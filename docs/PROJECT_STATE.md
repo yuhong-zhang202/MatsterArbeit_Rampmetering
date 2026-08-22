@@ -1,6 +1,6 @@
 # Project State
 
-**Last updated:** 2026-08-22  
+**Last updated:** 2026-08-23
 **Document role:** Current project snapshot. Replace stale operational information instead of using this file as a decision history.
 
 ## Current Phase
@@ -8,6 +8,25 @@
 Project setup, collaboration governance, and research-scope confirmation.
 
 No formal experiment protocol is frozen, and no formal thesis experiment has started.
+
+The local technical environment and the fixed upstream ALINEA example have completed a technical smoke test. This does not change the pending research scope or formal experiment status.
+
+## Current Technical Environment
+
+- macOS 15.3 on Apple Silicon (Apple M3, arm64).
+- SUMO and `sumo-gui` 1.26.0 from the EclipseSUMO macOS Framework.
+- Session-level `SUMO_HOME`: `/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo`.
+- Project `.venv`: Python 3.13.0 with `sumoITScontrol` 0.1.0, TraCI 1.26.0, and sumolib 1.26.0.
+- Fixed upstream smoke-test source: `sumoITScontrol` tag `v0.1.0`, commit `5776c6c79a888a37e55079db63eedc7db0570863`.
+
+## Technical Smoke-Test Status
+
+- Static input, checksum, import, and dependency validation passed.
+- The ALINEA GUI run completed with reliable SUMO-generated visual evidence: at simulation time 600 s the scene contained 47 vehicles and traffic light `J0` reported state `G`.
+- The completed GUI run executed 8,400 simulation steps, called `execute_control(...)` 8,400 times, and recorded 69 controller updates.
+- Headless runs with seeds 2 and 3 both exited with status 0 and completed the same 8,400-step control chain.
+- All runtime models, detector XML files, summaries, and GUI evidence were written under `/private/tmp`; no smoke-test output was written to `data/raw/` or used as thesis evidence.
+- The upstream example emits technical warnings, including missing yellow phases, vehicle `tau` below the simulation step, collision teleports, emergency braking, and use of the deprecated TraCI `getCurrentTime()` API. These warnings did not prevent the smoke test from completing, but the upstream example must not be reused as a formal experiment configuration without separate review and correction.
 
 ## Current Working Topic
 
@@ -84,14 +103,15 @@ Robert Hilbrich has not yet responded to the proposed research approach.
 
 This does not block reversible technical preparation, but it does block freezing the final scientific design.
 
+There is no remaining blocker to reproducing the fixed technical smoke test. The upstream demo warnings remain technical limitations, and the macOS GUI requires a working XQuartz display.
+
 ## Work That May Proceed Now
 
 - maintain the local project structure and collaboration rules;
 - archive original project and supervisor materials;
-- install and verify SUMO, Python, and `sumoITScontrol`;
 - read the core paper and official documentation needed for initial setup;
-- run the official ALINEA example;
-- perform clearly labelled environment checks and smoke tests.
+- review the upstream ALINEA example warnings and decide the smallest technically defensible corrections for a future project-owned scenario;
+- repeat the fixed environment check or smoke test when tool versions change.
 
 ## Work Deferred Until Scope Confirmation
 
@@ -104,6 +124,6 @@ This does not block reversible technical preparation, but it does block freezing
 
 ## Next Actions
 
-1. Complete the initial project-management documents and source-material organization.
-2. Verify the local environment and run the official ALINEA example on the Mac.
-3. Update this document after Robert Hilbrich replies and before the formal experimental design is frozen.
+1. Review and document the upstream demo warnings before using any part of it as the basis for a project-owned scenario.
+2. Continue reading the core `sumoITScontrol` paper and relevant official SUMO documentation without treating example settings as approved parameters.
+3. Update the research scope after Robert Hilbrich replies, then design and freeze a formal experiment protocol before producing thesis evidence.
