@@ -1,0 +1,95 @@
+{
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "constraints": {
+    "additional_q_or_seed_prohibited": true,
+    "candidate_receipt_may_append_only_after_analysis_of_each_completed_attempt": true,
+    "independent_review_now_passed": true,
+    "runtime_overlay_may_append_only_after_each_real_attempt": true,
+    "tier2_launch_permitted_before_independent_review": false
+  },
+  "context_preflight": {
+    "authorization": "existing exact T43 package authorization",
+    "current_phase": "T43 Tier1 complete; scientifically reviewed branch run_q3650; Tier2 not started",
+    "formal_protocol": "empty_not_frozen",
+    "write_scope": "Stage4 adapter, production tests, and batch engineering metadata only"
+  },
+  "execution_counters": {
+    "actual_gui_starts": 0,
+    "actual_netconvert_operations": 2,
+    "actual_sumo_starts": 2,
+    "actual_traci_connections": 0
+  },
+  "gate": {
+    "cancelled": [
+      "QM3350S17",
+      "QM3350S23"
+    ],
+    "path": "data/processed/stage4_qmain_sequential_20260912_v1/tier2_branch_gate_registration.json",
+    "selected": [
+      "QM3650S17",
+      "QM3650S23"
+    ],
+    "sha256": "a32b7a62a21e4c09ef40500d55a84bc806b4fef10f9ed7a2e2c01203a6f6be7d",
+    "status": "registered_independently_reviewed_passed"
+  },
+  "hashes": {
+    "adapter_sha256": "899305e7dfba2222ea552c0b453d3078f39b1d254d2805fb71287625864dcb1b",
+    "approved_source_registry_sha256": "96ee4a20f8130ede9a14ff9a40292a0c1d588770bbf1b37ad1ac455b3a1c538b",
+    "candidate_manifest_receipt_registry_sha256": "c80c571deacf9bc7a53c090d3c649fe1b05673ab21094bd76976dcf9973ccc4c",
+    "contract_sha256": "b3bf7abec5a9e6cfc29edb81de58ec5cc86c9e0fd132e88a9cd6999a456a91c9",
+    "independent_test_sha256": "97e61bf97a5fa975671359ebf23d477f6d73b6e3bf1c69967e0994fd7e78437e",
+    "production_test_sha256": "dc399fb002d2810f6e2f242f64839b94c919963f53ace2d0e7a3a2d6560a5b3c",
+    "registration_payload_sha256": "d934b62903081163495b7e17cf72c52786e1dfb864aa5d9a9d3eb5c2eb9a952a",
+    "runtime_source_registry_sha256": "526a144892c9b0317af7edc631fa9fba52173ca33c0c01dce6dbcf80f6866ac4"
+  },
+  "history": {
+    "gate_revision_01_path": "data/processed/stage4_qmain_sequential_20260912_v1/tier2_branch_gate_history/revision_01_e600e4bf5e19eba8114d2a781cd4167481af8330e3d5e6446682ea8df1e0d5e3.json",
+    "gate_revision_01_sha256": "e600e4bf5e19eba8114d2a781cd4167481af8330e3d5e6446682ea8df1e0d5e3",
+    "reason_for_revision_02": "validate every existing receipt before a future Tier2 append",
+    "reason_for_revision_03": "refresh fixed gate registration-time adapter hash after final pre-review validator hardening; preserve prior gate bytes",
+    "reason_for_revision_04": "record final independent Tier2 gate PASS and current independent test hash",
+    "revision_01_path": "data/processed/stage4_qmain_sequential_20260912_v1/tier2_gate_engineering_verification_revision_01.json",
+    "revision_01_sha256": "e79035954965f9fb3b1113e6ac7fe53fe1c37b08b8f9397fac6347ab5b94559f",
+    "revision_02_path": "data/processed/stage4_qmain_sequential_20260912_v1/tier2_gate_engineering_verification_revision_02.json",
+    "revision_02_sha256": "d295f71438029fa57de2320da3dea05f811c2bfb3a1d07ab9dd05d65817782fd",
+    "revision_03_path": "data/processed/stage4_qmain_sequential_20260912_v1/tier2_gate_engineering_verification_revision_03.json",
+    "revision_03_sha256": "68efb9426ad4c7dba7cefcfaac0751d6b21d4da3f94a8ce309de05855de48909"
+  },
+  "immutable_snapshots": {
+    "tier1_manifest_receipt_registry_sha256": "c80c571deacf9bc7a53c090d3c649fe1b05673ab21094bd76976dcf9973ccc4c",
+    "tier1_runtime_overlay_sha256": "526a144892c9b0317af7edc631fa9fba52173ca33c0c01dce6dbcf80f6866ac4"
+  },
+  "open_items": [],
+  "schema_version": 4,
+  "scientific_branch": {
+    "action": "run_q3650",
+    "decision_path": "data/processed/stage4_qmain_sequential_20260912_v1/analysis/tier1/revision_05/decision/branch_decision.json",
+    "decision_sha256": "e0fb31613c2af5375aa6d6148da7a9c67ef5efacde1c0e822b806b6bc2d54b91",
+    "review_receipt_path": "data/processed/stage4_qmain_sequential_20260912_v1/tier1_scientific_branch_review_receipt.json",
+    "review_receipt_sha256": "db3f6ec244e088768a44e36d7fbcd4735d1dd5f3a5bd06cc8e9feea1faff71e4",
+    "standalone_scientific_artifact_claimed": false
+  },
+  "scope": "offline branch-gate and adapter extension only; no Tier2 execution",
+  "stage": "Stage 4",
+  "status": "engineering_and_independent_data_review_passed_tier2_ready",
+  "step": "T43 Tier2 prelaunch engineering gate",
+  "verification": {
+    "ast_forbidden_imports": [],
+    "cli_help": "passed register-tier2-plan",
+    "combined_unittest": "passed 112/112",
+    "existing_receipt_registry_validated_before_append": true,
+    "git_diff_check": "passed",
+    "independent_gate_review_path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/T43_tier2_gate_analysis_review_revision_01.json",
+    "independent_gate_review_sha256": "e0296e1b2dcd7414e9c1ad1427fbb9590aa13418dcf05d45d8e46ed5bc40425b",
+    "independent_gate_verification_path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/T43_tier2_gate_independent_verification_revision_01.json",
+    "independent_gate_verification_sha256": "ba4c3a75bd8054619d87ebdf5040709aae87613c5dfa5bb79af0609e2c7e7903",
+    "independent_open_blocker_major_minor": [
+      0,
+      0,
+      0
+    ],
+    "independent_test_methods": 40,
+    "production_test_methods": 72,
+    "py_compile": "passed"
+  }
+}

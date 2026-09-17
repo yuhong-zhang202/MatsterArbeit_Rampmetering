@@ -1,0 +1,79 @@
+{
+  "alternative_explanations_and_limits": [
+    "Only two seeds were observed at qMain=3500.",
+    "EJMI is a registered local sufficient signature; not_identified is not evidence that freeway impairment is absent.",
+    "The scaffold inserts M traffic close to the merge and does not establish realistic freeway upstream dynamics.",
+    "Shared stopped exposure is observational and is not a causal urban-loss estimate.",
+    "R passage events and final arrivals are distinct clocks; S17 has 14 bracketed A passage events and 13 A arrivals without contradiction.",
+    "The formal experiment protocol remains empty."
+  ],
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "confidence": {
+    "registered_branch_reproduction": "high",
+    "scientific_interpretation": "pending_required_review",
+    "technical_data_integrity": "high"
+  },
+  "data_verification_path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/T43_tier1_independent_verification_revision_02.json",
+  "data_verification_sha256": "e41b844da5fb10b512b2ba38814bef8c2f4ab3dd9cfebd8733067bc5d184912d",
+  "observed_results": {
+    "QM3500S17": {
+      "M_stopped_episodes": 0,
+      "R_A_arrivals": 13,
+      "R_A_bracketed_events": 14,
+      "R_all_passage_events": 300,
+      "ejmi_A": false,
+      "ejmi_B": false,
+      "ejmi_persistence": false,
+      "ejmi_status": "not_identified",
+      "r_passage_status": "clear_passage",
+      "shared_R_stopped_vehicle_seconds": 19194.0,
+      "shared_U_stopped_vehicle_seconds": 10060.0,
+      "shared_cooccurrence_support_s": 1219
+    },
+    "QM3500S23": {
+      "M_stopped_episodes": 0,
+      "R_A_arrivals": 11,
+      "R_A_bracketed_events": 11,
+      "R_all_passage_events": 300,
+      "ejmi_A": false,
+      "ejmi_B": false,
+      "ejmi_persistence": false,
+      "ejmi_status": "not_identified",
+      "r_passage_status": "clear_passage",
+      "shared_R_stopped_vehicle_seconds": 20547.0,
+      "shared_U_stopped_vehicle_seconds": 10776.0,
+      "shared_cooccurrence_support_s": 1226
+    }
+  },
+  "open_data_findings": [],
+  "registered_branch_recommendation": {
+    "action": "run_q3650",
+    "additional_qmain_points_prohibited": true,
+    "batch_id": "stage4_qmain_sequential_20260912_v1",
+    "cancelled_by_stop_rule": [
+      "QM3350S17",
+      "QM3350S23"
+    ],
+    "decision_stage": "after_tier1",
+    "ejmi_states": [
+      "not_identified",
+      "not_identified"
+    ],
+    "r_states": [
+      "clear_passage",
+      "clear_passage"
+    ],
+    "result_status": "tier2_upper_selected",
+    "schema_version": 1,
+    "selected_tier2_runs": [
+      "QM3650S17",
+      "QM3650S23"
+    ]
+  },
+  "required_next_gate": "scientific_reviewer approval of the Tier1 interpretation and registered run_q3650 branch before any Tier2 execution",
+  "revision": 2,
+  "schema_version": 1,
+  "status": "data_review_passed_scientific_review_pending",
+  "supersedes": "T43_tier1_analysis_review_revision_01.json",
+  "task": "T43 Tier1 exploratory analysis review"
+}

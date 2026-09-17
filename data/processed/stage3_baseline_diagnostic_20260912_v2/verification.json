@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "scope": "Stage 3 T33-T34 data analysis and independent quantitative verification",
+  "status": "data_analysis_complete_pending_scientific_review",
+  "gates": {
+    "G01": {
+      "status": "passed_in_data_scope",
+      "run_coverage": "8/8",
+      "registered_archive_files": "232/232 hash-resolved",
+      "required_analyzed_outputs": "128/128 passed",
+      "unexplained_identity_conflicts": 0
+    },
+    "G02": {
+      "status": "passed",
+      "run_class_units": "32/32",
+      "endpoint_rows": "64/64 verified",
+      "integer_residual_failures": 0,
+      "duplicate_FCD_vehicle_rows": 0,
+      "unknown_vehicle_ids": 0,
+      "unknown_lanes": 0
+    },
+    "G03": {
+      "status": "passed_in_data_scope_pending_semantic_reviewer",
+      "FCD_frame_labels": "21600/21600",
+      "coverage_audit_rows": "128/128 passed",
+      "E1_native_intervals": "4320/4320",
+      "missing_required_intervals": 0,
+      "metadata_completeness": "100% for registered O1 contract fields"
+    },
+    "G04": {
+      "status": "passed_as_diagnostic_record_coverage",
+      "question_units": "40/40",
+      "observed_units": 32,
+      "partial_observation_units": 8,
+      "note": "Every run has five traceable statuses; origin-and-propagation remains partial in all eight runs. This is not a suitability pass."
+    },
+    "G05": {
+      "status": "passed_in_quantitative_scope",
+      "required_failure_mode_categories": "12/12",
+      "production_test_methods": "17/17",
+      "independent_verifier_tests": "4/4",
+      "independently_reconstructed_lane_class_time_cells": 246175,
+      "independently_reconstructed_episode_records": 99955,
+      "independently_reconstructed_first_R_downstream_events": 2100,
+      "independently_reconstructed_shared_R_U_labels": 7120,
+      "independently_reconstructed_sensitivity_values": "96/96",
+      "endpoint_identity_records": 14564,
+      "endpoint_sources": "demand + tripinfo + vehroute + SUMO summary",
+      "open_analysis_blocker_or_major": 0,
+      "limitation": "Static path/TLS/link semantics remain in the engineering/scientific review scope; quantity agreement does not prove causal spatial interpretation."
+    },
+    "G06": {
+      "status": "passed_as_descriptive_coverage",
+      "matched_input_contrasts": "6/6",
+      "seed_units": "8/8",
+      "window_metric_values": "96/96",
+      "aggregation_timeseries": "48/48",
+      "aggregation_bin_rows": 1264,
+      "aggregation_shape_summaries": "48/48",
+      "same_seed_contrast_rows": 801,
+      "seed_sign_comparison_rows": 398,
+      "symbol_inconsistent_rows_retained": 43,
+      "maximum_absolute_reaggregation_residual": 7.105427357601002e-15,
+      "note": "Time rebinning is a conservation and descriptive-shape check, not structural or behavioral sensitivity."
+    },
+    "G07": {
+      "status": "4/4_data_analyst_drafts_complete_pending_scientific_reviewer",
+      "critical_unknowns": {
+        "Q1": 1,
+        "Q2": 2,
+        "Q3": 1,
+        "Q4": 2
+      },
+      "draft_outcome": {
+        "Q1": "supported_with_scope_limitation",
+        "Q2": "not_identified",
+        "Q3": "supported_observation_only",
+        "Q4": "not_identified_due_to_Q2"
+      }
+    }
+  },
+  "candidate_explanations": {
+    "checked": [
+      "input_not_realized_in_demand_window",
+      "near_merge_mainline_insertion",
+      "traffic_signal_stopping",
+      "lane_coverage"
+    ],
+    "unresolved": [
+      "downstream_blockage",
+      "merge_or_lane_change_mechanism"
+    ]
+  },
+  "data_analyst_stage4_recommendation": "yes: formulate one targeted, discriminating validation because freeway-side impairment (Q2) and therefore same-scenario tradeoff suitability (Q4) were not identified; do not start a simulation until the exact Stage 4 registration card is approved",
+  "interpretation_boundaries": [
+    "All results are exploratory because docs/EXPERIMENT_PROTOCOL.md is empty.",
+    "The technical stop threshold does not classify congestion.",
+    "Co-occurring stopped R and U observations do not identify causal R-induced U loss.",
+    "High mainline speed and achieved input flow do not establish capacity, capacity drop, or freeway protection benefit.",
+    "Two seeds provide descriptive sensitivity only, not statistical robustness."
+  ],
+  "usable_review_revision": "data/processed/stage3_baseline_diagnostic_20260912_v2/analysis_review/revision_03",
+  "independent_verification": "data/processed/stage3_baseline_diagnostic_20260912_v2/verification/T33_T34_independent_v2.json",
+  "actual_sumo_starts": 0,
+  "actual_netconvert_starts": 0,
+  "actual_TraCI_starts": 0,
+  "actual_GUI_starts": 0
+}

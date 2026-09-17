@@ -1,0 +1,24 @@
+{
+  "artifact_kind": "user_authorization_record",
+  "recorded_date": "2026-09-13",
+  "status": "User-approved",
+  "user_statement_verbatim": "批准按 `docs/STAGE6_VALIDATION_LAUNCH_PACKAGE.md` 执行 SG6-P/D1–D3，并遵守绑定哈希、顺序停止门和预算上限。",
+  "authorized_document": "docs/STAGE6_VALIDATION_LAUNCH_PACKAGE.md",
+  "bindings": {
+    "launch_card_sha256": "6dad07d6862eb6dfd6ca5ffd4bd09ccffa3563ff63106b67a983dcbaba765067",
+    "stable_launch_payload_sha256": "4f65deb5ee65eb23ff071d6b79e85d1afcff1dd12fd50242cc7ed07b2161a1d3",
+    "launch_gate_policy_sha256": "d57cd0a14bbb5d38f1539c7bf2460191caebaa15964ef1d7b6a83217a3784eab"
+  },
+  "immediate_release": "S6_V1_ML_S17_attempt1 only; later attempts are released only by the sequential evidence gates",
+  "hard_limits": {
+    "max_total_sumo_starts": 6,
+    "max_wallclock_s_per_start": 120,
+    "max_total_wallclock_s": 720,
+    "max_archive_bytes_per_attempt": 2000000000,
+    "max_new_archive_bytes_total": 12000000000,
+    "shared_technical_retry": 1,
+    "netconvert": 0,
+    "traci": 0,
+    "gui": 0
+  }
+}

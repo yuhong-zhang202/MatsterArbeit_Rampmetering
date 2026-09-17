@@ -1,0 +1,36 @@
+{
+  "batch_id": "stage6_obstacle_20260913_v1",
+  "authorization": {
+    "user_text": "按照方案执行",
+    "authorized_plan": "docs/STAGE6_OBSTACLE_RESOLUTION_EXECUTION_PLAN.md",
+    "does_not_imply": ["T54 acceptance", "SG6-BUILD approval", "SG6-P launch approval", "SG6-R acceptance", "protocol freeze", "Robert communication"]
+  },
+  "current_stage": "S6-L_passed_C03_package_preparation",
+  "obstacle_status": "unresolved",
+  "steps": [
+    {"step_id": "S6-A00", "status": "completed", "owner": "primary+simulation_engineer", "verification": "12/12 runs; 348/348 archive files; duplicate=0; unexplained_hash_conflict=0"},
+    {"step_id": "S6-A01", "status": "completed", "owner": "data_analyst", "verification": "independent raw XML reconstruction passed; 12 A01 fixtures passed"},
+    {"step_id": "S6-A02", "status": "completed", "owner": "data_analyst+simulation_engineer+scientific_reviewer", "verification": "H1-H6=6/6; scientific PASS; Blocker/Major=0/0"},
+    {"step_id": "S6-A03", "status": "completed", "owner": "primary+simulation_engineer+scientific_reviewer", "verification": "H2 selected as sole proposed B candidate; report and candidate register complete"},
+    {"step_id": "S6-B00", "status": "completed_proposed", "owner": "primary+simulation_engineer+scientific_reviewer", "verification": "H2 intervention/reference/challenge fixed in revision_03; user numeric acceptance pending"},
+    {"step_id": "S6-B01", "status": "completed_proposed", "owner": "data_analyst+scientific_reviewer", "verification": "primary/support/R/RU/Q4/reference/inflow/boundary/sensitivity rules reviewed"},
+    {"step_id": "S6-B02", "status": "completed_proposed", "owner": "primary+simulation_engineer+data_analyst", "verification": "8 logical cells; 4 reused V0; 4 new V1; proposed max 6 SUMO starts; no execution authorized"},
+    {"step_id": "S6-B03", "status": "completed_user_accepted", "owner": "primary+scientific_reviewer", "verification": "revision_03 PASS; user explicitly approved scientific values and C00-C02; launch remains unauthorized"},
+    {"step_id": "S6-C00", "status": "completed", "owner": "simulation_engineer", "verification": "isolated candidate configuration and offline entry implemented; no simulator executor"},
+    {"step_id": "S6-C01", "status": "completed", "owner": "simulation_engineer+data_analyst", "verification": "measurement/materialization/source identity contracts implemented and independently reviewed"},
+    {"step_id": "S6-C02", "status": "SG6-L_passed", "owner": "simulation_engineer+data_analyst+scientific_reviewer", "verification": "open Blocker/Major/required Minor=0/0/0 within offline scope"},
+    {"step_id": "S6-C03", "status": "package_preparation_only", "owner": "simulation_engineer+data_analyst+scientific_reviewer"}
+  ],
+  "simulation_invocations": {"SUMO": 0, "netconvert": 0, "TraCI": 0, "GUI": 0},
+  "current_evidence": {
+    "source_registry": "data/processed/stage6_obstacle_20260913_v1/source_registry.csv",
+    "data_ledger": "data/processed/stage6_obstacle_20260913_v1/data_execution_ledger.json",
+    "diagnosis": "data/processed/stage6_obstacle_20260913_v1/obstacle_diagnosis_revision_02.csv",
+    "candidate_register": "data/processed/stage6_obstacle_20260913_v1/candidate_change_register.csv",
+    "independent_verification": "data/processed/stage6_obstacle_20260913_v1/independent_verification.json",
+    "human_report": "docs/STAGE6_OBSTACLE_DIAGNOSIS_REPORT.md",
+    "registration_card": "data/processed/stage6_obstacle_20260913_v1/validation_card_draft_revision_03.json",
+    "registration_report": "docs/STAGE6_VALIDATION_DESIGN_REGISTRATION.md"
+  },
+  "next_action": "Prepare and review an existing-compiled-network reuse/spatial acceptance package with netconvert planned=0 and actual=0; obtain user authorization before any later SG6-P integration or simulator execution."
+}

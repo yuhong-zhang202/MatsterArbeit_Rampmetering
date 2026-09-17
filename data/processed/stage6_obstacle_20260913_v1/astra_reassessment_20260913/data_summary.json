@@ -1,0 +1,289 @@
+{
+  "TT_effect_outer_envelope_percent": {
+    "common": {
+      "lower": -5.1985897770645995,
+      "upper": 14.97853714366939
+    },
+    "feeder": {
+      "lower": -2.3323302070108354,
+      "upper": 10.082847787813677
+    }
+  },
+  "checks": {
+    "complete_B_bins_each": 20,
+    "no_simulation_calls": true,
+    "unique_R_passages_each": 300
+  },
+  "conditions": {
+    "C": {
+      "M_regional_full_stopped_samples": {
+        "cross": 0,
+        "main_down": 0,
+        "main_up": 0,
+        "merge_M": 0,
+        "ramp": 0,
+        "shared": 0,
+        "urban_in": 0,
+        "urban_out": 0
+      },
+      "RU_B_joint_stopped_labels": 1136,
+      "R_B_certain_per60s": [
+        1,
+        0,
+        1,
+        0,
+        0,
+        0,
+        0,
+        0,
+        0,
+        1,
+        0,
+        3,
+        0,
+        0,
+        2,
+        0,
+        2,
+        0,
+        1,
+        0
+      ],
+      "R_first_crossing_bracket": [
+        174,
+        175
+      ],
+      "R_last_crossing_bracket": [
+        2505,
+        2506
+      ],
+      "R_passages": {
+        "B_certain": 12,
+        "boundary_ambiguous": 0,
+        "post_certain": 287,
+        "pre_certain": 1
+      },
+      "common_TT_bounds": {
+        "bound_state": "bounded",
+        "certain_count": 1065,
+        "lower": 20.23264540337711,
+        "lower_denominator": 1066,
+        "possible_only_count": 3,
+        "upper": 22.237113402061855,
+        "upper_denominator": 1067,
+        "value_state": "observed"
+      },
+      "feeder_TT_bounds": {
+        "bound_state": "bounded",
+        "certain_count": 1065,
+        "lower": 33.14272300469484,
+        "lower_denominator": 1065,
+        "possible_only_count": 3,
+        "upper": 35.151685393258425,
+        "upper_denominator": 1068,
+        "value_state": "observed"
+      },
+      "whole_observed_trip_descriptions": {
+        "M": {
+          "count": 1333,
+          "departDelay": {
+            "max": 0.88,
+            "mean": 0.44042010502625656,
+            "median": 0.5
+          },
+          "duration": {
+            "max": 93.0,
+            "mean": 73.18754688672168,
+            "median": 72.0
+          },
+          "timeLoss": {
+            "max": 37.36,
+            "mean": 9.446354088522131,
+            "median": 8.58
+          }
+        },
+        "R": {
+          "count": 300,
+          "departDelay": {
+            "max": 1061.0,
+            "mean": 564.1866666666666,
+            "median": 902.5
+          },
+          "duration": {
+            "max": 1497.0,
+            "mean": 643.7666666666667,
+            "median": 161.0
+          },
+          "timeLoss": {
+            "max": 1433.13,
+            "mean": 559.6244333333333,
+            "median": 68.845
+          }
+        },
+        "U": {
+          "count": 150,
+          "departDelay": {
+            "max": 1063.0,
+            "mean": 564.78,
+            "median": 904.5
+          },
+          "duration": {
+            "max": 1263.0,
+            "mean": 317.66,
+            "median": 130.0
+          },
+          "timeLoss": {
+            "max": 1208.32,
+            "mean": 246.20853333333332,
+            "median": 52.045
+          }
+        }
+      }
+    },
+    "ML": {
+      "M_regional_full_stopped_samples": {
+        "cross": 0,
+        "main_down": 0,
+        "main_up": 0,
+        "merge_M": 0,
+        "ramp": 0,
+        "shared": 0,
+        "urban_in": 0,
+        "urban_out": 0
+      },
+      "RU_B_joint_stopped_labels": 1118,
+      "R_B_certain_per60s": [
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        1,
+        0,
+        0,
+        1,
+        0,
+        0,
+        1
+      ],
+      "R_first_crossing_bracket": [
+        191,
+        192
+      ],
+      "R_last_crossing_bracket": [
+        2519,
+        2520
+      ],
+      "R_passages": {
+        "B_certain": 9,
+        "boundary_ambiguous": 0,
+        "post_certain": 288,
+        "pre_certain": 3
+      },
+      "common_TT_bounds": {
+        "bound_state": "bounded",
+        "certain_count": 870,
+        "lower": 19.34022988505747,
+        "lower_denominator": 870,
+        "possible_only_count": 1,
+        "upper": 21.342135476463834,
+        "upper_denominator": 871,
+        "value_state": "observed"
+      },
+      "feeder_TT_bounds": {
+        "bound_state": "bounded",
+        "certain_count": 866,
+        "lower": 31.932027649769584,
+        "lower_denominator": 868,
+        "possible_only_count": 2,
+        "upper": 33.93418013856813,
+        "upper_denominator": 866,
+        "value_state": "observed"
+      },
+      "whole_observed_trip_descriptions": {
+        "M": {
+          "count": 1083,
+          "departDelay": {
+            "max": 1.0,
+            "mean": 0.5014312096029547,
+            "median": 0.5
+          },
+          "duration": {
+            "max": 99.0,
+            "mean": 70.40073868882733,
+            "median": 70.0
+          },
+          "timeLoss": {
+            "max": 35.58,
+            "mean": 6.532262234533703,
+            "median": 4.52
+          }
+        },
+        "R": {
+          "count": 300,
+          "departDelay": {
+            "max": 1078.0,
+            "mean": 564.09,
+            "median": 915.0
+          },
+          "duration": {
+            "max": 1517.0,
+            "mean": 648.3966666666666,
+            "median": 160.0
+          },
+          "timeLoss": {
+            "max": 1446.64,
+            "mean": 564.3886666666667,
+            "median": 70.41499999999999
+          }
+        },
+        "U": {
+          "count": 150,
+          "departDelay": {
+            "max": 1078.0,
+            "mean": 566.3866666666667,
+            "median": 917.5
+          },
+          "duration": {
+            "max": 1282.0,
+            "mean": 319.50666666666666,
+            "median": 131.0
+          },
+          "timeLoss": {
+            "max": 1227.44,
+            "mean": 248.94413333333333,
+            "median": 52.21
+          }
+        }
+      }
+    }
+  },
+  "scope": "post_hoc_exploratory_descriptive_audit; no registered decision changed",
+  "sources": [
+    {
+      "path": "data/processed/stage6_obstacle_20260913_v1/d2_data_review_revision_01/ML_raw_oracle.json",
+      "sha256": "40e21a19d45a83df9d5e24b4d715a92217e630176dfc1bbbf2556fc806dc6c4b"
+    },
+    {
+      "path": "data/processed/stage6_obstacle_20260913_v1/d2_data_review_revision_01/S6_V1_ML_S17_registered_analysis/measurements.json",
+      "sha256": "d94356e3a72a31d412914833869a3309ec118429aef61268c44509ae31c7824e"
+    },
+    {
+      "path": "data/processed/stage6_obstacle_20260913_v1/d2_data_review_revision_01/C_raw_oracle.json",
+      "sha256": "189e4c664dc71ef9289489a2ebfc833b50c64549eb788e42b498eb40ecd70097"
+    },
+    {
+      "path": "data/processed/stage6_obstacle_20260913_v1/d2_data_review_revision_01/S6_V1_C_S17_registered_analysis/measurements.json",
+      "sha256": "44beebd4efe6ba78b66171f930a23310a52b71a8f8247236ae2165ab0b21c31a"
+    }
+  ],
+  "uncertainty": "TT interval arithmetic covers crossing brackets and optional cohort membership; not a statistical confidence interval; ratio interval is an outer envelope, not sharp identified bounds"
+}

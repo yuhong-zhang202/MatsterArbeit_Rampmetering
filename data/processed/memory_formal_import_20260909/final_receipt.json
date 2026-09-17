@@ -1,0 +1,38 @@
+{
+  "status": "passed",
+  "date": "2026-09-09",
+  "project": "Masterarbeit-Ramp-Metering",
+  "volume": "tdai-ramp-metering-memory-v1",
+  "service_id": "ramp-metering-formal-memory-v1",
+  "identity": {
+    "team_id": "team-masterarbeit-ramp-metering",
+    "agent_id": "agent-project-memory",
+    "user_id": "user-yuhong-zhang"
+  },
+  "model_for_l1_l2": "gpt-4.1-mini",
+  "l3_method": "reviewed deterministic seed through /v3/core/write with network disabled",
+  "native_layers": {
+    "l0": 4,
+    "l1": 6,
+    "l2": 1,
+    "l3": true
+  },
+  "budget": {
+    "total_claimed_attempts": 6,
+    "remaining_attempts": 35,
+    "prompt_tokens": 8582,
+    "completion_tokens": 1322,
+    "total_tokens": 9904,
+    "estimated_usd_at_published_text_rates": 0.005548
+  },
+  "restart_probe": {
+    "network": "none",
+    "status": "passed",
+    "l0_sha256": "896bc29442581ebc36274e5467df513acc89a0b30784d76d280f245d26ced9b5",
+    "l1_sha256": "7ef063bfe7001b9b8dbe844d35f6bcb054570eaab52bc33bc59c8969655645d9",
+    "l2_sha256": "0d616c74eac71abe1ca35cb2ca2164a5595eebca9052da8c6d5643ddbf6d9447",
+    "l3_sha256": "a350c926ab8a6201a9361a020490a439afc2453ce811b81cd11aef76d50e154a"
+  },
+  "authoritative_sources": "docs/memory/formal_import_bundle_20260909.md source manifest",
+  "notice": "Auxiliary memory only; current repository documents remain authoritative."
+}

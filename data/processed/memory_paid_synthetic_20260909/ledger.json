@@ -1,0 +1,57 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-09T14:34:17.217Z",
+  "updated_at": "2026-09-09T15:42:22.298Z",
+  "policy_hash": "4ad285a37f67980994e0f0803f6ba8540e5c99f1e2814ffd33db57943911ee55",
+  "policy": {
+    "model": "gpt-4.1-mini-2025-04-14",
+    "max_attempts": 41,
+    "max_request_bytes": 20000,
+    "max_output_tokens": 4096,
+    "upstream_origin": "https://api.openai.com",
+    "upstream_path": "/v1/chat/completions"
+  },
+  "claimed_attempts": 4,
+  "attempts": [
+    {
+      "id": "d543bac8-0f0a-4e23-95e0-dbf628544f32",
+      "claimed_at": "2026-09-09T14:34:25.524Z",
+      "request_bytes": 5835,
+      "requested_output_tokens": 4096,
+      "outcome": "response_received",
+      "upstream_status": 401,
+      "usage": null,
+      "finished_at": "2026-09-09T14:34:25.934Z"
+    },
+    {
+      "id": "d55aa75b-113c-419f-a5f3-07baeba5f27d",
+      "claimed_at": "2026-09-09T14:45:48.916Z",
+      "request_bytes": 5835,
+      "requested_output_tokens": 4096,
+      "outcome": "response_received",
+      "upstream_status": 401,
+      "usage": null,
+      "finished_at": "2026-09-09T14:45:50.892Z"
+    },
+    {
+      "id": "e106b6c4-9bb5-4acc-a6ea-d82afb3eacb4",
+      "claimed_at": "2026-09-09T15:00:28.431Z",
+      "request_bytes": 5835,
+      "requested_output_tokens": 4096,
+      "outcome": "response_received",
+      "upstream_status": 401,
+      "usage": null,
+      "finished_at": "2026-09-09T15:00:29.046Z"
+    },
+    {
+      "id": "dcbd274a-137f-42e9-bc13-f70ff62ce2ea",
+      "claimed_at": "2026-09-09T15:42:20.031Z",
+      "request_bytes": 16230,
+      "requested_output_tokens": 4096,
+      "outcome": "response_received",
+      "upstream_status": 403,
+      "usage": null,
+      "finished_at": "2026-09-09T15:42:22.298Z"
+    }
+  ]
+}

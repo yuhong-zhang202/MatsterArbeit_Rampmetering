@@ -1,0 +1,168 @@
+{
+  "schema_version": 1,
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "stage": "Stage 4 T42 independent data and logic rereview",
+  "revision": "revision_02",
+  "status": "passed",
+  "context_preflight": {
+    "status": "passed",
+    "current_phase": "T42 offline implementation and review; T43 prohibited",
+    "authorization_quote": "批准，继续stage 4",
+    "authorization_scope": "T42 offline implementation and three-specialist review only",
+    "formal_protocol": "empty_not_frozen",
+    "formal_experiment_started": false
+  },
+  "revision_01_preservation": {
+    "independent_verification_revision_01.json": "c5f63dc26c0e03df745a21dd3d09e8a2ca747c74a3766b7ba704f76f963eddbd",
+    "analysis_review_revision_01.json": "f37f69b2dd0cd8dee23999139dfb4b6470d63b26b8fc40acf9a3aaf1188305b5"
+  },
+  "reviewed_hashes": {
+    "src/analysis/analyze_stage4_qmain.py": "b5948bca030a0cbd7c431c74c3a7be746e3cf8b40e8dd35322e63ce65928b2a0",
+    "tests/test_stage4_qmain.py": "2c7154e7377d6c5d1fe98a11ebb092fe47e077b0ee68337ef5e7a51d33da2db7",
+    "tests/test_verify_stage4_qmain.py": "56121d5c5486b80c8e978b4aa6f5e6f240cb99999cacf890ddeeff8523ad579b",
+    "registration_payload.json": "1fc569742e9e3a2b18a5da47aa932134dbb99dc2d78803697648cb5181df4448",
+    "measurement_contract.json": "0e2f56a1c15033eeaccea0cc9cb780ff2b6c6c0d6e1aaa3e99f882efc0c640f7",
+    "source_registry.json": "2aca18f2865238ac9fb6aa8640d80ad193b808c2dd56ee87e19345ad18efa2b8",
+    "execution_ledger.json": "8df9a1790df472e1b8b9babaf51434d1f58ba7cc4196355c1aea64d517068bf2",
+    "engineering_verification.json": "a741c9fd50f108c48eaad6e57a583e4f5c666017690780165d2d3b3dfdc117ce",
+    "docs/STAGE4_QMAIN_SEQUENTIAL_REGISTRATION_PROPOSAL.md": "ec1c243fecece5f77a4f1201c5565592d732c67fb2d1761d0537fee4f5f47b7c"
+  },
+  "test_results": {
+    "production_suite": "37/37 passed",
+    "independent_suite": "22/22 passed",
+    "combined_suite": "59/59 passed",
+    "independent_fixture_scopes": [
+      "two-lane occupancy arithmetic mean in percentage points",
+      "speed contribution weighting and nVehEntered q arithmetic",
+      "strict A/B envelope comparisons at exact registered delta boundaries",
+      "120/60/30 persistence including 3-of-4 versus 2-of-4",
+      "all 81 two-seed R/EJMI state combinations",
+      "Tier-2 selection is empty or exactly one complete same-q branch",
+      "Tier-1 and Tier-2 terminal denominators derive from registered manifests",
+      "manifest run ID, seed, qMain, endpoint identity, uniqueness and coverage",
+      "cancelled_by_stop_rule action consistency",
+      "T43 approval quote, payload hash, scope and pending-field envelope",
+      "registration payload and proposal hash cross-links and drift rejection",
+      "zero-run gates and prohibited launch states",
+      "exclusive JSON output refuses overwrite",
+      "R coverage, arrival and duplicate-identity contradictions",
+      "four-reference independent raw reconstruction"
+    ]
+  },
+  "verification_commands": [
+    ".venv/bin/python -m unittest tests.test_stage4_qmain tests.test_verify_stage4_qmain -v",
+    ".venv/bin/python -m py_compile tests/test_verify_stage4_qmain.py",
+    "independent JSON/hash/cross-link and AST forbidden-import check",
+    "git diff --check -- tests/test_verify_stage4_qmain.py data/processed/stage4_qmain_sequential_20260912_v1/verification"
+  ],
+  "major_finding_closure": [
+    {
+      "id": "S4DA-M01",
+      "status": "closed",
+      "evidence": "Independent fixtures reject a mixed Tier-2 selection and accept only empty or one complete registered same-q branch."
+    },
+    {
+      "id": "S4DA-M02",
+      "status": "closed",
+      "evidence": "Missing or unqualified reference manifests cannot become reused_valid terminal evidence."
+    },
+    {
+      "id": "S4DA-M03",
+      "status": "closed",
+      "evidence": "Independent mutations of run ID, seed, qMain and endpoint uniqueness/coverage are rejected before denominator construction."
+    },
+    {
+      "id": "S4DA-M04",
+      "status": "closed",
+      "evidence": "Duplicate vehicle identity within one FCD frame is detected, reported and makes R evidence unresolved."
+    },
+    {
+      "id": "S4DA-M05",
+      "status": "closed",
+      "evidence": "A user-approved T43 envelope requires a nonempty exact quote plus registered payload hashes, scope and no pending launch-card fields."
+    },
+    {
+      "id": "S4DA-M06",
+      "status": "closed",
+      "evidence": "Independent contract-drift fixtures reject changes to exact EJMI margins, 30-second E1 period and occupancy, speed or q semantics."
+    },
+    {
+      "id": "S4DA-M07",
+      "status": "closed",
+      "evidence": "An immutable registration payload is hash-linked by the contract, registry and ledger; current proposal and payload hashes are independently recomputed and checked."
+    }
+  ],
+  "reference_reconstruction": {
+    "status": "passed_4_of_4",
+    "method": "Source-map hashes and archived XML files were independently read; two E1 lanes were independently combined; FCD frames, within-frame identity uniqueness, endpoint coverage and identity-bracketed first downstream R events were independently reconstructed without production aggregation, EJMI or branch helpers.",
+    "required_frame_count_per_run": 2700,
+    "required_unique_endpoint_cells_per_run": 8,
+    "runs": {
+      "C17": {
+        "R_A_events": 36,
+        "A_q_vehph": 3194.4,
+        "A_v_mps": 30.872817430503382,
+        "A_occ_percent": 7.337,
+        "frames": 2700,
+        "unique_endpoint_cells": 8,
+        "manifest_sha256": "8d9e4256dd3f79462e05882e90c5175cc2ac0a5a823d2ab884b0c49d38f8d177"
+      },
+      "C23": {
+        "R_A_events": 40,
+        "A_q_vehph": 3192.0,
+        "A_v_mps": 30.321151241534988,
+        "A_occ_percent": 7.502800000000001,
+        "frames": 2700,
+        "unique_endpoint_cells": 8,
+        "manifest_sha256": "ee689770a1b5b22c24b80d2551c1cbac47d919da9f2f70fda52cdebefc8a21d2"
+      },
+      "MH17": {
+        "R_A_events": 0,
+        "A_q_vehph": 3794.4,
+        "A_v_mps": 31.70932321315623,
+        "A_occ_percent": 8.382,
+        "frames": 2700,
+        "unique_endpoint_cells": 8,
+        "manifest_sha256": "ba004f3675572aa0757b148de1c18dda424a09ee88bd1f62968f116607eb11db"
+      },
+      "MH23": {
+        "R_A_events": 0,
+        "A_q_vehph": 3796.8,
+        "A_v_mps": 31.52122629582807,
+        "A_occ_percent": 8.4393,
+        "frames": 2700,
+        "unique_endpoint_cells": 8,
+        "manifest_sha256": "1acc9d6432aaf204a241cd0de44965b50bb83c05c80d97c6c573be73b6f1e510"
+      }
+    },
+    "revision_comparison": "Revision_01 and revision_02 reference scientific and numeric fields are identical; only adapter_sha256 and contract_sha256 changed.",
+    "semantic_note": "Stage 4 q uses nVehEntered while the Stage 3 q table used nVehContrib. For C23 A this yields 3192.0 versus the Stage 3 value 3189.6 veh/h. The Stage 4 contract explicitly registers nVehEntered; comparisons must not silently mix the two q definitions."
+  },
+  "hash_cross_links": {
+    "status": "passed",
+    "proposal": "actual file equals contract and ledger",
+    "registration_payload": "actual file equals contract, source registry and ledger",
+    "measurement_contract": "actual file equals ledger",
+    "source_registry": "actual file equals ledger",
+    "adapter_and_production_test": "actual files equal ledger",
+    "registered_reference_revision_01_manifests": "all four canonical payload hashes equal both source registry and ledger"
+  },
+  "lineage_note": "The registry and ledger retain the registered revision_01 reference manifest identities produced under the earlier adapter. Revision_02 outputs are separate no-overwrite rereview artifacts and independently reproduce identical scientific and numeric content.",
+  "launch_gate": {
+    "T42_data_review": "passed",
+    "T43": "prohibited",
+    "open_blocker_count": 0,
+    "open_major_count": 0,
+    "safe_next_step": "submit the repaired T42 package and this independent rereview to scientific_reviewer; do not launch T43"
+  },
+  "limitations": [
+    "No new qMain run exists, so future run behavior remains unverified.",
+    "Two seeds support only exploratory branch logic and descriptive uncertainty; they do not support robust stochastic inference.",
+    "EJMI is an exploratory registered diagnostic and is not a frozen Breakdown or capacity threshold.",
+    "The formal experiment protocol remains empty and unfrozen."
+  ],
+  "actual_sumo_starts": 0,
+  "actual_netconvert_operations": 0,
+  "actual_traci_connections": 0,
+  "actual_gui_starts": 0
+}

@@ -1,0 +1,322 @@
+{
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "closed_findings": [
+    {
+      "id": "T43-TEST-STATE-01",
+      "resolution": "Production 72/72 and independent 40/40 pass. Current-state tests verify 4/4/0/0 and four receipts/overlay entries; temporary fixtures retain pre/partial-state rejection checks."
+    }
+  ],
+  "confidence": {
+    "raw_reconstruction": "high",
+    "scientific_interpretation": "pending_required_review",
+    "technical_data_integrity": "high"
+  },
+  "coverage": {
+    "candidate_runs": "2/2",
+    "class_endpoint_units": "16/16",
+    "downstream_e1_30s_bins": "180/180",
+    "fcd_frames": "5400/5400",
+    "independent_field_comparisons": "2342/2342",
+    "internal_e1_30s_bins": "180/180",
+    "required_observation_audits": "14/14",
+    "source_files": "58/58"
+  },
+  "current_hashes": {
+    "adapter": "899305e7dfba2222ea552c0b453d3078f39b1d254d2805fb71287625864dcb1b",
+    "candidate_manifest_receipt_registry": "e4acfb5fd3d9f71ac0e55e5ccc8df951a1a7cf79d92146c817136656a66b5bca",
+    "independent_tests": "25b1af210dcadee6388716666d6e3a2fc4217591c5b6c6a13c47acb5d5fea39d",
+    "ledger": "b745ccaedf5a9b8c4bcf94119711f9fa4c7e0c12b12d3125c7bd5e337faefff5",
+    "production_tests": "41cf5c93b1b99e920df77a41921ab837380f33effdc1d8328e6360c2af6de448",
+    "runtime_source_registry": "04fc91c77c97f40e90513f069f572df9e2f0302aec7b8bb085b763b4dcef191d"
+  },
+  "formal_protocol_status": "empty_not_frozen",
+  "independent_reconstruction": {
+    "all_passed": true,
+    "no_production_analysis_import": true,
+    "path": "data/processed/stage4_qmain_sequential_20260912_v1/analysis/tier2/revision_01/independent_reconstruction.json",
+    "script_sha256": "480e8d1fe78946ccdb2a222cbcf4d7a0e0f38b8caa89100d4f6880b069e73604",
+    "sha256": "38439aa2b5e01f9e71994a630432ec8fb77f72788899693b47db71e6fcc14a54"
+  },
+  "interpretation_boundary": "Exploratory local scenario diagnostics only; not formal thesis evidence, causal proof, capacity, Breakdown, Capacity Drop, controller performance, or a sweet spot.",
+  "manifest_receipt_chain": {
+    "all_passed": true,
+    "path": "data/processed/stage4_qmain_sequential_20260912_v1/analysis/tier2/revision_01/manifest_receipt_verification.json",
+    "sha256": "8dcce0ecaef0ce8f4a00bb8a2cabe1ba85bd9d14cd9a12a1fe3f0f1c64a09222"
+  },
+  "open_findings": [],
+  "phase": "Stage 4 exploratory validation; T43 complete data analysis",
+  "ready_for_scientific_review": true,
+  "revision": 2,
+  "run_states": {
+    "QM3650S17": {
+      "EJMI": {
+        "aggregate_checks": {
+          "A": false,
+          "B": false
+        },
+        "persistence": {
+          "blocks": [
+            {
+              "begin": 300,
+              "end": 420,
+              "pass_120": false,
+              "pass_30_count": 0,
+              "pass_60_count": 0,
+              "passed": false
+            },
+            {
+              "begin": 420,
+              "end": 540,
+              "pass_120": false,
+              "pass_30_count": 0,
+              "pass_60_count": 0,
+              "passed": false
+            },
+            {
+              "begin": 540,
+              "end": 660,
+              "pass_120": false,
+              "pass_30_count": 0,
+              "pass_60_count": 0,
+              "passed": false
+            },
+            {
+              "begin": 660,
+              "end": 780,
+              "pass_120": false,
+              "pass_30_count": 0,
+              "pass_60_count": 0,
+              "passed": false
+            },
+            {
+              "begin": 780,
+              "end": 900,
+              "pass_120": false,
+              "pass_30_count": 0,
+              "pass_60_count": 0,
+              "passed": false
+            },
+            {
+              "begin": 900,
+              "end": 1020,
+              "pass_120": false,
+              "pass_30_count": 0,
+              "pass_60_count": 0,
+              "passed": false
+            },
+            {
+              "begin": 1020,
+              "end": 1140,
+              "pass_120": false,
+              "pass_30_count": 0,
+              "pass_60_count": 0,
+              "passed": false
+            },
+            {
+              "begin": 1140,
+              "end": 1260,
+              "pass_120": false,
+              "pass_30_count": 0,
+              "pass_60_count": 0,
+              "passed": false
+            },
+            {
+              "begin": 1260,
+              "end": 1380,
+              "pass_120": false,
+              "pass_30_count": 1,
+              "pass_60_count": 0,
+              "passed": false
+            },
+            {
+              "begin": 1380,
+              "end": 1500,
+              "pass_120": false,
+              "pass_30_count": 0,
+              "pass_60_count": 0,
+              "passed": false
+            }
+          ],
+          "passed": false
+        },
+        "status": "not_identified"
+      },
+      "M_stopped_episodes": 0,
+      "R": {
+        "a_arrival_count": 0,
+        "a_bracketed_event_count": 0,
+        "a_unbracketed_event_count": 0,
+        "arrival_without_passage_ids": [],
+        "coverage_complete": true,
+        "denominator_all_observed_r_passage_events": 300,
+        "status": "clear_exclusion"
+      },
+      "shared_exposure": {
+        "by_class": {
+          "R": {
+            "episode_count": 25,
+            "stopped_vehicle_seconds": 25093.0
+          },
+          "U": {
+            "episode_count": 14,
+            "stopped_vehicle_seconds": 13148.0
+          }
+        },
+        "cooccurrence_support_s": 1251
+      }
+    },
+    "QM3650S23": {
+      "EJMI": {
+        "aggregate_checks": {
+          "A": false,
+          "B": false
+        },
+        "persistence": {
+          "blocks": [
+            {
+              "begin": 300,
+              "end": 420,
+              "pass_120": false,
+              "pass_30_count": 0,
+              "pass_60_count": 0,
+              "passed": false
+            },
+            {
+              "begin": 420,
+              "end": 540,
+              "pass_120": false,
+              "pass_30_count": 0,
+              "pass_60_count": 0,
+              "passed": false
+            },
+            {
+              "begin": 540,
+              "end": 660,
+              "pass_120": false,
+              "pass_30_count": 1,
+              "pass_60_count": 0,
+              "passed": false
+            },
+            {
+              "begin": 660,
+              "end": 780,
+              "pass_120": false,
+              "pass_30_count": 0,
+              "pass_60_count": 0,
+              "passed": false
+            },
+            {
+              "begin": 780,
+              "end": 900,
+              "pass_120": false,
+              "pass_30_count": 0,
+              "pass_60_count": 0,
+              "passed": false
+            },
+            {
+              "begin": 900,
+              "end": 1020,
+              "pass_120": false,
+              "pass_30_count": 0,
+              "pass_60_count": 0,
+              "passed": false
+            },
+            {
+              "begin": 1020,
+              "end": 1140,
+              "pass_120": false,
+              "pass_30_count": 0,
+              "pass_60_count": 0,
+              "passed": false
+            },
+            {
+              "begin": 1140,
+              "end": 1260,
+              "pass_120": false,
+              "pass_30_count": 0,
+              "pass_60_count": 0,
+              "passed": false
+            },
+            {
+              "begin": 1260,
+              "end": 1380,
+              "pass_120": false,
+              "pass_30_count": 1,
+              "pass_60_count": 0,
+              "passed": false
+            },
+            {
+              "begin": 1380,
+              "end": 1500,
+              "pass_120": false,
+              "pass_30_count": 0,
+              "pass_60_count": 0,
+              "passed": false
+            }
+          ],
+          "passed": false
+        },
+        "status": "not_identified"
+      },
+      "M_stopped_episodes": 0,
+      "R": {
+        "a_arrival_count": 0,
+        "a_bracketed_event_count": 0,
+        "a_unbracketed_event_count": 0,
+        "arrival_without_passage_ids": [],
+        "coverage_complete": true,
+        "denominator_all_observed_r_passage_events": 300,
+        "status": "clear_exclusion"
+      },
+      "shared_exposure": {
+        "by_class": {
+          "R": {
+            "episode_count": 22,
+            "stopped_vehicle_seconds": 25101.0
+          },
+          "U": {
+            "episode_count": 13,
+            "stopped_vehicle_seconds": 13159.0
+          }
+        },
+        "cooccurrence_support_s": 1257
+      }
+    }
+  },
+  "safest_next_step": "Submit Tier2 and final exploratory package to scientific_reviewer.",
+  "schema_version": 1,
+  "simulation_accounting": {
+    "actual_gui_starts": 0,
+    "actual_netconvert_operations": 4,
+    "actual_sumo_starts": 4,
+    "actual_traci_connections": 0,
+    "new_starts_during_analysis": {
+      "gui": 0,
+      "netconvert": 0,
+      "sumo": 0,
+      "traci": 0
+    }
+  },
+  "status": "passed",
+  "supersedes": "T43_tier2_independent_verification_revision_01.json",
+  "supersession_reason": "closes stale pre-Tier2 test-state finding after production and independent fixtures were updated without weakening pre/partial-state gates",
+  "task": "T43 Tier2 independent data verification",
+  "test_results": {
+    "AST_no_simulation_imports": "passed",
+    "combined": {
+      "passed": 112,
+      "total": 112
+    },
+    "independent": {
+      "passed": 40,
+      "total": 40
+    },
+    "logical_status_reproduction": "byte_identical",
+    "production": {
+      "passed": 72,
+      "total": 72
+    },
+    "py_compile": "passed",
+    "registered_final_reproduction": "byte_identical"
+  }
+}

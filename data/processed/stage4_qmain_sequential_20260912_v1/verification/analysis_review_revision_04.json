@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "review_type": "independent data-contract and scientific-repair final rereview",
+  "revision": "revision_04",
+  "status": "accepted_for_scientific_review",
+  "review_boundary": "Exploratory T42 offline tooling only. This review does not authorize T43, select a Breakdown threshold, or establish causal or thesis claims.",
+  "closed_findings": [
+    "S4SR-M01",
+    "S4SR-M02",
+    "S4SR-M03",
+    "S4SR-M04",
+    "S4DA-R03-M01"
+  ],
+  "closed_minors": [
+    "nonnegative M lane-end distance",
+    "2--4 regular and 5 hard-cap netconvert budget",
+    "Stage 4 nVehEntered q label and Stage 3 nonmixing warning",
+    "historical no-overwrite preservation"
+  ],
+  "open_major_count": 0,
+  "recommendation": "The repaired T42 package can return to scientific_reviewer. T43 remains prohibited until that review passes and the user explicitly approves an exact no-pending launch card.",
+  "confidence": {
+    "offline_contract_and_decision_logic": "High",
+    "archived_reference_reconstruction": "High",
+    "future_nonempty_M_stop_candidate_behavior": "Moderate",
+    "future_new_run_behavior": "Unknown"
+  },
+  "actual_sumo_starts": 0,
+  "actual_netconvert_operations": 0,
+  "actual_traci_connections": 0,
+  "actual_gui_starts": 0
+}

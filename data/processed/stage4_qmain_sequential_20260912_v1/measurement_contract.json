@@ -1,0 +1,948 @@
+{
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "binary_hashes": {
+    "netconvert": "919f8491518379daeaf2e215a96e58edb4bed4894cbf6ef948788170d5bea9b5",
+    "sumo": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179"
+  },
+  "branch_rule": {
+    "any_unqualified_seed_disagreement_or_nonbranchable": "stop_unresolved",
+    "exclusion_and_not_positive_ejmi": [
+      "QM3350S17",
+      "QM3350S23"
+    ],
+    "maximum_tier2_branches": 1,
+    "passage_and_not_identified_ejmi": [
+      "QM3650S17",
+      "QM3650S23"
+    ],
+    "passage_and_positive_ejmi": "stop_supports_A",
+    "tier1": [
+      "QM3500S17",
+      "QM3500S23"
+    ]
+  },
+  "budget": {
+    "hard_netconvert_operation_cap": 5,
+    "hard_sumo_start_cap": 5,
+    "regular_netconvert_operations_max": 4,
+    "regular_netconvert_operations_min": 2,
+    "regular_new_sumo_starts_max": 4,
+    "regular_new_sumo_starts_min": 2,
+    "reserved_sumo_starts": 0,
+    "technical_retry_allowance": 1
+  },
+  "classification": "exploratory targeted validation; not formal or thesis evidence",
+  "contract_id": "stage4_qmain_sequential_offline_v1",
+  "controller": "none",
+  "demand_xml_number_rule": "int(round(rate_vehph * 1500 / 3600.0))",
+  "denominator_rules": {
+    "cancelled_runs_remain_in_registered_terminal_denominator": true,
+    "registration_universe_runs": 10,
+    "tier1_adjacent_matched_seed_comparisons": 4,
+    "tier1_endpoint_units": 48,
+    "tier1_used_runs": 6,
+    "tier2_adjacent_matched_seed_comparisons": 6,
+    "tier2_endpoint_units": 64,
+    "tier2_used_runs": 8
+  },
+  "e1": {
+    "internal_detector_ids": [
+      "mainline_merge_entry_e1_l0",
+      "mainline_merge_entry_e1_l1"
+    ],
+    "internal_output_suffixes": [
+      "outputs/mainline_merge_entry_e1_l0.xml",
+      "outputs/mainline_merge_entry_e1_l1.xml"
+    ],
+    "occupancy_rule": "arithmetic mean of the two lane occupancy percentages per aligned bin; duration-weighted across bins; never summed or called density",
+    "period_s": 30.0,
+    "q_rule": "sum nVehEntered across both lanes * 3600 / covered seconds",
+    "speed_rule": "sum(speed_mps*nVehContrib)/sum(nVehContrib) across both lanes; null when denominator=0"
+  },
+  "ejmi": {
+    "aggregate_rule": "candidate speed below min same-seed C/MH minus margin and occupancy above max plus margin in A and B",
+    "interpretation": "exploratory local sufficient discriminator; not Breakdown, Capacity Drop, capacity, or absence evidence",
+    "margins": {
+      "A": {
+        "delta_occ_percentage_points": 0.1658,
+        "delta_v_mps": 0.5516661889683938
+      },
+      "B": {
+        "delta_occ_percentage_points": 0.17725,
+        "delta_v_mps": 0.5020140721737434
+      }
+    },
+    "name": "EJMI sufficient signature",
+    "persistence_rule": "within B: one aligned 120s block passes, both contained 60s bins pass, and at least 3/4 contained 30s bins pass against same-clock C/MH envelopes"
+  },
+  "ejmi_reference_map": {
+    "QM3350S17": {
+      "candidate_q_main": 3350,
+      "candidate_run_id": "QM3350S17",
+      "candidate_seed": 17,
+      "lower": {
+        "manifest_path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/reference_C17_revision_01/run_manifest.json",
+        "manifest_payload_sha256": "916b4d35ee9e9ce0bd339f716cf902d080e0f520e1d04223f1752d266fdd562e",
+        "q_main": 3200,
+        "run_id": "C17",
+        "seed": 17,
+        "source_map_path": "data/processed/stage2_completion_20260909_v1/source_maps/C17_reused.json",
+        "source_map_sha256": "3a553c630bf3946cb87e133a1fe1fd392b99d571ffd36ea8f85a370481debbf0"
+      },
+      "upper": {
+        "manifest_path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/reference_MH17_revision_01/run_manifest.json",
+        "manifest_payload_sha256": "023e705bbbb8deaeb388fc3795719f9643ba8d9943c2b94c2392a4ea5d48e4f2",
+        "q_main": 3800,
+        "run_id": "MH17",
+        "seed": 17,
+        "source_map_path": "data/processed/stage2_completion_20260909_v1/source_maps/MH17_attempt1.json",
+        "source_map_sha256": "4a6ff66e7ff981a15db32e56905d88f93c8a903f4318887e17dc66a3f4fcd97f"
+      }
+    },
+    "QM3350S23": {
+      "candidate_q_main": 3350,
+      "candidate_run_id": "QM3350S23",
+      "candidate_seed": 23,
+      "lower": {
+        "manifest_path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/reference_C23_revision_01/run_manifest.json",
+        "manifest_payload_sha256": "629c1b3dcdd9821cad38006ec76cbe0d0499a47ad379e025a691d4b8305a7c1b",
+        "q_main": 3200,
+        "run_id": "C23",
+        "seed": 23,
+        "source_map_path": "data/processed/stage2_completion_20260909_v1/source_maps/C23_attempt1.json",
+        "source_map_sha256": "a09aaab37ab2ac3f70539c869d0b284781decd2adeddc82c23df7a3c942ed79f"
+      },
+      "upper": {
+        "manifest_path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/reference_MH23_revision_01/run_manifest.json",
+        "manifest_payload_sha256": "76612b00369f62c1d7005c656ec0fd22700ebf612e74c216d05756b0e50a9204",
+        "q_main": 3800,
+        "run_id": "MH23",
+        "seed": 23,
+        "source_map_path": "data/processed/stage2_completion_20260909_v1/source_maps/MH23_attempt1.json",
+        "source_map_sha256": "67e5644aad9f38e40d86c726bf27e881bfffe9199f2cab987db317c09925f7c1"
+      }
+    },
+    "QM3500S17": {
+      "candidate_q_main": 3500,
+      "candidate_run_id": "QM3500S17",
+      "candidate_seed": 17,
+      "lower": {
+        "manifest_path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/reference_C17_revision_01/run_manifest.json",
+        "manifest_payload_sha256": "916b4d35ee9e9ce0bd339f716cf902d080e0f520e1d04223f1752d266fdd562e",
+        "q_main": 3200,
+        "run_id": "C17",
+        "seed": 17,
+        "source_map_path": "data/processed/stage2_completion_20260909_v1/source_maps/C17_reused.json",
+        "source_map_sha256": "3a553c630bf3946cb87e133a1fe1fd392b99d571ffd36ea8f85a370481debbf0"
+      },
+      "upper": {
+        "manifest_path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/reference_MH17_revision_01/run_manifest.json",
+        "manifest_payload_sha256": "023e705bbbb8deaeb388fc3795719f9643ba8d9943c2b94c2392a4ea5d48e4f2",
+        "q_main": 3800,
+        "run_id": "MH17",
+        "seed": 17,
+        "source_map_path": "data/processed/stage2_completion_20260909_v1/source_maps/MH17_attempt1.json",
+        "source_map_sha256": "4a6ff66e7ff981a15db32e56905d88f93c8a903f4318887e17dc66a3f4fcd97f"
+      }
+    },
+    "QM3500S23": {
+      "candidate_q_main": 3500,
+      "candidate_run_id": "QM3500S23",
+      "candidate_seed": 23,
+      "lower": {
+        "manifest_path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/reference_C23_revision_01/run_manifest.json",
+        "manifest_payload_sha256": "629c1b3dcdd9821cad38006ec76cbe0d0499a47ad379e025a691d4b8305a7c1b",
+        "q_main": 3200,
+        "run_id": "C23",
+        "seed": 23,
+        "source_map_path": "data/processed/stage2_completion_20260909_v1/source_maps/C23_attempt1.json",
+        "source_map_sha256": "a09aaab37ab2ac3f70539c869d0b284781decd2adeddc82c23df7a3c942ed79f"
+      },
+      "upper": {
+        "manifest_path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/reference_MH23_revision_01/run_manifest.json",
+        "manifest_payload_sha256": "76612b00369f62c1d7005c656ec0fd22700ebf612e74c216d05756b0e50a9204",
+        "q_main": 3800,
+        "run_id": "MH23",
+        "seed": 23,
+        "source_map_path": "data/processed/stage2_completion_20260909_v1/source_maps/MH23_attempt1.json",
+        "source_map_sha256": "67e5644aad9f38e40d86c726bf27e881bfffe9199f2cab987db317c09925f7c1"
+      }
+    },
+    "QM3650S17": {
+      "candidate_q_main": 3650,
+      "candidate_run_id": "QM3650S17",
+      "candidate_seed": 17,
+      "lower": {
+        "manifest_path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/reference_C17_revision_01/run_manifest.json",
+        "manifest_payload_sha256": "916b4d35ee9e9ce0bd339f716cf902d080e0f520e1d04223f1752d266fdd562e",
+        "q_main": 3200,
+        "run_id": "C17",
+        "seed": 17,
+        "source_map_path": "data/processed/stage2_completion_20260909_v1/source_maps/C17_reused.json",
+        "source_map_sha256": "3a553c630bf3946cb87e133a1fe1fd392b99d571ffd36ea8f85a370481debbf0"
+      },
+      "upper": {
+        "manifest_path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/reference_MH17_revision_01/run_manifest.json",
+        "manifest_payload_sha256": "023e705bbbb8deaeb388fc3795719f9643ba8d9943c2b94c2392a4ea5d48e4f2",
+        "q_main": 3800,
+        "run_id": "MH17",
+        "seed": 17,
+        "source_map_path": "data/processed/stage2_completion_20260909_v1/source_maps/MH17_attempt1.json",
+        "source_map_sha256": "4a6ff66e7ff981a15db32e56905d88f93c8a903f4318887e17dc66a3f4fcd97f"
+      }
+    },
+    "QM3650S23": {
+      "candidate_q_main": 3650,
+      "candidate_run_id": "QM3650S23",
+      "candidate_seed": 23,
+      "lower": {
+        "manifest_path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/reference_C23_revision_01/run_manifest.json",
+        "manifest_payload_sha256": "629c1b3dcdd9821cad38006ec76cbe0d0499a47ad379e025a691d4b8305a7c1b",
+        "q_main": 3200,
+        "run_id": "C23",
+        "seed": 23,
+        "source_map_path": "data/processed/stage2_completion_20260909_v1/source_maps/C23_attempt1.json",
+        "source_map_sha256": "a09aaab37ab2ac3f70539c869d0b284781decd2adeddc82c23df7a3c942ed79f"
+      },
+      "upper": {
+        "manifest_path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/reference_MH23_revision_01/run_manifest.json",
+        "manifest_payload_sha256": "76612b00369f62c1d7005c656ec0fd22700ebf612e74c216d05756b0e50a9204",
+        "q_main": 3800,
+        "run_id": "MH23",
+        "seed": 23,
+        "source_map_path": "data/processed/stage2_completion_20260909_v1/source_maps/MH23_attempt1.json",
+        "source_map_sha256": "67e5644aad9f38e40d86c726bf27e881bfffe9199f2cab987db317c09925f7c1"
+      }
+    }
+  },
+  "endpoint_rule": {
+    "classes": [
+      "M",
+      "R",
+      "U",
+      "X"
+    ],
+    "fields": [
+      "planned",
+      "entered",
+      "arrived",
+      "outside",
+      "in_network",
+      "coverage"
+    ],
+    "identities": [
+      "planned=entered+outside",
+      "entered=arrived+in_network"
+    ],
+    "times_s": [
+      1500.0,
+      2700.0
+    ]
+  },
+  "final_decision_rule": {
+    "additional_points_or_seeds_prohibited": true,
+    "pair_requirement": "every used qMain has exactly seeds 17 and 23 and all manifests are technically qualified",
+    "supports_A_within_registered_points": "at least one used qMain has both seeds clear_passage and EJMI positive, with no unresolved state and no same-point clear_exclusion plus positive contradiction",
+    "supports_B_pattern_within_registered_points": "all used seeds are qualified and consistent, every EJMI is not_identified, and q-ordered R states contain one transition from one-or-more clear_passage points to one-or-more clear_exclusion points",
+    "unresolved": "same-point positive plus exclusion, missing/incomplete seed pair, unqualified run, seed disagreement, unregistered state, nonmonotone or nondiscriminating pattern",
+    "used_candidate_universes": [
+      [
+        3500
+      ],
+      [
+        3350,
+        3500
+      ],
+      [
+        3500,
+        3650
+      ]
+    ]
+  },
+  "fixed_demand_vehph": {
+    "R": 720.0,
+    "U": 360.0,
+    "X": 180.0
+  },
+  "fixed_plan_counts": {
+    "R": 300,
+    "U": 150,
+    "X": 75
+  },
+  "fixed_runtime_hashes": {
+    "scenario.con.xml": "d154948200c9b4d9a3d54bf04647357daaff0e6a19293f19fcef457ee4ae4ea5",
+    "scenario.edg.xml": "d6c7d6df0b8a5afc60a8bfedd796b9d14baa56ec44cf322e3129f976396cff53",
+    "scenario.nod.xml": "b1577412ba28470abe3270913833a4053ca6be174f2eede55de77aa5b8a2c923",
+    "scenario.sumocfg": "0e0f99a7af694e7f448efdb66837143100478da2151ae83ba3e1c6772a811db0",
+    "scenario.tll.xml": "89f25ab5020e4f2df2fc035233b038c89cc80cf748f6dca19b5584e829df3ecc"
+  },
+  "logical_run_ids": [
+    "C17",
+    "C23",
+    "MH17",
+    "MH23",
+    "QM3500S17",
+    "QM3500S23",
+    "QM3350S17",
+    "QM3350S23",
+    "QM3650S17",
+    "QM3650S23"
+  ],
+  "network_access": false,
+  "no_overwrite": true,
+  "non_binding_historical_proposal_snapshot": {
+    "path": "docs/STAGE4_QMAIN_SEQUENTIAL_REGISTRATION_PROPOSAL.md",
+    "role": "non_binding_historical_snapshot",
+    "sha256": "90a49cd31f7149c160b8a4c8d50ac53695811d32652b3560820f92f9237f0909",
+    "validation_rule": "current human document may change; validate_context must not compare it; registration_payload.json is the machine scientific authority"
+  },
+  "only_intervention": "q_main",
+  "planned_M_counts": {
+    "3200": 1333,
+    "3350": 1396,
+    "3500": 1458,
+    "3650": 1521,
+    "3800": 1583
+  },
+  "q_main_points": [
+    3200,
+    3350,
+    3500,
+    3650,
+    3800
+  ],
+  "r_passage": {
+    "clear_exclusion": "zero such events with complete FCD/identity/boundary coverage and no arrival contradiction",
+    "clear_passage": "at least one identity-resolved consecutive-1Hz bracketed first downstream R event",
+    "downstream_lanes": [
+      "main_down_0",
+      "main_down_1"
+    ],
+    "known_lane_ids": [
+      ":freeway_merge_0_0",
+      ":freeway_merge_1_0",
+      ":freeway_merge_1_1",
+      ":ramp_mid_0_0",
+      ":urban_diverge_0_0",
+      ":urban_diverge_1_0",
+      ":urban_tls_0_0",
+      ":urban_tls_1_0",
+      "cross_in_0",
+      "cross_out_0",
+      "main_down_0",
+      "main_down_1",
+      "main_up_0",
+      "main_up_1",
+      "ramp_accel_0",
+      "ramp_storage_0",
+      "shared_approach_0",
+      "urban_in_0",
+      "urban_out_0"
+    ],
+    "unresolved": "one-zero/one-nonzero across seeds, missing/duplicate/unknown coverage, unbracketed/arrival contradiction",
+    "window": [
+      0.0,
+      1500.0
+    ]
+  },
+  "registration_payload_path": "data/processed/stage4_qmain_sequential_20260912_v1/registration_payload.json",
+  "registration_payload_sha256": "d934b62903081163495b7e17cf72c52786e1dfb864aa5d9a9d3eb5c2eb9a952a",
+  "required_observations": {
+    "compiled_topology": {
+      "registered_reference_network_sha256": {
+        "C17": "a83bb0c3a03b7e74cf8c2360336eb0dfbb330073cf8b8f6aea9940ff7cf3d8ea",
+        "C23": "d20ac5e0feb0d4b7d7a520702ec925d985315be6e27b461d69518cb1185eb551",
+        "MH17": "54ed1e02a669d2f408a484d97ad77a2f158a940e358c1e931015fed54bcb658d",
+        "MH23": "db4f9c5ea8923f667c709f92d90be8753a8c27900dc21f0946429291a337bb79"
+      },
+      "required_lane_ids": [
+        ":freeway_merge_0_0",
+        ":freeway_merge_1_0",
+        ":freeway_merge_1_1",
+        ":ramp_mid_0_0",
+        ":urban_diverge_0_0",
+        ":urban_diverge_1_0",
+        ":urban_tls_0_0",
+        ":urban_tls_1_0",
+        "cross_in_0",
+        "cross_out_0",
+        "main_down_0",
+        "main_down_1",
+        "main_up_0",
+        "main_up_1",
+        "ramp_accel_0",
+        "ramp_storage_0",
+        "shared_approach_0",
+        "urban_in_0",
+        "urban_out_0"
+      ],
+      "required_tls_id": "urban_tls",
+      "required_tls_phase_states": [
+        "Gr",
+        "yr",
+        "rG",
+        "ry"
+      ],
+      "semantic_rule": "compiled lanes must match registered edge, length and speed; urban_tls phases and detector lanes must exist"
+    },
+    "e1_detectors": [
+      {
+        "detector_id": "merge_upstream_e1_l0",
+        "group": "origin_insertion_contaminated",
+        "lane_id": "main_up_0",
+        "output_suffix": "outputs/merge_upstream_e1_l0.xml",
+        "period_s": 30.0,
+        "position_m": -1.0,
+        "qualification": "technical_placeholder; E1 has no vehicle IDs"
+      },
+      {
+        "detector_id": "merge_upstream_e1_l1",
+        "group": "origin_insertion_contaminated",
+        "lane_id": "main_up_1",
+        "output_suffix": "outputs/merge_upstream_e1_l1.xml",
+        "period_s": 30.0,
+        "position_m": -1.0,
+        "qualification": "technical_placeholder; E1 has no vehicle IDs"
+      },
+      {
+        "detector_id": "mainline_merge_entry_e1_l0",
+        "group": "M-only_internal_merge_entry",
+        "lane_id": ":freeway_merge_1_0",
+        "output_suffix": "outputs/mainline_merge_entry_e1_l0.xml",
+        "period_s": 30.0,
+        "position_m": 4.32,
+        "qualification": "technical_placeholder; E1 has no vehicle IDs"
+      },
+      {
+        "detector_id": "mainline_merge_entry_e1_l1",
+        "group": "M-only_internal_merge_entry",
+        "lane_id": ":freeway_merge_1_1",
+        "output_suffix": "outputs/mainline_merge_entry_e1_l1.xml",
+        "period_s": 30.0,
+        "position_m": 4.32,
+        "qualification": "technical_placeholder; E1 has no vehicle IDs"
+      },
+      {
+        "detector_id": "merge_downstream_e1_l0",
+        "group": "downstream_passage",
+        "lane_id": "main_down_0",
+        "output_suffix": "outputs/merge_downstream_e1_l0.xml",
+        "period_s": 30.0,
+        "position_m": 100.0,
+        "qualification": "technical_placeholder; E1 has no vehicle IDs"
+      },
+      {
+        "detector_id": "merge_downstream_e1_l1",
+        "group": "downstream_passage",
+        "lane_id": "main_down_1",
+        "output_suffix": "outputs/merge_downstream_e1_l1.xml",
+        "period_s": 30.0,
+        "position_m": 100.0,
+        "qualification": "technical_placeholder; E1 has no vehicle IDs"
+      }
+    ],
+    "e2_detectors": [
+      {
+        "begin_pos_m": 0.0,
+        "detector_id": "shared_boundary_e2",
+        "end_pos_m": 238.8,
+        "lane_id": "shared_approach_0",
+        "period_s": 30.0,
+        "status": "coverage_only"
+      },
+      {
+        "begin_pos_m": 0.0,
+        "detector_id": "ramp_storage_e2",
+        "end_pos_m": 204.49,
+        "lane_id": "ramp_storage_0",
+        "period_s": 30.0,
+        "status": "coverage_only"
+      }
+    ],
+    "fcd": {
+      "empty_frame_semantics": "present frame with zero vehicles; not a missing frame",
+      "expected_begin_s": 0.0,
+      "expected_end_s": 2700.0,
+      "expected_label_count": 2700,
+      "sampling_period_s": 1.0
+    },
+    "lanes": {
+      ":freeway_merge_0_0": {
+        "distance_to_merge_start_m": -12.599999999999909,
+        "edge_id": ":freeway_merge_0",
+        "first_downstream_eligible": false,
+        "is_internal": true,
+        "length_m": 12.6,
+        "observed_classes": [
+          "R"
+        ],
+        "r_path_end_m": 1150.2699999999998,
+        "r_path_start_m": 1137.6699999999998,
+        "region": "ramp_merge_internal",
+        "speed_limit_mps": 30.55,
+        "tls_link": null
+      },
+      ":freeway_merge_1_0": {
+        "distance_to_merge_start_m": null,
+        "edge_id": ":freeway_merge_1",
+        "first_downstream_eligible": false,
+        "is_internal": true,
+        "length_m": 8.64,
+        "observed_classes": [
+          "M"
+        ],
+        "r_path_end_m": null,
+        "r_path_start_m": null,
+        "region": "mainline_merge_internal",
+        "speed_limit_mps": 33.33,
+        "tls_link": null
+      },
+      ":freeway_merge_1_1": {
+        "distance_to_merge_start_m": null,
+        "edge_id": ":freeway_merge_1",
+        "first_downstream_eligible": false,
+        "is_internal": true,
+        "length_m": 8.64,
+        "observed_classes": [
+          "M"
+        ],
+        "r_path_end_m": null,
+        "r_path_start_m": null,
+        "region": "mainline_merge_internal",
+        "speed_limit_mps": 33.33,
+        "tls_link": null
+      },
+      ":ramp_mid_0_0": {
+        "distance_to_merge_start_m": -189.89999999999975,
+        "edge_id": ":ramp_mid_0",
+        "first_downstream_eligible": false,
+        "is_internal": true,
+        "length_m": 81.98,
+        "observed_classes": [
+          "R"
+        ],
+        "r_path_end_m": 1042.35,
+        "r_path_start_m": 960.37,
+        "region": "ramp_mid_internal",
+        "speed_limit_mps": 25.0,
+        "tls_link": null
+      },
+      ":urban_diverge_0_0": {
+        "distance_to_merge_start_m": null,
+        "edge_id": ":urban_diverge_0",
+        "first_downstream_eligible": false,
+        "is_internal": true,
+        "length_m": 9.03,
+        "observed_classes": [
+          "U"
+        ],
+        "r_path_end_m": null,
+        "r_path_start_m": null,
+        "region": "urban_diverge_internal",
+        "speed_limit_mps": 6.51,
+        "tls_link": null
+      },
+      ":urban_diverge_1_0": {
+        "distance_to_merge_start_m": -507.4699999999998,
+        "edge_id": ":urban_diverge_1",
+        "first_downstream_eligible": false,
+        "is_internal": true,
+        "length_m": 113.08,
+        "observed_classes": [
+          "R"
+        ],
+        "r_path_end_m": 755.88,
+        "r_path_start_m": 642.8,
+        "region": "ramp_diverge_internal",
+        "speed_limit_mps": 18.05,
+        "tls_link": null
+      },
+      ":urban_tls_0_0": {
+        "distance_to_merge_start_m": -757.4699999999998,
+        "edge_id": ":urban_tls_0",
+        "first_downstream_eligible": false,
+        "is_internal": true,
+        "length_m": 11.2,
+        "observed_classes": [
+          "R",
+          "U"
+        ],
+        "r_path_end_m": 404.0,
+        "r_path_start_m": 392.8,
+        "region": "urban_tls_internal",
+        "speed_limit_mps": 13.89,
+        "tls_link": 0
+      },
+      ":urban_tls_1_0": {
+        "distance_to_merge_start_m": null,
+        "edge_id": ":urban_tls_1",
+        "first_downstream_eligible": false,
+        "is_internal": true,
+        "length_m": 11.2,
+        "observed_classes": [
+          "X"
+        ],
+        "r_path_end_m": null,
+        "r_path_start_m": null,
+        "region": "cross_tls_internal",
+        "speed_limit_mps": 13.89,
+        "tls_link": 1
+      },
+      "cross_in_0": {
+        "distance_to_merge_start_m": null,
+        "edge_id": "cross_in",
+        "first_downstream_eligible": false,
+        "is_internal": false,
+        "length_m": 446.0,
+        "observed_classes": [
+          "X"
+        ],
+        "r_path_end_m": null,
+        "r_path_start_m": null,
+        "region": "cross_origin",
+        "speed_limit_mps": 13.89,
+        "tls_link": 1
+      },
+      "cross_out_0": {
+        "distance_to_merge_start_m": null,
+        "edge_id": "cross_out",
+        "first_downstream_eligible": false,
+        "is_internal": false,
+        "length_m": 442.8,
+        "observed_classes": [
+          "X"
+        ],
+        "r_path_end_m": null,
+        "r_path_start_m": null,
+        "region": "cross_out",
+        "speed_limit_mps": 13.89,
+        "tls_link": null
+      },
+      "main_down_0": {
+        "distance_to_merge_start_m": 0.0,
+        "edge_id": "main_down",
+        "first_downstream_eligible": true,
+        "is_internal": false,
+        "length_m": 796.49,
+        "observed_classes": [
+          "M",
+          "R"
+        ],
+        "r_path_end_m": 1946.7599999999998,
+        "r_path_start_m": 1150.2699999999998,
+        "region": "mainline_downstream",
+        "speed_limit_mps": 33.33,
+        "tls_link": null
+      },
+      "main_down_1": {
+        "distance_to_merge_start_m": 0.0,
+        "edge_id": "main_down",
+        "first_downstream_eligible": true,
+        "is_internal": false,
+        "length_m": 796.49,
+        "observed_classes": [
+          "M",
+          "R"
+        ],
+        "r_path_end_m": 1946.7599999999998,
+        "r_path_start_m": 1150.2699999999998,
+        "region": "mainline_downstream",
+        "speed_limit_mps": 33.33,
+        "tls_link": null
+      },
+      "main_up_0": {
+        "distance_to_merge_start_m": null,
+        "edge_id": "main_up",
+        "first_downstream_eligible": false,
+        "is_internal": false,
+        "length_m": 1394.87,
+        "observed_classes": [
+          "M"
+        ],
+        "r_path_end_m": null,
+        "r_path_start_m": null,
+        "region": "mainline_origin_observation",
+        "speed_limit_mps": 33.33,
+        "tls_link": null
+      },
+      "main_up_1": {
+        "distance_to_merge_start_m": null,
+        "edge_id": "main_up",
+        "first_downstream_eligible": false,
+        "is_internal": false,
+        "length_m": 1394.87,
+        "observed_classes": [
+          "M"
+        ],
+        "r_path_end_m": null,
+        "r_path_start_m": null,
+        "region": "mainline_origin_observation",
+        "speed_limit_mps": 33.33,
+        "tls_link": null
+      },
+      "ramp_accel_0": {
+        "distance_to_merge_start_m": -107.91999999999985,
+        "edge_id": "ramp_accel",
+        "first_downstream_eligible": false,
+        "is_internal": false,
+        "length_m": 95.32,
+        "observed_classes": [
+          "R"
+        ],
+        "r_path_end_m": 1137.6699999999998,
+        "r_path_start_m": 1042.35,
+        "region": "ramp_accel",
+        "speed_limit_mps": 27.78,
+        "tls_link": null
+      },
+      "ramp_storage_0": {
+        "distance_to_merge_start_m": -394.38999999999976,
+        "edge_id": "ramp_storage",
+        "first_downstream_eligible": false,
+        "is_internal": false,
+        "length_m": 204.49,
+        "observed_classes": [
+          "R"
+        ],
+        "r_path_end_m": 960.37,
+        "r_path_start_m": 755.88,
+        "region": "ramp_storage",
+        "speed_limit_mps": 22.22,
+        "tls_link": null
+      },
+      "shared_approach_0": {
+        "distance_to_merge_start_m": -746.2699999999998,
+        "edge_id": "shared_approach",
+        "first_downstream_eligible": false,
+        "is_internal": false,
+        "length_m": 238.8,
+        "observed_classes": [
+          "R",
+          "U"
+        ],
+        "r_path_end_m": 642.8,
+        "r_path_start_m": 404.0,
+        "region": "shared_approach",
+        "speed_limit_mps": 13.89,
+        "tls_link": null
+      },
+      "urban_in_0": {
+        "distance_to_merge_start_m": -1150.2699999999998,
+        "edge_id": "urban_in",
+        "first_downstream_eligible": false,
+        "is_internal": false,
+        "length_m": 392.8,
+        "observed_classes": [
+          "R",
+          "U"
+        ],
+        "r_path_end_m": 392.8,
+        "r_path_start_m": 0.0,
+        "region": "urban_origin",
+        "speed_limit_mps": 13.89,
+        "tls_link": 0
+      },
+      "urban_out_0": {
+        "distance_to_merge_start_m": null,
+        "edge_id": "urban_out",
+        "first_downstream_eligible": false,
+        "is_internal": false,
+        "length_m": 442.8,
+        "observed_classes": [
+          "U"
+        ],
+        "r_path_end_m": null,
+        "r_path_start_m": null,
+        "region": "urban_out",
+        "speed_limit_mps": 13.89,
+        "tls_link": null
+      }
+    },
+    "q_definition": {
+      "demand_duration_s": 1500.0,
+      "internal_and_downstream_e1_q_rule": "sum nVehEntered across two declared lanes * 3600 / covered seconds",
+      "planned_demand_vehph_rule": "planned_count * 3600 / demand_duration_s",
+      "realized_entry_duration_s": 1500.0,
+      "realized_entry_vehph_A_rule": "covered class-specific entered count at endpoint_s=1500 * 3600 / A duration",
+      "realized_entry_window": "A=[0,1500)",
+      "requested_input_unit": "veh/h",
+      "warning": "planned demand, realized network entry, and E1 passage flow are distinct quantities; Stage 4 E1 q uses nVehEntered; do not mix with Stage 3 nVehContrib q values"
+    },
+    "qualification_rules": {
+      "depart_position": "all entered M tripinfo rows grouped by actual depart lane; count equals M entered at 2700",
+      "downstream_e1": "both declared lanes provide all 90 aligned 30 s bins over Full",
+      "entry_accounting": "exactly one covered endpoint_s=1500 row per M/R/U/X class; entered is an integer in [0, planned]",
+      "fcd": "2700 unique 1 Hz frames; no missing/extra frames, duplicate identities, unknown IDs or unknown lanes",
+      "m_stopped": "speed <= 0.1 m/s; episode support uses Full labels and A/B/Post slices retain parent IDs",
+      "r_propagation": "five mutually exclusive contract-derived R-path regions; order and contradictions retained",
+      "shared_exposure": "stopped R and U Full-label intersection on shared_approach; vehicle-seconds are observations",
+      "tls": "urban_tls has all 2700 expected labels and movement-specific link index context",
+      "warnings": "all registered technical diagnostic checks true and every required output coverage check passes"
+    },
+    "r_path": {
+      "merge_start_m": 1150.2699999999998,
+      "origin": "start of urban_in",
+      "positive_direction": "toward main_down",
+      "qualification": "compiled lane-length coordinate; M/U/X lanes outside the R path remain null"
+    },
+    "required_candidate_manifest_sections": [
+      "planned_demand_vehph",
+      "realized_entry_vehph_A",
+      "downstream_e1",
+      "m_stopped_episodes",
+      "m_stopped_position_range",
+      "m_depart_position_range",
+      "r_propagation",
+      "shared_r_u_stopped_exposure",
+      "tls_context",
+      "warning_coverage_audit"
+    ],
+    "scenario_add_semantics": {
+      "e1_ids": [
+        "merge_upstream_e1_l0",
+        "merge_upstream_e1_l1",
+        "mainline_merge_entry_e1_l0",
+        "mainline_merge_entry_e1_l1",
+        "merge_downstream_e1_l0",
+        "merge_downstream_e1_l1"
+      ],
+      "e2_ids": [
+        "shared_boundary_e2",
+        "ramp_storage_e2"
+      ],
+      "source_e2_end_rule": "-0.1 source fallback; runtime must equal compiled named-lane length",
+      "source_path": "config/scenarios/minimal_uncontrolled/scenario.add.xml",
+      "source_sha256": "8189e35c5d8224b91b6de57e3bcaf0a7a43139e73af0f50e2ea73d2224d80828",
+      "tls_event": {
+        "source": "urban_tls",
+        "type": "SaveTLSStates"
+      }
+    },
+    "schema_version": 2,
+    "stop_definition": {
+      "id": "technical_stop_speed_le_0_1",
+      "operator": "<=",
+      "qualification": "technical stop sample; not congestion",
+      "speed_threshold_mps": 0.1
+    },
+    "tls": {
+      "id": "urban_tls",
+      "movements": [
+        {
+          "class_scope": [
+            "R",
+            "U"
+          ],
+          "from": "urban_in",
+          "link_index": 0,
+          "to": "shared_approach"
+        },
+        {
+          "class_scope": [
+            "X"
+          ],
+          "from": "cross_in",
+          "link_index": 1,
+          "to": "cross_out"
+        }
+      ],
+      "phases": [
+        {
+          "duration": "45",
+          "state": "Gr"
+        },
+        {
+          "duration": "3",
+          "state": "yr"
+        },
+        {
+          "duration": "9",
+          "state": "rG"
+        },
+        {
+          "duration": "3",
+          "state": "ry"
+        }
+      ],
+      "program_id": "technical_placeholder",
+      "rule": "resolve the movement-specific link index; never use the first character for every movement",
+      "type": "static"
+    },
+    "windows": {
+      "A": {
+        "begin_s": 0.0,
+        "end_s": 1500.0,
+        "qualification": "exploratory finite horizon"
+      },
+      "B": {
+        "begin_s": 300.0,
+        "end_s": 1500.0,
+        "qualification": "B is a sensitivity cut, not verified steady-state warm-up"
+      },
+      "Full": {
+        "begin_s": 0.0,
+        "end_s": 2700.0,
+        "qualification": "exploratory finite horizon"
+      },
+      "Post": {
+        "begin_s": 1500.0,
+        "end_s": 2700.0,
+        "qualification": "exploratory finite horizon"
+      }
+    }
+  },
+  "rounding_tolerances": {
+    "counts": 0,
+    "derived_float_abs": 1e-09,
+    "derived_float_rel": 1e-12,
+    "timestamps_abs_s": 1e-09
+  },
+  "scenario_variant_path": "config/scenarios/minimal_uncontrolled",
+  "schema_version": 1,
+  "seeds": [
+    17,
+    23
+  ],
+  "simulation_launch_capability": false,
+  "source_code_hashes": {
+    "analyze_stage3_baseline.py": "195fcc2f8c534919eac540fd4e3692e111dda447d15373dec14b64f052a47b96",
+    "archive_stage2_runtime.py": "df6d4620b9b65482df7224bf7db4bf12ceb04ccf0a7a30c92408c65f187f38eb",
+    "internal_lane_accounting.py": "a8bbc12d161d98c73ad5088baf8cc052c5231333bb87c36a576f77aac26715e4",
+    "run_minimal_uncontrolled.py": "7cd29eeba5fff64c43cb71ba3b9f3477938f8d4e246ab158e4f20293dbd3f983"
+  },
+  "status": "t42_offline_ready_t43_prohibited",
+  "step_length_s": 1.0,
+  "t43_launch_status": "prohibited",
+  "terminal_states": [
+    "reused_valid",
+    "completed_valid",
+    "completed_invalid",
+    "failed",
+    "cancelled_by_stop_rule"
+  ],
+  "tmp_fallback": false,
+  "versions": {
+    "netconvert": "Eclipse SUMO netconvert 1.26.0",
+    "python": "3.13.0",
+    "sumo": "Eclipse SUMO sumo 1.26.0",
+    "traci_installed_but_unused": "1.26.0"
+  },
+  "windows": {
+    "A": [
+      0.0,
+      1500.0
+    ],
+    "B": [
+      300.0,
+      1500.0
+    ],
+    "Full": [
+      0.0,
+      2700.0
+    ],
+    "Post": [
+      1500.0,
+      2700.0
+    ]
+  }
+}

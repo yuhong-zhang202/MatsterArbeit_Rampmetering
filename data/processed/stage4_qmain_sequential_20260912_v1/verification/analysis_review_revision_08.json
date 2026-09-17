@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "review_type": "final ledger-cleanup independent mechanical review",
+  "revision": "revision_08",
+  "status": "passed",
+  "evidence_file": "data/processed/stage4_qmain_sequential_20260912_v1/verification/independent_verification_revision_08.json",
+  "decisions": {
+    "ledger_pending_list_is_minimal_and_truthful": "passed",
+    "revision_07_hash_links_are_exact": "passed",
+    "scientific_review_is_passed_with_zero_open_findings": "passed",
+    "absent_scientific_file_hash_is_not_fabricated": "passed",
+    "engineering_receipt_matches_current_ledger": "passed",
+    "T43_is_prohibited_with_four_zero_execution_counters": "passed"
+  },
+  "open_findings": [],
+  "open_blocker_count": 0,
+  "open_major_count": 0,
+  "open_minor_count": 0,
+  "recommendation": "The final T42 ledger and review package may be treated as mechanically closed. T43 remains prohibited until the exact registered run card receives explicit user authorization.",
+  "interpretation_boundary": "This is a mechanical consistency review. It adds no candidate observations, scientific conclusions, protocol decisions or simulation authorization.",
+  "actual_sumo_starts": 0,
+  "actual_netconvert_operations": 0,
+  "actual_traci_connections": 0,
+  "actual_gui_starts": 0
+}

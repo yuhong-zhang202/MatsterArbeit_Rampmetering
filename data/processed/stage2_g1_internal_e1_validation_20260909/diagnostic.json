@@ -1,0 +1,463 @@
+{
+  "classification": "exploratory observation-only paired validation",
+  "runtime": "/private/tmp/minimal_uncontrolled__5s3s06d",
+  "reference": "/private/tmp/minimal_uncontrolled_8egb0qb1",
+  "source_windows": {
+    "clearance": {
+      "begin_s": 1500,
+      "duration_s": 1200,
+      "end_s": 2700
+    },
+    "demand": {
+      "begin_s": 0,
+      "duration_s": 1500,
+      "end_s": 1500
+    },
+    "measurement": {
+      "begin_s": 0,
+      "duration_s": 1500,
+      "end_s": 1500
+    },
+    "simulation": {
+      "begin_s": 0,
+      "duration_s": 2700,
+      "end_s": 2700
+    },
+    "status": "all time values are exploratory candidates and are not frozen",
+    "warmup": {
+      "begin_s": 0,
+      "duration_s": 0,
+      "end_s": 0
+    }
+  },
+  "analysis_windows": {
+    "full": [
+      0,
+      2700
+    ],
+    "A": [
+      0,
+      1500
+    ],
+    "B": [
+      300,
+      1500
+    ],
+    "post": [
+      1500,
+      2700
+    ]
+  },
+  "topology": {
+    "mainline_merge_entry_e1_l0": {
+      "lane": ":freeway_merge_1_0",
+      "position_m": 4.32,
+      "lane_length_m": 8.64,
+      "incoming_connection": [
+        {
+          "from": "main_up",
+          "to": "main_down",
+          "fromLane": "0",
+          "toLane": "0",
+          "via": ":freeway_merge_1_0",
+          "dir": "s",
+          "state": "M"
+        }
+      ],
+      "scope": "M-only route topology; aggregate E1 has no vehicle IDs"
+    },
+    "mainline_merge_entry_e1_l1": {
+      "lane": ":freeway_merge_1_1",
+      "position_m": 4.32,
+      "lane_length_m": 8.64,
+      "incoming_connection": [
+        {
+          "from": "main_up",
+          "to": "main_down",
+          "fromLane": "1",
+          "toLane": "1",
+          "via": ":freeway_merge_1_1",
+          "dir": "s",
+          "state": "M"
+        }
+      ],
+      "scope": "M-only route topology; aggregate E1 has no vehicle IDs"
+    }
+  },
+  "window_summaries": {
+    "full": {
+      "begin_s": 0,
+      "end_s": 2700,
+      "lane_summaries": {
+        ":freeway_merge_1_0": {
+          "begin_s": 0,
+          "end_s": 2700,
+          "covered_seconds": 2700.0,
+          "nVehContrib": 715,
+          "speed_contribution_denominator": 715,
+          "speed_mps": 29.44958041958042,
+          "flow_vehph": 953.3333333333334,
+          "occupancy_pct": 4.612111111111111,
+          "missing_speed_intervals": 39
+        },
+        ":freeway_merge_1_1": {
+          "begin_s": 0,
+          "end_s": 2700,
+          "covered_seconds": 2700.0,
+          "nVehContrib": 618,
+          "speed_contribution_denominator": 618,
+          "speed_mps": 32.520825242718445,
+          "flow_vehph": 824.0,
+          "occupancy_pct": 3.552,
+          "missing_speed_intervals": 39
+        }
+      },
+      "total_flow_vehph": 1777.3333333333335,
+      "nVehContrib": 1333,
+      "speed_contribution_denominator": 1333,
+      "speed_mps": 30.873458364591148,
+      "occupancy_aggregation": "none; separate lane occupancy percentages retained"
+    },
+    "A": {
+      "begin_s": 0,
+      "end_s": 1500,
+      "lane_summaries": {
+        ":freeway_merge_1_0": {
+          "begin_s": 0,
+          "end_s": 1500,
+          "covered_seconds": 1500.0,
+          "nVehContrib": 714,
+          "speed_contribution_denominator": 714,
+          "speed_mps": 29.447394957983192,
+          "flow_vehph": 1713.6,
+          "occupancy_pct": 8.291,
+          "missing_speed_intervals": 0
+        },
+        ":freeway_merge_1_1": {
+          "begin_s": 0,
+          "end_s": 1500,
+          "covered_seconds": 1500.0,
+          "nVehContrib": 617,
+          "speed_contribution_denominator": 617,
+          "speed_mps": 32.52233387358184,
+          "flow_vehph": 1480.8,
+          "occupancy_pct": 6.383,
+          "missing_speed_intervals": 0
+        }
+      },
+      "total_flow_vehph": 3194.3999999999996,
+      "nVehContrib": 1331,
+      "speed_contribution_denominator": 1331,
+      "speed_mps": 30.872817430503382,
+      "occupancy_aggregation": "none; separate lane occupancy percentages retained"
+    },
+    "B": {
+      "begin_s": 300,
+      "end_s": 1500,
+      "lane_summaries": {
+        ":freeway_merge_1_0": {
+          "begin_s": 300,
+          "end_s": 1500,
+          "covered_seconds": 1200.0,
+          "nVehContrib": 573,
+          "speed_contribution_denominator": 573,
+          "speed_mps": 29.378115183246074,
+          "flow_vehph": 1719.0,
+          "occupancy_pct": 8.3435,
+          "missing_speed_intervals": 0
+        },
+        ":freeway_merge_1_1": {
+          "begin_s": 300,
+          "end_s": 1500,
+          "covered_seconds": 1200.0,
+          "nVehContrib": 493,
+          "speed_contribution_denominator": 493,
+          "speed_mps": 32.515354969574034,
+          "flow_vehph": 1479.0,
+          "occupancy_pct": 6.3785,
+          "missing_speed_intervals": 0
+        }
+      },
+      "total_flow_vehph": 3198.0,
+      "nVehContrib": 1066,
+      "speed_contribution_denominator": 1066,
+      "speed_mps": 30.82901500938086,
+      "occupancy_aggregation": "none; separate lane occupancy percentages retained"
+    },
+    "post": {
+      "begin_s": 1500,
+      "end_s": 2700,
+      "lane_summaries": {
+        ":freeway_merge_1_0": {
+          "begin_s": 1500,
+          "end_s": 2700,
+          "covered_seconds": 1200.0,
+          "nVehContrib": 1,
+          "speed_contribution_denominator": 1,
+          "speed_mps": 31.01,
+          "flow_vehph": 3.0,
+          "occupancy_pct": 0.013500000000000002,
+          "missing_speed_intervals": 39
+        },
+        ":freeway_merge_1_1": {
+          "begin_s": 1500,
+          "end_s": 2700,
+          "covered_seconds": 1200.0,
+          "nVehContrib": 1,
+          "speed_contribution_denominator": 1,
+          "speed_mps": 31.59,
+          "flow_vehph": 3.0,
+          "occupancy_pct": 0.01325,
+          "missing_speed_intervals": 39
+        }
+      },
+      "total_flow_vehph": 6.0,
+      "nVehContrib": 2,
+      "speed_contribution_denominator": 2,
+      "speed_mps": 31.3,
+      "occupancy_aggregation": "none; separate lane occupancy percentages retained"
+    }
+  },
+  "M_cohort": {
+    "planned": 1333,
+    "trip_records": 1333,
+    "arrived_by_end": 1333,
+    "windows": {
+      "full": {
+        "actual_M_departures": 1333,
+        "M_arrivals": 1333,
+        "scope": "event windows, not interchangeable with detector passage windows"
+      },
+      "A": {
+        "actual_M_departures": 1333,
+        "M_arrivals": 1306,
+        "scope": "event windows, not interchangeable with detector passage windows"
+      },
+      "B": {
+        "actual_M_departures": 1067,
+        "M_arrivals": 1069,
+        "scope": "event windows, not interchangeable with detector passage windows"
+      },
+      "post": {
+        "actual_M_departures": 0,
+        "M_arrivals": 27,
+        "scope": "event windows, not interchangeable with detector passage windows"
+      }
+    }
+  },
+  "aggregate_count_relationship": {
+    "contributions": 1333,
+    "entered_detector": 1333,
+    "planned_M": 1333,
+    "equal_totals": true,
+    "per_ID_coverage": "not_verified",
+    "reason": "Aggregate equality and M-only topology do not establish per-vehicle membership, zero omissions or zero duplicates."
+  },
+  "coverage": {
+    "interval_rows": 180,
+    "intervals_per_detector": 90,
+    "window_s": [
+      0,
+      2700
+    ],
+    "no_contribution_speed_intervals": 78
+  },
+  "extrema": {
+    "mainline_merge_entry_e1_l0": {
+      "min_valid_speed_interval": {
+        "detector_id": "mainline_merge_entry_e1_l0",
+        "lane_id": ":freeway_merge_1_0",
+        "begin_s": 1470.0,
+        "end_s": 1500.0,
+        "flow_vehph": 1440.0,
+        "speed_raw_mps": 25.94,
+        "occupancy_pct": 8.0,
+        "nVehContrib": 12,
+        "nVehEntered": 12,
+        "speed_valid": true,
+        "missing_reason": ""
+      },
+      "max_valid_speed_interval": {
+        "detector_id": "mainline_merge_entry_e1_l0",
+        "lane_id": ":freeway_merge_1_0",
+        "begin_s": 30.0,
+        "end_s": 60.0,
+        "flow_vehph": 2280.0,
+        "speed_raw_mps": 32.61,
+        "occupancy_pct": 9.31,
+        "nVehContrib": 19,
+        "nVehEntered": 18,
+        "speed_valid": true,
+        "missing_reason": ""
+      }
+    },
+    "mainline_merge_entry_e1_l1": {
+      "min_valid_speed_interval": {
+        "detector_id": "mainline_merge_entry_e1_l1",
+        "lane_id": ":freeway_merge_1_1",
+        "begin_s": 1470.0,
+        "end_s": 1500.0,
+        "flow_vehph": 1680.0,
+        "speed_raw_mps": 30.52,
+        "occupancy_pct": 7.71,
+        "nVehContrib": 14,
+        "nVehEntered": 14,
+        "speed_valid": true,
+        "missing_reason": ""
+      },
+      "max_valid_speed_interval": {
+        "detector_id": "mainline_merge_entry_e1_l1",
+        "lane_id": ":freeway_merge_1_1",
+        "begin_s": 660.0,
+        "end_s": 690.0,
+        "flow_vehph": 1080.0,
+        "speed_raw_mps": 35.82,
+        "occupancy_pct": 4.23,
+        "nVehContrib": 9,
+        "nVehEntered": 9,
+        "speed_valid": true,
+        "missing_reason": ""
+      }
+    }
+  },
+  "invalid_speed_with_contributions": [],
+  "fcd_examples": [
+    {
+      "time_s": 4.0,
+      "id": "M_flow.2",
+      "x": "1401.45",
+      "y": "895.20",
+      "angle": "90.00",
+      "type": "technical_passenger",
+      "speed": "34.97",
+      "pos": "6.49",
+      "lane": ":freeway_merge_1_0",
+      "slope": "0.00"
+    },
+    {
+      "time_s": 26.0,
+      "id": "M_flow.22",
+      "x": "1399.44",
+      "y": "895.20",
+      "angle": "90.00",
+      "type": "technical_passenger",
+      "speed": "32.19",
+      "pos": "4.41",
+      "lane": ":freeway_merge_1_0",
+      "slope": "0.00"
+    },
+    {
+      "time_s": 27.0,
+      "id": "M_flow.23",
+      "x": "1400.40",
+      "y": "895.20",
+      "angle": "90.00",
+      "type": "technical_passenger",
+      "speed": "30.60",
+      "pos": "5.41",
+      "lane": ":freeway_merge_1_0",
+      "slope": "0.00"
+    },
+    {
+      "time_s": 43.0,
+      "id": "M_flow.37",
+      "x": "1395.34",
+      "y": "895.20",
+      "angle": "90.00",
+      "type": "technical_passenger",
+      "speed": "31.63",
+      "pos": "0.15",
+      "lane": ":freeway_merge_1_0",
+      "slope": "0.00"
+    },
+    {
+      "time_s": 47.0,
+      "id": "M_flow.40",
+      "x": "1401.60",
+      "y": "898.40",
+      "angle": "90.00",
+      "type": "technical_passenger",
+      "speed": "36.51",
+      "pos": "6.80",
+      "lane": ":freeway_merge_1_1",
+      "slope": "0.00"
+    },
+    {
+      "time_s": 52.0,
+      "id": "M_flow.45",
+      "x": "1399.68",
+      "y": "895.20",
+      "angle": "90.00",
+      "type": "technical_passenger",
+      "speed": "31.82",
+      "pos": "4.66",
+      "lane": ":freeway_merge_1_0",
+      "slope": "0.00"
+    },
+    {
+      "time_s": 56.0,
+      "id": "M_flow.48",
+      "x": "1397.90",
+      "y": "895.20",
+      "angle": "90.00",
+      "type": "technical_passenger",
+      "speed": "36.67",
+      "pos": "2.81",
+      "lane": ":freeway_merge_1_0",
+      "slope": "0.00"
+    },
+    {
+      "time_s": 58.0,
+      "id": "M_flow.50",
+      "x": "1397.58",
+      "y": "895.20",
+      "angle": "90.00",
+      "type": "technical_passenger",
+      "speed": "33.00",
+      "pos": "2.48",
+      "lane": ":freeway_merge_1_0",
+      "slope": "0.00"
+    }
+  ],
+  "internal_lane_FCD_observed_unique_ID_count": 321,
+  "internal_lane_FCD_class_samples": {
+    "M": 321
+  },
+  "independent_reference_checks": {
+    "trip_ids_equal": [
+      "M_flow.0",
+      "M_flow.1332",
+      "R_flow.0",
+      "R_flow.299",
+      "U_flow.149"
+    ],
+    "FCD_frames_equal": [
+      0,
+      68,
+      450,
+      475,
+      1499,
+      1500,
+      1987,
+      2373,
+      2401
+    ],
+    "full_semantic_regression": "Engineering result reused; not rerun by this script"
+  },
+  "interpretation": {
+    "speed_valid": "nonnegative raw E1 speed with contributions only; not scientific traffic-state validity",
+    "location": "M-only internal merge-entry passage measurement; not an upstream feeder/queue detector",
+    "duration": "0/1500/1200 describes this finite cohort; no independent duration sufficiency test",
+    "scientific_gate": "Breakdown, capacity drop, capacity, formal free-flow or per-ID completeness not established"
+  },
+  "limitations": [
+    "One seed and matched unchanged traffic; not an independent stochastic replication.",
+    "No new speed or duration threshold.",
+    "Do not require same-window departures, arrivals and passage contributions to match.",
+    "1 Hz FCD misses many short internal-lane passages and cannot validate exact E1 speed for every passage."
+  ],
+  "independent_table_check": {
+    "raw_rows_reconciled": 180,
+    "fields_per_row": 7
+  }
+}

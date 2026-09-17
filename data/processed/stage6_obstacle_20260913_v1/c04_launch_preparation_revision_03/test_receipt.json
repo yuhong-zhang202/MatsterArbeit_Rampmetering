@@ -1,0 +1,24 @@
+{
+  "command": "PYTHONDONTWRITEBYTECODE=1 python3 -m unittest discover -s tests -p 'test_stage6_h2_*.py' -v",
+  "runner": "equivalent unittest discovery captured in StringIO",
+  "tests_run": 49,
+  "failures": 0,
+  "errors": 0,
+  "skipped": 0,
+  "successful": true,
+  "hashseed_cases": 8,
+  "hashseeds": [
+    1,
+    17,
+    23,
+    91
+  ],
+  "input_orders": [
+    "set_order",
+    "reversed_set_order"
+  ],
+  "SUMO": 0,
+  "netconvert": 0,
+  "TraCI": 0,
+  "GUI": 0
+}

@@ -1,0 +1,212 @@
+{
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "confidence": {
+    "clean_mechanical_suite": "not_met",
+    "manifest_receipt_integrity": "high",
+    "raw_data_reconstruction": "high"
+  },
+  "coverage": {
+    "candidate_runs_expected": 2,
+    "candidate_runs_observed": 2,
+    "class_endpoint_units_expected": 16,
+    "class_endpoint_units_observed": 16,
+    "downstream_e1_30s_bins_expected": 180,
+    "downstream_e1_30s_bins_rebuilt": 180,
+    "fcd_frames_expected": 5400,
+    "fcd_frames_verified": 5400,
+    "independent_field_comparisons": 2342,
+    "independent_field_comparisons_passed": 2342,
+    "internal_e1_30s_bins_expected": 180,
+    "internal_e1_30s_bins_rebuilt": 180,
+    "required_observation_audits_expected": 14,
+    "required_observation_audits_passed": 14,
+    "source_files_expected": 58,
+    "source_files_verified": 58
+  },
+  "figure_visual_review": {
+    "tier2_shared_exposure_grouped.png": "passed; grouped categorical bars, readable labels, no connected trend"
+  },
+  "formal_protocol_status": "empty_not_frozen",
+  "independent_reconstruction": {
+    "all_passed": true,
+    "no_production_analysis_import": true,
+    "path": "data/processed/stage4_qmain_sequential_20260912_v1/analysis/tier2/revision_01/independent_reconstruction.json",
+    "script_sha256": "480e8d1fe78946ccdb2a222cbcf4d7a0e0f38b8caa89100d4f6880b069e73604",
+    "sha256": "38439aa2b5e01f9e71994a630432ec8fb77f72788899693b47db71e6fcc14a54"
+  },
+  "interpretation_boundary": "Exploratory local scenario diagnostics only; not formal thesis evidence, causal proof, capacity, Breakdown, Capacity Drop, controller performance, or a sweet spot.",
+  "manifest_receipt_chain": {
+    "all_passed": true,
+    "verification_path": "data/processed/stage4_qmain_sequential_20260912_v1/analysis/tier2/revision_01/manifest_receipt_verification.json",
+    "verification_sha256": "8dcce0ecaef0ce8f4a00bb8a2cabe1ba85bd9d14cd9a12a1fe3f0f1c64a09222"
+  },
+  "observed_results": {
+    "QM3650S17": {
+      "EJMI_A": false,
+      "EJMI_B": false,
+      "EJMI_persistence": false,
+      "EJMI_status": "not_identified",
+      "M_stopped_episodes": 0,
+      "M_stopped_samples": 0,
+      "R_A_arrivals": 0,
+      "R_A_bracketed_events": 0,
+      "R_all_observed_passage_events": 300,
+      "R_first_stopped_time_by_region": {
+        "ramp_accel": 46.0,
+        "ramp_diverge_internal": 300.0,
+        "ramp_mid_internal": 124.0,
+        "ramp_storage": 175.0,
+        "shared_approach": 363.0
+      },
+      "R_region_sequence": [
+        "ramp_accel",
+        "ramp_mid_internal",
+        "ramp_storage",
+        "ramp_diverge_internal",
+        "shared_approach"
+      ],
+      "R_status": "clear_exclusion",
+      "TLS": {
+        "label_count": 2700,
+        "states": [
+          "Gr",
+          "rG",
+          "ry",
+          "yr"
+        ],
+        "transition_count": 179
+      },
+      "fcd_frames": 2700,
+      "field_comparisons": 1171,
+      "planned_demand_vehph": {
+        "M": 3650.4,
+        "R": 720.0,
+        "U": 360.0,
+        "X": 180.0
+      },
+      "realized_entry_vehph_A": {
+        "M": 3650.4,
+        "R": 290.4,
+        "U": 144.0,
+        "X": 180.0
+      },
+      "shared_exposure": {
+        "by_class": {
+          "R": {
+            "episode_count": 25,
+            "stopped_vehicle_seconds": 25093.0
+          },
+          "U": {
+            "episode_count": 14,
+            "stopped_vehicle_seconds": 13148.0
+          }
+        },
+        "cooccurrence_support_s": 1251
+      },
+      "source_files": 29,
+      "technical_observation_audits": "7/7"
+    },
+    "QM3650S23": {
+      "EJMI_A": false,
+      "EJMI_B": false,
+      "EJMI_persistence": false,
+      "EJMI_status": "not_identified",
+      "M_stopped_episodes": 0,
+      "M_stopped_samples": 0,
+      "R_A_arrivals": 0,
+      "R_A_bracketed_events": 0,
+      "R_all_observed_passage_events": 300,
+      "R_first_stopped_time_by_region": {
+        "ramp_accel": 46.0,
+        "ramp_diverge_internal": 298.0,
+        "ramp_mid_internal": 122.0,
+        "ramp_storage": 177.0,
+        "shared_approach": 359.0
+      },
+      "R_region_sequence": [
+        "ramp_accel",
+        "ramp_mid_internal",
+        "ramp_storage",
+        "ramp_diverge_internal",
+        "shared_approach"
+      ],
+      "R_status": "clear_exclusion",
+      "TLS": {
+        "label_count": 2700,
+        "states": [
+          "Gr",
+          "rG",
+          "ry",
+          "yr"
+        ],
+        "transition_count": 179
+      },
+      "fcd_frames": 2700,
+      "field_comparisons": 1171,
+      "planned_demand_vehph": {
+        "M": 3650.4,
+        "R": 720.0,
+        "U": 360.0,
+        "X": 180.0
+      },
+      "realized_entry_vehph_A": {
+        "M": 3650.4,
+        "R": 288.0,
+        "U": 144.0,
+        "X": 180.0
+      },
+      "shared_exposure": {
+        "by_class": {
+          "R": {
+            "episode_count": 22,
+            "stopped_vehicle_seconds": 25101.0
+          },
+          "U": {
+            "episode_count": 13,
+            "stopped_vehicle_seconds": 13159.0
+          }
+        },
+        "cooccurrence_support_s": 1257
+      },
+      "source_files": 29,
+      "technical_observation_audits": "7/7"
+    }
+  },
+  "open_findings": [
+    {
+      "finding": "Current Stage 4 production and independent tests still encode the pre-Tier2 state (2/2/0/0, Tier1-only runtime overlay, upper pair pending/no receipt). On the authoritative completed Tier2 state the combined run is 101/112 passed with 9 failures and 2 errors.",
+      "id": "T43-TEST-STATE-01",
+      "impact": "Blocks a clean final verification claim; it does not contradict the raw-data reconstruction or manifest/receipt comparison.",
+      "owner": "simulation_engineer",
+      "required_action": "Update state-dependent tests for authoritative completed Tier2 state, then rerun combined suite.",
+      "severity": "Major_mechanical"
+    }
+  ],
+  "phase": "Stage 4 exploratory validation; T43 Tier2 and final analysis",
+  "ready_for_scientific_review_after_mechanical_test_repair": true,
+  "revision": 1,
+  "safest_next_step": "Repair stale state-dependent tests and rerun. Then submit the unchanged data package and final action to scientific_reviewer.",
+  "schema_version": 1,
+  "simulation_accounting": {
+    "actual_gui_starts": 0,
+    "actual_netconvert_operations": 4,
+    "actual_sumo_starts": 4,
+    "actual_traci_connections": 0,
+    "new_starts_during_analysis": {
+      "gui": 0,
+      "netconvert": 0,
+      "sumo": 0,
+      "traci": 0
+    }
+  },
+  "status": "data_reconstruction_passed_mechanical_suite_stale",
+  "task": "T43 Tier2 independent data verification",
+  "test_results": {
+    "combined_tests": 112,
+    "errors": 2,
+    "failures": 9,
+    "independent_reconstruction_no_production_import": "passed",
+    "passed": 101,
+    "py_compile": "passed"
+  }
+}

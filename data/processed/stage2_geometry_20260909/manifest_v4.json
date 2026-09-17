@@ -1,0 +1,85 @@
+{
+  "task": "stage2 compiled geometry exploratory rendering",
+  "source": {
+    "network": "/private/tmp/minimal_uncontrolled_eozyn46f/network.net.xml",
+    "network_sha256_before": "848fd93b6b815e5cc2b1995fe105bd9e3cd67181ed03bc8a1c316296f3463a6b",
+    "network_sha256_after": "848fd93b6b815e5cc2b1995fe105bd9e3cd67181ed03bc8a1c316296f3463a6b",
+    "additional": "/private/tmp/minimal_uncontrolled_eozyn46f/scenario.add.xml",
+    "additional_sha256": "570beef4050b466dc8052ae71929c8f1263e46fdd113e3a62016f98d01010aa0"
+  },
+  "checks": {
+    "edge_count": 16,
+    "junction_count": 10,
+    "connection_count": 16,
+    "compiled_path_edge_ids": [
+      ":urban_diverge_1",
+      "ramp_storage",
+      ":ramp_mid_0",
+      "ramp_accel"
+    ],
+    "compiled_path_length_m": 494.87,
+    "expected_compiled_path_length_m": 494.87,
+    "labels": {
+      "ramp_storage_m": 204.49,
+      "internal_urban_diverge_m": 113.08,
+      "internal_ramp_mid_m": 81.98,
+      "ramp_accel_m": 95.32
+    },
+    "detectors": [
+      {
+        "type": "laneAreaDetector",
+        "id": "shared_boundary_e2",
+        "lane": "shared_approach_0",
+        "pos": 0.0,
+        "length": 250.0
+      },
+      {
+        "type": "laneAreaDetector",
+        "id": "ramp_storage_e2",
+        "lane": "ramp_storage_0",
+        "pos": 0.0,
+        "length": 250.0
+      },
+      {
+        "type": "inductionLoop",
+        "id": "merge_upstream_e1_l0",
+        "lane": "main_up_0",
+        "pos": -1.0,
+        "length": 0.0
+      },
+      {
+        "type": "inductionLoop",
+        "id": "merge_upstream_e1_l1",
+        "lane": "main_up_1",
+        "pos": -1.0,
+        "length": 0.0
+      },
+      {
+        "type": "inductionLoop",
+        "id": "merge_downstream_e1_l0",
+        "lane": "main_down_0",
+        "pos": 100.0,
+        "length": 0.0
+      },
+      {
+        "type": "inductionLoop",
+        "id": "merge_downstream_e1_l1",
+        "lane": "main_down_1",
+        "pos": 100.0,
+        "length": 0.0
+      }
+    ]
+  },
+  "outputs": {
+    "svg": "results/figures/stage2_geometry_20260909_v4.svg",
+    "svg_sha256": "f348d5e4ad566838bc393bd365d9c884319ec7daaf6e803ef38a388531a0a498",
+    "png": "results/figures/stage2_geometry_20260909_v4.png",
+    "png_sha256": "96c71b1ff88b5f0e93b9ec72a0bd5af76794dfdc391f92f06b883a20753bf30c"
+  },
+  "limitations": [
+    "Static compiled geometry only; no live SUMO GUI or dynamic validation.",
+    "No effective/safe storage designation; detector coverage is audited separately, not drawn as verified extent.",
+    "Pillow PNG is authoritative; SVG embeds the same raster image and is not independent vector geometry.",
+    "Versions before v4 are superseded; retain them for provenance, not interpretation."
+  ]
+}

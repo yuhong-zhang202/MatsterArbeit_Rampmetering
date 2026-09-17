@@ -1,0 +1,48 @@
+{
+  "SUMO_starts_this_preflight": 0,
+  "XSD_files_reparsed": 18,
+  "XSD_references_reparsed": 21,
+  "all_XSD_hashes_identical": true,
+  "attempt2_claim_absent": true,
+  "attempt2_outputs_empty": true,
+  "binary": {
+    "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+    "sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179"
+  },
+  "concurrent_simulator_processes": [],
+  "corrected_script": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_engineering_smoke_retry_revision_01/execute_d1_retry_corrected.py",
+    "sha256": "018a2a95fb7fe3af3a9b86ecc66d65ea2d05e6e3896bcd2d95b636d047fec4d2"
+  },
+  "live_counters": {
+    "actual_starts_observed": 1,
+    "archive_bytes": 54982857,
+    "reserved_or_unknown": 0,
+    "retry": 0,
+    "smoke": 1,
+    "sumo": 1,
+    "validation": 0,
+    "wallclock_s": 27.35341920799692
+  },
+  "materialization": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/attempts/S6_V1_ML_S17_attempt2/materialization_manifest.json",
+    "sha256": "a343654d64dc697cf0b09ae35c4beadd4fee3ffab841483c98f2b1341dc83b35"
+  },
+  "original_prelaunch": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_engineering_smoke_retry_revision_01/retry_prelaunch_receipt.json",
+    "sha256": "2d472c32b9e064afe374aa5d4a80bd4e503fd07b7562d45ad2553c71be398a21"
+  },
+  "prior_stops": [
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_engineering_smoke_retry_revision_01/preflight_stop_receipt.json",
+      "sha256": "6674ff2558d1c8c17f307fa8e1716f441d1428eb3465074c662afa5677c1ae33"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_engineering_smoke_retry_revision_01/preflight_stop_receipt_02.json",
+      "sha256": "acd423688ddde09d17d77f04b1adb3cfa0d6f81d8eee2553fb50a2579c2a620c"
+    }
+  ],
+  "process_check_command": "tool /bin/ps -axo pid=,comm=",
+  "status": "PASS_PRELAUNCH",
+  "wrapper_correction": "XSD verifier uses bound SUMO_HOME; binary path/realpath and direct SHA comparison"
+}

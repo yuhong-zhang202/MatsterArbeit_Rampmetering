@@ -1,0 +1,15 @@
+{
+  "Stage3": {
+    "status": "expected_rejection",
+    "reason": "analysis code hash is absent or stale in ledger"
+  },
+  "Stage4": {
+    "status": "expected_rejection",
+    "reason": "registered source-code hash mismatch: analyze_stage3_baseline.py"
+  },
+  "source_hashes": {
+    "src/analysis/analyze_stage3_baseline.py": "6558f971bc713397e26a41fd4b2b4a71255a38ff7b6122d77df6056b88b6b8f6",
+    "tests/test_stage3_baseline.py": "4c040d6c080319e9f40c7a300acde482d30fb42b51fdc693b888841f98d6dc77"
+  },
+  "syntax": "2/2 AST parses passed"
+}

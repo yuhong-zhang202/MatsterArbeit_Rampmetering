@@ -1,0 +1,68 @@
+{
+  "schema_version": 1,
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "stage": "Stage 4 T42 independent mechanical-metadata closure",
+  "revision": "revision_07",
+  "status": "passed",
+  "context_preflight": {
+    "status": "passed",
+    "current_phase": "T42 offline review; T43 prohibited",
+    "formal_protocol": "empty_not_frozen",
+    "authorization_scope": "T42 offline implementation and three-specialist review only"
+  },
+  "history_preservation": {
+    "revision_01_through_06": "preserved unchanged",
+    "independent_verification_revision_05_sha256": "8eb3d5242909dcfb4406e56671f77de578960172d05dff967bea11cd8f702c30",
+    "analysis_review_revision_05_sha256": "7a5300de478e0d0b4262ad7b208cb701e8f502e9c572cab716f2231f4914e891",
+    "independent_verification_revision_06_sha256": "dcadfee555e9c39000b9ea795d97661bec6f798690d9c068c27860d31591d673",
+    "analysis_review_revision_06_sha256": "0154873a51620c8994289e5aa1f50474a9b3d3ee34b2d33096af711b198a748a",
+    "revision_06_role": "immutable evidence that S4DA-R06-m01 existed before the engineering receipt was refreshed"
+  },
+  "reviewed_hashes": {
+    "src/analysis/analyze_stage4_qmain.py": "d8a1f3832588678a8054507ef8b0c74060ba39585a2c4c03bf268c966b4702f8",
+    "tests/test_stage4_qmain.py": "5849b61192c4c6dae0051e2b8b559a3fe3e626e2c9fd9a00737801dbc5d1a67b",
+    "tests/test_verify_stage4_qmain.py": "c8ee32f5e8da72695076228736d5aa290542bd34d56dd459817d25e5c82c101e",
+    "registration_payload.json": "d934b62903081163495b7e17cf72c52786e1dfb864aa5d9a9d3eb5c2eb9a952a",
+    "required_observations_payload.json": "61d1a6921feb501f641d97ebc3faa462ba183d9df04bd0d1622f497112b8754e",
+    "measurement_contract.json": "b3bf7abec5a9e6cfc29edb81de58ec5cc86c9e0fd132e88a9cd6999a456a91c9",
+    "source_registry.json": "96ee4a20f8130ede9a14ff9a40292a0c1d588770bbf1b37ad1ac455b3a1c538b",
+    "execution_ledger.json": "c5309b6c628b9e637192f0c36c82a6a8aa8dbba8cf994c4ffeeb2ae851e1c148",
+    "engineering_verification.json": "8b513043766778695061a25cf3527c05b91490046e02d5b14096f1795d44639f"
+  },
+  "test_results": {
+    "production_suite": "52/52 passed",
+    "independent_suite": "29/29 passed",
+    "combined_suite": "81/81 passed",
+    "py_compile": "passed",
+    "json_parse": "passed",
+    "diff_check": "passed"
+  },
+  "mechanical_contract_findings": {
+    "binding_scientific_authority": "passed; registration_payload.json is the sole hash-bound scientific payload across contract, registry and ledger",
+    "human_proposal_snapshot": "passed; contract, ledger and engineering receipt label the old 90a49c... Markdown snapshot non_binding_historical_snapshot",
+    "proposal_independence": "passed; validate_context accepts changed and nonexistent human-proposal snapshot metadata after only the temporary machine-file hashes are updated",
+    "removed_normative_fields": "passed; proposal_path/proposal_sha256 are absent from the machine contract and proposal_sha256 is absent from ledger input_hashes",
+    "engineering_receipt_alignment": "passed; receipt records the current contract, ledger, independent-test and payload hashes, 52+29=81 passing tests, and T43 prohibited"
+  },
+  "finding_closure": {
+    "id": "S4DA-R06-m01",
+    "severity": "Minor",
+    "previous_status": "open in revision_06",
+    "current_status": "closed",
+    "closure_evidence": "engineering_verification.json sha256 8b513043...639f records current contract b3bf7a...91c9, ledger c5309b...c148, independent test c8ee32...101e and combined 81/81"
+  },
+  "launch_gate": {
+    "T42_data_core": "passed",
+    "T42_metadata_closeout": "passed",
+    "T43": "prohibited",
+    "can_claim_no_pending_T42_data_or_engineering_review_finding": true,
+    "new_simulation_authorized": false
+  },
+  "open_blocker_count": 0,
+  "open_major_count": 0,
+  "open_minor_count": 0,
+  "actual_sumo_starts": 0,
+  "actual_netconvert_operations": 0,
+  "actual_traci_connections": 0,
+  "actual_gui_starts": 0
+}

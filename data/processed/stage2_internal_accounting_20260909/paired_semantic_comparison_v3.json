@@ -1,0 +1,94 @@
+{
+  "classification": "paired exploratory output semantic comparison; no performance or causal interpretation",
+  "reference_run": "/private/tmp/minimal_uncontrolled_eozyn46f",
+  "candidate_run": "/private/tmp/minimal_uncontrolled_8egb0qb1",
+  "semantic_rule": "Compare ordered record tags after XML comments and root/generator metadata are excluded. All record attributes, text, nested children, and order are retained in canonical SHA-256 record digests.",
+  "files": {
+    "fcd": {
+      "reference_path": "/private/tmp/minimal_uncontrolled_eozyn46f/outputs/fcd.xml",
+      "candidate_path": "/private/tmp/minimal_uncontrolled_8egb0qb1/outputs/fcd.xml",
+      "record_tag": "timestep",
+      "reference_sha256": "68640283db6226c803cc0bab8e7e9c8bc65830fdd0cf6a41fd5918ca3a8c73db",
+      "candidate_sha256": "dd194132c42a3ad02857f03250b97d4024afaa2afad4fb6c3edc0048d7d8a2a1",
+      "reference_record_count": 2700,
+      "candidate_record_count": 2700,
+      "different_record_count": 0,
+      "equal": true,
+      "difference_samples": []
+    },
+    "tripinfo": {
+      "reference_path": "/private/tmp/minimal_uncontrolled_eozyn46f/outputs/tripinfo.xml",
+      "candidate_path": "/private/tmp/minimal_uncontrolled_8egb0qb1/outputs/tripinfo.xml",
+      "record_tag": "tripinfo",
+      "reference_sha256": "0759a2c5e2b7ba2b7fd230e27dc995b6ff5f482d4cbbed68e7197c39d3626750",
+      "candidate_sha256": "3765a171f59b654ef2dc74f5bc1c7f231435d7a6069a2882fc39e68119ff3c4e",
+      "reference_record_count": 1858,
+      "candidate_record_count": 1858,
+      "different_record_count": 0,
+      "equal": true,
+      "difference_samples": []
+    },
+    "tls": {
+      "reference_path": "/private/tmp/minimal_uncontrolled_eozyn46f/outputs/tls_states.xml",
+      "candidate_path": "/private/tmp/minimal_uncontrolled_8egb0qb1/outputs/tls_states.xml",
+      "record_tag": "tlsState",
+      "reference_sha256": "f5d3820a8df77cf9ede7cfeaf691638e5ca6227f9bce6e8887ef33143d505118",
+      "candidate_sha256": "5e8e7fde05919488e4d72849b259c09dd3454192e0e8c981f155d52990cd415b",
+      "reference_record_count": 2700,
+      "candidate_record_count": 2700,
+      "different_record_count": 0,
+      "equal": true,
+      "difference_samples": []
+    },
+    "merge_downstream_e1_l0": {
+      "reference_path": "/private/tmp/minimal_uncontrolled_eozyn46f/outputs/merge_downstream_e1_l0.xml",
+      "candidate_path": "/private/tmp/minimal_uncontrolled_8egb0qb1/outputs/merge_downstream_e1_l0.xml",
+      "record_tag": "interval",
+      "reference_sha256": "3070c4872f02049a940694f37f88641917fdd097b1460a6784c0ebfb9383f322",
+      "candidate_sha256": "ffec96c6b01e8f0a8dd6232fa91582fcf333834ee3e911ed6b4f35c78533707f",
+      "reference_record_count": 90,
+      "candidate_record_count": 90,
+      "different_record_count": 0,
+      "equal": true,
+      "difference_samples": []
+    },
+    "merge_downstream_e1_l1": {
+      "reference_path": "/private/tmp/minimal_uncontrolled_eozyn46f/outputs/merge_downstream_e1_l1.xml",
+      "candidate_path": "/private/tmp/minimal_uncontrolled_8egb0qb1/outputs/merge_downstream_e1_l1.xml",
+      "record_tag": "interval",
+      "reference_sha256": "02fcb9e0c2656bd6eae534a805c37ff6a9b027fbab0557fa4998328cb73a3787",
+      "candidate_sha256": "d5ae1a3f8ca8b6a64cb264590ae6c931bc89084ba86aa460430edca2c151e40e",
+      "reference_record_count": 90,
+      "candidate_record_count": 90,
+      "different_record_count": 0,
+      "equal": true,
+      "difference_samples": []
+    },
+    "merge_upstream_e1_l0": {
+      "reference_path": "/private/tmp/minimal_uncontrolled_eozyn46f/outputs/merge_upstream_e1_l0.xml",
+      "candidate_path": "/private/tmp/minimal_uncontrolled_8egb0qb1/outputs/merge_upstream_e1_l0.xml",
+      "record_tag": "interval",
+      "reference_sha256": "cbf74f36d243090fd2b27b88ad1e78b308a0d37eb9a77f2ad3be6f3d9481033c",
+      "candidate_sha256": "6fa28c8c700e132ea7495af88ff448ed415f07b5bffb3e2d20f58e122c792ce7",
+      "reference_record_count": 90,
+      "candidate_record_count": 90,
+      "different_record_count": 0,
+      "equal": true,
+      "difference_samples": []
+    },
+    "merge_upstream_e1_l1": {
+      "reference_path": "/private/tmp/minimal_uncontrolled_eozyn46f/outputs/merge_upstream_e1_l1.xml",
+      "candidate_path": "/private/tmp/minimal_uncontrolled_8egb0qb1/outputs/merge_upstream_e1_l1.xml",
+      "record_tag": "interval",
+      "reference_sha256": "4e7ea620c7761e916a25219b1194aedac6cb8ab85e0d124e113a2f4d0d19d84a",
+      "candidate_sha256": "25a3aba7054f92ee39e735d32fad2dc738af5aeb42ab5a102cd57255805f6dc4",
+      "reference_record_count": 90,
+      "candidate_record_count": 90,
+      "different_record_count": 0,
+      "equal": true,
+      "difference_samples": []
+    }
+  },
+  "all_files_equal": true,
+  "total_different_records": 0
+}

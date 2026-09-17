@@ -1,0 +1,223 @@
+{
+  "FCD_sample_count": 323986,
+  "GUI": 0,
+  "M_insertion": {
+    "departPos_max": 100.0,
+    "departPos_min": 100.0,
+    "entered": 1083,
+    "misplaced_count": 0,
+    "no_additional_blocking_claim": false,
+    "planned": 1083,
+    "registered_reported_inlet_qualification": {
+      "analysis_qualification": "qualified",
+      "number_flow_exact_quantization": "pending_C_not_verified",
+      "rule": "pre_registered_maximum_reported_inlet_delay_qualification",
+      "scientific_result": "supported_bounded"
+    },
+    "reported_delay_max_s": 1.0
+  },
+  "SUMO_starts": 1,
+  "TLS_links_from_bound_loaded_network": [
+    {
+      "dir": "s",
+      "from": "cross_in",
+      "fromLane": "0",
+      "linkIndex": "1",
+      "state": "o",
+      "tl": "urban_tls",
+      "to": "cross_out",
+      "toLane": "0",
+      "via": ":urban_tls_1_0"
+    },
+    {
+      "dir": "s",
+      "from": "urban_in",
+      "fromLane": "0",
+      "linkIndex": "0",
+      "state": "O",
+      "tl": "urban_tls",
+      "to": "shared_approach",
+      "toLane": "0",
+      "via": ":urban_tls_0_0"
+    }
+  ],
+  "TraCI": 0,
+  "approved_launch_card": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_engineering_smoke_revision_01/approved_launch_card.json",
+    "sha256": "5b359c76deb6552f4d2738d9b6366404499a5a4279a86ec4da0519b79b2f175a"
+  },
+  "budget_counters": {
+    "actual_starts_observed": 1,
+    "archive_bytes": 54982857,
+    "reserved_or_unknown": 0,
+    "retry": 0,
+    "smoke": 1,
+    "sumo": 1,
+    "validation": 0,
+    "wallclock_s": 27.35341920799692
+  },
+  "diagnostics": [
+    {
+      "line": 1,
+      "role": "process.stderr.log",
+      "text": "Warning: Environment variable SUMO_HOME is not set properly, disabling XML validation. Set 'auto' or 'always' for web lookups."
+    }
+  ],
+  "domain_coverage": {
+    "common": {
+      "M_planned": 1083,
+      "observed_traversal": 1083,
+      "states": {
+        "not_observed_entry": 0,
+        "observed_traversal": 1083,
+        "right_censored": 0,
+        "unresolved_missing_exit": 0
+      },
+      "with_inside_samples": 1083
+    },
+    "feeder": {
+      "M_planned": 1083,
+      "observed_traversal": 1083,
+      "states": {
+        "not_observed_entry": 0,
+        "observed_traversal": 1083,
+        "right_censored": 0,
+        "unresolved_missing_exit": 0
+      },
+      "with_inside_samples": 1083
+    }
+  },
+  "engineering_recommendation": "FAIL_STOP",
+  "executed_source_map": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/attempts/S6_V1_ML_S17_attempt1/executed_source_map.json",
+    "sha256": "50b5e67f406beaaafbf3316828c4c1c51604e930164e1e7756902148bd7e5bfd"
+  },
+  "execution_receipt": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/attempts/S6_V1_ML_S17_attempt1/execution_receipt.json",
+    "sha256": "73574a941934830720b5b890e6305b5d17e9896b8fb01ccb9b9e0425b9a11039"
+  },
+  "execution_status": "technical_failure",
+  "exit_code": 0,
+  "failure_reason": "diagnostic_anomaly",
+  "final_attempt_directory_bytes": 55005831,
+  "main352_rows_written": 0,
+  "netconvert": 0,
+  "next_action": "stop for engineering/data/science failure review; no retry or validation released",
+  "per_id_records": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_engineering_smoke_revision_01/smoke_per_id_technical_records.json",
+    "sha256": "a9e31127965e99b0a6a329ce6770a693a5155602a2114c3b5020c6f9083658c8"
+  },
+  "prelaunch_receipt": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_engineering_smoke_revision_01/prelaunch_receipt.json",
+    "sha256": "15a3c4ee03930ef4546624d6577ab24ac210d8eedaf979342dd1530e3c8ed64a"
+  },
+  "raw_time_grid": {
+    "FCD_frames": 2700,
+    "TLS_frames": 2700,
+    "endpoint_states": {
+      "1500": {
+        "arrived": 1153,
+        "entered": 1355,
+        "in_network": 202,
+        "membership": "strictly_before_endpoint",
+        "outside": 253,
+        "planned": 1608
+      },
+      "2700": {
+        "arrived": 1608,
+        "entered": 1608,
+        "in_network": 0,
+        "membership": "strictly_before_endpoint",
+        "outside": 0,
+        "planned": 1608
+      }
+    },
+    "first_label": 0,
+    "last_label": 2699,
+    "simulation_end_from_log": "2700.00"
+  },
+  "required_xml_validation": {
+    "roles": {
+      "fcd.xml": {
+        "records": 2700,
+        "root": "fcd-export",
+        "status": "minimum_schema_passed"
+      },
+      "mainline_merge_entry_e1_l0.xml": {
+        "records": 90,
+        "root": "detector",
+        "status": "minimum_schema_passed"
+      },
+      "mainline_merge_entry_e1_l1.xml": {
+        "records": 90,
+        "root": "detector",
+        "status": "minimum_schema_passed"
+      },
+      "merge_downstream_e1_l0.xml": {
+        "records": 90,
+        "root": "detector",
+        "status": "minimum_schema_passed"
+      },
+      "merge_downstream_e1_l1.xml": {
+        "records": 90,
+        "root": "detector",
+        "status": "minimum_schema_passed"
+      },
+      "merge_upstream_e1_l0.xml": {
+        "records": 90,
+        "root": "detector",
+        "status": "minimum_schema_passed"
+      },
+      "merge_upstream_e1_l1.xml": {
+        "records": 90,
+        "root": "detector",
+        "status": "minimum_schema_passed"
+      },
+      "queues.xml": {
+        "records": 2700,
+        "root": "queue-export",
+        "status": "minimum_schema_passed"
+      },
+      "ramp_storage_e2.xml": {
+        "records": 90,
+        "root": "detector",
+        "status": "minimum_schema_passed"
+      },
+      "shared_boundary_e2.xml": {
+        "records": 90,
+        "root": "detector",
+        "status": "minimum_schema_passed"
+      },
+      "sumo_summary.xml": {
+        "records": 2700,
+        "root": "summary",
+        "status": "minimum_schema_passed"
+      },
+      "tls_states.xml": {
+        "records": 2700,
+        "root": "tlsStates",
+        "status": "minimum_schema_passed"
+      },
+      "tripinfo.xml": {
+        "records": 1608,
+        "root": "tripinfos",
+        "status": "minimum_schema_passed"
+      },
+      "vehroute.xml": {
+        "records": 1608,
+        "root": "routes",
+        "status": "minimum_schema_passed"
+      }
+    },
+    "scope": "minimum required XML role/schema/time/identity; scientific measurement checks remain required",
+    "status": "passed"
+  },
+  "retry_starts": 0,
+  "runtime_header_check": "passed",
+  "science_entrypoint_calls": 0,
+  "scope": "D1 real smoke technical evidence only; failure retained",
+  "sensitivity14_rows_written": 0,
+  "smoke_acceptance_gate_written": false,
+  "source_identity_check": "passed_for_smoke_role_only; not scientific qualification",
+  "validation_starts": 0
+}

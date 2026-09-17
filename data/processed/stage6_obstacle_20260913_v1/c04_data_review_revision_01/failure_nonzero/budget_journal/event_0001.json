@@ -1,0 +1,55 @@
+{
+  "event": {
+    "attempt_id": "S6_V1_ML_S17_attempt1",
+    "event": "mark_running"
+  },
+  "metadata": {
+    "process_identity": {
+      "adapter_scope": "synthetic_fixture",
+      "pid": 123456789
+    }
+  },
+  "previous": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_data_review_revision_01/failure_nonzero/budget_journal/event_0000.json",
+    "sha256": "a8f0346f81161163ac17af88f719cb26aa2846d08686b333046d774e9098d01a"
+  },
+  "sequence": 1,
+  "state": {
+    "attempts": [
+      {
+        "archive_bytes": 0,
+        "attempt_id": "S6_V1_ML_S17_attempt1",
+        "event": "reserve",
+        "parameter_hash": "2bc9c86d0e24e0688f5ed543db1bd75daa06f0a8d39a220f24905189ef088e03",
+        "process_identity": {
+          "adapter_scope": "synthetic_fixture",
+          "pid": 123456789
+        },
+        "role": "smoke",
+        "run_id": "S6_V1_ML_S17",
+        "start_observed": true,
+        "state": "running",
+        "wallclock_s": 0
+      }
+    ],
+    "cancelled_runs": [],
+    "card_sha256": "d0ef6270f5bdd687621ab3513e9ba533c979a6ea37dbd9e8efd268b5234d1dfb",
+    "limits": {
+      "GUI": 0,
+      "TraCI": 0,
+      "max_archive_bytes_per_attempt": 2000000000,
+      "max_new_archive_bytes_total": 12000000000,
+      "max_smoke_starts": 1,
+      "max_total_SUMO_starts": 6,
+      "max_wallclock_s_per_run": 120,
+      "netconvert_authorized": 0,
+      "netconvert_new_builds_planned": 0,
+      "new_validation_starts": 4,
+      "note": "Engineering management ceilings, not launch authorization; reused compiled network. Any changed build need must use prescribed build gate.",
+      "shared_technical_retry": 1,
+      "total_wallclock_s": 720
+    },
+    "revision": 2,
+    "stop_violations": []
+  }
+}

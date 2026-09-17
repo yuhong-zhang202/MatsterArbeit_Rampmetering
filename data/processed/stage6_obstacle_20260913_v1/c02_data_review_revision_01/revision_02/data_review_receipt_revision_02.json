@@ -1,0 +1,60 @@
+{
+  "status": "SG6_L_data_PASS_C00_C02_only",
+  "confidence": "High_within_verified_offline_scope",
+  "open_findings": {
+    "Blocker": 0,
+    "Major": 0,
+    "Minor": 0
+  },
+  "closed_findings": [
+    "D-C02-M01 registered six value states with separate bound_state",
+    "D-C02-M02 fixed archive source identity plus scientific paired identity"
+  ],
+  "verification": {
+    "regression_checks": 122,
+    "independent_science_arithmetic_comparisons": 80,
+    "focused_repair_checks": 42,
+    "V0_identity_runs": 4,
+    "current_materializations": 4,
+    "main_rule_keys": 352,
+    "applicable": 150,
+    "required": 148,
+    "not_applicable": 202,
+    "sensitivity_keys": 14,
+    "real_compatibility": "ML17 V0 only,1608 IDs and260011 FCD samples; raw endpoints and independently bounded common-domain cohort matched"
+  },
+  "production_bindings": {
+    "src/scenarios/stage6_h2_offline.py": "ec68742a87da612d03a486dcf39b985fe75a7ccc1ecd28107476193f3a682de8",
+    "src/analysis/stage6_h2_measurement.py": "f5d54992453e3d268bd491d22d7a3d89e9158e3de9fc6adc33c78a74d09975e1"
+  },
+  "engineering_receipt": {
+    "path": "data/processed/stage6_obstacle_20260913_v1/c02_engineering_revision_03/engineering_receipt.json",
+    "sha256": "a6f228d951408f3a7f15d66ec63a487b0250508018d272eb00d322a132f1a94d"
+  },
+  "evidence_receipts": [
+    {
+      "path": "data/processed/stage6_obstacle_20260913_v1/c02_data_review_revision_01/revision_02/initial_independent_receipt.json",
+      "sha256": "8e088cae1eef73e8a0021ab539078197e58b208bb1c07a0294a25e5297a6b631"
+    },
+    {
+      "path": "data/processed/stage6_obstacle_20260913_v1/c02_data_review_revision_01/revision_02/science_oracle_receipt.json",
+      "sha256": "376a73762a5e4b33866c4123613ec5e6fc8593eb7c7b51c0fb5345b9896158ec"
+    },
+    {
+      "path": "data/processed/stage6_obstacle_20260913_v1/c02_data_review_revision_01/revision_02/repair_specific_receipt.json",
+      "sha256": "f8c788d43dcfd1982144543c870efed78bf7fd07b08db801b6a9589c80146c1c"
+    }
+  ],
+  "known_limits": [
+    "SG6-L data slice only; final scientific and engineering integration judgment belongs to primary and reviewer",
+    "V1 executed-output source adapter and real scientific pair acceptance remain blocked pending_C04_D",
+    "No real watchdog/process signal or OS crash integration accepted here; explicitly deferred per parent",
+    "No new V1 traffic output, scientific suitability, control benefit or obstacle resolution demonstrated",
+    "Source changes invalidate code-bound review and require targeted recheck"
+  ],
+  "audit_development_note": "Initial focused-review script had a syntax typo before execution; original retained, corrected script executed42checks. No production failure or simulation occurred.",
+  "SUMO": 0,
+  "netconvert": 0,
+  "TraCI": 0,
+  "GUI": 0
+}

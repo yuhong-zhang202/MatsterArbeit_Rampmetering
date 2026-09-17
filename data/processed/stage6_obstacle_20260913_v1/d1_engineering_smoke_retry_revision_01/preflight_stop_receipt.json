@@ -1,0 +1,42 @@
+{
+  "GUI": 0,
+  "SUMO_starts_this_task": 0,
+  "TraCI": 0,
+  "attempt2_execution_claim_absent": true,
+  "attempt2_materialization": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/attempts/S6_V1_ML_S17_attempt2/materialization_manifest.json",
+    "sha256": "a343654d64dc697cf0b09ae35c4beadd4fee3ffab841483c98f2b1341dc83b35"
+  },
+  "attempt2_outputs_empty": true,
+  "budget_counters": {
+    "actual_starts_observed": 1,
+    "archive_bytes": 54982857,
+    "reserved_or_unknown": 0,
+    "retry": 0,
+    "smoke": 1,
+    "sumo": 1,
+    "validation": 0,
+    "wallclock_s": 27.35341920799692
+  },
+  "cause": "wrapper used verify_binding default ROOT for external XSD binding; explicit same-version external schema root was not passed",
+  "environment_mutated": false,
+  "error": "path outside allowed root: /Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+  "error_type": "EvidenceError",
+  "failed_stage": "binding recheck before environment mutation, reservation, execution claim or adapter.start",
+  "netconvert": 0,
+  "next_action": "stop and report; no autonomous second invocation or new attempt",
+  "prelaunch_receipt": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_engineering_smoke_retry_revision_01/retry_prelaunch_receipt.json",
+    "sha256": "2d472c32b9e064afe374aa5d4a80bd4e503fd07b7562d45ad2553c71be398a21"
+  },
+  "registered_XSD_manifest": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_engineering_smoke_retry_revision_01/xsd_dependency_manifest.json",
+    "sha256": "88ab7073ff68505fa43db144c505fdbbeb7236dd697cc41e3500eae41b6fb5c9"
+  },
+  "retry_consumed": false,
+  "script": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_engineering_smoke_retry_revision_01/execute_d1_retry.py",
+    "sha256": "55ac3c0e2feaf0bbab1666aaa864968bb9548837b899ca32644a714d16712221"
+  },
+  "status": "STOP_PRELAUNCH"
+}

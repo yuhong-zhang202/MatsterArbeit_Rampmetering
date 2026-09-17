@@ -1,0 +1,354 @@
+{
+  "runs": [
+    {
+      "run_id": "C17",
+      "status": "analyzed",
+      "qualification": {
+        "plan_count_status": "verified_declared_flow_number",
+        "schedule_time_status": "unverified",
+        "departure_coverage_status": "verified",
+        "arrival_coverage_status": "verified"
+      },
+      "plan_counts": {
+        "M": 1333,
+        "R": 300,
+        "U": 150,
+        "X": 75
+      },
+      "actual_trip_class_counts": {
+        "M": 1333,
+        "U": 150,
+        "X": 75,
+        "R": 300
+      },
+      "endpoint": {
+        "M": {
+          "planned": 1333,
+          "entered": 1333,
+          "arrived": 1333,
+          "outside_confirmed": 0,
+          "in_network": 0,
+          "unaccounted_count": 0
+        },
+        "R": {
+          "planned": 300,
+          "entered": 300,
+          "arrived": 300,
+          "outside_confirmed": 0,
+          "in_network": 0,
+          "unaccounted_count": 0
+        },
+        "U": {
+          "planned": 150,
+          "entered": 150,
+          "arrived": 150,
+          "outside_confirmed": 0,
+          "in_network": 0,
+          "unaccounted_count": 0
+        },
+        "X": {
+          "planned": 75,
+          "entered": 75,
+          "arrived": 75,
+          "outside_confirmed": 0,
+          "in_network": 0,
+          "unaccounted_count": 0
+        }
+      },
+      "schedule_check": {
+        "M": {
+          "max_nominal_schedule_discrepancy_s": 0.3794373593400451,
+          "observed_members": 1333,
+          "qualification": "unverified even if discrepancies are zero"
+        },
+        "R": {
+          "max_nominal_schedule_discrepancy_s": 0.0,
+          "observed_members": 300,
+          "qualification": "unverified even if discrepancies are zero"
+        },
+        "U": {
+          "max_nominal_schedule_discrepancy_s": 0.0,
+          "observed_members": 150,
+          "qualification": "unverified even if discrepancies are zero"
+        },
+        "X": {
+          "max_nominal_schedule_discrepancy_s": 0.0,
+          "observed_members": 75,
+          "qualification": "unverified even if discrepancies are zero"
+        }
+      },
+      "source_windows": {
+        "clearance": {
+          "begin_s": 1500,
+          "duration_s": 1200,
+          "end_s": 2700
+        },
+        "demand": {
+          "begin_s": 0,
+          "duration_s": 1500,
+          "end_s": 1500
+        },
+        "measurement": {
+          "begin_s": 0,
+          "duration_s": 1500,
+          "end_s": 1500
+        },
+        "simulation": {
+          "begin_s": 0,
+          "duration_s": 2700,
+          "end_s": 2700
+        },
+        "status": "all time values are exploratory candidates and are not frozen",
+        "warmup": {
+          "begin_s": 0,
+          "duration_s": 0,
+          "end_s": 0
+        }
+      },
+      "requested_demand": {
+        "M": 3200.0,
+        "R": 720.0,
+        "U": 360.0,
+        "X": 180.0
+      },
+      "six_e1_rows": 540,
+      "independent_E1_window_checks": 24,
+      "E1_per_ID_coverage": "not_verified",
+      "FCD_frames": 2700,
+      "FCD_missing_times": [],
+      "FCD_unique_IDs": 1858,
+      "FCD_lane_class_sample_counts": {
+        "main_up_0/M": 2158,
+        "urban_in_0/R": 45670,
+        "urban_in_0/U": 22626,
+        "cross_in_0/X": 2580,
+        "main_down_0/M": 17116,
+        "shared_approach_0/R": 30146,
+        ":urban_tls_0_0/U": 292,
+        "shared_approach_0/U": 15425,
+        ":freeway_merge_1_0/M": 190,
+        "main_up_1/M": 1755,
+        "main_down_1/M": 19104,
+        ":urban_diverge_1_0/R": 19796,
+        ":urban_diverge_0_0/U": 418,
+        "urban_out_0/U": 5279,
+        "ramp_storage_0/R": 37690,
+        ":ramp_mid_0_0/R": 16323,
+        "ramp_accel_0/R": 20718,
+        ":freeway_merge_1_1/M": 131,
+        ":urban_tls_1_0/X": 165,
+        "cross_out_0/X": 2704,
+        ":urban_tls_0_0/R": 433,
+        ":freeway_merge_0_0/R": 415,
+        "main_down_0/R": 7327,
+        "main_down_1/R": 1400
+      },
+      "merge_status_counts": {
+        "bracketed": 300
+      },
+      "merge_bin_ambiguous": 4,
+      "invalid_E1_speed_with_contributions": [],
+      "core_evidence_status": "passed_for_descriptive_contract",
+      "clearance_status": "complete",
+      "last_actual_departure_s": 2245.0,
+      "last_arrival_s": 2401.0,
+      "limitations": [
+        "Individual schedules unverified: no inferred mid-run outside counts or exact cohort external delay.",
+        "Internal E1 is M-only aggregate passage; per-ID omissions/duplicates unverified.",
+        "Origin E1 contaminated by insertion; downstream E1 may be affected by lane changes.",
+        "No breakdown/capacity-drop/steady-state or statistical classification."
+      ]
+    },
+    {
+      "run_id": "C23",
+      "status": "analyzed",
+      "qualification": {
+        "plan_count_status": "verified_declared_flow_number",
+        "schedule_time_status": "unverified",
+        "departure_coverage_status": "verified",
+        "arrival_coverage_status": "verified"
+      },
+      "plan_counts": {
+        "M": 1333,
+        "R": 300,
+        "U": 150,
+        "X": 75
+      },
+      "actual_trip_class_counts": {
+        "M": 1333,
+        "U": 150,
+        "X": 75,
+        "R": 300
+      },
+      "endpoint": {
+        "M": {
+          "planned": 1333,
+          "entered": 1333,
+          "arrived": 1333,
+          "outside_confirmed": 0,
+          "in_network": 0,
+          "unaccounted_count": 0
+        },
+        "R": {
+          "planned": 300,
+          "entered": 300,
+          "arrived": 300,
+          "outside_confirmed": 0,
+          "in_network": 0,
+          "unaccounted_count": 0
+        },
+        "U": {
+          "planned": 150,
+          "entered": 150,
+          "arrived": 150,
+          "outside_confirmed": 0,
+          "in_network": 0,
+          "unaccounted_count": 0
+        },
+        "X": {
+          "planned": 75,
+          "entered": 75,
+          "arrived": 75,
+          "outside_confirmed": 0,
+          "in_network": 0,
+          "unaccounted_count": 0
+        }
+      },
+      "schedule_check": {
+        "M": {
+          "max_nominal_schedule_discrepancy_s": 0.3794373593400451,
+          "observed_members": 1333,
+          "qualification": "unverified even if discrepancies are zero"
+        },
+        "R": {
+          "max_nominal_schedule_discrepancy_s": 0.0,
+          "observed_members": 300,
+          "qualification": "unverified even if discrepancies are zero"
+        },
+        "U": {
+          "max_nominal_schedule_discrepancy_s": 0.0,
+          "observed_members": 150,
+          "qualification": "unverified even if discrepancies are zero"
+        },
+        "X": {
+          "max_nominal_schedule_discrepancy_s": 0.0,
+          "observed_members": 75,
+          "qualification": "unverified even if discrepancies are zero"
+        }
+      },
+      "source_windows": {
+        "clearance": {
+          "begin_s": 1500,
+          "duration_s": 1200,
+          "end_s": 2700
+        },
+        "demand": {
+          "begin_s": 0,
+          "duration_s": 1500,
+          "end_s": 1500
+        },
+        "measurement": {
+          "begin_s": 0,
+          "duration_s": 1500,
+          "end_s": 1500
+        },
+        "simulation": {
+          "begin_s": 0,
+          "duration_s": 2700,
+          "end_s": 2700
+        },
+        "status": "all time values are exploratory candidates and are not frozen",
+        "warmup": {
+          "begin_s": 0,
+          "duration_s": 0,
+          "end_s": 0
+        }
+      },
+      "requested_demand": {
+        "M": 3200.0,
+        "R": 720.0,
+        "U": 360.0,
+        "X": 180.0
+      },
+      "six_e1_rows": 540,
+      "independent_E1_window_checks": 24,
+      "E1_per_ID_coverage": "not_verified",
+      "FCD_frames": 2700,
+      "FCD_missing_times": [],
+      "FCD_unique_IDs": 1858,
+      "FCD_lane_class_sample_counts": {
+        "main_up_0/M": 2234,
+        "urban_in_0/R": 44748,
+        "urban_in_0/U": 22182,
+        "cross_in_0/X": 6972,
+        "main_down_0/M": 17196,
+        "shared_approach_0/R": 29895,
+        ":urban_tls_0_0/U": 342,
+        "shared_approach_0/U": 15289,
+        "main_up_1/M": 1897,
+        "main_down_1/M": 19659,
+        ":urban_diverge_1_0/R": 19712,
+        "ramp_storage_0/R": 38013,
+        ":urban_diverge_0_0/U": 418,
+        "urban_out_0/U": 5203,
+        ":freeway_merge_1_0/M": 179,
+        ":ramp_mid_0_0/R": 16489,
+        "ramp_accel_0/R": 20835,
+        ":urban_tls_1_0/X": 200,
+        "cross_out_0/X": 2685,
+        ":urban_tls_0_0/R": 498,
+        ":freeway_merge_0_0/R": 426,
+        "main_down_0/R": 7509,
+        ":freeway_merge_1_1/M": 142,
+        "main_down_1/R": 1301
+      },
+      "merge_status_counts": {
+        "bracketed": 300
+      },
+      "merge_bin_ambiguous": 8,
+      "invalid_E1_speed_with_contributions": [],
+      "core_evidence_status": "passed_for_descriptive_contract",
+      "clearance_status": "complete",
+      "last_actual_departure_s": 2236.0,
+      "last_arrival_s": 2387.0,
+      "limitations": [
+        "Individual schedules unverified: no inferred mid-run outside counts or exact cohort external delay.",
+        "Internal E1 is M-only aggregate passage; per-ID omissions/duplicates unverified.",
+        "Origin E1 contaminated by insertion; downstream E1 may be affected by lane changes.",
+        "No breakdown/capacity-drop/steady-state or statistical classification."
+      ]
+    },
+    {
+      "run_id": "ML17",
+      "status": "pending",
+      "reason": "No selected attempt; retained in coverage"
+    },
+    {
+      "run_id": "ML23",
+      "status": "pending",
+      "reason": "No selected attempt; retained in coverage"
+    },
+    {
+      "run_id": "MH17",
+      "status": "pending",
+      "reason": "No selected attempt; retained in coverage"
+    },
+    {
+      "run_id": "MH23",
+      "status": "pending",
+      "reason": "No selected attempt; retained in coverage"
+    },
+    {
+      "run_id": "RL17",
+      "status": "pending",
+      "reason": "No selected attempt; retained in coverage"
+    },
+    {
+      "run_id": "RL23",
+      "status": "pending",
+      "reason": "No selected attempt; retained in coverage"
+    }
+  ],
+  "all_logical_records": 8,
+  "stage2_acceptance": "pending_user"
+}

@@ -1,0 +1,39 @@
+{
+  "schema_version": 1,
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "review_type": "independent data-contract and scientific-repair rereview",
+  "revision": "revision_03",
+  "status": "rejected_pending_new_major_repair",
+  "review_boundary": "Exploratory T42 offline tooling only. This review does not authorize T43, select a Breakdown threshold, or establish causal or thesis claims.",
+  "scientific_repair_decisions": {
+    "S4SR-M01": "closed",
+    "S4SR-M02": "closed",
+    "S4SR-M03": "closed within archived-reference and registered synthetic-fixture evidence",
+    "S4SR-M04": "closed"
+  },
+  "minor_decisions": {
+    "m_position_coordinate": "closed",
+    "netconvert_budget": "closed",
+    "q_definition_label": "closed",
+    "historical_revision_preservation": "closed"
+  },
+  "open_findings": [
+    {
+      "id": "S4DA-R03-M01",
+      "severity": "Major",
+      "summary": "T43 prohibited-state validation accepts nonzero TraCI or GUI execution counters."
+    }
+  ],
+  "open_major_count": 1,
+  "recommendation": "Do not return this hash set as T43-ready. Repair the four-counter prohibited-state gate, rerun production and independent suites under new hashes, and issue a new immutable data review before scientific review.",
+  "confidence": {
+    "S4SR_M01_to_M04_closure": "High, except future nonempty M-stop candidate behavior is Moderate",
+    "new_execution_gate_failure": "High",
+    "current_actual_zero_execution_state": "High",
+    "future_new_run_behavior": "Unknown"
+  },
+  "actual_sumo_starts": 0,
+  "actual_netconvert_operations": 0,
+  "actual_traci_connections": 0,
+  "actual_gui_starts": 0
+}

@@ -1,0 +1,73 @@
+{
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "constraints": {
+    "additional_q_or_seed_prohibited": true,
+    "candidate_receipt_may_append_only_after_analysis_of_each_completed_attempt": true,
+    "runtime_overlay_may_append_only_after_each_real_attempt": true,
+    "tier2_launch_permitted_before_independent_review": false
+  },
+  "context_preflight": {
+    "authorization": "existing exact T43 package authorization",
+    "current_phase": "T43 Tier1 complete; scientifically reviewed branch run_q3650; Tier2 not started",
+    "formal_protocol": "empty_not_frozen",
+    "write_scope": "Stage4 adapter, production tests, and batch engineering metadata only"
+  },
+  "execution_counters": {
+    "actual_gui_starts": 0,
+    "actual_netconvert_operations": 2,
+    "actual_sumo_starts": 2,
+    "actual_traci_connections": 0
+  },
+  "gate": {
+    "cancelled": [
+      "QM3350S17",
+      "QM3350S23"
+    ],
+    "path": "data/processed/stage4_qmain_sequential_20260912_v1/tier2_branch_gate_registration.json",
+    "selected": [
+      "QM3650S17",
+      "QM3650S23"
+    ],
+    "sha256": "e600e4bf5e19eba8114d2a781cd4167481af8330e3d5e6446682ea8df1e0d5e3",
+    "status": "registered_pending_independent_review"
+  },
+  "hashes": {
+    "adapter_sha256": "193b0a8072e3da308e75162e72296905c8278dc969d477197ae9b42ae6be1c2d",
+    "approved_source_registry_sha256": "96ee4a20f8130ede9a14ff9a40292a0c1d588770bbf1b37ad1ac455b3a1c538b",
+    "candidate_manifest_receipt_registry_sha256": "c80c571deacf9bc7a53c090d3c649fe1b05673ab21094bd76976dcf9973ccc4c",
+    "contract_sha256": "b3bf7abec5a9e6cfc29edb81de58ec5cc86c9e0fd132e88a9cd6999a456a91c9",
+    "independent_test_sha256": "1e366c843727f0abd9286063f533f43ee2d4a98345868c63d6ee6dc0a9406e6c",
+    "production_test_sha256": "dc399fb002d2810f6e2f242f64839b94c919963f53ace2d0e7a3a2d6560a5b3c",
+    "registration_payload_sha256": "d934b62903081163495b7e17cf72c52786e1dfb864aa5d9a9d3eb5c2eb9a952a",
+    "runtime_source_registry_sha256": "526a144892c9b0317af7edc631fa9fba52173ca33c0c01dce6dbcf80f6866ac4"
+  },
+  "immutable_snapshots": {
+    "tier1_manifest_receipt_registry_sha256": "c80c571deacf9bc7a53c090d3c649fe1b05673ab21094bd76976dcf9973ccc4c",
+    "tier1_runtime_overlay_sha256": "526a144892c9b0317af7edc631fa9fba52173ca33c0c01dce6dbcf80f6866ac4"
+  },
+  "open_items": [
+    "independent data-analyst review of Tier2 extension and gate"
+  ],
+  "schema_version": 1,
+  "scientific_branch": {
+    "action": "run_q3650",
+    "decision_path": "data/processed/stage4_qmain_sequential_20260912_v1/analysis/tier1/revision_05/decision/branch_decision.json",
+    "decision_sha256": "e0fb31613c2af5375aa6d6148da7a9c67ef5efacde1c0e822b806b6bc2d54b91",
+    "review_receipt_path": "data/processed/stage4_qmain_sequential_20260912_v1/tier1_scientific_branch_review_receipt.json",
+    "review_receipt_sha256": "db3f6ec244e088768a44e36d7fbcd4735d1dd5f3a5bd06cc8e9feea1faff71e4",
+    "standalone_scientific_artifact_claimed": false
+  },
+  "scope": "offline branch-gate and adapter extension only; no Tier2 execution",
+  "stage": "Stage 4",
+  "status": "engineering_passed_pending_independent_data_review",
+  "step": "T43 Tier2 prelaunch engineering gate",
+  "verification": {
+    "ast_forbidden_imports": [],
+    "cli_help": "passed register-tier2-plan",
+    "combined_unittest": "passed 104/104",
+    "git_diff_check": "passed",
+    "independent_test_methods": 32,
+    "production_test_methods": 72,
+    "py_compile": "passed"
+  }
+}

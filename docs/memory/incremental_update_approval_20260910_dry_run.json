@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "status": "dry-run-authorized",
+  "project": "Masterarbeit-Ramp-Metering",
+  "update_id": "stage2-closeout-20260910-v1",
+  "session_id": "stage2-closeout-20260910-v1",
+  "approved_at": "2026-09-10T00:07:30+02:00",
+  "approval_quote": "现在只制作增量包、完整 L3 候选和费用预算，先运行 dry-run；不要进行付费 API 调用，也不要写入腾讯记忆。",
+  "model": "gpt-4.1-mini",
+  "max_new_attempts": 3,
+  "max_request_bytes": 20000,
+  "max_output_tokens": 4096,
+  "input_rate_usd_per_million": 0.4,
+  "output_rate_usd_per_million": 1.6,
+  "approved_cost_ceiling_usd": 0.0436608,
+  "delta_bundle": {
+    "path": "docs/memory/incremental_update_20260910.md",
+    "sha256": "ea0d3aa4c6be63324bbdbbaecf6d43fd979874814c4b6908f972eeb4c0be89ad"
+  },
+  "l3_candidate": {
+    "path": "docs/memory/formal_core_memory_20260910_candidate.md",
+    "sha256": "94c495348fd2dc28bdc1bd22fc0afdd0f23385f8f83cf2ae62f3b090b1ac4bab"
+  }
+}

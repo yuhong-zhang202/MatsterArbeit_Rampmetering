@@ -1,0 +1,26 @@
+{
+  "schema_version": 1,
+  "status": "aggregate_archive_only_unit_label_corrected",
+  "parent_revision": "aggregate/revision_02",
+  "parent_manifest_sha256": "7851b3c861b74f89619d4f804b409ada99fc75d05515f8be11f17f1d593fbed3",
+  "correction": {
+    "metric": "stopped_episode_support",
+    "from": "sampled_vehicle_presence_s",
+    "to": "sampled_region_stop_support_s",
+    "row_count": 355,
+    "numeric_values_changed": 0
+  },
+  "unchanged_file_hashes": {
+    "aggregation_timeseries.csv": "0b10a51b1c4c2723aaf4bb1a8edc42e659366aa8174acab72e87d41f6e9f97a1",
+    "condition_event_sets.json": "b9c3812d84b29d5cdd6cb0aea2d26c1c1f8832b980614a8b6529d80f7be289ac",
+    "endpoint_accounting.csv": "36c934cdcfe1382ca993ee242ec6de507f4db5c3709f1f506cfdc4c998ca88c3",
+    "propagation_event_sets.json": "222e6b2a4ac0738df14cc7ebc06c23260342eaf266528e6a51794005babddf1b",
+    "sensitivity.csv": "35115af6556b415126f12fbc014c777cc31f3263dd92d917a1bb7b88650e9e28",
+    "coverage_audit.csv": "53fe8d501cb6e8a56ca960a4da89e5f2f1e7387b1608e8007e2aa1a432025bac",
+    "lane_class_timeline.csv": "de893f2a458facd65e4f37ebbcaa2dfeb6a42bd7e0aacebdd7c19ad768375f1e",
+    "spatial_propagation_evidence.csv": "a93f87933ba61995a8867b0f17d0d12420ec8a30095d06e412fd9513917c25b5",
+    "stopping_episodes.csv": "29b79854fa14fde655b679a4fdb7135477916bb0b913f05d1baa7a3a39e1638d"
+  },
+  "condition_evidence_summary_sha256": "5e56f56d7dd69abcdc3993ae42e4b4ed0dad75c7e4affab7b4eadab72e969a0f",
+  "actual_sumo_starts": 0
+}

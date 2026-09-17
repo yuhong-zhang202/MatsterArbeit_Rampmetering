@@ -1,6 +1,6 @@
 # Supervisor Feedback
 
-**Last updated:** 2026-08-22  
+**Last updated:** 2026-08-25
 **Document role:** Evidence-based record of explicit supervisor feedback. Current operational status belongs in `PROJECT_STATE.md`.
 
 ## Recording Rules
@@ -94,14 +94,49 @@ It must not be treated as supervisor confirmation.
 
 ## Robert Hilbrich
 
-No explicit feedback from Robert Hilbrich is currently available in the project records.
+### Received 2026-08-25 — Initial Scope, Technical Starting Point, and Timeline
 
-**Current status:** `Awaiting response`
+**Source:** `docs/supervision/2026-08-25_robert_hilbrich_reply.md`
 
-When a reply or meeting note becomes available:
+**Source-date limitation:** The supplied email body did not include its exact sent date or subject. The record uses the date on which the student supplied the reply.
 
-1. archive the original source under `docs/supervision/`;
-2. add a dated evidence-based entry here;
-3. distinguish explicit feedback from interpretation;
-4. update `PROJECT_STATE.md` if the current scope, blockers, or next steps change;
-5. update `DECISIONS.md` only after the user approves recording a resulting decision.
+**Record status:** Current supervisor guidance
+
+#### Explicit Feedback
+
+Robert Hilbrich stated that:
+
+- he would support the student with the master's thesis and welcomed the use of SUMO;
+- `sumoITScontrol` is a sensible initial framework because, to his knowledge, there is no comparable overall SUMO framework combining several established control methods with systematic multi-seed evaluation;
+- beginning with ALINEA is appropriate because it is established and comparatively manageable;
+- the proposed synthetic scenario is sensible and should initially remain simple: one freeway, one on-ramp, and a small upstream urban network with an initially fixed-time traffic signal;
+- scanning the uncontrolled traffic-demand grid is a good first step for understanding scenario behaviour, especially near breakdown;
+- `qRamp <= C - qMain` may be used as an intentionally simplified starting hypothesis, but actual capacity is variable and unknown, merging affects effective capacity, and capacity drop may reduce outflow after breakdown;
+- ramp demand may exceed the admissible inflow and therefore create a queue, while finite ramp storage can require releasing more traffic to protect the subordinate network even when the freeway lacks residual capacity;
+- a particularly interesting core question is when ramp metering should be reduced or overridden in favour of the subordinate network;
+- the initial car-following choice should be SUMO's standard Krauß model with default parameters; without empirical calibration data, special parameterization should not be used to force desired behaviour;
+- the first diagnostic question is whether the selected scenario produces plausible breakdown and capacity drop; if not, possible causes include car following, lane changing and merging, ramp geometry, and demand;
+- high-flow vehicle insertion must be configured and validated so that insertion does not cap realized demand; he named `departPos="last"`, `departLane="best"`, and `departSpeed="max"` as example settings;
+- the proposed schedule is realistic: an interim presentation to Prof. Nagel around late October or early November, subsequent refinement and official registration, and then the four-month thesis period, implying submission around February or March;
+- by the interim presentation, the framework should run, the scenario should be built, and initial uncontrolled-case results should be available so that the research question and scope can be reviewed before registration;
+- writing in English would not be a problem for him, but any chair-level or examination-rule requirements must still be checked.
+
+#### Project Relevance
+
+This reply supports the overall working direction and a staged initial scope: `sumoITScontrol`, ALINEA, a deliberately simple synthetic freeway–ramp–urban scenario, and uncontrolled demand-grid exploration before controlled comparisons.
+
+It also sharpens the central research interest toward the finite-storage conflict between protecting freeway flow and avoiding spillback into the subordinate network.
+
+The Krauß defaults and the named departure settings are starting and diagnostic guidance, not empirically validated thesis parameters. The reply does not freeze a formal experiment protocol.
+
+#### Explicitly Unresolved
+
+The reply does not determine:
+
+- the final wording of the research question or thesis title;
+- a formal sweet-spot or override rule;
+- the exact network geometry, ramp storage, demand ranges, or grid resolution;
+- the final metrics, seed count, statistical analysis, or exclusion rules;
+- whether the initial model produces plausible breakdown and capacity drop;
+- the final scope after the interim presentation;
+- whether institutional rules permit the thesis to be written in English.

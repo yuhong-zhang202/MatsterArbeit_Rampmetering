@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='UTF-8'?>
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://sumo.dlr.de/xsd/additional_file.xsd">
+    
+    <laneAreaDetector id="shared_boundary_e2" lane="shared_approach_0" pos="0" endPos="238.8" period="30" file="/private/tmp/minimal_uncontrolled_5tr62jan/outputs/shared_boundary_e2.xml" />
+    <laneAreaDetector id="ramp_storage_e2" lane="ramp_storage_0" pos="0" endPos="204.49" period="30" file="/private/tmp/minimal_uncontrolled_5tr62jan/outputs/ramp_storage_e2.xml" />
+
+    
+    <inductionLoop id="merge_upstream_e1_l0" lane="main_up_0" pos="-1" period="30" file="/private/tmp/minimal_uncontrolled_5tr62jan/outputs/merge_upstream_e1_l0.xml" />
+    <inductionLoop id="merge_upstream_e1_l1" lane="main_up_1" pos="-1" period="30" file="/private/tmp/minimal_uncontrolled_5tr62jan/outputs/merge_upstream_e1_l1.xml" />
+    <inductionLoop id="mainline_merge_entry_e1_l0" lane=":freeway_merge_1_0" pos="4.32" period="30" file="/private/tmp/minimal_uncontrolled_5tr62jan/outputs/mainline_merge_entry_e1_l0.xml" />
+    <inductionLoop id="mainline_merge_entry_e1_l1" lane=":freeway_merge_1_1" pos="4.32" period="30" file="/private/tmp/minimal_uncontrolled_5tr62jan/outputs/mainline_merge_entry_e1_l1.xml" />
+    <inductionLoop id="merge_downstream_e1_l0" lane="main_down_0" pos="100" period="30" file="/private/tmp/minimal_uncontrolled_5tr62jan/outputs/merge_downstream_e1_l0.xml" />
+    <inductionLoop id="merge_downstream_e1_l1" lane="main_down_1" pos="100" period="30" file="/private/tmp/minimal_uncontrolled_5tr62jan/outputs/merge_downstream_e1_l1.xml" />
+    <timedEvent type="SaveTLSStates" source="urban_tls" dest="/private/tmp/minimal_uncontrolled_5tr62jan/outputs/tls_states.xml" />
+</additional>

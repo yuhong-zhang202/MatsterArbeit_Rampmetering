@@ -1,0 +1,453 @@
+"""Strict offline H2 measurement primitives and registered result schemas.
+
+No process execution, simulator imports, or historical-contract mutation.
+Uncertainty is retained separately from missing/corrupt evidence.
+"""
+from __future__ import annotations
+
+from dataclasses import dataclass
+import math
+import statistics
+from pathlib import Path
+import xml.etree.ElementTree as ET
+
+from src.scenarios.stage6_h2_offline import EvidenceError, require, verify_binding
+
+LANE_CLASS = {
+    "main_up_0": "M", "main_up_1": "M", ":freeway_merge_1_0": "M", ":freeway_merge_1_1": "M",
+    "main_down_0": "MR", "main_down_1": "MR",
+    "ramp_accel_0": "R", ":freeway_merge_0_0": "R", ":ramp_mid_0_0": "R", "ramp_storage_0": "R", ":urban_diverge_1_0": "R",
+    "urban_in_0": "RU", ":urban_tls_0_0": "RU", "shared_approach_0": "RU",
+    ":urban_diverge_0_0": "U", "urban_out_0": "U", "cross_in_0": "X", ":urban_tls_1_0": "X", "cross_out_0": "X",
+}
+REGIONS = {
+    "ramp": {"ramp_accel_0", "ramp_storage_0", ":ramp_mid_0_0", ":freeway_merge_0_0", ":urban_diverge_1_0"},
+    "shared": {"shared_approach_0"}, "urban_in": {"urban_in_0", ":urban_tls_0_0"},
+    "main_up": {"main_up_0", "main_up_1"}, "merge_M": {":freeway_merge_1_0", ":freeway_merge_1_1"},
+    "main_down": {"main_down_0", "main_down_1"}, "urban_out": {":urban_diverge_0_0", "urban_out_0"}, "cross": {"cross_in_0", ":urban_tls_1_0", "cross_out_0"},
+}
+require(sum(map(len, REGIONS.values())) == len(set().union(*REGIONS.values())) == 19, "overlapping/incomplete lane regions")
+
+
+def number(raw, name: str, minimum: float | None = None) -> float:
+    try:
+        value = float(raw)
+    except (TypeError, ValueError) as exc:
+        raise EvidenceError(f"missing/invalid {name}") from exc
+    require(math.isfinite(value), f"nonfinite {name}")
+    require(minimum is None or value >= minimum, f"negative {name}")
+    return value
+
+
+def value(value: float | None, state: str = "observed", **extra) -> dict:
+    require(state in ("observed", "no_contributors", "missing_observation", "not_applicable", "unbounded"), "unknown value state")
+    require((state == "observed") == (value is not None), "value/state mismatch")
+    if value is not None:
+        number(value, "value")
+    return {"value": value, "value_state": state, **extra}
+
+
+def group(vehicle_id: str) -> str:
+    prefix = vehicle_id.split("_flow.")[0]
+    require(prefix in "MRUX" and len(prefix) == 1, "unknown vehicle class")
+    return prefix
+
+
+def planned_ids(numbers: dict) -> set[str]:
+    require(set(numbers) == set("MRUX"), "planned class universe mismatch")
+    for count in numbers.values():
+        require(type(count) is int and count >= 0, "invalid planned count")
+    return {f"{g}_flow.{i}" for g, n in numbers.items() for i in range(n)}
+
+
+def read_tripinfo(path: Path, expected: set[str]) -> dict[str, dict]:
+    rows = {}
+    for el in ET.parse(path).getroot().findall("tripinfo"):
+        vid = el.get("id")
+        require(vid in expected and vid not in rows, "unknown/duplicate tripinfo id")
+        dep = number(el.get("depart"), "depart")
+        arrival = number(el.get("arrival"), "arrival")
+        require(dep == -1 or dep >= 0, "invalid unfinished departure")
+        require(arrival == -1 or arrival >= dep >= 0, "arrival/depart order")
+        rows[vid] = {"depart": dep, "arrival": arrival, "departPos": number(el.get("departPos"), "departPos") if dep >= 0 else None, "departDelay": number(el.get("departDelay"), "departDelay", 0) if dep >= 0 else None, "departLane": el.get("departLane")}
+        if dep >= 0:
+            require(rows[vid]["departPos"] >= 0, "invalid actual depart position")
+            require(rows[vid]["departLane"] in LANE_CLASS and group(vid) in LANE_CLASS[rows[vid]["departLane"]], "invalid departure lane/class")
+    require(set(rows) == expected, "missing tripinfo identity; never silently omit unfinished")
+    return rows
+
+
+def endpoint(planned: set[str], trips: dict, time: float) -> dict:
+    """Half-open cumulative membership: depart/arrival exactly t is not before t."""
+    require(set(trips) == planned, "endpoint identity mismatch")
+    entered = {vid for vid, r in trips.items() if 0 <= r["depart"] < time}
+    arrived = {vid for vid, r in trips.items() if 0 <= r["arrival"] < time}
+    require(arrived <= entered, "arrival without entry")
+    return {"planned": len(planned), "entered": len(entered), "arrived": len(arrived), "in_network": len(entered - arrived), "outside": len(planned - entered), "membership": "strictly_before_endpoint"}
+
+
+@dataclass(frozen=True)
+class Sample:
+    time: int
+    lane: str
+    pos: float
+    speed: float
+
+
+def read_fcd(path: Path, expected: set[str], trips: dict, lane_lengths: dict, horizon: int = 2700) -> dict[str, list[Sample]]:
+    require(set(lane_lengths) == set(LANE_CLASS), "lane universe mismatch")
+    require(set(trips) == expected, "FCD/tripinfo identity universe")
+    trajectories = {vid: [] for vid in expected}
+    labels = []
+    for _, frame in ET.iterparse(path, events=["end"]):
+        if frame.tag != "timestep":
+            continue
+        time = number(frame.get("time"), "FCD label", 0)
+        require(time == len(labels) and time < horizon, "missing/duplicate/extra/off-grid FCD label")
+        labels.append(time)
+        seen = set()
+        for vehicle in frame.findall("vehicle"):
+            vid = vehicle.get("id")
+            require(vid in expected and vid not in seen, "unknown/duplicate FCD identity")
+            seen.add(vid)
+            lane = vehicle.get("lane")
+            require(lane in LANE_CLASS and group(vid) in LANE_CLASS[lane], "unknown lane or incompatible class")
+            pos = number(vehicle.get("pos"), "FCD pos", 0)
+            speed = number(vehicle.get("speed"), "FCD speed", 0)
+            require(pos <= lane_lengths[lane], "position outside compiled lane")
+            trajectories[vid].append(Sample(int(time), lane, pos, speed))
+        frame.clear()
+    require(len(labels) == horizon, "truncated FCD frame grid")
+    for vid, samples in trajectories.items():
+        trip = trips[vid]
+        if trip["depart"] < 0 or trip["depart"] >= horizon:
+            require(not samples, "FCD contains not-yet-entered vehicle")
+            continue
+        require(trip["depart"].is_integer(), "actual depart off 1Hz grid")
+        end = horizon if trip["arrival"] < 0 else min(horizon, int(trip["arrival"]))
+        require(trip["arrival"] < 0 or trip["arrival"].is_integer(), "actual arrival off 1Hz grid")
+        require([s.time for s in samples] == list(range(int(trip["depart"]), end)), "identity disappearance or missing trajectory label")
+        if samples:
+            require(samples[0].lane == trip["departLane"] and abs(samples[0].pos - trip["departPos"]) <= .02, "tripinfo/FCD actual insertion mismatch")
+    return trajectories
+
+
+def read_tls(path: Path, horizon: int = 2700) -> list[str]:
+    states = []
+    for _, el in ET.iterparse(path, events=["end"]):
+        if el.tag != "tlsState":
+            continue
+        time = number(el.get("time"), "TLS time", 0)
+        require(time == len(states) and time < horizon, "TLS grid mismatch")
+        require(el.get("id") == "urban_tls" and el.get("programID") == "technical_placeholder", "TLS identity/program mismatch")
+        state = el.get("state")
+        t = int(time) % 60
+        expected = "Gr" if t < 45 else "yr" if t < 48 else "rG" if t < 57 else "ry"
+        require(state == expected, "TLS movement/link/phase mismatch")
+        states.append(state)
+        el.clear()
+    require(len(states) == horizon, "TLS labels missing")
+    return states
+
+
+def analyze_observations(directory: Path, numbers: dict, lane_lengths: dict, version: str, horizon: int = 2700) -> dict:
+    """End-to-end raw observation qualification with final regional accounting.
+
+This is measurement qualification, not a declaration that scientific gates pass.
+Caller must verify source-file bindings before using results as evidence.
+"""
+    require(version in ("V0", "V1"), "unknown scenario version")
+    ids = planned_ids(numbers)
+    trips = read_tripinfo(directory / "tripinfo.xml", ids)
+    trajectories = read_fcd(directory / "fcd.xml", ids, trips, lane_lengths, horizon)
+    tls = read_tls(directory / "tls_states.xml", horizon)
+    if version == "V1":
+        for vid, trip in trips.items():
+            if group(vid) == "M" and trip["depart"] >= 0:
+                require(trip["departLane"] in ("main_up_0", "main_up_1") and abs(trip["departPos"] - 100) <= .02, "candidate insertion skipped registered feeder")
+    e1 = {}
+    for prefix in ("merge_upstream_e1", "mainline_merge_entry_e1", "merge_downstream_e1"):
+        for lane in (0, 1):
+            detector = f"{prefix}_l{lane}"
+            intervals = read_e1(directory / f"{detector}.xml", detector, horizon)
+            e1[detector] = {kind: aggregate_e1(intervals, kind) for kind in ("e1_nVehEntered_rate", "e1_nVehContrib_rate")}
+    return {"analysis_qualification": "qualified", "scientific_result": "not_evaluated", "tripinfo": trips, "trajectories": trajectories, "regional_stops": regional_stops(trajectories, horizon), "tls_states": tls, "e1": e1, "endpoints": {str(t): endpoint(ids, trips, t) for t in sorted({min(1500, horizon), horizon})}, "inlet": inlet_qualification(trips, ids)}
+
+
+def domain_cohort(trajectories: dict[str, list[Sample]], trips: dict, edge: str, start_pos: float, end_pos: float, window=(300, 1500), horizon=2700) -> dict:
+    """Conservative M cohort measured from adjacent raw labels."""
+    require(edge in ("main_up", "main_down") and start_pos < end_pos, "unknown domain")
+    lanes = {f"{edge}_0", f"{edge}_1"}
+    definite, optional, records = [], [], []
+    for vid, samples in trajectories.items():
+        if group(vid) != "M":
+            continue
+        start = crossing(samples, lanes, start_pos)
+        if start is None:
+            continue
+        member = membership(start, *window)
+        if member == "outside":
+            continue
+        end = crossing(samples, lanes, end_pos)
+        if end is None:
+            require(bool(samples) and samples[-1].time == horizon - 1 and samples[-1].lane in lanes and samples[-1].pos < end_pos and trips[vid]["arrival"] < 0, "missing exit is not valid end-of-record censor")
+            interval = travel_interval(start, None, last_confirmed=samples[-1].time, continuous_to_end=True)
+        else:
+            interval = travel_interval(start, end)
+        (definite if member == "certain" else optional).append(interval)
+        records.append({"vehicle_id": vid, "entry_bracket": start, "exit_bracket": end, "cohort_state": member, **interval})
+    return {"records": records, "bounds": conservative_mean_bounds(definite, optional)}
+
+
+def read_e1(path: Path, detector_id: str, horizon: float = 2700) -> list[dict]:
+    rows, cursor = [], 0.0
+    for el in ET.parse(path).getroot().findall("interval"):
+        require(el.get("id") == detector_id, "E1 detector mismatch")
+        begin, end = number(el.get("begin"), "E1 begin", 0), number(el.get("end"), "E1 end", 0)
+        require(begin == cursor and begin < end <= horizon, "E1 missing/duplicate/overlapping/extra interval")
+        entered = number(el.get("nVehEntered"), "E1 entered", 0)
+        contrib = number(el.get("nVehContrib"), "E1 contrib", 0)
+        require(entered.is_integer() and contrib.is_integer(), "E1 counts not integral")
+        speed = number(el.get("speed"), "E1 speed")
+        require((contrib > 0 and speed >= 0) or (contrib == 0 and (speed == -1 or speed >= 0)), "E1 positive contribution without valid speed")
+        occupancy = number(el.get("occupancy"), "E1 occupancy", 0)
+        require(occupancy <= 100, "invalid occupancy")
+        rows.append({"begin": begin, "end": end, "entered": entered, "contrib": contrib, "speed": speed, "occupancy": occupancy})
+        cursor = end
+    require(cursor == horizon, "E1 missing coverage")
+    return rows
+
+
+def aggregate_e1(rows: list[dict], metric_id: str) -> dict:
+    require(metric_id in ("e1_nVehEntered_rate", "e1_nVehContrib_rate"), "mixed/unknown flow population")
+    require(bool(rows), "missing E1 rows is not zero contributors")
+    duration = sum(r["end"] - r["begin"] for r in rows)
+    require(duration > 0, "zero E1 duration")
+    weight = sum(r["contrib"] for r in rows)
+    counter = "entered" if metric_id == "e1_nVehEntered_rate" else "contrib"
+    return {"metric_id": metric_id, "rate_vehph": sum(r[counter] for r in rows) * 3600 / duration, "speed": value(sum(r["speed"] * r["contrib"] for r in rows) / weight) if weight else value(None, "no_contributors"), "covered_seconds": duration}
+
+
+def regional_stops(trajectories: dict[str, list[Sample]], horizon: int) -> dict:
+    result = {region: {g: [0] * horizon for g in "MRUX"} for region in REGIONS}
+    lane_region = {lane: region for region, lanes in REGIONS.items() for lane in lanes}
+    for vid, samples in trajectories.items():
+        for sample in samples:
+            require(sample.lane in lane_region and 0 <= sample.time < horizon, "invalid regional sample")
+            if sample.speed <= .1:
+                result[lane_region[sample.lane]][group(vid)][sample.time] += 1
+    return result
+
+
+def crossing(samples: list[Sample], lanes: set[str], position: float) -> tuple[int, int] | None:
+    for before, after in zip(samples, samples[1:]):
+        require(after.time == before.time + 1, "crossing identity gap")
+        if before.lane in lanes and after.lane in lanes and before.pos < position <= after.pos:
+            return before.time, after.time
+    return None
+
+
+def membership(bracket: tuple[float, float], begin: float, end: float) -> str:
+    lo, hi = bracket
+    require(lo <= hi and begin < end, "invalid interval")
+    if lo >= begin and hi < end:
+        return "certain"
+    if hi >= begin and lo < end:
+        return "possible_only"
+    return "outside"
+
+
+def travel_interval(start: tuple[float, float], end: tuple[float, float] | None, *, last_confirmed: float | None = None, continuous_to_end: bool = False, later_evidence: dict | None = None, vehicle_id: str | None = None) -> dict:
+    a, b = start
+    require(0 <= a <= b, "invalid entry bracket")
+    if end is not None:
+        c, d = end
+        require(a <= c <= d and b <= d, "exit before entry")
+        return {"lower": max(0, c - b), "upper": d - a, "bound_state": "bounded"}
+    require(continuous_to_end and last_confirmed is not None and last_confirmed >= b, "unexplained disappearance is not censoring")
+    terminal = last_confirmed
+    if later_evidence is not None:
+        path = verify_binding(later_evidence)
+        require(bool(later_evidence.get("locator")), "later censor evidence locator missing")
+        # Later status must be a structured independently supplied endpoint record.
+        import json
+        record = json.loads(path.read_text())
+        require(record.get("vehicle_id") == vehicle_id and record.get("upstream_of_terminal") is True and record.get("continuous_identity_qualified") is True, "later endpoint does not establish same upstream vehicle")
+        terminal = number(record.get("time_s"), "later confirmed time", last_confirmed)
+    return {"lower": max(0, terminal - b), "upper": None, "bound_state": "unbounded", "last_confirmed_s": terminal}
+
+
+def conservative_mean_bounds(definite: list[dict], optional: list[dict]) -> dict:
+    """Enumerate optional cohort sizes; never cherry-pick favorable membership."""
+    for interval in definite + optional:
+        number(interval["lower"], "TT lower", 0)
+        require((interval["upper"] is None) == (interval["bound_state"] == "unbounded"), "upper/bound state mismatch")
+        if interval["upper"] is not None:
+            require(number(interval["upper"], "TT upper", 0) >= interval["lower"], "inverted TT bound")
+    if not definite and not optional:
+        return {"value_state": "no_contributors", "lower": None, "upper": None, "certain_count": 0}
+    lows = sorted(r["lower"] for r in optional)
+    highs = sorted((math.inf if r["upper"] is None else r["upper"] for r in optional), reverse=True)
+    base_lo = sum(r["lower"] for r in definite)
+    base_hi = sum(math.inf if r["upper"] is None else r["upper"] for r in definite)
+    candidates = [(len(definite) + k, (base_lo + sum(lows[:k])) / (len(definite) + k), (base_hi + sum(highs[:k])) / (len(definite) + k)) for k in range(len(optional) + 1) if len(definite) + k]
+    lower = min(candidates, key=lambda x: x[1])
+    upper = max(candidates, key=lambda x: x[2])
+    return {"value_state": "observed", "lower": lower[1], "upper": upper[2] if math.isfinite(upper[2]) else None, "bound_state": "bounded" if math.isfinite(upper[2]) else "unbounded", "lower_denominator": lower[0], "upper_denominator": upper[0], "certain_count": len(definite), "possible_only_count": len(optional)}
+
+
+def paired_rows(left: dict, right: dict) -> list[dict]:
+    return [{"key": key, "left": left.get(key), "right": right.get(key), "pair_state": "paired" if key in left and key in right else "not_paired"} for key in sorted(set(left) | set(right))]
+
+
+def inlet_qualification(trips: dict, expected: set[str]) -> dict:
+    require(set(trips) == expected, "inlet missing identity")
+    ms = [trips[vid] for vid in expected if group(vid) == "M"]
+    passed = bool(ms) and all(0 <= r["depart"] < 1500 and r["departDelay"] is not None and r["departDelay"] <= 1.01 for r in ms)
+    return {"analysis_qualification": "qualified", "scientific_result": "supported_bounded" if passed else "not_resolved", "rule": "pre_registered_maximum_reported_inlet_delay_qualification", "number_flow_exact_quantization": "pending_C_not_verified"}
+
+
+def reference_qualification(bin_speeds: list[list[float]], certain_counts: list[int], certain_B: int, half_limit=.05, cv_limit=.05) -> bool:
+    require(len(bin_speeds) == len(certain_counts) == 20, "reference bins missing")
+    for samples in bin_speeds:
+        for speed in samples:
+            number(speed, "reference speed", 0)
+    if certain_B < 500 or min(certain_counts) < 20 or any(not b for b in bin_speeds):
+        return False
+    means = [statistics.mean(x) for x in bin_speeds]
+    first, second = sum(bin_speeds[:10], []), sum(bin_speeds[10:], [])
+    if statistics.mean(first) <= 0 or statistics.mean(means) <= 0:
+        return False
+    return abs(statistics.mean(second) / statistics.mean(first) - 1) <= half_limit and statistics.stdev(means) / statistics.mean(means) <= cv_limit
+
+
+def shared_support_block(speed_ratios: list[float | None], certain_counts: list[int], r_passages: list[int], ru_labels: list[int], speed_limit=.95, speed_bins=3) -> list[int]:
+    require(len(speed_ratios) == len(certain_counts) == len(r_passages) == len(ru_labels) == 20, "missing support bins")
+    blocks = []
+    for begin in range(21 - speed_bins):
+        if not all(speed_ratios[i] is not None and number(speed_ratios[i], "speed ratio", 0) <= speed_limit and certain_counts[i] >= 20 for i in range(begin, begin + speed_bins)):
+            continue
+        for sub in range(begin, begin + speed_bins - 2):
+            if sum(r_passages[sub:sub + 3]) >= 10 and min(r_passages[sub:sub + 3]) >= 1 and min(ru_labels[sub:sub + 3]) >= 1:
+                blocks.append(sub)
+    return sorted(set(blocks))
+
+
+def feeder_science_inputs(observations: dict, horizon=2700) -> dict:
+    """Raw-label measurements used by primary and sensitivity rules, V1 only."""
+    trajectories, trips = observations["trajectories"], observations["tripinfo"]
+    cohort = domain_cohort(trajectories, trips, "main_up", 200, 1200, horizon=horizon)
+    bins = [(begin, begin + 60) for begin in range(300, 1500, 60)]
+    speeds = [[] for _ in bins]
+    counts = [0] * 20
+    r_events = []
+    for vid, samples in trajectories.items():
+        if group(vid) == "M":
+            bracket = crossing(samples, {"main_up_0", "main_up_1"}, 200)
+            for i, (begin, end) in enumerate(bins):
+                if bracket is not None and membership(bracket, begin, end) == "certain":
+                    counts[i] += 1
+            for s in samples:
+                if 300 <= s.time < 1500 and s.lane in ("main_up_0", "main_up_1") and 200 <= s.pos < 1200:
+                    speeds[(s.time - 300) // 60].append(s.speed)
+        elif group(vid) == "R":
+            for before, after in zip(samples, samples[1:]):
+                # A 1Hz sample can skip the short internal merge lane entirely.
+                # Bound first entry by the last upstream R label, not presence
+                # of a sample on one particular internal lane.
+                if before.lane not in ("main_down_0", "main_down_1") and after.lane in ("main_down_0", "main_down_1"):
+                    require(after.time == before.time + 1, "R crossing label gap")
+                    r_events.append((before.time, after.time))
+                    break
+    r_counts = [sum(membership(event, begin, end) == "certain" for event in r_events) for begin, end in bins]
+    shared = observations["regional_stops"]["shared"]
+    require(horizon >= 1500 and len(shared["R"]) >= 1500, "science input does not cover B")
+    ru = [sum(shared["R"][t] > 0 and shared["U"][t] > 0 for t in range(begin, end)) for begin, end in bins]
+    return {"cohort": cohort, "bin_speeds": speeds, "certain_counts": counts, "r_counts": r_counts, "ru_labels": ru, "inlet": observations["inlet"], "source_qualification": observations["analysis_qualification"]}
+
+
+def evaluate_science_pair(reference: dict, challenge: dict, *, tt_ratio=1.10, speed_ratio=.95, speed_bins=3, reference_half_limit=.05, reference_cv_limit=.05) -> dict:
+    """Apply one registered primary/sensitivity set; no threshold adaptation."""
+    for item in (reference, challenge):
+        require(item["source_qualification"] == "qualified", "unqualified scientific input")
+    rb, cb = reference["cohort"]["bounds"], challenge["cohort"]["bounds"]
+    ref_pass = reference_qualification(reference["bin_speeds"], reference["certain_counts"], rb["certain_count"], reference_half_limit, reference_cv_limit)
+    inflow_pass = all(x["inlet"]["scientific_result"] == "supported_bounded" for x in (reference, challenge))
+    primary = cb["certain_count"] >= 500 and rb["certain_count"] >= 500 and rb.get("upper") is not None and cb.get("lower") is not None and cb["lower"] > tt_ratio * rb["upper"]
+    ratios = []
+    for ref, candidate in zip(reference["bin_speeds"], challenge["bin_speeds"]):
+        ratios.append(statistics.mean(candidate) / statistics.mean(ref) if ref and candidate and statistics.mean(ref) > 0 else None)
+    counts = [min(a, b) for a, b in zip(reference["certain_counts"], challenge["certain_counts"])]
+    blocks = shared_support_block(ratios, counts, challenge["r_counts"], challenge["ru_labels"], speed_ratio, speed_bins)
+    supported = ref_pass and inflow_pass and primary and bool(blocks)
+    return {"S_REF_QUAL": ref_pass, "S_M_INFLOW": inflow_pass, "M_PRIMARY": primary, "Q4_blocks": blocks, "scientific_result": "supported_bounded" if supported else "not_resolved"}
+
+
+def evaluate_registered_sensitivities(reference: dict, challenge: dict) -> dict:
+    options = {"TT05": {"tt_ratio": 1.05}, "TT15": {"tt_ratio": 1.15}, "SPEED90": {"speed_ratio": .90}, "SPEED98": {"speed_ratio": .98}, "PERSIST240": {"speed_bins": 4}, "REF_STRICT": {"reference_half_limit": .03, "reference_cv_limit": .04}, "REF_LOOSE": {"reference_half_limit": .07, "reference_cv_limit": .06}}
+    return {key: evaluate_science_pair(reference, challenge, **changes) for key, changes in options.items()}
+
+
+def analyze_to_new_directory(source_bindings: dict, run_id: str, output: Path) -> dict:
+    """Bound raw analysis with persistent error receipt and exclusive outputs."""
+    from dataclasses import asdict
+    from src.scenarios import stage6_h2_offline as control
+    card = control.load_card()
+    row = control.registered_run(card, run_id)
+    output = control.checked_path(output, control.BATCH, exists=False)
+    require(output.parent.is_dir() and not output.exists(), "analysis output unavailable or exists")
+    output.mkdir()
+    try:
+        names = {"tripinfo.xml", "fcd.xml", "tls_states.xml"} | {f"{p}_l{i}.xml" for p in ("merge_upstream_e1", "mainline_merge_entry_e1", "merge_downstream_e1") for i in (0, 1)} | {"network.net.xml"}
+        require(set(source_bindings) == names, "bound analysis source inventory mismatch")
+        paths = {name: verify_binding(b) for name, b in source_bindings.items()}
+        directory = paths['fcd.xml'].parent
+        require(all(paths[name] == directory / name for name in names - {'network.net.xml'}), "observation path mismatch")
+        network = control.verify_network(paths['network.net.xml'], source_bindings['network.net.xml']['sha256'])
+        counts = next(c['exact_flow_numbers'] for c in card['conditions'] if c['condition_id'] == row['condition'])
+        measured = analyze_observations(directory, counts, network['lanes'], row['version'])
+        result = {k: v for k, v in measured.items() if k != 'trajectories'}
+        result['trajectory_sample_count'] = sum(map(len, measured['trajectories'].values()))
+        if row['version'] == 'V1':
+            result['feeder_science_inputs'] = feeder_science_inputs(measured)
+        else:
+            result['feeder_science_inputs'] = {'value_state': 'not_applicable'}
+        result['common_background_cohort'] = domain_cohort(measured['trajectories'], measured['tripinfo'], 'main_down', 100, 700)
+        with (output/'measurements.json').open('xb') as stream:
+            stream.write(control.encode(result))
+        manifest = {'status':'qualified_offline_measurements','scientific_result':'not_evaluated','run_id':run_id,'card':control.bind(control.CARD),'implementation':control.bind(Path(__file__)),'source_bindings':source_bindings,'output':control.bind(output/'measurements.json'),'launch_eligible':False}
+        with (output/'analysis_manifest.json').open('xb') as stream:
+            stream.write(control.encode(manifest))
+        return manifest
+    except Exception as exc:
+        with (output/'analysis_error.json').open('xb') as stream:
+            stream.write(control.encode({'analysis_qualification':'blocked_by_evidence_error','error_type':type(exc).__name__,'error':str(exc),'scientific_result':'not_evaluated'}))
+        raise
+
+
+def validate_rule_results(rows: list[dict], expected_keys: list[dict], sensitivity: bool = False) -> dict:
+    field = "sensitivity_id" if sensitivity else "rule_id"
+    key = lambda r: tuple(str(r[k]) for k in (field, "version", "condition", "seed", "window"))
+    expected = {key(r): r for r in expected_keys}
+    require(len(expected) == len(expected_keys), "duplicate expected key")
+    require(len(rows) == len(expected) and len({key(r) for r in rows}) == len(rows), "missing/duplicate result key")
+    required, passed = 0, 0
+    for row in rows:
+        k = key(row)
+        require(k in expected, "unregistered result key")
+        original = expected[k]
+        require(row["required_for_resolution"] == original["required_for_resolution"], "required denominator changed")
+        state, result = row["value_state"], row["result"]
+        require(state in ("observed", "no_contributors", "missing_observation", "not_applicable", "unbounded"), "unknown value state")
+        require(result in ("supported_bounded", "not_resolved", "not_evaluated", "blocked_by_evidence_error", "not_applicable"), "unknown result")
+        applicable = original.get("applicable", "true") == "true"
+        require(applicable or (state == result == "not_applicable"), "N/A rule became observation")
+        require(not applicable or state != "not_applicable", "applicable rule hidden as N/A")
+        if result == "supported_bounded":
+            require(state == "observed" and bool(row.get("evidence_bindings")), "unsupported passing result")
+            for evidence in row["evidence_bindings"]:
+                verify_binding(evidence)
+        if original["required_for_resolution"] == "true":
+            required += 1
+            passed += result == "supported_bounded"
+    return {"total": len(rows), "required": required, "passed": passed, "all_required_supported": required > 0 and required == passed}

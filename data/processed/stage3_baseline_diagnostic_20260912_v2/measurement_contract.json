@@ -1,0 +1,1224 @@
+{
+  "schema_version": 1,
+  "contract_id": "stage3_measurement_contract_20260912_v1",
+  "status": "user_approved_exploratory_contract_pending_scientific_review",
+  "source_batch": "stage2_completion_20260909_v1",
+  "windows": {
+    "Full": {
+      "begin_s": 0.0,
+      "end_s": 2700.0,
+      "qualification": "exploratory finite horizon"
+    },
+    "A": {
+      "begin_s": 0.0,
+      "end_s": 1500.0,
+      "qualification": "exploratory finite horizon"
+    },
+    "B": {
+      "begin_s": 300.0,
+      "end_s": 1500.0,
+      "qualification": "B is a sensitivity cut, not verified steady-state warm-up"
+    },
+    "Post": {
+      "begin_s": 1500.0,
+      "end_s": 2700.0,
+      "qualification": "exploratory finite horizon"
+    }
+  },
+  "versions": {
+    "sumo": "Eclipse SUMO sumo 1.26.0",
+    "netconvert": "Eclipse SUMO netconvert 1.26.0"
+  },
+  "fcd": {
+    "sampling_period_s": 1.0,
+    "expected_begin_s": 0.0,
+    "expected_end_s": 2700.0,
+    "expected_label_count": 2700,
+    "empty_frame_semantics": "present frame with zero vehicles; not a missing frame"
+  },
+  "stop_definition": {
+    "id": "technical_stop_speed_le_0_1",
+    "speed_threshold_mps": 0.1,
+    "operator": "<=",
+    "qualification": "technical stop sample; not congestion"
+  },
+  "lanes": {
+    ":freeway_merge_0_0": {
+      "edge_id": ":freeway_merge_0",
+      "region": "ramp_merge_internal",
+      "is_internal": true,
+      "length_m": 12.6,
+      "speed_limit_mps": 30.55,
+      "observed_classes": [
+        "R"
+      ],
+      "r_path_start_m": 1137.6699999999998,
+      "r_path_end_m": 1150.2699999999998,
+      "distance_to_merge_start_m": -12.599999999999909,
+      "tls_link": null,
+      "first_downstream_eligible": false
+    },
+    ":freeway_merge_1_0": {
+      "edge_id": ":freeway_merge_1",
+      "region": "mainline_merge_internal",
+      "is_internal": true,
+      "length_m": 8.64,
+      "speed_limit_mps": 33.33,
+      "observed_classes": [
+        "M"
+      ],
+      "r_path_start_m": null,
+      "r_path_end_m": null,
+      "distance_to_merge_start_m": null,
+      "tls_link": null,
+      "first_downstream_eligible": false
+    },
+    ":freeway_merge_1_1": {
+      "edge_id": ":freeway_merge_1",
+      "region": "mainline_merge_internal",
+      "is_internal": true,
+      "length_m": 8.64,
+      "speed_limit_mps": 33.33,
+      "observed_classes": [
+        "M"
+      ],
+      "r_path_start_m": null,
+      "r_path_end_m": null,
+      "distance_to_merge_start_m": null,
+      "tls_link": null,
+      "first_downstream_eligible": false
+    },
+    ":ramp_mid_0_0": {
+      "edge_id": ":ramp_mid_0",
+      "region": "ramp_mid_internal",
+      "is_internal": true,
+      "length_m": 81.98,
+      "speed_limit_mps": 25.0,
+      "observed_classes": [
+        "R"
+      ],
+      "r_path_start_m": 960.37,
+      "r_path_end_m": 1042.35,
+      "distance_to_merge_start_m": -189.89999999999975,
+      "tls_link": null,
+      "first_downstream_eligible": false
+    },
+    ":urban_diverge_0_0": {
+      "edge_id": ":urban_diverge_0",
+      "region": "urban_diverge_internal",
+      "is_internal": true,
+      "length_m": 9.03,
+      "speed_limit_mps": 6.51,
+      "observed_classes": [
+        "U"
+      ],
+      "r_path_start_m": null,
+      "r_path_end_m": null,
+      "distance_to_merge_start_m": null,
+      "tls_link": null,
+      "first_downstream_eligible": false
+    },
+    ":urban_diverge_1_0": {
+      "edge_id": ":urban_diverge_1",
+      "region": "ramp_diverge_internal",
+      "is_internal": true,
+      "length_m": 113.08,
+      "speed_limit_mps": 18.05,
+      "observed_classes": [
+        "R"
+      ],
+      "r_path_start_m": 642.8,
+      "r_path_end_m": 755.88,
+      "distance_to_merge_start_m": -507.4699999999998,
+      "tls_link": null,
+      "first_downstream_eligible": false
+    },
+    ":urban_tls_0_0": {
+      "edge_id": ":urban_tls_0",
+      "region": "urban_tls_internal",
+      "is_internal": true,
+      "length_m": 11.2,
+      "speed_limit_mps": 13.89,
+      "observed_classes": [
+        "R",
+        "U"
+      ],
+      "r_path_start_m": 392.8,
+      "r_path_end_m": 404.0,
+      "distance_to_merge_start_m": -757.4699999999998,
+      "tls_link": 0,
+      "first_downstream_eligible": false
+    },
+    ":urban_tls_1_0": {
+      "edge_id": ":urban_tls_1",
+      "region": "cross_tls_internal",
+      "is_internal": true,
+      "length_m": 11.2,
+      "speed_limit_mps": 13.89,
+      "observed_classes": [
+        "X"
+      ],
+      "r_path_start_m": null,
+      "r_path_end_m": null,
+      "distance_to_merge_start_m": null,
+      "tls_link": 1,
+      "first_downstream_eligible": false
+    },
+    "cross_in_0": {
+      "edge_id": "cross_in",
+      "region": "cross_origin",
+      "is_internal": false,
+      "length_m": 446.0,
+      "speed_limit_mps": 13.89,
+      "observed_classes": [
+        "X"
+      ],
+      "r_path_start_m": null,
+      "r_path_end_m": null,
+      "distance_to_merge_start_m": null,
+      "tls_link": 1,
+      "first_downstream_eligible": false
+    },
+    "cross_out_0": {
+      "edge_id": "cross_out",
+      "region": "cross_out",
+      "is_internal": false,
+      "length_m": 442.8,
+      "speed_limit_mps": 13.89,
+      "observed_classes": [
+        "X"
+      ],
+      "r_path_start_m": null,
+      "r_path_end_m": null,
+      "distance_to_merge_start_m": null,
+      "tls_link": null,
+      "first_downstream_eligible": false
+    },
+    "main_down_0": {
+      "edge_id": "main_down",
+      "region": "mainline_downstream",
+      "is_internal": false,
+      "length_m": 796.49,
+      "speed_limit_mps": 33.33,
+      "observed_classes": [
+        "M",
+        "R"
+      ],
+      "r_path_start_m": 1150.2699999999998,
+      "r_path_end_m": 1946.7599999999998,
+      "distance_to_merge_start_m": 0.0,
+      "tls_link": null,
+      "first_downstream_eligible": true
+    },
+    "main_down_1": {
+      "edge_id": "main_down",
+      "region": "mainline_downstream",
+      "is_internal": false,
+      "length_m": 796.49,
+      "speed_limit_mps": 33.33,
+      "observed_classes": [
+        "M",
+        "R"
+      ],
+      "r_path_start_m": 1150.2699999999998,
+      "r_path_end_m": 1946.7599999999998,
+      "distance_to_merge_start_m": 0.0,
+      "tls_link": null,
+      "first_downstream_eligible": true
+    },
+    "main_up_0": {
+      "edge_id": "main_up",
+      "region": "mainline_origin_observation",
+      "is_internal": false,
+      "length_m": 1394.87,
+      "speed_limit_mps": 33.33,
+      "observed_classes": [
+        "M"
+      ],
+      "r_path_start_m": null,
+      "r_path_end_m": null,
+      "distance_to_merge_start_m": null,
+      "tls_link": null,
+      "first_downstream_eligible": false
+    },
+    "main_up_1": {
+      "edge_id": "main_up",
+      "region": "mainline_origin_observation",
+      "is_internal": false,
+      "length_m": 1394.87,
+      "speed_limit_mps": 33.33,
+      "observed_classes": [
+        "M"
+      ],
+      "r_path_start_m": null,
+      "r_path_end_m": null,
+      "distance_to_merge_start_m": null,
+      "tls_link": null,
+      "first_downstream_eligible": false
+    },
+    "ramp_accel_0": {
+      "edge_id": "ramp_accel",
+      "region": "ramp_accel",
+      "is_internal": false,
+      "length_m": 95.32,
+      "speed_limit_mps": 27.78,
+      "observed_classes": [
+        "R"
+      ],
+      "r_path_start_m": 1042.35,
+      "r_path_end_m": 1137.6699999999998,
+      "distance_to_merge_start_m": -107.91999999999985,
+      "tls_link": null,
+      "first_downstream_eligible": false
+    },
+    "ramp_storage_0": {
+      "edge_id": "ramp_storage",
+      "region": "ramp_storage",
+      "is_internal": false,
+      "length_m": 204.49,
+      "speed_limit_mps": 22.22,
+      "observed_classes": [
+        "R"
+      ],
+      "r_path_start_m": 755.88,
+      "r_path_end_m": 960.37,
+      "distance_to_merge_start_m": -394.38999999999976,
+      "tls_link": null,
+      "first_downstream_eligible": false
+    },
+    "shared_approach_0": {
+      "edge_id": "shared_approach",
+      "region": "shared_approach",
+      "is_internal": false,
+      "length_m": 238.8,
+      "speed_limit_mps": 13.89,
+      "observed_classes": [
+        "R",
+        "U"
+      ],
+      "r_path_start_m": 404.0,
+      "r_path_end_m": 642.8,
+      "distance_to_merge_start_m": -746.2699999999998,
+      "tls_link": null,
+      "first_downstream_eligible": false
+    },
+    "urban_in_0": {
+      "edge_id": "urban_in",
+      "region": "urban_origin",
+      "is_internal": false,
+      "length_m": 392.8,
+      "speed_limit_mps": 13.89,
+      "observed_classes": [
+        "R",
+        "U"
+      ],
+      "r_path_start_m": 0.0,
+      "r_path_end_m": 392.8,
+      "distance_to_merge_start_m": -1150.2699999999998,
+      "tls_link": 0,
+      "first_downstream_eligible": false
+    },
+    "urban_out_0": {
+      "edge_id": "urban_out",
+      "region": "urban_out",
+      "is_internal": false,
+      "length_m": 442.8,
+      "speed_limit_mps": 13.89,
+      "observed_classes": [
+        "U"
+      ],
+      "r_path_start_m": null,
+      "r_path_end_m": null,
+      "distance_to_merge_start_m": null,
+      "tls_link": null,
+      "first_downstream_eligible": false
+    }
+  },
+  "e1_detectors": [
+    {
+      "detector_id": "merge_upstream_e1_l0",
+      "lane_id": "main_up_0",
+      "position_m": -1.0,
+      "period_s": 30.0,
+      "group": "origin_insertion_contaminated",
+      "output_suffix": "outputs/merge_upstream_e1_l0.xml",
+      "qualification": "technical_placeholder; E1 has no vehicle IDs"
+    },
+    {
+      "detector_id": "merge_upstream_e1_l1",
+      "lane_id": "main_up_1",
+      "position_m": -1.0,
+      "period_s": 30.0,
+      "group": "origin_insertion_contaminated",
+      "output_suffix": "outputs/merge_upstream_e1_l1.xml",
+      "qualification": "technical_placeholder; E1 has no vehicle IDs"
+    },
+    {
+      "detector_id": "mainline_merge_entry_e1_l0",
+      "lane_id": ":freeway_merge_1_0",
+      "position_m": 4.32,
+      "period_s": 30.0,
+      "group": "M-only_internal_merge_entry",
+      "output_suffix": "outputs/mainline_merge_entry_e1_l0.xml",
+      "qualification": "technical_placeholder; E1 has no vehicle IDs"
+    },
+    {
+      "detector_id": "mainline_merge_entry_e1_l1",
+      "lane_id": ":freeway_merge_1_1",
+      "position_m": 4.32,
+      "period_s": 30.0,
+      "group": "M-only_internal_merge_entry",
+      "output_suffix": "outputs/mainline_merge_entry_e1_l1.xml",
+      "qualification": "technical_placeholder; E1 has no vehicle IDs"
+    },
+    {
+      "detector_id": "merge_downstream_e1_l0",
+      "lane_id": "main_down_0",
+      "position_m": 100.0,
+      "period_s": 30.0,
+      "group": "downstream_passage",
+      "output_suffix": "outputs/merge_downstream_e1_l0.xml",
+      "qualification": "technical_placeholder; E1 has no vehicle IDs"
+    },
+    {
+      "detector_id": "merge_downstream_e1_l1",
+      "lane_id": "main_down_1",
+      "position_m": 100.0,
+      "period_s": 30.0,
+      "group": "downstream_passage",
+      "output_suffix": "outputs/merge_downstream_e1_l1.xml",
+      "qualification": "technical_placeholder; E1 has no vehicle IDs"
+    }
+  ],
+  "e2_detectors": [
+    {
+      "detector_id": "shared_boundary_e2",
+      "lane_id": "shared_approach_0",
+      "begin_pos_m": 0.0,
+      "end_pos_m": 238.8,
+      "period_s": 30.0,
+      "status": "coverage_only"
+    },
+    {
+      "detector_id": "ramp_storage_e2",
+      "lane_id": "ramp_storage_0",
+      "begin_pos_m": 0.0,
+      "end_pos_m": 204.49,
+      "period_s": 30.0,
+      "status": "coverage_only"
+    }
+  ],
+  "tls": {
+    "id": "urban_tls",
+    "program_id": "technical_placeholder",
+    "type": "static",
+    "phases": [
+      {
+        "duration": "45",
+        "state": "Gr"
+      },
+      {
+        "duration": "3",
+        "state": "yr"
+      },
+      {
+        "duration": "9",
+        "state": "rG"
+      },
+      {
+        "duration": "3",
+        "state": "ry"
+      }
+    ],
+    "movements": [
+      {
+        "class_scope": [
+          "R",
+          "U"
+        ],
+        "from": "urban_in",
+        "to": "shared_approach",
+        "link_index": 0
+      },
+      {
+        "class_scope": [
+          "X"
+        ],
+        "from": "cross_in",
+        "to": "cross_out",
+        "link_index": 1
+      }
+    ],
+    "rule": "resolve the movement-specific link index; never use the first character for every movement"
+  },
+  "r_path": {
+    "origin": "start of urban_in",
+    "positive_direction": "toward main_down",
+    "merge_start_m": 1150.2699999999998,
+    "qualification": "compiled lane-length coordinate; M/U/X lanes outside the R path remain null"
+  },
+  "insertion_observations": {
+    "C17": {
+      "declared": {
+        "M": {
+          "departPos": "last",
+          "departLane": "best"
+        },
+        "R": {
+          "departPos": "last",
+          "departLane": "best"
+        },
+        "U": {
+          "departPos": "last",
+          "departLane": "best"
+        },
+        "X": {
+          "departPos": "last",
+          "departLane": "best"
+        }
+      },
+      "tripinfo_actual": [
+        {
+          "class": "M",
+          "lane_id": "main_up_0",
+          "min_depart_pos_m": 1139.77,
+          "max_depart_pos_m": 1394.77,
+          "vehicle_count": 768
+        },
+        {
+          "class": "M",
+          "lane_id": "main_up_1",
+          "min_depart_pos_m": 1175.05,
+          "max_depart_pos_m": 1394.77,
+          "vehicle_count": 565
+        },
+        {
+          "class": "R",
+          "lane_id": "urban_in_0",
+          "min_depart_pos_m": 0.01,
+          "max_depart_pos_m": 392.7,
+          "vehicle_count": 300
+        },
+        {
+          "class": "U",
+          "lane_id": "urban_in_0",
+          "min_depart_pos_m": 0.02,
+          "max_depart_pos_m": 378.48,
+          "vehicle_count": 150
+        },
+        {
+          "class": "X",
+          "lane_id": "cross_in_0",
+          "min_depart_pos_m": 387.18,
+          "max_depart_pos_m": 445.9,
+          "vehicle_count": 75
+        }
+      ],
+      "first_fcd_actual": [
+        {
+          "class": "M",
+          "lane_id": "main_up_0",
+          "min_first_pos_m": 1139.77,
+          "max_first_pos_m": 1394.77,
+          "vehicle_count": 768
+        },
+        {
+          "class": "M",
+          "lane_id": "main_up_1",
+          "min_first_pos_m": 1175.05,
+          "max_first_pos_m": 1394.77,
+          "vehicle_count": 565
+        },
+        {
+          "class": "R",
+          "lane_id": "urban_in_0",
+          "min_first_pos_m": 0.01,
+          "max_first_pos_m": 392.7,
+          "vehicle_count": 300
+        },
+        {
+          "class": "U",
+          "lane_id": "urban_in_0",
+          "min_first_pos_m": 0.02,
+          "max_first_pos_m": 378.48,
+          "vehicle_count": 150
+        },
+        {
+          "class": "X",
+          "lane_id": "cross_in_0",
+          "min_first_pos_m": 387.18,
+          "max_first_pos_m": 445.9,
+          "vehicle_count": 75
+        }
+      ]
+    },
+    "C23": {
+      "declared": {
+        "M": {
+          "departPos": "last",
+          "departLane": "best"
+        },
+        "R": {
+          "departPos": "last",
+          "departLane": "best"
+        },
+        "U": {
+          "departPos": "last",
+          "departLane": "best"
+        },
+        "X": {
+          "departPos": "last",
+          "departLane": "best"
+        }
+      },
+      "tripinfo_actual": [
+        {
+          "class": "M",
+          "lane_id": "main_up_0",
+          "min_depart_pos_m": 1108.31,
+          "max_depart_pos_m": 1394.77,
+          "vehicle_count": 739
+        },
+        {
+          "class": "M",
+          "lane_id": "main_up_1",
+          "min_depart_pos_m": 1156.2,
+          "max_depart_pos_m": 1394.77,
+          "vehicle_count": 594
+        },
+        {
+          "class": "R",
+          "lane_id": "urban_in_0",
+          "min_depart_pos_m": 0.05,
+          "max_depart_pos_m": 392.7,
+          "vehicle_count": 300
+        },
+        {
+          "class": "U",
+          "lane_id": "urban_in_0",
+          "min_depart_pos_m": 0.01,
+          "max_depart_pos_m": 381.45,
+          "vehicle_count": 150
+        },
+        {
+          "class": "X",
+          "lane_id": "cross_in_0",
+          "min_depart_pos_m": 319.33,
+          "max_depart_pos_m": 445.9,
+          "vehicle_count": 75
+        }
+      ],
+      "first_fcd_actual": [
+        {
+          "class": "M",
+          "lane_id": "main_up_0",
+          "min_first_pos_m": 1108.31,
+          "max_first_pos_m": 1394.77,
+          "vehicle_count": 739
+        },
+        {
+          "class": "M",
+          "lane_id": "main_up_1",
+          "min_first_pos_m": 1156.2,
+          "max_first_pos_m": 1394.77,
+          "vehicle_count": 594
+        },
+        {
+          "class": "R",
+          "lane_id": "urban_in_0",
+          "min_first_pos_m": 0.05,
+          "max_first_pos_m": 392.7,
+          "vehicle_count": 300
+        },
+        {
+          "class": "U",
+          "lane_id": "urban_in_0",
+          "min_first_pos_m": 0.01,
+          "max_first_pos_m": 381.45,
+          "vehicle_count": 150
+        },
+        {
+          "class": "X",
+          "lane_id": "cross_in_0",
+          "min_first_pos_m": 319.33,
+          "max_first_pos_m": 445.9,
+          "vehicle_count": 75
+        }
+      ]
+    },
+    "ML17": {
+      "declared": {
+        "M": {
+          "departPos": "last",
+          "departLane": "best"
+        },
+        "R": {
+          "departPos": "last",
+          "departLane": "best"
+        },
+        "U": {
+          "departPos": "last",
+          "departLane": "best"
+        },
+        "X": {
+          "departPos": "last",
+          "departLane": "best"
+        }
+      },
+      "tripinfo_actual": [
+        {
+          "class": "M",
+          "lane_id": "main_up_0",
+          "min_depart_pos_m": 1171.92,
+          "max_depart_pos_m": 1394.77,
+          "vehicle_count": 646
+        },
+        {
+          "class": "M",
+          "lane_id": "main_up_1",
+          "min_depart_pos_m": 1156.22,
+          "max_depart_pos_m": 1394.77,
+          "vehicle_count": 437
+        },
+        {
+          "class": "R",
+          "lane_id": "urban_in_0",
+          "min_depart_pos_m": 0.01,
+          "max_depart_pos_m": 392.7,
+          "vehicle_count": 300
+        },
+        {
+          "class": "U",
+          "lane_id": "urban_in_0",
+          "min_depart_pos_m": 0.01,
+          "max_depart_pos_m": 379.14,
+          "vehicle_count": 150
+        },
+        {
+          "class": "X",
+          "lane_id": "cross_in_0",
+          "min_depart_pos_m": 269.1,
+          "max_depart_pos_m": 445.9,
+          "vehicle_count": 75
+        }
+      ],
+      "first_fcd_actual": [
+        {
+          "class": "M",
+          "lane_id": "main_up_0",
+          "min_first_pos_m": 1171.92,
+          "max_first_pos_m": 1394.77,
+          "vehicle_count": 646
+        },
+        {
+          "class": "M",
+          "lane_id": "main_up_1",
+          "min_first_pos_m": 1156.22,
+          "max_first_pos_m": 1394.77,
+          "vehicle_count": 437
+        },
+        {
+          "class": "R",
+          "lane_id": "urban_in_0",
+          "min_first_pos_m": 0.01,
+          "max_first_pos_m": 392.7,
+          "vehicle_count": 300
+        },
+        {
+          "class": "U",
+          "lane_id": "urban_in_0",
+          "min_first_pos_m": 0.01,
+          "max_first_pos_m": 379.14,
+          "vehicle_count": 150
+        },
+        {
+          "class": "X",
+          "lane_id": "cross_in_0",
+          "min_first_pos_m": 269.1,
+          "max_first_pos_m": 445.9,
+          "vehicle_count": 75
+        }
+      ]
+    },
+    "ML23": {
+      "declared": {
+        "M": {
+          "departPos": "last",
+          "departLane": "best"
+        },
+        "R": {
+          "departPos": "last",
+          "departLane": "best"
+        },
+        "U": {
+          "departPos": "last",
+          "departLane": "best"
+        },
+        "X": {
+          "departPos": "last",
+          "departLane": "best"
+        }
+      },
+      "tripinfo_actual": [
+        {
+          "class": "M",
+          "lane_id": "main_up_0",
+          "min_depart_pos_m": 1163.14,
+          "max_depart_pos_m": 1394.77,
+          "vehicle_count": 625
+        },
+        {
+          "class": "M",
+          "lane_id": "main_up_1",
+          "min_depart_pos_m": 1181.81,
+          "max_depart_pos_m": 1394.77,
+          "vehicle_count": 458
+        },
+        {
+          "class": "R",
+          "lane_id": "urban_in_0",
+          "min_depart_pos_m": 0.0,
+          "max_depart_pos_m": 392.7,
+          "vehicle_count": 300
+        },
+        {
+          "class": "U",
+          "lane_id": "urban_in_0",
+          "min_depart_pos_m": 0.02,
+          "max_depart_pos_m": 381.45,
+          "vehicle_count": 150
+        },
+        {
+          "class": "X",
+          "lane_id": "cross_in_0",
+          "min_depart_pos_m": 275.65,
+          "max_depart_pos_m": 445.9,
+          "vehicle_count": 75
+        }
+      ],
+      "first_fcd_actual": [
+        {
+          "class": "M",
+          "lane_id": "main_up_0",
+          "min_first_pos_m": 1163.14,
+          "max_first_pos_m": 1394.77,
+          "vehicle_count": 625
+        },
+        {
+          "class": "M",
+          "lane_id": "main_up_1",
+          "min_first_pos_m": 1181.81,
+          "max_first_pos_m": 1394.77,
+          "vehicle_count": 458
+        },
+        {
+          "class": "R",
+          "lane_id": "urban_in_0",
+          "min_first_pos_m": 0.0,
+          "max_first_pos_m": 392.7,
+          "vehicle_count": 300
+        },
+        {
+          "class": "U",
+          "lane_id": "urban_in_0",
+          "min_first_pos_m": 0.02,
+          "max_first_pos_m": 381.45,
+          "vehicle_count": 150
+        },
+        {
+          "class": "X",
+          "lane_id": "cross_in_0",
+          "min_first_pos_m": 275.65,
+          "max_first_pos_m": 445.9,
+          "vehicle_count": 75
+        }
+      ]
+    },
+    "MH17": {
+      "declared": {
+        "M": {
+          "departPos": "last",
+          "departLane": "best"
+        },
+        "R": {
+          "departPos": "last",
+          "departLane": "best"
+        },
+        "U": {
+          "departPos": "last",
+          "departLane": "best"
+        },
+        "X": {
+          "departPos": "last",
+          "departLane": "best"
+        }
+      },
+      "tripinfo_actual": [
+        {
+          "class": "M",
+          "lane_id": "main_up_0",
+          "min_depart_pos_m": 1232.9,
+          "max_depart_pos_m": 1394.77,
+          "vehicle_count": 913
+        },
+        {
+          "class": "M",
+          "lane_id": "main_up_1",
+          "min_depart_pos_m": 1256.91,
+          "max_depart_pos_m": 1394.77,
+          "vehicle_count": 670
+        },
+        {
+          "class": "R",
+          "lane_id": "urban_in_0",
+          "min_depart_pos_m": 0.01,
+          "max_depart_pos_m": 392.7,
+          "vehicle_count": 300
+        },
+        {
+          "class": "U",
+          "lane_id": "urban_in_0",
+          "min_depart_pos_m": 0.03,
+          "max_depart_pos_m": 385.1,
+          "vehicle_count": 150
+        },
+        {
+          "class": "X",
+          "lane_id": "cross_in_0",
+          "min_depart_pos_m": 391.15,
+          "max_depart_pos_m": 445.9,
+          "vehicle_count": 75
+        }
+      ],
+      "first_fcd_actual": [
+        {
+          "class": "M",
+          "lane_id": "main_up_0",
+          "min_first_pos_m": 1232.9,
+          "max_first_pos_m": 1394.77,
+          "vehicle_count": 913
+        },
+        {
+          "class": "M",
+          "lane_id": "main_up_1",
+          "min_first_pos_m": 1256.91,
+          "max_first_pos_m": 1394.77,
+          "vehicle_count": 670
+        },
+        {
+          "class": "R",
+          "lane_id": "urban_in_0",
+          "min_first_pos_m": 0.01,
+          "max_first_pos_m": 392.7,
+          "vehicle_count": 300
+        },
+        {
+          "class": "U",
+          "lane_id": "urban_in_0",
+          "min_first_pos_m": 0.03,
+          "max_first_pos_m": 385.1,
+          "vehicle_count": 150
+        },
+        {
+          "class": "X",
+          "lane_id": "cross_in_0",
+          "min_first_pos_m": 391.15,
+          "max_first_pos_m": 445.9,
+          "vehicle_count": 75
+        }
+      ]
+    },
+    "MH23": {
+      "declared": {
+        "M": {
+          "departPos": "last",
+          "departLane": "best"
+        },
+        "R": {
+          "departPos": "last",
+          "departLane": "best"
+        },
+        "U": {
+          "departPos": "last",
+          "departLane": "best"
+        },
+        "X": {
+          "departPos": "last",
+          "departLane": "best"
+        }
+      },
+      "tripinfo_actual": [
+        {
+          "class": "M",
+          "lane_id": "main_up_0",
+          "min_depart_pos_m": 1232.2,
+          "max_depart_pos_m": 1394.77,
+          "vehicle_count": 929
+        },
+        {
+          "class": "M",
+          "lane_id": "main_up_1",
+          "min_depart_pos_m": 1250.27,
+          "max_depart_pos_m": 1394.77,
+          "vehicle_count": 654
+        },
+        {
+          "class": "R",
+          "lane_id": "urban_in_0",
+          "min_depart_pos_m": 0.01,
+          "max_depart_pos_m": 392.7,
+          "vehicle_count": 300
+        },
+        {
+          "class": "U",
+          "lane_id": "urban_in_0",
+          "min_depart_pos_m": 0.07,
+          "max_depart_pos_m": 381.98,
+          "vehicle_count": 150
+        },
+        {
+          "class": "X",
+          "lane_id": "cross_in_0",
+          "min_depart_pos_m": 388.88,
+          "max_depart_pos_m": 445.9,
+          "vehicle_count": 75
+        }
+      ],
+      "first_fcd_actual": [
+        {
+          "class": "M",
+          "lane_id": "main_up_0",
+          "min_first_pos_m": 1232.2,
+          "max_first_pos_m": 1394.77,
+          "vehicle_count": 929
+        },
+        {
+          "class": "M",
+          "lane_id": "main_up_1",
+          "min_first_pos_m": 1250.27,
+          "max_first_pos_m": 1394.77,
+          "vehicle_count": 654
+        },
+        {
+          "class": "R",
+          "lane_id": "urban_in_0",
+          "min_first_pos_m": 0.01,
+          "max_first_pos_m": 392.7,
+          "vehicle_count": 300
+        },
+        {
+          "class": "U",
+          "lane_id": "urban_in_0",
+          "min_first_pos_m": 0.07,
+          "max_first_pos_m": 381.98,
+          "vehicle_count": 150
+        },
+        {
+          "class": "X",
+          "lane_id": "cross_in_0",
+          "min_first_pos_m": 388.88,
+          "max_first_pos_m": 445.9,
+          "vehicle_count": 75
+        }
+      ]
+    },
+    "RL17": {
+      "declared": {
+        "M": {
+          "departPos": "last",
+          "departLane": "best"
+        },
+        "R": {
+          "departPos": "last",
+          "departLane": "best"
+        },
+        "U": {
+          "departPos": "last",
+          "departLane": "best"
+        },
+        "X": {
+          "departPos": "last",
+          "departLane": "best"
+        }
+      },
+      "tripinfo_actual": [
+        {
+          "class": "M",
+          "lane_id": "main_up_0",
+          "min_depart_pos_m": 1154.98,
+          "max_depart_pos_m": 1394.77,
+          "vehicle_count": 747
+        },
+        {
+          "class": "M",
+          "lane_id": "main_up_1",
+          "min_depart_pos_m": 1163.67,
+          "max_depart_pos_m": 1394.77,
+          "vehicle_count": 586
+        },
+        {
+          "class": "R",
+          "lane_id": "urban_in_0",
+          "min_depart_pos_m": 0.07,
+          "max_depart_pos_m": 392.7,
+          "vehicle_count": 150
+        },
+        {
+          "class": "U",
+          "lane_id": "urban_in_0",
+          "min_depart_pos_m": 0.09,
+          "max_depart_pos_m": 380.55,
+          "vehicle_count": 150
+        },
+        {
+          "class": "X",
+          "lane_id": "cross_in_0",
+          "min_depart_pos_m": 348.02,
+          "max_depart_pos_m": 445.9,
+          "vehicle_count": 75
+        }
+      ],
+      "first_fcd_actual": [
+        {
+          "class": "M",
+          "lane_id": "main_up_0",
+          "min_first_pos_m": 1154.98,
+          "max_first_pos_m": 1394.77,
+          "vehicle_count": 747
+        },
+        {
+          "class": "M",
+          "lane_id": "main_up_1",
+          "min_first_pos_m": 1163.67,
+          "max_first_pos_m": 1394.77,
+          "vehicle_count": 586
+        },
+        {
+          "class": "R",
+          "lane_id": "urban_in_0",
+          "min_first_pos_m": 0.07,
+          "max_first_pos_m": 392.7,
+          "vehicle_count": 150
+        },
+        {
+          "class": "U",
+          "lane_id": "urban_in_0",
+          "min_first_pos_m": 0.09,
+          "max_first_pos_m": 380.55,
+          "vehicle_count": 150
+        },
+        {
+          "class": "X",
+          "lane_id": "cross_in_0",
+          "min_first_pos_m": 348.02,
+          "max_first_pos_m": 445.9,
+          "vehicle_count": 75
+        }
+      ]
+    },
+    "RL23": {
+      "declared": {
+        "M": {
+          "departPos": "last",
+          "departLane": "best"
+        },
+        "R": {
+          "departPos": "last",
+          "departLane": "best"
+        },
+        "U": {
+          "departPos": "last",
+          "departLane": "best"
+        },
+        "X": {
+          "departPos": "last",
+          "departLane": "best"
+        }
+      },
+      "tripinfo_actual": [
+        {
+          "class": "M",
+          "lane_id": "main_up_0",
+          "min_depart_pos_m": 1108.12,
+          "max_depart_pos_m": 1394.77,
+          "vehicle_count": 751
+        },
+        {
+          "class": "M",
+          "lane_id": "main_up_1",
+          "min_depart_pos_m": 1168.21,
+          "max_depart_pos_m": 1394.77,
+          "vehicle_count": 582
+        },
+        {
+          "class": "R",
+          "lane_id": "urban_in_0",
+          "min_depart_pos_m": 0.1,
+          "max_depart_pos_m": 392.7,
+          "vehicle_count": 150
+        },
+        {
+          "class": "U",
+          "lane_id": "urban_in_0",
+          "min_depart_pos_m": 0.07,
+          "max_depart_pos_m": 382.8,
+          "vehicle_count": 150
+        },
+        {
+          "class": "X",
+          "lane_id": "cross_in_0",
+          "min_depart_pos_m": 370.96,
+          "max_depart_pos_m": 445.9,
+          "vehicle_count": 75
+        }
+      ],
+      "first_fcd_actual": [
+        {
+          "class": "M",
+          "lane_id": "main_up_0",
+          "min_first_pos_m": 1108.12,
+          "max_first_pos_m": 1394.77,
+          "vehicle_count": 751
+        },
+        {
+          "class": "M",
+          "lane_id": "main_up_1",
+          "min_first_pos_m": 1168.21,
+          "max_first_pos_m": 1394.77,
+          "vehicle_count": 582
+        },
+        {
+          "class": "R",
+          "lane_id": "urban_in_0",
+          "min_first_pos_m": 0.1,
+          "max_first_pos_m": 392.7,
+          "vehicle_count": 150
+        },
+        {
+          "class": "U",
+          "lane_id": "urban_in_0",
+          "min_first_pos_m": 0.07,
+          "max_first_pos_m": 382.8,
+          "vehicle_count": 150
+        },
+        {
+          "class": "X",
+          "lane_id": "cross_in_0",
+          "min_first_pos_m": 370.96,
+          "max_first_pos_m": 445.9,
+          "vehicle_count": 75
+        }
+      ]
+    }
+  },
+  "endpoint_rule": "O=P-E only at 1500/2700 when declared plan and departure/arrival coverage are verified",
+  "first_R_downstream_rule": "(previous raw FCD label, first main_down label]; cross-bin events remain unknown",
+  "episode_rule": "Full episodes split on missing labels; region occupancy and same-vehicle episodes are distinct; A/B/Post clips reference Full parent IDs",
+  "sensitivity_rule": "M-only internal E1 native 30 s data rebinned to 60/120 s, anchored independently at A=0 and B=300; real short tails retained",
+  "limitations": [
+    "1 Hz FCD provides sampled observations rather than exact physical transition times.",
+    "Static priority and link data do not establish dynamic causal obstruction.",
+    "E2 is coverage_only unless a later contract explicitly registers a new metric and verification scope.",
+    "Mainline departPos=last observations near the merge do not establish upstream feeder traffic state."
+  ]
+}

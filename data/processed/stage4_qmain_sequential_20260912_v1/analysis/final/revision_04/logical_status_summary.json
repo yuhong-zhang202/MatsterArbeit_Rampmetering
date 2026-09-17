@@ -1,0 +1,110 @@
+{
+  "all_registered_terminal": true,
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "denominators": {
+    "adjacent_matched_seed_comparisons_expected": 6,
+    "class_endpoint_units_expected": 64,
+    "class_endpoint_units_observed": 64,
+    "registered_logical_runs": 10,
+    "registered_terminal_runs": 10,
+    "used_logical_runs": 8,
+    "used_qmain_points": [
+      3200,
+      3500,
+      3650,
+      3800
+    ],
+    "used_valid_run_manifests": 8
+  },
+  "evidence_provenance": {
+    "current_mutable_execution_ledger_used": false,
+    "normative_evidence_ledger_snapshot": {
+      "canonical_execution_ledger_sha256": "265ec48b66947ad22e771cad9477f639a9d1b4523c0addb5c05f2303c8ba21bd",
+      "path": "data/processed/stage4_qmain_sequential_20260912_v1/final_evidence_ledger_snapshot.json",
+      "sha256": "f589c905067887536037fe6fe045438e8a1588cbf3246dcc50b573facecb4516"
+    }
+  },
+  "logical_statuses": [
+    {
+      "included_in_used_design": true,
+      "reason": null,
+      "run_id": "C17",
+      "state": "reused_valid",
+      "terminal": true,
+      "used_as_evidence": true
+    },
+    {
+      "included_in_used_design": true,
+      "reason": null,
+      "run_id": "C23",
+      "state": "reused_valid",
+      "terminal": true,
+      "used_as_evidence": true
+    },
+    {
+      "included_in_used_design": true,
+      "reason": null,
+      "run_id": "MH17",
+      "state": "reused_valid",
+      "terminal": true,
+      "used_as_evidence": true
+    },
+    {
+      "included_in_used_design": true,
+      "reason": null,
+      "run_id": "MH23",
+      "state": "reused_valid",
+      "terminal": true,
+      "used_as_evidence": true
+    },
+    {
+      "included_in_used_design": true,
+      "reason": null,
+      "run_id": "QM3500S17",
+      "state": "completed_valid",
+      "terminal": true,
+      "used_as_evidence": true
+    },
+    {
+      "included_in_used_design": true,
+      "reason": null,
+      "run_id": "QM3500S23",
+      "state": "completed_valid",
+      "terminal": true,
+      "used_as_evidence": true
+    },
+    {
+      "included_in_used_design": false,
+      "reason": "run_q3650",
+      "run_id": "QM3350S17",
+      "state": "cancelled_by_stop_rule",
+      "terminal": true,
+      "used_as_evidence": false
+    },
+    {
+      "included_in_used_design": false,
+      "reason": "run_q3650",
+      "run_id": "QM3350S23",
+      "state": "cancelled_by_stop_rule",
+      "terminal": true,
+      "used_as_evidence": false
+    },
+    {
+      "included_in_used_design": true,
+      "reason": null,
+      "run_id": "QM3650S17",
+      "state": "completed_valid",
+      "terminal": true,
+      "used_as_evidence": true
+    },
+    {
+      "included_in_used_design": true,
+      "reason": null,
+      "run_id": "QM3650S23",
+      "state": "completed_valid",
+      "terminal": true,
+      "used_as_evidence": true
+    }
+  ],
+  "schema_version": 1
+}

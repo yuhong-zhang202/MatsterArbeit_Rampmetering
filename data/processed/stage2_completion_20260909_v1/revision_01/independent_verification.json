@@ -1,0 +1,24 @@
+{
+  "status": "passed",
+  "archive_files_hash_verified": 29,
+  "vehicle_unique_rows": 1858,
+  "E1_raw_rows_fields_reconciled": [
+    540,
+    7
+  ],
+  "cohort_trip_account_rows_reconciled": 364,
+  "internal_E1_Full_A": [
+    1333,
+    1331
+  ],
+  "R_brackets": 300,
+  "R_first_downstream_before1500": 36,
+  "R_bin_ambiguous": 4,
+  "tests": "12 dedicated plus13 specified existing static/analysis tests passed; py_compile/diffcheck passed",
+  "source_archive_only": true,
+  "pending_runs_retained": 7,
+  "figures": "Both viewed: full internal/downstream passage series and R/U observed cumulative insertion/arrival fallback; outside not interpolated. Horizontal ticks are simulation seconds as defined by analysis_windows.",
+  "limitations": "Schedule unverified; per-ID E1 coverage unverified; C1 scientific review pending.",
+  "command": ".venv/bin/python data/processed/stage2_completion_20260909_v1/revision_01/independent_verification.py",
+  "verification_script_sha256": "53567de8d0d98042d37c2913a6f1321d90ea8338c7ec4661005de1abeb1b4ccd"
+}

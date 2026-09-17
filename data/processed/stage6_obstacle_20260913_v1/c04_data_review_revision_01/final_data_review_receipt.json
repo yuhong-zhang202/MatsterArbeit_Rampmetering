@@ -1,0 +1,56 @@
+{
+  "confidence": "High",
+  "documentation_impact": "Parent must record material review finding in PROJECT_STATE/WORKLOG; data analyst cannot edit governance.",
+  "findings": [
+    {
+      "claim": "Empty mandatory auxiliary XML output files are accepted as completed execution and T_MEASURE supports all four windows per measured run.",
+      "evidence": "independent_fake_chain/attempts/S6_V1_ML_S17_attempt3/outputs/{queues.xml,sumo_summary.xml,vehroute.xml} are zero bytes; corresponding execution receipt completed, analysis manifest qualified, paired_negative results contain 8 T_MEASURE supported rows for ML/C17.",
+      "id": "C04-D-M01",
+      "location": "src/scenarios/stage6_h2_execution.py execute_attempt missing_output; src/analysis/stage6_h2_pipeline.py validate_auxiliary_context/assemble_rule_tables",
+      "minimal_remediation": "Require each mandatory XML role to parse with the expected root before completion/measurement qualification; retain invalid/partial artifacts and report technical/evidence failure. Add empty/truncated/wrong-root fixtures. Register any role intentionally treated as archival presence only before excluding its completeness from T_MEASURE.",
+      "severity": "Major",
+      "status": "open_pending_engineering_response"
+    }
+  ],
+  "gate": "SG6-P_data_preparation",
+  "limitations": [
+    "No real SUMO process was created; fake process controls and source contracts cannot establish actual runtime behavior.",
+    "Positive V1-style receipt chain was exercised only with explicit synthetic_fixture scope; real scope was rejected without approval.",
+    "The 45 production tests were read/cross-referenced, not rerun; independent checks exercised selected overlapping cases.",
+    "Exact number-flow schedule remains pending; finite inlet qualification is not proof of no additional insertion blocking.",
+    "Initial data_review_receipt.json PASS reports only its 274 programmed checks; this final receipt supersedes its overall gate interpretation.",
+    "Two supplemental audit script attempts had fixture errors (missing bound_state; guessed auxiliary filenames). Preserved originals and successful supplemental_checks_revision_03.py. These were audit-fixture errors, not production findings."
+  ],
+  "preflight": {
+    "frozen_registration": "revision03 scientific card; exact launch still Proposed",
+    "permitted_writes": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_data_review_revision_01",
+    "phase": "C04 offline preparation user authorized",
+    "prohibited_tools_invocations": {
+      "GUI": 0,
+      "SUMO": 0,
+      "TraCI": 0,
+      "netconvert": 0
+    },
+    "protocol": "empty; formal parameters unknown; exploratory only"
+  },
+  "scope": "C04 offline only; not launch authorization or scientific validation",
+  "status": "FAIL",
+  "verified": {
+    "applicable": 150,
+    "dedicated_production_test_methods_inspected": 45,
+    "historical_ML17_tripinfo_rows_independently_parsed": 1608,
+    "independent_fake_adapter_calls": 8,
+    "main_checks": 274,
+    "main_keys": 352,
+    "negative_sensitivity_rows_retained": 7,
+    "not_applicable": 202,
+    "prepared_attempts": 5,
+    "real_reserved": 0,
+    "real_starts": 0,
+    "required": 148,
+    "retry_predictions": 5,
+    "sensitivity_keys": 14,
+    "single_side_sensitivity_not_paired": 7,
+    "supplemental_checks": 27
+  }
+}

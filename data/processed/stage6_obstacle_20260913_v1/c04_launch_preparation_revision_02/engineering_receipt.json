@@ -1,0 +1,132 @@
+{
+  "Proposed_launch_card": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_02/proposed_launch_card.json",
+    "sha256": "3d7f23ca434f714c15c306267e3a2b08603e216e5cb70e53b11c9aa706ab2e77"
+  },
+  "archive_compatibility": {
+    "analysis_manifest": {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_02/historical_ML17_compatibility/analysis_manifest.json",
+      "sha256": "aff2de235137f6caba0403d0be709fbac65513ade8548b2e3f29d3fbd38e1bf2"
+    },
+    "distinct_physical_archive": 1,
+    "offline_analysis_invocations_this_package": 1
+  },
+  "capability_audit": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_02/capability_audit.json",
+    "sha256": "fda4c715fb00cd09e0bc6746c8191266a9cffbd869b09febf7d38402bda9c7c4"
+  },
+  "compiled_files_created": 0,
+  "coverage": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_02/failure_mode_coverage.json",
+    "sha256": "9e0877772591e0a97343ba2540a3d594e6b6b2f302cee07a83d35277e420ccd8"
+  },
+  "engineering_self_review": "PASS_offline_only",
+  "files": [
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/scenarios/stage6_h2_offline.py",
+      "sha256": "4620f4636fc6abe96d3732e46097b3b2ee0ef9e928e288625421e9dc8bcad3d9"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/scenarios/stage6_h2_execution.py",
+      "sha256": "4c6dc65967cb655b132fe344587d5354979867c1ae26668cbf6ce920539ab402"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/analysis/stage6_h2_measurement.py",
+      "sha256": "ae1c1bbf2b6e95132988537edc7db2c0323935db00e60b991e6e68520f8042e3"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/analysis/stage6_h2_pipeline.py",
+      "sha256": "e80efb58da5996b18a451782037450cce786a4c83ff930af56a04b047855fedb"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/test_stage6_h2_offline.py",
+      "sha256": "bb3191bf5c3b44ffa71b289718f0d9bbe0e3d63c70dc0eb965c2c036d87071d3"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/test_stage6_h2_measurement.py",
+      "sha256": "76c98e24189630518fc4a5aa832a7ca7cf2440bc687111eb0589819c9da5c61c"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/test_stage6_h2_c04.py",
+      "sha256": "333bc0c7897ee35681e21e83b6199ac5ed762bd24debaf576478f77f3127d88f"
+    }
+  ],
+  "historical_ML17_measurements_identical_to_revision01": false,
+  "independent_finding": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_data_review_revision_01/supplemental_check_receipt.json",
+    "sha256": "9e6a6425583719ee94ff976b0f19a0340ba8d6e111c12b21d0463ef87a31f747"
+  },
+  "launch_eligible": false,
+  "launch_payload_sha256": "75901b51e4fe6ee9a3f4dc99bdac38c720d22ee2d91b2e5d0e5041e790dbe0d4",
+  "materializations": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_02/materialization_verification.json",
+    "sha256": "2c91b8a925ceb443f23679a0a333e61f36407ab455fc02458bd9fb1b3c797518"
+  },
+  "new_XML_negative_cases": 53,
+  "no_historical_config_raw_result_or_docs_modified": true,
+  "persistent_fixture_evidence": {
+    "analysis_manifests": [
+      {
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_02/synthetic_fixture_evidence/S6_V1_ML_S17_analysis/analysis_manifest.json",
+        "sha256": "9e6422fddeb19e0432647664665ca81d092eabb05c1771bdf3f9f68c9186f7c1"
+      },
+      {
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_02/synthetic_fixture_evidence/S6_V1_C_S17_analysis/analysis_manifest.json",
+        "sha256": "1d62fc2d0878dfa727604201d82d1c57533606369410349150c3e5962101d6a3"
+      }
+    ],
+    "fake_attempts": 3,
+    "physical_simulator_runs": 0,
+    "rule_manifest": {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_02/synthetic_fixture_evidence/registered_rule_tables/rule_manifest.json",
+      "sha256": "e1834c66f71391fde95a53fa628be4655a6ee0cf370e1302abd9d2ace18047be"
+    },
+    "scope": "synthetic_fixture_only"
+  },
+  "preserved_development_failures": [
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_01/development_test_failure_01.json",
+      "sha256": "91d565eb0ff7fd223f738cba25b4c15713587c719ae704a9738b7f70082546c6"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_01/development_test_failure_02.json",
+      "sha256": "e4e9c552b0ca805d157f24057f4c2f5c8fa0bdcf6051848d0bff7b9e6c57730c"
+    }
+  ],
+  "real_budget_counters": {
+    "actual_starts_observed": 0,
+    "archive_bytes": 0,
+    "reserved_or_unknown": 0,
+    "retry": 0,
+    "smoke": 0,
+    "sumo": 0,
+    "validation": 0,
+    "wallclock_s": 0
+  },
+  "registration": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/validation_card_draft_revision_03.json",
+    "sha256": "d0ef6270f5bdd687621ab3513e9ba533c979a6ea37dbd9e8efd268b5234d1dfb"
+  },
+  "required_XML_roles": 14,
+  "revision_reason": "Close independent Major:14 required XML outputs now need nonempty well-formed matching roots, direct-record shape, registered grids and identities; invalid XML cannot complete or qualify T_MEASURE.",
+  "scope": "C04/SG6-P offline preparation; independent review pending",
+  "simulation_invocations": {
+    "GUI": 0,
+    "SUMO": 0,
+    "TraCI": 0,
+    "netconvert": 0
+  },
+  "supersedes": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_01/engineering_receipt.json",
+    "sha256": "677d7a69eb2816fb5abd230bdc6be98fc84df26a39fed1184e85afab9507df87"
+  },
+  "test_log": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_02/offline_tests_final.log",
+    "sha256": "8d4abced84f33c6e51a1ebbe1eee374b6b177c22402505c48c0232576a32fa9d"
+  },
+  "test_receipt": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_02/test_receipt.json",
+    "sha256": "31a625e307fd2c84c179d3b7fc7b6c1e3657cf465c90bd088c3a6fe2d93da53f"
+  },
+  "user_launch_approval": null
+}

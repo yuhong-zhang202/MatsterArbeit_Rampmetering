@@ -1,0 +1,121 @@
+{
+  "schema_version": 1,
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "stage": "Stage 4 T42 independent data and logic review",
+  "status": "failed_major_findings_open",
+  "context_preflight": {
+    "status": "passed",
+    "current_phase": "T42 offline implementation and review; T43 prohibited",
+    "authorization_quote": "批准，继续stage 4",
+    "authorization_scope": "T42 offline implementation and three-specialist review only",
+    "formal_protocol": "empty_not_frozen",
+    "formal_experiment_started": false
+  },
+  "reviewed_hashes": {
+    "src/analysis/analyze_stage4_qmain.py": "b199a193604d8d889dc16490e36725d58d26d5708c28acb73128685caae98d46",
+    "tests/test_stage4_qmain.py": "6db4faf66c61d5d5e3b83e2ff1f52cefadf5ffc8587ce1ffef16a61fe3a375e8",
+    "tests/test_verify_stage4_qmain.py": "79420da22241d4eedc610ed932ab45bfc9cb71126ae1d34aa4eeff8f1ad350ae",
+    "measurement_contract.json": "7354ffb1041d865e28c02b5254b3b7f1eecc97abdb42dcf30f5b52c1f69baa88",
+    "execution_ledger.json": "88087c27aee5fd0766527bf59cafe1b4e77d74f4a46dc25937239323f93a97af",
+    "source_registry.json": "8438ca5a5f6a078662e146a5b6e6537be0199a3ec8f49fd0da3df32196568f96"
+  },
+  "test_results": {
+    "production_suite": "26/26 passed",
+    "independent_methods": 18,
+    "independent_failure_records": 9,
+    "combined_methods": 44,
+    "combined_result": "failed with 9 independent failure records",
+    "passed_independent_scopes": [
+      "two-lane occupancy arithmetic mean in percentage points",
+      "speed contribution weighting and q count arithmetic",
+      "strict A/B envelope comparisons at exact boundaries",
+      "120/60/30 persistence including 3-of-4 versus 2-of-4",
+      "all 81 two-seed R/EJMI state combinations",
+      "registered cancelled_by_stop_rule denominator in the valid stop-A case",
+      "current zero-run and prohibited-launch gates",
+      "prohibited state rejects nonzero SUMO or netconvert ledger counts",
+      "exclusive JSON output refuses overwrite",
+      "basic R coverage and arrival contradiction cases",
+      "four-reference independent raw reconstruction"
+    ]
+  },
+  "findings": [
+    {
+      "id": "S4DA-M01",
+      "severity": "Major",
+      "scope": "single Tier-2 branch",
+      "evidence": "build_logical_statuses accepts selected_tier2_runs={QM3350S17,QM3650S23} with the other two registered as cancelled; no same-q branch-pair validation is applied.",
+      "required_resolution": "Reject any Tier-2 selection other than exactly LOWER_IDS, exactly UPPER_IDS, or empty when the stop action cancels all four. Validate action/result/selected/cancelled consistency."
+    },
+    {
+      "id": "S4DA-M02",
+      "severity": "Major",
+      "scope": "logical-run terminal evidence",
+      "evidence": "Without any C/MH reference manifests, build_logical_statuses marks all four references reused_valid and terminal and can return all_registered_terminal=true after Tier 1 stops.",
+      "required_resolution": "A reused reference may be terminal/used only when its registered, qualified manifest is present and validates against the ledger. Missing manifests must remain nonterminal or block finalization."
+    },
+    {
+      "id": "S4DA-M03",
+      "severity": "Major",
+      "scope": "manifest and denominator integrity",
+      "evidence": "A C17 manifest with seed=23, q_main=9999 and eight duplicate M/1500 endpoint rows is accepted and counted as eight observed endpoint units.",
+      "required_resolution": "Validate every manifest run ID, seed and qMain against its ledger row; require exactly the unique Cartesian set {M,R,U,X} x {1500,2700}, coverage eligibility, and registered manifest hashes before counting evidence."
+    },
+    {
+      "id": "S4DA-M04",
+      "severity": "Major",
+      "scope": "R passage and FCD identity coverage",
+      "evidence": "Two copies of R_flow.0 in the same FCD frame are not counted as a duplicate; the fixture is classified clear_passage rather than unresolved.",
+      "required_resolution": "Detect duplicate vehicle identity within each timestep, expose its count, include zero duplicates in coverage_complete, and make any duplicate unresolved."
+    },
+    {
+      "id": "S4DA-M05",
+      "severity": "Major",
+      "scope": "T43 authorization completeness",
+      "evidence": "validate_context accepts t43_launch_authorization.status=user_approved with quote=null.",
+      "required_resolution": "A user-approved launch state must require the exact nonempty authorization quote and the remaining no-pending launch-card fields; the current prohibited state remains valid only with zero starts."
+    },
+    {
+      "id": "S4DA-M06",
+      "severity": "Major",
+      "scope": "registered analysis-contract drift",
+      "evidence": "validate_contract accepts altered exact EJMI margins, E1 period_s=60, and an occupancy_rule changed to summation/density semantics.",
+      "required_resolution": "Validate the exact registered margins, 30 s period, occupancy arithmetic-mean percentage-point rule, speed contribution-weighted rule and q rule rather than checking only positive margins and detector IDs."
+    },
+    {
+      "id": "S4DA-M07",
+      "severity": "Major",
+      "scope": "proposal provenance",
+      "evidence": "The current authoritative proposal hash is ec1c243fecece5f77a4f1201c5565592d732c67fb2d1761d0537fee4f5f47b7c, while both contract and ledger retain 042f0dd0b0cb5152b710b8fa9489a577e1732eda6351b8ae92aa5adbf7de54f5 after the authorized status text was updated.",
+      "required_resolution": "Update the registered proposal hash consistently after the authoritative status update, or hash a clearly identified immutable scientific-registration payload separate from mutable status text; validate it in context before T43."
+    }
+  ],
+  "reference_reconstruction": {
+    "status": "passed_4_of_4",
+    "method": "Source-map hashes and archived files were independently read; two E1 lanes were independently combined; FCD frames and identity-bracketed first downstream R events were independently reconstructed without production aggregation, EJMI, or branch helpers.",
+    "runs": {
+      "C17": {"R_A_events": 36, "A_q_vehph": 3194.4, "A_v_mps": 30.872817430503382, "A_occ_percent": 7.337, "frames": 2700},
+      "C23": {"R_A_events": 40, "A_q_vehph": 3192.0, "A_v_mps": 30.321151241534988, "A_occ_percent": 7.502800000000001, "frames": 2700},
+      "MH17": {"R_A_events": 0, "A_q_vehph": 3794.4, "A_v_mps": 31.70932321315623, "A_occ_percent": 8.382, "frames": 2700},
+      "MH23": {"R_A_events": 0, "A_q_vehph": 3796.8, "A_v_mps": 31.52122629582807, "A_occ_percent": 8.4393, "frames": 2700}
+    },
+    "manifest_hashes": {
+      "C17": "6539b01b76835d43b33ff554317c66f6674bc134d59c63e068eb1f0bf1c5eff7",
+      "C23": "6d3ae27afc301bba6460f64531d9909b35646e47acca0afeafa162d5cae7a980",
+      "MH17": "3d747673679ff7a9985228279d44754542661ce685651030f124b272e091afc3",
+      "MH23": "1a75d7fab95a7f9af486a46be30b6cf25dfc203e6e101c7c8003a3cbde374cca"
+    },
+    "semantic_note": "Stage 4 q uses nVehEntered while the Stage 3 q table used nVehContrib. For C23 A this yields 3192.0 versus the Stage 3 value 3189.6 veh/h. The Stage 4 contract explicitly registers nVehEntered; comparisons must not silently mix the two q definitions."
+  },
+  "launch_gate": {
+    "T42_data_review": "failed",
+    "T43": "prohibited",
+    "open_blocker_count": 0,
+    "open_major_count": 7,
+    "safe_next_step": "simulation_engineer repairs the six findings without changing the registered scientific design; data_analyst reruns this full independent suite on new hashes before scientific review"
+  },
+  "actual_sumo_starts": 0,
+  "actual_netconvert_operations": 0,
+  "actual_traci_connections": 0,
+  "actual_gui_starts": 0
+}

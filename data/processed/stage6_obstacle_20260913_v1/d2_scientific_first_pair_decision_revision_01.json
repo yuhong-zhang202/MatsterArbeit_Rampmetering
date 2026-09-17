@@ -1,0 +1,19 @@
+{
+  "artifact_kind": "first_matched_unit_scientific_decision",
+  "recorded_date": "2026-09-13",
+  "decision": "FAIL_STOP_NOT_RESOLVED",
+  "classification": "not_resolved",
+  "confidence": "High within the preregistered bounded validation and stop decision",
+  "open_counts": {"blocker": 0, "major": 0, "required_minor": 0},
+  "evidence_acceptance": "The seed-17 pair is complete, qualified and independently reconstructed; the negative is not an evidence error.",
+  "required_main_results": {"passed": 69, "not_resolved": 5, "missing": 0, "required": 74},
+  "failed_required_rules": ["M_PRIMARY", "M_SUPPORT", "R_SUPPORT", "S_RU_EXPOSURE", "Q4_COEXIST"],
+  "sensitivity_results": {"passed": 0, "not_resolved": 7, "required": 7},
+  "stop_action": "Do not start seed23 and do not retry; retain seed23 as missing/not_evaluated in the fixed denominator.",
+  "interpretation_boundary": "Raw R passage and shared R/U exposure were observed. Coupled support-rule failures do not mean those phenomena were absent. The result does not identify the structural cause or exclude effects under other demands or controllers.",
+  "sg6r_candidate": "not_resolved",
+  "formal_design_unlocked": false,
+  "bound_data_receipt_sha256": "ae2fc3a1bdf596a106358b36eb69098a7b84473272c97b5fd665f7cf82f9c2b5",
+  "bound_data_manifest_sha256": "92b415ca8152557fb4d483f1ac16cc8f8c9640e7b122867140c5d7da9620c7f3",
+  "bound_engineering_manifest_sha256": "48aa1578226ed5c983d0d06ff565381d65f95f487bfc404cfc7bb562665ea148"
+}

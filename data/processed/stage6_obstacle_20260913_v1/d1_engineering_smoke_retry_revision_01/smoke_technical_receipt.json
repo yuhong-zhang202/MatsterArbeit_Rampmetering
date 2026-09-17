@@ -1,0 +1,255 @@
+{
+  "FCD_sample_count": 323986,
+  "GUI": 0,
+  "M_insertion": {
+    "departPos_max": 100.0,
+    "departPos_min": 100.0,
+    "entered": 1083,
+    "misplaced_count": 0,
+    "no_additional_blocking_claim": false,
+    "planned": 1083,
+    "registered_reported_inlet_qualification": {
+      "analysis_qualification": "qualified",
+      "number_flow_exact_quantization": "pending_C_not_verified",
+      "rule": "pre_registered_maximum_reported_inlet_delay_qualification",
+      "scientific_result": "supported_bounded"
+    },
+    "reported_delay_max_s": 1.0
+  },
+  "SUMO_XML_validation_status": {
+    "diagnostic_warning_or_error_count": 0,
+    "disabled_validation_warning_present": false,
+    "error_log_bytes": 0,
+    "local_XSD_chain_verified": true,
+    "scope": "same default validation flags, valid local schema tree, no disabling warning; individual schema-open system calls were not traced",
+    "stderr_bytes": 0,
+    "validation_flags_changed": false
+  },
+  "SUMO_starts": 2,
+  "SUMO_starts_this_attempt": 1,
+  "TLS_links_from_bound_loaded_network": [
+    {
+      "dir": "s",
+      "from": "cross_in",
+      "fromLane": "0",
+      "linkIndex": "1",
+      "state": "o",
+      "tl": "urban_tls",
+      "to": "cross_out",
+      "toLane": "0",
+      "via": ":urban_tls_1_0"
+    },
+    {
+      "dir": "s",
+      "from": "urban_in",
+      "fromLane": "0",
+      "linkIndex": "0",
+      "state": "O",
+      "tl": "urban_tls",
+      "to": "shared_approach",
+      "toLane": "0",
+      "via": ":urban_tls_0_0"
+    }
+  ],
+  "TraCI": 0,
+  "XSD_dependencies": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_engineering_smoke_retry_revision_01/xsd_dependency_manifest.json",
+    "sha256": "88ab7073ff68505fa43db144c505fdbbeb7236dd697cc41e3500eae41b6fb5c9"
+  },
+  "approved_launch_card": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_engineering_smoke_revision_01/approved_launch_card.json",
+    "sha256": "5b359c76deb6552f4d2738d9b6366404499a5a4279a86ec4da0519b79b2f175a"
+  },
+  "attempt_budget_archive_bytes": 54982731,
+  "attempt_wallclock_s": 3.594294499998796,
+  "budget_counters": {
+    "actual_starts_observed": 2,
+    "archive_bytes": 109965588,
+    "reserved_or_unknown": 0,
+    "retry": 1,
+    "smoke": 1,
+    "sumo": 2,
+    "validation": 0,
+    "wallclock_s": 30.947713707995717
+  },
+  "corrected_prelaunch": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_engineering_smoke_retry_revision_01/corrected_prelaunch_receipt.json",
+    "sha256": "55c83702a7162ed07879877ea7f38a734eebd47c1fb56566176fefaf3d3386e3"
+  },
+  "diagnostics": [],
+  "domain_coverage": {
+    "common": {
+      "M_planned": 1083,
+      "observed_traversal": 1083,
+      "states": {
+        "not_observed_entry": 0,
+        "observed_traversal": 1083,
+        "right_censored": 0,
+        "unresolved_missing_exit": 0
+      },
+      "with_inside_samples": 1083
+    },
+    "feeder": {
+      "M_planned": 1083,
+      "observed_traversal": 1083,
+      "states": {
+        "not_observed_entry": 0,
+        "observed_traversal": 1083,
+        "right_censored": 0,
+        "unresolved_missing_exit": 0
+      },
+      "with_inside_samples": 1083
+    }
+  },
+  "effective_process_environment": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_engineering_smoke_retry_revision_01/effective_process_environment_receipt.json",
+    "sha256": "d7e71513693ae283016104611bcc25c42a72aadb08a43b1632d3e00c19897f73"
+  },
+  "engineering_recommendation": "PASS_SMOKE_TECHNICAL_ONLY",
+  "executed_source_map": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/attempts/S6_V1_ML_S17_attempt2/executed_source_map.json",
+    "sha256": "f832d11b6440dc1e042accb2edbb4b2cd64595222d2b95a1394d91a5fc6f57bb"
+  },
+  "execution_reason": "completed",
+  "execution_receipt": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/attempts/S6_V1_ML_S17_attempt2/execution_receipt.json",
+    "sha256": "6ef710419a7868eb34123b1e12293076b4f4f93cdb888c005d565ce2899059fe"
+  },
+  "execution_status": "completed",
+  "exit_code": 0,
+  "final_attempt_directory_bytes": 55005682,
+  "main352_rows_written": 0,
+  "netconvert": 0,
+  "next_action": "stop for independent data/science smoke acceptance; no validation released; shared retry exhausted",
+  "per_id_records": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_engineering_smoke_retry_revision_01/smoke_per_id_technical_records.json",
+    "sha256": "a9e31127965e99b0a6a329ce6770a693a5155602a2114c3b5020c6f9083658c8"
+  },
+  "prelaunch_receipt": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_engineering_smoke_retry_revision_01/retry_prelaunch_receipt.json",
+    "sha256": "2d472c32b9e064afe374aa5d4a80bd4e503fd07b7562d45ad2553c71be398a21"
+  },
+  "preserved_preflight_stops": [
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_engineering_smoke_retry_revision_01/preflight_stop_receipt.json",
+      "sha256": "6674ff2558d1c8c17f307fa8e1716f441d1428eb3465074c662afa5677c1ae33"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_engineering_smoke_retry_revision_01/preflight_stop_receipt_02.json",
+      "sha256": "acd423688ddde09d17d77f04b1adb3cfa0d6f81d8eee2553fb50a2579c2a620c"
+    }
+  ],
+  "prior_attempt_failure": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/attempts/S6_V1_ML_S17_attempt1/execution_receipt.json",
+    "sha256": "73574a941934830720b5b890e6305b5d17e9896b8fb01ccb9b9e0425b9a11039"
+  },
+  "raw_time_grid": {
+    "FCD_frames": 2700,
+    "TLS_frames": 2700,
+    "endpoint_states": {
+      "1500": {
+        "arrived": 1153,
+        "entered": 1355,
+        "in_network": 202,
+        "membership": "strictly_before_endpoint",
+        "outside": 253,
+        "planned": 1608
+      },
+      "2700": {
+        "arrived": 1608,
+        "entered": 1608,
+        "in_network": 0,
+        "membership": "strictly_before_endpoint",
+        "outside": 0,
+        "planned": 1608
+      }
+    },
+    "first_label": 0,
+    "last_label": 2699,
+    "simulation_end_from_log": "2700.00"
+  },
+  "required_xml_validation": {
+    "roles": {
+      "fcd.xml": {
+        "records": 2700,
+        "root": "fcd-export",
+        "status": "minimum_schema_passed"
+      },
+      "mainline_merge_entry_e1_l0.xml": {
+        "records": 90,
+        "root": "detector",
+        "status": "minimum_schema_passed"
+      },
+      "mainline_merge_entry_e1_l1.xml": {
+        "records": 90,
+        "root": "detector",
+        "status": "minimum_schema_passed"
+      },
+      "merge_downstream_e1_l0.xml": {
+        "records": 90,
+        "root": "detector",
+        "status": "minimum_schema_passed"
+      },
+      "merge_downstream_e1_l1.xml": {
+        "records": 90,
+        "root": "detector",
+        "status": "minimum_schema_passed"
+      },
+      "merge_upstream_e1_l0.xml": {
+        "records": 90,
+        "root": "detector",
+        "status": "minimum_schema_passed"
+      },
+      "merge_upstream_e1_l1.xml": {
+        "records": 90,
+        "root": "detector",
+        "status": "minimum_schema_passed"
+      },
+      "queues.xml": {
+        "records": 2700,
+        "root": "queue-export",
+        "status": "minimum_schema_passed"
+      },
+      "ramp_storage_e2.xml": {
+        "records": 90,
+        "root": "detector",
+        "status": "minimum_schema_passed"
+      },
+      "shared_boundary_e2.xml": {
+        "records": 90,
+        "root": "detector",
+        "status": "minimum_schema_passed"
+      },
+      "sumo_summary.xml": {
+        "records": 2700,
+        "root": "summary",
+        "status": "minimum_schema_passed"
+      },
+      "tls_states.xml": {
+        "records": 2700,
+        "root": "tlsStates",
+        "status": "minimum_schema_passed"
+      },
+      "tripinfo.xml": {
+        "records": 1608,
+        "root": "tripinfos",
+        "status": "minimum_schema_passed"
+      },
+      "vehroute.xml": {
+        "records": 1608,
+        "root": "routes",
+        "status": "minimum_schema_passed"
+      }
+    },
+    "scope": "minimum required XML role/schema/time/identity; scientific measurement checks remain required",
+    "status": "passed"
+  },
+  "retry_starts": 1,
+  "runtime_header_check": "passed",
+  "science_entrypoint_calls": 0,
+  "scope": "D1 real smoke retry technical evidence only; attempt1 failure and two preflight stops retained",
+  "sensitivity14_rows_written": 0,
+  "smoke_acceptance_gate_written": false,
+  "source_identity_check": "passed_for_smoke_role_only; not scientific qualification",
+  "validation_starts": 0
+}

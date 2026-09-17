@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+  <input>
+    <net-file value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/network.net.xml" />
+    <route-files value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c01_materializations_revision_02/S6_V1_ML_S23_attempt1/demand.rou.xml" />
+    <additional-files value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c01_materializations_revision_02/S6_V1_ML_S23_attempt1/scenario.add.xml" />
+  </input>
+  <time>
+    <begin value="0" />
+    <end value="2700" />
+    <step-length value="1" />
+  </time>
+  <processing>
+    <time-to-teleport value="-1" />
+    <collision.action value="warn" />
+    <collision.check-junctions value="true" />
+    <extrapolate-departpos value="false" />
+  </processing>
+  <output>
+    <fcd-output value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c01_materializations_revision_02/S6_V1_ML_S23_attempt1/outputs/fcd.xml" />
+    <queue-output value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c01_materializations_revision_02/S6_V1_ML_S23_attempt1/outputs/queues.xml" />
+    <summary-output value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c01_materializations_revision_02/S6_V1_ML_S23_attempt1/outputs/sumo_summary.xml" />
+    <tripinfo-output value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c01_materializations_revision_02/S6_V1_ML_S23_attempt1/outputs/tripinfo.xml" />
+    <vehroute-output value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c01_materializations_revision_02/S6_V1_ML_S23_attempt1/outputs/vehroute.xml" />
+    <tripinfo-output.write-unfinished value="true" />
+    <vehroute-output.write-unfinished value="true" />
+    <precision value="2" />
+  </output>
+  <random_number>
+    <seed value="23" />
+  </random_number>
+  <report>
+    <log value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c01_materializations_revision_02/S6_V1_ML_S23_attempt1/outputs/sumo.log" />
+    <error-log value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c01_materializations_revision_02/S6_V1_ML_S23_attempt1/outputs/sumo_error.log" />
+    <no-step-log value="true" />
+  </report>
+</configuration>

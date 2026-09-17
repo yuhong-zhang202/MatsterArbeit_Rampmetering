@@ -1,0 +1,36 @@
+{
+  "schema_version": 1,
+  "status": "aggregate_archive_only",
+  "run_ids": [
+    "C17",
+    "C23",
+    "ML17",
+    "ML23",
+    "MH17",
+    "MH23",
+    "RL17",
+    "RL23"
+  ],
+  "contract_sha256": "e9c8a6c026b22faedb51902d79cc3952333a3e86ea963b0c06083f0889b81fd7",
+  "run_manifest_sha256": {
+    "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/C17/revision_01/manifest.json": "8e647470ef13a39c06f471118ce5a12270eceb4aded4bd8fc3bbdc8bdf237da3",
+    "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/C23/revision_01/manifest.json": "2282089b243dd9d28eebbf8cbfed753e5513c81b5146f6f85b3525a62d055641",
+    "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/ML17/revision_01/manifest.json": "0c3b5a20d4f216694149c0d392d0a7e4910ee68f8f9d35c6d7a1abec374d9c96",
+    "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/ML23/revision_01/manifest.json": "3cd9c68134c59e1041834cc5637134d355539afcd0a4e88c79ececde02e3f2fb",
+    "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/MH17/revision_01/manifest.json": "f4fa3b39ad3507e9a5242fe2970a4c9b3bcaefdbaf0c86037ab3422a2856526b",
+    "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/MH23/revision_01/manifest.json": "cedd1b1011502a6e1529d160217c1579697df846889598acef8d79d68ef9bf65",
+    "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/RL17/revision_01/manifest.json": "4c3cdf1f5c519e3a1e5601909da5520163eb0b5b7828077cb75829593fa0d5a2",
+    "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/RL23/revision_01/manifest.json": "80181f2d56b5b01ebb4db1a22b1d9d7b4bbb59cab78a0c59f3fb6830af265565"
+  },
+  "table_row_counts": {
+    "coverage_audit.csv": 128,
+    "lane_class_timeline.csv": 246175,
+    "stopping_episodes.csv": 99955,
+    "spatial_propagation_evidence.csv": 8,
+    "condition_evidence_summary.csv": 1131
+  },
+  "diagnostic_question_units": 40,
+  "sensitivity_values": 96,
+  "endpoint_rows": 64,
+  "figure_status": "directory_reserved; figures require the Stage 3 analysis owner"
+}

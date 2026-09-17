@@ -1,0 +1,359 @@
+{
+  "schema_version": 1,
+  "batch_id": "stage2_completion_20260909_v1",
+  "authorization": {
+    "status": "user_approved",
+    "date": "2026-09-09",
+    "scope": "Execute C0-C5 of docs/STAGE2_COMPLETION_PLAN.md with its fixed matrix and budget; submit C6/G2 package for user acceptance."
+  },
+  "budget": {
+    "planned_new_starts": 7,
+    "max_new_starts": 8,
+    "retry_allowance": 1,
+    "actual_new_starts": 1,
+    "retries_used": 0
+  },
+  "steps": {
+    "C0": {
+      "owner": "primary+simulation_engineer",
+      "status": "completed",
+      "evidence": [
+        "source_maps/C17_reused.json",
+        "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused",
+        "C17 archive diff and SHA-256 inventory passed; 29 regular files; no symlink/special entry"
+      ],
+      "resume_point": null
+    },
+    "C1": {
+      "owner": "simulation_engineer->data_analyst->scientific_reviewer",
+      "status": "completed",
+      "evidence": [
+        "engineering preflight found no blocker; exact per-ID schedule reconstruction is unverified because C17 M differs from duration*i/count by up to 0.379437 s",
+        "data/processed/stage2_completion_20260909_v1/revision_01",
+        "25 offline tests passed",
+        "independent_verification.py --check-only passed",
+        "scientific reviewer: all five C1 measurement-contract checks passed; no Blocker/Major"
+      ],
+      "resume_point": null
+    },
+    "C2": {
+      "owner": "simulation_engineer",
+      "status": "running",
+      "evidence": [
+        "C23_attempt1 completed with one SUMO start and no retry; exit code 0",
+        "runtime identity uniquely bound to /private/tmp/minimal_uncontrolled_5tr62jan by stdout summary path and pre/post directory-set difference",
+        "C23 command, seed 23, 0/1500/1200 windows, planned flow numbers 1333/300/150/75, six 30 s E1 series with 90 intervals each, key outputs, and internal-lane mapping passed technical validation",
+        "data/processed/stage2_completion_20260909_v1/source_maps/C23_attempt1.json",
+        "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1"
+      ],
+      "resume_point": "data_analyst revision_02 gate for C17+C23 before remaining six runs"
+    },
+    "C3": {
+      "owner": "data_analyst",
+      "status": "pending",
+      "evidence": [],
+      "resume_point": null
+    },
+    "C4": {
+      "owner": "data_analyst->scientific_reviewer",
+      "status": "pending",
+      "evidence": [],
+      "resume_point": null
+    },
+    "C5": {
+      "owner": "primary",
+      "status": "pending",
+      "evidence": [],
+      "resume_point": null
+    },
+    "C6": {
+      "owner": "user",
+      "status": "pending",
+      "evidence": [],
+      "resume_point": "await G2 package"
+    }
+  },
+  "runs": [
+    {
+      "run_id": "C17",
+      "condition": "C",
+      "q_main": 3200,
+      "q_ramp": 720,
+      "q_urban": 360,
+      "q_x": 180,
+      "seed": 17,
+      "warmup_s": 0,
+      "measurement_s": 1500,
+      "clearance_s": 1200,
+      "origin": "reused",
+      "status": "analyzed_revision_01",
+      "selected_attempt_id": "C17_reused",
+      "attempts": [
+        {
+          "attempt_id": "C17_reused",
+          "runtime_dir": "/private/tmp/minimal_uncontrolled__5s3s06d",
+          "archive_dir": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused",
+          "sumo_started": false,
+          "exit_code": 0,
+          "retry_of": null,
+          "source_manifest": "data/processed/stage2_completion_20260909_v1/source_maps/C17_reused.json",
+          "execution_status": "completed_reused",
+          "measurement_status": "validated_C1",
+          "analysis_status": "passed_revision_01",
+          "reason": "schedule_time_status remains unverified; aggregate endpoint and declared-section evidence passed"
+        }
+      ]
+    },
+    {
+      "run_id": "C23",
+      "condition": "C",
+      "q_main": 3200,
+      "q_ramp": 720,
+      "q_urban": 360,
+      "q_x": 180,
+      "seed": 23,
+      "warmup_s": 0,
+      "measurement_s": 1500,
+      "clearance_s": 1200,
+      "origin": "new",
+      "status": "completed_waiting_revision_02",
+      "selected_attempt_id": "C23_attempt1",
+      "attempts": [
+        {
+          "attempt_id": "C23_attempt1",
+          "execution_status": "completed",
+          "analysis_status": "pending_revision_02",
+          "archive_status": "complete",
+          "retry_of": null,
+          "start_time_utc": "2026-09-09T16:59:14.282290+00:00",
+          "budget_reserved": 1,
+          "sumo_started": true,
+          "actual_sumo_starts": 1,
+          "retry_used": false,
+          "prelaunch_incidents": [
+            {
+              "type": "outer_shell_redirection_failed",
+              "reason": "runner_logs directory absent; shell exited before Python runner, netconvert, or SUMO started",
+              "sumo_budget_consumed": false
+            }
+          ],
+          "command": [
+            ".venv/bin/python",
+            "src/scenarios/run_minimal_uncontrolled.py",
+            "--profile",
+            "low",
+            "--q-main",
+            "3200",
+            "--q-ramp",
+            "720",
+            "--seed",
+            "23",
+            "--warmup-s",
+            "0",
+            "--measurement-duration-s",
+            "1500",
+            "--demand-end-s",
+            "1500",
+            "--post-demand-clearance-s",
+            "1200"
+          ],
+          "source_sha256": {
+            "src/scenarios/run_minimal_uncontrolled.py": "7cd29eeba5fff64c43cb71ba3b9f3477938f8d4e246ab158e4f20293dbd3f983",
+            "config/scenarios/minimal_uncontrolled/scenario.add.xml": "8189e35c5d8224b91b6de57e3bcaf0a7a43139e73af0f50e2ea73d2224d80828",
+            "config/scenarios/minimal_uncontrolled/scenario.con.xml": "d154948200c9b4d9a3d54bf04647357daaff0e6a19293f19fcef457ee4ae4ea5",
+            "config/scenarios/minimal_uncontrolled/scenario.edg.xml": "d6c7d6df0b8a5afc60a8bfedd796b9d14baa56ec44cf322e3129f976396cff53",
+            "config/scenarios/minimal_uncontrolled/scenario.nod.xml": "b1577412ba28470abe3270913833a4053ca6be174f2eede55de77aa5b8a2c923",
+            "config/scenarios/minimal_uncontrolled/scenario.tll.xml": "89f25ab5020e4f2df2fc035233b038c89cc80cf748f6dca19b5584e829df3ecc"
+          },
+          "prelaunch_runtime_dirs": [
+            "/private/tmp/minimal_uncontrolled_0z5fg5k_",
+            "/private/tmp/minimal_uncontrolled_17p2c9eo",
+            "/private/tmp/minimal_uncontrolled_5rppsy4m",
+            "/private/tmp/minimal_uncontrolled_7c6lptau",
+            "/private/tmp/minimal_uncontrolled_8ajspzfl",
+            "/private/tmp/minimal_uncontrolled_8bh6hry7",
+            "/private/tmp/minimal_uncontrolled_8egb0qb1",
+            "/private/tmp/minimal_uncontrolled__49yber4",
+            "/private/tmp/minimal_uncontrolled__5s3s06d",
+            "/private/tmp/minimal_uncontrolled_a5xj00lx",
+            "/private/tmp/minimal_uncontrolled_a5yo3470",
+            "/private/tmp/minimal_uncontrolled_a76ilayy",
+            "/private/tmp/minimal_uncontrolled_al1x6mj4",
+            "/private/tmp/minimal_uncontrolled_b4lwjcca",
+            "/private/tmp/minimal_uncontrolled_d73b4m7x",
+            "/private/tmp/minimal_uncontrolled_eozyn46f",
+            "/private/tmp/minimal_uncontrolled_g9l6i10w",
+            "/private/tmp/minimal_uncontrolled_htmv4mgr",
+            "/private/tmp/minimal_uncontrolled_lwcljtnh",
+            "/private/tmp/minimal_uncontrolled_m774p09j",
+            "/private/tmp/minimal_uncontrolled_mbj_y2qc",
+            "/private/tmp/minimal_uncontrolled_o56hr436",
+            "/private/tmp/minimal_uncontrolled_qsqayo8q",
+            "/private/tmp/minimal_uncontrolled_qtmhotcz",
+            "/private/tmp/minimal_uncontrolled_qzzv_0ft",
+            "/private/tmp/minimal_uncontrolled_reanalysis__9lb950g",
+            "/private/tmp/minimal_uncontrolled_reanalysis_cfhkezu6",
+            "/private/tmp/minimal_uncontrolled_reanalysis_f7rm7h5r",
+            "/private/tmp/minimal_uncontrolled_reanalysis_fdr6tupv",
+            "/private/tmp/minimal_uncontrolled_reanalysis_ffah57_g",
+            "/private/tmp/minimal_uncontrolled_reanalysis_hxf84gx1",
+            "/private/tmp/minimal_uncontrolled_reanalysis_omyo6q5v",
+            "/private/tmp/minimal_uncontrolled_reanalysis_pb0uw7j8",
+            "/private/tmp/minimal_uncontrolled_reanalysis_r7zm521n",
+            "/private/tmp/minimal_uncontrolled_reanalysis_s98w3xiu",
+            "/private/tmp/minimal_uncontrolled_reanalysis_vatmiakw",
+            "/private/tmp/minimal_uncontrolled_ru1l0uey",
+            "/private/tmp/minimal_uncontrolled_szrhbhxn",
+            "/private/tmp/minimal_uncontrolled_td6xu6u4",
+            "/private/tmp/minimal_uncontrolled_tq4v7kmu",
+            "/private/tmp/minimal_uncontrolled_vbpsz_99",
+            "/private/tmp/minimal_uncontrolled_vyo047tf",
+            "/private/tmp/minimal_uncontrolled_w8wne0in",
+            "/private/tmp/minimal_uncontrolled_x_o0ywnl",
+            "/private/tmp/minimal_uncontrolled_z6r_vxrl",
+            "/private/tmp/minimal_uncontrolled_zk23w8q3",
+            "/private/tmp/minimal_uncontrolled_zmcgx1ir"
+          ],
+          "prelaunch_runtime_dir_count": 47,
+          "runtime_dir": "/private/tmp/minimal_uncontrolled_5tr62jan",
+          "archive_dir": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1",
+          "source_manifest": "data/processed/stage2_completion_20260909_v1/source_maps/C23_attempt1.json",
+          "exit_code": 0,
+          "end_time_utc": "2026-09-09T17:05:04.429293+00:00",
+          "identity_binding": {
+            "stdout_summary_path": "/private/tmp/minimal_uncontrolled_5tr62jan/summary.json",
+            "unique_runtime_set_difference": true
+          },
+          "observed_versions": {
+            "sumo": "1.26.0",
+            "netconvert": "1.26.0"
+          },
+          "technical_validation": {
+            "summary_status": "completed",
+            "requested_demands_veh_per_h": {
+              "M": 3200,
+              "R": 720,
+              "U": 360,
+              "X": 180
+            },
+            "planned_and_generated_flow_numbers": {
+              "M": 1333,
+              "R": 300,
+              "U": 150,
+              "X": 75
+            },
+            "windows_s": {
+              "warmup": 0,
+              "measurement_end": 1500,
+              "demand_end": 1500,
+              "clearance": 1200,
+              "simulation_end": 2700
+            },
+            "all_planned_departed_and_arrived": true,
+            "six_e1_each_90_intervals_covering_0_to_2700": true,
+            "compiled_internal_mainline_mapping_matches_contract": true,
+            "key_outputs_present_and_nonempty": true,
+            "warning_error_collision_teleport_emergency_route_error_counts": 0,
+            "source_hashes_unchanged_after_run": true
+          }
+        }
+      ]
+    },
+    {
+      "run_id": "ML17",
+      "condition": "ML",
+      "q_main": 2600,
+      "q_ramp": 720,
+      "q_urban": 360,
+      "q_x": 180,
+      "seed": 17,
+      "warmup_s": 0,
+      "measurement_s": 1500,
+      "clearance_s": 1200,
+      "origin": "new",
+      "status": "pending",
+      "selected_attempt_id": null,
+      "attempts": []
+    },
+    {
+      "run_id": "ML23",
+      "condition": "ML",
+      "q_main": 2600,
+      "q_ramp": 720,
+      "q_urban": 360,
+      "q_x": 180,
+      "seed": 23,
+      "warmup_s": 0,
+      "measurement_s": 1500,
+      "clearance_s": 1200,
+      "origin": "new",
+      "status": "pending",
+      "selected_attempt_id": null,
+      "attempts": []
+    },
+    {
+      "run_id": "MH17",
+      "condition": "MH",
+      "q_main": 3800,
+      "q_ramp": 720,
+      "q_urban": 360,
+      "q_x": 180,
+      "seed": 17,
+      "warmup_s": 0,
+      "measurement_s": 1500,
+      "clearance_s": 1200,
+      "origin": "new",
+      "status": "pending",
+      "selected_attempt_id": null,
+      "attempts": []
+    },
+    {
+      "run_id": "MH23",
+      "condition": "MH",
+      "q_main": 3800,
+      "q_ramp": 720,
+      "q_urban": 360,
+      "q_x": 180,
+      "seed": 23,
+      "warmup_s": 0,
+      "measurement_s": 1500,
+      "clearance_s": 1200,
+      "origin": "new",
+      "status": "pending",
+      "selected_attempt_id": null,
+      "attempts": []
+    },
+    {
+      "run_id": "RL17",
+      "condition": "RL",
+      "q_main": 3200,
+      "q_ramp": 360,
+      "q_urban": 360,
+      "q_x": 180,
+      "seed": 17,
+      "warmup_s": 0,
+      "measurement_s": 1500,
+      "clearance_s": 1200,
+      "origin": "new",
+      "status": "pending",
+      "selected_attempt_id": null,
+      "attempts": []
+    },
+    {
+      "run_id": "RL23",
+      "condition": "RL",
+      "q_main": 3200,
+      "q_ramp": 360,
+      "q_urban": 360,
+      "q_x": 180,
+      "seed": 23,
+      "warmup_s": 0,
+      "measurement_s": 1500,
+      "clearance_s": 1200,
+      "origin": "new",
+      "status": "pending",
+      "selected_attempt_id": null,
+      "attempts": []
+    }
+  ]
+}

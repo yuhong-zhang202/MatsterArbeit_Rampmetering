@@ -1,0 +1,33 @@
+deployMode: standalone
+stateBackend: local
+server:
+  port: 8420
+  host: 127.0.0.1
+data:
+  baseDir: /data/tdai-memory
+llm:
+  baseUrl: http://127.0.0.1:18420/v1
+  apiKey: fake-local-only
+  model: fake-local-only
+  maxTokens: 128
+  timeoutMs: 2000
+memory:
+  capture:
+    enabled: false
+  extraction:
+    enabled: false
+    enableDedup: false
+  pipeline:
+    enableWarmup: false
+  storeBackend: sqlite
+  embedding:
+    provider: none
+skill:
+  enabled: false
+worker:
+  concurrency: 1
+observability:
+  otel: { enabled: false }
+  langfuse: { enabled: false }
+  kafka: { enabled: false }
+  clickhouse: { enabled: false }

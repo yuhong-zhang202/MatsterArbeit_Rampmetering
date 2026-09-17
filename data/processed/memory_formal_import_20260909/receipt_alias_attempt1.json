@@ -1,0 +1,32 @@
+{
+  "status": "failed",
+  "created_at": "2026-09-09T15:53:18.332Z",
+  "project": "Masterarbeit-Ramp-Metering",
+  "volume": "tdai-ramp-metering-memory-v1",
+  "image": "sha256:9798254a8cc06276b7c5b3c19df49f136fae25d579564e1f01f9c4b9b8cd2d11",
+  "model": "gpt-4.1-mini",
+  "source_bundle": "docs/memory/formal_import_bundle_20260909.md",
+  "reused_initialized_volume": true,
+  "native_result": {
+    "status": "failed",
+    "began_at": "2026-09-09T15:53:11.521Z",
+    "finished_at": "2026-09-09T15:53:18.198Z",
+    "error": "Target project identity is not empty; refusing duplicate seed",
+    "gateway_stderr_tail": "[observability][factory] Internal observability backend requested but private module not available. Falling back to console backend. Install the private submodule for full observability.\n2026-09-09T15:53:15.711+00:00 WARN  [tdai-gateway] [gateway] integrations/ not available (Cannot find module '/app/src/integrations/factory.js' imported from /app/src/gateway/server.ts); falling back to inline LocalConfigSource + NoopQuotaReporter (standalone only).\n(node:17) ExperimentalWarning: SQLite is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+  },
+  "restart_persistence_probe": null,
+  "budget": {
+    "prior_claimed_attempts": 0,
+    "new_claimed_attempts": 0,
+    "legacy_claimed_attempts": 4,
+    "alias_claimed_attempts": 0,
+    "total_claimed_attempts": 4,
+    "remaining_attempts": 37,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "estimated_usd_at_published_text_rates": 0,
+    "ledger_path": "data/processed/memory_formal_import_20260909/ledger_gpt-4.1-mini.json"
+  },
+  "error": "Native formal import failed: {\"status\":\"failed\",\"began_at\":\"2026-09-09T15:53:11.521Z\",\"finished_at\":\"2026-09-09T15:53:18.198Z\",\"error\":\"Target project identity is not empty; refusing duplicate seed\",\"gateway_stderr_tail\":\"[observability][factory] Internal observability backend requested but private module not available. Falling back to console backend. Install the private submodule for full observability.\\n2026-09-09T15:53:15.711+00:00 WARN  [tdai-gateway] [gateway] integrations/ not available (Cannot find module '/app/src/integrations/factory.js' imported from /app/src/gateway/server.ts); falling back to inline LocalConfigSource + NoopQuotaReporter (standalone only).\\n(node:17) ExperimentalWarning: SQLite is an experimental feature and might change at any time\\n(Use `node --trace-warnings ...` to show where the warning was created)\\n\"} "
+}

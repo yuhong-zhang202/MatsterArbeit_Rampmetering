@@ -1,0 +1,97 @@
+{
+  "action": "run_q3650",
+  "actual_execution_counters_at_registration": {
+    "actual_gui_starts": 0,
+    "actual_netconvert_operations": 2,
+    "actual_sumo_starts": 2,
+    "actual_traci_connections": 0
+  },
+  "adapter_sha256_at_registration": "68b73598cda7c72921324f8ef49c002a8486acdba6ff86e251d53845845a23e2",
+  "additional_qmain_points_or_seeds_prohibited": true,
+  "approved_source_registry_sha256": "96ee4a20f8130ede9a14ff9a40292a0c1d588770bbf1b37ad1ac455b3a1c538b",
+  "authorization_quote": "\u6279\u51c6\u6309 `docs/STAGE4_T43_LAUNCH_CONFIRMATION_PACKAGE.md` \u6267\u884c T43\u3002",
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "cancelled_run_ids": [
+    "QM3350S17",
+    "QM3350S23"
+  ],
+  "measurement_contract_sha256": "b3bf7abec5a9e6cfc29edb81de58ec5cc86c9e0fd132e88a9cd6999a456a91c9",
+  "registration_payload_sha256": "d934b62903081163495b7e17cf72c52786e1dfb864aa5d9a9d3eb5c2eb9a952a",
+  "schema_version": 1,
+  "scientific_decision_path": "data/processed/stage4_qmain_sequential_20260912_v1/analysis/tier1/revision_05/decision/branch_decision.json",
+  "scientific_decision_sha256": "e0fb31613c2af5375aa6d6148da7a9c67ef5efacde1c0e822b806b6bc2d54b91",
+  "scientific_review_receipt_path": "data/processed/stage4_qmain_sequential_20260912_v1/tier1_scientific_branch_review_receipt.json",
+  "scientific_review_receipt_sha256": "db3f6ec244e088768a44e36d7fbcd4735d1dd5f3a5bd06cc8e9feea1faff71e4",
+  "selected_q_main": 3650,
+  "selected_run_contracts": [
+    {
+      "exact_runner_command_argv": [
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/scenarios/run_minimal_uncontrolled.py",
+        "--profile",
+        "low",
+        "--q-main",
+        "3650",
+        "--q-ramp",
+        "720",
+        "--seed",
+        "17",
+        "--warmup-s",
+        "0",
+        "--measurement-duration-s",
+        "1500",
+        "--demand-end-s",
+        "1500",
+        "--post-demand-clearance-s",
+        "1200",
+        "--sumo-binary",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+        "--netconvert-binary",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/netconvert"
+      ],
+      "q_main": 3650,
+      "run_id": "QM3650S17",
+      "seed": 17
+    },
+    {
+      "exact_runner_command_argv": [
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/scenarios/run_minimal_uncontrolled.py",
+        "--profile",
+        "low",
+        "--q-main",
+        "3650",
+        "--q-ramp",
+        "720",
+        "--seed",
+        "23",
+        "--warmup-s",
+        "0",
+        "--measurement-duration-s",
+        "1500",
+        "--demand-end-s",
+        "1500",
+        "--post-demand-clearance-s",
+        "1200",
+        "--sumo-binary",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+        "--netconvert-binary",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/netconvert"
+      ],
+      "q_main": 3650,
+      "run_id": "QM3650S23",
+      "seed": 23
+    }
+  ],
+  "selected_run_ids": [
+    "QM3650S17",
+    "QM3650S23"
+  ],
+  "selected_seed_pair": [
+    17,
+    23
+  ],
+  "status": "scientifically_reviewed_upper_pair_selected",
+  "tier1_manifest_receipt_registry_path": "data/processed/stage4_qmain_sequential_20260912_v1/candidate_manifest_receipt_registry_snapshots/tier1_complete.json",
+  "tier1_manifest_receipt_registry_sha256": "c80c571deacf9bc7a53c090d3c649fe1b05673ab21094bd76976dcf9973ccc4c"
+}

@@ -1,0 +1,113 @@
+{
+  "schema_version": 1,
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "stage": "T43 final evidence-ledger snapshot engineering verification",
+  "verified_at": "2026-09-13T00:31:38+02:00",
+  "status": "passed_pending_independent_snapshot_bound_final_regeneration",
+  "snapshot": {
+    "path": "data/processed/stage4_qmain_sequential_20260912_v1/final_evidence_ledger_snapshot.json",
+    "sha256": "f589c905067887536037fe6fe045438e8a1588cbf3246dcc50b573facecb4516",
+    "role": "sole immutable normative ledger input for all new final evidence revisions",
+    "source_execution_ledger_sha256": "a2313d754c982ab4a768dcfcc6810975ffa75bc81dd8ae5b70c0d69c35d26199",
+    "canonical_execution_ledger_sha256": "265ec48b66947ad22e771cad9477f639a9d1b4523c0addb5c05f2303c8ba21bd",
+    "must_never_be_rewritten": true
+  },
+  "coverage": {
+    "completed_attempts": "4/4",
+    "runtime_registry_rows": "4/4",
+    "candidate_manifest_receipts": "4/4",
+    "source_maps": "4/4",
+    "archive_files_hash_rechecked": "116/116",
+    "tier2_data_status": "passed_ready_for_scientific_review",
+    "execution_counters": {
+      "actual_sumo_starts": 4,
+      "actual_netconvert_operations": 4,
+      "actual_traci_connections": 0,
+      "actual_gui_starts": 0
+    }
+  },
+  "source_maps": {
+    "QM3500S17": {
+      "path": "data/processed/stage4_qmain_sequential_20260912_v1/source_maps/QM3500S17_attempt1.json",
+      "sha256": "e9d32a4fbaba5a52ca06f13b9cebadbba581831ed0022f6f7587914a7b6a9744",
+      "archive_file_count": 29
+    },
+    "QM3500S23": {
+      "path": "data/processed/stage4_qmain_sequential_20260912_v1/source_maps/QM3500S23_attempt1.json",
+      "sha256": "7f8ea7b7afa55b62afb98fc4cbc0ea923ea0d1989ffd6a9c9dab24552313baa1",
+      "archive_file_count": 29
+    },
+    "QM3650S17": {
+      "path": "data/processed/stage4_qmain_sequential_20260912_v1/source_maps/QM3650S17_attempt1.json",
+      "sha256": "d173b33ae42e96560d99420e5d3da45e3cdbe81ef1d21ab97fb03a6cc4257db9",
+      "archive_file_count": 29
+    },
+    "QM3650S23": {
+      "path": "data/processed/stage4_qmain_sequential_20260912_v1/source_maps/QM3650S23_attempt1.json",
+      "sha256": "3049dc681d76d3161384f8cfd3764e028ffbfaa652037f929ca1d84d5a3dcdc0",
+      "archive_file_count": 29
+    }
+  },
+  "registry_bindings": {
+    "runtime_source_registry_path": "data/processed/stage4_qmain_sequential_20260912_v1/runtime_source_registry.json",
+    "runtime_source_registry_sha256": "04fc91c77c97f40e90513f069f572df9e2f0302aec7b8bb085b763b4dcef191d",
+    "candidate_manifest_receipt_registry_path": "data/processed/stage4_qmain_sequential_20260912_v1/candidate_manifest_receipt_registry.json",
+    "candidate_manifest_receipt_registry_sha256": "e4acfb5fd3d9f71ac0e55e5ccc8df951a1a7cf79d92146c817136656a66b5bca"
+  },
+  "tests": {
+    "snapshot_specific": {
+      "passed": 2,
+      "total": 2
+    },
+    "production": {
+      "passed": 74,
+      "total": 74
+    },
+    "independent": {
+      "passed": 40,
+      "total": 40
+    },
+    "combined": {
+      "passed": 114,
+      "total": 114
+    },
+    "py_compile": "passed",
+    "AST_no_simulation_process_or_network_imports": "passed",
+    "diff_check": "passed",
+    "future_mutable_ledger_metadata_independence": "passed"
+  },
+  "hashes": {
+    "adapter_sha256": "899305e7dfba2222ea552c0b453d3078f39b1d254d2805fb71287625864dcb1b",
+    "production_test_sha256": "7dbc5759b166460a0aa8a5d93be6819562c4cde0308b823c42a6bf377db2fb9a",
+    "independent_test_sha256": "25b1af210dcadee6388716666d6e3a2fc4217591c5b6c6a13c47acb5d5fea39d",
+    "mutable_execution_ledger_at_engineering_verification_sha256": "a5daaf2323651143e62f011c379cb8b6940c4b5299e249b71fdebd1264ce3c34"
+  },
+  "historical_traceability_gap": {
+    "old_transient_ledger_sha256": "b745ccaedf5a9b8c4bcf94119711f9fa4c7e0c12b12d3125c7bd5e337faefff5",
+    "exact_immutable_snapshot_available": false,
+    "confirmed_absent_from_batch_ledger_artifact_hashes": true,
+    "old_final_artifacts": "retained unchanged and superseded for final traceability purposes"
+  },
+  "minimal_consumer": {
+    "step_1": "Verify this snapshot file SHA-256 equals f589c905067887536037fe6fe045438e8a1588cbf3246dcc50b573facecb4516.",
+    "step_2": "Load final_evidence_ledger_snapshot.json and use only its execution_ledger object as the ledger input.",
+    "step_3": "Recompute canonical_execution_ledger_sha256 using sorted keys and compact separators, then validate the embedded runtime and manifest-receipt bindings.",
+    "step_4": "Write new final outputs into a new revision and bind them to the snapshot file hash; never bind them to the later mutable execution_ledger.json hash.",
+    "step_5": "Do not add review receipts or status changes to the snapshot."
+  },
+  "boundaries": {
+    "new_simulation_starts": {
+      "sumo": 0,
+      "netconvert": 0,
+      "traci": 0,
+      "gui": 0
+    },
+    "scientific_code_or_contract_changed": false,
+    "raw_archive_or_existing_final_artifact_changed": false,
+    "formal_protocol": "empty_not_frozen"
+  },
+  "pending": [
+    "data analyst generates a new snapshot-bound final revision and independent verification",
+    "scientific reviewer closes the traceability Major after that independent pass"
+  ]
+}

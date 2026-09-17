@@ -1,0 +1,75 @@
+{
+  "schema_version": 1,
+  "scope": "T30-T32 engineering verification",
+  "metadata_preparation": {
+    "first_batch_path": "data/processed/stage3_baseline_diagnostic_20260912_v1",
+    "first_batch_status": "incomplete_before_contract_or_ledger",
+    "first_batch_reason": "archived summary seed was read from an incorrect root-level field",
+    "resolution": "v1 retained with INCOMPLETE.json; v2 cross-checks simulation.seed and --seed and requires equality",
+    "stage2_files_modified": 0
+  },
+  "read_only_stage2_checks": [
+    {
+      "command": ".venv/bin/python data/processed/stage2_completion_20260909_v1/revision_04/independent_verification.py --check-only",
+      "executions_this_session": 1,
+      "exit_code": 0,
+      "observed": {
+        "archive_files": 232,
+        "vehicles": 14564,
+        "E1_rows": 4320,
+        "merge_endpoints": 4200,
+        "contrasts": 198
+      }
+    },
+    {
+      "command": ".venv/bin/python data/processed/stage2_completion_20260909_v1/g2_review/supplemental_verification.py",
+      "executions_this_session": 1,
+      "exit_code": 0,
+      "observed": {
+        "vehicle_rows": 14564,
+        "first_R_events": 2100,
+        "actual_new_starts_recounted": 7
+      }
+    }
+  ],
+  "dedicated_tests": {
+    "command": ".venv/bin/python -m unittest tests.test_stage3_baseline -v",
+    "status": "passed",
+    "test_methods": 18,
+    "required_failure_mode_categories": 12,
+    "all_required_categories_passed": true,
+    "synthetic_fixture_count": 24,
+    "assertion_count": 94,
+    "additional_guardrail_categories": 2
+  },
+  "interface_help": [
+    "root --help passed",
+    "analyze-run --help passed",
+    "aggregate --help passed"
+  ],
+  "forbidden_runtime_scan": {
+    "subprocess_imports": 0,
+    "traci_imports": 0,
+    "runner_imports": 0
+  },
+  "actual_sumo_starts": 0,
+  "actual_netconvert_starts": 0,
+  "propagation_order_major_repair": {
+    "status": "passed",
+    "source_hash": "195fcc2f8c534919eac540fd4e3692e111dda447d15373dec14b64f052a47b96",
+    "test_hash": "f8d15550366a300116a5f7c4ef731651e3f14ee801e4790a24f712e5ddc55e63",
+    "R_path_order_downstream_to_upstream": [
+      "ramp_accel",
+      "ramp_mid_internal",
+      "ramp_storage",
+      "ramp_diverge_internal",
+      "shared_approach"
+    ],
+    "event_sets_pairwise_disjoint": true,
+    "ordered_and_reversed_tests": "passed"
+  },
+  "limitations": [
+    "Independent production quantity reconstruction belongs to T33 data_analyst work.",
+    "Measurement contract and dynamic interpretation still require scientific_reviewer review."
+  ]
+}

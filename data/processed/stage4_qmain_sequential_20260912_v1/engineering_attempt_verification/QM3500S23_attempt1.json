@@ -1,0 +1,108 @@
+{
+  "archive_file_count": 29,
+  "archive_runtime_path": "artifacts/stage4_qmain_sequential_20260912_v1/runtime_archive/QM3500S23_attempt1",
+  "archive_status": "complete",
+  "attempt_id": "QM3500S23_attempt1",
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "branch_interpretation_deferred_until_complete_tier1_pair": true,
+  "classification": "exploratory targeted validation; not a formal experiment or thesis evidence",
+  "diagnostic_checks": {
+    "collision_zero": true,
+    "completed_status": true,
+    "emergency_braking_zero": true,
+    "errors_zero": true,
+    "route_errors_zero": true,
+    "technical_expectations": true,
+    "teleport_zero": true,
+    "warnings_zero": true
+  },
+  "ejmi_status_recorded_without_branch_action": "not_identified",
+  "exact_runner_command_argv": [
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/scenarios/run_minimal_uncontrolled.py",
+    "--profile",
+    "low",
+    "--q-main",
+    "3500",
+    "--q-ramp",
+    "720",
+    "--seed",
+    "23",
+    "--warmup-s",
+    "0",
+    "--measurement-duration-s",
+    "1500",
+    "--demand-end-s",
+    "1500",
+    "--post-demand-clearance-s",
+    "1200",
+    "--sumo-binary",
+    "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+    "--netconvert-binary",
+    "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/netconvert"
+  ],
+  "execution_counters_after_attempt": {
+    "actual_gui_starts": 0,
+    "actual_netconvert_operations": 2,
+    "actual_sumo_starts": 2,
+    "actual_traci_connections": 0
+  },
+  "inventory_count": 29,
+  "r_passage_status_recorded_without_branch_action": "clear_passage",
+  "required_observation_audit": {
+    "passed": true,
+    "passed_audit_items": 7,
+    "required_audit_items": 7
+  },
+  "run_id": "QM3500S23",
+  "runner_exit_code": 0,
+  "runtime_identity": {
+    "netconvert_version": "Eclipse SUMO netconvert 1.26.0",
+    "planned": {
+      "M": 1458,
+      "R": 300,
+      "U": 150,
+      "X": 75
+    },
+    "q_main": 3500,
+    "q_ramp": 720.0,
+    "q_urban": 360.0,
+    "q_x": 180.0,
+    "seed": 23,
+    "sumo_version": "Eclipse SUMO sumo 1.26.0",
+    "time_windows": {
+      "clearance": {
+        "begin_s": 1500,
+        "duration_s": 1200,
+        "end_s": 2700
+      },
+      "demand": {
+        "begin_s": 0,
+        "duration_s": 1500,
+        "end_s": 1500
+      },
+      "measurement": {
+        "begin_s": 0,
+        "duration_s": 1500,
+        "end_s": 1500
+      },
+      "simulation": {
+        "begin_s": 0,
+        "duration_s": 2700,
+        "end_s": 2700
+      },
+      "status": "all time values are exploratory candidates and are not frozen",
+      "warmup": {
+        "begin_s": 0,
+        "duration_s": 0,
+        "end_s": 0
+      }
+    }
+  },
+  "schema_version": 1,
+  "single_factor_hash_check": true,
+  "source_map_path": "data/processed/stage4_qmain_sequential_20260912_v1/source_maps/QM3500S23_attempt1.json",
+  "source_map_sha256": "7f8ea7b7afa55b62afb98fc4cbc0ea923ea0d1989ffd6a9c9dab24552313baa1",
+  "summary_sha256": "99ed4ba7f7c0bbd6dacfabbefcec986a53e795154338b681fe3fb50441b5966e",
+  "technical_qualified": true
+}

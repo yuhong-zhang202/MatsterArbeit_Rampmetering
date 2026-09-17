@@ -1,0 +1,24 @@
+{
+  "schema_version": 1,
+  "status": "template-not-approved",
+  "project": "Masterarbeit-Ramp-Metering",
+  "update_id": "replace-with-unique-session-id",
+  "session_id": "replace-with-unique-session-id",
+  "approved_at": "replace-with-approval-time",
+  "approval_quote": "replace-with-the-user's-explicit-authorization",
+  "model": "gpt-4.1-mini",
+  "max_new_attempts": 1,
+  "max_request_bytes": 20000,
+  "max_output_tokens": 4096,
+  "input_rate_usd_per_million": 0.4,
+  "output_rate_usd_per_million": 1.6,
+  "approved_cost_ceiling_usd": 0.0145536,
+  "delta_bundle": {
+    "path": "docs/memory/incremental_update_YYYYMMDD.md",
+    "sha256": "replace-with-64-lowercase-hex-digest"
+  },
+  "l3_candidate": {
+    "path": "docs/memory/formal_core_memory_YYYYMMDD.md",
+    "sha256": "replace-with-64-lowercase-hex-digest"
+  }
+}

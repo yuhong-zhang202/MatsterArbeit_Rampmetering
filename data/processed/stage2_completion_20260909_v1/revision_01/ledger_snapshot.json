@@ -1,0 +1,210 @@
+{
+  "schema_version": 1,
+  "batch_id": "stage2_completion_20260909_v1",
+  "authorization": {
+    "status": "user_approved",
+    "date": "2026-09-09",
+    "scope": "Execute C0-C5 of docs/STAGE2_COMPLETION_PLAN.md with its fixed matrix and budget; submit C6/G2 package for user acceptance."
+  },
+  "budget": {
+    "planned_new_starts": 7,
+    "max_new_starts": 8,
+    "retry_allowance": 1,
+    "actual_new_starts": 0,
+    "retries_used": 0
+  },
+  "steps": {
+    "C0": {
+      "owner": "primary+simulation_engineer",
+      "status": "completed",
+      "evidence": [
+        "source_maps/C17_reused.json",
+        "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused",
+        "C17 archive diff and SHA-256 inventory passed; 29 regular files; no symlink/special entry"
+      ],
+      "resume_point": null
+    },
+    "C1": {
+      "owner": "simulation_engineer->data_analyst->scientific_reviewer",
+      "status": "running",
+      "evidence": [
+        "engineering preflight found no blocker; exact per-ID schedule reconstruction is unverified because C17 M differs from duration*i/count by up to 0.379437 s"
+      ],
+      "resume_point": "implement and validate revision_01 against archived C17"
+    },
+    "C2": {
+      "owner": "simulation_engineer",
+      "status": "pending",
+      "evidence": [],
+      "resume_point": null
+    },
+    "C3": {
+      "owner": "data_analyst",
+      "status": "pending",
+      "evidence": [],
+      "resume_point": null
+    },
+    "C4": {
+      "owner": "data_analyst->scientific_reviewer",
+      "status": "pending",
+      "evidence": [],
+      "resume_point": null
+    },
+    "C5": {
+      "owner": "primary",
+      "status": "pending",
+      "evidence": [],
+      "resume_point": null
+    },
+    "C6": {
+      "owner": "user",
+      "status": "pending",
+      "evidence": [],
+      "resume_point": "await G2 package"
+    }
+  },
+  "runs": [
+    {
+      "run_id": "C17",
+      "condition": "C",
+      "q_main": 3200,
+      "q_ramp": 720,
+      "q_urban": 360,
+      "q_x": 180,
+      "seed": 17,
+      "warmup_s": 0,
+      "measurement_s": 1500,
+      "clearance_s": 1200,
+      "origin": "reused",
+      "status": "archived",
+      "selected_attempt_id": "C17_reused",
+      "attempts": [
+        {
+          "attempt_id": "C17_reused",
+          "runtime_dir": "/private/tmp/minimal_uncontrolled__5s3s06d",
+          "archive_dir": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused",
+          "sumo_started": false,
+          "exit_code": 0,
+          "retry_of": null,
+          "source_manifest": "data/processed/stage2_completion_20260909_v1/source_maps/C17_reused.json",
+          "execution_status": "completed_reused",
+          "measurement_status": "previously_validated",
+          "analysis_status": "pending_revision_01",
+          "reason": null
+        }
+      ]
+    },
+    {
+      "run_id": "C23",
+      "condition": "C",
+      "q_main": 3200,
+      "q_ramp": 720,
+      "q_urban": 360,
+      "q_x": 180,
+      "seed": 23,
+      "warmup_s": 0,
+      "measurement_s": 1500,
+      "clearance_s": 1200,
+      "origin": "new",
+      "status": "pending",
+      "selected_attempt_id": null,
+      "attempts": []
+    },
+    {
+      "run_id": "ML17",
+      "condition": "ML",
+      "q_main": 2600,
+      "q_ramp": 720,
+      "q_urban": 360,
+      "q_x": 180,
+      "seed": 17,
+      "warmup_s": 0,
+      "measurement_s": 1500,
+      "clearance_s": 1200,
+      "origin": "new",
+      "status": "pending",
+      "selected_attempt_id": null,
+      "attempts": []
+    },
+    {
+      "run_id": "ML23",
+      "condition": "ML",
+      "q_main": 2600,
+      "q_ramp": 720,
+      "q_urban": 360,
+      "q_x": 180,
+      "seed": 23,
+      "warmup_s": 0,
+      "measurement_s": 1500,
+      "clearance_s": 1200,
+      "origin": "new",
+      "status": "pending",
+      "selected_attempt_id": null,
+      "attempts": []
+    },
+    {
+      "run_id": "MH17",
+      "condition": "MH",
+      "q_main": 3800,
+      "q_ramp": 720,
+      "q_urban": 360,
+      "q_x": 180,
+      "seed": 17,
+      "warmup_s": 0,
+      "measurement_s": 1500,
+      "clearance_s": 1200,
+      "origin": "new",
+      "status": "pending",
+      "selected_attempt_id": null,
+      "attempts": []
+    },
+    {
+      "run_id": "MH23",
+      "condition": "MH",
+      "q_main": 3800,
+      "q_ramp": 720,
+      "q_urban": 360,
+      "q_x": 180,
+      "seed": 23,
+      "warmup_s": 0,
+      "measurement_s": 1500,
+      "clearance_s": 1200,
+      "origin": "new",
+      "status": "pending",
+      "selected_attempt_id": null,
+      "attempts": []
+    },
+    {
+      "run_id": "RL17",
+      "condition": "RL",
+      "q_main": 3200,
+      "q_ramp": 360,
+      "q_urban": 360,
+      "q_x": 180,
+      "seed": 17,
+      "warmup_s": 0,
+      "measurement_s": 1500,
+      "clearance_s": 1200,
+      "origin": "new",
+      "status": "pending",
+      "selected_attempt_id": null,
+      "attempts": []
+    },
+    {
+      "run_id": "RL23",
+      "condition": "RL",
+      "q_main": 3200,
+      "q_ramp": 360,
+      "q_urban": 360,
+      "q_x": 180,
+      "seed": 23,
+      "warmup_s": 0,
+      "measurement_s": 1500,
+      "clearance_s": 1200,
+      "origin": "new",
+      "status": "pending",
+      "selected_attempt_id": null,
+      "attempts": []
+    }
+  ]
+}

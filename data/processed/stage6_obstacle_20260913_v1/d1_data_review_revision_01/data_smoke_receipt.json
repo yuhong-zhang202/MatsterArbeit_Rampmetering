@@ -1,0 +1,173 @@
+{
+  "M": {
+    "actual_departPos_max": 100.0,
+    "actual_departPos_min": 100.0,
+    "censored": 0,
+    "common_traversals": 1083,
+    "entered": 1083,
+    "feeder_traversals": 1083,
+    "max_reported_departDelay": 1.0,
+    "nontraversals": 0,
+    "planned": 1083
+  },
+  "TLS_links": {
+    "0": [
+      "urban_in",
+      "shared_approach"
+    ],
+    "1": [
+      "cross_in",
+      "cross_out"
+    ]
+  },
+  "actions": {
+    "GUI": 0,
+    "SUMO": 0,
+    "TraCI": 0,
+    "main352_rows_written": 0,
+    "netconvert": 0,
+    "retry": 0,
+    "science_entrypoint_calls": 0,
+    "sensitivity14_rows_written": 0
+  },
+  "archive_usable_as": "retained technical failure/coverage diagnostic only; not accepted D1 gate or Q2-Q4 evidence",
+  "budget": {
+    "actual_starts_observed": 1,
+    "archive_bytes": 54982857,
+    "reserved_or_unknown": 0,
+    "retry": 0,
+    "smoke": 1,
+    "sumo": 1,
+    "validation": 0,
+    "wallclock_s": 27.35341920799692
+  },
+  "checks_passed": 1706,
+  "confidence": "High",
+  "decision": "fail_stop",
+  "endpoints": {
+    "1500": {
+      "arrived": 1153,
+      "entered": 1355,
+      "in_network": 202,
+      "membership": "strictly_before_endpoint",
+      "outside": 253,
+      "planned": 1608
+    },
+    "2700": {
+      "arrived": 1608,
+      "entered": 1608,
+      "in_network": 0,
+      "membership": "strictly_before_endpoint",
+      "outside": 0,
+      "planned": 1608
+    }
+  },
+  "engineering_manifest": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_engineering_smoke_revision_01/d1_manifest.json",
+    "sha256": "31474b665e8a7a080bbd576cc0a427f348f69122842c44a8c212662042c3aac8"
+  },
+  "engineering_receipt": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_engineering_smoke_revision_01/smoke_technical_receipt.json",
+    "sha256": "959a3415d2b85b94425d4fc81be61f5a99f8aceb4db3da2252e1cbe9be7043ee"
+  },
+  "execution_receipt": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/attempts/S6_V1_ML_S17_attempt1/execution_receipt.json",
+    "sha256": "73574a941934830720b5b890e6305b5d17e9896b8fb01ccb9b9e0425b9a11039"
+  },
+  "findings": [
+    {
+      "detail": "SUMO_HOME warning disables built-in XML validation. Pinned executor rejects every Warning as diagnostic_anomaly; exit0 and independently valid XML do not override the registered failure.",
+      "id": "D1-D-T01",
+      "kind": "registered_technical_failure",
+      "severity": "Major_for_D1_release",
+      "status": "open"
+    }
+  ],
+  "gate_qualified": false,
+  "limitations": [
+    "Independent ElementTree validation proves well-formedness, declared role/count and checked identities; it does not retroactively restore the disabled SUMO XSD validation.",
+    "No retry was run, so proposed environment repair efficacy remains unverified.",
+    "Finite M inlet delay and smoke coverage do not establish scientific reference stability or obstacle resolution."
+  ],
+  "minimal_environment_repair": {
+    "SUMO_HOME": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo",
+    "local_schema_bindings": [
+      {
+        "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/sumoConfiguration.xsd",
+        "sha256": "3a17f38bb69fcfaa46ae6e8e1dad548133a4e173368eab524d0cbef9eecad69b"
+      },
+      {
+        "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/routes_file.xsd",
+        "sha256": "2ce8e88b6644d87cc6d8acd49b2fc9da29f74e953e67ab4c6e475de5cfe0cb11"
+      },
+      {
+        "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+        "sha256": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e"
+      }
+    ],
+    "proposal": "Set SUMO_HOME for the retry process to the installed matching-version share/sumo directory; retain binary, argv, materialization, model, demand, seed and thresholds unchanged. Record environment value and bind local schema files. Do not suppress warnings or change xml-validation flags.",
+    "runtime_fix_verified": false
+  },
+  "retry_eligibility": "Fits registered technical_failure state and same-parameter retry mechanism; global retry unspent. Retry is conditional on engineering/scientific acceptance and applicable approval for explicit environment repair; no retry released here.",
+  "runtime_XML": {
+    "fcd.xml": {
+      "records": 2700,
+      "root": "fcd-export"
+    },
+    "mainline_merge_entry_e1_l0.xml": {
+      "records": 90,
+      "root": "detector"
+    },
+    "mainline_merge_entry_e1_l1.xml": {
+      "records": 90,
+      "root": "detector"
+    },
+    "merge_downstream_e1_l0.xml": {
+      "records": 90,
+      "root": "detector"
+    },
+    "merge_downstream_e1_l1.xml": {
+      "records": 90,
+      "root": "detector"
+    },
+    "merge_upstream_e1_l0.xml": {
+      "records": 90,
+      "root": "detector"
+    },
+    "merge_upstream_e1_l1.xml": {
+      "records": 90,
+      "root": "detector"
+    },
+    "queues.xml": {
+      "records": 2700,
+      "root": "queue-export"
+    },
+    "ramp_storage_e2.xml": {
+      "records": 90,
+      "root": "detector"
+    },
+    "shared_boundary_e2.xml": {
+      "records": 90,
+      "root": "detector"
+    },
+    "sumo_summary.xml": {
+      "records": 2700,
+      "root": "summary"
+    },
+    "tls_states.xml": {
+      "records": 2700,
+      "root": "tlsStates"
+    },
+    "tripinfo.xml": {
+      "records": 1608,
+      "root": "tripinfos"
+    },
+    "vehroute.xml": {
+      "records": 1608,
+      "root": "routes"
+    }
+  },
+  "sample_count": 323986,
+  "scope": "real D1 smoke diagnostics only; never scientific validation",
+  "warning": "Warning: Environment variable SUMO_HOME is not set properly, disabling XML validation. Set 'auto' or 'always' for web lookups."
+}

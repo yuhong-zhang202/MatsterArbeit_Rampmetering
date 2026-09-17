@@ -1,0 +1,904 @@
+{
+  "adapter_sha256": "b5948bca030a0cbd7c431c74c3a7be746e3cf8b40e8dd35322e63ce65928b2a0",
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "contract_sha256": "0e2f56a1c15033eeaccea0cc9cb780ff2b6c6c0d6e1aaa3e99f882efc0c640f7",
+  "diagnostic_checks": {
+    "collision_zero": true,
+    "completed_status": true,
+    "emergency_braking_zero": true,
+    "errors_zero": true,
+    "route_errors_zero": true,
+    "technical_expectations": true,
+    "teleport_zero": true,
+    "warnings_zero": true
+  },
+  "e1": {
+    "aggregates": {
+      "A": {
+        "begin": 0.0,
+        "covered_seconds": 1500.0,
+        "end": 1500.0,
+        "n_contrib": 1331,
+        "occupancy_percent": 7.337,
+        "q_vehph": 3194.4,
+        "speed_mps": 30.872817430503382
+      },
+      "B": {
+        "begin": 300.0,
+        "covered_seconds": 1200.0,
+        "end": 1500.0,
+        "n_contrib": 1066,
+        "occupancy_percent": 7.361000000000001,
+        "q_vehph": 3198.0,
+        "speed_mps": 30.82901500938086
+      }
+    },
+    "bins_30s": [
+      {
+        "begin": 0.0,
+        "end": 30.0,
+        "n_contrib": 24,
+        "occupancy_percent": 6.515,
+        "q_vehph": 3000.0,
+        "speed_mps": 32.01291666666667
+      },
+      {
+        "begin": 30.0,
+        "end": 60.0,
+        "n_contrib": 27,
+        "occupancy_percent": 6.625,
+        "q_vehph": 3120.0,
+        "speed_mps": 33.09
+      },
+      {
+        "begin": 60.0,
+        "end": 90.0,
+        "n_contrib": 27,
+        "occupancy_percent": 7.300000000000001,
+        "q_vehph": 3240.0,
+        "speed_mps": 31.044444444444448
+      },
+      {
+        "begin": 90.0,
+        "end": 120.0,
+        "n_contrib": 27,
+        "occupancy_percent": 7.575,
+        "q_vehph": 3240.0,
+        "speed_mps": 30.12185185185185
+      },
+      {
+        "begin": 120.0,
+        "end": 150.0,
+        "n_contrib": 24,
+        "occupancy_percent": 6.705,
+        "q_vehph": 2880.0,
+        "speed_mps": 30.595
+      },
+      {
+        "begin": 150.0,
+        "end": 180.0,
+        "n_contrib": 29,
+        "occupancy_percent": 8.05,
+        "q_vehph": 3480.0,
+        "speed_mps": 30.730689655172412
+      },
+      {
+        "begin": 180.0,
+        "end": 210.0,
+        "n_contrib": 27,
+        "occupancy_percent": 7.13,
+        "q_vehph": 3240.0,
+        "speed_mps": 32.06444444444445
+      },
+      {
+        "begin": 210.0,
+        "end": 240.0,
+        "n_contrib": 24,
+        "occupancy_percent": 7.09,
+        "q_vehph": 2880.0,
+        "speed_mps": 29.135833333333334
+      },
+      {
+        "begin": 240.0,
+        "end": 270.0,
+        "n_contrib": 28,
+        "occupancy_percent": 7.9399999999999995,
+        "q_vehph": 3360.0,
+        "speed_mps": 30.10928571428571
+      },
+      {
+        "begin": 270.0,
+        "end": 300.0,
+        "n_contrib": 28,
+        "occupancy_percent": 7.48,
+        "q_vehph": 3360.0,
+        "speed_mps": 31.4725
+      },
+      {
+        "begin": 300.0,
+        "end": 330.0,
+        "n_contrib": 26,
+        "occupancy_percent": 7.015000000000001,
+        "q_vehph": 3120.0,
+        "speed_mps": 31.474615384615383
+      },
+      {
+        "begin": 330.0,
+        "end": 360.0,
+        "n_contrib": 23,
+        "occupancy_percent": 6.16,
+        "q_vehph": 2880.0,
+        "speed_mps": 32.23173913043478
+      },
+      {
+        "begin": 360.0,
+        "end": 390.0,
+        "n_contrib": 31,
+        "occupancy_percent": 8.5,
+        "q_vehph": 3600.0,
+        "speed_mps": 30.675806451612903
+      },
+      {
+        "begin": 390.0,
+        "end": 420.0,
+        "n_contrib": 27,
+        "occupancy_percent": 7.455,
+        "q_vehph": 3240.0,
+        "speed_mps": 30.899259259259257
+      },
+      {
+        "begin": 420.0,
+        "end": 450.0,
+        "n_contrib": 25,
+        "occupancy_percent": 7.215,
+        "q_vehph": 3000.0,
+        "speed_mps": 29.822
+      },
+      {
+        "begin": 450.0,
+        "end": 480.0,
+        "n_contrib": 28,
+        "occupancy_percent": 7.210000000000001,
+        "q_vehph": 3360.0,
+        "speed_mps": 32.53857142857142
+      },
+      {
+        "begin": 480.0,
+        "end": 510.0,
+        "n_contrib": 26,
+        "occupancy_percent": 7.36,
+        "q_vehph": 3120.0,
+        "speed_mps": 30.54615384615385
+      },
+      {
+        "begin": 510.0,
+        "end": 540.0,
+        "n_contrib": 27,
+        "occupancy_percent": 7.405,
+        "q_vehph": 3240.0,
+        "speed_mps": 31.03518518518519
+      },
+      {
+        "begin": 540.0,
+        "end": 570.0,
+        "n_contrib": 26,
+        "occupancy_percent": 7.465,
+        "q_vehph": 3120.0,
+        "speed_mps": 29.515000000000004
+      },
+      {
+        "begin": 570.0,
+        "end": 600.0,
+        "n_contrib": 26,
+        "occupancy_percent": 7.37,
+        "q_vehph": 3120.0,
+        "speed_mps": 29.978461538461538
+      },
+      {
+        "begin": 600.0,
+        "end": 630.0,
+        "n_contrib": 28,
+        "occupancy_percent": 8.145,
+        "q_vehph": 3360.0,
+        "speed_mps": 29.392857142857142
+      },
+      {
+        "begin": 630.0,
+        "end": 660.0,
+        "n_contrib": 26,
+        "occupancy_percent": 7.35,
+        "q_vehph": 3120.0,
+        "speed_mps": 30.259999999999998
+      },
+      {
+        "begin": 660.0,
+        "end": 690.0,
+        "n_contrib": 28,
+        "occupancy_percent": 7.04,
+        "q_vehph": 3360.0,
+        "speed_mps": 33.472142857142856
+      },
+      {
+        "begin": 690.0,
+        "end": 720.0,
+        "n_contrib": 25,
+        "occupancy_percent": 7.045,
+        "q_vehph": 3000.0,
+        "speed_mps": 30.428
+      },
+      {
+        "begin": 720.0,
+        "end": 750.0,
+        "n_contrib": 27,
+        "occupancy_percent": 7.115,
+        "q_vehph": 3240.0,
+        "speed_mps": 31.84777777777778
+      },
+      {
+        "begin": 750.0,
+        "end": 780.0,
+        "n_contrib": 25,
+        "occupancy_percent": 7.305,
+        "q_vehph": 3120.0,
+        "speed_mps": 29.39
+      },
+      {
+        "begin": 780.0,
+        "end": 810.0,
+        "n_contrib": 29,
+        "occupancy_percent": 7.925,
+        "q_vehph": 3480.0,
+        "speed_mps": 31.513103448275867
+      },
+      {
+        "begin": 810.0,
+        "end": 840.0,
+        "n_contrib": 26,
+        "occupancy_percent": 7.17,
+        "q_vehph": 3000.0,
+        "speed_mps": 30.134999999999998
+      },
+      {
+        "begin": 840.0,
+        "end": 870.0,
+        "n_contrib": 27,
+        "occupancy_percent": 7.210000000000001,
+        "q_vehph": 3360.0,
+        "speed_mps": 32.156666666666666
+      },
+      {
+        "begin": 870.0,
+        "end": 900.0,
+        "n_contrib": 28,
+        "occupancy_percent": 7.555,
+        "q_vehph": 3240.0,
+        "speed_mps": 30.875
+      },
+      {
+        "begin": 900.0,
+        "end": 930.0,
+        "n_contrib": 24,
+        "occupancy_percent": 7.24,
+        "q_vehph": 3000.0,
+        "speed_mps": 29.836666666666662
+      },
+      {
+        "begin": 930.0,
+        "end": 960.0,
+        "n_contrib": 25,
+        "occupancy_percent": 6.8100000000000005,
+        "q_vehph": 2880.0,
+        "speed_mps": 30.1396
+      },
+      {
+        "begin": 960.0,
+        "end": 990.0,
+        "n_contrib": 26,
+        "occupancy_percent": 6.9,
+        "q_vehph": 3120.0,
+        "speed_mps": 31.79
+      },
+      {
+        "begin": 990.0,
+        "end": 1020.0,
+        "n_contrib": 31,
+        "occupancy_percent": 8.575,
+        "q_vehph": 3720.0,
+        "speed_mps": 30.89838709677419
+      },
+      {
+        "begin": 1020.0,
+        "end": 1050.0,
+        "n_contrib": 26,
+        "occupancy_percent": 7.365,
+        "q_vehph": 3120.0,
+        "speed_mps": 29.885384615384616
+      },
+      {
+        "begin": 1050.0,
+        "end": 1080.0,
+        "n_contrib": 26,
+        "occupancy_percent": 6.98,
+        "q_vehph": 3120.0,
+        "speed_mps": 31.436923076923076
+      },
+      {
+        "begin": 1080.0,
+        "end": 1110.0,
+        "n_contrib": 24,
+        "occupancy_percent": 6.585,
+        "q_vehph": 2880.0,
+        "speed_mps": 31.08916666666666
+      },
+      {
+        "begin": 1110.0,
+        "end": 1140.0,
+        "n_contrib": 30,
+        "occupancy_percent": 8.385,
+        "q_vehph": 3600.0,
+        "speed_mps": 30.254
+      },
+      {
+        "begin": 1140.0,
+        "end": 1170.0,
+        "n_contrib": 28,
+        "occupancy_percent": 7.195,
+        "q_vehph": 3360.0,
+        "speed_mps": 32.66142857142857
+      },
+      {
+        "begin": 1170.0,
+        "end": 1200.0,
+        "n_contrib": 22,
+        "occupancy_percent": 6.105,
+        "q_vehph": 2640.0,
+        "speed_mps": 31.01181818181818
+      },
+      {
+        "begin": 1200.0,
+        "end": 1230.0,
+        "n_contrib": 28,
+        "occupancy_percent": 7.595000000000001,
+        "q_vehph": 3360.0,
+        "speed_mps": 30.994999999999997
+      },
+      {
+        "begin": 1230.0,
+        "end": 1260.0,
+        "n_contrib": 24,
+        "occupancy_percent": 6.755,
+        "q_vehph": 2880.0,
+        "speed_mps": 30.715000000000003
+      },
+      {
+        "begin": 1260.0,
+        "end": 1290.0,
+        "n_contrib": 32,
+        "occupancy_percent": 8.92,
+        "q_vehph": 3840.0,
+        "speed_mps": 30.51625
+      },
+      {
+        "begin": 1290.0,
+        "end": 1320.0,
+        "n_contrib": 23,
+        "occupancy_percent": 6.265,
+        "q_vehph": 2760.0,
+        "speed_mps": 31.30913043478261
+      },
+      {
+        "begin": 1320.0,
+        "end": 1350.0,
+        "n_contrib": 31,
+        "occupancy_percent": 8.530000000000001,
+        "q_vehph": 3720.0,
+        "speed_mps": 30.533870967741933
+      },
+      {
+        "begin": 1350.0,
+        "end": 1380.0,
+        "n_contrib": 26,
+        "occupancy_percent": 7.345000000000001,
+        "q_vehph": 3120.0,
+        "speed_mps": 30.36423076923077
+      },
+      {
+        "begin": 1380.0,
+        "end": 1410.0,
+        "n_contrib": 27,
+        "occupancy_percent": 7.45,
+        "q_vehph": 3240.0,
+        "speed_mps": 30.840370370370373
+      },
+      {
+        "begin": 1410.0,
+        "end": 1440.0,
+        "n_contrib": 26,
+        "occupancy_percent": 7.225,
+        "q_vehph": 3120.0,
+        "speed_mps": 30.609230769230766
+      },
+      {
+        "begin": 1440.0,
+        "end": 1470.0,
+        "n_contrib": 27,
+        "occupancy_percent": 7.345000000000001,
+        "q_vehph": 3240.0,
+        "speed_mps": 31.375555555555554
+      },
+      {
+        "begin": 1470.0,
+        "end": 1500.0,
+        "n_contrib": 26,
+        "occupancy_percent": 7.855,
+        "q_vehph": 3120.0,
+        "speed_mps": 28.406153846153845
+      },
+      {
+        "begin": 1500.0,
+        "end": 1530.0,
+        "n_contrib": 2,
+        "occupancy_percent": 0.535,
+        "q_vehph": 240.0,
+        "speed_mps": 31.3
+      },
+      {
+        "begin": 1530.0,
+        "end": 1560.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 1560.0,
+        "end": 1590.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 1590.0,
+        "end": 1620.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 1620.0,
+        "end": 1650.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 1650.0,
+        "end": 1680.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 1680.0,
+        "end": 1710.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 1710.0,
+        "end": 1740.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 1740.0,
+        "end": 1770.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 1770.0,
+        "end": 1800.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 1800.0,
+        "end": 1830.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 1830.0,
+        "end": 1860.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 1860.0,
+        "end": 1890.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 1890.0,
+        "end": 1920.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 1920.0,
+        "end": 1950.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 1950.0,
+        "end": 1980.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 1980.0,
+        "end": 2010.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 2010.0,
+        "end": 2040.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 2040.0,
+        "end": 2070.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 2070.0,
+        "end": 2100.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 2100.0,
+        "end": 2130.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 2130.0,
+        "end": 2160.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 2160.0,
+        "end": 2190.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 2190.0,
+        "end": 2220.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 2220.0,
+        "end": 2250.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 2250.0,
+        "end": 2280.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 2280.0,
+        "end": 2310.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 2310.0,
+        "end": 2340.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 2340.0,
+        "end": 2370.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 2370.0,
+        "end": 2400.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 2400.0,
+        "end": 2430.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 2430.0,
+        "end": 2460.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 2460.0,
+        "end": 2490.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 2490.0,
+        "end": 2520.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 2520.0,
+        "end": 2550.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 2550.0,
+        "end": 2580.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 2580.0,
+        "end": 2610.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 2610.0,
+        "end": 2640.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 2640.0,
+        "end": 2670.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      },
+      {
+        "begin": 2670.0,
+        "end": 2700.0,
+        "n_contrib": 0,
+        "occupancy_percent": 0.0,
+        "q_vehph": 0.0,
+        "speed_mps": null
+      }
+    ]
+  },
+  "ejmi": {
+    "status": "not_applicable_reference"
+  },
+  "endpoints": [
+    {
+      "arrived": 1306,
+      "class": "M",
+      "coverage": true,
+      "endpoint_s": 1500.0,
+      "entered": 1333,
+      "in_network": 27,
+      "outside": 0,
+      "planned": 1333
+    },
+    {
+      "arrived": 35,
+      "class": "R",
+      "coverage": true,
+      "endpoint_s": 1500.0,
+      "entered": 150,
+      "in_network": 115,
+      "outside": 150,
+      "planned": 300
+    },
+    {
+      "arrived": 49,
+      "class": "U",
+      "coverage": true,
+      "endpoint_s": 1500.0,
+      "entered": 75,
+      "in_network": 26,
+      "outside": 75,
+      "planned": 150
+    },
+    {
+      "arrived": 72,
+      "class": "X",
+      "coverage": true,
+      "endpoint_s": 1500.0,
+      "entered": 75,
+      "in_network": 3,
+      "outside": 0,
+      "planned": 75
+    },
+    {
+      "arrived": 1333,
+      "class": "M",
+      "coverage": true,
+      "endpoint_s": 2700.0,
+      "entered": 1333,
+      "in_network": 0,
+      "outside": 0,
+      "planned": 1333
+    },
+    {
+      "arrived": 300,
+      "class": "R",
+      "coverage": true,
+      "endpoint_s": 2700.0,
+      "entered": 300,
+      "in_network": 0,
+      "outside": 0,
+      "planned": 300
+    },
+    {
+      "arrived": 150,
+      "class": "U",
+      "coverage": true,
+      "endpoint_s": 2700.0,
+      "entered": 150,
+      "in_network": 0,
+      "outside": 0,
+      "planned": 150
+    },
+    {
+      "arrived": 75,
+      "class": "X",
+      "coverage": true,
+      "endpoint_s": 2700.0,
+      "entered": 75,
+      "in_network": 0,
+      "outside": 0,
+      "planned": 75
+    }
+  ],
+  "interpretation_boundary": "exploratory local signature; not Breakdown, Capacity Drop, capacity, or thesis evidence",
+  "outside_M_1500": 0,
+  "planned": {
+    "M": 1333,
+    "R": 300,
+    "U": 150,
+    "X": 75
+  },
+  "q_main": 3200,
+  "q_ramp": 720.0,
+  "q_urban": 360.0,
+  "q_x": 180.0,
+  "r_passage": {
+    "a_arrival_count": 35,
+    "a_bracketed_event_count": 36,
+    "a_unbracketed_event_count": 0,
+    "arrival_without_passage_ids": [],
+    "coverage_complete": true,
+    "denominator_all_observed_r_passage_events": 300,
+    "status": "clear_passage"
+  },
+  "role": "lower_reused_reference",
+  "run_id": "C17",
+  "schema_version": 1,
+  "seed": 17,
+  "single_factor_hash_check": true,
+  "source_inventory_hashes": {
+    "demand.rou.xml": "29ffdf99e8b794b31e4cb32bc951347b72c94e85902b0c5926ffe74249ecd429",
+    "netconvert.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "netconvert.stdout.log": "c5b6fd8211edd733614c0fcc956b64ff288d5876926ffe7291fcfa8bf3dbb887",
+    "network.net.xml": "a83bb0c3a03b7e74cf8c2360336eb0dfbb330073cf8b8f6aea9940ff7cf3d8ea",
+    "outputs/fcd.xml": "92f3972a274913a174af02593704e739f55af676c7d67ab79554fe0e0645635a",
+    "outputs/mainline_merge_entry_e1_l0.xml": "bea8023fafce9701c273edfbe782f84c0a8bb4d0a52da1ee0b42c8e27f83c9bf",
+    "outputs/mainline_merge_entry_e1_l1.xml": "67b273e090f72f8d9a97e89c4aeba3f7c4b2fd43a9868c51db62999f76bf964c",
+    "outputs/merge_downstream_e1_l0.xml": "cec692a13d85646c374633fcb474b358824e17f8f81a749ba543cf6648e8cd00",
+    "outputs/merge_downstream_e1_l1.xml": "a86d78eb413da7c13813f70bc8b237b1a1d5c8be2d92fbf9c3f3783ee15f8103",
+    "outputs/merge_upstream_e1_l0.xml": "92c56cca5331b0f576160930d135578038d854e887e230e178d5d47827083bfc",
+    "outputs/merge_upstream_e1_l1.xml": "feb9d9b6ae118d0b1adf84156b8700c95414dd1e07cb5fb147b8822381b42d95",
+    "outputs/queues.xml": "d03a37becdf1c00319fb92c73e3a496cd0142b973da8b6f024900756cd51f2d1",
+    "outputs/ramp_storage_e2.xml": "90f52e918caf86b1e3f748352663e2a6743c01c0a77159f62f0a7b804dfe6ecc",
+    "outputs/shared_boundary_e2.xml": "141b0dd22315e4d87a1169e29e2eb74d125ee8837590f7e6e9c75080734e875d",
+    "outputs/sumo.log": "f8d20199bafebcb01a1c9f4d884cebbbbb4ba96d3489a3d616e79d58c6ccd3e6",
+    "outputs/sumo.stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/sumo.stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/sumo_error.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "outputs/sumo_summary.xml": "65a3de2cc04c7eec5fa22b67c397f1b560692d93cf4e0b66ace12b58b0482383",
+    "outputs/tls_states.xml": "461511ce3857d704bc57d0bbb2c444296a85efe447d7c4da112592b5262d7620",
+    "outputs/tripinfo.xml": "0846fcd8ffb53588c7666a40a30911a8a267c4f77bd02aa34f9e174685656254",
+    "outputs/vehroute.xml": "8c06e0bfd502bbe123e9da956ab1a1d28c4f92f8373fd74fa6f82d009c6a2a4c",
+    "scenario.add.xml": "be46ba588a7ceaa8dfb8e3870e4f70176a9ac2b64f1abba6703b2f955a799941",
+    "scenario.con.xml": "d154948200c9b4d9a3d54bf04647357daaff0e6a19293f19fcef457ee4ae4ea5",
+    "scenario.edg.xml": "d6c7d6df0b8a5afc60a8bfedd796b9d14baa56ec44cf322e3129f976396cff53",
+    "scenario.nod.xml": "b1577412ba28470abe3270913833a4053ca6be174f2eede55de77aa5b8a2c923",
+    "scenario.sumocfg": "0e0f99a7af694e7f448efdb66837143100478da2151ae83ba3e1c6772a811db0",
+    "scenario.tll.xml": "89f25ab5020e4f2df2fc035233b038c89cc80cf748f6dca19b5584e829df3ecc",
+    "summary.json": "4e80da39f4e3000122d30eb8f0d05500c8e6aa4491a9e91bc3f928d8f6cca4b1"
+  },
+  "source_map_path": "data/processed/stage2_completion_20260909_v1/source_maps/C17_reused.json",
+  "source_map_sha256": "3a553c630bf3946cb87e133a1fe1fd392b99d571ffd36ea8f85a370481debbf0",
+  "technical_qualified": true
+}

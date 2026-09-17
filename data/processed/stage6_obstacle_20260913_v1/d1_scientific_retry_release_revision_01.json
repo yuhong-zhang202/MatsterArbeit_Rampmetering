@@ -1,0 +1,34 @@
+{
+  "artifact_kind": "scientific_retry_release_record",
+  "recorded_date": "2026-09-13",
+  "review_result": "release S6_V1_ML_S17_attempt2 only after engineering prelaunch bindings pass",
+  "confidence": "High",
+  "technical_retry_eligibility_open_counts": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "d1_acceptance_open_counts": {
+    "blocker": 0,
+    "major": 1,
+    "required_minor": 0
+  },
+  "classification": "attempt1 is a registered technical_failure / diagnostic_anomaly caused by disabled SUMO XML validation, not an H2 scientific negative",
+  "release_conditions": [
+    "process-only SUMO_HOME points to the existing EclipseSUMO 1.26.0 share/sumo directory",
+    "SUMO_HOME realpath, same-version binary and recursive XSD dependency paths and hashes are bound",
+    "attempt2 materialization, argv, parent failure receipt and current budget journal are bound",
+    "network, demand, seed, model, scientific rules, code, argv flags and XML validation flags remain unchanged"
+  ],
+  "prohibitions": [
+    "no validation launch",
+    "no netconvert, TraCI or GUI",
+    "no warning suppression or skipped diagnostic checks",
+    "no use of smoke in the 352 main or 14 sensitivity denominators"
+  ],
+  "bound_parent_receipts": {
+    "engineering_smoke_receipt_sha256": "959a3415d2b85b94425d4fc81be61f5a99f8aceb4db3da2252e1cbe9be7043ee",
+    "data_smoke_receipt_sha256": "d358b2e7cd7138fc881f09dc36d3607e6f3384dbf522727d241fc77ddb718b24",
+    "attempt1_execution_receipt_sha256": "73574a941934830720b5b890e6305b5d17e9896b8fb01ccb9b9e0425b9a11039"
+  }
+}

@@ -1,0 +1,91 @@
+{
+  "analysis_interface": {
+    "actual_execution_counters_unchanged": {
+      "actual_gui_starts": 0,
+      "actual_netconvert_operations": 4,
+      "actual_sumo_starts": 4,
+      "actual_traci_connections": 0
+    },
+    "adapter_path": "src/analysis/analyze_stage4_qmain.py",
+    "adapter_sha256": "899305e7dfba2222ea552c0b453d3078f39b1d254d2805fb71287625864dcb1b",
+    "entry_point": "analyze-run --runtime-registry",
+    "entry_points": [
+      "analyze-run --runtime-registry",
+      "register-manifest --manifest-registry",
+      "decide-tier1/decide-final/summarize-status --manifest-registry"
+    ],
+    "historical_cli_smoke_outputs_revision_01": {
+      "QM3500S17": {
+        "path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/engineering_overlay_cli_revision_01/QM3500S17/run_manifest.json",
+        "sha256": "dc4aa74930e3030759944c84e4e6f1e238ba3a2d8a0709ea8c64748568341b99"
+      },
+      "QM3500S23": {
+        "path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/engineering_overlay_cli_revision_01/QM3500S23/run_manifest.json",
+        "sha256": "f5bc568bec5091bde44f19e196cf056009198183a1256ef5a7ae2bae1757775a"
+      }
+    },
+    "production_test_path": "tests/test_stage4_qmain.py",
+    "production_test_sha256": "dc399fb002d2810f6e2f242f64839b94c919963f53ace2d0e7a3a2d6560a5b3c",
+    "production_tests": "72/72 passed",
+    "scientific_contract_changed": false,
+    "simulation_execution_capability": false,
+    "status": "tier2_pair_archived_analyzed_and_receipt_registered"
+  },
+  "approved_source_registry_path": "data/processed/stage4_qmain_sequential_20260912_v1/source_registry.json",
+  "approved_source_registry_sha256": "96ee4a20f8130ede9a14ff9a40292a0c1d588770bbf1b37ad1ac455b3a1c538b",
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "registration_payload_sha256": "d934b62903081163495b7e17cf72c52786e1dfb864aa5d9a9d3eb5c2eb9a952a",
+  "role": "append-only execution-fact overlay; approved source_registry.json remains immutable",
+  "runs": [
+    {
+      "archive_file_count": 29,
+      "archive_runtime_path": "artifacts/stage4_qmain_sequential_20260912_v1/runtime_archive/QM3500S17_attempt1",
+      "attempt_id": "QM3500S17_attempt1",
+      "engineering_verification_path": "data/processed/stage4_qmain_sequential_20260912_v1/engineering_attempt_verification/QM3500S17_attempt1.json",
+      "engineering_verification_sha256": "3fb469ce87fa6e84874cf7a5997359b2a935c3c8ff1892a840253d906847cad6",
+      "run_id": "QM3500S17",
+      "source_map_path": "data/processed/stage4_qmain_sequential_20260912_v1/source_maps/QM3500S17_attempt1.json",
+      "source_map_sha256": "e9d32a4fbaba5a52ca06f13b9cebadbba581831ed0022f6f7587914a7b6a9744",
+      "summary_sha256": "3e5ae6089fc7f881a3a3b994866653a231987b7cff247917568e5b25179b38f3",
+      "technical_qualified": true
+    },
+    {
+      "archive_file_count": 29,
+      "archive_runtime_path": "artifacts/stage4_qmain_sequential_20260912_v1/runtime_archive/QM3500S23_attempt1",
+      "attempt_id": "QM3500S23_attempt1",
+      "engineering_verification_path": "data/processed/stage4_qmain_sequential_20260912_v1/engineering_attempt_verification/QM3500S23_attempt1.json",
+      "engineering_verification_sha256": "5c0e44ad4fa77a25ef15dd6562999d18ad256937e0a564d0392d58953b19cbea",
+      "run_id": "QM3500S23",
+      "source_map_path": "data/processed/stage4_qmain_sequential_20260912_v1/source_maps/QM3500S23_attempt1.json",
+      "source_map_sha256": "7f8ea7b7afa55b62afb98fc4cbc0ea923ea0d1989ffd6a9c9dab24552313baa1",
+      "summary_sha256": "99ed4ba7f7c0bbd6dacfabbefcec986a53e795154338b681fe3fb50441b5966e",
+      "technical_qualified": true
+    },
+    {
+      "archive_file_count": 29,
+      "archive_runtime_path": "artifacts/stage4_qmain_sequential_20260912_v1/runtime_archive/QM3650S17_attempt1",
+      "attempt_id": "QM3650S17_attempt1",
+      "engineering_verification_path": "data/processed/stage4_qmain_sequential_20260912_v1/engineering_attempt_verification/QM3650S17_attempt1.json",
+      "engineering_verification_sha256": "6ee6dc547eec92033032ce8d0ce88ad86e9ae71ae9361126fdaa280c051aaf19",
+      "run_id": "QM3650S17",
+      "source_map_path": "data/processed/stage4_qmain_sequential_20260912_v1/source_maps/QM3650S17_attempt1.json",
+      "source_map_sha256": "d173b33ae42e96560d99420e5d3da45e3cdbe81ef1d21ab97fb03a6cc4257db9",
+      "summary_sha256": "87b3711a14d83b24ed5f5d763d92b0025fe54a152b67a4ac4803734b252e2e85",
+      "technical_qualified": true
+    },
+    {
+      "archive_file_count": 29,
+      "archive_runtime_path": "artifacts/stage4_qmain_sequential_20260912_v1/runtime_archive/QM3650S23_attempt1",
+      "attempt_id": "QM3650S23_attempt1",
+      "engineering_verification_path": "data/processed/stage4_qmain_sequential_20260912_v1/engineering_attempt_verification/QM3650S23_attempt1.json",
+      "engineering_verification_sha256": "bd5b0cb4652a7627257196c71887da15ee9b3ec4df6f7df30902f396f212b221",
+      "run_id": "QM3650S23",
+      "source_map_path": "data/processed/stage4_qmain_sequential_20260912_v1/source_maps/QM3650S23_attempt1.json",
+      "source_map_sha256": "3049dc681d76d3161384f8cfd3764e028ffbfaa652037f929ca1d84d5a3dcdc0",
+      "summary_sha256": "119d4f2ce2a682735626d406658fd3d532be1701d566d11311873f2c2af6d9dd",
+      "technical_qualified": true
+    }
+  ],
+  "schema_version": 1,
+  "status": "tier2_pair_archived_technical_valid_manifests_registered"
+}

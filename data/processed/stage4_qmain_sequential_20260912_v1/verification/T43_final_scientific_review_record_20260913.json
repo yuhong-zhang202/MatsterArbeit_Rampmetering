@@ -1,0 +1,83 @@
+{
+  "schema_version": 1,
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "recorded_at": "2026-09-13T00:49:10+02:00",
+  "record_role": "operational record of a read-only scientific-review conclusion; not a substitute source artifact",
+  "source": {
+    "type": "scientific_reviewer read-only message",
+    "standalone_source_artifact": null,
+    "standalone_source_artifact_sha256": null,
+    "source_hash_claimed": false,
+    "note": "The primary agent received the reviewer conclusion as a read-only agent message. No standalone source artifact exists, so no source-file hash is invented."
+  },
+  "review_decision": {
+    "status": "PASS",
+    "finding_S4_FINAL_M01": "closed",
+    "open_blocker_major_minor": {
+      "Blocker": 0,
+      "Major": 0,
+      "Minor": 0
+    },
+    "t43_status": "closed",
+    "stage4_status": "closed",
+    "classification": "supports_B_pattern_within_registered_points",
+    "stage5_direction": "completed/specific_obstacle"
+  },
+  "sole_normative_ledger_input": {
+    "path": "data/processed/stage4_qmain_sequential_20260912_v1/final_evidence_ledger_snapshot.json",
+    "sha256": "f589c905067887536037fe6fe045438e8a1588cbf3246dcc50b573facecb4516",
+    "canonical_embedded_execution_ledger_sha256": "265ec48b66947ad22e771cad9477f639a9d1b4523c0addb5c05f2303c8ba21bd",
+    "current_mutable_execution_ledger_is_normative": false,
+    "review_record_must_not_be_written_back_to_snapshot": true
+  },
+  "reviewed_evidence": {
+    "snapshot_bound_independent_verification": {
+      "path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/T43_final_snapshot_bound_independent_verification_revision_01.json",
+      "sha256": "d600d46b70957751ea3ff685da48c280bc6ba2809ab614ad0aea89a589d0c2aa",
+      "status": "passed"
+    },
+    "snapshot_bound_data_review": {
+      "path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/T43_final_snapshot_bound_analysis_review_revision_01.json",
+      "sha256": "2e745aa80a796a779e21027ed66c41dee8862e0424224658f35e9eab998fa23d",
+      "status": "data_and_traceability_review_passed"
+    },
+    "snapshot_bound_registered_final_decision": {
+      "path": "data/processed/stage4_qmain_sequential_20260912_v1/analysis/final/revision_04/registered_final_decision.json",
+      "sha256": "c87884325f7f1a0e5dfdd18a01dd6c244b00fb85a2b41818fc65e6c4ba4d0080"
+    },
+    "snapshot_bound_independent_oracle": {
+      "path": "data/processed/stage4_qmain_sequential_20260912_v1/analysis/final/revision_04/snapshot_bound_independent_oracle.json",
+      "sha256": "74beffc5ea5efde27649cb6204f275429309d4a6eeb2bd3b55532bdb29571ace"
+    },
+    "mechanical_coverage": {
+      "completed_attempts": "4/4",
+      "runtime_registry_rows": "4/4",
+      "candidate_manifest_receipts": "4/4",
+      "archive_files": "116/116",
+      "registered_logical_runs_terminal": "10/10",
+      "used_valid_run_manifests": "8/8",
+      "class_endpoint_units": "64/64",
+      "adjacent_same_seed_comparisons": "6/6",
+      "tests": "116/116"
+    },
+    "execution_counters": {
+      "actual_sumo_starts": 4,
+      "actual_netconvert_operations": 4,
+      "actual_traci_connections": 0,
+      "actual_gui_starts": 0
+    }
+  },
+  "scientific_interpretation": {
+    "accepted_bounded_statement": "Within the registered synthetic scaffold, qMain 3500 has A-window R passage in both seeds and qMain 3650 has A-window clear_exclusion in both seeds, while the registered EJMI sufficient signature is not identified at either candidate point.",
+    "specific_obstacle": "The scaffold reaches demand-window R passage exclusion before identifying the registered local mainline-impairment signature, while near-merge M insertion limits freeway-side realism."
+  },
+  "boundaries": [
+    "Exploratory scenario evidence only; not formal thesis evidence.",
+    "clear_exclusion is limited to first R downstream passage during A=[0,1500), not permanent exclusion.",
+    "EJMI not_identified does not establish absence of freeway impairment.",
+    "No Breakdown, Capacity Drop, capacity, sweet spot, causal urban loss, controller effectiveness, or structural cause is established.",
+    "Only two seeds and two registered candidate qMain points were evaluated; no interpolation or statistical robustness claim is permitted.",
+    "The formal experiment protocol remains empty and unfrozen."
+  ],
+  "next_step": "Proceed to Stage 5 T50-T53 handoff as completed/specific_obstacle; no new Stage 4 simulation is justified."
+}

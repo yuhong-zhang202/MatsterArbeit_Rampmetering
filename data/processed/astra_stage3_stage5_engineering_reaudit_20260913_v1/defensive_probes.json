@@ -1,0 +1,194 @@
+[
+  {
+    "probe": "missing_fcd_speed",
+    "fixture_path": "data/processed/astra_stage3_stage5_engineering_reaudit_20260913_v1/missing_fcd_speed_lm20kw79",
+    "original_fixture_assertion_failure": null,
+    "production_manifest_status": "analyzed_archive_only",
+    "coverage_statuses": {
+      "network.net": "passed",
+      "demand.rou": "passed",
+      "scenario.add": "passed",
+      "scenario.sumocfg": "passed",
+      "summary.json": "passed",
+      "fcd": "passed",
+      "tls_states": "passed",
+      "tripinfo": "passed",
+      "vehroute": "passed",
+      "sumo_summary": "passed",
+      "up0": "passed",
+      "up1": "passed",
+      "int0": "passed",
+      "int1": "passed",
+      "down0": "passed",
+      "down1": "passed"
+    },
+    "question_statuses": {
+      "question:insertion": "observed",
+      "question:origin_and_propagation": "partial_observation",
+      "question:mainline_and_downstream": "observed",
+      "question:spillback": "not_identified",
+      "question:urban_exposure": "not_identified"
+    },
+    "missing_speed_count": 1,
+    "M_full_v": [
+      {
+        "run_id": "C17",
+        "condition": "C",
+        "seed": "17",
+        "window": "Full",
+        "entity": "M-only_internal_merge_entry",
+        "metric": "v",
+        "value": "10.0",
+        "unit": "m/s",
+        "denominator": "180",
+        "qualification": "complete",
+        "source_event_id": "",
+        "reason": "vehicle-contribution-weighted speed"
+      }
+    ]
+  },
+  {
+    "probe": "unknown_fcd_lane",
+    "fixture_path": "data/processed/astra_stage3_stage5_engineering_reaudit_20260913_v1/unknown_fcd_lane_pp57yqf4",
+    "original_fixture_assertion_failure": "AssertionError: False is not true",
+    "production_manifest_status": "analyzed_archive_only",
+    "coverage_statuses": {
+      "network.net": "passed",
+      "demand.rou": "passed",
+      "scenario.add": "passed",
+      "scenario.sumocfg": "passed",
+      "summary.json": "passed",
+      "fcd": "passed",
+      "tls_states": "passed",
+      "tripinfo": "passed",
+      "vehroute": "passed",
+      "sumo_summary": "passed",
+      "up0": "passed",
+      "up1": "passed",
+      "int0": "passed",
+      "int1": "passed",
+      "down0": "passed",
+      "down1": "passed"
+    },
+    "question_statuses": {
+      "question:insertion": "not_verified",
+      "question:origin_and_propagation": "partial_observation",
+      "question:mainline_and_downstream": "observed",
+      "question:spillback": "not_identified",
+      "question:urban_exposure": "not_verified"
+    },
+    "missing_speed_count": 0,
+    "M_full_v": [
+      {
+        "run_id": "C17",
+        "condition": "C",
+        "seed": "17",
+        "window": "Full",
+        "entity": "M-only_internal_merge_entry",
+        "metric": "v",
+        "value": "10.0",
+        "unit": "m/s",
+        "denominator": "180",
+        "qualification": "complete",
+        "source_event_id": "",
+        "reason": "vehicle-contribution-weighted speed"
+      }
+    ]
+  },
+  {
+    "probe": "tls_shifted_label",
+    "fixture_path": "data/processed/astra_stage3_stage5_engineering_reaudit_20260913_v1/tls_shifted_label_a7tr85h1",
+    "original_fixture_assertion_failure": null,
+    "production_manifest_status": "analyzed_archive_only",
+    "coverage_statuses": {
+      "network.net": "passed",
+      "demand.rou": "passed",
+      "scenario.add": "passed",
+      "scenario.sumocfg": "passed",
+      "summary.json": "passed",
+      "fcd": "passed",
+      "tls_states": "passed",
+      "tripinfo": "passed",
+      "vehroute": "passed",
+      "sumo_summary": "passed",
+      "up0": "passed",
+      "up1": "passed",
+      "int0": "passed",
+      "int1": "passed",
+      "down0": "passed",
+      "down1": "passed"
+    },
+    "question_statuses": {
+      "question:insertion": "observed",
+      "question:origin_and_propagation": "partial_observation",
+      "question:mainline_and_downstream": "observed",
+      "question:spillback": "not_identified",
+      "question:urban_exposure": "not_identified"
+    },
+    "missing_speed_count": 0,
+    "M_full_v": [
+      {
+        "run_id": "C17",
+        "condition": "C",
+        "seed": "17",
+        "window": "Full",
+        "entity": "M-only_internal_merge_entry",
+        "metric": "v",
+        "value": "10.0",
+        "unit": "m/s",
+        "denominator": "180",
+        "qualification": "complete",
+        "source_event_id": "",
+        "reason": "vehicle-contribution-weighted speed"
+      }
+    ]
+  },
+  {
+    "probe": "positive_e1_missing_speed",
+    "fixture_path": "data/processed/astra_stage3_stage5_engineering_reaudit_20260913_v1/positive_e1_missing_speed_cwfwxuup",
+    "original_fixture_assertion_failure": null,
+    "production_manifest_status": "analyzed_archive_only",
+    "coverage_statuses": {
+      "network.net": "passed",
+      "demand.rou": "passed",
+      "scenario.add": "passed",
+      "scenario.sumocfg": "passed",
+      "summary.json": "passed",
+      "fcd": "passed",
+      "tls_states": "passed",
+      "tripinfo": "passed",
+      "vehroute": "passed",
+      "sumo_summary": "passed",
+      "up0": "passed",
+      "up1": "passed",
+      "int0": "passed",
+      "int1": "passed",
+      "down0": "passed",
+      "down1": "passed"
+    },
+    "question_statuses": {
+      "question:insertion": "observed",
+      "question:origin_and_propagation": "partial_observation",
+      "question:mainline_and_downstream": "observed",
+      "question:spillback": "not_identified",
+      "question:urban_exposure": "not_identified"
+    },
+    "missing_speed_count": 0,
+    "M_full_v": [
+      {
+        "run_id": "C17",
+        "condition": "C",
+        "seed": "17",
+        "window": "Full",
+        "entity": "M-only_internal_merge_entry",
+        "metric": "v",
+        "value": "10.0",
+        "unit": "m/s",
+        "denominator": "90",
+        "qualification": "complete",
+        "source_event_id": "",
+        "reason": "vehicle-contribution-weighted speed"
+      }
+    ]
+  }
+]

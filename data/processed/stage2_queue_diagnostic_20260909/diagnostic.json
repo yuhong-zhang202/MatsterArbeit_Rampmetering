@@ -1,0 +1,2534 @@
+{
+  "high_long": {
+    "classification": "exploratory single-trajectory diagnostic",
+    "source_sha256": {
+      "/private/tmp/minimal_uncontrolled_eozyn46f/summary.json": "dbee0f312db8155d583949800c0ac89119b770ddacccb6c182a69d0ef4a2bbac",
+      "/private/tmp/minimal_uncontrolled_eozyn46f/outputs/fcd.xml": "68640283db6226c803cc0bab8e7e9c8bc65830fdd0cf6a41fd5918ca3a8c73db",
+      "/private/tmp/minimal_uncontrolled_eozyn46f/outputs/tripinfo.xml": "0759a2c5e2b7ba2b7fd230e27dc995b6ff5f482d4cbbed68e7197c39d3626750",
+      "/private/tmp/minimal_uncontrolled_eozyn46f/outputs/tls_states.xml": "f5d3820a8df77cf9ede7cfeaf691638e5ca6227f9bce6e8887ef33143d505118"
+    },
+    "all_sources_unchanged": true,
+    "definitions": {
+      "stopped": "FCD speed <= 0.1 m/s (existing technical placeholder)",
+      "episode": "consecutive one-second samples, reported [begin,end)",
+      "head": "furthest downstream R/U vehicle on each edge; lane-independent",
+      "backlog": "reported planned depart = depart - departDelay; scheduled < t <= actual depart",
+      "green": "first urban TLS signal character; relevance requires connection review",
+      "boundary": "stop episodes and temporal ordering do not establish causation"
+    },
+    "vehicle_count": 1858,
+    "demand_end_s": 1500,
+    "waiting_at_demand_end": {
+      "R": 150,
+      "U": 75
+    },
+    "last_depart_s": 2245.0,
+    "last_arrival_s": 2401.0,
+    "edge_diagnostics": {
+      "ramp_accel/R": {
+        "first_stop": {
+          "time_s": 46.0,
+          "vehicle_id": "R_flow.0",
+          "position_m": 95.13,
+          "tls_state": "yr"
+        },
+        "max_stopped_count": 13,
+        "seconds_with_any_stopped": 1467,
+        "longest_contiguous_episodes": [
+          [
+            69.0,
+            1514.0
+          ],
+          [
+            46.0,
+            68.0
+          ]
+        ],
+        "green_state_seconds_with_stops": 1093
+      },
+      "ramp_accel/U": {
+        "first_stop": null,
+        "max_stopped_count": 0,
+        "seconds_with_any_stopped": 0,
+        "longest_contiguous_episodes": [],
+        "green_state_seconds_with_stops": 0
+      },
+      "ramp_storage/R": {
+        "first_stop": {
+          "time_s": 192.0,
+          "vehicle_id": "R_flow.28",
+          "position_m": 201.6,
+          "tls_state": "Gr"
+        },
+        "max_stopped_count": 27,
+        "seconds_with_any_stopped": 1358,
+        "longest_contiguous_episodes": [
+          [
+            234.0,
+            1560.0
+          ],
+          [
+            192.0,
+            224.0
+          ]
+        ],
+        "green_state_seconds_with_stops": 1022
+      },
+      "ramp_storage/U": {
+        "first_stop": null,
+        "max_stopped_count": 0,
+        "seconds_with_any_stopped": 0,
+        "longest_contiguous_episodes": [],
+        "green_state_seconds_with_stops": 0
+      },
+      "shared_approach/R": {
+        "first_stop": {
+          "time_s": 412.0,
+          "vehicle_id": "R_flow.74",
+          "position_m": 238.43,
+          "tls_state": "rG"
+        },
+        "max_stopped_count": 21,
+        "seconds_with_any_stopped": 1178,
+        "longest_contiguous_episodes": [
+          [
+            730.0,
+            1472.0
+          ],
+          [
+            412.0,
+            723.0
+          ],
+          [
+            1476.0,
+            1535.0
+          ],
+          [
+            1538.0,
+            1597.0
+          ],
+          [
+            1598.0,
+            1600.0
+          ]
+        ],
+        "green_state_seconds_with_stops": 885
+      },
+      "shared_approach/U": {
+        "first_stop": {
+          "time_s": 414.0,
+          "vehicle_id": "U_flow.37",
+          "position_m": 230.95,
+          "tls_state": "rG"
+        },
+        "max_stopped_count": 11,
+        "seconds_with_any_stopped": 1172,
+        "longest_contiguous_episodes": [
+          [
+            729.0,
+            1471.0
+          ],
+          [
+            519.0,
+            722.0
+          ],
+          [
+            414.0,
+            518.0
+          ],
+          [
+            1473.0,
+            1534.0
+          ],
+          [
+            1536.0,
+            1590.0
+          ]
+        ],
+        "green_state_seconds_with_stops": 880
+      },
+      "urban_in/R": {
+        "first_stop": {
+          "time_s": 45.0,
+          "vehicle_id": "R_flow.9",
+          "position_m": 392.7,
+          "tls_state": "yr"
+        },
+        "max_stopped_count": 33,
+        "seconds_with_any_stopped": 1693,
+        "longest_contiguous_episodes": [
+          [
+            493.0,
+            1707.0
+          ],
+          [
+            2208.0,
+            2245.0
+          ],
+          [
+            2090.0,
+            2125.0
+          ],
+          [
+            2029.0,
+            2063.0
+          ],
+          [
+            1730.0,
+            1763.0
+          ]
+        ],
+        "green_state_seconds_with_stops": 1169
+      },
+      "urban_in/U": {
+        "first_stop": {
+          "time_s": 58.0,
+          "vehicle_id": "U_flow.5",
+          "position_m": 377.7,
+          "tls_state": "ry"
+        },
+        "max_stopped_count": 16,
+        "seconds_with_any_stopped": 1527,
+        "longest_contiguous_episodes": [
+          [
+            550.0,
+            1690.0
+          ],
+          [
+            496.0,
+            549.0
+          ],
+          [
+            2088.0,
+            2119.0
+          ],
+          [
+            2212.0,
+            2242.0
+          ],
+          [
+            2149.0,
+            2177.0
+          ]
+        ],
+        "green_state_seconds_with_stops": 1116
+      }
+    },
+    "longest_same_vehicle_head_stops": [
+      {
+        "edge_vehicle": "urban_in/R_flow.114",
+        "begin_s": 1223.0,
+        "end_s": 1320.0,
+        "duration_s": 97.0
+      },
+      {
+        "edge_vehicle": "urban_in/R_flow.104",
+        "begin_s": 750.0,
+        "end_s": 840.0,
+        "duration_s": 90.0
+      },
+      {
+        "edge_vehicle": "ramp_accel/R_flow.27",
+        "begin_s": 1107.0,
+        "end_s": 1190.0,
+        "duration_s": 83.0
+      },
+      {
+        "edge_vehicle": "ramp_storage/R_flow.51",
+        "begin_s": 1140.0,
+        "end_s": 1217.0,
+        "duration_s": 77.0
+      },
+      {
+        "edge_vehicle": "shared_approach/U_flow.46",
+        "begin_s": 1194.0,
+        "end_s": 1270.0,
+        "duration_s": 76.0
+      },
+      {
+        "edge_vehicle": "ramp_accel/R_flow.17",
+        "begin_s": 638.0,
+        "end_s": 704.0,
+        "duration_s": 66.0
+      },
+      {
+        "edge_vehicle": "urban_in/R_flow.106",
+        "begin_s": 884.0,
+        "end_s": 943.0,
+        "duration_s": 59.0
+      },
+      {
+        "edge_vehicle": "ramp_accel/R_flow.19",
+        "begin_s": 763.0,
+        "end_s": 821.0,
+        "duration_s": 58.0
+      },
+      {
+        "edge_vehicle": "urban_in/R_flow.112",
+        "begin_s": 1144.0,
+        "end_s": 1200.0,
+        "duration_s": 56.0
+      },
+      {
+        "edge_vehicle": "ramp_storage/R_flow.41",
+        "begin_s": 676.0,
+        "end_s": 731.0,
+        "duration_s": 55.0
+      },
+      {
+        "edge_vehicle": "shared_approach/U_flow.41",
+        "begin_s": 729.0,
+        "end_s": 784.0,
+        "duration_s": 55.0
+      },
+      {
+        "edge_vehicle": "urban_in/R_flow.98",
+        "begin_s": 548.0,
+        "end_s": 601.0,
+        "duration_s": 53.0
+      },
+      {
+        "edge_vehicle": "urban_in/R_flow.117",
+        "begin_s": 1388.0,
+        "end_s": 1440.0,
+        "duration_s": 52.0
+      },
+      {
+        "edge_vehicle": "ramp_accel/R_flow.11",
+        "begin_s": 429.0,
+        "end_s": 479.0,
+        "duration_s": 50.0
+      },
+      {
+        "edge_vehicle": "ramp_accel/R_flow.30",
+        "begin_s": 1257.0,
+        "end_s": 1307.0,
+        "duration_s": 50.0
+      },
+      {
+        "edge_vehicle": "ramp_accel/R_flow.7",
+        "begin_s": 259.0,
+        "end_s": 308.0,
+        "duration_s": 49.0
+      },
+      {
+        "edge_vehicle": "ramp_accel/R_flow.18",
+        "begin_s": 709.0,
+        "end_s": 758.0,
+        "duration_s": 49.0
+      },
+      {
+        "edge_vehicle": "ramp_accel/R_flow.20",
+        "begin_s": 826.0,
+        "end_s": 875.0,
+        "duration_s": 49.0
+      },
+      {
+        "edge_vehicle": "ramp_storage/R_flow.43",
+        "begin_s": 800.0,
+        "end_s": 848.0,
+        "duration_s": 48.0
+      },
+      {
+        "edge_vehicle": "shared_approach/U_flow.42",
+        "begin_s": 853.0,
+        "end_s": 901.0,
+        "duration_s": 48.0
+      }
+    ],
+    "waiting_episodes": {
+      "R": [
+        [
+          656.0,
+          2246.0
+        ]
+      ],
+      "U": [
+        [
+          641.0,
+          642.0
+        ],
+        [
+          651.0,
+          652.0
+        ],
+        [
+          661.0,
+          2244.0
+        ]
+      ]
+    },
+    "timeline_30s": [
+      {
+        "time_s": 0.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 30.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 60.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 3,
+          "urban_in/R": 2,
+          "urban_in/U": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 90.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 8
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 120.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 9,
+          "urban_in/R": 1,
+          "urban_in/U": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 150.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 8
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 180.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 13,
+          "urban_in/R": 2,
+          "urban_in/U": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 210.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 9,
+          "ramp_storage/R": 5
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 240.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 6,
+          "ramp_storage/R": 6,
+          "urban_in/R": 1,
+          "urban_in/U": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 270.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 7,
+          "ramp_storage/R": 4
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 300.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 13,
+          "ramp_storage/R": 9,
+          "urban_in/R": 2,
+          "urban_in/U": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 330.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 11,
+          "ramp_storage/R": 25
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 360.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 7,
+          "ramp_storage/R": 12,
+          "urban_in/R": 1,
+          "urban_in/U": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 390.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 13,
+          "ramp_storage/R": 18
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 420.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 12,
+          "ramp_storage/R": 18,
+          "shared_approach/R": 4,
+          "urban_in/R": 2,
+          "shared_approach/U": 2,
+          "urban_in/U": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 450.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 13,
+          "ramp_storage/R": 14,
+          "shared_approach/R": 3,
+          "shared_approach/U": 3
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 480.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 11,
+          "ramp_storage/R": 14,
+          "shared_approach/R": 13,
+          "urban_in/R": 1,
+          "shared_approach/U": 7,
+          "urban_in/U": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 510.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "urban_in/R": 5,
+          "ramp_accel/R": 13,
+          "ramp_storage/R": 23,
+          "shared_approach/R": 4,
+          "shared_approach/U": 3,
+          "urban_in/U": 3
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 540.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "urban_in/R": 3,
+          "ramp_accel/R": 13,
+          "ramp_storage/R": 15,
+          "shared_approach/R": 10,
+          "shared_approach/U": 6,
+          "urban_in/U": 2
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 570.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "urban_in/R": 11,
+          "ramp_accel/R": 13,
+          "ramp_storage/R": 13,
+          "shared_approach/R": 15,
+          "shared_approach/U": 8,
+          "urban_in/U": 6
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 600.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "urban_in/R": 21,
+          "ramp_accel/R": 11,
+          "ramp_storage/R": 13,
+          "shared_approach/R": 6,
+          "shared_approach/U": 3,
+          "urban_in/U": 11
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 630.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "urban_in/R": 19,
+          "ramp_accel/R": 13,
+          "ramp_storage/R": 16,
+          "shared_approach/R": 6,
+          "shared_approach/U": 5,
+          "urban_in/U": 9
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 660.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "urban_in/R": 17,
+          "ramp_accel/R": 13,
+          "ramp_storage/R": 12,
+          "shared_approach/R": 6,
+          "shared_approach/U": 4,
+          "urban_in/U": 8
+        },
+        "waiting_to_insert_before_step": {
+          "R": 1,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 690.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "shared_approach/R": 9,
+          "urban_in/R": 14,
+          "ramp_accel/R": 13,
+          "ramp_storage/R": 12,
+          "shared_approach/U": 3,
+          "urban_in/U": 6
+        },
+        "waiting_to_insert_before_step": {
+          "R": 6,
+          "U": 3
+        }
+      },
+      {
+        "time_s": 720.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "shared_approach/R": 3,
+          "urban_in/R": 14,
+          "ramp_accel/R": 7,
+          "ramp_storage/R": 27,
+          "shared_approach/U": 1,
+          "urban_in/U": 7
+        },
+        "waiting_to_insert_before_step": {
+          "R": 12,
+          "U": 6
+        }
+      },
+      {
+        "time_s": 750.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "urban_in/R": 10,
+          "ramp_accel/R": 13,
+          "ramp_storage/R": 16,
+          "shared_approach/R": 10,
+          "shared_approach/U": 5,
+          "urban_in/U": 4
+        },
+        "waiting_to_insert_before_step": {
+          "R": 15,
+          "U": 8
+        }
+      },
+      {
+        "time_s": 780.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "shared_approach/R": 21,
+          "urban_in/R": 15,
+          "ramp_accel/R": 12,
+          "ramp_storage/R": 25,
+          "shared_approach/U": 11,
+          "urban_in/U": 8
+        },
+        "waiting_to_insert_before_step": {
+          "R": 21,
+          "U": 10
+        }
+      },
+      {
+        "time_s": 810.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "shared_approach/R": 8,
+          "urban_in/R": 29,
+          "ramp_accel/R": 13,
+          "ramp_storage/R": 14,
+          "shared_approach/U": 4,
+          "urban_in/U": 15
+        },
+        "waiting_to_insert_before_step": {
+          "R": 26,
+          "U": 13
+        }
+      },
+      {
+        "time_s": 840.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "urban_in/R": 32,
+          "ramp_accel/R": 10,
+          "ramp_storage/R": 27,
+          "shared_approach/R": 13,
+          "shared_approach/U": 6,
+          "urban_in/U": 16
+        },
+        "waiting_to_insert_before_step": {
+          "R": 31,
+          "U": 16
+        }
+      },
+      {
+        "time_s": 870.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "shared_approach/R": 12,
+          "urban_in/R": 24,
+          "ramp_accel/R": 13,
+          "ramp_storage/R": 14,
+          "shared_approach/U": 6,
+          "urban_in/U": 12
+        },
+        "waiting_to_insert_before_step": {
+          "R": 37,
+          "U": 19
+        }
+      },
+      {
+        "time_s": 900.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "shared_approach/R": 21,
+          "urban_in/R": 18,
+          "ramp_accel/R": 13,
+          "ramp_storage/R": 26,
+          "shared_approach/U": 11,
+          "urban_in/U": 9
+        },
+        "waiting_to_insert_before_step": {
+          "R": 43,
+          "U": 22
+        }
+      },
+      {
+        "time_s": 930.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "shared_approach/R": 10,
+          "urban_in/R": 23,
+          "ramp_accel/R": 9,
+          "ramp_storage/R": 14,
+          "shared_approach/U": 4,
+          "urban_in/U": 13
+        },
+        "waiting_to_insert_before_step": {
+          "R": 49,
+          "U": 24
+        }
+      },
+      {
+        "time_s": 960.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "shared_approach/R": 13,
+          "urban_in/R": 27,
+          "ramp_accel/R": 5,
+          "ramp_storage/R": 16,
+          "shared_approach/U": 7,
+          "urban_in/U": 12
+        },
+        "waiting_to_insert_before_step": {
+          "R": 53,
+          "U": 27
+        }
+      },
+      {
+        "time_s": 990.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "shared_approach/R": 13,
+          "urban_in/R": 18,
+          "ramp_accel/R": 7,
+          "ramp_storage/R": 15,
+          "shared_approach/U": 7,
+          "urban_in/U": 7
+        },
+        "waiting_to_insert_before_step": {
+          "R": 59,
+          "U": 30
+        }
+      },
+      {
+        "time_s": 1020.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "shared_approach/R": 11,
+          "urban_in/R": 18,
+          "ramp_accel/R": 11,
+          "ramp_storage/R": 14,
+          "shared_approach/U": 5,
+          "urban_in/U": 9
+        },
+        "waiting_to_insert_before_step": {
+          "R": 65,
+          "U": 32
+        }
+      },
+      {
+        "time_s": 1050.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "shared_approach/R": 8,
+          "urban_in/R": 16,
+          "ramp_accel/R": 13,
+          "ramp_storage/R": 16,
+          "shared_approach/U": 5,
+          "urban_in/U": 6
+        },
+        "waiting_to_insert_before_step": {
+          "R": 70,
+          "U": 35
+        }
+      },
+      {
+        "time_s": 1080.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "shared_approach/R": 10,
+          "urban_in/R": 21,
+          "ramp_accel/R": 8,
+          "ramp_storage/R": 14,
+          "shared_approach/U": 5,
+          "urban_in/U": 11
+        },
+        "waiting_to_insert_before_step": {
+          "R": 75,
+          "U": 38
+        }
+      },
+      {
+        "time_s": 1110.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "shared_approach/R": 4,
+          "urban_in/R": 20,
+          "ramp_accel/R": 5,
+          "ramp_storage/R": 14,
+          "shared_approach/U": 2,
+          "urban_in/U": 10
+        },
+        "waiting_to_insert_before_step": {
+          "R": 81,
+          "U": 40
+        }
+      },
+      {
+        "time_s": 1140.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "shared_approach/R": 11,
+          "urban_in/R": 15,
+          "ramp_accel/R": 13,
+          "ramp_storage/R": 14,
+          "shared_approach/U": 6,
+          "urban_in/U": 7
+        },
+        "waiting_to_insert_before_step": {
+          "R": 86,
+          "U": 43
+        }
+      },
+      {
+        "time_s": 1170.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "shared_approach/R": 8,
+          "urban_in/R": 18,
+          "ramp_accel/R": 13,
+          "ramp_storage/R": 22,
+          "shared_approach/U": 5,
+          "urban_in/U": 9
+        },
+        "waiting_to_insert_before_step": {
+          "R": 91,
+          "U": 45
+        }
+      },
+      {
+        "time_s": 1200.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "shared_approach/R": 6,
+          "urban_in/R": 24,
+          "ramp_accel/R": 6,
+          "ramp_storage/R": 27,
+          "shared_approach/U": 4,
+          "urban_in/U": 12
+        },
+        "waiting_to_insert_before_step": {
+          "R": 95,
+          "U": 48
+        }
+      },
+      {
+        "time_s": 1230.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "shared_approach/R": 16,
+          "urban_in/R": 20,
+          "ramp_accel/R": 8,
+          "ramp_storage/R": 15,
+          "shared_approach/U": 9,
+          "urban_in/U": 9
+        },
+        "waiting_to_insert_before_step": {
+          "R": 101,
+          "U": 51
+        }
+      },
+      {
+        "time_s": 1260.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "shared_approach/R": 21,
+          "urban_in/R": 17,
+          "ramp_accel/R": 7,
+          "ramp_storage/R": 13,
+          "shared_approach/U": 11,
+          "urban_in/U": 8
+        },
+        "waiting_to_insert_before_step": {
+          "R": 107,
+          "U": 54
+        }
+      },
+      {
+        "time_s": 1290.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "shared_approach/R": 12,
+          "urban_in/R": 31,
+          "ramp_accel/R": 13,
+          "ramp_storage/R": 6,
+          "shared_approach/U": 6,
+          "urban_in/U": 15
+        },
+        "waiting_to_insert_before_step": {
+          "R": 111,
+          "U": 56
+        }
+      },
+      {
+        "time_s": 1320.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "shared_approach/R": 3,
+          "urban_in/R": 32,
+          "ramp_accel/R": 6,
+          "ramp_storage/R": 19,
+          "shared_approach/U": 1,
+          "urban_in/U": 16
+        },
+        "waiting_to_insert_before_step": {
+          "R": 117,
+          "U": 59
+        }
+      },
+      {
+        "time_s": 1350.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "shared_approach/R": 3,
+          "urban_in/R": 22,
+          "ramp_accel/R": 13,
+          "ramp_storage/R": 15,
+          "shared_approach/U": 1,
+          "urban_in/U": 9
+        },
+        "waiting_to_insert_before_step": {
+          "R": 123,
+          "U": 62
+        }
+      },
+      {
+        "time_s": 1380.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "shared_approach/R": 11,
+          "urban_in/R": 14,
+          "ramp_accel/R": 11,
+          "ramp_storage/R": 20,
+          "shared_approach/U": 6,
+          "urban_in/U": 8
+        },
+        "waiting_to_insert_before_step": {
+          "R": 129,
+          "U": 65
+        }
+      },
+      {
+        "time_s": 1410.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "shared_approach/R": 12,
+          "urban_in/R": 19,
+          "ramp_accel/R": 13,
+          "ramp_storage/R": 9,
+          "shared_approach/U": 7,
+          "urban_in/U": 9
+        },
+        "waiting_to_insert_before_step": {
+          "R": 134,
+          "U": 67
+        }
+      },
+      {
+        "time_s": 1440.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "shared_approach/R": 13,
+          "urban_in/R": 24,
+          "ramp_accel/R": 13,
+          "ramp_storage/R": 14,
+          "shared_approach/U": 7,
+          "urban_in/U": 11
+        },
+        "waiting_to_insert_before_step": {
+          "R": 140,
+          "U": 70
+        }
+      },
+      {
+        "time_s": 1470.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "shared_approach/R": 1,
+          "urban_in/R": 25,
+          "ramp_accel/R": 11,
+          "ramp_storage/R": 14,
+          "shared_approach/U": 1,
+          "urban_in/U": 13
+        },
+        "waiting_to_insert_before_step": {
+          "R": 144,
+          "U": 72
+        }
+      },
+      {
+        "time_s": 1500.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "shared_approach/R": 9,
+          "urban_in/R": 13,
+          "ramp_accel/R": 13,
+          "ramp_storage/R": 10,
+          "shared_approach/U": 4,
+          "urban_in/U": 7
+        },
+        "waiting_to_insert_before_step": {
+          "R": 150,
+          "U": 75
+        }
+      },
+      {
+        "time_s": 1530.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "shared_approach/R": 4,
+          "urban_in/R": 14,
+          "ramp_storage/R": 13,
+          "shared_approach/U": 1,
+          "urban_in/U": 8
+        },
+        "waiting_to_insert_before_step": {
+          "R": 149,
+          "U": 74
+        }
+      },
+      {
+        "time_s": 1560.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "shared_approach/R": 5,
+          "urban_in/R": 15,
+          "shared_approach/U": 3,
+          "urban_in/U": 8
+        },
+        "waiting_to_insert_before_step": {
+          "R": 148,
+          "U": 74
+        }
+      },
+      {
+        "time_s": 1590.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "shared_approach/R": 2,
+          "urban_in/R": 14,
+          "urban_in/U": 6
+        },
+        "waiting_to_insert_before_step": {
+          "R": 147,
+          "U": 74
+        }
+      },
+      {
+        "time_s": 1620.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "urban_in/R": 14,
+          "urban_in/U": 8
+        },
+        "waiting_to_insert_before_step": {
+          "R": 146,
+          "U": 73
+        }
+      },
+      {
+        "time_s": 1650.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "urban_in/R": 5,
+          "urban_in/U": 2
+        },
+        "waiting_to_insert_before_step": {
+          "R": 146,
+          "U": 73
+        }
+      },
+      {
+        "time_s": 1680.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "urban_in/R": 4,
+          "urban_in/U": 2
+        },
+        "waiting_to_insert_before_step": {
+          "R": 144,
+          "U": 72
+        }
+      },
+      {
+        "time_s": 1710.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "urban_in/R": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 136,
+          "U": 68
+        }
+      },
+      {
+        "time_s": 1740.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "urban_in/R": 4,
+          "urban_in/U": 2
+        },
+        "waiting_to_insert_before_step": {
+          "R": 131,
+          "U": 66
+        }
+      },
+      {
+        "time_s": 1770.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 120,
+          "U": 60
+        }
+      },
+      {
+        "time_s": 1800.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "urban_in/R": 4,
+          "urban_in/U": 2
+        },
+        "waiting_to_insert_before_step": {
+          "R": 115,
+          "U": 58
+        }
+      },
+      {
+        "time_s": 1830.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 105,
+          "U": 52
+        }
+      },
+      {
+        "time_s": 1860.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "urban_in/R": 5,
+          "urban_in/U": 2
+        },
+        "waiting_to_insert_before_step": {
+          "R": 100,
+          "U": 50
+        }
+      },
+      {
+        "time_s": 1890.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 89,
+          "U": 45
+        }
+      },
+      {
+        "time_s": 1920.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "urban_in/R": 4,
+          "urban_in/U": 2
+        },
+        "waiting_to_insert_before_step": {
+          "R": 84,
+          "U": 42
+        }
+      },
+      {
+        "time_s": 1950.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 75,
+          "U": 37
+        }
+      },
+      {
+        "time_s": 1980.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "urban_in/R": 6,
+          "urban_in/U": 2
+        },
+        "waiting_to_insert_before_step": {
+          "R": 69,
+          "U": 35
+        }
+      },
+      {
+        "time_s": 2010.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 59,
+          "U": 30
+        }
+      },
+      {
+        "time_s": 2040.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "urban_in/R": 4,
+          "urban_in/U": 3
+        },
+        "waiting_to_insert_before_step": {
+          "R": 54,
+          "U": 27
+        }
+      },
+      {
+        "time_s": 2070.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 45,
+          "U": 22
+        }
+      },
+      {
+        "time_s": 2100.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "urban_in/R": 5,
+          "urban_in/U": 2
+        },
+        "waiting_to_insert_before_step": {
+          "R": 39,
+          "U": 19
+        }
+      },
+      {
+        "time_s": 2130.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "urban_in/R": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 29,
+          "U": 15
+        }
+      },
+      {
+        "time_s": 2160.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "urban_in/R": 4,
+          "urban_in/U": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 24,
+          "U": 12
+        }
+      },
+      {
+        "time_s": 2190.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 14,
+          "U": 7
+        }
+      },
+      {
+        "time_s": 2220.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "urban_in/R": 5,
+          "urban_in/U": 2
+        },
+        "waiting_to_insert_before_step": {
+          "R": 8,
+          "U": 4
+        }
+      },
+      {
+        "time_s": 2250.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 2280.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "urban_in/R": 5,
+          "urban_in/U": 2
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 2310.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 2340.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 2370.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 2400.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 2430.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 2460.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 2490.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 2520.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 2550.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 2580.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 2610.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 2640.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 2670.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      }
+    ]
+  },
+  "low": {
+    "classification": "exploratory single-trajectory diagnostic",
+    "source_sha256": {
+      "/private/tmp/minimal_uncontrolled_17p2c9eo/summary.json": "5f95dba3e07b096ac7deef3d977565bc6cb35278394e95401a162c24a601ae63",
+      "/private/tmp/minimal_uncontrolled_17p2c9eo/outputs/fcd.xml": "c2a275b24dda48dd5b7f18943e1aa8272703c3e5d7610f0a9d2d1344edc730b7",
+      "/private/tmp/minimal_uncontrolled_17p2c9eo/outputs/tripinfo.xml": "3f161c30170c9644f744d5b75473923ba96058f90e9e2ad89114c093a5481744",
+      "/private/tmp/minimal_uncontrolled_17p2c9eo/outputs/tls_states.xml": "5ebb9585fb11a1addbc075a7024550e032f768a0ac0cbef2af6f284b8792ad75"
+    },
+    "all_sources_unchanged": true,
+    "definitions": {
+      "stopped": "FCD speed <= 0.1 m/s (existing technical placeholder)",
+      "episode": "consecutive one-second samples, reported [begin,end)",
+      "head": "furthest downstream R/U vehicle on each edge; lane-independent",
+      "backlog": "reported planned depart = depart - departDelay; scheduled < t <= actual depart",
+      "green": "first urban TLS signal character; relevance requires connection review",
+      "boundary": "stop episodes and temporal ordering do not establish causation"
+    },
+    "vehicle_count": 660,
+    "demand_end_s": 1200,
+    "waiting_at_demand_end": {
+      "R": 0,
+      "U": 0
+    },
+    "last_depart_s": 1197.0,
+    "last_arrival_s": 1271.0,
+    "edge_diagnostics": {
+      "ramp_accel/R": {
+        "first_stop": {
+          "time_s": 74.0,
+          "vehicle_id": "R_flow.3",
+          "position_m": 95.21,
+          "tls_state": "Gr"
+        },
+        "max_stopped_count": 5,
+        "seconds_with_any_stopped": 896,
+        "longest_contiguous_episodes": [
+          [
+            840.0,
+            1008.0
+          ],
+          [
+            1052.0,
+            1128.0
+          ],
+          [
+            773.0,
+            839.0
+          ],
+          [
+            1140.0,
+            1188.0
+          ],
+          [
+            1009.0,
+            1049.0
+          ]
+        ],
+        "green_state_seconds_with_stops": 688
+      },
+      "ramp_accel/U": {
+        "first_stop": null,
+        "max_stopped_count": 0,
+        "seconds_with_any_stopped": 0,
+        "longest_contiguous_episodes": [],
+        "green_state_seconds_with_stops": 0
+      },
+      "ramp_storage/R": {
+        "first_stop": null,
+        "max_stopped_count": 0,
+        "seconds_with_any_stopped": 0,
+        "longest_contiguous_episodes": [],
+        "green_state_seconds_with_stops": 0
+      },
+      "ramp_storage/U": {
+        "first_stop": null,
+        "max_stopped_count": 0,
+        "seconds_with_any_stopped": 0,
+        "longest_contiguous_episodes": [],
+        "green_state_seconds_with_stops": 0
+      },
+      "shared_approach/R": {
+        "first_stop": null,
+        "max_stopped_count": 0,
+        "seconds_with_any_stopped": 0,
+        "longest_contiguous_episodes": [],
+        "green_state_seconds_with_stops": 0
+      },
+      "shared_approach/U": {
+        "first_stop": null,
+        "max_stopped_count": 0,
+        "seconds_with_any_stopped": 0,
+        "longest_contiguous_episodes": [],
+        "green_state_seconds_with_stops": 0
+      },
+      "urban_in/R": {
+        "first_stop": {
+          "time_s": 55.0,
+          "vehicle_id": "R_flow.5",
+          "position_m": 391.8,
+          "tls_state": "rG"
+        },
+        "max_stopped_count": 1,
+        "seconds_with_any_stopped": 107,
+        "longest_contiguous_episodes": [
+          [
+            710.0,
+            720.0
+          ],
+          [
+            950.0,
+            960.0
+          ],
+          [
+            1130.0,
+            1140.0
+          ],
+          [
+            654.0,
+            660.0
+          ],
+          [
+            1074.0,
+            1080.0
+          ]
+        ],
+        "green_state_seconds_with_stops": 0
+      },
+      "urban_in/U": {
+        "first_stop": {
+          "time_s": 58.0,
+          "vehicle_id": "U_flow.5",
+          "position_m": 384.28,
+          "tls_state": "ry"
+        },
+        "max_stopped_count": 1,
+        "seconds_with_any_stopped": 70,
+        "longest_contiguous_episodes": [
+          [
+            716.0,
+            721.0
+          ],
+          [
+            956.0,
+            961.0
+          ],
+          [
+            477.0,
+            481.0
+          ],
+          [
+            537.0,
+            541.0
+          ],
+          [
+            597.0,
+            601.0
+          ]
+        ],
+        "green_state_seconds_with_stops": 20
+      }
+    },
+    "longest_same_vehicle_head_stops": [
+      {
+        "edge_vehicle": "urban_in/R_flow.71",
+        "begin_s": 710.0,
+        "end_s": 720.0,
+        "duration_s": 10.0
+      },
+      {
+        "edge_vehicle": "urban_in/R_flow.95",
+        "begin_s": 950.0,
+        "end_s": 960.0,
+        "duration_s": 10.0
+      },
+      {
+        "edge_vehicle": "urban_in/R_flow.113",
+        "begin_s": 1130.0,
+        "end_s": 1140.0,
+        "duration_s": 10.0
+      },
+      {
+        "edge_vehicle": "ramp_accel/R_flow.56",
+        "begin_s": 647.0,
+        "end_s": 656.0,
+        "duration_s": 9.0
+      },
+      {
+        "edge_vehicle": "ramp_accel/R_flow.67",
+        "begin_s": 773.0,
+        "end_s": 782.0,
+        "duration_s": 9.0
+      },
+      {
+        "edge_vehicle": "ramp_accel/R_flow.22",
+        "begin_s": 278.0,
+        "end_s": 286.0,
+        "duration_s": 8.0
+      },
+      {
+        "edge_vehicle": "ramp_accel/R_flow.42",
+        "begin_s": 495.0,
+        "end_s": 503.0,
+        "duration_s": 8.0
+      },
+      {
+        "edge_vehicle": "ramp_accel/R_flow.53",
+        "begin_s": 614.0,
+        "end_s": 622.0,
+        "duration_s": 8.0
+      },
+      {
+        "edge_vehicle": "ramp_accel/R_flow.75",
+        "begin_s": 862.0,
+        "end_s": 870.0,
+        "duration_s": 8.0
+      },
+      {
+        "edge_vehicle": "ramp_accel/R_flow.76",
+        "begin_s": 875.0,
+        "end_s": 883.0,
+        "duration_s": 8.0
+      },
+      {
+        "edge_vehicle": "ramp_accel/R_flow.93",
+        "begin_s": 1061.0,
+        "end_s": 1069.0,
+        "duration_s": 8.0
+      },
+      {
+        "edge_vehicle": "ramp_accel/R_flow.27",
+        "begin_s": 332.0,
+        "end_s": 339.0,
+        "duration_s": 7.0
+      },
+      {
+        "edge_vehicle": "ramp_accel/R_flow.35",
+        "begin_s": 419.0,
+        "end_s": 426.0,
+        "duration_s": 7.0
+      },
+      {
+        "edge_vehicle": "ramp_accel/R_flow.40",
+        "begin_s": 472.0,
+        "end_s": 479.0,
+        "duration_s": 7.0
+      },
+      {
+        "edge_vehicle": "ramp_accel/R_flow.46",
+        "begin_s": 537.0,
+        "end_s": 544.0,
+        "duration_s": 7.0
+      },
+      {
+        "edge_vehicle": "ramp_accel/R_flow.47",
+        "begin_s": 549.0,
+        "end_s": 556.0,
+        "duration_s": 7.0
+      },
+      {
+        "edge_vehicle": "ramp_accel/R_flow.51",
+        "begin_s": 590.0,
+        "end_s": 597.0,
+        "duration_s": 7.0
+      },
+      {
+        "edge_vehicle": "ramp_accel/R_flow.52",
+        "begin_s": 602.0,
+        "end_s": 609.0,
+        "duration_s": 7.0
+      },
+      {
+        "edge_vehicle": "ramp_accel/R_flow.58",
+        "begin_s": 672.0,
+        "end_s": 679.0,
+        "duration_s": 7.0
+      },
+      {
+        "edge_vehicle": "ramp_accel/R_flow.60",
+        "begin_s": 696.0,
+        "end_s": 703.0,
+        "duration_s": 7.0
+      }
+    ],
+    "waiting_episodes": {
+      "R": [],
+      "U": []
+    },
+    "timeline_30s": [
+      {
+        "time_s": 0.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 30.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 60.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "urban_in/U": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 90.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 120.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 1,
+          "urban_in/U": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 150.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 180.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 1,
+          "urban_in/U": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 210.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 240.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 2,
+          "urban_in/U": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 270.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 300.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "urban_in/U": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 330.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 360.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 1,
+          "urban_in/U": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 390.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 420.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 2,
+          "urban_in/U": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 450.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 480.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 2,
+          "urban_in/U": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 510.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 2
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 540.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 2,
+          "urban_in/U": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 570.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 600.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "urban_in/U": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 630.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 2
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 660.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "urban_in/U": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 690.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 4
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 720.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 1,
+          "urban_in/U": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 750.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 2
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 780.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 5,
+          "urban_in/U": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 810.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 840.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 1,
+          "urban_in/U": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 870.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 4
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 900.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 2,
+          "urban_in/U": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 930.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 960.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 4,
+          "urban_in/U": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 990.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1020.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 3,
+          "urban_in/U": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1050.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1080.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 4,
+          "urban_in/U": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1110.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 3
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1140.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 1,
+          "urban_in/U": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1170.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1200.0,
+        "tls_state": "Gr",
+        "stopped_counts": {
+          "ramp_accel/R": 2,
+          "urban_in/U": 1
+        },
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1230.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1260.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1290.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1320.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1350.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1380.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1410.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1440.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1470.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1500.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1530.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1560.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1590.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1620.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1650.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1680.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1710.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1740.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1770.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1800.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1830.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1860.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1890.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1920.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1950.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 1980.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 2010.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 2040.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      },
+      {
+        "time_s": 2070.0,
+        "tls_state": "Gr",
+        "stopped_counts": {},
+        "waiting_to_insert_before_step": {
+          "R": 0,
+          "U": 0
+        }
+      }
+    ]
+  }
+}

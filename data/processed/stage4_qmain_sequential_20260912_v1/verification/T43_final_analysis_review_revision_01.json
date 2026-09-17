@@ -1,0 +1,30 @@
+{
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "confidence": {
+    "clean_mechanical_suite": "not_met",
+    "independent_oracle_agreement": "high",
+    "registered_final_action_reproduction": "high",
+    "scientific_interpretation": "pending_required_review"
+  },
+  "data_verification_path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/T43_final_independent_verification_revision_01.json",
+  "data_verification_sha256": "ce0ef7d9c30060be2d84cce3c30bf31e86878e96c59f40e6679fad288acec9da",
+  "interpretation_boundary": "Exploratory local scenario diagnostics only; not formal thesis evidence, causal proof, capacity, Breakdown, Capacity Drop, controller performance, or a sweet spot.",
+  "observed_final_action": "supports_B_pattern_within_registered_points",
+  "open_data_findings": [],
+  "open_mechanical_findings": [
+    {
+      "finding": "Current Stage 4 production and independent tests still encode the pre-Tier2 state (2/2/0/0, Tier1-only runtime overlay, upper pair pending/no receipt). On the authoritative completed Tier2 state the combined run is 101/112 passed with 9 failures and 2 errors.",
+      "id": "T43-TEST-STATE-01",
+      "impact": "Blocks a clean final verification claim; it does not contradict the raw-data reconstruction or manifest/receipt comparison.",
+      "owner": "simulation_engineer",
+      "required_action": "Update state-dependent tests for authoritative completed Tier2 state, then rerun combined suite.",
+      "severity": "Major_mechanical"
+    }
+  ],
+  "revision": 1,
+  "safest_next_step": "After the state-dependent test repair yields a clean run, submit to scientific_reviewer; do not promote this exploratory pattern to a formal claim.",
+  "schema_version": 1,
+  "scientific_status": "pending_required_scientific_reviewer",
+  "status": "data_review_passed_mechanical_test_repair_pending_scientific_review_pending",
+  "task": "T43 Stage 4 final exploratory analysis review"
+}

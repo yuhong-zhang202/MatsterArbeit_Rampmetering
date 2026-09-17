@@ -1,0 +1,39 @@
+{
+  "status": "validated",
+  "mode": "dry-run",
+  "project": "Masterarbeit-Ramp-Metering",
+  "update_id": "stage2-closeout-20260910-v1",
+  "session_id": "stage2-closeout-20260910-v1",
+  "approval_manifest": "docs/memory/incremental_update_approval_20260910_dry_run.json",
+  "approval_manifest_sha256": "00480fffd3e9766435fdc5a72cef9d4671ade6f4e492ab3bb941fbfd8c84ad37",
+  "files": {
+    "delta_bundle": {
+      "path": "docs/memory/incremental_update_20260910.md",
+      "bytes": 8670,
+      "sha256": "ea0d3aa4c6be63324bbdbbaecf6d43fd979874814c4b6908f972eeb4c0be89ad"
+    },
+    "l3_candidate": {
+      "path": "docs/memory/formal_core_memory_20260910_candidate.md",
+      "bytes": 6528,
+      "sha256": "94c495348fd2dc28bdc1bd22fc0afdd0f23385f8f83cf2ae62f3b090b1ac4bab"
+    }
+  },
+  "model": "gpt-4.1-mini",
+  "approved_max_new_attempts": 3,
+  "approved_cost": {
+    "input_rate_usd_per_million": 0.4,
+    "output_rate_usd_per_million": 1.6,
+    "conservative_cost_ceiling_usd": 0.0436608,
+    "approved_cost_ceiling_usd": 0.0436608
+  },
+  "historical_claimed_attempts": 6,
+  "historical_remaining_attempts": 35,
+  "network_or_api_access_performed": false,
+  "keychain_access_performed": false,
+  "docker_access_performed": false,
+  "model_call_performed": false,
+  "memory_write_performed": false,
+  "paid_execution_guard_test": "passed: manifest rejected without --dry-run",
+  "authorized_cost_usd": 0,
+  "actual_cost_usd": 0
+}

@@ -1,0 +1,59 @@
+{
+  "schema_version": 1,
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "stage": "Stage 4 T42 independent mechanical-metadata review",
+  "revision": "revision_06",
+  "status": "passed_core_with_metadata_minor_open",
+  "context_preflight": {
+    "status": "passed",
+    "current_phase": "T42 offline review; T43 prohibited",
+    "formal_protocol": "empty_not_frozen"
+  },
+  "history_preservation": {
+    "revision_01_through_05": "preserved unchanged",
+    "independent_verification_revision_05_sha256": "8eb3d5242909dcfb4406e56671f77de578960172d05dff967bea11cd8f702c30",
+    "analysis_review_revision_05_sha256": "7a5300de478e0d0b4262ad7b208cb701e8f502e9c572cab716f2231f4914e891"
+  },
+  "reviewed_hashes": {
+    "src/analysis/analyze_stage4_qmain.py": "d8a1f3832588678a8054507ef8b0c74060ba39585a2c4c03bf268c966b4702f8",
+    "tests/test_stage4_qmain.py": "5849b61192c4c6dae0051e2b8b559a3fe3e626e2c9fd9a00737801dbc5d1a67b",
+    "tests/test_verify_stage4_qmain.py": "c8ee32f5e8da72695076228736d5aa290542bd34d56dd459817d25e5c82c101e",
+    "registration_payload.json": "d934b62903081163495b7e17cf72c52786e1dfb864aa5d9a9d3eb5c2eb9a952a",
+    "measurement_contract.json": "b3bf7abec5a9e6cfc29edb81de58ec5cc86c9e0fd132e88a9cd6999a456a91c9",
+    "source_registry.json": "96ee4a20f8130ede9a14ff9a40292a0c1d588770bbf1b37ad1ac455b3a1c538b",
+    "execution_ledger.json": "c5309b6c628b9e637192f0c36c82a6a8aa8dbba8cf994c4ffeeb2ae851e1c148",
+    "engineering_verification.json": "0feb3878b356ded0e20d8890a62eff9a619aad7d9062fd96524295b2843c7e28"
+  },
+  "test_results": {
+    "production_suite": "52/52 passed",
+    "independent_suite": "29/29 passed",
+    "combined_suite": "81/81 passed",
+    "py_compile": "passed",
+    "diff_check": "passed"
+  },
+  "mechanical_contract_findings": {
+    "binding_scientific_authority": "passed; registration_payload.json remains the sole hash-bound scientific payload across contract, registry and ledger",
+    "human_proposal_snapshot": "passed; contract and ledger label the old 90a49c... snapshot non_binding_historical_snapshot",
+    "proposal_independence": "passed; validate_context accepts a changed snapshot path/hash and a nonexistent snapshot path when only nonbinding metadata changes and registered machine-file hashes are updated",
+    "removed_normative_fields": "passed; proposal_path/proposal_sha256 are absent from the machine contract and proposal_sha256 is absent from ledger input_hashes"
+  },
+  "open_finding": {
+    "id": "S4DA-R06-m01",
+    "severity": "Minor",
+    "status": "open",
+    "scope": "engineering verification metadata",
+    "evidence": "engineering_verification.json still reports status pending independent revision_05, old contract a519..., old ledger 1db2..., old independent-test 007c..., and 79/79, while the reviewed package uses contract b3bf..., ledger c530..., independent-test c8ee..., and 81/81.",
+    "impact": "No scientific payload or validate_context behavior is affected, but this file cannot serve as a current no-pending engineering receipt.",
+    "required_resolution": "Update the engineering verification receipt to the current mechanical contract, ledger, independent test hash, count and status; then issue a fresh independent metadata check."
+  },
+  "launch_gate": {
+    "T42_data_core": "passed",
+    "T42_metadata_closeout": "minor_open",
+    "T43": "prohibited",
+    "can_claim_no_pending_T42_package": false
+  },
+  "actual_sumo_starts": 0,
+  "actual_netconvert_operations": 0,
+  "actual_traci_connections": 0,
+  "actual_gui_starts": 0
+}

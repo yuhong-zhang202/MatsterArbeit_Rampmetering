@@ -1,0 +1,156 @@
+{
+  "applies_to": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c03_reuse_spatial_package_revision_01/actual_observation_map.csv",
+    "sha256": "28bfd7e8441c257462f6f420abdadc21bc3a5d9a62200b592e5541c9fc06b6ff"
+  },
+  "corrected_source_locators": [
+    {
+      "correct_source": {
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c01_materializations_revision_03/S6_V1_ML_S17_attempt1/demand.rou.xml",
+        "sha256": "3afa7005380703fa715fe9704a747d9a509783f9028dc80d71c8ea69eeb49042"
+      },
+      "id": "M",
+      "kind": "route",
+      "locator": "route[@id='M_route']/@edges",
+      "reason": "Use concrete generated route XML as locator, rather than the high-level entry contract used in initial map."
+    },
+    {
+      "correct_source": {
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c01_materializations_revision_03/S6_V1_ML_S17_attempt1/demand.rou.xml",
+        "sha256": "3afa7005380703fa715fe9704a747d9a509783f9028dc80d71c8ea69eeb49042"
+      },
+      "id": "R",
+      "kind": "route",
+      "locator": "route[@id='R_route']/@edges",
+      "reason": "Use concrete generated route XML as locator, rather than the high-level entry contract used in initial map."
+    },
+    {
+      "correct_source": {
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c01_materializations_revision_03/S6_V1_ML_S17_attempt1/demand.rou.xml",
+        "sha256": "3afa7005380703fa715fe9704a747d9a509783f9028dc80d71c8ea69eeb49042"
+      },
+      "id": "U",
+      "kind": "route",
+      "locator": "route[@id='U_route']/@edges",
+      "reason": "Use concrete generated route XML as locator, rather than the high-level entry contract used in initial map."
+    },
+    {
+      "correct_source": {
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c01_materializations_revision_03/S6_V1_ML_S17_attempt1/demand.rou.xml",
+        "sha256": "3afa7005380703fa715fe9704a747d9a509783f9028dc80d71c8ea69eeb49042"
+      },
+      "id": "X",
+      "kind": "route",
+      "locator": "route[@id='X_route']/@edges",
+      "reason": "Use concrete generated route XML as locator, rather than the high-level entry contract used in initial map."
+    },
+    {
+      "correct_source": {
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/config/scenarios/stage6_h2_entry_v1/entry_contract.json",
+        "sha256": "cd8ba4e981c8467fe7df9c66ab533479504e480813bf26f4e40f66288d47a46e"
+      },
+      "id": "V1_feeder:main_up_0",
+      "kind": "domain",
+      "locator": "/feeder_m",
+      "reason": "Precise JSON field locator for mapped domain."
+    },
+    {
+      "correct_source": {
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/config/scenarios/stage6_h2_entry_v1/entry_contract.json",
+        "sha256": "cd8ba4e981c8467fe7df9c66ab533479504e480813bf26f4e40f66288d47a46e"
+      },
+      "id": "V1_feeder:main_up_1",
+      "kind": "domain",
+      "locator": "/feeder_m",
+      "reason": "Precise JSON field locator for mapped domain."
+    },
+    {
+      "correct_source": {
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/config/scenarios/stage6_h2_entry_v1/entry_contract.json",
+        "sha256": "cd8ba4e981c8467fe7df9c66ab533479504e480813bf26f4e40f66288d47a46e"
+      },
+      "id": "V0_V1_common:main_down_0",
+      "kind": "domain",
+      "locator": "/common_m",
+      "reason": "Precise JSON field locator for mapped domain."
+    },
+    {
+      "correct_source": {
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/config/scenarios/stage6_h2_entry_v1/entry_contract.json",
+        "sha256": "cd8ba4e981c8467fe7df9c66ab533479504e480813bf26f4e40f66288d47a46e"
+      },
+      "id": "V0_V1_common:main_down_1",
+      "kind": "domain",
+      "locator": "/common_m",
+      "reason": "Precise JSON field locator for mapped domain."
+    }
+  ],
+  "new_simulation_calls": 0,
+  "prior_failed_attempt": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c03_reuse_spatial_package_revision_01/supplement_attempt_01_error.json",
+    "sha256": "fb8a67ef299e5851f90504f47c8b398f1357e5bdd9b62d98ddef53a782637bc4"
+  },
+  "route_lane_sets": {
+    "M": [
+      ":freeway_merge_1_0",
+      ":freeway_merge_1_1",
+      "main_down_0",
+      "main_down_1",
+      "main_up_0",
+      "main_up_1"
+    ],
+    "R": [
+      ":freeway_merge_0_0",
+      ":ramp_mid_0_0",
+      ":urban_diverge_1_0",
+      ":urban_tls_0_0",
+      "main_down_0",
+      "main_down_1",
+      "ramp_accel_0",
+      "ramp_storage_0",
+      "shared_approach_0",
+      "urban_in_0"
+    ],
+    "U": [
+      ":urban_diverge_0_0",
+      ":urban_tls_0_0",
+      "shared_approach_0",
+      "urban_in_0",
+      "urban_out_0"
+    ],
+    "X": [
+      ":urban_tls_1_0",
+      "cross_in_0",
+      "cross_out_0"
+    ]
+  },
+  "route_partition_checks": {
+    "M_R_ordinary_route_lane_intersection": [
+      "main_down_0",
+      "main_down_1"
+    ],
+    "R_U_after_divergence_disjoint": true,
+    "R_U_shared_prefix_exact": [
+      "urban_in_0",
+      ":urban_tls_0_0",
+      "shared_approach_0"
+    ],
+    "R_internal_sequence": [
+      ":urban_tls_0_0",
+      ":urban_diverge_1_0",
+      ":ramp_mid_0_0",
+      ":freeway_merge_0_0"
+    ],
+    "R_merge_connection_enters": "main_down_0",
+    "U_internal_sequence": [
+      ":urban_tls_0_0",
+      ":urban_diverge_0_0"
+    ],
+    "route_lane_union_matches_all19": true
+  },
+  "source_network": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/network.net.xml",
+    "sha256": "a83bb0c3a03b7e74cf8c2360336eb0dfbb330073cf8b8f6aea9940ff7cf3d8ea"
+  },
+  "spatial_values_unchanged": true
+}

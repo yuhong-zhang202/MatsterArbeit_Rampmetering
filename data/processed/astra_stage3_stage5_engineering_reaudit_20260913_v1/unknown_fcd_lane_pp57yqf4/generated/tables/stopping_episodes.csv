@@ -1,0 +1,5 @@
+episode_id,parent_episode_id,run_id,class,region,kind,vehicle_id_or_null,observation_domain,stop_definition_id,sampling_period_s,first_label,last_label,sample_count,support_seconds,censor_left,censor_right,gap_reason,TLS_context
+full:1,,C17,R,ramp_storage,vehicle_stop,R_flow.0,Full,technical_stop,1.0,0.0,0.0,1,1.0,True,False,source_boundary,link0:G=1
+full:2,,C17,R,ramp_storage,region_stop,,Full,technical_stop,1.0,0.0,0.0,1,1.0,True,False,source_boundary,link0:G=1
+A:full:1,full:1,C17,R,ramp_storage,vehicle_stop,R_flow.0,A,technical_stop,1.0,0.0,0.0,1,1.0,True,False,source_boundary,link0:G=1
+A:full:2,full:2,C17,R,ramp_storage,region_stop,,A,technical_stop,1.0,0.0,0.0,1,1.0,True,False,source_boundary,link0:G=1

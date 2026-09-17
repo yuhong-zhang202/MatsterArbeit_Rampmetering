@@ -1,0 +1,1590 @@
+{
+  "schema_version": 1,
+  "batch_id": "stage3_baseline_diagnostic_20260912_v2",
+  "source_batch": "stage2_completion_20260909_v1",
+  "selection_rule": "execution ledger selected attempt -> exact source map -> immutable project archive",
+  "tmp_fallback": false,
+  "selected_run_count": 8,
+  "runs": [
+    {
+      "run_id": "C17",
+      "attempt_id": "C17_reused",
+      "selected_attempt": true,
+      "seed": 17,
+      "condition": "C",
+      "requested_demand_vehph": {
+        "M": 3200.0,
+        "R": 720.0,
+        "U": 360.0,
+        "X": 180.0
+      },
+      "time_windows": {
+        "clearance": {
+          "begin_s": 1500,
+          "duration_s": 1200,
+          "end_s": 2700
+        },
+        "demand": {
+          "begin_s": 0,
+          "duration_s": 1500,
+          "end_s": 1500
+        },
+        "measurement": {
+          "begin_s": 0,
+          "duration_s": 1500,
+          "end_s": 1500
+        },
+        "simulation": {
+          "begin_s": 0,
+          "duration_s": 2700,
+          "end_s": 2700
+        },
+        "status": "all time values are exploratory candidates and are not frozen",
+        "warmup": {
+          "begin_s": 0,
+          "duration_s": 0,
+          "end_s": 0
+        }
+      },
+      "sumo_version": "Eclipse SUMO sumo 1.26.0",
+      "netconvert_version": "Eclipse SUMO netconvert 1.26.0",
+      "source_map_path": "data/processed/stage2_completion_20260909_v1/source_maps/C17_reused.json",
+      "source_map_sha256": "3a553c630bf3946cb87e133a1fe1fd392b99d571ffd36ea8f85a370481debbf0",
+      "archive_runtime_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused",
+      "archive_file_count": 29,
+      "files": [
+        {
+          "source_suffix": "demand.rou.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/demand.rou.xml",
+          "sha256": "29ffdf99e8b794b31e4cb32bc951347b72c94e85902b0c5926ffe74249ecd429"
+        },
+        {
+          "source_suffix": "netconvert.stderr.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/netconvert.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "netconvert.stdout.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/netconvert.stdout.log",
+          "sha256": "c5b6fd8211edd733614c0fcc956b64ff288d5876926ffe7291fcfa8bf3dbb887"
+        },
+        {
+          "source_suffix": "network.net.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/network.net.xml",
+          "sha256": "a83bb0c3a03b7e74cf8c2360336eb0dfbb330073cf8b8f6aea9940ff7cf3d8ea"
+        },
+        {
+          "source_suffix": "outputs/fcd.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/outputs/fcd.xml",
+          "sha256": "92f3972a274913a174af02593704e739f55af676c7d67ab79554fe0e0645635a"
+        },
+        {
+          "source_suffix": "outputs/mainline_merge_entry_e1_l0.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/outputs/mainline_merge_entry_e1_l0.xml",
+          "sha256": "bea8023fafce9701c273edfbe782f84c0a8bb4d0a52da1ee0b42c8e27f83c9bf"
+        },
+        {
+          "source_suffix": "outputs/mainline_merge_entry_e1_l1.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/outputs/mainline_merge_entry_e1_l1.xml",
+          "sha256": "67b273e090f72f8d9a97e89c4aeba3f7c4b2fd43a9868c51db62999f76bf964c"
+        },
+        {
+          "source_suffix": "outputs/merge_downstream_e1_l0.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/outputs/merge_downstream_e1_l0.xml",
+          "sha256": "cec692a13d85646c374633fcb474b358824e17f8f81a749ba543cf6648e8cd00"
+        },
+        {
+          "source_suffix": "outputs/merge_downstream_e1_l1.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/outputs/merge_downstream_e1_l1.xml",
+          "sha256": "a86d78eb413da7c13813f70bc8b237b1a1d5c8be2d92fbf9c3f3783ee15f8103"
+        },
+        {
+          "source_suffix": "outputs/merge_upstream_e1_l0.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/outputs/merge_upstream_e1_l0.xml",
+          "sha256": "92c56cca5331b0f576160930d135578038d854e887e230e178d5d47827083bfc"
+        },
+        {
+          "source_suffix": "outputs/merge_upstream_e1_l1.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/outputs/merge_upstream_e1_l1.xml",
+          "sha256": "feb9d9b6ae118d0b1adf84156b8700c95414dd1e07cb5fb147b8822381b42d95"
+        },
+        {
+          "source_suffix": "outputs/queues.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/outputs/queues.xml",
+          "sha256": "d03a37becdf1c00319fb92c73e3a496cd0142b973da8b6f024900756cd51f2d1"
+        },
+        {
+          "source_suffix": "outputs/ramp_storage_e2.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/outputs/ramp_storage_e2.xml",
+          "sha256": "90f52e918caf86b1e3f748352663e2a6743c01c0a77159f62f0a7b804dfe6ecc"
+        },
+        {
+          "source_suffix": "outputs/shared_boundary_e2.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/outputs/shared_boundary_e2.xml",
+          "sha256": "141b0dd22315e4d87a1169e29e2eb74d125ee8837590f7e6e9c75080734e875d"
+        },
+        {
+          "source_suffix": "outputs/sumo.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/outputs/sumo.log",
+          "sha256": "f8d20199bafebcb01a1c9f4d884cebbbbb4ba96d3489a3d616e79d58c6ccd3e6"
+        },
+        {
+          "source_suffix": "outputs/sumo.stderr.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/outputs/sumo.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "outputs/sumo.stdout.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/outputs/sumo.stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "outputs/sumo_error.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/outputs/sumo_error.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "outputs/sumo_summary.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/outputs/sumo_summary.xml",
+          "sha256": "65a3de2cc04c7eec5fa22b67c397f1b560692d93cf4e0b66ace12b58b0482383"
+        },
+        {
+          "source_suffix": "outputs/tls_states.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/outputs/tls_states.xml",
+          "sha256": "461511ce3857d704bc57d0bbb2c444296a85efe447d7c4da112592b5262d7620"
+        },
+        {
+          "source_suffix": "outputs/tripinfo.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/outputs/tripinfo.xml",
+          "sha256": "0846fcd8ffb53588c7666a40a30911a8a267c4f77bd02aa34f9e174685656254"
+        },
+        {
+          "source_suffix": "outputs/vehroute.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/outputs/vehroute.xml",
+          "sha256": "8c06e0bfd502bbe123e9da956ab1a1d28c4f92f8373fd74fa6f82d009c6a2a4c"
+        },
+        {
+          "source_suffix": "scenario.add.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/scenario.add.xml",
+          "sha256": "be46ba588a7ceaa8dfb8e3870e4f70176a9ac2b64f1abba6703b2f955a799941"
+        },
+        {
+          "source_suffix": "scenario.con.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/scenario.con.xml",
+          "sha256": "d154948200c9b4d9a3d54bf04647357daaff0e6a19293f19fcef457ee4ae4ea5"
+        },
+        {
+          "source_suffix": "scenario.edg.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/scenario.edg.xml",
+          "sha256": "d6c7d6df0b8a5afc60a8bfedd796b9d14baa56ec44cf322e3129f976396cff53"
+        },
+        {
+          "source_suffix": "scenario.nod.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/scenario.nod.xml",
+          "sha256": "b1577412ba28470abe3270913833a4053ca6be174f2eede55de77aa5b8a2c923"
+        },
+        {
+          "source_suffix": "scenario.sumocfg",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/scenario.sumocfg",
+          "sha256": "0e0f99a7af694e7f448efdb66837143100478da2151ae83ba3e1c6772a811db0"
+        },
+        {
+          "source_suffix": "scenario.tll.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/scenario.tll.xml",
+          "sha256": "89f25ab5020e4f2df2fc035233b038c89cc80cf748f6dca19b5584e829df3ecc"
+        },
+        {
+          "source_suffix": "summary.json",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/summary.json",
+          "sha256": "4e80da39f4e3000122d30eb8f0d05500c8e6aa4491a9e91bc3f928d8f6cca4b1"
+        }
+      ]
+    },
+    {
+      "run_id": "C23",
+      "attempt_id": "C23_attempt1",
+      "selected_attempt": true,
+      "seed": 23,
+      "condition": "C",
+      "requested_demand_vehph": {
+        "M": 3200.0,
+        "R": 720.0,
+        "U": 360.0,
+        "X": 180.0
+      },
+      "time_windows": {
+        "clearance": {
+          "begin_s": 1500,
+          "duration_s": 1200,
+          "end_s": 2700
+        },
+        "demand": {
+          "begin_s": 0,
+          "duration_s": 1500,
+          "end_s": 1500
+        },
+        "measurement": {
+          "begin_s": 0,
+          "duration_s": 1500,
+          "end_s": 1500
+        },
+        "simulation": {
+          "begin_s": 0,
+          "duration_s": 2700,
+          "end_s": 2700
+        },
+        "status": "all time values are exploratory candidates and are not frozen",
+        "warmup": {
+          "begin_s": 0,
+          "duration_s": 0,
+          "end_s": 0
+        }
+      },
+      "sumo_version": "Eclipse SUMO sumo 1.26.0",
+      "netconvert_version": "Eclipse SUMO netconvert 1.26.0",
+      "source_map_path": "data/processed/stage2_completion_20260909_v1/source_maps/C23_attempt1.json",
+      "source_map_sha256": "a09aaab37ab2ac3f70539c869d0b284781decd2adeddc82c23df7a3c942ed79f",
+      "archive_runtime_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1",
+      "archive_file_count": 29,
+      "files": [
+        {
+          "source_suffix": "demand.rou.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/demand.rou.xml",
+          "sha256": "29ffdf99e8b794b31e4cb32bc951347b72c94e85902b0c5926ffe74249ecd429"
+        },
+        {
+          "source_suffix": "netconvert.stderr.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/netconvert.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "netconvert.stdout.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/netconvert.stdout.log",
+          "sha256": "c5b6fd8211edd733614c0fcc956b64ff288d5876926ffe7291fcfa8bf3dbb887"
+        },
+        {
+          "source_suffix": "network.net.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/network.net.xml",
+          "sha256": "d20ac5e0feb0d4b7d7a520702ec925d985315be6e27b461d69518cb1185eb551"
+        },
+        {
+          "source_suffix": "outputs/fcd.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/outputs/fcd.xml",
+          "sha256": "fcdbccdf32311638075b4ad45dbaa3ec1423a09dcf71dadf16ec7418d7803220"
+        },
+        {
+          "source_suffix": "outputs/mainline_merge_entry_e1_l0.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/outputs/mainline_merge_entry_e1_l0.xml",
+          "sha256": "90c0f62cfde04b5222c98ec64ca3490a8e4f24dd5520ac2483361c5a0bd98805"
+        },
+        {
+          "source_suffix": "outputs/mainline_merge_entry_e1_l1.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/outputs/mainline_merge_entry_e1_l1.xml",
+          "sha256": "d9bfcf736eefced3704d74881e24caaf9ebf9a7c512f148a255aca79173a7313"
+        },
+        {
+          "source_suffix": "outputs/merge_downstream_e1_l0.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/outputs/merge_downstream_e1_l0.xml",
+          "sha256": "9be786c6b62d63e4835a64730998d9c6a550391216be6509585e4235c59b53d1"
+        },
+        {
+          "source_suffix": "outputs/merge_downstream_e1_l1.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/outputs/merge_downstream_e1_l1.xml",
+          "sha256": "46c12a042a20d37dcd813ffbfb1aa4e492ff69695b300dc725264d59f86642bf"
+        },
+        {
+          "source_suffix": "outputs/merge_upstream_e1_l0.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/outputs/merge_upstream_e1_l0.xml",
+          "sha256": "eccd0d5407cab56f388b347cb6711f97610bb856eb66195c47a5c0fb1aceb8a4"
+        },
+        {
+          "source_suffix": "outputs/merge_upstream_e1_l1.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/outputs/merge_upstream_e1_l1.xml",
+          "sha256": "52c5c14a2a998be9ea40ad97e95ba3f928eb8359e709dc8d09b192b08fd2faff"
+        },
+        {
+          "source_suffix": "outputs/queues.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/outputs/queues.xml",
+          "sha256": "3b61b9dcbfb4f7d9e7627210e5476347e16c30d7e7bb7984a834f99ec720dbea"
+        },
+        {
+          "source_suffix": "outputs/ramp_storage_e2.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/outputs/ramp_storage_e2.xml",
+          "sha256": "84ad4cd536239f1c8d024d9d52e0147511e367ac45a1b9e6b57b50d2cf79c95a"
+        },
+        {
+          "source_suffix": "outputs/shared_boundary_e2.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/outputs/shared_boundary_e2.xml",
+          "sha256": "6349f7895c3b9e1907bccbe509923f5c9ad57eea1c74a705ff85344b014fdeab"
+        },
+        {
+          "source_suffix": "outputs/sumo.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/outputs/sumo.log",
+          "sha256": "441d7b5309064f3de4f186fdfc2fa16442f928850b1632177a46787636279f95"
+        },
+        {
+          "source_suffix": "outputs/sumo.stderr.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/outputs/sumo.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "outputs/sumo.stdout.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/outputs/sumo.stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "outputs/sumo_error.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/outputs/sumo_error.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "outputs/sumo_summary.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/outputs/sumo_summary.xml",
+          "sha256": "ee176a4c88ca9b9468a8e389564b202f85b13cba6120b25f25e6c78d1c54fc0e"
+        },
+        {
+          "source_suffix": "outputs/tls_states.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/outputs/tls_states.xml",
+          "sha256": "0c17cf19548157932a2b3efb3d6596a1b72f2996b64d3f417dd36450e8546b04"
+        },
+        {
+          "source_suffix": "outputs/tripinfo.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/outputs/tripinfo.xml",
+          "sha256": "0d6f0ff8bb9ea733293fc1ff0f61e517459d748f4d08eea1c54c7b7c24083ba2"
+        },
+        {
+          "source_suffix": "outputs/vehroute.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/outputs/vehroute.xml",
+          "sha256": "ed36e3974484ecdbed08cc6cccf9812dbf76b1b1d0b262cdad68e04f50d452b3"
+        },
+        {
+          "source_suffix": "scenario.add.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/scenario.add.xml",
+          "sha256": "110901d2af3dfb9a11f0762fc231435abb3b2f01881accce58831ee4749f952b"
+        },
+        {
+          "source_suffix": "scenario.con.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/scenario.con.xml",
+          "sha256": "d154948200c9b4d9a3d54bf04647357daaff0e6a19293f19fcef457ee4ae4ea5"
+        },
+        {
+          "source_suffix": "scenario.edg.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/scenario.edg.xml",
+          "sha256": "d6c7d6df0b8a5afc60a8bfedd796b9d14baa56ec44cf322e3129f976396cff53"
+        },
+        {
+          "source_suffix": "scenario.nod.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/scenario.nod.xml",
+          "sha256": "b1577412ba28470abe3270913833a4053ca6be174f2eede55de77aa5b8a2c923"
+        },
+        {
+          "source_suffix": "scenario.sumocfg",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/scenario.sumocfg",
+          "sha256": "0e0f99a7af694e7f448efdb66837143100478da2151ae83ba3e1c6772a811db0"
+        },
+        {
+          "source_suffix": "scenario.tll.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/scenario.tll.xml",
+          "sha256": "89f25ab5020e4f2df2fc035233b038c89cc80cf748f6dca19b5584e829df3ecc"
+        },
+        {
+          "source_suffix": "summary.json",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/summary.json",
+          "sha256": "c781fd57b6cef5e96e9f2cba2bed5353b37b80752c761af0f0ca1a1bdf875028"
+        }
+      ]
+    },
+    {
+      "run_id": "ML17",
+      "attempt_id": "ML17_attempt1",
+      "selected_attempt": true,
+      "seed": 17,
+      "condition": "ML",
+      "requested_demand_vehph": {
+        "M": 2600.0,
+        "R": 720.0,
+        "U": 360.0,
+        "X": 180.0
+      },
+      "time_windows": {
+        "clearance": {
+          "begin_s": 1500,
+          "duration_s": 1200,
+          "end_s": 2700
+        },
+        "demand": {
+          "begin_s": 0,
+          "duration_s": 1500,
+          "end_s": 1500
+        },
+        "measurement": {
+          "begin_s": 0,
+          "duration_s": 1500,
+          "end_s": 1500
+        },
+        "simulation": {
+          "begin_s": 0,
+          "duration_s": 2700,
+          "end_s": 2700
+        },
+        "status": "all time values are exploratory candidates and are not frozen",
+        "warmup": {
+          "begin_s": 0,
+          "duration_s": 0,
+          "end_s": 0
+        }
+      },
+      "sumo_version": "Eclipse SUMO sumo 1.26.0",
+      "netconvert_version": "Eclipse SUMO netconvert 1.26.0",
+      "source_map_path": "data/processed/stage2_completion_20260909_v1/source_maps/ML17_attempt1.json",
+      "source_map_sha256": "430ff9608e0e7ca091406826be9be327da972f9d4026df915cb86e816831a759",
+      "archive_runtime_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1",
+      "archive_file_count": 29,
+      "files": [
+        {
+          "source_suffix": "demand.rou.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/demand.rou.xml",
+          "sha256": "1e115c4ddfd3c61f7c7fbca73c7f76ba0862d111d54ac7d8698b5808664ee1e6"
+        },
+        {
+          "source_suffix": "netconvert.stderr.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/netconvert.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "netconvert.stdout.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/netconvert.stdout.log",
+          "sha256": "c5b6fd8211edd733614c0fcc956b64ff288d5876926ffe7291fcfa8bf3dbb887"
+        },
+        {
+          "source_suffix": "network.net.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/network.net.xml",
+          "sha256": "9a8613629143e34f5fb0d1cd39dea890424816e87c6238264c8395c2c3775eb0"
+        },
+        {
+          "source_suffix": "outputs/fcd.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/outputs/fcd.xml",
+          "sha256": "1915db89972b1f89e7d369acf39dee38241f9d8f849e7e4f7f1946105afe82b4"
+        },
+        {
+          "source_suffix": "outputs/mainline_merge_entry_e1_l0.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/outputs/mainline_merge_entry_e1_l0.xml",
+          "sha256": "a1d5d9d10edf0ed494d83b4e92126759929359698af8a59f3033bd1497cbb58e"
+        },
+        {
+          "source_suffix": "outputs/mainline_merge_entry_e1_l1.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/outputs/mainline_merge_entry_e1_l1.xml",
+          "sha256": "631fc0aabcbad3523833942f011777fa4c4aacaee3c0dfc4a7e7a86d928c4836"
+        },
+        {
+          "source_suffix": "outputs/merge_downstream_e1_l0.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/outputs/merge_downstream_e1_l0.xml",
+          "sha256": "0b8c4e7960c515231104fd9b5601087ce0c81b017759ef7581bcfdc532adb7c3"
+        },
+        {
+          "source_suffix": "outputs/merge_downstream_e1_l1.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/outputs/merge_downstream_e1_l1.xml",
+          "sha256": "395cbf7da30992086f9327b6bfc66ae0b02c9b65daa384850e71c911a2243ef3"
+        },
+        {
+          "source_suffix": "outputs/merge_upstream_e1_l0.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/outputs/merge_upstream_e1_l0.xml",
+          "sha256": "3884ab19ee681f8683c10cf728a1fb919ade3ea631e90df79bcf8fc0304b516a"
+        },
+        {
+          "source_suffix": "outputs/merge_upstream_e1_l1.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/outputs/merge_upstream_e1_l1.xml",
+          "sha256": "a7ea01fed802e5cab93315688cc575acfbb2c0c1e938fcbf1490128318b75f9f"
+        },
+        {
+          "source_suffix": "outputs/queues.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/outputs/queues.xml",
+          "sha256": "f3622eb18952e0b365890a4d0b2cc07cdef9e9a886f20aabd6e493e834a856fd"
+        },
+        {
+          "source_suffix": "outputs/ramp_storage_e2.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/outputs/ramp_storage_e2.xml",
+          "sha256": "189aed5aef3696fdcd12ff3ff92a56e8a0a57e44ed962ea1d953e68a665fccf1"
+        },
+        {
+          "source_suffix": "outputs/shared_boundary_e2.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/outputs/shared_boundary_e2.xml",
+          "sha256": "7c44b5ee4fad8b1b46324e18e363c78a8dfc6548ad8bd9093a6e17295fbba5b4"
+        },
+        {
+          "source_suffix": "outputs/sumo.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/outputs/sumo.log",
+          "sha256": "066b416c8724d629816f57a687703b0090e26892a51a1b9e8c1a4c3e1741f169"
+        },
+        {
+          "source_suffix": "outputs/sumo.stderr.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/outputs/sumo.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "outputs/sumo.stdout.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/outputs/sumo.stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "outputs/sumo_error.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/outputs/sumo_error.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "outputs/sumo_summary.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/outputs/sumo_summary.xml",
+          "sha256": "81ed9a847203bd9d07a019b0420cb507bfce79727041a8b350c92c7f721ace95"
+        },
+        {
+          "source_suffix": "outputs/tls_states.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/outputs/tls_states.xml",
+          "sha256": "3c90386fdf96b527f51c15cbe2e5bfaf8c1b536d33431949039eb1ed41cd1ff8"
+        },
+        {
+          "source_suffix": "outputs/tripinfo.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/outputs/tripinfo.xml",
+          "sha256": "60f38542983e170cd9d72eea83ae5677dddfaa97bc5d8d1fe50b5c5a62370e25"
+        },
+        {
+          "source_suffix": "outputs/vehroute.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/outputs/vehroute.xml",
+          "sha256": "fde9b1fa020de13f343fcc03c5fba2ffaf2628bea0f752549a7567e8cab31de0"
+        },
+        {
+          "source_suffix": "scenario.add.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/scenario.add.xml",
+          "sha256": "db54139fbf676c99860472ba20e7c58909116a6687a6daa3e90bf8ba97fce73c"
+        },
+        {
+          "source_suffix": "scenario.con.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/scenario.con.xml",
+          "sha256": "d154948200c9b4d9a3d54bf04647357daaff0e6a19293f19fcef457ee4ae4ea5"
+        },
+        {
+          "source_suffix": "scenario.edg.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/scenario.edg.xml",
+          "sha256": "d6c7d6df0b8a5afc60a8bfedd796b9d14baa56ec44cf322e3129f976396cff53"
+        },
+        {
+          "source_suffix": "scenario.nod.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/scenario.nod.xml",
+          "sha256": "b1577412ba28470abe3270913833a4053ca6be174f2eede55de77aa5b8a2c923"
+        },
+        {
+          "source_suffix": "scenario.sumocfg",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/scenario.sumocfg",
+          "sha256": "0e0f99a7af694e7f448efdb66837143100478da2151ae83ba3e1c6772a811db0"
+        },
+        {
+          "source_suffix": "scenario.tll.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/scenario.tll.xml",
+          "sha256": "89f25ab5020e4f2df2fc035233b038c89cc80cf748f6dca19b5584e829df3ecc"
+        },
+        {
+          "source_suffix": "summary.json",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/summary.json",
+          "sha256": "2668cf17ad92d455be4e0e9369d36344cf3f61a540caa493caa812c05acd0787"
+        }
+      ]
+    },
+    {
+      "run_id": "ML23",
+      "attempt_id": "ML23_attempt1",
+      "selected_attempt": true,
+      "seed": 23,
+      "condition": "ML",
+      "requested_demand_vehph": {
+        "M": 2600.0,
+        "R": 720.0,
+        "U": 360.0,
+        "X": 180.0
+      },
+      "time_windows": {
+        "clearance": {
+          "begin_s": 1500,
+          "duration_s": 1200,
+          "end_s": 2700
+        },
+        "demand": {
+          "begin_s": 0,
+          "duration_s": 1500,
+          "end_s": 1500
+        },
+        "measurement": {
+          "begin_s": 0,
+          "duration_s": 1500,
+          "end_s": 1500
+        },
+        "simulation": {
+          "begin_s": 0,
+          "duration_s": 2700,
+          "end_s": 2700
+        },
+        "status": "all time values are exploratory candidates and are not frozen",
+        "warmup": {
+          "begin_s": 0,
+          "duration_s": 0,
+          "end_s": 0
+        }
+      },
+      "sumo_version": "Eclipse SUMO sumo 1.26.0",
+      "netconvert_version": "Eclipse SUMO netconvert 1.26.0",
+      "source_map_path": "data/processed/stage2_completion_20260909_v1/source_maps/ML23_attempt1.json",
+      "source_map_sha256": "8cc3bb134a515f3468f9969ddfcbaba6589f17292c8a437daeaf3355748e6130",
+      "archive_runtime_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1",
+      "archive_file_count": 29,
+      "files": [
+        {
+          "source_suffix": "demand.rou.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/demand.rou.xml",
+          "sha256": "1e115c4ddfd3c61f7c7fbca73c7f76ba0862d111d54ac7d8698b5808664ee1e6"
+        },
+        {
+          "source_suffix": "netconvert.stderr.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/netconvert.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "netconvert.stdout.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/netconvert.stdout.log",
+          "sha256": "c5b6fd8211edd733614c0fcc956b64ff288d5876926ffe7291fcfa8bf3dbb887"
+        },
+        {
+          "source_suffix": "network.net.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/network.net.xml",
+          "sha256": "5cdb3d04718153b66a77cb1ef7679205ba35d89ab0f8a7d237276e54dbe855d7"
+        },
+        {
+          "source_suffix": "outputs/fcd.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/outputs/fcd.xml",
+          "sha256": "9fc69546f3506c2c3d6e00c1da5f1e8495a482d03a135b1215f0c7a07d4cfeaf"
+        },
+        {
+          "source_suffix": "outputs/mainline_merge_entry_e1_l0.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/outputs/mainline_merge_entry_e1_l0.xml",
+          "sha256": "6633f27043f33be0a94198ae5a63a029f6a2cacaa4478a36bc761d840580e2c4"
+        },
+        {
+          "source_suffix": "outputs/mainline_merge_entry_e1_l1.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/outputs/mainline_merge_entry_e1_l1.xml",
+          "sha256": "f3d38f5c806052c355d3f82ae5e8a30ae238d9deaf0a2c0fb38c773bf113d9ae"
+        },
+        {
+          "source_suffix": "outputs/merge_downstream_e1_l0.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/outputs/merge_downstream_e1_l0.xml",
+          "sha256": "3db2f50cc42c66e80bd4c66dc4e258d0f9803d160541b07f2cf257de6617b208"
+        },
+        {
+          "source_suffix": "outputs/merge_downstream_e1_l1.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/outputs/merge_downstream_e1_l1.xml",
+          "sha256": "52cbfa5286eeadaa63f9651f2dd4f63788eba94a02e13ef22e0be8efd98a0403"
+        },
+        {
+          "source_suffix": "outputs/merge_upstream_e1_l0.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/outputs/merge_upstream_e1_l0.xml",
+          "sha256": "6bf2af51dc9233c8f6770497bb090643277e9f0d26275dc0bff4ea1e6e6fc4f0"
+        },
+        {
+          "source_suffix": "outputs/merge_upstream_e1_l1.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/outputs/merge_upstream_e1_l1.xml",
+          "sha256": "dcbf1c35b97985cde442fccb56dffb4a6cdc0ea394af909cdd2aad2ae262c388"
+        },
+        {
+          "source_suffix": "outputs/queues.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/outputs/queues.xml",
+          "sha256": "8b6d87c4ceb347891936fbb35c825a957fee05209fcee2aab0c9566541384007"
+        },
+        {
+          "source_suffix": "outputs/ramp_storage_e2.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/outputs/ramp_storage_e2.xml",
+          "sha256": "8d8b384ec6123e2cdf82a889fcabaece62f9f20d6b696c1cf74a93ad9a70be74"
+        },
+        {
+          "source_suffix": "outputs/shared_boundary_e2.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/outputs/shared_boundary_e2.xml",
+          "sha256": "3881a759a75430907c20eab23516d414809f0b24f0c17316b28f37d4e9506222"
+        },
+        {
+          "source_suffix": "outputs/sumo.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/outputs/sumo.log",
+          "sha256": "cbd52c77eb26c4fe000f1326058cb7af2dde8d6506fc86cf67ce2842293d9635"
+        },
+        {
+          "source_suffix": "outputs/sumo.stderr.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/outputs/sumo.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "outputs/sumo.stdout.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/outputs/sumo.stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "outputs/sumo_error.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/outputs/sumo_error.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "outputs/sumo_summary.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/outputs/sumo_summary.xml",
+          "sha256": "14e6398c794371b707a35d5708754a401eaaa5812cbdb311402794747002693e"
+        },
+        {
+          "source_suffix": "outputs/tls_states.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/outputs/tls_states.xml",
+          "sha256": "06b2e439e29384cd05d46b6a8ebb72e18433129e092413031f84d844bda056fb"
+        },
+        {
+          "source_suffix": "outputs/tripinfo.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/outputs/tripinfo.xml",
+          "sha256": "bba20faffef3aac9b0b450ddc46d228425383466ed615168c36d31206e897680"
+        },
+        {
+          "source_suffix": "outputs/vehroute.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/outputs/vehroute.xml",
+          "sha256": "324e8c87f2269fc08ef152c69cf21822e73bf7c443d46efb2ffdf346af8b0969"
+        },
+        {
+          "source_suffix": "scenario.add.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/scenario.add.xml",
+          "sha256": "200d8b1b45fe615a71fc3f6193ccfd68bd602e09877eed3be8c33cf21cb8661f"
+        },
+        {
+          "source_suffix": "scenario.con.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/scenario.con.xml",
+          "sha256": "d154948200c9b4d9a3d54bf04647357daaff0e6a19293f19fcef457ee4ae4ea5"
+        },
+        {
+          "source_suffix": "scenario.edg.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/scenario.edg.xml",
+          "sha256": "d6c7d6df0b8a5afc60a8bfedd796b9d14baa56ec44cf322e3129f976396cff53"
+        },
+        {
+          "source_suffix": "scenario.nod.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/scenario.nod.xml",
+          "sha256": "b1577412ba28470abe3270913833a4053ca6be174f2eede55de77aa5b8a2c923"
+        },
+        {
+          "source_suffix": "scenario.sumocfg",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/scenario.sumocfg",
+          "sha256": "0e0f99a7af694e7f448efdb66837143100478da2151ae83ba3e1c6772a811db0"
+        },
+        {
+          "source_suffix": "scenario.tll.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/scenario.tll.xml",
+          "sha256": "89f25ab5020e4f2df2fc035233b038c89cc80cf748f6dca19b5584e829df3ecc"
+        },
+        {
+          "source_suffix": "summary.json",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/summary.json",
+          "sha256": "40b04c73f3e52fb87d75781efcfa99a5e5ecc1622db20b87102599e1f649a0f9"
+        }
+      ]
+    },
+    {
+      "run_id": "MH17",
+      "attempt_id": "MH17_attempt1",
+      "selected_attempt": true,
+      "seed": 17,
+      "condition": "MH",
+      "requested_demand_vehph": {
+        "M": 3800.0,
+        "R": 720.0,
+        "U": 360.0,
+        "X": 180.0
+      },
+      "time_windows": {
+        "clearance": {
+          "begin_s": 1500,
+          "duration_s": 1200,
+          "end_s": 2700
+        },
+        "demand": {
+          "begin_s": 0,
+          "duration_s": 1500,
+          "end_s": 1500
+        },
+        "measurement": {
+          "begin_s": 0,
+          "duration_s": 1500,
+          "end_s": 1500
+        },
+        "simulation": {
+          "begin_s": 0,
+          "duration_s": 2700,
+          "end_s": 2700
+        },
+        "status": "all time values are exploratory candidates and are not frozen",
+        "warmup": {
+          "begin_s": 0,
+          "duration_s": 0,
+          "end_s": 0
+        }
+      },
+      "sumo_version": "Eclipse SUMO sumo 1.26.0",
+      "netconvert_version": "Eclipse SUMO netconvert 1.26.0",
+      "source_map_path": "data/processed/stage2_completion_20260909_v1/source_maps/MH17_attempt1.json",
+      "source_map_sha256": "4a6ff66e7ff981a15db32e56905d88f93c8a903f4318887e17dc66a3f4fcd97f",
+      "archive_runtime_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1",
+      "archive_file_count": 29,
+      "files": [
+        {
+          "source_suffix": "demand.rou.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/demand.rou.xml",
+          "sha256": "eeecf1caa3290e243b83a81a131c13db709a95451c65f6c19b09d324d35e6993"
+        },
+        {
+          "source_suffix": "netconvert.stderr.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/netconvert.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "netconvert.stdout.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/netconvert.stdout.log",
+          "sha256": "c5b6fd8211edd733614c0fcc956b64ff288d5876926ffe7291fcfa8bf3dbb887"
+        },
+        {
+          "source_suffix": "network.net.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/network.net.xml",
+          "sha256": "54ed1e02a669d2f408a484d97ad77a2f158a940e358c1e931015fed54bcb658d"
+        },
+        {
+          "source_suffix": "outputs/fcd.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/fcd.xml",
+          "sha256": "2554a60ba99f64cafd2a173125ec5adae3ac3923ef8df0ce6d05938d7732995c"
+        },
+        {
+          "source_suffix": "outputs/mainline_merge_entry_e1_l0.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/mainline_merge_entry_e1_l0.xml",
+          "sha256": "9c3b5b283d7a1a39f4d1bb5059c4eed6b152ae5ac8acc0f600aff4d6a9f2c267"
+        },
+        {
+          "source_suffix": "outputs/mainline_merge_entry_e1_l1.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/mainline_merge_entry_e1_l1.xml",
+          "sha256": "37d9ecf00d0aeca890e8937b28bed385f4c8d60cbacd32f83e23c973d20dac54"
+        },
+        {
+          "source_suffix": "outputs/merge_downstream_e1_l0.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/merge_downstream_e1_l0.xml",
+          "sha256": "bae6037b8139dd4e7821748f3aab08911a74ee2708495ef1b0c10e34d23001eb"
+        },
+        {
+          "source_suffix": "outputs/merge_downstream_e1_l1.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/merge_downstream_e1_l1.xml",
+          "sha256": "98d22dd1d3df9527a907fd170c8ae43ca8a67053d9a519c165075f7f5a64dd4b"
+        },
+        {
+          "source_suffix": "outputs/merge_upstream_e1_l0.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/merge_upstream_e1_l0.xml",
+          "sha256": "16f757a99f6533e079eec5b52a381fc59bf461cc6c0661d0477e991a464ab775"
+        },
+        {
+          "source_suffix": "outputs/merge_upstream_e1_l1.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/merge_upstream_e1_l1.xml",
+          "sha256": "7083feb3434c17626a222ef19a14f89997c7a570128f46cf91cd45abf1f21a7b"
+        },
+        {
+          "source_suffix": "outputs/queues.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/queues.xml",
+          "sha256": "1be7b7e8c67f41ddb91a8f216adc0b9157871ba7a503b8ac598c86bf4abbafb1"
+        },
+        {
+          "source_suffix": "outputs/ramp_storage_e2.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/ramp_storage_e2.xml",
+          "sha256": "e4af251e46d21abba10b12fd45a17e194346e6358898b51ebe310ee7506bc489"
+        },
+        {
+          "source_suffix": "outputs/shared_boundary_e2.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/shared_boundary_e2.xml",
+          "sha256": "2151452a806d95925b864dea45228ebe03f752471ae6c82e8b25948ae694039c"
+        },
+        {
+          "source_suffix": "outputs/sumo.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/sumo.log",
+          "sha256": "d277332dc7be81627a27c99bb461a924176c535c756c8d3126d903edd672ebf3"
+        },
+        {
+          "source_suffix": "outputs/sumo.stderr.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/sumo.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "outputs/sumo.stdout.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/sumo.stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "outputs/sumo_error.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/sumo_error.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "outputs/sumo_summary.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/sumo_summary.xml",
+          "sha256": "0f357d27c3862ffc43bfc6951918bde2f2c1acd77ffa74e1504b58676f4bed3b"
+        },
+        {
+          "source_suffix": "outputs/tls_states.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/tls_states.xml",
+          "sha256": "dff705de7ac12833f5e8189425d8086f96f2cbf636874b618687b7d749a683c0"
+        },
+        {
+          "source_suffix": "outputs/tripinfo.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/tripinfo.xml",
+          "sha256": "5e1ee26d23e81264382b054e25d159a83744595409b7e17b3616e496dfd29ade"
+        },
+        {
+          "source_suffix": "outputs/vehroute.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/vehroute.xml",
+          "sha256": "f3b2c18b99f7ec021396439276be16c36b7333ef60768b12cbf221bf423b7f3e"
+        },
+        {
+          "source_suffix": "scenario.add.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/scenario.add.xml",
+          "sha256": "f2b73d23625b5d13de1cc26c13dae68295021e851f1fd4a720371719ecffefeb"
+        },
+        {
+          "source_suffix": "scenario.con.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/scenario.con.xml",
+          "sha256": "d154948200c9b4d9a3d54bf04647357daaff0e6a19293f19fcef457ee4ae4ea5"
+        },
+        {
+          "source_suffix": "scenario.edg.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/scenario.edg.xml",
+          "sha256": "d6c7d6df0b8a5afc60a8bfedd796b9d14baa56ec44cf322e3129f976396cff53"
+        },
+        {
+          "source_suffix": "scenario.nod.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/scenario.nod.xml",
+          "sha256": "b1577412ba28470abe3270913833a4053ca6be174f2eede55de77aa5b8a2c923"
+        },
+        {
+          "source_suffix": "scenario.sumocfg",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/scenario.sumocfg",
+          "sha256": "0e0f99a7af694e7f448efdb66837143100478da2151ae83ba3e1c6772a811db0"
+        },
+        {
+          "source_suffix": "scenario.tll.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/scenario.tll.xml",
+          "sha256": "89f25ab5020e4f2df2fc035233b038c89cc80cf748f6dca19b5584e829df3ecc"
+        },
+        {
+          "source_suffix": "summary.json",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/summary.json",
+          "sha256": "2068239fec4a050970cd78e2aabe773fc4aee26c918d3e736368283d678e8c24"
+        }
+      ]
+    },
+    {
+      "run_id": "MH23",
+      "attempt_id": "MH23_attempt1",
+      "selected_attempt": true,
+      "seed": 23,
+      "condition": "MH",
+      "requested_demand_vehph": {
+        "M": 3800.0,
+        "R": 720.0,
+        "U": 360.0,
+        "X": 180.0
+      },
+      "time_windows": {
+        "clearance": {
+          "begin_s": 1500,
+          "duration_s": 1200,
+          "end_s": 2700
+        },
+        "demand": {
+          "begin_s": 0,
+          "duration_s": 1500,
+          "end_s": 1500
+        },
+        "measurement": {
+          "begin_s": 0,
+          "duration_s": 1500,
+          "end_s": 1500
+        },
+        "simulation": {
+          "begin_s": 0,
+          "duration_s": 2700,
+          "end_s": 2700
+        },
+        "status": "all time values are exploratory candidates and are not frozen",
+        "warmup": {
+          "begin_s": 0,
+          "duration_s": 0,
+          "end_s": 0
+        }
+      },
+      "sumo_version": "Eclipse SUMO sumo 1.26.0",
+      "netconvert_version": "Eclipse SUMO netconvert 1.26.0",
+      "source_map_path": "data/processed/stage2_completion_20260909_v1/source_maps/MH23_attempt1.json",
+      "source_map_sha256": "67e5644aad9f38e40d86c726bf27e881bfffe9199f2cab987db317c09925f7c1",
+      "archive_runtime_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1",
+      "archive_file_count": 29,
+      "files": [
+        {
+          "source_suffix": "demand.rou.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/demand.rou.xml",
+          "sha256": "eeecf1caa3290e243b83a81a131c13db709a95451c65f6c19b09d324d35e6993"
+        },
+        {
+          "source_suffix": "netconvert.stderr.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/netconvert.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "netconvert.stdout.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/netconvert.stdout.log",
+          "sha256": "c5b6fd8211edd733614c0fcc956b64ff288d5876926ffe7291fcfa8bf3dbb887"
+        },
+        {
+          "source_suffix": "network.net.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/network.net.xml",
+          "sha256": "db4f9c5ea8923f667c709f92d90be8753a8c27900dc21f0946429291a337bb79"
+        },
+        {
+          "source_suffix": "outputs/fcd.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/outputs/fcd.xml",
+          "sha256": "d2fb7cbc7871393b09b8530d453dbf012bc116f316ded19aa9598daba499a087"
+        },
+        {
+          "source_suffix": "outputs/mainline_merge_entry_e1_l0.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/outputs/mainline_merge_entry_e1_l0.xml",
+          "sha256": "87cf883b28ee8046564f34547794732d865cbfb18c6f053770429866f98e76c6"
+        },
+        {
+          "source_suffix": "outputs/mainline_merge_entry_e1_l1.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/outputs/mainline_merge_entry_e1_l1.xml",
+          "sha256": "b799426dae0e4552a29081cd3db3220c3c5dc5cff8661bc1de4ca7ba695d7bbf"
+        },
+        {
+          "source_suffix": "outputs/merge_downstream_e1_l0.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/outputs/merge_downstream_e1_l0.xml",
+          "sha256": "5be9555d2b53819c7cf30efe5245c77abddeabd73ed679e49da29c50047b3a59"
+        },
+        {
+          "source_suffix": "outputs/merge_downstream_e1_l1.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/outputs/merge_downstream_e1_l1.xml",
+          "sha256": "0f120060ee11d73b8a31f201e0a3bc905785d515a9c71a89cfbde0c8a6e0f690"
+        },
+        {
+          "source_suffix": "outputs/merge_upstream_e1_l0.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/outputs/merge_upstream_e1_l0.xml",
+          "sha256": "7f24b8a894751baf041c95007084f97cb9b2d9f96e278c9e053ae831aff72ff0"
+        },
+        {
+          "source_suffix": "outputs/merge_upstream_e1_l1.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/outputs/merge_upstream_e1_l1.xml",
+          "sha256": "89647f801c3c304dea645882c86c36ebb216701705250f82cb4856138f5c738f"
+        },
+        {
+          "source_suffix": "outputs/queues.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/outputs/queues.xml",
+          "sha256": "2dad3e99f81b9578954f2ab9cf1cbe0c55088e2b9f7c1680720dd895f5bd2abc"
+        },
+        {
+          "source_suffix": "outputs/ramp_storage_e2.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/outputs/ramp_storage_e2.xml",
+          "sha256": "5d6b1f2be8fd1afff32f4c12ddcecead802fd983a14cf0690ea5d95eb87467e8"
+        },
+        {
+          "source_suffix": "outputs/shared_boundary_e2.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/outputs/shared_boundary_e2.xml",
+          "sha256": "be32b2a134a4ce4d85bc3e9bc2dfddddf6c65032be232790e53686b1903a7fd5"
+        },
+        {
+          "source_suffix": "outputs/sumo.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/outputs/sumo.log",
+          "sha256": "67d1109a50d0316c7c7d09f7b728c047f423d73cf0e9d326730d930ca371c7d8"
+        },
+        {
+          "source_suffix": "outputs/sumo.stderr.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/outputs/sumo.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "outputs/sumo.stdout.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/outputs/sumo.stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "outputs/sumo_error.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/outputs/sumo_error.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "outputs/sumo_summary.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/outputs/sumo_summary.xml",
+          "sha256": "531a22dc2b115875b0ba256f3a828650edaf6bb85b7b9dc67be9a2f9d218e9f6"
+        },
+        {
+          "source_suffix": "outputs/tls_states.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/outputs/tls_states.xml",
+          "sha256": "a5666c4e213268ceb3fc8c5fcfc584e4634b5542e8fe3a9c2ec25819e5f877fd"
+        },
+        {
+          "source_suffix": "outputs/tripinfo.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/outputs/tripinfo.xml",
+          "sha256": "65c61d3b3f6e57a5dc86319eada462d2dda8047accc9d0a9380ee32285538e3a"
+        },
+        {
+          "source_suffix": "outputs/vehroute.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/outputs/vehroute.xml",
+          "sha256": "4fe4d94c0b984979dce5cbd8aee5a7ac3c3a6c5d135c7cfc2de6b41b3da641e1"
+        },
+        {
+          "source_suffix": "scenario.add.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/scenario.add.xml",
+          "sha256": "81d04b85fa256953a72506ef2f5e5e49d9af7ef5f1888d595b73298ec65b463c"
+        },
+        {
+          "source_suffix": "scenario.con.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/scenario.con.xml",
+          "sha256": "d154948200c9b4d9a3d54bf04647357daaff0e6a19293f19fcef457ee4ae4ea5"
+        },
+        {
+          "source_suffix": "scenario.edg.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/scenario.edg.xml",
+          "sha256": "d6c7d6df0b8a5afc60a8bfedd796b9d14baa56ec44cf322e3129f976396cff53"
+        },
+        {
+          "source_suffix": "scenario.nod.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/scenario.nod.xml",
+          "sha256": "b1577412ba28470abe3270913833a4053ca6be174f2eede55de77aa5b8a2c923"
+        },
+        {
+          "source_suffix": "scenario.sumocfg",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/scenario.sumocfg",
+          "sha256": "0e0f99a7af694e7f448efdb66837143100478da2151ae83ba3e1c6772a811db0"
+        },
+        {
+          "source_suffix": "scenario.tll.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/scenario.tll.xml",
+          "sha256": "89f25ab5020e4f2df2fc035233b038c89cc80cf748f6dca19b5584e829df3ecc"
+        },
+        {
+          "source_suffix": "summary.json",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/summary.json",
+          "sha256": "c1c6a590f7104b5e5039e3ea90b2f17af18684899dc56b4fcf7b22589a82099e"
+        }
+      ]
+    },
+    {
+      "run_id": "RL17",
+      "attempt_id": "RL17_attempt1",
+      "selected_attempt": true,
+      "seed": 17,
+      "condition": "RL",
+      "requested_demand_vehph": {
+        "M": 3200.0,
+        "R": 360.0,
+        "U": 360.0,
+        "X": 180.0
+      },
+      "time_windows": {
+        "clearance": {
+          "begin_s": 1500,
+          "duration_s": 1200,
+          "end_s": 2700
+        },
+        "demand": {
+          "begin_s": 0,
+          "duration_s": 1500,
+          "end_s": 1500
+        },
+        "measurement": {
+          "begin_s": 0,
+          "duration_s": 1500,
+          "end_s": 1500
+        },
+        "simulation": {
+          "begin_s": 0,
+          "duration_s": 2700,
+          "end_s": 2700
+        },
+        "status": "all time values are exploratory candidates and are not frozen",
+        "warmup": {
+          "begin_s": 0,
+          "duration_s": 0,
+          "end_s": 0
+        }
+      },
+      "sumo_version": "Eclipse SUMO sumo 1.26.0",
+      "netconvert_version": "Eclipse SUMO netconvert 1.26.0",
+      "source_map_path": "data/processed/stage2_completion_20260909_v1/source_maps/RL17_attempt1.json",
+      "source_map_sha256": "3efedb7ea868c7cf94c7278547d95a770781287ec807adfa883d9d7f19439e87",
+      "archive_runtime_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1",
+      "archive_file_count": 29,
+      "files": [
+        {
+          "source_suffix": "demand.rou.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/demand.rou.xml",
+          "sha256": "8c65e758c6688f22a04af2cc2331b8938cc45a58fa97491db5aa77ee37ce5472"
+        },
+        {
+          "source_suffix": "netconvert.stderr.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/netconvert.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "netconvert.stdout.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/netconvert.stdout.log",
+          "sha256": "c5b6fd8211edd733614c0fcc956b64ff288d5876926ffe7291fcfa8bf3dbb887"
+        },
+        {
+          "source_suffix": "network.net.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/network.net.xml",
+          "sha256": "ad7d8a107a9e83fed53066014fdd241c51fa9611171a0b0326787b20fb064d5f"
+        },
+        {
+          "source_suffix": "outputs/fcd.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/outputs/fcd.xml",
+          "sha256": "600a5fc77e03c035fbf5eb2d7192c4113d23b4f49c2df7df4968925f0c6ef834"
+        },
+        {
+          "source_suffix": "outputs/mainline_merge_entry_e1_l0.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/outputs/mainline_merge_entry_e1_l0.xml",
+          "sha256": "1018132b7c01ef8fd9636ab59b01ac65344f9033f8f83e5b42cfa992b17509c5"
+        },
+        {
+          "source_suffix": "outputs/mainline_merge_entry_e1_l1.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/outputs/mainline_merge_entry_e1_l1.xml",
+          "sha256": "11525d09b86ea542046417b86051fb4a34455313a98055e7225bc04472abe5d0"
+        },
+        {
+          "source_suffix": "outputs/merge_downstream_e1_l0.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/outputs/merge_downstream_e1_l0.xml",
+          "sha256": "24b9329517e538ce663eb08e9191de3069a9445fc98f5af0b0a58f93150fc3d5"
+        },
+        {
+          "source_suffix": "outputs/merge_downstream_e1_l1.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/outputs/merge_downstream_e1_l1.xml",
+          "sha256": "002a528a2c0ebac3c90ff8dbae441830999cb3b41cc0df4427890d57efe5c4f2"
+        },
+        {
+          "source_suffix": "outputs/merge_upstream_e1_l0.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/outputs/merge_upstream_e1_l0.xml",
+          "sha256": "22ae891faf62cc0bc49111a4132cef14883365f3a9ad24cd99e34a583eb438ca"
+        },
+        {
+          "source_suffix": "outputs/merge_upstream_e1_l1.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/outputs/merge_upstream_e1_l1.xml",
+          "sha256": "714c2f96a3b8c3f7efedeec517f02ebf8d4bc0110fa20571847071d5e0588e16"
+        },
+        {
+          "source_suffix": "outputs/queues.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/outputs/queues.xml",
+          "sha256": "47c807318a1ed05b0c79397d3506c18778ea427156d266a83db1031bc4b74fe4"
+        },
+        {
+          "source_suffix": "outputs/ramp_storage_e2.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/outputs/ramp_storage_e2.xml",
+          "sha256": "4e1719f163f7d2dc02aa052a8c44bd14fac7ba433dd58bb7f66c416c1b1f7c18"
+        },
+        {
+          "source_suffix": "outputs/shared_boundary_e2.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/outputs/shared_boundary_e2.xml",
+          "sha256": "8a8097144d34bfe7d3d98768645903291755ded2495af46a73db024846cb20b5"
+        },
+        {
+          "source_suffix": "outputs/sumo.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/outputs/sumo.log",
+          "sha256": "59da7da2bf937e9197e490a676fae9de7d61a752ff10bf3376ea1427ffc1ba1e"
+        },
+        {
+          "source_suffix": "outputs/sumo.stderr.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/outputs/sumo.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "outputs/sumo.stdout.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/outputs/sumo.stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "outputs/sumo_error.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/outputs/sumo_error.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "outputs/sumo_summary.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/outputs/sumo_summary.xml",
+          "sha256": "411b5d1a89fbfc47202fe728bbe870c4d0b7a6ef13882da0a3a513c509bbd8ba"
+        },
+        {
+          "source_suffix": "outputs/tls_states.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/outputs/tls_states.xml",
+          "sha256": "0eb65433036eab1cdf4694027f7571c4635d1a594f07477bd8b246757077f562"
+        },
+        {
+          "source_suffix": "outputs/tripinfo.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/outputs/tripinfo.xml",
+          "sha256": "2f901e13c11aaef8aa3e42e6859e59263e580fd32cb43dc4e9480553cf042b19"
+        },
+        {
+          "source_suffix": "outputs/vehroute.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/outputs/vehroute.xml",
+          "sha256": "626a73dbfa77f2c1cc607a0a9e009a340e0d177d8dbe9cd6b351ce1792e6da1a"
+        },
+        {
+          "source_suffix": "scenario.add.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/scenario.add.xml",
+          "sha256": "8467d184fbd78aa8a2a116250fdc9ee11e33746dfb332a25619e5bc159b0080a"
+        },
+        {
+          "source_suffix": "scenario.con.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/scenario.con.xml",
+          "sha256": "d154948200c9b4d9a3d54bf04647357daaff0e6a19293f19fcef457ee4ae4ea5"
+        },
+        {
+          "source_suffix": "scenario.edg.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/scenario.edg.xml",
+          "sha256": "d6c7d6df0b8a5afc60a8bfedd796b9d14baa56ec44cf322e3129f976396cff53"
+        },
+        {
+          "source_suffix": "scenario.nod.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/scenario.nod.xml",
+          "sha256": "b1577412ba28470abe3270913833a4053ca6be174f2eede55de77aa5b8a2c923"
+        },
+        {
+          "source_suffix": "scenario.sumocfg",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/scenario.sumocfg",
+          "sha256": "0e0f99a7af694e7f448efdb66837143100478da2151ae83ba3e1c6772a811db0"
+        },
+        {
+          "source_suffix": "scenario.tll.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/scenario.tll.xml",
+          "sha256": "89f25ab5020e4f2df2fc035233b038c89cc80cf748f6dca19b5584e829df3ecc"
+        },
+        {
+          "source_suffix": "summary.json",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/summary.json",
+          "sha256": "624f739c86200d138f495f919156ef3db13877ca9dc06d0943109be70f95e603"
+        }
+      ]
+    },
+    {
+      "run_id": "RL23",
+      "attempt_id": "RL23_attempt1",
+      "selected_attempt": true,
+      "seed": 23,
+      "condition": "RL",
+      "requested_demand_vehph": {
+        "M": 3200.0,
+        "R": 360.0,
+        "U": 360.0,
+        "X": 180.0
+      },
+      "time_windows": {
+        "clearance": {
+          "begin_s": 1500,
+          "duration_s": 1200,
+          "end_s": 2700
+        },
+        "demand": {
+          "begin_s": 0,
+          "duration_s": 1500,
+          "end_s": 1500
+        },
+        "measurement": {
+          "begin_s": 0,
+          "duration_s": 1500,
+          "end_s": 1500
+        },
+        "simulation": {
+          "begin_s": 0,
+          "duration_s": 2700,
+          "end_s": 2700
+        },
+        "status": "all time values are exploratory candidates and are not frozen",
+        "warmup": {
+          "begin_s": 0,
+          "duration_s": 0,
+          "end_s": 0
+        }
+      },
+      "sumo_version": "Eclipse SUMO sumo 1.26.0",
+      "netconvert_version": "Eclipse SUMO netconvert 1.26.0",
+      "source_map_path": "data/processed/stage2_completion_20260909_v1/source_maps/RL23_attempt1.json",
+      "source_map_sha256": "ca411acc1a3c71ebafadb3e8fe63efbd326bcac280c6134c69ae724deb1dd4ce",
+      "archive_runtime_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1",
+      "archive_file_count": 29,
+      "files": [
+        {
+          "source_suffix": "demand.rou.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/demand.rou.xml",
+          "sha256": "8c65e758c6688f22a04af2cc2331b8938cc45a58fa97491db5aa77ee37ce5472"
+        },
+        {
+          "source_suffix": "netconvert.stderr.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/netconvert.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "netconvert.stdout.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/netconvert.stdout.log",
+          "sha256": "c5b6fd8211edd733614c0fcc956b64ff288d5876926ffe7291fcfa8bf3dbb887"
+        },
+        {
+          "source_suffix": "network.net.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/network.net.xml",
+          "sha256": "1ad11dc3af1c9d822d5ceafc55268d6d2f4e301dceea79172c98a7a9c233a6d4"
+        },
+        {
+          "source_suffix": "outputs/fcd.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/outputs/fcd.xml",
+          "sha256": "39ef7fe893ccd9a658245c6f8b6ae16e5d5d95932f16641c1f17364e7ef8bb3f"
+        },
+        {
+          "source_suffix": "outputs/mainline_merge_entry_e1_l0.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/outputs/mainline_merge_entry_e1_l0.xml",
+          "sha256": "cc0a4529c07d4b0a427a9ffa04de28f5c21985505b7ce248d275ae5ef4b1cf41"
+        },
+        {
+          "source_suffix": "outputs/mainline_merge_entry_e1_l1.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/outputs/mainline_merge_entry_e1_l1.xml",
+          "sha256": "cc946951ed97a299e12df9f06be354da4250a13e3a1d16ea76417ca49912e912"
+        },
+        {
+          "source_suffix": "outputs/merge_downstream_e1_l0.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/outputs/merge_downstream_e1_l0.xml",
+          "sha256": "cbdfb87b506f2395f77766393a9f2d9952256b0d1f9fd9a1a35243bf0c3914d9"
+        },
+        {
+          "source_suffix": "outputs/merge_downstream_e1_l1.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/outputs/merge_downstream_e1_l1.xml",
+          "sha256": "2d533932ebfbe3f607d850038906db25ab8da23d6e5189c1a97aa79bc1b0be74"
+        },
+        {
+          "source_suffix": "outputs/merge_upstream_e1_l0.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/outputs/merge_upstream_e1_l0.xml",
+          "sha256": "6d3689123420ec697dc6c574a273a8c86723a3e0fb08099b95a1ba3e07b0202e"
+        },
+        {
+          "source_suffix": "outputs/merge_upstream_e1_l1.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/outputs/merge_upstream_e1_l1.xml",
+          "sha256": "2db3a32ff0e032a74f068e8855c1735e191eb0365048af4c1ef440b4926e3766"
+        },
+        {
+          "source_suffix": "outputs/queues.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/outputs/queues.xml",
+          "sha256": "11b1e2c9a749119474d741cfcf3032c4b357d1e076fff8d68f9c63ee197ff7f2"
+        },
+        {
+          "source_suffix": "outputs/ramp_storage_e2.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/outputs/ramp_storage_e2.xml",
+          "sha256": "17b6724c9020d54fba5fd4deae0b653bef68a1ac5b4ddcaa8de5be11367495aa"
+        },
+        {
+          "source_suffix": "outputs/shared_boundary_e2.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/outputs/shared_boundary_e2.xml",
+          "sha256": "391a6e6a2af363b4c29c8006105eeaa433d4edff9c2e1cf0e3ecf035bdab8e15"
+        },
+        {
+          "source_suffix": "outputs/sumo.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/outputs/sumo.log",
+          "sha256": "ad63c6f688bbc9b92cab5be2f10c98872ba31f546935e8d9c659ebb763e20494"
+        },
+        {
+          "source_suffix": "outputs/sumo.stderr.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/outputs/sumo.stderr.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "outputs/sumo.stdout.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/outputs/sumo.stdout.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "outputs/sumo_error.log",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/outputs/sumo_error.log",
+          "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+        },
+        {
+          "source_suffix": "outputs/sumo_summary.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/outputs/sumo_summary.xml",
+          "sha256": "9a5d82515784714a4305479e2e6d68db5491a6e32328c29ce6167fcf8e5e5152"
+        },
+        {
+          "source_suffix": "outputs/tls_states.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/outputs/tls_states.xml",
+          "sha256": "d37484cc7bd8406af3e384a1945b95335de3a4b7915505e12dc2be4bf60914dc"
+        },
+        {
+          "source_suffix": "outputs/tripinfo.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/outputs/tripinfo.xml",
+          "sha256": "2acaf731bf9bfd756725d7d292248b31fbcc1c2e2f96e360c4532254bcac8427"
+        },
+        {
+          "source_suffix": "outputs/vehroute.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/outputs/vehroute.xml",
+          "sha256": "91475ddc1598e22a3a674ef079ec1bf5d31aafae6806da3ce81054119582171c"
+        },
+        {
+          "source_suffix": "scenario.add.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/scenario.add.xml",
+          "sha256": "edb5b457c50f1fa218e27ec16637670536fa8d8fdc7d623690a7479bbfe989d1"
+        },
+        {
+          "source_suffix": "scenario.con.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/scenario.con.xml",
+          "sha256": "d154948200c9b4d9a3d54bf04647357daaff0e6a19293f19fcef457ee4ae4ea5"
+        },
+        {
+          "source_suffix": "scenario.edg.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/scenario.edg.xml",
+          "sha256": "d6c7d6df0b8a5afc60a8bfedd796b9d14baa56ec44cf322e3129f976396cff53"
+        },
+        {
+          "source_suffix": "scenario.nod.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/scenario.nod.xml",
+          "sha256": "b1577412ba28470abe3270913833a4053ca6be174f2eede55de77aa5b8a2c923"
+        },
+        {
+          "source_suffix": "scenario.sumocfg",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/scenario.sumocfg",
+          "sha256": "0e0f99a7af694e7f448efdb66837143100478da2151ae83ba3e1c6772a811db0"
+        },
+        {
+          "source_suffix": "scenario.tll.xml",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/scenario.tll.xml",
+          "sha256": "89f25ab5020e4f2df2fc035233b038c89cc80cf748f6dca19b5584e829df3ecc"
+        },
+        {
+          "source_suffix": "summary.json",
+          "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/summary.json",
+          "sha256": "35e3623c3ece5a686580ec878817b1cb632a2274791ffacd2e535986743c1a60"
+        }
+      ]
+    }
+  ],
+  "static_hash_sets": {
+    "network.net.xml": [
+      "1ad11dc3af1c9d822d5ceafc55268d6d2f4e301dceea79172c98a7a9c233a6d4",
+      "54ed1e02a669d2f408a484d97ad77a2f158a940e358c1e931015fed54bcb658d",
+      "5cdb3d04718153b66a77cb1ef7679205ba35d89ab0f8a7d237276e54dbe855d7",
+      "9a8613629143e34f5fb0d1cd39dea890424816e87c6238264c8395c2c3775eb0",
+      "a83bb0c3a03b7e74cf8c2360336eb0dfbb330073cf8b8f6aea9940ff7cf3d8ea",
+      "ad7d8a107a9e83fed53066014fdd241c51fa9611171a0b0326787b20fb064d5f",
+      "d20ac5e0feb0d4b7d7a520702ec925d985315be6e27b461d69518cb1185eb551",
+      "db4f9c5ea8923f667c709f92d90be8753a8c27900dc21f0946429291a337bb79"
+    ],
+    "scenario.add.xml": [
+      "110901d2af3dfb9a11f0762fc231435abb3b2f01881accce58831ee4749f952b",
+      "200d8b1b45fe615a71fc3f6193ccfd68bd602e09877eed3be8c33cf21cb8661f",
+      "81d04b85fa256953a72506ef2f5e5e49d9af7ef5f1888d595b73298ec65b463c",
+      "8467d184fbd78aa8a2a116250fdc9ee11e33746dfb332a25619e5bc159b0080a",
+      "be46ba588a7ceaa8dfb8e3870e4f70176a9ac2b64f1abba6703b2f955a799941",
+      "db54139fbf676c99860472ba20e7c58909116a6687a6daa3e90bf8ba97fce73c",
+      "edb5b457c50f1fa218e27ec16637670536fa8d8fdc7d623690a7479bbfe989d1",
+      "f2b73d23625b5d13de1cc26c13dae68295021e851f1fd4a720371719ecffefeb"
+    ],
+    "scenario.sumocfg": [
+      "0e0f99a7af694e7f448efdb66837143100478da2151ae83ba3e1c6772a811db0"
+    ],
+    "scenario.tll.xml": [
+      "89f25ab5020e4f2df2fc035233b038c89cc80cf748f6dca19b5584e829df3ecc"
+    ]
+  }
+}

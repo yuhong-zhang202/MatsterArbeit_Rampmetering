@@ -1,0 +1,190 @@
+{
+  "archive_compatibility": {
+    "current_V0_identity_checks": 4,
+    "current_manifest": {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c01_archive_compatibility_revision_04/analysis_manifest.json",
+      "sha256": "87bad72c0f5cd2b872c6f982a547bfe47ce7632122915629fe54b58019b2e050"
+    },
+    "development_analysis_invocations": 4,
+    "identity_evidence": {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c02_engineering_revision_03/archive_identity_verification.json",
+      "sha256": "9a614e6873dd40d16d63d81756095e46472d629d2d86887d0ec3b415a8a3434b"
+    },
+    "physical_runs": 1
+  },
+  "authorization": {
+    "card": {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/validation_card_draft_revision_03.json",
+      "sha256": "d0ef6270f5bdd687621ab3513e9ba533c979a6ea37dbd9e8efd268b5234d1dfb"
+    },
+    "does_not_authorize": [
+      "SUMO",
+      "netconvert",
+      "TraCI",
+      "GUI",
+      "SG6-P"
+    ],
+    "quote": "\u6279\u51c6\uff0c\u8bf7\u7ee7\u7eed",
+    "source": "docs/WORKLOG.md section Stage 6 B registration accepted; C00-C02 authorized"
+  },
+  "budget_state": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c02_engineering_revision_02/budget_revision_0000.json",
+    "sha256": "26c63a05f95316190c2fc30d22272b077fa97ce183aa23f7fa1b84dc06ff5f64"
+  },
+  "capability_boundary": {
+    "V1_archive_entry": "blocked_by_evidence_error pending_C04_D",
+    "V1_low_level_measurements": "offline synthetic XML fixtures available",
+    "archive_entry": "V0 only, registered physical source-map/role/seed/condition hashes plus demand/summary/tripinfo runtime header",
+    "real_executor": "not_implemented_not_authorized",
+    "scientific_pair": "registered V1 ML/C same seed IDs, explicit synthetic_fixture evidence scope; no real V1 claim"
+  },
+  "compiled_files_created": 0,
+  "files": [
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/scenarios/stage6_h2_offline.py",
+      "sha256": "ec68742a87da612d03a486dcf39b985fe75a7ccc1ecd28107476193f3a682de8"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/analysis/stage6_h2_measurement.py",
+      "sha256": "f5d54992453e3d268bd491d22d7a3d89e9158e3de9fc6adc33c78a74d09975e1"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/test_stage6_h2_offline.py",
+      "sha256": "bb3191bf5c3b44ffa71b289718f0d9bbe0e3d63c70dc0eb965c2c036d87071d3"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/test_stage6_h2_measurement.py",
+      "sha256": "9ef77967635f62f4e66e222c6bb08becea6290e56f179e2ec5ff402daf67fa1c"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/config/scenarios/stage6_h2_entry_v1/entry_contract.json",
+      "sha256": "cd8ba4e981c8467fe7df9c66ab533479504e480813bf26f4e40f66288d47a46e"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/config/scenarios/stage6_h2_entry_v1/scenario.add.xml",
+      "sha256": "8189e35c5d8224b91b6de57e3bcaf0a7a43139e73af0f50e2ea73d2224d80828"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/config/scenarios/stage6_h2_entry_v1/scenario.con.xml",
+      "sha256": "d154948200c9b4d9a3d54bf04647357daaff0e6a19293f19fcef457ee4ae4ea5"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/config/scenarios/stage6_h2_entry_v1/scenario.edg.xml",
+      "sha256": "d6c7d6df0b8a5afc60a8bfedd796b9d14baa56ec44cf322e3129f976396cff53"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/config/scenarios/stage6_h2_entry_v1/scenario.nod.xml",
+      "sha256": "b1577412ba28470abe3270913833a4053ca6be174f2eede55de77aa5b8a2c923"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/config/scenarios/stage6_h2_entry_v1/scenario.sumocfg",
+      "sha256": "8bcf3632a68cda002a75aaed017f724faf435f3251ad67e0ccb795c4d661593e"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/config/scenarios/stage6_h2_entry_v1/scenario.tll.xml",
+      "sha256": "89f25ab5020e4f2df2fc035233b038c89cc80cf748f6dca19b5584e829df3ecc"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/config/scenarios/stage6_h2_entry_v1/source_manifest.json",
+      "sha256": "987b43bc6ee8335e124b05282513bfab2135262dd20b400d2e56e99397843292"
+    }
+  ],
+  "launch_eligible": false,
+  "legacy_source_preservation": {
+    "config/scenarios/minimal_uncontrolled/scenario.add.xml": {
+      "actual": "8189e35c5d8224b91b6de57e3bcaf0a7a43139e73af0f50e2ea73d2224d80828",
+      "expected": "8189e35c5d8224b91b6de57e3bcaf0a7a43139e73af0f50e2ea73d2224d80828",
+      "matches": true
+    },
+    "config/scenarios/minimal_uncontrolled/scenario.con.xml": {
+      "actual": "d154948200c9b4d9a3d54bf04647357daaff0e6a19293f19fcef457ee4ae4ea5",
+      "expected": "d154948200c9b4d9a3d54bf04647357daaff0e6a19293f19fcef457ee4ae4ea5",
+      "matches": true
+    },
+    "config/scenarios/minimal_uncontrolled/scenario.edg.xml": {
+      "actual": "d6c7d6df0b8a5afc60a8bfedd796b9d14baa56ec44cf322e3129f976396cff53",
+      "expected": "d6c7d6df0b8a5afc60a8bfedd796b9d14baa56ec44cf322e3129f976396cff53",
+      "matches": true
+    },
+    "config/scenarios/minimal_uncontrolled/scenario.nod.xml": {
+      "actual": "b1577412ba28470abe3270913833a4053ca6be174f2eede55de77aa5b8a2c923",
+      "expected": "b1577412ba28470abe3270913833a4053ca6be174f2eede55de77aa5b8a2c923",
+      "matches": true
+    },
+    "config/scenarios/minimal_uncontrolled/scenario.sumocfg": {
+      "actual": "0e0f99a7af694e7f448efdb66837143100478da2151ae83ba3e1c6772a811db0",
+      "expected": "0e0f99a7af694e7f448efdb66837143100478da2151ae83ba3e1c6772a811db0",
+      "matches": true
+    },
+    "config/scenarios/minimal_uncontrolled/scenario.tll.xml": {
+      "actual": "89f25ab5020e4f2df2fc035233b038c89cc80cf748f6dca19b5584e829df3ecc",
+      "expected": "89f25ab5020e4f2df2fc035233b038c89cc80cf748f6dca19b5584e829df3ecc",
+      "matches": true
+    },
+    "src/analysis/analyze_stage3_baseline.py": {
+      "actual": "6558f971bc713397e26a41fd4b2b4a71255a38ff7b6122d77df6056b88b6b8f6",
+      "expected": "6558f971bc713397e26a41fd4b2b4a71255a38ff7b6122d77df6056b88b6b8f6",
+      "matches": true
+    },
+    "src/analysis/analyze_stage4_qmain.py": {
+      "actual": "899305e7dfba2222ea552c0b453d3078f39b1d254d2805fb71287625864dcb1b",
+      "expected": "899305e7dfba2222ea552c0b453d3078f39b1d254d2805fb71287625864dcb1b",
+      "matches": true
+    },
+    "src/scenarios/run_minimal_uncontrolled.py": {
+      "actual": "7cd29eeba5fff64c43cb71ba3b9f3477938f8d4e246ab158e4f20293dbd3f983",
+      "expected": "7cd29eeba5fff64c43cb71ba3b9f3477938f8d4e246ab158e4f20293dbd3f983",
+      "matches": true
+    }
+  },
+  "main_rule_keys": 352,
+  "materializations": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c02_engineering_revision_03/materialization_verification.json",
+    "sha256": "4857fdae2bad531b2d3cb57d15b044e1ea5bafc4d9ae7b9de906e9490e350bf9"
+  },
+  "pending": [
+    "number-flow exact quantization remains pending as approved by revision_03; no strict no-blockage assertion",
+    "real executor/process watchdog signal delivery and OS crash recovery integration before C04/D; pure budget/recovery/watchdog decisions implemented",
+    "SG6-BUILD compiled-source spatial acceptance",
+    "independent data oracle and scientific SG6-L review",
+    "real candidate observations and all scientific outcomes",
+    "V1 executed-output source-map/receipt adapter before C04/D; archive analysis rejects all V1; scientific pair evaluator currently permits explicitly labelled registered synthetic fixtures only"
+  ],
+  "required_main_keys": 148,
+  "required_sensitivity_keys": 14,
+  "review_findings_source": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c02_data_review_revision_01/initial_independent_receipt.json",
+    "sha256": "c8bbfdea3f085fb9949cc5a09b0125cd8e3c66ceb7620d7d5c734802c0e6e751"
+  },
+  "revision_reason": "Two independent Major repairs: registered six-state schema; pinned physical archive identity and registered matched scientific pair identity. V1 executed-source adapter explicitly pending_C04_D.",
+  "scope": "C00-C02 offline engineering implementation, independent review pending",
+  "simulation_invocations": {
+    "GUI": 0,
+    "SUMO": 0,
+    "TraCI": 0,
+    "netconvert": 0
+  },
+  "supersedes": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c02_engineering_revision_02/engineering_receipt.json",
+    "sha256": "e234c82ac814d34442630ba885b4cd1f4239c4a2a1fe18d63a0699c5b0f3762e"
+  },
+  "tests": {
+    "development_runs": [
+      19,
+      23,
+      24,
+      25,
+      27,
+      28,
+      28
+    ],
+    "errors": 0,
+    "failures": 0,
+    "final_methods": 28,
+    "log": {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c02_engineering_revision_03/offline_tests.log",
+      "sha256": "4030ae5971c133e80dbe6650e0e4a86b431353a5833281f60b7c518147f48c15"
+    },
+    "method_executions_including_development_repeats": 174
+  }
+}

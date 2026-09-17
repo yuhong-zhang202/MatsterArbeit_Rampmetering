@@ -2,3 +2,14 @@
 enabled = true
 max_concurrent_threads_per_session = 3
 interrupt_message = true
+
+# Project-scoped, read-only Tencent MemoryCore recall. This does not change the
+# Codex model provider and does not send model requests through MemoryProxy.
+[mcp_servers.ramp_project_memory]
+command = "/usr/local/bin/node"
+args = ["/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/memory/formal_memory_mcp.mjs"]
+cwd = "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering"
+enabled = true
+enabled_tools = ["read_project_memory"]
+startup_timeout_sec = 10
+tool_timeout_sec = 40

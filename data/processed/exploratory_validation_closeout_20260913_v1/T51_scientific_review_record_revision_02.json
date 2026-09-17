@@ -1,0 +1,46 @@
+{
+  "task": "Stage 5 T51 intended-use scientific review",
+  "date": "2026-09-13",
+  "revision": 2,
+  "supersedes": "T51_scientific_review_record.json",
+  "revision_reason": "Conform Q1-Q4 status values to the registered supported/contradicted/not_identified vocabulary; scientific judgments are unchanged.",
+  "review_source": "scientific_reviewer read-only agent message",
+  "reviewer_produced_standalone_artifact": false,
+  "status": "PASS",
+  "open_findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "question_assessments": {
+    "Q1_observability": "supported",
+    "Q2_freeway_side_impairment": "not_identified",
+    "Q3_urban_side_exposure": "supported",
+    "Q4_same_scenario_tradeoff_basis": "not_identified"
+  },
+  "scope_limits_by_question": {
+    "Q1_observability": "Supported only within the declared synthetic topology, lanes, detectors, endpoints and finite windows; no realistic long upstream freeway feeder state is observed.",
+    "Q2_freeway_side_impairment": "EJMI is an exploratory sufficient signature and is not a formal Breakdown or Capacity Drop definition; not_identified does not mean no impairment.",
+    "Q3_urban_side_exposure": "Supported as observed shared-road stopped exposure and U performance within the registered domain; causal additional U loss is not established.",
+    "Q4_same_scenario_tradeoff_basis": "Not identified for the current structure, registered demand points and two seeds; other structures or conditions are not contradicted."
+  },
+  "core_question_level_unknowns": 2,
+  "assessment_completion": "pending_T53_T54",
+  "design_readiness": "specific_obstacle",
+  "preliminary_ready": false,
+  "strict_obstacle": "Within the current synthetic scaffold and registered demand points, A-window ramp passage changes from non-zero at qMain=3500 to zero at qMain=3650 while the preregistered local mainline EJMI is not identified at either point. The scenario therefore loses demand-window ramp passage before it presents the registered protectable mainline-side state.",
+  "general_scope_limits": [
+    "Two seeds do not establish statistical robustness.",
+    "No controller benefit or sweet spot has been tested."
+  ],
+  "evidence": [
+    "docs/STAGE2_COMPLETION_REPORT.md",
+    "docs/STAGE3_BASELINE_DIAGNOSTIC_REPORT.md",
+    "docs/STAGE4_TARGETED_VALIDATION_REPORT.md",
+    "data/processed/stage3_baseline_diagnostic_20260912_v2/analysis_review/revision_06/claim_evidence.csv",
+    "data/processed/stage4_qmain_sequential_20260912_v1/final_evidence_ledger_snapshot.json",
+    "data/processed/stage4_qmain_sequential_20260912_v1/analysis/final/revision_04/registered_final_decision.json",
+    "data/processed/stage4_qmain_sequential_20260912_v1/analysis/final/revision_04/snapshot_bound_independent_oracle.json",
+    "data/processed/stage4_qmain_sequential_20260912_v1/verification/T43_final_scientific_review_record_20260913.json"
+  ]
+}

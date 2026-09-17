@@ -1,0 +1,33 @@
+{
+  "schema_version": 1,
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "review_type": "independent data-contract and decision-logic review",
+  "status": "rejected_pending_major_repairs",
+  "review_boundary": "Exploratory T42 offline tooling only. This review does not authorize T43, select a Breakdown threshold, or establish causal or thesis claims.",
+  "accepted_scopes": {
+    "measurement_arithmetic": "Two-lane occupancy arithmetic mean, percentage-point unit, contribution-weighted speed, nVehEntered q and duration-weighted A/B aggregation matched independent calculations.",
+    "ejmi_math": "Strict A/B margins and 120/60/30 persistence logic matched independent boundary fixtures.",
+    "tier1_matrix": "All 81 registered two-seed R/EJMI combinations produced the intended Tier-1 action.",
+    "current_safety_state": "T43 remains prohibited, all four start/connect counters are zero, and no new source map exists.",
+    "references": "C17/C23/MH17/MH23 independently matched 36/40/0/0 A-window R events and exact Stage 4 E1 aggregates."
+  },
+  "rejected_scopes": {
+    "contract_lock": ["exact EJMI margins", "E1 30-second period", "occupancy/speed/q semantic rules", "current authoritative proposal hash"],
+    "authorization_lock": ["nonempty exact T43 approval quote"],
+    "R_measurement_integrity": ["duplicate vehicle identities within a frame"],
+    "sequential_integrity": ["single same-q Tier-2 branch"],
+    "denominator_integrity": ["reference manifest presence", "manifest-to-ledger seed/q match", "unique complete endpoint cells"]
+  },
+  "finding_ids": ["S4DA-M01", "S4DA-M02", "S4DA-M03", "S4DA-M04", "S4DA-M05", "S4DA-M06", "S4DA-M07"],
+  "open_major_count": 7,
+  "recommendation": "Do not prepare a no-pending T43 card from the reviewed hash. Repair production validation, update hashes and engineering evidence, then rerun every independent test and all four reference checks.",
+  "confidence": {
+    "identified_failures": "High",
+    "accepted_arithmetic_and_reference_results": "High",
+    "future_new_run_behavior": "Unknown; no new run exists and none was authorized"
+  },
+  "actual_sumo_starts": 0,
+  "actual_netconvert_operations": 0,
+  "actual_traci_connections": 0,
+  "actual_gui_starts": 0
+}

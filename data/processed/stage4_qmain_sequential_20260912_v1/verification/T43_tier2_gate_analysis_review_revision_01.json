@@ -1,0 +1,23 @@
+{
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "conclusion": "The exact registered QM3650S17/QM3650S23 pair may proceed sequentially under the existing T43 authorization. This does not authorize any other run, retry, controller, formal experiment, or protocol change.",
+  "confidence": "high for the prelaunch gate; moderate for post-run append compatibility until real Tier2 artifacts exist",
+  "open_findings": {
+    "Blocker": 0,
+    "Major": 0,
+    "Minor": 0
+  },
+  "required_after_each_run": [
+    "bind the actual attempt and counters in the ledger",
+    "append only verified runtime/source-map/archive/engineering facts",
+    "generate a 7/7-qualified candidate manifest",
+    "append its immutable receipt only after the existing receipt registry validates",
+    "do not infer final scientific status before both seeds and required reviews are complete"
+  ],
+  "revision": 1,
+  "schema_version": 1,
+  "status": "passed_ready_for_exact_sequential_tier2_execution",
+  "task": "T43 Tier2 gate analysis review",
+  "verification_path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/T43_tier2_gate_independent_verification_revision_01.json",
+  "verification_sha256": "ba4c3a75bd8054619d87ebdf5040709aae87613c5dfa5bb79af0609e2c7e7903"
+}

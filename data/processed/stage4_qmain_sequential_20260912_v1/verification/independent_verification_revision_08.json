@@ -1,0 +1,60 @@
+{
+  "schema_version": 1,
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "stage": "Stage 4 T42 final ledger-cleanup independent mechanical review",
+  "revision": "revision_08",
+  "status": "passed",
+  "context_preflight": {
+    "status": "passed",
+    "current_phase": "T42 offline review complete pending primary documentation closeout; T43 prohibited",
+    "formal_protocol": "empty_not_frozen",
+    "authorization_scope": "T42 offline implementation and three-specialist review only"
+  },
+  "history_preservation": {
+    "revision_01_through_07": "preserved unchanged",
+    "independent_verification_revision_07_sha256": "e1157f674cb34137a3220ffa73c4dd11c6090cacef488098fdac0431dbe3ff36",
+    "analysis_review_revision_07_sha256": "4876e670d687a0e6684b02274f5bf968af46d3d91088a918bab69f5b785eb510"
+  },
+  "reviewed_hashes": {
+    "execution_ledger.json": "f4fad2661a4638e2045d5d74b50418e068758f08d271705d3cccbcebecaa51bf",
+    "engineering_verification.json": "4e1e2f8d621e35f4927dbc5f29a706dce838a7e20ecb3c4459efd12a174860fb",
+    "src/analysis/analyze_stage4_qmain.py": "d8a1f3832588678a8054507ef8b0c74060ba39585a2c4c03bf268c966b4702f8",
+    "tests/test_stage4_qmain.py": "5849b61192c4c6dae0051e2b8b559a3fe3e626e2c9fd9a00737801dbc5d1a67b",
+    "tests/test_verify_stage4_qmain.py": "c8ee32f5e8da72695076228736d5aa290542bd34d56dd459817d25e5c82c101e",
+    "registration_payload.json": "d934b62903081163495b7e17cf72c52786e1dfb864aa5d9a9d3eb5c2eb9a952a",
+    "measurement_contract.json": "b3bf7abec5a9e6cfc29edb81de58ec5cc86c9e0fd132e88a9cd6999a456a91c9",
+    "source_registry.json": "96ee4a20f8130ede9a14ff9a40292a0c1d588770bbf1b37ad1ac455b3a1c538b"
+  },
+  "canonical_registration_subobject_hashes": {
+    "required_observations": "61d1a6921feb501f641d97ebc3faa462ba183d9df04bd0d1622f497112b8754e",
+    "ejmi_reference_map": "1c061f9e5a18ffae50b1c5c41568255e765935b81a4f1535e5e10c05cb5d6e99",
+    "canonicalization": "UTF-8 JSON with sorted keys and separators comma/colon"
+  },
+  "ledger_cleanup_checks": {
+    "pending_before_t43": "passed; contains only the exact future T43 authorization quote and authorization-dependent new-run source maps/runtime identities/attempt IDs",
+    "design_time_nulls": "passed; future new-run identities are explicitly described as authorization-dependent design-time nulls rather than contract omissions",
+    "revision_07_data_receipts": "passed; both paths and SHA-256 values resolve to the preserved revision_07 files",
+    "scientific_review_status": "passed; status=passed and all recorded open finding counts equal zero",
+    "scientific_review_artifact_integrity": "passed; no standalone artifact exists, standalone_artifact_sha256 is null, and the ledger explicitly refuses to invent one",
+    "engineering_ledger_crosslink": "passed; engineering verification records the exact current ledger SHA-256",
+    "T43_zero_gate": "passed; T43 is prohibited and SUMO/netconvert/TraCI/GUI counters are all zero"
+  },
+  "verification": {
+    "production_tests": "52/52 passed",
+    "independent_tests": "29/29 passed",
+    "combined_tests": "81/81 passed",
+    "validate_context": "passed",
+    "file_and_registered_subobject_hash_recalculation": "passed",
+    "py_compile": "passed",
+    "json_parse": "passed",
+    "diff_check": "passed"
+  },
+  "open_findings": [],
+  "open_blocker_count": 0,
+  "open_major_count": 0,
+  "open_minor_count": 0,
+  "actual_sumo_starts": 0,
+  "actual_netconvert_operations": 0,
+  "actual_traci_connections": 0,
+  "actual_gui_starts": 0
+}

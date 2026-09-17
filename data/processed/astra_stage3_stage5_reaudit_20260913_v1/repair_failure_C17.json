@@ -1,0 +1,21 @@
+{
+  "command": [
+    "python3",
+    "-B",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/analysis/analyze_stage3_baseline.py",
+    "analyze-run",
+    "--ledger",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/astra_stage3_stage5_engineering_reaudit_20260913_v1/audit_only_execution_ledger_revision_02.json",
+    "--contract",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage3_baseline_diagnostic_20260912_v2/measurement_contract.json",
+    "--run-id",
+    "C17",
+    "--output-dir",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/C17",
+    "--table-dir",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/C17"
+  ],
+  "exit": 1,
+  "stdout": "",
+  "stderr": "Traceback (most recent call last):\n  File \"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/analysis/analyze_stage3_baseline.py\", line 1469, in <module>\n    sys.exit(main())\n             ~~~~^^\n  File \"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/analysis/analyze_stage3_baseline.py\", line 1464, in main\n    args.func(args)\n    ~~~~~~~~~^^^^^^\n  File \"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/analysis/analyze_stage3_baseline.py\", line 940, in analyze_run\n    reserve_directories([output_dir, table_dir])\n    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/analysis/analyze_stage3_baseline.py\", line 126, in reserve_directories\n    raise FileNotFoundError(f\"output parent does not exist: {first.parent}\")\nFileNotFoundError: output parent does not exist: /Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs\n"
+}

@@ -1,0 +1,118 @@
+{
+  "artifacts": {
+    "archive_hash_checks.json": {
+      "path": "data/processed/stage4_qmain_sequential_20260912_v1/analysis/final/revision_04/archive_hash_checks.json",
+      "sha256": "e8e770e6d1a4c92a084b8bb735430eafed83539688f0610b1a78f7f2c25dddb6"
+    },
+    "logical_status_summary.json": {
+      "path": "data/processed/stage4_qmain_sequential_20260912_v1/analysis/final/revision_04/logical_status_summary.json",
+      "sha256": "deb37d5f2c284838e73aba1eee77c7279df8a0ac127a227fa0ef1e218aa4740e"
+    },
+    "registered_final_decision.json": {
+      "path": "data/processed/stage4_qmain_sequential_20260912_v1/analysis/final/revision_04/registered_final_decision.json",
+      "sha256": "c87884325f7f1a0e5dfdd18a01dd6c244b00fb85a2b41818fc65e6c4ba4d0080"
+    },
+    "snapshot_bound_independent_oracle.json": {
+      "path": "data/processed/stage4_qmain_sequential_20260912_v1/analysis/final/revision_04/snapshot_bound_independent_oracle.json",
+      "sha256": "74beffc5ea5efde27649cb6204f275429309d4a6eeb2bd3b55532bdb29571ace"
+    },
+    "snapshot_bound_independent_oracle.py": {
+      "path": "data/processed/stage4_qmain_sequential_20260912_v1/analysis/final/revision_04/snapshot_bound_independent_oracle.py",
+      "sha256": "d307d0370810a9fa8f17fb91c5ab137f181115ac7178af56bab2259f19b500a6"
+    },
+    "snapshot_bound_registered_final.py": {
+      "path": "data/processed/stage4_qmain_sequential_20260912_v1/analysis/final/revision_04/snapshot_bound_registered_final.py",
+      "sha256": "7d10e097a4c4dbb8b1e5195ea7fc4578c17a0684445be35f858565f2ecf46b51"
+    },
+    "snapshot_consumption_verification.json": {
+      "path": "data/processed/stage4_qmain_sequential_20260912_v1/analysis/final/revision_04/snapshot_consumption_verification.json",
+      "sha256": "bc0406fc97c2ba73e26fed61f55819541bea18843ca1554eab0a877faa957da6"
+    }
+  },
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "calculation": {
+    "actions_match": true,
+    "independent_action": "supports_B_pattern_within_registered_points",
+    "registered_action": "supports_B_pattern_within_registered_points",
+    "registered_reason": "qualified q-ordered passage-to-exclusion pattern without positive EJMI",
+    "supports_B_scope": "qMain 3500 and 3650, seeds 17 and 23, registered A/B windows and current scaffold only"
+  },
+  "coverage": {
+    "adjacent_same_seed_comparisons": "6/6",
+    "archive_files_byte_and_size_checks": "116/116",
+    "candidate_manifest_receipts": "4/4",
+    "class_endpoint_units": "64/64",
+    "completed_attempts": "4/4",
+    "registered_logical_runs": "10/10 terminal",
+    "runtime_registry_rows": "4/4",
+    "used_valid_run_manifests": "8/8"
+  },
+  "current_mutable_execution_ledger": {
+    "hash_bound_by_this_artifact": false,
+    "role": "operational_index_only",
+    "used_for_final_calculation": false
+  },
+  "hashes": {
+    "adapter_sha256": "899305e7dfba2222ea552c0b453d3078f39b1d254d2805fb71287625864dcb1b",
+    "independent_tests_sha256": "7824b853e2ca936594272ff1cfbcf05d3f5c910146bbc22b4960bb3eef8f297a",
+    "production_tests_sha256": "7dbc5759b166460a0aa8a5d93be6819562c4cde0308b823c42a6bf377db2fb9a",
+    "snapshot_engineering_verification_sha256": "51145e7db82d0c077992ae6efc62e46bf17cb8cf2bc92883716afa32722a0d69"
+  },
+  "interpretation_boundary": "Exploratory scenario evidence only; not causal, capacity, Breakdown, controller, sweet-spot, or thesis evidence.",
+  "limitations": [
+    "Only two seeds per qMain category.",
+    "Only registered discrete candidate points qMain 3500 and 3650 were evaluated.",
+    "The formal experiment protocol is empty.",
+    "The scaffold inserts M traffic close to the merge and does not establish realistic upstream freeway dynamics.",
+    "clear_exclusion is an A-window R-passage classification, not a capacity or welfare metric.",
+    "EJMI not_identified is failure to meet a sufficient local signature, not proof of absent freeway impairment."
+  ],
+  "open_findings": [],
+  "ready_for_scientific_final_re_review": true,
+  "results": {
+    "figures_path": "results/figures/stage4_qmain_sequential_20260912_v1/final/revision_03",
+    "figures_visual_review": "2/2 passed; discrete points only, readable, no interpolation",
+    "tables_path": "results/tables/stage4_qmain_sequential_20260912_v1/final/revision_03"
+  },
+  "revision": 1,
+  "safest_next_step": "Submit this snapshot-bound package to scientific_reviewer for final traceability and substantive re-review; do not alter the snapshot.",
+  "schema_version": 1,
+  "simulation_accounting": {
+    "cumulative_gui_starts": 0,
+    "cumulative_netconvert_operations": 4,
+    "cumulative_sumo_starts": 4,
+    "cumulative_traci_connections": 0,
+    "new_starts_during_snapshot_analysis": {
+      "gui": 0,
+      "netconvert": 0,
+      "sumo": 0,
+      "traci": 0
+    }
+  },
+  "snapshot_integrity": {
+    "canonical_embedded_ledger_hash_passed": true,
+    "entire_file_hash_passed": true,
+    "historical_b745_absent_from_batch_ledger_artifact_hashes": true,
+    "historical_b745_exact_snapshot_available": false,
+    "review_receipt_written_back_to_snapshot": false,
+    "snapshot_hash_after_output_generation": "f589c905067887536037fe6fe045438e8a1588cbf3246dcc50b573facecb4516"
+  },
+  "sole_normative_ledger_input": {
+    "canonical_execution_ledger_sha256": "265ec48b66947ad22e771cad9477f639a9d1b4523c0addb5c05f2303c8ba21bd",
+    "path": "data/processed/stage4_qmain_sequential_20260912_v1/final_evidence_ledger_snapshot.json",
+    "sha256": "f589c905067887536037fe6fe045438e8a1588cbf3246dcc50b573facecb4516"
+  },
+  "status": "passed",
+  "task": "T43 final immutable evidence-ledger snapshot independent verification",
+  "tests": {
+    "AST_no_simulation_process_or_network_imports": "passed",
+    "combined": "116/116",
+    "diff_check": "passed",
+    "future_mutable_ledger_metadata_independence": "passed",
+    "independent": "42/42",
+    "independent_oracle_no_production_analysis_import": "passed",
+    "production": "74/74",
+    "py_compile": "passed",
+    "snapshot_specific_independent": "2/2"
+  }
+}

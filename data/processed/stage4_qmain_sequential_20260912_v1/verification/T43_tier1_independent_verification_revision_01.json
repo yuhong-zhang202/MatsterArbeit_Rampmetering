@@ -1,0 +1,87 @@
+{
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "branch_result": {
+    "action": "run_q3650",
+    "cancelled_by_stop_rule": [
+      "QM3350S17",
+      "QM3350S23"
+    ],
+    "ejmi_states": [
+      "not_identified",
+      "not_identified"
+    ],
+    "r_states": [
+      "clear_passage",
+      "clear_passage"
+    ],
+    "result_status": "tier2_upper_selected",
+    "selected_tier2_runs": [
+      "QM3650S17",
+      "QM3650S23"
+    ]
+  },
+  "context": {
+    "formal_protocol_status": "empty_not_frozen",
+    "phase": "Stage 4 exploratory validation; T43 Tier1 analysis",
+    "tier2_status": "not_started",
+    "user_authorization_quote": "\u6279\u51c6\u6309 `docs/STAGE4_T43_LAUNCH_CONFIRMATION_PACKAGE.md` \u6267\u884c T43\u3002"
+  },
+  "coverage": {
+    "candidate_runs_expected": 2,
+    "candidate_runs_observed": 2,
+    "fcd_frames_expected": 5400,
+    "fcd_frames_verified": 5400,
+    "independent_field_comparisons": 1234,
+    "independent_field_comparisons_passed": 1234,
+    "required_observation_audits_expected": 14,
+    "required_observation_audits_passed": 14,
+    "seed_units_expected": 2,
+    "seed_units_observed": 2,
+    "source_files_expected": 58,
+    "source_files_verified": 58
+  },
+  "interpretation_boundary": "The registered action is an exploratory branch recommendation. It is not a Breakdown, Capacity Drop, capacity, causal, sweet-spot, or thesis conclusion, and it does not itself authorize Tier2.",
+  "open_findings": [],
+  "ready_for_scientific_review": true,
+  "registered_chain": {
+    "adapter_sha256": "8e359a21cee4ea0612fd3bd2dfa1af2a20a5599c7695dacdcee08cbcda3835be",
+    "candidate_manifest_file_sha256": {
+      "QM3500S17": "d01d93948990de325565f1c2a3c0d8ea0c7ccd786a678bfbd4d68a4135b31f27",
+      "QM3500S23": "70dc887afd1da49b9d211f24af24cd1ccb11e4f3d946f731dc3814e2ccaf78e4"
+    },
+    "candidate_regeneration_byte_identical": {
+      "QM3500S17": true,
+      "QM3500S23": true
+    },
+    "independent_tests_sha256": "1e366c843727f0abd9286063f533f43ee2d4a98345868c63d6ee6dc0a9406e6c",
+    "ledger_sha256": "06405b22a5520c051d176b29adaf5f2d1cf517130869fc853e66276ead89a7f4",
+    "manifest_receipt_registry_sha256": "c80c571deacf9bc7a53c090d3c649fe1b05673ab21094bd76976dcf9973ccc4c",
+    "production_tests_sha256": "648d8ed91fd26c95f4fda84afbace6e44f70ecc13fda701144164a971b7bbdc2",
+    "runtime_overlay_sha256": "526a144892c9b0317af7edc631fa9fba52173ca33c0c01dce6dbcf80f6866ac4"
+  },
+  "revision": 1,
+  "run_findings": [],
+  "safest_next_step": "Submit this data package to the required scientific reviewer; do not start Tier2 unless that review accepts the registered branch recommendation.",
+  "schema_version": 1,
+  "simulation_accounting": {
+    "cumulative_actual_gui_starts": 0,
+    "cumulative_actual_netconvert_operations": 2,
+    "cumulative_actual_sumo_starts": 2,
+    "cumulative_actual_traci_connections": 0,
+    "new_gui_starts_during_analysis": 0,
+    "new_netconvert_operations_during_analysis": 0,
+    "new_sumo_starts_during_analysis": 0,
+    "new_traci_connections_during_analysis": 0
+  },
+  "status": "passed",
+  "task": "T43 Tier1 independent data verification",
+  "test_results": {
+    "combined_passed": 98,
+    "combined_tests": 98,
+    "git_diff_check": "passed",
+    "independent_no_production_import": "passed",
+    "independent_tests": 32,
+    "production_tests": 66,
+    "py_compile": "passed"
+  }
+}

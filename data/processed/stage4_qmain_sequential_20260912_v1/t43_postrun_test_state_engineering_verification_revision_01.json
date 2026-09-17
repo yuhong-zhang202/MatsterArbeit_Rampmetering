@@ -1,0 +1,76 @@
+{
+  "schema_version": 1,
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "stage": "T43 post-Tier2 mechanical test-state repair",
+  "status": "production_state_dependent_tests_passed_independent_update_pending",
+  "classification": "offline engineering verification; exploratory Stage 4; not formal thesis evidence",
+  "finding_addressed": {
+    "id": "T43-TEST-STATE-01",
+    "scope": "production state-dependent tests",
+    "result": "closed_in_production_suite_pending_independent_suite_owner_update"
+  },
+  "changes": [
+    "Current-context assertions now require authoritative 4/4/0/0 execution counters.",
+    "Current runtime-overlay assertions now require all four completed candidate identities.",
+    "Current Tier-2 assertions require QM3650S17/QM3650S23 completed_valid and QM3350S17/QM3350S23 cancelled_by_stop_rule.",
+    "Pre-run, partial-run, duplicate, unexecuted and prohibited-run checks use isolated temporary fixtures and retain fail-closed expectations."
+  ],
+  "unchanged_boundaries": {
+    "production_adapter_changed": false,
+    "scientific_contract_or_formula_changed": false,
+    "simulation_or_runtime_archive_changed": false,
+    "analyst_outputs_changed": false
+  },
+  "verification": {
+    "production_tests": {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "tests.test_stage4_qmain"
+      ],
+      "result": "passed",
+      "tests": 72,
+      "failures": 0,
+      "errors": 0
+    },
+    "combined_pre_independent_owner_update": {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "tests.test_stage4_qmain",
+        "tests.test_verify_stage4_qmain"
+      ],
+      "result": "107/112 passed; 5 independent stale-state failures; 0 production failures",
+      "tests": 112,
+      "passed": 107,
+      "failures": 5,
+      "errors": 0
+    },
+    "simulation_starts_during_repair": {
+      "sumo": 0,
+      "netconvert": 0,
+      "traci": 0,
+      "gui": 0
+    },
+    "cumulative_execution_counters": {
+      "actual_sumo_starts": 4,
+      "actual_netconvert_operations": 4,
+      "actual_traci_connections": 0,
+      "actual_gui_starts": 0
+    }
+  },
+  "hashes": {
+    "adapter_sha256": "899305e7dfba2222ea552c0b453d3078f39b1d254d2805fb71287625864dcb1b",
+    "production_test_sha256": "41cf5c93b1b99e920df77a41921ab837380f33effdc1d8328e6360c2af6de448",
+    "input_execution_ledger_sha256": "39a240a22671e686ef27a95533f28ded2abee68d3de267c804ce1b37306e9f26",
+    "tier2_independent_verification_revision_01_sha256": "5e3ba10170116dd02f417a2438564255feadbbbd2ee0e85ba0a782a231b41eca",
+    "final_independent_verification_revision_01_sha256": "ce0ef7d9c30060be2d84cce3c30bf31e86878e96c59f40e6679fad288acec9da"
+  },
+  "pending": [
+    "data_analyst-owned independent tests must replace five current-state pre-Tier2 assertions while retaining isolated prelaunch/partial fixtures",
+    "new independent revision must rerun the combined suite with zero failures",
+    "scientific final Stage4 interpretation remains pending after mechanical closure"
+  ]
+}

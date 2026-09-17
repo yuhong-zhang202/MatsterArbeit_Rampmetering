@@ -1,0 +1,208 @@
+{
+  "status": "passed",
+  "scope": "Supplement existing revision_04 verification; direct raw XML checks without importing production analysis.",
+  "runs": [
+    {
+      "run_id": "C17",
+      "status": "passed",
+      "vehicle_rows": 1858,
+      "vehicle_fields_checked": [
+        "actual_depart_s",
+        "arrival_s",
+        "departDelay_s",
+        "completed_duration_s"
+      ],
+      "tripinfo_vehroute_table_id_sets_equal": true,
+      "E1_group_window_metric_checks": 12,
+      "first_R_downstream_events": 300,
+      "last_departure_s": 2245.0,
+      "last_arrival_s": 2401.0
+    },
+    {
+      "run_id": "C23",
+      "status": "passed",
+      "vehicle_rows": 1858,
+      "vehicle_fields_checked": [
+        "actual_depart_s",
+        "arrival_s",
+        "departDelay_s",
+        "completed_duration_s"
+      ],
+      "tripinfo_vehroute_table_id_sets_equal": true,
+      "E1_group_window_metric_checks": 12,
+      "first_R_downstream_events": 300,
+      "last_departure_s": 2236.0,
+      "last_arrival_s": 2387.0
+    },
+    {
+      "run_id": "ML17",
+      "status": "passed",
+      "vehicle_rows": 1608,
+      "vehicle_fields_checked": [
+        "actual_depart_s",
+        "arrival_s",
+        "departDelay_s",
+        "completed_duration_s"
+      ],
+      "tripinfo_vehroute_table_id_sets_equal": true,
+      "E1_group_window_metric_checks": 12,
+      "first_R_downstream_events": 300,
+      "last_departure_s": 2133.0,
+      "last_arrival_s": 2286.0
+    },
+    {
+      "run_id": "ML23",
+      "status": "passed",
+      "vehicle_rows": 1608,
+      "vehicle_fields_checked": [
+        "actual_depart_s",
+        "arrival_s",
+        "departDelay_s",
+        "completed_duration_s"
+      ],
+      "tripinfo_vehroute_table_id_sets_equal": true,
+      "E1_group_window_metric_checks": 12,
+      "first_R_downstream_events": 300,
+      "last_departure_s": 2119.0,
+      "last_arrival_s": 2274.0
+    },
+    {
+      "run_id": "MH17",
+      "status": "passed",
+      "vehicle_rows": 2108,
+      "vehicle_fields_checked": [
+        "actual_depart_s",
+        "arrival_s",
+        "departDelay_s",
+        "completed_duration_s"
+      ],
+      "tripinfo_vehroute_table_id_sets_equal": true,
+      "E1_group_window_metric_checks": 12,
+      "first_R_downstream_events": 300,
+      "last_departure_s": 2404.0,
+      "last_arrival_s": 2551.0
+    },
+    {
+      "run_id": "MH23",
+      "status": "passed",
+      "vehicle_rows": 2108,
+      "vehicle_fields_checked": [
+        "actual_depart_s",
+        "arrival_s",
+        "departDelay_s",
+        "completed_duration_s"
+      ],
+      "tripinfo_vehroute_table_id_sets_equal": true,
+      "E1_group_window_metric_checks": 12,
+      "first_R_downstream_events": 300,
+      "last_departure_s": 2408.0,
+      "last_arrival_s": 2558.0
+    },
+    {
+      "run_id": "RL17",
+      "status": "passed",
+      "vehicle_rows": 1708,
+      "vehicle_fields_checked": [
+        "actual_depart_s",
+        "arrival_s",
+        "departDelay_s",
+        "completed_duration_s"
+      ],
+      "tripinfo_vehroute_table_id_sets_equal": true,
+      "E1_group_window_metric_checks": 12,
+      "first_R_downstream_events": 150,
+      "last_departure_s": 1708.0,
+      "last_arrival_s": 1864.0
+    },
+    {
+      "run_id": "RL23",
+      "status": "passed",
+      "vehicle_rows": 1708,
+      "vehicle_fields_checked": [
+        "actual_depart_s",
+        "arrival_s",
+        "departDelay_s",
+        "completed_duration_s"
+      ],
+      "tripinfo_vehroute_table_id_sets_equal": true,
+      "E1_group_window_metric_checks": 12,
+      "first_R_downstream_events": 150,
+      "last_departure_s": 1700.0,
+      "last_arrival_s": 1859.0
+    }
+  ],
+  "vehicle_rows": 14564,
+  "first_R_events": 2100,
+  "actual_new_starts_recounted": 7,
+  "input_sha256": {
+    "data/processed/stage2_completion_20260909_v1/execution_ledger.json": "ca5ecf2b6e91542bd3a0e2c2e4040e9d25f391423e1ee62d7e7d1f9d5badc98a",
+    "results/tables/stage2_completion_20260909_v1/revision_04/vehicle_accounting.csv": "90f78a9664c320ae9bb83cdf23c9000c60df92c368fbcee8fe37744c43e68804",
+    "results/tables/stage2_completion_20260909_v1/revision_04/run_window_summary.csv": "87fe6b1be7267266fad7c5fedf4e720019f22971e69d1ff3669223640359548c",
+    "results/tables/stage2_completion_20260909_v1/revision_04/merge_events.csv": "cfff135534a56dbcdffc04ec1c497ae06bf8166428dce48384ecbb0689193e1c",
+    "data/processed/stage2_completion_20260909_v1/revision_04/run_audit.json": "02d4df49adc4856769725b24933c4669b521d34281a9d913f3e00b9a0698aa29",
+    "data/processed/stage2_completion_20260909_v1/source_maps/C17_reused.json": "3a553c630bf3946cb87e133a1fe1fd392b99d571ffd36ea8f85a370481debbf0",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/outputs/tripinfo.xml": "0846fcd8ffb53588c7666a40a30911a8a267c4f77bd02aa34f9e174685656254",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/outputs/vehroute.xml": "8c06e0bfd502bbe123e9da956ab1a1d28c4f92f8373fd74fa6f82d009c6a2a4c",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/scenario.add.xml": "be46ba588a7ceaa8dfb8e3870e4f70176a9ac2b64f1abba6703b2f955a799941",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/outputs/mainline_merge_entry_e1_l0.xml": "bea8023fafce9701c273edfbe782f84c0a8bb4d0a52da1ee0b42c8e27f83c9bf",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/outputs/mainline_merge_entry_e1_l1.xml": "67b273e090f72f8d9a97e89c4aeba3f7c4b2fd43a9868c51db62999f76bf964c",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/outputs/fcd.xml": "92f3972a274913a174af02593704e739f55af676c7d67ab79554fe0e0645635a",
+    "data/processed/stage2_completion_20260909_v1/source_maps/C23_attempt1.json": "a09aaab37ab2ac3f70539c869d0b284781decd2adeddc82c23df7a3c942ed79f",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/outputs/tripinfo.xml": "0d6f0ff8bb9ea733293fc1ff0f61e517459d748f4d08eea1c54c7b7c24083ba2",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/outputs/vehroute.xml": "ed36e3974484ecdbed08cc6cccf9812dbf76b1b1d0b262cdad68e04f50d452b3",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/scenario.add.xml": "110901d2af3dfb9a11f0762fc231435abb3b2f01881accce58831ee4749f952b",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/outputs/mainline_merge_entry_e1_l0.xml": "90c0f62cfde04b5222c98ec64ca3490a8e4f24dd5520ac2483361c5a0bd98805",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/outputs/mainline_merge_entry_e1_l1.xml": "d9bfcf736eefced3704d74881e24caaf9ebf9a7c512f148a255aca79173a7313",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/outputs/fcd.xml": "fcdbccdf32311638075b4ad45dbaa3ec1423a09dcf71dadf16ec7418d7803220",
+    "data/processed/stage2_completion_20260909_v1/source_maps/ML17_attempt1.json": "430ff9608e0e7ca091406826be9be327da972f9d4026df915cb86e816831a759",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/outputs/tripinfo.xml": "60f38542983e170cd9d72eea83ae5677dddfaa97bc5d8d1fe50b5c5a62370e25",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/outputs/vehroute.xml": "fde9b1fa020de13f343fcc03c5fba2ffaf2628bea0f752549a7567e8cab31de0",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/scenario.add.xml": "db54139fbf676c99860472ba20e7c58909116a6687a6daa3e90bf8ba97fce73c",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/outputs/mainline_merge_entry_e1_l0.xml": "a1d5d9d10edf0ed494d83b4e92126759929359698af8a59f3033bd1497cbb58e",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/outputs/mainline_merge_entry_e1_l1.xml": "631fc0aabcbad3523833942f011777fa4c4aacaee3c0dfc4a7e7a86d928c4836",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1/outputs/fcd.xml": "1915db89972b1f89e7d369acf39dee38241f9d8f849e7e4f7f1946105afe82b4",
+    "data/processed/stage2_completion_20260909_v1/source_maps/ML23_attempt1.json": "8cc3bb134a515f3468f9969ddfcbaba6589f17292c8a437daeaf3355748e6130",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/outputs/tripinfo.xml": "bba20faffef3aac9b0b450ddc46d228425383466ed615168c36d31206e897680",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/outputs/vehroute.xml": "324e8c87f2269fc08ef152c69cf21822e73bf7c443d46efb2ffdf346af8b0969",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/scenario.add.xml": "200d8b1b45fe615a71fc3f6193ccfd68bd602e09877eed3be8c33cf21cb8661f",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/outputs/mainline_merge_entry_e1_l0.xml": "6633f27043f33be0a94198ae5a63a029f6a2cacaa4478a36bc761d840580e2c4",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/outputs/mainline_merge_entry_e1_l1.xml": "f3d38f5c806052c355d3f82ae5e8a30ae238d9deaf0a2c0fb38c773bf113d9ae",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1/outputs/fcd.xml": "9fc69546f3506c2c3d6e00c1da5f1e8495a482d03a135b1215f0c7a07d4cfeaf",
+    "data/processed/stage2_completion_20260909_v1/source_maps/MH17_attempt1.json": "4a6ff66e7ff981a15db32e56905d88f93c8a903f4318887e17dc66a3f4fcd97f",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/tripinfo.xml": "5e1ee26d23e81264382b054e25d159a83744595409b7e17b3616e496dfd29ade",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/vehroute.xml": "f3b2c18b99f7ec021396439276be16c36b7333ef60768b12cbf221bf423b7f3e",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/scenario.add.xml": "f2b73d23625b5d13de1cc26c13dae68295021e851f1fd4a720371719ecffefeb",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/mainline_merge_entry_e1_l0.xml": "9c3b5b283d7a1a39f4d1bb5059c4eed6b152ae5ac8acc0f600aff4d6a9f2c267",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/mainline_merge_entry_e1_l1.xml": "37d9ecf00d0aeca890e8937b28bed385f4c8d60cbacd32f83e23c973d20dac54",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/fcd.xml": "2554a60ba99f64cafd2a173125ec5adae3ac3923ef8df0ce6d05938d7732995c",
+    "data/processed/stage2_completion_20260909_v1/source_maps/MH23_attempt1.json": "67e5644aad9f38e40d86c726bf27e881bfffe9199f2cab987db317c09925f7c1",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/outputs/tripinfo.xml": "65c61d3b3f6e57a5dc86319eada462d2dda8047accc9d0a9380ee32285538e3a",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/outputs/vehroute.xml": "4fe4d94c0b984979dce5cbd8aee5a7ac3c3a6c5d135c7cfc2de6b41b3da641e1",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/scenario.add.xml": "81d04b85fa256953a72506ef2f5e5e49d9af7ef5f1888d595b73298ec65b463c",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/outputs/mainline_merge_entry_e1_l0.xml": "87cf883b28ee8046564f34547794732d865cbfb18c6f053770429866f98e76c6",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/outputs/mainline_merge_entry_e1_l1.xml": "b799426dae0e4552a29081cd3db3220c3c5dc5cff8661bc1de4ca7ba695d7bbf",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1/outputs/fcd.xml": "d2fb7cbc7871393b09b8530d453dbf012bc116f316ded19aa9598daba499a087",
+    "data/processed/stage2_completion_20260909_v1/source_maps/RL17_attempt1.json": "3efedb7ea868c7cf94c7278547d95a770781287ec807adfa883d9d7f19439e87",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/outputs/tripinfo.xml": "2f901e13c11aaef8aa3e42e6859e59263e580fd32cb43dc4e9480553cf042b19",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/outputs/vehroute.xml": "626a73dbfa77f2c1cc607a0a9e009a340e0d177d8dbe9cd6b351ce1792e6da1a",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/scenario.add.xml": "8467d184fbd78aa8a2a116250fdc9ee11e33746dfb332a25619e5bc159b0080a",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/outputs/mainline_merge_entry_e1_l0.xml": "1018132b7c01ef8fd9636ab59b01ac65344f9033f8f83e5b42cfa992b17509c5",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/outputs/mainline_merge_entry_e1_l1.xml": "11525d09b86ea542046417b86051fb4a34455313a98055e7225bc04472abe5d0",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1/outputs/fcd.xml": "600a5fc77e03c035fbf5eb2d7192c4113d23b4f49c2df7df4968925f0c6ef834",
+    "data/processed/stage2_completion_20260909_v1/source_maps/RL23_attempt1.json": "ca411acc1a3c71ebafadb3e8fe63efbd326bcac280c6134c69ae724deb1dd4ce",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/outputs/tripinfo.xml": "2acaf731bf9bfd756725d7d292248b31fbcc1c2e2f96e360c4532254bcac8427",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/outputs/vehroute.xml": "91475ddc1598e22a3a674ef079ec1bf5d31aafae6806da3ce81054119582171c",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/scenario.add.xml": "edb5b457c50f1fa218e27ec16637670536fa8d8fdc7d623690a7479bbfe989d1",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/outputs/mainline_merge_entry_e1_l0.xml": "cc0a4529c07d4b0a427a9ffa04de28f5c21985505b7ce248d275ae5ef4b1cf41",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/outputs/mainline_merge_entry_e1_l1.xml": "cc946951ed97a299e12df9f06be354da4250a13e3a1d16ea76417ca49912e912",
+    "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1/outputs/fcd.xml": "39ef7fe893ccd9a658245c6f8b6ae16e5d5d95932f16641c1f17364e7ef8bb3f"
+  },
+  "script_sha256": "486ffad2f5856100b5d3939aca2d1b1109e56ff9cbeeb7c40a5f15d7bb49a62c",
+  "limitations": [
+    "vehroute check covers complete identity sets, not all XML attributes.",
+    "Four published per-vehicle numeric fields checked, not every possible XML attribute.",
+    "1 Hz first downstream observation is not exact physical crossing time.",
+    "No schedule, ordinary E1 per-ID completeness, statistical robustness or causal inference established."
+  ],
+  "reproduce": ".venv/bin/python data/processed/stage2_completion_20260909_v1/g2_review/supplemental_verification.py"
+}

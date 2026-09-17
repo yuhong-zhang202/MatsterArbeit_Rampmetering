@@ -1,0 +1,160 @@
+{
+  "schema_version": 1,
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "stage": "Stage 4 T42 independent rereview after S4SR-M01--M04 repairs",
+  "revision": "revision_03",
+  "status": "failed_new_major_open",
+  "context_preflight": {
+    "status": "passed",
+    "current_phase": "T42 offline implementation and review; T43 prohibited",
+    "authorization_quote": "批准，继续stage 4",
+    "authorization_scope": "T42 offline implementation and three-specialist review only",
+    "formal_protocol": "empty_not_frozen",
+    "formal_experiment_started": false
+  },
+  "history_preservation": {
+    "independent_verification_revision_01.json": "c5f63dc26c0e03df745a21dd3d09e8a2ca747c74a3766b7ba704f76f963eddbd",
+    "analysis_review_revision_01.json": "f37f69b2dd0cd8dee23999139dfb4b6470d63b26b8fc40acf9a3aaf1188305b5",
+    "independent_verification_revision_02.json": "3dde863c85c703ee5b38ed6f1567ca64539fffde49be54d4e51aae58887e6b9f",
+    "analysis_review_revision_02.json": "f88ddfc0386660f2af27bc159aca7e95612e3c9420d37e1e6f33ea1e6d5e8831"
+  },
+  "reviewed_hashes": {
+    "src/analysis/analyze_stage4_qmain.py": "4ccc3381a255c0d5360cca8985443a3e2ddd12f1f0185d117219184bb3edf03d",
+    "tests/test_stage4_qmain.py": "34566bfaf4ea97d502725278e8aa149bed119050250f50d3a6fae8a069af6874",
+    "tests/test_verify_stage4_qmain.py": "007c9c29db325f0fde44f6b03dc25045c1904c186a70fff7c85e7d10c6c5c529",
+    "registration_payload.json": "3d03dd47c165b231feaa5b8eb374aabf5dc43d6d616b43a10a81b15a46f0621c",
+    "measurement_contract.json": "b3ab79e6b813b60e4e04643a05c05513a72eb42147dc1279e04d068dc6a65e8d",
+    "source_registry.json": "6314aac07b747ad2be86fcaa0695815b43c6990b1a6024a9e84c4d803f245db5",
+    "execution_ledger.json": "aeb7d4dc6fa2552fd0e918bf09e1f7a0df20e0eb5c18a82d3cfe45d9bab37e3e",
+    "engineering_verification.json": "b8b5a5ac138377e6fd4f44b0cd677d859bb839941506de2119dbbbb1874f3d97"
+  },
+  "test_results": {
+    "production_suite": "48/48 passed",
+    "independent_methods": 27,
+    "independent_methods_passed": 26,
+    "independent_methods_failed": 1,
+    "combined_methods": 75,
+    "combined_result": "failed with two subtest failures in one independent method",
+    "failure_subcases": [
+      "T43 prohibited state accepted actual_traci_connections=1",
+      "T43 prohibited state accepted actual_gui_starts=1"
+    ],
+    "py_compile": "passed",
+    "diff_check_before_review_artifacts": "passed"
+  },
+  "scientific_repair_findings": [
+    {
+      "id": "S4SR-M01",
+      "status": "closed",
+      "confidence": "High",
+      "evidence": "All six candidate IDs independently map to exact same-seed C/MH run IDs, qMain values, registered manifest paths and canonical hashes, source-map paths and actual source-map hashes. Production path-substitution rejection also passes."
+    },
+    {
+      "id": "S4SR-M02",
+      "status": "closed",
+      "confidence": "High",
+      "evidence": "An independent oracle matched decide_final for all registered one-point and both two-point candidate universes over the full per-seed R x EJMI state space, including disagreement, contradiction, incomplete discrimination, supports-A and monotone supports-B cases."
+    },
+    {
+      "id": "S4SR-M03",
+      "status": "closed",
+      "confidence": "High for archived references; Moderate for future nonempty M-stop candidate observations",
+      "evidence": "All four archived references were reprocessed into no-overwrite revision_03 manifests. Independent XML parsing reproduced actual demand, four-window downstream E1 arithmetic, M episode/sample denominators, stopped/depart position ranges, ordered five-region R observations, shared R/U episode and stopped-second denominators, cooccurrence seconds, TLS labels/states/transitions and six passing audits. All reference M-stop sets are truly empty; the production synthetic nonempty episode fixture passes, but no future candidate archive exists."
+    },
+    {
+      "id": "S4SR-M04",
+      "status": "closed",
+      "confidence": "High",
+      "evidence": "Independent hashes and XML semantics match the registered scenario.add detector/E2/TLS definitions, all four compiled network hashes and lane topology, runner/helper/archive/Stage3 source hashes, and SUMO/netconvert binary hashes. Production drift fixtures pass."
+    }
+  ],
+  "minor_finding_closure": {
+    "m_position_coordinate": "closed; nonnegative distance-to-lane-end calculation independently checked against lane lengths and positions",
+    "netconvert_budget": "closed; regular min/max 2/4 and hard cap 5 are frozen in payload and ledger",
+    "q_definition": "closed; Stage 4 q explicitly uses nVehEntered and warns against mixing with Stage 3 nVehContrib",
+    "historical_revision_preservation": "closed; revision_01 and revision_02 hashes remain unchanged"
+  },
+  "new_finding": {
+    "id": "S4DA-R03-M01",
+    "severity": "Major",
+    "scope": "T43 prohibited-state execution-counter gate",
+    "status": "open",
+    "evidence": "validate_context rejects nonzero actual_sumo_starts and actual_netconvert_operations while T43 is prohibited, but independently mutated ledgers with actual_traci_connections=1 or actual_gui_starts=1 are accepted.",
+    "actual_state": "The authoritative ledger currently records zero for all four counters; no execution occurred during this review.",
+    "required_resolution": "When T43 status is prohibited, validate_context must reject any nonzero SUMO start, netconvert operation, TraCI connection or GUI start, with a production regression. Then rerun the complete independent suite on new immutable hashes."
+  },
+  "reference_revision_03": {
+    "status": "passed_4_of_4_independent_reconstruction",
+    "runs": {
+      "C17": {
+        "manifest_sha256": "2ca3bc60e32888b8bb9aef42aa5258602d1239e759d3ea68a5f0a547dea8444e",
+        "downstream_bins": 90,
+        "M_full_stop_episodes": 0,
+        "shared_R_episode_count": 795,
+        "shared_R_stopped_vehicle_seconds": 10974.0,
+        "shared_U_episode_count": 421,
+        "shared_U_stopped_vehicle_seconds": 5737.0,
+        "cooccurrence_support_s": 1164,
+        "tls_labels": 2700
+      },
+      "C23": {
+        "manifest_sha256": "936123b0d294bca1ebfd4874b59bc734c8a54bb7a2eff4f3be90633dbeb41e26",
+        "downstream_bins": 90,
+        "M_full_stop_episodes": 0,
+        "shared_R_episode_count": 769,
+        "shared_R_stopped_vehicle_seconds": 9961.0,
+        "shared_U_episode_count": 400,
+        "shared_U_stopped_vehicle_seconds": 5231.0,
+        "cooccurrence_support_s": 1156,
+        "tls_labels": 2700
+      },
+      "MH17": {
+        "manifest_sha256": "1552808dc8089de3eea094c2ca7aeba33fb5cb02ec98086c61d600a8090b8462",
+        "downstream_bins": 90,
+        "M_full_stop_episodes": 0,
+        "shared_R_episode_count": 21,
+        "shared_R_stopped_vehicle_seconds": 25087.0,
+        "shared_U_episode_count": 11,
+        "shared_U_stopped_vehicle_seconds": 13146.0,
+        "cooccurrence_support_s": 1258,
+        "tls_labels": 2700
+      },
+      "MH23": {
+        "manifest_sha256": "960abdba43e6ab95e32d77d40456e164b1b77f39a2b324179c87a9e456d8a138",
+        "downstream_bins": 90,
+        "M_full_stop_episodes": 0,
+        "shared_R_episode_count": 22,
+        "shared_R_stopped_vehicle_seconds": 25095.0,
+        "shared_U_episode_count": 11,
+        "shared_U_stopped_vehicle_seconds": 13143.0,
+        "cooccurrence_support_s": 1255,
+        "tls_labels": 2700
+      }
+    },
+    "common_r_region_order": [
+      "ramp_accel",
+      "ramp_mid_internal",
+      "ramp_storage",
+      "ramp_diverge_internal",
+      "shared_approach"
+    ],
+    "qualification": "four of four manifests passed all six registered audit items"
+  },
+  "launch_gate": {
+    "T42_data_review": "failed_new_major_open",
+    "T43": "prohibited",
+    "open_major_count": 1,
+    "can_return_to_scientific_reviewer": false,
+    "safe_next_step": "simulation_engineer closes S4DA-R03-M01 and updates immutable hashes; data_analyst issues a new no-overwrite rereview before scientific review"
+  },
+  "limitations": [
+    "No new qMain archive exists; future candidate production behavior remains unobserved.",
+    "All four reference M stopped-episode sets are empty, so nonempty M-stop behavior is covered by a synthetic production fixture rather than an archived candidate.",
+    "Two seeds support exploratory consistency only, not robust stochastic inference.",
+    "EJMI remains an exploratory signature, not Breakdown, Capacity Drop or capacity."
+  ],
+  "actual_sumo_starts": 0,
+  "actual_netconvert_operations": 0,
+  "actual_traci_connections": 0,
+  "actual_gui_starts": 0
+}

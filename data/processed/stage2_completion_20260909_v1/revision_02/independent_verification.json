@@ -1,0 +1,70 @@
+{
+  "status": "passed",
+  "runs": {
+    "C17": {
+      "archive_files": 29,
+      "unique_vehicles": 1858,
+      "E1_rows": 540,
+      "cohort_rows": 364,
+      "merge_raw_endpoint_records": 600,
+      "R_before1500": 36,
+      "merge_bin_ambiguous": 4,
+      "outside_at1500": {
+        "M": 0,
+        "R": 150,
+        "U": 75,
+        "X": 0
+      },
+      "internal_contributions": {
+        "Full": 1333.0,
+        "A": 1331.0,
+        "B": 1066.0,
+        "Post": 2.0
+      },
+      "qualification": {
+        "plan_count_status": "verified_declared_flow_number",
+        "schedule_time_status": "unverified",
+        "departure_coverage_status": "verified",
+        "arrival_coverage_status": "verified"
+      },
+      "last_arrival_s": 2401.0
+    },
+    "C23": {
+      "archive_files": 29,
+      "unique_vehicles": 1858,
+      "E1_rows": 540,
+      "cohort_rows": 364,
+      "merge_raw_endpoint_records": 600,
+      "R_before1500": 40,
+      "merge_bin_ambiguous": 8,
+      "outside_at1500": {
+        "M": 0,
+        "R": 146,
+        "U": 73,
+        "X": 0
+      },
+      "internal_contributions": {
+        "Full": 1333.0,
+        "A": 1329.0,
+        "B": 1067.0,
+        "Post": 4.0
+      },
+      "qualification": {
+        "plan_count_status": "verified_declared_flow_number",
+        "schedule_time_status": "unverified",
+        "departure_coverage_status": "verified",
+        "arrival_coverage_status": "verified"
+      },
+      "last_arrival_s": 2387.0
+    }
+  },
+  "archive_files_verified": 58,
+  "coverage_rows": 8,
+  "pending_runs": 6,
+  "comparisons": 0,
+  "tests": "25 pure-offline tests plus compile/diffcheck passed",
+  "mode": "create_report",
+  "command": ".venv/bin/python data/processed/stage2_completion_20260909_v1/revision_02/independent_verification.py --check-only",
+  "script_sha256": "c76fd141ae0090184224a47677b1360a11ecaefb216a08be774f7535391b2eda",
+  "limitations": "Schedule and per-ID E1 completeness remain unverified; no significance or breakdown claim."
+}

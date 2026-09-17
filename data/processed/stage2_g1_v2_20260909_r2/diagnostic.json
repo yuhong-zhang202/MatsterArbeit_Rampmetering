@@ -1,0 +1,348 @@
+{
+  "classification": "exploratory",
+  "source_run": "/private/tmp/minimal_uncontrolled_8egb0qb1",
+  "source_windows": {
+    "clearance": {
+      "begin_s": 1500,
+      "duration_s": 1200,
+      "end_s": 2700
+    },
+    "demand": {
+      "begin_s": 0,
+      "duration_s": 1500,
+      "end_s": 1500
+    },
+    "measurement": {
+      "begin_s": 600,
+      "duration_s": 900,
+      "end_s": 1500
+    },
+    "simulation": {
+      "begin_s": 0,
+      "duration_s": 2700,
+      "end_s": 2700
+    },
+    "status": "all time values are exploratory candidates and are not frozen",
+    "warmup": {
+      "begin_s": 0,
+      "duration_s": 600,
+      "end_s": 600
+    }
+  },
+  "analysis_windows": {
+    "A": [
+      0,
+      1500
+    ],
+    "B": [
+      300,
+      1500
+    ],
+    "post_demand": [
+      1500,
+      2700
+    ]
+  },
+  "schedule_status": "schedule_unverified_for_general_flow_expansion",
+  "cohort_source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage2_evidence_package_20260909/evidence.json",
+  "paired_equivalence_source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage2_internal_accounting_20260909/paired_semantic_comparison_v3.json",
+  "planned_counts_from_flow": {
+    "M": 1333,
+    "R": 300,
+    "U": 150,
+    "X": 75
+  },
+  "trip_class_counts": {
+    "M": 1333,
+    "U": 150,
+    "X": 75,
+    "R": 300
+  },
+  "vehicle_status_counts": {
+    "arrived": 1858
+  },
+  "referenced_account_max_difference": 0,
+  "last_actual_departure_s": 2245.0,
+  "last_arrival_s": 2401.0,
+  "post_demand_departures_by_class": {
+    "M": 0,
+    "R": 150,
+    "U": 75,
+    "X": 0
+  },
+  "completed_trip_reconstructed_schedule_check": {
+    "method": "depart - departDelay for observed completed trips only; not a general flow schedule",
+    "min_s": 0.0,
+    "max_s": 1498.5
+  },
+  "e1_summaries": {
+    "merge_upstream_e1_l0": {
+      "A": {
+        "begin_s": 0,
+        "end_s": 1500,
+        "covered_seconds": 1500.0,
+        "nVehContrib": 715,
+        "speed_contribution_denominator": 715,
+        "speed_mps": 27.257678321678323,
+        "flow_vehph": 1716.0,
+        "occupancy_pct": 12.677600000000002,
+        "missing_speed_intervals": 0
+      },
+      "B": {
+        "begin_s": 300,
+        "end_s": 1500,
+        "covered_seconds": 1200.0,
+        "nVehContrib": 574,
+        "speed_contribution_denominator": 574,
+        "speed_mps": 27.396236933797912,
+        "flow_vehph": 1722.0,
+        "occupancy_pct": 12.3795,
+        "missing_speed_intervals": 0
+      },
+      "post_demand": {
+        "begin_s": 1500,
+        "end_s": 2700,
+        "covered_seconds": 1200.0,
+        "nVehContrib": 1,
+        "speed_contribution_denominator": 1,
+        "speed_mps": 31.01,
+        "flow_vehph": 3.0,
+        "occupancy_pct": 0.013500000000000002,
+        "missing_speed_intervals": 39
+      }
+    },
+    "merge_upstream_e1_l1": {
+      "A": {
+        "begin_s": 0,
+        "end_s": 1500,
+        "covered_seconds": 1500.0,
+        "nVehContrib": 614,
+        "speed_contribution_denominator": 614,
+        "speed_mps": 26.906644951140066,
+        "flow_vehph": 1473.6,
+        "occupancy_pct": 14.6386,
+        "missing_speed_intervals": 0
+      },
+      "B": {
+        "begin_s": 300,
+        "end_s": 1500,
+        "covered_seconds": 1200.0,
+        "nVehContrib": 490,
+        "speed_contribution_denominator": 490,
+        "speed_mps": 27.079061224489795,
+        "flow_vehph": 1470.0,
+        "occupancy_pct": 14.353250000000001,
+        "missing_speed_intervals": 0
+      },
+      "post_demand": {
+        "begin_s": 1500,
+        "end_s": 2700,
+        "covered_seconds": 1200.0,
+        "nVehContrib": 1,
+        "speed_contribution_denominator": 1,
+        "speed_mps": 4.43,
+        "flow_vehph": 3.0,
+        "occupancy_pct": 0.010750000000000001,
+        "missing_speed_intervals": 39
+      }
+    },
+    "merge_downstream_e1_l0": {
+      "A": {
+        "begin_s": 0,
+        "end_s": 1500,
+        "covered_seconds": 1500.0,
+        "nVehContrib": 701,
+        "speed_contribution_denominator": 701,
+        "speed_mps": 28.409372325249645,
+        "flow_vehph": 1682.4,
+        "occupancy_pct": 8.3724,
+        "missing_speed_intervals": 0
+      },
+      "B": {
+        "begin_s": 300,
+        "end_s": 1500,
+        "covered_seconds": 1200.0,
+        "nVehContrib": 565,
+        "speed_contribution_denominator": 565,
+        "speed_mps": 28.289982300884954,
+        "flow_vehph": 1695.0,
+        "occupancy_pct": 8.4615,
+        "missing_speed_intervals": 0
+      },
+      "post_demand": {
+        "begin_s": 1500,
+        "end_s": 2700,
+        "covered_seconds": 1200.0,
+        "nVehContrib": 259,
+        "speed_contribution_denominator": 259,
+        "speed_mps": 22.305057915057915,
+        "flow_vehph": 777.0,
+        "occupancy_pct": 4.86775,
+        "missing_speed_intervals": 10
+      }
+    },
+    "merge_downstream_e1_l1": {
+      "A": {
+        "begin_s": 0,
+        "end_s": 1500,
+        "covered_seconds": 1500.0,
+        "nVehContrib": 663,
+        "speed_contribution_denominator": 663,
+        "speed_mps": 31.43636500754148,
+        "flow_vehph": 1591.2,
+        "occupancy_pct": 7.2894000000000005,
+        "missing_speed_intervals": 0
+      },
+      "B": {
+        "begin_s": 300,
+        "end_s": 1500,
+        "covered_seconds": 1200.0,
+        "nVehContrib": 530,
+        "speed_contribution_denominator": 530,
+        "speed_mps": 31.4732641509434,
+        "flow_vehph": 1590.0,
+        "occupancy_pct": 7.204,
+        "missing_speed_intervals": 0
+      },
+      "post_demand": {
+        "begin_s": 1500,
+        "end_s": 2700,
+        "covered_seconds": 1200.0,
+        "nVehContrib": 10,
+        "speed_contribution_denominator": 10,
+        "speed_mps": 21.902,
+        "flow_vehph": 30.0,
+        "occupancy_pct": 0.2465,
+        "missing_speed_intervals": 33
+      }
+    }
+  },
+  "e1_measurement_interpretation": {
+    "speed_valid_definition": "nVehContrib > 0 and nonnegative raw E1 passage speed; not traffic-state validity",
+    "upstream_coverage_limitation": "Upstream E1 overlaps the route origin / departPos=last insertion positions. Raw flow, speed and occupancy are detector observations, not conventional upstream traffic-state estimates.",
+    "specific_reviewed_cases": [
+      {
+        "detector_id": "merge_upstream_e1_l1",
+        "begin_s": 450,
+        "end_s": 480,
+        "flag": "insertion_overlaps_detector",
+        "explanation": "Direct insertion near the upstream detector; raw E1 speed is not upstream traffic speed.",
+        "scope": "reviewed retained source only",
+        "engineering_evidence": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/docs/STAGE2_G1_V2_ENGINEERING_REVIEW.md"
+      },
+      {
+        "detector_id": "merge_upstream_e1_l1",
+        "begin_s": 1500,
+        "end_s": 1530,
+        "flag": "insertion_and_interval_settlement",
+        "explanation": "M_flow.1332 inserted beyond the detector at 1499; contribution settles in the next interval, not evidence of post-demand slow traffic.",
+        "scope": "reviewed retained source only",
+        "engineering_evidence": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/docs/STAGE2_G1_V2_ENGINEERING_REVIEW.md"
+      },
+      {
+        "detector_id": "merge_downstream_e1_l1",
+        "begin_s": 1980,
+        "end_s": 2010,
+        "flag": "lane_change_near_detector",
+        "explanation": "R_flow.200 changes lane near the detector; the isolated passage-speed contribution does not establish lane congestion.",
+        "scope": "reviewed retained source only",
+        "engineering_evidence": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/docs/STAGE2_G1_V2_ENGINEERING_REVIEW.md"
+      }
+    ],
+    "no_generalization": "No automatic low-contribution exclusion, congestion classifier, E1 defect claim or substitution with FCD speeds."
+  },
+  "e1_interval_count": 360,
+  "e1_invalid_with_contributions": [],
+  "fcd_coverage": {
+    "observed_timestep_count": 2700,
+    "missing_times_before_end": [],
+    "endpoint_2700_observed": false,
+    "unique_fcd_ids": 1858,
+    "anomalies": []
+  },
+  "mainline_stopped_samples": 0,
+  "stopped_by_lane_class": {
+    "main_up_0/M": 0,
+    "main_up_0/R": 0,
+    "main_up_1/M": 0,
+    "main_up_1/R": 0,
+    "main_down_0/M": 0,
+    "main_down_0/R": 0,
+    "main_down_1/M": 0,
+    "main_down_1/R": 0,
+    ":freeway_merge_1_0/M": 0,
+    ":freeway_merge_1_0/R": 0,
+    ":freeway_merge_1_1/M": 0,
+    ":freeway_merge_1_1/R": 0,
+    ":freeway_merge_0_0/M": 0,
+    ":freeway_merge_0_0/R": 0
+  },
+  "merge": {
+    "status": "time_uncertain",
+    "spatial_boundary": "entry to main_down_0 after ramp internal connector; first downstream sample can be either downstream lane",
+    "R_route_ids": 300,
+    "event_status_counts": {
+      "bracketed": 300
+    },
+    "bin_boundary_ambiguous_events": 4,
+    "event_time_semantics": "(previous raw FCD label,first downstream raw FCD label]; not exact physical crossing times",
+    "unresolved": []
+  },
+  "referenced_events": [
+    {
+      "time_s": 46,
+      "label": "first_R_stop_ramp_accel"
+    },
+    {
+      "time_s": 192,
+      "label": "first_R_stop_ramp_storage"
+    },
+    {
+      "time_s": 412,
+      "label": "first_R_stop_shared"
+    },
+    {
+      "time_s": 414,
+      "label": "first_U_stop_shared"
+    },
+    {
+      "time_s": 656,
+      "label": "continuous_R_outside_waiting_begins"
+    },
+    {
+      "time_s": 661,
+      "label": "continuous_U_outside_waiting_begins"
+    },
+    {
+      "time_s": 900,
+      "label": "candidate_cut"
+    },
+    {
+      "time_s": 1200,
+      "label": "candidate_cut"
+    },
+    {
+      "time_s": 1500,
+      "label": "demand_scheduling_ends"
+    },
+    {
+      "time_s": 2245,
+      "label": "last_vehicle_departure_label"
+    },
+    {
+      "time_s": 2401,
+      "label": "last_arrival_label"
+    }
+  ],
+  "formal_breakdown": "not_evaluated",
+  "capacity_drop": "not_evaluated",
+  "sweet_spot": "not_evaluated",
+  "limitations": [
+    "One retained trajectory, seed 17; repeated seconds are not replications.",
+    "No new speed/duration threshold or automatic scientific classifier.",
+    "No-vehicle E1 speeds are missing; sampled stopping is not queue length or causal delay.",
+    "Flow expansion is unverified: existing audited accounts are cited, not generalized to unfinished runs.",
+    "No comparison of upstream/downstream simultaneous differences as ramp flow.",
+    "No formal duration sufficiency, steady-state or capacity conclusion."
+  ]
+}

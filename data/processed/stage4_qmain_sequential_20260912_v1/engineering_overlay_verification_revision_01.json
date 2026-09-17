@@ -1,0 +1,63 @@
+{
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "bindings": {
+    "approved_source_registry_sha256": "96ee4a20f8130ede9a14ff9a40292a0c1d588770bbf1b37ad1ac455b3a1c538b",
+    "measurement_contract_sha256": "b3bf7abec5a9e6cfc29edb81de58ec5cc86c9e0fd132e88a9cd6999a456a91c9",
+    "registration_payload_sha256": "d934b62903081163495b7e17cf72c52786e1dfb864aa5d9a9d3eb5c2eb9a952a",
+    "runtime_source_registry_path": "data/processed/stage4_qmain_sequential_20260912_v1/runtime_source_registry.json",
+    "runtime_source_registry_sha256": "13f97e95a573b0d5177c46f8024c6a44df5445fc4c9d752d1e8d34da82be0b94"
+  },
+  "blocker_addressed": "analyze-run previously had no accepted path from immutable null candidate source fields to ledger-bound post-run facts",
+  "execution_counters": {
+    "actual_gui_starts": 0,
+    "actual_netconvert_operations": 2,
+    "actual_sumo_starts": 2,
+    "actual_traci_connections": 0
+  },
+  "implementation": {
+    "adapter_path": "src/analysis/analyze_stage4_qmain.py",
+    "adapter_sha256": "64cc185aaab4235c96e442be0289a2a83394cac209d199be3fdcc48f7531cd37",
+    "cli_flag": "--runtime-registry",
+    "production_test_path": "tests/test_stage4_qmain.py",
+    "production_test_sha256": "ebbd9417209ad764d2967f33dec8a38091a45948bb494b3db9db3dc5fe54670b",
+    "scientific_contract_changed": false,
+    "simulation_execution_capability": false
+  },
+  "independent_verification": {
+    "legacy_preauthorization_suite_result": "21 passed; 6 failures and 2 errors were stale assertions of prohibited/zero-run state",
+    "status": "pending_updated_post_T43_review"
+  },
+  "production_verification": {
+    "analyze_run_help": "passed",
+    "cli_success_outputs": {
+      "QM3500S17": {
+        "path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/engineering_overlay_cli_revision_01/QM3500S17/run_manifest.json",
+        "sha256": "dc4aa74930e3030759944c84e4e6f1e238ba3a2d8a0709ea8c64748568341b99"
+      },
+      "QM3500S23": {
+        "path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/engineering_overlay_cli_revision_01/QM3500S23/run_manifest.json",
+        "sha256": "f5bc568bec5091bde44f19e196cf056009198183a1256ef5a7ae2bae1757775a"
+      }
+    },
+    "no_output_before_overlay_validation": "passed",
+    "py_compile": "passed",
+    "tests_failed": 0,
+    "tests_passed": 60,
+    "tier1_manifests_technical_qualified": 2,
+    "tier1_required_observation_audits": [
+      "7/7",
+      "7/7"
+    ]
+  },
+  "prohibited_changes_confirmed": [
+    "registration_payload unchanged",
+    "measurement_contract unchanged",
+    "approved source_registry unchanged",
+    "runner/config/raw/archive unchanged",
+    "no Tier2 launch"
+  ],
+  "revision": "revision_01",
+  "schema_version": 1,
+  "scope": "T43 Tier1 explicit ledger-bound runtime overlay support",
+  "status": "production_verified_pending_independent_review"
+}

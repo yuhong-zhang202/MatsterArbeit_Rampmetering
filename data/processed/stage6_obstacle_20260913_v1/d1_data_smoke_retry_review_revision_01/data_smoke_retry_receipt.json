@@ -1,0 +1,162 @@
+{
+  "FCD_sample_count": 323986,
+  "M": {
+    "common_traversals": 1083,
+    "entered": 1083,
+    "feeder_traversals": 1083,
+    "max_reported_departDelay_s": 1.0,
+    "p_max": 100.0,
+    "p_min": 100.0,
+    "planned": 1083,
+    "unresolved_or_censored": 0
+  },
+  "TLS_links": {
+    "0": [
+      "urban_in",
+      "shared_approach"
+    ],
+    "1": [
+      "cross_in",
+      "cross_out"
+    ]
+  },
+  "XSD_files": 18,
+  "XSD_manifest": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_engineering_smoke_retry_revision_01/xsd_dependency_manifest.json",
+    "sha256": "88ab7073ff68505fa43db144c505fdbbeb7236dd697cc41e3500eae41b6fb5c9"
+  },
+  "XSD_references": 21,
+  "actions": {
+    "GUI": 0,
+    "SUMO": 0,
+    "TraCI": 0,
+    "main352_rows_written": 0,
+    "netconvert": 0,
+    "science_entrypoint_calls": 0,
+    "sensitivity14_rows_written": 0,
+    "validation_released": false
+  },
+  "boundaries": [
+    "Smoke only; excluded from scientific validation and all352+14 denominators.",
+    "All 1608 per-ID fields independently reconstructed and equal engineering receipt; equality with attempt1 does not retroactively qualify failed attempt1.",
+    "Finite inlet/coverage checks do not resolve the scientific obstacle.",
+    "Global retry is now exhausted; no further retry release.",
+    "Only data gate recommendation; parent/scientific review must control validation release."
+  ],
+  "budget_independently_recomputed": {
+    "actual_starts_observed": 2,
+    "archive_bytes": 109965588,
+    "reserved_or_unknown": 0,
+    "retry": 1,
+    "smoke": 1,
+    "sumo": 2,
+    "validation": 0,
+    "wallclock_s": 30.947713707995717
+  },
+  "checks_passed": 1769,
+  "closed_finding": "D1-D-T01 SUMO_HOME warning absent after matched-version process environment repair",
+  "confidence": "High",
+  "decision": "pass_smoke_technical_data_only",
+  "diagnostic_count": 0,
+  "endpoints": {
+    "1500": {
+      "arrived": 1153,
+      "entered": 1355,
+      "in_network": 202,
+      "membership": "strictly_before_endpoint",
+      "outside": 253,
+      "planned": 1608
+    },
+    "2700": {
+      "arrived": 1608,
+      "entered": 1608,
+      "in_network": 0,
+      "membership": "strictly_before_endpoint",
+      "outside": 0,
+      "planned": 1608
+    }
+  },
+  "engineering_manifest": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_engineering_smoke_retry_revision_01/retry_final_manifest.json",
+    "sha256": "3b28b69468e8630521b5577f5b92fb2fd793401d87dd8f9099d7a0373f1090d9"
+  },
+  "engineering_receipt": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_engineering_smoke_retry_revision_01/smoke_technical_receipt.json",
+    "sha256": "1801c24372450ad849a0971d8c9b5161d424620b29580d71292de43afd579bf0"
+  },
+  "environment": {
+    "SUMO_HOME": {
+      "after": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo",
+      "before": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO"
+    }
+  },
+  "environment_recovery_evidence": "Corrected wrapper snapshots before/after environment, asserts only SUMO_HOME differs, and restores/asserts before environment in finally. Raw full environments are intentionally not exported; external OS-level independent retrospective proof is unavailable.",
+  "execution_receipt": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/attempts/S6_V1_ML_S17_attempt2/execution_receipt.json",
+    "sha256": "6ef710419a7868eb34123b1e12293076b4f4f93cdb888c005d565ce2899059fe"
+  },
+  "open_findings": {
+    "Blocker": 0,
+    "Major": 0,
+    "Minor": 0
+  },
+  "preserved_attempt1_and_two_preflight_stops": true,
+  "runtime_XML": {
+    "fcd.xml": {
+      "records": 2700,
+      "root": "fcd-export"
+    },
+    "mainline_merge_entry_e1_l0.xml": {
+      "records": 90,
+      "root": "detector"
+    },
+    "mainline_merge_entry_e1_l1.xml": {
+      "records": 90,
+      "root": "detector"
+    },
+    "merge_downstream_e1_l0.xml": {
+      "records": 90,
+      "root": "detector"
+    },
+    "merge_downstream_e1_l1.xml": {
+      "records": 90,
+      "root": "detector"
+    },
+    "merge_upstream_e1_l0.xml": {
+      "records": 90,
+      "root": "detector"
+    },
+    "merge_upstream_e1_l1.xml": {
+      "records": 90,
+      "root": "detector"
+    },
+    "queues.xml": {
+      "records": 2700,
+      "root": "queue-export"
+    },
+    "ramp_storage_e2.xml": {
+      "records": 90,
+      "root": "detector"
+    },
+    "shared_boundary_e2.xml": {
+      "records": 90,
+      "root": "detector"
+    },
+    "sumo_summary.xml": {
+      "records": 2700,
+      "root": "summary"
+    },
+    "tls_states.xml": {
+      "records": 2700,
+      "root": "tlsStates"
+    },
+    "tripinfo.xml": {
+      "records": 1608,
+      "root": "tripinfos"
+    },
+    "vehroute.xml": {
+      "records": 1608,
+      "root": "routes"
+    }
+  }
+}

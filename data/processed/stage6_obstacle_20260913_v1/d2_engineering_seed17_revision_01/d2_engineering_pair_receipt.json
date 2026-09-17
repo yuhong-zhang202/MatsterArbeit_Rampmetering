@@ -1,0 +1,265 @@
+{
+  "D1_scientific_acceptance": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_scientific_smoke_acceptance_revision_01.json",
+    "sha256": "4686efe5176ae9794e6408ed333c0530b06976ec128c7dbca61a130d30f06129"
+  },
+  "D1_smoke_gate": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/budget_journal/smoke_acceptance.json",
+    "sha256": "a8eb31d831e31440d332a257e12935ea3cfdd5d825f95b1ae09e3e19e43a85af"
+  },
+  "D2_SUMO_starts": 2,
+  "GUI": 0,
+  "TraCI": 0,
+  "actual_total_archive_bytes_including_receipts": 223270357,
+  "approved_card": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_engineering_smoke_revision_01/approved_launch_card.json",
+    "sha256": "5b359c76deb6552f4d2738d9b6366404499a5a4279a86ec4da0519b79b2f175a"
+  },
+  "attempts": [
+    {
+      "XML_roles": 14,
+      "XML_validation": {
+        "roles": {
+          "fcd.xml": {
+            "records": 2700,
+            "root": "fcd-export",
+            "status": "minimum_schema_passed"
+          },
+          "mainline_merge_entry_e1_l0.xml": {
+            "records": 90,
+            "root": "detector",
+            "status": "minimum_schema_passed"
+          },
+          "mainline_merge_entry_e1_l1.xml": {
+            "records": 90,
+            "root": "detector",
+            "status": "minimum_schema_passed"
+          },
+          "merge_downstream_e1_l0.xml": {
+            "records": 90,
+            "root": "detector",
+            "status": "minimum_schema_passed"
+          },
+          "merge_downstream_e1_l1.xml": {
+            "records": 90,
+            "root": "detector",
+            "status": "minimum_schema_passed"
+          },
+          "merge_upstream_e1_l0.xml": {
+            "records": 90,
+            "root": "detector",
+            "status": "minimum_schema_passed"
+          },
+          "merge_upstream_e1_l1.xml": {
+            "records": 90,
+            "root": "detector",
+            "status": "minimum_schema_passed"
+          },
+          "queues.xml": {
+            "records": 2700,
+            "root": "queue-export",
+            "status": "minimum_schema_passed"
+          },
+          "ramp_storage_e2.xml": {
+            "records": 90,
+            "root": "detector",
+            "status": "minimum_schema_passed"
+          },
+          "shared_boundary_e2.xml": {
+            "records": 90,
+            "root": "detector",
+            "status": "minimum_schema_passed"
+          },
+          "sumo_summary.xml": {
+            "records": 2700,
+            "root": "summary",
+            "status": "minimum_schema_passed"
+          },
+          "tls_states.xml": {
+            "records": 2700,
+            "root": "tlsStates",
+            "status": "minimum_schema_passed"
+          },
+          "tripinfo.xml": {
+            "records": 1608,
+            "root": "tripinfos",
+            "status": "minimum_schema_passed"
+          },
+          "vehroute.xml": {
+            "records": 1608,
+            "root": "routes",
+            "status": "minimum_schema_passed"
+          }
+        },
+        "scope": "minimum required XML role/schema/time/identity; scientific measurement checks remain required",
+        "status": "passed"
+      },
+      "attempt_id": "S6_V1_ML_S17_attempt3",
+      "attempt_manifest": {
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d2_engineering_seed17_revision_01/S6_V1_ML_S17_attempt3/attempt_manifest.json",
+        "sha256": "d3581caef707ce0ce301c5a0d8fc3664a7ccbc818e95098131fbecb922f33453"
+      },
+      "budget_archive_bytes": 54982731,
+      "condition": "ML",
+      "diagnostics": [],
+      "engineering_receipt": {
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d2_engineering_seed17_revision_01/S6_V1_ML_S17_attempt3/engineering_receipt.json",
+        "sha256": "55e7fe6a61ba8fb8d6fa82e2790a6deb9e197e8891065936dac6324695e4462e"
+      },
+      "error_log_bytes": 0,
+      "execution_receipt": {
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/attempts/S6_V1_ML_S17_attempt3/execution_receipt.json",
+        "sha256": "4c37fe039aa39a763ef2a50c228335ccb3502514dc09a160dbea0ede0b525ecf"
+      },
+      "execution_status": "completed",
+      "exit_code": 0,
+      "final_attempt_bytes": 55005692,
+      "output_roles": 18,
+      "run_id": "S6_V1_ML_S17",
+      "seed": "17",
+      "source_map": {
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/attempts/S6_V1_ML_S17_attempt3/executed_source_map.json",
+        "sha256": "4a2f50432a590b43176f05505c45e161ee108befd952a274fa3d1e609ca9477e"
+      },
+      "stderr_bytes": 0,
+      "version": "V1",
+      "wallclock_s": 3.6128210840106476
+    },
+    {
+      "XML_roles": 14,
+      "XML_validation": {
+        "roles": {
+          "fcd.xml": {
+            "records": 2700,
+            "root": "fcd-export",
+            "status": "minimum_schema_passed"
+          },
+          "mainline_merge_entry_e1_l0.xml": {
+            "records": 90,
+            "root": "detector",
+            "status": "minimum_schema_passed"
+          },
+          "mainline_merge_entry_e1_l1.xml": {
+            "records": 90,
+            "root": "detector",
+            "status": "minimum_schema_passed"
+          },
+          "merge_downstream_e1_l0.xml": {
+            "records": 90,
+            "root": "detector",
+            "status": "minimum_schema_passed"
+          },
+          "merge_downstream_e1_l1.xml": {
+            "records": 90,
+            "root": "detector",
+            "status": "minimum_schema_passed"
+          },
+          "merge_upstream_e1_l0.xml": {
+            "records": 90,
+            "root": "detector",
+            "status": "minimum_schema_passed"
+          },
+          "merge_upstream_e1_l1.xml": {
+            "records": 90,
+            "root": "detector",
+            "status": "minimum_schema_passed"
+          },
+          "queues.xml": {
+            "records": 2700,
+            "root": "queue-export",
+            "status": "minimum_schema_passed"
+          },
+          "ramp_storage_e2.xml": {
+            "records": 90,
+            "root": "detector",
+            "status": "minimum_schema_passed"
+          },
+          "shared_boundary_e2.xml": {
+            "records": 90,
+            "root": "detector",
+            "status": "minimum_schema_passed"
+          },
+          "sumo_summary.xml": {
+            "records": 2700,
+            "root": "summary",
+            "status": "minimum_schema_passed"
+          },
+          "tls_states.xml": {
+            "records": 2700,
+            "root": "tlsStates",
+            "status": "minimum_schema_passed"
+          },
+          "tripinfo.xml": {
+            "records": 1858,
+            "root": "tripinfos",
+            "status": "minimum_schema_passed"
+          },
+          "vehroute.xml": {
+            "records": 1858,
+            "root": "routes",
+            "status": "minimum_schema_passed"
+          }
+        },
+        "scope": "minimum required XML role/schema/time/identity; scientific measurement checks remain required",
+        "status": "passed"
+      },
+      "attempt_id": "S6_V1_C_S17_attempt1",
+      "attempt_manifest": {
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d2_engineering_seed17_revision_01/S6_V1_C_S17_attempt1/attempt_manifest.json",
+        "sha256": "327171c55b13b434d5742eed1c07f6a817f91c5dfbe566d5056240ebc35384e3"
+      },
+      "budget_archive_bytes": 58230245,
+      "condition": "C",
+      "diagnostics": [],
+      "engineering_receipt": {
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d2_engineering_seed17_revision_01/S6_V1_C_S17_attempt1/engineering_receipt.json",
+        "sha256": "37eb5bb7a4ff0331429891f99105f27f9488b11161b4b73fab9740c149193b07"
+      },
+      "error_log_bytes": 0,
+      "execution_receipt": {
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/attempts/S6_V1_C_S17_attempt1/execution_receipt.json",
+        "sha256": "4ebe5ba781b45d5ac51b66b25907a91cea02a6d720b2fb365d96632c48c5764c"
+      },
+      "execution_status": "completed",
+      "exit_code": 0,
+      "final_attempt_bytes": 58253152,
+      "output_roles": 18,
+      "run_id": "S6_V1_C_S17",
+      "seed": "17",
+      "source_map": {
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/attempts/S6_V1_C_S17_attempt1/executed_source_map.json",
+        "sha256": "bfa9d00f5abc87bbb783803fc4a8bf9b5041a46ffc0e3260b77b45befd153587"
+      },
+      "stderr_bytes": 0,
+      "version": "V1",
+      "wallclock_s": 3.7455701250000857
+    }
+  ],
+  "budget_counters": {
+    "actual_starts_observed": 4,
+    "archive_bytes": 223178564,
+    "reserved_or_unknown": 0,
+    "retry": 1,
+    "smoke": 1,
+    "sumo": 4,
+    "validation": 2,
+    "wallclock_s": 38.30610491700645
+  },
+  "confidence": "High within technical scope",
+  "engineering_result": "PASS_TECHNICAL_PAIR_ARCHIVED",
+  "first_matched_unit_gate_written": false,
+  "launch_payload_sha256": "4f65deb5ee65eb23ff071d6b79e85d1afcff1dd12fd50242cc7ed07b2161a1d3",
+  "main352_rows_written": 0,
+  "netconvert": 0,
+  "next_action": "pause for independent raw-XML recomputation and scientific first-matched-unit review; no further starts by engineer",
+  "retained_environment_limit": "full OS environment not exported; process-only SUMO_HOME delta, hashes and restoration recorded",
+  "retry_remaining": 0,
+  "same_seed_pair_identity": "V1 ML17 and V1 C17; distinct registered attempts and source maps",
+  "scientific_analysis_calls": 0,
+  "scientific_result": "not_evaluated",
+  "scope": "D2 seed17 pair execution and technical source identity only",
+  "seed23_released": false,
+  "seed23_starts": 0,
+  "sensitivity14_rows_written": 0,
+  "total_SUMO_starts": 4
+}

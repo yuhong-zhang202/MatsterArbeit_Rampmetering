@@ -1,0 +1,24 @@
+{
+  "status": "failed",
+  "created_at": "2026-09-09T15:47:16.959Z",
+  "project": "Masterarbeit-Ramp-Metering",
+  "volume": "tdai-ramp-metering-memory-v1",
+  "image": "sha256:9798254a8cc06276b7c5b3c19df49f136fae25d579564e1f01f9c4b9b8cd2d11",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "source_bundle": "docs/memory/formal_import_bundle_20260909.md",
+  "reused_initialized_volume": true,
+  "native_result": {},
+  "restart_persistence_probe": null,
+  "budget": {
+    "prior_claimed_attempts": 3,
+    "new_claimed_attempts": 1,
+    "total_claimed_attempts": 4,
+    "remaining_attempts": 37,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "estimated_usd_at_published_text_rates": 0,
+    "ledger_path": "data/processed/memory_paid_synthetic_20260909/ledger.json"
+  },
+  "error": "Native formal import failed: {} "
+}

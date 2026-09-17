@@ -1,0 +1,81 @@
+{
+  "status": "Proposed_data_advice_pending_scientific_registration",
+  "launch_eligible": false,
+  "scope": "Exploratory H2 only; no formal thesis threshold and no claim of obstacle resolution",
+  "authorization": "Parent relayed user continuation after paused_before_S6-B00; numerical values remain proposed",
+  "versions": {
+    "V0": {"M_departPos": "last", "role": "seen matched background; existing qualified sources may be reused"},
+    "V1": {"M_departPos_proposed_m": 100, "registration_state": "Proposed", "sole_changed_factor": "M numerical departPos", "same_compiled_network": true, "fixed": ["departLane best", "departSpeed max", "M vehicle model", "lane-changing", "merge priority", "all R/U/X generation and insertion", "TLS", "storage", "demand period"], "confounders": ["arrival order", "lane use", "travel duration", "insertion delay and realized inflow"]}
+  },
+  "geometry": {
+    "main_up_length_m": 1394.87,
+    "proposed_p_M_m": 100,
+    "remaining_upstream_length_m": 1294.87,
+    "p_M_basis": "Transparent round interior coordinate on existing lane; creates over1km observable travel without geometric change. No evidence that100m is optimal.",
+    "p_M_alternatives_m": [50, 200],
+    "alternative_policy": "Choose at B only if physical review rejects100m; not an authorized parameter sweep or post-result retry.",
+    "V1_feeder_domain_main_up_m": [200, 1200],
+    "V1_feeder_role": "Qualification and descriptive formation domain; no V0 upstream causal comparison because V0 lacks this traveled segment.",
+    "common_domain_main_down_m": [100, 700],
+    "common_domain_length_m": 600,
+    "common_domain_role": "M-only FCD trajectories traversing identical spatial interval in both versions; old downstream E1 at100m mixes M/R and is not this cohort.",
+    "feeder_virtual_sections_m": [200, 1200],
+    "common_virtual_sections_m": [100, 700],
+    "section_method": "FCD last-below/first-at-or-above crossing brackets; no new E1 or netconvert required for this measurement proposal.",
+    "coverage_tolerance_m": 0.02,
+    "coverage_tolerance_basis": "Proposed two output-position hundredths; not traffic-state threshold. Engineer must confirm decimal output precision before registration.",
+    "spatial_sensitivity": "Report the full existing lane-class grid and domain boundary brackets; any alternate numeric common domain must be pre-registered before new outcomes. No post-result spatial optimization."
+  },
+  "conditions": {
+    "reference": {"condition_id": "ML", "q_main_vehph": 2600, "q_ramp_vehph": 720, "qualification": "lower-load empirical comparator, not established free-flow/capacity reference", "basis": "Seen12-run inventory:1083 M vehicles per ML run; A-window R passage67/69; same qRamp as challenge."},
+    "challenge": {"condition_id": "C", "q_main_vehph": 3200, "q_ramp_vehph": 720, "basis": "Higher mainline load than ML with36/40 seen A-window R passages. Prefer bounded joint-observation opportunity over MH/3650 with zero A passage. No promised positive M impairment."},
+    "fixed_U_X": "Copy exact archived generator and counts; do not infer continuous input rate from delayed entry. Actual fields must be copied into final card from original demand XML.",
+    "alternatives_not_selected": {"QM3500": "A-window R14/11; narrower joint opportunity", "QM3650_and_MH": "A-window R0/0; unsuitable default joint-window challenge", "RL": "Changes qRamp relative to ML and confounds intended single demand-axis comparison"}
+  },
+  "matrix": {
+    "versions": ["V0", "V1"], "conditions": ["ML", "C"], "seeds": [17,23],
+    "logical_run_count": 8,
+    "V0_information": "seen_reused; reuse4 existing runs only if new common-domain source/definition/qualification receipts match",
+    "V1_information": "new_condition_or_seed: new insertion configuration plus previously unavailable upstream traveled observation; old seeds are not newly independent random draws",
+    "nominal_new_validation_starts": 4,
+    "new_information_limit": "Inference conditional on these two chosen seeds and seen demand conditions; no generalization or statistical power claim.",
+    "alternative_new_seed_matrix": "If reviewer requires unselected stochastic replication, replace the whole proposed seed set before registration and run all8 logical cells; exact new seeds unknown_requires_registration. Do not append seeds after seeing outcomes."
+  },
+  "time_contract": {
+    "demand_begin_s": 0, "demand_end_s": 1500, "simulation_end_proposed_s": 2700,
+    "windows": {"A": [0,1500], "B": [300,1500], "Post": [1500,2700], "Full": [0,2700]},
+    "primary_window": "B", "warmup_qualification": "B is a historical analysis cut, not proven stationary warm-up.",
+    "basis": "Keep identical finite observation horizon for eligible oldV0 reuse. Historical latest arrival2558 leaves142s; 1294.87/33.33=38.849985s is merely nominal no-delay travel, not a clearance guarantee.",
+    "censor_rule": "Never extend after an unfavorable result; record entered/arrived/outside at1500/2700 and incomplete crossings. Required scientific cohort with unresolvable truncation cannot pass.",
+    "Post_role": "May contain delayed R/U entries; do not call it recovery without checking actual zero inflow.",
+    "time_sensitivity": "A,Post,Full descriptive; primary gate remainsB.60s bins, sensitivity30/120s may be computed only as registered robustness diagnostics, never substituted to rescue primary failure."
+  },
+  "entry_and_reference_qualification": {
+    "identity_and_hash_requirement": "100% required files, IDs, registered lanes and time labels; no unexplained duplicate/missing/nonfinite critical values",
+    "V1_required_M_feeder_fraction": 1.0,
+    "V1_rule": "Every entered M must have registered actual departPos and bracketed passage200 then1200 then common100 then700, or an explicit incomplete/censored state; no removal of delayed or blocked vehicles.100% is coverage target, not forced completion assumption.",
+    "B_completed_common_M_proposed_min": 500,
+    "bin_completed_M_proposed_min": 20,
+    "sample_basis": "Exploratory administrative adequacy proposals; seen ML B completed866/868. Neither500 nor20 is a power calculation.",
+    "reference_stability_rule": "unknown_requires_registration: define allowable within-window trend/dispersion and handling of transient bins; lower requested demand alone does not qualify reference.",
+    "realized_inflow_rule": "unknown_requires_registration: compare M requested/entered, departDelay, arrival at feeder/merge sections and lane allocation. Reviewer must decide tolerance and whether mismatch changes estimand; never silently attribute insertion-induced inflow loss solely to distance."
+  },
+  "scientific_rule_candidates": {
+    "registration_state": "unknown_requires_registration; numbers below are explicit discussion proposals, not frozen success rules",
+    "M_primary": {"metric": "mean M common-domain travel time for bracket-qualified common-entry cohort inB", "estimate": "mean lower/upper bounds separately; retain boundary-ambiguous and incomplete denominator", "candidate_effect_ratio": 1.10, "sensitivity_ratios": [1.05,1.15], "conservative_candidate_test": "challenge mean lower bound >1.10*same-version same-seed reference mean upper bound", "basis": "Exploratory meaningful-effect proposal; no formal traffic standard; old 1Hz trajectories produce2s individual TT bound width, which must not be ignored."},
+    "M_support": {"metric": "M-only common-domain vehicle-time-weighted speed plus accumulation and technical stopping", "candidate_speed_ratio_max": 0.95, "candidate_persistence_s": 180, "candidate_bin_s": 60, "candidate_allowed_gaps_s": 0, "candidate_test": "speed ratio <=0.95 in3 consecutive eligible matched60s bins; show accumulation, completed flow and stopping in the same intervals", "sensitivity": "speed ratios0.90/0.98; persistence120/240s; descriptive only", "limit": "Travel time and speed share trajectories and are correlated; accumulation rises with demand and is not automatically a bottleneck proof. Technical stop0.1m/s remains descriptive."},
+    "R_support": {"metric": "first main_down passage count and eligible R cohort/unfinished counts during registered support intervals", "candidate_min_passages_per_seed": 10, "candidate_min_distinct_60s_bins": 3, "basis": "Explicit exploratory event-support choice, not validated sufficient capacity. Reviewer must resolve actual intended-use adequacy beforeB passes.", "boundary_rule": "Crossing interval straddling a boundary remains ambiguous, not forced into a bin; show lower/upper count."},
+    "Q4_relation": {"candidate_rule": "Required M support and R passage evidence share at least3 registered60s bins withinB in eachV1 seed; no post hoc adjacent-lag rescue", "lag_proposed_s": 0, "causal_limit": "Finite joint observability for uncontrolled suitability only; does not establish control benefit, sweet spot or pure urban loss."},
+    "U_context": "Report R upstream stop propagation, R/U shared stopped labels, U counts/time loss, movement-specific TLS and cross-window entering; no invented causal-U-loss threshold."
+  },
+  "result_classes": {
+    "technical_success": "All source/runtime/output/coverage checks meet their registered contract; separate from scientific success.",
+    "scientific_support": "Both requiredV1 seeds meet the registered reference, primary, corroborating,R andQ4 rules with independent receipts; only bounded suitability support, still subject toSG6-R.",
+    "not_resolved": "Complete qualified evidence but either seed fails/contradicts required criteria, insufficient phenomenon/event support, reference not scientifically suitable, or primary sensitivity is not robust; no phenotype-driven retry.",
+    "blocked_by_evidence_error": "Source/hash/ID/time-grid/critical field/parser or reconstruction disagreement prevents interpretation. Preserve attempt; technical_failed execution is separately recorded, not coded as scientific negative."
+  },
+  "budgets_advice": {"max_smoke": 1, "nominal_validation_new": 4, "max_shared_technical_retry": 1, "proposed_total_sumo_starts": 6, "plan_absolute_ceiling": 10, "max_wallclock_s_per_run": 120, "proposed_total_wallclock_s": 720, "archive_cap_bytes_per_attempt": 2000000000, "proposed_total_archive_bytes": 12000000000, "basis": "Engineering management estimates; include failed/reserved attempts. Reused archives are separately retained; netconvert exact requirement is engineeringpending_C, not inferred approved.", "TraCI": 0, "GUI": 0},
+  "unresolved_before_B_completion": ["reference stability and realized-inflow tolerances", "final effect/sample/persistence/R/Q4 thresholds and sensitivities", "numeric p_M/domain/time and matrix acceptance", "all U/X demand fields copied from actual source", "scientific review of reuse/new-information sufficiency"],
+  "decision_owner": "primary agent reconciles scientific_reviewer and simulation_engineer, then obtains required approval; data analyst does not freeze research settings",
+  "stop_boundary": "Any required scientific unknown remains =>B incomplete; no implementation eligibility or simulator start inferred from this proposal"
+}

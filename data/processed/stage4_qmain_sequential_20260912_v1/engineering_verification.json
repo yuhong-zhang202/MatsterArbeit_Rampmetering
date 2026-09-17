@@ -1,0 +1,213 @@
+{
+  "actual_gui_starts": 0,
+  "actual_netconvert_operations": 0,
+  "actual_sumo_starts": 0,
+  "actual_traci_connections": 0,
+  "authorization": {
+    "t42_authorized": true,
+    "t43_authorized": false,
+    "t43_status": "prohibited"
+  },
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "commands": [
+    {
+      "argv": [
+        ".venv/bin/python",
+        "-m",
+        "unittest",
+        "tests.test_stage4_qmain",
+        "tests.test_verify_stage4_qmain",
+        "-v"
+      ],
+      "result": "passed 81/81"
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "-m",
+        "py_compile",
+        "src/analysis/analyze_stage4_qmain.py",
+        "tests/test_stage4_qmain.py",
+        "tests/test_verify_stage4_qmain.py"
+      ],
+      "result": "passed"
+    },
+    {
+      "argv": [
+        ".venv/bin/python",
+        "src/analysis/analyze_stage4_qmain.py",
+        "analyze-run|decide-tier1|decide-final|summarize-status",
+        "--help"
+      ],
+      "result": "passed all four"
+    },
+    {
+      "argv": [
+        "AST static forbidden-import/execution scan",
+        "src/analysis/analyze_stage4_qmain.py",
+        "src/analysis/analyze_stage3_baseline.py"
+      ],
+      "result": "passed; zero banned imports and zero simulation/process/network execution calls"
+    },
+    {
+      "argv": [
+        "read-only registered C17 production-path analysis"
+      ],
+      "result": "passed; complete six-item observation audit; no output persisted"
+    },
+    {
+      "argv": [
+        "git",
+        "diff",
+        "--check",
+        "--",
+        "src/analysis/analyze_stage4_qmain.py",
+        "tests/test_stage4_qmain.py",
+        "data/processed/stage4_qmain_sequential_20260912_v1"
+      ],
+      "result": "passed"
+    },
+    {
+      "argv": [
+        "read-only registered C17/C23/MH17/MH23 production-path analysis"
+      ],
+      "result": "passed 4/4; each passed 7/7 audits; planned and realized rates independently differ where insertion was delayed"
+    }
+  ],
+  "context_preflight": {
+    "authorization_quote": "批准，继续stage 4",
+    "authorization_scope": "T42 offline implementation and three-specialist review only",
+    "current_phase": "Stage 4 T42 offline implementation/review; T43 prohibited",
+    "formal_protocol": "empty_not_frozen",
+    "status": "passed"
+  },
+  "documentation_impact": "PROJECT_STATE/WORKLOG/current human proposal remain primary-agent-owned; registration_payload.json is the unique machine scientific authority.",
+  "hashes": {
+    "adapter_sha256": "d8a1f3832588678a8054507ef8b0c74060ba39585a2c4c03bf268c966b4702f8",
+    "analysis_review_revision_01_sha256": "f37f69b2dd0cd8dee23999139dfb4b6470d63b26b8fc40acf9a3aaf1188305b5",
+    "analysis_review_revision_02_sha256": "f88ddfc0386660f2af27bc159aca7e95612e3c9420d37e1e6f33ea1e6d5e8831",
+    "analysis_review_revision_04_sha256": "d85e14fa403027cbf4fe0668bb54f0a3d26df2dbd298da66bb3f2fda111a8504",
+    "analysis_review_revision_05_sha256": "7a5300de478e0d0b4262ad7b208cb701e8f502e9c572cab716f2231f4914e891",
+    "analysis_review_revision_07_sha256": "4876e670d687a0e6684b02274f5bf968af46d3d91088a918bab69f5b785eb510",
+    "contract_sha256": "b3bf7abec5a9e6cfc29edb81de58ec5cc86c9e0fd132e88a9cd6999a456a91c9",
+    "ejmi_reference_map_sha256": "1c061f9e5a18ffae50b1c5c41568255e765935b81a4f1535e5e10c05cb5d6e99",
+    "execution_ledger_sha256": "f4fad2661a4638e2045d5d74b50418e068758f08d271705d3cccbcebecaa51bf",
+    "independent_test_sha256": "c8ee32f5e8da72695076228736d5aa290542bd34d56dd459817d25e5c82c101e",
+    "independent_verification_revision_01_sha256": "c5f63dc26c0e03df745a21dd3d09e8a2ca747c74a3766b7ba704f76f963eddbd",
+    "independent_verification_revision_02_sha256": "3dde863c85c703ee5b38ed6f1567ca64539fffde49be54d4e51aae58887e6b9f",
+    "independent_verification_revision_04_sha256": "ba725b5057898e864154155e3bb21e49f3af42bb977ae87f83591982af8f8326",
+    "independent_verification_revision_05_sha256": "8eb3d5242909dcfb4406e56671f77de578960172d05dff967bea11cd8f702c30",
+    "independent_verification_revision_07_sha256": "e1157f674cb34137a3220ffa73c4dd11c6090cacef488098fdac0431dbe3ff36",
+    "production_test_sha256": "5849b61192c4c6dae0051e2b8b559a3fe3e626e2c9fd9a00737801dbc5d1a67b",
+    "registration_payload_sha256": "d934b62903081163495b7e17cf72c52786e1dfb864aa5d9a9d3eb5c2eb9a952a",
+    "required_observations_payload_sha256": "61d1a6921feb501f641d97ebc3faa462ba183d9df04bd0d1622f497112b8754e",
+    "source_registry_sha256": "96ee4a20f8130ede9a14ff9a40292a0c1d588770bbf1b37ad1ac455b3a1c538b"
+  },
+  "history_preservation": "All revision_01 through revision_05 review files remain unchanged; revision_05 is the passed scientific-input-semantics evidence. A final mechanical review may be appended without replacing it.",
+  "limitations": [
+    "No T43 simulation has been authorized or run.",
+    "No new qMain archive exists; production behavior for candidate runs remains unobserved.",
+    "All T42 engineering, data and scientific reviews are complete. T43 still requires the user’s exact authorization; new-run identities remain design-time null until authorized execution."
+  ],
+  "major_closures": {
+    "S4SR-M01": "Each of all six registered candidates is bound to the same-seed C and MH reference manifests by run ID, seed, qMain, canonical manifest hash, source-map path and source-map hash. Candidate CLI input rejects path substitution.",
+    "S4SR-M02": "The complete final decision matrix is frozen in registration_payload.json and enforced for exact two-seed pairs: clear-passage plus positive EJMI supports A; qualified consistent q-ordered passage-to-exclusion without positive EJMI supports B; contradictions, incomplete pairs, unqualified runs, disagreements and other patterns are unresolved.",
+    "S4SR-M03": "Candidate analysis now parses the complete registered observation set: downstream E1, Full/A/B/Post M stopped episodes with parent IDs and lane-position ranges, M depart-position ranges, five-region R propagation, shared R/U stopped exposure, TLS context and warning/coverage audit. Decision and status command paths reject candidate manifests lacking any section or a passing six-item audit.",
+    "S4SR-M04": "Source and runtime scenario.add detector/TLS semantics, compiled lane/TLS topology, four reference network hashes, runner/helper/archive/Stage3 analyzer hashes and exact SUMO/netconvert binary hashes are frozen and checked before analysis.",
+    "S4SR_INPUT_SEMANTICS": "The ambiguous actual_input_vehph field is prohibited. planned_demand_vehph is computed from planned counts and the 1500 s demand duration; realized_entry_vehph_A is computed per class from the unique covered endpoint_s=1500 entered counts and the A duration. Candidate validation independently recomputes both from manifest plan/endpoints and rejects mismatch.",
+    "T43_ZERO_GATE": "When T43 is prohibited, any nonzero SUMO start, netconvert operation, TraCI connection or GUI start is rejected."
+  },
+  "minor_closures": {
+    "m_position_coordinate": "Distance to lane end is emitted as nonnegative lane_length minus position; Full summaries do not double-count A/B/Post slices.",
+    "netconvert_budget": "Registration payload and ledger freeze regular min/max 2/4 operations, hard cap 5.",
+    "q_definition": "Planned demand, realized network entry and detector passage flow are distinct frozen quantities; Stage 4 detector q remains nVehEntered and is not mixed with Stage 3 nVehContrib."
+  },
+  "non_binding_historical_proposal_snapshot": {
+    "current_file_match_not_required": true,
+    "path": "docs/STAGE4_QMAIN_SEQUENTIAL_REGISTRATION_PROPOSAL.md",
+    "role": "non_binding_historical_snapshot",
+    "sha256": "90a49cd31f7149c160b8a4c8d50ac53695811d32652b3560820f92f9237f0909"
+  },
+  "pending_before_t43": [
+    "exact T43 user authorization quote",
+    "new-run source maps/runtime identities/attempt IDs are generated only after authorized execution (design-time null; not a contract omission)"
+  ],
+  "read_only_c17_observation_validation": {
+    "downstream_30s_bins": 90,
+    "m_depart_lanes": 2,
+    "m_full_stop_episodes": 0,
+    "m_window_stop_slices": 0,
+    "observation_audit": "passed_6_of_6",
+    "r_propagation_status": "complete_ordered_observation",
+    "shared_R_stopped_vehicle_seconds": 10974.0,
+    "shared_U_stopped_vehicle_seconds": 5737.0,
+    "technical_qualified": true,
+    "tls_labels": 2700
+  },
+  "registered_reference_input_rates": {
+    "C17": {
+      "planned_M": 3199.2,
+      "planned_R": 720.0,
+      "realized_M_A": 3199.2,
+      "realized_R_A": 360.0
+    },
+    "C23": {
+      "planned_M": 3199.2,
+      "planned_R": 720.0,
+      "realized_M_A": 3199.2,
+      "realized_R_A": 369.6
+    },
+    "MH17": {
+      "planned_M": 3799.2,
+      "planned_R": 720.0,
+      "realized_M_A": 3799.2,
+      "realized_R_A": 288.0
+    },
+    "MH23": {
+      "planned_M": 3799.2,
+      "planned_R": 720.0,
+      "realized_M_A": 3799.2,
+      "realized_R_A": 285.6
+    },
+    "common": "deprecated actual_input_vehph absent; qualification passed 7/7"
+  },
+  "registered_reference_validation": {
+    "manifest_payload_hashes": {
+      "C17": "916b4d35ee9e9ce0bd339f716cf902d080e0f520e1d04223f1752d266fdd562e",
+      "C23": "629c1b3dcdd9821cad38006ec76cbe0d0499a47ad379e025a691d4b8305a7c1b",
+      "MH17": "023e705bbbb8deaeb388fc3795719f9643ba8d9943c2b94c2392a4ea5d48e4f2",
+      "MH23": "76612b00369f62c1d7005c656ec0fd22700ebf612e74c216d05756b0e50a9204"
+    },
+    "same_seed_mapping": "passed_6_of_6_candidates",
+    "status": "passed_4_of_4"
+  },
+  "review_closeout": {
+    "data_analyst": {
+      "final_revision": "revision_07",
+      "open_findings": 0,
+      "status": "passed"
+    },
+    "scientific_reviewer": {
+      "note": "No standalone file hash was provided and none is claimed.",
+      "open_findings": 0,
+      "standalone_artifact_sha256": null,
+      "status": "passed"
+    }
+  },
+  "schema_version": 5,
+  "stage": "Stage 4",
+  "status": "t42_all_engineering_data_scientific_reviews_complete_t43_authorization_pending",
+  "step": "T42",
+  "verification": {
+    "ast_banned_imports": [],
+    "ast_dangerous_execution_calls": 0,
+    "combined_unittest": "passed 81/81",
+    "four_cli_help_commands": "passed",
+    "git_diff_check": "passed",
+    "independent_test_methods": 29,
+    "production_test_methods": 52,
+    "py_compile": "passed",
+    "static_assert_calls_independent": 121,
+    "static_assert_calls_production": 108
+  }
+}

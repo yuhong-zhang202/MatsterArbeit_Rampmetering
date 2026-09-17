@@ -1,0 +1,93 @@
+{
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "candidate_manifests": {
+    "QM3500S17": {
+      "audit": {
+        "passed": true,
+        "passed_audit_items": 7,
+        "required_audit_items": 7
+      },
+      "file_sha256": "d01d93948990de325565f1c2a3c0d8ea0c7ccd786a678bfbd4d68a4135b31f27",
+      "path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/engineering_overlay_cli_revision_02/QM3500S17/run_manifest.json",
+      "payload_sha256": "a21d3f114954a5f82770b01b6629afd7bf2621e1a2a472bd2675609e74ecf58e",
+      "technical_qualified": true
+    },
+    "QM3500S23": {
+      "audit": {
+        "passed": true,
+        "passed_audit_items": 7,
+        "required_audit_items": 7
+      },
+      "file_sha256": "70dc887afd1da49b9d211f24af24cd1ccb11e4f3d946f731dc3814e2ccaf78e4",
+      "path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/engineering_overlay_cli_revision_02/QM3500S23/run_manifest.json",
+      "payload_sha256": "a930dc291cb196d802768b1953b9225ebd5a1f2e60ecca1eac23f1520e0782de",
+      "technical_qualified": true
+    }
+  },
+  "candidate_receipts": {
+    "QM3500S17": {
+      "path": "data/processed/stage4_qmain_sequential_20260912_v1/candidate_manifest_receipts/QM3500S17_revision_01.json",
+      "sha256": "98f45ee5d73e55b321267147b0c9a26c4e2e1769d425bc4bf677d1010f9311da"
+    },
+    "QM3500S23": {
+      "path": "data/processed/stage4_qmain_sequential_20260912_v1/candidate_manifest_receipts/QM3500S23_revision_01.json",
+      "sha256": "a3128382d4de6a33f322fc58d586488ead8357041875fd3abfa78df4226883c9"
+    }
+  },
+  "closed_blockers": [
+    "analyze-run required immutable registry source fields and could not resolve ledger-bound runtime overlay",
+    "decide-tier1 required candidate manifest payload hashes but had no controlled registration workflow"
+  ],
+  "engineering_decision_smoke": {
+    "action": "run_q3650",
+    "interpretation": "workflow verification only; not authorization to launch Tier2",
+    "path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/engineering_decision_cli_revision_01/branch_decision.json",
+    "sha256": "e0fb31613c2af5375aa6d6148da7a9c67ef5efacde1c0e822b806b6bc2d54b91"
+  },
+  "execution_counters": {
+    "actual_gui_starts": 0,
+    "actual_netconvert_operations": 2,
+    "actual_sumo_starts": 2,
+    "actual_traci_connections": 0
+  },
+  "immutable_bindings": {
+    "approved_source_registry_sha256": "96ee4a20f8130ede9a14ff9a40292a0c1d588770bbf1b37ad1ac455b3a1c538b",
+    "candidate_manifest_receipt_registry_path": "data/processed/stage4_qmain_sequential_20260912_v1/candidate_manifest_receipt_registry.json",
+    "candidate_manifest_receipt_registry_sha256": "c80c571deacf9bc7a53c090d3c649fe1b05673ab21094bd76976dcf9973ccc4c",
+    "measurement_contract_sha256": "b3bf7abec5a9e6cfc29edb81de58ec5cc86c9e0fd132e88a9cd6999a456a91c9",
+    "registration_payload_sha256": "d934b62903081163495b7e17cf72c52786e1dfb864aa5d9a9d3eb5c2eb9a952a",
+    "runtime_source_registry_path": "data/processed/stage4_qmain_sequential_20260912_v1/runtime_source_registry.json",
+    "runtime_source_registry_sha256": "526a144892c9b0317af7edc631fa9fba52173ca33c0c01dce6dbcf80f6866ac4"
+  },
+  "implementation": {
+    "adapter_path": "src/analysis/analyze_stage4_qmain.py",
+    "adapter_sha256": "8e359a21cee4ea0612fd3bd2dfa1af2a20a5599c7695dacdcee08cbcda3835be",
+    "production_test_path": "tests/test_stage4_qmain.py",
+    "production_test_sha256": "648d8ed91fd26c95f4fda84afbace6e44f70ecc13fda701144164a971b7bbdc2",
+    "scientific_contract_changed": false,
+    "simulation_execution_capability": false
+  },
+  "independent_verification": {
+    "status": "pending_new_revision"
+  },
+  "production_verification": {
+    "analyze_run_success": "2/2",
+    "cli_help": "passed",
+    "decide_tier1_success": "passed",
+    "duplicate_registration_no_overwrite": "passed",
+    "error_before_output_reservation": "passed",
+    "forbidden_simulation_imports": "absent",
+    "py_compile": "passed",
+    "register_manifest_success": "2/2",
+    "tests_failed": 0,
+    "tests_passed": 66
+  },
+  "revision": "revision_02",
+  "schema_version": 1,
+  "scope": "T43 Tier1 runtime overlay plus controlled candidate-manifest receipt workflow",
+  "status": "production_verified_pending_independent_review",
+  "tier2": {
+    "launch_status": "not_started_and_not_authorized_by_this_engineering_step",
+    "registered_engineering_decision": "run_q3650"
+  }
+}

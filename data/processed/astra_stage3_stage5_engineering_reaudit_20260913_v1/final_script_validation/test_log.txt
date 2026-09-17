@@ -1,0 +1,39 @@
+test_01_duplicate_id (tests.test_stage3_baseline.Stage3FailureModes.test_01_duplicate_id) ... ok
+test_02_missing_frame_and_empty_frame (tests.test_stage3_baseline.Stage3FailureModes.test_02_missing_frame_and_empty_frame) ... ok
+test_03_episode_split_1_2_4 (tests.test_stage3_baseline.Stage3FailureModes.test_03_episode_split_1_2_4) ... ok
+test_04_region_replacement_is_not_same_vehicle_episode (tests.test_stage3_baseline.Stage3FailureModes.test_04_region_replacement_is_not_same_vehicle_episode) ... ok
+test_05_internal_lane_complete_without_double_count (tests.test_stage3_baseline.Stage3FailureModes.test_05_internal_lane_complete_without_double_count) ... ok
+test_06_stop_boundary_and_missing_speed (tests.test_stage3_baseline.Stage3FailureModes.test_06_stop_boundary_and_missing_speed) ... ok
+test_07_first_r_downstream_is_unique (tests.test_stage3_baseline.Stage3FailureModes.test_07_first_r_downstream_is_unique) ... ok
+test_08_cross_bin_event_is_unknown (tests.test_stage3_baseline.Stage3FailureModes.test_08_cross_bin_event_is_unknown) ... ok
+test_09_endpoint_without_coverage_does_not_emit_zero (tests.test_stage3_baseline.Stage3FailureModes.test_09_endpoint_without_coverage_does_not_emit_zero) ... ok
+test_10_e1_zero_weighting_anchors_and_short_tail (tests.test_stage3_baseline.Stage3FailureModes.test_10_e1_zero_weighting_anchors_and_short_tail) ... ok
+test_11_tls_wrong_link (tests.test_stage3_baseline.Stage3FailureModes.test_11_tls_wrong_link) ... ok
+test_12_missing_seed_prohibits_consistency_claim (tests.test_stage3_baseline.Stage3FailureModes.test_12_missing_seed_prohibits_consistency_claim) ... ok
+test_13_guardrails_and_contract (tests.test_stage3_baseline.Stage3FailureModes.test_13_guardrails_and_contract) ... ok
+test_14_full_episode_slices_parent_and_censor (tests.test_stage3_baseline.Stage3FailureModes.test_14_full_episode_slices_parent_and_censor) ... ok
+test_15_propagation_endpoint_and_five_question_rows (tests.test_stage3_baseline.Stage3FailureModes.test_15_propagation_endpoint_and_five_question_rows) ... ok
+test_15b_reversed_propagation_is_traceable_contradiction (tests.test_stage3_baseline.Stage3FailureModes.test_15b_reversed_propagation_is_traceable_contradiction) ... ok
+test_16_aggregate_combines_eight_nonempty_run_packages_and_checks_hashes (tests.test_stage3_baseline.Stage3FailureModes.test_16_aggregate_combines_eight_nonempty_run_packages_and_checks_hashes) ... ok
+test_17_analyze_run_writes_all_contract_tables_from_synthetic_archive (tests.test_stage3_baseline.Stage3FailureModes.test_17_analyze_run_writes_all_contract_tables_from_synthetic_archive) ... ok
+test_18_end_to_end_missing_or_invalid_fcd_speed_is_rejected (tests.test_stage3_baseline.Stage3FailureModes.test_18_end_to_end_missing_or_invalid_fcd_speed_is_rejected) ... ok
+test_19_end_to_end_unknown_identity_or_frame_is_rejected (tests.test_stage3_baseline.Stage3FailureModes.test_19_end_to_end_unknown_identity_or_frame_is_rejected) ... ok
+test_20_end_to_end_exact_tls_grid_is_required (tests.test_stage3_baseline.Stage3FailureModes.test_20_end_to_end_exact_tls_grid_is_required) ... ok
+test_21_end_to_end_contributed_e1_speed_is_required (tests.test_stage3_baseline.Stage3FailureModes.test_21_end_to_end_contributed_e1_speed_is_required) ... ok
+test_22_internal_stopped_fcd_reaches_disjoint_regions (tests.test_stage3_baseline.Stage3FailureModes.test_22_internal_stopped_fcd_reaches_disjoint_regions) ... ok
+test_23_endpoint_excludes_departure_at_1500 (tests.test_stage3_baseline.Stage3FailureModes.test_23_endpoint_excludes_departure_at_1500) ... ok
+test_24_zero_contribution_and_short_tail_flow (tests.test_stage3_baseline.Stage3FailureModes.test_24_zero_contribution_and_short_tail_flow) ... ok
+{"assertion_count": 183, "failure_mode_categories": 19, "synthetic_fixture_count": 40}
+test_close_handles_nested_numeric_and_none (tests.test_verify_stage3_baseline.IndependentVerifierTests.test_close_handles_nested_numeric_and_none) ... ok
+test_contiguous_rejects_duplicates (tests.test_verify_stage3_baseline.IndependentVerifierTests.test_contiguous_rejects_duplicates) ... ok
+test_contiguous_splits_gaps (tests.test_verify_stage3_baseline.IndependentVerifierTests.test_contiguous_splits_gaps) ... ok
+test_sign_keeps_zero_separate (tests.test_verify_stage3_baseline.IndependentVerifierTests.test_sign_keeps_zero_separate) ... ok
+test_final_evidence_snapshot_is_complete_and_registry_bound (tests.test_stage4_qmain.Stage4FinalEvidenceSnapshotTests.test_final_evidence_snapshot_is_complete_and_registry_bound) ... ok
+test_future_current_ledger_metadata_does_not_change_snapshot_validation (tests.test_stage4_qmain.Stage4FinalEvidenceSnapshotTests.test_future_current_ledger_metadata_does_not_change_snapshot_validation) ... ok
+test_snapshot_consumer_is_independent_of_future_mutable_ledger_metadata (tests.test_verify_stage4_qmain.IndependentFinalEvidenceSnapshotChecks.test_snapshot_consumer_is_independent_of_future_mutable_ledger_metadata) ... ok
+test_snapshot_independently_rebuilds_all_execution_evidence_hashes (tests.test_verify_stage4_qmain.IndependentFinalEvidenceSnapshotChecks.test_snapshot_independently_rebuilds_all_execution_evidence_hashes) ... ok
+
+----------------------------------------------------------------------
+Ran 33 tests in 1.303s
+
+OK

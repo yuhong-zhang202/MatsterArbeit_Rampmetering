@@ -1,0 +1,137 @@
+{
+  "schema_version": 1,
+  "created_at": "2026-09-09T15:53:10.838Z",
+  "updated_at": "2026-09-09T22:14:21.089Z",
+  "policy_hash": "88a0df82b84beb420c26fdc94e999e7306033f79a382f4249fa978bd7deda331",
+  "policy": {
+    "model": "gpt-4.1-mini",
+    "max_attempts": 37,
+    "max_request_bytes": 20000,
+    "max_output_tokens": 4096,
+    "upstream_origin": "https://api.openai.com",
+    "upstream_path": "/v1/chat/completions"
+  },
+  "claimed_attempts": 5,
+  "attempts": [
+    {
+      "id": "9baa1cbf-cd11-4b08-9b51-461258c5984b",
+      "claimed_at": "2026-09-09T15:54:52.675Z",
+      "request_bytes": 16219,
+      "requested_output_tokens": 4096,
+      "outcome": "response_received",
+      "upstream_status": 200,
+      "usage": {
+        "prompt_tokens": 3792,
+        "completion_tokens": 845,
+        "total_tokens": 4637,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "finished_at": "2026-09-09T15:55:02.333Z"
+    },
+    {
+      "id": "45412b2a-1ee3-4abe-af85-69051af43a79",
+      "claimed_at": "2026-09-09T15:55:03.506Z",
+      "request_bytes": 17900,
+      "requested_output_tokens": 4096,
+      "outcome": "response_received",
+      "upstream_status": 200,
+      "usage": {
+        "prompt_tokens": 4790,
+        "completion_tokens": 477,
+        "total_tokens": 5267,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "finished_at": "2026-09-09T15:55:09.127Z"
+    },
+    {
+      "id": "5b849c26-103e-4b5c-9b8c-a448a69e221d",
+      "claimed_at": "2026-09-09T22:14:07.285Z",
+      "request_bytes": 15058,
+      "requested_output_tokens": 4096,
+      "outcome": "response_received",
+      "upstream_status": 200,
+      "usage": {
+        "prompt_tokens": 3774,
+        "completion_tokens": 434,
+        "total_tokens": 4208,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "finished_at": "2026-09-09T22:14:14.002Z"
+    },
+    {
+      "id": "90d49537-3ef9-43e7-b88d-8da7994717ac",
+      "claimed_at": "2026-09-09T22:14:16.014Z",
+      "request_bytes": 16364,
+      "requested_output_tokens": 4096,
+      "outcome": "response_received",
+      "upstream_status": 200,
+      "usage": {
+        "prompt_tokens": 4409,
+        "completion_tokens": 20,
+        "total_tokens": 4429,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "finished_at": "2026-09-09T22:14:17.207Z"
+    },
+    {
+      "id": "9fc65687-8794-4b41-a294-ae23a443bbe3",
+      "claimed_at": "2026-09-09T22:14:17.239Z",
+      "request_bytes": 18861,
+      "requested_output_tokens": 4096,
+      "outcome": "response_received",
+      "upstream_status": 200,
+      "usage": {
+        "prompt_tokens": 4869,
+        "completion_tokens": 454,
+        "total_tokens": 5323,
+        "prompt_tokens_details": {
+          "cached_tokens": 4352,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "finished_at": "2026-09-09T22:14:21.089Z"
+    }
+  ]
+}

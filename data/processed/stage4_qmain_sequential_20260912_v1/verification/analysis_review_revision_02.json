@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "review_type": "independent data-contract and decision-logic rereview",
+  "revision": "revision_02",
+  "status": "accepted_for_scientific_review",
+  "review_boundary": "Exploratory T42 offline tooling only. This review does not authorize T43, select a Breakdown threshold, or establish causal or thesis claims.",
+  "accepted_scopes": {
+    "measurement_arithmetic": "Two-lane occupancy arithmetic mean, percentage-point unit, contribution-weighted speed, nVehEntered q and duration-weighted A/B aggregation matched independent calculations.",
+    "ejmi_math": "Strict registered A/B margins and 120/60/30 persistence logic matched independent boundary fixtures.",
+    "tier1_matrix": "All 81 registered two-seed R/EJMI combinations produced the intended Tier-1 action.",
+    "tier2_integrity": "Only empty or one complete same-q branch is accepted; a complete lower-branch fixture produced 10 registered terminal logical runs, 8 used logical runs, 64 eligible endpoint cells and 6 planned comparisons.",
+    "denominator_integrity": "Reference and new-run terminal status, run identity, seed, qMain, endpoint uniqueness and complete endpoint coverage are manifest-backed.",
+    "contract_and_authorization_lock": "Exact arithmetic rules, EJMI constants, immutable registration payload and the complete T43 approval envelope are validated against drift.",
+    "R_measurement_integrity": "Arrival, coverage and duplicate within-frame identity contradictions become unresolved evidence.",
+    "current_safety_state": "T43 remains prohibited, all four start/connect counters are zero, and no new source map exists.",
+    "references": "C17/C23/MH17/MH23 independently matched 36/40/0/0 A-window R events, exact Stage 4 E1 aggregates and all eight unique endpoint cells per run."
+  },
+  "closed_major_findings": [
+    "S4DA-M01",
+    "S4DA-M02",
+    "S4DA-M03",
+    "S4DA-M04",
+    "S4DA-M05",
+    "S4DA-M06",
+    "S4DA-M07"
+  ],
+  "open_major_count": 0,
+  "recommendation": "The repaired T42 package may be submitted to scientific_reviewer. Keep T43 prohibited until a separate, complete, user-approved launch envelope is recorded after review.",
+  "remaining_limits": [
+    "No future new-run result has been observed or validated.",
+    "The two-seed design remains exploratory and cannot establish robust stochastic or causal conclusions.",
+    "EJMI is not a frozen Breakdown or capacity threshold.",
+    "Stage 4 q is based on nVehEntered and must not be mixed with Stage 3 nVehContrib values.",
+    "Registered reference identity remains revision_01; revision_02 rereview outputs separately reproduce identical scientific and numeric fields under the repaired adapter."
+  ],
+  "confidence": {
+    "M01_to_M07_closure": "High",
+    "measurement_and_reference_reconstruction": "High",
+    "offline_branch_and_denominator_logic": "High",
+    "future_new_run_behavior": "Unknown"
+  },
+  "actual_sumo_starts": 0,
+  "actual_netconvert_operations": 0,
+  "actual_traci_connections": 0,
+  "actual_gui_starts": 0
+}

@@ -1,0 +1,9 @@
+gate_id,gate_name,status,denominator,evidence_id,scope_and_limit
+G01,source_and_run_coverage,passed,"Stage3 8/8 runs, 232/232 files, 128/128 required outputs; Stage4 10/10 logical terminal, 8/8 evidence manifests, 116/116 archive files",E-S3-FINAL|E-S4-FINAL,"All registered exploratory sources have terminal, hash-linked status."
+G02,count_and_identity,passed,32/32 run-class; 64/64 Stage3 endpoints; Stage4 64/64 endpoints; unexplained duplicate/unknown/residual=0,E-S2-G2|E-S3-FINAL|E-S4-FINAL,Accounting completeness only; no demand adequacy threshold selected.
+G03,measurement_coverage,passed,metadata 100%; Stage3 FCD 21600/21600 and E1 4320/4320; Stage4 registered observations 7/7 per new run,E-S3-FINAL|E-S4-FINAL,Within fixed exploratory topology and declared windows.
+G04,behavior_diagnosis,passed,40/40 run-question evidence units; Stage4 four candidates classified under registered rules,E-S3-FINAL|E-S4-SCI,Complete diagnosis includes not_identified states.
+G05,new_processing_trustworthiness,passed,Stage3 12/12 failure modes and full independent core reconstruction; Stage4 snapshot-bound 116/116 tests; open analysis Blocker/Major=0,E-S3-FINAL|E-S4-FINAL,"Trusts registered processing, not scientific generalization."
+G06,sensitivity_and_randomness,passed,6/6 input contrasts; 8/8 seed units; 96/96 q/v values; 48/48 time series; 43 sign inconsistencies retained,E-S3-FINAL,Descriptive two-seed/window coverage; not statistical power or robustness.
+G07,intended_use_assessment,passed,Q1-Q4 4/4: Q1/Q3 supported with limits; Q2/Q4 not_identified; core unknowns retained,E-S3-FINAL|E-S4-SCI,"Completion of scientific assessment leads to specific_obstacle, not preliminary_ready."
+G08,handover,passed,O1-O6 6/6; T52 classes 22/22; unclassified=0; unsupported verified claims=0; undisclosed key limitations=0,E-S4-SCI|E-STAGE5-T50|E-STAGE5-T52,Passed only after Stage4 final scientific PASS; T51/T53/T54 still required for Stage5/user closeout.

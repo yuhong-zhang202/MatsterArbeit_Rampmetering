@@ -1,0 +1,92 @@
+{
+  "SUMO_HOME_realpath": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo",
+  "approval": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/sg6p_user_approval.json",
+    "sha256": "8db02823acb7307826c86baa901658ba1fad5e5434b29bcd321e50a298eedb2d"
+  },
+  "argv": [
+    "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+    "-c",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/attempts/S6_V1_ML_S17_attempt2/scenario.sumocfg"
+  ],
+  "binary": {
+    "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+    "sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179"
+  },
+  "budget_events": [
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/budget_journal/event_0000.json",
+      "sha256": "a8f0346f81161163ac17af88f719cb26aa2846d08686b333046d774e9098d01a"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/budget_journal/event_0001.json",
+      "sha256": "e8de5114410ce2eef35b5df73024b6b77a91f8acd9415dcee1f5477ed17784ac"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/budget_journal/event_0002.json",
+      "sha256": "8339bb30db54947595e162bbe1c0a202b7e30b7e49fff795b1105f8eab40a180"
+    }
+  ],
+  "concurrent_simulator_processes": [],
+  "environment_diff": {
+    "SUMO_HOME": {
+      "after": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo",
+      "before": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO",
+      "scope": "child execution process only; no shell/profile/config mutation"
+    }
+  },
+  "gate_policy": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/launch_gate_policy.json",
+    "sha256": "d57cd0a14bbb5d38f1539c7bf2460191caebaa15964ef1d7b6a83217a3784eab"
+  },
+  "initial_budget_counters": {
+    "actual_starts_observed": 1,
+    "archive_bytes": 54982857,
+    "reserved_or_unknown": 0,
+    "retry": 0,
+    "smoke": 1,
+    "sumo": 1,
+    "validation": 0,
+    "wallclock_s": 27.35341920799692
+  },
+  "launch_card": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_engineering_smoke_revision_01/approved_launch_card.json",
+    "sha256": "5b359c76deb6552f4d2738d9b6366404499a5a4279a86ec4da0519b79b2f175a"
+  },
+  "materialization": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/attempts/S6_V1_ML_S17_attempt2/materialization_manifest.json",
+    "sha256": "a343654d64dc697cf0b09ae35c4beadd4fee3ffab841483c98f2b1341dc83b35"
+  },
+  "parameter_and_normalized_runtime_comparison": "identical except predetermined attempt output paths",
+  "parent_execution_receipt": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/attempts/S6_V1_ML_S17_attempt1/execution_receipt.json",
+    "sha256": "73574a941934830720b5b890e6305b5d17e9896b8fb01ccb9b9e0425b9a11039"
+  },
+  "parent_technical_receipt": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_engineering_smoke_revision_01/smoke_technical_receipt.json",
+    "sha256": "959a3415d2b85b94425d4fc81be61f5a99f8aceb4db3da2252e1cbe9be7043ee"
+  },
+  "process_check": "tool /bin/ps -axo pid=,comm= succeeded, no matching sumo/sumo-gui/netconvert",
+  "proposed_card": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/proposed_launch_card.json",
+    "sha256": "6dad07d6862eb6dfd6ca5ffd4bd09ccffa3563ff63106b67a983dcbaba765067"
+  },
+  "remaining_before_attempt": {
+    "SUMO_starts": 5,
+    "global_retry": 1,
+    "validation_starts": 4
+  },
+  "retry_consumed_on_start": true,
+  "scientific_release": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_scientific_retry_release_revision_01.json",
+    "sha256": "3c579b51c5def53b9ff0926286ede8143731deb65dfd5dc1bccc9346bdef1d9d"
+  },
+  "stable_payload_sha256": "4f65deb5ee65eb23ff071d6b79e85d1afcff1dd12fd50242cc7ed07b2161a1d3",
+  "status": "PASS_prelaunch_only",
+  "validation_released": false,
+  "xml_validation_flags_changed": false,
+  "xsd_dependencies": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_engineering_smoke_retry_revision_01/xsd_dependency_manifest.json",
+    "sha256": "88ab7073ff68505fa43db144c505fdbbeb7236dd697cc41e3500eae41b6fb5c9"
+  }
+}

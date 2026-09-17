@@ -1,0 +1,61 @@
+{
+  "attempt_id": "S6_V1_C_S23_attempt1",
+  "binary": {
+    "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+    "sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179"
+  },
+  "card": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/validation_card_draft_revision_03.json",
+    "sha256": "d0ef6270f5bdd687621ab3513e9ba533c979a6ea37dbd9e8efd268b5234d1dfb"
+  },
+  "execution_implementation": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/scenarios/stage6_h2_execution.py",
+    "sha256": "4c6dc65967cb655b132fe344587d5354979867c1ae26668cbf6ce920539ab402"
+  },
+  "files": {
+    "demand.rou.xml": {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_data_review_revision_02/empty_queue_end_to_end/attempts/S6_V1_C_S23_attempt1/demand.rou.xml",
+      "sha256": "8a1346fc910efc68b795b510c77fcee2fe6c3c4ee71ccc3c60d2cd4b13e36ac3"
+    },
+    "scenario.add.xml": {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_data_review_revision_02/empty_queue_end_to_end/attempts/S6_V1_C_S23_attempt1/scenario.add.xml",
+      "sha256": "03d3aa07e2e25a04810436e000bd1aa60eb34056d9668ad5f68dcf4173a2ad61"
+    },
+    "scenario.sumocfg": {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_data_review_revision_02/empty_queue_end_to_end/attempts/S6_V1_C_S23_attempt1/scenario.sumocfg",
+      "sha256": "f5926e759f851ec91c59f26e3aaac9140dee4b98dd3f16b6d13d4d75808680af"
+    }
+  },
+  "implementation": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/scenarios/stage6_h2_offline.py",
+    "sha256": "4620f4636fc6abe96d3732e46097b3b2ee0ef9e928e288625421e9dc8bcad3d9"
+  },
+  "launch_eligible": false,
+  "measurement_implementation": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/analysis/stage6_h2_measurement.py",
+    "sha256": "43cb28c7f1daba0b21c56590f8432c86a92aa0de136988eb6ccb9fe5894e85c5"
+  },
+  "network": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/network.net.xml",
+    "sha256": "a83bb0c3a03b7e74cf8c2360336eb0dfbb330073cf8b8f6aea9940ff7cf3d8ea"
+  },
+  "number_flow_exact_quantization": "pending_C_not_verified",
+  "proposed_sumo_argv_not_authorized": [
+    "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+    "-c",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_data_review_revision_02/empty_queue_end_to_end/attempts/S6_V1_C_S23_attempt1/scenario.sumocfg"
+  ],
+  "run_id": "S6_V1_C_S23",
+  "schema_version": 1,
+  "simulation_invocations": {
+    "GUI": 0,
+    "SUMO": 0,
+    "TraCI": 0,
+    "netconvert": 0
+  },
+  "source_manifest": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/config/scenarios/stage6_h2_entry_v1/source_manifest.json",
+    "sha256": "987b43bc6ee8335e124b05282513bfab2135262dd20b400d2e56e99397843292"
+  },
+  "status": "prepared_offline_not_launch_approved"
+}

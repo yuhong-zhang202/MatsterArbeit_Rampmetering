@@ -1,0 +1,119 @@
+{
+  "status": "passed",
+  "method": "independent stdlib raw XML implementation; no production adapter import",
+  "source_file_hashes": 348,
+  "runs": [
+    {
+      "run_id": "C17",
+      "status": "passed",
+      "raw_FCD_frames": 2700,
+      "raw_FCD_vehicle_samples": 269861,
+      "unique_vehicles": 1858
+    },
+    {
+      "run_id": "C23",
+      "status": "passed",
+      "raw_FCD_frames": 2700,
+      "raw_FCD_vehicle_samples": 274024,
+      "unique_vehicles": 1858
+    },
+    {
+      "run_id": "ML17",
+      "status": "passed",
+      "raw_FCD_frames": 2700,
+      "raw_FCD_vehicle_samples": 260011,
+      "unique_vehicles": 1608
+    },
+    {
+      "run_id": "ML23",
+      "status": "passed",
+      "raw_FCD_frames": 2700,
+      "raw_FCD_vehicle_samples": 261255,
+      "unique_vehicles": 1608
+    },
+    {
+      "run_id": "MH17",
+      "status": "passed",
+      "raw_FCD_frames": 2700,
+      "raw_FCD_vehicle_samples": 293534,
+      "unique_vehicles": 2108
+    },
+    {
+      "run_id": "MH23",
+      "status": "passed",
+      "raw_FCD_frames": 2700,
+      "raw_FCD_vehicle_samples": 292780,
+      "unique_vehicles": 2108
+    },
+    {
+      "run_id": "RL17",
+      "status": "passed",
+      "raw_FCD_frames": 2700,
+      "raw_FCD_vehicle_samples": 181397,
+      "unique_vehicles": 1708
+    },
+    {
+      "run_id": "RL23",
+      "status": "passed",
+      "raw_FCD_frames": 2700,
+      "raw_FCD_vehicle_samples": 180263,
+      "unique_vehicles": 1708
+    },
+    {
+      "run_id": "QM3500S17",
+      "status": "passed",
+      "raw_FCD_frames": 2700,
+      "raw_FCD_vehicle_samples": 283896,
+      "unique_vehicles": 1983
+    },
+    {
+      "run_id": "QM3500S23",
+      "status": "passed",
+      "raw_FCD_frames": 2700,
+      "raw_FCD_vehicle_samples": 284915,
+      "unique_vehicles": 1983
+    },
+    {
+      "run_id": "QM3650S17",
+      "status": "passed",
+      "raw_FCD_frames": 2700,
+      "raw_FCD_vehicle_samples": 292318,
+      "unique_vehicles": 2046
+    },
+    {
+      "run_id": "QM3650S23",
+      "status": "passed",
+      "raw_FCD_frames": 2700,
+      "raw_FCD_vehicle_samples": 290566,
+      "unique_vehicles": 2046
+    }
+  ],
+  "comparison_counts": {
+    "lane_class_time_rows": 777600,
+    "entry_vehicles": 22622,
+    "endpoints": 96,
+    "R_events": 3300,
+    "propagation_firsts": 60,
+    "shared_window_rows": 48,
+    "M_region_window_rows": 144,
+    "M_space_time_bins": 3240,
+    "section_window_values": 576
+  },
+  "code_sha256": "5c2eb8ab532bbfee2f713601b79fdb7f2e54eb1ad6c5054939130f0633a87eb7",
+  "production_sha256": "a6e083cc42ecf680930650702a56b4dc514af3930bdce57daec20556cf2b3181",
+  "analysis_contract_sha256": "0aec3ecf0c28902b2c0fd286d1f30e83636b482d2ed12e17c2513855f20af410",
+  "numerical_tolerance": {
+    "abs": 1e-08,
+    "rel": 1e-10
+  },
+  "simulation_counts": {
+    "SUMO": 0,
+    "netconvert": 0,
+    "TraCI": 0,
+    "GUI": 0
+  },
+  "limitations": [
+    "Independent numeric reconstruction does not validate scientific causality or future scenario suitability",
+    "No new EJMI classification or formal threshold selected"
+  ]
+}

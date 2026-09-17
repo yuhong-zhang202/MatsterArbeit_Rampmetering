@@ -1,0 +1,99 @@
+{
+  "schema_version": 1,
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "stage": "Stage 4 T42 independent input-semantics rereview",
+  "revision": "revision_05",
+  "status": "passed",
+  "context_preflight": {
+    "status": "passed",
+    "current_phase": "T42 offline implementation and review; T43 prohibited",
+    "authorization_quote": "批准，继续stage 4",
+    "formal_protocol": "empty_not_frozen",
+    "formal_experiment_started": false
+  },
+  "history_preservation": {
+    "revision_01_through_04": "preserved unchanged",
+    "previous_passed_verification_revision_04_sha256": "ba725b5057898e864154155e3bb21e49f3af42bb977ae87f83591982af8f8326",
+    "previous_passed_analysis_review_revision_04_sha256": "d85e14fa403027cbf4fe0668bb54f0a3d26df2dbd298da66bb3f2fda111a8504"
+  },
+  "reviewed_hashes": {
+    "src/analysis/analyze_stage4_qmain.py": "d8a1f3832588678a8054507ef8b0c74060ba39585a2c4c03bf268c966b4702f8",
+    "tests/test_stage4_qmain.py": "5849b61192c4c6dae0051e2b8b559a3fe3e626e2c9fd9a00737801dbc5d1a67b",
+    "tests/test_verify_stage4_qmain.py": "76242786bf979ce818d0e56682b35a27d343cb35ca533046ee24dda44e1c724b",
+    "registration_payload.json": "d934b62903081163495b7e17cf72c52786e1dfb864aa5d9a9d3eb5c2eb9a952a",
+    "required_observations_payload": "61d1a6921feb501f641d97ebc3faa462ba183d9df04bd0d1622f497112b8754e",
+    "measurement_contract.json": "a519b8aa1a20e616914ddb38ca2ef32c8ee326494be8b66951bd2cf5c4ba8523",
+    "source_registry.json": "96ee4a20f8130ede9a14ff9a40292a0c1d588770bbf1b37ad1ac455b3a1c538b",
+    "execution_ledger.json": "1db266fc2fc035fa9fbd393549fb6335ae3599ba3d1e877a0497868345416a24",
+    "engineering_verification.json": "0feb3878b356ded0e20d8890a62eff9a619aad7d9062fd96524295b2843c7e28",
+    "docs/STAGE4_QMAIN_SEQUENTIAL_REGISTRATION_PROPOSAL.md": "90a49cd31f7149c160b8a4c8d50ac53695811d32652b3560820f92f9237f0909"
+  },
+  "test_results": {
+    "production_suite": "52/52 passed",
+    "independent_suite": "29/29 passed",
+    "combined_suite": "81/81 passed",
+    "py_compile": "passed",
+    "hash_and_cross_link_check": "passed",
+    "diff_check": "passed"
+  },
+  "input_semantics_decision": {
+    "status": "closed",
+    "confidence": "High",
+    "planned_demand_vehph": "independently recomputed from immutable demand.rou.xml class counts times 3600/1500",
+    "realized_entry_vehph_A": "independently recomputed from each unique covered class endpoint_s=1500 entered count times 3600/1500",
+    "deprecated_field": "actual_input_vehph is absent from all revision_05 manifests and rejected by candidate validation",
+    "candidate_integrity": "mutating either planned_demand_vehph or realized_entry_vehph_A away from top-level plan/A-endpoint accounting is rejected",
+    "qualification": "entry_accounting is the seventh mandatory audit item; all four references pass 7/7"
+  },
+  "reference_revision_05": {
+    "status": "passed_4_of_4",
+    "runs": {
+      "C17": {
+        "manifest_sha256": "1dc75a7dd63ecc55afe4783efcba2f7d4339b54a1896aa46b525df1dbe2167a8",
+        "entered_A": {"M": 1333, "R": 150, "U": 75, "X": 75},
+        "planned_demand_vehph": {"M": 3199.2, "R": 720.0, "U": 360.0, "X": 180.0},
+        "realized_entry_vehph_A": {"M": 3199.2, "R": 360.0, "U": 180.0, "X": 180.0}
+      },
+      "C23": {
+        "manifest_sha256": "e76b39c5d6f75bf355e442fa67ec5c27997718f3a515063f933bbb8a54bac5b1",
+        "entered_A": {"M": 1333, "R": 154, "U": 77, "X": 75},
+        "planned_demand_vehph": {"M": 3199.2, "R": 720.0, "U": 360.0, "X": 180.0},
+        "realized_entry_vehph_A": {"M": 3199.2, "R": 369.6, "U": 184.8, "X": 180.0}
+      },
+      "MH17": {
+        "manifest_sha256": "4373674209afe3ccfa4d82c4e2112773f043c123aa7512b63d21d18af78fd208",
+        "entered_A": {"M": 1583, "R": 120, "U": 60, "X": 75},
+        "planned_demand_vehph": {"M": 3799.2, "R": 720.0, "U": 360.0, "X": 180.0},
+        "realized_entry_vehph_A": {"M": 3799.2, "R": 288.0, "U": 144.0, "X": 180.0}
+      },
+      "MH23": {
+        "manifest_sha256": "944712ddb5ec0c05d5fa59e31393a99390f36b22687716c67ff78efda3b1a3fe",
+        "entered_A": {"M": 1583, "R": 119, "U": 60, "X": 75},
+        "planned_demand_vehph": {"M": 3799.2, "R": 720.0, "U": 360.0, "X": 180.0},
+        "realized_entry_vehph_A": {"M": 3799.2, "R": 285.6, "U": 144.0, "X": 180.0}
+      }
+    },
+    "interpretation": "The large R/U differences between planned demand and A-window realized entry are observed delayed-insertion accounting, not a change in requested demand."
+  },
+  "cross_links": {
+    "status": "passed",
+    "proposal_trace": "current proposal file equals contract and ledger proposal_sha256",
+    "registration_payload": "current payload equals contract, registry and ledger payload hashes",
+    "contract_registry_ledger": "current file hashes match the ledger registrations"
+  },
+  "launch_gate": {
+    "T42_data_review": "passed",
+    "T43": "prohibited",
+    "open_major_count": 0,
+    "can_return_to_scientific_reviewer": true
+  },
+  "limitations": [
+    "No new qMain archive exists; candidate behavior remains unobserved.",
+    "The rate split corrects labeling and accounting but does not establish realized demand adequacy or a scientific acceptance threshold.",
+    "Two seeds remain exploratory, EJMI is not Breakdown or capacity, and the formal protocol is empty."
+  ],
+  "actual_sumo_starts": 0,
+  "actual_netconvert_operations": 0,
+  "actual_traci_connections": 0,
+  "actual_gui_starts": 0
+}

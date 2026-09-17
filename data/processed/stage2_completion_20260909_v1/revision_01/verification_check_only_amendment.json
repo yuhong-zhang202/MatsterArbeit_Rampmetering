@@ -1,0 +1,12 @@
+{
+  "status": "passed",
+  "purpose": "Read-only repeat verification amendment; original first-build report and all datasets/figures preserved.",
+  "command": ".venv/bin/python data/processed/stage2_completion_20260909_v1/revision_01/independent_verification.py --check-only",
+  "tests": "25 pure-offline tests passed; existing output-protection test additionally forbids all write-capable Path.open calls while executing full check-only verification.",
+  "compile_and_diffcheck": "passed",
+  "script_sha256": "c495d85e9d29a6e6d7dae80c8b730ec5e7ee8382fc448b97c42f239794f3b76d",
+  "test_sha256": "8ab8db77ce7c930fbac3835ea9973d4566eaaafcfcac3990db5e7f846fe529f9",
+  "preserved_initial_report_sha256": "fb8d47f7a9805ed3905cd715f6f6d358efcaa9c6468d4e30caafa1d605a9fc0e",
+  "hash_semantics": "Initial report contains the historical pre-amendment script hash. This amendment identifies current repeat-verification code; original manifest remains unchanged.",
+  "writes_in_check_only": 0
+}

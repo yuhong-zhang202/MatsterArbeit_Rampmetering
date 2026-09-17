@@ -1,0 +1,96 @@
+{
+  "schema_version": 1,
+  "scope": "Stage 3 T33-T34 final data package after propagation-order repair and unit-label correction",
+  "status": "data_analysis_complete_required_minor_closed",
+  "status_enums": {
+    "gate": ["passed", "failed", "not_verified", "not_applicable"],
+    "claim": ["supported", "contradicted", "not_identified"]
+  },
+  "gates": {
+    "G01": {
+      "status": "passed",
+      "denominator": "8/8 runs; 232/232 archive files; 128/128 analyzed required outputs",
+      "scope_limitation": "Archive-only Stage 3 scope."
+    },
+    "G02": {
+      "status": "passed",
+      "denominator": "32/32 run-class units; 64/64 endpoint rows",
+      "observed": "integer residual failures=0; duplicate IDs=0; unknown IDs=0; unknown lanes=0",
+      "scope_limitation": "Continuous planned-outside curves remain unavailable between approved endpoints."
+    },
+    "G03": {
+      "status": "passed",
+      "denominator": "21600/21600 FCD labels; 4320/4320 E1 intervals; 128/128 coverage rows passed",
+      "observed": "registered technical metadata complete; missing required intervals=0; repaired propagation order accepted by scientific review",
+      "scope_limitation": "The registered measurement scope does not establish a realistic upstream freeway feeder state."
+    },
+    "G04": {
+      "status": "passed",
+      "denominator": "40/40 diagnostic question units",
+      "observed": "All five question records exist per run; repaired origin/propagation status is complete_ordered_observation in 8/8 runs with zero order contradictions.",
+      "scope_limitation": "Diagnostic record completeness is not scenario-suitability approval."
+    },
+    "G05": {
+      "status": "passed",
+      "denominator": "12/12 required failure modes; 18/18 production tests; 4/4 independent-verifier tests; 355/355 corrected unit rows",
+      "observed": "Independent raw reconstruction matched 14564 identities, 246175 lane cells, 99955 episode records, 2100 R first-downstream events, 7120 shared R/U labels, and 96/96 sensitivity values. The unit-only verifier confirmed 355 stopped_episode_support rows changed from sampled_vehicle_presence_s to sampled_region_stop_support_s, with zero numeric changes and all other fields and aggregate files unchanged.",
+      "scope_limitation": "Quantity reconstruction and unit consistency do not independently validate the scientific meaning of the synthetic network."
+    },
+    "G06": {
+      "status": "passed",
+      "denominator": "6/6 input contrasts; 8/8 seed units; 96/96 window metrics; 48/48 time series; 48/48 shape summaries",
+      "observed": "1264 bins; 801 matched-seed contrasts; 398 two-seed sign rows; 43 symbol-inconsistent rows retained; maximum absolute reaggregation residual 7.105427357601002e-15.",
+      "scope_limitation": "Two seeds and time rebinning are descriptive; structural/behavioral sensitivity is not tested."
+    },
+    "G07": {
+      "status": "passed",
+      "denominator": "4/4 claim drafts with evidence, alternatives, status, scope limitation, and scientific review",
+      "observed": "Q1 supported; Q2 not_identified; Q3 supported; Q4 not_identified. Scientific review closed the propagation-order Major and identified only the corrected unit-label Minor in the final data package.",
+      "scope_limitation": "Passing G07 means the four assessments are complete; it does not convert not_identified claims into support or approve Stage 4 simulation."
+    }
+  },
+  "claims": {
+    "Q1": {
+      "status": "supported",
+      "scope_limitation": "Synthetic scaffold only; no realistic upstream freeway feeder observation."
+    },
+    "Q2": {
+      "status": "not_identified",
+      "scope_limitation": "No approved breakdown threshold, upstream feeder state, or causal mechanism test."
+    },
+    "Q3": {
+      "status": "supported",
+      "scope_limitation": "Observed shared-road exposure only; causal R-induced U loss is not established."
+    },
+    "Q4": {
+      "status": "not_identified",
+      "scope_limitation": "Q2 freeway impairment is not identified in the current archive."
+    }
+  },
+  "candidate_explanations": {
+    "checked": ["input_not_realized_in_demand_window", "near_merge_mainline_insertion", "traffic_signal_stopping", "lane_coverage"],
+    "unresolved": ["downstream_blockage", "merge_or_lane_change_mechanism"]
+  },
+  "data_analyst_stage4_recommendation": "Prepare one targeted, discriminating Stage 4 proposal aimed at Q2; do not run it before exact registration and approval.",
+  "current_outputs": {
+    "run_revision": "revision_02",
+    "aggregate_revision": "revision_03",
+    "analysis_review": "analysis_review/revision_06",
+    "independent_verification": "verification/T33_T34_independent_v3.json",
+    "unit_correction_verification": "verification/unit_correction_revision_03.json",
+    "reviewer_opinion_verification": "verification/reviewer_opinion_revision_06.json",
+    "figures": "results/figures/stage3_baseline_diagnostic_20260912_v2/revision_06"
+  },
+  "superseded_attempts": [
+    "runs/*/revision_01 and aggregate/revision_01: propagation-order Major; retained, not current",
+    "aggregate/revision_02: numeric results retained but stopped_episode_support unit label superseded by revision_03",
+    "analysis_review/revision_01: incomplete font-cache attempt",
+    "analysis_review/revision_02 and revision_03: superseded by repaired revision_04",
+    "analysis_review/revision_04 and figure revision_04: superseded by unit-corrected, discrete-figure revision_05",
+    "analysis_review/revision_05 and figure revision_05: scientific statuses and values retained; reviewer opinions recorded in revision_06"
+  ],
+  "actual_sumo_starts": 0,
+  "actual_netconvert_starts": 0,
+  "actual_TraCI_starts": 0,
+  "actual_GUI_starts": 0
+}

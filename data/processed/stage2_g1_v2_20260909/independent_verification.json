@@ -1,0 +1,171 @@
+{
+  "status": "passed_for_declared_checks",
+  "script_sha256": "f543d8d3e052903123932fd8765305751fa4018dac636741467296751de752ae",
+  "command": ".venv/bin/python data/processed/stage2_g1_v2_20260909/independent_verification.py",
+  "table_rows": {
+    "e1": 360,
+    "lane_class": 37814,
+    "cohort": 396,
+    "merge": 300
+  },
+  "raw_e1_rows_reconciled": 360,
+  "empty_speed_intervals": 121,
+  "merge_raw_endpoint_records_reconciled": 600,
+  "merge_30s_boundary_cases": [
+    {
+      "vehicle_id": "R_flow.108",
+      "previous_time_s": "1679.0",
+      "previous_lane": ":freeway_merge_0_0",
+      "first_downstream_time_s": "1680.0",
+      "first_downstream_lane": "main_down_0",
+      "interval_semantics": "(previous_raw_label,first_downstream_raw_label]",
+      "time_precision": "sample_bracket_not_exact_crossing_time",
+      "boundary_30s_ambiguous": "True",
+      "status": "bracketed",
+      "reason": ""
+    },
+    {
+      "vehicle_id": "R_flow.144",
+      "previous_time_s": "1769.0",
+      "previous_lane": ":freeway_merge_0_0",
+      "first_downstream_time_s": "1770.0",
+      "first_downstream_lane": "main_down_0",
+      "interval_semantics": "(previous_raw_label,first_downstream_raw_label]",
+      "time_precision": "sample_bracket_not_exact_crossing_time",
+      "boundary_30s_ambiguous": "True",
+      "status": "bracketed",
+      "reason": ""
+    },
+    {
+      "vehicle_id": "R_flow.289",
+      "previous_time_s": "2339.0",
+      "previous_lane": ":freeway_merge_0_0",
+      "first_downstream_time_s": "2340.0",
+      "first_downstream_lane": "main_down_0",
+      "interval_semantics": "(previous_raw_label,first_downstream_raw_label]",
+      "time_precision": "sample_bracket_not_exact_crossing_time",
+      "boundary_30s_ambiguous": "True",
+      "status": "bracketed",
+      "reason": ""
+    },
+    {
+      "vehicle_id": "R_flow.298",
+      "previous_time_s": "2369.0",
+      "previous_lane": ":freeway_merge_0_0",
+      "first_downstream_time_s": "2370.0",
+      "first_downstream_lane": "main_down_0",
+      "interval_semantics": "(previous_raw_label,first_downstream_raw_label]",
+      "time_precision": "sample_bracket_not_exact_crossing_time",
+      "boundary_30s_ambiguous": "True",
+      "status": "bracketed",
+      "reason": ""
+    }
+  ],
+  "first_downstream_observations_before": {
+    "300": 7,
+    "600": 15,
+    "900": 21,
+    "1200": 28,
+    "1500": 36,
+    "1800": 153,
+    "2100": 231,
+    "2400": 300,
+    "2700": 300
+  },
+  "e1_minimum_valid_speed_intervals": {
+    "merge_upstream_e1_l0": {
+      "begin": "1290.00",
+      "end": "1320.00",
+      "id": "merge_upstream_e1_l0",
+      "nVehContrib": "13",
+      "flow": "1560.00",
+      "occupancy": "20.78",
+      "speed": "22.10",
+      "harmonicMeanSpeed": "10.63",
+      "length": "5.00",
+      "nVehEntered": "14"
+    },
+    "merge_upstream_e1_l1": {
+      "begin": "1500.00",
+      "end": "1530.00",
+      "id": "merge_upstream_e1_l1",
+      "nVehContrib": "1",
+      "flow": "120.00",
+      "occupancy": "0.43",
+      "speed": "4.43",
+      "harmonicMeanSpeed": "4.43",
+      "length": "5.00",
+      "nVehEntered": "0"
+    },
+    "merge_downstream_e1_l0": {
+      "begin": "2130.00",
+      "end": "2160.00",
+      "id": "merge_downstream_e1_l0",
+      "nVehContrib": "7",
+      "flow": "840.00",
+      "occupancy": "5.40",
+      "speed": "21.63",
+      "harmonicMeanSpeed": "21.61",
+      "length": "5.00",
+      "nVehEntered": "7"
+    },
+    "merge_downstream_e1_l1": {
+      "begin": "1980.00",
+      "end": "2010.00",
+      "id": "merge_downstream_e1_l1",
+      "nVehContrib": "1",
+      "flow": "120.00",
+      "occupancy": "3.39",
+      "speed": "4.91",
+      "harmonicMeanSpeed": "4.91",
+      "length": "5.00",
+      "nVehEntered": "1"
+    }
+  },
+  "selected_raw_fcd_minima": {
+    "(450, 480, 'main_up_1')": {
+      "time_s": 475.0,
+      "id": "M_flow.422",
+      "x": "1394.45",
+      "y": "898.40",
+      "angle": "90.00",
+      "type": "technical_passenger",
+      "speed": "29.63",
+      "pos": "1394.77",
+      "lane": "main_up_1",
+      "slope": "0.00"
+    },
+    "(1470, 1530, 'main_up_1')": {
+      "time_s": 1482.0,
+      "id": "M_flow.1316",
+      "x": "1330.11",
+      "y": "898.40",
+      "angle": "90.00",
+      "type": "technical_passenger",
+      "speed": "25.17",
+      "pos": "1330.41",
+      "lane": "main_up_1",
+      "slope": "0.00"
+    },
+    "(1980, 2010, 'main_down_1')": {
+      "time_s": 1987.0,
+      "id": "R_flow.200",
+      "x": "1508.11",
+      "y": "898.40",
+      "angle": "90.00",
+      "type": "technical_passenger",
+      "speed": "21.13",
+      "pos": "104.60",
+      "lane": "main_down_1",
+      "slope": "0.00"
+    }
+  },
+  "source_and_artifact_hashes_unchanged": true,
+  "interpretation": "E1 minima and selected same-lane raw FCD minima differ; no claim of instrument defect or congestion from this alone. Crossing brackets are sampled observations, not exact times.",
+  "figure_check": "Analyst viewed PNG: 4 separate detector series, correct units, native step intervals, missing-speed gaps, 1500 dashed boundary and 1500-2700 shading; source table checked above.",
+  "limitations": [
+    "Scientific review remains pending.",
+    "No exact substep trajectory or detector passage logs used.",
+    "No new simulation or independent statistical replication."
+  ]
+}

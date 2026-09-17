@@ -1,0 +1,40 @@
+{
+  "allowed_attempt": "S6_V1_ML_S17_attempt1",
+  "approval": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/sg6p_user_approval.json",
+    "sha256": "8db02823acb7307826c86baa901658ba1fad5e5434b29bcd321e50a298eedb2d"
+  },
+  "approved_card": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_engineering_smoke_revision_01/approved_launch_card.json",
+    "sha256": "5b359c76deb6552f4d2738d9b6366404499a5a4279a86ec4da0519b79b2f175a"
+  },
+  "formal_protocol_bytes": 0,
+  "gate_policy": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/launch_gate_policy.json",
+    "sha256": "d57cd0a14bbb5d38f1539c7bf2460191caebaa15964ef1d7b6a83217a3784eab"
+  },
+  "initial_counters": {
+    "actual_starts_observed": 0,
+    "archive_bytes": 0,
+    "reserved_or_unknown": 0,
+    "retry": 0,
+    "smoke": 0,
+    "sumo": 0,
+    "validation": 0,
+    "wallclock_s": 0
+  },
+  "initial_sandbox_process_check": "PermissionError; read-only ps escalation succeeded before this receipt",
+  "observed_concurrent_simulator_processes": [],
+  "process_check_command": [
+    "/bin/ps",
+    "-axo",
+    "pid=,comm="
+  ],
+  "process_check_tool_verified": true,
+  "proposed_card": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/proposed_launch_card.json",
+    "sha256": "6dad07d6862eb6dfd6ca5ffd4bd09ccffa3563ff63106b67a983dcbaba765067"
+  },
+  "stable_payload_sha256": "4f65deb5ee65eb23ff071d6b79e85d1afcff1dd12fd50242cc7ed07b2161a1d3",
+  "validation_released": false
+}

@@ -1,0 +1,208 @@
+{
+  "batch_id": "exploratory_validation_closeout_20260913_v1",
+  "counts": {
+    "O_outputs_complete": "6/6",
+    "evidence_manifests": "8/8",
+    "gates_with_result": "8/8",
+    "handover_classes_classified": "22/22",
+    "path_hash_pairs_checked": 15,
+    "path_hash_pairs_passed": 15,
+    "registered_logical_runs_terminal": "10/10",
+    "unclassified_handover_items": 0,
+    "unsupported_verified_claims": 0
+  },
+  "finalization_inputs": {
+    "T51_scientific_review_record": {
+      "core_question_level_unknowns": 2,
+      "open_findings": {
+        "blocker": 0,
+        "major": 0,
+        "required_minor": 0
+      },
+      "path": "data/processed/exploratory_validation_closeout_20260913_v1/T51_scientific_review_record.json",
+      "sha256": "6a3348c4b5638df6d59fee63c52353a14c64e045b121bc1261a013c18d7f5e0a",
+      "status": "PASS"
+    },
+    "T53_exploratory_validation_report": {
+      "path": "docs/EXPLORATORY_VALIDATION_REPORT.md",
+      "remaining_gate": "T54_user_acceptance",
+      "sha256": "4c8f8b7c17c991e6ffffed97976b56d6139e85c4ca236c762f4c1fe5be0badfc",
+      "status": "complete"
+    }
+  },
+  "formal_protocol": "empty_not_frozen",
+  "interpretation_boundary": "Inventory completion, T51 PASS, T53 completion, and G08 handover completeness do not make the scenario preliminary_ready or select formal parameters.",
+  "mirror_checks": {
+    "artifact_inventory.csv": {
+      "byte_identical": true,
+      "mirror_sha256": "efdf3ddc977208d99794f68cb222a4be203b1e9aa9b885a517d342f7ed25b9c8",
+      "source_sha256": "efdf3ddc977208d99794f68cb222a4be203b1e9aa9b885a517d342f7ed25b9c8"
+    },
+    "gate_inventory.csv": {
+      "byte_identical": true,
+      "mirror_sha256": "693e1d55e66293436cf0c2fe740ed950d5adde7d3c745f391ec2dba8d1e613a7",
+      "source_sha256": "693e1d55e66293436cf0c2fe740ed950d5adde7d3c745f391ec2dba8d1e613a7"
+    },
+    "method_handover_draft.csv": {
+      "byte_identical": true,
+      "mirror_sha256": "1b29caa271686d1c61385ef75b3b6cd3eae264c02f466d70c68f72dd4b96cace",
+      "source_sha256": "1b29caa271686d1c61385ef75b3b6cd3eae264c02f466d70c68f72dd4b96cace"
+    }
+  },
+  "open_data_findings": [],
+  "path_hash_checks": [
+    {
+      "actual_sha256": "e9c8a6c026b22faedb51902d79cc3952333a3e86ea963b0c06083f0889b81fd7",
+      "expected_sha256": "e9c8a6c026b22faedb51902d79cc3952333a3e86ea963b0c06083f0889b81fd7",
+      "passed": true,
+      "path": "data/processed/stage3_baseline_diagnostic_20260912_v2/measurement_contract.json"
+    },
+    {
+      "actual_sha256": "636689b4576502355eae3159c44ff9569bb720f994234d445cd3a0eb16f0c84a",
+      "expected_sha256": "636689b4576502355eae3159c44ff9569bb720f994234d445cd3a0eb16f0c84a",
+      "passed": true,
+      "path": "data/processed/stage3_baseline_diagnostic_20260912_v2/network_observation_map.csv"
+    },
+    {
+      "actual_sha256": "90f78a9664c320ae9bb83cdf23c9000c60df92c368fbcee8fe37744c43e68804",
+      "expected_sha256": "90f78a9664c320ae9bb83cdf23c9000c60df92c368fbcee8fe37744c43e68804",
+      "passed": true,
+      "path": "results/tables/stage2_completion_20260909_v1/revision_04/vehicle_accounting.csv"
+    },
+    {
+      "actual_sha256": "36c934cdcfe1382ca993ee242ec6de507f4db5c3709f1f506cfdc4c998ca88c3",
+      "expected_sha256": "36c934cdcfe1382ca993ee242ec6de507f4db5c3709f1f506cfdc4c998ca88c3",
+      "passed": true,
+      "path": "data/processed/stage3_baseline_diagnostic_20260912_v2/aggregate/revision_03/endpoint_accounting.csv"
+    },
+    {
+      "actual_sha256": "5e56f56d7dd69abcdc3993ae42e4b4ed0dad75c7e4affab7b4eadab72e969a0f",
+      "expected_sha256": "5e56f56d7dd69abcdc3993ae42e4b4ed0dad75c7e4affab7b4eadab72e969a0f",
+      "passed": true,
+      "path": "results/tables/stage3_baseline_diagnostic_20260912_v2/aggregate/revision_03/condition_evidence_summary.csv"
+    },
+    {
+      "actual_sha256": "10163e9327d8e5ccfed2ad5ad986090f940d78e073eea696e692f378901edae6",
+      "expected_sha256": "10163e9327d8e5ccfed2ad5ad986090f940d78e073eea696e692f378901edae6",
+      "passed": true,
+      "path": "results/tables/stage4_qmain_sequential_20260912_v1/final/revision_03/final_run_matrix.csv"
+    },
+    {
+      "actual_sha256": "e28ffdbb0411a5579fd4cbfcee405057f4610683b1be3d79ef37a39553ac7c2a",
+      "expected_sha256": "e28ffdbb0411a5579fd4cbfcee405057f4610683b1be3d79ef37a39553ac7c2a",
+      "passed": true,
+      "path": "data/processed/stage3_baseline_diagnostic_20260912_v2/analysis_review/revision_06/claim_evidence.csv"
+    },
+    {
+      "actual_sha256": "695744bc455526e01821a2b88cc7ac70ed2d2569f8bc31ddb88d310573016494",
+      "expected_sha256": "695744bc455526e01821a2b88cc7ac70ed2d2569f8bc31ddb88d310573016494",
+      "passed": true,
+      "path": "docs/STAGE4_TARGETED_VALIDATION_REPORT.md"
+    },
+    {
+      "actual_sha256": "b73513dca5a0b535a8910ff4c779f410a13f0b165391b503b6e70c0475469726",
+      "expected_sha256": "b73513dca5a0b535a8910ff4c779f410a13f0b165391b503b6e70c0475469726",
+      "passed": true,
+      "path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/T43_final_scientific_review_record_20260913.json"
+    },
+    {
+      "actual_sha256": "6a3348c4b5638df6d59fee63c52353a14c64e045b121bc1261a013c18d7f5e0a",
+      "expected_sha256": "6a3348c4b5638df6d59fee63c52353a14c64e045b121bc1261a013c18d7f5e0a",
+      "passed": true,
+      "path": "data/processed/exploratory_validation_closeout_20260913_v1/T51_scientific_review_record.json"
+    },
+    {
+      "actual_sha256": "35115af6556b415126f12fbc014c777cc31f3263dd92d917a1bb7b88650e9e28",
+      "expected_sha256": "35115af6556b415126f12fbc014c777cc31f3263dd92d917a1bb7b88650e9e28",
+      "passed": true,
+      "path": "data/processed/stage3_baseline_diagnostic_20260912_v2/aggregate/revision_03/sensitivity.csv"
+    },
+    {
+      "actual_sha256": "7f2fd3e96cc4bd2867aa41324b3f3f39a4f0094a210a6af5c60085ef125f3732",
+      "expected_sha256": "7f2fd3e96cc4bd2867aa41324b3f3f39a4f0094a210a6af5c60085ef125f3732",
+      "passed": true,
+      "path": "data/processed/stage3_baseline_diagnostic_20260912_v2/analysis_review/revision_06/aggregation_timeseries_registry.csv"
+    },
+    {
+      "actual_sha256": "695744bc455526e01821a2b88cc7ac70ed2d2569f8bc31ddb88d310573016494",
+      "expected_sha256": "695744bc455526e01821a2b88cc7ac70ed2d2569f8bc31ddb88d310573016494",
+      "passed": true,
+      "path": "docs/STAGE4_TARGETED_VALIDATION_REPORT.md"
+    },
+    {
+      "actual_sha256": "1b29caa271686d1c61385ef75b3b6cd3eae264c02f466d70c68f72dd4b96cace",
+      "expected_sha256": "1b29caa271686d1c61385ef75b3b6cd3eae264c02f466d70c68f72dd4b96cace",
+      "passed": true,
+      "path": "data/processed/exploratory_validation_closeout_20260913_v1/method_handover_draft.csv"
+    },
+    {
+      "actual_sha256": "4c8f8b7c17c991e6ffffed97976b56d6139e85c4ca236c762f4c1fe5be0badfc",
+      "expected_sha256": "4c8f8b7c17c991e6ffffed97976b56d6139e85c4ca236c762f4c1fe5be0badfc",
+      "passed": true,
+      "path": "docs/EXPLORATORY_VALIDATION_REPORT.md"
+    }
+  ],
+  "remaining_stage5_work": [
+    "T54 user closeout decision"
+  ],
+  "schema_version": 1,
+  "simulation_accounting": {
+    "cumulative_gui_starts": 0,
+    "cumulative_netconvert_operations": 4,
+    "cumulative_sumo_starts": 4,
+    "cumulative_traci_connections": 0,
+    "new_starts_this_task": {
+      "gui": 0,
+      "netconvert": 0,
+      "sumo": 0,
+      "traci": 0
+    }
+  },
+  "stage4_final_scientific_gate": {
+    "path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/T43_final_scientific_review_record_20260913.json",
+    "sha256": "b73513dca5a0b535a8910ff4c779f410a13f0b165391b503b6e70c0475469726",
+    "stage4": "closed",
+    "stage5_direction": "completed/specific_obstacle",
+    "status": "PASS"
+  },
+  "stage5_scientific_assessment": {
+    "T51_status": "PASS",
+    "T53_status": "complete",
+    "assessment_completion": "pending_user_acceptance_T54",
+    "core_question_level_unknowns": 2,
+    "design_readiness": "specific_obstacle",
+    "open_findings": {
+      "blocker": 0,
+      "major": 0,
+      "required_minor": 0
+    },
+    "preliminary_ready": false,
+    "question_assessments": {
+      "Q1_observability": "supported_with_scope",
+      "Q2_freeway_side_impairment": "not_identified",
+      "Q3_urban_side_exposure": "supported_with_scope",
+      "Q4_same_scenario_tradeoff_basis": "not_identified"
+    }
+  },
+  "status": "passed",
+  "status_vocabulary": {
+    "all_handover_qualifications_valid": true,
+    "allowed_qualifications": [
+      "candidate_requires_validation",
+      "not_available_or_ineligible",
+      "requires_scientific_decision",
+      "reuse_with_scope"
+    ],
+    "formal_values_selected": 0,
+    "qualification_counts": {
+      "candidate_requires_validation": 8,
+      "not_available_or_ineligible": 2,
+      "requires_scientific_decision": 11,
+      "reuse_with_scope": 1
+    },
+    "unknown_proposed_formal_values": 22
+  },
+  "supersedes_inventory_verification_sha256": "61404509554b04dc8596ad701c086155e16208601f8a735d0c72f891895fe710",
+  "t53_embedded_inventory_note": "The T53 report records the pre-finalization T50 count of 13/13; this finalized inventory adds T51 and T53 themselves and verifies 15/15 without changing the underlying T50 result.",
+  "task": "Stage5 T50/T52 inventory finalization after T51/T53 completion"
+}

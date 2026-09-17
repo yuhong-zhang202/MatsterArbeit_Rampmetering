@@ -1,0 +1,13 @@
+import { execFileSync } from 'node:child_process';
+import { createHash } from 'node:crypto';
+export const SHA = 'b83321b4791ae18100900ac5b28804a18112c1a251995bf7fc179eafdee1f99c';
+const volume = 'tdai-ramp-metering-snapshot-20260909';
+const image = 'sha256:9798254a8cc06276b7c5b3c19df49f136fae25d579564e1f01f9c4b9b8cd2d11';
+const run = args => execFileSync('/opt/homebrew/bin/docker', ['--context', 'colima-memory-pilot', ...args], { encoding: 'utf8', timeout: 15000, maxBuffer: 128 * 1024, env: { PATH: '/opt/homebrew/bin:/usr/bin:/bin', HOME: '/Users/yuhongzhang', LC_ALL: 'C' } });
+if (process.argv.length !== 2) throw Error('This fixed-project reader accepts no arguments');
+run(['volume', 'inspect', volume]);
+const program = "const fs=require('fs');const p='/snapshot/tdai-memory/profiles/team%3Adefault%7Cagent%3Adefault/persona.md';const s=fs.lstatSync(p);if(!s.isFile()||s.isSymbolicLink()||s.size>65536||fs.realpathSync(p)!==p)throw Error('Invalid snapshot');process.stdout.write(fs.readFileSync(p));";
+const content = run(['run', '--rm', '--pull=never', '--network', 'none', '--read-only', '--cap-drop', 'ALL', '--security-opt', 'no-new-privileges', '--mount', `type=volume,source=${volume},target=/snapshot,readonly`, '--entrypoint', 'node', image, '-e', program]);
+if (createHash('sha256').update(content).digest('hex') !== SHA) throw Error('Snapshot hash mismatch');
+if (!content.includes('Project ID: Masterarbeit-Ramp-Metering')) throw Error('Project mismatch');
+console.log(JSON.stringify({ project: 'Masterarbeit-Ramp-Metering', sha: SHA, date: '2026-09-09', notice: 'Dated auxiliary snapshot; project documents remain authoritative.', content }));

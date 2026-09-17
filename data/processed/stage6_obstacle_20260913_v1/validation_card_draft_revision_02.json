@@ -1,0 +1,664 @@
+{
+  "schema_version": 2,
+  "artifact_kind": "reviewed_exploratory_registration_draft",
+  "status": "Proposed_reviewed_revision_02_pending_primary_final_review",
+  "launch_eligible": false,
+  "formal_protocol_frozen": false,
+  "user_numeric_or_launch_approval": null,
+  "decision_provenance": "Parent explicitly instructed this revision using scientific_reviewer and simulation_engineer final adjudications; does not imply user or supervisor parameter approval.",
+  "scope": "Unique H2 intervention; bounded uncontrolled suitability only. No control benefit, sweet spot, causal root cause or formal traffic standard is established.",
+  "artifact_bindings": [
+    {
+      "path": "data/processed/stage6_obstacle_20260913_v1/source_registry.csv",
+      "sha256": "d38f83619d61ac0cc93c2ac3e9b39920d147fdc9c4d96e32de540414c5bddadb"
+    },
+    {
+      "path": "data/processed/stage6_obstacle_20260913_v1/source_file_inventory.csv",
+      "sha256": "500e2995aba85fceef223e2c103c143987444138699574c0ce52734fe3cd32f0"
+    },
+    {
+      "path": "data/processed/stage6_obstacle_20260913_v1/b01_fixed_demand_source_fields.csv",
+      "sha256": "1c794f5d54e6007fb06f310b9ce72df8ecb19a8f516ceb2ee7a2959c3fffc6d3"
+    },
+    {
+      "path": "data/processed/stage6_obstacle_20260913_v1/b01_independent_verification.json",
+      "sha256": "29a57cbf51af3112bda73c19c877efce2a252872d1503fc439ae87c34ca7fa57"
+    },
+    {
+      "path": "data/processed/stage6_obstacle_20260913_v1/b03_independent_stability_verification.json",
+      "sha256": "b691258e4039b0ff00fa7d791c6e76c7cda349e96dac2428b6dfb7a3ef575d7a"
+    },
+    {
+      "path": "data/processed/stage6_obstacle_20260913_v1/b03_boundary_and_qualification_advice.json",
+      "sha256": "68b71d300557e495cd532e0f2449e8b50981bc577363e14307d45e307793019e"
+    },
+    {
+      "path": "data/processed/stage6_obstacle_20260913_v1/b02_registered_rule_keys_revision_02.csv",
+      "sha256": "b07cd1beb777747030c9f23f0c79271b7730edabf4da7f09d9c40b24f6827996"
+    },
+    {
+      "path": "data/processed/stage6_obstacle_20260913_v1/b02_registered_sensitivity_keys_revision_02.csv",
+      "sha256": "8b1a0bfc47ed3384c28f4d3de5a7b8bd688a07f219e611f460440f85630fb201"
+    },
+    {
+      "path": "data/processed/stage6_obstacle_20260913_v1/b02_registered_background_scope_revision_02.csv",
+      "sha256": "29436f57fbbaa948828297ccacadd45155eb4dd3079444dbd1365036a63e3cb1"
+    }
+  ],
+  "rule_denominators": {
+    "total": 352,
+    "applicable": 150,
+    "required": 148,
+    "not_applicable": 202,
+    "required_sensitivity_keys": 14
+  },
+  "scientific_rule_provenance": "Exploratory operational definitions selected before new V1 outcomes after reviewing seen archive facts; not empirically calibrated traffic thresholds.",
+  "position_contract": {
+    "M_departPos_m": 100,
+    "V0_M_departPos": "last",
+    "coordinate": "SUMO lane position, not global x",
+    "V1_primary_feeder": {
+      "edge": "main_up",
+      "lanes": [
+        "main_up_0",
+        "main_up_1"
+      ],
+      "interval_m": [
+        200,
+        1200
+      ],
+      "interval_convention": "half_open",
+      "cohort": "M only"
+    },
+    "common_background": {
+      "edge": "main_down",
+      "lanes": [
+        "main_down_0",
+        "main_down_1"
+      ],
+      "interval_m": [
+        100,
+        700
+      ],
+      "interval_convention": "half_open",
+      "cohort": "M only"
+    },
+    "position_comparison_tolerance_m": 0.02,
+    "tolerance_role": "configured-versus-actual numeric comparison only; do not enlarge domain or assert physical accuracy",
+    "extrapolate_departpos": false,
+    "invalid_position_policy": "static range rejection and reject runtime position-fallback warnings",
+    "crossing_observation": "1Hz adjacent-frame brackets; no exact crossing interpolation",
+    "same_compiled_network": true,
+    "geometry_facts": {
+      "main_up_length_m": 1394.87,
+      "main_down_length_m": 796.49,
+      "remaining_upstream_from_p100_m": 1294.87
+    },
+    "V0_feeder_science": "not_applicable; missing traveled feeder is not fabricated"
+  },
+  "fixed_factors": [
+    "compiled geometry and connections",
+    "vehicle and lane-changing behavior",
+    "M departLane best and departSpeed max",
+    "R/U/X insertion and counts",
+    "TLS program and storage",
+    "number-flow duration"
+  ],
+  "conditions": [
+    {
+      "condition_id": "ML",
+      "role": "reference",
+      "nominal_q_main_vehph": 2600,
+      "effective_planned_M_rate_vehph": 2599.2,
+      "exact_flow_numbers": {
+        "M": 1083,
+        "R": 300,
+        "U": 150,
+        "X": 75
+      },
+      "planned_total": 1608,
+      "q_ramp_effective_planned_vehph": 720,
+      "q_U_effective_planned_vehph": 360,
+      "q_X_effective_planned_vehph": 180,
+      "begin_s": 0,
+      "end_s": 1500,
+      "source_flow_format": "number; no conversion to probabilistic rate",
+      "reference_qualification": "lower-load comparator, not claimed free-flow"
+    },
+    {
+      "condition_id": "C",
+      "role": "challenge",
+      "nominal_q_main_vehph": 3200,
+      "effective_planned_M_rate_vehph": 3199.2,
+      "exact_flow_numbers": {
+        "M": 1333,
+        "R": 300,
+        "U": 150,
+        "X": 75
+      },
+      "planned_total": 1858,
+      "q_ramp_effective_planned_vehph": 720,
+      "q_U_effective_planned_vehph": 360,
+      "q_X_effective_planned_vehph": 180,
+      "begin_s": 0,
+      "end_s": 1500,
+      "source_flow_format": "number; no conversion to probabilistic rate",
+      "reference_qualification": "lower-load comparator, not claimed free-flow"
+    }
+  ],
+  "seed_set": [
+    17,
+    23
+  ],
+  "logical_runs": [
+    {
+      "run_id": "S6_V0_ML_S17",
+      "version": "V0",
+      "condition": "ML",
+      "seed": "17",
+      "reuse_or_new": "reuse",
+      "parent_source_id": "ML17",
+      "information_status": "seen_reused",
+      "information_reason": "same archived trajectory",
+      "required_for_resolution": "true",
+      "status": "registered_draft_not_executed",
+      "cancel_rule": "preserve registered row and denominator; no substitute seed",
+      "attempts": []
+    },
+    {
+      "run_id": "S6_V0_ML_S23",
+      "version": "V0",
+      "condition": "ML",
+      "seed": "23",
+      "reuse_or_new": "reuse",
+      "parent_source_id": "ML23",
+      "information_status": "seen_reused",
+      "information_reason": "same archived trajectory",
+      "required_for_resolution": "true",
+      "status": "registered_draft_not_executed",
+      "cancel_rule": "preserve registered row and denominator; no substitute seed",
+      "attempts": []
+    },
+    {
+      "run_id": "S6_V0_C_S17",
+      "version": "V0",
+      "condition": "C",
+      "seed": "17",
+      "reuse_or_new": "reuse",
+      "parent_source_id": "C17",
+      "information_status": "seen_reused",
+      "information_reason": "same archived trajectory",
+      "required_for_resolution": "true",
+      "status": "registered_draft_not_executed",
+      "cancel_rule": "preserve registered row and denominator; no substitute seed",
+      "attempts": []
+    },
+    {
+      "run_id": "S6_V0_C_S23",
+      "version": "V0",
+      "condition": "C",
+      "seed": "23",
+      "reuse_or_new": "reuse",
+      "parent_source_id": "C23",
+      "information_status": "seen_reused",
+      "information_reason": "same archived trajectory",
+      "required_for_resolution": "true",
+      "status": "registered_draft_not_executed",
+      "cancel_rule": "preserve registered row and denominator; no substitute seed",
+      "attempts": []
+    },
+    {
+      "run_id": "S6_V1_ML_S17",
+      "version": "V1",
+      "condition": "ML",
+      "seed": "17",
+      "reuse_or_new": "new",
+      "parent_source_id": "",
+      "information_status": "new_condition_or_seed",
+      "information_reason": "new M insertion configuration; additional traveled upstream observation",
+      "required_for_resolution": "true",
+      "status": "registered_draft_not_executed",
+      "cancel_rule": "preserve registered row and denominator; no substitute seed",
+      "attempts": []
+    },
+    {
+      "run_id": "S6_V1_ML_S23",
+      "version": "V1",
+      "condition": "ML",
+      "seed": "23",
+      "reuse_or_new": "new",
+      "parent_source_id": "",
+      "information_status": "new_condition_or_seed",
+      "information_reason": "new M insertion configuration; additional traveled upstream observation",
+      "required_for_resolution": "true",
+      "status": "registered_draft_not_executed",
+      "cancel_rule": "preserve registered row and denominator; no substitute seed",
+      "attempts": []
+    },
+    {
+      "run_id": "S6_V1_C_S17",
+      "version": "V1",
+      "condition": "C",
+      "seed": "17",
+      "reuse_or_new": "new",
+      "parent_source_id": "",
+      "information_status": "new_condition_or_seed",
+      "information_reason": "new M insertion configuration; additional traveled upstream observation",
+      "required_for_resolution": "true",
+      "status": "registered_draft_not_executed",
+      "cancel_rule": "preserve registered row and denominator; no substitute seed",
+      "attempts": []
+    },
+    {
+      "run_id": "S6_V1_C_S23",
+      "version": "V1",
+      "condition": "C",
+      "seed": "23",
+      "reuse_or_new": "new",
+      "parent_source_id": "",
+      "information_status": "new_condition_or_seed",
+      "information_reason": "new M insertion configuration; additional traveled upstream observation",
+      "required_for_resolution": "true",
+      "status": "registered_draft_not_executed",
+      "cancel_rule": "preserve registered row and denominator; no substitute seed",
+      "attempts": []
+    }
+  ],
+  "information_qualification": "V0 four seen archives; V1 four unrun insertion configurations supply new traveled feeder information. Existing seeds are not unselected holdout draws. No deterministic reproduction is counted as new information.",
+  "time_contract": {
+    "demand_interval": [
+      0,
+      1500
+    ],
+    "observation_interval": [
+      0,
+      2700
+    ],
+    "windows": {
+      "A": [
+        0,
+        1500
+      ],
+      "B": [
+        300,
+        1500
+      ],
+      "Post": [
+        1500,
+        2700
+      ],
+      "Full": [
+        0,
+        2700
+      ]
+    },
+    "primary_bins": [
+      [
+        300,
+        360
+      ],
+      [
+        360,
+        420
+      ],
+      [
+        420,
+        480
+      ],
+      [
+        480,
+        540
+      ],
+      [
+        540,
+        600
+      ],
+      [
+        600,
+        660
+      ],
+      [
+        660,
+        720
+      ],
+      [
+        720,
+        780
+      ],
+      [
+        780,
+        840
+      ],
+      [
+        840,
+        900
+      ],
+      [
+        900,
+        960
+      ],
+      [
+        960,
+        1020
+      ],
+      [
+        1020,
+        1080
+      ],
+      [
+        1080,
+        1140
+      ],
+      [
+        1140,
+        1200
+      ],
+      [
+        1200,
+        1260
+      ],
+      [
+        1260,
+        1320
+      ],
+      [
+        1320,
+        1380
+      ],
+      [
+        1380,
+        1440
+      ],
+      [
+        1440,
+        1500
+      ]
+    ],
+    "all_intervals": "half_open",
+    "step_s": 1,
+    "B_is_not_proven_warmup": true,
+    "Post_is_not_assumed_zero_inflow_recovery": true,
+    "no_result_dependent_extension": true,
+    "endpoints": "planned/entered/arrived/in-network/outside with explicit membership at1500 and2700"
+  },
+  "scientific_rules": {
+    "S_REF_QUAL": {
+      "applies": "V1 ML/B each seed",
+      "domain": "V1 primary feeder",
+      "minimum_certain_B_entry_M": 500,
+      "minimum_certain_entry_M_each_bin": 20,
+      "half_change_max": 0.05,
+      "half_change_definition": "abs(vehicle-label-weighted mean_speed_[900,1500) / mean_speed_[300,900) -1)",
+      "bin_CV_max": 0.05,
+      "CV_definition": "sample SD(ddof1) of20 bin vehicle-label-weighted mean speeds / arithmetic mean of those20 speeds",
+      "no_bin_deletion": true,
+      "meaning": "limited lower-load comparator qualification; not free-flow or stationarity proof"
+    },
+    "S_M_INFLOW": {
+      "applies": "all8 logical runs/B row; assessment uses whole planned loading cohort",
+      "name": "pre_registered_maximum_reported_inlet_delay_qualification",
+      "all_planned_M_accounted": true,
+      "entered_before_s": 1500,
+      "required_entered_count": "exact planned M number",
+      "max_reported_departDelay_s": 1.01,
+      "meaning": "finite reported-field qualification only; not proof that no earliest eligible insertion step was missed",
+      "number_flow_exact_quantization": "pending_C_not_verified",
+      "forbidden_equivalence": "Do not equate network entry, planned demand, merge passage, E1 contrib, E1 entered or common-domain crossing in one window."
+    },
+    "M_PRIMARY": {
+      "applies": "V1 C/B vs same-seed V1 ML/B",
+      "domain": "main_up[200,1200),M only",
+      "metric": "mean feeder travel-time interval for certain/possible entry cohorts; retain censoring",
+      "minimum_certain_B_entry_M": 500,
+      "TT_ratio_threshold": 1.1,
+      "comparison": "challenge_mean_TT_lower >1.10*reference_mean_TT_upper",
+      "aggregation_window": "wholeB"
+    },
+    "M_SUPPORT": {
+      "applies": "V1 C/B vs same-seed V1 ML/B",
+      "speed_metric": "vehicle-label-weighted feeder speed",
+      "speed_ratio_max": 0.95,
+      "minimum_certain_M_per_bin": 20,
+      "persistence_s": 180,
+      "bin_s": 60,
+      "consecutive_bins": 3,
+      "allowed_gap_s": 0,
+      "rule": "each of the same3 consecutive eligible bins has C/ML speed ratio<=.95",
+      "required_descriptive_companions": [
+        "feeder accumulation",
+        "entries and exits",
+        "technical stopping at inherited0.1m/s",
+        "unfinished and outside vehicles"
+      ],
+      "limit": "TT and speed are correlated, not independent mechanism proof"
+    },
+    "R_SUPPORT": {
+      "applies": "V1 C/B in identical M-support180s block",
+      "event": "first main_down R crossing bracket",
+      "minimum_total_certain_passages": 10,
+      "minimum_certain_passages_each_bin": 1,
+      "bin_count": 3,
+      "uncompleted": "retained with explicit state and denominators"
+    },
+    "Q4_COEXIST": {
+      "applies": "V1 C/B each seed",
+      "rule": "same180s block satisfies M_SUPPORT and R_SUPPORT and S_RU_EXPOSURE; no lag rescue or stitched blocks",
+      "lag_s": 0,
+      "interpretation": "joint finite observability only; no control benefit claim"
+    },
+    "S_RU_EXPOSURE": {
+      "applies": "V1 C/B required; V0 C/B context only",
+      "shared_location": "shared_approach_0",
+      "technical_stop_speed_mps": 0.1,
+      "same180s_block": true,
+      "each_bin_rule": "at least one raw label with stopped R count>0 and stopped U count>0",
+      "TLS_role": "movement-specific context only",
+      "required_reports": [
+        "R path stopping and regional propagation",
+        "U exposure labels and unique vehicles",
+        "U flow/time-loss context",
+        "TLS movement context",
+        "endpoints"
+      ],
+      "no_causal_U_loss_gate": true
+    }
+  },
+  "boundary_and_censor_algorithm": {
+    "crossing_interval": "[last_below_time,first_at_or_above_time]",
+    "certain_bin_membership": "lower>=bin_begin and upper<bin_end",
+    "possible_bin_membership": "upper>=bin_begin and lower<bin_end",
+    "individual_TT": "[max(0,end_lower-start_upper),end_upper-start_lower]",
+    "optional_cohort_extrema": "For each k from0 through possible-only count, add k smallest lower bounds for minimum mean and k largest upper bounds for maximum mean to definite cohort sums. Keep extremizing denominators; ignore empty means. No favorable optional additions to minimum sample gate.",
+    "censor": "Valid observation ends before crossing: TT lower=max(0,observation_end-start_upper), upper=unbounded; serialize upper as null with bound_state=unbounded, never JSON Infinity or missing_observation.",
+    "worst_case_reference": "Unbounded reference upper or unresolved conservative contrast prevents support; valid uncertainty=>not_resolved.",
+    "coherence": "No mutually incompatible favorable memberships across bins; independent per-bin worst-case bounds are conservative.",
+    "empty_mean": "value_state=no_contributors; required science cannot pass"
+  },
+  "sensitivity_cases": [
+    {
+      "sensitivity_id": "TT05",
+      "changes": {
+        "TT_ratio_threshold": 1.05
+      },
+      "required_seed_set": [
+        17,
+        23
+      ],
+      "other_rules": "unchanged"
+    },
+    {
+      "sensitivity_id": "TT15",
+      "changes": {
+        "TT_ratio_threshold": 1.15
+      },
+      "required_seed_set": [
+        17,
+        23
+      ],
+      "other_rules": "unchanged"
+    },
+    {
+      "sensitivity_id": "SPEED90",
+      "changes": {
+        "speed_ratio_max": 0.9
+      },
+      "required_seed_set": [
+        17,
+        23
+      ],
+      "other_rules": "unchanged"
+    },
+    {
+      "sensitivity_id": "SPEED98",
+      "changes": {
+        "speed_ratio_max": 0.98
+      },
+      "required_seed_set": [
+        17,
+        23
+      ],
+      "other_rules": "unchanged"
+    },
+    {
+      "sensitivity_id": "PERSIST240",
+      "changes": {
+        "M_persistence_s": 240,
+        "R_RU_subblock_s": 180
+      },
+      "required_seed_set": [
+        17,
+        23
+      ],
+      "other_rules": "unchanged"
+    },
+    {
+      "sensitivity_id": "REF_STRICT",
+      "changes": {
+        "reference_half_change_max": 0.03,
+        "reference_CV_max": 0.04
+      },
+      "required_seed_set": [
+        17,
+        23
+      ],
+      "other_rules": "unchanged"
+    },
+    {
+      "sensitivity_id": "REF_LOOSE",
+      "changes": {
+        "reference_half_change_max": 0.07,
+        "reference_CV_max": 0.06
+      },
+      "required_seed_set": [
+        17,
+        23
+      ],
+      "other_rules": "unchanged"
+    }
+  ],
+  "sensitivity_acceptance": "All14 required cases must support in addition to primary. Any unsupported, indeterminate or seed-disagreeing case=>not_resolved. Acceptance is stricter than primary10%/.95/180s alone. No Cartesian sweep or favorable substitution.",
+  "persistence240_rule": "Require4 consecutive speed-qualified60s bins and an embedded3-consecutive-bin180s subblock meeting original R/RU conditions.",
+  "result_axes": {
+    "execution_status": [
+      "not_started",
+      "completed",
+      "technical_failed",
+      "cancelled",
+      "unknown"
+    ],
+    "analysis_qualification": [
+      "not_verified",
+      "qualified",
+      "blocked_by_evidence_error"
+    ],
+    "scientific_result": [
+      "not_evaluated",
+      "supported_bounded",
+      "not_resolved"
+    ]
+  },
+  "failure_classification": {
+    "observed_insertion_blockage_or_entry_bottleneck": "qualified observations but intended comparison fails =>not_resolved",
+    "legitimate_censoring_or_absent_support": "not_resolved",
+    "missing_hash_ID_time_or_parser_error": "blocked_by_evidence_error",
+    "independent_disagreement": "blocked_by_evidence_error",
+    "technical_failure": "preserve attempt as technical_failed; no scientific negative invented",
+    "unfavorable_seed": "retain key; no replacement or phenomenon-driven retry"
+  },
+  "technical_rules_scope": {
+    "T_SOURCE": "required version-bound hashes, unique IDs, raw completeness",
+    "T_TIME": "registered raw label grids and window membership",
+    "T_ENTRY": "complete actual-entry/cohort records and explicit censored statuses; legitimate blockage is not corrupt data",
+    "T_MEASURE": "version-applicable coverage and schema including explicit N/A/no-contributor; V0 feeder not expected"
+  },
+  "gate_summary": "Report148 required main keys and14 required sensitivities separately; technical128 does not count as scientific support rate. All cancelled/unobserved required keys remain in denominator.",
+  "budgets_proposed": {
+    "max_smoke_starts": 1,
+    "new_validation_starts": 4,
+    "shared_technical_retry": 1,
+    "max_total_SUMO_starts": 6,
+    "max_wallclock_s_per_run": 120,
+    "total_wallclock_s": 720,
+    "max_archive_bytes_per_attempt": 2000000000,
+    "max_new_archive_bytes_total": 12000000000,
+    "netconvert_new_builds_planned": 0,
+    "netconvert_authorized": 0,
+    "TraCI": 0,
+    "GUI": 0,
+    "note": "Engineering management ceilings, not launch authorization; reused compiled network. Any changed build need must use prescribed build gate."
+  },
+  "engineering_dependencies": [
+    {
+      "field": "isolated_V1_configuration_and_hashes",
+      "status": "pending_C"
+    },
+    {
+      "field": "actual_compiled_artifact_binding",
+      "status": "pending_C"
+    },
+    {
+      "field": "implemented_runner_argv",
+      "status": "pending_C"
+    },
+    {
+      "field": "analyzer_and_independent_checker_hashes",
+      "status": "pending_C"
+    },
+    {
+      "field": "materialization_and_attempt_manifests",
+      "status": "pending_C"
+    },
+    {
+      "field": "number_flow_exact_quantization_and_departDelay_semantics",
+      "status": "pending_C"
+    },
+    {
+      "field": "actual_1Hz_output_precision_and_position_guards",
+      "status": "pending_C"
+    },
+    {
+      "field": "malformed_input_censor_and_science_classification_fixtures",
+      "status": "pending_C"
+    },
+    {
+      "field": "runtime_budget_and_stop_implementation",
+      "status": "pending_C"
+    }
+  ],
+  "forbidden": [
+    "SUMO or netconvert from this card",
+    "formal protocol freezing",
+    "automatic p50/p200 alternative",
+    "post-outcome threshold changes",
+    "relaxing old hash guards",
+    "discarding cancelled keys",
+    "causal urban-loss or control-benefit claim"
+  ],
+  "stage_gate_status": {
+    "B_final_primary_review": "pending",
+    "C_implementation": "not_started",
+    "SG6_BUILD": "not_authorized",
+    "SG6_P": "not_eligible",
+    "SG6_R": "not_evaluated"
+  }
+}

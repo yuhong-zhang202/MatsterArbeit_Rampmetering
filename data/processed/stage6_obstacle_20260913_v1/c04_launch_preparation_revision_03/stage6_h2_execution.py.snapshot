@@ -1,0 +1,490 @@
+"""Stage6 receipt and process control. Real processes are disabled by default.
+
+No process is created at import or by card/materialization validation. Tests inject
+an explicit fake adapter and retain synthetic scope in every resulting artifact.
+"""
+from __future__ import annotations
+import copy
+import hashlib
+import os
+from pathlib import Path
+import time
+import xml.etree.ElementTree as ET
+from src.scenarios import stage6_h2_offline as o
+
+SCHEMA = 1
+
+
+def exclusive_json(path, value):
+    with Path(path).open('xb') as stream:
+        stream.write(o.encode(value))
+        stream.flush()
+        os.fsync(stream.fileno())
+
+
+def payload_sha(card):
+    return hashlib.sha256(o.encode({k:v for k,v in card.items() if k not in ('status','launch_eligible','user_approval')})).hexdigest()
+
+
+def validate_launch_card(path, *, require_approval=False):
+    path=o.checked_path(path,o.BATCH)
+    card=o.read_json(path)
+    o.require(card['schema_version']==SCHEMA and card['registration']==o.bind(o.CARD),'launch registration mismatch')
+    registered=o.load_card()
+    o.require(card['budgets']==registered['budgets_proposed'],'launch budget drift')
+    o.require(card['netconvert_planned']==0,'hidden build forbidden')
+    o.verify_binding(card['C03_spatial_acceptance'])
+    o.verify_binding(card['preparation_authorization_snapshot'])
+    for binding in card['implementation_bindings']:
+        o.verify_binding(binding)
+    o.require({Path(b['path']).resolve() for b in card['implementation_bindings']}=={Path(__file__).resolve(),Path(o.__file__).resolve(),o.ROOT/'src/analysis/stage6_h2_measurement.py',o.ROOT/'src/analysis/stage6_h2_pipeline.py'},'implementation inventory mismatch')
+    runs=card['attempts']
+    o.require(len(runs)==5 and len({r['attempt_id'] for r in runs})==5,'five distinct prepared attempts required')
+    o.require([r['role'] for r in runs]==['smoke']+['validation']*4,'launch role/order mismatch')
+    o.require([r['run_id'] for r in runs]==['S6_V1_ML_S17','S6_V1_ML_S17','S6_V1_C_S17','S6_V1_ML_S23','S6_V1_C_S23'],'registered execution order drift')
+    for r in runs:
+        row=o.registered_run(registered,r['run_id'])
+        o.require(row['version']=='V1','V0 cannot launch')
+        mp=o.verify_binding(r['materialization'])
+        o.verify_materialization(mp,o.BATCH)
+        mat=o.read_json(mp)
+        o.require(mat['run_id']==r['run_id'] and mat['attempt_id']==r['attempt_id'],'attempt materialization identity mismatch')
+        o.require(r['argv']==mat['proposed_sumo_argv_not_authorized'],'argv binding mismatch')
+    retries=card['retry_options']
+    o.require(card['global_retry_limit']==1,'global retry limit drift')
+    o.require(len(retries)==5 and len({r['attempt_id'] for r in runs+retries})==10,'retry identity inventory mismatch')
+    for retry,parent in zip(retries,runs):
+        o.require(retry['parent_attempt_id']==parent['attempt_id'] and retry['run_id']==parent['run_id'] and retry['role']=='retry','retry parent/parameter identity drift')
+        expected=expected_materialization(Path(retry['materialization']['path']).parent,retry['run_id'],retry['attempt_id'])
+        o.require(retry['materialization']['sha256']==hashlib.sha256(o.encode(expected)).hexdigest(),'retry deterministic manifest mismatch')
+        o.require(retry['argv']==expected['proposed_sumo_argv_not_authorized'],'retry argv drift')
+        o.require(retry['expected_runtime_files']==expected['files'],'retry runtime hash drift')
+    if require_approval:
+        approval=card.get('user_approval')
+        o.require(card.get('status')=='User-approved' and card.get('launch_eligible') is True and isinstance(approval,dict),'exact launch card not approved')
+        o.require(approval.get('approved_payload_sha256')==payload_sha(card),'approval payload mismatch')
+        evidence=o.verify_binding(approval['evidence'])
+        o.require(payload_sha(card) in evidence.read_text() and approval.get('scope')=='Stage6_exact_SUMO_launch','approval evidence does not bind payload/scope')
+    else:
+        o.require(card['status'] in ('Proposed','User-approved'),'unknown launch card status')
+        if card['status']=='Proposed':
+            o.require(card['launch_eligible'] is False and card['user_approval'] is None,'Proposed card cannot unlock launch')
+    return card
+
+
+def expected_materialization(directory,run_id,attempt_id):
+    """Predict exact immutable retry payload without writing or starting it."""
+    network=o.ROOT/'artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/network.net.xml'
+    card=o.load_card();row=o.registered_run(card,run_id)
+    documents=o.runtime_documents(card,row,network,directory,o.CANDIDATE)
+    return {'schema_version':1,'status':'prepared_offline_not_launch_approved','launch_eligible':False,'run_id':run_id,'attempt_id':attempt_id,'card':o.bind(o.CARD),'source_manifest':o.bind(o.CANDIDATE/'source_manifest.json'),'implementation':o.bind(Path(o.__file__)),'measurement_implementation':o.bind(o.ROOT/'src/analysis/stage6_h2_measurement.py'),'execution_implementation':o.bind(Path(__file__)),'network':o.bind(network),'binary':o.bind(o.SUMO_BINARY),'files':{name:{'path':str(directory/name),'sha256':hashlib.sha256(content).hexdigest()} for name,content in documents.items()},'proposed_sumo_argv_not_authorized':[str(o.SUMO_BINARY),'-c',str(directory/'scenario.sumocfg')],'number_flow_exact_quantization':'pending_C_not_verified','simulation_invocations':{'SUMO':0,'netconvert':0,'TraCI':0,'GUI':0}}
+
+
+def prepare_launch_card(directory):
+    """Five exclusive input packages; zero starts. Retry paths are predictive."""
+    directory=o.checked_path(directory,o.BATCH,exists=False)
+    o.require(directory.is_dir(),'launch preparation directory missing')
+    attempts_root=directory/'attempts';attempts_root.mkdir()
+    journal=directory/'budget_journal';journal.mkdir()
+    preparation_snapshot=directory/'preparation_authorization_WORKLOG.snapshot'
+    with preparation_snapshot.open('xb') as stream:
+        stream.write((o.ROOT/'docs/WORKLOG.md').read_bytes())
+    spec=[('S6_V1_ML_S17',1,'smoke'),('S6_V1_ML_S17',3,'validation'),('S6_V1_C_S17',1,'validation'),('S6_V1_ML_S23',1,'validation'),('S6_V1_C_S23',1,'validation')]
+    entries=[];retries=[]
+    for run_id,number,role in spec:
+        aid=f'{run_id}_attempt{number}';target=attempts_root/aid
+        expected=expected_materialization(target,run_id,aid)
+        mat=o.prepare(o.CARD,Path(expected['network']['path']),expected['network']['sha256'],run_id,aid,target,o.BATCH)
+        o.require(mat==expected,'deterministic preparation mismatch')
+        entries.append({'run_id':run_id,'attempt_id':aid,'role':role,'status':'prepared_not_started','materialization':o.bind(target/'materialization_manifest.json'),'argv':mat['proposed_sumo_argv_not_authorized']})
+        retry_id=f'{run_id}_attempt{number+1}';retry_dir=attempts_root/retry_id
+        retry=expected_materialization(retry_dir,run_id,retry_id)
+        retries.append({'run_id':run_id,'attempt_id':retry_id,'parent_attempt_id':aid,'role':'retry','status':'conditional_not_materialized_not_started','materialization':{'path':str(retry_dir/'materialization_manifest.json'),'sha256':hashlib.sha256(o.encode(retry)).hexdigest()},'argv':retry['proposed_sumo_argv_not_authorized'],'expected_runtime_files':retry['files']})
+    card={'schema_version':SCHEMA,'status':'Proposed','launch_eligible':False,'user_approval':None,'registration':o.bind(o.CARD),'implementation_bindings':[o.bind(Path(o.__file__)),o.bind(o.ROOT/'src/analysis/stage6_h2_measurement.py'),o.bind(Path(__file__)),o.bind(o.ROOT/'src/analysis/stage6_h2_pipeline.py')],'budgets':o.load_card()['budgets_proposed'],'budget_journal_directory':str(journal),'netconvert_planned':0,'attempts':entries,'retry_options':retries,'global_retry_limit':1,'review_pauses':['smoke_acceptance','first_matched_unit_acceptance'],'scope':'bounded exploratory H2 validation; not formal experiment','number_flow_schedule_status':'pending_exact_schedule; reported fields only; no no-additional-blockage claim'}
+    card['C03_spatial_acceptance']=o.bind(o.BATCH/'c03_reuse_spatial_package_revision_01/final_package_manifest_revision_02.json')
+    card['preparation_authorization_snapshot']=o.bind(preparation_snapshot)
+    exclusive_json(directory/'proposed_launch_card.json',card)
+    return card
+
+
+def materialize_retry(launch_card_path,parent_receipt_binding,journal,*,allow_fixture=False):
+    parent=o.read_json(o.verify_binding(parent_receipt_binding))
+    fixture=parent.get('evidence_scope')=='synthetic_fixture'
+    o.require(allow_fixture if fixture else parent.get('evidence_scope')=='real_executed_output','retry evidence scope mismatch')
+    card=validate_launch_card(launch_card_path,require_approval=not fixture)
+    o.require(parent['execution_status']=='technical_failure' and parent['launch_card']==o.bind(launch_card_path),'retry parent not qualified technical failure')
+    o.require(str(journal.directory)==card['budget_journal_directory'],'retry alternate journal')
+    state,_,_=journal.load()
+    o.require(o.budget_usage(state)['retry']==0 and not state['stop_violations'],'shared retry exhausted or global hard stop')
+    prior=[r for r in state['attempts'] if r['attempt_id']==parent['attempt_id']]
+    o.require(len(prior)==1 and prior[0]['state']=='technical_failed','retry parent state mismatch')
+    entries=[r for r in card['retry_options'] if r['parent_attempt_id']==parent['attempt_id']]
+    o.require(len(entries)==1,'unregistered retry')
+    entry=entries[0];directory=Path(entry['materialization']['path']).parent
+    expected=expected_materialization(directory,entry['run_id'],entry['attempt_id'])
+    o.prepare(o.CARD,Path(expected['network']['path']),expected['network']['sha256'],entry['run_id'],entry['attempt_id'],directory,o.BATCH)
+    o.require(o.bind(directory/'materialization_manifest.json')==entry['materialization'],'retry materialization changed')
+    return entry
+
+
+def expected_outputs(material):
+    directory=Path(material['files']['scenario.sumocfg']['path']).parent
+    root=ET.parse(directory/'scenario.sumocfg').getroot()
+    paths={Path(x.get('value')) for x in root.findall('./output/*') if x.tag in ('fcd-output','queue-output','summary-output','tripinfo-output','vehroute-output')}
+    paths|={Path(x.get('value')) for x in root.findall('./report/*') if x.tag in ('log','error-log')}
+    add=ET.parse(directory/'scenario.add.xml').getroot()
+    paths|={Path(x.get('file')) for x in add if x.get('file')}
+    paths|={Path(x.get('dest')) for x in add if x.get('dest')}
+    paths|={directory/'outputs/process.stdout.log',directory/'outputs/process.stderr.log'}
+    o.require(all(p.parent==directory/'outputs' for p in paths),'output role escapes attempt')
+    return {p.name:p for p in paths}
+
+
+def validate_required_xml_outputs(material):
+    """Minimum role/schema checks for every required XML, including context.
+
+    This is deliberately stricter than existence. Scientific FCD/E1/E2 and
+    cohort qualification still run in the source-bound measurement pipeline.
+    """
+    from src.analysis import stage6_h2_measurement as m
+    expected=expected_outputs(material)
+    demand=ET.parse(o.verify_binding(material['files']['demand.rou.xml'])).getroot()
+    counts={g:int(next(f.get('number') for f in demand.findall('flow') if f.get('id')==g+'_flow')) for g in 'MRUX'}
+    ids=m.planned_ids(counts)
+    lanes={e.get('id') for e in ET.parse(o.verify_binding(material['network'])).getroot().findall('.//lane')}
+    roles={'fcd.xml':('fcd-export','timestep'),'queues.xml':('queue-export','data'),'sumo_summary.xml':('summary','step'),'tripinfo.xml':('tripinfos','tripinfo'),'vehroute.xml':('routes','vehicle'),'tls_states.xml':('tlsStates','tlsState')}
+    roles.update({name:('detector','interval') for name in expected if '_e1_' in name or '_e2.' in name})
+    o.require(set(roles)=={name for name in expected if name.endswith('.xml')},'unregistered required XML role')
+    result={};identity_records={}
+    for name,(root_tag,child_tag) in roles.items():
+        path=expected[name]
+        o.require(path.is_file() and path.stat().st_size>0,'empty/missing required XML:'+name)
+        depth=0;children=0;seen=set();records={};previous_counters={}
+        try:
+            for event,element in ET.iterparse(path,events=('start','end')):
+                if event=='start':
+                    depth+=1
+                    if depth==1:o.require(element.tag==root_tag,'XML root/role mismatch:'+name)
+                    continue
+                if depth==2:
+                    o.require(element.tag==child_tag,'unexpected XML child/role:'+name)
+                    if name in ('fcd.xml','queues.xml','sumo_summary.xml','tls_states.xml'):
+                        field='timestep' if name=='queues.xml' else 'time'
+                        o.require(m.number(element.get(field),name+' time',0)==children and children<2700,'XML raw time grid mismatch:'+name)
+                    if name=='queues.xml':
+                        o.require(len(element)==1 and element[0].tag=='lanes','queue lanes container missing/unknown')
+                        local=set()
+                        for lane in element[0]:
+                            lid=lane.get('id')
+                            o.require(lane.tag=='lane' and lid in lanes and lid not in local,'queue lane identity mismatch')
+                            local.add(lid)
+                            for field in ('queueing_time','queueing_length','queueing_length_experimental'):m.number(lane.get(field),field,0)
+                    elif name=='sumo_summary.xml':
+                        for field in ('loaded','inserted','running','waiting','ended','arrived','collisions','teleports','halting','stopped','discarded'):
+                            value=m.number(element.get(field),'summary '+field,0)
+                            o.require(value.is_integer(),'summary counter nonintegral')
+                            if field in ('loaded','inserted','ended','arrived'):
+                                o.require(previous_counters.get(field,0)<=value<=len(ids),'summary cumulative counter invalid')
+                                previous_counters[field]=value
+                        for field in ('meanWaitingTime','meanTravelTime','meanSpeed','meanSpeedRelative'):
+                            o.require(m.number(element.get(field),'summary '+field)>=-1,'summary invalid mean sentinel')
+                    elif name in ('tripinfo.xml','vehroute.xml'):
+                        vid=element.get('id')
+                        o.require(vid in ids and vid not in seen,'unknown/duplicate XML vehicle identity:'+name)
+                        seen.add(vid);dep=m.number(element.get('depart'),'XML depart')
+                        o.require(dep==-1 or 0<=dep<2700,'XML depart outside recorded horizon')
+                        arrival=m.number(element.get('arrival'),'XML arrival') if element.get('arrival') is not None else -1
+                        o.require(arrival==-1 or dep<=arrival<=2700 and dep>=0,'XML arrival/depart mismatch')
+                        records[vid]={'depart':dep,'arrival':arrival}
+                        if name=='vehroute.xml':
+                            route=element.findall('route')
+                            o.require(len(route)==1 and route[0].get('edges')==o.ROUTES[m.group(vid)],'vehroute path missing/mismatched')
+                    elif name=='fcd.xml':
+                        local=set()
+                        for vehicle in element:
+                            vid=vehicle.get('id')
+                            o.require(vehicle.tag=='vehicle' and vid in ids and vid not in local and vehicle.get('lane') in lanes,'FCD basic schema/identity mismatch')
+                            local.add(vid)
+                            for field in ('pos','speed'):m.number(vehicle.get(field),'FCD '+field,0)
+                    elif name=='tls_states.xml':
+                        o.require(element.get('id')=='urban_tls' and element.get('programID')=='technical_placeholder' and element.get('state') in ('Gr','yr','rG','ry'),'TLS basic identity/program/state mismatch')
+                    elif root_tag=='detector':
+                        o.require(element.get('id')==name[:-4],'detector role/identity mismatch')
+                        o.require(m.number(element.get('begin'),'detector begin',0)==children*30 and m.number(element.get('end'),'detector end',0)==min((children+1)*30,2700) and children<90,'detector basic interval grid mismatch')
+                    children+=1;element.clear()
+                depth-=1
+        except ET.ParseError as exc:
+            raise o.EvidenceError('malformed required XML:'+name) from exc
+        o.require(children>0,'required XML has no records:'+name)
+        if name in ('fcd.xml','queues.xml','sumo_summary.xml','tls_states.xml'):o.require(children==2700,'incomplete required XML grid:'+name)
+        if root_tag=='detector':o.require(children==90,'incomplete detector interval coverage:'+name)
+        if name in ('tripinfo.xml','vehroute.xml'):
+            o.require(seen==ids,'missing required XML vehicle identities:'+name);identity_records[name]=records
+        if name=='sumo_summary.xml':o.require(previous_counters['loaded']==len(ids),'summary planned-loading count mismatch')
+        result[name]={'root':root_tag,'records':children,'status':'minimum_schema_passed'}
+    o.require(identity_records['tripinfo.xml']==identity_records['vehroute.xml'],'tripinfo/vehroute identity timing mismatch')
+    # Reuse strict contributed-value validators, not a second permissive parser.
+    for name in roles:
+        if '_e1_' in name:m.read_e1(expected[name],name[:-4],expected_period_s=30)
+    trips=m.read_tripinfo(expected['tripinfo.xml'],ids)
+    from src.analysis.stage6_h2_pipeline import validate_auxiliary_context
+    validate_auxiliary_context({'output_bindings':{name:o.bind(expected[name]) for name in ('ramp_storage_e2.xml','shared_boundary_e2.xml')}},{'tripinfo':trips})
+    return {'status':'passed','roles':result,'scope':'minimum required XML role/schema/time/identity; scientific measurement checks remain required'}
+
+
+class Journal:
+    """Exclusive immutable revisions. Stale lock/unknown start requires recovery."""
+    def __init__(self,directory):
+        self.directory=o.checked_path(directory,o.BATCH,exists=False)
+        o.require(self.directory.is_dir(),'journal directory missing')
+
+    def load(self):
+        files=sorted(self.directory.glob('event_*.json'))
+        previous=None
+        state=o.new_budget(o.load_card())
+        for i,path in enumerate(files):
+            data=o.read_json(path)
+            o.require(path.name==f'event_{i:04d}.json' and data['sequence']==i,'journal gap')
+            o.require(data['previous']==previous,'journal hash chain broken')
+            replayed=o.budget_event(state,o.load_card(),data['event'])
+            if data['event']['event']=='mark_running':
+                row=next(r for r in replayed['attempts'] if r['attempt_id']==data['event']['attempt_id'])
+                row['start_observed']=True;row['process_identity']=data['metadata'].get('process_identity')
+            o.require(replayed==data['state'],'journal state does not replay')
+            state=replayed
+            previous=o.bind(path)
+        return state,previous,len(files)
+
+    def append(self,event,**metadata):
+        lock=self.directory/'journal.lock'
+        with lock.open('xb') as f:
+            f.write(str(os.getpid()).encode());f.flush();os.fsync(f.fileno())
+        try:
+            state,prev,sequence=self.load()
+            next_state=o.budget_event(state,o.load_card(),event)
+            if event['event']=='mark_running':
+                target=next(r for r in next_state['attempts'] if r['attempt_id']==event['attempt_id'])
+                target['start_observed']=True
+                target['process_identity']=metadata.get('process_identity')
+            path=self.directory/f'event_{sequence:04d}.json'
+            exclusive_json(path,{'sequence':sequence,'previous':prev,'event':event,'metadata':metadata,'state':next_state})
+            return o.bind(path)
+        finally:
+            lock.unlink()
+
+    def counters(self):
+        state,_,_=self.load()
+        return {**o.budget_usage(state),'actual_starts_observed':sum(r.get('start_observed',False) for r in state['attempts']),'reserved_or_unknown':sum(r['state'] in ('reserved','unknown') for r in state['attempts'])}
+
+    def recover_unknown(self,attempt_id):
+        # Does not inspect/kill a PID or invent no-start proof after an OS crash.
+        return self.append({'event':'mark_unknown','attempt_id':attempt_id},reason='explicit recovery; start may have occurred; charged and no relaunch')
+
+
+class RealProcessAdapter:
+    evidence_scope='real_executed_output'
+    def __init__(self,*,enable=False):
+        self.enabled=enable
+    def start(self,argv,directory,*,launch_card_path):
+        o.require(self.enabled,'real process adapter disabled')
+        validate_launch_card(launch_card_path,require_approval=True)
+        import subprocess
+        stdout=(directory/'outputs/process.stdout.log').open('xb')
+        stderr=(directory/'outputs/process.stderr.log').open('xb')
+        try:
+            return subprocess.Popen(argv,cwd=directory,stdout=stdout,stderr=stderr,shell=False,start_new_session=True)
+        finally:
+            stdout.close();stderr.close()
+
+
+def attempt_bytes(directory):
+    return sum(p.stat().st_size for p in directory.rglob('*') if p.is_file())
+
+
+def execute_attempt(launch_card_path,attempt_id,journal,adapter,*,clock=time.monotonic,sleep=time.sleep,allow_fixture=False):
+    """One controlled attempt. Real execution requires an explicitly enabled adapter and approved card."""
+    fixture=getattr(adapter,'evidence_scope',None)=='synthetic_fixture'
+    o.require(fixture and allow_fixture or isinstance(adapter,RealProcessAdapter),'untrusted process adapter')
+    if not fixture:
+        o.require(adapter.enabled,'real process adapter disabled')
+        o.require(clock is time.monotonic and sleep is time.sleep,'real watchdog clock cannot be replaced by fixture clock')
+    card=validate_launch_card(launch_card_path,require_approval=not fixture)
+    o.require(str(journal.directory)==card['budget_journal_directory'],'alternate global budget journal forbidden')
+    entries=[r for r in card['attempts']+card['retry_options'] if r['attempt_id']==attempt_id]
+    o.require(len(entries)==1,'attempt not registered')
+    entry=entries[0];mp=o.verify_binding(entry['materialization']);mat=o.read_json(mp);directory=mp.parent
+    o.require(not (directory/'execution_receipt.json').exists() and not any((directory/'outputs').iterdir()),'attempt outputs/receipt already exist; never overwrite or relaunch')
+    state,_,_=journal.load()
+    parent=next((r for r in card['attempts'] if r['attempt_id']==entry.get('parent_attempt_id')),entry)
+    earlier=card['attempts'][:card['attempts'].index(parent)]
+    for predecessor in earlier:
+        matches=[r for r in state['attempts'] if r['attempt_id']==predecessor['attempt_id']]
+        recovered=[r for r in state['attempts'] if r.get('parent_attempt_id')==predecessor['attempt_id'] and r['state']=='completed']
+        o.require(len(matches)==1 and (matches[0]['state']=='completed' or len(recovered)==1),'prior ordered attempt not complete')
+    # Review pauses are explicit durable evidence, not inferred from exit zero.
+    if parent['role']=='validation':
+        gate='smoke_acceptance' if entry['run_id'] in ('S6_V1_ML_S17','S6_V1_C_S17') else 'first_matched_unit_acceptance'
+        gate_path=journal.directory/(gate+'.json')
+        o.require(gate_path.is_file(),'required review pause not accepted')
+        gate_data=o.read_json(gate_path)
+        o.require(gate_data.get('launch_payload_sha256')==payload_sha(card) and gate_data.get('accepted') is True,'review gate mismatch')
+        o.require(gate_data.get('evidence_scope')==adapter.evidence_scope,'fixture review gate cannot unlock real execution')
+        for binding in gate_data['evidence_bindings']:o.verify_binding(binding)
+        o.require(bool(gate_data['evidence_bindings']),'review gate lacks evidence')
+    parameter_hash=hashlib.sha256(o.encode({'run_id':entry['run_id'],'registration':card['registration'],'network':mat['network'],'source_manifest':mat['source_manifest']})).hexdigest()
+    with (directory/'execution_claim.json').open('xb') as f:
+        f.write(o.encode({'attempt_id':attempt_id,'launch_card':o.bind(launch_card_path),'evidence_scope':adapter.evidence_scope}))
+    reserve_event={'event':'reserve','attempt_id':attempt_id,'run_id':entry['run_id'],'role':entry['role'],'parameter_hash':parameter_hash}
+    if entry['role']=='retry':reserve_event['parent_attempt_id']=entry['parent_attempt_id']
+    try:
+        reserved=journal.append(reserve_event)
+    except BaseException as exc:
+        exclusive_json(directory/'prelaunch_rejection.json',{'attempt_id':attempt_id,'error_type':type(exc).__name__,'error':str(exc),'simulator_start_observed':False,'reason':'reservation failed before adapter.start'})
+        raise
+    start=clock();proc=None;exit_code=None;reason='unknown';execution_status='unknown';last_event=reserved;xml_validation={'status':'not_evaluated'}
+    try:
+        proc=adapter.start(entry['argv'],directory,launch_card_path=launch_card_path)
+        last_event=journal.append({'event':'mark_running','attempt_id':attempt_id},process_identity={'pid':proc.pid,'adapter_scope':adapter.evidence_scope})
+        reason='completed'
+        while True:
+            elapsed=clock()-start
+            size=attempt_bytes(directory)
+            exit_code=proc.poll()
+            if elapsed>=card['budgets']['max_wallclock_s_per_run'] or size>card['budgets']['max_archive_bytes_per_attempt']:
+                reason='timeout' if elapsed>=card['budgets']['max_wallclock_s_per_run'] else 'archive_size_limit'
+                proc.terminate()
+                # Bounded termination grace, then kill. Real wait uses a timeout.
+                try: proc.wait(timeout=1)
+                except TimeoutError: proc.kill();proc.wait(timeout=1)
+                except Exception as exc:
+                    if type(exc).__name__!='TimeoutExpired':raise
+                    proc.kill();proc.wait(timeout=1)
+                exit_code=proc.poll();break
+            if exit_code is not None:
+                if exit_code!=0:reason='signal' if exit_code<0 else 'nonzero_exit'
+                break
+            sleep(.05)
+        expected=expected_outputs(mat)
+        if reason=='completed' and any(not p.is_file() for p in expected.values()):reason='missing_output'
+        if reason=='completed':
+            try:xml_validation=validate_required_xml_outputs(mat)
+            except (o.EvidenceError,OSError) as exc:
+                reason='invalid_required_xml';xml_validation={'status':'failed','error_type':type(exc).__name__,'error':str(exc)}
+        if reason=='completed':
+            import re
+            diagnostics='\n'.join(expected[n].read_text() for n in ('sumo.log','sumo_error.log','process.stderr.log'))
+            if re.search(r'\b(?:Error|Warning)\b',diagnostics):reason='diagnostic_anomaly'
+        execution_status='completed' if reason=='completed' else 'technical_failure'
+        elapsed=max(0,clock()-start);size=attempt_bytes(directory)
+        committed_outputs={name:o.bind(path) for name,path in expected.items() if path.is_file()}
+        last_event=journal.append({'event':'complete' if execution_status=='completed' else 'technical_fail','attempt_id':attempt_id,'wallclock_s':elapsed,'archive_bytes':size},reason=reason,exit_code=exit_code,output_bindings=committed_outputs,materialization=o.bind(mp),launch_payload_sha256=payload_sha(card),required_xml_validation=xml_validation)
+    except BaseException as exc:
+        # Preserve ambiguity; never release/retry merely because Python crashed.
+        reason='exception:'+type(exc).__name__;execution_status='unknown'
+        if proc is not None:
+            try:
+                if proc.poll() is None:
+                    proc.terminate()
+                    try:proc.wait(timeout=1)
+                    except Exception:proc.kill();proc.wait(timeout=1)
+            except Exception:
+                reason+=':process_cleanup_unconfirmed'
+        try:
+            current,_,_=journal.load();record=next(r for r in current['attempts'] if r['attempt_id']==attempt_id)
+            if record['state'] in ('reserved','running'):
+                last_event=journal.recover_unknown(attempt_id)
+        except BaseException:
+            reason+=':journal_recovery_unconfirmed'
+    outputs={name:o.bind(path) for name,path in expected_outputs(mat).items() if path.is_file()}
+    try:counters=journal.counters()
+    except Exception as exc:counters={'state':'unknown','error_type':type(exc).__name__,'last_bound_event':last_event}
+    registered=o.registered_run(o.load_card(),entry['run_id'])
+    receipt={'schema_version':SCHEMA,'evidence_scope':adapter.evidence_scope,'execution_status':execution_status,'reason':reason,'exit_code':exit_code,'run_id':entry['run_id'],'attempt_id':attempt_id,'role':entry['role'],'version':registered['version'],'condition':registered['condition'],'seed':registered['seed'],'launch_card':o.bind(launch_card_path),'launch_payload_sha256':payload_sha(card),'materialization':o.bind(mp),'registration':card['registration'],'implementation_bindings':card['implementation_bindings'],'binary':mat['binary'],'network':mat['network'],'source_manifest':mat['source_manifest'],'argv':entry['argv'],'files':mat['files'],'output_bindings':outputs,'journal_event':last_event,'budget_counters':counters,'process_start_observed_in_handler':proc is not None,'scientific_result':'not_evaluated'}
+    receipt['required_xml_validation']=xml_validation
+    source_map={k:receipt[k] for k in ('schema_version','evidence_scope','execution_status','run_id','attempt_id','role','version','condition','seed','launch_card','materialization','registration','implementation_bindings','binary','network','source_manifest','argv','files','output_bindings','journal_event')}
+    exclusive_json(directory/'executed_source_map.json',source_map)
+    receipt['executed_source_map']=o.bind(directory/'executed_source_map.json')
+    exclusive_json(directory/'execution_receipt.json',receipt)
+    return receipt
+
+
+def verify_executed_source(receipt_binding,run_id,*,allow_fixture=False):
+    receipt_path=o.verify_binding(receipt_binding)
+    r=o.read_json(receipt_path)
+    source_map_path=o.verify_binding(r['executed_source_map'])
+    source_map=o.read_json(source_map_path)
+    o.require(all(source_map.get(k)==r[k] for k in source_map),'source-map/receipt identity conflict')
+    o.require(set(source_map)=={'schema_version','evidence_scope','execution_status','run_id','attempt_id','role','version','condition','seed','launch_card','materialization','registration','implementation_bindings','binary','network','source_manifest','argv','files','output_bindings','journal_event'},'source-map schema incomplete')
+    fixture=r.get('evidence_scope')=='synthetic_fixture'
+    o.require(allow_fixture if fixture else r.get('evidence_scope')=='real_executed_output','synthetic receipt cannot qualify real evidence')
+    o.require(r['schema_version']==SCHEMA and r['execution_status']=='completed' and r['exit_code']==0,'incomplete or failed execution')
+    card_path=o.verify_binding(r['launch_card']);card=validate_launch_card(card_path,require_approval=not fixture)
+    o.require(r['launch_payload_sha256']==payload_sha(card),'receipt launch payload drift')
+    rows=[x for x in card['attempts']+card['retry_options'] if x['attempt_id']==r['attempt_id'] and x['run_id']==run_id]
+    o.require(len(rows)==1 and rows[0]['role']==r['role'],'scientific archive requires matching attempt')
+    parent=next((x for x in card['attempts'] if x['attempt_id']==rows[0].get('parent_attempt_id')),rows[0])
+    o.require(parent['role']=='validation','smoke and smoke retry excluded from scientific validation')
+    row=o.registered_run(o.load_card(),run_id)
+    o.require(r['run_id']==run_id and all(str(r[k])==str(row[k]) for k in ('version','condition','seed')),'executed identity mismatch')
+    mp=o.verify_binding(r['materialization']);o.require(r['materialization']==rows[0]['materialization'],'receipt materialization role mismatch')
+    o.verify_materialization(mp,o.BATCH);mat=o.read_json(mp)
+    for field in ('binary','network','source_manifest','files'):
+        o.require(r[field]==mat[field],f'receipt {field} mismatch')
+    o.require(r['argv']==rows[0]['argv'] and r['registration']==card['registration'] and r['implementation_bindings']==card['implementation_bindings'],'receipt source/argv mismatch')
+    event=o.read_json(o.verify_binding(r['journal_event']))
+    Journal(Path(card['budget_journal_directory'])).load()
+    o.require(event['metadata'].get('output_bindings')==r['output_bindings'] and event['metadata'].get('materialization')==r['materialization'] and event['metadata'].get('launch_payload_sha256')==payload_sha(card),'journal output/source commitment mismatch')
+    o.require(r.get('required_xml_validation',{}).get('status')=='passed' and event['metadata'].get('required_xml_validation')==r['required_xml_validation'],'missing or failed required XML validation')
+    matches=[x for x in event['state']['attempts'] if x['attempt_id']==r['attempt_id']]
+    o.require(len(matches)==1 and matches[0]['state']=='completed' and matches[0].get('start_observed') is True,'receipt lacks observed completed attempt')
+    o.require(receipt_path==mp.parent/'execution_receipt.json','receipt outside attempt')
+    o.require(source_map_path==mp.parent/'executed_source_map.json','source map outside attempt')
+    o.require(Path(r['journal_event']['path']).parent==Path(card['budget_journal_directory']),'receipt budget journal substitution')
+    expected=expected_outputs(mat)
+    o.require(set(r['output_bindings'])==set(expected),'executed output inventory missing/extra role')
+    for name,binding in r['output_bindings'].items():
+        o.require(o.verify_binding(binding)==expected[name],'output run/role substitution')
+    o.require(validate_required_xml_outputs(mat)==r['required_xml_validation'],'required XML validation evidence changed')
+    # SUMO's embedded runtime configuration is independent of caller metadata.
+    import re
+    with expected['tripinfo.xml'].open() as f:header=f.read(65536)
+    fragments=re.findall(r'<sumoConfiguration\b[^>]*>.*?</sumoConfiguration>',header,re.S)
+    o.require(len(fragments)==1,'executed tripinfo runtime header missing')
+    config=ET.fromstring(fragments[0])
+    for tag,expected_value in (('seed',str(row['seed'])),('step-length','1'),('end','2700'),('net-file',mat['network']['path']),('route-files',mat['files']['demand.rou.xml']['path']),('tripinfo-output',str(expected['tripinfo.xml']))):
+        els=config.findall('.//'+tag)
+        o.require(len(els)==1 and els[0].get('value')==expected_value,'executed runtime header mismatch:'+tag)
+    return {'run_id':run_id,'version':'V1','condition':row['condition'],'seed':row['seed'],'evidence_scope':r['evidence_scope'],'execution_receipt':receipt_binding,'source_map':r['output_bindings'],'materialization':r['materialization']}
+
+
+def verify_scientific_identity(identity, *, allow_fixture=False):
+    if identity.get('evidence_scope')=='synthetic_fixture' and 'execution_receipt' not in identity:
+        o.require(allow_fixture,'synthetic arithmetic input forbidden in real analysis')
+        return
+    o.require(identity.get('evidence_scope') in ('synthetic_fixture','real_executed_output') and isinstance(identity.get('execution_receipt'),dict),'scientific identity missing valid executed receipt')
+    verified=verify_executed_source(identity['execution_receipt'],identity['run_id'],allow_fixture=allow_fixture)
+    o.require(all(str(identity[k])==str(verified[k]) for k in ('run_id','version','condition','seed','evidence_scope')),'science source identity drift')
+
+
+def verify_reported_schedule(trips, exact_schedule=None):
+    """Check a separately supplied exact schedule; never infer from nominal N/T.
+
+    No schedule exists in the current approved contract. A future independent
+    schedule artifact must bind its implementation/version provenance explicitly.
+    """
+    if exact_schedule is None:
+        return {'status':'pending_exact_schedule','no_additional_blockage_claim':False}
+    from decimal import Decimal
+    path=o.verify_binding(exact_schedule)
+    schedule=o.read_json(path)
+    o.require(schedule.get('independently_verified') is True and schedule.get('time_unit')=='seconds','schedule not independently verified')
+    for binding in schedule['provenance_bindings']:o.verify_binding(binding)
+    o.require(bool(schedule['provenance_bindings']) and set(schedule['planned_depart_s'])==set(trips),'schedule provenance/identity mismatch')
+    mismatches=[]
+    for vid,t in trips.items():
+        planned=float(schedule['planned_depart_s'][vid])
+        o.require(planned>=0 and planned<1500,'schedule outside registered demand')
+        if t['depart']<0:continue
+        residual=Decimal(str(t['depart']))-Decimal(str(t['departDelay']))-Decimal(str(schedule['planned_depart_s'][vid]))
+        if abs(residual)>Decimal('0.01'):mismatches.append({'vehicle_id':vid,'residual_s':float(residual)})
+    return {'status':'reported_fields_consistent' if not mismatches else 'schedule_report_mismatch','mismatches':mismatches,'schedule':exact_schedule,'no_additional_blockage_claim':False}

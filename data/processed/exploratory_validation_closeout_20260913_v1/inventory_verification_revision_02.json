@@ -1,0 +1,221 @@
+{
+  "batch_id": "exploratory_validation_closeout_20260913_v1",
+  "counts": {
+    "O_outputs_complete": "6/6",
+    "evidence_manifests": "8/8",
+    "gates_with_result": "8/8",
+    "handover_classes_classified": "22/22",
+    "path_hash_pairs_checked": 15,
+    "path_hash_pairs_passed": 15,
+    "registered_logical_runs_terminal": "10/10",
+    "unclassified_handover_items": 0,
+    "unsupported_verified_claims": 0
+  },
+  "finalization_inputs": {
+    "T51_scientific_review_record": {
+      "core_question_level_unknowns": 2,
+      "open_findings": {
+        "blocker": 0,
+        "major": 0,
+        "required_minor": 0
+      },
+      "path": "data/processed/exploratory_validation_closeout_20260913_v1/T51_scientific_review_record_revision_02.json",
+      "revision": 2,
+      "sha256": "c5aafabf28afaf5fbf9c919226cd9852a2730667236907ec3750539c36ae7f42",
+      "status": "PASS",
+      "supersedes_path": "data/processed/exploratory_validation_closeout_20260913_v1/T51_scientific_review_record.json"
+    },
+    "T53_exploratory_validation_report": {
+      "path": "docs/EXPLORATORY_VALIDATION_REPORT.md",
+      "remaining_gate": "T54_user_acceptance",
+      "sha256": "e41fa4c058b2eab19c2f3f3e47dd1f3f6e607657fd48ffdfac324f4883d27de8",
+      "status": "complete"
+    }
+  },
+  "formal_protocol": "empty_not_frozen",
+  "interpretation_boundary": "Inventory completion, T51 revision_02 PASS, T53 completion, and G08 handover completeness do not make the scenario preliminary_ready or select formal parameters.",
+  "mirror_checks": {
+    "artifact_inventory.csv": {
+      "byte_identical": true,
+      "mirror_sha256": "ee1f0f144d4075667aa87926132b0657484c3f288cc15f41543655bf87274ee5",
+      "source_sha256": "ee1f0f144d4075667aa87926132b0657484c3f288cc15f41543655bf87274ee5"
+    },
+    "gate_inventory.csv": {
+      "byte_identical": true,
+      "mirror_sha256": "693e1d55e66293436cf0c2fe740ed950d5adde7d3c745f391ec2dba8d1e613a7",
+      "source_sha256": "693e1d55e66293436cf0c2fe740ed950d5adde7d3c745f391ec2dba8d1e613a7"
+    },
+    "method_handover_draft.csv": {
+      "byte_identical": true,
+      "mirror_sha256": "1b29caa271686d1c61385ef75b3b6cd3eae264c02f466d70c68f72dd4b96cace",
+      "source_sha256": "1b29caa271686d1c61385ef75b3b6cd3eae264c02f466d70c68f72dd4b96cace"
+    }
+  },
+  "open_data_findings": [],
+  "path_hash_checks": [
+    {
+      "actual_sha256": "e9c8a6c026b22faedb51902d79cc3952333a3e86ea963b0c06083f0889b81fd7",
+      "expected_sha256": "e9c8a6c026b22faedb51902d79cc3952333a3e86ea963b0c06083f0889b81fd7",
+      "passed": true,
+      "path": "data/processed/stage3_baseline_diagnostic_20260912_v2/measurement_contract.json"
+    },
+    {
+      "actual_sha256": "636689b4576502355eae3159c44ff9569bb720f994234d445cd3a0eb16f0c84a",
+      "expected_sha256": "636689b4576502355eae3159c44ff9569bb720f994234d445cd3a0eb16f0c84a",
+      "passed": true,
+      "path": "data/processed/stage3_baseline_diagnostic_20260912_v2/network_observation_map.csv"
+    },
+    {
+      "actual_sha256": "90f78a9664c320ae9bb83cdf23c9000c60df92c368fbcee8fe37744c43e68804",
+      "expected_sha256": "90f78a9664c320ae9bb83cdf23c9000c60df92c368fbcee8fe37744c43e68804",
+      "passed": true,
+      "path": "results/tables/stage2_completion_20260909_v1/revision_04/vehicle_accounting.csv"
+    },
+    {
+      "actual_sha256": "36c934cdcfe1382ca993ee242ec6de507f4db5c3709f1f506cfdc4c998ca88c3",
+      "expected_sha256": "36c934cdcfe1382ca993ee242ec6de507f4db5c3709f1f506cfdc4c998ca88c3",
+      "passed": true,
+      "path": "data/processed/stage3_baseline_diagnostic_20260912_v2/aggregate/revision_03/endpoint_accounting.csv"
+    },
+    {
+      "actual_sha256": "5e56f56d7dd69abcdc3993ae42e4b4ed0dad75c7e4affab7b4eadab72e969a0f",
+      "expected_sha256": "5e56f56d7dd69abcdc3993ae42e4b4ed0dad75c7e4affab7b4eadab72e969a0f",
+      "passed": true,
+      "path": "results/tables/stage3_baseline_diagnostic_20260912_v2/aggregate/revision_03/condition_evidence_summary.csv"
+    },
+    {
+      "actual_sha256": "10163e9327d8e5ccfed2ad5ad986090f940d78e073eea696e692f378901edae6",
+      "expected_sha256": "10163e9327d8e5ccfed2ad5ad986090f940d78e073eea696e692f378901edae6",
+      "passed": true,
+      "path": "results/tables/stage4_qmain_sequential_20260912_v1/final/revision_03/final_run_matrix.csv"
+    },
+    {
+      "actual_sha256": "e28ffdbb0411a5579fd4cbfcee405057f4610683b1be3d79ef37a39553ac7c2a",
+      "expected_sha256": "e28ffdbb0411a5579fd4cbfcee405057f4610683b1be3d79ef37a39553ac7c2a",
+      "passed": true,
+      "path": "data/processed/stage3_baseline_diagnostic_20260912_v2/analysis_review/revision_06/claim_evidence.csv"
+    },
+    {
+      "actual_sha256": "695744bc455526e01821a2b88cc7ac70ed2d2569f8bc31ddb88d310573016494",
+      "expected_sha256": "695744bc455526e01821a2b88cc7ac70ed2d2569f8bc31ddb88d310573016494",
+      "passed": true,
+      "path": "docs/STAGE4_TARGETED_VALIDATION_REPORT.md"
+    },
+    {
+      "actual_sha256": "b73513dca5a0b535a8910ff4c779f410a13f0b165391b503b6e70c0475469726",
+      "expected_sha256": "b73513dca5a0b535a8910ff4c779f410a13f0b165391b503b6e70c0475469726",
+      "passed": true,
+      "path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/T43_final_scientific_review_record_20260913.json"
+    },
+    {
+      "actual_sha256": "c5aafabf28afaf5fbf9c919226cd9852a2730667236907ec3750539c36ae7f42",
+      "expected_sha256": "c5aafabf28afaf5fbf9c919226cd9852a2730667236907ec3750539c36ae7f42",
+      "passed": true,
+      "path": "data/processed/exploratory_validation_closeout_20260913_v1/T51_scientific_review_record_revision_02.json"
+    },
+    {
+      "actual_sha256": "35115af6556b415126f12fbc014c777cc31f3263dd92d917a1bb7b88650e9e28",
+      "expected_sha256": "35115af6556b415126f12fbc014c777cc31f3263dd92d917a1bb7b88650e9e28",
+      "passed": true,
+      "path": "data/processed/stage3_baseline_diagnostic_20260912_v2/aggregate/revision_03/sensitivity.csv"
+    },
+    {
+      "actual_sha256": "7f2fd3e96cc4bd2867aa41324b3f3f39a4f0094a210a6af5c60085ef125f3732",
+      "expected_sha256": "7f2fd3e96cc4bd2867aa41324b3f3f39a4f0094a210a6af5c60085ef125f3732",
+      "passed": true,
+      "path": "data/processed/stage3_baseline_diagnostic_20260912_v2/analysis_review/revision_06/aggregation_timeseries_registry.csv"
+    },
+    {
+      "actual_sha256": "695744bc455526e01821a2b88cc7ac70ed2d2569f8bc31ddb88d310573016494",
+      "expected_sha256": "695744bc455526e01821a2b88cc7ac70ed2d2569f8bc31ddb88d310573016494",
+      "passed": true,
+      "path": "docs/STAGE4_TARGETED_VALIDATION_REPORT.md"
+    },
+    {
+      "actual_sha256": "1b29caa271686d1c61385ef75b3b6cd3eae264c02f466d70c68f72dd4b96cace",
+      "expected_sha256": "1b29caa271686d1c61385ef75b3b6cd3eae264c02f466d70c68f72dd4b96cace",
+      "passed": true,
+      "path": "data/processed/exploratory_validation_closeout_20260913_v1/method_handover_draft.csv"
+    },
+    {
+      "actual_sha256": "e41fa4c058b2eab19c2f3f3e47dd1f3f6e607657fd48ffdfac324f4883d27de8",
+      "expected_sha256": "e41fa4c058b2eab19c2f3f3e47dd1f3f6e607657fd48ffdfac324f4883d27de8",
+      "passed": true,
+      "path": "docs/EXPLORATORY_VALIDATION_REPORT.md"
+    }
+  ],
+  "remaining_stage5_work": [
+    "T54 user closeout decision"
+  ],
+  "revision": 2,
+  "schema_version": 1,
+  "simulation_accounting": {
+    "cumulative_gui_starts": 0,
+    "cumulative_netconvert_operations": 4,
+    "cumulative_sumo_starts": 4,
+    "cumulative_traci_connections": 0,
+    "new_starts_this_task": {
+      "gui": 0,
+      "netconvert": 0,
+      "sumo": 0,
+      "traci": 0
+    }
+  },
+  "stage4_final_scientific_gate": {
+    "path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/T43_final_scientific_review_record_20260913.json",
+    "sha256": "b73513dca5a0b535a8910ff4c779f410a13f0b165391b503b6e70c0475469726",
+    "stage4": "closed",
+    "stage5_direction": "completed/specific_obstacle",
+    "status": "PASS"
+  },
+  "stage5_scientific_assessment": {
+    "T51_revision": 2,
+    "T51_status": "PASS",
+    "T53_status": "complete",
+    "assessment_completion": "pending_user_acceptance_T54",
+    "core_question_level_unknowns": 2,
+    "design_readiness": "specific_obstacle",
+    "open_findings": {
+      "blocker": 0,
+      "major": 0,
+      "required_minor": 0
+    },
+    "preliminary_ready": false,
+    "question_assessments": {
+      "Q1_observability": "supported",
+      "Q2_freeway_side_impairment": "not_identified",
+      "Q3_urban_side_exposure": "supported",
+      "Q4_same_scenario_tradeoff_basis": "not_identified"
+    },
+    "scope_limits_by_question": {
+      "Q1_observability": "Supported only within the declared synthetic topology, lanes, detectors, endpoints and finite windows; no realistic long upstream freeway feeder state is observed.",
+      "Q2_freeway_side_impairment": "EJMI is an exploratory sufficient signature and is not a formal Breakdown or Capacity Drop definition; not_identified does not mean no impairment.",
+      "Q3_urban_side_exposure": "Supported as observed shared-road stopped exposure and U performance within the registered domain; causal additional U loss is not established.",
+      "Q4_same_scenario_tradeoff_basis": "Not identified for the current structure, registered demand points and two seeds; other structures or conditions are not contradicted."
+    }
+  },
+  "status": "passed",
+  "status_vocabulary": {
+    "all_handover_qualifications_valid": true,
+    "allowed_qualifications": [
+      "candidate_requires_validation",
+      "not_available_or_ineligible",
+      "requires_scientific_decision",
+      "reuse_with_scope"
+    ],
+    "formal_values_selected": 0,
+    "qualification_counts": {
+      "candidate_requires_validation": 8,
+      "not_available_or_ineligible": 2,
+      "requires_scientific_decision": 11,
+      "reuse_with_scope": 1
+    },
+    "unknown_proposed_formal_values": 22
+  },
+  "supersedes": {
+    "path": "data/processed/exploratory_validation_closeout_20260913_v1/inventory_verification.json",
+    "sha256": "598bf99fb5c80bc4be718c7423e2d75dffd9c94137ba2f840a22ed6be69a9d9f"
+  },
+  "task": "Stage5 T50/T52 inventory finalization after T51 revision_02 and revised T53 report",
+  "traceability_note": "The superseded T51 file and inventory_verification.json remain immutable history but are excluded from the current O4/current verification binding. Current T51 revision_02 and T53 are verified in this revision."
+}

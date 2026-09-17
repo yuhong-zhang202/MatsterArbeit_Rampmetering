@@ -1,0 +1,173 @@
+{
+  "schema_version": 1,
+  "run_id": "MH17",
+  "seed": 17,
+  "source_map_path": "data/processed/stage2_completion_20260909_v1/source_maps/MH17_attempt1.json",
+  "source_map_sha256": "4a6ff66e7ff981a15db32e56905d88f93c8a903f4318887e17dc66a3f4fcd97f",
+  "contract_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/measurement_contract.json",
+  "contract_sha256": "e9c8a6c026b22faedb51902d79cc3952333a3e86ea963b0c06083f0889b81fd7",
+  "source_inventory": [
+    {
+      "source_suffix": "demand.rou.xml",
+      "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/demand.rou.xml",
+      "sha256": "eeecf1caa3290e243b83a81a131c13db709a95451c65f6c19b09d324d35e6993"
+    },
+    {
+      "source_suffix": "netconvert.stderr.log",
+      "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/netconvert.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source_suffix": "netconvert.stdout.log",
+      "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/netconvert.stdout.log",
+      "sha256": "c5b6fd8211edd733614c0fcc956b64ff288d5876926ffe7291fcfa8bf3dbb887"
+    },
+    {
+      "source_suffix": "network.net.xml",
+      "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/network.net.xml",
+      "sha256": "54ed1e02a669d2f408a484d97ad77a2f158a940e358c1e931015fed54bcb658d"
+    },
+    {
+      "source_suffix": "outputs/fcd.xml",
+      "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/fcd.xml",
+      "sha256": "2554a60ba99f64cafd2a173125ec5adae3ac3923ef8df0ce6d05938d7732995c"
+    },
+    {
+      "source_suffix": "outputs/mainline_merge_entry_e1_l0.xml",
+      "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/mainline_merge_entry_e1_l0.xml",
+      "sha256": "9c3b5b283d7a1a39f4d1bb5059c4eed6b152ae5ac8acc0f600aff4d6a9f2c267"
+    },
+    {
+      "source_suffix": "outputs/mainline_merge_entry_e1_l1.xml",
+      "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/mainline_merge_entry_e1_l1.xml",
+      "sha256": "37d9ecf00d0aeca890e8937b28bed385f4c8d60cbacd32f83e23c973d20dac54"
+    },
+    {
+      "source_suffix": "outputs/merge_downstream_e1_l0.xml",
+      "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/merge_downstream_e1_l0.xml",
+      "sha256": "bae6037b8139dd4e7821748f3aab08911a74ee2708495ef1b0c10e34d23001eb"
+    },
+    {
+      "source_suffix": "outputs/merge_downstream_e1_l1.xml",
+      "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/merge_downstream_e1_l1.xml",
+      "sha256": "98d22dd1d3df9527a907fd170c8ae43ca8a67053d9a519c165075f7f5a64dd4b"
+    },
+    {
+      "source_suffix": "outputs/merge_upstream_e1_l0.xml",
+      "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/merge_upstream_e1_l0.xml",
+      "sha256": "16f757a99f6533e079eec5b52a381fc59bf461cc6c0661d0477e991a464ab775"
+    },
+    {
+      "source_suffix": "outputs/merge_upstream_e1_l1.xml",
+      "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/merge_upstream_e1_l1.xml",
+      "sha256": "7083feb3434c17626a222ef19a14f89997c7a570128f46cf91cd45abf1f21a7b"
+    },
+    {
+      "source_suffix": "outputs/queues.xml",
+      "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/queues.xml",
+      "sha256": "1be7b7e8c67f41ddb91a8f216adc0b9157871ba7a503b8ac598c86bf4abbafb1"
+    },
+    {
+      "source_suffix": "outputs/ramp_storage_e2.xml",
+      "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/ramp_storage_e2.xml",
+      "sha256": "e4af251e46d21abba10b12fd45a17e194346e6358898b51ebe310ee7506bc489"
+    },
+    {
+      "source_suffix": "outputs/shared_boundary_e2.xml",
+      "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/shared_boundary_e2.xml",
+      "sha256": "2151452a806d95925b864dea45228ebe03f752471ae6c82e8b25948ae694039c"
+    },
+    {
+      "source_suffix": "outputs/sumo.log",
+      "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/sumo.log",
+      "sha256": "d277332dc7be81627a27c99bb461a924176c535c756c8d3126d903edd672ebf3"
+    },
+    {
+      "source_suffix": "outputs/sumo.stderr.log",
+      "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/sumo.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source_suffix": "outputs/sumo.stdout.log",
+      "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/sumo.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source_suffix": "outputs/sumo_error.log",
+      "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/sumo_error.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "source_suffix": "outputs/sumo_summary.xml",
+      "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/sumo_summary.xml",
+      "sha256": "0f357d27c3862ffc43bfc6951918bde2f2c1acd77ffa74e1504b58676f4bed3b"
+    },
+    {
+      "source_suffix": "outputs/tls_states.xml",
+      "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/tls_states.xml",
+      "sha256": "dff705de7ac12833f5e8189425d8086f96f2cbf636874b618687b7d749a683c0"
+    },
+    {
+      "source_suffix": "outputs/tripinfo.xml",
+      "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/tripinfo.xml",
+      "sha256": "5e1ee26d23e81264382b054e25d159a83744595409b7e17b3616e496dfd29ade"
+    },
+    {
+      "source_suffix": "outputs/vehroute.xml",
+      "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/outputs/vehroute.xml",
+      "sha256": "f3b2c18b99f7ec021396439276be16c36b7333ef60768b12cbf221bf423b7f3e"
+    },
+    {
+      "source_suffix": "scenario.add.xml",
+      "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/scenario.add.xml",
+      "sha256": "f2b73d23625b5d13de1cc26c13dae68295021e851f1fd4a720371719ecffefeb"
+    },
+    {
+      "source_suffix": "scenario.con.xml",
+      "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/scenario.con.xml",
+      "sha256": "d154948200c9b4d9a3d54bf04647357daaff0e6a19293f19fcef457ee4ae4ea5"
+    },
+    {
+      "source_suffix": "scenario.edg.xml",
+      "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/scenario.edg.xml",
+      "sha256": "d6c7d6df0b8a5afc60a8bfedd796b9d14baa56ec44cf322e3129f976396cff53"
+    },
+    {
+      "source_suffix": "scenario.nod.xml",
+      "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/scenario.nod.xml",
+      "sha256": "b1577412ba28470abe3270913833a4053ca6be174f2eede55de77aa5b8a2c923"
+    },
+    {
+      "source_suffix": "scenario.sumocfg",
+      "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/scenario.sumocfg",
+      "sha256": "0e0f99a7af694e7f448efdb66837143100478da2151ae83ba3e1c6772a811db0"
+    },
+    {
+      "source_suffix": "scenario.tll.xml",
+      "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/scenario.tll.xml",
+      "sha256": "89f25ab5020e4f2df2fc035233b038c89cc80cf748f6dca19b5584e829df3ecc"
+    },
+    {
+      "source_suffix": "summary.json",
+      "archive_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1/summary.json",
+      "sha256": "2068239fec4a050970cd78e2aabe773fc4aee26c918d3e736368283d678e8c24"
+    }
+  ],
+  "fcd_missing_frames": [],
+  "fcd_extra_frames": [],
+  "outputs": {
+    "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/MH17/revision_02/aggregation_timeseries.csv": "b3995ece604da198f761555a9bca8e697592a6fb08e67122a092a597022147a0",
+    "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/MH17/revision_02/condition_event_sets.json": "2c1233895d7c4c588773fe413b7f6b1c673f2b24a31fe08734b725461067ecd4",
+    "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/MH17/revision_02/endpoint_accounting.csv": "1007880ad8405d407c604f5d92ca476696594190c04aa6bf2b83ddaa3549b117",
+    "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/MH17/revision_02/first_downstream_events.csv": "2f5a99d87587cd3eeb1482ef6f7ed53d0f1f001ce2e6db95dca7fa97f0a16577",
+    "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/MH17/revision_02/frame_registry.csv": "b2725131e5ef7dd20d202989f76b42009a87d9deb42c6a9d5b0742dc48a15a66",
+    "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/MH17/revision_02/propagation_event_sets.json": "58bc029868a7d7f59ee6d7870c3d2ca2d1c60b52c54586c072a47e957645af33",
+    "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/MH17/revision_02/sensitivity.csv": "a8787d3c6f5a7ca7a90aed6069e9f1231f7197d07bb7387d27dde0cf3e254b56",
+    "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/MH17/revision_02/condition_evidence_summary.csv": "9d50f1aa05ac71b2d25f86116d7044f5737a4bb8186084846340ec6dceb08853",
+    "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/MH17/revision_02/coverage_audit.csv": "c7c045279f9a32ad2d4124e751ae181e64f92cc1918c952998e2c6e9414cbacb",
+    "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/MH17/revision_02/lane_class_timeline.csv": "e4d5ad41c1bd13faec77925ac9e2ad3886ce4de3eee12bce69aa9b599a7df43b",
+    "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/MH17/revision_02/spatial_propagation_evidence.csv": "553902e8147907c664132b7b229ec38022973059431a71d489335dce950c584e",
+    "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/MH17/revision_02/stopping_episodes.csv": "7545e3babd847fd335fe7dae0f4c6c423f0d9feb25443bac3e7a7dcd1f3a8261"
+  },
+  "status": "analyzed_archive_only"
+}

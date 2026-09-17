@@ -1,0 +1,259 @@
+{
+  "14_XML_roles": [
+    "merge_downstream_e1_l0.xml",
+    "mainline_merge_entry_e1_l1.xml",
+    "mainline_merge_entry_e1_l0.xml",
+    "sumo_summary.xml",
+    "merge_upstream_e1_l0.xml",
+    "queues.xml",
+    "ramp_storage_e2.xml",
+    "tls_states.xml",
+    "shared_boundary_e2.xml",
+    "merge_upstream_e1_l1.xml",
+    "merge_downstream_e1_l1.xml",
+    "vehroute.xml",
+    "fcd.xml",
+    "tripinfo.xml"
+  ],
+  "checks": [
+    {
+      "name": "merge_downstream_e1_l0.xml_empty",
+      "rejected": true
+    },
+    {
+      "name": "merge_downstream_e1_l0.xml_malformed",
+      "rejected": true
+    },
+    {
+      "name": "merge_downstream_e1_l0.xml_wrong_root",
+      "rejected": true
+    },
+    {
+      "name": "merge_downstream_e1_l0.xml_role_swap",
+      "rejected": true
+    },
+    {
+      "name": "mainline_merge_entry_e1_l1.xml_empty",
+      "rejected": true
+    },
+    {
+      "name": "mainline_merge_entry_e1_l1.xml_malformed",
+      "rejected": true
+    },
+    {
+      "name": "mainline_merge_entry_e1_l1.xml_wrong_root",
+      "rejected": true
+    },
+    {
+      "name": "mainline_merge_entry_e1_l1.xml_role_swap",
+      "rejected": true
+    },
+    {
+      "name": "mainline_merge_entry_e1_l0.xml_empty",
+      "rejected": true
+    },
+    {
+      "name": "mainline_merge_entry_e1_l0.xml_malformed",
+      "rejected": true
+    },
+    {
+      "name": "mainline_merge_entry_e1_l0.xml_wrong_root",
+      "rejected": true
+    },
+    {
+      "name": "mainline_merge_entry_e1_l0.xml_role_swap",
+      "rejected": true
+    },
+    {
+      "name": "sumo_summary.xml_empty",
+      "rejected": true
+    },
+    {
+      "name": "sumo_summary.xml_malformed",
+      "rejected": true
+    },
+    {
+      "name": "sumo_summary.xml_wrong_root",
+      "rejected": true
+    },
+    {
+      "name": "sumo_summary.xml_role_swap",
+      "rejected": true
+    },
+    {
+      "name": "merge_upstream_e1_l0.xml_empty",
+      "rejected": true
+    },
+    {
+      "name": "merge_upstream_e1_l0.xml_malformed",
+      "rejected": true
+    },
+    {
+      "name": "merge_upstream_e1_l0.xml_wrong_root",
+      "rejected": true
+    },
+    {
+      "name": "merge_upstream_e1_l0.xml_role_swap",
+      "rejected": true
+    },
+    {
+      "name": "queues.xml_empty",
+      "rejected": true
+    },
+    {
+      "name": "queues.xml_malformed",
+      "rejected": true
+    },
+    {
+      "name": "queues.xml_wrong_root",
+      "rejected": true
+    },
+    {
+      "name": "queues.xml_role_swap",
+      "rejected": true
+    },
+    {
+      "name": "ramp_storage_e2.xml_empty",
+      "rejected": true
+    },
+    {
+      "name": "ramp_storage_e2.xml_malformed",
+      "rejected": true
+    },
+    {
+      "name": "ramp_storage_e2.xml_wrong_root",
+      "rejected": true
+    },
+    {
+      "name": "ramp_storage_e2.xml_role_swap",
+      "rejected": true
+    },
+    {
+      "name": "tls_states.xml_empty",
+      "rejected": true
+    },
+    {
+      "name": "tls_states.xml_malformed",
+      "rejected": true
+    },
+    {
+      "name": "tls_states.xml_wrong_root",
+      "rejected": true
+    },
+    {
+      "name": "tls_states.xml_role_swap",
+      "rejected": true
+    },
+    {
+      "name": "shared_boundary_e2.xml_empty",
+      "rejected": true
+    },
+    {
+      "name": "shared_boundary_e2.xml_malformed",
+      "rejected": true
+    },
+    {
+      "name": "shared_boundary_e2.xml_wrong_root",
+      "rejected": true
+    },
+    {
+      "name": "shared_boundary_e2.xml_role_swap",
+      "rejected": true
+    },
+    {
+      "name": "merge_upstream_e1_l1.xml_empty",
+      "rejected": true
+    },
+    {
+      "name": "merge_upstream_e1_l1.xml_malformed",
+      "rejected": true
+    },
+    {
+      "name": "merge_upstream_e1_l1.xml_wrong_root",
+      "rejected": true
+    },
+    {
+      "name": "merge_upstream_e1_l1.xml_role_swap",
+      "rejected": true
+    },
+    {
+      "name": "merge_downstream_e1_l1.xml_empty",
+      "rejected": true
+    },
+    {
+      "name": "merge_downstream_e1_l1.xml_malformed",
+      "rejected": true
+    },
+    {
+      "name": "merge_downstream_e1_l1.xml_wrong_root",
+      "rejected": true
+    },
+    {
+      "name": "merge_downstream_e1_l1.xml_role_swap",
+      "rejected": true
+    },
+    {
+      "name": "vehroute.xml_empty",
+      "rejected": true
+    },
+    {
+      "name": "vehroute.xml_malformed",
+      "rejected": true
+    },
+    {
+      "name": "vehroute.xml_wrong_root",
+      "rejected": true
+    },
+    {
+      "name": "vehroute.xml_role_swap",
+      "rejected": true
+    },
+    {
+      "name": "fcd.xml_empty",
+      "rejected": true
+    },
+    {
+      "name": "fcd.xml_malformed",
+      "rejected": true
+    },
+    {
+      "name": "fcd.xml_wrong_root",
+      "rejected": true
+    },
+    {
+      "name": "fcd.xml_role_swap",
+      "rejected": true
+    },
+    {
+      "name": "tripinfo.xml_empty",
+      "rejected": true
+    },
+    {
+      "name": "tripinfo.xml_malformed",
+      "rejected": true
+    },
+    {
+      "name": "tripinfo.xml_wrong_root",
+      "rejected": true
+    },
+    {
+      "name": "tripinfo.xml_role_swap",
+      "rejected": true
+    },
+    {
+      "name": "failed_XML_receipt_rejected",
+      "rejected": true
+    },
+    {
+      "name": "failed_XML_no_qualified_analysis",
+      "rejected": true
+    }
+  ],
+  "closes": "C04-D-M01",
+  "fake_calls": 2,
+  "invalid_XML_execution_status": "technical_failure",
+  "qualified_analysis_absent": true,
+  "rejected": 58,
+  "simulator_calls": 0,
+  "status": "PASS"
+}

@@ -1,0 +1,43 @@
+{
+  "schema_version": 1,
+  "run_id": "C17",
+  "status": "passed",
+  "scope": "T33 first-item gate manual evidence samples; all quantitative sets are separately covered by C17_first_gate.json",
+  "known_baseline": {
+    "planned_by_class": {"M": 1333, "R": 300, "U": 150, "X": 75},
+    "R_first_downstream_before_1500": 36,
+    "R_first_downstream_full": 300,
+    "M_only_internal_E1_contribution_A": 1331,
+    "M_only_internal_E1_contribution_full": 1333,
+    "status": "passed"
+  },
+  "first_downstream_and_previous_frame_samples": [
+    {"event_id": "R_flow.0:first_downstream", "previous": {"time_s": 67.0, "lane": ":freeway_merge_0_0", "speed_mps": 6.53, "lane_pos_m": 12.55}, "first": {"time_s": 68.0, "lane": "main_down_0", "speed_mps": 8.44, "lane_pos_m": 8.39}, "status": "bracketed_and_matched_raw_FCD"},
+    {"event_id": "R_flow.7:first_downstream", "previous": {"time_s": 310.0, "lane": ":freeway_merge_0_0", "speed_mps": 5.23, "lane_pos_m": 10.96}, "first": {"time_s": 311.0, "lane": "main_down_0", "speed_mps": 7.76, "lane_pos_m": 6.12}, "status": "bracketed_and_matched_raw_FCD"},
+    {"event_id": "R_flow.35:first_downstream", "previous": {"time_s": 1471.0, "lane": ":freeway_merge_0_0", "speed_mps": 5.75, "lane_pos_m": 11.61}, "first": {"time_s": 1472.0, "lane": "main_down_0", "speed_mps": 7.15, "lane_pos_m": 6.16}, "status": "last_event_before_1500_boundary"},
+    {"event_id": "R_flow.36:first_downstream", "previous": {"time_s": 1503.0, "lane": ":freeway_merge_0_0", "speed_mps": 4.41, "lane_pos_m": 8.63}, "first": {"time_s": 1504.0, "lane": "main_down_0", "speed_mps": 5.93, "lane_pos_m": 1.97}, "status": "first_event_after_1500_boundary"}
+  ],
+  "TLS_samples": [
+    {"time_s": 412.0, "raw_state": "rG", "registered_R_U_link_index": 0, "movement_state": "r"},
+    {"time_s": 519.0, "raw_state": "Gr", "registered_R_U_link_index": 0, "movement_state": "G"},
+    {"time_s": 722.0, "raw_state": "Gr", "registered_R_U_link_index": 0, "movement_state": "G"},
+    {"time_s": 729.0, "raw_state": "Gr", "registered_R_U_link_index": 0, "movement_state": "G"}
+  ],
+  "episode_samples": [
+    {"episode_id": "full:5958", "class": "R", "region": "shared_approach", "kind": "region_stop", "first_label": 412.0, "last_label": 722.0, "sample_count": 311, "support_seconds": 311.0, "status": "matched_raw_FCD_and_TLS_context"},
+    {"episode_id": "full:5970", "class": "U", "region": "shared_approach", "kind": "region_stop", "first_label": 729.0, "last_label": 1470.0, "sample_count": 742, "support_seconds": 742.0, "status": "matched_raw_FCD_and_TLS_context"},
+    {"vehicle_id": "R_flow.114", "class": "R", "region": "urban_origin", "kind": "vehicle_stop", "first_label": 1223.0, "last_label": 1319.0, "sample_count": 97, "support_seconds": 97.0, "status": "matched_raw_FCD"}
+  ],
+  "lane_group_check": {
+    "sparse_lane_class_cells": 32275,
+    "unknown_lane_count": 0,
+    "unknown_vehicle_id_count": 0,
+    "all_cells_independently_reconstructed": true,
+    "position_and_speed_fields_compared": true
+  },
+  "limitations": [
+    "These spot checks illustrate traceability and do not replace the 100% independent reconstruction in C17_first_gate.json.",
+    "The technical stop threshold is an observation definition and is not a congestion classification."
+  ],
+  "actual_sumo_starts": 0
+}

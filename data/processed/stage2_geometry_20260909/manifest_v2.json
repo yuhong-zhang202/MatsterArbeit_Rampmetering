@@ -1,0 +1,84 @@
+{
+  "task": "stage2 compiled geometry exploratory rendering",
+  "source": {
+    "network": "/private/tmp/minimal_uncontrolled_eozyn46f/network.net.xml",
+    "network_sha256_before": "848fd93b6b815e5cc2b1995fe105bd9e3cd67181ed03bc8a1c316296f3463a6b",
+    "network_sha256_after": "848fd93b6b815e5cc2b1995fe105bd9e3cd67181ed03bc8a1c316296f3463a6b",
+    "additional": "/private/tmp/minimal_uncontrolled_eozyn46f/scenario.add.xml",
+    "additional_sha256": "570beef4050b466dc8052ae71929c8f1263e46fdd113e3a62016f98d01010aa0"
+  },
+  "checks": {
+    "edge_count": 16,
+    "junction_count": 10,
+    "connection_count": 16,
+    "compiled_path_edge_ids": [
+      ":urban_diverge_1",
+      "ramp_storage",
+      ":ramp_mid_0",
+      "ramp_accel"
+    ],
+    "compiled_path_length_m": 494.87,
+    "expected_compiled_path_length_m": 494.87,
+    "labels": {
+      "ramp_storage_m": 204.49,
+      "internal_urban_diverge_m": 113.08,
+      "internal_ramp_mid_m": 81.98,
+      "ramp_accel_m": 95.32
+    },
+    "detectors": [
+      {
+        "type": "laneAreaDetector",
+        "id": "shared_boundary_e2",
+        "lane": "shared_approach_0",
+        "pos": 0.0,
+        "length": 250.0
+      },
+      {
+        "type": "laneAreaDetector",
+        "id": "ramp_storage_e2",
+        "lane": "ramp_storage_0",
+        "pos": 0.0,
+        "length": 250.0
+      },
+      {
+        "type": "inductionLoop",
+        "id": "merge_upstream_e1_l0",
+        "lane": "main_up_0",
+        "pos": -1.0,
+        "length": 0.0
+      },
+      {
+        "type": "inductionLoop",
+        "id": "merge_upstream_e1_l1",
+        "lane": "main_up_1",
+        "pos": -1.0,
+        "length": 0.0
+      },
+      {
+        "type": "inductionLoop",
+        "id": "merge_downstream_e1_l0",
+        "lane": "main_down_0",
+        "pos": 100.0,
+        "length": 0.0
+      },
+      {
+        "type": "inductionLoop",
+        "id": "merge_downstream_e1_l1",
+        "lane": "main_down_1",
+        "pos": 100.0,
+        "length": 0.0
+      }
+    ]
+  },
+  "outputs": {
+    "svg": "results/figures/stage2_geometry_20260909_v2.svg",
+    "svg_sha256": "e7ae14e04eb886a5a8db064854a8b79032f792c6b3f2e8137a1d5004451ec125",
+    "png": "results/figures/stage2_geometry_20260909_v2.png",
+    "png_sha256": "93caaca88fde766c1ef345ef871791ee100f35636b46920713a127b49653677d"
+  },
+  "limitations": [
+    "Exploratory technical geometry visual only; no safe/effective storage designation.",
+    "E2 coverage is asserted only on the named lane segment from the additional XML; any extension beyond that lane or into a branch is unknown and not interpreted.",
+    "PNG uses a deterministic Pillow renderer when available, otherwise the built-in fallback; SVG preserves vector geometry."
+  ]
+}

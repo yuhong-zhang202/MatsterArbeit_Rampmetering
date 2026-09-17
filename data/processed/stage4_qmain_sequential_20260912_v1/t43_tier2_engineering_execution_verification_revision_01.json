@@ -1,0 +1,131 @@
+{
+  "actual_execution_counters": {
+    "actual_gui_starts": 0,
+    "actual_netconvert_operations": 4,
+    "actual_sumo_starts": 4,
+    "actual_traci_connections": 0
+  },
+  "attempts": [
+    {
+      "archive_file_count": 29,
+      "archive_runtime_path": "artifacts/stage4_qmain_sequential_20260912_v1/runtime_archive/QM3650S17_attempt1",
+      "attempt_id": "QM3650S17_attempt1",
+      "engineering_attempt_receipt_path": "data/processed/stage4_qmain_sequential_20260912_v1/engineering_attempt_verification/QM3650S17_attempt1.json",
+      "engineering_attempt_receipt_sha256": "6ee6dc547eec92033032ce8d0ce88ad86e9ae71ae9361126fdaa280c051aaf19",
+      "manifest_file_sha256": "0a05fd84ddfff48688a9133f312a2451b6155902d416ffc6d689b1031cca296b",
+      "manifest_path": "data/processed/stage4_qmain_sequential_20260912_v1/analysis/tier2/engineering/QM3650S17/run_manifest.json",
+      "manifest_payload_sha256": "406a39032e920ac74e8d8244739fa3cd6262c32495c14e47c7a11492bf460eb6",
+      "manifest_receipt_path": "data/processed/stage4_qmain_sequential_20260912_v1/candidate_manifest_receipts/QM3650S17_revision_01.json",
+      "manifest_receipt_sha256": "f8b4c165126d318f454c8221e1ca2d3a38427284c1d6f2391ab41cf03ebe10f4",
+      "netconvert_version": "Eclipse SUMO netconvert 1.26.0",
+      "required_observation_audit": "7/7",
+      "run_id": "QM3650S17",
+      "runner_exit_code": 0,
+      "source_map_path": "data/processed/stage4_qmain_sequential_20260912_v1/source_maps/QM3650S17_attempt1.json",
+      "source_map_sha256": "d173b33ae42e96560d99420e5d3da45e3cdbe81ef1d21ab97fb03a6cc4257db9",
+      "source_runtime_path": "/private/tmp/minimal_uncontrolled_3ml5mgqv",
+      "summary_sha256": "87b3711a14d83b24ed5f5d763d92b0025fe54a152b67a4ac4803734b252e2e85",
+      "sumo_version": "Eclipse SUMO sumo 1.26.0",
+      "technical_qualified": true,
+      "warnings_errors_collisions_teleports_emergency_braking_all_zero": true
+    },
+    {
+      "archive_file_count": 29,
+      "archive_runtime_path": "artifacts/stage4_qmain_sequential_20260912_v1/runtime_archive/QM3650S23_attempt1",
+      "attempt_id": "QM3650S23_attempt1",
+      "engineering_attempt_receipt_path": "data/processed/stage4_qmain_sequential_20260912_v1/engineering_attempt_verification/QM3650S23_attempt1.json",
+      "engineering_attempt_receipt_sha256": "bd5b0cb4652a7627257196c71887da15ee9b3ec4df6f7df30902f396f212b221",
+      "manifest_file_sha256": "2bc2fac41e30f491336328cace7de9f14d8dfe8d6f57a5dfe694969241d37cba",
+      "manifest_path": "data/processed/stage4_qmain_sequential_20260912_v1/analysis/tier2/engineering/QM3650S23/run_manifest.json",
+      "manifest_payload_sha256": "5c983f83471f8a826df0bea37d86a486c9fa982d91f22df3e2c68a2ad36a29ee",
+      "manifest_receipt_path": "data/processed/stage4_qmain_sequential_20260912_v1/candidate_manifest_receipts/QM3650S23_revision_01.json",
+      "manifest_receipt_sha256": "81fc5111dc19eb5133afe07a17c94934ebba9f0cf5bbb4eb098969c112b0c0b4",
+      "netconvert_version": "Eclipse SUMO netconvert 1.26.0",
+      "required_observation_audit": "7/7",
+      "run_id": "QM3650S23",
+      "runner_exit_code": 0,
+      "source_map_path": "data/processed/stage4_qmain_sequential_20260912_v1/source_maps/QM3650S23_attempt1.json",
+      "source_map_sha256": "3049dc681d76d3161384f8cfd3764e028ffbfaa652037f929ca1d84d5a3dcdc0",
+      "source_runtime_path": "/private/tmp/minimal_uncontrolled_qgb9l4ax",
+      "summary_sha256": "119d4f2ce2a682735626d406658fd3d532be1701d566d11311873f2c2af6d9dd",
+      "sumo_version": "Eclipse SUMO sumo 1.26.0",
+      "technical_qualified": true,
+      "warnings_errors_collisions_teleports_emergency_braking_all_zero": true
+    }
+  ],
+  "authorization": {
+    "independent_gate_verification_sha256": "ba4c3a75bd8054619d87ebdf5040709aae87613c5dfa5bb79af0609e2c7e7903",
+    "quote": "\u6279\u51c6\u6309 `docs/STAGE4_T43_LAUNCH_CONFIRMATION_PACKAGE.md` \u6267\u884c T43\u3002",
+    "scope_executed": "QM3650S17_then_QM3650S23_only",
+    "tier2_gate_sha256": "a32b7a62a21e4c09ef40500d55a84bc806b4fef10f9ed7a2e2c01203a6f6be7d"
+  },
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "budget_remaining": {
+    "hard_netconvert_operations": 1,
+    "hard_sumo_starts": 1,
+    "regular_netconvert_operations": 0,
+    "regular_sumo_starts": 0,
+    "technical_retry_allowance": 1
+  },
+  "classification": "bounded exploratory targeted validation; not a formal experiment or thesis evidence",
+  "mechanical_classifier_preview": {
+    "action": "supports_B_pattern_within_registered_points",
+    "interpretation_prohibited_until_data_and_scientific_review": true,
+    "status": "unreviewed_engineering_preview_only"
+  },
+  "non_simulation_anomalies": [
+    {
+      "additional_sumo_netconvert_starts": 0,
+      "cause": "summary version fields were read from a nonexistent environment object; corrected to documented top-level fields",
+      "result": "failed_closed_before_receipt_write",
+      "step": "S17 engineering receipt preparation"
+    },
+    {
+      "additional_sumo_netconvert_starts": 0,
+      "cause": "supplied revision_05 reference paths differed from contract-registered revision_01 paths; rerun used exact contract paths",
+      "result": "failed_closed_before_output_reservation",
+      "step": "S17 analyze-run first invocation"
+    }
+  ],
+  "pending": [
+    "independent data reconstruction/analysis",
+    "scientific final Stage4 interpretation"
+  ],
+  "prohibited_runs_confirmed_absent": [
+    "QM3350S17",
+    "QM3350S23",
+    "all other qMain/seed points"
+  ],
+  "registries": {
+    "approved_source_registry_sha256": "96ee4a20f8130ede9a14ff9a40292a0c1d588770bbf1b37ad1ac455b3a1c538b",
+    "candidate_manifest_receipt_registry_path": "data/processed/stage4_qmain_sequential_20260912_v1/candidate_manifest_receipt_registry.json",
+    "candidate_manifest_receipt_registry_sha256": "e4acfb5fd3d9f71ac0e55e5ccc8df951a1a7cf79d92146c817136656a66b5bca",
+    "runtime_source_registry_path": "data/processed/stage4_qmain_sequential_20260912_v1/runtime_source_registry.json",
+    "runtime_source_registry_sha256": "04fc91c77c97f40e90513f069f572df9e2f0302aec7b8bb085b763b4dcef191d"
+  },
+  "schema_version": 1,
+  "stage": "T43 Tier2 engineering execution",
+  "status": "tier2_pair_engineering_complete_pending_independent_data_and_scientific_review",
+  "verification": {
+    "archive_file_hash_recheck": "passed 58/58",
+    "archived_files_each": [
+      29,
+      29
+    ],
+    "context_gate_runtime_and_receipt_validators": "passed",
+    "registered_manifest_receipt_count_total": 4,
+    "required_observation_audits": [
+      "7/7",
+      "7/7"
+    ],
+    "runner_exit_codes": [
+      0,
+      0
+    ],
+    "strict_execution_order": [
+      "QM3650S17",
+      "QM3650S23"
+    ],
+    "technical_qualified_count": 2
+  }
+}

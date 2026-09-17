@@ -1,0 +1,19 @@
+<?xml version='1.0' encoding='utf-8'?>
+<configuration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+  <input>
+    <net-file value="network.net.xml" />
+    <route-files value="demand.rou.xml" />
+    <additional-files value="scenario.add.xml" />
+  </input>
+  <time>
+    <begin value="0" />
+    <end value="2700" />
+    <step-length value="1" />
+  </time>
+  <processing>
+    <time-to-teleport value="-1" />
+    <collision.action value="warn" />
+    <collision.check-junctions value="true" />
+    <extrapolate-departpos value="false" />
+  </processing>
+</configuration>

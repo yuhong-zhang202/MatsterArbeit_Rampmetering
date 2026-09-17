@@ -1,0 +1,36 @@
+{
+  "GUI": 0,
+  "SUMO_starts_this_task": 0,
+  "TraCI": 0,
+  "XSD_files_reparsed_and_hash_verified": 18,
+  "XSD_references_reparsed": 21,
+  "attempt2_execution_claim_absent": true,
+  "attempt2_outputs_empty": true,
+  "budget_counters": {
+    "actual_starts_observed": 1,
+    "archive_bytes": 54982857,
+    "reserved_or_unknown": 0,
+    "retry": 0,
+    "smoke": 1,
+    "sumo": 1,
+    "validation": 0,
+    "wallclock_s": 27.35341920799692
+  },
+  "cause": "additional direct binary hash check used default repository root; existing verify_materialization had already checked registered binary successfully",
+  "environment_mutated": false,
+  "error": "path outside allowed root: /Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+  "error_type": "EvidenceError",
+  "failed_stage": "independent binary binding check before corrected wrapper generation, environment mutation, reservation or launch",
+  "netconvert": 0,
+  "next_action": "stop; binary check must use pinned binary parent root or explicit hash, with all existing materialization checks retained",
+  "prelaunch_receipt": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_engineering_smoke_retry_revision_01/retry_prelaunch_receipt.json",
+    "sha256": "2d472c32b9e064afe374aa5d4a80bd4e503fd07b7562d45ad2553c71be398a21"
+  },
+  "previous_stop": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d1_engineering_smoke_retry_revision_01/preflight_stop_receipt.json",
+    "sha256": "6674ff2558d1c8c17f307fa8e1716f441d1428eb3465074c662afa5677c1ae33"
+  },
+  "retry_consumed": false,
+  "status": "STOP_PRELAUNCH"
+}

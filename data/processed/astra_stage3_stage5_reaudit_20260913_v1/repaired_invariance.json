@@ -1,0 +1,855 @@
+{
+  "status": "passed",
+  "new_sumo_starts": 0,
+  "new_netconvert_starts": 0,
+  "code_sha256": "6558f971bc713397e26a41fd4b2b4a71255a38ff7b6122d77df6056b88b6b8f6",
+  "audit_ledger_sha256": "22bc5506f0b9df2976b2dc7100fde7ab9729e469836cf7d8d8a0bd5ef2316b38",
+  "contract_sha256": "e9c8a6c026b22faedb51902d79cc3952333a3e86ea963b0c06083f0889b81fd7",
+  "runs": [
+    {
+      "run_id": "C17",
+      "exit_code": 0,
+      "products": [
+        {
+          "basename": "aggregation_timeseries.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/C17/revision_02/aggregation_timeseries.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/C17/aggregation_timeseries.csv",
+          "old_sha256": "0b5f151a47c8936eb6e20a9bf86840516d82841daf4f3d603c0678d404793e82",
+          "new_sha256": "0b5f151a47c8936eb6e20a9bf86840516d82841daf4f3d603c0678d404793e82",
+          "byte_identical": true
+        },
+        {
+          "basename": "condition_event_sets.json",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/C17/revision_02/condition_event_sets.json",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/C17/condition_event_sets.json",
+          "old_sha256": "a5ce61c1efe40ea346ac68d08f5bba345464b1c41330ae8b8efb7e319ab4876f",
+          "new_sha256": "a5ce61c1efe40ea346ac68d08f5bba345464b1c41330ae8b8efb7e319ab4876f",
+          "byte_identical": true
+        },
+        {
+          "basename": "endpoint_accounting.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/C17/revision_02/endpoint_accounting.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/C17/endpoint_accounting.csv",
+          "old_sha256": "5bab1325478ec23c4d2d94e149f47178a4547001c179c3f69b21105ffe903dc5",
+          "new_sha256": "5bab1325478ec23c4d2d94e149f47178a4547001c179c3f69b21105ffe903dc5",
+          "byte_identical": true
+        },
+        {
+          "basename": "first_downstream_events.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/C17/revision_02/first_downstream_events.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/C17/first_downstream_events.csv",
+          "old_sha256": "3bc649d4d006e076b44574c1311de5a2b6be6072e13d908e7ae62409d64ad081",
+          "new_sha256": "3bc649d4d006e076b44574c1311de5a2b6be6072e13d908e7ae62409d64ad081",
+          "byte_identical": true
+        },
+        {
+          "basename": "frame_registry.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/C17/revision_02/frame_registry.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/C17/frame_registry.csv",
+          "old_sha256": "b47ff2b21a6e24e0e161558f22056ac74298db9b138558d34627931f564ef832",
+          "new_sha256": "b47ff2b21a6e24e0e161558f22056ac74298db9b138558d34627931f564ef832",
+          "byte_identical": true
+        },
+        {
+          "basename": "propagation_event_sets.json",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/C17/revision_02/propagation_event_sets.json",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/C17/propagation_event_sets.json",
+          "old_sha256": "97979ca1b8c670d89779bfb1a88650f3fa5bf59290269513a7f4a1bed95e2953",
+          "new_sha256": "97979ca1b8c670d89779bfb1a88650f3fa5bf59290269513a7f4a1bed95e2953",
+          "byte_identical": true
+        },
+        {
+          "basename": "sensitivity.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/C17/revision_02/sensitivity.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/C17/sensitivity.csv",
+          "old_sha256": "4235a3a995f925f1b4350055ae2022f785cca0f288715dee39e9b220ad565efb",
+          "new_sha256": "4235a3a995f925f1b4350055ae2022f785cca0f288715dee39e9b220ad565efb",
+          "byte_identical": true
+        },
+        {
+          "basename": "condition_evidence_summary.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/C17/revision_02/condition_evidence_summary.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/C17/condition_evidence_summary.csv",
+          "old_sha256": "ec32b709e84418c74361deee1714599fbfb8e21ae1e1029e0d53bc052783a672",
+          "new_sha256": "ec32b709e84418c74361deee1714599fbfb8e21ae1e1029e0d53bc052783a672",
+          "byte_identical": true
+        },
+        {
+          "basename": "coverage_audit.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/C17/revision_02/coverage_audit.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/C17/coverage_audit.csv",
+          "old_sha256": "53ef838bd17c8d7f8cf425d74cafe519058671e6e3e8c9e358f2c85504901a1e",
+          "new_sha256": "53ef838bd17c8d7f8cf425d74cafe519058671e6e3e8c9e358f2c85504901a1e",
+          "byte_identical": true
+        },
+        {
+          "basename": "lane_class_timeline.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/C17/revision_02/lane_class_timeline.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/C17/lane_class_timeline.csv",
+          "old_sha256": "e9325bb9bba1c01ae9602b88657530f1654030848e72f92b53e8396700ffdc85",
+          "new_sha256": "e9325bb9bba1c01ae9602b88657530f1654030848e72f92b53e8396700ffdc85",
+          "byte_identical": true
+        },
+        {
+          "basename": "spatial_propagation_evidence.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/C17/revision_02/spatial_propagation_evidence.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/C17/spatial_propagation_evidence.csv",
+          "old_sha256": "a00612d88c286e211ab3790364a2259c6ce6f8d523b7410dc0deed3ed33dd203",
+          "new_sha256": "a00612d88c286e211ab3790364a2259c6ce6f8d523b7410dc0deed3ed33dd203",
+          "byte_identical": true
+        },
+        {
+          "basename": "stopping_episodes.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/C17/revision_02/stopping_episodes.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/C17/stopping_episodes.csv",
+          "old_sha256": "86e518d62400d85ffaa42e2be6d3fcd6372a665893b7a8e908ddce1ea655fcb4",
+          "new_sha256": "86e518d62400d85ffaa42e2be6d3fcd6372a665893b7a8e908ddce1ea655fcb4",
+          "byte_identical": true
+        }
+      ],
+      "manifest_metadata_identical_except_output_paths": true,
+      "old_manifest_sha256": "76e106a64286ca73cb0dd44f5318f16469be262601d559efadd203fa55cdf682",
+      "new_manifest_sha256": "a0093b54afbda3877d40bd2e846ab41f5939965ebc04aea2d9e82d992d38fadb"
+    },
+    {
+      "run_id": "C23",
+      "exit_code": 0,
+      "products": [
+        {
+          "basename": "aggregation_timeseries.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/C23/revision_02/aggregation_timeseries.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/C23/aggregation_timeseries.csv",
+          "old_sha256": "e25dd344d4d5a972d4c03bb7f283a412d358dc7f5c4a821a4897ea6b6386a8ca",
+          "new_sha256": "e25dd344d4d5a972d4c03bb7f283a412d358dc7f5c4a821a4897ea6b6386a8ca",
+          "byte_identical": true
+        },
+        {
+          "basename": "condition_event_sets.json",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/C23/revision_02/condition_event_sets.json",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/C23/condition_event_sets.json",
+          "old_sha256": "6130583a2efbe72947df579e7328a24a7a4e231e17fcfd5f6ca68ed4ba46d912",
+          "new_sha256": "6130583a2efbe72947df579e7328a24a7a4e231e17fcfd5f6ca68ed4ba46d912",
+          "byte_identical": true
+        },
+        {
+          "basename": "endpoint_accounting.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/C23/revision_02/endpoint_accounting.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/C23/endpoint_accounting.csv",
+          "old_sha256": "e58668a820d00d08021e4a38b354c0f0d15baa55464c672b8857005c71067de2",
+          "new_sha256": "e58668a820d00d08021e4a38b354c0f0d15baa55464c672b8857005c71067de2",
+          "byte_identical": true
+        },
+        {
+          "basename": "first_downstream_events.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/C23/revision_02/first_downstream_events.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/C23/first_downstream_events.csv",
+          "old_sha256": "6a7c6c67294eca022dd00897961a44ffd480db9b0bf67644137cf95c1319f42c",
+          "new_sha256": "6a7c6c67294eca022dd00897961a44ffd480db9b0bf67644137cf95c1319f42c",
+          "byte_identical": true
+        },
+        {
+          "basename": "frame_registry.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/C23/revision_02/frame_registry.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/C23/frame_registry.csv",
+          "old_sha256": "26cd186952de8847315fcd8c5c1f783575dd1f66e68ba3abf1fcc9cdab5bd545",
+          "new_sha256": "26cd186952de8847315fcd8c5c1f783575dd1f66e68ba3abf1fcc9cdab5bd545",
+          "byte_identical": true
+        },
+        {
+          "basename": "propagation_event_sets.json",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/C23/revision_02/propagation_event_sets.json",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/C23/propagation_event_sets.json",
+          "old_sha256": "97ebb860fe76aacfd595495d7c4b2406d449cd7bc65f1b56cb0b8c943f8193e1",
+          "new_sha256": "97ebb860fe76aacfd595495d7c4b2406d449cd7bc65f1b56cb0b8c943f8193e1",
+          "byte_identical": true
+        },
+        {
+          "basename": "sensitivity.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/C23/revision_02/sensitivity.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/C23/sensitivity.csv",
+          "old_sha256": "451fffb4a1ca1892ebbedf592e54953b88ab998d7c5b892fadf43b88df2dc9d9",
+          "new_sha256": "451fffb4a1ca1892ebbedf592e54953b88ab998d7c5b892fadf43b88df2dc9d9",
+          "byte_identical": true
+        },
+        {
+          "basename": "condition_evidence_summary.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/C23/revision_02/condition_evidence_summary.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/C23/condition_evidence_summary.csv",
+          "old_sha256": "95359ba53f39d0823408b031318885bc114ba22652610070abee6d434750c940",
+          "new_sha256": "95359ba53f39d0823408b031318885bc114ba22652610070abee6d434750c940",
+          "byte_identical": true
+        },
+        {
+          "basename": "coverage_audit.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/C23/revision_02/coverage_audit.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/C23/coverage_audit.csv",
+          "old_sha256": "b71ba88d449fdb42aeb4e014935f2ea77b8d9d52a8b037a73e82f0ca89100a49",
+          "new_sha256": "b71ba88d449fdb42aeb4e014935f2ea77b8d9d52a8b037a73e82f0ca89100a49",
+          "byte_identical": true
+        },
+        {
+          "basename": "lane_class_timeline.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/C23/revision_02/lane_class_timeline.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/C23/lane_class_timeline.csv",
+          "old_sha256": "8d3c972cd24f0aa0a7249a465089d5420ad22466ea33c422ced9a0b79eb1ea61",
+          "new_sha256": "8d3c972cd24f0aa0a7249a465089d5420ad22466ea33c422ced9a0b79eb1ea61",
+          "byte_identical": true
+        },
+        {
+          "basename": "spatial_propagation_evidence.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/C23/revision_02/spatial_propagation_evidence.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/C23/spatial_propagation_evidence.csv",
+          "old_sha256": "5b86542c18d716142960d8ff331d14251f59650afd7bc0c9a24b21b02c3ffcc3",
+          "new_sha256": "5b86542c18d716142960d8ff331d14251f59650afd7bc0c9a24b21b02c3ffcc3",
+          "byte_identical": true
+        },
+        {
+          "basename": "stopping_episodes.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/C23/revision_02/stopping_episodes.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/C23/stopping_episodes.csv",
+          "old_sha256": "0a7b05c2bca363e81701c583b482a2346fc68302f57a79ee3fa04280434817d0",
+          "new_sha256": "0a7b05c2bca363e81701c583b482a2346fc68302f57a79ee3fa04280434817d0",
+          "byte_identical": true
+        }
+      ],
+      "manifest_metadata_identical_except_output_paths": true,
+      "old_manifest_sha256": "ca1b81844cbb9b26f2b7766c2780590e3e16269690c42aff3f701976d0b73a17",
+      "new_manifest_sha256": "f8c80806dcf06b55a04c93840b3b7f978ef0ad3c8953c96f41ea5e817c97c4b8"
+    },
+    {
+      "run_id": "ML17",
+      "exit_code": 0,
+      "products": [
+        {
+          "basename": "aggregation_timeseries.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/ML17/revision_02/aggregation_timeseries.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/ML17/aggregation_timeseries.csv",
+          "old_sha256": "6b1f4c630c578a5716ddb2399e3081cf472f0027229f28d7745116af376951d9",
+          "new_sha256": "6b1f4c630c578a5716ddb2399e3081cf472f0027229f28d7745116af376951d9",
+          "byte_identical": true
+        },
+        {
+          "basename": "condition_event_sets.json",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/ML17/revision_02/condition_event_sets.json",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/ML17/condition_event_sets.json",
+          "old_sha256": "22fcfa5eeb7e83f3cd6df325d77030c3068c48e398e746f677888b328e1bde24",
+          "new_sha256": "22fcfa5eeb7e83f3cd6df325d77030c3068c48e398e746f677888b328e1bde24",
+          "byte_identical": true
+        },
+        {
+          "basename": "endpoint_accounting.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/ML17/revision_02/endpoint_accounting.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/ML17/endpoint_accounting.csv",
+          "old_sha256": "da77949f49eab99517cb92445703134479942d11059894e3c7d1c63fbde81c9f",
+          "new_sha256": "da77949f49eab99517cb92445703134479942d11059894e3c7d1c63fbde81c9f",
+          "byte_identical": true
+        },
+        {
+          "basename": "first_downstream_events.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/ML17/revision_02/first_downstream_events.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/ML17/first_downstream_events.csv",
+          "old_sha256": "dc80f4229edfcf2de7634238441d1831155748e39346d5b5882ee51d9814f07f",
+          "new_sha256": "dc80f4229edfcf2de7634238441d1831155748e39346d5b5882ee51d9814f07f",
+          "byte_identical": true
+        },
+        {
+          "basename": "frame_registry.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/ML17/revision_02/frame_registry.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/ML17/frame_registry.csv",
+          "old_sha256": "802852b8c22c1621c5d650435fc63f71f0438ad0ab0a1b6fd334ad987e599581",
+          "new_sha256": "802852b8c22c1621c5d650435fc63f71f0438ad0ab0a1b6fd334ad987e599581",
+          "byte_identical": true
+        },
+        {
+          "basename": "propagation_event_sets.json",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/ML17/revision_02/propagation_event_sets.json",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/ML17/propagation_event_sets.json",
+          "old_sha256": "5aac4a23906f833f1beca67f1ba96a8c98146a956b7b4cce947539cc7c8f18d1",
+          "new_sha256": "5aac4a23906f833f1beca67f1ba96a8c98146a956b7b4cce947539cc7c8f18d1",
+          "byte_identical": true
+        },
+        {
+          "basename": "sensitivity.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/ML17/revision_02/sensitivity.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/ML17/sensitivity.csv",
+          "old_sha256": "8eb95f0eca4063e74ddd93baced0e8518a1c0e65f41ca0133eb02562dc4a5981",
+          "new_sha256": "8eb95f0eca4063e74ddd93baced0e8518a1c0e65f41ca0133eb02562dc4a5981",
+          "byte_identical": true
+        },
+        {
+          "basename": "condition_evidence_summary.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/ML17/revision_02/condition_evidence_summary.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/ML17/condition_evidence_summary.csv",
+          "old_sha256": "d0749246f62b84e7eb2db2089539fbc2dc44670923e9cccc2e5add6ae43d0319",
+          "new_sha256": "d0749246f62b84e7eb2db2089539fbc2dc44670923e9cccc2e5add6ae43d0319",
+          "byte_identical": true
+        },
+        {
+          "basename": "coverage_audit.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/ML17/revision_02/coverage_audit.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/ML17/coverage_audit.csv",
+          "old_sha256": "6221d285a51672e5f1d88e38a4b1e33d5b4f51d8c28d927964ab083a290bd0bd",
+          "new_sha256": "6221d285a51672e5f1d88e38a4b1e33d5b4f51d8c28d927964ab083a290bd0bd",
+          "byte_identical": true
+        },
+        {
+          "basename": "lane_class_timeline.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/ML17/revision_02/lane_class_timeline.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/ML17/lane_class_timeline.csv",
+          "old_sha256": "b4839b1d4e27abf909921e584899fcf14f1e4ad32cedae68aca0644156fa0cc6",
+          "new_sha256": "b4839b1d4e27abf909921e584899fcf14f1e4ad32cedae68aca0644156fa0cc6",
+          "byte_identical": true
+        },
+        {
+          "basename": "spatial_propagation_evidence.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/ML17/revision_02/spatial_propagation_evidence.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/ML17/spatial_propagation_evidence.csv",
+          "old_sha256": "bb1e66faabe4a3fc01388000d920d60026a49eccd95c69c50ddd2b9237494ee1",
+          "new_sha256": "bb1e66faabe4a3fc01388000d920d60026a49eccd95c69c50ddd2b9237494ee1",
+          "byte_identical": true
+        },
+        {
+          "basename": "stopping_episodes.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/ML17/revision_02/stopping_episodes.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/ML17/stopping_episodes.csv",
+          "old_sha256": "7a1e65682133e1fe5a54aa014e9e10ef177d1b9e62704cf05c19b2cdf39ff7d3",
+          "new_sha256": "7a1e65682133e1fe5a54aa014e9e10ef177d1b9e62704cf05c19b2cdf39ff7d3",
+          "byte_identical": true
+        }
+      ],
+      "manifest_metadata_identical_except_output_paths": true,
+      "old_manifest_sha256": "d1256e5f8fd133c8c2536566f278de16b0d3b0e9edb34988c75ff4b4a7ef80dd",
+      "new_manifest_sha256": "5604995afc2dfc75511be92fe00d8a8571c93505f733570e54c46d2d0b0e0fa2"
+    },
+    {
+      "run_id": "ML23",
+      "exit_code": 0,
+      "products": [
+        {
+          "basename": "aggregation_timeseries.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/ML23/revision_02/aggregation_timeseries.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/ML23/aggregation_timeseries.csv",
+          "old_sha256": "aad9f9033003f56e5943a185744caf29bb29902b57cff3ec9055cb42a12d7892",
+          "new_sha256": "aad9f9033003f56e5943a185744caf29bb29902b57cff3ec9055cb42a12d7892",
+          "byte_identical": true
+        },
+        {
+          "basename": "condition_event_sets.json",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/ML23/revision_02/condition_event_sets.json",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/ML23/condition_event_sets.json",
+          "old_sha256": "ace53f308d65001d4c354b56a149174b31600c4c857315218fa5391f1f3b89f4",
+          "new_sha256": "ace53f308d65001d4c354b56a149174b31600c4c857315218fa5391f1f3b89f4",
+          "byte_identical": true
+        },
+        {
+          "basename": "endpoint_accounting.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/ML23/revision_02/endpoint_accounting.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/ML23/endpoint_accounting.csv",
+          "old_sha256": "777dfb0c048c805bbf6011cbe9292d1ab7f7ddd8a12c6a978843b0d51209ba88",
+          "new_sha256": "777dfb0c048c805bbf6011cbe9292d1ab7f7ddd8a12c6a978843b0d51209ba88",
+          "byte_identical": true
+        },
+        {
+          "basename": "first_downstream_events.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/ML23/revision_02/first_downstream_events.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/ML23/first_downstream_events.csv",
+          "old_sha256": "6ebd89251c3d5924d1ba18d6ca2133424e50b57f30029c34d8f4a63b63bb985a",
+          "new_sha256": "6ebd89251c3d5924d1ba18d6ca2133424e50b57f30029c34d8f4a63b63bb985a",
+          "byte_identical": true
+        },
+        {
+          "basename": "frame_registry.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/ML23/revision_02/frame_registry.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/ML23/frame_registry.csv",
+          "old_sha256": "e236cb45717b8ba8bdf6774de22a7b35b53bd4f8a7f3a97b4ae3020d080bca1b",
+          "new_sha256": "e236cb45717b8ba8bdf6774de22a7b35b53bd4f8a7f3a97b4ae3020d080bca1b",
+          "byte_identical": true
+        },
+        {
+          "basename": "propagation_event_sets.json",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/ML23/revision_02/propagation_event_sets.json",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/ML23/propagation_event_sets.json",
+          "old_sha256": "e2a0bf1245a0e78a19ee0fe65a761511c858eb9371c6bf6fde10c7d85675a0b8",
+          "new_sha256": "e2a0bf1245a0e78a19ee0fe65a761511c858eb9371c6bf6fde10c7d85675a0b8",
+          "byte_identical": true
+        },
+        {
+          "basename": "sensitivity.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/ML23/revision_02/sensitivity.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/ML23/sensitivity.csv",
+          "old_sha256": "be1e4d8b29c2974143cb594f56cd3e92021c3aa59f3ad4ef9987085197352d27",
+          "new_sha256": "be1e4d8b29c2974143cb594f56cd3e92021c3aa59f3ad4ef9987085197352d27",
+          "byte_identical": true
+        },
+        {
+          "basename": "condition_evidence_summary.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/ML23/revision_02/condition_evidence_summary.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/ML23/condition_evidence_summary.csv",
+          "old_sha256": "bf36a5c5953e15dddbf7eb6df7f969fdf52c717bd1f8fb3dedcbeb4f831a0607",
+          "new_sha256": "bf36a5c5953e15dddbf7eb6df7f969fdf52c717bd1f8fb3dedcbeb4f831a0607",
+          "byte_identical": true
+        },
+        {
+          "basename": "coverage_audit.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/ML23/revision_02/coverage_audit.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/ML23/coverage_audit.csv",
+          "old_sha256": "13f7f666e516553a9bfd30e1eb2b8d6610a51bbc59e02ffc91ba5b95758749bf",
+          "new_sha256": "13f7f666e516553a9bfd30e1eb2b8d6610a51bbc59e02ffc91ba5b95758749bf",
+          "byte_identical": true
+        },
+        {
+          "basename": "lane_class_timeline.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/ML23/revision_02/lane_class_timeline.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/ML23/lane_class_timeline.csv",
+          "old_sha256": "a846cb5e5502c0e99bf3bfb9f4713d26d40ed2bc6640fb381b4073659778dda1",
+          "new_sha256": "a846cb5e5502c0e99bf3bfb9f4713d26d40ed2bc6640fb381b4073659778dda1",
+          "byte_identical": true
+        },
+        {
+          "basename": "spatial_propagation_evidence.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/ML23/revision_02/spatial_propagation_evidence.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/ML23/spatial_propagation_evidence.csv",
+          "old_sha256": "55896f2e69a07e46978a46408be5e85f911b857394c681f56c978fee51f97788",
+          "new_sha256": "55896f2e69a07e46978a46408be5e85f911b857394c681f56c978fee51f97788",
+          "byte_identical": true
+        },
+        {
+          "basename": "stopping_episodes.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/ML23/revision_02/stopping_episodes.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/ML23/stopping_episodes.csv",
+          "old_sha256": "37850a08fdfcca7bc95e3c91b59731a2299a4e31998b408b9cc38efa552f37cb",
+          "new_sha256": "37850a08fdfcca7bc95e3c91b59731a2299a4e31998b408b9cc38efa552f37cb",
+          "byte_identical": true
+        }
+      ],
+      "manifest_metadata_identical_except_output_paths": true,
+      "old_manifest_sha256": "f813d0960a954c2c76bca472c8ea80ae461cd889282cc88b7dc535837fdbadc8",
+      "new_manifest_sha256": "33983d2d4d23ce26cf6ddcc3a0e0ae683cc0a8a267f11da43ca227f4c2bb96b3"
+    },
+    {
+      "run_id": "MH17",
+      "exit_code": 0,
+      "products": [
+        {
+          "basename": "aggregation_timeseries.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/MH17/revision_02/aggregation_timeseries.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/MH17/aggregation_timeseries.csv",
+          "old_sha256": "b3995ece604da198f761555a9bca8e697592a6fb08e67122a092a597022147a0",
+          "new_sha256": "b3995ece604da198f761555a9bca8e697592a6fb08e67122a092a597022147a0",
+          "byte_identical": true
+        },
+        {
+          "basename": "condition_event_sets.json",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/MH17/revision_02/condition_event_sets.json",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/MH17/condition_event_sets.json",
+          "old_sha256": "2c1233895d7c4c588773fe413b7f6b1c673f2b24a31fe08734b725461067ecd4",
+          "new_sha256": "2c1233895d7c4c588773fe413b7f6b1c673f2b24a31fe08734b725461067ecd4",
+          "byte_identical": true
+        },
+        {
+          "basename": "endpoint_accounting.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/MH17/revision_02/endpoint_accounting.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/MH17/endpoint_accounting.csv",
+          "old_sha256": "1007880ad8405d407c604f5d92ca476696594190c04aa6bf2b83ddaa3549b117",
+          "new_sha256": "1007880ad8405d407c604f5d92ca476696594190c04aa6bf2b83ddaa3549b117",
+          "byte_identical": true
+        },
+        {
+          "basename": "first_downstream_events.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/MH17/revision_02/first_downstream_events.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/MH17/first_downstream_events.csv",
+          "old_sha256": "2f5a99d87587cd3eeb1482ef6f7ed53d0f1f001ce2e6db95dca7fa97f0a16577",
+          "new_sha256": "2f5a99d87587cd3eeb1482ef6f7ed53d0f1f001ce2e6db95dca7fa97f0a16577",
+          "byte_identical": true
+        },
+        {
+          "basename": "frame_registry.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/MH17/revision_02/frame_registry.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/MH17/frame_registry.csv",
+          "old_sha256": "b2725131e5ef7dd20d202989f76b42009a87d9deb42c6a9d5b0742dc48a15a66",
+          "new_sha256": "b2725131e5ef7dd20d202989f76b42009a87d9deb42c6a9d5b0742dc48a15a66",
+          "byte_identical": true
+        },
+        {
+          "basename": "propagation_event_sets.json",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/MH17/revision_02/propagation_event_sets.json",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/MH17/propagation_event_sets.json",
+          "old_sha256": "58bc029868a7d7f59ee6d7870c3d2ca2d1c60b52c54586c072a47e957645af33",
+          "new_sha256": "58bc029868a7d7f59ee6d7870c3d2ca2d1c60b52c54586c072a47e957645af33",
+          "byte_identical": true
+        },
+        {
+          "basename": "sensitivity.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/MH17/revision_02/sensitivity.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/MH17/sensitivity.csv",
+          "old_sha256": "a8787d3c6f5a7ca7a90aed6069e9f1231f7197d07bb7387d27dde0cf3e254b56",
+          "new_sha256": "a8787d3c6f5a7ca7a90aed6069e9f1231f7197d07bb7387d27dde0cf3e254b56",
+          "byte_identical": true
+        },
+        {
+          "basename": "condition_evidence_summary.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/MH17/revision_02/condition_evidence_summary.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/MH17/condition_evidence_summary.csv",
+          "old_sha256": "9d50f1aa05ac71b2d25f86116d7044f5737a4bb8186084846340ec6dceb08853",
+          "new_sha256": "9d50f1aa05ac71b2d25f86116d7044f5737a4bb8186084846340ec6dceb08853",
+          "byte_identical": true
+        },
+        {
+          "basename": "coverage_audit.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/MH17/revision_02/coverage_audit.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/MH17/coverage_audit.csv",
+          "old_sha256": "c7c045279f9a32ad2d4124e751ae181e64f92cc1918c952998e2c6e9414cbacb",
+          "new_sha256": "c7c045279f9a32ad2d4124e751ae181e64f92cc1918c952998e2c6e9414cbacb",
+          "byte_identical": true
+        },
+        {
+          "basename": "lane_class_timeline.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/MH17/revision_02/lane_class_timeline.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/MH17/lane_class_timeline.csv",
+          "old_sha256": "e4d5ad41c1bd13faec77925ac9e2ad3886ce4de3eee12bce69aa9b599a7df43b",
+          "new_sha256": "e4d5ad41c1bd13faec77925ac9e2ad3886ce4de3eee12bce69aa9b599a7df43b",
+          "byte_identical": true
+        },
+        {
+          "basename": "spatial_propagation_evidence.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/MH17/revision_02/spatial_propagation_evidence.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/MH17/spatial_propagation_evidence.csv",
+          "old_sha256": "553902e8147907c664132b7b229ec38022973059431a71d489335dce950c584e",
+          "new_sha256": "553902e8147907c664132b7b229ec38022973059431a71d489335dce950c584e",
+          "byte_identical": true
+        },
+        {
+          "basename": "stopping_episodes.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/MH17/revision_02/stopping_episodes.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/MH17/stopping_episodes.csv",
+          "old_sha256": "7545e3babd847fd335fe7dae0f4c6c423f0d9feb25443bac3e7a7dcd1f3a8261",
+          "new_sha256": "7545e3babd847fd335fe7dae0f4c6c423f0d9feb25443bac3e7a7dcd1f3a8261",
+          "byte_identical": true
+        }
+      ],
+      "manifest_metadata_identical_except_output_paths": true,
+      "old_manifest_sha256": "6f9a71b19c324e901bba0e29c59274bb516e7dc715f82eff49169008e44b0e52",
+      "new_manifest_sha256": "bfb83bc27d2b77288f8bc212c6c9c79742123c35d07d3d677f4b4e84b69c5517"
+    },
+    {
+      "run_id": "MH23",
+      "exit_code": 0,
+      "products": [
+        {
+          "basename": "aggregation_timeseries.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/MH23/revision_02/aggregation_timeseries.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/MH23/aggregation_timeseries.csv",
+          "old_sha256": "acd55d2d09a19fd0b0ad3456f359002019e0a20d6342335834c9cda6744665ed",
+          "new_sha256": "acd55d2d09a19fd0b0ad3456f359002019e0a20d6342335834c9cda6744665ed",
+          "byte_identical": true
+        },
+        {
+          "basename": "condition_event_sets.json",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/MH23/revision_02/condition_event_sets.json",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/MH23/condition_event_sets.json",
+          "old_sha256": "c810565ac5d921dc9e1ca3d991511731abc4421b6d630b03a6e22d9facf5d4bd",
+          "new_sha256": "c810565ac5d921dc9e1ca3d991511731abc4421b6d630b03a6e22d9facf5d4bd",
+          "byte_identical": true
+        },
+        {
+          "basename": "endpoint_accounting.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/MH23/revision_02/endpoint_accounting.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/MH23/endpoint_accounting.csv",
+          "old_sha256": "50200ca43fd1a2c4774d22a6401177cc18df71f2caa28447e9de8baa8e07ad09",
+          "new_sha256": "50200ca43fd1a2c4774d22a6401177cc18df71f2caa28447e9de8baa8e07ad09",
+          "byte_identical": true
+        },
+        {
+          "basename": "first_downstream_events.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/MH23/revision_02/first_downstream_events.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/MH23/first_downstream_events.csv",
+          "old_sha256": "9d5e78a89d0288d900e6416b71f1299bd13e7ccce8ea5cf6a2f6c2c025537423",
+          "new_sha256": "9d5e78a89d0288d900e6416b71f1299bd13e7ccce8ea5cf6a2f6c2c025537423",
+          "byte_identical": true
+        },
+        {
+          "basename": "frame_registry.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/MH23/revision_02/frame_registry.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/MH23/frame_registry.csv",
+          "old_sha256": "d28e165e46d9304dce6686f2c6cc84f9eece2d4c87a2b775fcd283c7c74350c4",
+          "new_sha256": "d28e165e46d9304dce6686f2c6cc84f9eece2d4c87a2b775fcd283c7c74350c4",
+          "byte_identical": true
+        },
+        {
+          "basename": "propagation_event_sets.json",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/MH23/revision_02/propagation_event_sets.json",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/MH23/propagation_event_sets.json",
+          "old_sha256": "25260be521682c4de2a0e1808f374ecb4963178b0a38a556cd9e39b88f084220",
+          "new_sha256": "25260be521682c4de2a0e1808f374ecb4963178b0a38a556cd9e39b88f084220",
+          "byte_identical": true
+        },
+        {
+          "basename": "sensitivity.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/MH23/revision_02/sensitivity.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/MH23/sensitivity.csv",
+          "old_sha256": "fce7c834acf843c21a809b1c2907a345db49ff0245a2ec7532c4765259f3e66f",
+          "new_sha256": "fce7c834acf843c21a809b1c2907a345db49ff0245a2ec7532c4765259f3e66f",
+          "byte_identical": true
+        },
+        {
+          "basename": "condition_evidence_summary.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/MH23/revision_02/condition_evidence_summary.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/MH23/condition_evidence_summary.csv",
+          "old_sha256": "92bc99948fa7533e12db53e4da1bbd652e695fb9b0942e605f3bd03014386ea3",
+          "new_sha256": "92bc99948fa7533e12db53e4da1bbd652e695fb9b0942e605f3bd03014386ea3",
+          "byte_identical": true
+        },
+        {
+          "basename": "coverage_audit.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/MH23/revision_02/coverage_audit.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/MH23/coverage_audit.csv",
+          "old_sha256": "b573e841b07cd9e3b946933effcacec627a8c60549fae67985d56eb7b9fa6dfa",
+          "new_sha256": "b573e841b07cd9e3b946933effcacec627a8c60549fae67985d56eb7b9fa6dfa",
+          "byte_identical": true
+        },
+        {
+          "basename": "lane_class_timeline.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/MH23/revision_02/lane_class_timeline.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/MH23/lane_class_timeline.csv",
+          "old_sha256": "e28a563f4faaf45abe0172516b96606898b9bf71a48944c47de55bb616881e18",
+          "new_sha256": "e28a563f4faaf45abe0172516b96606898b9bf71a48944c47de55bb616881e18",
+          "byte_identical": true
+        },
+        {
+          "basename": "spatial_propagation_evidence.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/MH23/revision_02/spatial_propagation_evidence.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/MH23/spatial_propagation_evidence.csv",
+          "old_sha256": "00eee931f266433f6055bf0c089bedfac6479b2c4daf4290f25d24682b7c3d17",
+          "new_sha256": "00eee931f266433f6055bf0c089bedfac6479b2c4daf4290f25d24682b7c3d17",
+          "byte_identical": true
+        },
+        {
+          "basename": "stopping_episodes.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/MH23/revision_02/stopping_episodes.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/MH23/stopping_episodes.csv",
+          "old_sha256": "474b03f0d8269c394a1b608dad81204a2bfb45261037130d14faeb4b591be6a7",
+          "new_sha256": "474b03f0d8269c394a1b608dad81204a2bfb45261037130d14faeb4b591be6a7",
+          "byte_identical": true
+        }
+      ],
+      "manifest_metadata_identical_except_output_paths": true,
+      "old_manifest_sha256": "3dd85ddf5411282475a99896f668e7662df5b85cc3a3611dd2f4ce73dce3b9ad",
+      "new_manifest_sha256": "31c8f9a94ae573d127774afbe1f83ada6cd8a8ff063e7846336401fd95cfb6b8"
+    },
+    {
+      "run_id": "RL17",
+      "exit_code": 0,
+      "products": [
+        {
+          "basename": "aggregation_timeseries.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/RL17/revision_02/aggregation_timeseries.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/RL17/aggregation_timeseries.csv",
+          "old_sha256": "aa9b0449ed6ea5647947817752b2cfae550fc9442dde77c66ff4d4a3f7c61c65",
+          "new_sha256": "aa9b0449ed6ea5647947817752b2cfae550fc9442dde77c66ff4d4a3f7c61c65",
+          "byte_identical": true
+        },
+        {
+          "basename": "condition_event_sets.json",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/RL17/revision_02/condition_event_sets.json",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/RL17/condition_event_sets.json",
+          "old_sha256": "3987f178f1d9eebf3a2db68a3b114a48d73f3a52756ea69bfe74b53a8e3f305d",
+          "new_sha256": "3987f178f1d9eebf3a2db68a3b114a48d73f3a52756ea69bfe74b53a8e3f305d",
+          "byte_identical": true
+        },
+        {
+          "basename": "endpoint_accounting.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/RL17/revision_02/endpoint_accounting.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/RL17/endpoint_accounting.csv",
+          "old_sha256": "439ce5381f320ce1484e28301a3d9fa351fb33076982ad4b18dffb9d7438212d",
+          "new_sha256": "439ce5381f320ce1484e28301a3d9fa351fb33076982ad4b18dffb9d7438212d",
+          "byte_identical": true
+        },
+        {
+          "basename": "first_downstream_events.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/RL17/revision_02/first_downstream_events.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/RL17/first_downstream_events.csv",
+          "old_sha256": "5ee0b3dc05034c4615f9bdb4d3f9eba73d55036c69c816a4462b617a4b2d5b50",
+          "new_sha256": "5ee0b3dc05034c4615f9bdb4d3f9eba73d55036c69c816a4462b617a4b2d5b50",
+          "byte_identical": true
+        },
+        {
+          "basename": "frame_registry.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/RL17/revision_02/frame_registry.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/RL17/frame_registry.csv",
+          "old_sha256": "b71b4aa02c6091573fc880837ccf2a0e90db769186569f8c658513220cd9b0f5",
+          "new_sha256": "b71b4aa02c6091573fc880837ccf2a0e90db769186569f8c658513220cd9b0f5",
+          "byte_identical": true
+        },
+        {
+          "basename": "propagation_event_sets.json",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/RL17/revision_02/propagation_event_sets.json",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/RL17/propagation_event_sets.json",
+          "old_sha256": "9374ce08b4bc1c1556a0924455e2e43eae04bdc64067fe9062b48dee2a904779",
+          "new_sha256": "9374ce08b4bc1c1556a0924455e2e43eae04bdc64067fe9062b48dee2a904779",
+          "byte_identical": true
+        },
+        {
+          "basename": "sensitivity.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/RL17/revision_02/sensitivity.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/RL17/sensitivity.csv",
+          "old_sha256": "24c62471e84b2f517e6a152919946f6bb09160e4c1f52793434e372fe9ca83f4",
+          "new_sha256": "24c62471e84b2f517e6a152919946f6bb09160e4c1f52793434e372fe9ca83f4",
+          "byte_identical": true
+        },
+        {
+          "basename": "condition_evidence_summary.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/RL17/revision_02/condition_evidence_summary.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/RL17/condition_evidence_summary.csv",
+          "old_sha256": "636c98fa6ccb61b5eb6c23022ca320cb4a8de23b29f9d3aeb5c904e052fa4bac",
+          "new_sha256": "636c98fa6ccb61b5eb6c23022ca320cb4a8de23b29f9d3aeb5c904e052fa4bac",
+          "byte_identical": true
+        },
+        {
+          "basename": "coverage_audit.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/RL17/revision_02/coverage_audit.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/RL17/coverage_audit.csv",
+          "old_sha256": "e55ecb1b5b3aacfb00b1c3e9de757ac058c1be57b7b576995bb652f55e63e73c",
+          "new_sha256": "e55ecb1b5b3aacfb00b1c3e9de757ac058c1be57b7b576995bb652f55e63e73c",
+          "byte_identical": true
+        },
+        {
+          "basename": "lane_class_timeline.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/RL17/revision_02/lane_class_timeline.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/RL17/lane_class_timeline.csv",
+          "old_sha256": "5f107ec52dc837b3fad7a0a906ee28fd3630c3dc4947a1a772f03cbdd3b0f83b",
+          "new_sha256": "5f107ec52dc837b3fad7a0a906ee28fd3630c3dc4947a1a772f03cbdd3b0f83b",
+          "byte_identical": true
+        },
+        {
+          "basename": "spatial_propagation_evidence.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/RL17/revision_02/spatial_propagation_evidence.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/RL17/spatial_propagation_evidence.csv",
+          "old_sha256": "5b7685fdb1074a6ab64bf8de4e80c996b6e856781e3a0676e6fca0585f24e85c",
+          "new_sha256": "5b7685fdb1074a6ab64bf8de4e80c996b6e856781e3a0676e6fca0585f24e85c",
+          "byte_identical": true
+        },
+        {
+          "basename": "stopping_episodes.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/RL17/revision_02/stopping_episodes.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/RL17/stopping_episodes.csv",
+          "old_sha256": "b8fb1095cf2d77509e471ee4b48de5599bf11aef0aea49b8215e7cd702b1f93f",
+          "new_sha256": "b8fb1095cf2d77509e471ee4b48de5599bf11aef0aea49b8215e7cd702b1f93f",
+          "byte_identical": true
+        }
+      ],
+      "manifest_metadata_identical_except_output_paths": true,
+      "old_manifest_sha256": "1c3333e6e3f7ac79b7e340514f063caac1b7295f079110f11ae135e7bf9a8aac",
+      "new_manifest_sha256": "188960ce43d9c7ef407817880bdfda6a1c6c9e030a9fc383eece232924628d6f"
+    },
+    {
+      "run_id": "RL23",
+      "exit_code": 0,
+      "products": [
+        {
+          "basename": "aggregation_timeseries.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/RL23/revision_02/aggregation_timeseries.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/RL23/aggregation_timeseries.csv",
+          "old_sha256": "b6776b9bcadfe039474040bb90df5c7d7adfcb6989071c1609e874bfbd726d28",
+          "new_sha256": "b6776b9bcadfe039474040bb90df5c7d7adfcb6989071c1609e874bfbd726d28",
+          "byte_identical": true
+        },
+        {
+          "basename": "condition_event_sets.json",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/RL23/revision_02/condition_event_sets.json",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/RL23/condition_event_sets.json",
+          "old_sha256": "662b16d019087ef92b0c4c2c7f1413fb1d1e37bfd4bb15bd726cfb4375de4630",
+          "new_sha256": "662b16d019087ef92b0c4c2c7f1413fb1d1e37bfd4bb15bd726cfb4375de4630",
+          "byte_identical": true
+        },
+        {
+          "basename": "endpoint_accounting.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/RL23/revision_02/endpoint_accounting.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/RL23/endpoint_accounting.csv",
+          "old_sha256": "c07ca4067c7ec45b910bd3c43c861384c8aa5ec87437c1fda0ddadae88359588",
+          "new_sha256": "c07ca4067c7ec45b910bd3c43c861384c8aa5ec87437c1fda0ddadae88359588",
+          "byte_identical": true
+        },
+        {
+          "basename": "first_downstream_events.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/RL23/revision_02/first_downstream_events.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/RL23/first_downstream_events.csv",
+          "old_sha256": "5941f261da22c88f1299c6e773412025b4d6d01802c205ebfcd2a5414a8a8545",
+          "new_sha256": "5941f261da22c88f1299c6e773412025b4d6d01802c205ebfcd2a5414a8a8545",
+          "byte_identical": true
+        },
+        {
+          "basename": "frame_registry.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/RL23/revision_02/frame_registry.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/RL23/frame_registry.csv",
+          "old_sha256": "5cbeae62cb98a661a20f5850e51fee3854ca0997fb09d195fce8ca13fc3adaa8",
+          "new_sha256": "5cbeae62cb98a661a20f5850e51fee3854ca0997fb09d195fce8ca13fc3adaa8",
+          "byte_identical": true
+        },
+        {
+          "basename": "propagation_event_sets.json",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/RL23/revision_02/propagation_event_sets.json",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/RL23/propagation_event_sets.json",
+          "old_sha256": "2c9c6d6512071db79f11149590772ff93194ec3d20c854952d11366ac8226e4d",
+          "new_sha256": "2c9c6d6512071db79f11149590772ff93194ec3d20c854952d11366ac8226e4d",
+          "byte_identical": true
+        },
+        {
+          "basename": "sensitivity.csv",
+          "old_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/runs/RL23/revision_02/sensitivity.csv",
+          "new_path": "data/processed/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/RL23/sensitivity.csv",
+          "old_sha256": "846152457e4f98bf8b01a83033b61119787113e173ebeabfa076260c71276e0c",
+          "new_sha256": "846152457e4f98bf8b01a83033b61119787113e173ebeabfa076260c71276e0c",
+          "byte_identical": true
+        },
+        {
+          "basename": "condition_evidence_summary.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/RL23/revision_02/condition_evidence_summary.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/RL23/condition_evidence_summary.csv",
+          "old_sha256": "50399be65e8e2cc189d9a1187517a06d1236d821f1ab2eab6858b5d1e824bb38",
+          "new_sha256": "50399be65e8e2cc189d9a1187517a06d1236d821f1ab2eab6858b5d1e824bb38",
+          "byte_identical": true
+        },
+        {
+          "basename": "coverage_audit.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/RL23/revision_02/coverage_audit.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/RL23/coverage_audit.csv",
+          "old_sha256": "2c53000cc24fd5e9f7ca605f46e9fb266d7262bf5a3e9515562ffe591c370035",
+          "new_sha256": "2c53000cc24fd5e9f7ca605f46e9fb266d7262bf5a3e9515562ffe591c370035",
+          "byte_identical": true
+        },
+        {
+          "basename": "lane_class_timeline.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/RL23/revision_02/lane_class_timeline.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/RL23/lane_class_timeline.csv",
+          "old_sha256": "bad2b90f98182048a22751f63d7043935f210c53f03a69cecd74d340bb888902",
+          "new_sha256": "bad2b90f98182048a22751f63d7043935f210c53f03a69cecd74d340bb888902",
+          "byte_identical": true
+        },
+        {
+          "basename": "spatial_propagation_evidence.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/RL23/revision_02/spatial_propagation_evidence.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/RL23/spatial_propagation_evidence.csv",
+          "old_sha256": "60ac991ddd226b511484386f948565c154bf1b33627ab27c2e60f2834dcc00b0",
+          "new_sha256": "60ac991ddd226b511484386f948565c154bf1b33627ab27c2e60f2834dcc00b0",
+          "byte_identical": true
+        },
+        {
+          "basename": "stopping_episodes.csv",
+          "old_path": "results/tables/stage3_baseline_diagnostic_20260912_v2/runs/RL23/revision_02/stopping_episodes.csv",
+          "new_path": "results/tables/astra_stage3_stage5_reaudit_20260913_v1/repaired_runs/RL23/stopping_episodes.csv",
+          "old_sha256": "ac9b31b919bcf1eae44a7b09648315ff11757b822c55fd89b7d0f05244daa86e",
+          "new_sha256": "ac9b31b919bcf1eae44a7b09648315ff11757b822c55fd89b7d0f05244daa86e",
+          "byte_identical": true
+        }
+      ],
+      "manifest_metadata_identical_except_output_paths": true,
+      "old_manifest_sha256": "8ffd3e80cbd4b0ecfae4e8cd01c3cd98e29f2d7f476fcf43bccd4841e0035dac",
+      "new_manifest_sha256": "85e08e04bf4ba1c92160ff621e4fa1759f98f82678e1f89d80988f1475ea70c5"
+    }
+  ],
+  "counts": {
+    "runs": 8,
+    "byte_identical_products": 96
+  },
+  "manifest_difference": "Only output paths differ; all other manifest metadata equals historical revision_02. No historical file was rewritten."
+}

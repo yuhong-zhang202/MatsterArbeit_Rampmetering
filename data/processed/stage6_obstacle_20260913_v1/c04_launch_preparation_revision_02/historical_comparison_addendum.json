@@ -1,0 +1,16 @@
+{
+  "byte_identical": false,
+  "comparison_method": "Recursively sort only nonempty lists whose every item is a dict with vehicle_id; do not alter values or other lists.",
+  "different_location": "common_background_cohort.records list order only",
+  "new": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_02/historical_ML17_compatibility/measurements.json",
+    "sha256": "48ad583231a1400eebe11eb78e869a9d96c04622589a2c9f52cae10ddc0ac589"
+  },
+  "old": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_01/historical_ML17_compatibility/measurements.json",
+    "sha256": "5a0f6b42e96652c5957c7fda4f182845a2d6cc45f97b4ca4e1c6fd79a7e4c26c"
+  },
+  "production_code_changed_for_this_difference": false,
+  "scope": "The latest XML fix changed execution validator/tests only; this comparison is not a new simulation.",
+  "vehicle_id_keyed_records_and_all_other_values_equal": true
+}

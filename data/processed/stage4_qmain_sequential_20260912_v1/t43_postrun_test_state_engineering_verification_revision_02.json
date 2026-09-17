@@ -1,0 +1,62 @@
+{
+  "schema_version": 1,
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "stage": "T43 post-Tier2 mechanical test-state repair",
+  "revision": 2,
+  "status": "passed",
+  "supersedes": "t43_postrun_test_state_engineering_verification_revision_01.json",
+  "finding_closed": {
+    "id": "T43-TEST-STATE-01",
+    "result": "closed",
+    "evidence": "production 72/72 plus independent 40/40 equals combined 112/112; authoritative 4/4/0/0 and four completed candidate bindings verified; isolated prelaunch and partial fixtures retained"
+  },
+  "verification": {
+    "production_tests": {
+      "passed": 72,
+      "total": 72
+    },
+    "independent_tests": {
+      "passed": 40,
+      "total": 40
+    },
+    "combined_tests": {
+      "passed": 112,
+      "total": 112
+    },
+    "py_compile": "passed",
+    "context_runtime_receipt_tier2_gate": "passed",
+    "AST_no_simulation_process_or_network_imports": "passed",
+    "diff_check": "passed",
+    "new_starts_during_repair": {
+      "sumo": 0,
+      "netconvert": 0,
+      "traci": 0,
+      "gui": 0
+    },
+    "cumulative_execution_counters": {
+      "actual_sumo_starts": 4,
+      "actual_netconvert_operations": 4,
+      "actual_traci_connections": 0,
+      "actual_gui_starts": 0
+    }
+  },
+  "hashes": {
+    "adapter_sha256": "899305e7dfba2222ea552c0b453d3078f39b1d254d2805fb71287625864dcb1b",
+    "production_test_sha256": "41cf5c93b1b99e920df77a41921ab837380f33effdc1d8328e6360c2af6de448",
+    "independent_test_sha256": "25b1af210dcadee6388716666d6e3a2fc4217591c5b6c6a13c47acb5d5fea39d",
+    "input_execution_ledger_sha256": "b745ccaedf5a9b8c4bcf94119711f9fa4c7e0c12b12d3125c7bd5e337faefff5",
+    "tier2_independent_verification_revision_02_sha256": "758ed05c4dc9359ce9fb1fa84c14ccf9b51685f9dacc62a66769f5f3911509aa",
+    "final_independent_verification_revision_02_sha256": "fc9bc9410de6726e2205e9583391ecee80feba5f20aea15b96f2cee6fbe2f137",
+    "final_analysis_review_revision_02_sha256": "883c0982e72817253f466915bc6cb1983c2e1ff2e7296b3015f50165c52a9159"
+  },
+  "boundaries": {
+    "production_adapter_changed": false,
+    "scientific_contract_or_formula_changed": false,
+    "simulation_data_or_archive_changed": false,
+    "formal_protocol_status": "empty_not_frozen",
+    "scientific_interpretation": "pending_required_scientific_review"
+  },
+  "pending": [
+    "scientific final Stage4 interpretation and closure review"
+  ]
+}

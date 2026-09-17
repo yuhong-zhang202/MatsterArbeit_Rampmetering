@@ -1,0 +1,167 @@
+{
+  "status": "exploratory_archive_analysis_only",
+  "physical_run_ids": [
+    "C17",
+    "C23",
+    "ML17",
+    "ML23",
+    "MH17",
+    "MH23",
+    "RL17",
+    "RL23",
+    "QM3500S17",
+    "QM3500S23",
+    "QM3650S17",
+    "QM3650S23"
+  ],
+  "windows": {
+    "A": [
+      0,
+      1500
+    ],
+    "B": [
+      300,
+      1500
+    ],
+    "Post": [
+      1500,
+      2700
+    ],
+    "Full": [
+      0,
+      2700
+    ]
+  },
+  "fcd_step_s": 1,
+  "lane_class_domain": [
+    [
+      ":freeway_merge_0_0",
+      "R"
+    ],
+    [
+      ":freeway_merge_1_0",
+      "M"
+    ],
+    [
+      ":freeway_merge_1_1",
+      "M"
+    ],
+    [
+      ":ramp_mid_0_0",
+      "R"
+    ],
+    [
+      ":urban_diverge_0_0",
+      "U"
+    ],
+    [
+      ":urban_diverge_1_0",
+      "R"
+    ],
+    [
+      ":urban_tls_0_0",
+      "R"
+    ],
+    [
+      ":urban_tls_0_0",
+      "U"
+    ],
+    [
+      ":urban_tls_1_0",
+      "X"
+    ],
+    [
+      "cross_in_0",
+      "X"
+    ],
+    [
+      "cross_out_0",
+      "X"
+    ],
+    [
+      "main_down_0",
+      "M"
+    ],
+    [
+      "main_down_0",
+      "R"
+    ],
+    [
+      "main_down_1",
+      "M"
+    ],
+    [
+      "main_down_1",
+      "R"
+    ],
+    [
+      "main_up_0",
+      "M"
+    ],
+    [
+      "main_up_1",
+      "M"
+    ],
+    [
+      "ramp_accel_0",
+      "R"
+    ],
+    [
+      "ramp_storage_0",
+      "R"
+    ],
+    [
+      "shared_approach_0",
+      "R"
+    ],
+    [
+      "shared_approach_0",
+      "U"
+    ],
+    [
+      "urban_in_0",
+      "R"
+    ],
+    [
+      "urban_in_0",
+      "U"
+    ],
+    [
+      "urban_out_0",
+      "U"
+    ]
+  ],
+  "lane_map_source": "data/processed/stage3_baseline_diagnostic_20260912_v2/measurement_contract.json",
+  "technical_stop_speed_mps": 0.1,
+  "threshold_role": "existing technical stop only; not congestion threshold",
+  "time_bin_s": 30,
+  "bin_role": "native E1-aligned descriptive display; no scientific state threshold",
+  "e1_metric_ids": [
+    "q_contrib_vehph",
+    "q_entered_vehph",
+    "speed_contribution_weighted_mps",
+    "occupancy_lane_mean_percent"
+  ],
+  "e1_counter_rule": "both counters preserved; historical Stage3 q uses contrib, Stage4 q uses entered; no historical reclassification",
+  "value_states": [
+    "observed",
+    "observed_zero",
+    "no_contributors",
+    "missing_observation",
+    "not_applicable",
+    "not_paired"
+  ],
+  "zero_rule": "dense zeros only for a validated frame and explicitly registered lane/class domain",
+  "position_rule": "M signed coordinate: main_up pos minus lane length; merge internal pos; main_down pos+8.64; only declared M route",
+  "outside_rule": "planned cohort minus entered only at 1500/2700, no unverified schedule-based intermediate curve",
+  "TLS_rule": "same raw time label, movement 0 R/U or 1 X; no substep causal ordering",
+  "R_rule": "first observed main_down and preceding observation form bracket; no exact crossing interpolation",
+  "preserved_decisions": "Stage4 EJMI and all historical machine decisions unchanged",
+  "independent_plan": "separate verifier directly scans raw XML without importing this adapter; full core cross-check against new rows",
+  "new_simulation_counts": {
+    "SUMO": 0,
+    "netconvert": 0,
+    "TraCI": 0,
+    "GUI": 0
+  }
+}

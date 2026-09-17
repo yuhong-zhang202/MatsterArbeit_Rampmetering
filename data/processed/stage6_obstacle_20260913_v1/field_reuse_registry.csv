@@ -1,0 +1,241 @@
+run_id,field_id,availability,evidence,scope
+C17,run_id_seed_demand,reusable,source_registry.csv; source_identity_verification.json,"archived identity, requested demand and actual argv verified"
+C17,compiled_topology,reusable,static_context_links.csv,"original network hash, lanes and static links"
+C17,FCD_id_lane_time_speed_position,requires_recalculation,lane_class_time.csv; entry_vehicle_records.csv,raw available; new scoped aggregation independently verified
+C17,E1_nVehContrib,requires_recalculation,section_window_metrics.csv,"q_contrib_vehph; detector contributions, not requested/network inflow"
+C17,E1_nVehEntered,requires_recalculation,section_window_metrics.csv,q_entered_vehph; detector entry counter distinct from contributions
+C17,E1_speed_occupancy_duration,requires_recalculation,e1_native_intervals.csv; section_window_metrics.csv,contribution-weighted speed; duration and lane-mean occupancy
+C17,TLS_state_time_movement,reusable,shared_label_timeline.csv,movement 0 R/U; movement 1 X; simultaneous labels not causal ordering
+C17,tripinfo_actual_entry_arrival,reusable,entry_vehicle_records.csv,actual depart lane/position/time and arrival; completed IDs
+C17,vehroute_class_route,reusable,entry_vehicle_records.csv,class identity and route checked against archived output
+C17,planned_cohort_and_endpoints,requires_recalculation,endpoint_accounting.csv,P/E/A/N/O at 1500/2700 only
+C17,M_observed_space_time,requires_recalculation,M_space_time_30s.csv; M_region_window.csv,observed traveled route; no synthetic upstream observations
+C17,R_passage_bracket,requires_recalculation,R_passage_events.csv,all R first downstream brackets; 1s labels not exact event time
+C17,R_regional_propagation,requires_recalculation,R_region_propagation.csv,technical stopped first labels; no congestion definition
+C17,RU_shared_exposure,requires_recalculation,shared_exposure.csv,technical stopped label cooccurrence
+C17,historical_EJMI,reusable,historical_ejmi_components.csv,unchanged historical definitions; not new classification
+C17,seed_contrast_pairing,requires_recalculation,historical_seed_outer_join.csv,403 union;398 paired;5 not_paired
+C17,lanechange_gap_acceptance,unavailable,none,not emitted; no imputation
+C17,untraveled_upstream_state,unavailable,none,cannot infer state upstream of actual insertion
+C17,continuous_outside_waiting_curve,unavailable,none,no exact planned individual schedule derived in this batch
+C17,causal_reference_and_control_benefit,unavailable,none,no newly registered counterfactual or controlled runs
+C23,run_id_seed_demand,reusable,source_registry.csv; source_identity_verification.json,"archived identity, requested demand and actual argv verified"
+C23,compiled_topology,reusable,static_context_links.csv,"original network hash, lanes and static links"
+C23,FCD_id_lane_time_speed_position,requires_recalculation,lane_class_time.csv; entry_vehicle_records.csv,raw available; new scoped aggregation independently verified
+C23,E1_nVehContrib,requires_recalculation,section_window_metrics.csv,"q_contrib_vehph; detector contributions, not requested/network inflow"
+C23,E1_nVehEntered,requires_recalculation,section_window_metrics.csv,q_entered_vehph; detector entry counter distinct from contributions
+C23,E1_speed_occupancy_duration,requires_recalculation,e1_native_intervals.csv; section_window_metrics.csv,contribution-weighted speed; duration and lane-mean occupancy
+C23,TLS_state_time_movement,reusable,shared_label_timeline.csv,movement 0 R/U; movement 1 X; simultaneous labels not causal ordering
+C23,tripinfo_actual_entry_arrival,reusable,entry_vehicle_records.csv,actual depart lane/position/time and arrival; completed IDs
+C23,vehroute_class_route,reusable,entry_vehicle_records.csv,class identity and route checked against archived output
+C23,planned_cohort_and_endpoints,requires_recalculation,endpoint_accounting.csv,P/E/A/N/O at 1500/2700 only
+C23,M_observed_space_time,requires_recalculation,M_space_time_30s.csv; M_region_window.csv,observed traveled route; no synthetic upstream observations
+C23,R_passage_bracket,requires_recalculation,R_passage_events.csv,all R first downstream brackets; 1s labels not exact event time
+C23,R_regional_propagation,requires_recalculation,R_region_propagation.csv,technical stopped first labels; no congestion definition
+C23,RU_shared_exposure,requires_recalculation,shared_exposure.csv,technical stopped label cooccurrence
+C23,historical_EJMI,reusable,historical_ejmi_components.csv,unchanged historical definitions; not new classification
+C23,seed_contrast_pairing,requires_recalculation,historical_seed_outer_join.csv,403 union;398 paired;5 not_paired
+C23,lanechange_gap_acceptance,unavailable,none,not emitted; no imputation
+C23,untraveled_upstream_state,unavailable,none,cannot infer state upstream of actual insertion
+C23,continuous_outside_waiting_curve,unavailable,none,no exact planned individual schedule derived in this batch
+C23,causal_reference_and_control_benefit,unavailable,none,no newly registered counterfactual or controlled runs
+ML17,run_id_seed_demand,reusable,source_registry.csv; source_identity_verification.json,"archived identity, requested demand and actual argv verified"
+ML17,compiled_topology,reusable,static_context_links.csv,"original network hash, lanes and static links"
+ML17,FCD_id_lane_time_speed_position,requires_recalculation,lane_class_time.csv; entry_vehicle_records.csv,raw available; new scoped aggregation independently verified
+ML17,E1_nVehContrib,requires_recalculation,section_window_metrics.csv,"q_contrib_vehph; detector contributions, not requested/network inflow"
+ML17,E1_nVehEntered,requires_recalculation,section_window_metrics.csv,q_entered_vehph; detector entry counter distinct from contributions
+ML17,E1_speed_occupancy_duration,requires_recalculation,e1_native_intervals.csv; section_window_metrics.csv,contribution-weighted speed; duration and lane-mean occupancy
+ML17,TLS_state_time_movement,reusable,shared_label_timeline.csv,movement 0 R/U; movement 1 X; simultaneous labels not causal ordering
+ML17,tripinfo_actual_entry_arrival,reusable,entry_vehicle_records.csv,actual depart lane/position/time and arrival; completed IDs
+ML17,vehroute_class_route,reusable,entry_vehicle_records.csv,class identity and route checked against archived output
+ML17,planned_cohort_and_endpoints,requires_recalculation,endpoint_accounting.csv,P/E/A/N/O at 1500/2700 only
+ML17,M_observed_space_time,requires_recalculation,M_space_time_30s.csv; M_region_window.csv,observed traveled route; no synthetic upstream observations
+ML17,R_passage_bracket,requires_recalculation,R_passage_events.csv,all R first downstream brackets; 1s labels not exact event time
+ML17,R_regional_propagation,requires_recalculation,R_region_propagation.csv,technical stopped first labels; no congestion definition
+ML17,RU_shared_exposure,requires_recalculation,shared_exposure.csv,technical stopped label cooccurrence
+ML17,historical_EJMI,reusable,historical_ejmi_components.csv,unchanged historical definitions; not new classification
+ML17,seed_contrast_pairing,requires_recalculation,historical_seed_outer_join.csv,403 union;398 paired;5 not_paired
+ML17,lanechange_gap_acceptance,unavailable,none,not emitted; no imputation
+ML17,untraveled_upstream_state,unavailable,none,cannot infer state upstream of actual insertion
+ML17,continuous_outside_waiting_curve,unavailable,none,no exact planned individual schedule derived in this batch
+ML17,causal_reference_and_control_benefit,unavailable,none,no newly registered counterfactual or controlled runs
+ML23,run_id_seed_demand,reusable,source_registry.csv; source_identity_verification.json,"archived identity, requested demand and actual argv verified"
+ML23,compiled_topology,reusable,static_context_links.csv,"original network hash, lanes and static links"
+ML23,FCD_id_lane_time_speed_position,requires_recalculation,lane_class_time.csv; entry_vehicle_records.csv,raw available; new scoped aggregation independently verified
+ML23,E1_nVehContrib,requires_recalculation,section_window_metrics.csv,"q_contrib_vehph; detector contributions, not requested/network inflow"
+ML23,E1_nVehEntered,requires_recalculation,section_window_metrics.csv,q_entered_vehph; detector entry counter distinct from contributions
+ML23,E1_speed_occupancy_duration,requires_recalculation,e1_native_intervals.csv; section_window_metrics.csv,contribution-weighted speed; duration and lane-mean occupancy
+ML23,TLS_state_time_movement,reusable,shared_label_timeline.csv,movement 0 R/U; movement 1 X; simultaneous labels not causal ordering
+ML23,tripinfo_actual_entry_arrival,reusable,entry_vehicle_records.csv,actual depart lane/position/time and arrival; completed IDs
+ML23,vehroute_class_route,reusable,entry_vehicle_records.csv,class identity and route checked against archived output
+ML23,planned_cohort_and_endpoints,requires_recalculation,endpoint_accounting.csv,P/E/A/N/O at 1500/2700 only
+ML23,M_observed_space_time,requires_recalculation,M_space_time_30s.csv; M_region_window.csv,observed traveled route; no synthetic upstream observations
+ML23,R_passage_bracket,requires_recalculation,R_passage_events.csv,all R first downstream brackets; 1s labels not exact event time
+ML23,R_regional_propagation,requires_recalculation,R_region_propagation.csv,technical stopped first labels; no congestion definition
+ML23,RU_shared_exposure,requires_recalculation,shared_exposure.csv,technical stopped label cooccurrence
+ML23,historical_EJMI,reusable,historical_ejmi_components.csv,unchanged historical definitions; not new classification
+ML23,seed_contrast_pairing,requires_recalculation,historical_seed_outer_join.csv,403 union;398 paired;5 not_paired
+ML23,lanechange_gap_acceptance,unavailable,none,not emitted; no imputation
+ML23,untraveled_upstream_state,unavailable,none,cannot infer state upstream of actual insertion
+ML23,continuous_outside_waiting_curve,unavailable,none,no exact planned individual schedule derived in this batch
+ML23,causal_reference_and_control_benefit,unavailable,none,no newly registered counterfactual or controlled runs
+MH17,run_id_seed_demand,reusable,source_registry.csv; source_identity_verification.json,"archived identity, requested demand and actual argv verified"
+MH17,compiled_topology,reusable,static_context_links.csv,"original network hash, lanes and static links"
+MH17,FCD_id_lane_time_speed_position,requires_recalculation,lane_class_time.csv; entry_vehicle_records.csv,raw available; new scoped aggregation independently verified
+MH17,E1_nVehContrib,requires_recalculation,section_window_metrics.csv,"q_contrib_vehph; detector contributions, not requested/network inflow"
+MH17,E1_nVehEntered,requires_recalculation,section_window_metrics.csv,q_entered_vehph; detector entry counter distinct from contributions
+MH17,E1_speed_occupancy_duration,requires_recalculation,e1_native_intervals.csv; section_window_metrics.csv,contribution-weighted speed; duration and lane-mean occupancy
+MH17,TLS_state_time_movement,reusable,shared_label_timeline.csv,movement 0 R/U; movement 1 X; simultaneous labels not causal ordering
+MH17,tripinfo_actual_entry_arrival,reusable,entry_vehicle_records.csv,actual depart lane/position/time and arrival; completed IDs
+MH17,vehroute_class_route,reusable,entry_vehicle_records.csv,class identity and route checked against archived output
+MH17,planned_cohort_and_endpoints,requires_recalculation,endpoint_accounting.csv,P/E/A/N/O at 1500/2700 only
+MH17,M_observed_space_time,requires_recalculation,M_space_time_30s.csv; M_region_window.csv,observed traveled route; no synthetic upstream observations
+MH17,R_passage_bracket,requires_recalculation,R_passage_events.csv,all R first downstream brackets; 1s labels not exact event time
+MH17,R_regional_propagation,requires_recalculation,R_region_propagation.csv,technical stopped first labels; no congestion definition
+MH17,RU_shared_exposure,requires_recalculation,shared_exposure.csv,technical stopped label cooccurrence
+MH17,historical_EJMI,reusable,historical_ejmi_components.csv,unchanged historical definitions; not new classification
+MH17,seed_contrast_pairing,requires_recalculation,historical_seed_outer_join.csv,403 union;398 paired;5 not_paired
+MH17,lanechange_gap_acceptance,unavailable,none,not emitted; no imputation
+MH17,untraveled_upstream_state,unavailable,none,cannot infer state upstream of actual insertion
+MH17,continuous_outside_waiting_curve,unavailable,none,no exact planned individual schedule derived in this batch
+MH17,causal_reference_and_control_benefit,unavailable,none,no newly registered counterfactual or controlled runs
+MH23,run_id_seed_demand,reusable,source_registry.csv; source_identity_verification.json,"archived identity, requested demand and actual argv verified"
+MH23,compiled_topology,reusable,static_context_links.csv,"original network hash, lanes and static links"
+MH23,FCD_id_lane_time_speed_position,requires_recalculation,lane_class_time.csv; entry_vehicle_records.csv,raw available; new scoped aggregation independently verified
+MH23,E1_nVehContrib,requires_recalculation,section_window_metrics.csv,"q_contrib_vehph; detector contributions, not requested/network inflow"
+MH23,E1_nVehEntered,requires_recalculation,section_window_metrics.csv,q_entered_vehph; detector entry counter distinct from contributions
+MH23,E1_speed_occupancy_duration,requires_recalculation,e1_native_intervals.csv; section_window_metrics.csv,contribution-weighted speed; duration and lane-mean occupancy
+MH23,TLS_state_time_movement,reusable,shared_label_timeline.csv,movement 0 R/U; movement 1 X; simultaneous labels not causal ordering
+MH23,tripinfo_actual_entry_arrival,reusable,entry_vehicle_records.csv,actual depart lane/position/time and arrival; completed IDs
+MH23,vehroute_class_route,reusable,entry_vehicle_records.csv,class identity and route checked against archived output
+MH23,planned_cohort_and_endpoints,requires_recalculation,endpoint_accounting.csv,P/E/A/N/O at 1500/2700 only
+MH23,M_observed_space_time,requires_recalculation,M_space_time_30s.csv; M_region_window.csv,observed traveled route; no synthetic upstream observations
+MH23,R_passage_bracket,requires_recalculation,R_passage_events.csv,all R first downstream brackets; 1s labels not exact event time
+MH23,R_regional_propagation,requires_recalculation,R_region_propagation.csv,technical stopped first labels; no congestion definition
+MH23,RU_shared_exposure,requires_recalculation,shared_exposure.csv,technical stopped label cooccurrence
+MH23,historical_EJMI,reusable,historical_ejmi_components.csv,unchanged historical definitions; not new classification
+MH23,seed_contrast_pairing,requires_recalculation,historical_seed_outer_join.csv,403 union;398 paired;5 not_paired
+MH23,lanechange_gap_acceptance,unavailable,none,not emitted; no imputation
+MH23,untraveled_upstream_state,unavailable,none,cannot infer state upstream of actual insertion
+MH23,continuous_outside_waiting_curve,unavailable,none,no exact planned individual schedule derived in this batch
+MH23,causal_reference_and_control_benefit,unavailable,none,no newly registered counterfactual or controlled runs
+RL17,run_id_seed_demand,reusable,source_registry.csv; source_identity_verification.json,"archived identity, requested demand and actual argv verified"
+RL17,compiled_topology,reusable,static_context_links.csv,"original network hash, lanes and static links"
+RL17,FCD_id_lane_time_speed_position,requires_recalculation,lane_class_time.csv; entry_vehicle_records.csv,raw available; new scoped aggregation independently verified
+RL17,E1_nVehContrib,requires_recalculation,section_window_metrics.csv,"q_contrib_vehph; detector contributions, not requested/network inflow"
+RL17,E1_nVehEntered,requires_recalculation,section_window_metrics.csv,q_entered_vehph; detector entry counter distinct from contributions
+RL17,E1_speed_occupancy_duration,requires_recalculation,e1_native_intervals.csv; section_window_metrics.csv,contribution-weighted speed; duration and lane-mean occupancy
+RL17,TLS_state_time_movement,reusable,shared_label_timeline.csv,movement 0 R/U; movement 1 X; simultaneous labels not causal ordering
+RL17,tripinfo_actual_entry_arrival,reusable,entry_vehicle_records.csv,actual depart lane/position/time and arrival; completed IDs
+RL17,vehroute_class_route,reusable,entry_vehicle_records.csv,class identity and route checked against archived output
+RL17,planned_cohort_and_endpoints,requires_recalculation,endpoint_accounting.csv,P/E/A/N/O at 1500/2700 only
+RL17,M_observed_space_time,requires_recalculation,M_space_time_30s.csv; M_region_window.csv,observed traveled route; no synthetic upstream observations
+RL17,R_passage_bracket,requires_recalculation,R_passage_events.csv,all R first downstream brackets; 1s labels not exact event time
+RL17,R_regional_propagation,requires_recalculation,R_region_propagation.csv,technical stopped first labels; no congestion definition
+RL17,RU_shared_exposure,requires_recalculation,shared_exposure.csv,technical stopped label cooccurrence
+RL17,historical_EJMI,reusable,historical_ejmi_components.csv,unchanged historical definitions; not new classification
+RL17,seed_contrast_pairing,requires_recalculation,historical_seed_outer_join.csv,403 union;398 paired;5 not_paired
+RL17,lanechange_gap_acceptance,unavailable,none,not emitted; no imputation
+RL17,untraveled_upstream_state,unavailable,none,cannot infer state upstream of actual insertion
+RL17,continuous_outside_waiting_curve,unavailable,none,no exact planned individual schedule derived in this batch
+RL17,causal_reference_and_control_benefit,unavailable,none,no newly registered counterfactual or controlled runs
+RL23,run_id_seed_demand,reusable,source_registry.csv; source_identity_verification.json,"archived identity, requested demand and actual argv verified"
+RL23,compiled_topology,reusable,static_context_links.csv,"original network hash, lanes and static links"
+RL23,FCD_id_lane_time_speed_position,requires_recalculation,lane_class_time.csv; entry_vehicle_records.csv,raw available; new scoped aggregation independently verified
+RL23,E1_nVehContrib,requires_recalculation,section_window_metrics.csv,"q_contrib_vehph; detector contributions, not requested/network inflow"
+RL23,E1_nVehEntered,requires_recalculation,section_window_metrics.csv,q_entered_vehph; detector entry counter distinct from contributions
+RL23,E1_speed_occupancy_duration,requires_recalculation,e1_native_intervals.csv; section_window_metrics.csv,contribution-weighted speed; duration and lane-mean occupancy
+RL23,TLS_state_time_movement,reusable,shared_label_timeline.csv,movement 0 R/U; movement 1 X; simultaneous labels not causal ordering
+RL23,tripinfo_actual_entry_arrival,reusable,entry_vehicle_records.csv,actual depart lane/position/time and arrival; completed IDs
+RL23,vehroute_class_route,reusable,entry_vehicle_records.csv,class identity and route checked against archived output
+RL23,planned_cohort_and_endpoints,requires_recalculation,endpoint_accounting.csv,P/E/A/N/O at 1500/2700 only
+RL23,M_observed_space_time,requires_recalculation,M_space_time_30s.csv; M_region_window.csv,observed traveled route; no synthetic upstream observations
+RL23,R_passage_bracket,requires_recalculation,R_passage_events.csv,all R first downstream brackets; 1s labels not exact event time
+RL23,R_regional_propagation,requires_recalculation,R_region_propagation.csv,technical stopped first labels; no congestion definition
+RL23,RU_shared_exposure,requires_recalculation,shared_exposure.csv,technical stopped label cooccurrence
+RL23,historical_EJMI,reusable,historical_ejmi_components.csv,unchanged historical definitions; not new classification
+RL23,seed_contrast_pairing,requires_recalculation,historical_seed_outer_join.csv,403 union;398 paired;5 not_paired
+RL23,lanechange_gap_acceptance,unavailable,none,not emitted; no imputation
+RL23,untraveled_upstream_state,unavailable,none,cannot infer state upstream of actual insertion
+RL23,continuous_outside_waiting_curve,unavailable,none,no exact planned individual schedule derived in this batch
+RL23,causal_reference_and_control_benefit,unavailable,none,no newly registered counterfactual or controlled runs
+QM3500S17,run_id_seed_demand,reusable,source_registry.csv; source_identity_verification.json,"archived identity, requested demand and actual argv verified"
+QM3500S17,compiled_topology,reusable,static_context_links.csv,"original network hash, lanes and static links"
+QM3500S17,FCD_id_lane_time_speed_position,requires_recalculation,lane_class_time.csv; entry_vehicle_records.csv,raw available; new scoped aggregation independently verified
+QM3500S17,E1_nVehContrib,requires_recalculation,section_window_metrics.csv,"q_contrib_vehph; detector contributions, not requested/network inflow"
+QM3500S17,E1_nVehEntered,requires_recalculation,section_window_metrics.csv,q_entered_vehph; detector entry counter distinct from contributions
+QM3500S17,E1_speed_occupancy_duration,requires_recalculation,e1_native_intervals.csv; section_window_metrics.csv,contribution-weighted speed; duration and lane-mean occupancy
+QM3500S17,TLS_state_time_movement,reusable,shared_label_timeline.csv,movement 0 R/U; movement 1 X; simultaneous labels not causal ordering
+QM3500S17,tripinfo_actual_entry_arrival,reusable,entry_vehicle_records.csv,actual depart lane/position/time and arrival; completed IDs
+QM3500S17,vehroute_class_route,reusable,entry_vehicle_records.csv,class identity and route checked against archived output
+QM3500S17,planned_cohort_and_endpoints,requires_recalculation,endpoint_accounting.csv,P/E/A/N/O at 1500/2700 only
+QM3500S17,M_observed_space_time,requires_recalculation,M_space_time_30s.csv; M_region_window.csv,observed traveled route; no synthetic upstream observations
+QM3500S17,R_passage_bracket,requires_recalculation,R_passage_events.csv,all R first downstream brackets; 1s labels not exact event time
+QM3500S17,R_regional_propagation,requires_recalculation,R_region_propagation.csv,technical stopped first labels; no congestion definition
+QM3500S17,RU_shared_exposure,requires_recalculation,shared_exposure.csv,technical stopped label cooccurrence
+QM3500S17,historical_EJMI,reusable,historical_ejmi_components.csv,unchanged historical definitions; not new classification
+QM3500S17,seed_contrast_pairing,requires_recalculation,historical_seed_outer_join.csv,403 union;398 paired;5 not_paired
+QM3500S17,lanechange_gap_acceptance,unavailable,none,not emitted; no imputation
+QM3500S17,untraveled_upstream_state,unavailable,none,cannot infer state upstream of actual insertion
+QM3500S17,continuous_outside_waiting_curve,unavailable,none,no exact planned individual schedule derived in this batch
+QM3500S17,causal_reference_and_control_benefit,unavailable,none,no newly registered counterfactual or controlled runs
+QM3500S23,run_id_seed_demand,reusable,source_registry.csv; source_identity_verification.json,"archived identity, requested demand and actual argv verified"
+QM3500S23,compiled_topology,reusable,static_context_links.csv,"original network hash, lanes and static links"
+QM3500S23,FCD_id_lane_time_speed_position,requires_recalculation,lane_class_time.csv; entry_vehicle_records.csv,raw available; new scoped aggregation independently verified
+QM3500S23,E1_nVehContrib,requires_recalculation,section_window_metrics.csv,"q_contrib_vehph; detector contributions, not requested/network inflow"
+QM3500S23,E1_nVehEntered,requires_recalculation,section_window_metrics.csv,q_entered_vehph; detector entry counter distinct from contributions
+QM3500S23,E1_speed_occupancy_duration,requires_recalculation,e1_native_intervals.csv; section_window_metrics.csv,contribution-weighted speed; duration and lane-mean occupancy
+QM3500S23,TLS_state_time_movement,reusable,shared_label_timeline.csv,movement 0 R/U; movement 1 X; simultaneous labels not causal ordering
+QM3500S23,tripinfo_actual_entry_arrival,reusable,entry_vehicle_records.csv,actual depart lane/position/time and arrival; completed IDs
+QM3500S23,vehroute_class_route,reusable,entry_vehicle_records.csv,class identity and route checked against archived output
+QM3500S23,planned_cohort_and_endpoints,requires_recalculation,endpoint_accounting.csv,P/E/A/N/O at 1500/2700 only
+QM3500S23,M_observed_space_time,requires_recalculation,M_space_time_30s.csv; M_region_window.csv,observed traveled route; no synthetic upstream observations
+QM3500S23,R_passage_bracket,requires_recalculation,R_passage_events.csv,all R first downstream brackets; 1s labels not exact event time
+QM3500S23,R_regional_propagation,requires_recalculation,R_region_propagation.csv,technical stopped first labels; no congestion definition
+QM3500S23,RU_shared_exposure,requires_recalculation,shared_exposure.csv,technical stopped label cooccurrence
+QM3500S23,historical_EJMI,reusable,historical_ejmi_components.csv,unchanged historical definitions; not new classification
+QM3500S23,seed_contrast_pairing,requires_recalculation,historical_seed_outer_join.csv,403 union;398 paired;5 not_paired
+QM3500S23,lanechange_gap_acceptance,unavailable,none,not emitted; no imputation
+QM3500S23,untraveled_upstream_state,unavailable,none,cannot infer state upstream of actual insertion
+QM3500S23,continuous_outside_waiting_curve,unavailable,none,no exact planned individual schedule derived in this batch
+QM3500S23,causal_reference_and_control_benefit,unavailable,none,no newly registered counterfactual or controlled runs
+QM3650S17,run_id_seed_demand,reusable,source_registry.csv; source_identity_verification.json,"archived identity, requested demand and actual argv verified"
+QM3650S17,compiled_topology,reusable,static_context_links.csv,"original network hash, lanes and static links"
+QM3650S17,FCD_id_lane_time_speed_position,requires_recalculation,lane_class_time.csv; entry_vehicle_records.csv,raw available; new scoped aggregation independently verified
+QM3650S17,E1_nVehContrib,requires_recalculation,section_window_metrics.csv,"q_contrib_vehph; detector contributions, not requested/network inflow"
+QM3650S17,E1_nVehEntered,requires_recalculation,section_window_metrics.csv,q_entered_vehph; detector entry counter distinct from contributions
+QM3650S17,E1_speed_occupancy_duration,requires_recalculation,e1_native_intervals.csv; section_window_metrics.csv,contribution-weighted speed; duration and lane-mean occupancy
+QM3650S17,TLS_state_time_movement,reusable,shared_label_timeline.csv,movement 0 R/U; movement 1 X; simultaneous labels not causal ordering
+QM3650S17,tripinfo_actual_entry_arrival,reusable,entry_vehicle_records.csv,actual depart lane/position/time and arrival; completed IDs
+QM3650S17,vehroute_class_route,reusable,entry_vehicle_records.csv,class identity and route checked against archived output
+QM3650S17,planned_cohort_and_endpoints,requires_recalculation,endpoint_accounting.csv,P/E/A/N/O at 1500/2700 only
+QM3650S17,M_observed_space_time,requires_recalculation,M_space_time_30s.csv; M_region_window.csv,observed traveled route; no synthetic upstream observations
+QM3650S17,R_passage_bracket,requires_recalculation,R_passage_events.csv,all R first downstream brackets; 1s labels not exact event time
+QM3650S17,R_regional_propagation,requires_recalculation,R_region_propagation.csv,technical stopped first labels; no congestion definition
+QM3650S17,RU_shared_exposure,requires_recalculation,shared_exposure.csv,technical stopped label cooccurrence
+QM3650S17,historical_EJMI,reusable,historical_ejmi_components.csv,unchanged historical definitions; not new classification
+QM3650S17,seed_contrast_pairing,requires_recalculation,historical_seed_outer_join.csv,403 union;398 paired;5 not_paired
+QM3650S17,lanechange_gap_acceptance,unavailable,none,not emitted; no imputation
+QM3650S17,untraveled_upstream_state,unavailable,none,cannot infer state upstream of actual insertion
+QM3650S17,continuous_outside_waiting_curve,unavailable,none,no exact planned individual schedule derived in this batch
+QM3650S17,causal_reference_and_control_benefit,unavailable,none,no newly registered counterfactual or controlled runs
+QM3650S23,run_id_seed_demand,reusable,source_registry.csv; source_identity_verification.json,"archived identity, requested demand and actual argv verified"
+QM3650S23,compiled_topology,reusable,static_context_links.csv,"original network hash, lanes and static links"
+QM3650S23,FCD_id_lane_time_speed_position,requires_recalculation,lane_class_time.csv; entry_vehicle_records.csv,raw available; new scoped aggregation independently verified
+QM3650S23,E1_nVehContrib,requires_recalculation,section_window_metrics.csv,"q_contrib_vehph; detector contributions, not requested/network inflow"
+QM3650S23,E1_nVehEntered,requires_recalculation,section_window_metrics.csv,q_entered_vehph; detector entry counter distinct from contributions
+QM3650S23,E1_speed_occupancy_duration,requires_recalculation,e1_native_intervals.csv; section_window_metrics.csv,contribution-weighted speed; duration and lane-mean occupancy
+QM3650S23,TLS_state_time_movement,reusable,shared_label_timeline.csv,movement 0 R/U; movement 1 X; simultaneous labels not causal ordering
+QM3650S23,tripinfo_actual_entry_arrival,reusable,entry_vehicle_records.csv,actual depart lane/position/time and arrival; completed IDs
+QM3650S23,vehroute_class_route,reusable,entry_vehicle_records.csv,class identity and route checked against archived output
+QM3650S23,planned_cohort_and_endpoints,requires_recalculation,endpoint_accounting.csv,P/E/A/N/O at 1500/2700 only
+QM3650S23,M_observed_space_time,requires_recalculation,M_space_time_30s.csv; M_region_window.csv,observed traveled route; no synthetic upstream observations
+QM3650S23,R_passage_bracket,requires_recalculation,R_passage_events.csv,all R first downstream brackets; 1s labels not exact event time
+QM3650S23,R_regional_propagation,requires_recalculation,R_region_propagation.csv,technical stopped first labels; no congestion definition
+QM3650S23,RU_shared_exposure,requires_recalculation,shared_exposure.csv,technical stopped label cooccurrence
+QM3650S23,historical_EJMI,reusable,historical_ejmi_components.csv,unchanged historical definitions; not new classification
+QM3650S23,seed_contrast_pairing,requires_recalculation,historical_seed_outer_join.csv,403 union;398 paired;5 not_paired
+QM3650S23,lanechange_gap_acceptance,unavailable,none,not emitted; no imputation
+QM3650S23,untraveled_upstream_state,unavailable,none,cannot infer state upstream of actual insertion
+QM3650S23,continuous_outside_waiting_curve,unavailable,none,no exact planned individual schedule derived in this batch
+QM3650S23,causal_reference_and_control_benefit,unavailable,none,no newly registered counterfactual or controlled runs

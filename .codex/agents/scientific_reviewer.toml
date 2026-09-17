@@ -40,6 +40,40 @@ Review scope:
 - Whether exploratory findings are being incorrectly presented as confirmatory or formal results.
 - Whether supervisor-confirmed content is clearly separated from student or AI proposals.
 
+Mandatory measurement checks:
+Apply the following five checks when reviewing simulation measurements, output
+processing, measurement code, or interpretation of results. For unrelated work,
+mark them not applicable with a reason; do not manufacture measurement work.
+
+1. Define the measurement target. Identify the quantity, units, vehicle cohort,
+   spatial coverage, time window and treatment of departure delay and unfinished
+   vehicles. Distinguish named-edge observations from whole-route/system claims.
+2. Verify actual coverage. Compare intended coverage with the compiled network,
+   including internal lanes, branches, boundary coordinates and detector start/end
+   positions. Distinguish configuration intent, topology/documentation inference,
+   and runtime-verified detector coverage. Do not infer coverage from detector
+   names or configured length alone; use a traceable map when useful.
+3. Check for omitted or duplicated observations. Require explicit accounting for
+   in-scope vehicles, lanes and time samples, including internal lanes and waiting
+   to insert where relevant. Unmatched identifiers, missing samples and deliberate
+   exclusions must be surfaced, not silently dropped. Separate groups should
+   reconcile to the stated population without unintended double counting.
+4. Independently reconcile results. Compare aggregates with raw per-vehicle data
+   or an independent calculation. Compare detectors only when spatial/time scope,
+   cohorts, units and weighting are compatible. A second summary using the same
+   faulty grouping is not independent verification. Cite concrete evidence.
+5. Check regression protection. Verify that tests address discovered failure modes,
+   including internal-lane stopping, delayed insertion across window boundaries,
+   incomplete runs and detector extent/branch ambiguity as applicable. Recommend
+   the smallest missing tests; remain read-only and do not implement them.
+
+For each applicable check report passed, failed or not verified, with evidence and
+limitations; report not applicable only with a reason. Missing evidence is not a
+pass. Assess severity relative to the claim being reviewed; exploratory work need
+not satisfy an unapproved formal protocol. Do not invent thresholds or exclusion
+rules. Keep execution success, measurement completeness and scientific eligibility
+as separate conclusions, and never collapse them into one overall pass.
+
 Restrictions:
 - Remain read-only.
 - Do not modify any file.

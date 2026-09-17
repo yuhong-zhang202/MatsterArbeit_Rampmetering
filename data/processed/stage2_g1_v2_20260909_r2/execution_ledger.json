@@ -1,0 +1,176 @@
+{
+  "authorization": "User approved docs/STAGE2_G1_EXECUTION_PLAN_V2.md D0-D7, 2026-09-09; parent delegated D2-D5; zero simulator starts",
+  "new_simulator_starts": 0,
+  "steps": {
+    "D0": {
+      "status": "completed",
+      "owner": "primary",
+      "inputs": [
+        "/private/tmp/minimal_uncontrolled_8egb0qb1"
+      ],
+      "outputs": [],
+      "command": null,
+      "verification": [
+        "Parent confirmed user D0-D7 authorization and preserved dirty worktree; analyst independently checked dedicated output paths absent before first build."
+      ],
+      "issues": [],
+      "resume_point": "D0"
+    },
+    "D1": {
+      "status": "completed",
+      "owner": "simulation_engineer",
+      "inputs": [
+        "/private/tmp/minimal_uncontrolled_8egb0qb1"
+      ],
+      "outputs": [],
+      "command": null,
+      "verification": [
+        "Parent-supplied engineer: version 1.26, seed 17, demand end 1500, max end 2700; four E1; R via :freeway_merge_0_0 12.60 m; no exitTimes; zero warnings/collisions/teleports"
+      ],
+      "issues": [],
+      "resume_point": "D1"
+    },
+    "D2": {
+      "status": "completed",
+      "owner": "data_analyst",
+      "inputs": [
+        "/private/tmp/minimal_uncontrolled_8egb0qb1"
+      ],
+      "outputs": [
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage2_g1_v2_20260909_r2",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/tables/stage2_g1_v2_20260909_r2",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/figures/stage2_g1_v2_20260909_r2"
+      ],
+      "command": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python src/analysis/build_stage2_g1_diagnostic.py --runtime-dir /private/tmp/minimal_uncontrolled_8egb0qb1 --output-dir data/processed/stage2_g1_v2_20260909_r2 --table-dir results/tables/stage2_g1_v2_20260909_r2 --figure-dir results/figures/stage2_g1_v2_20260909_r2",
+      "verification": [
+        "Source hashes unchanged",
+        "Actual interval coverage checked",
+        "Reused trip accounts reconciled",
+        "No simulator calls"
+      ],
+      "issues": [],
+      "resume_point": "D5"
+    },
+    "D3": {
+      "status": "completed",
+      "owner": "data_analyst",
+      "inputs": [
+        "/private/tmp/minimal_uncontrolled_8egb0qb1"
+      ],
+      "outputs": [
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage2_g1_v2_20260909_r2",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/tables/stage2_g1_v2_20260909_r2",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/figures/stage2_g1_v2_20260909_r2"
+      ],
+      "command": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python src/analysis/build_stage2_g1_diagnostic.py --runtime-dir /private/tmp/minimal_uncontrolled_8egb0qb1 --output-dir data/processed/stage2_g1_v2_20260909_r2 --table-dir results/tables/stage2_g1_v2_20260909_r2 --figure-dir results/figures/stage2_g1_v2_20260909_r2",
+      "verification": [
+        "Source hashes unchanged",
+        "Actual interval coverage checked",
+        "Reused trip accounts reconciled",
+        "No simulator calls"
+      ],
+      "issues": [],
+      "resume_point": "D5"
+    },
+    "D4": {
+      "status": "completed",
+      "owner": "data_analyst",
+      "inputs": [
+        "/private/tmp/minimal_uncontrolled_8egb0qb1"
+      ],
+      "outputs": [
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage2_g1_v2_20260909_r2",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/tables/stage2_g1_v2_20260909_r2",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/figures/stage2_g1_v2_20260909_r2"
+      ],
+      "command": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python src/analysis/build_stage2_g1_diagnostic.py --runtime-dir /private/tmp/minimal_uncontrolled_8egb0qb1 --output-dir data/processed/stage2_g1_v2_20260909_r2 --table-dir results/tables/stage2_g1_v2_20260909_r2 --figure-dir results/figures/stage2_g1_v2_20260909_r2",
+      "verification": [
+        "Source hashes unchanged",
+        "Actual interval coverage checked",
+        "Reused trip accounts reconciled",
+        "No simulator calls"
+      ],
+      "issues": [],
+      "resume_point": "D5"
+    },
+    "D5": {
+      "status": "completed",
+      "owner": "data_analyst",
+      "inputs": [
+        "/private/tmp/minimal_uncontrolled_8egb0qb1"
+      ],
+      "outputs": [
+        "data/processed/stage2_g1_v2_20260909_r2/independent_verification.json"
+      ],
+      "command": [
+        ".venv/bin/python -m unittest discover -s tests -p test_stage2_g1_diagnostic.py",
+        ".venv/bin/python data/processed/stage2_g1_v2_20260909_r2/independent_verification.py"
+      ],
+      "verification": [
+        "14 dedicated unit tests passed",
+        "Independent raw360 E1 rows/600 FCD bracket endpoints reconciled",
+        "All4 CSV hashes identical to first batch",
+        "Source and generated hashes verified",
+        "PNG viewed: explicit raw passage title, insertion overlap, isolated dips not congestion, speed_valid limited semantics; no clipping"
+      ],
+      "issues": [
+        "Matplotlib used automatic writable temporary cache; build exited0"
+      ],
+      "resume_point": "D6"
+    },
+    "D6": {
+      "status": "completed",
+      "owner": "scientific_reviewer",
+      "inputs": [
+        "/private/tmp/minimal_uncontrolled_8egb0qb1"
+      ],
+      "outputs": [],
+      "command": null,
+      "verification": [
+        "Scientific reviewer: target passed",
+        "Scientific reviewer: coverage failed for conventional upstream state",
+        "Scientific reviewer: omission passed",
+        "Scientific reviewer: reconciliation passed",
+        "Scientific reviewer: regression passed"
+      ],
+      "issues": [
+        "Interpretation gap closed; physical upstream detector coverage remains unsuitable for conventional upstream traffic-state estimation."
+      ],
+      "resume_point": "D7",
+      "revision_status": "major_closed",
+      "review_conclusion": "D6 Major closed after interpretation revision; bounded raw-observation diagnostic accepted within stated limitations, not conventional upstream state or Stage 2 completion."
+    },
+    "D7": {
+      "status": "completed",
+      "owner": "primary",
+      "inputs": [
+        "/private/tmp/minimal_uncontrolled_8egb0qb1",
+        "docs/STAGE2_G1_V2_ENGINEERING_REVIEW.md",
+        "data/processed/stage2_g1_v2_20260909_r2/diagnostic.json"
+      ],
+      "outputs": [
+        "docs/STAGE2_G1_V2_DIAGNOSTIC_REPORT.md"
+      ],
+      "command": null,
+      "verification": [
+        "Primary integrated D0-D6 evidence and produced one exact future observation-only proposal.",
+        "Scientific reviewer accepted the D7 proposal with aggregate-versus-per-ID E1 coverage boundaries made explicit."
+      ],
+      "issues": [
+        "Future internal-lane E1 feasibility and per-vehicle coverage remain not_verified; proposed simulator start budget remains unauthorized."
+      ],
+      "resume_point": "complete",
+      "proposal_status": "awaiting_user_decision_no_execution_authority"
+    }
+  },
+  "allowed_write_paths": [
+    "src/analysis/build_stage2_g1_diagnostic.py",
+    "tests/test_stage2_g1_diagnostic.py",
+    "data/processed/stage2_g1_v2_20260909_r2",
+    "results/tables/stage2_g1_v2_20260909_r2",
+    "results/figures/stage2_g1_v2_20260909_r2"
+  ],
+  "revision_of": "data/processed/stage2_g1_v2_20260909",
+  "revision_scope": "D6 interpretation correction only; original tables/data retained unchanged; first output batch preserved.",
+  "test_script_sha256": "732fb4cd6f6f15a96f5cce394bd12bec1f27bc454dc18b83ceab05ca388b45ca"
+}

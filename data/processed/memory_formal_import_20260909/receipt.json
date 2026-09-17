@@ -1,0 +1,23 @@
+{
+  "status": "failed",
+  "created_at": "2026-09-09T15:28:20.197Z",
+  "project": "Masterarbeit-Ramp-Metering",
+  "volume": "tdai-ramp-metering-memory-v1",
+  "image": "sha256:9798254a8cc06276b7c5b3c19df49f136fae25d579564e1f01f9c4b9b8cd2d11",
+  "model": "gpt-4.1-mini-2025-04-14",
+  "source_bundle": "docs/memory/formal_import_bundle_20260909.md",
+  "native_result": {},
+  "restart_persistence_probe": null,
+  "budget": {
+    "prior_claimed_attempts": 3,
+    "new_claimed_attempts": 0,
+    "total_claimed_attempts": 3,
+    "remaining_attempts": 38,
+    "prompt_tokens": 0,
+    "completion_tokens": 0,
+    "total_tokens": 0,
+    "estimated_usd_at_published_text_rates": 0,
+    "ledger_path": "data/processed/memory_paid_synthetic_20260909/ledger.json"
+  },
+  "error": "Native formal import failed: {} node:internal/modules/cjs/loader:1433\n  throw err;\n  ^\n\nError: Cannot find module '/tmp/formal_import_container.mjs'\n    at Function._resolveFilename (node:internal/modules/cjs/loader:1430:15)\n    at defaultResolveImpl (node:internal/modules/cjs/loader:1040:19)\n    at resolveForCJSWithHooks (node:internal/modules/cjs/loader:1045:22)\n    at Function._load (node:internal/modules/cjs/loader:1216:25)\n    at wrapModuleLoad (node:internal/modules/cjs/loader:254:19)\n    at Function.executeUserEntryPoint [as runMain] (node:internal/modules/run_main:171:5)\n    at node:internal/main/run_main_module:36:49 {\n  code: 'MODULE_NOT_FOUND',\n  requireStack: []\n}\n\nNode.js v22.23.2\n"
+}

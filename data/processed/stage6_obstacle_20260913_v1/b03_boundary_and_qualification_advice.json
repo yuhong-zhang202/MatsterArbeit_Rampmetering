@@ -1,0 +1,55 @@
+{
+  "status": "Proposed_mechanical_advice_pending_reviewer",
+  "role": "Seen exploratory registration support; no validated traffic-state standard",
+  "reference_facts": {
+    "ML17_speed_half_change_pct": 2.394831869961145,
+    "ML23_speed_half_change_pct": 1.4597874734003646,
+    "ML17_speed_bin_cv_pct": 3.406785731725181,
+    "ML23_speed_bin_cv_pct": 3.2490288302005577,
+    "ML17_max_adjacent_speed_change_pct": 11.279545593275596,
+    "ML23_max_adjacent_speed_change_pct": 9.585894488325552,
+    "min_certain_M_per60s_bin_both_ML": 39,
+    "interpretation": "Old ML is not binwise constant. Adjacent-bin5% rule would reject seen ML. These observed extrema do not determine a validated stability boundary."
+  },
+  "reference_tolerance_discussion": {
+    "candidate_absolute_half_change_pct_max": 5,
+    "candidate_bin_CV_pct_max": 5,
+    "candidate_min_certain_M_per_bin": 20,
+    "candidate_min_whole_B_M": 500,
+    "sensitivity_half_change_pct": [3,7],
+    "sensitivity_CV_pct": [4,6],
+    "basis": "Explicit exploratory working choices exceeding seen ML whole-window trend/CV while preserving adequate observed counts; not confidence limits, power, free-flow certification or universal thresholds.",
+    "do_not_use": "No hard adjacent-bin5% rule, and no claim that mean stability proves stationary traffic.",
+    "decide_before_B_complete": "Reviewer must accept exact estimand and tolerances or retain unknown. Fixed primary denominator and no post-result reference reselection."
+  },
+  "entry_qualification": {
+    "observed": "ML1083/1083 and C1333/1333 M enter before1500, all four runs. ML reported max departDelay1s; C.88s. B-window entry rates2601/3201vehph differ from source integer-count effective2599.2/3199.2 and detector/common crossing counts.",
+    "candidate_rule": "All planned M retained in accounting; reported max departure delay <= one1s step plus declared numeric-output tolerance, and all planned M entered by1500; exact scheduled departure reconstruction remains engineering-confirmation dependent.",
+    "numeric_tolerance_proposed_s": 0.01,
+    "numeric_tolerance_role": "One displayed hundredth only; not an extra traffic delay allowance. Engineer must confirm precision before registration.",
+    "scope": "Network insertion only. Never impose equality of requested, entered, merge passage, detector contrib, detector entered, or common-domain crossing counts in the same calendar window.",
+    "failure_meaning": "Complete observations showing sustained insertion delay are observed input-supply mismatch and not_resolved for intended comparison, not evidence corruption. Missing/invalid delay or identity is an evidence error.",
+    "planned_schedule_rule": "Use documented number-based generator schedule under actual SUMO version after engineering verification; cannot infer exact intended schedule solely by subtracting rounded tripinfo departDelay."
+  },
+  "TT_boundary_algorithm": {
+    "crossing": "Each observed crossing is an interval [last_below_time, first_at_or_above_time]. For half-open bin[a,b), certain cohort requires lower>=a and upper<b; possible cohort has upper>=a and lower<b. Conservative endpoint treatment is intentional.",
+    "individual_bounds": "TT_lower=max(0,end_lower-start_upper); TT_upper=end_upper-start_lower.",
+    "optional_membership": "Keep definite cohortD and ambiguous cohortA separately. Compute minimum average over k=0..|A| of (sum lower_D + sum k smallest lower_A)/(nD+k). Compute maximum average using upper_D and k largest upper_A. Record exact denominator attaining each extremum; never replace ambiguous by zero.",
+    "zero_denominator": "Exclude empty-set means from arithmetic and return no_contributors if no nonempty eligible set. Required minimum sample uses definite count, not favorable optional additions.",
+    "right_censor": "For entered cohort with no exit by valid observation end, lower=max(0,end_of_observation-start_upper), upper=unbounded. Retain it. Any mandatory or possible censored reference member gives conservative reference upper unbounded. No finite censor value is invented.",
+    "robust_support": "challenge mean lower > (1+registered_delta)*reference mean upper, with all required entry/reference/sample rules. If reference upper unbounded, support is not identified.",
+    "classification": "Valid but ambiguous/censored bounds that do not prove support =>not_resolved. Corrupted/missing required source data or independently inconsistent computation =>blocked_by_evidence_error.",
+    "bin_membership_coherence": "Independent worst-case bounds per bin are conservative. Do not choose mutually incompatible favorable memberships across bins to fabricate a support block.",
+    "planned_fixture_examples": ["one definite plus one optional small/large TT changes worst mean", "boundary at a or b remains possible", "mandatory censor makes upper unbounded", "empty denominator gives no_contributors", "reference upper unbounded prevents ratio success"]
+  },
+  "sensitivity_algorithm": {
+    "register_before_outcomes": "List exact parameter combinations and applicability in a separate sensitivity key table; rules, cohort and all seeds stay fixed.",
+    "primary_and_sensitivity": "Evaluate primary first, then all required sensitivity combinations. Report per-seed pass/fail/indeterminate with numeric bounds; no choice of favorable bins or thresholds after results.",
+    "flip": "Any registered required sensitivity classification differing from primary, or any required seed disagreement, yields not_resolved for robust suitability; retain primary result descriptively.",
+    "insufficient_bin_samples": "Do not relax sample count or bridge missing bins to preserve persistence. A stricter registered sensitivity with insufficient valid support is indeterminate/not_resolved, not an automatic PASS.",
+    "no_automatic_threshold_grid": "Candidate values listed earlier are discussion options until reviewer registers the actual sensitivity set; do not silently create a full combinatorial gate or shrink its denominator."
+  },
+  "joint_context_fact": "All four seen ML/C runs have zero B-window180s triplets with R passage in each60s bin, sharedR/U stopping in each bin and at least10 certain R passages in total. This does not preclude a V1 outcome; it prevents claiming historical whole-window R totals already establish persistent joint support.",
+  "denominator_revision": "Earlier256/136 proposal is superseded only after primary adopts added reference/inflow/RU rule IDs. This supplement does not edit that prior proposal; scientific reviewer suggested352 total/160 applicable/148 required/192 N/A for explicit added gates, pending reconciliation.",
+  "SUMO": 0, "netconvert": 0, "TraCI": 0, "GUI": 0
+}

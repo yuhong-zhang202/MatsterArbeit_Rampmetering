@@ -1,0 +1,108 @@
+{
+  "schema_version": 1,
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "stage": "Stage 4 T42 independent final rereview after S4SR repairs and four-counter gate repair",
+  "revision": "revision_04",
+  "status": "passed",
+  "context_preflight": {
+    "status": "passed",
+    "current_phase": "T42 offline implementation and review; T43 prohibited",
+    "authorization_quote": "批准，继续stage 4",
+    "authorization_scope": "T42 offline implementation and three-specialist review only",
+    "formal_protocol": "empty_not_frozen",
+    "formal_experiment_started": false
+  },
+  "history_preservation": {
+    "revision_01_and_02": "preserved with the hashes recorded in revision_03",
+    "independent_verification_revision_03.json": "29e7eade495186e541e6e6cd5e9c5f2ae54e8d906e74378d10e7fe2dc65d012f",
+    "analysis_review_revision_03.json": "968c81f003d82bd2de09efe294ba8b5524ad1c79fdd7ff1b6f38a72d0fa52a63",
+    "revision_03_disposition": "retained failed review that discovered S4DA-R03-M01"
+  },
+  "reviewed_hashes": {
+    "src/analysis/analyze_stage4_qmain.py": "2e6037e381a0df1523880b802628444f0de4445323ac1693cbda19c8b803b2ff",
+    "tests/test_stage4_qmain.py": "78c6db23d67ccdd6ed46c22fec8a66e04c9d2142ec05cdc52b44a3ef96f7e502",
+    "tests/test_verify_stage4_qmain.py": "007c9c29db325f0fde44f6b03dc25045c1904c186a70fff7c85e7d10c6c5c529",
+    "registration_payload.json": "3d03dd47c165b231feaa5b8eb374aabf5dc43d6d616b43a10a81b15a46f0621c",
+    "measurement_contract.json": "b3ab79e6b813b60e4e04643a05c05513a72eb42147dc1279e04d068dc6a65e8d",
+    "source_registry.json": "6314aac07b747ad2be86fcaa0695815b43c6990b1a6024a9e84c4d803f245db5",
+    "execution_ledger.json": "bbbdf020a8fc72f3064b263f548427608ec2e68b8579c1a2eb4294b9b237a8ee",
+    "engineering_verification.json": "c3ef503128a4cee0955f2ac1e5700ea92c6088b8672ef826879d4ae27f8600d0"
+  },
+  "test_results": {
+    "production_suite": "49/49 passed",
+    "independent_suite": "27/27 passed",
+    "combined_suite": "76/76 passed",
+    "py_compile": "passed",
+    "json_hash_and_cross_link_checks": "passed",
+    "diff_check": "passed",
+    "independent_final_matrix_cases": 13203
+  },
+  "finding_decisions": {
+    "S4SR-M01": {
+      "status": "closed",
+      "confidence": "High",
+      "evidence": "All six candidates have exact same-seed C/MH run, qMain, manifest path/hash and source-map path/hash bindings; substitution is rejected."
+    },
+    "S4SR-M02": {
+      "status": "closed",
+      "confidence": "High",
+      "evidence": "The independent oracle matched all 13,203 registered final-state cases across the one-point and two conditional two-point universes."
+    },
+    "S4SR-M03": {
+      "status": "closed",
+      "confidence": "High for archived references; Moderate for future nonempty M-stop candidates",
+      "evidence": "Four archives independently reproduce actual demand, four-window downstream E1, M episode and position denominators, M depart ranges, five-region R order, shared R/U exposure, TLS and all six audits. Production has a passing nonempty synthetic episode fixture; no future candidate archive exists."
+    },
+    "S4SR-M04": {
+      "status": "closed",
+      "confidence": "High",
+      "evidence": "Detector/E2/TLS source and runtime semantics, compiled lane topology, four network hashes, source-code hashes and binary hashes independently match the contract; drift fixtures pass."
+    },
+    "S4DA-R03-M01": {
+      "status": "closed",
+      "confidence": "High",
+      "evidence": "Both production and independent regressions now reject each of four nonzero counters under T43 prohibited: SUMO, netconvert, TraCI and GUI. Current actual values remain zero."
+    }
+  },
+  "minor_decisions": {
+    "m_position_coordinate": "closed",
+    "netconvert_budget": "closed at regular 2--4 and hard cap 5",
+    "q_definition": "closed as nVehEntered with explicit Stage 3 nVehContrib nonmixing warning",
+    "historical_revisions": "closed; no prior revision was overwritten"
+  },
+  "reference_revision_04": {
+    "status": "passed_4_of_4",
+    "comparison_to_revision_03": "all scientific and numeric fields are identical; only adapter_sha256 changed",
+    "manifests": {
+      "C17": "7e622f88191bbd21815f50cb9873bef3733825e52393c7d47ed1e940412871a9",
+      "C23": "fafc7e05528907fc67e3fa4146a71bb9532031dd258bd19698502292ace86eb1",
+      "MH17": "02b4da603be06b52698f073f26e7dbfa039701fb174a72c27d23d808a2855c80",
+      "MH23": "9cbeeb7b94c12cad2cf37eefdad45211ed497ee47847d262a42e772c504f984c"
+    },
+    "common_coverage": "2700 FCD labels, 90 downstream bins, 2700 TLS labels and six of six audit items per run",
+    "common_r_region_order": [
+      "ramp_accel",
+      "ramp_mid_internal",
+      "ramp_storage",
+      "ramp_diverge_internal",
+      "shared_approach"
+    ]
+  },
+  "launch_gate": {
+    "T42_data_review": "passed",
+    "T43": "prohibited",
+    "open_major_count": 0,
+    "can_return_to_scientific_reviewer": true,
+    "safe_next_step": "submit this hash-linked T42 package to scientific_reviewer; do not launch T43 without a later exact user-approved run card"
+  },
+  "limitations": [
+    "No new qMain archive exists; future candidate behavior remains unobserved.",
+    "All four references contain zero M stopped episodes; nonempty M-stop handling currently relies on a deterministic synthetic production fixture.",
+    "Two seeds support exploratory consistency only, not robust stochastic inference.",
+    "EJMI is not Breakdown, Capacity Drop or capacity, and the formal protocol remains empty."
+  ],
+  "actual_sumo_starts": 0,
+  "actual_netconvert_operations": 0,
+  "actual_traci_connections": 0,
+  "actual_gui_starts": 0
+}

@@ -1,0 +1,198 @@
+{
+  "schema_version": 1,
+  "plan_version": "docs/EXPLORATORY_VALIDATION_COMPLETION_PLAN.md@sha256:9f61fd7347ed78e4329647768b88a93636c1bb9da395b18245daa13a7550c62a",
+  "authorization": {
+    "status": "user_approved",
+    "date": "2026-09-12",
+    "quote": "按照这个方案开始执行stage3-6的任务",
+    "boundary": "Execute the approved staged plan; Stage 3 has zero SUMO/netconvert starts and Stage 4 retains its explicit conditional gate."
+  },
+  "stage": "Stage 3",
+  "status": "completed",
+  "batch_id": "stage3_baseline_diagnostic_20260912_v2",
+  "steps": {
+    "T30": {
+      "status": "completed",
+      "owner": "primary+simulation_engineer",
+      "evidence": [
+        "source_registry.json",
+        "engineering_verification.json"
+      ]
+    },
+    "T31": {
+      "status": "completed",
+      "owner": "simulation_engineer->scientific_reviewer",
+      "evidence": [
+        "measurement_contract.json",
+        "network_observation_map.csv"
+      ]
+    },
+    "T32": {
+      "status": "completed",
+      "owner": "simulation_engineer->data_analyst->scientific_reviewer",
+      "evidence": [
+        "src/analysis/analyze_stage3_baseline.py",
+        "tests/test_stage3_baseline.py",
+        "engineering_verification.json"
+      ]
+    },
+    "T33": {
+      "status": "completed",
+      "owner": "data_analyst",
+      "evidence": [
+        "runs/C17/revision_02/manifest.json",
+        "verification/C17_first_gate_revision_02.json",
+        "verification/C17_manual_spot_checks.json",
+        "runs/C23/revision_02/manifest.json",
+        "runs/ML17/revision_02/manifest.json",
+        "runs/ML23/revision_02/manifest.json",
+        "runs/MH17/revision_02/manifest.json",
+        "runs/MH23/revision_02/manifest.json",
+        "runs/RL17/revision_02/manifest.json",
+        "runs/RL23/revision_02/manifest.json",
+        "aggregate/revision_03/manifest.json",
+        "verification/T33_T34_independent_v3.json",
+        "verification/unit_correction_revision_03.json",
+        "verification_revision_03.json"
+      ]
+    },
+    "T34": {
+      "status": "completed",
+      "owner": "data_analyst->scientific_reviewer",
+      "evidence": [
+        "analysis_review/revision_06/analysis_summary.json",
+        "analysis_review/revision_06/claim_evidence.csv",
+        "analysis_review/revision_06/candidate_explanations.csv",
+        "analysis_review/revision_06/aggregation_shape_summary.csv",
+        "verification/unit_correction_revision_03.json",
+        "verification/reviewer_opinion_revision_06.json",
+        "verification_revision_03.json"
+      ]
+    },
+    "T35": {
+      "status": "completed",
+      "owner": "primary",
+      "evidence": [
+        "docs/STAGE3_BASELINE_DIAGNOSTIC_REPORT.md"
+      ],
+      "branch": "prepare_one_targeted_stage4_qmain_registration; no launch without an exact complete card and authorization"
+    }
+  },
+  "source_runs": [
+    {
+      "run_id": "C17",
+      "attempt_id": "C17_reused",
+      "seed": 17,
+      "condition": "C",
+      "source_map_path": "data/processed/stage2_completion_20260909_v1/source_maps/C17_reused.json",
+      "source_map_sha256": "3a553c630bf3946cb87e133a1fe1fd392b99d571ffd36ea8f85a370481debbf0",
+      "archive_runtime_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused"
+    },
+    {
+      "run_id": "C23",
+      "attempt_id": "C23_attempt1",
+      "seed": 23,
+      "condition": "C",
+      "source_map_path": "data/processed/stage2_completion_20260909_v1/source_maps/C23_attempt1.json",
+      "source_map_sha256": "a09aaab37ab2ac3f70539c869d0b284781decd2adeddc82c23df7a3c942ed79f",
+      "archive_runtime_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1"
+    },
+    {
+      "run_id": "ML17",
+      "attempt_id": "ML17_attempt1",
+      "seed": 17,
+      "condition": "ML",
+      "source_map_path": "data/processed/stage2_completion_20260909_v1/source_maps/ML17_attempt1.json",
+      "source_map_sha256": "430ff9608e0e7ca091406826be9be327da972f9d4026df915cb86e816831a759",
+      "archive_runtime_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML17_attempt1"
+    },
+    {
+      "run_id": "ML23",
+      "attempt_id": "ML23_attempt1",
+      "seed": 23,
+      "condition": "ML",
+      "source_map_path": "data/processed/stage2_completion_20260909_v1/source_maps/ML23_attempt1.json",
+      "source_map_sha256": "8cc3bb134a515f3468f9969ddfcbaba6589f17292c8a437daeaf3355748e6130",
+      "archive_runtime_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/ML23_attempt1"
+    },
+    {
+      "run_id": "MH17",
+      "attempt_id": "MH17_attempt1",
+      "seed": 17,
+      "condition": "MH",
+      "source_map_path": "data/processed/stage2_completion_20260909_v1/source_maps/MH17_attempt1.json",
+      "source_map_sha256": "4a6ff66e7ff981a15db32e56905d88f93c8a903f4318887e17dc66a3f4fcd97f",
+      "archive_runtime_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH17_attempt1"
+    },
+    {
+      "run_id": "MH23",
+      "attempt_id": "MH23_attempt1",
+      "seed": 23,
+      "condition": "MH",
+      "source_map_path": "data/processed/stage2_completion_20260909_v1/source_maps/MH23_attempt1.json",
+      "source_map_sha256": "67e5644aad9f38e40d86c726bf27e881bfffe9199f2cab987db317c09925f7c1",
+      "archive_runtime_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/MH23_attempt1"
+    },
+    {
+      "run_id": "RL17",
+      "attempt_id": "RL17_attempt1",
+      "seed": 17,
+      "condition": "RL",
+      "source_map_path": "data/processed/stage2_completion_20260909_v1/source_maps/RL17_attempt1.json",
+      "source_map_sha256": "3efedb7ea868c7cf94c7278547d95a770781287ec807adfa883d9d7f19439e87",
+      "archive_runtime_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL17_attempt1"
+    },
+    {
+      "run_id": "RL23",
+      "attempt_id": "RL23_attempt1",
+      "seed": 23,
+      "condition": "RL",
+      "source_map_path": "data/processed/stage2_completion_20260909_v1/source_maps/RL23_attempt1.json",
+      "source_map_sha256": "ca411acc1a3c71ebafadb3e8fe63efbd326bcac280c6134c69ae724deb1dd4ce",
+      "archive_runtime_path": "artifacts/stage2_completion_20260909_v1/runtime_archive/RL23_attempt1"
+    }
+  ],
+  "input_hashes": {
+    "source_registry_sha256": "de5811b122eacc944363ba6b45d56a93c2080632df716f6307786c49cfeb9422",
+    "measurement_contract_sha256": "e9c8a6c026b22faedb51902d79cc3952333a3e86ea963b0c06083f0889b81fd7",
+    "network_observation_map_sha256": "636689b4576502355eae3159c44ff9569bb720f994234d445cd3a0eb16f0c84a"
+  },
+  "code_hashes": {
+    "analyze_stage3_baseline.py": "6558f971bc713397e26a41fd4b2b4a71255a38ff7b6122d77df6056b88b6b8f6",
+    "test_stage3_baseline.py": "4c040d6c080319e9f40c7a300acde482d30fb42b51fdc693b888841f98d6dc77"
+  },
+  "measurement_contract_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/measurement_contract.json",
+  "outputs": [
+    "data/processed/stage3_baseline_diagnostic_20260912_v2/engineering_verification.json",
+    "data/processed/stage3_baseline_diagnostic_20260912_v2/measurement_contract.json",
+    "data/processed/stage3_baseline_diagnostic_20260912_v2/network_observation_map.csv",
+    "data/processed/stage3_baseline_diagnostic_20260912_v2/source_registry.json"
+  ],
+  "checks": {
+    "T30_read_only_checks": "2/2 passed once",
+    "T32_required_failure_modes": "12/12 passed; 18 test methods, 24 synthetic fixtures, 94 runtime assertions; propagation-order Major repaired",
+    "technical_blocker_major_open": 0
+  },
+  "limitations": [
+    "Independent production quantity reconstruction belongs to T33 data_analyst work.",
+    "Measurement contract and dynamic interpretation still require scientific_reviewer review.",
+    "The preserved v1 batch contains only INCOMPLETE.json from a closed metadata-field error; v2 is the first usable batch."
+  ],
+  "resume_point": "Stage 4 registration-card preparation; actual SUMO launch remains gated",
+  "budget": {
+    "max_sumo_starts": 0,
+    "max_netconvert_starts": 0
+  },
+  "actual_sumo_starts": 0,
+  "actual_netconvert_starts": 0,
+  "audit_only_derivation": {
+    "purpose": "Offline reproduction of the exact eight accepted archives after fail-closed engineering repair; no new simulation authorization",
+    "source_ledger_path": "data/processed/stage3_baseline_diagnostic_20260912_v2/execution_ledger.json",
+    "source_ledger_sha256": "51d5d5d1d63c6f6c469c0c48b48bade0d9bc2f4d45791393ed49eba86c1f1cfb",
+    "simulation_starts_authorized": 0,
+    "changed_normative_fields": [
+      "code_hashes.analyze_stage3_baseline.py",
+      "code_hashes.test_stage3_baseline.py"
+    ]
+  }
+}

@@ -1,0 +1,64 @@
+{
+  "schema_version": 1,
+  "batch_id": "stage4_qmain_sequential_20260912_v1",
+  "verified_at": "2026-09-13T00:50:21+02:00",
+  "task": "T43 and Stage 4 operational closeout verification",
+  "status": "passed",
+  "scientific_review_record": {
+    "path": "data/processed/stage4_qmain_sequential_20260912_v1/verification/T43_final_scientific_review_record_20260913.json",
+    "sha256": "b73513dca5a0b535a8910ff4c779f410a13f0b165391b503b6e70c0475469726",
+    "source_type": "scientific_reviewer read-only message",
+    "standalone_source_artifact": null,
+    "standalone_source_artifact_sha256": null,
+    "decision": "PASS; S4-FINAL-M01 closed; open Blocker/Major/Minor 0/0/0"
+  },
+  "normative_evidence": {
+    "snapshot_path": "data/processed/stage4_qmain_sequential_20260912_v1/final_evidence_ledger_snapshot.json",
+    "snapshot_sha256": "f589c905067887536037fe6fe045438e8a1588cbf3246dcc50b573facecb4516",
+    "canonical_embedded_execution_ledger_sha256": "265ec48b66947ad22e771cad9477f639a9d1b4523c0addb5c05f2303c8ba21bd",
+    "snapshot_hash_unchanged": true,
+    "review_record_written_to_snapshot": false,
+    "current_mutable_execution_ledger_is_normative": false
+  },
+  "operational_index": {
+    "execution_ledger_path": "data/processed/stage4_qmain_sequential_20260912_v1/execution_ledger.json",
+    "execution_ledger_sha256_at_verification": "45dcbdae5245b9e498407ae2225f71dd62b8d36d1150a1a0c96b9d4f903c88d4",
+    "stage4_status": "closed",
+    "t43_status": "closed",
+    "classification": "supports_B_pattern_within_registered_points",
+    "stage5_handoff": "completed/specific_obstacle",
+    "pending_stage4_items": 0
+  },
+  "verification": {
+    "completed_attempts": "4/4",
+    "runtime_registry_rows": "4/4",
+    "candidate_manifest_receipts": "4/4",
+    "archive_files_hash_and_size": "116/116",
+    "production_tests": "74/74 passed",
+    "independent_tests": "42/42 passed",
+    "combined_tests": "116/116 passed",
+    "py_compile": "passed",
+    "evidence_record_paths_and_hashes": "passed",
+    "JSON_parse": "passed",
+    "diff_check": "passed",
+    "execution_counters": {
+      "actual_sumo_starts": 4,
+      "actual_netconvert_operations": 4,
+      "actual_traci_connections": 0,
+      "actual_gui_starts": 0
+    },
+    "new_starts_during_closeout": {
+      "sumo": 0,
+      "netconvert": 0,
+      "traci": 0,
+      "gui": 0
+    }
+  },
+  "hashes": {
+    "production_test_sha256": "7dbc5759b166460a0aa8a5d93be6819562c4cde0308b823c42a6bf377db2fb9a",
+    "independent_test_sha256": "7824b853e2ca936594272ff1cfbcf05d3f5c910146bbc22b4960bb3eef8f297a",
+    "snapshot_bound_independent_verification_sha256": "d600d46b70957751ea3ff685da48c280bc6ba2809ab614ad0aea89a589d0c2aa",
+    "snapshot_bound_analysis_review_sha256": "2e745aa80a796a779e21027ed66c41dee8862e0424224658f35e9eab998fa23d"
+  },
+  "boundary": "Operational closeout only. No simulation, scientific code, tests, contract, raw data, archive, immutable snapshot, snapshot-bound artifact, or documentation changed."
+}

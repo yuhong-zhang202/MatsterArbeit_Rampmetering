@@ -1,0 +1,93 @@
+{
+  "status": "passed",
+  "runs": [
+    {
+      "run_id": "C17",
+      "lane_checks": 19,
+      "E1_static_checks": 6,
+      "E2_static_checks": 2,
+      "source_map_sha256": "3a553c630bf3946cb87e133a1fe1fd392b99d571ffd36ea8f85a370481debbf0"
+    },
+    {
+      "run_id": "C23",
+      "lane_checks": 19,
+      "E1_static_checks": 6,
+      "E2_static_checks": 2,
+      "source_map_sha256": "a09aaab37ab2ac3f70539c869d0b284781decd2adeddc82c23df7a3c942ed79f"
+    },
+    {
+      "run_id": "ML17",
+      "lane_checks": 19,
+      "E1_static_checks": 6,
+      "E2_static_checks": 2,
+      "source_map_sha256": "430ff9608e0e7ca091406826be9be327da972f9d4026df915cb86e816831a759"
+    },
+    {
+      "run_id": "ML23",
+      "lane_checks": 19,
+      "E1_static_checks": 6,
+      "E2_static_checks": 2,
+      "source_map_sha256": "8cc3bb134a515f3468f9969ddfcbaba6589f17292c8a437daeaf3355748e6130"
+    },
+    {
+      "run_id": "MH17",
+      "lane_checks": 19,
+      "E1_static_checks": 6,
+      "E2_static_checks": 2,
+      "source_map_sha256": "4a6ff66e7ff981a15db32e56905d88f93c8a903f4318887e17dc66a3f4fcd97f"
+    },
+    {
+      "run_id": "MH23",
+      "lane_checks": 19,
+      "E1_static_checks": 6,
+      "E2_static_checks": 2,
+      "source_map_sha256": "67e5644aad9f38e40d86c726bf27e881bfffe9199f2cab987db317c09925f7c1"
+    },
+    {
+      "run_id": "RL17",
+      "lane_checks": 19,
+      "E1_static_checks": 6,
+      "E2_static_checks": 2,
+      "source_map_sha256": "3efedb7ea868c7cf94c7278547d95a770781287ec807adfa883d9d7f19439e87"
+    },
+    {
+      "run_id": "RL23",
+      "lane_checks": 19,
+      "E1_static_checks": 6,
+      "E2_static_checks": 2,
+      "source_map_sha256": "ca411acc1a3c71ebafadb3e8fe63efbd326bcac280c6134c69ae724deb1dd4ce"
+    }
+  ],
+  "compiled_lanes_per_run": 19,
+  "E1_per_run": 6,
+  "E2_per_run": 2,
+  "propagation_path": [
+    {
+      "region": "ramp_accel",
+      "r_path_start_m": 1042.35,
+      "r_path_end_m": 1137.6699999999998
+    },
+    {
+      "region": "ramp_mid_internal",
+      "r_path_start_m": 960.37,
+      "r_path_end_m": 1042.35
+    },
+    {
+      "region": "ramp_storage",
+      "r_path_start_m": 755.88,
+      "r_path_end_m": 960.37
+    },
+    {
+      "region": "ramp_diverge_internal",
+      "r_path_start_m": 642.8,
+      "r_path_end_m": 755.88
+    },
+    {
+      "region": "shared_approach",
+      "r_path_start_m": 404.0,
+      "r_path_end_m": 642.8
+    }
+  ],
+  "scope": "Static source-map-bound archive metadata only; no detector loading, live/runtime measurement or per-vehicle E1 coverage newly verified",
+  "actual_simulation_starts": 0
+}

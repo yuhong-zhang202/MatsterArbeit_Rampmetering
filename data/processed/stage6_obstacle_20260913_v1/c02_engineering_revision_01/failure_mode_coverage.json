@@ -1,0 +1,66 @@
+{
+  "group_count": 12,
+  "groups": [
+    {
+      "failure_mode": "card/config/source hash drift",
+      "group": 1,
+      "tests_and_expected": "test_card_config_and_fixed_denominators; test_candidate_manifest_cannot_be_rebound"
+    },
+    {
+      "failure_mode": "unregistered run/seed/budget",
+      "group": 2,
+      "tests_and_expected": "test_card_config_and_fixed_denominators; test_one_retry_shared_across_smoke_and_validation; test_budget_overrun_is_retained_and_stops_new_reservation"
+    },
+    {
+      "failure_mode": "unknown/duplicate lane/ID",
+      "group": 3,
+      "tests_and_expected": "test_fcd_malformed_variants_end_to_end"
+    },
+    {
+      "failure_mode": "FCD missing/nonfinite speed and frame grid",
+      "group": 4,
+      "tests_and_expected": "test_fcd_malformed_variants_end_to_end: 11 subcases"
+    },
+    {
+      "failure_mode": "TLS labels/identity/program/movement",
+      "group": 5,
+      "tests_and_expected": "test_tls_grid_identity_phase_variants: 4 subcases"
+    },
+    {
+      "failure_mode": "E1 contribution/speed/zero population",
+      "group": 6,
+      "tests_and_expected": "test_e1_bad_positive_speed_missing_interval_and_empty_valid: 5 rejected subcases plus valid empty-contribution fixture"
+    },
+    {
+      "failure_mode": "internal stopped final region partition",
+      "group": 7,
+      "tests_and_expected": "test_end_to_end_internal_stopped_partition_and_real_tail; test_R_first_downstream_bracket_can_skip_internal_lane"
+    },
+    {
+      "failure_mode": "entry windows/censor/identity disappearance",
+      "group": 8,
+      "tests_and_expected": "test_endpoint1499_1500_1501_and_no_inlet_flow_equivalence; test_full_raw_grid_censor2699_and_disappearance_not_censor; test_2699_censor_bound_and_traceable2700"
+    },
+    {
+      "failure_mode": "actual tail duration and contribution weighting",
+      "group": 9,
+      "tests_and_expected": "test_end_to_end_internal_stopped_partition_and_real_tail: 3s+1s gives rate2700 and weighted speed40/3"
+    },
+    {
+      "failure_mode": "unpaired seed key union",
+      "group": 10,
+      "tests_and_expected": "test_unpaired_outer_union_and_rule_denominators"
+    },
+    {
+      "failure_mode": "distinct flow populations/value states",
+      "group": 11,
+      "tests_and_expected": "test_end_to_end_internal_stopped_partition_and_real_tail: entered3600 vs contrib2700; test_e1_bad_positive_speed_missing_interval_and_empty_valid"
+    },
+    {
+      "failure_mode": "resume/attempt/cancel/no overwrite/error persistence",
+      "group": 12,
+      "tests_and_expected": "test_reserved_unknown_block_relaunch_and_cancel_denominator; test_budget_revision_is_exclusive_and_no_json_nonfinite; test_deterministic_materialization_and_no_overwrite; test_failed_analysis_persists_error_without_success_manifest"
+    }
+  ],
+  "not_independent_oracle": true
+}

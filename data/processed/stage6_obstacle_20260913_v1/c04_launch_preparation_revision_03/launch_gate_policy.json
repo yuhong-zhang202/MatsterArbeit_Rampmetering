@@ -1,0 +1,72 @@
+{
+  "artifact_kind": "SG6-P approval overlay",
+  "schema_version": 1,
+  "status": "Proposed",
+  "launch_eligible": false,
+  "launch_card_sha256": "6dad07d6862eb6dfd6ca5ffd4bd09ccffa3563ff63106b67a983dcbaba765067",
+  "stable_launch_payload_sha256": "4f65deb5ee65eb23ff071d6b79e85d1afcff1dd12fd50242cc7ed07b2161a1d3",
+  "execution_order": [
+    "S6_V1_ML_S17_attempt1",
+    "smoke_acceptance_gate",
+    "S6_V1_ML_S17_attempt3",
+    "S6_V1_C_S17_attempt1",
+    "first_matched_unit_acceptance_gate",
+    "S6_V1_ML_S23_attempt1",
+    "S6_V1_C_S23_attempt1",
+    "full_matrix_analysis"
+  ],
+  "gate_semantics": {
+    "general": "A gate decision is an evidence-bound engineering, data and scientific review recorded with input hashes; setting accepted=true without those checks is invalid.",
+    "smoke_acceptance_gate": {
+      "required_checks": [
+        "real source-map and receipt identities match the registered V1 ML seed-17 smoke attempt",
+        "actual M entry position is reported and qualified without fallback or misplacement",
+        "actual FCD traverses the registered feeder and common domains; the route alone is insufficient",
+        "TLS, link and detector definitions are loaded and the complete registered time endpoints are present; legitimate incomplete or non-traversal states remain explicit and are handled by the registered censoring and qualification rules",
+        "all 14 required runtime XML roles are non-empty, well-formed, have the registered root and contain required records",
+        "runtime outputs and a smoke-specific technical measurement receipt are archived and hash-bound; this receipt must not use the scientific-analysis entry point that rejects smoke and must not enter the 352 main or 14 sensitivity denominators",
+        "no result from the smoke is used as Q2-Q4 scientific evidence"
+      ],
+      "on_pass": "run the seed-17 validation pair sequentially",
+      "on_technical_failure": "a registered retry may consume the one shared global retry only when the failure satisfies the pre-registered technical-failure rule",
+      "on_evidence_or_qualification_failure": "stop; classify blocked_by_evidence_error or not_resolved as registered; do not release validation"
+    },
+    "first_matched_unit_acceptance_gate": {
+      "unit": ["S6_V1_ML_S17_attempt3", "S6_V1_C_S17_attempt1"],
+      "required_checks": [
+        "both attempts are qualified, identity-bound and form the registered same-seed ML/C pair",
+        "the data analyst independently rebuilds the registered core metrics, travel-time interval bounds and censoring states, shared support blocks and boundary states from both real source XML archives",
+        "the data analyst independently recomputes the registered primary rule, Q1-Q4 rules, R and shared R/U evidence rules",
+        "the data analyst independently recomputes all seven registered sensitivity rules with fixed denominators",
+        "the scientific reviewer reviews the independent recomputation before the gate is signed",
+        "negative, unpaired, infinite-bound and missing-evidence states are preserved"
+      ],
+      "on_all_required_seed17_checks_pass": "run the seed-23 validation pair sequentially",
+      "on_any_complete_qualified_scientific_check_fail": "classify not_resolved and stop; do not start seed 23 because the registered all-seed success rule can no longer pass",
+      "on_evidence_error": "classify blocked_by_evidence_error and stop",
+      "on_technical_failure": "a registered same-parameter retry may consume the one shared global retry; otherwise stop"
+    },
+    "full_matrix_analysis": {
+      "required_scope": "both qualified matched seed pairs and every registered primary and sensitivity rule",
+      "pass_result": "eligible for SG6-R obstacle-resolution review; not itself SG6-R approval",
+      "fail_result": "not_resolved or blocked_by_evidence_error; formal design remains locked"
+    }
+  },
+  "budget_and_execution_constraints": {
+    "max_total_sumo_starts": 6,
+    "max_smoke_starts": 1,
+    "max_validation_starts": 4,
+    "shared_technical_retry": 1,
+    "max_wallclock_s_per_start": 120,
+    "max_total_wallclock_s": 720,
+    "max_archive_bytes_per_attempt": 2000000000,
+    "max_new_archive_bytes_total": 12000000000,
+    "netconvert": 0,
+    "traci": 0,
+    "gui": 0,
+    "parallel_starts": 0,
+    "watchdog_note": "The watchdog polls and terminates the process after the registered limit; it is not an operating-system hard resource quota.",
+    "counting_rule": "Every SUMO process start counts, including failed or timed-out starts. The retry budget is shared by the whole block."
+  },
+  "change_control": "Changing an input, threshold, seed, attempt mapping, executable, budget, stop rule or bound hash invalidates this approval overlay and requires a revised package and approval."
+}

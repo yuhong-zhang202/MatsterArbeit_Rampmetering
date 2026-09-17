@@ -1,0 +1,26 @@
+{
+  "artifact_kind": "scientific_smoke_acceptance_record",
+  "recorded_date": "2026-09-13",
+  "decision": "ACCEPT",
+  "scope": "D1 smoke technical gate only",
+  "confidence": "High",
+  "open_counts": {"blocker": 0, "major": 0, "required_minor": 0},
+  "findings": [
+    "1083 of 1083 M vehicles entered at 100 m and traversed feeder and common domains",
+    "2700 FCD frames, 323986 FCD samples and 1608 vehicle identities and endpoints passed independent reconstruction",
+    "TLS/link, six E1 and two E2 outputs and all 14 XML roles passed",
+    "the disabled-validation warning disappeared; stderr and error logs were empty",
+    "the smoke is excluded from the 352 main and 14 sensitivity denominators"
+  ],
+  "retained_limitation": "The complete OS environment was not exported; process-only SUMO_HOME change and restoration are recorded and asserted, but complete OS-environment reconstruction and per-file XSD-open tracing are not established.",
+  "released_attempts_in_order": ["S6_V1_ML_S17_attempt3", "S6_V1_C_S17_attempt1"],
+  "not_released": ["S6_V1_ML_S23_attempt1", "S6_V1_C_S23_attempt1"],
+  "postcondition": "Pause after the seed-17 pair for independent raw-XML recomputation and scientific review.",
+  "bound_evidence": {
+    "engineering_receipt_sha256": "1801c24372450ad849a0971d8c9b5161d424620b29580d71292de43afd579bf0",
+    "engineering_manifest_sha256": "3b28b69468e8630521b5577f5b92fb2fd793401d87dd8f9099d7a0373f1090d9",
+    "execution_receipt_sha256": "6ef710419a7868eb34123b1e12293076b4f4f93cdb888c005d565ce2899059fe",
+    "data_receipt_sha256": "e128e73016f6aaf45943a5a8bb90cc4fe5c04960240e28a6a4ce8fe3ca1a6bcf",
+    "data_manifest_sha256": "c2904349446d3593419e4f98cb220ed54f59a20ff7c860a9d969b8b325f5b5fe"
+  }
+}

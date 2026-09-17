@@ -1,0 +1,277 @@
+{
+  "classification": "exploratory saved-trajectory replay; not SUMO GUI or model validation",
+  "sources": {
+    "network": {
+      "path": "/private/tmp/minimal_uncontrolled_8egb0qb1/network.net.xml",
+      "sha256_before": "3d3716ad9660ca17cd9c48df967fa84edbcbd7245314aaead7813ceb4f0334e3",
+      "sha256_after": "3d3716ad9660ca17cd9c48df967fa84edbcbd7245314aaead7813ceb4f0334e3"
+    },
+    "fcd": {
+      "path": "/private/tmp/minimal_uncontrolled_8egb0qb1/outputs/fcd.xml",
+      "sha256_before": "dd194132c42a3ad02857f03250b97d4024afaa2afad4fb6c3edc0048d7d8a2a1",
+      "sha256_after": "dd194132c42a3ad02857f03250b97d4024afaa2afad4fb6c3edc0048d7d8a2a1"
+    },
+    "tls": {
+      "path": "/private/tmp/minimal_uncontrolled_8egb0qb1/outputs/tls_states.xml",
+      "sha256_before": "5e8e7fde05919488e4d72849b259c09dd3454192e0e8c981f155d52990cd415b",
+      "sha256_after": "5e8e7fde05919488e4d72849b259c09dd3454192e0e8c981f155d52990cd415b"
+    },
+    "reference": {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage2_internal_accounting_20260909/paired_accounting_v2.json",
+      "sha256_before": "b4a1f887a3d3abc01639b76e4da2f6e849e6e36b07e3e32e7c9cfd1d16f838ee",
+      "sha256_after": "b4a1f887a3d3abc01639b76e4da2f6e849e6e36b07e3e32e7c9cfd1d16f838ee"
+    },
+    "template": {
+      "path": "/Users/yuhongzhang/.codex/visualizations/2026/09/09/01a08662-dea3-7f00-957d-a7c7e1fbb8e8/stage2-queue-replay-template.html",
+      "sha256_before": "a40d3d6e0cbd28f27328128fb15d62d3f983e9c703f1db9f905e2eb50a3076d0",
+      "sha256_after": "a40d3d6e0cbd28f27328128fb15d62d3f983e9c703f1db9f905e2eb50a3076d0"
+    }
+  },
+  "generator": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/analysis/build_stage2_replay.py",
+    "sha256": "42ec5370716a91ff53cb4a169652f75b6c6b87dff40828aead37fef1cd0578ca"
+  },
+  "artifacts": {
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage2_replay_20260909/replay.json": "c7ab7d0650fd05389059bef7293a1abcbab8a3843a6e5389d5aa50196c783601",
+    "/Users/yuhongzhang/.codex/visualizations/2026/09/09/01a08662-dea3-7f00-957d-a7c7e1fbb8e8/stage2-queue-replay.html": "1273fcbac8430208e4b5f6eae12646cd49a41093f618653d64b71402377098ac"
+  },
+  "transformations": {
+    "time_window": "390 <= original time <= 430",
+    "sampling": "all original 1 s frames",
+    "coordinates": "original FCD x/y and compiled shapes; no added netOffset",
+    "vehicles": "all classes/lanes retained in data, map clips spatially",
+    "stopped": "existing technical speed <= 0.1 m/s; no official metric",
+    "tls_join": "exact raw timestamp; no shift/interpolation",
+    "exclusions": "time outside requested window; unused FCD attributes omitted",
+    "rounding": "none beyond original source precision",
+    "animation": "discrete frames, no loop"
+  },
+  "checks": {
+    "frame_count": 41,
+    "vehicle_samples": 4541,
+    "duplicate_ids": 0,
+    "missing_or_unknown_lanes": 0,
+    "source_hashes_unchanged": true,
+    "all_frame_lane_class_and_stopped_counts_equal_v2": true,
+    "anchors": {
+      "shared_R_first_within_clip": 412,
+      "shared_U_first_within_clip": 414
+    },
+    "frames": [
+      {
+        "time_s": 390,
+        "vehicle_samples": 112,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 391,
+        "vehicle_samples": 112,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 392,
+        "vehicle_samples": 111,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 393,
+        "vehicle_samples": 109,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 394,
+        "vehicle_samples": 108,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 395,
+        "vehicle_samples": 109,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 396,
+        "vehicle_samples": 108,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 397,
+        "vehicle_samples": 106,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 398,
+        "vehicle_samples": 107,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 399,
+        "vehicle_samples": 107,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 400,
+        "vehicle_samples": 111,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 401,
+        "vehicle_samples": 111,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 402,
+        "vehicle_samples": 111,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 403,
+        "vehicle_samples": 110,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 404,
+        "vehicle_samples": 110,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 405,
+        "vehicle_samples": 110,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 406,
+        "vehicle_samples": 110,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 407,
+        "vehicle_samples": 109,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 408,
+        "vehicle_samples": 109,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 409,
+        "vehicle_samples": 109,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 410,
+        "vehicle_samples": 110,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 411,
+        "vehicle_samples": 110,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 412,
+        "vehicle_samples": 109,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 413,
+        "vehicle_samples": 110,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 414,
+        "vehicle_samples": 109,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 415,
+        "vehicle_samples": 109,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 416,
+        "vehicle_samples": 109,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 417,
+        "vehicle_samples": 108,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 418,
+        "vehicle_samples": 109,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 419,
+        "vehicle_samples": 110,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 420,
+        "vehicle_samples": 114,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 421,
+        "vehicle_samples": 113,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 422,
+        "vehicle_samples": 113,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 423,
+        "vehicle_samples": 113,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 424,
+        "vehicle_samples": 113,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 425,
+        "vehicle_samples": 114,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 426,
+        "vehicle_samples": 114,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 427,
+        "vehicle_samples": 115,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 428,
+        "vehicle_samples": 116,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 429,
+        "vehicle_samples": 116,
+        "v2_exact_match": true
+      },
+      {
+        "time_s": 430,
+        "vehicle_samples": 118,
+        "v2_exact_match": true
+      }
+    ]
+  },
+  "limitations": [
+    "Single seed 17 retained exploratory run; protocol empty/unfrozen.",
+    "No queue-length, causality, storage-capacity, timing-selection or thesis claim.",
+    "Vehicles outside display crop and outside-network waiting are not drawn.",
+    "Marker sizes are not physical vehicle dimensions.",
+    "TLS controls the upstream urban inlet only, not the ramp path.",
+    "Within-step TLS/FCD update ordering was not verified against implementation; exact raw timestamp join only, no phase-boundary causality claim.",
+    "Dynamic playback UI and visual QA are separate from these data checks."
+  ]
+}

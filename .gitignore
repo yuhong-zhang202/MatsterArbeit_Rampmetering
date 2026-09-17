@@ -40,6 +40,7 @@ env/
 # Generated simulation data
 data/raw/**
 !data/raw/.gitkeep
+/artifacts/stage2_completion_*/runtime_archive/
 
 # Generated processed data
 data/processed/**
@@ -50,3 +51,8 @@ results/tables/**
 !results/tables/.gitkeep
 results/figures/**
 !results/figures/.gitkeep
+
+# Dashboard dependencies and local runtime caches
+dashboard/**/node_modules/
+dashboard/**/.sites-runtime/
+dashboard/**/.wrangler/

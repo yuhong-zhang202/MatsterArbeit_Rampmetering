@@ -1,0 +1,352 @@
+"""Stage 6 H2 preparation. This module has no simulator/process launch capability.
+
+All commands are offline. A prepared manifest is explicitly not a launch approval.
+Historical runners, ledgers and source configurations are never modified.
+"""
+from __future__ import annotations
+
+import argparse
+import copy
+import csv
+import hashlib
+import json
+import math
+from pathlib import Path
+import re
+import xml.etree.ElementTree as ET
+
+ROOT = Path(__file__).resolve().parents[2]
+BATCH = ROOT / "data/processed/stage6_obstacle_20260913_v1"
+CARD = BATCH / "validation_card_draft_revision_03.json"
+CARD_SHA = "d0ef6270f5bdd687621ab3513e9ba533c979a6ea37dbd9e8efd268b5234d1dfb"
+CANDIDATE = ROOT / "config/scenarios/stage6_h2_entry_v1"
+NETWORK_SEMANTIC_SHA = "29b7b3350e19462380ba44db1535e7aa426af7f4cb5ba355357f8628060ec635"
+SOURCE_MANIFEST_SHA = "987b43bc6ee8335e124b05282513bfab2135262dd20b400d2e56e99397843292"
+SUMO_BINARY = Path("/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo")
+SUMO_BINARY_SHA = "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179"
+SOURCE_NAMES = ("scenario.nod.xml", "scenario.edg.xml", "scenario.con.xml", "scenario.tll.xml", "scenario.add.xml", "scenario.sumocfg", "entry_contract.json")
+ROUTES = {"M": "main_up main_down", "R": "urban_in shared_approach ramp_storage ramp_accel main_down", "U": "urban_in shared_approach urban_out", "X": "cross_in cross_out"}
+
+
+class EvidenceError(ValueError):
+    """Missing or corrupt evidence, distinct from qualified negative traffic."""
+
+
+def sha256(path: Path) -> str:
+    digest = hashlib.sha256()
+    with Path(path).open("rb") as stream:
+        for block in iter(lambda: stream.read(1024 * 1024), b""):
+            digest.update(block)
+    return digest.hexdigest()
+
+
+def encode(value: object) -> bytes:
+    return (json.dumps(value, sort_keys=True, indent=2, allow_nan=False) + "\n").encode()
+
+
+def read_json(path: Path) -> dict:
+    def unique(items):
+        result = {}
+        for key, value in items:
+            if key in result:
+                raise EvidenceError(f"duplicate JSON key: {key}")
+            result[key] = value
+        return result
+    def invalid(value):
+        raise EvidenceError(f"nonfinite JSON: {value}")
+    return json.loads(Path(path).read_text(), object_pairs_hook=unique, parse_constant=invalid)
+
+
+def require(condition: bool, message: str) -> None:
+    if not condition:
+        raise EvidenceError(message)
+
+
+def checked_path(path: Path, allowed_root: Path, *, exists: bool = True) -> Path:
+    path = Path(path).absolute()
+    base = Path(allowed_root).resolve()
+    require(path.is_relative_to(base), f"path outside allowed root: {path}")
+    require(not any(part.is_symlink() for part in (path, *path.parents)), "symlink path forbidden")
+    require(path.resolve().is_relative_to(base), "resolved path escape")
+    if exists:
+        require(path.is_file(), f"missing file: {path}")
+    return path
+
+
+def bind(path: Path) -> dict:
+    return {"path": str(Path(path).resolve()), "sha256": sha256(path)}
+
+
+def verify_binding(binding: dict, root: Path = ROOT) -> Path:
+    path = Path(binding["path"])
+    if not path.is_absolute():
+        path = root / path
+    path = checked_path(path, root)
+    require(sha256(path) == binding["sha256"], f"hash drift: {path}")
+    return path
+
+
+def load_card(path: Path = CARD, expected_sha: str = CARD_SHA) -> dict:
+    require(expected_sha == CARD_SHA, "only approved revision_03 is implemented")
+    require(sha256(path) == expected_sha, "registration card hash drift")
+    card = read_json(path)
+    for item in card["artifact_bindings"]:
+        verify_binding(item)
+    require(card["launch_eligible"] is False, "registration is not launch authorization")
+    return card
+
+
+def registered_run(card: dict, run_id: str) -> dict:
+    rows = [row for row in card["logical_runs"] if row["run_id"] == run_id]
+    require(len(rows) == 1, "unregistered/duplicate logical run")
+    row = rows[0]
+    require(int(row["seed"]) in card["seed_set"], "unregistered seed")
+    return row
+
+
+def read_rule_keys(card: dict) -> tuple[list[dict], list[dict]]:
+    tables = []
+    for name, count in (("b02_registered_rule_keys_revision_02.csv", 352), ("b02_registered_sensitivity_keys_revision_02.csv", 14)):
+        binding = next(item for item in card["artifact_bindings"] if Path(item["path"]).name == name)
+        with verify_binding(binding).open(newline="") as stream:
+            rows = list(csv.DictReader(stream))
+        require(len(rows) == count, "rule denominator changed")
+        field = "rule_id" if count == 352 else "sensitivity_id"
+        keys = [(r[field], r["version"], r["condition"], r["seed"], r["window"]) for r in rows]
+        require(len(set(keys)) == count, "duplicate rule key")
+        tables.append(rows)
+    require(sum(r["required_for_resolution"] == "true" for r in tables[0]) == 148, "required main denominator drift")
+    return tables[0], tables[1]
+
+
+def verify_candidate(path: Path = CANDIDATE) -> dict:
+    require(sha256(path / "source_manifest.json") == SOURCE_MANIFEST_SHA, "candidate manifest drift")
+    manifest = read_json(path / "source_manifest.json")
+    require(manifest["card_sha256"] == CARD_SHA, "candidate/card mismatch")
+    require(set(manifest["files"]) == set(SOURCE_NAMES), "candidate file inventory changed")
+    for name, expected in manifest["files"].items():
+        require(sha256(checked_path(path / name, path)) == expected, f"candidate source drift: {name}")
+    entry = read_json(path / "entry_contract.json")
+    require(entry["M_departPos_m"] == 100 and entry["extrapolate_departpos"] is False, "unregistered insertion")
+    require(entry["feeder_m"] == [200, 1200] and entry["common_m"] == [100, 700], "domain drift")
+    return manifest
+
+
+def verify_network(path: Path, expected_sha: str) -> dict:
+    require(sha256(path) == expected_sha, "compiled network byte hash drift")
+    root = ET.parse(path).getroot()
+    require(hashlib.sha256(ET.tostring(root)).hexdigest() == NETWORK_SEMANTIC_SHA, "compiled network semantic drift")
+    lanes = {x.get("id"): float(x.get("length")) for x in root.findall(".//lane")}
+    require(len(lanes) == 19, "compiled lane universe changed")
+    require(all(100 < lanes[x] for x in ("main_up_0", "main_up_1")), "invalid depart position; fallback forbidden")
+    return {"binding": bind(path), "lanes": lanes, "semantic_sha256": NETWORK_SEMANTIC_SHA}
+
+
+def xml_bytes(root: ET.Element) -> bytes:
+    ET.indent(root)
+    return ET.tostring(root, encoding="utf-8", xml_declaration=True) + b"\n"
+
+
+def runtime_documents(card: dict, row: dict, network: Path, directory: Path, candidate: Path = CANDIDATE) -> dict[str, bytes]:
+    condition = next(x for x in card["conditions"] if x["condition_id"] == row["condition"])
+    demand = ET.Element("routes")
+    ET.SubElement(demand, "vType", {"id": "technical_passenger", "vClass": "passenger"})
+    for group, edges in ROUTES.items():
+        ET.SubElement(demand, "route", {"id": f"{group}_route", "edges": edges})
+    for group in ROUTES:
+        ET.SubElement(demand, "flow", {"id": f"{group}_flow", "type": "technical_passenger", "route": f"{group}_route", "begin": "0", "end": "1500", "number": str(condition["exact_flow_numbers"][group]), "departPos": "100" if group == "M" and row["version"] == "V1" else "last", "departLane": "best", "departSpeed": "max"})
+    additional = ET.parse(candidate / "scenario.add.xml").getroot()
+    for element in additional:
+        if element.tag == "laneAreaDetector":
+            element.set("endPos", {"shared_boundary_e2": "238.8", "ramp_storage_e2": "204.49"}[element.get("id")])
+        if "file" in element.attrib:
+            element.set("file", str(directory / "outputs" / f"{element.get('id')}.xml"))
+        if "dest" in element.attrib:
+            element.set("dest", str(directory / "outputs/tls_states.xml"))
+    config = ET.parse(candidate / "scenario.sumocfg").getroot()
+    config.find("input/net-file").set("value", str(network.resolve()))
+    config.find("input/route-files").set("value", str(directory / "demand.rou.xml"))
+    config.find("input/additional-files").set("value", str(directory / "scenario.add.xml"))
+    output = ET.SubElement(config, "output")
+    for option, filename in (("fcd-output", "fcd.xml"), ("queue-output", "queues.xml"), ("summary-output", "sumo_summary.xml"), ("tripinfo-output", "tripinfo.xml"), ("vehroute-output", "vehroute.xml")):
+        ET.SubElement(output, option, {"value": str(directory / "outputs" / filename)})
+    for option in ("tripinfo-output.write-unfinished", "vehroute-output.write-unfinished"):
+        ET.SubElement(output, option, {"value": "true"})
+    ET.SubElement(output, "precision", {"value": "2"})
+    random = ET.SubElement(config, "random_number")
+    ET.SubElement(random, "seed", {"value": str(row["seed"])})
+    report = ET.SubElement(config, "report")
+    ET.SubElement(report, "log", {"value": str(directory / "outputs/sumo.log")})
+    ET.SubElement(report, "error-log", {"value": str(directory / "outputs/sumo_error.log")})
+    ET.SubElement(report, "no-step-log", {"value": "true"})
+    return {"demand.rou.xml": xml_bytes(demand), "scenario.add.xml": xml_bytes(additional), "scenario.sumocfg": xml_bytes(config)}
+
+
+def prepare(card_path: Path, network: Path, network_sha: str, run_id: str, attempt_id: str, directory: Path, allowed_root: Path, candidate: Path = CANDIDATE) -> dict:
+    """Create deterministic offline inputs; never reserve or launch a simulator."""
+    card = load_card(card_path)
+    row = registered_run(card, run_id)
+    require(row["version"] == "V1" and row["reuse_or_new"] == "new", "reused runs must not be rematerialized as new")
+    require(re.fullmatch(re.escape(run_id) + r"_attempt[1-9][0-9]*", attempt_id) is not None, "invalid attempt id")
+    verify_candidate(candidate)
+    network_info = verify_network(network, network_sha)
+    require(sha256(SUMO_BINARY) == SUMO_BINARY_SHA, "registered simulator binary hash drift")
+    directory = checked_path(directory, allowed_root, exists=False)
+    require(not directory.exists(), "output already exists; recovery must inspect it")
+    require(directory.parent.is_dir(), "output parent must already exist")
+    documents = runtime_documents(card, row, network, directory, candidate)
+    directory.mkdir()  # exclusive; concurrent preparation fails rather than overwrites
+    try:
+        (directory / "outputs").mkdir()
+        for name, content in documents.items():
+            with (directory / name).open("xb") as stream:
+                stream.write(content)
+        manifest = {"schema_version": 1, "status": "prepared_offline_not_launch_approved", "launch_eligible": False, "run_id": run_id, "attempt_id": attempt_id, "card": bind(card_path), "source_manifest": bind(candidate / "source_manifest.json"), "implementation": bind(Path(__file__)), "measurement_implementation": bind(ROOT / 'src/analysis/stage6_h2_measurement.py'), "network": network_info["binding"], "binary": bind(SUMO_BINARY), "files": {name: bind(directory / name) for name in documents}, "proposed_sumo_argv_not_authorized": [str(SUMO_BINARY), "-c", str(directory / "scenario.sumocfg")], "number_flow_exact_quantization": "pending_C_not_verified", "simulation_invocations": {"SUMO": 0, "netconvert": 0, "TraCI": 0, "GUI": 0}}
+        with (directory / "materialization_manifest.json").open("xb") as stream:
+            stream.write(encode(manifest))
+        return manifest
+    except Exception as exc:
+        with (directory / "preparation_error.json").open("xb") as stream:
+            stream.write(encode({"status": "failed", "type": type(exc).__name__, "error": str(exc)}))
+        raise
+
+
+def verify_materialization(path: Path, allowed_root: Path) -> dict:
+    manifest = read_json(checked_path(path, allowed_root))
+    require(manifest["launch_eligible"] is False, "offline manifest cannot become approval")
+    card_path = verify_binding(manifest["card"])
+    card = load_card(card_path)
+    row = registered_run(card, manifest["run_id"])
+    source_path = verify_binding(manifest["source_manifest"])
+    verify_candidate(source_path.parent)
+    verify_binding(manifest["implementation"])
+    verify_binding(manifest["measurement_implementation"])
+    require(manifest["binary"] == {"path": str(SUMO_BINARY), "sha256": SUMO_BINARY_SHA}, "binary binding changed")
+    require(sha256(SUMO_BINARY) == SUMO_BINARY_SHA, "binary drift")
+    require(manifest["proposed_sumo_argv_not_authorized"] == [str(SUMO_BINARY), "-c", str(Path(path).parent.resolve() / 'scenario.sumocfg')], "argv materialization drift")
+    network = verify_binding(manifest["network"])
+    verify_network(network, manifest["network"]["sha256"])
+    expected = runtime_documents(card, row, network, Path(path).parent.resolve(), source_path.parent)
+    require(set(manifest["files"]) == set(expected), "materialization inventory mismatch")
+    for name, payload in expected.items():
+        file = verify_binding(manifest["files"][name], allowed_root)
+        require(file == Path(path).parent.resolve() / name, "runtime path mismatch")
+        require(file.read_bytes() == payload, "undeclared runtime materialization change")
+    return {"status": "offline_materialization_verified", "launch_eligible": False}
+
+
+def new_budget(card: dict) -> dict:
+    return {"card_sha256": CARD_SHA, "revision": 0, "attempts": [], "cancelled_runs": [], "stop_violations": [], "limits": copy.deepcopy(card["budgets_proposed"])}
+
+
+def budget_usage(state: dict) -> dict:
+    rows = state["attempts"]
+    require(len({r["attempt_id"] for r in rows}) == len(rows), "duplicate attempt")
+    charged = [r for r in rows if r["state"] != "released_before_start"]
+    return {"sumo": len(charged), "smoke": sum(r["role"] == "smoke" for r in charged), "validation": sum(r["role"] == "validation" for r in charged), "retry": sum(r["role"] == "retry" for r in charged), "wallclock_s": sum(r.get("wallclock_s", 0) for r in rows), "archive_bytes": sum(r.get("archive_bytes", 0) for r in rows)}
+
+
+def budget_event(state: dict, card: dict, event: dict) -> dict:
+    """Pure state transition for future execution accounting; performs no launch."""
+    require(state["card_sha256"] == CARD_SHA and state["limits"] == card["budgets_proposed"], "budget/card drift")
+    out = copy.deepcopy(state)
+    kind = event["event"]
+    if kind == "cancel":
+        run = registered_run(card, event["run_id"])
+        require(run["run_id"] not in out["cancelled_runs"], "duplicate cancellation")
+        require(not any(r["run_id"] == run["run_id"] and r["state"] in ("reserved", "running", "unknown") for r in out["attempts"]), "unresolved attempt blocks cancellation")
+        out["cancelled_runs"].append(run["run_id"])
+    elif kind == "reserve":
+        require(not out["stop_violations"], "budget stopped; no further reservation")
+        row = registered_run(card, event["run_id"])
+        require(row["version"] == "V1", "reused run cannot consume new launch")
+        require(row["run_id"] not in out["cancelled_runs"], "cancelled run")
+        require(event["attempt_id"] not in {r["attempt_id"] for r in out["attempts"]}, "duplicate attempt")
+        require(event["role"] in ("smoke", "validation", "retry"), "unknown attempt role")
+        prior = [r for r in out["attempts"] if r["run_id"] == row["run_id"]]
+        require(not any(r["state"] in ("reserved", "running", "unknown") for r in prior), "unresolved prior attempt; no relaunch")
+        if event["role"] == "retry":
+            parents = [r for r in prior if r["attempt_id"] == event.get("parent_attempt_id")]
+            require(len(parents) == 1 and parents[0]["state"] == "technical_failed", "retry requires technical failure")
+            require(event["parameter_hash"] == parents[0]["parameter_hash"], "retry parameters changed")
+        elif event["role"] == "validation":
+            require(not any(r["role"] == "validation" and r["state"] != "released_before_start" for r in prior), "duplicate regular validation")
+        out["attempts"].append({**event, "state": "reserved", "wallclock_s": 0, "archive_bytes": 0})
+    else:
+        rows = [r for r in out["attempts"] if r["attempt_id"] == event.get("attempt_id")]
+        require(len(rows) == 1, "unknown attempt")
+        row = rows[0]
+        transitions = {"mark_running": ({"reserved"}, "running"), "mark_unknown": ({"reserved", "running"}, "unknown"), "release": ({"reserved", "unknown"}, "released_before_start"), "complete": ({"running", "unknown"}, "completed"), "technical_fail": ({"running", "unknown"}, "technical_failed")}
+        require(kind in transitions and row["state"] in transitions[kind][0], "invalid attempt transition")
+        if kind == "release":
+            require(event.get("verified_no_start") is True and bool(event.get("evidence_binding")), "release requires verified no-start evidence")
+            proof = read_json(verify_binding(event["evidence_binding"]))
+            require(proof.get("attempt_id") == row["attempt_id"] and proof.get("simulator_start_observed") is False and proof.get("process_absent") is True, "no-start evidence does not resolve this attempt")
+        if kind in ("complete", "technical_fail"):
+            for field in ("wallclock_s", "archive_bytes"):
+                value = event.get(field)
+                require(isinstance(value, (int, float)) and not isinstance(value, bool) and math.isfinite(value) and value >= 0, "invalid usage")
+                row[field] = value
+            for field, limit in (("wallclock_s", "max_wallclock_s_per_run"), ("archive_bytes", "max_archive_bytes_per_attempt")):
+                if row[field] > out["limits"][limit]:
+                    out["stop_violations"].append({"attempt_id": row["attempt_id"], "field": field, "actual": row[field], "limit": out["limits"][limit]})
+        row["state"] = transitions[kind][1]
+    usage = budget_usage(out)
+    for field, limit in (("sumo", "max_total_SUMO_starts"), ("smoke", "max_smoke_starts"), ("validation", "new_validation_starts"), ("retry", "shared_technical_retry"), ("wallclock_s", "total_wallclock_s"), ("archive_bytes", "max_new_archive_bytes_total")):
+        if kind == "reserve":
+            require(usage[field] <= out["limits"][limit], f"budget exceeded: {field}")
+        elif usage[field] > out["limits"][limit]:
+            out["stop_violations"].append({"field": field, "actual": usage[field], "limit": out["limits"][limit]})
+    out["revision"] += 1
+    return out
+
+
+def watchdog_action(elapsed_s: float, archive_bytes: int, card: dict) -> dict:
+    """Pure decision for a future authorized executor; never sends a signal."""
+    require(math.isfinite(elapsed_s) and elapsed_s >= 0 and type(archive_bytes) is int and archive_bytes >= 0, "invalid watchdog observation")
+    limits = card["budgets_proposed"]
+    exceeded = elapsed_s > limits["max_wallclock_s_per_run"] or archive_bytes > limits["max_archive_bytes_per_attempt"]
+    return {"action": "stop_and_record_technical_failure" if exceeded else "continue", "executor_signal_delivery": "not_implemented_no_launch_authority"}
+
+
+def save_budget_revision(state: dict, directory: Path) -> Path:
+    directory = checked_path(directory, ROOT, exists=False)
+    require(directory.is_dir(), "ledger directory missing")
+    path = directory / f"budget_revision_{state['revision']:04d}.json"
+    with path.open("xb") as stream:
+        stream.write(encode(state))
+    return path
+
+
+def main(argv=None) -> int:
+    parser = argparse.ArgumentParser(description=__doc__)
+    sub = parser.add_subparsers(dest="command", required=True)
+    sub.add_parser("validate-offline")
+    mat = sub.add_parser("prepare-offline")
+    mat.add_argument("--compiled-network", type=Path, required=True)
+    mat.add_argument("--compiled-sha256", required=True)
+    mat.add_argument("--run-id", required=True)
+    mat.add_argument("--attempt-id", required=True)
+    mat.add_argument("--output-dir", type=Path, required=True)
+    verify = sub.add_parser("verify-materialization")
+    verify.add_argument("--manifest", type=Path, required=True)
+    args = parser.parse_args(argv)
+    try:
+        if args.command == "validate-offline":
+            card = load_card()
+            keys, sensitivities = read_rule_keys(card)
+            verify_candidate()
+            result = {"status": "offline_valid", "main_keys": len(keys), "sensitivity_keys": len(sensitivities), "launch_eligible": False}
+        elif args.command == "prepare-offline":
+            result = prepare(CARD, args.compiled_network, args.compiled_sha256, args.run_id, args.attempt_id, args.output_dir, BATCH)
+        else:
+            result = verify_materialization(args.manifest, BATCH)
+        print(encode(result).decode(), end="")
+        return 0
+    except (ValueError, OSError, KeyError, ET.ParseError) as exc:
+        print(encode({"status": "failed", "error": str(exc), "launch_eligible": False}).decode(), end="")
+        return 1
+
+
+if __name__ == "__main__":
+    raise SystemExit(main())

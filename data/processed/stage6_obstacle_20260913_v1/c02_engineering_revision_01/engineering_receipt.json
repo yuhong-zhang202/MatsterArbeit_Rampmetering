@@ -1,0 +1,135 @@
+{
+  "archive_compatibility": {
+    "current_manifest": {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c01_archive_compatibility_revision_02/analysis_manifest.json",
+      "sha256": "9571a348f5e8570b1cc0447b04a10bc0f2bbfffd8a1fcb139ad87510cb6a6e88"
+    },
+    "development_analysis_invocations": 2,
+    "old_revision_01": "retained intermediate code binding; superseded, not final reproduction artifact",
+    "physical_runs": 1
+  },
+  "authorization": {
+    "card": {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/validation_card_draft_revision_03.json",
+      "sha256": "d0ef6270f5bdd687621ab3513e9ba533c979a6ea37dbd9e8efd268b5234d1dfb"
+    },
+    "does_not_authorize": [
+      "SUMO",
+      "netconvert",
+      "TraCI",
+      "GUI",
+      "SG6-P"
+    ],
+    "quote": "\u6279\u51c6\uff0c\u8bf7\u7ee7\u7eed",
+    "source": "docs/WORKLOG.md section Stage 6 B registration accepted; C00-C02 authorized"
+  },
+  "budget_state": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c02_engineering_revision_01/budget_revision_0000.json",
+    "sha256": "26c63a05f95316190c2fc30d22272b077fa97ce183aa23f7fa1b84dc06ff5f64"
+  },
+  "compiled_files_created": 0,
+  "files": [
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/scenarios/stage6_h2_offline.py",
+      "sha256": "ec68742a87da612d03a486dcf39b985fe75a7ccc1ecd28107476193f3a682de8"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/analysis/stage6_h2_measurement.py",
+      "sha256": "d8ffdf194ea2a63f92b0c9cb6194365aa34af697cca2e1ad37b8bfb192aa87dc"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/test_stage6_h2_offline.py",
+      "sha256": "bb3191bf5c3b44ffa71b289718f0d9bbe0e3d63c70dc0eb965c2c036d87071d3"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/test_stage6_h2_measurement.py",
+      "sha256": "63db48fbcc34d57a2f5a45e72639db552709bb420423abd3fa42c4ec4a8903c5"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/config/scenarios/stage6_h2_entry_v1/entry_contract.json",
+      "sha256": "cd8ba4e981c8467fe7df9c66ab533479504e480813bf26f4e40f66288d47a46e"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/config/scenarios/stage6_h2_entry_v1/scenario.add.xml",
+      "sha256": "8189e35c5d8224b91b6de57e3bcaf0a7a43139e73af0f50e2ea73d2224d80828"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/config/scenarios/stage6_h2_entry_v1/scenario.con.xml",
+      "sha256": "d154948200c9b4d9a3d54bf04647357daaff0e6a19293f19fcef457ee4ae4ea5"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/config/scenarios/stage6_h2_entry_v1/scenario.edg.xml",
+      "sha256": "d6c7d6df0b8a5afc60a8bfedd796b9d14baa56ec44cf322e3129f976396cff53"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/config/scenarios/stage6_h2_entry_v1/scenario.nod.xml",
+      "sha256": "b1577412ba28470abe3270913833a4053ca6be174f2eede55de77aa5b8a2c923"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/config/scenarios/stage6_h2_entry_v1/scenario.sumocfg",
+      "sha256": "8bcf3632a68cda002a75aaed017f724faf435f3251ad67e0ccb795c4d661593e"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/config/scenarios/stage6_h2_entry_v1/scenario.tll.xml",
+      "sha256": "89f25ab5020e4f2df2fc035233b038c89cc80cf748f6dca19b5584e829df3ecc"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/config/scenarios/stage6_h2_entry_v1/source_manifest.json",
+      "sha256": "987b43bc6ee8335e124b05282513bfab2135262dd20b400d2e56e99397843292"
+    }
+  ],
+  "launch_eligible": false,
+  "legacy_source_preservation": {
+    "src/analysis/analyze_stage3_baseline.py": {
+      "actual": "6558f971bc713397e26a41fd4b2b4a71255a38ff7b6122d77df6056b88b6b8f6",
+      "expected": "6558f971bc713397e26a41fd4b2b4a71255a38ff7b6122d77df6056b88b6b8f6",
+      "matches": true
+    },
+    "src/analysis/analyze_stage4_qmain.py": {
+      "actual": "899305e7dfba2222ea552c0b453d3078f39b1d254d2805fb71287625864dcb1b",
+      "expected": "899305e7dfba2222ea552c0b453d3078f39b1d254d2805fb71287625864dcb1b",
+      "matches": true
+    },
+    "src/scenarios/run_minimal_uncontrolled.py": {
+      "actual": "7cd29eeba5fff64c43cb71ba3b9f3477938f8d4e246ab158e4f20293dbd3f983",
+      "expected": "7cd29eeba5fff64c43cb71ba3b9f3477938f8d4e246ab158e4f20293dbd3f983",
+      "matches": true
+    }
+  },
+  "main_rule_keys": 352,
+  "materializations": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c02_engineering_revision_01/materialization_verification.json",
+    "sha256": "ec7f3a6f9874e890ca711fbab726b6889e82bef52109da800ff9e07e6ea4da10"
+  },
+  "pending": [
+    "number-flow exact quantization remains pending as approved by revision_03; no strict no-blockage assertion",
+    "real executor/process watchdog signal delivery and OS crash recovery integration before C04/D; pure budget/recovery/watchdog decisions implemented",
+    "SG6-BUILD compiled-source spatial acceptance",
+    "independent data oracle and scientific SG6-L review",
+    "real candidate observations and all scientific outcomes"
+  ],
+  "required_main_keys": 148,
+  "required_sensitivity_keys": 14,
+  "scope": "C00-C02 offline engineering implementation, independent review pending",
+  "simulation_invocations": {
+    "GUI": 0,
+    "SUMO": 0,
+    "TraCI": 0,
+    "netconvert": 0
+  },
+  "tests": {
+    "development_runs": [
+      19,
+      23,
+      24
+    ],
+    "errors": 0,
+    "failures": 0,
+    "final_methods": 24,
+    "log": {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c02_engineering_revision_01/offline_tests.log",
+      "sha256": "f193f655dd46839d939e7a68fa9a8d4680b9e8eb263bba43addf22e0154c0eeb"
+    },
+    "method_executions_including_development_repeats": 66
+  }
+}

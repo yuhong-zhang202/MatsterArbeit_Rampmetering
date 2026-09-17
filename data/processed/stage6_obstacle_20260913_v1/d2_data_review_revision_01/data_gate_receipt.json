@@ -1,0 +1,313 @@
+{
+  "C_TT_bounds": {
+    "bound_state": "bounded",
+    "certain_count": 1065,
+    "lower": 33.14272300469484,
+    "lower_denominator": 1065,
+    "possible_only_count": 3,
+    "upper": 35.151685393258425,
+    "upper_denominator": 1068,
+    "value_state": "observed"
+  },
+  "ML_TT_bounds": {
+    "bound_state": "bounded",
+    "certain_count": 866,
+    "lower": 31.932027649769584,
+    "lower_denominator": 868,
+    "possible_only_count": 2,
+    "upper": 33.93418013856813,
+    "upper_denominator": 866,
+    "value_state": "observed"
+  },
+  "Q1_R_context": {
+    "C": {
+      "B_certain_R_passages": 11,
+      "full_R_passages": 300
+    },
+    "ML": {
+      "B_certain_R_passages": 8,
+      "full_R_passages": 300
+    }
+  },
+  "Q2_registered_M": "not_resolved: conservative10percent TT test fails; no registered0.95x3 M speed support",
+  "Q3_shared_context": {
+    "C": {
+      "B_raw_shared_RU_labels": 1136,
+      "full_U_unique_shared_R_exposed": 17
+    },
+    "ML": {
+      "B_raw_shared_RU_labels": 1118,
+      "full_U_unique_shared_R_exposed": 16
+    }
+  },
+  "Q4_registered_joint": "not_resolved: no common M/R/RU support block; R_SUPPORT/RU_SUPPORT are coupled block rules, not claims of no raw R/U phenomenon",
+  "all_required_seed17_checks_pass": false,
+  "budget": {
+    "SUMO_starts": 4,
+    "archive_bytes": 223178564,
+    "retry": 1,
+    "validation": 2,
+    "wallclock_s": 38.30610491700645
+  },
+  "classification": "not_resolved",
+  "confidence": "High",
+  "data_integrity_review": "PASS",
+  "decision": "FAIL_STOP_NOT_RESOLVED",
+  "endpoints": {
+    "C": {
+      "1500": {
+        "arrived": 1392,
+        "entered": 1606,
+        "in_network": 214,
+        "membership": "strictly_before_endpoint",
+        "outside": 252,
+        "planned": 1858
+      },
+      "2700": {
+        "arrived": 1858,
+        "entered": 1858,
+        "in_network": 0,
+        "membership": "strictly_before_endpoint",
+        "outside": 0,
+        "planned": 1858
+      }
+    },
+    "ML": {
+      "1500": {
+        "arrived": 1153,
+        "entered": 1355,
+        "in_network": 202,
+        "membership": "strictly_before_endpoint",
+        "outside": 253,
+        "planned": 1608
+      },
+      "2700": {
+        "arrived": 1608,
+        "entered": 1608,
+        "in_network": 0,
+        "membership": "strictly_before_endpoint",
+        "outside": 0,
+        "planned": 1608
+      }
+    }
+  },
+  "engineering_manifest": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d2_engineering_seed17_revision_01/d2_final_manifest.json",
+    "sha256": "48aa1578226ed5c983d0d06ff565381d65f95f487bfc404cfc7bb562665ea148"
+  },
+  "independent_oracle_receipt": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d2_data_review_revision_01/raw_oracle_receipt.json",
+    "sha256": "e6d24de8c286df4a37f43d814fd43d65532662b078df1df110d08798e7186f87"
+  },
+  "independent_value_comparisons": 219851,
+  "limitations": [
+    "All scientific statements are bounded exploratory registered outcomes, not formal standards or controller benefits.",
+    "Historical V0 ML17/C17 are exact registered reuse; they are not new independent repetitions. Their source identities and derived qualification were checked using the registered adapter.",
+    "Seed23 remains missing/not_evaluated; no seed is replaced and the global 352+14 denominator is unchanged.",
+    "Non-required V0 C17 shared-RU background row is preserved not_evaluated by the existing pipeline; it does not enter the74 required gate.",
+    "No real data censor or infinite TT upper occurred in these two registered B cohorts; null/unbounded handling remains registered and tested in prior C02/C04 evidence.",
+    "Full OS environment values are not exported; the documented process-only SUMO_HOME change/restoration provenance limit remains."
+  ],
+  "main_fixed_denominators": {
+    "NA": 202,
+    "applicable": 150,
+    "required": 148,
+    "total": 352
+  },
+  "new_V1_source_runs": 2,
+  "next_action": "Keep seed23 locked. Submit negative first matched unit for scientific review; do not proceed toward SG6-R resolution or formal-design unlock.",
+  "open_findings": {
+    "Blocker": 0,
+    "Major": 0,
+    "Minor": 0
+  },
+  "primary": {
+    "M_PRIMARY": false,
+    "M_SUPPORT_blocks": [],
+    "Q4_blocks": [],
+    "RU_SUPPORT_blocks": [],
+    "R_SUPPORT_blocks": [],
+    "S_M_INFLOW": true,
+    "S_REF_QUAL": true,
+    "bin_certain_counts_minimum": [
+      44,
+      42,
+      41,
+      43,
+      42,
+      42,
+      43,
+      42,
+      42,
+      43,
+      42,
+      43,
+      42,
+      42,
+      42,
+      43,
+      44,
+      42,
+      42,
+      43
+    ],
+    "bin_speed_ratios": [
+      0.9756017966777978,
+      0.983967058570032,
+      0.9498571407512034,
+      0.9598246614774693,
+      0.9660878247044656,
+      0.9254159322107125,
+      0.9921507145094121,
+      1.0245515908950353,
+      0.9644869998509624,
+      0.9670152561060594,
+      0.9915528916440008,
+      0.8994641655148814,
+      0.978841748410892,
+      0.9637104114154651,
+      0.9290909716971146,
+      0.9322702933092156,
+      0.9568612594170618,
+      0.9566952667229548,
+      0.9798694603325317,
+      0.9948598004556926
+    ],
+    "reference_CV": 0.02219883697358272,
+    "reference_half_change": 0.015802315046659743,
+    "reference_half_means": [
+      30.06035253296322,
+      30.53537569410276
+    ],
+    "scientific_result": "not_resolved"
+  },
+  "registered_rule_manifest": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/d2_data_review_revision_01/registered_fixed_rule_tables/rule_manifest.json",
+    "sha256": "06ec1d8248058ff8219b450c5768a6f6bfb6090f52dc9db775f87abdba5b9b2b"
+  },
+  "registration": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/validation_card_draft_revision_03.json",
+    "sha256": "d0ef6270f5bdd687621ab3513e9ba533c979a6ea37dbd9e8efd268b5234d1dfb"
+  },
+  "required_gate_summary": [
+    {
+      "classification": "FAIL",
+      "fail": 1,
+      "not_evaluated": 0,
+      "pass": 0,
+      "required_seed17": 1,
+      "rule_id": "M_PRIMARY"
+    },
+    {
+      "classification": "FAIL",
+      "fail": 1,
+      "not_evaluated": 0,
+      "pass": 0,
+      "required_seed17": 1,
+      "rule_id": "M_SUPPORT"
+    },
+    {
+      "classification": "FAIL",
+      "fail": 1,
+      "not_evaluated": 0,
+      "pass": 0,
+      "required_seed17": 1,
+      "rule_id": "Q4_COEXIST"
+    },
+    {
+      "classification": "FAIL",
+      "fail": 1,
+      "not_evaluated": 0,
+      "pass": 0,
+      "required_seed17": 1,
+      "rule_id": "R_SUPPORT"
+    },
+    {
+      "classification": "PASS",
+      "fail": 0,
+      "not_evaluated": 0,
+      "pass": 4,
+      "required_seed17": 4,
+      "rule_id": "S_M_INFLOW"
+    },
+    {
+      "classification": "PASS",
+      "fail": 0,
+      "not_evaluated": 0,
+      "pass": 1,
+      "required_seed17": 1,
+      "rule_id": "S_REF_QUAL"
+    },
+    {
+      "classification": "FAIL",
+      "fail": 1,
+      "not_evaluated": 0,
+      "pass": 0,
+      "required_seed17": 1,
+      "rule_id": "S_RU_EXPOSURE"
+    },
+    {
+      "classification": "PASS",
+      "fail": 0,
+      "not_evaluated": 0,
+      "pass": 16,
+      "required_seed17": 16,
+      "rule_id": "T_ENTRY"
+    },
+    {
+      "classification": "PASS",
+      "fail": 0,
+      "not_evaluated": 0,
+      "pass": 16,
+      "required_seed17": 16,
+      "rule_id": "T_MEASURE"
+    },
+    {
+      "classification": "PASS",
+      "fail": 0,
+      "not_evaluated": 0,
+      "pass": 16,
+      "required_seed17": 16,
+      "rule_id": "T_SOURCE"
+    },
+    {
+      "classification": "PASS",
+      "fail": 0,
+      "not_evaluated": 0,
+      "pass": 16,
+      "required_seed17": 16,
+      "rule_id": "T_TIME"
+    }
+  ],
+  "reused_historical_V0_runs": 2,
+  "scientific_negative_is_not_a_software_defect": true,
+  "seed17_main": {
+    "missing": 0,
+    "not_resolved": 5,
+    "passed": 69,
+    "required": 74
+  },
+  "seed17_sensitivity": {
+    "not_resolved": 7,
+    "passed": 0,
+    "required": 7
+  },
+  "seed23_released": false,
+  "sensitivity_total": 14,
+  "simulation_calls": {
+    "GUI": 0,
+    "SUMO": 0,
+    "TraCI": 0,
+    "netconvert": 0
+  },
+  "source_receipts": [
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/attempts/S6_V1_ML_S17_attempt3/execution_receipt.json",
+      "sha256": "4c37fe039aa39a763ef2a50c228335ccb3502514dc09a160dbea0ede0b525ecf"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/attempts/S6_V1_C_S17_attempt1/execution_receipt.json",
+      "sha256": "4ebe5ba781b45d5ac51b66b25907a91cea02a6d720b2fb365d96632c48c5764c"
+    }
+  ]
+}

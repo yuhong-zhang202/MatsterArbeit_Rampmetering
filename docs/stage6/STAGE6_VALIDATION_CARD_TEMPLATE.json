@@ -1,0 +1,206 @@
+{
+  "schema_version": 1,
+  "artifact_kind": "proposed_non_executable_template",
+  "status": "Proposed",
+  "launch_eligible": false,
+  "validator_implementation_status": "not_implemented",
+  "user_authorization": null,
+  "plan": "docs/STAGE6_OBSTACLE_RESOLUTION_EXECUTION_PLAN.md",
+  "stage5_acceptance_reference": null,
+  "study": {
+    "question": null,
+    "hypothesis_id": null,
+    "candidate_id": null,
+    "intervention": null,
+    "unchanged_factors": [],
+    "known_confounders": [],
+    "scope_limits": [],
+    "reference_qualification_rule": null,
+    "predicted_support": null,
+    "predicted_non_support": null,
+    "inconclusive_result_action": null
+  },
+  "source_registry": {
+    "path": null,
+    "sha256": null,
+    "unique_historical_run_count": 12
+  },
+  "diagnostic_rules": {
+    "path": null,
+    "sha256": null,
+    "expected_rule_keys_path": null,
+    "expected_rule_keys_sha256": null,
+    "aggregation_rules": null,
+    "threshold_provenance": null,
+    "measurement_contract_path": null,
+    "measurement_contract_sha256": null,
+    "independent_verification_method": null
+  },
+  "unresolved_parameters": [
+    {
+      "parameter_id": "EXAMPLE_REPLACE_BEFORE_APPROVAL",
+      "value": null,
+      "status": "unknown_requires_registration",
+      "needed_evidence": null,
+      "owner": null,
+      "resolve_by_gate": "SG6-P"
+    }
+  ],
+  "scenario_versions": [],
+  "conditions": [],
+  "seed_set": [],
+  "logical_runs": [],
+  "run_row_required_fields": [
+    "run_id",
+    "scenario_id",
+    "condition_id",
+    "seed",
+    "role",
+    "reuse_or_new",
+    "information_status",
+    "parent_source_ids",
+    "attempt_sequence",
+    "required_for_resolution",
+    "cancel_rule"
+  ],
+  "attempt_row_required_fields": [
+    "attempt_id",
+    "run_id",
+    "absolute_work_dir",
+    "argv",
+    "source_hashes",
+    "compiled_network_hash",
+    "materialization_manifest_path",
+    "materialization_manifest_sha256",
+    "expected_output_paths",
+    "execution_status",
+    "analysis_qualification",
+    "scientific_result"
+  ],
+  "information_status_allowed": [
+    "seen_reused",
+    "new_condition_or_seed",
+    "new_measurement_information",
+    "technical_reproduction_only"
+  ],
+  "budgets": {
+    "status": "proposed_management_ceiling_not_approved",
+    "max_sumo_starts": 10,
+    "max_smoke_starts": 1,
+    "max_regular_validation_starts": 8,
+    "max_same_parameter_technical_retries": 1,
+    "max_netconvert_operations": 6,
+    "max_traci_connections": 0,
+    "max_gui_starts": 0,
+    "max_wallclock_s_per_run": null,
+    "total_wallclock_budget_s": null,
+    "max_total_archive_bytes": null,
+    "estimate_sources": [],
+    "retry_shared_across_smoke_and_validation": true,
+    "netconvert_shared_across_all_steps": true,
+    "reserved_or_unknown_counts_against_remaining": true
+  },
+  "build_gate": {
+    "gate_id": "SG6-BUILD",
+    "status": "not_ready",
+    "build_argv": [],
+    "source_hashes": {},
+    "expected_semantic_changes": [],
+    "output_paths": [],
+    "authorization_reference": null,
+    "receipts": []
+  },
+  "implementation_gate": {
+    "gate_id": "SG6-L",
+    "required_failure_mode_groups": 12,
+    "actual_fixture_results": null,
+    "review_records": [],
+    "status": "not_ready"
+  },
+  "launch_gate": {
+    "gate_id": "SG6-P",
+    "compiled_artifacts": [],
+    "actual_observation_map": null,
+    "materialization_manifests": [],
+    "expanded_argv_by_attempt": [],
+    "rules_and_card_hash": null,
+    "approval_reference": null,
+    "status": "not_ready"
+  },
+  "resolution_gate": {
+    "gate_id": "SG6-R",
+    "required_rules": [
+      "RG1",
+      "RG2",
+      "RG3",
+      "RG4",
+      "RG5",
+      "RG6",
+      "RG7",
+      "RG8"
+    ],
+    "scientific_reviews": [],
+    "user_acceptance_reference": null,
+    "status": "not_evaluated",
+    "conditional_acceptance_reference": null
+  },
+  "stop_rules": {
+    "technical_failure_rule": null,
+    "scientific_negative_rule": null,
+    "seed_conflict_rule": null,
+    "unresolved_rule": null,
+    "budget_exhaustion_action": "stop_and_prepare_obstacle_consultation",
+    "no_discriminating_test_action": "stop_and_prepare_obstacle_consultation",
+    "required_research_scope_change_action": "stop_for_user_and_Robert_review"
+  },
+  "forbidden_actions": [
+    "execute_template",
+    "fill_missing_parameters_from_model_guess",
+    "reuse_Stage4_retry_budget",
+    "overwrite_historical_contract_hashes",
+    "change_rules_after_new_results",
+    "omit_required_cancelled_seed_from_success_denominator",
+    "create_formal_design_before_SG6_R_accepted"
+  ],
+  "launch_validator_must_reject": [
+    "missing_launch_critical_value",
+    "empty_expected_matrix_or_argv",
+    "unresolved_required_parameter",
+    "hash_mismatch",
+    "missing_approval",
+    "budget_violation",
+    "undeclared_materialization_change",
+    "missing_independent_verification_plan"
+  ],
+  "condition_row_required_fields": [
+    "condition_id",
+    "reference_or_challenge_or_smoke",
+    "q_main_vehph",
+    "q_ramp_vehph",
+    "q_urban_vehph",
+    "q_x_vehph",
+    "warmup_s",
+    "measurement_duration_s",
+    "demand_end_s",
+    "post_demand_clearance_s",
+    "window_definitions",
+    "planned_count_rounding_rule",
+    "expected_class_totals",
+    "parameter_evidence_ids"
+  ],
+  "scenario_row_required_fields": [
+    "scenario_id",
+    "config_path",
+    "source_hashes",
+    "compiled_artifact_path",
+    "compiled_artifact_sha256",
+    "insertion_rules_by_class",
+    "vehicle_behavior_parameters",
+    "TLS_settings",
+    "physical_and_observed_storage_bounds",
+    "changed_factors",
+    "required_synchronized_changes",
+    "observed_space_contract",
+    "approval_status"
+  ]
+}

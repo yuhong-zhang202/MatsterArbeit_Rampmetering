@@ -1,0 +1,16 @@
+{
+  "GUI": 0,
+  "SUMO": 0,
+  "TraCI": 0,
+  "corrected_expected_route_lane_intersection": [
+    "main_down_0",
+    "main_down_1"
+  ],
+  "error": "AssertionError in supplemental route-lane intersection check",
+  "explanation": "Ordinary-edge route coverage includes both downstream lanes, including later R lane changes; R merge connection itself enters lane0. Primary C03 package was unaffected.",
+  "incorrect_fixture_expectation": [
+    "main_down_0"
+  ],
+  "netconvert": 0,
+  "status": "failed_before_output_creation"
+}

@@ -1,0 +1,62 @@
+{
+  "scope": "C00-C02 independent data review; engineering fixes pending",
+  "status": "SG6_L_data_FAIL_pending_repairs",
+  "severity": {
+    "Blocker": 0,
+    "Major": 2,
+    "Minor": 0
+  },
+  "findings": [
+    {
+      "id": "D-C02-M01",
+      "issue": "Registered observed_zero/not_paired rejected; unbounded incorrectly used as a value_state",
+      "evidence": "initial_independent_receipt.json#findings",
+      "repair": "Align six registered states and distinct bound_state; preserve numeric zero versus missing"
+    },
+    {
+      "id": "D-C02-M02",
+      "issue": "Wrong-seed raw archive may receive qualified registered-run analysis manifest",
+      "evidence": "wrong_seed_audit_probe/analysis_manifest.json: ML17 source accepted as S6_V0_ML_S23",
+      "repair": "Bind physical source identity/condition/seed/version to registered logical run before qualification; extend pairing provenance"
+    }
+  ],
+  "verified": {
+    "initial_checks": 121,
+    "science_oracle_comparisons": 80,
+    "materializations": 4,
+    "main_keys": 352,
+    "applicable": 150,
+    "required": 148,
+    "not_applicable": 202,
+    "sensitivity_keys": 14,
+    "real_archive": "ML17,1608vehicles,260011FCDsamples; existingV0 compatibility only"
+  },
+  "failure_mode_groups": {
+    "G01": "hash drift rejected; same-count wrong-seed binding FAILED",
+    "G02": "unregistered seed rejected; four physical preparations unique",
+    "G03": "unknown/duplicateID andunknownlane rejected",
+    "G04": "missing/nonfinite/negative speed,missing/extra frames,disappearance rejected",
+    "G05": "wrong same-lengthTLSlabel,movement,program rejected",
+    "G06": "E1positivebad speed/negativecount/missing speed rejected; zero contributors explicit",
+    "G07": "internal Rramp and Mmerge final attribution numerically matched",
+    "G08": "half-open boundaries and2699 lower; absent continuity rejected",
+    "G09": "registered30s+5s tail and contribution weights; exhaustive optional-subset oracle includingunbounded matched",
+    "G10": "unpaired outerunion preservesNone; missingkeys/required shrink rejected",
+    "G11": "separatecounter rates correct; registeredvalue states FAILED",
+    "G12": "reserved/unknown charged; relaunch/unprovedrelease/revisionoverwrite rejected"
+  },
+  "implementation_limits": [
+    "Real executor/process watchdog and OS recovery deferredC04/D perparent; not a C02 finding",
+    "Production aggregate/classification functions used solelyasSUT; independently coded or literalexpected outputs",
+    "No newV1 observations; no scientific support inferred",
+    "Frozen snapshot hashes apply to this review; updates require new receipt"
+  ],
+  "production_hashes": {
+    "src/scenarios/stage6_h2_offline.py": "ec68742a87da612d03a486dcf39b985fe75a7ccc1ecd28107476193f3a682de8",
+    "src/analysis/stage6_h2_measurement.py": "258908b6055b6ebe9c2f05613a9b03b39654be2eeac8048ad0d17ed5cc01e02b"
+  },
+  "SUMO": 0,
+  "netconvert": 0,
+  "TraCI": 0,
+  "GUI": 0
+}

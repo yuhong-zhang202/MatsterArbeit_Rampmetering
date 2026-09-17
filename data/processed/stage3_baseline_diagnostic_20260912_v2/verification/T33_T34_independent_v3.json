@@ -1,0 +1,129 @@
+{
+  "schema_version": 1,
+  "status": "passed",
+  "method": "independent raw XML reconstruction; no production analyzer imports",
+  "run_count": 8,
+  "runs": [
+    {
+      "run_id": "C17",
+      "status": "passed",
+      "timeline_cells": 32275,
+      "episode_records": 17153,
+      "first_R_downstream": 300,
+      "shared_R_U_cooccurrence_labels": 1164,
+      "sensitivity_values": 12,
+      "question_units": "5/5",
+      "endpoint_identity_records": 1858,
+      "endpoint_coverage_sources": "demand+tripinfo+vehroute+sumo_summary",
+      "known_C17": {
+        "planned": {
+          "M": 1333,
+          "R": 300,
+          "U": 150,
+          "X": 75
+        },
+        "R_before_1500": 36,
+        "R_total": 300
+      }
+    },
+    {
+      "run_id": "C23",
+      "status": "passed",
+      "timeline_cells": 32595,
+      "episode_records": 17867,
+      "first_R_downstream": 300,
+      "shared_R_U_cooccurrence_labels": 1156,
+      "sensitivity_values": 12,
+      "question_units": "5/5",
+      "endpoint_identity_records": 1858,
+      "endpoint_coverage_sources": "demand+tripinfo+vehroute+sumo_summary",
+      "known_C17": null
+    },
+    {
+      "run_id": "ML17",
+      "status": "passed",
+      "timeline_cells": 33290,
+      "episode_records": 19729,
+      "first_R_downstream": 300,
+      "shared_R_U_cooccurrence_labels": 620,
+      "sensitivity_values": 12,
+      "question_units": "5/5",
+      "endpoint_identity_records": 1608,
+      "endpoint_coverage_sources": "demand+tripinfo+vehroute+sumo_summary",
+      "known_C17": null
+    },
+    {
+      "run_id": "ML23",
+      "status": "passed",
+      "timeline_cells": 33424,
+      "episode_records": 19585,
+      "first_R_downstream": 300,
+      "shared_R_U_cooccurrence_labels": 555,
+      "sensitivity_values": 12,
+      "question_units": "5/5",
+      "endpoint_identity_records": 1608,
+      "endpoint_coverage_sources": "demand+tripinfo+vehroute+sumo_summary",
+      "known_C17": null
+    },
+    {
+      "run_id": "MH17",
+      "status": "passed",
+      "timeline_cells": 31520,
+      "episode_records": 1752,
+      "first_R_downstream": 300,
+      "shared_R_U_cooccurrence_labels": 1258,
+      "sensitivity_values": 12,
+      "question_units": "5/5",
+      "endpoint_identity_records": 2108,
+      "endpoint_coverage_sources": "demand+tripinfo+vehroute+sumo_summary",
+      "known_C17": null
+    },
+    {
+      "run_id": "MH23",
+      "status": "passed",
+      "timeline_cells": 31467,
+      "episode_records": 1809,
+      "first_R_downstream": 300,
+      "shared_R_U_cooccurrence_labels": 1255,
+      "sensitivity_values": 12,
+      "question_units": "5/5",
+      "endpoint_identity_records": 2108,
+      "endpoint_coverage_sources": "demand+tripinfo+vehroute+sumo_summary",
+      "known_C17": null
+    },
+    {
+      "run_id": "RL17",
+      "status": "passed",
+      "timeline_cells": 25627,
+      "episode_records": 10968,
+      "first_R_downstream": 150,
+      "shared_R_U_cooccurrence_labels": 566,
+      "sensitivity_values": 12,
+      "question_units": "5/5",
+      "endpoint_identity_records": 1708,
+      "endpoint_coverage_sources": "demand+tripinfo+vehroute+sumo_summary",
+      "known_C17": null
+    },
+    {
+      "run_id": "RL23",
+      "status": "passed",
+      "timeline_cells": 25977,
+      "episode_records": 11092,
+      "first_R_downstream": 150,
+      "shared_R_U_cooccurrence_labels": 546,
+      "sensitivity_values": 12,
+      "question_units": "5/5",
+      "endpoint_identity_records": 1708,
+      "endpoint_coverage_sources": "demand+tripinfo+vehroute+sumo_summary",
+      "known_C17": null
+    }
+  ],
+  "totals": {
+    "timeline_cells": 246175,
+    "episode_records": 99955,
+    "first_R_downstream": 2100,
+    "shared_R_U_cooccurrence_labels": 7120,
+    "sensitivity_values": 96
+  },
+  "actual_sumo_starts": 0
+}

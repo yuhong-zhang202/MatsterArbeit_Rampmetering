@@ -1,0 +1,9 @@
+gate_id,required,status,evidence,reason
+RG1,true,passed,final_data_gate_receipt.json,"Sources, endpoints, coverage and independent recomputation complete; no open data defect"
+RG2,true,passed,d1_data_smoke_retry_review_revision_01/data_smoke_retry_receipt.json,"M actual p100 entry and feeder/common traversal verified; R/U domains observed in V1"
+RG3,true,failed,registered_fixed_rule_tables/resolution_rule_results.csv,"Registered conservative 10 percent TT test failed and no 0.95 speed-ratio three-bin M support block"
+RG4,true,failed,final_data_gate_receipt.json,"Raw R passage and R/U exposure exist, but registered minimum joint support rule did not pass"
+RG5,true,failed,final_data_gate_receipt.json,"Q2 and Q4 not supported; common M/R/RU support block is empty"
+RG6,true,failed,launch_gate_policy.json,"Seed17 valid negative triggered preregistered stop; seed23 remains not_evaluated and required denominator is retained"
+RG7,true,passed,d2_scientific_first_pair_decision_revision_01.json,"Independent data reconstruction and scientific review complete with 0/0/0 open findings"
+RG8,true,not_applicable,PROJECT_STATE.md,"Resolved-for-baseline acceptance cannot be requested because RG3-RG6 failed"

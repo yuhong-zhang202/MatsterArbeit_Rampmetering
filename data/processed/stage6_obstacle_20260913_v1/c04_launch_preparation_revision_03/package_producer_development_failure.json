@@ -1,0 +1,11 @@
+{
+  "stage": "offline artifact producer after five proposed input packages prepared",
+  "exception": "TypeError: spec_from_file_location() takes from 1 to 2 positional arguments but 3 were given",
+  "cause": "Overbroad producer-string replacement also changed fixture module import; production source and49 passing tests unaffected",
+  "repair": "new resume script corrects fixture import and verifies existing prepared packages instead of overwriting",
+  "prior_files_preserved": true,
+  "SUMO": 0,
+  "netconvert": 0,
+  "TraCI": 0,
+  "GUI": 0
+}
