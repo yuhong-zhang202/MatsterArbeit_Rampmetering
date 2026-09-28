@@ -1,0 +1,37 @@
+{
+  "files": {
+    "A/demand.rou.xml": "12e2e4e003089dad489a2ea1323cd44ef54dea39f994f1bb5fe61e45c7f03be0",
+    "A/scenario.add.xml": "6c3f027ef7a923b21be54968e8bc429ae3feffc4bccca0411bb9014ee41e68b1",
+    "A/scenario.sumocfg": "e844969b31734a90026a8493d2cb33417db584a1268b941e4624ec713ac90d84",
+    "B/demand.rou.xml": "12e2e4e003089dad489a2ea1323cd44ef54dea39f994f1bb5fe61e45c7f03be0",
+    "B/scenario.add.xml": "4c9e551c866f03f8bfc9c050a646539d75547cf403a37183f517a0850b500e39",
+    "B/scenario.sumocfg": "c0c19ff03e6d7d434568cfd9fcc37dc677b414e81381a87a06a4db6df5ed255b",
+    "C/demand.rou.xml": "12e2e4e003089dad489a2ea1323cd44ef54dea39f994f1bb5fe61e45c7f03be0",
+    "C/scenario.add.xml": "09321ff53fca2791770ecd4e05e3a412686d118cb51c4fb36970bd43d5433646",
+    "C/scenario.sumocfg": "2ba24f9efed5f5a1627398aef9cf856a7079770de24371dbb72680eda7d63b41",
+    "R0/demand.rou.xml": "97a68cdb00a0e13eb6f68c0b18019ae959e2a10132ad339fce748176faf2a57e",
+    "R0/scenario.add.xml": "208b2248f20984476feceb697d4d07b5e82db43e3be6fecd4a48b732ad459676",
+    "R0/scenario.sumocfg": "9142c087d177a4ad3103e2c884f5016ad6180f41d65460f5d349253f23739cba",
+    "STATIC_AUDIT.json": "66bba28484daf154464a63f21cac52be19335f59afb99f056c329af16cfe8aa7"
+  },
+  "generator_sha256": "cf8aed85e6ce03c01da98cc3e6b5918dac57fc198ab4af8f494e7e739565fc51",
+  "input_sources": {
+    "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/inputs/LOC_M3350_S17_attempt1/demand.rou.xml": "e64057692b4194b6f395c7a5349104a407d806b2b5a6bda9efcbac29489fdac3",
+    "artifacts/stage6_full_network_abc_phenomenon_validation_plan_20260926_v1/A_launch_package/inputs/scenario.add.xml": "eda6351f5795269b1406945963eeeabe428737a1e3e8cfaab0363ff74434f0ee",
+    "artifacts/stage6_full_network_abc_phenomenon_validation_plan_20260926_v1/A_launch_package/inputs/scenario.sumocfg": "66b4932e3e247bfeacdb709a667e6db5bb59820954dec8fc1e3509b88f2923a5",
+    "artifacts/stage6_ramp_induced_validation_20260922_v1/control_input/demand_control.rou.xml": "0edeb776e6656f3fd22f1e8d0b4c07ece17903695c901af576d93fb205b26865"
+  },
+  "raw_root": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_fullnet_abc_matched_rebuild_20260926_v1_retry2",
+  "speed_factor_generation": {
+    "algorithm": "Python random.Random(seed).gauss(mean, deviation), reject values outside inclusive [min,max]; draw in sorted (depart_ms,id) order; serialize 10 decimal places",
+    "deviation": 0.1,
+    "maximum": 2.0,
+    "mean": 1.0,
+    "minimum": 0.2,
+    "python_version": "3.13.0",
+    "seed": 170026,
+    "source_note": "SUMO 1.26 passenger default normc(1,0.1,0.2,2); project prospective independent draw"
+  },
+  "status": "INPUTS_BUILT_NOT_EXECUTION_AUTHORIZED",
+  "sumo_starts": 0
+}

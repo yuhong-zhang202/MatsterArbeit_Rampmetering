@@ -1,0 +1,55 @@
+{
+  "BUILD01_consumed_irrevocably": true,
+  "BUILD01_receipt": {
+    "bytes": 2776,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_attempts/BUILD01/build_receipt.json",
+    "sha256": "902956e03e04e516da3e43725205d220fa8a4b6249572782339e4c728ee7e7f3"
+  },
+  "hard_caps_claimed": false,
+  "new_card_limits": {
+    "GUI": 0,
+    "SUMO": 0,
+    "TraCI": 0,
+    "netconvert_starts": 1,
+    "technical_retry": 0,
+    "total_output_bytes": 100000000,
+    "wallclock_s": 30
+  },
+  "no_historical_budget_transfer": true,
+  "overall_recovery_governance": {
+    "authorization": "ongoing evidence-based attempts until successful build; no arbitrary three-attempt authorization endpoint",
+    "automatic_loop": false,
+    "current_card_attempt_id": "BUILD02",
+    "current_card_max_netconvert_starts": 1,
+    "future_attempts_require_new_evidence_and_independent_review": true,
+    "no_repeated_user_approval_required_within_existing_scope": true,
+    "only_BUILD02_defined_now": true,
+    "per_attempt_monitored_s": 30,
+    "per_attempt_observed_bytes": 100000000,
+    "review_and_exact_cumulative_accounting_after_every_attempt": true,
+    "stop_if_no_new_hypothesis_or_scientific_change_needed": true
+  },
+  "previous_budget": {
+    "bytes": 5131,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/budget_reconciliation_revision02.json",
+    "sha256": "a3f853ea5a919fe55aeaea62a7a0558333ffbf69a5781b7d5e978cb6fc2260d4"
+  },
+  "recovery_actual_tool_starts": {
+    "GUI": 0,
+    "SUMO": 0,
+    "TraCI": 0,
+    "netconvert": 1
+  },
+  "specified_scope_lower_bounds_now": {
+    "GUI": "unknown",
+    "SUMO": 25,
+    "TraCI": 1,
+    "netconvert": 13
+  },
+  "status": "reconciled_with_explicit_exclusions",
+  "supersedes": {
+    "bytes": 1616,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_recovery_diagnosis_revision01/recovery_budget_reconciliation.json",
+    "sha256": "5cee59448c4936e3d1e103bfa7400bb22c2c94109a4f1653013679696a8459c5"
+  }
+}

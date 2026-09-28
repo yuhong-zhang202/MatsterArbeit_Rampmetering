@@ -1,0 +1,149 @@
+{
+  "card_id": "LOC_M3350_S17",
+  "attempt_id": "LOC_M3350_S17_attempt1",
+  "revision": 2,
+  "supersedes": {
+    "revision": 1,
+    "card_sha256": "57714636d8b71c5a003f5ebca59da2dcfa2d85ab80a3266d6d6f08c6fc3a61d3",
+    "reason": "revision 1 fail-closed dry-run exposed a card/launcher key mismatch; corrected the manifest field name to the launcher contract before any runtime start"
+  },
+  "status": "AWAITING_EXPLICIT_USER_APPROVAL",
+  "card_scope": "materialize exactly one first baseline-localization point; this file does not authorize execution",
+  "created_utc_date": "2026-09-21",
+  "research_status": "exploratory design only; not a formal thesis experiment, not a physical breakdown finding, not Stage 6 closeout",
+  "scientific_point": {
+    "arm": "A_OPEN",
+    "baseline_source_run": "TV_A_S17_attempt1",
+    "qMain_nominal_veh_h": 3350,
+    "qMain_exact_scheduled_veh_h": 3350.4,
+    "qRamp_exact_scheduled_veh_h": 720,
+    "qUrban_exact_scheduled_veh_h": 360,
+    "qX_exact_scheduled_veh_h": 180,
+    "seed": 17,
+    "demand_interval_s": {"begin": 0, "end_exclusive": 1500, "duration": 1500},
+    "simulation_interval_s": {"begin": 0, "end_exclusive": 2700, "step_length": 1},
+    "scheduled_counts": {"M":1396,"R":300,"U":150,"X":75,"total":1921},
+    "qMain_arithmetic": {"nominal":3350,"number_flow_count":1396,"exact_rate_formula":"1396*3600/1500","exact_veh_h":3350.4,"A0_count":1333,"A0_exact_veh_h":3199.2,"M_count_delta":63},
+    "single_scientific_change": "M_flow number changes from 1333 to 1396; all other scientific input fields remain identical to accepted A0",
+    "unchanged": ["qRamp=720","qUrban=360","qX=180","seed=17","A_OPEN","routes and route edge sequences","vehicle-type and speedFactor semantics","departure attributes","accepted compiled network and geometry","TLS programs and timing","detector definitions","simulation horizon and step","demand window","car-following and lane-changing settings","locked P/S/L/Candidate A/Candidate C classifier"],
+    "classification_caveat": "One seed17 outcome may at most be a candidate or release label; it can never establish SUITABLE_BASELINE_FOUND. P-positive is an exploratory rule output, not physical breakdown proof."
+  },
+  "provenance": {
+    "localization_design_path": "docs/methodology/STAGE6_MINIMAL_BASELINE_DEMAND_LOCALIZATION_PLAN.md",
+    "localization_design_sha256": "92b81e9283bb55f3d99f1ed812e121f014c15dcef782a52209d008ac6dc636a9",
+    "localization_design_review": "PASS_EXPLORATORY_DESIGN; design approval is not runtime authorization",
+    "methodology_path": "docs/methodology/FREEWAY_PROTECTABLE_STATE_EXPLORATORY_DEFINITION.md",
+    "methodology_sha256": "22fe22170c17ce74e261e717586a458a1b5173e9deabbee925bd4c1d606adfe7",
+    "methodology_review": "PASS_METHOD_DEFINITION",
+    "formal_protocol_path": "docs/EXPERIMENT_PROTOCOL.md",
+    "formal_protocol_bytes": 0,
+    "protocol_modified": false,
+    "supervisor_approval_claimed": false
+  },
+  "input_manifest": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/input_manifest.json",
+    "bytes": 12964,
+    "sha256": "131f3b6c8506edbd3e905d5f3e737ecb770601e6e6fbb27c1e365f8504f22ffc",
+    "binding_semantics": "The manifest lists each source and generated input with exact path, byte size and SHA-256; it also records source-to-copy relationships. Every listed binding is checked by the one-run launcher before any future start."
+  },
+  "accepted_network": {
+    "source_path": "artifacts/stage6_targeted_validation_20260920_v1/engineering/build_attempts/TV_BUILD01/network.net.xml",
+    "run_copy_path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+    "bytes": 12814,
+    "sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "relationship": "byte-identical copy; no netconvert or geometry rebuild",
+    "geometry_audit_path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/compiled_audit.json",
+    "geometry_audit_sha256": "070ff4de4cc2ba0a23a31cd4e8a450e5987dedde1c630051acec1f41bc944793"
+  },
+  "classifier": {
+    "method_sha256": "22fe22170c17ce74e261e717586a458a1b5173e9deabbee925bd4c1d606adfe7",
+    "source_analyzer_path": "data/processed/stage6_protectable_state_application_20260921_v1/apply_rule.py",
+    "source_analyzer_sha256": "786376e2371909609612c5834a26bc1fd6c4cc6984607ab931796938deb935b3",
+    "point_adapter_path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/analysis/apply_rule.py",
+    "point_adapter_sha256": "00ab445634523d74b8fb55f3ee15d765c5879636884af9bc3ccd9488e91e66e1",
+    "configuration_path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/analysis/application_config.json",
+    "fixture_receipt_path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/receipts/fixture_test_receipt.json",
+    "fixture_status": "PASS_ALL_22",
+    "thresholds_mutable": false,
+    "post_run_reclassification_with_changed_code_prohibited": true
+  },
+  "expected_outputs": {
+    "future_raw_output_root": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_baseline_localization_20260921_v1/LOC_M3350_S17_attempt1",
+    "exclusive_create": true,
+    "currently_exists": false,
+    "expected_output_manifest_path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/inputs/LOC_M3350_S17_attempt1/expected_output_manifest.json",
+    "roles_path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/inputs/LOC_M3350_S17_attempt1/output_roles.json",
+    "registered_xml_roles": 18,
+    "raw_traffic_outputs_created_during_card_preparation": false
+  },
+  "runtime": {
+    "platform": "macOS",
+    "sumo_executable": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+    "sumo_executable_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+    "argv": ["/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo", "-c", "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/inputs/LOC_M3350_S17_attempt1/scenario.sumocfg"],
+    "expected_version": "1.26.0",
+    "version_evidence": "existing trusted framework/environment receipt and prior runtime log; no sumo --version call in this task",
+    "runtime_version_recheck": "PENDING LAUNCH AUTHORIZATION",
+    "SUMO_HOME": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo",
+    "python_entrypoint": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+    "python_resolved_executable": "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "python_version": "3.13.0",
+    "python_sha256": "76c73e25cdd69650a897648666e41c364940fbcff0d1176572a667d4d470ec9e",
+    "venv_packages": {"traci":"1.26.0","sumolib":"1.26.0","sumoITScontrol":"0.1.0"},
+    "TraCI_runtime_use": false,
+    "runtime_environment": "The executor launches only the bound SUMO binary/config, with a restricted environment; no GUI, netconvert, external demand generator or controller process is permitted."
+  },
+  "future_command_not_executed": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python /Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/launch_once.py --approval /Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/card/USER_APPROVAL.json --execute",
+  "post_run_offline_analysis_command_not_executed": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python /Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/analysis/apply_rule.py",
+  "authorization_sidecar_schema": {
+    "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/card/USER_APPROVAL.json",
+    "must_be_created_only_after_explicit_user_approval": true,
+    "required_fields": {"status":"USER_APPROVED_EXACT_CARD","card_sha256":"exact final card SHA-256","card_path":"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/docs/run_cards/STAGE6_BASELINE_LOC_M3350_S17_EXACT_CARD.json","run_id":"LOC_M3350_S17_attempt1","authorized_starts":1,"technical_retries":0,"review_receipt_sha256":{"engineering_review":"current exact-card JSON receipt SHA-256","data_review":"current exact-card JSON receipt SHA-256","scientific_review":"current exact-card JSON receipt SHA-256"}},
+    "no_approval_sidecar_created_in_this_task": true
+  },
+  "runtime_limits": {
+    "max_sumo_starts": 1,
+    "authorized_starts_before_user_approval": 0,
+    "technical_retries": 0,
+    "wallclock_stop_line_s": 180,
+    "output_size_stop_line_bytes": 1500000000,
+    "output_size_enforcement": "SUMO child receives a kernel-enforced RLIMIT_FSIZE of 65,000,000 bytes per file and RLIMIT_CORE=0. The hash-bound configuration registers exactly 18 SUMO XML outputs + sumo.log + sumo_error.log + stdout + stderr (22 large-file streams), bounding their combined maximum at 1,430,000,000 bytes; this leaves 70,000,000 bytes under the 1.5 GB run-directory ceiling for the small supervisor reservation/receipt records. The existing 50 ms directory-size monitor is a secondary stop-line. Any unregistered output role fails G1; the run remains consumed and no retry is allowed.",
+    "any_launch_failure_timeout_crash_or_incomplete_output_consumes_the_single_start": true,
+    "automatic_retry": false,
+    "historical_planning_reference_only": {"A_B_C_seed17_wallclock_s_min_median_max":[1.1439,1.2525,2.1392],"A_B_C_observed_output_bytes_min_median_max":[25522462,28368278,59984655],"interpretation":"three prior conditions only; not a calibrated prediction for Point 1"}
+  },
+  "quality_gates": {
+    "machine_contract_path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/gate_contract.json",
+    "gate_ids": ["G0_TECHNICAL_COMPLETION","G1_RAW_COMPLETENESS","G2_IDENTITY_AND_ACCOUNTING","G3_DEMAND_REALIZATION","G4_PROTECTABLE_STATE","G5_ATTRIBUTION","G6_RAMP_URBAN_OVERLOAD","G7_BASELINE_CANDIDATE_DECISION"],
+    "allowed_terminal_labels": ["SUITABLE_BASELINE_CANDIDATE_SEED17","P_NEGATIVE_RELEASE_NEXT_POINT_ELIGIBLE","OVERLOADED_NOT_SUITABLE_BASELINE","BORDERLINE_ONLY","LOCALIZATION_NOT_EVALUABLE","TECHNICAL_RUN_FAILED"],
+    "all_outcomes_stop_after_point1": true,
+    "no_automatic_point2_point3_or_seed23": true
+  },
+  "after_point1_state_machine": {
+    "SUITABLE_BASELINE_CANDIDATE_SEED17": "stop; only propose a separate same-demand seed23 confirmation card, requiring new explicit approval",
+    "P_NEGATIVE_RELEASE_NEXT_POINT_ELIGIBLE": "stop; Point 2 may be proposed for a new card, requiring new explicit approval",
+    "OVERLOADED_NOT_SUITABLE_BASELINE": "stop localization chain",
+    "BORDERLINE_ONLY": "stop localization chain",
+    "LOCALIZATION_NOT_EVALUABLE": "stop localization chain",
+    "TECHNICAL_RUN_FAILED": "stop; no retry; any recovery requires a new card and explicit approval"
+  },
+  "prelaunch_reviews": {
+    "required_order": ["engineering", "data", "scientific"],
+    "review_receipts": {
+      "engineering_review": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/prelaunch_reviews/engineering_review_revision02.json",
+      "data_review": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/prelaunch_reviews/data_review_revision02.json",
+      "scientific_review": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/prelaunch_reviews/scientific_review_revision02.json"
+    },
+    "all_must_bind_final_card_sha256": true
+  },
+  "git_and_scope": {
+    "preexisting_modified_paths_preserved": ["data/processed/stage6_obstacle_20260913_v1/ledger.json","docs/PROJECT_STATE.md","docs/STAGE6_ASTRA_REASSESSMENT_AND_RECOVERY_PLAN.md","docs/WORKLOG.md"],
+    "preexisting_untracked_paths_preserved": ["artifacts/stage6_o2_causal_diagnostic_20260921_v1/","artifacts/stage6_recovery_p2_revision_01/","artifacts/stage6_targeted_validation_20260920_v1/","docs/STAGE6_P0_MECHANISM_DIAGNOSTIC_REPORT.md","docs/STAGE6_P1_CANDIDATE_DESIGN_AND_REGISTRATION.md","docs/STAGE6_P2_IMPLEMENTATION_AND_BUILD_PACKAGES.md","docs/STAGE6_TARGETED_CAUSAL_VALIDATION_REPORT.md","docs/methodology/"],
+    "scientific_source_inputs_modified": false,
+    "formal_experiment_protocol_modified": false,
+    "point2_point3_or_seed23_materialized": false,
+    "git_commit_or_push": false
+  },
+  "authorization": {"user_approved":false,"authorized_starts":0,"max_starts":1,"technical_retries":0},
+  "card_hash_semantics": "Compute the SHA-256 of this exact file only after all three prelaunch reviews and any required corrections. The review receipts bind that digest. Any later edit requires a new revision and a new explicit user approval."
+}

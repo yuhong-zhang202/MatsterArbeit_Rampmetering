@@ -1,0 +1,59 @@
+{
+  "schema_version": "1",
+  "run_id": "FULLNET3350_A_R900_S17",
+  "final_disposition": "A_NOT_EVALUABLE",
+  "pre_R_pairability": "FAIL",
+  "confidence": "High",
+  "scope_limit": "No post-540 A phenomenon, R merge exposure, P/S/L, Candidate A/C, or 0.85 outcome was assessed after the pre-R gate failed.",
+  "execution": {
+    "Guardian_starts": 1,
+    "SUMO_starts": 1,
+    "TraCI_starts": 0,
+    "netconvert_starts": 0,
+    "return_code": 0,
+    "simulation_end_s": 2700,
+    "wallclock_s": 24.467939,
+    "output_payload_bytes": 24585577,
+    "retries": 0,
+    "B_or_C_started": false
+  },
+  "pre_R_metrics": {
+    "window_s": "[0,540)",
+    "tuple_definition": "exact lane,pos,speed,x,y match by vehicle_id and integer-second FCD time",
+    "exact_tuple_match_fraction": {
+      "M": "497/34470 = 1.44%",
+      "U": "80/2008 = 3.98%",
+      "X": "468/1394 = 33.57%"
+    },
+    "first_divergence_s": {
+      "M": 12,
+      "U": 13,
+      "X": 108
+    },
+    "actual_pre_R_departures_R0_vs_A": {
+      "M": "502 vs 502",
+      "U": "54 vs 35",
+      "X": "27 vs 27"
+    },
+    "M_flow.502": "desired 539.148 s; actual 540.00 s in both; no FCD before 540; excluded from strict pre-R counts"
+  },
+  "lifecycle_warning": "A inserted/arrived M=1396/1396, R=240/240, U=93/150, X=75/75; 57 U were not inserted, 19 before 540 s, with slow-lane-ahead departure errors.",
+  "historical_R0_status": "CONTROL_NOT_EVALUABLE; unchanged",
+  "review_dispositions": {
+    "engineering": "Execution/integrity complete; 25/25 output manifest entries verified; U insertion warning referred to data review.",
+    "data_analyst": "PRE_R_PAIRABILITY_FAIL; A_NOT_EVALUABLE for phenomenon assessment.",
+    "scientific_reviewer": "PRE_R_PAIRABILITY_FAIL; stop before A phenomenon interpretation or B/C progression."
+  },
+  "sha256": {
+    "final_card": "09f711a540457f1fbecc1c30fe5173ca8b83b24c39ad1913a9d33e782cc03cdd",
+    "engineering_postrun_review": "15b73de865731ba11c9a50ac39b4294b3565c2e42200bbf2b8bf6c15bff9da10",
+    "scientific_postrun_review": "1497f8f17ea13e5b9cc8cff36da97c19860b5ce0a60f29fc0bb602df64a613a6",
+    "data_report": "7cba57c3b1480c26c510eaf39a3e7f6cbfef5b1d6cfb7ad66f9438ff165e01aa",
+    "data_json": "5070239beac74185c1e76ed45d816cc3879dd12b7614a16dfc4296396f991f69",
+    "data_provenance_receipt": "339353c390ba923096624e0267556a4c17748bf8e329c59b6dd24a17d7497ead",
+    "raw_execution_receipt": "7a904daadc88327f018977039216fa90f7594e78d99e4af3eb9987304e8246ca",
+    "raw_output_manifest": "301636c785128f062b33f5a48d814a2fd46ccc32f2e4165fb70fe08208a42d40",
+    "raw_fcd": "4aeb5cf578c20d1be72213427a3592d916f6eb8407d90aa2d0dc0764fa73be63"
+  },
+  "next_gate": "Stop. No B/C package or launch from this comparator/pair without a separate user-directed redesign and review."
+}

@@ -1,0 +1,157 @@
+{
+  "full_time_contract": "FCD/TLS/summary/queue expected labels0..2699; detector0..2700 intervals; empty traffic is not missing frames",
+  "internal_fcd": "P2 smoke must verify all actual lanes including internals",
+  "required_role_count": 17,
+  "required_xml_roles": [
+    {
+      "detector_id": "shared_boundary_e2",
+      "endPos": "238.8",
+      "kind": "E2",
+      "lane": "shared_approach_0",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision01/runs/RV_SMOKE_R720_S17_attempt1/outputs/shared_boundary_e2.xml",
+      "period_s": 30,
+      "pos": 0,
+      "role": "shared_boundary_e2.xml",
+      "root": "detector"
+    },
+    {
+      "detector_id": "ramp_storage_e2",
+      "endPos": "204.49",
+      "kind": "E2",
+      "lane": "ramp_storage_0",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision01/runs/RV_SMOKE_R720_S17_attempt1/outputs/ramp_storage_e2.xml",
+      "period_s": 30,
+      "pos": 0,
+      "role": "ramp_storage_e2.xml",
+      "root": "detector"
+    },
+    {
+      "detector_id": "p1_main_up_1300_l0",
+      "kind": "E1",
+      "lane": "main_up_0",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision01/runs/RV_SMOKE_R720_S17_attempt1/outputs/p1_main_up_1300_l0.xml",
+      "period_s": 30,
+      "pos": 1300,
+      "role": "p1_main_up_1300_l0.xml",
+      "root": "detector"
+    },
+    {
+      "detector_id": "p1_main_up_1300_l1",
+      "kind": "E1",
+      "lane": "main_up_1",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision01/runs/RV_SMOKE_R720_S17_attempt1/outputs/p1_main_up_1300_l1.xml",
+      "period_s": 30,
+      "pos": 1300,
+      "role": "p1_main_up_1300_l1.xml",
+      "root": "detector"
+    },
+    {
+      "detector_id": "p1_merge_section_20_l0",
+      "kind": "E1",
+      "lane": "merge_section_0",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision01/runs/RV_SMOKE_R720_S17_attempt1/outputs/p1_merge_section_20_l0.xml",
+      "period_s": 30,
+      "pos": 20,
+      "role": "p1_merge_section_20_l0.xml",
+      "root": "detector"
+    },
+    {
+      "detector_id": "p1_merge_section_20_l1",
+      "kind": "E1",
+      "lane": "merge_section_1",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision01/runs/RV_SMOKE_R720_S17_attempt1/outputs/p1_merge_section_20_l1.xml",
+      "period_s": 30,
+      "pos": 20,
+      "role": "p1_merge_section_20_l1.xml",
+      "root": "detector"
+    },
+    {
+      "detector_id": "p1_merge_section_20_l2",
+      "kind": "E1",
+      "lane": "merge_section_2",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision01/runs/RV_SMOKE_R720_S17_attempt1/outputs/p1_merge_section_20_l2.xml",
+      "period_s": 30,
+      "pos": 20,
+      "role": "p1_merge_section_20_l2.xml",
+      "root": "detector"
+    },
+    {
+      "detector_id": "p1_main_down_20_l0",
+      "kind": "E1",
+      "lane": "main_down_0",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision01/runs/RV_SMOKE_R720_S17_attempt1/outputs/p1_main_down_20_l0.xml",
+      "period_s": 30,
+      "pos": 20,
+      "role": "p1_main_down_20_l0.xml",
+      "root": "detector"
+    },
+    {
+      "detector_id": "p1_main_down_20_l1",
+      "kind": "E1",
+      "lane": "main_down_1",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision01/runs/RV_SMOKE_R720_S17_attempt1/outputs/p1_main_down_20_l1.xml",
+      "period_s": 30,
+      "pos": 20,
+      "role": "p1_main_down_20_l1.xml",
+      "root": "detector"
+    },
+    {
+      "detector_id": "p1_main_down_200_l0",
+      "kind": "E1",
+      "lane": "main_down_0",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision01/runs/RV_SMOKE_R720_S17_attempt1/outputs/p1_main_down_200_l0.xml",
+      "period_s": 30,
+      "pos": 200,
+      "role": "p1_main_down_200_l0.xml",
+      "root": "detector"
+    },
+    {
+      "detector_id": "p1_main_down_200_l1",
+      "kind": "E1",
+      "lane": "main_down_1",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision01/runs/RV_SMOKE_R720_S17_attempt1/outputs/p1_main_down_200_l1.xml",
+      "period_s": 30,
+      "pos": 200,
+      "role": "p1_main_down_200_l1.xml",
+      "root": "detector"
+    },
+    {
+      "kind": "trajectory_or_status",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision01/runs/RV_SMOKE_R720_S17_attempt1/outputs/fcd.xml",
+      "role": "fcd.xml",
+      "root": "fcd-export"
+    },
+    {
+      "kind": "trajectory_or_status",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision01/runs/RV_SMOKE_R720_S17_attempt1/outputs/queues.xml",
+      "role": "queues.xml",
+      "root": "queue-export"
+    },
+    {
+      "kind": "trajectory_or_status",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision01/runs/RV_SMOKE_R720_S17_attempt1/outputs/sumo_summary.xml",
+      "role": "sumo_summary.xml",
+      "root": "summary"
+    },
+    {
+      "kind": "trajectory_or_status",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision01/runs/RV_SMOKE_R720_S17_attempt1/outputs/tripinfo.xml",
+      "role": "tripinfo.xml",
+      "root": "tripinfos"
+    },
+    {
+      "kind": "trajectory_or_status",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision01/runs/RV_SMOKE_R720_S17_attempt1/outputs/vehroute.xml",
+      "role": "vehroute.xml",
+      "root": "routes"
+    },
+    {
+      "kind": "trajectory_or_status",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision01/runs/RV_SMOKE_R720_S17_attempt1/outputs/tls_states.xml",
+      "role": "tls_states.xml",
+      "root": "tlsStates"
+    }
+  ],
+  "status": "FINAL_STATIC_BOUND_RUNTIME_UNTESTED",
+  "zero_expected_R": "R0 permits no R records, never missing role"
+}

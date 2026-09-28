@@ -1,0 +1,38 @@
+{
+  "approval": {
+    "synthetic_only": true
+  },
+  "automatic_retry": false,
+  "compiled_guard_acceptance": false,
+  "consumed_starts": 1,
+  "error": "ValueError('Missing compiled network')",
+  "monitored_cap_bytes": 100000000,
+  "monitored_timeout_s": 30,
+  "observed_peak_bytes": 516,
+  "outputs": {
+    "netconvert.stderr.log": {
+      "bytes": 27,
+      "sha256": "3e5877400ee725c0a9163ff8ae00e2d420d7db3354989c7cb3b75bb2f06251a2"
+    },
+    "netconvert.stdout.log": {
+      "bytes": 17,
+      "sha256": "74e366b714516751de5bf7d288540550888ccc9f94b82c4a035b72d5998df7ec"
+    },
+    "reservation.json": {
+      "bytes": 379,
+      "sha256": "6222a5c878c0dd51471ee1970faf574b06cb93cc0983aadd421843bfe5bc5f2a"
+    },
+    "started.json": {
+      "bytes": 93,
+      "sha256": "75dff4fcc3d0d852470a3d485865e60f282cfd0a77f3a7d115eb81a7b107f0db"
+    }
+  },
+  "polling_overshoot_possible": true,
+  "returncode": 0,
+  "scientific_acceptance": false,
+  "status": "terminal_missing_or_invalid_network",
+  "stderr_nonempty": true,
+  "synthetic_test_only": true,
+  "termination_requested": false,
+  "wallclock_s": 0
+}

@@ -1,0 +1,33 @@
+{
+  "schema_version": "1",
+  "status": "ENVIRONMENT_IDENTITY_RECORDED_NO_SIMULATION",
+  "python": {
+    "executable_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+    "resolved_executable_path": "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "executable_sha256": "76c73e25cdd69650a897648666e41c364940fbcff0d1176572a667d4d470ec9e",
+    "version": "3.13.0",
+    "implementation": "CPython",
+    "required_packages": {
+      "traci": "1.26.0",
+      "sumolib": "1.26.0",
+      "sumoITScontrol": "0.1.0"
+    },
+    "evidence_command": "./.venv/bin/python -c 'import importlib.metadata as m, platform, sys; print(sys.executable, platform.python_version(), platform.python_implementation(), m.version(\"traci\"), m.version(\"sumolib\"), m.version(\"sumoITScontrol\"))'",
+    "verified_by_this_agent": true
+  },
+  "sumo": {
+    "executable_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+    "executable_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+    "reported_version": "1.26.0",
+    "version_query": "sumo --version",
+    "query_source": "Primary agent reported running this exact executable with --version; this agent did not run it.",
+    "query_was_environment_probe_only": true,
+    "simulation_started": false,
+    "version_verified_by_this_agent": false
+  },
+  "resource_binding": {
+    "max_runtime_s": null,
+    "max_output_bytes": null,
+    "status": "NOT_APPROVED; MUST REMAIN BLOCKED"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "card_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/PAIR_3199_R720_DELAYED_S17_CARD_PRELAUNCH_REV2.json",
+  "card_rev1_preserved_sha256": "263c63f356b02353655a5e8e06eb7089d527e82f8137f45a8ecaf63054fd38a4",
+  "card_sha256": "6e810adfe70c03ff321ba47a4fff6593323e5b4a78884ce8e6971ffd86bb8d25",
+  "card_status": "PRELAUNCH_READY_AWAITING_AUTHORIZATION",
+  "execution_authorized": false,
+  "input_manifest_sha256": "a69ba23ed1a82957904c8abc4aee774decf94d0210c07d29d051c0162f7aef1b",
+  "input_sha256": {
+    "additional": "13dc69427f24014e02c4ded173ba5d2db12ebf2666c0b77f2cc486a19755332a",
+    "demand": "6fe53e5b294184704ee5dbd575ccb2c225c17b57014c5c981b60ba557a9ae400",
+    "network": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "output_roles": "7dab35372984ccd3e7f103afaaf0dff59ecf4df6dc13d4c66dea5190fa77155d",
+    "sumocfg": "70a082e81a32f3a759a8b26cd9cbf426358d7cf4f40eedcef72d3f272d851072"
+  },
+  "matched_control_binding": {
+    "data_review_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/CONTROL_DATA_LIFECYCLE_REVIEW_FINAL_REV1.json",
+    "data_review_sha256": "6c8c2a381a5a2fc1102953ed58a5a1cd022a0c22789b0bbbd486d86a7b0ac799",
+    "exact_card_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/PAIR_3199_CTRL_S17_CARD_FINAL_REV1.json",
+    "exact_card_sha256": "0748d37719541d7c76adcd57e07fd764b413fbd21bb16e015b57024175e866da",
+    "execution_receipt_path": "data/raw/stage6_bounded_pair_20260923_v1/PAIR_3199_CTRL_S17/outputs/execution_receipt.json",
+    "execution_receipt_sha256": "a6a1a67282ff9e19f0205ce4b681cef34315bc04ad65f9588d7b269fadcfd336",
+    "output_manifest_path": "data/raw/stage6_bounded_pair_20260923_v1/PAIR_3199_CTRL_S17/outputs/output_manifest.json",
+    "output_manifest_sha256": "da15103c64be65eb6b83fc37a505418c81c33cf490db48f03a5fd15d984a74d8",
+    "preserved_candidate_c_warning": "EARLY_WARNING_PRESENT_NOT_STATE1",
+    "preserved_historical_low_r_status": "NOT_EVALUABLE",
+    "raw_output_directory": "data/raw/stage6_bounded_pair_20260923_v1/PAIR_3199_CTRL_S17/outputs",
+    "run_id": "PAIR_3199_CTRL_S17",
+    "use_as_clean_normal_baseline": false
+  },
+  "output_directory": "data/raw/stage6_bounded_pair_20260923_v1/PAIR_3199_R720_DELAYED_S17/outputs",
+  "output_path_absent": true,
+  "prohibitions_observed": {
+    "SUMO_starts": 0,
+    "TraCI_starts": 0,
+    "launch_command_invoked": false,
+    "netconvert_starts": 0,
+    "scientific_inputs_modified": false
+  },
+  "readonly_preflight": {
+    "launch_authorized": false,
+    "path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/R02_TREATMENT_READONLY_PREFLIGHT_REV2.json",
+    "sha256": "d53aae49ebebf20a06cb823fcdc4af605ff305cbf1fa72255760098bea04a866",
+    "status": "PREFLIGHT_PASS_NO_PROCESS_STARTED"
+  },
+  "receipt_id": "PAIR3199_R720_DELAYED_S17_ENGINEERING_PRELAUNCH_REV2",
+  "reservation_absent": true,
+  "reservation_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/r02_single_start/consumption/PAIR_3199_R720_DELAYED_S17.json",
+  "resource_proposal": {
+    "runtime_s": 120,
+    "scope": "PAIR_3199_R720_DELAYED_S17",
+    "status": "PROPOSED_NOT_AUTHORIZED",
+    "storage_bytes": 90000000,
+    "storage_enforcement": "100ms_polled_stop_trigger_with_possible_overshoot_not_hard_quota"
+  },
+  "rev1_receipt_preserved": true,
+  "run_command": null,
+  "run_id": "PAIR_3199_R720_DELAYED_S17",
+  "runner_behavior": {
+    "launch_validation_rejects_current_card": true,
+    "one_start_maximum_after_future_separate_authorization": 1,
+    "preflight_only_for_this_card": true,
+    "technical_retries": 0
+  },
+  "runner_contract_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/R02_RUNNER_CONTRACT.md",
+  "runner_contract_sha256": "858dfcc28e7b092e2ebdd2ca29877a83228bac449cc4a46deb692a5e46f3fd10",
+  "runner_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+  "runner_sha256": "482056a14df16af779ef8c8ad8182c313775a3392caa24e1e5224e9f0c1c8a37",
+  "runtime_binding_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/runtime_bindings/PAIR_3199_R720_DELAYED_S17_PRELAUNCH_REV2.json",
+  "runtime_binding_sha256": "5c72fa902c828b2d85efc4f5adf4ff1d534526d2ccebdf352fb5c2d703cefb6f",
+  "status": "PRELAUNCH_CARD_AND_READONLY_BINDING_PASS_NO_LAUNCH_AUTHORIZATION",
+  "test_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/test_runner.py",
+  "test_sha256": "da35812053b8135b0b6bb72308318f04f96ec0cdf722f492137f0f476299dc80",
+  "timeline_contract_note": "Keep scheduled and actual first R departure separate; record first R arrival near/at merge separately from first meaningful merge exposure, then first treatment-specific M deterioration and locked State1 onset.",
+  "timeline_markers": [
+    "R_demand_activation",
+    "first_scheduled_R_departure",
+    "first_actual_R_departure",
+    "first_R_arrival_near_merge",
+    "first_meaningful_merge_exposure",
+    "first_M_deterioration",
+    "State1_onset"
+  ],
+  "witness_contract": {
+    "path": "docs/methodology/STAGE6_EXPLORATORY_RAMP_INDUCED_WITNESS_CONTRACT.md",
+    "scope": "This Stage 6 exploratory treatment only; not the formal experiment protocol",
+    "sha256": "958890a7dd017110787a85d77ebfa3e6dac2b7d862f0fd91f6bafb7cf1738d9a"
+  }
+}

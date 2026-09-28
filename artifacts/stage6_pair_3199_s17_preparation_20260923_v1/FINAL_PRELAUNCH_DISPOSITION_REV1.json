@@ -1,0 +1,73 @@
+{
+  "schema_version": "1",
+  "disposition": "PAIR_3199_CONTROL_FINAL_PRELAUNCH_GATE_PASS_AWAITING_SINGLE_START",
+  "run_id": "PAIR_3199_CTRL_S17",
+  "execution_authorized": true,
+  "start_budget": 1,
+  "retry_budget": 0,
+  "resource_contract": {
+    "wallclock_stop_trigger_s": 90,
+    "output_size_stop_trigger_bytes_decimal": 60000000,
+    "output_polling_ms": 100,
+    "overshoot_accepted": true,
+    "scope": "PAIR_3199_CTRL_S17"
+  },
+  "exact_bindings": {
+    "card": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/PAIR_3199_CTRL_S17_CARD_FINAL_REV1.json",
+    "card_sha256": "0748d37719541d7c76adcd57e07fd764b413fbd21bb16e015b57024175e866da",
+    "runner": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+    "runner_sha256": "df8645414a6010b361fd68e298ea521f422eaa0ed969aa36419a1ba9e28ba81e",
+    "runtime_sidecar": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/runtime_bindings/PAIR_3199_CTRL_S17_FINAL_REV1.json",
+    "runtime_sidecar_sha256": "caa9839b29dfdbfb7c1bb67487a24d21f8fc4bf613dad23c4db9844c7f986ea0",
+    "engineering_binding_receipt": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/R02_ENGINEERING_BINDING_RECEIPT_FINAL_REV1.json",
+    "engineering_binding_receipt_sha256": "7b1152211ff77e55bdf254fddee1a85f098408609ac58e101f936344d5d59fd9",
+    "read_only_preflight": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/R02_READONLY_PREFLIGHT_FINAL_REV1.json",
+    "read_only_preflight_sha256": "04cb5d4413fe55073af389feff1aba7950d5c1ebd5a3588739f4dce241132f68",
+    "parent_prelaunch_provenance": "PROVENANCE_RECEIPT_REV2.json",
+    "parent_prelaunch_provenance_sha256": "701cd5351045b6b25ddeae888e2ac9ae08431c1e6bb8ae261849a4ff091bfb84"
+  },
+  "reviews": {
+    "engineering": {
+      "status": "PASS",
+      "blocker_major_required_minor": [
+        0,
+        0,
+        0
+      ],
+      "confidence": "High",
+      "report": "ENGINEERING_PRELAUNCH_REVIEW_FINAL_REV1.md",
+      "sha256": "d68c68c2b5c8ba2b3fe4cb70a211d699240626160e488aca0f25a52535c3cad3"
+    },
+    "data_provenance": {
+      "status": "PASS",
+      "blocker_major_required_minor": [
+        0,
+        0,
+        0
+      ],
+      "confidence": "High",
+      "report": "DATA_PROVENANCE_PRELAUNCH_REVIEW_FINAL_REV1.md",
+      "sha256": "33e382600ebb1510b355704ed79147a4c9189e8fe4b53b75861d358c5a740afb"
+    },
+    "scientific": {
+      "status": "PASS",
+      "blocker_major_required_minor": [
+        0,
+        0,
+        0
+      ],
+      "confidence": "High design consistency; Moderate exploratory inference",
+      "report": "SCIENTIFIC_PRELAUNCH_REVIEW_FINAL_REV1.md",
+      "sha256": "f1d1f39da506400e3dba03b97da56f5f220f2f40929e18cdccb89b1ec412ff8a"
+    }
+  },
+  "preflight_status": "PREFLIGHT_PASS_NO_PROCESS_STARTED",
+  "prior_to_start": {
+    "SUMO_starts": 0,
+    "TraCI_starts": 0,
+    "netconvert_starts": 0,
+    "reservations_created": 0,
+    "raw_outputs_created": 0
+  },
+  "scope_guard": "Only this exact control card may start once. Any launch consumes authorization. No treatment, seed23, B/C, other demand, geometry/input/classifier/threshold/vehicle/protocol change."
+}

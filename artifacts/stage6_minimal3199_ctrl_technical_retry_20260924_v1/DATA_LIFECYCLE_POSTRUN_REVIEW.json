@@ -1,0 +1,39 @@
+{
+  "run_id": "MINIMAL3199_CTRL_S17_TECH_RETRY1",
+  "card_sha256": "027d7dc7b74561648ec6c0799abd64a99b7fb746273d1ecb78905c00c082c672",
+  "status": "NOT_EVALUABLE",
+  "reservation_status": "GUARDIAN_HANDOFF_PENDING",
+  "guardian_validation_error": "INVALID_START_REQUEST",
+  "simulator_pid": null,
+  "retry_allowed": false,
+  "sumo_starts": 0,
+  "traffic_output_roles_present": 0,
+  "traffic_output_roles_required": 18,
+  "output_manifest_present": false,
+  "execution_receipt_present": false,
+  "inventory": {
+    "scenario_control.sumocfg": {
+      "bytes": 2802,
+      "sha256": "1906f98e1e108a9019919d29fa4c9c6086659fdbedd231d16531ec275505650c"
+    },
+    "scenario_control.add.xml": {
+      "bytes": 3940,
+      "sha256": "6b93195465eb66462394905fcf6bd450c8e3b863517bef436f5177f0a54c9470"
+    },
+    "guardian_stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "analysis_unavailable": [
+    "lifecycle reconciliation",
+    "actual departure and insertion delay",
+    "M exposure and downstream passage",
+    "unfinished/censored vehicles",
+    "locked P/S/L",
+    "Candidate A/C",
+    "control suitability"
+  ],
+  "no_outcome_inferred": true,
+  "review_process_starts": 0
+}

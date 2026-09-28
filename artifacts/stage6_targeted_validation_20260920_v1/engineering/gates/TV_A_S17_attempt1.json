@@ -1,0 +1,329 @@
+{
+  "analysis_version_binding": {
+    "bytes": 1714,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_targeted_validation_20260920_v1/TV_A_S17_attempt1/revision01/analysis_manifest.json",
+    "sha256": "8fb0f5e4e9cbdd14c84bff108ec111bf173a8a74db815b901cce12c2d47f0c24"
+  },
+  "attempt_id": "TV_A_S17_attempt1",
+  "card_sha256": "8e54ab7ac73e3192a1db5ea249efbe610e1114d79980166baea83934a6601f4c",
+  "checks": [
+    {
+      "check_id": "source_binding_exact",
+      "evidence": {
+        "approval": {
+          "bytes": 1365,
+          "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/RUNTIME_user_approval.json",
+          "sha256": "53ca2c11dcf9a4e60e852e35102a798d8b29cdb5aaac13341a2c11717152d88d"
+        },
+        "bad": [],
+        "bindings_checked": 98
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "execution_complete_2700",
+      "evidence": {
+        "last_summary": {
+          "arrived": "1858",
+          "collisions": "0",
+          "discarded": "0",
+          "duration": "0",
+          "ended": "1858",
+          "halting": "0",
+          "inserted": "1858",
+          "loaded": "1858",
+          "meanSpeed": "-1.00",
+          "meanSpeedRelative": "-1.00",
+          "meanTravelTime": "74.71",
+          "meanWaitingTime": "0.63",
+          "running": "0",
+          "stopped": "0",
+          "teleports": "0",
+          "time": "2699.00",
+          "waiting": "0"
+        },
+        "receipt": {
+          "bytes": 916,
+          "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_A_S17_attempt1/execution_receipt.json",
+          "sha256": "7ecf7d554f2a165c99159da28a548126f90246fe6fa20c7e8e40f0bac59b8b2a"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "output_role_set_exact",
+      "evidence": {
+        "actual": 18,
+        "declared": 18,
+        "difference": []
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "xml_roots_and_timegrids",
+      "evidence": {
+        "FCD_errors": [],
+        "grids": {
+          "fcd.xml": true,
+          "queues.xml": true,
+          "sumo_summary.xml": true
+        },
+        "queue_errors": [],
+        "root_counts": {
+          "fcd.xml": 2700,
+          "lanechanges.xml": 710,
+          "p1_main_down_200_l0.xml": 90,
+          "p1_main_down_200_l1.xml": 90,
+          "p1_main_down_20_l0.xml": 90,
+          "p1_main_down_20_l1.xml": 90,
+          "p1_main_up_1300_l0.xml": 90,
+          "p1_main_up_1300_l1.xml": 90,
+          "p1_merge_section_20_l0.xml": 90,
+          "p1_merge_section_20_l1.xml": 90,
+          "p1_merge_section_20_l2.xml": 90,
+          "queues.xml": 2700,
+          "ramp_storage_e2.xml": 90,
+          "shared_boundary_e2.xml": 90,
+          "sumo_summary.xml": 2700,
+          "tls_states.xml": 5400,
+          "tripinfo.xml": 1858,
+          "vehroute.xml": 1858
+        },
+        "root_errors": []
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "planned_identity_coverage",
+      "evidence": {
+        "missing": [],
+        "planned": {
+          "M": 1333,
+          "R": 300,
+          "U": 150,
+          "X": 75
+        },
+        "trip_records": 1858,
+        "unexpected": []
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "departed_route_and_fcd_consistency",
+      "evidence": {
+        "FCD_samples": 138809,
+        "errors": [],
+        "vehroute_count": 1858
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "population_conservation",
+      "evidence": {
+        "accounts": {
+          "M": {
+            "arrived": 1333,
+            "departed": 1333,
+            "never_inserted": 0,
+            "planned": 1333,
+            "remaining": 0
+          },
+          "R": {
+            "arrived": 300,
+            "departed": 300,
+            "never_inserted": 0,
+            "planned": 300,
+            "remaining": 0
+          },
+          "U": {
+            "arrived": 150,
+            "departed": 150,
+            "never_inserted": 0,
+            "planned": 150,
+            "remaining": 0
+          },
+          "X": {
+            "arrived": 75,
+            "departed": 75,
+            "never_inserted": 0,
+            "planned": 75,
+            "remaining": 0
+          }
+        },
+        "bad_labels": []
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "actual_lane_and_connection_consistency",
+      "evidence": {
+        "errors": [],
+        "method": "directed compiled lane reachability with permitted passenger lateral links; does not infer subsecond positions",
+        "observed_lanes": [
+          ":freeway_merge_0_0",
+          ":freeway_merge_0_1",
+          ":freeway_merge_2_0",
+          ":merge_end_0_0",
+          ":merge_end_0_1",
+          ":ramp_mid_0_0",
+          ":urban_diverge_0_0",
+          ":urban_diverge_1_0",
+          ":urban_tls_0_0",
+          ":urban_tls_1_0",
+          "cross_in_0",
+          "cross_out_0",
+          "main_down_0",
+          "main_down_1",
+          "main_up_0",
+          "main_up_1",
+          "merge_section_0",
+          "merge_section_1",
+          "merge_section_2",
+          "ramp_accel_0",
+          "ramp_storage_0",
+          "shared_approach_0",
+          "urban_in_0",
+          "urban_out_0"
+        ],
+        "transitions": 6978
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "detector_output_contract",
+      "evidence": {
+        "caveat": "E1 passage events are not unique-population counts; no TraCI extent query",
+        "detectors": {
+          "p1_main_down_200_l0.xml": {
+            "bins": 90,
+            "nVehEntered": 753
+          },
+          "p1_main_down_200_l1.xml": {
+            "bins": 90,
+            "nVehEntered": 881
+          },
+          "p1_main_down_20_l0.xml": {
+            "bins": 90,
+            "nVehEntered": 755
+          },
+          "p1_main_down_20_l1.xml": {
+            "bins": 90,
+            "nVehEntered": 878
+          },
+          "p1_main_up_1300_l0.xml": {
+            "bins": 90,
+            "nVehEntered": 538
+          },
+          "p1_main_up_1300_l1.xml": {
+            "bins": 90,
+            "nVehEntered": 795
+          },
+          "p1_merge_section_20_l0.xml": {
+            "bins": 90,
+            "nVehEntered": 246
+          },
+          "p1_merge_section_20_l1.xml": {
+            "bins": 90,
+            "nVehEntered": 587
+          },
+          "p1_merge_section_20_l2.xml": {
+            "bins": 90,
+            "nVehEntered": 815
+          },
+          "ramp_storage_e2.xml": {
+            "bins": 90,
+            "nVehEntered": 300
+          },
+          "shared_boundary_e2.xml": {
+            "bins": 90,
+            "nVehEntered": 450
+          }
+        },
+        "errors": []
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "tls_state_contract",
+      "evidence": {
+        "counts": {
+          "ramp_mid": 2700,
+          "urban_tls": 2700
+        },
+        "errors": [],
+        "states": {
+          "ramp_mid": {
+            "G": 2700
+          },
+          "urban_tls": {
+            "Gr": 2025,
+            "rG": 405,
+            "ry": 135,
+            "yr": 135
+          }
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "output_manifest_complete",
+      "evidence": {
+        "directory_bytes": 25530344,
+        "entries": 24,
+        "errors": [],
+        "live_processes": [],
+        "lsof_rc": 1,
+        "lsof_stderr": "",
+        "missing": [],
+        "unlisted": []
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "m_insertion_contract",
+      "evidence": {
+        "actual_M": 1333,
+        "errors": [],
+        "pos": 100
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "native_lanechange_contract",
+      "evidence": {
+        "None_values_as_NA": 918,
+        "R_aux_to_main_events": 300,
+        "R_unique": 300,
+        "errors": [],
+        "events": 710
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "meter_state_and_crossing_contract",
+      "evidence": {
+        "R_population": 300,
+        "categories": {
+          "green_only": 300
+        },
+        "crossings": 300,
+        "errors": [],
+        "interpretation": "FCD interval endpoints bracket passage, red/yellow endpoints do not establish violation; zero passage is allowed observation"
+      },
+      "status": "PASS"
+    }
+  ],
+  "execution_receipt_sha256": "7ecf7d554f2a165c99159da28a548126f90246fe6fa20c7e8e40f0bac59b8b2a",
+  "output_manifest_sha256": "0c8de2658902a037e4aa44ce837667da9ed3cf162338fe79d0967490ed0e2dbd",
+  "physical_observations": {
+    "collisions": 0,
+    "discarded": 0,
+    "emergency_braking_lines": 0,
+    "error_lines": [],
+    "teleports": 0
+  },
+  "physical_status": "suitable",
+  "progression_allowed": true,
+  "scientific_acceptance": "not_assessed_smoke_only",
+  "technical_status": "PASS"
+}

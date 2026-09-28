@@ -1,0 +1,125 @@
+{
+  "M_match": {
+    "expected": 1333,
+    "fields": [
+      "id",
+      "depart_ms",
+      "route",
+      "type",
+      "speedFactor",
+      "departPos",
+      "departLane",
+      "departSpeed"
+    ],
+    "matched": 1333
+  },
+  "cards": {
+    "control": {
+      "additional_schema_sha256": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e",
+      "approved_card_sha256": "352a7f4ccc3fcf376e569f0cbe7c65735dad1687993011742af6da909a7294b4",
+      "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+      "binary_version": "1.26.0",
+      "guardian_runner_sha256": "7b65231a292a1cb16337a39fcc0cd4cd4d9f26d01fabc844d1184cd1d094aee7",
+      "launch_authorized": false,
+      "launchable_now": false,
+      "max_starts": 1,
+      "output_directory": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3199_existence_20260924_v1/MINIMAL3199_CTRL_S17/outputs",
+      "python_executable": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+      "python_version": "3.13.0",
+      "run_id": "MINIMAL3199_CTRL_S17",
+      "simulator_process_started": false,
+      "status": "PREFLIGHT_PASS_NO_PROCESS_STARTED",
+      "sumo_home": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo",
+      "technical_retries": 0
+    },
+    "treatment": {
+      "additional_schema_sha256": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e",
+      "approved_card_sha256": "bb7768c1c0a621a0bfaa3e9793418b8cdee7d08fe1eeefd47a8414db2d346f4a",
+      "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+      "binary_version": "1.26.0",
+      "guardian_runner_sha256": "7b65231a292a1cb16337a39fcc0cd4cd4d9f26d01fabc844d1184cd1d094aee7",
+      "launch_authorized": false,
+      "launchable_now": false,
+      "max_starts": 1,
+      "output_directory": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3199_existence_20260924_v1/MINIMAL3199_R720_DELAYED_S17/outputs",
+      "python_executable": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+      "python_version": "3.13.0",
+      "run_id": "MINIMAL3199_R720_DELAYED_S17",
+      "simulator_process_started": false,
+      "status": "PREFLIGHT_PASS_NO_PROCESS_STARTED",
+      "sumo_home": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo",
+      "technical_retries": 0
+    }
+  },
+  "explicit_zero": {
+    "control": {
+      "R": "PASS_ZERO",
+      "U": "PASS_ZERO",
+      "X": "PASS_ZERO"
+    },
+    "treatment": {
+      "U": "PASS_ZERO",
+      "X": "PASS_ZERO"
+    }
+  },
+  "outputs": {
+    "control": {
+      "exists": false,
+      "path": "data/raw/stage6_minimal3199_existence_20260924_v1/MINIMAL3199_CTRL_S17/outputs"
+    },
+    "treatment": {
+      "exists": false,
+      "path": "data/raw/stage6_minimal3199_existence_20260924_v1/MINIMAL3199_R720_DELAYED_S17/outputs"
+    }
+  },
+  "readonly_runtime_hash_checks": {
+    "additional_schema": {
+      "actual_sha256": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e",
+      "expected_sha256": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e",
+      "matches": true,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd"
+    },
+    "python_executable": {
+      "actual_sha256": "76c73e25cdd69650a897648666e41c364940fbcff0d1176572a667d4d470ec9e",
+      "expected_sha256": "76c73e25cdd69650a897648666e41c364940fbcff0d1176572a667d4d470ec9e",
+      "matches": true,
+      "path": "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3.13"
+    },
+    "runner": {
+      "actual_sha256": "7b65231a292a1cb16337a39fcc0cd4cd4d9f26d01fabc844d1184cd1d094aee7",
+      "manifest_sha256": "7b65231a292a1cb16337a39fcc0cd4cd4d9f26d01fabc844d1184cd1d094aee7",
+      "matches": true,
+      "path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+      "runtime_guardian_sha256": "7b65231a292a1cb16337a39fcc0cd4cd4d9f26d01fabc844d1184cd1d094aee7"
+    },
+    "sumo_binary": {
+      "actual_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+      "expected_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+      "matches": true,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo"
+    }
+  },
+  "resource_proposals": {
+    "control": {
+      "output_bytes_decimal": 60000000,
+      "status": "PROPOSED_NOT_AUTHORIZED",
+      "wallclock_s": 90
+    },
+    "treatment": {
+      "output_bytes_decimal": 75000000,
+      "status": "PROPOSED_NOT_AUTHORIZED",
+      "wallclock_s": 90
+    }
+  },
+  "run_authorization": "NONE",
+  "status": "ENGINEERING_STATIC_BINDINGS_PASS_DRAFTS_NOT_AUTHORIZED",
+  "treatment_only_difference": "R_flow.0..191 (192 vehicles, depart=540000ms+5000ms*i)",
+  "verification": {
+    "netconvert_starts": 0,
+    "output_path_created": false,
+    "sumo_starts": 0,
+    "traci_starts": 0,
+    "unit_tests": "10/10 PASS",
+    "version_probe_started": false
+  }
+}

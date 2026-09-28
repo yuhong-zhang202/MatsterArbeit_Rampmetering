@@ -1,0 +1,95 @@
+{
+  "bindings": {
+    "card_sha256": "d610c5c47c440014a3b8254b36de8d93a48c5d32be928746b93f50003ebcb125",
+    "common_M_sha256": "2fb1383e709e2174e2623aae575649aba40937729325a5e9c43bcc2b76982865",
+    "demand_sha256": "569b9fb152b060c848b9c8da2c2c7d94e68da4fa7e7ab4c5a03a869f05ecce53",
+    "input_manifest_sha256": "622b28e0fdb7659e75acdcc89b90a8e0038dc0eed052b4fdb0d188162fb4a95f",
+    "provenance_receipt_sha256": "bea34253e86a0968d75cef6c6653e6c04940ed2b0b80bbd975b93175aef5c01f",
+    "runner_request_match": true,
+    "runner_sha256": "cca3cb7c9536d929f1928529b1294adc11dc45c6ff6d951b3ed810a06da5ef7b",
+    "runtime_binding_sha256": "a839625d058c7869e6af4f22fba80f1a60a5b821e190398d1c8dcd1988018567",
+    "start_request_receipt_sha256": "984fa00e807a8bf1b2b7d97b7fae7aa17d2c9cd1b963bc4de0bf0e5755456fe6",
+    "start_request_sha256": "4bc11a4089d73c3116a5b95c44840d95f8afbb910913dfa53894198d9eb8b874"
+  },
+  "card_sha256": "d610c5c47c440014a3b8254b36de8d93a48c5d32be928746b93f50003ebcb125",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "focused_tests": {
+    "command": ".venv/bin/python -m unittest tests.test_minimal3350_treatment_adapter tests.test_minimal3350_treatment_binding tests.test_minimal3350_treatment_control_gate tests.test_minimal3350_treatment_data_receipt",
+    "failed": 0,
+    "passed": 25,
+    "status": "PASS"
+  },
+  "inputs": {
+    "M_count": 1396,
+    "M_exact_matched": 1396,
+    "R_count": 192,
+    "U_explicit_zero": true,
+    "X_explicit_zero": true,
+    "treatment_only_delta": "R_flow.0..R_flow.191"
+  },
+  "limitations": [
+    "Fresh REV7 data/provenance and independent scientific prelaunch receipts are required because the bound runner/card changed.",
+    "No process was launched."
+  ],
+  "matched_control_gate": {
+    "control_disposition": "LOW_R_BACKGROUND_ACCEPTABLE",
+    "control_findings": {
+      "blocker": 0,
+      "major": 0,
+      "required_minor": 0
+    },
+    "control_scientific_sha256": "8078d5ee902eb355623d29e7cc78c7d9cdf61e918903d9a3040fe0f320ae3738",
+    "exploratory_gate_required": true,
+    "legacy_clean_high_mobility_gate_required": false,
+    "required_category": "LOW_R_BACKGROUND_ACCEPTABLE"
+  },
+  "output_targets": {
+    "all_absent": true,
+    "all_under_bound_directory": true,
+    "count": 18,
+    "output_directory": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260924_v15/MINIMAL3350_R720_DELAYED_S17/outputs",
+    "parent_absent": true,
+    "roles_sha256": "3ab602a38df0b25a0484f6693d1f8003a6d95dc751588a15ccd8e47bc967ddd7",
+    "unique": true
+  },
+  "receipt_schema_gate": {
+    "accepted_binding_location": "bindings",
+    "data_receipt_schema": "stage6_minimal3350_treatment_data_provenance_prelaunch_review_v1",
+    "negative_fixtures_passed": true,
+    "required_hashes": [
+      "card_sha256",
+      "input_manifest_sha256",
+      "runtime_binding_sha256",
+      "runner_sha256",
+      "start_request_sha256",
+      "start_request_receipt_sha256",
+      "provenance_receipt_sha256"
+    ],
+    "requires_exact_run_package_status_and_0_0_0": true
+  },
+  "resource_contract": {
+    "output_bytes": 75000000,
+    "poll_interval_ms": 100,
+    "slight_overshoot_accepted": true,
+    "wallclock_s": 90
+  },
+  "run_id": "MINIMAL3350_R720_DELAYED_S17",
+  "schema": "stage6_minimal3350_treatment_engineering_prelaunch_review_v1",
+  "scope": "REV7 runner receipt-schema compatibility repair, matched-control gate, exact binding, and static preflight only.",
+  "static_preflight": {
+    "guardian_sumo_traci_netconvert_starts": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "launchable_now": false,
+    "review_gate": "WAITING_FOR_REQUIRED_REVIEWS",
+    "status": "PREFLIGHT_PASS_NO_PROCESS_STARTED"
+  },
+  "status": "PASS_PRELAUNCH"
+}

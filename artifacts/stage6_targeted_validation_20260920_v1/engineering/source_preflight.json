@@ -1,0 +1,114 @@
+{
+  "GUI_calls": 0,
+  "SUMO_calls": 0,
+  "TraCI_calls": 0,
+  "context_bindings": [
+    {
+      "bytes": 14070,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/AGENTS.md",
+      "sha256": "4df6eb482d63f9d1e6d30dfea6d78c3645577cc08a9d944b818db53601ac281b"
+    },
+    {
+      "bytes": 40859,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/docs/PROJECT_STATE.md",
+      "sha256": "ffae356d7fd7fe7ba90313cd6e5f2ddc928391207a28ad9e1805aed712bb903d"
+    },
+    {
+      "bytes": 3044,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/docs/DECISIONS.md",
+      "sha256": "4e440204b812a9ed28181b6b4aa54818ca5e7a39d207aeaadcab12cf8cb00d7a"
+    },
+    {
+      "bytes": 0,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/docs/EXPERIMENT_PROTOCOL.md",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 205320,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/docs/WORKLOG.md",
+      "sha256": "98a4904d2c8e35035557c92f280ea429db478b6964b1d3b6cdd6f0c8cc1c4ec0"
+    }
+  ],
+  "deltas": [
+    "ramp_mid node priority\u2192traffic_light tl=ramp_mid",
+    "three static ramp_mid programs A/B/C added; urban program unchanged"
+  ],
+  "schema_checks": [
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/nodes_file.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/network_inputs/candidate.nod.xml"
+      ],
+      "returncode": 0,
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/network_inputs/candidate.nod.xml validates\n",
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/edges_file.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/network_inputs/candidate.edg.xml"
+      ],
+      "returncode": 0,
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/network_inputs/candidate.edg.xml validates\n",
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/connections_file.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/network_inputs/candidate.con.xml"
+      ],
+      "returncode": 0,
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/network_inputs/candidate.con.xml validates\n",
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/tllogic_file.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/network_inputs/candidate.tll.xml"
+      ],
+      "returncode": 0,
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/network_inputs/candidate.tll.xml validates\n",
+      "stdout": ""
+    }
+  ],
+  "scope": "new task, exploratory protocol remains empty",
+  "source_bindings": [
+    {
+      "bytes": 717,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/network_inputs/candidate.nod.xml",
+      "sha256": "8952c46b1b01eac912c54fbe4ab33bbb67dc79fb8862d68272591469e4fe61f3"
+    },
+    {
+      "bytes": 1686,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/network_inputs/candidate.edg.xml",
+      "sha256": "26ad2219b776b986f20641d9aae227f23de91cc1e247b477cd6aa2ef03e0fd4f"
+    },
+    {
+      "bytes": 838,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/network_inputs/candidate.con.xml",
+      "sha256": "a6f005daf1974d7c3d1a06536dc6a7161ca0e56411d0ead40becb183d642f542"
+    },
+    {
+      "bytes": 551,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/network_inputs/candidate.tll.xml",
+      "sha256": "89f25ab5020e4f2df2fc035233b038c89cc80cf748f6dca19b5584e829df3ecc"
+    }
+  ],
+  "status": "PASS"
+}

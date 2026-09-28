@@ -1,0 +1,26 @@
+{
+  "status": "PASS_POSTRUN_SCIENTIFIC",
+  "card_sha256": "00e095217e6dd66581707439c81ba15204c69e12de7d0f4a5f38e0fc04607bed",
+  "execution_receipt_sha256": "b4f181c499eb255090c7aa4cd7fa7c30512b474739958ea061d3edba4917c2da",
+  "output_manifest_sha256": "df6e663e91cb82c91ce7db1ba855f979a1289262cdf0efe817ac76a9910de000",
+  "lifecycle_ledger_sha256": "989da3e8a5397568f1a21088cdb88c1e0ba009af85dea12aecb54f93b43dbc81",
+  "data_gate_sha256": "7b9a8719f7ea13183f10aee24a4f67bbe4a8c5ff66c5ee609ed45efd9116b2de",
+  "classifier_receipt_sha256": "10d276035b5efa760c4dd1894b331072b5e2336c8cd486644bf2fb42c50c2ce3",
+  "classifier_report_sha256": "5a3ef9e3e4edcdfa89a4e716c77434972178ba1e5f64660cb6df62995d51f7f2",
+  "open_findings": {"blocker": 0, "major": 0, "required_minor": 0},
+  "gates": {
+    "G0": "PASS",
+    "G1": "PASS",
+    "G2": "PASS",
+    "G3": "PASS",
+    "G4": "NOT_ACCEPTED",
+    "G5": "UNRESOLVED",
+    "G6": "NOT_EVALUABLE_FOR_RELEASE",
+    "G7": "STOP"
+  },
+  "allowed_terminal_label": "LOCALIZATION_NOT_EVALUABLE",
+  "prohibited_labels": ["SUITABLE_BASELINE_CANDIDATE_SEED17", "P_NEGATIVE_RELEASE_NEXT_POINT_ELIGIBLE", "OVERLOADED_NOT_SUITABLE_BASELINE", "NO_BASELINE_WITHIN_BUDGET"],
+  "interpretation": "Technically complete and fully realized single demand point, but no confirmed P-defined State 1; no baseline candidate, next-point release, O2 resolution, capacity/breakdown or controller conclusion.",
+  "point2_point3_seed23_released": false,
+  "runtime_invocations_during_review": 0
+}

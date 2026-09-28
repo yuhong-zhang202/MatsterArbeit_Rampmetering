@@ -1,0 +1,39 @@
+{
+  "schema": "stage6_minimal3350_e1_r900_retry1_scientific_prelaunch_review_v1",
+  "run_id": "MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY1",
+  "card_sha256": "d71c0580a4020b3f94a39d8d8e134560ca1181dd2c08d06ae230ff7218377f5d",
+  "disposition": "PASS_PRELAUNCH",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "confidence": {
+    "scientific_condition_continuity": "High",
+    "cross_rate_exposure_interpretation": "Moderate"
+  },
+  "condition": {
+    "qMain_veh_per_h": 3350.4,
+    "R_veh_per_h": 900,
+    "planned_R": 240,
+    "R_window_s": "[540,1500)",
+    "seed": 17,
+    "U": 0,
+    "X": 0,
+    "TLS_program": "A_OPEN",
+    "M_count": 1396,
+    "M_control_matching": "exact identity and bound attribute match"
+  },
+  "scientific_assessment": "The card preserves the reviewed E1 condition. Only technical path closure, output root, and attempt identity differ from the first attempt. The current user explicitly authorizes one independent technical retry of this same condition after fresh three-way PASS reviews. This does not release E2 or any other run.",
+  "predecessor_failure": {
+    "run_id": "MINIMAL3350_E1_R900_DELAYED_S17",
+    "disposition": "NOT_EVALUABLE",
+    "raw_preserved_separately": true,
+    "receipt_path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev17/post_failure/SCIENTIFIC_FAILURE_REVIEW.json"
+  },
+  "observations": [
+    "The first 192 R identities' speedFactors match 0/192 to the R720 vector. This does not invalidate R900-versus-R0, but limits attributing any R900-versus-R720 exposure increase solely to nominal qRamp."
+  ],
+  "review_scope": "Independent scientific prelaunch review of this exact E1 technical retry card only; no future outcome assessed.",
+  "starts_during_review": 0
+}

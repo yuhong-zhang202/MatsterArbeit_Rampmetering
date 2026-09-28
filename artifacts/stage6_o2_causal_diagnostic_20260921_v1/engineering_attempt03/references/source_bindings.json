@@ -1,0 +1,127 @@
+{
+  "context": "O2 unresolved; original 5 starts exhausted; D001-D004 provisional; protocol empty. Parent authorized package only, run conditional on exact final review. No formal claims.",
+  "default_length_not_assumed": "Observer reads actual vehicle length and minGap.",
+  "source_scope": "Installed Python API and installed local XSD; official version-tag C++ source is documentation, not proof of binary reproducible build.",
+  "sources": [
+    {
+      "bytes": 2674,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_C_S17_attempt1/scenario.sumocfg",
+      "sha256": "65e0ef661dbc21a9a49be60119393e595b769bd61960074b76a53684c55bc068"
+    },
+    {
+      "bytes": 3738,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_C_S17_attempt1/scenario.add.xml",
+      "sha256": "0f1bfa1a4d977f8cb1382394a476756a41b7b20b7d79559221c0e65378aad971"
+    },
+    {
+      "bytes": 1141,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_C_S17_attempt1/demand.rou.xml",
+      "sha256": "70d90d477c97141086b87cd248064c2c27c5965060e04fe9a2cbec67ec20e1cd"
+    },
+    {
+      "bytes": 37529,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_C_S17_attempt1/expected_identity_manifest.json",
+      "sha256": "b92c52c7a233d82a7f8aa76f0ef131fb35812ff6aa75f495711424e3da647219"
+    },
+    {
+      "bytes": 36472,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/RUNTIME_CARD.json",
+      "sha256": "8e54ab7ac73e3192a1db5ea249efbe610e1114d79980166baea83934a6601f4c"
+    },
+    {
+      "bytes": 14524,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/runtime_executor.py",
+      "sha256": "ee0ceb1fa361161ad11fe4b48ed6bd5ba21e79861f5b82b6083e1c869e8dfe7f"
+    },
+    {
+      "bytes": 10579,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/RUNTIME_CONTRACT.md",
+      "sha256": "83d1955b516cd2c3e57c233c7270474987993f3fa74b309ea0925f2669ceca0e"
+    },
+    {
+      "bytes": 915,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_C_S17_attempt1/execution_receipt.json",
+      "sha256": "945f5dd5ef3ac2d3cd6a21e038b0bbfea49fb2d90887f13d6d76992d1078c498"
+    },
+    {
+      "bytes": 6967,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_C_S17_attempt1/output_manifest.json",
+      "sha256": "0e69c85dd8d2c2cc1f6a1b7d9dbd436bae74b608812fc5561000fc55b8be18b3"
+    },
+    {
+      "bytes": 55246671,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_C_S17_attempt1/outputs/fcd.xml",
+      "sha256": "e7b3c1e310e7d15eff52e4bf2ca1b10975e2efadca452017d5fbc8d3dae8a891"
+    },
+    {
+      "bytes": 505773,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_C_S17_attempt1/outputs/tls_states.xml",
+      "sha256": "758378417dbf9ff462a6cc4bab7c88f67efa6c0c02ff3a81c954d3ebb1dd9662"
+    },
+    {
+      "bytes": 1597092,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_C_S17_attempt1/outputs/queues.xml",
+      "sha256": "da1ef2e0fb59678335b130f8195978c8258dc63708831aaabeb946a8caa722d6"
+    },
+    {
+      "bytes": 759330,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_C_S17_attempt1/outputs/sumo_summary.xml",
+      "sha256": "844b95c3678c53c3e3644530a2dde2f63c65a14021ac68c2b0ff422a9a46b786"
+    },
+    {
+      "bytes": 247339,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_C_S17_attempt1/outputs/lanechanges.xml",
+      "sha256": "5cb32d0177aaecc049eedd1ebf398c263526d700cc79f1fc7a3fb3d46bddec9d"
+    },
+    {
+      "bytes": 2346,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/__init__.py",
+      "sha256": "0c216f53345d2301e3c46dda03dd9ee97622db103a8ab132fc47c2fe44181fda"
+    },
+    {
+      "bytes": 10680,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/main.py",
+      "sha256": "433832a156b224a584d6237607b33bbfb3ee35e9be1188c7f3f3afdbb24d20fe"
+    },
+    {
+      "bytes": 17094,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/connection.py",
+      "sha256": "05820ab615a2ab18411e9722ebbc7056856f2de155383a8b58120d2b2feac572"
+    },
+    {
+      "bytes": 11719,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/domain.py",
+      "sha256": "69e28e03cc7844c63049a7f177f73f927ea2ebef7065c47fcfbd388d52b7b8bd"
+    },
+    {
+      "bytes": 44991,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/constants.py",
+      "sha256": "38c54a14cf57dba8f45e67b3927d0b4a2663733fc5fc2fe41a1c9f41914cf891"
+    },
+    {
+      "bytes": 71786,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_vehicle.py",
+      "sha256": "998b5579fc6df5380af5a315a2677d396460a9e8ecc58a8ba971d6f085b206eb"
+    },
+    {
+      "bytes": 22415,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_vehicletype.py",
+      "sha256": "90ac3e869010662546f4639c55738c0a4c01f31cf7780b5cb8aad34230ee0dd6"
+    },
+    {
+      "bytes": 27058,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_simulation.py",
+      "sha256": "8b7f97ced4dd6774271e8e0da270d687aa9a5ff438c8090023a941beb4e8bbec"
+    },
+    {
+      "bytes": 19900,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_trafficlight.py",
+      "sha256": "4757c6336d7edf37a7d1473d050731e40a18e4a4d9220babb564af2abaaac4c9"
+    },
+    {
+      "bytes": 13836,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_lane.py",
+      "sha256": "1b785163f695807cb8ea129cba9c42f243f3974a4a0d3d49ed442f362f043e6a"
+    }
+  ]
+}

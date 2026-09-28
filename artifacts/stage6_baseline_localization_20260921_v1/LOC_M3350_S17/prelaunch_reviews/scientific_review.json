@@ -1,0 +1,27 @@
+{
+  "status": "PASS_PRELAUNCH_SCIENTIFIC",
+  "card_sha256": "57714636d8b71c5a003f5ebca59da2dcfa2d85ab80a3266d6d6f08c6fc3a61d3",
+  "input_manifest_sha256": "131f3b6c8506edbd3e905d5f3e737ecb770601e6e6fbb27c1e365f8504f22ffc",
+  "open_findings": {"blocker": 0, "major": 0, "required_minor": 0},
+  "review_scope": "read-only final scientific prelaunch review of exact Point1 card, bound inputs, gates, review receipts and approval boundary",
+  "checks": {
+    "context_and_approval_boundary": "PASS; current state/worklog reconciled, exact card awaits explicit user approval, formal protocol empty/unfrozen",
+    "bounded_qMain_only_point_and_no_result_chasing": "PASS; scheduled M count 1333 to 1396 over [0,1500), remaining scientific inputs fixed",
+    "P_positive_not_sufficient_and_no_physical_breakdown_claim": "PASS",
+    "demand_realization_overload_and_attribution": "PASS_WITH_REQUIRED_POST_RUN_GATE; exact class-specific identity/insertion accounting and source-context checks required at G2/G3/G7",
+    "analyzer_accounting_scope": "PASS_WITH_LIMITATION; classifier adapter does not generate full M/R/U/X lifecycle ledger; separate reconciled ledger is mandatory and its absence/unresolved status blocks acceptance or release",
+    "locked_classifier_and_stop_logic": "PASS; classifier/fixtures hash-bound, unresolved/unsuitable/overloaded/failed outcomes stop",
+    "reproducibility_and_resource_controls": "PASS; one start maximum, zero retries, exclusive outputs, declared stop conditions",
+    "actual_runtime_measurement_and_regression": "NOT_YET_VERIFIABLE; no run occurred",
+    "aggregate_output_limit": "PASS_WITH_LIMITATION; 22-stream RLIMIT bound as specified, 50 ms monitor is secondary rather than instantaneous aggregate quota"
+  },
+  "limitations": [
+    "one exploratory seed and one localization point; cannot establish suitable baseline, stochastic robustness, physical capacity/breakdown, or ALINEA efficacy",
+    "runtime coverage, observed-population reconciliation, aggregate-to-raw reconciliation and runtime regression remain unverified until an authorized run and post-run gates"
+  ],
+  "runtime_invocations": 0,
+  "sumo_starts": 0,
+  "netconvert_starts": 0,
+  "TraCI_sessions": 0,
+  "user_execution_authorization": false
+}

@@ -1,0 +1,27 @@
+{
+  "schema_version": "1",
+  "run_id": "RI3350_CTRL_S17_technical_retry1",
+  "card_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/control_card_FINAL_RI3350_CTRL_S17_technical_retry1_REV1.json",
+  "card_sha256": "28be8560664c75f0176b048206f50b50392c3ed1c03a64dae02d2e01c0daf91e",
+  "runner_sha256": "abba1b31970a4690a262881cec1ea0957b2386c65a20c4105a711cebf3c80154",
+  "preflight_command": ".venv/bin/python artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py preflight --repo \"$PWD\" --card artifacts/stage6_ramp_induced_validation_20260922_v1/control_card_FINAL_RI3350_CTRL_S17_technical_retry1_REV1.json --approved-card-sha256 28be8560664c75f0176b048206f50b50392c3ed1c03a64dae02d2e01c0daf91e",
+  "result": "PREFLIGHT_PASS_NO_PROCESS_STARTED",
+  "max_starts": 1,
+  "technical_retries": 0,
+  "resource_contract": {
+    "wallclock_stop_trigger_s": 180,
+    "output_size_stop_trigger_bytes_decimal": 300000000,
+    "poll_interval_ms": 100,
+    "overshoot_accepted": true,
+    "strict_disk_quota": false
+  },
+  "resolved_environment": {
+    "sumo_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+    "sumo_version": "1.26.0",
+    "sumo_home": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo",
+    "schema_sha256": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e",
+    "python_executable": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+    "python_version": "3.13.0"
+  },
+  "simulator_process_started": false
+}

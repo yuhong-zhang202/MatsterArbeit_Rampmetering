@@ -1,0 +1,139 @@
+{
+  "schema_version": "1",
+  "card_status": "AUTHORIZED_EXACT_CARD",
+  "card_revision": 1,
+  "run_id": "RI3350_CTRL_S17_attempt1",
+  "pair_id": "RI3350",
+  "condition": "M_ONLY_URBAN_BACKGROUND",
+  "design_sha256": "62fb63eb49ae98b58bc45ad6bc7d60cd21fcdb73b3327c34b97c5151b01ca355",
+  "input_manifest": "input_manifest.json",
+  "input_manifest_sha256": "ebb8647e8441183cd57c0b5e56053cffc598b718421e5460e60687eead46fc5d",
+  "control_inputs": {
+    "sumocfg": "control_input/scenario_control.sumocfg",
+    "demand": "control_input/demand_control.rou.xml",
+    "additional": "control_input/scenario_control.add.xml",
+    "network": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml"
+  },
+  "control_input_sha256": {
+    "sumocfg": "87ba0d7d671f1f72f45d7fda3c3e857a1622263a9c2ce4d3f1ef625745f7ab7c",
+    "demand": "0edeb776e6656f3fd22f1e8d0b4c07ece17903695c901af576d93fb205b26865",
+    "additional": "6355c6a6deaf0b7aadbdca59a8349c4e0e96e47b9ff5f89b8498b9ad02adcd59",
+    "network": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca"
+  },
+  "output_role_source": {
+    "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/inputs/LOC_M3350_S17_attempt1/output_roles.json",
+    "sha256": "e33b7439cc15b7b68048fa2bf63f659769b93e4718650c11eeda46959404b2b3"
+  },
+  "run_condition": {
+    "qMain_veh_per_h": 3350.4,
+    "M_scheduled": 1396,
+    "qRamp_veh_per_h": 0,
+    "R_scheduled": 0,
+    "qUrban_veh_per_h": 360,
+    "U_scheduled": 150,
+    "qX_veh_per_h": 180,
+    "X_scheduled": 75,
+    "demand_window_s": "[0,1500)",
+    "meter_program": "A_OPEN",
+    "simulation_step_s": 1
+  },
+  "seed": 17,
+  "horizon_s": 2700,
+  "max_starts": 1,
+  "technical_retries": 0,
+  "progression_allowed": false,
+  "approval_required": false,
+  "authorization": {
+    "type": "CONDITIONAL_USER_AUTHORIZATION",
+    "source": "current user message in this task",
+    "condition": "Final engineering, data, and scientific prelaunch reviews each PASS with blocker/major/required minor 0/0/0",
+    "condition_met": true,
+    "scope": "This exact run only; one start; retry zero; post-run reviews then STOP",
+    "exact_card_digest_is_computed_after_card_creation": true
+  },
+  "execution_authorized": true,
+  "readiness_status": "PRELAUNCH_GATES_PASS_CONDITIONAL_AUTHORIZATION_SATISFIED",
+  "readiness_register": {
+    "path": "readiness_register_CONDITIONAL_PRELAUNCH_FINAL.json",
+    "sha256": "5f57ef136cb26dfb8b954c41b5e7e23dd00d60ec3764e42da7ebda2edf4da698"
+  },
+  "prelaunch_review": {
+    "path": "FINAL_PRELAUNCH_REVIEW_REV2.md",
+    "sha256": "4ae1f4522773911d8ed55e298d35fc777bec707252e385a0b86c01776d19f489",
+    "engineering": "PASS_0_0_0",
+    "data": "PASS_0_0_0",
+    "scientific": "PASS_0_0_0"
+  },
+  "implementation_bindings": {
+    "runner_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+    "runner_sha256": "f8c3129e193fad38feddb8b4853638303faf1ee2f92706753db611fb50909a54",
+    "runner_contract_sha256": "5960d01cbcf623af666cd4d93f98c739b20e1dd74763f6eae35add059dc272a0",
+    "r04_adapter_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r04_adapter/ri3350_control_adapter.py",
+    "r04_adapter_sha256": "b2cdc1a14ba2cf1152539ff7e4469ffb6f7e157e770e4dade0a1ef95af6ecf2a",
+    "r04_locked_event_source_adapter_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r04_adapter/locked_event_source_adapter.py",
+    "r04_locked_event_source_adapter_sha256": "a5becfcf327dc2b9bc02ca6336526cd3a98509ffc2c7c2356a65d4088ce6bf6a",
+    "locked_analyzer_sha256": "78f001b7909bdda6797eae6aab5bf6bf0dd70bce83262d8f2619c3fa71149c55",
+    "locked_method_sha256": "22fe22170c17ce74e261e717586a458a1b5173e9deabbee925bd4c1d606adfe7"
+  },
+  "runtime_binding": {
+    "binary_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+    "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+    "binary_version": "1.26.0",
+    "version_evidence": {
+      "binary_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+      "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+      "reported_version": "1.26.0",
+      "query": "sumo --version (environment probe; no simulation)"
+    },
+    "python_environment": {
+      "executable_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+      "executable_sha256": "76c73e25cdd69650a897648666e41c364940fbcff0d1176572a667d4d470ec9e",
+      "implementation": "CPython",
+      "version": "3.13.0",
+      "package_versions": {
+        "traci": "1.26.0",
+        "sumolib": "1.26.0",
+        "sumoITScontrol": "0.1.0"
+      }
+    },
+    "max_runtime_s": 180,
+    "max_output_bytes": 300000000,
+    "output_poll_interval_s": 0.1,
+    "output_overshoot_accepted": true,
+    "guardian_runner_sha256": "f8c3129e193fad38feddb8b4853638303faf1ee2f92706753db611fb50909a54"
+  },
+  "resource_limits": {
+    "scope": "this run only",
+    "runtime_s": 180,
+    "storage_bytes": 300000000,
+    "storage_enforcement": "polled_stop_trigger_with_accepted_overshoot_not_hard_quota",
+    "termination": "SIGTERM_process_group_then_SIGKILL_after_5s"
+  },
+  "output_directory": "artifacts/stage6_ramp_induced_validation_20260922_v1/outputs/RI3350_CTRL_S17_attempt1",
+  "run_command": {
+    "argv_template": [
+      "<bound SUMO binary>",
+      "-c",
+      "<exclusive output directory>/scenario_control.sumocfg"
+    ],
+    "shell": false,
+    "launcher": "r02_single_start/runner.py",
+    "guardian": "runner-managed independent Guardian"
+  },
+  "postrun_analysis_bindings": {
+    "required_after_raw_exists": true,
+    "application_adapter_sha256": "b2cdc1a14ba2cf1152539ff7e4469ffb6f7e157e770e4dade0a1ef95af6ecf2a",
+    "locked_event_source_adapter_sha256": "a5becfcf327dc2b9bc02ca6336526cd3a98509ffc2c7c2356a65d4088ce6bf6a",
+    "actual_raw_application_is_not_claimed_prelaunch": true,
+    "G6": "UNKNOWN_NOT_PASS",
+    "on_complete_postrun_review": "STOP_NO_PROGRESSION"
+  },
+  "stop_conditions": {
+    "never_retry": true,
+    "never_run_transition": true,
+    "never_run_seed23": true,
+    "never_run_B_or_C": true,
+    "never_run_other_SUMO": true,
+    "after_complete_postrun_reviews": "STOP"
+  }
+}

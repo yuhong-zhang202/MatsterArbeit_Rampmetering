@@ -1,0 +1,146 @@
+{
+  "schema": "stage6_minimal3350_treatment_data_provenance_prelaunch_review_v1",
+  "status": "PASS_DATA_PROVENANCE_PRELAUNCH",
+  "run_id": "MINIMAL3350_R720_DELAYED_S17",
+  "package_id": "stage6_minimal3350_r720_treatment_preparation_20260924_rev7",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "bindings": {
+    "card_path": "artifacts/stage6_minimal3350_r720_treatment_preparation_20260924_rev7/MINIMAL3350_R720_DELAYED_S17_CARD_REV1.json",
+    "card_sha256": "d610c5c47c440014a3b8254b36de8d93a48c5d32be928746b93f50003ebcb125",
+    "input_manifest_sha256": "622b28e0fdb7659e75acdcc89b90a8e0038dc0eed052b4fdb0d188162fb4a95f",
+    "runtime_binding_sha256": "a839625d058c7869e6af4f22fba80f1a60a5b821e190398d1c8dcd1988018567",
+    "runner_sha256": "cca3cb7c9536d929f1928529b1294adc11dc45c6ff6d951b3ed810a06da5ef7b",
+    "start_request_sha256": "4bc11a4089d73c3116a5b95c44840d95f8afbb910913dfa53894198d9eb8b874",
+    "start_request_receipt_sha256": "984fa00e807a8bf1b2b7d97b7fae7aa17d2c9cd1b963bc4de0bf0e5755456fe6",
+    "provenance_receipt_sha256": "bea34253e86a0968d75cef6c6653e6c04940ed2b0b80bbd975b93175aef5c01f",
+    "design_plan_sha256": "06b0f04f1144ef8497b4d64906ae27b1377b544abd6e0639133c8d85a3fabc23",
+    "witness_contract_sha256": "958890a7dd017110787a85d77ebfa3e6dac2b7d862f0fd91f6bafb7cf1738d9a",
+    "adapter_sha256": "3ab2560ad9364da07572053b685bc4d2d92844c030d6bb53273eb3d7677ac434"
+  },
+  "condition_check": {
+    "qMain_veh_per_h": 3350.4,
+    "seed": 17,
+    "R_veh_per_h": 720,
+    "R_window_s": "[540,1500)",
+    "U": 0,
+    "X": 0,
+    "legacy_clean_high_mobility_screen_required_for_release": false,
+    "stage6_exploratory_control_disposition_required_for_release": true,
+    "required_exploratory_control_disposition": "LOW_R_BACKGROUND_ACCEPTABLE"
+  },
+  "matched_control_gate": {
+    "run_id": "MINIMAL3350_CTRL_S17",
+    "card_sha256": "15544478e8e7ced98b12673bec65cfe646b1f73e9e471ed501ddee052306bbfd",
+    "data_review_sha256": "24711f151751cb1d6b0ba852388824f1f8e69be7fea3678900b872498870ab4d",
+    "data_review_disposition": "PASS_DATA_LIFECYCLE",
+    "data_side_control_category": "LOW_R_BACKGROUND_ACCEPTABLE",
+    "scientific_review_sha256": "8078d5ee902eb355623d29e7cc78c7d9cdf61e918903d9a3040fe0f320ae3738",
+    "scientific_disposition": "LOW_R_BACKGROUND_ACCEPTABLE",
+    "scientific_findings": {
+      "blocker": 0,
+      "major": 0,
+      "required_minor": 0
+    },
+    "output_manifest_sha256": "48456bb607b4e4679dd13274696c60ab7f5ae020aa6ecbf2462110e1fdcd752f",
+    "result": "PASS_EXACT_BOUND_CONTROL_RECEIPTS"
+  },
+  "common_M_binding": {
+    "manifest_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/COMMON_M_DEMAND_MANIFEST.json",
+    "manifest_sha256": "2fb1383e709e2174e2623aae575649aba40937729325a5e9c43bcc2b76982865",
+    "planned_count": 1396,
+    "control_count": 1396,
+    "treatment_count": 1396,
+    "id_sets_identical": true,
+    "fields_compared": [
+      "id",
+      "desired_depart_ms",
+      "depart",
+      "route",
+      "type",
+      "speedFactor",
+      "departLane",
+      "departPos",
+      "departSpeed"
+    ],
+    "exact_mismatch_count": 0,
+    "integer_SUMOTime_schedule": "desired_depart_ms(i)=i*1074 for i=0..1395; all 1396 records conform",
+    "route_and_type_definitions_identical": true
+  },
+  "treatment_delta": {
+    "only_new_vehicle_id_family": "R_flow.0..R_flow.191",
+    "R_count": 192,
+    "first_depart_ms": 540000,
+    "last_depart_ms": 1495000,
+    "interval_ms": 5000,
+    "exact_schedule": true,
+    "control_R_count": 0,
+    "control_U_count": 0,
+    "control_X_count": 0,
+    "treatment_U_count": 0,
+    "treatment_X_count": 0,
+    "result": "ONLY_R_ADDED; ZERO_CLASSES_EXPLICIT"
+  },
+  "M_speedFactor_scope_limitation": {
+    "source_path": "data/raw/stage6_baseline_localization_20260921_v1/LOC_M3350_S17_attempt1/outputs/vehroute.xml",
+    "source_sha256": "0183782a60172b5c038d7c0dcd0a9172478803a1c1673df6eadb29f2a6ea1702",
+    "note": "The explicit M speedFactor vector was copied from a prior qMain=3350.4 seed17 full-network run with nonzero U/X. The complete same vector is bound in control and treatment, which establishes planned-input matching, not an independent U=X=0 random realization. This scope limitation is disclosed and is nonblocking for this matched-input provenance check."
+  },
+  "input_hash_validation": {
+    "additional": "bf30adcd2cd26a8982096d0f6a5c2758a3cc3255d272d55bae72876777844d15",
+    "demand": "569b9fb152b060c848b9c8da2c2c7d94e68da4fa7e7ab4c5a03a869f05ecce53",
+    "network": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "output_roles": "3ab602a38df0b25a0484f6693d1f8003a6d95dc751588a15ccd8e47bc967ddd7",
+    "sumocfg": "d8c53d9c3ab30fe0cf91eba848dbc3c9c79a7e4a273cd61fce1b9091051c4195",
+    "all_actual_bytes_match": true
+  },
+  "output_targets": {
+    "count": 18,
+    "unique": true,
+    "all_under_exact_bound_directory": true,
+    "all_absent": true,
+    "parent_absent": true,
+    "output_directory": "data/raw/stage6_minimal3350_ux0_20260924_v15/MINIMAL3350_R720_DELAYED_S17/outputs"
+  },
+  "resource_contract": {
+    "wallclock_stop_trigger_s": 90,
+    "output_size_stop_trigger_bytes": 75000000,
+    "poll_interval_ms": 100,
+    "slight_overshoot_accepted": true,
+    "max_starts": 1,
+    "technical_retries": 0
+  },
+  "request_and_execution_status": {
+    "start_request_status": "PERSISTED_UNSENT",
+    "start_request_dispatched": false,
+    "preparation_receipt_start_counts": {
+      "guardian": 0,
+      "sumo": 0,
+      "traci": 0,
+      "netconvert": 0
+    },
+    "static_preflight": "PREFLIGHT_PASS_NO_PROCESS_STARTED",
+    "launchable_now": false,
+    "live_process_listing": "Not independently inspected because the execution environment denied the process-list command. No process was started by this review; preflight receipts report zero starts and the output directory and all targets remain absent."
+  },
+  "negative_test_inspection": {
+    "engineering_focused_tests_reported_passed": 25,
+    "failed": 0,
+    "test_file": "tests/test_minimal3350_treatment_data_receipt.py",
+    "covered_fail_closed_cases": [
+      "nested card path/hash missing or incorrect",
+      "input manifest/runtime/runner/request/request receipt/provenance hash mismatch",
+      "wrong status/run ID/nonzero finding/control disposition",
+      "missing receipt or missing nested bindings"
+    ],
+    "tests_rerun_by_this_review": false
+  },
+  "scope_limitations": [
+    "Prelaunch provenance review only; not an execution authorization or post-run/scientific outcome analysis.",
+    "The prior full-network source for explicit M speedFactors is not an independent U=X=0 RNG realization.",
+    "Live process listing was unavailable due an OS execution restriction; no launch was attempted and all bound output locations were absent at review capture."
+  ]
+}

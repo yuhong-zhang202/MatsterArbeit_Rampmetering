@@ -1,0 +1,58 @@
+{
+  "status": "PAIR3199_R720_DELAYED_PRELAUNCH_READY_AWAITING_AUTHORIZATION",
+  "run_id": "PAIR_3199_R720_DELAYED_S17",
+  "card_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/PAIR_3199_R720_DELAYED_S17_CARD_PRELAUNCH_REV1.json",
+  "card_sha256": "263c63f356b02353655a5e8e06eb7089d527e82f8137f45a8ecaf63054fd38a4",
+  "contract_path": "docs/methodology/STAGE6_EXPLORATORY_RAMP_INDUCED_WITNESS_CONTRACT.md",
+  "contract_sha256": "958890a7dd017110787a85d77ebfa3e6dac2b7d862f0fd91f6bafb7cf1738d9a",
+  "reviews": {
+    "engineering": {
+      "status": "PASS",
+      "blocker_major_required_minor": "0/0/0",
+      "path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/ENGINEERING_TREATMENT_PRELAUNCH_REVIEW_INDEPENDENT_REV1.md",
+      "sha256": "960015710b7d3dd569ed1487536839b4afc603ce762bf5a4b0cf2c7ad90aab0a"
+    },
+    "data_provenance": {
+      "status": "PASS",
+      "blocker_major_required_minor": "0/0/0",
+      "path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/DATA_TREATMENT_PRELAUNCH_REVIEW_REV1.md",
+      "sha256": "bb119fe4ebb7f767d48bb48279e6d146342e0ec66b81348843a035206280aa72",
+      "receipt_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/DATA_TREATMENT_PRELAUNCH_REVIEW_RECEIPT_REV1.json",
+      "receipt_sha256": "4f50b496d45d841a889408378a7b95413f9acdc9728b00c4ca600eae352d52a3"
+    },
+    "scientific": {
+      "status": "PASS",
+      "blocker_major_required_minor": "0/0/0",
+      "confidence": "High for card-contract alignment; Moderate for future one-case attribution",
+      "path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/SCIENTIFIC_TREATMENT_PRELAUNCH_REVIEW_REV1.md",
+      "sha256": "688b77d9eb2ef31fe4e0827354f06c3ecd394a938bebf8d294dffa9fe45ac04b"
+    }
+  },
+  "resource_proposal": {
+    "run_id": "PAIR_3199_R720_DELAYED_S17",
+    "wallclock_stop_trigger_s": 120,
+    "output_size_stop_trigger_bytes_decimal": 90000000,
+    "output_polling_interval_ms": 100,
+    "polling_overshoot_accepted": true,
+    "status": "PROPOSED_NOT_AUTHORIZED"
+  },
+  "execution_authorized": false,
+  "max_starts_after_separate_authorization": 1,
+  "technical_retries": 0,
+  "output_path_absent": true,
+  "reservation_absent": true,
+  "execution_counts": {
+    "SUMO_starts": 0,
+    "TraCI_starts": 0,
+    "netconvert_starts": 0,
+    "launch_commands": 0
+  },
+  "control_history_preserved": {
+    "LOW_R_BACKGROUND_ACCEPTABLE": "NOT_EVALUABLE",
+    "fixed_screens": "FAIL",
+    "low_speed_and_candidate_C_warnings": "retained",
+    "clean_normal_baseline": false
+  },
+  "formal_protocol_changed": false,
+  "scientific_inputs_changed": false
+}

@@ -1,0 +1,62 @@
+{
+  "M_exact_common_matches": 1396,
+  "R_schedule_first_last_interval_ms": [
+    540000,
+    1495000,
+    5000
+  ],
+  "U_explicit_zero": true,
+  "X_explicit_zero": true,
+  "card_sha256": "d610c5c47c440014a3b8254b36de8d93a48c5d32be928746b93f50003ebcb125",
+  "class_counts": {
+    "M": {
+      "planned_count": 1396,
+      "status": "BOUND"
+    },
+    "R": {
+      "planned_count": 192,
+      "status": "BOUND"
+    },
+    "U": {
+      "planned_count": 0,
+      "status": "PASS_ZERO"
+    },
+    "X": {
+      "planned_count": 0,
+      "status": "PASS_ZERO"
+    }
+  },
+  "common_m_manifest_sha256": "2fb1383e709e2174e2623aae575649aba40937729325a5e9c43bcc2b76982865",
+  "control_scientific_disposition": "LOW_R_BACKGROUND_ACCEPTABLE",
+  "control_scientific_review_sha256": "8078d5ee902eb355623d29e7cc78c7d9cdf61e918903d9a3040fe0f320ae3738",
+  "input_manifest_sha256": "622b28e0fdb7659e75acdcc89b90a8e0038dc0eed052b4fdb0d188162fb4a95f",
+  "input_sha256": {
+    "additional": "bf30adcd2cd26a8982096d0f6a5c2758a3cc3255d272d55bae72876777844d15",
+    "demand": "569b9fb152b060c848b9c8da2c2c7d94e68da4fa7e7ab4c5a03a869f05ecce53",
+    "network": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "output_roles": "3ab602a38df0b25a0484f6693d1f8003a6d95dc751588a15ccd8e47bc967ddd7",
+    "sumocfg": "d8c53d9c3ab30fe0cf91eba848dbc3c9c79a7e4a273cd61fce1b9091051c4195"
+  },
+  "output_directory": "data/raw/stage6_minimal3350_ux0_20260924_v15/MINIMAL3350_R720_DELAYED_S17/outputs",
+  "output_parent_absent": true,
+  "process_starts": {
+    "guardian": 0,
+    "netconvert": 0,
+    "sumo": 0,
+    "traci": 0
+  },
+  "r_vehicle_source_sha256": "b57a0f3723be40bd1725a478f4ec7f57c1aacfbac0f2e57a5d94f31dce758c83",
+  "resource_limits": {
+    "output_bytes": 75000000,
+    "overshoot_accepted": true,
+    "poll_interval_ms": 100,
+    "wallclock_s": 90
+  },
+  "run_id": "MINIMAL3350_R720_DELAYED_S17",
+  "runner_sha256": "cca3cb7c9536d929f1928529b1294adc11dc45c6ff6d951b3ed810a06da5ef7b",
+  "runtime_binding_sha256": "a839625d058c7869e6af4f22fba80f1a60a5b821e190398d1c8dcd1988018567",
+  "schema": "stage6_minimal3350_treatment_provenance_receipt_v1",
+  "start_request_receipt_sha256": "984fa00e807a8bf1b2b7d97b7fae7aa17d2c9cd1b963bc4de0bf0e5755456fe6",
+  "start_request_sha256": "4bc11a4089d73c3116a5b95c44840d95f8afbb910913dfa53894198d9eb8b874",
+  "treatment_only_delta": "R_flow.0..R_flow.191"
+}

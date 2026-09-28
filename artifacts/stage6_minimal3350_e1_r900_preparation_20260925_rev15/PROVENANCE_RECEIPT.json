@@ -1,0 +1,50 @@
+{
+  "M_exact_common_matches": 1396,
+  "U_explicit_zero": true,
+  "X_explicit_zero": true,
+  "card_sha256": "95b577a8b62bb79cccbcba8aa04869a96d3c04fa9dcc7db6d38489627d94b148",
+  "common_m_manifest_sha256": "2fb1383e709e2174e2623aae575649aba40937729325a5e9c43bcc2b76982865",
+  "control_binding": {
+    "card_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/MINIMAL3350_CTRL_S17_CARD_FINAL.json",
+    "card_sha256": "15544478e8e7ced98b12673bec65cfe646b1f73e9e471ed501ddee052306bbfd",
+    "data_review_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/DATA_POSTRUN_REVIEW.json",
+    "data_review_sha256": "24711f151751cb1d6b0ba852388824f1f8e69be7fea3678900b872498870ab4d",
+    "demand_input_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/inputs/control/demand.rou.xml",
+    "demand_input_sha256": "da93237ed572b4103146b07b6e2b6ed4ffb9b95d21e7ed22e823ea427f8d477c",
+    "output_manifest_path": "data/raw/stage6_minimal3350_ux0_20260924_v8/MINIMAL3350_CTRL_S17/outputs/output_manifest.json",
+    "output_manifest_sha256": "48456bb607b4e4679dd13274696c60ab7f5ae020aa6ecbf2462110e1fdcd752f",
+    "run_id": "MINIMAL3350_CTRL_S17",
+    "scientific_review_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/SCIENTIFIC_POSTRUN_REVIEW.json",
+    "scientific_review_sha256": "8078d5ee902eb355623d29e7cc78c7d9cdf61e918903d9a3040fe0f320ae3738"
+  },
+  "input_manifest_sha256": "389ee74637d6fcac45480ac2e5f9f41cd51a39b2aa605d710b882af40673e6f5",
+  "output_directory": "data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs",
+  "output_parent_absent": true,
+  "process_starts": {
+    "guardian": 0,
+    "netconvert": 0,
+    "sumo": 0,
+    "traci": 0
+  },
+  "r_schedule_first_last_interval_ms": [
+    540000,
+    1496000,
+    4000
+  ],
+  "r_vector_sha256": "4f23a508713b53b64c3d419e06d754d3032dce52a19f17f977a6508509d8c8fb",
+  "r_vehicle_source_sha256": "a6ae2649fe93c61460a52303b6358985c14270ce5ac5af02460af53880965851",
+  "resource_limits": {
+    "output_bytes": 100000000,
+    "overshoot_accepted": true,
+    "poll_interval_ms": 100,
+    "wallclock_s": 120
+  },
+  "run_id": "MINIMAL3350_E1_R900_DELAYED_S17",
+  "runner_sha256": "2926918ffb8dfdbf64874946af2cf3b199735335e9cce299770b28c4aad41e6f",
+  "runtime_binding_sha256": "191674b9c8fdb2b05244f44fc9d98d31b6d279e3a870b0c1f3ff623716586bfd",
+  "schema": "stage6_minimal3350_e1_r900_provenance_receipt_v1",
+  "start_request_receipt_sha256": "8d9c44ba3d26c9fc8a7d9a63e6106a994fc0adf3d25fb9e51b5b7912998046c6",
+  "start_request_sha256": "1bce0cf5c4cbc6cd3edd9843e2cfae09d291d0993f10e34ce185407ac46db931",
+  "status": "PRELAUNCH_ONLY",
+  "treatment_only_delta": "R_flow.0..239"
+}

@@ -1,0 +1,179 @@
+{
+  "authorization": {
+    "authorization": "USER_AUTHORIZED_REV19_ONE_START_AFTER_REV18_PRESPAWN_FAILURE_AND_FRESH_REVIEWS",
+    "execution_authorized": true,
+    "max_starts": 1,
+    "output_size_stop_limit_bytes_decimal": 100000000,
+    "review_gate_required": true,
+    "run_id": "MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY2",
+    "status": "AUTHORIZED_EXACTLY_ONE_START_AFTER_FRESH_REVIEWS",
+    "technical_retries": 0,
+    "wallclock_stop_limit_s": 120
+  },
+  "class_counts": {
+    "M": {
+      "planned_count": 1396,
+      "status": "BOUND"
+    },
+    "R": {
+      "planned_count": 240,
+      "status": "BOUND"
+    },
+    "U": {
+      "planned_count": 0,
+      "status": "PASS_ZERO"
+    },
+    "X": {
+      "planned_count": 0,
+      "status": "PASS_ZERO"
+    }
+  },
+  "common_m_manifest": {
+    "path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/COMMON_M_DEMAND_MANIFEST.json",
+    "sha256": "2fb1383e709e2174e2623aae575649aba40937729325a5e9c43bcc2b76982865"
+  },
+  "control_binding": {
+    "card_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/MINIMAL3350_CTRL_S17_CARD_FINAL.json",
+    "card_sha256": "15544478e8e7ced98b12673bec65cfe646b1f73e9e471ed501ddee052306bbfd",
+    "data_review_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/DATA_POSTRUN_REVIEW.json",
+    "data_review_sha256": "24711f151751cb1d6b0ba852388824f1f8e69be7fea3678900b872498870ab4d",
+    "demand_input_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/inputs/control/demand.rou.xml",
+    "demand_input_sha256": "da93237ed572b4103146b07b6e2b6ed4ffb9b95d21e7ed22e823ea427f8d477c",
+    "output_manifest_path": "data/raw/stage6_minimal3350_ux0_20260924_v8/MINIMAL3350_CTRL_S17/outputs/output_manifest.json",
+    "output_manifest_sha256": "48456bb607b4e4679dd13274696c60ab7f5ae020aa6ecbf2462110e1fdcd752f",
+    "run_id": "MINIMAL3350_CTRL_S17",
+    "scientific_review_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/SCIENTIFIC_POSTRUN_REVIEW.json",
+    "scientific_review_sha256": "8078d5ee902eb355623d29e7cc78c7d9cdf61e918903d9a3040fe0f320ae3738"
+  },
+  "design_plan_sha256": "06b0f04f1144ef8497b4d64906ae27b1377b544abd6e0639133c8d85a3fabc23",
+  "escalation_plan_sha256": "dee35d966d3fb00b1320092e49c1ebc228fbbbe3c5a8c3320e7966960e976776",
+  "failure_predecessor": {
+    "card_sha256": "d71c0580a4020b3f94a39d8d8e134560ca1181dd2c08d06ae230ff7218377f5d",
+    "reservation_sha256": "ca665df555c2294d5da027ab87e862b38e8bbc5d7693d5a434743851c819fcbd",
+    "retry_allowed": false,
+    "run_id": "MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY1",
+    "status": "FAILED_PRESPAWN"
+  },
+  "fixed_conditions": {
+    "A": "A_OPEN",
+    "R_window_s": "[540,1500)",
+    "U": 0,
+    "X": 0,
+    "horizon_s": 2700,
+    "qMain_veh_per_h": 3350.4,
+    "qRamp_veh_per_h": 900,
+    "seed": 17,
+    "step_s": 1
+  },
+  "guardian_request_binding": {
+    "receipt_path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev19/START_REQUEST_RECEIPT.json",
+    "request_path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev19/START_REQUEST.json",
+    "schema": "r02-start-v2",
+    "status": "PERSISTED_UNSENT"
+  },
+  "inputs": {
+    "additional": {
+      "bytes": 4012,
+      "path": "inputs/treatment/scenario.add.xml",
+      "sha256": "fcc47b936eaf2577c459b4f7282c0ed0d9dba8418a49f4ce0f7cd0e7e8f453b3"
+    },
+    "demand": {
+      "bytes": 263175,
+      "path": "inputs/treatment/demand.rou.xml",
+      "sha256": "3b3da52ac2ddbe915b3f6578b515ace1a30b3f7a1169724528855a6387abaada"
+    },
+    "network": {
+      "bytes": 12814,
+      "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+      "sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca"
+    },
+    "output_roles": {
+      "bytes": 6929,
+      "path": "inputs/treatment/output_roles.json",
+      "sha256": "8491ef81b8d8b5ba39f57d3cb3d859e3b61bd1bab924acb06f2470aef2b65d6d"
+    },
+    "sumocfg": {
+      "bytes": 2864,
+      "path": "inputs/treatment/scenario.sumocfg",
+      "sha256": "2193c7e925b8fe2a5f9b53f2aa2293ce24aeae2263c10be3474fa6244e170fce"
+    }
+  },
+  "output_directory": "data/raw/stage6_minimal3350_ux0_20260925_v19/MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY2/outputs",
+  "package_id": "stage6_minimal3350_e1_r900_preparation_20260925_rev19",
+  "pair_id": "MINIMAL3350_UX0_S17",
+  "path_binding": {
+    "additional_source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev19/inputs/treatment/scenario.add.xml",
+    "route_files_source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev19/inputs/treatment/demand.rou.xml",
+    "staged_additional": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v19/MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY2/outputs/scenario_control.add.xml"
+  },
+  "plan_sha256": "dee35d966d3fb00b1320092e49c1ebc228fbbbe3c5a8c3320e7966960e976776",
+  "provenance": {
+    "guardian_starts": 0,
+    "netconvert_starts": 0,
+    "scope": "PRELAUNCH_ONLY_NO_GUARDIAN_NO_SIMULATOR",
+    "sumo_starts": 0,
+    "traci_starts": 0
+  },
+  "r_vector_note": "Fixed reused identity-keyed speedFactors; no qRamp900 capacity inference.",
+  "r_vector_provenance": {
+    "path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev19/R900_MATERIALIZED_VECTOR.json",
+    "sha256": "4f23a508713b53b64c3d419e06d754d3032dce52a19f17f977a6508509d8c8fb"
+  },
+  "r_vector_sha256": "4f23a508713b53b64c3d419e06d754d3032dce52a19f17f977a6508509d8c8fb",
+  "r_vehicle_source": {
+    "path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev19/inputs/treatment/r900_vehicle_source.rou.xml",
+    "sha256": "a6ae2649fe93c61460a52303b6358985c14270ce5ac5af02460af53880965851"
+  },
+  "r_vehicle_source_sha256": "a6ae2649fe93c61460a52303b6358985c14270ce5ac5af02460af53880965851",
+  "resource_limits": {
+    "output_bytes": 100000000,
+    "overshoot_accepted": true,
+    "poll_interval_ms": 100,
+    "wallclock_s": 120
+  },
+  "retry_context": {
+    "retry_of_card_sha256": "d71c0580a4020b3f94a39d8d8e134560ca1181dd2c08d06ae230ff7218377f5d",
+    "retry_of_reservation_sha256": "ca665df555c2294d5da027ab87e862b38e8bbc5d7693d5a434743851c819fcbd",
+    "retry_of_run_id": "MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY1",
+    "scientific_condition_unchanged": true,
+    "type": "INDEPENDENT_TECHNICAL_RETRY"
+  },
+  "run_id": "MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY2",
+  "run_ids": {
+    "treatment": "MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY2"
+  },
+  "runner_path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev19/r02_single_start/runner.py",
+  "runner_sha256": "d6bde894ec724ded810f9d5f28c39e62d269a70c345be79ca2fdfa467c1c502a",
+  "runtime_binding_sha256": "63f2059410ecefb3a4ba069458110c2be54d1010d93e29f3e77ac29a4a6bdbc3",
+  "schema": "stage6_minimal3350_e1_r900_technical_retry_execution_manifest_v1",
+  "staged_config": {
+    "additional_outputs": 12,
+    "config_outputs": 8,
+    "configured_role_records": 18,
+    "configured_unique_paths": 20,
+    "network_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+    "route_file_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev19/inputs/treatment/demand.rou.xml",
+    "schema": "e1-staged-reference-closure-v1",
+    "source_additional_sha256": "fcc47b936eaf2577c459b4f7282c0ed0d9dba8418a49f4ce0f7cd0e7e8f453b3",
+    "source_demand_sha256": "3b3da52ac2ddbe915b3f6578b515ace1a30b3f7a1169724528855a6387abaada",
+    "source_sumocfg_sha256": "2193c7e925b8fe2a5f9b53f2aa2293ce24aeae2263c10be3474fa6244e170fce",
+    "staged_additional_bytes": 4012,
+    "staged_additional_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v19/MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY2/outputs/scenario_control.add.xml",
+    "staged_additional_sha256": "fcc47b936eaf2577c459b4f7282c0ed0d9dba8418a49f4ce0f7cd0e7e8f453b3",
+    "staged_sumocfg_bytes": 2888,
+    "staged_sumocfg_sha256": "7f7329b91c77b3f10e38659875a78aa3ed7bb58a85ebe6ba735e07bdea9d6bfc",
+    "validated_actual_staged_bytes": true
+  },
+  "staging_preview": {
+    "additional": {
+      "bytes": 4012,
+      "path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev19/staging_preview/scenario_control.add.xml",
+      "sha256": "fcc47b936eaf2577c459b4f7282c0ed0d9dba8418a49f4ce0f7cd0e7e8f453b3"
+    },
+    "sumocfg": {
+      "bytes": 2888,
+      "path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev19/staging_preview/scenario_control.sumocfg",
+      "sha256": "7f7329b91c77b3f10e38659875a78aa3ed7bb58a85ebe6ba735e07bdea9d6bfc"
+    }
+  }
+}

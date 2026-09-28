@@ -1,0 +1,45 @@
+{
+  "status": "PASS_STATIC_FINAL",
+  "stage": "exact_o2_diagnostic_package",
+  "card_sha256": "fa90dd0757acbe7f63b86cd95b27baabedf6977f56c9f9885f9f5593a6ea255c",
+  "scope": "single_C_seed17_end450_readonly_diagnostic",
+  "blocker_major_required_minor": [
+    0,
+    0,
+    0
+  ],
+  "scientific_review": {
+    "status": "PASS_STATIC_FINAL",
+    "agent": "/root/p0_scientific_final",
+    "confidence": "High, static scope only",
+    "findings": [
+      "The only observer behavior change is postconnect ownership verification: the preconnect exact child-PID LISTEN gate remains; postconnect checks the same PID for an ESTABLISHED socket with exact reversed client/server endpoints.",
+      "TraCI version query, 450 single-second simulation steps, 385-430 observation window, snapshots, measurement gate, demand, network, seed, signal, vehicle models, and all scientific settings are unchanged.",
+      "Attempt01 and attempt02 failure accounting is complete; attempt03 uses a unique, unused output root and contains no automatic retry.",
+      "Static review does not establish runtime neutrality or resolve O2."
+    ]
+  },
+  "data_review": {
+    "status": "PASS_STATIC_DATA",
+    "agent": "/root/p0_data",
+    "confidence": "High, bindings and path review",
+    "card_self_binding_count": 232,
+    "delivery_file_bindings": 82,
+    "input_file_bindings": 6,
+    "card_sha256": "fa90dd0757acbe7f63b86cd95b27baabedf6977f56c9f9885f9f5593a6ea255c",
+    "delivery_manifest_sha256": "b58d94ac722aa548792a76f22e789d4c107cf602d04224eec747ad38946ed116",
+    "input_manifest_sha256": "a90a94059013d17b228f9c6f0a5ba5445a3035fa7fcce677463bacfc80adb624",
+    "prior_attempts": {
+      "SUMO_starts": 2,
+      "wallclock_s": 28.542396625998663,
+      "final_raw_bytes": 118166,
+      "traffic_steps": 0
+    },
+    "findings": [
+      "All reviewed hashes and output paths match; attempt03 root is new and absent.",
+      "The prior raw attempts and exact failure causes are bound; existing C-prefix comparison and measurement rules remain unchanged.",
+      "Runtime prefix neutrality and output integrity remain mandatory gates after the run."
+    ]
+  },
+  "execution_authorization_basis": "User explicitly authorized continued technical troubleshooting retries for the unchanged 0-450 s C/seed17 diagnostic until it connects and completes. Exact review authorizes only one attempt03 start. No broader scientific experiment is authorized."
+}

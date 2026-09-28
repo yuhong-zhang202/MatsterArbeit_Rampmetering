@@ -1,0 +1,162 @@
+{
+  "schema_version": "1",
+  "scope": "PRELAUNCH_OUTPUT_COVERAGE_AUDIT_ONLY",
+  "status": "PASS_COVERAGE_AUDIT_WITH_G6_LIMITATION",
+  "starts": 0,
+  "added_observers_or_detectors": false,
+  "planned_observability": {
+    "source_and_insertion": {
+      "status": "CONDITIONAL_DETECTABLE",
+      "evidence_roles": [
+        "demand_control.rou.xml",
+        "sumo_summary.xml",
+        "fcd.xml",
+        "vehroute.xml",
+        "tripinfo.xml"
+      ],
+      "limits": [
+        "no approved numeric material-insertion cutoff",
+        "report exact counts/delays; do not infer artifact clearance mechanically"
+      ]
+    },
+    "downstream_tailback": {
+      "status": "CONDITIONAL_DETECTABLE",
+      "evidence_roles": [
+        "fcd.xml",
+        "p1_main_down_20_l0.xml",
+        "p1_main_down_20_l1.xml",
+        "p1_main_down_200_l0.xml",
+        "p1_main_down_200_l1.xml"
+      ],
+      "limits": [
+        "E1 flow/occupancy is not class-attributed",
+        "coarse simultaneity remains UNKNOWN"
+      ]
+    },
+    "direct_mainline_tls": {
+      "status": "DETECTABLE_WITH_STATIC_TOPOLOGY_CONTEXT",
+      "evidence_roles": [
+        "tls_states.xml",
+        "network.net.xml"
+      ],
+      "limits": [
+        "does not exclude urban platoon/TLS timing effects"
+      ]
+    },
+    "geometry_or_unrelated_bottleneck": {
+      "status": "CONDITIONAL_DETECTABLE",
+      "evidence_roles": [
+        "network.net.xml",
+        "fcd.xml",
+        "vehroute.xml",
+        "lanechanges.xml"
+      ],
+      "limits": [
+        "accepted geometry is context, not automatic event-specific clearance"
+      ]
+    },
+    "ramp_internal_shared_occupancy": {
+      "status": "PARTIAL_COVERAGE",
+      "evidence_roles": [
+        "fcd.xml",
+        "ramp_storage_e2.xml",
+        "shared_boundary_e2.xml",
+        "queues.xml"
+      ],
+      "limits": [
+        "E2 covers storage and shared approach only; 113.08 m :urban_diverge_1_0 connector has no dedicated E2; FCD can provide trajectories but does not itself establish a registered queue/storage predicate"
+      ]
+    },
+    "storage_cross_or_connected_stopped_chain": {
+      "status": "CONDITIONAL_FCD_ADJUDICATION_REQUIRED",
+      "evidence_roles": [
+        "fcd.xml",
+        "lanechanges.xml",
+        "network.net.xml"
+      ],
+      "limits": [
+        "no approved new numeric queue-connectivity predicate; no positive event is not evidence of absence unless coverage adequacy is established"
+      ]
+    },
+    "direct_same_identity_time_location_R_to_U_obstruction": {
+      "status": "NOT_ESTABLISHED_BY_REGISTERED_OUTPUTS",
+      "evidence_roles": [
+        "fcd.xml",
+        "lanechanges.xml",
+        "tripinfo.xml",
+        "vehroute.xml",
+        "ramp_storage_e2.xml",
+        "shared_boundary_e2.xml"
+      ],
+      "limits": [
+        "historical M3350 G6 remained NOT_EVALUABLE_FOR_RELEASE; strict storage_cross and linked same-R/same-U/time/location obstruction were not independently established; proximity/R-ahead of stopped U is not causal linkage; no approved obstruction threshold"
+      ]
+    },
+    "U_exposure_and_lifecycle": {
+      "status": "DESCRIPTIVE_DETECTABLE",
+      "evidence_roles": [
+        "tripinfo.xml",
+        "vehroute.xml",
+        "sumo_summary.xml",
+        "fcd.xml"
+      ],
+      "limits": [
+        "delay and unfinished counts do not prove R caused U harm without linked obstruction evidence"
+      ]
+    }
+  },
+  "release_policy": {
+    "unknown_g6_blocks_baseline_suitability": true,
+    "unknown_g6_does_not_erase_separately_supported_mainline_mechanism": true,
+    "no_positive_evidence_does_not_equal_cleared": true,
+    "no_new_sensor_or_runtime_observer_authorized": true,
+    "no_user_facing_claim_of_urban_safety_or_G6_clearance": true
+  },
+  "historical_review_status": {
+    "data_G6": "NOT_EVALUABLE_FOR_RELEASE; storage_cross and direct same-identity/time/location R-to-U obstruction not independently established",
+    "scientific_G6": "NOT_EVALUABLE_FOR_RELEASE"
+  },
+  "explicit_G6_evidence_boundary": {
+    "registered_hard_predicate": "same R blocker/U victim/time/location plus same-U overlapping positive insertion delay or unfinished status",
+    "historical_finding": "NOT_EVALUABLE_FOR_RELEASE; strict storage_cross and direct linkage not independently established",
+    "internal_connector_with_no_dedicated_E2": {
+      "lane": ":urban_diverge_1_0",
+      "length_m": 113.08
+    },
+    "meaning": "output coverage supports conditional post-run review but cannot turn unobserved/unlinked evidence into a clearance"
+  },
+  "source_manifest": {
+    "output_roles": {
+      "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/inputs/LOC_M3350_S17_attempt1/output_roles.json",
+      "sha256": "e33b7439cc15b7b68048fa2bf63f659769b93e4718650c11eeda46959404b2b3"
+    },
+    "control_additional": {
+      "path": "artifacts/stage6_ramp_induced_validation_20260922_v1/control_input/scenario_control.add.xml",
+      "sha256": "6355c6a6deaf0b7aadbdca59a8349c4e0e96e47b9ff5f89b8498b9ad02adcd59"
+    },
+    "historical_data_review": {
+      "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/postrun_reviews/data_postrun_review.json",
+      "sha256": "60b0e941be5604a4ed69c230cead7889adeda852281b510a5d77226aab2ae5c1"
+    },
+    "historical_scientific_review": {
+      "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/postrun_reviews/scientific_postrun_review.json",
+      "sha256": "db5e9256534c15d4f541fb057cdce462773779c518504ec6cfbc8fd88193721d"
+    },
+    "registered_G6_gate": {
+      "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/gate_contract.json",
+      "sha256": "a9cea8ac59073b21a59afd14f41afdbb0d3f2545214cf866f7fe7c8a152f5566"
+    },
+    "compiled_geometry_audit": {
+      "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/compiled_audit.json",
+      "sha256": "070ff4de4cc2ba0a23a31cd4e8a450e5987dedde1c630051acec1f41bc944793"
+    },
+    "prior_urban_detector_scope_diagnostic": {
+      "path": "docs/STAGE2_TIMING_DIAGNOSTIC.md",
+      "sha256": "e5c62d5a43adac8a84f6f74bca88e087b042176ec7d47ee4e9642c60bc2542b4"
+    }
+  },
+  "limitations": [
+    "This is a coverage/readiness conclusion, not an audit of a future RI3350 run.",
+    "R07 closes only as bounded observability specification; direct G6 remains an explicit post-run UNKNOWN unless evidence resolves it."
+  ]
+}

@@ -1,0 +1,37 @@
+{
+  "schema": "stage6_minimal3350_e1_r900_retry3_scientific_prelaunch_review_v1",
+  "status": "PASS_PRELAUNCH",
+  "disposition": "PASS_PRELAUNCH",
+  "run_id": "MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY3",
+  "card_sha256": "c5e94245dc44cc190dbcb2e402c28213c7e7e3ea90edf35e708a8d332209f31a",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "confidence": {
+    "condition_and_binding_continuity": "High",
+    "realized_exposure_comparison_with_R720": "Moderate"
+  },
+  "reviewer": "scientific_reviewer",
+  "evidence": {
+    "engineering_review_sha256": "08721df964ecf0e124d5a16ee09af9146075990a3ff427b069157b71511b5fe0",
+    "data_provenance_review_sha256": "d9725df2efb4ace44f458602e8b7b7ea52c4cfae6a0aa38ad08839ab2de8f7bb",
+    "input_manifest_sha256": "f7b5364c85a88de37d668818cc066c2e95697536993321dc06723f80e413d962"
+  },
+  "scope": "Exact REV20 E1 R900 RETRY3 prelaunch review only. No outcome inspected and no process started.",
+  "scientific_condition": {
+    "qMain_veh_per_h": 3350.4,
+    "R_veh_per_h": 900,
+    "R_window_s": "[540,1500)",
+    "seed": 17,
+    "U": 0,
+    "X": 0,
+    "matched_M_count": 1396,
+    "control_disposition": "LOW_R_BACKGROUND_ACCEPTABLE"
+  },
+  "limitations": [
+    "0/192 shared R identities have the same speedFactor as the R720 vector; this does not invalidate the R900-versus-R0 exploratory case but limits attributing a nominal qRamp exposure difference against R720 solely to qRamp.",
+    "This card cannot release R1080, E2, or any other run."
+  ]
+}

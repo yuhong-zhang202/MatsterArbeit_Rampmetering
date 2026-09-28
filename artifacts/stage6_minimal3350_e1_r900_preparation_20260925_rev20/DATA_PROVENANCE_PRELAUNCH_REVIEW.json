@@ -1,0 +1,135 @@
+{
+  "schema": "stage6_minimal3350_e1_r900_retry3_data_provenance_prelaunch_review_v1",
+  "status": "PASS_DATA_PROVENANCE_PRELAUNCH",
+  "run_id": "MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY3",
+  "package_id": "stage6_minimal3350_e1_r900_preparation_20260925_rev20",
+  "card_sha256": "c5e94245dc44cc190dbcb2e402c28213c7e7e3ea90edf35e708a8d332209f31a",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "confidence": "High",
+  "reviewer": "data_analyst",
+  "bindings": {
+    "card_path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev20/MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY3_CARD_FINAL_REV1.json",
+    "card_sha256": "c5e94245dc44cc190dbcb2e402c28213c7e7e3ea90edf35e708a8d332209f31a",
+    "input_manifest_sha256": "f7b5364c85a88de37d668818cc066c2e95697536993321dc06723f80e413d962",
+    "runtime_binding_sha256": "b4e65f0a03f16e0de8cbb4c5630591f3a9f9a52c3d950a2a2cac135ef02a1e80",
+    "runner_sha256": "85a25ab9efbe4d92c1153c15148c287c31a3a61d24251e379aa9e48eb9640aed",
+    "start_request_sha256": "cc6e0ed29312672e0ffc034cf4f470ca13ce5277691c0a2e4d7f25aaaedf3a7a",
+    "start_request_receipt_sha256": "41a952e3ac9eeb51efbc8517a48b1b98ac0b598d61f604424a4e5522b2092321",
+    "provenance_receipt_sha256": "05c9b7eacceaa64481618201cb340cd1e3fae4b6851e1d43207bbcc7fafc97b9",
+    "design_plan_sha256": "06b0f04f1144ef8497b4d64906ae27b1377b544abd6e0639133c8d85a3fabc23",
+    "witness_contract_sha256": "958890a7dd017110787a85d77ebfa3e6dac2b7d862f0fd91f6bafb7cf1738d9a",
+    "adapter_sha256": "98d530ad4490c92c174233028cdb9d2388b5a4a945233f90aefa7c4613052148"
+  },
+  "matched_control_gate": {
+    "run_id": "MINIMAL3350_CTRL_S17",
+    "card_sha256": "15544478e8e7ced98b12673bec65cfe646b1f73e9e471ed501ddee052306bbfd",
+    "data_review_sha256": "24711f151751cb1d6b0ba852388824f1f8e69be7fea3678900b872498870ab4d",
+    "data_review_disposition": "PASS_DATA_LIFECYCLE",
+    "data_side_control_category": "LOW_R_BACKGROUND_ACCEPTABLE",
+    "scientific_review_sha256": "8078d5ee902eb355623d29e7cc78c7d9cdf61e918903d9a3040fe0f320ae3738",
+    "scientific_disposition": "LOW_R_BACKGROUND_ACCEPTABLE",
+    "scientific_findings": {
+      "blocker": 0,
+      "major": 0,
+      "required_minor": 0
+    },
+    "output_manifest_sha256": "48456bb607b4e4679dd13274696c60ab7f5ae020aa6ecbf2462110e1fdcd752f",
+    "result": "PASS_EXACT_BOUND_CONTROL_RECEIPTS"
+  },
+  "condition_check": {
+    "qMain_veh_per_h": 3350.4,
+    "seed": 17,
+    "R_veh_per_h": 900,
+    "R_window_s": "[540,1500)",
+    "U": 0,
+    "X": 0,
+    "legacy_clean_high_mobility_screen_required_for_release": false,
+    "stage6_exploratory_control_disposition_required_for_release": true,
+    "required_exploratory_control_disposition": "LOW_R_BACKGROUND_ACCEPTABLE"
+  },
+  "data_checks": {
+    "same_scientific_condition_as_retry1_retry2": true,
+    "M_count": 1396,
+    "M_exact_matches": 1396,
+    "M_fields": [
+      "id",
+      "integer-ms desired departure",
+      "route",
+      "vType",
+      "speedFactor",
+      "departPos",
+      "departLane",
+      "departSpeed"
+    ],
+    "added_external_demand_only": "R_flow.0..239",
+    "R_count": 240,
+    "R_schedule_ms": [
+      540000,
+      1496000,
+      4000
+    ],
+    "U_explicit_zero": true,
+    "X_explicit_zero": true,
+    "demand_bytes_identical_to_prior_attempts": true,
+    "R_vehicle_source_bytes_identical_to_prior_attempts": true,
+    "R_materialized_vector_bytes_identical_to_prior_attempts": true,
+    "additional_xml_changes_output_root_only": true,
+    "sumocfg_additional_nested_reference_exact": true,
+    "staged_sumocfg_bytes": 2888,
+    "staged_sumocfg_sha256": "1d8b94361831d425a8f64533b422065c12beaad47a6e4d76e91cb67453d69765",
+    "staged_additional_bytes": 4012,
+    "staged_additional_sha256": "5b1298bf6fd6f7834a9ad9dcd1bb04d61bfe3f3191708b4a6a2005d897f8d324",
+    "configured_unique_output_paths": 20,
+    "paths_absolute_canonical_unique_revision_local": true,
+    "output_root": "data/raw/stage6_minimal3350_ux0_20260925_v20",
+    "output_directory_absent": true,
+    "output_parent_creatable": true,
+    "start_request_validation": "PASS_PERSISTED_UNSENT",
+    "request_dispatched": false,
+    "resource_contract": {
+      "wallclock_stop_trigger_s": 120,
+      "output_size_stop_trigger_bytes": 100000000,
+      "polling_interval_ms": 100,
+      "max_starts": 1,
+      "technical_retries": 0
+    }
+  },
+  "retry_predecessors": {
+    "retry1": {
+      "run_id": "MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY1",
+      "status": "FAILED_PRESPAWN",
+      "guardian_starts": 0,
+      "sumo_starts": 0,
+      "raw_absent": true
+    },
+    "retry2": {
+      "run_id": "MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY2",
+      "status": "FAILED_PRE_SPAWN_ENGINEERING",
+      "reservation_sha256": "d27a977678871885d376272b56b945e9d1f28a7728b22fd63dedd05da3aaaa45",
+      "failure_disposition_sha256": "d4515c6dc57a9eb942f40eeaae00ccf453625aa6933c3b0c1b3011b3ec49eb44",
+      "guardian_starts": 0,
+      "sumo_starts": 0,
+      "traffic_raw_complete": false,
+      "only_two_expected_staged_files_present": true
+    },
+    "retry3_reservation_absent": true
+  },
+  "historical_raw_integrity": {
+    "retry1_output_preserved": true,
+    "retry2_output_inventory_matches_failure_receipt": true,
+    "original_rev17_raw": "15/15 files retain recorded size/SHA256"
+  },
+  "process_starts": {
+    "guardian": 0,
+    "sumo": 0,
+    "traci": 0,
+    "netconvert": 0
+  },
+  "limitations": [
+    "Data/provenance review only; it does not independently disposition engineering or scientific review. At data-audit time, engineering receipt had not yet been written; it was recorded separately afterward and final preflight must validate all reviews."
+  ]
+}

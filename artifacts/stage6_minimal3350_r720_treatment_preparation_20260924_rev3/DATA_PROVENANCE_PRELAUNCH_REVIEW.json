@@ -1,0 +1,299 @@
+{
+  "blocker_detail": {
+    "actual_control_disposition": "LOW_R_BACKGROUND_ACCEPTABLE",
+    "adopted_entry_condition": "D-008 requires an acceptable qMain3350.4/R0 control, independently classified LOW_R_BACKGROUND_ACCEPTABLE.",
+    "assessment": "The control receipt is referenced in the card/manifest, but the dedicated treatment launch path does not validate its hash/disposition; the explicit field is false and is hard-enforced. This makes the adopted release condition ambiguous and not fail-closed. It is a substantive release-binding blocker pending a card/runner revision, despite the currently bound REV8 review itself being LOW_R_BACKGROUND_ACCEPTABLE. Distinguish this exploratory prerequisite from the historical strict normal/high-mobility screen.",
+    "card_flag": "LOW_R_BACKGROUND_ACCEPTABLE_required_for_release=false",
+    "dedicated_runner_checks_bound_control_disposition": false,
+    "dedicated_runner_checks_matched_control_review_hash": false,
+    "flag_enforced_by_runner": true
+  },
+  "card_sha256": "f151ea300bd236aa30ef0baec9980a2c28b01e1e80bfaa4aa2f080a26934783c",
+  "common_M_binding": {
+    "all_1396_match": true,
+    "common_manifest_count": 1396,
+    "control_M_count": 1396,
+    "field_mismatches_vs_control_or_common_manifest": {
+      "depart": 0,
+      "departLane": 0,
+      "departPos": 0,
+      "departSpeed": 0,
+      "route": 0,
+      "speedFactor": 0,
+      "type": 0
+    },
+    "fields": [
+      "ID",
+      "desired depart",
+      "route",
+      "type/vType",
+      "speedFactor",
+      "departLane",
+      "departPos",
+      "departSpeed"
+    ],
+    "identity_sets_match": true,
+    "treatment_M_count": 1396,
+    "vehicle_order_matches": true
+  },
+  "context_preflight": {
+    "AGENTS.md": "read",
+    "Amendment V1 scope": "read; D-007 remains limited to existing 3199 retrospective comparison",
+    "adopted D-008 plan/adoption receipt": "read",
+    "docs/DECISIONS.md incl D-005 and D-008": "read",
+    "docs/EXPERIMENT_PROTOCOL.md": "read; empty/unfrozen",
+    "docs/PROJECT_STATE.md": "read",
+    "docs/WORKLOG.md relevant current entries": "read",
+    "minimal existence-test plan": "read",
+    "minimal3350 control REV8 data/scientific postrun reviews": "read",
+    "parent Stage 6 witness contract": "read"
+  },
+  "findings": {
+    "blocker": 1,
+    "major": 0,
+    "required_minor": 0
+  },
+  "input_hashes": {
+    "additional": {
+      "actual_sha256": "195ae5ccc094044905802e98b60c31c46a6644e61eb2ff4c4bdd33cf5fdafadb",
+      "expected_sha256": "195ae5ccc094044905802e98b60c31c46a6644e61eb2ff4c4bdd33cf5fdafadb",
+      "match": true,
+      "path": "inputs/treatment/scenario.add.xml"
+    },
+    "demand": {
+      "actual_sha256": "569b9fb152b060c848b9c8da2c2c7d94e68da4fa7e7ab4c5a03a869f05ecce53",
+      "expected_sha256": "569b9fb152b060c848b9c8da2c2c7d94e68da4fa7e7ab4c5a03a869f05ecce53",
+      "match": true,
+      "path": "inputs/treatment/demand.rou.xml"
+    },
+    "network": {
+      "actual_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+      "expected_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+      "match": true,
+      "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml"
+    },
+    "output_roles": {
+      "actual_sha256": "92ac74b6e51146942e76e29ea4e149599a3c833c2d496002ee8a4b4f2b76f043",
+      "expected_sha256": "92ac74b6e51146942e76e29ea4e149599a3c833c2d496002ee8a4b4f2b76f043",
+      "match": true,
+      "path": "inputs/treatment/output_roles.json"
+    },
+    "sumocfg": {
+      "actual_sha256": "078307d03953159e23072edeb2c1a9afe7b2545abeae4868bbcb17f984598743",
+      "expected_sha256": "078307d03953159e23072edeb2c1a9afe7b2545abeae4868bbcb17f984598743",
+      "match": true,
+      "path": "inputs/treatment/scenario.sumocfg"
+    }
+  },
+  "limitations": [
+    "No treatment raw exists and no treatment outcome was inspected.",
+    "M speedFactor vector is copied from prior full-network seed17 raw with U/X present; this is explicit matching, not a separate U=X0 random realization.",
+    "Staged config/additional were predicted in memory only; actual files are produced on launch and must be validated by engineering launch receipt.",
+    "D-005 originally scoped the parent witness contract to the 3199 pair; D-008 adopts the conditional minimal3350 sequence and unchanged witness rules. Independent science reviewer should confirm this application and scope."
+  ],
+  "matched_control": {
+    "binding": {
+      "card_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/MINIMAL3350_CTRL_S17_CARD_FINAL.json",
+      "card_sha256": "15544478e8e7ced98b12673bec65cfe646b1f73e9e471ed501ddee052306bbfd",
+      "data_review_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/DATA_POSTRUN_REVIEW.json",
+      "data_review_sha256": "24711f151751cb1d6b0ba852388824f1f8e69be7fea3678900b872498870ab4d",
+      "demand_input_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/inputs/control/demand.rou.xml",
+      "demand_input_sha256": "da93237ed572b4103146b07b6e2b6ed4ffb9b95d21e7ed22e823ea427f8d477c",
+      "output_manifest_path": "data/raw/stage6_minimal3350_ux0_20260924_v8/MINIMAL3350_CTRL_S17/outputs/output_manifest.json",
+      "output_manifest_sha256": "48456bb607b4e4679dd13274696c60ab7f5ae020aa6ecbf2462110e1fdcd752f",
+      "run_id": "MINIMAL3350_CTRL_S17",
+      "scientific_review_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/SCIENTIFIC_POSTRUN_REVIEW.json",
+      "scientific_review_sha256": "8078d5ee902eb355623d29e7cc78c7d9cdf61e918903d9a3040fe0f320ae3738"
+    },
+    "bound_review_disposition": "LOW_R_BACKGROUND_ACCEPTABLE",
+    "control_review_sha256_actual": "8078d5ee902eb355623d29e7cc78c7d9cdf61e918903d9a3040fe0f320ae3738",
+    "required_by_D008": true
+  },
+  "output_binding": {
+    "additional_detector_and_TLS_outputs": 12,
+    "all_paths_under_bound_output_directory": true,
+    "any_role_target_exists": false,
+    "config_outputs": 6,
+    "output_directory_exists": false,
+    "output_parent_absent": true,
+    "required_roles": 18,
+    "roles_reconcile_exactly_to_config_and_additional_destinations": true,
+    "unique_paths": 18
+  },
+  "preflight": {
+    "launchable_now": false,
+    "review_gate_pending": true,
+    "start_counts": {
+      "guardian": 0,
+      "netconvert": 0,
+      "sumo": 0,
+      "traci": 0
+    },
+    "static_status": "PREFLIGHT_PASS_NO_PROCESS_STARTED"
+  },
+  "processes_started_by_this_review": 0,
+  "raw_modified": false,
+  "resources": {
+    "matches_card_runtime_request_receipt": true,
+    "output_size_bytes": 75000000,
+    "overshoot_accepted": true,
+    "poll_ms": 100,
+    "wallclock_s": 90
+  },
+  "reviewer": "data_analyst",
+  "run_id": "MINIMAL3350_R720_DELAYED_S17",
+  "runner_binding": {
+    "actual_runner_sha256": "5181e5873774e91437ad42313225042264fdae55e43e87738b75f8c75cc171a7",
+    "all_equal": true,
+    "card_runner_sha256": "5181e5873774e91437ad42313225042264fdae55e43e87738b75f8c75cc171a7",
+    "manifest_runner_sha256": "5181e5873774e91437ad42313225042264fdae55e43e87738b75f8c75cc171a7",
+    "runtime_runner_sha256": "5181e5873774e91437ad42313225042264fdae55e43e87738b75f8c75cc171a7"
+  },
+  "runtime_hashes": {
+    "additional_schema": {
+      "actual_sha256": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e",
+      "expected_sha256": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e",
+      "match": true,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd"
+    },
+    "python": {
+      "actual_sha256": "76c73e25cdd69650a897648666e41c364940fbcff0d1176572a667d4d470ec9e",
+      "expected_sha256": "76c73e25cdd69650a897648666e41c364940fbcff0d1176572a667d4d470ec9e",
+      "match": true,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python"
+    },
+    "sumo_binary": {
+      "actual_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+      "expected_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+      "match": true,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo"
+    }
+  },
+  "schema": "stage6_minimal3350_treatment_data_provenance_prelaunch_review_v1",
+  "scope": "REV3 prelaunch data/provenance only; no outcome and no process start.",
+  "source_hashes": {
+    "adapter": {
+      "actual_sha256": "3ab2560ad9364da07572053b685bc4d2d92844c030d6bb53273eb3d7677ac434",
+      "expected_sha256": "3ab2560ad9364da07572053b685bc4d2d92844c030d6bb53273eb3d7677ac434",
+      "match": true,
+      "path": "scripts/stage6/minimal3350/minimal3350_treatment_adapter.py"
+    },
+    "common_m_manifest": {
+      "actual_sha256": "2fb1383e709e2174e2623aae575649aba40937729325a5e9c43bcc2b76982865",
+      "expected_sha256": "2fb1383e709e2174e2623aae575649aba40937729325a5e9c43bcc2b76982865",
+      "match": true,
+      "path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/COMMON_M_DEMAND_MANIFEST.json"
+    },
+    "control_card": {
+      "actual_sha256": "15544478e8e7ced98b12673bec65cfe646b1f73e9e471ed501ddee052306bbfd",
+      "expected_sha256": "15544478e8e7ced98b12673bec65cfe646b1f73e9e471ed501ddee052306bbfd",
+      "match": true,
+      "path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/MINIMAL3350_CTRL_S17_CARD_FINAL.json"
+    },
+    "control_data_review": {
+      "actual_sha256": "24711f151751cb1d6b0ba852388824f1f8e69be7fea3678900b872498870ab4d",
+      "expected_sha256": "24711f151751cb1d6b0ba852388824f1f8e69be7fea3678900b872498870ab4d",
+      "match": true,
+      "path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/DATA_POSTRUN_REVIEW.json"
+    },
+    "control_science_review": {
+      "actual_sha256": "8078d5ee902eb355623d29e7cc78c7d9cdf61e918903d9a3040fe0f320ae3738",
+      "expected_sha256": "8078d5ee902eb355623d29e7cc78c7d9cdf61e918903d9a3040fe0f320ae3738",
+      "match": true,
+      "path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/SCIENTIFIC_POSTRUN_REVIEW.json"
+    },
+    "locked_method": {
+      "actual_sha256": "22fe22170c17ce74e261e717586a458a1b5173e9deabbee925bd4c1d606adfe7",
+      "expected_sha256": "22fe22170c17ce74e261e717586a458a1b5173e9deabbee925bd4c1d606adfe7",
+      "match": true,
+      "path": "docs/methodology/FREEWAY_PROTECTABLE_STATE_EXPLORATORY_DEFINITION.md"
+    },
+    "network": {
+      "actual_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+      "expected_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+      "match": true,
+      "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml"
+    },
+    "plan": {
+      "actual_sha256": "06b0f04f1144ef8497b4d64906ae27b1377b544abd6e0639133c8d85a3fabc23",
+      "expected_sha256": "06b0f04f1144ef8497b4d64906ae27b1377b544abd6e0639133c8d85a3fabc23",
+      "match": true,
+      "path": "artifacts/stage6_minimal_ramp_induced_breakdown_existence_test_20260924_v1/PLAN.md"
+    },
+    "r_vehicle_source": {
+      "actual_sha256": "b57a0f3723be40bd1725a478f4ec7f57c1aacfbac0f2e57a5d94f31dce758c83",
+      "expected_sha256": "b57a0f3723be40bd1725a478f4ec7f57c1aacfbac0f2e57a5d94f31dce758c83",
+      "match": true,
+      "path": "scripts/stage6/minimal3199/prepared_rev3/treatment/demand.rou.xml"
+    },
+    "runner": {
+      "actual_sha256": "5181e5873774e91437ad42313225042264fdae55e43e87738b75f8c75cc171a7",
+      "expected_sha256": "5181e5873774e91437ad42313225042264fdae55e43e87738b75f8c75cc171a7",
+      "match": true,
+      "path": "artifacts/stage6_minimal3350_r720_treatment_preparation_20260924_rev3/r02_single_start/runner.py"
+    },
+    "witness_contract": {
+      "actual_sha256": "958890a7dd017110787a85d77ebfa3e6dac2b7d862f0fd91f6bafb7cf1738d9a",
+      "expected_sha256": "958890a7dd017110787a85d77ebfa3e6dac2b7d862f0fd91f6bafb7cf1738d9a",
+      "match": true,
+      "path": "docs/methodology/STAGE6_EXPLORATORY_RAMP_INDUCED_WITNESS_CONTRACT.md"
+    }
+  },
+  "staging": {
+    "physical_staged_files_present": false,
+    "predicted_staged_additional_bytes": 3832,
+    "predicted_staged_additional_sha256": "195ae5ccc094044905802e98b60c31c46a6644e61eb2ff4c4bdd33cf5fdafadb",
+    "predicted_staged_sumocfg_bytes": 2759,
+    "predicted_staged_sumocfg_sha256": "8cab2c806e6584515db0048809bd336cdc3cd723629349abbe863c592759a1d0",
+    "preview_in_memory_only": true,
+    "source_additional_sha256": "195ae5ccc094044905802e98b60c31c46a6644e61eb2ff4c4bdd33cf5fdafadb",
+    "source_sumocfg_sha256": "078307d03953159e23072edeb2c1a9afe7b2545abeae4868bbcb17f984598743",
+    "source_transform_bound_by_runner_hash_and_input_hashes": true,
+    "transform": "generic PAIR_RUN; bound runner replaces output token and redirects config additional-file to staged output/scenario_control.add.xml"
+  },
+  "start_request": {
+    "receipt_binds_request": true,
+    "receipt_sha256": "e3f5cd3f83b3e68077f8b74cb35daa822b137001d7bd98d24b75f76b141709f4",
+    "request_schema": "r02-start-v2",
+    "run_id": "MINIMAL3350_R720_DELAYED_S17",
+    "runner_sha256_match": true,
+    "runtime_binding_sha256_match": true,
+    "sha256": "630b18782bc598fea342da46f7dba5daa39e1d076a1f5b5defdb128b9e0c73af"
+  },
+  "status": "BLOCKED_CARD_CONDITION_BINDING",
+  "treatment_only_delta": {
+    "R_count": 192,
+    "R_ids": [
+      "R_flow.0",
+      "R_flow.191"
+    ],
+    "U_X_explicit_zero": true,
+    "exact_schedule": true,
+    "first_last_depart_ms": [
+      540000,
+      1495000
+    ],
+    "interval_ms": 5000,
+    "other_vehicle_ids": 0,
+    "route_type": [
+      [
+        "R_route",
+        "technical_passenger"
+      ]
+    ],
+    "treatment_vehicle_count": 1588
+  },
+  "verified_conditions": {
+    "A": "A_OPEN",
+    "M_count": 1396,
+    "R_count": 192,
+    "R_veh_per_h": 720,
+    "R_window_s": "[540,1500)",
+    "U": 0,
+    "X": 0,
+    "horizon_s": 2700,
+    "qMain_veh_per_h": 3350.4,
+    "seed": 17,
+    "step_s": 1
+  }
+}

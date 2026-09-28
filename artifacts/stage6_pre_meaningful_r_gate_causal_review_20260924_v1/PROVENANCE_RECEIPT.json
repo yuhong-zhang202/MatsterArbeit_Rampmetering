@@ -1,0 +1,51 @@
+{
+  "schema_version": "1",
+  "status": "PASS_TO_PROPOSE_VERSIONED_AMENDMENT_NOT_ADOPTED",
+  "independent_scientific_reviewer": {
+    "disposition": "PASS_METHODOLOGICAL_REVIEW",
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0,
+    "confidence_gate_logic": "High",
+    "confidence_U_physical_mechanism": "Moderate_unverified",
+    "review_mode": "read_only"
+  },
+  "question": "Causal applicability of pre-meaningful-R M/U/X trajectory-equivalence gate only",
+  "periods": {
+    "pre_treatment": "t<540",
+    "post_treatment_pre_first_through_merge": "540<=t<591",
+    "first_through_merge_s": 591,
+    "meaningful_exposure_confirmation_s": 660
+  },
+  "original_contract_unchanged": true,
+  "historical_repaired_attempt_disposition": "NOT_EVALUABLE_UNCHANGED",
+  "post_591_classifier_or_witness_outcomes_examined": false,
+  "amendment_created_or_adopted": false,
+  "new_simulation_starts": {
+    "SUMO": 0,
+    "TraCI": 0,
+    "netconvert": 0
+  },
+  "bindings": {
+    "review": {
+      "path": "artifacts/stage6_pre_meaningful_r_gate_causal_review_20260924_v1/SCIENTIFIC_REVIEW.md",
+      "sha256": "4065bd3a3c62fd592e72ae61df899a50afdd34d36b53d92cd3d99fbc5829137c"
+    },
+    "adopted_contract": {
+      "path": "docs/methodology/STAGE6_EXPLORATORY_RAMP_INDUCED_WITNESS_CONTRACT.md",
+      "sha256": "958890a7dd017110787a85d77ebfa3e6dac2b7d862f0fd91f6bafb7cf1738d9a"
+    },
+    "premerge_data_review": {
+      "path": "artifacts/stage6_pair_3199_repaired_treatment_execution_20260923_v1/INDEPENDENT_DATA_POSTRUN_REVIEW.md",
+      "sha256": "fcabdde57ceb07a181b0878007ebf2bbdf501d532f36555c9d7bdccad4a1c20e"
+    },
+    "historical_scientific_postrun": {
+      "path": "artifacts/stage6_pair_3199_repaired_treatment_execution_20260923_v1/SCIENTIFIC_POSTRUN_REVIEW_FINAL_REV1.md",
+      "sha256": "95382de387c436dc0980dcc263b1e5a5ceb586abcfd0123ecdc428a9e0fac7a6"
+    },
+    "repaired_final_card": {
+      "path": "artifacts/stage6_pair_3199_repaired_treatment_execution_20260923_v1/PAIR3199_R720_DELAYED_S17_REPAIRED_V5_ATTEMPT1_CARD_FINAL.json",
+      "sha256": "0801dc1e15ade92babe33640d521ba831174210a200b9e5a66aaeb3bd472e0ef"
+    }
+  }
+}

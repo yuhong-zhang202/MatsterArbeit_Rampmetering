@@ -1,0 +1,98 @@
+{
+  "schema_version": "1",
+  "run_id": "MINIMAL3199_CTRL_S17_TECH_RETRY2",
+  "disposition": "PASS_DATA_PROVENANCE_PRELAUNCH",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "confidence": "High",
+  "scope": "read_only_static_input_and_execution_provenance_review",
+  "bound_hashes": {
+    "card": "b387a750f9f41fe7439d79ead7133fc07ac817fe8da497a8e045433a4accee5a",
+    "manifest": "551fdfbe78530662f2a437436d8a36813902d5728ac88b03a7a316382d7bca9a",
+    "start_request": "45d6f25b3f2f099cf67286859c0421cf23f0e0055ca6c31cea8d380c17fac64e",
+    "runtime_binding": "95f3d7bdae0dfd5f629d28e1ebf2bcdb0e957c6eb790f61307442704a82c373d",
+    "runner": "4f31c3e1be5d4aba841ebb2ca00a6f7df90f2d6a434819ac83ed262d4401b529",
+    "adapter": "9f7a459a167884533f5f044018bf209a24ed154173d044ce80baa7640a6311b8",
+    "approved_plan": "06b0f04f1144ef8497b4d64906ae27b1377b544abd6e0639133c8d85a3fabc23",
+    "historical_rev3_input_design_receipt": "28addb6e2c26ee2de3810f88fb8896134393793e820874da61ebdbef316b1f44"
+  },
+  "fixed_inputs": {
+    "qMain_veh_per_h": 3199.2,
+    "seed": 17,
+    "TLS_program": "A_OPEN",
+    "R_veh_per_h": 0,
+    "U": 0,
+    "X": 0,
+    "M_count": 1333
+  },
+  "independent_xml_invariant_check": {
+    "control_M_count": 1333,
+    "treatment_M_count": 1333,
+    "M_id_sets_equal": true,
+    "M_tuple_mismatch_count": 0,
+    "tuple_fields": [
+      "id",
+      "depart",
+      "route",
+      "type",
+      "speedFactor",
+      "departPos",
+      "departLane",
+      "departSpeed"
+    ],
+    "control_R_count": 0,
+    "control_U_count": 0,
+    "control_X_count": 0,
+    "treatment_R_count": 192,
+    "treatment_U_count": 0,
+    "treatment_X_count": 0
+  },
+  "staging": {
+    "replacement_counts": {
+      "sumocfg_output_root": 8,
+      "sumocfg_additional_path": 1,
+      "additional_xml_output_root": 12
+    },
+    "staged_sumocfg": {
+      "path": "data/raw/stage6_minimal3199_existence_20260924_v3/MINIMAL3199_CTRL_S17_TECH_RETRY2/outputs/scenario_control.sumocfg",
+      "bytes": 2802,
+      "sha256": "f91c2fa87b12e83e39d27051e01d56f231d9a0a074e6ea445200d294adbf677b"
+    },
+    "staged_additional": {
+      "path": "data/raw/stage6_minimal3199_existence_20260924_v3/MINIMAL3199_CTRL_S17_TECH_RETRY2/outputs/scenario_control.add.xml",
+      "bytes": 3940,
+      "sha256": "354c1dcffc9f4b18d6e92f1dd4658098f0e24b3d2ab30671df4a1faefb6d62f3"
+    }
+  },
+  "start_request": {
+    "request_schema": "r02-start-v2",
+    "run_id_match": true,
+    "card_hash_match": true,
+    "manifest_hash_match": true,
+    "runtime_and_runner_hash_match": true,
+    "schema_hash_match": true,
+    "output_path_match": true,
+    "resource_limits_match": true,
+    "output_role_count": 18,
+    "output_roles_match_bound_source": true,
+    "historical_role_path_strings_are_source_metadata": true,
+    "runner_output_manifest_maps_role_basenames_under_bound_retry2_output": true,
+    "persisted_but_not_sent": true,
+    "guardian_invoked": false,
+    "launch_invoked": false,
+    "simulator_started": false
+  },
+  "paths": {
+    "output_directory": "data/raw/stage6_minimal3199_existence_20260924_v3/MINIMAL3199_CTRL_S17_TECH_RETRY2/outputs",
+    "output_inventory": [
+      "scenario_control.add.xml",
+      "scenario_control.sumocfg"
+    ],
+    "consumption_path_absent": true
+  },
+  "processes_started_for_review": 0,
+  "files_edited_outside_review_artifacts": 0
+}

@@ -1,0 +1,33 @@
+{
+  "card_path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev17/MINIMAL3350_E1_R900_DELAYED_S17_CARD_FINAL_REV1.json",
+  "card_sha256": "f0387580053ad6b862ec2874a4eb55e5c9a468a3f23db561af40d6c9e6499908",
+  "confidence": {
+    "design_alignment": "High",
+    "cross_rate_exposure_interpretation": "Moderate"
+  },
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "observations": [
+    "R900 first 192 identities have 0/192 speedFactor matches to the R720 vector. This does not invalidate the R900-versus-R0 exploratory case, but limits attributing a later R900-versus-R720 exposure increase solely to nominal qRamp. Preserve this caveat in interpretation."
+  ],
+  "review_scope": "Independent scientific prelaunch review of the exact E1 R900 card only; no future outcomes assessed.",
+  "disposition": "PASS_PRELAUNCH",
+  "run_id": "MINIMAL3350_E1_R900_DELAYED_S17",
+  "scientific_assessment": {
+    "adopted_second_tier_entry_gate": "PASS: 3350.4 R0 is LOW_R_BACKGROUND_ACCEPTABLE and matched R720 is reviewed NO_WITNESS",
+    "condition": "qMain=3350.4; seed=17; U=X=0; A_OPEN; delayed R900 [540,1500); 240 planned R vehicles; M=1396 exactly matched",
+    "scope": "Bounded exploratory mechanism-existence stress step; not parameter optimization or a formal experiment",
+    "user_authorization": "The current user instruction conditionally authorizes exactly one E1 start after all three exact-card prelaunch reviews PASS; this supersedes the earlier plan-only NO_RUN_AUTHORIZATION for this one run. No other run is authorized."
+  },
+  "schema": "stage6_minimal3350_treatment_scientific_prelaunch_review_v1",
+  "starts": {
+    "guardian": 0,
+    "netconvert": 0,
+    "sumo": 0,
+    "traci": 0
+  },
+  "status": "PASS_SCIENTIFIC_PRELAUNCH"
+}

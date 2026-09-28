@@ -1,0 +1,23 @@
+{
+  "status": "PASS_POSTRUN_DATA",
+  "card_sha256": "00e095217e6dd66581707439c81ba15204c69e12de7d0f4a5f38e0fc04607bed",
+  "output_manifest_sha256": "df6e663e91cb82c91ce7db1ba855f979a1289262cdf0efe817ac76a9910de000",
+  "lifecycle_ledger_sha256": "989da3e8a5397568f1a21088cdb88c1e0ba009af85dea12aecb54f93b43dbc81",
+  "data_gate_sha256": "7b9a8719f7ea13183f10aee24a4f67bbe4a8c5ff66c5ee609ed45efd9116b2de",
+  "open_findings": {"blocker": 0, "major": 0, "required_minor": 0},
+  "gates": {
+    "G0": "PASS_PROCESS_ONLY",
+    "G1": "PASS",
+    "G2": "PASS; 1921/1921 identities reconcile, no unknown/missing/duplicate",
+    "G3": "PASS; M/R/U/X 1396/300/150/75 inserted in [0,1500), zero late/never/unfinished, all arrived",
+    "G4": "NOT_ACCEPTED; P zero numerical-positive events, onset reference unresolved; S no qualifying event; L unresolved; C early warning only; A no spatial candidate",
+    "G5": "UNRESOLVED; attribution evidence does not clear source/tailback/geometry checks",
+    "G6": "NOT_EVALUABLE_FOR_RELEASE; storage_cross and direct same-identity/time/location R-to-U obstruction not independently established"
+  },
+  "artifacts": {
+    "lifecycle_ledger": "data/processed/stage6_baseline_localization_20260921_v1/LOC_M3350_S17_attempt1/vehicle_lifecycle_ledger.csv",
+    "data_gate": "data/processed/stage6_baseline_localization_20260921_v1/LOC_M3350_S17_attempt1/data_gate_audit.json",
+    "classifier_output": "data/processed/stage6_baseline_localization_20260921_v1/LOC_M3350_S17_attempt1/classifier_output/"
+  },
+  "scientific_decision": "not issued by data review"
+}

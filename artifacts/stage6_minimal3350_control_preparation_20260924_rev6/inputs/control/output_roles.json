@@ -1,0 +1,164 @@
+{
+  "full_time_contract": "FCD/summary/queue labels0..2699. TLS two IDs each labels0..2699 (5400 total). Detectors90 consecutive30s bins.",
+  "internal_fcd": "P2 smoke must verify all actual lanes including internals",
+  "lanechange_logging_enabled": true,
+  "required_role_count": 18,
+  "required_xml_roles": [
+    {
+      "detector_id": "shared_boundary_e2",
+      "endPos": "238.8",
+      "kind": "E2",
+      "lane": "shared_approach_0",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260924_v6/MINIMAL3350_CTRL_S17/outputs/shared_boundary_e2.xml",
+      "period_s": 30,
+      "pos": 0,
+      "role": "shared_boundary_e2.xml",
+      "root": "detector"
+    },
+    {
+      "detector_id": "ramp_storage_e2",
+      "endPos": "204.49",
+      "kind": "E2",
+      "lane": "ramp_storage_0",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260924_v6/MINIMAL3350_CTRL_S17/outputs/ramp_storage_e2.xml",
+      "period_s": 30,
+      "pos": 0,
+      "role": "ramp_storage_e2.xml",
+      "root": "detector"
+    },
+    {
+      "detector_id": "p1_main_up_1300_l0",
+      "kind": "E1",
+      "lane": "main_up_0",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260924_v6/MINIMAL3350_CTRL_S17/outputs/p1_main_up_1300_l0.xml",
+      "period_s": 30,
+      "pos": 1300,
+      "role": "p1_main_up_1300_l0.xml",
+      "root": "detector"
+    },
+    {
+      "detector_id": "p1_main_up_1300_l1",
+      "kind": "E1",
+      "lane": "main_up_1",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260924_v6/MINIMAL3350_CTRL_S17/outputs/p1_main_up_1300_l1.xml",
+      "period_s": 30,
+      "pos": 1300,
+      "role": "p1_main_up_1300_l1.xml",
+      "root": "detector"
+    },
+    {
+      "detector_id": "p1_merge_section_20_l0",
+      "kind": "E1",
+      "lane": "merge_section_0",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260924_v6/MINIMAL3350_CTRL_S17/outputs/p1_merge_section_20_l0.xml",
+      "period_s": 30,
+      "pos": 20,
+      "role": "p1_merge_section_20_l0.xml",
+      "root": "detector"
+    },
+    {
+      "detector_id": "p1_merge_section_20_l1",
+      "kind": "E1",
+      "lane": "merge_section_1",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260924_v6/MINIMAL3350_CTRL_S17/outputs/p1_merge_section_20_l1.xml",
+      "period_s": 30,
+      "pos": 20,
+      "role": "p1_merge_section_20_l1.xml",
+      "root": "detector"
+    },
+    {
+      "detector_id": "p1_merge_section_20_l2",
+      "kind": "E1",
+      "lane": "merge_section_2",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260924_v6/MINIMAL3350_CTRL_S17/outputs/p1_merge_section_20_l2.xml",
+      "period_s": 30,
+      "pos": 20,
+      "role": "p1_merge_section_20_l2.xml",
+      "root": "detector"
+    },
+    {
+      "detector_id": "p1_main_down_20_l0",
+      "kind": "E1",
+      "lane": "main_down_0",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260924_v6/MINIMAL3350_CTRL_S17/outputs/p1_main_down_20_l0.xml",
+      "period_s": 30,
+      "pos": 20,
+      "role": "p1_main_down_20_l0.xml",
+      "root": "detector"
+    },
+    {
+      "detector_id": "p1_main_down_20_l1",
+      "kind": "E1",
+      "lane": "main_down_1",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260924_v6/MINIMAL3350_CTRL_S17/outputs/p1_main_down_20_l1.xml",
+      "period_s": 30,
+      "pos": 20,
+      "role": "p1_main_down_20_l1.xml",
+      "root": "detector"
+    },
+    {
+      "detector_id": "p1_main_down_200_l0",
+      "kind": "E1",
+      "lane": "main_down_0",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260924_v6/MINIMAL3350_CTRL_S17/outputs/p1_main_down_200_l0.xml",
+      "period_s": 30,
+      "pos": 200,
+      "role": "p1_main_down_200_l0.xml",
+      "root": "detector"
+    },
+    {
+      "detector_id": "p1_main_down_200_l1",
+      "kind": "E1",
+      "lane": "main_down_1",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260924_v6/MINIMAL3350_CTRL_S17/outputs/p1_main_down_200_l1.xml",
+      "period_s": 30,
+      "pos": 200,
+      "role": "p1_main_down_200_l1.xml",
+      "root": "detector"
+    },
+    {
+      "kind": "trajectory_or_status",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260924_v6/MINIMAL3350_CTRL_S17/outputs/fcd.xml",
+      "role": "fcd.xml",
+      "root": "fcd-export"
+    },
+    {
+      "kind": "trajectory_or_status",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260924_v6/MINIMAL3350_CTRL_S17/outputs/queues.xml",
+      "role": "queues.xml",
+      "root": "queue-export"
+    },
+    {
+      "kind": "trajectory_or_status",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260924_v6/MINIMAL3350_CTRL_S17/outputs/sumo_summary.xml",
+      "role": "sumo_summary.xml",
+      "root": "summary"
+    },
+    {
+      "kind": "trajectory_or_status",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260924_v6/MINIMAL3350_CTRL_S17/outputs/tripinfo.xml",
+      "role": "tripinfo.xml",
+      "root": "tripinfos"
+    },
+    {
+      "kind": "trajectory_or_status",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260924_v6/MINIMAL3350_CTRL_S17/outputs/vehroute.xml",
+      "role": "vehroute.xml",
+      "root": "routes"
+    },
+    {
+      "kind": "trajectory_or_status",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260924_v6/MINIMAL3350_CTRL_S17/outputs/tls_states.xml",
+      "role": "tls_states.xml",
+      "root": "tlsStates"
+    },
+    {
+      "empty_events_permitted": true,
+      "kind": "native_lanechange",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260924_v6/MINIMAL3350_CTRL_S17/outputs/lanechanges.xml",
+      "role": "lanechanges.xml",
+      "root": "lanechanges"
+    }
+  ],
+  "status": "FINAL_STATIC_BOUND_RUNTIME_UNTESTED"
+}

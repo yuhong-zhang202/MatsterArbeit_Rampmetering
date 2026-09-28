@@ -1,0 +1,184 @@
+{
+  "R_veh_per_h": 720,
+  "R_window_s": "[540,1500)",
+  "TLS_program": "A_OPEN",
+  "U": 0,
+  "X": 0,
+  "approval_required": false,
+  "authorization_record": {
+    "authorization": "USER_AUTHORIZED_CONDITIONAL_ONE_UX0_TREATMENT_START_AFTER_THREE_REVIEWS",
+    "exact_card_path": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_v1/MINIMAL3199_R720_DELAYED_S17_UX0_ATTEMPT1_CARD_FINAL.json",
+    "max_starts": 1,
+    "output_polling_interval_ms": 100,
+    "output_size_stop_trigger_bytes_decimal": 75000000,
+    "polling_overshoot_accepted": true,
+    "prohibited_runs": [
+      "3350",
+      "seed23",
+      "B",
+      "C",
+      "transition",
+      "other_qMain_qRamp"
+    ],
+    "run_id": "MINIMAL3199_R720_DELAYED_S17_UX0_ATTEMPT1",
+    "technical_retries": 0,
+    "wallclock_stop_trigger_s": 90
+  },
+  "card_revision": 1,
+  "card_status": "FINAL_AUTHORIZED_FOR_ONE_START",
+  "class_counts": {
+    "M": {
+      "planned_count": 1333,
+      "status": "BOUND"
+    },
+    "R": {
+      "planned_count": 192,
+      "status": "BOUND"
+    },
+    "U": {
+      "planned_count": 0,
+      "status": "PASS_ZERO"
+    },
+    "X": {
+      "planned_count": 0,
+      "status": "PASS_ZERO"
+    }
+  },
+  "condition": "A_OPEN_R720_DELAYED_TREATMENT",
+  "design_plan": "artifacts/stage6_minimal_ramp_induced_breakdown_existence_test_20260924_v1/PLAN.md",
+  "design_sha256": "06b0f04f1144ef8497b4d64906ae27b1377b544abd6e0639133c8d85a3fabc23",
+  "execution_attempt_id": "MINIMAL3199_R720_DELAYED_S17_UX0_ATTEMPT1",
+  "execution_authorized": true,
+  "horizon_s": 2700,
+  "input_manifest": "INPUT_MANIFEST.json",
+  "input_manifest_sha256": "7c79180c2ee5cd9c678ae3b366d28751e020122a1c42ebf524cc319b3cb5cc64",
+  "input_sha256": {
+    "additional": "4a80f635e4cd967c520ed466df3c2a8dfff5a68e8ad0b675473feb53c8509f16",
+    "demand": "b57a0f3723be40bd1725a478f4ec7f57c1aacfbac0f2e57a5d94f31dce758c83",
+    "network": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "output_roles": "32056005f915229daebc8193a4e4aa0d80d54d9f0caa0f296014b7a72c05b996",
+    "sumocfg": "7b78607a3858d56e2828c2425d323cff8e4a9e9bc985c2cab5a09cd8fc2ce319"
+  },
+  "inputs": {
+    "additional": "treatment/scenario.add.xml",
+    "demand": "treatment/demand.rou.xml",
+    "network": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+    "output_roles": "treatment/output_roles.json",
+    "sumocfg": "treatment/scenario.sumocfg"
+  },
+  "matched_control_binding": {
+    "card_path": "artifacts/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/MINIMAL3199_CTRL_S17_TECH_RETRY2_CARD_FINAL.json",
+    "card_sha256": "b387a750f9f41fe7439d79ead7133fc07ac817fe8da497a8e045433a4accee5a",
+    "data_review_path": "artifacts/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/DATA_LIFECYCLE_POSTRUN_REVIEW.json",
+    "data_review_sha256": "3579107c935b3f0a91f1f4f79d0791742b462a45548917c8ad317304fff70b37",
+    "demand_input_path": "scripts/stage6/minimal3199/prepared_rev3/control/demand.rou.xml",
+    "demand_input_sha256": "5df62660b9b9e2cc02734794ef2d361a3a97c30fa38a1e4fcbf550f0a2a1e405",
+    "output_manifest_path": "data/raw/stage6_minimal3199_existence_20260924_v3/MINIMAL3199_CTRL_S17_TECH_RETRY2/outputs/output_manifest.json",
+    "output_manifest_sha256": "07cd3cd1707e3717f9401f3e164a932cb6c10196af1461f267869f1d582e5e5e",
+    "run_id": "MINIMAL3199_CTRL_S17_TECH_RETRY2",
+    "scientific_review_path": "artifacts/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/SCIENTIFIC_POSTRUN_REVIEW.json",
+    "scientific_review_sha256": "f7892d4d6fa974dbea2c373092760749b5764c8c79fbd01cd2ec49e6ca99784d"
+  },
+  "max_starts": 1,
+  "note": "Conditional single treatment authorization. Exact card is deliberately blocked until fresh exact-card engineering, data/provenance, and scientific receipts are PASS and their receipt hashes are sidecar-bound.",
+  "output_directory": "data/raw/stage6_minimal3199_existence_20260924_v4/MINIMAL3199_R720_DELAYED_S17_UX0_ATTEMPT1/outputs",
+  "output_role_source": {
+    "path": "scripts/stage6/minimal3199/prepared_rev3/treatment/output_roles.json",
+    "sha256": "32056005f915229daebc8193a4e4aa0d80d54d9f0caa0f296014b7a72c05b996"
+  },
+  "pair_id": "MINIMAL3199_UX0_S17",
+  "prelaunch_disposition": "FINAL_EXACT_CARD_READY_FOR_REVIEWS_NOT_LAUNCHABLE_UNTIL_REVIEW_BINDING_PASS",
+  "progression_allowed": false,
+  "qMain_veh_per_h": 3199.2,
+  "resource_limits": {
+    "polling_interval_ms": 100,
+    "polling_overshoot_accepted": true,
+    "runtime_s": 90,
+    "scope": "MINIMAL3199_R720_DELAYED_S17_UX0_ATTEMPT1",
+    "status": "AUTHORIZED_FOR_THIS_RUN",
+    "storage_bytes": 75000000
+  },
+  "review_gate": {
+    "binding_path": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_v1/FINAL_PRELAUNCH_REVIEW_BINDING.json",
+    "receipt_paths": {
+      "data_provenance": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_v1/FINAL_DATA_PROVENANCE_PRELAUNCH_REVIEW.json",
+      "engineering": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_v1/FINAL_ENGINEERING_PRELAUNCH_REVIEW.json",
+      "scientific": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_v1/FINAL_SCIENTIFIC_PRELAUNCH_REVIEW.json"
+    },
+    "required_roles": [
+      "engineering",
+      "data_provenance",
+      "scientific"
+    ],
+    "status": "PENDING_EXACT_CARD_RECEIPTS"
+  },
+  "run_command": null,
+  "run_id": "MINIMAL3199_R720_DELAYED_S17_UX0_ATTEMPT1",
+  "runner": {
+    "path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+    "sha256": "1d30a28284589ed8f36a2672e51f1ca2584599d782d989072c397c3e18b2b687",
+    "status": "EXACT_FINAL_CARD_GUARDIAN_BINDING_REVIEW_GATED"
+  },
+  "runner_binding": {
+    "card_path": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_v1/MINIMAL3199_R720_DELAYED_S17_UX0_ATTEMPT1_CARD_FINAL.json",
+    "consumption_directory": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_v1/consumption",
+    "kind": "MINIMAL3199_UX0_TREATMENT_FINAL",
+    "output_directory": "data/raw/stage6_minimal3199_existence_20260924_v4/MINIMAL3199_R720_DELAYED_S17_UX0_ATTEMPT1/outputs",
+    "package_id": "stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_v1",
+    "run_id": "MINIMAL3199_R720_DELAYED_S17_UX0_ATTEMPT1"
+  },
+  "runtime_binding": {
+    "additional_schema_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+    "additional_schema_sha256": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e",
+    "binary_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+    "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+    "binary_version": "1.26.0",
+    "guardian_runner_sha256": "1d30a28284589ed8f36a2672e51f1ca2584599d782d989072c397c3e18b2b687",
+    "max_output_bytes": 75000000,
+    "max_runtime_s": 90,
+    "python_environment": {
+      "executable_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+      "executable_sha256": "76c73e25cdd69650a897648666e41c364940fbcff0d1176572a667d4d470ec9e",
+      "implementation": "CPython",
+      "package_versions": {
+        "sumoITScontrol": "0.1.0",
+        "sumolib": "1.26.0",
+        "traci": "1.26.0"
+      },
+      "version": "3.13.0"
+    },
+    "resource_proposal": {
+      "basis": "User-authorized conditional single treatment start after exact-card engineering, data/provenance, and scientific reviews; 90 s and 75,000,000-byte triggers accepted.",
+      "enforcement": "100ms_polled_stop_trigger_with_possible_overshoot_not_hard_quota",
+      "output_size_stop_limit_bytes_decimal": 75000000,
+      "overshoot_accepted": true,
+      "poll_interval_s": 0.1,
+      "scope": "MINIMAL3199_R720_DELAYED_S17_UX0_ATTEMPT1",
+      "status": "AUTHORIZED_FOR_THIS_RUN",
+      "wallclock_stop_limit_s": 90
+    },
+    "runtime_provenance_status": "READONLY_PATH_AND_HASH_VERIFIED_NO_SUMO_VERSION_PROCESS",
+    "sumo_home": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo",
+    "version_evidence": {
+      "binary_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+      "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+      "query": "sumo --version (environment probe; no simulation)",
+      "reported_version": "1.26.0"
+    }
+  },
+  "runtime_binding_path": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_v1/runtime_binding_final.json",
+  "runtime_binding_sha256": "a6c9b26f2dc40a3f95a1438160b4a8cd08b0756156263bf16772b55d234f63fe",
+  "schema_version": "1",
+  "scope_prohibitions": [
+    "No treatment-independent candidate, other qMain/qRamp, seed23, B/C or transition run.",
+    "No retry after any launch.",
+    "No scientific-input, geometry, vehicle-behavior, classifier, threshold, witness-contract, or formal-protocol changes."
+  ],
+  "seed": 17,
+  "staged_additional_bytes": 4048,
+  "staged_additional_sha256": "0a476ff96e378ae8972de96cba1b1748274158a29bc7f9f3408be70996e3b2f0",
+  "staged_config_bytes": 2885,
+  "staged_config_sha256": "839cd0604aa2eef5da3677dae06296995fc3c017b9a84f1f8cf0ed0315d47d54",
+  "step_s": 1,
+  "technical_retries": 0
+}

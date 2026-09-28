@@ -1,0 +1,166 @@
+{
+  "M_planned_count": 1396,
+  "R_veh_per_h": 0,
+  "R_window_s": "NO_R_SOURCE",
+  "TLS_program": "A_OPEN",
+  "U": 0,
+  "X": 0,
+  "approval_required": false,
+  "authorization_record": {
+    "authorization": "USER_AUTHORIZED_CONDITIONAL_MINIMAL3350_CONTROL_START_AFTER_THREE_REVIEWS",
+    "exact_card_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev3/MINIMAL3350_CTRL_S17_CARD_FINAL.json",
+    "max_starts": 1,
+    "output_polling_interval_ms": 100,
+    "output_size_stop_trigger_bytes_decimal": 60000000,
+    "polling_overshoot_accepted": true,
+    "prohibited_runs": [
+      "treatment",
+      "seed23",
+      "B",
+      "C",
+      "other_qMain_qRamp"
+    ],
+    "run_id": "MINIMAL3350_CTRL_S17",
+    "technical_retries": 0,
+    "wallclock_stop_trigger_s": 90
+  },
+  "card_revision": 2,
+  "card_status": "FINAL_AUTHORIZED_FOR_ONE_START",
+  "class_counts": {
+    "M": {
+      "planned_count": 1396,
+      "status": "BOUND"
+    },
+    "R": {
+      "planned_count": 0,
+      "status": "PASS_ZERO"
+    },
+    "U": {
+      "planned_count": 0,
+      "status": "PASS_ZERO"
+    },
+    "X": {
+      "planned_count": 0,
+      "status": "PASS_ZERO"
+    }
+  },
+  "common_m_manifest": {
+    "path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev3/COMMON_M_DEMAND_MANIFEST.json",
+    "sha256": "2fb1383e709e2174e2623aae575649aba40937729325a5e9c43bcc2b76982865"
+  },
+  "condition": "A_OPEN_R0_CONTROL",
+  "design_plan": "artifacts/stage6_minimal_ramp_induced_breakdown_existence_test_20260924_v1/PLAN.md",
+  "design_sha256": "06b0f04f1144ef8497b4d64906ae27b1377b544abd6e0639133c8d85a3fabc23",
+  "execution_attempt_id": "MINIMAL3350_CTRL_S17",
+  "execution_authorized": true,
+  "guardian_request_binding": {
+    "receipt_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev3/START_REQUEST_RECEIPT.json",
+    "request_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev3/START_REQUEST.json",
+    "schema": "r02-start-v2",
+    "status": "PERSISTED_UNSENT"
+  },
+  "horizon_s": 2700,
+  "input_manifest": "INPUT_MANIFEST.json",
+  "input_manifest_sha256": "b6e2bafc5f5c881a245083e73453eef149edc413844274eda3e90fa298179d76",
+  "input_sha256": {
+    "additional": "de0df5f3ab47835eaae7cf96b43b55af55f875437feafc721b2eab453fc1d081",
+    "demand": "da93237ed572b4103146b07b6e2b6ed4ffb9b95d21e7ed22e823ea427f8d477c",
+    "network": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "output_roles": "635d7331cb094adc6afa6143a2da20f69a4f9635d125cbb8df902fd80b7936fb",
+    "sumocfg": "2cfeabaf1b6a1d17324957c35e85bab33c1d2ed84dfbe703c300c6e3073b38ae"
+  },
+  "inputs": {
+    "additional": "inputs/control/scenario.add.xml",
+    "demand": "inputs/control/demand.rou.xml",
+    "network": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+    "output_roles": "inputs/control/output_roles.json",
+    "sumocfg": "inputs/control/scenario.sumocfg"
+  },
+  "locked_method": {
+    "path": "docs/methodology/FREEWAY_PROTECTABLE_STATE_EXPLORATORY_DEFINITION.md",
+    "sha256": "22fe22170c17ce74e261e717586a458a1b5173e9deabbee925bd4c1d606adfe7"
+  },
+  "max_starts": 1,
+  "output_directory": "data/raw/stage6_minimal3350_ux0_20260924_v3/MINIMAL3350_CTRL_S17/outputs",
+  "output_role_source": {
+    "path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev3/inputs/control/output_roles.json",
+    "sha256": "635d7331cb094adc6afa6143a2da20f69a4f9635d125cbb8df902fd80b7936fb"
+  },
+  "pair_id": "MINIMAL3350_UX0_S17",
+  "progression_allowed": false,
+  "qMain_veh_per_h": 3350.4,
+  "resource_limits": {
+    "runtime_s": 90,
+    "scope": "MINIMAL3350_CTRL_S17",
+    "status": "AUTHORIZED_FOR_THIS_RUN",
+    "storage_bytes": 60000000
+  },
+  "review_gate": {
+    "required": [
+      "engineering",
+      "data_provenance",
+      "scientific"
+    ],
+    "status": "PENDING_EXACT_CARD_REVIEWS"
+  },
+  "run_command": null,
+  "run_id": "MINIMAL3350_CTRL_S17",
+  "runner": {
+    "path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+    "sha256": "e32956f37bb0d6e111cde6c907c4e759b6fe67a581c9b9924dc4452ac62b991a",
+    "status": "EXACT_FINAL_CARD_GUARDIAN_V2_BINDING"
+  },
+  "runner_binding": {
+    "card_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev3/MINIMAL3350_CTRL_S17_CARD_FINAL.json",
+    "consumption_directory": "artifacts/stage6_minimal3350_control_preparation_20260924_rev3/r02_single_start/consumption",
+    "kind": "PAIR_RUN",
+    "output_directory": "data/raw/stage6_minimal3350_ux0_20260924_v3/MINIMAL3350_CTRL_S17/outputs",
+    "package_id": "stage6_minimal3350_control_preparation_20260924_rev3",
+    "run_id": "MINIMAL3350_CTRL_S17"
+  },
+  "runtime_binding": {
+    "additional_schema_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+    "additional_schema_sha256": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e",
+    "binary_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+    "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+    "binary_version": "1.26.0",
+    "guardian_runner_sha256": "e32956f37bb0d6e111cde6c907c4e759b6fe67a581c9b9924dc4452ac62b991a",
+    "max_output_bytes": 60000000,
+    "max_runtime_s": 90,
+    "python_environment": {
+      "executable_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+      "executable_sha256": "76c73e25cdd69650a897648666e41c364940fbcff0d1176572a667d4d470ec9e",
+      "implementation": "CPython",
+      "package_versions": {
+        "sumoITScontrol": "0.1.0",
+        "sumolib": "1.26.0",
+        "traci": "1.26.0"
+      },
+      "version": "3.13.0"
+    },
+    "resource_proposal": {
+      "basis": "User-accepted MINIMAL3350 control contract; prior 3350.4 completed raw output exists but U=X0 output size is new.",
+      "enforcement": "100ms_polled_stop_trigger_with_possible_overshoot_not_hard_quota",
+      "output_size_stop_limit_bytes_decimal": 60000000,
+      "overshoot_accepted": true,
+      "poll_interval_s": 0.1,
+      "scope": "MINIMAL3350_CTRL_S17",
+      "status": "AUTHORIZED_FOR_THIS_RUN",
+      "wallclock_stop_limit_s": 90
+    },
+    "runtime_provenance_status": "READONLY_PATH_AND_HASH_VERIFIED_NO_SUMO_VERSION_PROCESS",
+    "sumo_home": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo",
+    "version_evidence": {
+      "binary_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+      "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+      "query": "sumo --version (environment probe; no simulation)",
+      "reported_version": "1.26.0"
+    }
+  },
+  "runtime_binding_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev3/runtime_binding.json",
+  "runtime_binding_sha256": "8c926939ccee77df81f0b975612342a695c21939738ffd1d003bad57e7006236",
+  "schema_version": "1",
+  "seed": 17,
+  "step_s": 1,
+  "technical_retries": 0
+}

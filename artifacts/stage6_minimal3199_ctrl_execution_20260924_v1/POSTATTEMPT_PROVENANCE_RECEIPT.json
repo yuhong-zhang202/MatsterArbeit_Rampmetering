@@ -1,0 +1,59 @@
+{
+  "disposition": "NOT_EVALUABLE",
+  "authorization_consumed": true,
+  "retry_allowed": false,
+  "sumo_starts": 0,
+  "traci_starts": 0,
+  "netconvert_starts": 0,
+  "failure": "KeyError:'additional_schema' before Guardian/SUMO spawn",
+  "bindings": {
+    "final_card": {
+      "path": "artifacts/stage6_minimal3199_ctrl_execution_20260924_v1/MINIMAL3199_CTRL_S17_CARD_FINAL.json",
+      "sha256": "abdca0b5a12d5e1cda7e978fca733e84ac22a6431803f58df7f845e334b19e0e"
+    },
+    "execution_manifest": {
+      "path": "artifacts/stage6_minimal3199_ctrl_execution_20260924_v1/EXECUTION_MANIFEST.json",
+      "sha256": "256a5fac5b7b3ac5acb9d912b65eb96dd0511998cd9a0ebf63ebf6fc9d105441"
+    },
+    "runtime_binding": {
+      "path": "artifacts/stage6_minimal3199_ctrl_execution_20260924_v1/runtime_binding.json",
+      "sha256": "6606b757c1c8cb4467be76ebc2e649d66dafdb2edafabbe90988425ba8f265c3"
+    },
+    "runner_at_attempt": {
+      "path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+      "sha256": "e3c8ce06f5a9c320a2d04089ceb5cfff118e34a44b972a53e560c2424f52e271"
+    },
+    "consumption_reservation": {
+      "path": "artifacts/stage6_minimal3199_ctrl_execution_20260924_v1/consumption/MINIMAL3199_CTRL_S17.json",
+      "status": "FAILED",
+      "simulator_pid": null,
+      "retry_allowed": false
+    },
+    "raw_output_files": [
+      {
+        "path": "data/raw/stage6_minimal3199_existence_20260924_v1/MINIMAL3199_CTRL_S17/outputs/scenario_control.add.xml",
+        "bytes": 3796,
+        "sha256": "6bd3555c983db506800cab40524767229a3a03c94e893e0ccdc506f95690d8ef"
+      },
+      {
+        "path": "data/raw/stage6_minimal3199_existence_20260924_v1/MINIMAL3199_CTRL_S17/outputs/scenario_control.sumocfg",
+        "bytes": 2694,
+        "sha256": "0a016bea72ef30815226bd8677dbdd86803796523c481e476a6e47f577457c49",
+        "source_hash": "a6be97aba1ab00d6f17ae15788d45765d0a0efca7e297cc1423e4fb720853b1c",
+        "note": "Staged hash differs from source; no copy hash receipt exists. No SUMO process spawned."
+      }
+    ]
+  },
+  "reviews": {
+    "engineering": "pre-spawn failure independently inspected; no retry",
+    "data_lifecycle": "NOT_EVALUABLE; no simulation or lifecycle outputs",
+    "scientific": "NOT_EVALUABLE; no traffic outcome inferable, confidence High"
+  },
+  "resource_contract": {
+    "wallclock_stop_trigger_s": 90,
+    "output_size_stop_trigger_bytes_decimal": 60000000,
+    "poll_interval_ms": 100,
+    "overshoot_accepted": true,
+    "triggers_fired": false
+  }
+}

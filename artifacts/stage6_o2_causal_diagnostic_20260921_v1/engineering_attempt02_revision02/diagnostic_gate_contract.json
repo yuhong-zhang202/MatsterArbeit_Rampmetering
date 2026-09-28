@@ -1,0 +1,38 @@
+{
+  "O2_decision": "Not automatically resolved by technical PASS; independent scientific review required; strict registered storage-cross rules unchanged.",
+  "all_required_for_diagnostic_interpretation": "PASS",
+  "allowed_status": [
+    "PASS",
+    "FAIL",
+    "INDETERMINATE",
+    "NOT_RUN"
+  ],
+  "body_occupancy": "Use actual queried length, route history, lane length and front position to identify vehicle rear occupying preceding shared lane. Never infer same-path empty gap merely by excluding a vehicle whose front entered the other internal branch. This geometry alone is not a native selected-blocker label.",
+  "no_followup_start_under_any_outcome": true,
+  "observer_alignment": "Compare recorded step_before/after with native FCD same IDs/fields. Expect candidate before label, but require observed agreement; inspect0/1/2 and every385..430. Raw query precision higher than FCD; compare after original2-decimal rounding with documented floating representation tolerance only. TLS query timing is separate; do not force equality at phase transitions without step semantics.",
+  "physical": "Any collision/teleport stops and preserves partial evidence. Data found only after completion makes complete evidence unsuitable. Query failure/unknown alignment/neutrality prevents causal use.",
+  "prefix_comparison": {
+    "FCD": "All original fields including id/lane/pos/speed/XY/type/angle/slope and row order per label0..449 equal archived C exactly at original precision; additional leader fields excluded ONLY from neutrality comparison. No tolerance added to original XML strings.",
+    "horizon_dependent_requirement": "Do not compare completed2700 summaries against cutoff450. Reconcile departed/arrived/active IDs and explicitly separate not-yet-scheduled beyond450 from pending insertion before450; preserve complete original planned demand as context.",
+    "horizon_dependent_roles": [
+      "tripinfo.xml",
+      "vehroute.xml"
+    ],
+    "other_timebounded_roles": "Compare all 11 detector roles for intervals ending<=450, queue/summary/TLS labels<450, native lanechange event times<450, semantic content/order. Ignore XML comments/whitespace and summary step duration (wall-clock computation) only."
+  },
+  "required_checks": [
+    "exact_input_and_binary_bindings",
+    "one_start_and_process_group_terminated",
+    "execution_clock_0_to_450",
+    "eighteen_XML_roles_complete",
+    "observer_steps_and_target_window_complete",
+    "native_leader_and_actual_vehicle_geometry_fields",
+    "archived_C_common_prefix_neutrality",
+    "TraCI_to_FCD_position_and_clock_alignment",
+    "original_program_and_detector_contract",
+    "physical_events_and_engineering_errors",
+    "cutoff450_population_and_censoring",
+    "output_manifest_and_exact_final_bytes"
+  ],
+  "status": "PROPOSED_STATIC_GATE_CONTRACT"
+}

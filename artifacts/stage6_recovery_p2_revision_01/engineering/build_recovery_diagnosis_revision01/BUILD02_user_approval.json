@@ -1,0 +1,20 @@
+{
+  "approved_at": "2026-09-19T19:48:24Z",
+  "authority_mode": "continuing_user_instruction_with_independent_review",
+  "approval_basis": "The user explicitly instructed: diagnose the cause and keep attempting until successful. This BUILD02 card is a separately reviewed, evidence-based engineering implementation under that instruction; it is not represented as an exact-hash approval personally reviewed by the user.",
+  "card_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_recovery_diagnosis_revision01/BUILD02_request_card_revision02.json",
+  "card_sha256": "0f80fff0ee7b434dbb30e796b30f67045bddb983ac173efd34e90c3797a90672",
+  "max_netconvert_starts": 1,
+  "monitoring_semantics": "polling_50ms_possible_overshoot_preserved",
+  "note": "Only this immutable BUILD02 attempt is activated. No automatic retry. Any later evidence-based attempt requires a new immutable card and independent review under the user's continuing instruction. SUMO/TraCI/GUI remain unauthorized.",
+  "review_receipt": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_recovery_diagnosis_revision01/BUILD02_independent_review_record.json",
+    "sha256": "780f3a47dda62a94c61f0c922555f35c83024e3e2a29f4d31d162aa28bf00905",
+    "result": "PASS",
+    "open_blocker_major_required_minor": "0/0/0"
+  },
+  "scope": "SG6-BUILD BUILD02 only",
+  "status": "user-approved",
+  "synthetic_test_only": false,
+  "user_approval_quote": "排查原因，尝试直到成功"
+}

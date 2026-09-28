@@ -1,0 +1,31 @@
+{
+  "status": "PASS_STATIC_PREFLIGHT",
+  "run_id": "LOC_M3350_S17_attempt1",
+  "sumo_processes_started": 0,
+  "netconvert_processes_started": 0,
+  "TraCI_sessions_started": 0,
+  "XML_parse_and_local_XSD": {
+    "scenario.sumocfg": "PASS, local sumoConfiguration.xsd, xmllint --nonet",
+    "demand.rou.xml": "PASS, local routes_file.xsd, xmllint --nonet",
+    "scenario.add.xml": "PASS, local additional_file.xsd, xmllint --nonet",
+    "network.net.xml": "PASS, local net_file.xsd, xmllint --nonet"
+  },
+  "semantic_consistency": "PASS_STATIC_SEMANTIC_DIFF",
+  "checks": {
+    "route_edge_references": "PASS",
+    "vehicle_type_and_route_references": "PASS",
+    "detector_lane_references": "PASS",
+    "registered_tls_ids": ["ramp_mid", "urban_tls"],
+    "flow_arithmetic_and_counts": "PASS",
+    "registered_output_roles": 18,
+    "role_path_uniqueness": "PASS",
+    "future_output_files_absent": true,
+    "raw_output_directory_absent": true,
+    "network_copy_matches_accepted_hash": true,
+    "compiled_geometry_audit_copy_matches_source_hash": true,
+    "classifier_method_hash_matches_locked_review": true
+  },
+  "runtime_version_recheck": "PENDING EXPLICIT LAUNCH AUTHORIZATION; no sumo --version invocation",
+  "output_safety_design": {"kernel_RLIMIT_FSIZE_per_SUMO_output_file_bytes":65000000,"RLIMIT_CORE_bytes":0,"registered_large_file_streams":22,"stream_composition":"18 XML outputs + sumo.log + sumo_error.log + stdout + stderr","aggregate_max_registered_large_files_bytes":1430000000,"directory_stop_line_bytes":1500000000,"monitoring":"50 ms observed directory-size secondary stop-line","headroom_for_small_supervisor_records_bytes":70000000},
+  "limitations": ["static validation cannot establish future runtime completion or physical suitability","aggregate 1.5 GB safety bound assumes the hash-bound SUMO configuration writes only its 18 registered XML roles plus two registered SUMO logs and two redirected streams as large files; an unexpected role is a G1 failure and ends the chain"]
+}

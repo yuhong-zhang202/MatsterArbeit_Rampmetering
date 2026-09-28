@@ -1,0 +1,71 @@
+{
+  "TLS_program": "A_OPEN",
+  "approval_required": true,
+  "card_revision": 1,
+  "card_status": "DRAFT_NOT_AUTHORIZED",
+  "condition": "A_OPEN_R0_CONTROL",
+  "demand": {
+    "M_number": 1333,
+    "M_window_s": "[0,1500)",
+    "R_number": 0,
+    "R_window_s": "NO_R_SOURCE",
+    "U_number": 150,
+    "X_number": 75,
+    "qMain_veh_per_h": 3199.2,
+    "qRamp_veh_per_h": 0,
+    "qUrban_veh_per_h": 360,
+    "qX_veh_per_h": 180
+  },
+  "design_plan": "artifacts/stage6_final_bounded_demand_scan_plan_20260923_v1/BOUNDED_DEMAND_SCAN_PLAN.md",
+  "design_sha256": "5aeddf82bcaa7f2b559e7b6db951815c724cf7d3e8f14dd81158a6f9dbac1046",
+  "execution_authorized": false,
+  "geometry": "accepted network bytes; read-only; no netconvert",
+  "horizon_s": 2700,
+  "input_manifest": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/inputs/control/expected_identity_manifest.json",
+  "input_manifest_sha256": "920f7d379c4a6509f2591447577688c372759f7b82c9cace166c0a95e51bec3f",
+  "input_sha256": {
+    "additional": "ed98832e73675aa95cb3cfc386c579db9525b942b2555e802f0a29324affc23e",
+    "demand": "6bbdc1d9148b05286c25b94f23c37174951c9f3e4a544ef8b9a322fbc42ab631",
+    "network": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "output_roles": "5fe6d340f7196a2afd91ad56cd3c6ed419e32501110ce21076771446b4299ad3",
+    "sumocfg": "6ea7306958543281b35a4c560e735d07e04c7658f73dc06f5cb174041baf0fe6"
+  },
+  "inputs": {
+    "additional": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/inputs/control/scenario.add.xml",
+    "demand": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/inputs/control/demand.rou.xml",
+    "network": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+    "output_roles": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/inputs/control/output_roles.json",
+    "sumocfg": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/inputs/control/scenario.sumocfg"
+  },
+  "max_starts": 1,
+  "output_directory": "data/raw/stage6_bounded_pair_20260923_v1/PAIR_3199_CTRL_S17",
+  "pair_id": "PAIR_3199_S17",
+  "pair_start_order": 1,
+  "pair_start_rule": "Treatment may start only after control raw passes predeclared technical/data integrity gates and R0 does not trigger pair stop; separate user authorization required.",
+  "progression_allowed": false,
+  "protocol_status": "UNFROZEN; no formal protocol change",
+  "required_unresolved_prelaunch_items": [
+    "R02 runner is hard-bound to RI3350_CTRL_S17_technical_retry1 and cannot accept this new run_id",
+    "Exact runtime binary/version/python/guardian bindings for this new card not established",
+    "positive finite runtime and storage stop triggers have not been approved/bound"
+  ],
+  "resource_limits": {
+    "runtime_s": null,
+    "status": "NOT_BOUND_FOR_THIS_RUNNER",
+    "storage_bytes": null
+  },
+  "run_command": null,
+  "run_id": "PAIR_3199_CTRL_S17",
+  "schema_version": "1",
+  "scope_prohibitions": [
+    "No SUMO/netconvert/TraCI execution before separate user authorization",
+    "No classifier or threshold changes",
+    "No other qMain/qRamp/seed/controller arms",
+    "No 3350.4/R0 offline suitability audit prerequisite for this pair per explicit user instruction; apply the full control acceptance criteria to this pair’s own R0 raw before treatment release."
+  ],
+  "seed": 17,
+  "step_s": 1,
+  "technical_retries": 0,
+  "treatment_release": "Treatment is not released unless a separate user authorization is given after independent review of control raw; require the full adopted-plan LOW_R_BACKGROUND_ACCEPTABLE determination: adequate M exposure, no locked P/S/L sustained event, no established sustained collective self-congestion, relevant C/L/long-low-ratio patterns bounded and adjudicated, and no unresolved source/downstream/geometry/TLS/measurement alternative. P/S/L negative alone is insufficient.",
+  "vehicle_behavior": "unchanged from bound route file: technical_passenger, no explicit per-vehicle overrides"
+}

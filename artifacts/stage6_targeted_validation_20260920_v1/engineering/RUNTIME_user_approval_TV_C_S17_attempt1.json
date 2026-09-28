@@ -1,0 +1,30 @@
+{
+  "authorization_provenance": "Parent-agent staged release under the user-authorized conditional sequence. Both smoke fixtures and A passed their exact gates/reviews; B passed 14/14 and physical suitability, and independent scientific review passed B/M/required-minor 0/0/0. This sidecar does not claim user personal review of later-generated hashes. It releases only C, the final start in the card; no additional run is authorized by this sidecar.",
+  "card_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/RUNTIME_CARD.json",
+  "card_sha256": "8e54ab7ac73e3192a1db5ea249efbe610e1114d79980166baea83934a6601f4c",
+  "max_SUMO_starts": 5,
+  "output_gate_review_receipt": {
+    "bytes": 1692,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/B_gate_review_receipt.json",
+    "sha256": "0939cebffe451e4316571704d97c0698fd46e640b346db165fd9c6755dc9a3c8"
+  },
+  "previous_gate": {
+    "bytes": 9075,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/gates/TV_B_S17_attempt1.json",
+    "sha256": "7b0c9f0c935ca1efbe0e1cf1b31d9275fc83b6e11d08bef7d6ea613df47f2104"
+  },
+  "released_attempt": "TV_C_S17_attempt1",
+  "review_receipt": {
+    "bytes": 1656,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/scientific_review_receipt.json",
+    "sha256": "bf9cd5058a674208f16a99a285e45743c266d4bcc09cfa5e49d7753b704a57bd"
+  },
+  "scope": "two technical fixtures then seed17 A/B/C",
+  "status": "authorized-under-user-task",
+  "synthetic_test_only": false,
+  "user_task_binding": {
+    "bytes": 45035,
+    "path": "/Users/yuhongzhang/.codex/attachments/6e3cc74b-84d3-471e-9426-4589a7a3b855/已粘贴的文本.txt",
+    "sha256": "6bb0eb4897939fa642065230ed623915a7f270e1d278d27d4187e28bb8225fbc"
+  }
+}

@@ -1,0 +1,171 @@
+{
+  "artifact_checks": {
+    "R_U_X_vehicle_exports_empty_as_expected": true,
+    "all_25_raw_inventory_files_match_manifest": true,
+    "all_M_have_downstream_loop_passage": true,
+    "candidate_C_low_speed_warnings": "Retained; isolated 30s low-ratio warning bins with no same-cell sustained L/P/S event. Some adjacent cells are affected in the same time bin; no State1 event or persistent same-cell continuation is found. Not treated as clean-normal/high-mobility evidence.",
+    "geometry_lane_map_confirmed_against_bound_network_and_locked_whitelist": true,
+    "mainline_direct_TLS_red_constraint_records": 0,
+    "queue_export_has_no_lane_records_at_all_2700_timesteps": true,
+    "ramp_storage_E2_90_intervals_zero_vehicles_and_zero_occupancy": true,
+    "shared_boundary_E2_90_intervals_zero_vehicles_and_zero_occupancy": true
+  },
+  "card_sha256": "15544478e8e7ced98b12673bec65cfe646b1f73e9e471ed501ddee052306bbfd",
+  "data_side_control_category": "LOW_R_BACKGROUND_ACCEPTABLE",
+  "derived_outputs": {
+    "analysis_script": {
+      "path": "data/processed/stage6_minimal3350_ctrl_postrun_20260924_v2/analyze_minimal3350_control.py",
+      "sha256": "b81bae1886c12269988ef8433e6cb4ad7e006cf4831d0da690f278fc53205696"
+    },
+    "cell_bin_metrics": {
+      "path": "data/processed/stage6_minimal3350_ctrl_postrun_20260924_v2/cell_bin_metrics.csv",
+      "sha256": "c599b6dd9c40f2995ee259cef2c2785a38a6a72fdcf83ad0ebca4434deb73f09"
+    },
+    "machine_report": {
+      "path": "data/processed/stage6_minimal3350_ctrl_postrun_20260924_v2/data_lifecycle_classifier_report.json",
+      "sha256": "1f6f125ab9d8a3458d81df74ae7a75d10fa2ca9c712f46692b5c72fbef412869"
+    }
+  },
+  "disposition": "PASS_DATA_LIFECYCLE",
+  "engineering_postrun_review_sha256": "657e5951469b86e43d72782a3f154f288aa57c1f68d2caac339adfef1af75cac",
+  "exposure_and_coverage": {
+    "E1_M_passes_main_down_20": 1396,
+    "E1_M_passes_main_down_200": 1396,
+    "E1_M_passes_main_up_1300": 1396,
+    "E1_all_required_outputs_present": true,
+    "E1_records_per_loop": 90,
+    "FCD_labels": "0..2699 inclusive, one-second grid, no gaps or duplicate labels",
+    "FCD_timestep_count": 2700,
+    "M_FCD_samples": 102444,
+    "M_FCD_samples_in_merge_core_during_720_1440_s": 7096,
+    "auxiliary_merge_lane_E1_M_passes": 0,
+    "duplicate_time_ID_keys": 0,
+    "merge_through_lane_E1_M_passes": 1396,
+    "summary_final": {
+      "arrived": 1396,
+      "collisions": 0,
+      "discarded": 0,
+      "ended": 1396,
+      "inserted": 1396,
+      "loaded": 1396,
+      "running": 0,
+      "teleports": 0,
+      "waiting": 0
+    },
+    "unexpected_M_lane_or_position": 0,
+    "unique_M_FCD_IDs": 1396,
+    "unique_M_IDs_observed_in_merge_core_during_720_1440_s": 677
+  },
+  "final_scientific_disposition_pending": "Independent scientific post-run review is still required.",
+  "limitations": [
+    "Single fixed seed/vector; no replication or robustness inference.",
+    "Strict high-mobility/normal screen remains historical FAIL and is not rewritten.",
+    "Queue export is structurally empty (one empty lanes element per time step), so queue morphology cannot be assessed from that output.",
+    "E2 confirms empty ramp/shared detector exposure for this R=U=X=0 control but cannot establish behavior under treatment.",
+    "Localized Candidate C warnings remain diagnostic; a negative P/S/L classification is not proof of ideal free flow."
+  ],
+  "locked_classifier": {
+    "Candidate_A": "No adjacent-cell S qualification.",
+    "Candidate_C": "28 one-bin early-warning flags across 28 cell/time combinations in 11 distinct time bins; warning records retained. They do not qualify as State 1.",
+    "L": "NO_QUALIFYING_EVENT; no cell had two consecutive bins meeting all locked L low-state gates and density/reference conditions.",
+    "P": "NO_QUALIFYING_EVENT; no valid merge-core cell met all locked P persistence, speed, simultaneous-population, reference-density and attribution conditions.",
+    "S": "NO_QUALIFYING_EVENT; no valid merge-core cell met all locked S conditions.",
+    "early_warning_cells_times": {
+      "1020": [
+        20
+      ],
+      "1230": [
+        11,
+        12
+      ],
+      "1440": [
+        14,
+        15,
+        16,
+        17
+      ],
+      "1500": [
+        17
+      ],
+      "300": [
+        15,
+        16,
+        17
+      ],
+      "330": [
+        19,
+        20
+      ],
+      "420": [
+        18,
+        19,
+        20
+      ],
+      "570": [
+        16,
+        18,
+        19
+      ],
+      "660": [
+        8,
+        9
+      ],
+      "690": [
+        13,
+        14,
+        15,
+        16,
+        17,
+        18
+      ],
+      "720": [
+        20
+      ]
+    },
+    "method_path": "docs/methodology/FREEWAY_PROTECTABLE_STATE_EXPLORATORY_DEFINITION.md"
+  },
+  "output_manifest_sha256": "48456bb607b4e4679dd13274696c60ab7f5ae020aa6ecbf2462110e1fdcd752f",
+  "planned_realized_lifecycle": {
+    "SUMOTime_desired_schedule": "integer 1074 ms per consecutive M identity in bound manifest; actual SUMO departures occur on the simulation-step grid and each identity departs within [0,1] s of its desired time.",
+    "actual_depart_s_min_max": [
+      0,
+      1499
+    ],
+    "arrival_s_min_max": [
+      65,
+      1570
+    ],
+    "arrived": 1396,
+    "departDelay_s_min_median_max": [
+      0,
+      0.5,
+      1.0
+    ],
+    "discarded": 0,
+    "inserted": 1396,
+    "planned_M": 1396,
+    "planned_vehroute_tripinfo_id_sets_identical": true,
+    "route_mismatch": 0,
+    "speedFactor_mismatch": 0,
+    "type_mismatch": 0,
+    "unfinished_at_end": 0,
+    "unique_tripinfo_M": 1396,
+    "unique_vehroute_M": 1396,
+    "vaporized": 0
+  },
+  "processes_started_by_this_review": 0,
+  "provenance_limitation": "The explicit per-M speedFactors are copied from the archived qMain=3350.4 seed17 full-network vehroute (nonzero U/X) and materialized for common-demand reproducibility. This closes the identity/attribute binding for the intended matched comparison but does not claim an independently generated U=X=0 random realization.",
+  "raw_mutated": false,
+  "review_scope": "Independent data/lifecycle review only; control run REV8; no treatment outcome; raw read-only.",
+  "run_id": "MINIMAL3350_CTRL_S17",
+  "scenario": {
+    "M_planned": 1396,
+    "R_planned": 0,
+    "U_planned": 0,
+    "X_planned": 0,
+    "horizon_s": 2700,
+    "qMain_veh_per_h": 3350.4,
+    "seed": 17
+  },
+  "schema": "stage6_minimal3350_control_data_postrun_review_v1"
+}

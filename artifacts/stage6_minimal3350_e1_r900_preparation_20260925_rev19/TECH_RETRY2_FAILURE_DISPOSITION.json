@@ -1,0 +1,34 @@
+{
+  "schema": "stage6_minimal3350_e1_r900_retry2_failure_disposition_v1",
+  "status": "FAILED_PRE_SPAWN_ENGINEERING",
+  "run_id": "MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY2",
+  "card_sha256": "cea374f60db487ce9b4bd0c5f45ed28996b298a710af2da33aca6ae9f3bae380",
+  "reservation_sha256": "d27a977678871885d376272b56b945e9d1f28a7728b22fd63dedd05da3aaaa45",
+  "reservation_status": "FAILED",
+  "retry_allowed": false,
+  "simulator_pid": null,
+  "guardian_starts": 0,
+  "sumo_starts": 0,
+  "traci_starts": 0,
+  "netconvert_starts": 0,
+  "traffic_raw_complete": false,
+  "failure_type": "FileExistsError",
+  "root_cause": "The E1-specific launch branch wrote staged scenario_control.add.xml and scenario_control.sumocfg; the common staging block then attempted exclusive writes of the same files a second time, raising FileExistsError for scenario_control.add.xml before Guardian/SUMO spawn.",
+  "output_directory": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v19/MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY2/outputs",
+  "output_inventory": [
+    {
+      "path": "scenario_control.add.xml",
+      "bytes": 4012,
+      "sha256": "fcc47b936eaf2577c459b4f7282c0ed0d9dba8418a49f4ce0f7cd0e7e8f453b3"
+    },
+    {
+      "path": "scenario_control.sumocfg",
+      "bytes": 2888,
+      "sha256": "7f7329b91c77b3f10e38659875a78aa3ed7bb58a85ebe6ba735e07bdea9d6bfc"
+    }
+  ],
+  "expected_staged_hashes_match": true,
+  "other_traffic_outputs_present": false,
+  "repair_cycle": 2,
+  "scientific_inputs_changed": false
+}

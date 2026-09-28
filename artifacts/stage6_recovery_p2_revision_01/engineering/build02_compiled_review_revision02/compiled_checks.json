@@ -1,0 +1,2419 @@
+[
+  {
+    "check": "process_and_group_absent",
+    "evidence": {
+      "pid": "absent",
+      "process_group": "absent"
+    },
+    "scope": "execution",
+    "status": "PASS"
+  },
+  {
+    "check": "no_open_attempt_handles_reported",
+    "evidence": {
+      "argv": [
+        "/usr/sbin/lsof",
+        "-nP",
+        "+D",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_attempts/BUILD02"
+      ],
+      "returncode": 1,
+      "stderr_bytes": 0,
+      "stdout_bytes": 0
+    },
+    "scope": "execution",
+    "status": "PASS"
+  },
+  {
+    "check": "no_sample_file_or_partial",
+    "evidence": {
+      "consequence": "No live stack evidence; this limits diagnosis, not XML existence. Independent reviewer must assess this procedural deviation.",
+      "matching_files": [],
+      "parent_evidence": "Primary first inspected after executor tool yielded; os.kill and os.getpgid for24060 both raised ProcessLookupError. No sample command was started.",
+      "status": "NOT_STARTED_PARENT_OBSERVED_PID_ALREADY_ABSENT",
+      "timing_deviation": "The first observation time relative to t+2 was not recorded; cannot claim an exact2s skip. No post-hoc sample was attempted."
+    },
+    "scope": "execution",
+    "status": "PASS"
+  },
+  {
+    "check": "wrapper_success",
+    "evidence": {
+      "returncode": 0,
+      "status": "completed_pending_compiled_review"
+    },
+    "scope": "execution",
+    "status": "PASS"
+  },
+  {
+    "check": "receipt_hash_netconvert.stderr.log",
+    "evidence": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "scope": "integrity",
+    "status": "PASS"
+  },
+  {
+    "check": "receipt_hash_netconvert.stdout.log",
+    "evidence": {
+      "bytes": 2195,
+      "sha256": "e25c5e6e77ade26d7bd3d1acbe79b5c45c78dc90cd41a1248d4f23ff019a6bdf"
+    },
+    "scope": "integrity",
+    "status": "PASS"
+  },
+  {
+    "check": "receipt_hash_network.net.xml",
+    "evidence": {
+      "bytes": 12244,
+      "sha256": "e47b0f94521414e55d0e5337b87204dc38d98a0a3a7c5466f2a5883f80b52710"
+    },
+    "scope": "integrity",
+    "status": "PASS"
+  },
+  {
+    "check": "receipt_hash_reservation.json",
+    "evidence": {
+      "bytes": 3076,
+      "sha256": "0d59f1af93d8f78b254ffbd8f8e4644307ae99a90d6a89b66f7b68972b44d38b"
+    },
+    "scope": "integrity",
+    "status": "PASS"
+  },
+  {
+    "check": "receipt_hash_started.json",
+    "evidence": {
+      "bytes": 94,
+      "sha256": "1ed81e1d96be6a844481965714879045fdb2f2f704832bd423f772a39dfec2f9"
+    },
+    "scope": "integrity",
+    "status": "PASS"
+  },
+  {
+    "check": "directory_byte_reconciliation",
+    "evidence": {
+      "before_receipt": 17609,
+      "expected_printed_final": 21096,
+      "final_directory_bytes": 21096,
+      "receipt_bytes": 3487
+    },
+    "scope": "execution",
+    "status": "PASS"
+  },
+  {
+    "check": "observed_resource_lines",
+    "evidence": {
+      "bytes": 21096,
+      "wallclock_s": 4.657082666999486
+    },
+    "scope": "execution",
+    "status": "PASS"
+  },
+  {
+    "check": "source_identity_candidate.con.xml",
+    "evidence": {
+      "bytes": 838,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/network_inputs/candidate.con.xml",
+      "sha256": "a6f005daf1974d7c3d1a06536dc6a7161ca0e56411d0ead40becb183d642f542"
+    },
+    "scope": "integrity",
+    "status": "PASS"
+  },
+  {
+    "check": "source_identity_candidate.edg.xml",
+    "evidence": {
+      "bytes": 1686,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/network_inputs/candidate.edg.xml",
+      "sha256": "26ad2219b776b986f20641d9aae227f23de91cc1e247b477cd6aa2ef03e0fd4f"
+    },
+    "scope": "integrity",
+    "status": "PASS"
+  },
+  {
+    "check": "source_identity_candidate.schema_revision02.netccfg",
+    "evidence": {
+      "bytes": 1094,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/network_inputs/candidate.schema_revision02.netccfg",
+      "sha256": "ed4ff9bc1c90a2b07cca9fd1a0f1a0d1b58c6ab6e716bbac1212a7f9c4f3b44f"
+    },
+    "scope": "integrity",
+    "status": "PASS"
+  },
+  {
+    "check": "source_identity_candidate.nod.xml",
+    "evidence": {
+      "bytes": 717,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/network_inputs/candidate.nod.xml",
+      "sha256": "8952c46b1b01eac912c54fbe4ab33bbb67dc79fb8862d68272591469e4fe61f3"
+    },
+    "scope": "integrity",
+    "status": "PASS"
+  },
+  {
+    "check": "source_identity_candidate.tll.xml",
+    "evidence": {
+      "bytes": 551,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/network_inputs/candidate.tll.xml",
+      "sha256": "89f25ab5020e4f2df2fc035233b038c89cc80cf748f6dca19b5584e829df3ecc"
+    },
+    "scope": "integrity",
+    "status": "PASS"
+  },
+  {
+    "check": "BUILD01_preserved_SG6_BUILD_user_approval.json",
+    "evidence": {
+      "bytes": 1160,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/SG6_BUILD_user_approval.json",
+      "sha256": "1e64e23b9ac79c005c77677ffde93ffd0020ddafc71740b8b6086d195f48d658"
+    },
+    "scope": "integrity",
+    "status": "PASS"
+  },
+  {
+    "check": "BUILD01_preserved_BUILD01_actual_preflight_receipt.json",
+    "evidence": {
+      "bytes": 17232,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/BUILD01_actual_preflight_receipt.json",
+      "sha256": "cc427ab7477eb3e5c4a0e440a877860d6dc86d87af6a8f3b2d36341cf249ad01"
+    },
+    "scope": "integrity",
+    "status": "PASS"
+  },
+  {
+    "check": "BUILD01_preserved_BUILD01_failure_closeout.json",
+    "evidence": {
+      "bytes": 6102,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/BUILD01_failure_closeout.json",
+      "sha256": "4b44188779b5efa61802d8e9e8f1a4aaa6b2bdcaeea270d55a6ad70b8d6561c5"
+    },
+    "scope": "integrity",
+    "status": "PASS"
+  },
+  {
+    "check": "BUILD01_preserved_build_receipt.json",
+    "evidence": {
+      "bytes": 2776,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_attempts/BUILD01/build_receipt.json",
+      "sha256": "902956e03e04e516da3e43725205d220fa8a4b6249572782339e4c728ee7e7f3"
+    },
+    "scope": "integrity",
+    "status": "PASS"
+  },
+  {
+    "check": "BUILD01_preserved_netconvert.stderr.log",
+    "evidence": {
+      "bytes": 0,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_attempts/BUILD01/netconvert.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "scope": "integrity",
+    "status": "PASS"
+  },
+  {
+    "check": "BUILD01_preserved_netconvert.stdout.log",
+    "evidence": {
+      "bytes": 0,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_attempts/BUILD01/netconvert.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "scope": "integrity",
+    "status": "PASS"
+  },
+  {
+    "check": "BUILD01_preserved_reservation.json",
+    "evidence": {
+      "bytes": 2319,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_attempts/BUILD01/reservation.json",
+      "sha256": "6117c58d05f2e34b75a93ba8beefb568b3530b4fd180922f9caa539b03f3a68d"
+    },
+    "scope": "integrity",
+    "status": "PASS"
+  },
+  {
+    "check": "BUILD01_preserved_started.json",
+    "evidence": {
+      "bytes": 93,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_attempts/BUILD01/started.json",
+      "sha256": "3e99c41b62274061095678e445f9f138a67a92105fdfa867412d1ed23230ec81"
+    },
+    "scope": "integrity",
+    "status": "PASS"
+  },
+  {
+    "check": "baseline_bound",
+    "evidence": {
+      "bytes": 9928,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/network.net.xml",
+      "sha256": "a83bb0c3a03b7e74cf8c2360336eb0dfbb330073cf8b8f6aea9940ff7cf3d8ea"
+    },
+    "scope": "integrity",
+    "status": "PASS"
+  },
+  {
+    "check": "network_xml_exists_nonempty_root",
+    "evidence": {
+      "bytes": 12244,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_attempts/BUILD02/network.net.xml",
+      "sha256": "e47b0f94521414e55d0e5337b87204dc38d98a0a3a7c5466f2a5883f80b52710"
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "expected_external_edges_lanes",
+    "evidence": {
+      "external_edges": 10,
+      "external_lanes": 14,
+      "internal_lanes": 10
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "exact10_requested_movements",
+    "evidence": {
+      "actual": [
+        [
+          "cross_in",
+          "cross_out",
+          "0",
+          "0"
+        ],
+        [
+          "main_up",
+          "merge_section",
+          "0",
+          "1"
+        ],
+        [
+          "main_up",
+          "merge_section",
+          "1",
+          "2"
+        ],
+        [
+          "merge_section",
+          "main_down",
+          "1",
+          "0"
+        ],
+        [
+          "merge_section",
+          "main_down",
+          "2",
+          "1"
+        ],
+        [
+          "ramp_accel",
+          "merge_section",
+          "0",
+          "0"
+        ],
+        [
+          "ramp_storage",
+          "ramp_accel",
+          "0",
+          "0"
+        ],
+        [
+          "shared_approach",
+          "ramp_storage",
+          "0",
+          "0"
+        ],
+        [
+          "shared_approach",
+          "urban_out",
+          "0",
+          "0"
+        ],
+        [
+          "urban_in",
+          "shared_approach",
+          "0",
+          "0"
+        ]
+      ],
+      "expected": [
+        [
+          "cross_in",
+          "cross_out",
+          "0",
+          "0"
+        ],
+        [
+          "main_up",
+          "merge_section",
+          "0",
+          "1"
+        ],
+        [
+          "main_up",
+          "merge_section",
+          "1",
+          "2"
+        ],
+        [
+          "merge_section",
+          "main_down",
+          "1",
+          "0"
+        ],
+        [
+          "merge_section",
+          "main_down",
+          "2",
+          "1"
+        ],
+        [
+          "ramp_accel",
+          "merge_section",
+          "0",
+          "0"
+        ],
+        [
+          "ramp_storage",
+          "ramp_accel",
+          "0",
+          "0"
+        ],
+        [
+          "shared_approach",
+          "ramp_storage",
+          "0",
+          "0"
+        ],
+        [
+          "shared_approach",
+          "urban_out",
+          "0",
+          "0"
+        ],
+        [
+          "urban_in",
+          "shared_approach",
+          "0",
+          "0"
+        ]
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "via_:urban_tls_1_0",
+    "evidence": {
+      "dir": "s",
+      "from": "cross_in",
+      "fromLane": "0",
+      "linkIndex": "1",
+      "state": "o",
+      "tl": "urban_tls",
+      "to": "cross_out",
+      "toLane": "0",
+      "via": ":urban_tls_1_0"
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "via_:freeway_merge_0_0",
+    "evidence": {
+      "dir": "s",
+      "from": "main_up",
+      "fromLane": "0",
+      "state": "M",
+      "to": "merge_section",
+      "toLane": "1",
+      "via": ":freeway_merge_0_0"
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "via_:freeway_merge_0_1",
+    "evidence": {
+      "dir": "s",
+      "from": "main_up",
+      "fromLane": "1",
+      "state": "M",
+      "to": "merge_section",
+      "toLane": "2",
+      "via": ":freeway_merge_0_1"
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "via_:merge_end_0_0",
+    "evidence": {
+      "dir": "s",
+      "from": "merge_section",
+      "fromLane": "1",
+      "state": "M",
+      "to": "main_down",
+      "toLane": "0",
+      "via": ":merge_end_0_0"
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "via_:merge_end_0_1",
+    "evidence": {
+      "dir": "s",
+      "from": "merge_section",
+      "fromLane": "2",
+      "state": "M",
+      "to": "main_down",
+      "toLane": "1",
+      "via": ":merge_end_0_1"
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "via_:freeway_merge_2_0",
+    "evidence": {
+      "dir": "s",
+      "from": "ramp_accel",
+      "fromLane": "0",
+      "state": "M",
+      "to": "merge_section",
+      "toLane": "0",
+      "via": ":freeway_merge_2_0"
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "via_:ramp_mid_0_0",
+    "evidence": {
+      "dir": "s",
+      "from": "ramp_storage",
+      "fromLane": "0",
+      "state": "M",
+      "to": "ramp_accel",
+      "toLane": "0",
+      "via": ":ramp_mid_0_0"
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "via_:urban_diverge_0_0",
+    "evidence": {
+      "dir": "r",
+      "from": "shared_approach",
+      "fromLane": "0",
+      "state": "M",
+      "to": "urban_out",
+      "toLane": "0",
+      "via": ":urban_diverge_0_0"
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "via_:urban_diverge_1_0",
+    "evidence": {
+      "dir": "R",
+      "from": "shared_approach",
+      "fromLane": "0",
+      "state": "M",
+      "to": "ramp_storage",
+      "toLane": "0",
+      "via": ":urban_diverge_1_0"
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "via_:urban_tls_0_0",
+    "evidence": {
+      "dir": "s",
+      "from": "urban_in",
+      "fromLane": "0",
+      "linkIndex": "0",
+      "state": "O",
+      "tl": "urban_tls",
+      "to": "shared_approach",
+      "toLane": "0",
+      "via": ":urban_tls_0_0"
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "three_merge_requests_nonconflicting",
+    "evidence": {
+      "connections": [
+        {
+          "dir": "s",
+          "from": "main_up",
+          "fromLane": "0",
+          "state": "M",
+          "to": "merge_section",
+          "toLane": "1",
+          "via": ":freeway_merge_0_0"
+        },
+        {
+          "dir": "s",
+          "from": "main_up",
+          "fromLane": "1",
+          "state": "M",
+          "to": "merge_section",
+          "toLane": "2",
+          "via": ":freeway_merge_0_1"
+        },
+        {
+          "dir": "s",
+          "from": "ramp_accel",
+          "fromLane": "0",
+          "state": "M",
+          "to": "merge_section",
+          "toLane": "0",
+          "via": ":freeway_merge_2_0"
+        }
+      ],
+      "requests": [
+        {
+          "cont": "0",
+          "foes": "000",
+          "index": "0",
+          "response": "000"
+        },
+        {
+          "cont": "0",
+          "foes": "000",
+          "index": "1",
+          "response": "000"
+        },
+        {
+          "cont": "0",
+          "foes": "000",
+          "index": "2",
+          "response": "000"
+        }
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "aux0_no_outgoing",
+    "evidence": [
+      {
+        "dir": "s",
+        "from": "merge_section",
+        "fromLane": "1",
+        "state": "M",
+        "to": "main_down",
+        "toLane": "0",
+        "via": ":merge_end_0_0"
+      },
+      {
+        "dir": "s",
+        "from": "merge_section",
+        "fromLane": "2",
+        "state": "M",
+        "to": "main_down",
+        "toLane": "1",
+        "via": ":merge_end_0_1"
+      }
+    ],
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "two_through_continuations",
+    "evidence": [
+      {
+        "dir": "s",
+        "from": "merge_section",
+        "fromLane": "1",
+        "state": "M",
+        "to": "main_down",
+        "toLane": "0",
+        "via": ":merge_end_0_0"
+      },
+      {
+        "dir": "s",
+        "from": "merge_section",
+        "fromLane": "2",
+        "state": "M",
+        "to": "main_down",
+        "toLane": "1",
+        "via": ":merge_end_0_1"
+      }
+    ],
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "aux_usable_280_300",
+    "evidence": {
+      "compiled_m": 294.51,
+      "nominal_planning_span_m": 300
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "downstream_gt400",
+    "evidence": {
+      "compiled_lane_lengths_m": [
+        496.0,
+        496.0
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "passenger_right_entry_excluded",
+    "evidence": {
+      "changeRight": "authority",
+      "id": "merge_section_1",
+      "index": "1",
+      "length": "294.51",
+      "shape": "1401.49,895.20 1696.00,895.20",
+      "speed": "33.33",
+      "width": "3.20"
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "aux_left_not_prohibited",
+    "evidence": {
+      "acceleration": "1",
+      "id": "merge_section_0",
+      "index": "0",
+      "length": "294.51",
+      "shape": "1401.49,892.00 1696.00,892.00",
+      "speed": "33.33",
+      "width": "3.20"
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "no_unregulated_junctions_or_pass_override",
+    "evidence": {
+      "junction_types": [
+        "dead_end",
+        "priority",
+        "traffic_light"
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "aux_geometrically_right",
+    "evidence": {
+      "merge_section_0": "1401.49,892.00 1696.00,892.00",
+      "merge_section_1": "1401.49,895.20 1696.00,895.20",
+      "merge_section_2": "1401.49,898.40 1696.00,898.40"
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "r_approach_stays_below_M_centres",
+    "evidence": {
+      "M_right_y": 895.2,
+      "R_max_y": 893.4
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "straight_M_alignment_0",
+    "evidence": {
+      "lanes": [
+        "main_up_0",
+        ":freeway_merge_0_0",
+        "merge_section_1",
+        ":merge_end_0_0",
+        "main_down_0"
+      ],
+      "ys": [
+        895.2
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "straight_M_alignment_1",
+    "evidence": {
+      "lanes": [
+        "main_up_1",
+        ":freeway_merge_0_1",
+        "merge_section_2",
+        ":merge_end_0_1",
+        "main_down_1"
+      ],
+      "ys": [
+        898.4
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "urban_lane_invariant_urban_in_0",
+    "evidence": {
+      "baseline": {
+        "id": "urban_in_0",
+        "index": "0",
+        "length": "392.80",
+        "shape": "1001.60,0.00 1001.60,392.80",
+        "speed": "13.89"
+      },
+      "candidate": {
+        "id": "urban_in_0",
+        "index": "0",
+        "length": "392.80",
+        "shape": "1001.60,0.00 1001.60,392.80",
+        "speed": "13.89",
+        "width": "3.20"
+      },
+      "normalization": "Missing width interpreted3.2 per bound local sumolib parser; shape/length/speed exact"
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "urban_lane_invariant_shared_approach_0",
+    "evidence": {
+      "baseline": {
+        "id": "shared_approach_0",
+        "index": "0",
+        "length": "238.80",
+        "shape": "1001.60,404.00 1001.60,642.80",
+        "speed": "13.89"
+      },
+      "candidate": {
+        "id": "shared_approach_0",
+        "index": "0",
+        "length": "238.80",
+        "shape": "1001.60,404.00 1001.60,642.80",
+        "speed": "13.89",
+        "width": "3.20"
+      },
+      "normalization": "Missing width interpreted3.2 per bound local sumolib parser; shape/length/speed exact"
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "urban_lane_invariant_urban_out_0",
+    "evidence": {
+      "baseline": {
+        "id": "urban_out_0",
+        "index": "0",
+        "length": "442.80",
+        "shape": "1007.20,648.40 1450.00,648.40",
+        "speed": "13.89"
+      },
+      "candidate": {
+        "id": "urban_out_0",
+        "index": "0",
+        "length": "442.80",
+        "shape": "1007.20,648.40 1450.00,648.40",
+        "speed": "13.89",
+        "width": "3.20"
+      },
+      "normalization": "Missing width interpreted3.2 per bound local sumolib parser; shape/length/speed exact"
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "urban_lane_invariant_cross_in_0",
+    "evidence": {
+      "baseline": {
+        "id": "cross_in_0",
+        "index": "0",
+        "length": "446.00",
+        "shape": "550.00,398.40 996.00,398.40",
+        "speed": "13.89"
+      },
+      "candidate": {
+        "id": "cross_in_0",
+        "index": "0",
+        "length": "446.00",
+        "shape": "550.00,398.40 996.00,398.40",
+        "speed": "13.89",
+        "width": "3.20"
+      },
+      "normalization": "Missing width interpreted3.2 per bound local sumolib parser; shape/length/speed exact"
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "urban_lane_invariant_cross_out_0",
+    "evidence": {
+      "baseline": {
+        "id": "cross_out_0",
+        "index": "0",
+        "length": "442.80",
+        "shape": "1007.20,398.40 1450.00,398.40",
+        "speed": "13.89"
+      },
+      "candidate": {
+        "id": "cross_out_0",
+        "index": "0",
+        "length": "442.80",
+        "shape": "1007.20,398.40 1450.00,398.40",
+        "speed": "13.89",
+        "width": "3.20"
+      },
+      "normalization": "Missing width interpreted3.2 per bound local sumolib parser; shape/length/speed exact"
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "urban_lane_invariant_:urban_tls_0_0",
+    "evidence": {
+      "baseline": {
+        "id": ":urban_tls_0_0",
+        "index": "0",
+        "length": "11.20",
+        "shape": "1001.60,392.80 1001.60,404.00",
+        "speed": "13.89"
+      },
+      "candidate": {
+        "id": ":urban_tls_0_0",
+        "index": "0",
+        "length": "11.20",
+        "shape": "1001.60,392.80 1001.60,404.00",
+        "speed": "13.89",
+        "width": "3.20"
+      },
+      "normalization": "Missing width interpreted3.2 per bound local sumolib parser; shape/length/speed exact"
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "urban_lane_invariant_:urban_tls_1_0",
+    "evidence": {
+      "baseline": {
+        "id": ":urban_tls_1_0",
+        "index": "0",
+        "length": "11.20",
+        "shape": "996.00,398.40 1007.20,398.40",
+        "speed": "13.89"
+      },
+      "candidate": {
+        "id": ":urban_tls_1_0",
+        "index": "0",
+        "length": "11.20",
+        "shape": "996.00,398.40 1007.20,398.40",
+        "speed": "13.89",
+        "width": "3.20"
+      },
+      "normalization": "Missing width interpreted3.2 per bound local sumolib parser; shape/length/speed exact"
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "urban_lane_invariant_:urban_diverge_0_0",
+    "evidence": {
+      "baseline": {
+        "id": ":urban_diverge_0_0",
+        "index": "0",
+        "length": "9.03",
+        "shape": "1001.60,642.80 1001.95,645.25 1003.00,647.00 1004.75,648.05 1007.20,648.40",
+        "speed": "6.51"
+      },
+      "candidate": {
+        "id": ":urban_diverge_0_0",
+        "index": "0",
+        "length": "9.03",
+        "shape": "1001.60,642.80 1001.95,645.25 1003.00,647.00 1004.75,648.05 1007.20,648.40",
+        "speed": "6.51",
+        "width": "3.20"
+      },
+      "normalization": "Missing width interpreted3.2 per bound local sumolib parser; shape/length/speed exact"
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "urban_lane_invariant_:urban_diverge_1_0",
+    "evidence": {
+      "baseline": {
+        "id": ":urban_diverge_1_0",
+        "index": "0",
+        "length": "113.08",
+        "shape": "1001.60,642.80 1010.40,659.42 1030.04,691.38 1050.34,723.07 1061.13,738.87",
+        "speed": "18.05"
+      },
+      "candidate": {
+        "id": ":urban_diverge_1_0",
+        "index": "0",
+        "length": "113.08",
+        "shape": "1001.60,642.80 1010.40,659.42 1030.04,691.38 1050.34,723.07 1061.13,738.87",
+        "speed": "18.05",
+        "width": "3.20"
+      },
+      "normalization": "Missing width interpreted3.2 per bound local sumolib parser; shape/length/speed exact"
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "urban_junction_invariant_urban_in",
+    "evidence": {
+      "attrs": {
+        "id": "urban_in",
+        "incLanes": "",
+        "intLanes": "",
+        "shape": "1000.00,0.00 1003.20,0.00",
+        "type": "dead_end",
+        "x": "1000.00",
+        "y": "0.00"
+      },
+      "children": [],
+      "tag": "junction"
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "urban_junction_invariant_urban_out",
+    "evidence": {
+      "attrs": {
+        "id": "urban_out",
+        "incLanes": "urban_out_0",
+        "intLanes": "",
+        "shape": "1450.00,646.80 1450.00,650.00",
+        "type": "dead_end",
+        "x": "1450.00",
+        "y": "650.00"
+      },
+      "children": [],
+      "tag": "junction"
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "urban_junction_invariant_cross_in",
+    "evidence": {
+      "attrs": {
+        "id": "cross_in",
+        "incLanes": "",
+        "intLanes": "",
+        "shape": "550.00,400.00 550.00,396.80",
+        "type": "dead_end",
+        "x": "550.00",
+        "y": "400.00"
+      },
+      "children": [],
+      "tag": "junction"
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "urban_junction_invariant_cross_out",
+    "evidence": {
+      "attrs": {
+        "id": "cross_out",
+        "incLanes": "cross_out_0",
+        "intLanes": "",
+        "shape": "1450.00,396.80 1450.00,400.00",
+        "type": "dead_end",
+        "x": "1450.00",
+        "y": "400.00"
+      },
+      "children": [],
+      "tag": "junction"
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "urban_junction_invariant_urban_tls",
+    "evidence": {
+      "attrs": {
+        "id": "urban_tls",
+        "incLanes": "urban_in_0 cross_in_0",
+        "intLanes": ":urban_tls_0_0 :urban_tls_1_0",
+        "shape": "1000.00,404.00 1003.20,404.00 1003.64,401.78 1004.20,401.00 1004.98,400.44 1005.98,400.11 1007.20,400.00 1007.20,396.80 1004.98,396.36 1004.20,395.80 1003.64,395.02 1003.31,394.02 1003.20,392.80 1000.00,392.80 999.56,395.02 999.00,395.80 998.22,396.36 997.22,396.69 996.00,396.80 996.00,400.00 998.22,400.44 999.00,401.00 999.56,401.78 999.89,402.78",
+        "type": "traffic_light",
+        "x": "1000.00",
+        "y": "400.00"
+      },
+      "children": [
+        {
+          "attrs": {
+            "cont": "0",
+            "foes": "10",
+            "index": "0",
+            "response": "00"
+          },
+          "children": [],
+          "tag": "request"
+        },
+        {
+          "attrs": {
+            "cont": "0",
+            "foes": "01",
+            "index": "1",
+            "response": "01"
+          },
+          "children": [],
+          "tag": "request"
+        }
+      ],
+      "tag": "junction"
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "urban_junction_invariant_urban_diverge",
+    "evidence": {
+      "attrs": {
+        "id": "urban_diverge",
+        "incLanes": "shared_approach_0",
+        "intLanes": ":urban_diverge_0_0 :urban_diverge_1_0",
+        "shape": "1060.00,740.00 1062.26,737.74 1007.20,650.00 1007.20,646.80 1004.98,646.36 1004.20,645.80 1003.64,645.02 1003.31,644.02 1003.20,642.80 1000.00,642.80 1003.22,657.45 1011.63,675.18 1023.37,694.15 1036.59,712.50 1049.42,728.40",
+        "type": "priority",
+        "x": "1000.00",
+        "y": "650.00"
+      },
+      "children": [
+        {
+          "attrs": {
+            "cont": "0",
+            "foes": "00",
+            "index": "0",
+            "response": "00"
+          },
+          "children": [],
+          "tag": "request"
+        },
+        {
+          "attrs": {
+            "cont": "0",
+            "foes": "00",
+            "index": "1",
+            "response": "00"
+          },
+          "children": [],
+          "tag": "request"
+        }
+      ],
+      "tag": "junction"
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "urban_connections_invariant",
+    "evidence": {
+      "baseline": [
+        {
+          "dir": "s",
+          "from": "cross_in",
+          "fromLane": "0",
+          "linkIndex": "1",
+          "state": "o",
+          "tl": "urban_tls",
+          "to": "cross_out",
+          "toLane": "0",
+          "via": ":urban_tls_1_0"
+        },
+        {
+          "dir": "r",
+          "from": "shared_approach",
+          "fromLane": "0",
+          "state": "M",
+          "to": "urban_out",
+          "toLane": "0",
+          "via": ":urban_diverge_0_0"
+        },
+        {
+          "dir": "R",
+          "from": "shared_approach",
+          "fromLane": "0",
+          "state": "M",
+          "to": "ramp_storage",
+          "toLane": "0",
+          "via": ":urban_diverge_1_0"
+        },
+        {
+          "dir": "s",
+          "from": "urban_in",
+          "fromLane": "0",
+          "linkIndex": "0",
+          "state": "O",
+          "tl": "urban_tls",
+          "to": "shared_approach",
+          "toLane": "0",
+          "via": ":urban_tls_0_0"
+        },
+        {
+          "dir": "r",
+          "from": ":urban_diverge_0",
+          "fromLane": "0",
+          "state": "M",
+          "to": "urban_out",
+          "toLane": "0"
+        },
+        {
+          "dir": "R",
+          "from": ":urban_diverge_1",
+          "fromLane": "0",
+          "state": "M",
+          "to": "ramp_storage",
+          "toLane": "0"
+        },
+        {
+          "dir": "s",
+          "from": ":urban_tls_0",
+          "fromLane": "0",
+          "state": "M",
+          "to": "shared_approach",
+          "toLane": "0"
+        },
+        {
+          "dir": "s",
+          "from": ":urban_tls_1",
+          "fromLane": "0",
+          "state": "M",
+          "to": "cross_out",
+          "toLane": "0"
+        }
+      ],
+      "candidate": [
+        {
+          "dir": "s",
+          "from": "cross_in",
+          "fromLane": "0",
+          "linkIndex": "1",
+          "state": "o",
+          "tl": "urban_tls",
+          "to": "cross_out",
+          "toLane": "0",
+          "via": ":urban_tls_1_0"
+        },
+        {
+          "dir": "r",
+          "from": "shared_approach",
+          "fromLane": "0",
+          "state": "M",
+          "to": "urban_out",
+          "toLane": "0",
+          "via": ":urban_diverge_0_0"
+        },
+        {
+          "dir": "R",
+          "from": "shared_approach",
+          "fromLane": "0",
+          "state": "M",
+          "to": "ramp_storage",
+          "toLane": "0",
+          "via": ":urban_diverge_1_0"
+        },
+        {
+          "dir": "s",
+          "from": "urban_in",
+          "fromLane": "0",
+          "linkIndex": "0",
+          "state": "O",
+          "tl": "urban_tls",
+          "to": "shared_approach",
+          "toLane": "0",
+          "via": ":urban_tls_0_0"
+        },
+        {
+          "dir": "r",
+          "from": ":urban_diverge_0",
+          "fromLane": "0",
+          "state": "M",
+          "to": "urban_out",
+          "toLane": "0"
+        },
+        {
+          "dir": "R",
+          "from": ":urban_diverge_1",
+          "fromLane": "0",
+          "state": "M",
+          "to": "ramp_storage",
+          "toLane": "0"
+        },
+        {
+          "dir": "s",
+          "from": ":urban_tls_0",
+          "fromLane": "0",
+          "state": "M",
+          "to": "shared_approach",
+          "toLane": "0"
+        },
+        {
+          "dir": "s",
+          "from": ":urban_tls_1",
+          "fromLane": "0",
+          "state": "M",
+          "to": "cross_out",
+          "toLane": "0"
+        }
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "TLS_exact_invariant",
+    "evidence": [
+      {
+        "attrs": {
+          "id": "urban_tls",
+          "offset": "0",
+          "programID": "technical_placeholder",
+          "type": "static"
+        },
+        "children": [
+          {
+            "attrs": {
+              "duration": "45",
+              "state": "Gr"
+            },
+            "children": [],
+            "tag": "phase"
+          },
+          {
+            "attrs": {
+              "duration": "3",
+              "state": "yr"
+            },
+            "children": [],
+            "tag": "phase"
+          },
+          {
+            "attrs": {
+              "duration": "9",
+              "state": "rG"
+            },
+            "children": [],
+            "tag": "phase"
+          },
+          {
+            "attrs": {
+              "duration": "3",
+              "state": "ry"
+            },
+            "children": [],
+            "tag": "phase"
+          }
+        ],
+        "tag": "tlLogic"
+      }
+    ],
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "ramp_storage_and_mid_invariant",
+    "evidence": {
+      "changed_neighborhood": "ramp_accel and freeway merge; storage and ramp_mid geometries unchanged",
+      "ramp_mid_internal_m": 81.98,
+      "storage_m": 204.49
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_counts_P1B_R0_S17_attempt1",
+    "evidence": {
+      "E1": 9,
+      "E2": 2
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R0_S17_attempt1_shared_boundary_e2",
+    "evidence": {
+      "lane": "shared_approach_0",
+      "lane_length": 238.8,
+      "materialized": false,
+      "pos": 0.0,
+      "resolved_endPos": 238.8
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R0_S17_attempt1_ramp_storage_e2",
+    "evidence": {
+      "lane": "ramp_storage_0",
+      "lane_length": 204.49,
+      "materialized": false,
+      "pos": 0.0,
+      "resolved_endPos": 204.49
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R0_S17_attempt1_p1_main_up_1300_l0",
+    "evidence": {
+      "lane": "main_up_0",
+      "lane_length": 1398.38,
+      "materialized": false,
+      "pos": 1300.0,
+      "resolved_endPos": 1300.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R0_S17_attempt1_p1_main_up_1300_l1",
+    "evidence": {
+      "lane": "main_up_1",
+      "lane_length": 1398.38,
+      "materialized": false,
+      "pos": 1300.0,
+      "resolved_endPos": 1300.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R0_S17_attempt1_p1_merge_section_20_l0",
+    "evidence": {
+      "lane": "merge_section_0",
+      "lane_length": 294.51,
+      "materialized": false,
+      "pos": 20.0,
+      "resolved_endPos": 20.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R0_S17_attempt1_p1_merge_section_20_l1",
+    "evidence": {
+      "lane": "merge_section_1",
+      "lane_length": 294.51,
+      "materialized": false,
+      "pos": 20.0,
+      "resolved_endPos": 20.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R0_S17_attempt1_p1_merge_section_20_l2",
+    "evidence": {
+      "lane": "merge_section_2",
+      "lane_length": 294.51,
+      "materialized": false,
+      "pos": 20.0,
+      "resolved_endPos": 20.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R0_S17_attempt1_p1_main_down_20_l0",
+    "evidence": {
+      "lane": "main_down_0",
+      "lane_length": 496.0,
+      "materialized": false,
+      "pos": 20.0,
+      "resolved_endPos": 20.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R0_S17_attempt1_p1_main_down_20_l1",
+    "evidence": {
+      "lane": "main_down_1",
+      "lane_length": 496.0,
+      "materialized": false,
+      "pos": 20.0,
+      "resolved_endPos": 20.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R0_S17_attempt1_p1_main_down_200_l0",
+    "evidence": {
+      "lane": "main_down_0",
+      "lane_length": 496.0,
+      "materialized": false,
+      "pos": 200.0,
+      "resolved_endPos": 200.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R0_S17_attempt1_p1_main_down_200_l1",
+    "evidence": {
+      "lane": "main_down_1",
+      "lane_length": 496.0,
+      "materialized": false,
+      "pos": 200.0,
+      "resolved_endPos": 200.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_counts_P1B_R0_S23_attempt1",
+    "evidence": {
+      "E1": 9,
+      "E2": 2
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R0_S23_attempt1_shared_boundary_e2",
+    "evidence": {
+      "lane": "shared_approach_0",
+      "lane_length": 238.8,
+      "materialized": false,
+      "pos": 0.0,
+      "resolved_endPos": 238.8
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R0_S23_attempt1_ramp_storage_e2",
+    "evidence": {
+      "lane": "ramp_storage_0",
+      "lane_length": 204.49,
+      "materialized": false,
+      "pos": 0.0,
+      "resolved_endPos": 204.49
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R0_S23_attempt1_p1_main_up_1300_l0",
+    "evidence": {
+      "lane": "main_up_0",
+      "lane_length": 1398.38,
+      "materialized": false,
+      "pos": 1300.0,
+      "resolved_endPos": 1300.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R0_S23_attempt1_p1_main_up_1300_l1",
+    "evidence": {
+      "lane": "main_up_1",
+      "lane_length": 1398.38,
+      "materialized": false,
+      "pos": 1300.0,
+      "resolved_endPos": 1300.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R0_S23_attempt1_p1_merge_section_20_l0",
+    "evidence": {
+      "lane": "merge_section_0",
+      "lane_length": 294.51,
+      "materialized": false,
+      "pos": 20.0,
+      "resolved_endPos": 20.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R0_S23_attempt1_p1_merge_section_20_l1",
+    "evidence": {
+      "lane": "merge_section_1",
+      "lane_length": 294.51,
+      "materialized": false,
+      "pos": 20.0,
+      "resolved_endPos": 20.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R0_S23_attempt1_p1_merge_section_20_l2",
+    "evidence": {
+      "lane": "merge_section_2",
+      "lane_length": 294.51,
+      "materialized": false,
+      "pos": 20.0,
+      "resolved_endPos": 20.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R0_S23_attempt1_p1_main_down_20_l0",
+    "evidence": {
+      "lane": "main_down_0",
+      "lane_length": 496.0,
+      "materialized": false,
+      "pos": 20.0,
+      "resolved_endPos": 20.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R0_S23_attempt1_p1_main_down_20_l1",
+    "evidence": {
+      "lane": "main_down_1",
+      "lane_length": 496.0,
+      "materialized": false,
+      "pos": 20.0,
+      "resolved_endPos": 20.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R0_S23_attempt1_p1_main_down_200_l0",
+    "evidence": {
+      "lane": "main_down_0",
+      "lane_length": 496.0,
+      "materialized": false,
+      "pos": 200.0,
+      "resolved_endPos": 200.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R0_S23_attempt1_p1_main_down_200_l1",
+    "evidence": {
+      "lane": "main_down_1",
+      "lane_length": 496.0,
+      "materialized": false,
+      "pos": 200.0,
+      "resolved_endPos": 200.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_counts_P1B_R720_S17_attempt1",
+    "evidence": {
+      "E1": 9,
+      "E2": 2
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R720_S17_attempt1_shared_boundary_e2",
+    "evidence": {
+      "lane": "shared_approach_0",
+      "lane_length": 238.8,
+      "materialized": false,
+      "pos": 0.0,
+      "resolved_endPos": 238.8
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R720_S17_attempt1_ramp_storage_e2",
+    "evidence": {
+      "lane": "ramp_storage_0",
+      "lane_length": 204.49,
+      "materialized": false,
+      "pos": 0.0,
+      "resolved_endPos": 204.49
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R720_S17_attempt1_p1_main_up_1300_l0",
+    "evidence": {
+      "lane": "main_up_0",
+      "lane_length": 1398.38,
+      "materialized": false,
+      "pos": 1300.0,
+      "resolved_endPos": 1300.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R720_S17_attempt1_p1_main_up_1300_l1",
+    "evidence": {
+      "lane": "main_up_1",
+      "lane_length": 1398.38,
+      "materialized": false,
+      "pos": 1300.0,
+      "resolved_endPos": 1300.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R720_S17_attempt1_p1_merge_section_20_l0",
+    "evidence": {
+      "lane": "merge_section_0",
+      "lane_length": 294.51,
+      "materialized": false,
+      "pos": 20.0,
+      "resolved_endPos": 20.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R720_S17_attempt1_p1_merge_section_20_l1",
+    "evidence": {
+      "lane": "merge_section_1",
+      "lane_length": 294.51,
+      "materialized": false,
+      "pos": 20.0,
+      "resolved_endPos": 20.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R720_S17_attempt1_p1_merge_section_20_l2",
+    "evidence": {
+      "lane": "merge_section_2",
+      "lane_length": 294.51,
+      "materialized": false,
+      "pos": 20.0,
+      "resolved_endPos": 20.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R720_S17_attempt1_p1_main_down_20_l0",
+    "evidence": {
+      "lane": "main_down_0",
+      "lane_length": 496.0,
+      "materialized": false,
+      "pos": 20.0,
+      "resolved_endPos": 20.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R720_S17_attempt1_p1_main_down_20_l1",
+    "evidence": {
+      "lane": "main_down_1",
+      "lane_length": 496.0,
+      "materialized": false,
+      "pos": 20.0,
+      "resolved_endPos": 20.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R720_S17_attempt1_p1_main_down_200_l0",
+    "evidence": {
+      "lane": "main_down_0",
+      "lane_length": 496.0,
+      "materialized": false,
+      "pos": 200.0,
+      "resolved_endPos": 200.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R720_S17_attempt1_p1_main_down_200_l1",
+    "evidence": {
+      "lane": "main_down_1",
+      "lane_length": 496.0,
+      "materialized": false,
+      "pos": 200.0,
+      "resolved_endPos": 200.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_counts_P1B_R720_S23_attempt1",
+    "evidence": {
+      "E1": 9,
+      "E2": 2
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R720_S23_attempt1_shared_boundary_e2",
+    "evidence": {
+      "lane": "shared_approach_0",
+      "lane_length": 238.8,
+      "materialized": false,
+      "pos": 0.0,
+      "resolved_endPos": 238.8
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R720_S23_attempt1_ramp_storage_e2",
+    "evidence": {
+      "lane": "ramp_storage_0",
+      "lane_length": 204.49,
+      "materialized": false,
+      "pos": 0.0,
+      "resolved_endPos": 204.49
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R720_S23_attempt1_p1_main_up_1300_l0",
+    "evidence": {
+      "lane": "main_up_0",
+      "lane_length": 1398.38,
+      "materialized": false,
+      "pos": 1300.0,
+      "resolved_endPos": 1300.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R720_S23_attempt1_p1_main_up_1300_l1",
+    "evidence": {
+      "lane": "main_up_1",
+      "lane_length": 1398.38,
+      "materialized": false,
+      "pos": 1300.0,
+      "resolved_endPos": 1300.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R720_S23_attempt1_p1_merge_section_20_l0",
+    "evidence": {
+      "lane": "merge_section_0",
+      "lane_length": 294.51,
+      "materialized": false,
+      "pos": 20.0,
+      "resolved_endPos": 20.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R720_S23_attempt1_p1_merge_section_20_l1",
+    "evidence": {
+      "lane": "merge_section_1",
+      "lane_length": 294.51,
+      "materialized": false,
+      "pos": 20.0,
+      "resolved_endPos": 20.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R720_S23_attempt1_p1_merge_section_20_l2",
+    "evidence": {
+      "lane": "merge_section_2",
+      "lane_length": 294.51,
+      "materialized": false,
+      "pos": 20.0,
+      "resolved_endPos": 20.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R720_S23_attempt1_p1_main_down_20_l0",
+    "evidence": {
+      "lane": "main_down_0",
+      "lane_length": 496.0,
+      "materialized": false,
+      "pos": 20.0,
+      "resolved_endPos": 20.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R720_S23_attempt1_p1_main_down_20_l1",
+    "evidence": {
+      "lane": "main_down_1",
+      "lane_length": 496.0,
+      "materialized": false,
+      "pos": 20.0,
+      "resolved_endPos": 20.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R720_S23_attempt1_p1_main_down_200_l0",
+    "evidence": {
+      "lane": "main_down_0",
+      "lane_length": 496.0,
+      "materialized": false,
+      "pos": 200.0,
+      "resolved_endPos": 200.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_R720_S23_attempt1_p1_main_down_200_l1",
+    "evidence": {
+      "lane": "main_down_1",
+      "lane_length": 496.0,
+      "materialized": false,
+      "pos": 200.0,
+      "resolved_endPos": 200.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_counts_P1B_SMOKE_R720_S17_attempt1",
+    "evidence": {
+      "E1": 9,
+      "E2": 2
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_SMOKE_R720_S17_attempt1_shared_boundary_e2",
+    "evidence": {
+      "lane": "shared_approach_0",
+      "lane_length": 238.8,
+      "materialized": false,
+      "pos": 0.0,
+      "resolved_endPos": 238.8
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_SMOKE_R720_S17_attempt1_ramp_storage_e2",
+    "evidence": {
+      "lane": "ramp_storage_0",
+      "lane_length": 204.49,
+      "materialized": false,
+      "pos": 0.0,
+      "resolved_endPos": 204.49
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_SMOKE_R720_S17_attempt1_p1_main_up_1300_l0",
+    "evidence": {
+      "lane": "main_up_0",
+      "lane_length": 1398.38,
+      "materialized": false,
+      "pos": 1300.0,
+      "resolved_endPos": 1300.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_SMOKE_R720_S17_attempt1_p1_main_up_1300_l1",
+    "evidence": {
+      "lane": "main_up_1",
+      "lane_length": 1398.38,
+      "materialized": false,
+      "pos": 1300.0,
+      "resolved_endPos": 1300.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_SMOKE_R720_S17_attempt1_p1_merge_section_20_l0",
+    "evidence": {
+      "lane": "merge_section_0",
+      "lane_length": 294.51,
+      "materialized": false,
+      "pos": 20.0,
+      "resolved_endPos": 20.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_SMOKE_R720_S17_attempt1_p1_merge_section_20_l1",
+    "evidence": {
+      "lane": "merge_section_1",
+      "lane_length": 294.51,
+      "materialized": false,
+      "pos": 20.0,
+      "resolved_endPos": 20.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_SMOKE_R720_S17_attempt1_p1_merge_section_20_l2",
+    "evidence": {
+      "lane": "merge_section_2",
+      "lane_length": 294.51,
+      "materialized": false,
+      "pos": 20.0,
+      "resolved_endPos": 20.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_SMOKE_R720_S17_attempt1_p1_main_down_20_l0",
+    "evidence": {
+      "lane": "main_down_0",
+      "lane_length": 496.0,
+      "materialized": false,
+      "pos": 20.0,
+      "resolved_endPos": 20.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_SMOKE_R720_S17_attempt1_p1_main_down_20_l1",
+    "evidence": {
+      "lane": "main_down_1",
+      "lane_length": 496.0,
+      "materialized": false,
+      "pos": 20.0,
+      "resolved_endPos": 20.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_SMOKE_R720_S17_attempt1_p1_main_down_200_l0",
+    "evidence": {
+      "lane": "main_down_0",
+      "lane_length": 496.0,
+      "materialized": false,
+      "pos": 200.0,
+      "resolved_endPos": 200.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "detector_fit_P1B_SMOKE_R720_S17_attempt1_p1_main_down_200_l1",
+    "evidence": {
+      "lane": "main_down_1",
+      "lane_length": 496.0,
+      "materialized": false,
+      "pos": 200.0,
+      "resolved_endPos": 200.0
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "domain_position_fit_main_up_0",
+    "evidence": {
+      "length": 1398.38,
+      "positions": [
+        100,
+        200,
+        1200,
+        1300
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "domain_position_fit_main_up_1",
+    "evidence": {
+      "length": 1398.38,
+      "positions": [
+        100,
+        200,
+        1200,
+        1300
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "domain_position_fit_merge_section_0",
+    "evidence": {
+      "length": 294.51,
+      "positions": [
+        0,
+        20,
+        294.51
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "domain_position_fit_main_down_0",
+    "evidence": {
+      "length": 496.0,
+      "positions": [
+        20,
+        200,
+        400
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "domain_position_fit_main_down_1",
+    "evidence": {
+      "length": 496.0,
+      "positions": [
+        20,
+        200,
+        400
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "route_edge_connectivity_P1B_R0_S17_attempt1_M_route",
+    "evidence": {
+      "R_lane_change_required": false,
+      "route": [
+        "main_up",
+        "merge_section",
+        "main_down"
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "route_edge_connectivity_P1B_R0_S17_attempt1_R_route",
+    "evidence": {
+      "R_lane_change_required": true,
+      "route": [
+        "urban_in",
+        "shared_approach",
+        "ramp_storage",
+        "ramp_accel",
+        "merge_section",
+        "main_down"
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "route_edge_connectivity_P1B_R0_S17_attempt1_U_route",
+    "evidence": {
+      "R_lane_change_required": false,
+      "route": [
+        "urban_in",
+        "shared_approach",
+        "urban_out"
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "route_edge_connectivity_P1B_R0_S17_attempt1_X_route",
+    "evidence": {
+      "R_lane_change_required": false,
+      "route": [
+        "cross_in",
+        "cross_out"
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "route_edge_connectivity_P1B_R0_S23_attempt1_M_route",
+    "evidence": {
+      "R_lane_change_required": false,
+      "route": [
+        "main_up",
+        "merge_section",
+        "main_down"
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "route_edge_connectivity_P1B_R0_S23_attempt1_R_route",
+    "evidence": {
+      "R_lane_change_required": true,
+      "route": [
+        "urban_in",
+        "shared_approach",
+        "ramp_storage",
+        "ramp_accel",
+        "merge_section",
+        "main_down"
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "route_edge_connectivity_P1B_R0_S23_attempt1_U_route",
+    "evidence": {
+      "R_lane_change_required": false,
+      "route": [
+        "urban_in",
+        "shared_approach",
+        "urban_out"
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "route_edge_connectivity_P1B_R0_S23_attempt1_X_route",
+    "evidence": {
+      "R_lane_change_required": false,
+      "route": [
+        "cross_in",
+        "cross_out"
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "route_edge_connectivity_P1B_R720_S23_attempt1_M_route",
+    "evidence": {
+      "R_lane_change_required": false,
+      "route": [
+        "main_up",
+        "merge_section",
+        "main_down"
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "route_edge_connectivity_P1B_R720_S23_attempt1_R_route",
+    "evidence": {
+      "R_lane_change_required": true,
+      "route": [
+        "urban_in",
+        "shared_approach",
+        "ramp_storage",
+        "ramp_accel",
+        "merge_section",
+        "main_down"
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "route_edge_connectivity_P1B_R720_S23_attempt1_U_route",
+    "evidence": {
+      "R_lane_change_required": false,
+      "route": [
+        "urban_in",
+        "shared_approach",
+        "urban_out"
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "route_edge_connectivity_P1B_R720_S23_attempt1_X_route",
+    "evidence": {
+      "R_lane_change_required": false,
+      "route": [
+        "cross_in",
+        "cross_out"
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "route_edge_connectivity_P1B_SMOKE_R720_S17_attempt1_M_route",
+    "evidence": {
+      "R_lane_change_required": false,
+      "route": [
+        "main_up",
+        "merge_section",
+        "main_down"
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "route_edge_connectivity_P1B_SMOKE_R720_S17_attempt1_R_route",
+    "evidence": {
+      "R_lane_change_required": true,
+      "route": [
+        "urban_in",
+        "shared_approach",
+        "ramp_storage",
+        "ramp_accel",
+        "merge_section",
+        "main_down"
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "route_edge_connectivity_P1B_SMOKE_R720_S17_attempt1_U_route",
+    "evidence": {
+      "R_lane_change_required": false,
+      "route": [
+        "urban_in",
+        "shared_approach",
+        "urban_out"
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "route_edge_connectivity_P1B_SMOKE_R720_S17_attempt1_X_route",
+    "evidence": {
+      "R_lane_change_required": false,
+      "route": [
+        "cross_in",
+        "cross_out"
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "route_edge_connectivity_P1B_R720_S17_attempt1_M_route",
+    "evidence": {
+      "R_lane_change_required": false,
+      "route": [
+        "main_up",
+        "merge_section",
+        "main_down"
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "route_edge_connectivity_P1B_R720_S17_attempt1_R_route",
+    "evidence": {
+      "R_lane_change_required": true,
+      "route": [
+        "urban_in",
+        "shared_approach",
+        "ramp_storage",
+        "ramp_accel",
+        "merge_section",
+        "main_down"
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "route_edge_connectivity_P1B_R720_S17_attempt1_U_route",
+    "evidence": {
+      "R_lane_change_required": false,
+      "route": [
+        "urban_in",
+        "shared_approach",
+        "urban_out"
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "route_edge_connectivity_P1B_R720_S17_attempt1_X_route",
+    "evidence": {
+      "R_lane_change_required": false,
+      "route": [
+        "cross_in",
+        "cross_out"
+      ]
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  },
+  {
+    "check": "loaded_E1_E2_coverage_and17_role_output",
+    "evidence": "No SUMO invoked; pending final additional materialization and separate technical smoke",
+    "scope": "runtime",
+    "status": "NOT_EVALUABLE"
+  },
+  {
+    "check": "M_actual_p100_and_no_aux0_usage",
+    "evidence": "Only route input and permissions verified; trajectory requires separately approved SUMO",
+    "scope": "runtime",
+    "status": "NOT_EVALUABLE"
+  },
+  {
+    "check": "R_actual_safe_lane_change_and_passage",
+    "evidence": "Lane connectivity permits intended mechanism; actual safe merge/queue behavior not observed",
+    "scope": "runtime",
+    "status": "NOT_EVALUABLE"
+  },
+  {
+    "check": "specific_obstacle_and_two_sided_behavior",
+    "evidence": "No traffic run; unresolved",
+    "scope": "runtime",
+    "status": "NOT_EVALUABLE"
+  },
+  {
+    "check": "local_net_XSD",
+    "evidence": {
+      "returncode": 0,
+      "schema": {
+        "bytes": 15093,
+        "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/net_file.xsd",
+        "sha256": "88382ca428d95eac9785a7443813bd7e414dd566d7450766ac6cb088b19740d2"
+      },
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_attempts/BUILD02/network.net.xml validates\n"
+    },
+    "scope": "compiled",
+    "status": "PASS"
+  }
+]

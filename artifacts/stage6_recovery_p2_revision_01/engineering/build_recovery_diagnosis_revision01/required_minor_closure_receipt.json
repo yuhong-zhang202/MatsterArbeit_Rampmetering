@@ -1,0 +1,25 @@
+{
+  "BUILD01_delivery_bindings_unchanged": true,
+  "changes": [
+    "BUILD02 absent; BUILD01 preserved with exact receipt binding",
+    "ongoing explicit user authorization and parent-derived later SHA binding clarified",
+    "sample termination barrier before final bytes/hashes; final closeout resource failure overrides wrapper snapshot",
+    "removed arbitrary three-attempt end to continuing authorization"
+  ],
+  "code_changed": false,
+  "existing19_tests_retained_no_code_change": {
+    "bytes": 2613,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_recovery_diagnosis_revision01/fake_process_tests_revision01/test_receipt.json",
+    "sha256": "ae68eae14e6237a71dfc67b535fb482a761e3ad9acbba0e6bcf2da4d0090becc"
+  },
+  "new_card_preflight": "All bindings pass; inactive sidecar rejected at authorization gate",
+  "new_netconvert_SUMO_TraCI_GUI_starts": [
+    0,
+    0,
+    0,
+    0
+  ],
+  "prior_103_file_bindings_unchanged": true,
+  "source_network_inputs_changed": false,
+  "status": "PASS_WORDING_AND_CLOSEOUT_CONTRACT_ONLY"
+}

@@ -1,0 +1,237 @@
+{
+  "LOW_R_BACKGROUND_ACCEPTABLE_required_for_release": true,
+  "R_veh_per_h": 900,
+  "R_window_s": "[540,1500)",
+  "TLS_program": "A_OPEN",
+  "U": 0,
+  "X": 0,
+  "actual_merge_exposure_comparison": {
+    "baseline_counts": {
+      "1440": 167,
+      "1500": 183
+    },
+    "method_source": "r720_exposure_comparator.data_receipt_path",
+    "must_report_unique_first_through_lane_R_ids_by_cutoff_inclusive": [
+      "1440",
+      "1500"
+    ],
+    "no_substitution_or_method_change_after_treatment": true
+  },
+  "adopted_plan_binding": {
+    "adoption_receipt_path": "artifacts/stage6_clean_onset_witness_test_plan_20260925_v1/ADOPTION_RECEIPT.json",
+    "adoption_receipt_sha256": "18de90300420263218d978ace9081e31a3b80aacadd7e9ef7810de176eeb6255",
+    "decision_id": "D-009"
+  },
+  "approval_required": false,
+  "authorization_record": {
+    "authorization": "USER_AUTHORIZED_EXACTLY_ONE_CLEAN3199_A_R900_START",
+    "exact_card_path": "artifacts/stage6_clean_onset_3199_r900_preparation_20260925_v1/CLEAN3199_A_R900_DELAYED_S17_CARD_FINAL_REV3.json",
+    "execution_attempt_id": "CLEAN3199_A_R900_DELAYED_S17",
+    "max_starts": 1,
+    "output_polling_interval_ms": 100,
+    "output_size_stop_trigger_bytes_decimal": 75000000,
+    "polling_overshoot_accepted": true,
+    "prohibited_runs": [
+      "R1080",
+      "other_qMain",
+      "seed23",
+      "B",
+      "C"
+    ],
+    "run_id": "CLEAN3199_A_R900_DELAYED_S17",
+    "technical_retries": 0,
+    "wallclock_stop_trigger_s": 90
+  },
+  "candidate_binding_adapter": {
+    "path": "artifacts/stage6_clean_onset_3199_r900_preparation_20260925_v1/tools/candidate_a_binding.py",
+    "sha256": "7eafdda0a9591d36a9a8d07fc3a3f3d48801a019585272f90afa31f87ee5d907"
+  },
+  "card_revision": 3,
+  "card_sha256_binding_note": "Card identity is the SHA-256 of this exact file; no self-referential digest is embedded.",
+  "card_status": "FINAL_AUTHORIZED_FOR_ONE_START",
+  "class_counts": {
+    "M": {
+      "planned_count": 1333,
+      "status": "BOUND"
+    },
+    "R": {
+      "planned_count": 240,
+      "status": "BOUND"
+    },
+    "U": {
+      "planned_count": 0,
+      "status": "PASS_ZERO"
+    },
+    "X": {
+      "planned_count": 0,
+      "status": "PASS_ZERO"
+    }
+  },
+  "condition": "A_OPEN_R900_DELAYED_CLEAN_ONSET_CANDIDATE_A",
+  "design_plan": "artifacts/stage6_clean_onset_witness_test_plan_20260925_v1/CLEAN_ONSET_WITNESS_TEST.md",
+  "design_sha256": "63f84a0ee6de30e912c32cac2ab236e9dcfeff70598e2c68624411207de360ee",
+  "execution_attempt_id": "CLEAN3199_A_R900_DELAYED_S17",
+  "execution_authorized": true,
+  "existing_control_gate": {
+    "control_requalification_required": false,
+    "legacy_high_mobility_rescreen_required": false,
+    "required_disposition": "LOW_R_BACKGROUND_ACCEPTABLE",
+    "scope": "Previously reviewed minimal U=X=0 module only.",
+    "source_review_path": "artifacts/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/SCIENTIFIC_POSTRUN_REVIEW.json"
+  },
+  "horizon_s": 2700,
+  "input_manifest": "INPUT_MANIFEST.json",
+  "input_manifest_sha256": "26dbf70a1741ae5c24e1ffd1713d17c433eae0b7f038a71981e19bedff105108",
+  "input_sha256": {
+    "additional": "b3796d28fc67f1c544d527c7d033057e7e884eb02c604368ad8eec57e6f663ac",
+    "demand": "0843d22672927b980431348a56d3ffe68fce7090099254856c9920a5d87602bf",
+    "network": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "output_roles": "5218679efd9a74249a8d34d33cfe5403d768c7670a42473fc4e36d4bc7d3bd0b",
+    "sumocfg": "c59d73debe3550fef1159516e1336694159b0e525da9fde7f349686800712f9a"
+  },
+  "inputs": {
+    "additional": "inputs/treatment/scenario.add.xml",
+    "demand": "inputs/treatment/demand.rou.xml",
+    "network": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+    "output_roles": "inputs/treatment/output_roles.json",
+    "sumocfg": "inputs/treatment/scenario.sumocfg"
+  },
+  "legacy_high_mobility_rescreen_required": false,
+  "matched_control_binding": {
+    "card_path": "artifacts/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/MINIMAL3199_CTRL_S17_TECH_RETRY2_CARD_FINAL.json",
+    "card_sha256": "b387a750f9f41fe7439d79ead7133fc07ac817fe8da497a8e045433a4accee5a",
+    "control_demand_path": "scripts/stage6/minimal3199/prepared_rev3/control/demand.rou.xml",
+    "control_demand_sha256": "5df62660b9b9e2cc02734794ef2d361a3a97c30fa38a1e4fcbf550f0a2a1e405",
+    "data_review_path": "artifacts/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/DATA_LIFECYCLE_POSTRUN_REVIEW.json",
+    "data_review_sha256": "3579107c935b3f0a91f1f4f79d0791742b462a45548917c8ad317304fff70b37",
+    "disposition": "LOW_R_BACKGROUND_ACCEPTABLE_WITHIN_MINIMAL_UX0_MODULE_NOT_CLEAN_NORMAL_BASELINE",
+    "output_manifest_path": "data/raw/stage6_minimal3199_existence_20260924_v3/MINIMAL3199_CTRL_S17_TECH_RETRY2/outputs/output_manifest.json",
+    "output_manifest_sha256": "07cd3cd1707e3717f9401f3e164a932cb6c10196af1461f267869f1d582e5e5e",
+    "run_id": "MINIMAL3199_CTRL_S17_TECH_RETRY2",
+    "scientific_review_path": "artifacts/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/SCIENTIFIC_POSTRUN_REVIEW.json",
+    "scientific_review_sha256": "f7892d4d6fa974dbea2c373092760749b5764c8c79fbd01cd2ec49e6ca99784d"
+  },
+  "max_starts": 1,
+  "output_directory": "data/raw/stage6_clean_onset_3199_ux0_20260925_v1/CLEAN3199_A_R900_DELAYED_S17/outputs",
+  "output_role_source": {
+    "path": "artifacts/stage6_clean_onset_3199_r900_preparation_20260925_v1/inputs/treatment/output_roles.json",
+    "sha256": "5218679efd9a74249a8d34d33cfe5403d768c7670a42473fc4e36d4bc7d3bd0b"
+  },
+  "pair_id": "PAIR_3199_S17",
+  "prelaunch_disposition": "PASS_REV2_INPUTS_AND_REV3_FINAL_EXECUTION_BINDING",
+  "progression_allowed": false,
+  "qMain_veh_per_h": 3199.2,
+  "r720_exposure_comparator": {
+    "csv_path": "data/processed/stage6_clean_onset_3199_r720_exposure_baseline_20260925_v1/r720_first_through_lane_entries.csv",
+    "csv_sha256": "143c93dfff5d5f3157bb9233fde89bd0e49c86dd459bc111eba458b9334d82ed",
+    "data_receipt_path": "data/processed/stage6_clean_onset_3199_r720_exposure_baseline_20260925_v1/SUMMARY_METHOD_RECEIPT.json",
+    "data_receipt_sha256": "19db932892bee42e4ddbcc32c1651048d7781f2c68d5c44dccff238ee4c7e77f",
+    "extractor_path": "data/processed/stage6_clean_onset_3199_r720_exposure_baseline_20260925_v1/extract_through_lane_entries.py",
+    "extractor_sha256": "0a7256488364493df2714a2c9a90fecea0e1d82a73e4e1156ca96235eeb20802",
+    "method": "first FCD observation on mapped freeway through-lane whitelist, count each R identity once at earliest frame, inclusive cutoffs; exclude merge_section_0 auxiliary lane",
+    "run_id": "MINIMAL3199_R720_DELAYED_S17_UX0_ATTEMPT1",
+    "unique_R_ids_by_cutoff_inclusive": {
+      "1440": 167,
+      "1500": 183
+    }
+  },
+  "required_event_timeline_markers": [
+    "R_demand_activation",
+    "first_scheduled_R_departure",
+    "first_actual_R_departure",
+    "first_R_arrival_near_merge",
+    "first_meaningful_merge_exposure",
+    "first_M_deterioration",
+    "State1_onset"
+  ],
+  "resource_limits": {
+    "polling_interval_ms": 100,
+    "polling_overshoot_accepted": true,
+    "runtime_s": 90,
+    "scope": "CLEAN3199_A_R900_DELAYED_S17",
+    "status": "AUTHORIZED_FOR_THIS_RUN",
+    "storage_bytes": 75000000
+  },
+  "run_command": null,
+  "run_id": "CLEAN3199_A_R900_DELAYED_S17",
+  "runner": {
+    "path": "artifacts/stage6_clean_onset_3199_r900_preparation_20260925_v1/r02_single_start/runner.py",
+    "sha256": "57dec7bef9dcb065c3447548f65105ce69b93f1085287d31749c18f106e5a5b8",
+    "status": "EXACT_FINAL_CARD_AND_RUN_BINDING"
+  },
+  "runner_binding": {
+    "card_path": "artifacts/stage6_clean_onset_3199_r900_preparation_20260925_v1/CLEAN3199_A_R900_DELAYED_S17_CARD_FINAL_REV3.json",
+    "consumption_directory": "artifacts/stage6_clean_onset_3199_r900_preparation_20260925_v1/consumption",
+    "kind": "PAIR_RUN",
+    "output_directory": "data/raw/stage6_clean_onset_3199_ux0_20260925_v1/CLEAN3199_A_R900_DELAYED_S17/outputs",
+    "package_id": "stage6_clean_onset_3199_r900_preparation_20260925_v1",
+    "run_id": "CLEAN3199_A_R900_DELAYED_S17"
+  },
+  "runtime_binding": {
+    "additional_schema_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+    "additional_schema_sha256": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e",
+    "binary_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+    "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+    "binary_version": "1.26.0",
+    "guardian_runner_sha256": "57dec7bef9dcb065c3447548f65105ce69b93f1085287d31749c18f106e5a5b8",
+    "max_output_bytes": 75000000,
+    "max_runtime_s": 90,
+    "python_environment": {
+      "executable_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+      "executable_sha256": "76c73e25cdd69650a897648666e41c364940fbcff0d1176572a667d4d470ec9e",
+      "implementation": "CPython",
+      "package_versions": {
+        "sumoITScontrol": "0.1.0",
+        "sumolib": "1.26.0",
+        "traci": "1.26.0"
+      },
+      "version": "3.13.0"
+    },
+    "resource_proposal": {
+      "basis": "User accepted the Candidate-A-specific resource contract for this single run.",
+      "enforcement": "100ms_polled_stop_trigger_with_possible_overshoot_not_hard_quota",
+      "output_size_stop_limit_bytes_decimal": 75000000,
+      "overshoot_accepted": true,
+      "poll_interval_s": 0.1,
+      "scope": "CLEAN3199_A_R900_DELAYED_S17",
+      "status": "AUTHORIZED_FOR_THIS_RUN",
+      "wallclock_stop_limit_s": 90
+    },
+    "runtime_provenance_status": "READONLY_PATH_AND_HASH_VERIFIED_NO_SUMO_VERSION_PROCESS",
+    "sumo_home": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo",
+    "version_evidence": {
+      "binary_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+      "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+      "query": "sumo --version (environment probe; no simulation)",
+      "reported_version": "1.26.0"
+    }
+  },
+  "runtime_binding_path": "artifacts/stage6_clean_onset_3199_r900_preparation_20260925_v1/runtime_binding.json",
+  "runtime_binding_sha256": "d44192649ecfd7747c3236337ad4918b1fb7fae30c8c65d894f6c6048eab8b5a",
+  "schema_version": "1",
+  "scope_prohibitions": [
+    "No R1080 or Candidate B preparation",
+    "No other qMain/qRamp, seed23, B/C, or formal run",
+    "No classifier, threshold, geometry, vehicle behavior, formal protocol changes"
+  ],
+  "seed": 17,
+  "staged_inputs": {
+    "additional": {
+      "bytes": 3880,
+      "sha256": "b3796d28fc67f1c544d527c7d033057e7e884eb02c604368ad8eec57e6f663ac"
+    },
+    "output_local_additional_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_clean_onset_3199_ux0_20260925_v1/CLEAN3199_A_R900_DELAYED_S17/outputs/scenario_control.add.xml",
+    "sumocfg": {
+      "bytes": 2788,
+      "sha256": "0d9233b1d76638de0f7e5f900f4012ae491232ea413fce5f86989a0e56e000d2"
+    },
+    "transformation": "UTF-8 byte-preserving sumocfg replacement: package scenario.add.xml absolute path -> output-local scenario_control.add.xml; additional XML copied byte-identically"
+  },
+  "step_s": 1,
+  "technical_retries": 0,
+  "treatment_release_gate": "CLEAN_ONSET_WITNESS_TEST_D009_CANDIDATE_A_ONLY",
+  "witness_contract": {
+    "path": "artifacts/stage6_clean_onset_witness_test_plan_20260925_v1/CLEAN_ONSET_WITNESS_TEST.md",
+    "sha256": "63f84a0ee6de30e912c32cac2ab236e9dcfeff70598e2c68624411207de360ee"
+  }
+}

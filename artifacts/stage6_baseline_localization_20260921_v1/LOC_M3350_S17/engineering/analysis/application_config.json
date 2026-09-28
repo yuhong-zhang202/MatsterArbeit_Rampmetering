@@ -1,0 +1,17 @@
+{
+  "status": "LOCKED_METHOD_APPLICATION_CONFIG_NOT_RUNTIME_RESULT",
+  "run_id": "LOC_M3350_S17_attempt1",
+  "methodology_path": "docs/methodology/FREEWAY_PROTECTABLE_STATE_EXPLORATORY_DEFINITION.md",
+  "methodology_sha256": "22fe22170c17ce74e261e717586a458a1b5173e9deabbee925bd4c1d606adfe7",
+  "methodology_review_path": "docs/methodology/FREEWAY_PROTECTABLE_STATE_SCIENTIFIC_REVIEW.md",
+  "analyzer_path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/analysis/apply_rule.py",
+  "analyzer_source_path": "data/processed/stage6_protectable_state_application_20260921_v1/apply_rule.py",
+  "analyzer_source_sha256": "786376e2371909609612c5834a26bc1fd6c4cc6984607ab931796938deb935b3",
+  "analyzer_adapter_sha256": "00ab445634523d74b8fb55f3ee15d765c5879636884af9bc3ccd9488e91e66e1",
+  "profile_constants": {"P": {"speed_ratio_max": 0.7, "minimum_consecutive_30s_bins": 3, "density_factor": 1.0}, "S": {"speed_ratio_max": 0.6, "minimum_consecutive_30s_bins": 4, "density_factor": 1.25}, "L": {"speed_ratio_max": 0.8, "minimum_consecutive_30s_bins": 2, "density_factor": 1.0}},
+  "grid": {"spatial_cell_m": 100, "aggregation_bin_s": 30, "simulation_begin_s": 0, "simulation_end_s": 2700},
+  "fixture_contract": {"expected_count": 22, "required_status": "PASS_ALL_22", "execution_scope": "pure offline decision-helper fixtures; not SUMO"},
+  "classification_limits": ["P is the required primary profile for a candidate", "S is supporting robustness", "L and Candidate C are warnings only", "Candidate A is spatial corroboration only", "P-positive is exploratory and not physical breakdown proof", "seed17 cannot establish SUITABLE_BASELINE_FOUND"],
+  "output_path": "data/processed/stage6_baseline_localization_20260921_v1/LOC_M3350_S17_attempt1",
+  "output_must_not_exist_before_offline_application": true
+}

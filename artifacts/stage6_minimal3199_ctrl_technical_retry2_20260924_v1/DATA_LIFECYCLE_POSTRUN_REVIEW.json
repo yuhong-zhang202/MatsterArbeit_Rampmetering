@@ -1,0 +1,213 @@
+{
+  "schema_version": "1",
+  "review_type": "DATA_LIFECYCLE_POSTRUN",
+  "run_id": "MINIMAL3199_CTRL_S17_TECH_RETRY2",
+  "disposition": "PASS_DATA_LIFECYCLE_WITH_RETAINED_CANDIDATE_C_WARNINGS",
+  "confidence": "High",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0,
+    "nonblocking_notes": 2
+  },
+  "scope": "This review covers only the authorized retry2 R=0 control raw. No other run outcome was analyzed. Raw files were read-only. No SUMO, TraCI, netconvert, or classifier-threshold changes.",
+  "root_bindings": {
+    "final_card": {
+      "path": "artifacts/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/MINIMAL3199_CTRL_S17_TECH_RETRY2_CARD_FINAL.json",
+      "sha256": "b387a750f9f41fe7439d79ead7133fc07ac817fe8da497a8e045433a4accee5a"
+    },
+    "execution_manifest": {
+      "path": "artifacts/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/EXECUTION_MANIFEST.json",
+      "sha256": "551fdfbe78530662f2a437436d8a36813902d5728ac88b03a7a316382d7bca9a"
+    },
+    "engineering_postrun_review": {
+      "path": "artifacts/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/ENGINEERING_POSTRUN_REVIEW.json",
+      "sha256": "3c7d798178dbb2bdfbddf732f88356621025c25a092167cf6f86dad54e1b117c"
+    },
+    "raw_output_manifest": {
+      "path": "data/raw/stage6_minimal3199_existence_20260924_v3/MINIMAL3199_CTRL_S17_TECH_RETRY2/outputs/output_manifest.json",
+      "sha256": "07cd3cd1707e3717f9401f3e164a932cb6c10196af1461f267869f1d582e5e5e"
+    },
+    "execution_receipt": {
+      "path": "data/raw/stage6_minimal3199_existence_20260924_v3/MINIMAL3199_CTRL_S17_TECH_RETRY2/outputs/execution_receipt.json",
+      "sha256": "f9f783f19cc61d342de09ab7dc6172e56645b7e1604d7447ad6e0582a7bd2348"
+    },
+    "locked_method": {
+      "path": "docs/methodology/FREEWAY_PROTECTABLE_STATE_EXPLORATORY_DEFINITION.md",
+      "sha256": "22fe22170c17ce74e261e717586a458a1b5173e9deabbee925bd4c1d606adfe7"
+    },
+    "minimal_plan": {
+      "path": "artifacts/stage6_minimal_ramp_induced_breakdown_existence_test_20260924_v1/PLAN.md",
+      "sha256": "06b0f04f1144ef8497b4d64906ae27b1377b544abd6e0639133c8d85a3fabc23"
+    },
+    "locked_classifier": {
+      "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/analysis/apply_rule.py",
+      "sha256": "78f001b7909bdda6797eae6aab5bf6bf0dd70bce83262d8f2619c3fa71149c55"
+    },
+    "adapter_source": {
+      "path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r04_adapter/ri3350_control_adapter.py",
+      "sha256": "d423563e6f88a8e7356a041f7e28f8d7204055465d069db4173f453d96f7f490"
+    },
+    "processed_analysis": {
+      "path": "data/processed/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/r04_locked_offline_analysis_v8",
+      "processing_manifest_sha256": "047b19ed237d8fb2575373ac937cb5baac0ec009fe23fbba5c4be5d5bf32878b",
+      "application_receipt_sha256": "be2b74b3989e7c1b8dbfa00b8be317da7df8fe65902f0d619807ea6a5561505c",
+      "input_manifest_sha256": "82201dd68ad835a30162487e9cf2ad106e3be1ed295aea7784021aa9146da32e"
+    }
+  },
+  "input_and_lifecycle": {
+    "planned_counts": {
+      "M": 1333,
+      "R": 0,
+      "U": 0,
+      "X": 0
+    },
+    "explicit_zero_evidence": "FINAL exact card binds R=0/U=0/X=0; exact materialized demand contains only 1333 M_flow identities and no R/U/X or flow identities; tripinfo/vehroute/FCD contain no R/U/X identity.",
+    "observed_class_status": {
+      "M:ARRIVED": 1333
+    },
+    "M": {
+      "scheduled": 1333,
+      "inserted": 1333,
+      "arrived_before_horizon": 1333,
+      "unfinished": 0,
+      "at_horizon_boundary": 0,
+      "unexpected_or_missing_identities": 0,
+      "input_vs_vehroute_match": {
+        "identity": 1333,
+        "desired_depart_schedule_reconciled": 1333,
+        "route": 1333,
+        "vType": 1333,
+        "speedFactor": 1333
+      },
+      "actual_departure_delay_s_min_median_max": [
+        0.0,
+        0.5,
+        0.875
+      ],
+      "FCD_identity_count": 1333,
+      "all_reach_locked_core_observation_cells": true
+    },
+    "R": {
+      "planned": 0,
+      "inserted": 0,
+      "arrived": 0,
+      "unfinished": 0,
+      "raw_ids": 0,
+      "source_absent": true
+    },
+    "U": {
+      "planned": 0,
+      "raw_ids": 0,
+      "source_vehicles_absent": true
+    },
+    "X": {
+      "planned": 0,
+      "raw_ids": 0,
+      "source_vehicles_absent": true
+    }
+  },
+  "measurement_and_alternative_checks": {
+    "FCD": {
+      "time_labels": 2700,
+      "range_s": [
+        0,
+        2699
+      ],
+      "unique_time_vehicle_records": 97723,
+      "all_M_seen": true,
+      "duplicate_or_invalid_grid": false
+    },
+    "E1": {
+      "required_detectors": 9,
+      "present": 9,
+      "intervals_each": 90,
+      "coverage_s": [
+        0,
+        2700
+      ],
+      "downstream_20m_total_entries": 1333,
+      "downstream_200m_total_entries": 1333,
+      "merge_section_lane_entry_counts": {
+        "lane_role_0": 0,
+        "lane_role_1": 560,
+        "lane_role_2": 773
+      }
+    },
+    "E2": {
+      "roles_present": 2,
+      "intervals_each": 90,
+      "coverage_s": [
+        0,
+        2700
+      ],
+      "ramp_storage_vehicle_entries": 0,
+      "shared_boundary_vehicle_entries": 0
+    },
+    "TLS": {
+      "controllers": [
+        "ramp_mid",
+        "urban_tls"
+      ],
+      "labels_each": 2700,
+      "ramp_mid": "G for all 2700 labels",
+      "urban_tls_state_counts": {
+        "Gr": 2025,
+        "yr": 135,
+        "rG": 405,
+        "ry": 135
+      }
+    },
+    "lane_changes": {
+      "records": 343,
+      "locked_analyzer_lane_mapping_integrity": "PASS; no unknown M lane, auxiliary-lane, or out-of-domain sample flags"
+    },
+    "downstream_and_source": "All 1333 M inserted within demand window; maximum recorded insertion/departure delay 0.875 s; all completed and passed the two downstream E1 detectors; last M FCD sample by 1576 s. This does not show a downstream receiving-space failure.",
+    "queue_export_limitation": "queues.xml has complete 0..2699 labels but empty <lanes/> at each label; it provides no queue occupancy series and is not treated as evidence of no queues. Full vehicle completion, downstream E1 passage, FCD, and E2 coverage provide the remaining checks."
+  },
+  "locked_classification": {
+    "P": "NO_QUALIFYING_EVENT",
+    "S": "NO_QUALIFYING_EVENT",
+    "L": "NO_QUALIFYING_EVENT",
+    "Candidate_A": "NO_SPATIAL_CANDIDATE",
+    "Candidate_C": "EARLY_WARNING_PRESENT_NOT_STATE1",
+    "Candidate_C_merge_core_warning_rows": 20,
+    "all_L_candidate_rows": 42,
+    "all_L_rows_are": "SHORT_LOW_STATE_CANDIDATE, one 30-s low bin per row; none met locked two-bin L duration",
+    "reference_screen": "FAIL: 160/180 rows failed; strict high-mobility/reference screen is not the R=0 eligibility criterion in the approved minimal plan, and is not relabeled PASS. It documents retained low-speed-ratio background.",
+    "candidate_C_adjudication": "Warnings are retained. Each cell episode is one 30-s bin, with no within-cell consecutive two-bin episode. Several same-bin multi-cell patches occur, including around 720, 990, 1170 and 1380 s; they do not meet locked P/S/L sustained criteria. Some recovery fields are unresolved because reference/coverage conditions are not met; those are not treated as recovered or erased."
+  },
+  "integrity": {
+    "raw_roles_present": 18,
+    "raw_roles_expected": 18,
+    "raw_support_file_count": 7,
+    "raw_payload_bytes": 18261973,
+    "processed_artifact_hashes_verified": true,
+    "locked_analyzer_method_sha_verified": true,
+    "locked_event_source_status": "PASS",
+    "disturbance_catalog_status": "PASS",
+    "analyzer_integrity_status": "PASS"
+  },
+  "compatibility_and_provenance_note": "The unchanged locked analyzer source/hash and P/S/L thresholds were used. In-memory data-format binding handled R02 output-folder/run_id convention, materialized M <vehicle> identities with exact desired-depart schedule instead of an aggregate M flow, and unioned an added exporter field recovery_start_s. These adaptations changed only input-schema binding/output column serialization; they did not change classifier calculations or thresholds. The adapter application_receipt records the source adapter file hash; these wrapper adaptations are disclosed here and should be preserved in any reuse.",
+  "interpretation_boundary": "Data evidence supports the minimal-plan R=0 control eligibility criteria: adequate M exposure and complete lifecycle/measurement, no locked sustained P/S/L event, no identified source/insertion or downstream failure. It does not certify a clean high-mobility baseline. The one-bin Candidate C background patches and empty queue-export lane series remain explicit scientific-review notes. The plan does not define the older label LOW_R_BACKGROUND_ACCEPTABLE; no such label is assigned here. No treatment, matched causal contrast, or Stage 6 witness conclusion can be made from this control alone.",
+  "files": {
+    "processed_output_dir": "data/processed/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/r04_locked_offline_analysis_v8",
+    "review_artifacts": [
+      "artifacts/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/DATA_LIFECYCLE_POSTRUN_REVIEW.md",
+      "artifacts/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/DATA_LIFECYCLE_POSTRUN_REVIEW.json"
+    ]
+  },
+  "superseded_processing_snapshots": {
+    "paths": [
+      "data/processed/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/r04_locked_offline_analysis",
+      "data/processed/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/r04_locked_offline_analysis_v2",
+      "data/processed/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/r04_locked_offline_analysis_v3",
+      "data/processed/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/r04_locked_offline_analysis_v4",
+      "data/processed/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/r04_locked_offline_analysis_v5",
+      "data/processed/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/r04_locked_offline_analysis_v6",
+      "data/processed/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/r04_locked_offline_analysis_v7"
+    ],
+    "status": "PRESERVED_NONAUTHORITATIVE_COMPATIBILITY_PREFLIGHTS",
+    "note": "Created during adapter compatibility diagnosis; their partial raw_completeness/application receipts or partial tables are not used as final results. The v8 directory is the complete bound output set for this review. No raw or prior outputs were overwritten/deleted."
+  }
+}

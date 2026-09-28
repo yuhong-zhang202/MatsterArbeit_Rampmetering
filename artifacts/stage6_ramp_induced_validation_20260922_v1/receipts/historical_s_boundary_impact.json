@@ -1,0 +1,34 @@
+{
+  "status": "PASS_NO_HISTORICAL_CLASSIFICATION_IMPACT",
+  "sources": [
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/tables/stage6_protectable_state_application_20260921_v1/cell_bin_metrics.csv",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_baseline_localization_20260921_v1/LOC_M3350_S17_attempt1/classifier_output/tables/cell_bin_metrics.csv"
+  ],
+  "source_sha256": [
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/tables/stage6_protectable_state_application_20260921_v1/cell_bin_metrics.csv",
+      "sha256": "9363bc9dd97959a07d4eb38599cd0251ee21fa8e4888e75a2fecc7f1e04c96bb"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_baseline_localization_20260921_v1/LOC_M3350_S17_attempt1/classifier_output/tables/cell_bin_metrics.csv",
+      "sha256": "d04d95a99935ae25b1809a83e48f44b13961c2bd31494c43dd47b2e440b19716"
+    }
+  ],
+  "profile_scanned": "S_ONLY",
+  "runs_scanned": [
+    "A",
+    "B",
+    "C",
+    "LOC"
+  ],
+  "groups_scanned": 88,
+  "qualification_bins_scanned": 0,
+  "low_runs_scanned": 4,
+  "low_runs_reference_ineligible": 4,
+  "exact_boundary_rows": [],
+  "near_boundary_rows_abs_delta_le_1": [],
+  "classification_impact_rows": [],
+  "old_outputs_unchanged": true,
+  "method_or_other_thresholds_changed": false,
+  "algorithm_note": "Grouped by run/profile/cell; reconstructed maximal S low-runs; used exactly the three immediately preceding bins at each run start; compared old strict float gate with new inclusive integer gate. All scanned S low-runs were reference-ineligible, so zero S density predicates were evaluable; no classification impact can occur in these archived outputs."
+}

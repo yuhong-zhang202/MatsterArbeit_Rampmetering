@@ -1,0 +1,284 @@
+{
+  "schema": "stage6_e1_r900_data_lifecycle_failure_disposition_v1",
+  "run_id": "MINIMAL3350_E1_R900_DELAYED_S17",
+  "disposition": "NOT_EVALUABLE",
+  "review_scope": "Read-only failure disposition of the immutable failed attempt. No classifier, witness, or outcome analysis.",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "execution": {
+    "execution_receipt_sha256": "3d4b795ecebe38cc1dc01749b2f2c2c7fd25a9afdbdc7f732c149aeded27c62b",
+    "output_manifest_sha256": "d7d70dc04722bdce1d510961393c79a7095a9e1d658fd3353e57e011d8cca707",
+    "consumption_receipt_sha256": "17f21d690985069be7c893e90da33ccabc4127382d5a8a88416a38bae74a8c16",
+    "engineering_failure_disposition_sha256": "b2268a7b336f3126eb5e6f2def7efa103a355dbe711782046a87009e8cf50574",
+    "card_sha256": null,
+    "guardian_starts": 1,
+    "sumo_starts": 1,
+    "traci_starts": 0,
+    "netconvert_starts": 0,
+    "process_status": "PROCESS_EXITED",
+    "return_code": 1,
+    "retry_allowed": false,
+    "started_at_utc": "2026-09-24T23:36:33.470893Z",
+    "finished_at_utc": "2026-09-24T23:36:56.994351Z",
+    "wallclock_runtime_s": 23.522957
+  },
+  "inventory": {
+    "raw_directory": "data/raw/stage6_minimal3350_ux0_20260925_v17/MINIMAL3350_E1_R900_DELAYED_S17/outputs",
+    "manifest_actual_file_count": 13,
+    "filesystem_actual_file_count_including_manifest_receipt": 15,
+    "payload_bytes_excluding_manifest_and_receipt": 26800,
+    "output_directory_bytes_including_manifest_receipt": 33348,
+    "present_lifecycle_or_traffic_roles": 6,
+    "missing_required_roles": 12,
+    "roles": [
+      {
+        "role": "fcd.xml",
+        "status": "PRESENT",
+        "size_bytes": 3183,
+        "sha256": "ef488e7ee4a94f01202af787154fb84316235abb66a8a15ed87f6257b9e2bdaf",
+        "xml_root": "fcd-export",
+        "xml_child_count": 0
+      },
+      {
+        "role": "lanechanges.xml",
+        "status": "PRESENT",
+        "size_bytes": 3063,
+        "sha256": "409a034ca692da7421f7892df12f30c9dff272de0c343131ccfec8e709546f6c",
+        "xml_root": "lanechanges",
+        "xml_child_count": 0
+      },
+      {
+        "role": "p1_main_down_200_l0.xml",
+        "status": "MISSING",
+        "size_bytes": null,
+        "sha256": null
+      },
+      {
+        "role": "p1_main_down_200_l1.xml",
+        "status": "MISSING",
+        "size_bytes": null,
+        "sha256": null
+      },
+      {
+        "role": "p1_main_down_20_l0.xml",
+        "status": "MISSING",
+        "size_bytes": null,
+        "sha256": null
+      },
+      {
+        "role": "p1_main_down_20_l1.xml",
+        "status": "MISSING",
+        "size_bytes": null,
+        "sha256": null
+      },
+      {
+        "role": "p1_main_up_1300_l0.xml",
+        "status": "MISSING",
+        "size_bytes": null,
+        "sha256": null
+      },
+      {
+        "role": "p1_main_up_1300_l1.xml",
+        "status": "MISSING",
+        "size_bytes": null,
+        "sha256": null
+      },
+      {
+        "role": "p1_merge_section_20_l0.xml",
+        "status": "MISSING",
+        "size_bytes": null,
+        "sha256": null
+      },
+      {
+        "role": "p1_merge_section_20_l1.xml",
+        "status": "MISSING",
+        "size_bytes": null,
+        "sha256": null
+      },
+      {
+        "role": "p1_merge_section_20_l2.xml",
+        "status": "MISSING",
+        "size_bytes": null,
+        "sha256": null
+      },
+      {
+        "role": "queues.xml",
+        "status": "PRESENT",
+        "size_bytes": 3189,
+        "sha256": "c54c9f525477fa223f74df3b132c6bf9a94dfd0cd8c46bebf892a4ad8c0ebca4",
+        "xml_root": "queue-export",
+        "xml_child_count": 0
+      },
+      {
+        "role": "ramp_storage_e2.xml",
+        "status": "MISSING",
+        "size_bytes": null,
+        "sha256": null
+      },
+      {
+        "role": "shared_boundary_e2.xml",
+        "status": "MISSING",
+        "size_bytes": null,
+        "sha256": null
+      },
+      {
+        "role": "sumo_summary.xml",
+        "status": "PRESENT",
+        "size_bytes": 3181,
+        "sha256": "ca8b25008042f8d95fc37e36e571d7736f4f9d3ba1b08860d4157e0d0998565b",
+        "xml_root": "summary",
+        "xml_child_count": 0
+      },
+      {
+        "role": "tls_states.xml",
+        "status": "MISSING",
+        "size_bytes": null,
+        "sha256": null
+      },
+      {
+        "role": "tripinfo.xml",
+        "status": "PRESENT",
+        "size_bytes": 3186,
+        "sha256": "ca1d657965d842878dd8a9c63478e0ed9ac2b475bc7f33c71e3948dae4ef57e9",
+        "xml_root": "tripinfos",
+        "xml_child_count": 0
+      },
+      {
+        "role": "vehroute.xml",
+        "status": "PRESENT",
+        "size_bytes": 3178,
+        "sha256": "1f5171173bc30c7da04d2d1ef640bdb70e885a1f68a0b0135cb6421faaeb1f1c",
+        "xml_root": "routes",
+        "xml_child_count": 0
+      }
+    ],
+    "files": [
+      {
+        "path": "execution_receipt.json",
+        "size_bytes": 498,
+        "sha256": "3d4b795ecebe38cc1dc01749b2f2c2c7fd25a9afdbdc7f732c149aeded27c62b"
+      },
+      {
+        "path": "fcd.xml",
+        "size_bytes": 3183,
+        "sha256": "ef488e7ee4a94f01202af787154fb84316235abb66a8a15ed87f6257b9e2bdaf"
+      },
+      {
+        "path": "guardian_stderr.log",
+        "size_bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "lanechanges.xml",
+        "size_bytes": 3063,
+        "sha256": "409a034ca692da7421f7892df12f30c9dff272de0c343131ccfec8e709546f6c"
+      },
+      {
+        "path": "output_manifest.json",
+        "size_bytes": 6050,
+        "sha256": "d7d70dc04722bdce1d510961393c79a7095a9e1d658fd3353e57e011d8cca707"
+      },
+      {
+        "path": "queues.xml",
+        "size_bytes": 3189,
+        "sha256": "c54c9f525477fa223f74df3b132c6bf9a94dfd0cd8c46bebf892a4ad8c0ebca4"
+      },
+      {
+        "path": "runner_stderr.log",
+        "size_bytes": 249,
+        "sha256": "27170fc40d47672cbfca2c01060e1802c36bf2162db8ca8c175185e100ba6097"
+      },
+      {
+        "path": "runner_stdout.log",
+        "size_bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "path": "scenario_control.add.xml",
+        "size_bytes": 3868,
+        "sha256": "28a7bd6afbe5c0a151ce96dabfabf7aeaf5885ba38b6add36da7e1faa258369c"
+      },
+      {
+        "path": "scenario_control.sumocfg",
+        "size_bytes": 2768,
+        "sha256": "f2883c2ad355a8a604fd20610380d0f648e175afcf8228b5f3b407bd149b851f"
+      },
+      {
+        "path": "sumo.log",
+        "size_bytes": 686,
+        "sha256": "417ef83838421ffdb52e5e38f61992a02142aab10ea7dd921792469b73c87a9c"
+      },
+      {
+        "path": "sumo_error.log",
+        "size_bytes": 249,
+        "sha256": "27170fc40d47672cbfca2c01060e1802c36bf2162db8ca8c175185e100ba6097"
+      },
+      {
+        "path": "sumo_summary.xml",
+        "size_bytes": 3181,
+        "sha256": "ca8b25008042f8d95fc37e36e571d7736f4f9d3ba1b08860d4157e0d0998565b"
+      },
+      {
+        "path": "tripinfo.xml",
+        "size_bytes": 3186,
+        "sha256": "ca1d657965d842878dd8a9c63478e0ed9ac2b475bc7f33c71e3948dae4ef57e9"
+      },
+      {
+        "path": "vehroute.xml",
+        "size_bytes": 3178,
+        "sha256": "1f5171173bc30c7da04d2d1ef640bdb70e885a1f68a0b0135cb6421faaeb1f1c"
+      }
+    ],
+    "all_present_roles_match_manifest_bytes_hashes": true,
+    "xml_traffic_and_lifecycle_outputs_have_zero_records": true
+  },
+  "missing_required_roles": [
+    "p1_main_down_200_l0.xml",
+    "p1_main_down_200_l1.xml",
+    "p1_main_down_20_l0.xml",
+    "p1_main_down_20_l1.xml",
+    "p1_main_up_1300_l0.xml",
+    "p1_main_up_1300_l1.xml",
+    "p1_merge_section_20_l0.xml",
+    "p1_merge_section_20_l1.xml",
+    "p1_merge_section_20_l2.xml",
+    "ramp_storage_e2.xml",
+    "shared_boundary_e2.xml",
+    "tls_states.xml"
+  ],
+  "empty_skeleton_roles": [
+    "fcd.xml",
+    "lanechanges.xml",
+    "queues.xml",
+    "sumo_summary.xml",
+    "tripinfo.xml",
+    "vehroute.xml"
+  ],
+  "failure_evidence": {
+    "sumo_error_log_sha256": "27170fc40d47672cbfca2c01060e1802c36bf2162db8ca8c175185e100ba6097",
+    "reason": "SUMO exited during additional-file loading before traffic simulation. The stale REV14 additional-file path instructed SUMO to create shared_boundary_e2.xml under absent v16 output directory.",
+    "scientific_input_or_demand_evaluation": "none possible"
+  },
+  "data_assessment": {
+    "lifecycle_reconciliation": "NOT_POSSIBLE: tripinfo.xml and vehroute.xml are zero-record XML skeletons; no planned/inserted/actual-depart/arrived/unfinished/insertion-delay rows exist.",
+    "M_R_U_X_counts": "NOT_OBSERVABLE: no traffic lifecycle records; do not infer zero insertions/arrivals from the output files.",
+    "classifier": "NOT_RUN: required detector/TLS/lifecycle observations absent.",
+    "witness_disposition": "NOT_EVALUATED; no NO_WITNESS inference allowed.",
+    "permitted_attempt_disposition": "NOT_EVALUABLE"
+  },
+  "preservation": {
+    "raw_modified_by_this_review": false,
+    "raw_files_written_or_changed_by_this_review": [],
+    "processes_started_by_this_review": {
+      "guardian": 0,
+      "sumo": 0,
+      "traci": 0,
+      "netconvert": 0
+    },
+    "current_raw_files_reconciled_against_immutable_output_manifest": true
+  },
+  "scope_limit": "This disposition records only data/lifecycle incompleteness for the consumed failed attempt. It does not alter raw files, card, inputs, scientific conclusion, or authorization."
+}

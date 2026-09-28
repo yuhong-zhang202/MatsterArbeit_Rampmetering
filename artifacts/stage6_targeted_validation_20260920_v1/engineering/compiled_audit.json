@@ -1,0 +1,492 @@
+{
+  "checks": [
+    {
+      "check": "edge_same_IDs",
+      "status": "PASS"
+    },
+    {
+      "check": "edge(':freeway_merge_0',)_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "edge(':freeway_merge_2',)_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "edge(':merge_end_0',)_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "edge(':ramp_mid_0',)_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "edge(':urban_diverge_0',)_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "edge(':urban_diverge_1',)_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "edge(':urban_tls_0',)_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "edge(':urban_tls_1',)_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "edge('cross_in',)_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "edge('cross_out',)_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "edge('main_down',)_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "edge('main_up',)_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "edge('merge_section',)_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "edge('ramp_accel',)_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "edge('ramp_storage',)_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "edge('shared_approach',)_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "edge('urban_in',)_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "edge('urban_out',)_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "junction_same_IDs",
+      "status": "PASS"
+    },
+    {
+      "check": "junction('cross_in',)_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "junction('cross_out',)_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "junction('freeway_merge',)_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "junction('main_in',)_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "junction('main_out',)_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "junction('merge_end',)_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "only_ramp_mid_type",
+      "status": "PASS"
+    },
+    {
+      "check": "junction('ramp_mid',)_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "junction('urban_diverge',)_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "junction('urban_in',)_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "junction('urban_out',)_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "junction('urban_tls',)_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "connection_same_IDs",
+      "status": "PASS"
+    },
+    {
+      "check": "connection('cross_in', 'cross_out', '0', '0')_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "connection('main_up', 'merge_section', '0', '1')_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "connection('main_up', 'merge_section', '1', '2')_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "connection('merge_section', 'main_down', '1', '0')_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "connection('merge_section', 'main_down', '2', '1')_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "connection('ramp_accel', 'merge_section', '0', '0')_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "ramp_meter_exact_control",
+      "status": "PASS"
+    },
+    {
+      "check": "connection('ramp_storage', 'ramp_accel', '0', '0')_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "connection('shared_approach', 'urban_out', '0', '0')_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "connection('shared_approach', 'ramp_storage', '0', '0')_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "connection('urban_in', 'shared_approach', '0', '0')_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "connection(':freeway_merge_0', 'merge_section', '0', '1')_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "connection(':freeway_merge_0', 'merge_section', '1', '2')_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "connection(':freeway_merge_2', 'merge_section', '0', '0')_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "connection(':merge_end_0', 'main_down', '0', '0')_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "connection(':merge_end_0', 'main_down', '1', '1')_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "connection(':ramp_mid_0', 'ramp_accel', '0', '0')_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "connection(':urban_diverge_0', 'urban_out', '0', '0')_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "connection(':urban_diverge_1', 'ramp_storage', '0', '0')_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "connection(':urban_tls_0', 'shared_approach', '0', '0')_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "connection(':urban_tls_1', 'cross_out', '0', '0')_unchanged_except_registered",
+      "status": "PASS"
+    },
+    {
+      "check": "urban_TLS_unchanged",
+      "status": "PASS"
+    },
+    {
+      "check": "ramp_program_set",
+      "status": "PASS"
+    },
+    {
+      "check": "A_OPEN",
+      "status": "PASS"
+    },
+    {
+      "check": "B_MODERATE",
+      "status": "PASS"
+    },
+    {
+      "check": "C_STRONG",
+      "status": "PASS"
+    },
+    {
+      "check": "storage_317_57",
+      "status": "PASS"
+    },
+    {
+      "check": "aux_usable",
+      "status": "PASS"
+    },
+    {
+      "check": "downstream_gt400",
+      "status": "PASS"
+    },
+    {
+      "check": "aux_no_outgoing",
+      "status": "PASS"
+    },
+    {
+      "check": "all_three_merge_foes_zero",
+      "status": "PASS"
+    },
+    {
+      "check": "compiled_XSD",
+      "status": "PASS"
+    }
+  ],
+  "lanes": {
+    ":freeway_merge_0_0": {
+      "id": ":freeway_merge_0_0",
+      "index": "0",
+      "length": "3.11",
+      "shape": "1398.38,895.20 1401.49,895.20",
+      "speed": "33.33",
+      "width": "3.20"
+    },
+    ":freeway_merge_0_1": {
+      "id": ":freeway_merge_0_1",
+      "index": "1",
+      "length": "3.11",
+      "shape": "1398.38,898.40 1401.49,898.40",
+      "speed": "33.33",
+      "width": "3.20"
+    },
+    ":freeway_merge_2_0": {
+      "id": ":freeway_merge_2_0",
+      "index": "0",
+      "length": "3.11",
+      "shape": "1398.38,892.04 1401.49,892.00",
+      "speed": "30.55",
+      "width": "3.20"
+    },
+    ":merge_end_0_0": {
+      "id": ":merge_end_0_0",
+      "index": "0",
+      "length": "8.00",
+      "shape": "1696.00,895.20 1704.00,895.20",
+      "speed": "33.33",
+      "width": "3.20"
+    },
+    ":merge_end_0_1": {
+      "id": ":merge_end_0_1",
+      "index": "1",
+      "length": "8.00",
+      "shape": "1696.00,898.40 1704.00,898.40",
+      "speed": "33.33",
+      "width": "3.20"
+    },
+    ":ramp_mid_0_0": {
+      "id": ":ramp_mid_0_0",
+      "index": "0",
+      "length": "81.98",
+      "shape": "1220.78,863.61 1234.36,867.60 1260.34,874.07 1286.43,880.26 1300.31,883.43",
+      "speed": "25.00",
+      "width": "3.20"
+    },
+    ":urban_diverge_0_0": {
+      "id": ":urban_diverge_0_0",
+      "index": "0",
+      "length": "9.03",
+      "shape": "1001.60,642.80 1001.95,645.25 1003.00,647.00 1004.75,648.05 1007.20,648.40",
+      "speed": "6.51",
+      "width": "3.20"
+    },
+    ":urban_diverge_1_0": {
+      "id": ":urban_diverge_1_0",
+      "index": "0",
+      "length": "113.08",
+      "shape": "1001.60,642.80 1010.40,659.42 1030.04,691.38 1050.34,723.07 1061.13,738.87",
+      "speed": "18.05",
+      "width": "3.20"
+    },
+    ":urban_tls_0_0": {
+      "id": ":urban_tls_0_0",
+      "index": "0",
+      "length": "11.20",
+      "shape": "1001.60,392.80 1001.60,404.00",
+      "speed": "13.89",
+      "width": "3.20"
+    },
+    ":urban_tls_1_0": {
+      "id": ":urban_tls_1_0",
+      "index": "0",
+      "length": "11.20",
+      "shape": "996.00,398.40 1007.20,398.40",
+      "speed": "13.89",
+      "width": "3.20"
+    },
+    "cross_in_0": {
+      "id": "cross_in_0",
+      "index": "0",
+      "length": "446.00",
+      "shape": "550.00,398.40 996.00,398.40",
+      "speed": "13.89",
+      "width": "3.20"
+    },
+    "cross_out_0": {
+      "id": "cross_out_0",
+      "index": "0",
+      "length": "442.80",
+      "shape": "1007.20,398.40 1450.00,398.40",
+      "speed": "13.89",
+      "width": "3.20"
+    },
+    "main_down_0": {
+      "id": "main_down_0",
+      "index": "0",
+      "length": "496.00",
+      "shape": "1704.00,895.20 2200.00,895.20",
+      "speed": "33.33",
+      "width": "3.20"
+    },
+    "main_down_1": {
+      "id": "main_down_1",
+      "index": "1",
+      "length": "496.00",
+      "shape": "1704.00,898.40 2200.00,898.40",
+      "speed": "33.33",
+      "width": "3.20"
+    },
+    "main_up_0": {
+      "id": "main_up_0",
+      "index": "0",
+      "length": "1398.38",
+      "shape": "0.00,895.20 1398.38,895.20",
+      "speed": "33.33",
+      "width": "3.20"
+    },
+    "main_up_1": {
+      "id": "main_up_1",
+      "index": "1",
+      "length": "1398.38",
+      "shape": "0.00,898.40 1398.38,898.40",
+      "speed": "33.33",
+      "width": "3.20"
+    },
+    "merge_section_0": {
+      "acceleration": "1",
+      "id": "merge_section_0",
+      "index": "0",
+      "length": "294.51",
+      "shape": "1401.49,892.00 1696.00,892.00",
+      "speed": "33.33",
+      "width": "3.20"
+    },
+    "merge_section_1": {
+      "changeRight": "authority",
+      "id": "merge_section_1",
+      "index": "1",
+      "length": "294.51",
+      "shape": "1401.49,895.20 1696.00,895.20",
+      "speed": "33.33",
+      "width": "3.20"
+    },
+    "merge_section_2": {
+      "id": "merge_section_2",
+      "index": "2",
+      "length": "294.51",
+      "shape": "1401.49,898.40 1696.00,898.40",
+      "speed": "33.33",
+      "width": "3.20"
+    },
+    "ramp_accel_0": {
+      "id": "ramp_accel_0",
+      "index": "0",
+      "length": "99.07",
+      "shape": "1300.31,883.43 1350.14,893.40 1398.38,892.04",
+      "speed": "27.78",
+      "width": "3.20"
+    },
+    "ramp_storage_0": {
+      "id": "ramp_storage_0",
+      "index": "0",
+      "length": "204.49",
+      "shape": "1061.13,738.87 1140.98,818.71 1220.78,863.61",
+      "speed": "22.22",
+      "width": "3.20"
+    },
+    "shared_approach_0": {
+      "id": "shared_approach_0",
+      "index": "0",
+      "length": "238.80",
+      "shape": "1001.60,404.00 1001.60,642.80",
+      "speed": "13.89",
+      "width": "3.20"
+    },
+    "urban_in_0": {
+      "id": "urban_in_0",
+      "index": "0",
+      "length": "392.80",
+      "shape": "1001.60,0.00 1001.60,392.80",
+      "speed": "13.89",
+      "width": "3.20"
+    },
+    "urban_out_0": {
+      "id": "urban_out_0",
+      "index": "0",
+      "length": "442.80",
+      "shape": "1007.20,648.40 1450.00,648.40",
+      "speed": "13.89",
+      "width": "3.20"
+    }
+  },
+  "network": {
+    "bytes": 12814,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/build_attempts/TV_BUILD01/network.net.xml",
+    "sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca"
+  },
+  "previous_network": {
+    "bytes": 12244,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_attempts/BUILD02/network.net.xml",
+    "sha256": "e47b0f94521414e55d0e5337b87204dc38d98a0a3a7c5466f2a5883f80b52710"
+  },
+  "runtime_UNTESTED": [
+    "WAUT selected program",
+    "meter movements and yellow handling",
+    "detector operation",
+    "LC instrumentation neutrality",
+    "spillback and U chain"
+  ],
+  "schema": {
+    "argv": [
+      "/usr/bin/xmllint",
+      "--nonet",
+      "--noout",
+      "--schema",
+      "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/net_file.xsd",
+      "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/build_attempts/TV_BUILD01/network.net.xml"
+    ],
+    "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/build_attempts/TV_BUILD01/network.net.xml validates\n",
+    "stdout": ""
+  },
+  "status": "PASS_STATIC_ONLY",
+  "storage_not_calibrated_capacity": true,
+  "storage_reference_m": 317.57
+}

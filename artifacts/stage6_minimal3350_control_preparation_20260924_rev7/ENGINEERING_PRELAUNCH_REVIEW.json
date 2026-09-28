@@ -1,0 +1,40 @@
+{
+  "card_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev7/MINIMAL3350_CTRL_S17_CARD_FINAL.json",
+  "card_sha256": "c488ab86fd29799bba1aea882cae2aad908cd2e0b45ae8cef01ad13b7a9385f4",
+  "checks": {
+    "card_runner_runtime_request_hashes_match": true,
+    "exact_status_run_card_hash_and_zero_integer_findings_enforced": true,
+    "minimal3350_gate_allows_only_declared_v2_v3_data_schemas_and_canonical_science_schema": true,
+    "no_process_started": true,
+    "output_directory_and_parent_absent": true,
+    "resource_contract_90s_60000000bytes_100ms": true,
+    "sidecar_exact_review_hash_map_enforced": true,
+    "sumocfg_8_additional_12_roles_18_and_20_unique_targets_bind": true
+  },
+  "evidence": {
+    "adapter_sha256": "6d9d2deb9904d0322ec0bbdb0eaaf0c2b59a80da98516fd3ca4ad5c67c643df6",
+    "preflight": "Pending fresh exact-card data/scientific reviews; no launch",
+    "provenance_receipt_sha256": "d5e90171eaa1869c82b78de04a0eb657294caf6fad31387016e6f22222e24722",
+    "runner_sha256": "26c9f7638f6ab9e70beef0346ca7a7980d04f57fa1b085e8097ae1686bd826d5",
+    "test_command": ".venv/bin/python -m unittest -v tests/test_minimal3350_binding.py",
+    "test_result": "PASS (8 tests)"
+  },
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "limitations": [
+    "Data/provenance and scientific receipts for this exact rev7 card are required before launch."
+  ],
+  "process_starts": {
+    "guardian": 0,
+    "netconvert": 0,
+    "sumo": 0,
+    "traci": 0
+  },
+  "reviewer": "simulation_engineer",
+  "run_id": "MINIMAL3350_CTRL_S17",
+  "schema": "stage6_engineering_prelaunch_review_v1",
+  "status": "PASS_PRELAUNCH"
+}

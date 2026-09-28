@@ -1,0 +1,55 @@
+{
+  "schema_version": "1",
+  "review_id": "PAIR_3199_R720_DELAYED_S17_ENGINEERING_POSTRUN_FINAL_REV1",
+  "disposition": "PASS_EXECUTION_INTEGRITY_WITH_REQUIRED_DATA_RECONCILIATION_OPEN",
+  "issue_counts": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor_open": 1
+  },
+  "confidence": "High for execution integrity; not a traffic interpretation",
+  "scope": "Independent static/read-only engineering review of exact authorized single-start binding and raw inventory",
+  "run_id": "PAIR_3199_R720_DELAYED_S17",
+  "final_card_sha256": "08160a2ad225ee9fcc2abcc11d509a88ecf554252f1fb17e35dc69b9404351d4",
+  "prelaunch_card_sha256": "6e810adfe70c03ff321ba47a4fff6593323e5b4a78884ce8e6971ffd86bb8d25",
+  "runtime_binding_sha256": "0b80e870722573ee0ff61a05109c2fc2f7263b6cf7e0fbf1fb4f8b5a7bf5131e",
+  "runner_sha256": "cbfa8937fe22dd0998667cc4fc3df6f44cd61cf1e5cd32c4a5507aa5bb425104",
+  "execution_capture_sha256": "00e061736a21c3031b476b2e9c0c1bcee2b669179e48bb375778c070d5f56374",
+  "reservation_sha256": "062d4bca70fce7f343d97bc679284516ea52ac33103f1a62615fee33783235fa",
+  "execution_receipt_sha256": "7d77da828ca962178432150bccf26ea7922d59428b31eda564ad4c3c64628d5a",
+  "output_manifest_sha256": "92dbe5627f8afbfe26f50bc8d62207ca9a9ed579c6f707481079d8ad795228dd",
+  "reservation_status": "FINAL_STATUS_HANDED_OFF",
+  "start_count": 1,
+  "max_starts": 1,
+  "retry_allowed": false,
+  "return_code": 0,
+  "stop_reason": null,
+  "wallclock_runtime_s": 19.92132,
+  "wallclock_stop_trigger_s": 120,
+  "output_payload_bytes": 21066503,
+  "output_size_stop_trigger_bytes": 90000000,
+  "output_polling_interval_ms": 100,
+  "polling_overshoot_accepted": true,
+  "required_output_roles": 18,
+  "present_output_roles": 18,
+  "manifest_inventory_files": 25,
+  "manifest_hash_and_size_mismatches": 0,
+  "unlisted_or_missing_inventory_files": 0,
+  "required_data_reconciliation_issue": {
+    "status": "OPEN_PENDING_INDEPENDENT_DATA_REVIEW",
+    "sumo_log_sha256": "4be0e443c50ca88ac78e924ac7f4ae2067bd2b7cd5e78b650ead89a2ad563e2a",
+    "observations": [
+      "U_flow and X_flow route-file departure-sort warnings are present in the treatment SUMO log",
+      "SUMO summary says Inserted: 1525, numerically equal to planned M1333+R192"
+    ],
+    "control_reference": {
+      "sumo_log_sha256": "a0fe87230c310dc675cd868c8841ed7d77f1c676bfdb08ea09d4e6b296259cf6",
+      "reported_inserted": 1558,
+      "planned_M_plus_U_plus_X": 1558
+    },
+    "interpretation_boundary": "Evidence requires lifecycle reconciliation; it does not prove U/X omission and no traffic/witness result is assigned."
+  },
+  "no_simulator_invoked_during_review": true,
+  "raw_modified": false,
+  "report_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/ENGINEERING_POSTRUN_REVIEW_TREATMENT_FINAL_REV1.md"
+}

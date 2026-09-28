@@ -1,0 +1,36 @@
+{
+  "status": "PASS_STATIC_FINAL",
+  "stage": "exact_runtime_package",
+  "card_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/RUNTIME_VALIDATION_CARD.json",
+  "card_sha256": "c6dd680580ed3ca78400811d2b78bba9050b1da570a717310eb0428551b8b742",
+  "reviewed_at_utc": "2026-09-19T22:03:09Z",
+  "reviewers": {
+    "simulation_engineer": {
+      "status": "PASS",
+      "scope": "runtime XML schema repair, local SUMO 1.26 schema provenance, execution package and fail-closed limits",
+      "evidence": "24/24 fake executor tests; 45/45 schema/repair/semantic/input checks; 9/9 XSD checks; no real SUMO call during static review",
+      "limitation": "real SUMO schema resolution and traffic behavior remain unverified"
+    },
+    "data_analyst": {
+      "status": "PASS",
+      "scope": "exact card and delivery bindings, output contract/source adapter, preserving previous failure and run identities",
+      "evidence": "191 engineering bindings; 316 data manifest bindings; 14 synthetic tests; exact hashes and budget accounting passed",
+      "limitation": "real output coverage/gates remain unverified"
+    },
+    "scientific_reviewer": {
+      "status": "PASS_STATIC_FINAL",
+      "scope": "scientific validity boundaries, authorization interpretation, order/stop gates and claim limits",
+      "open_blocker_major_required_minor": [
+        0,
+        0,
+        0
+      ],
+      "confidence": "High within static package review only",
+      "limitation": "no dynamic traffic evidence; no inference about specific_obstacle"
+    }
+  },
+  "scope_decision": "Only the repaired smoke may start now; R0/S17 then R720/S17 remain conditionally gated on full prior technical/data/physical PASS. No retries, seed23, demand grid, ALINEA, or formal thesis data.",
+  "authorization_provenance": "The user authorized bounded smoke and conditional dynamic validation, then explicitly instructed troubleshooting the smoke cause and continuing attempts. This receipt binds the reviewed exact card; it does not claim the user personally reviewed this later hash.",
+  "prelaunch_findings": "The prior failed attempt exited during additional-file parsing because of runtime XML schema discovery. This package adds locally verified SUMO schema hints, uses fresh run roots, and preserves the prior attempt. This is a technical packaging repair, not a traffic-model change.",
+  "static_limits": "Actual SUMO runtime schema resolution, output completeness, insertion, merging, priority, lane changes, detectors, bottleneck location, and specific_obstacle status remain unverified."
+}

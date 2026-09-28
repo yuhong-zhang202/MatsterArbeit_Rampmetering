@@ -1,0 +1,97 @@
+{
+  "schema_version": "1",
+  "review_id": "PAIR3199_REPAIRED_TREATMENT_INDEPENDENT_ENGINEERING_PRELAUNCH_REV1",
+  "status": "PASS_PREPARATION_ONLY_NOT_AUTHORIZED",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "scope": "Read-only technical review of the repaired PAIR3199 delayed-R treatment card, v5 input binding, R02 exact-card binding, runtime binding, output exclusivity, resource proposal, preflight evidence, test suite, and preregistered pre-R trajectory gate.",
+  "context_preflight": {
+    "read": [
+      "AGENTS.md",
+      "docs/PROJECT_STATE.md",
+      "docs/WORKLOG.md",
+      "docs/DECISIONS.md",
+      "docs/EXPERIMENT_PROTOCOL.md",
+      "docs/methodology/STAGE6_EXPLORATORY_RAMP_INDUCED_WITNESS_CONTRACT.md",
+      "artifacts/stage6_pair_3199_matched_input_repair_20260923_v5/PROVENANCE_RECEIPT.json",
+      "artifacts/stage6_pair_3199_matched_input_repair_20260923_v5/INVARIANT_CHECK_REPORT.json",
+      "artifacts/stage6_pair_3199_matched_input_repair_20260923_v5/ENGINEERING_REVIEW_INDEPENDENT.md",
+      "artifacts/stage6_pair_3199_matched_input_repair_20260923_v5/DATA_PROVENANCE_REVIEW_INDEPENDENT.md",
+      "artifacts/stage6_pair_3199_matched_input_repair_20260923_v5/SCIENTIFIC_REVIEW.md",
+      "artifacts/stage6_pair_3199_repaired_treatment_preparation_20260923_v1/"
+    ],
+    "phase": "Offline v5 matched-input repair and separate repaired-treatment preparation; Stage 6 partial; O2 unresolved; formal protocol unfrozen.",
+    "prior_treatment": "NOT_EVALUABLE; D-006 one-start authorization consumed; prior card/raw not reused or reinterpreted.",
+    "adopted_contract": "D-005 scoped to this exploratory matched pair; does not alter historical control labels or formal protocol."
+  },
+  "bindings": {
+    "run_id": "PAIR_3199_R720_DELAYED_S17",
+    "card_path": "artifacts/stage6_pair_3199_repaired_treatment_preparation_20260923_v1/PAIR_3199_R720_DELAYED_S17_CARD_DRAFT_NOT_AUTHORIZED_REV1.json",
+    "card_sha256": "593cabd4c82a8b7b735e6ebc000d836bebab80a9c8962e20f2865a5bbf4dbed0",
+    "card_status": "DRAFT_NOT_AUTHORIZED",
+    "execution_authorized": false,
+    "approval_required": true,
+    "run_command": null,
+    "runtime_binding_sha256": "d1d86b35ffa0a55ccb4ed5ed0f4e654fc6a1ecfc0c722cdbd802ed0cf465932f",
+    "runner_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+    "runner_sha256": "86faab71ea187be4f46fb89d2436fbfb679324297166c63ee376805c362fbdcf",
+    "test_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/test_runner.py",
+    "test_sha256": "eae75661d48282ba69913847c9e2482a3fbbbdd5040091d072eea81d4dda2fe9",
+    "v5_treatment_demand_sha256": "b8aae801122e918731fb8e05a9aa8ca94873f02282d7f1afee57777f6bea96ea",
+    "v5_invariant_report_sha256": "509f1a46873b6922ce22e18f4100fa2dcb84a632d80ee9a014750efc6c857d54",
+    "v5_provenance_receipt_sha256": "3a2531c3bbf3d9d69ac6c94f0f2663b67b47ffde7ce36c7ea0e1a943b74e32c9",
+    "common_MUX_full_records": "1558/1558",
+    "treatment_only_ids": "R_flow.0–R_flow.191",
+    "treatment_only_count": 192,
+    "witness_contract_sha256": "958890a7dd017110787a85d77ebfa3e6dac2b7d862f0fd91f6bafb7cf1738d9a",
+    "output_directory": "data/raw/stage6_bounded_pair_repaired_20260923_v1/PAIR_3199_R720_DELAYED_S17/outputs",
+    "output_directory_absent": true,
+    "consumption_directory_exists_empty": true,
+    "runner_mapping": "Additive exact-card mapping for repaired package; existing legacy/old treatment mappings remain separate."
+  },
+  "tests": {
+    "bound_interpreter_command": ".venv/bin/python artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/test_runner.py",
+    "bound_interpreter_result": "22/22 PASS",
+    "unbound_interpreter_command": "python3 artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/test_runner.py",
+    "unbound_interpreter_result": "1 error: PYTHON_EXECUTABLE_PATH_MISMATCH; fail-closed behavior expected for non-bound interpreter",
+    "interpretation": "Environment invocation mismatch, not an engineering defect; exact runtime executable hash remains required at future preflight."
+  },
+  "read_only_preflight": {
+    "receipt_status": "PREFLIGHT_PASS_NO_PROCESS_STARTED",
+    "launch_authorized": false,
+    "simulator_process_started": false,
+    "sumo_starts": 0,
+    "traci_starts": 0,
+    "netconvert_starts": 0,
+    "reviewer_reran_preflight": false
+  },
+  "resource_proposal": {
+    "wallclock_stop_trigger_s": 90,
+    "output_size_stop_trigger_bytes_decimal": 75000000,
+    "polling_ms": 100,
+    "slight_overshoot_possible": true,
+    "status": "PROPOSED_NOT_AUTHORIZED",
+    "scope": "PAIR_3199_R720_DELAYED_S17 only"
+  },
+  "postrun_gate": {
+    "pre_meaningful_R_MUX_trajectory_equivalence_required_first": true,
+    "material_unexplained_pre_R_difference_disposition": "NOT_EVALUABLE",
+    "post_R_witness_analysis_only_after_gate_pass": true,
+    "new_numeric_threshold_introduced": false,
+    "future_trajectory_equivalence_verified": false
+  },
+  "limitations": [
+    "This review establishes static card/runtime/runner/input binding and reviewed planned-input matching only.",
+    "Future insertion, lifecycle completion, runtime availability and trajectory equivalence are not established.",
+    "The resource limits are proposals, not user-accepted authorization."
+  ],
+  "authorization": {
+    "execution_authorized": false,
+    "separate_user_start_authorization_required": true,
+    "starts_consumed_by_this_review": 0
+  },
+  "review_report": "artifacts/stage6_pair_3199_repaired_treatment_preparation_20260923_v1/INDEPENDENT_ENGINEERING_REVIEW.md"
+}

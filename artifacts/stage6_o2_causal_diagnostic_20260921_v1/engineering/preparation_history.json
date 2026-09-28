@@ -1,0 +1,18 @@
+{
+  "real_SUMO_starts": 0,
+  "failures_preserved": [
+    {
+      "kind": "offline_test_attempt1",
+      "result": "13/14 PASS; argparse.add_argument misidentified as behavior setter",
+      "receipt": "offline_test_receipt.json",
+      "source": "tests/test_offline_initial_failure.py",
+      "resolution": "Whitelist argparse.add_argument only; no observer API change; full14/14 second attempt passed."
+    },
+    {
+      "kind": "static_validator_attempt1",
+      "result": "Failed config_only_permitted_changes due to XML whitespace tail from appended output element",
+      "source": "tests/static_validate_initial_failure.py",
+      "resolution": "Normalize whitespace-only XML text/tail for semantic equality; input values unchanged."
+    }
+  ]
+}

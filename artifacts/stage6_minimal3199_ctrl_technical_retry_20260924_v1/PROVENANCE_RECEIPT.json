@@ -1,0 +1,107 @@
+{
+  "card": {
+    "path": "artifacts/stage6_minimal3199_ctrl_technical_retry_20260924_v1/MINIMAL3199_CTRL_S17_TECH_RETRY1_CARD_DRAFT.json",
+    "sha256": "5f9c8f17476296cab5b30c59b9dd60bda1f4b066b956a897bbd53be43a50be22"
+  },
+  "engineering_regression_test": {
+    "command": ".venv/bin/python -m unittest tests.test_minimal3199_technical_retry -v",
+    "count": 9,
+    "path": "tests/test_minimal3199_technical_retry.py",
+    "sha256": "a529ca5afefdbcec2c14a39b4541f40774c121cb0737a1e6628dc37ed4814bdf",
+    "test_result": "9/9_PASS"
+  },
+  "manifest": {
+    "path": "artifacts/stage6_minimal3199_ctrl_technical_retry_20260924_v1/INPUT_MANIFEST.json",
+    "sha256": "6944ba949a0e9aa40c11cfc22e430248a61e748aa789685a8b14812fc3ab313e"
+  },
+  "new_consumption_exists": false,
+  "new_consumption_path": "artifacts/stage6_minimal3199_ctrl_technical_retry_20260924_v1/consumption/MINIMAL3199_CTRL_S17_TECH_RETRY1.json",
+  "new_output_exists": false,
+  "new_output_path": "data/raw/stage6_minimal3199_existence_20260924_v2/MINIMAL3199_CTRL_S17_TECH_RETRY1/outputs",
+  "package_id": "stage6_minimal3199_ctrl_technical_retry_20260924_v1",
+  "prelaunch_checks": {
+    "guardian": "NOT_STARTED",
+    "netconvert_starts": 0,
+    "offline_tests": "9/9_PASS",
+    "readonly_exact_card_preflight": "PASS_NO_PROCESS_STARTED",
+    "runtime_binary_version_process": "NOT_RUN",
+    "sumo_starts": 0,
+    "traci_starts": 0
+  },
+  "prior_failed_reservation": {
+    "path": "artifacts/stage6_minimal3199_ctrl_execution_20260924_v1/consumption/MINIMAL3199_CTRL_S17.json",
+    "retry_allowed": false,
+    "sha256": "6d1414879f24277280850c2e510e9404c8662168dbb798f9652a67114ec29c22",
+    "simulator_pid": null,
+    "status": "FAILED"
+  },
+  "prior_raw_inventory": {
+    "scenario_control.add.xml": {
+      "bytes": 3796,
+      "sha256": "6bd3555c983db506800cab40524767229a3a03c94e893e0ccdc506f95690d8ef"
+    },
+    "scenario_control.sumocfg": {
+      "bytes": 2694,
+      "sha256": "0a016bea72ef30815226bd8677dbdd86803796523c481e476a6e47f577457c49"
+    }
+  },
+  "review": {
+    "path": "artifacts/stage6_minimal3199_ctrl_technical_retry_20260924_v1/ENGINEERING_REVIEW.md",
+    "sha256": "9d3794b8940b6c5e23fd0f0467d32e432c44fdb96817eb44ea89cfaaa04e976e"
+  },
+  "run_id": "MINIMAL3199_CTRL_S17_TECH_RETRY1",
+  "runner": {
+    "path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+    "sha256": "74a9d51716006e5283e7e04cef0f0a82df17f26695b7fb444c8ffd29d41e664a"
+  },
+  "runtime_binding": {
+    "path": "artifacts/stage6_minimal3199_ctrl_technical_retry_20260924_v1/control/runtime_binding.json",
+    "sha256": "3bb37acdcea05687cc779a361dfd5c7f824421a30469ae9ec0858884c49300b4"
+  },
+  "schema_version": "1",
+  "source_additional": {
+    "bytes": 3796,
+    "path": "scripts/stage6/minimal3199/prepared_rev3/control/scenario.add.xml",
+    "sha256": "6bd3555c983db506800cab40524767229a3a03c94e893e0ccdc506f95690d8ef"
+  },
+  "source_prelaunch_review_bundle": {
+    "path": "artifacts/stage6_minimal3199_pair_preparation_20260924_rev3/PROVENANCE_RECEIPT.json",
+    "sha256": "21dcf1337c8627eed94572b200080b780f9973ac13e77bffef4d4a68e4edd527"
+  },
+  "source_sumocfg": {
+    "bytes": 2656,
+    "path": "scripts/stage6/minimal3199/prepared_rev3/control/scenario.sumocfg",
+    "sha256": "a6be97aba1ab00d6f17ae15788d45765d0a0efca7e297cc1423e4fb720853b1c"
+  },
+  "staged_additional_expected": {
+    "expected_staged_bytes": 3940,
+    "expected_staged_sha256": "6b93195465eb66462394905fcf6bd450c8e3b863517bef436f5177f0a54c9470",
+    "source_sha256": "6bd3555c983db506800cab40524767229a3a03c94e893e0ccdc506f95690d8ef"
+  },
+  "staged_sumocfg_expected": {
+    "expected_staged_bytes": 2802,
+    "expected_staged_sha256": "1906f98e1e108a9019919d29fa4c9c6086659fdbedd231d16531ec275505650c",
+    "source_sha256": "a6be97aba1ab00d6f17ae15788d45765d0a0efca7e297cc1423e4fb720853b1c"
+  },
+  "staging_rules_in_order": [
+    {
+      "expected_occurrences": 8,
+      "file": "sumocfg",
+      "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3199_existence_20260924_v1/MINIMAL3199_CTRL_S17/outputs",
+      "target": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3199_existence_20260924_v2/MINIMAL3199_CTRL_S17_TECH_RETRY1/outputs"
+    },
+    {
+      "expected_occurrences": 1,
+      "file": "sumocfg",
+      "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/stage6/minimal3199/prepared_rev3/control/scenario.add.xml",
+      "target": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3199_existence_20260924_v2/MINIMAL3199_CTRL_S17_TECH_RETRY1/outputs/scenario_control.add.xml"
+    },
+    {
+      "expected_occurrences": 12,
+      "file": "additional",
+      "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3199_existence_20260924_v1/MINIMAL3199_CTRL_S17/outputs",
+      "target": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3199_existence_20260924_v2/MINIMAL3199_CTRL_S17_TECH_RETRY1/outputs"
+    }
+  ],
+  "status": "ENGINEERING_PASS_DRAFT_NOT_AUTHORIZED"
+}

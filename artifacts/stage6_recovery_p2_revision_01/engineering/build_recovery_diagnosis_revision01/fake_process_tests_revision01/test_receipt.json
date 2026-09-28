@@ -1,0 +1,94 @@
+{
+  "artifact_root": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_recovery_diagnosis_revision01/fake_process_tests_revision01",
+  "executor_sha256": "d8f5c474b222f1d087bce826c1c58735232d75d17fdb3556ecd2d5b5400b5bdb",
+  "limitations": [
+    "No real netconvert behavior tested",
+    "Polling caps can overshoot; not OS quota",
+    "SIGKILL/power loss leaves claim consumed; surviving child needs manual inspection"
+  ],
+  "python_fake_subprocesses": 2,
+  "real_netconvert_starts": 0,
+  "real_simulator_starts": 0,
+  "status": "PASS",
+  "synthetic_only": true,
+  "test_script_sha256": "12030cd5017dc5665ad7cd53554efb4b58a16b7664b851ae7779abda04e7d612",
+  "tests": [
+    {
+      "status": "PASS",
+      "test": "__main__.Tests.test_approval_requires_exact_hash_and_scope"
+    },
+    {
+      "status": "PASS",
+      "test": "__main__.Tests.test_cap"
+    },
+    {
+      "status": "PASS",
+      "test": "__main__.Tests.test_directory_byte_count"
+    },
+    {
+      "status": "PASS",
+      "test": "__main__.Tests.test_draft_card_rejected"
+    },
+    {
+      "status": "PASS",
+      "test": "__main__.Tests.test_duplicate_after_failure"
+    },
+    {
+      "status": "PASS",
+      "test": "__main__.Tests.test_duplicate_after_success"
+    },
+    {
+      "status": "PASS",
+      "test": "__main__.Tests.test_input_tamper_rejected"
+    },
+    {
+      "status": "PASS",
+      "test": "__main__.Tests.test_missing_network"
+    },
+    {
+      "status": "PASS",
+      "test": "__main__.Tests.test_monitor_exception_terminates"
+    },
+    {
+      "status": "PASS",
+      "test": "__main__.Tests.test_nonzero"
+    },
+    {
+      "status": "PASS",
+      "test": "__main__.Tests.test_orphan_claim_consumed"
+    },
+    {
+      "status": "PASS",
+      "test": "__main__.Tests.test_output_symlink_rejected"
+    },
+    {
+      "status": "PASS",
+      "test": "__main__.Tests.test_pending_cumulative_audit_rejected"
+    },
+    {
+      "status": "PASS",
+      "test": "__main__.Tests.test_real_python_fake_process_success"
+    },
+    {
+      "status": "PASS",
+      "test": "__main__.Tests.test_real_python_fake_process_timeout_and_stderr"
+    },
+    {
+      "status": "PASS",
+      "test": "__main__.Tests.test_startfailure"
+    },
+    {
+      "status": "PASS",
+      "test": "__main__.Tests.test_success_stderr_and_reservation"
+    },
+    {
+      "status": "PASS",
+      "test": "__main__.Tests.test_timeout"
+    },
+    {
+      "status": "PASS",
+      "test": "__main__.Tests.test_wrong_command_environment_budget_and_binary_rejected"
+    }
+  ],
+  "tests_run": 19
+}

@@ -1,0 +1,124 @@
+{
+  "cards": {
+    "PAIR_3199_CTRL_S17": {
+      "execution_authorized": false,
+      "input_sha256": {
+        "additional": "ed98832e73675aa95cb3cfc386c579db9525b942b2555e802f0a29324affc23e",
+        "demand": "6bbdc1d9148b05286c25b94f23c37174951c9f3e4a544ef8b9a322fbc42ab631",
+        "network": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+        "output_roles": "5fe6d340f7196a2afd91ad56cd3c6ed419e32501110ce21076771446b4299ad3",
+        "sumocfg": "6ea7306958543281b35a4c560e735d07e04c7658f73dc06f5cb174041baf0fe6"
+      },
+      "output_directory": "data/raw/stage6_bounded_pair_20260923_v1/PAIR_3199_CTRL_S17/outputs",
+      "path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/PAIR_3199_CTRL_S17_CARD_DRAFT_NOT_AUTHORIZED_REV2.json",
+      "resource_limits": {
+        "runtime_s": 90,
+        "scope": "PAIR_3199_CTRL_S17",
+        "status": "PROPOSED_NOT_AUTHORIZED",
+        "storage_bytes": 60000000,
+        "storage_enforcement": "100ms_polled_stop_trigger_with_possible_overshoot_not_hard_quota"
+      },
+      "runtime_binding_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/runtime_bindings/PAIR_3199_CTRL_S17.json",
+      "runtime_binding_sha256": "b351f102a634cbef6aa8720381005881192bce71ffc4b9a319602ce36aafab0a",
+      "sha256": "cffef505430303edb21322f19bac5d3df1d921b300ba3a65d0ea1398d92ca739",
+      "status": "DRAFT_NOT_AUTHORIZED"
+    },
+    "PAIR_3199_R720_DELAYED_S17": {
+      "execution_authorized": false,
+      "input_sha256": {
+        "additional": "13dc69427f24014e02c4ded173ba5d2db12ebf2666c0b77f2cc486a19755332a",
+        "demand": "6fe53e5b294184704ee5dbd575ccb2c225c17b57014c5c981b60ba557a9ae400",
+        "network": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+        "output_roles": "7dab35372984ccd3e7f103afaaf0dff59ecf4df6dc13d4c66dea5190fa77155d",
+        "sumocfg": "70a082e81a32f3a759a8b26cd9cbf426358d7cf4f40eedcef72d3f272d851072"
+      },
+      "output_directory": "data/raw/stage6_bounded_pair_20260923_v1/PAIR_3199_R720_DELAYED_S17/outputs",
+      "path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/PAIR_3199_R720_DELAYED_S17_CARD_DRAFT_NOT_AUTHORIZED_REV2.json",
+      "resource_limits": {
+        "runtime_s": 90,
+        "scope": "PAIR_3199_R720_DELAYED_S17",
+        "status": "PROPOSED_NOT_AUTHORIZED",
+        "storage_bytes": 60000000,
+        "storage_enforcement": "100ms_polled_stop_trigger_with_possible_overshoot_not_hard_quota"
+      },
+      "runtime_binding_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/runtime_bindings/PAIR_3199_R720_DELAYED_S17.json",
+      "runtime_binding_sha256": "98ab356826c627512ca0d09b4d8b8d2d4e6295db0d1fe9f29bdd91065e13247f",
+      "sha256": "4905619ca19d06c71e9eb405457e468981f901813e7efdeca693d8f6bd1de670",
+      "status": "DRAFT_NOT_AUTHORIZED"
+    }
+  },
+  "compile_check": {
+    "command": "python3 -m py_compile artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/test_runner.py",
+    "result": "PASS"
+  },
+  "contract": {
+    "path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/R02_RUNNER_CONTRACT.md",
+    "sha256": "2c395e0edee28720facf7235aa92b5164298a430f40503ec04c41eb2b10d54eb"
+  },
+  "execution": {
+    "SUMO_starts": 0,
+    "TraCI_starts": 0,
+    "host_runtime_probes": 0,
+    "netconvert_starts": 0,
+    "raw_outputs_created": 0
+  },
+  "input_hashes_unchanged_from_revision_1": true,
+  "limitations": [
+    "Runner tests do not establish real SUMO invocation or runtime compatibility.",
+    "The prior test_runner.py source was unavailable after replacement; targeted R02 durability/Guardian contracts were reconstructed, not restored as the historical suite.",
+    "Independent engineering/data/scientific prelaunch verdicts are outside this implementation receipt.",
+    "Resource recommendations require separate explicit user authorization before any launch."
+  ],
+  "receipt_id": "PAIR_3199_R02_BINDING_ENGINEERING_REV2",
+  "resource_proposal_basis": {
+    "historical_run_id": "RI3350_CTRL_S17_technical_retry1",
+    "pair_only_proposal": {
+      "enforcement": "100ms polling stop trigger with possible overshoot; not hard quota",
+      "output_size_stop_limit_bytes_decimal": 60000000,
+      "status": "PROPOSED_NOT_AUTHORIZED",
+      "wallclock_stop_limit_s": 90
+    },
+    "payload_bytes": 21720062,
+    "wallclock_runtime_s": 24.465112
+  },
+  "run_ids": [
+    "PAIR_3199_CTRL_S17",
+    "PAIR_3199_R720_DELAYED_S17"
+  ],
+  "runner_binding": {
+    "pair_cards_require_exact_path_package_run_id_output_and_consumption_binding": true,
+    "resource_and_runtime_proposal_scopes_must_equal_run_id": true,
+    "runner_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+    "runner_sha256": "ac0781d6f24657002e78dbf130519eb38090f4f8d91180548ec306d17080be9b",
+    "runtime_sidecar_hash_and_content_must_match_card": true,
+    "runtime_sidecar_path_must_equal_runtime_bindings_run_id_json": true,
+    "supported_ids": [
+      "RI3350_CTRL_S17_technical_retry1 (legacy exact binding)",
+      "PAIR_3199_CTRL_S17",
+      "PAIR_3199_R720_DELAYED_S17"
+    ],
+    "unknown_or_mismatched_id_fails_closed": true
+  },
+  "schema_version": "1",
+  "status": "IMPLEMENTED_MOCK_TESTED_NO_SIMULATION",
+  "tests": {
+    "command": "python3 -m unittest discover -s artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start -v",
+    "cross_arm_cases": [
+      "runtime sidecar path relabeled from control to treatment is refused",
+      "resource_limits.scope and runtime.resource_proposal.scope relabeled to treatment are refused"
+    ],
+    "failed": 0,
+    "passed": 16,
+    "reconstructed_legacy_contract_checks": [
+      "reservation file/replace/directory-fsync ordering",
+      "Guardian invalid-start creates no child",
+      "polled time/output trigger boundaries",
+      "SIGTERM then SIGKILL escalation",
+      "deterministic output manifest inventory"
+    ],
+    "result": "PASS",
+    "scope": "Temporary repository fixtures; fake SUMO/Python/schema files; mocked Guardian orchestration; no host runtime inspection or executable invocation",
+    "test_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/test_runner.py",
+    "test_sha256": "6a2fc48370a880919f8bca0877e65d4df6b9ea0a811555a8712619fcca6e596a"
+  }
+}

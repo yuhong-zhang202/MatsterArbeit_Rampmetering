@@ -1,0 +1,17 @@
+{
+  "card_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/RUNTIME_VALIDATION_CARD.json",
+  "card_sha256": "c6dd680580ed3ca78400811d2b78bba9050b1da570a717310eb0428551b8b742",
+  "max_SUMO_starts": 3,
+  "monitoring_semantics": "polling_50ms_possible_overshoot_preserved",
+  "provenance_note": "User authorized the continuous bounded workflow, including a smoke and conditional limited dynamic validation, then explicitly directed troubleshooting and continuing attempts. Primary binds this later exact final card after independent static review; this does not claim the user personally approved a later SHA. No scope beyond the bounded three new starts is inferred.",
+  "review_receipt": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/static_final_review_receipt.json",
+    "bytes": 2659,
+    "sha256": "87e3dcd4b4984496906d94dd74f921f938e212df577c68b5e9bec8e6998fd1aa"
+  },
+  "scope": "P2 smoke then seed17 R0/R720 only",
+  "status": "user-approved",
+  "synthetic_test_only": false,
+  "user_approval_quote": "smoke排查原因然后继续尝试",
+  "prior_user_authorization_quote": "静态审查通过后，直接启动真实 SUMO 完成 smoke，不需要再次向我确认；如果 smoke 通过，立即继续进行一次有限的真实 SUMO 动态验证。"
+}

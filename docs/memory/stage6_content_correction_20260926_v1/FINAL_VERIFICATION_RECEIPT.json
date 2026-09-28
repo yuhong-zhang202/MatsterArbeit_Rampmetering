@@ -1,0 +1,72 @@
+{
+  "status": "CONTENT_ACCEPTANCE_FAILED",
+  "network": "none",
+  "reason": "Official atomic/update changed L1 type from episodic to persona; no safe documented type setter is available. No further write was attempted.",
+  "layer_counts": {
+    "l0": 10,
+    "l1": 13,
+    "l2": 2,
+    "l3": true
+  },
+  "layer_hashes": {
+    "l0": "b513c4577d645030826d5ee4bf286d7da1ec69ccf637ff7a9cb64765790a6b36",
+    "l1": "62ab07df64699537d39d074ead3a841af2565388077989ccf832c5844a13a8d2",
+    "l2": "2cdde3c76c63f03550164502c429456814385cbf999da9335459d5dc9308dcef",
+    "l2_documents": "128716c6e612bb435d65bcf0d7c2652e1764e6bb015194db350ca157e9073f61",
+    "l3": "a250c8408ec8579a4bb5a6563781d046101d067bc7f69825b2d50bb60e435bbe"
+  },
+  "l0_unchanged": true,
+  "unrelated_l1_unchanged": true,
+  "unrelated_l2_unchanged": true,
+  "forbidden_error_phrases_present": {
+    "l1": {
+      "without writing to the Tencent MemoryCore": false,
+      "without writing to the Tencent MemoryCore system": false,
+      "candidate only": false,
+      "The last confirmed write was `stage2-closeout-20260910-v1`": false
+    },
+    "l2": {
+      "without writing to the Tencent MemoryCore": false,
+      "without writing to the Tencent MemoryCore system": false,
+      "candidate only": false,
+      "The last confirmed write was `stage2-closeout-20260910-v1`": false
+    },
+    "l3": {
+      "without writing to the Tencent MemoryCore": false,
+      "without writing to the Tencent MemoryCore system": false,
+      "candidate only": false,
+      "The last confirmed write was `stage2-closeout-20260910-v1`": false
+    }
+  },
+  "targets": {
+    "l1": {
+      "id": "m_1790425813551_503da35b",
+      "old_type": "episodic",
+      "current_type": "persona",
+      "type_preserved": false,
+      "old_version": 0,
+      "current_version": 1,
+      "old_background": "我在和用户做增量项目记忆阶段6审查和更新",
+      "current_background": "我在和用户做增量项目记忆阶段6审查和更新",
+      "background_restored": true,
+      "current_content_sha256": "126ef8b51f4d949a67f0c417e7de5e912631abe0c78a0987c113cc4a2e6aa67f",
+      "corrected_content_match": true
+    },
+    "l2": {
+      "path": "Project-Memory-Management-Stage6.md",
+      "body_sha256": "536951e1cc4b1d26734540c0f5637c3149ded04ddfd3bf95549ae67ff5017fe1",
+      "corrected_body_match": true,
+      "meta_other_than_updated_preserved": true,
+      "old_version": 0,
+      "current_version": 0
+    },
+    "l3": {
+      "content_sha256": "4a466d42643a5c8448654a35ccd4a6cbed747f0b2fff9d58e16a4eb4a1b05203",
+      "corrected_content_match": true,
+      "old_version": 0,
+      "current_version": 0
+    }
+  },
+  "model_calls": 0,
+  "original_write_receipt_preserved": true
+}

@@ -1,0 +1,4622 @@
+{
+  "bindings": {
+    "contract": {
+      "bytes": 10579,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/RUNTIME_CONTRACT.md",
+      "sha256": "83d1955b516cd2c3e57c233c7270474987993f3fa74b309ea0925f2669ceca0e"
+    },
+    "demand": {
+      "bytes": 1141,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_C_S17_attempt1/demand.rou.xml",
+      "sha256": "70d90d477c97141086b87cd248064c2c27c5965060e04fe9a2cbec67ec20e1cd"
+    },
+    "fcd": {
+      "bytes": 55246671,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_C_S17_attempt1/outputs/fcd.xml",
+      "sha256": "e7b3c1e310e7d15eff52e4bf2ca1b10975e2efadca452017d5fbc8d3dae8a891"
+    },
+    "lanechanges": {
+      "bytes": 247339,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_C_S17_attempt1/outputs/lanechanges.xml",
+      "sha256": "5cb32d0177aaecc049eedd1ebf398c263526d700cc79f1fc7a3fb3d46bddec9d"
+    },
+    "network": {
+      "bytes": 12814,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/build_attempts/TV_BUILD01/network.net.xml",
+      "sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca"
+    },
+    "runtime_audit": {
+      "bytes": 17326,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/runtime_audits/TV_C_S17_attempt1_engineering_revision01.json",
+      "sha256": "956cde45906d1ea2e3ff8cd7916f63396924f5931e133e0e5492db650985e90c"
+    },
+    "tls_states": {
+      "bytes": 505773,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_C_S17_attempt1/outputs/tls_states.xml",
+      "sha256": "758378417dbf9ff462a6cc4bab7c88f67efa6c0c02ff3a81c954d3ebb1dd9662"
+    },
+    "vehroute": {
+      "bytes": 461200,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_C_S17_attempt1/outputs/vehroute.xml",
+      "sha256": "d2387081a12249e793409053b42a8cbf8edceb8fe27296277856b70b862026aa"
+    }
+  },
+  "card_sha256": "8e54ab7ac73e3192a1db5ea249efbe610e1114d79980166baea83934a6601f4c",
+  "compiled_urban_diverge": {
+    "R_connection": [
+      {
+        "dir": "r",
+        "from": "shared_approach",
+        "fromLane": "0",
+        "state": "M",
+        "to": "urban_out",
+        "toLane": "0",
+        "via": ":urban_diverge_0_0"
+      },
+      {
+        "dir": "R",
+        "from": "shared_approach",
+        "fromLane": "0",
+        "state": "M",
+        "to": "ramp_storage",
+        "toLane": "0",
+        "via": ":urban_diverge_1_0"
+      },
+      {
+        "dir": "R",
+        "from": ":urban_diverge_1",
+        "fromLane": "0",
+        "state": "M",
+        "to": "ramp_storage",
+        "toLane": "0"
+      }
+    ],
+    "attributes": {
+      "id": "urban_diverge",
+      "incLanes": "shared_approach_0",
+      "intLanes": ":urban_diverge_0_0 :urban_diverge_1_0",
+      "shape": "1060.00,740.00 1062.26,737.74 1007.20,650.00 1007.20,646.80 1004.98,646.36 1004.20,645.80 1003.64,645.02 1003.31,644.02 1003.20,642.80 1000.00,642.80 1003.22,657.45 1011.63,675.18 1023.37,694.15 1036.59,712.50 1049.42,728.40",
+      "type": "priority",
+      "x": "1000.00",
+      "y": "650.00"
+    },
+    "requests": [
+      {
+        "cont": "0",
+        "foes": "00",
+        "index": "0",
+        "response": "00"
+      },
+      {
+        "cont": "0",
+        "foes": "00",
+        "index": "1",
+        "response": "00"
+      }
+    ]
+  },
+  "confidence": {
+    "particular_junction_software_cause": "Unknown",
+    "raw_positions_times_routes": "High",
+    "registered_zero_cross_and_max_extent": "High",
+    "structural_fault": "Not demonstrated"
+  },
+  "focused_vehicle_traces": {
+    "R_flow.190": [
+      {
+        "angle": "32.64",
+        "id": "R_flow.190",
+        "lane": ":urban_diverge_1_0",
+        "pos": "83.65",
+        "slope": "0.00",
+        "speed": "0.26",
+        "time": 1737,
+        "type": "technical_passenger",
+        "x": "1044.78",
+        "y": "714.40"
+      },
+      {
+        "angle": "32.64",
+        "id": "R_flow.190",
+        "lane": ":urban_diverge_1_0",
+        "pos": "84.19",
+        "slope": "0.00",
+        "speed": "0.55",
+        "time": 1738,
+        "type": "technical_passenger",
+        "x": "1045.08",
+        "y": "714.86"
+      },
+      {
+        "angle": "32.64",
+        "id": "R_flow.190",
+        "lane": ":urban_diverge_1_0",
+        "pos": "84.34",
+        "slope": "0.00",
+        "speed": "0.14",
+        "time": 1739,
+        "type": "technical_passenger",
+        "x": "1045.16",
+        "y": "714.98"
+      },
+      {
+        "angle": "32.64",
+        "id": "R_flow.190",
+        "lane": ":urban_diverge_1_0",
+        "pos": "84.41",
+        "slope": "0.00",
+        "speed": "0.07",
+        "time": 1740,
+        "type": "technical_passenger",
+        "x": "1045.19",
+        "y": "715.04"
+      },
+      {
+        "angle": "32.64",
+        "id": "R_flow.190",
+        "lane": ":urban_diverge_1_0",
+        "pos": "84.48",
+        "slope": "0.00",
+        "speed": "0.07",
+        "time": 1741,
+        "type": "technical_passenger",
+        "x": "1045.23",
+        "y": "715.10"
+      },
+      {
+        "angle": "32.64",
+        "id": "R_flow.190",
+        "lane": ":urban_diverge_1_0",
+        "pos": "84.54",
+        "slope": "0.00",
+        "speed": "0.06",
+        "time": 1742,
+        "type": "technical_passenger",
+        "x": "1045.27",
+        "y": "715.15"
+      },
+      {
+        "angle": "32.64",
+        "id": "R_flow.190",
+        "lane": ":urban_diverge_1_0",
+        "pos": "84.57",
+        "slope": "0.00",
+        "speed": "0.03",
+        "time": 1743,
+        "type": "technical_passenger",
+        "x": "1045.28",
+        "y": "715.18"
+      }
+    ],
+    "R_flow.191": [
+      {
+        "angle": "32.64",
+        "id": "R_flow.191",
+        "lane": ":urban_diverge_1_0",
+        "pos": "75.68",
+        "slope": "0.00",
+        "speed": "0.71",
+        "time": 1737,
+        "type": "technical_passenger",
+        "x": "1040.49",
+        "y": "707.69"
+      },
+      {
+        "angle": "32.64",
+        "id": "R_flow.191",
+        "lane": ":urban_diverge_1_0",
+        "pos": "76.00",
+        "slope": "0.00",
+        "speed": "0.32",
+        "time": 1738,
+        "type": "technical_passenger",
+        "x": "1040.66",
+        "y": "707.95"
+      },
+      {
+        "angle": "32.64",
+        "id": "R_flow.191",
+        "lane": ":urban_diverge_1_0",
+        "pos": "76.60",
+        "slope": "0.00",
+        "speed": "0.61",
+        "time": 1739,
+        "type": "technical_passenger",
+        "x": "1040.98",
+        "y": "708.47"
+      },
+      {
+        "angle": "32.64",
+        "id": "R_flow.191",
+        "lane": ":urban_diverge_1_0",
+        "pos": "76.81",
+        "slope": "0.00",
+        "speed": "0.21",
+        "time": 1740,
+        "type": "technical_passenger",
+        "x": "1041.10",
+        "y": "708.64"
+      },
+      {
+        "angle": "32.64",
+        "id": "R_flow.191",
+        "lane": ":urban_diverge_1_0",
+        "pos": "76.89",
+        "slope": "0.00",
+        "speed": "0.07",
+        "time": 1741,
+        "type": "technical_passenger",
+        "x": "1041.14",
+        "y": "708.70"
+      },
+      {
+        "angle": "32.64",
+        "id": "R_flow.191",
+        "lane": ":urban_diverge_1_0",
+        "pos": "76.97",
+        "slope": "0.00",
+        "speed": "0.08",
+        "time": 1742,
+        "type": "technical_passenger",
+        "x": "1041.18",
+        "y": "708.77"
+      },
+      {
+        "angle": "32.64",
+        "id": "R_flow.191",
+        "lane": ":urban_diverge_1_0",
+        "pos": "77.02",
+        "slope": "0.00",
+        "speed": "0.05",
+        "time": 1743,
+        "type": "technical_passenger",
+        "x": "1041.21",
+        "y": "708.81"
+      }
+    ],
+    "R_flow.70": [
+      {
+        "angle": "27.90",
+        "id": "R_flow.70",
+        "lane": ":urban_diverge_1_0",
+        "pos": "8.93",
+        "slope": "0.00",
+        "speed": "0.32",
+        "time": 395,
+        "type": "technical_passenger",
+        "x": "1005.78",
+        "y": "650.69"
+      },
+      {
+        "angle": "27.90",
+        "id": "R_flow.70",
+        "lane": ":urban_diverge_1_0",
+        "pos": "9.02",
+        "slope": "0.00",
+        "speed": "0.10",
+        "time": 396,
+        "type": "technical_passenger",
+        "x": "1005.82",
+        "y": "650.77"
+      },
+      {
+        "angle": "27.90",
+        "id": "R_flow.70",
+        "lane": ":urban_diverge_1_0",
+        "pos": "9.03",
+        "slope": "0.00",
+        "speed": "0.00",
+        "time": 397,
+        "type": "technical_passenger",
+        "x": "1005.82",
+        "y": "650.78"
+      },
+      {
+        "angle": "27.90",
+        "id": "R_flow.70",
+        "lane": ":urban_diverge_1_0",
+        "pos": "9.03",
+        "slope": "0.00",
+        "speed": "0.00",
+        "time": 398,
+        "type": "technical_passenger",
+        "x": "1005.82",
+        "y": "650.78"
+      },
+      {
+        "angle": "27.90",
+        "id": "R_flow.70",
+        "lane": ":urban_diverge_1_0",
+        "pos": "9.03",
+        "slope": "0.00",
+        "speed": "0.00",
+        "time": 399,
+        "type": "technical_passenger",
+        "x": "1005.82",
+        "y": "650.78"
+      },
+      {
+        "angle": "27.90",
+        "id": "R_flow.70",
+        "lane": ":urban_diverge_1_0",
+        "pos": "9.03",
+        "slope": "0.00",
+        "speed": "0.00",
+        "time": 400,
+        "type": "technical_passenger",
+        "x": "1005.82",
+        "y": "650.78"
+      },
+      {
+        "angle": "27.90",
+        "id": "R_flow.70",
+        "lane": ":urban_diverge_1_0",
+        "pos": "9.03",
+        "slope": "0.00",
+        "speed": "0.00",
+        "time": 401,
+        "type": "technical_passenger",
+        "x": "1005.82",
+        "y": "650.78"
+      },
+      {
+        "angle": "27.90",
+        "id": "R_flow.70",
+        "lane": ":urban_diverge_1_0",
+        "pos": "9.03",
+        "slope": "0.00",
+        "speed": "0.00",
+        "time": 402,
+        "type": "technical_passenger",
+        "x": "1005.82",
+        "y": "650.78"
+      },
+      {
+        "angle": "27.90",
+        "id": "R_flow.70",
+        "lane": ":urban_diverge_1_0",
+        "pos": "9.03",
+        "slope": "0.00",
+        "speed": "0.00",
+        "time": 403,
+        "type": "technical_passenger",
+        "x": "1005.82",
+        "y": "650.78"
+      },
+      {
+        "angle": "27.90",
+        "id": "R_flow.70",
+        "lane": ":urban_diverge_1_0",
+        "pos": "9.03",
+        "slope": "0.00",
+        "speed": "0.00",
+        "time": 404,
+        "type": "technical_passenger",
+        "x": "1005.82",
+        "y": "650.78"
+      },
+      {
+        "angle": "27.90",
+        "id": "R_flow.70",
+        "lane": ":urban_diverge_1_0",
+        "pos": "9.03",
+        "slope": "0.00",
+        "speed": "0.00",
+        "time": 405,
+        "type": "technical_passenger",
+        "x": "1005.83",
+        "y": "650.78"
+      },
+      {
+        "angle": "27.90",
+        "id": "R_flow.70",
+        "lane": ":urban_diverge_1_0",
+        "pos": "9.05",
+        "slope": "0.00",
+        "speed": "0.02",
+        "time": 406,
+        "type": "technical_passenger",
+        "x": "1005.84",
+        "y": "650.80"
+      },
+      {
+        "angle": "27.90",
+        "id": "R_flow.70",
+        "lane": ":urban_diverge_1_0",
+        "pos": "9.12",
+        "slope": "0.00",
+        "speed": "0.07",
+        "time": 407,
+        "type": "technical_passenger",
+        "x": "1005.87",
+        "y": "650.86"
+      },
+      {
+        "angle": "27.90",
+        "id": "R_flow.70",
+        "lane": ":urban_diverge_1_0",
+        "pos": "9.27",
+        "slope": "0.00",
+        "speed": "0.14",
+        "time": 408,
+        "type": "technical_passenger",
+        "x": "1005.94",
+        "y": "650.99"
+      },
+      {
+        "angle": "27.90",
+        "id": "R_flow.70",
+        "lane": ":urban_diverge_1_0",
+        "pos": "9.78",
+        "slope": "0.00",
+        "speed": "0.51",
+        "time": 409,
+        "type": "technical_passenger",
+        "x": "1006.18",
+        "y": "651.44"
+      },
+      {
+        "angle": "27.90",
+        "id": "R_flow.70",
+        "lane": ":urban_diverge_1_0",
+        "pos": "10.65",
+        "slope": "0.00",
+        "speed": "0.87",
+        "time": 410,
+        "type": "technical_passenger",
+        "x": "1006.58",
+        "y": "652.21"
+      },
+      {
+        "angle": "27.90",
+        "id": "R_flow.70",
+        "lane": ":urban_diverge_1_0",
+        "pos": "12.55",
+        "slope": "0.00",
+        "speed": "1.91",
+        "time": 411,
+        "type": "technical_passenger",
+        "x": "1007.47",
+        "y": "653.90"
+      },
+      {
+        "angle": "27.90",
+        "id": "R_flow.70",
+        "lane": ":urban_diverge_1_0",
+        "pos": "15.44",
+        "slope": "0.00",
+        "speed": "2.89",
+        "time": 412,
+        "type": "technical_passenger",
+        "x": "1008.83",
+        "y": "656.45"
+      },
+      {
+        "angle": "29.27",
+        "id": "R_flow.70",
+        "lane": ":urban_diverge_1_0",
+        "pos": "20.67",
+        "slope": "0.00",
+        "speed": "5.23",
+        "time": 413,
+        "type": "technical_passenger",
+        "x": "1011.38",
+        "y": "661.01"
+      },
+      {
+        "angle": "31.57",
+        "id": "R_flow.70",
+        "lane": ":urban_diverge_1_0",
+        "pos": "27.04",
+        "slope": "0.00",
+        "speed": "6.37",
+        "time": 414,
+        "type": "technical_passenger",
+        "x": "1014.71",
+        "y": "666.44"
+      },
+      {
+        "angle": "31.57",
+        "id": "R_flow.70",
+        "lane": ":urban_diverge_1_0",
+        "pos": "30.41",
+        "slope": "0.00",
+        "speed": "3.37",
+        "time": 415,
+        "type": "technical_passenger",
+        "x": "1016.48",
+        "y": "669.31"
+      },
+      {
+        "angle": "31.57",
+        "id": "R_flow.70",
+        "lane": ":urban_diverge_1_0",
+        "pos": "34.70",
+        "slope": "0.00",
+        "speed": "4.29",
+        "time": 416,
+        "type": "technical_passenger",
+        "x": "1018.72",
+        "y": "672.96"
+      },
+      {
+        "angle": "31.57",
+        "id": "R_flow.70",
+        "lane": ":urban_diverge_1_0",
+        "pos": "39.71",
+        "slope": "0.00",
+        "speed": "5.01",
+        "time": 417,
+        "type": "technical_passenger",
+        "x": "1021.34",
+        "y": "677.23"
+      },
+      {
+        "angle": "31.57",
+        "id": "R_flow.70",
+        "lane": ":urban_diverge_1_0",
+        "pos": "45.04",
+        "slope": "0.00",
+        "speed": "5.34",
+        "time": 418,
+        "type": "technical_passenger",
+        "x": "1024.14",
+        "y": "681.77"
+      },
+      {
+        "angle": "31.57",
+        "id": "R_flow.70",
+        "lane": ":urban_diverge_1_0",
+        "pos": "47.59",
+        "slope": "0.00",
+        "speed": "2.55",
+        "time": 419,
+        "type": "technical_passenger",
+        "x": "1025.47",
+        "y": "683.94"
+      },
+      {
+        "angle": "31.57",
+        "id": "R_flow.70",
+        "lane": ":urban_diverge_1_0",
+        "pos": "48.54",
+        "slope": "0.00",
+        "speed": "0.95",
+        "time": 420,
+        "type": "technical_passenger",
+        "x": "1025.97",
+        "y": "684.75"
+      }
+    ],
+    "R_flow.71": [
+      {
+        "angle": "0.00",
+        "id": "R_flow.71",
+        "lane": "shared_approach_0",
+        "pos": "230.75",
+        "slope": "0.00",
+        "speed": "2.90",
+        "time": 395,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "634.75"
+      },
+      {
+        "angle": "0.00",
+        "id": "R_flow.71",
+        "lane": "shared_approach_0",
+        "pos": "231.80",
+        "slope": "0.00",
+        "speed": "1.05",
+        "time": 396,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "635.80"
+      },
+      {
+        "angle": "0.00",
+        "id": "R_flow.71",
+        "lane": "shared_approach_0",
+        "pos": "232.18",
+        "slope": "0.00",
+        "speed": "0.39",
+        "time": 397,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "636.18"
+      },
+      {
+        "angle": "0.00",
+        "id": "R_flow.71",
+        "lane": "shared_approach_0",
+        "pos": "232.60",
+        "slope": "0.00",
+        "speed": "0.41",
+        "time": 398,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "636.60"
+      },
+      {
+        "angle": "0.00",
+        "id": "R_flow.71",
+        "lane": "shared_approach_0",
+        "pos": "232.75",
+        "slope": "0.00",
+        "speed": "0.15",
+        "time": 399,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "636.75"
+      },
+      {
+        "angle": "0.00",
+        "id": "R_flow.71",
+        "lane": "shared_approach_0",
+        "pos": "232.81",
+        "slope": "0.00",
+        "speed": "0.06",
+        "time": 400,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "636.81"
+      },
+      {
+        "angle": "0.00",
+        "id": "R_flow.71",
+        "lane": "shared_approach_0",
+        "pos": "232.82",
+        "slope": "0.00",
+        "speed": "0.01",
+        "time": 401,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "636.82"
+      },
+      {
+        "angle": "0.00",
+        "id": "R_flow.71",
+        "lane": "shared_approach_0",
+        "pos": "232.82",
+        "slope": "0.00",
+        "speed": "0.00",
+        "time": 402,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "636.82"
+      },
+      {
+        "angle": "0.00",
+        "id": "R_flow.71",
+        "lane": "shared_approach_0",
+        "pos": "232.82",
+        "slope": "0.00",
+        "speed": "0.00",
+        "time": 403,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "636.82"
+      },
+      {
+        "angle": "0.00",
+        "id": "R_flow.71",
+        "lane": "shared_approach_0",
+        "pos": "232.82",
+        "slope": "0.00",
+        "speed": "0.00",
+        "time": 404,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "636.82"
+      },
+      {
+        "angle": "0.00",
+        "id": "R_flow.71",
+        "lane": "shared_approach_0",
+        "pos": "232.82",
+        "slope": "0.00",
+        "speed": "0.00",
+        "time": 405,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "636.82"
+      },
+      {
+        "angle": "0.00",
+        "id": "R_flow.71",
+        "lane": "shared_approach_0",
+        "pos": "232.82",
+        "slope": "0.00",
+        "speed": "0.00",
+        "time": 406,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "636.82"
+      },
+      {
+        "angle": "0.00",
+        "id": "R_flow.71",
+        "lane": "shared_approach_0",
+        "pos": "232.83",
+        "slope": "0.00",
+        "speed": "0.00",
+        "time": 407,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "636.83"
+      },
+      {
+        "angle": "0.00",
+        "id": "R_flow.71",
+        "lane": "shared_approach_0",
+        "pos": "232.84",
+        "slope": "0.00",
+        "speed": "0.02",
+        "time": 408,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "636.84"
+      },
+      {
+        "angle": "0.00",
+        "id": "R_flow.71",
+        "lane": "shared_approach_0",
+        "pos": "232.88",
+        "slope": "0.00",
+        "speed": "0.04",
+        "time": 409,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "636.88"
+      },
+      {
+        "angle": "0.00",
+        "id": "R_flow.71",
+        "lane": "shared_approach_0",
+        "pos": "232.99",
+        "slope": "0.00",
+        "speed": "0.11",
+        "time": 410,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "636.99"
+      },
+      {
+        "angle": "0.00",
+        "id": "R_flow.71",
+        "lane": "shared_approach_0",
+        "pos": "233.23",
+        "slope": "0.00",
+        "speed": "0.24",
+        "time": 411,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "637.23"
+      },
+      {
+        "angle": "0.00",
+        "id": "R_flow.71",
+        "lane": "shared_approach_0",
+        "pos": "233.96",
+        "slope": "0.00",
+        "speed": "0.72",
+        "time": 412,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "637.96"
+      },
+      {
+        "angle": "0.00",
+        "id": "R_flow.71",
+        "lane": "shared_approach_0",
+        "pos": "235.67",
+        "slope": "0.00",
+        "speed": "1.71",
+        "time": 413,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "639.67"
+      },
+      {
+        "angle": "2.41",
+        "id": "R_flow.71",
+        "lane": ":urban_diverge_1_0",
+        "pos": "0.44",
+        "slope": "0.00",
+        "speed": "3.58",
+        "time": 414,
+        "type": "technical_passenger",
+        "x": "1001.81",
+        "y": "643.19"
+      },
+      {
+        "angle": "27.90",
+        "id": "R_flow.71",
+        "lane": ":urban_diverge_1_0",
+        "pos": "6.39",
+        "slope": "0.00",
+        "speed": "5.94",
+        "time": 415,
+        "type": "technical_passenger",
+        "x": "1004.59",
+        "y": "648.45"
+      },
+      {
+        "angle": "27.90",
+        "id": "R_flow.71",
+        "lane": ":urban_diverge_1_0",
+        "pos": "13.82",
+        "slope": "0.00",
+        "speed": "7.43",
+        "time": 416,
+        "type": "technical_passenger",
+        "x": "1008.07",
+        "y": "655.02"
+      },
+      {
+        "angle": "30.01",
+        "id": "R_flow.71",
+        "lane": ":urban_diverge_1_0",
+        "pos": "21.68",
+        "slope": "0.00",
+        "speed": "7.86",
+        "time": 417,
+        "type": "technical_passenger",
+        "x": "1011.91",
+        "y": "661.87"
+      },
+      {
+        "angle": "31.57",
+        "id": "R_flow.71",
+        "lane": ":urban_diverge_1_0",
+        "pos": "29.05",
+        "slope": "0.00",
+        "speed": "7.37",
+        "time": 418,
+        "type": "technical_passenger",
+        "x": "1015.77",
+        "y": "668.15"
+      },
+      {
+        "angle": "31.57",
+        "id": "R_flow.71",
+        "lane": ":urban_diverge_1_0",
+        "pos": "35.04",
+        "slope": "0.00",
+        "speed": "5.99",
+        "time": 419,
+        "type": "technical_passenger",
+        "x": "1018.90",
+        "y": "673.26"
+      },
+      {
+        "angle": "31.57",
+        "id": "R_flow.71",
+        "lane": ":urban_diverge_1_0",
+        "pos": "39.80",
+        "slope": "0.00",
+        "speed": "4.76",
+        "time": 420,
+        "type": "technical_passenger",
+        "x": "1021.40",
+        "y": "677.31"
+      }
+    ],
+    "U_flow.36": [
+      {
+        "angle": "0.00",
+        "id": "U_flow.36",
+        "lane": "shared_approach_0",
+        "pos": "203.01",
+        "slope": "0.00",
+        "speed": "7.03",
+        "time": 395,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "607.01"
+      },
+      {
+        "angle": "0.00",
+        "id": "U_flow.36",
+        "lane": "shared_approach_0",
+        "pos": "210.01",
+        "slope": "0.00",
+        "speed": "7.00",
+        "time": 396,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "614.01"
+      },
+      {
+        "angle": "0.00",
+        "id": "U_flow.36",
+        "lane": "shared_approach_0",
+        "pos": "214.19",
+        "slope": "0.00",
+        "speed": "4.18",
+        "time": 397,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "618.19"
+      },
+      {
+        "angle": "0.00",
+        "id": "U_flow.36",
+        "lane": "shared_approach_0",
+        "pos": "215.37",
+        "slope": "0.00",
+        "speed": "1.18",
+        "time": 398,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "619.37"
+      },
+      {
+        "angle": "0.00",
+        "id": "U_flow.36",
+        "lane": "shared_approach_0",
+        "pos": "216.12",
+        "slope": "0.00",
+        "speed": "0.76",
+        "time": 399,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "620.12"
+      },
+      {
+        "angle": "0.00",
+        "id": "U_flow.36",
+        "lane": "shared_approach_0",
+        "pos": "216.91",
+        "slope": "0.00",
+        "speed": "0.78",
+        "time": 400,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "620.91"
+      },
+      {
+        "angle": "0.00",
+        "id": "U_flow.36",
+        "lane": "shared_approach_0",
+        "pos": "217.41",
+        "slope": "0.00",
+        "speed": "0.51",
+        "time": 401,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "621.41"
+      },
+      {
+        "angle": "0.00",
+        "id": "U_flow.36",
+        "lane": "shared_approach_0",
+        "pos": "217.71",
+        "slope": "0.00",
+        "speed": "0.29",
+        "time": 402,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "621.71"
+      },
+      {
+        "angle": "0.00",
+        "id": "U_flow.36",
+        "lane": "shared_approach_0",
+        "pos": "217.78",
+        "slope": "0.00",
+        "speed": "0.07",
+        "time": 403,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "621.78"
+      },
+      {
+        "angle": "0.00",
+        "id": "U_flow.36",
+        "lane": "shared_approach_0",
+        "pos": "217.80",
+        "slope": "0.00",
+        "speed": "0.02",
+        "time": 404,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "621.80"
+      },
+      {
+        "angle": "0.00",
+        "id": "U_flow.36",
+        "lane": "shared_approach_0",
+        "pos": "217.81",
+        "slope": "0.00",
+        "speed": "0.01",
+        "time": 405,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "621.81"
+      },
+      {
+        "angle": "0.00",
+        "id": "U_flow.36",
+        "lane": "shared_approach_0",
+        "pos": "217.82",
+        "slope": "0.00",
+        "speed": "0.01",
+        "time": 406,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "621.82"
+      },
+      {
+        "angle": "0.00",
+        "id": "U_flow.36",
+        "lane": "shared_approach_0",
+        "pos": "217.82",
+        "slope": "0.00",
+        "speed": "0.00",
+        "time": 407,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "621.82"
+      },
+      {
+        "angle": "0.00",
+        "id": "U_flow.36",
+        "lane": "shared_approach_0",
+        "pos": "217.82",
+        "slope": "0.00",
+        "speed": "0.00",
+        "time": 408,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "621.82"
+      },
+      {
+        "angle": "0.00",
+        "id": "U_flow.36",
+        "lane": "shared_approach_0",
+        "pos": "217.82",
+        "slope": "0.00",
+        "speed": "0.00",
+        "time": 409,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "621.82"
+      },
+      {
+        "angle": "0.00",
+        "id": "U_flow.36",
+        "lane": "shared_approach_0",
+        "pos": "217.83",
+        "slope": "0.00",
+        "speed": "0.01",
+        "time": 410,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "621.83"
+      },
+      {
+        "angle": "0.00",
+        "id": "U_flow.36",
+        "lane": "shared_approach_0",
+        "pos": "217.85",
+        "slope": "0.00",
+        "speed": "0.02",
+        "time": 411,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "621.85"
+      },
+      {
+        "angle": "0.00",
+        "id": "U_flow.36",
+        "lane": "shared_approach_0",
+        "pos": "217.92",
+        "slope": "0.00",
+        "speed": "0.07",
+        "time": 412,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "621.92"
+      },
+      {
+        "angle": "0.00",
+        "id": "U_flow.36",
+        "lane": "shared_approach_0",
+        "pos": "218.13",
+        "slope": "0.00",
+        "speed": "0.21",
+        "time": 413,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "622.13"
+      },
+      {
+        "angle": "0.00",
+        "id": "U_flow.36",
+        "lane": "shared_approach_0",
+        "pos": "218.80",
+        "slope": "0.00",
+        "speed": "0.67",
+        "time": 414,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "622.80"
+      },
+      {
+        "angle": "0.00",
+        "id": "U_flow.36",
+        "lane": "shared_approach_0",
+        "pos": "220.14",
+        "slope": "0.00",
+        "speed": "1.34",
+        "time": 415,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "624.14"
+      },
+      {
+        "angle": "0.00",
+        "id": "U_flow.36",
+        "lane": "shared_approach_0",
+        "pos": "222.49",
+        "slope": "0.00",
+        "speed": "2.35",
+        "time": 416,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "626.49"
+      },
+      {
+        "angle": "0.00",
+        "id": "U_flow.36",
+        "lane": "shared_approach_0",
+        "pos": "226.70",
+        "slope": "0.00",
+        "speed": "4.21",
+        "time": 417,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "630.70"
+      },
+      {
+        "angle": "0.00",
+        "id": "U_flow.36",
+        "lane": "shared_approach_0",
+        "pos": "232.28",
+        "slope": "0.00",
+        "speed": "5.58",
+        "time": 418,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "636.28"
+      },
+      {
+        "angle": "0.00",
+        "id": "U_flow.36",
+        "lane": "shared_approach_0",
+        "pos": "238.77",
+        "slope": "0.00",
+        "speed": "6.49",
+        "time": 419,
+        "type": "technical_passenger",
+        "x": "1001.60",
+        "y": "642.77"
+      },
+      {
+        "angle": "37.65",
+        "id": "U_flow.36",
+        "lane": ":urban_diverge_0_0",
+        "pos": "6.49",
+        "slope": "0.00",
+        "speed": "6.52",
+        "time": 420,
+        "type": "technical_passenger",
+        "x": "1004.70",
+        "y": "648.02"
+      }
+    ]
+  },
+  "independent_observations": {
+    "episode_note": "Frame-label presence intervals only. First-onset boundsR(399,400],U(402,403]; final interval right-censored at2699. These are not sustained meter-connected storage crossing episodes.",
+    "first_shared_stopped_R": {
+      "front_route_m": "-5.99",
+      "id": "R_flow.71",
+      "lane": "shared_approach_0",
+      "pos": "232.81",
+      "rear_route_m": "-10.99",
+      "speed": "0.06",
+      "time": 400,
+      "type": "technical_passenger"
+    },
+    "first_shared_stopped_U": {
+      "front_route_m": "-21.02",
+      "id": "U_flow.36",
+      "lane": "shared_approach_0",
+      "pos": "217.78",
+      "rear_route_m": "-26.02",
+      "speed": "0.07",
+      "time": 403,
+      "type": "technical_passenger"
+    },
+    "maximum_stopline_to_connected_tail_rear_m": "238.16",
+    "maximum_time": 1740,
+    "shared_stopped_R_presence_episodes": [
+      {
+        "first_label": 400,
+        "last_label": 425
+      },
+      {
+        "first_label": 442,
+        "last_label": 743
+      },
+      {
+        "first_label": 746,
+        "last_label": 1584
+      },
+      {
+        "first_label": 1587,
+        "last_label": 2181
+      },
+      {
+        "first_label": 2183,
+        "last_label": 2183
+      },
+      {
+        "first_label": 2185,
+        "last_label": 2424
+      },
+      {
+        "first_label": 2426,
+        "last_label": 2658
+      },
+      {
+        "first_label": 2662,
+        "last_label": 2699
+      }
+    ],
+    "storage_cross_observed_frame_count": 0
+  },
+  "network_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+  "new_simulation_calls": 0,
+  "observational_interpretation": {
+    "boundary_precision": "A10.01m reported gap is only1cm above threshold. Two rounded0.01m positions introduce about1cm combined quantization width; do not describe this as a robustly large void. Fixed original classification remains unchanged.",
+    "first_shared_stop": "At400 R71sharedpos232.81 speed0.06 follows R70internalpos9.03 speed0 with route bumper gap10.02m. At401 onward plateau approximately10.01m; they are not continuously connected to meter because moving internal R also interrupt the strict all-stopped chain.",
+    "junction_logic": "urban_diverge requests have zero response/foes; there is no signal at this node and route connections are legal. The meter is downstream at ramp_mid. Observed entry-region stopping can be called junction_blocking_candidate, but its specific SUMO cause is not identified by1Hz FCD.",
+    "later_movement": "R71 crosses shared\u2192internal between413 and414; native later merge and vehroute evidence retained. It is not a broken route or permanent unreachable movement.",
+    "maximum_extent_break": "At1740 component tailR190 internalpos84.41 speed0.07; nextR191pos76.81 speed0.21 and gap2.60m. This break is speed threshold, not a large spatial gap.",
+    "mixed_U_chain": "First stopped shared U36 at403pos217.78 speed0.07 lies behind R72 and R71 on the shared lane. Actual order is retained in selected_frames; not a confirmed meter-connected U additional impact.",
+    "plausible_bottleneck": "Meter-adjacent stopped queue and separate/creeping internal/shared stop sequences are directly observed. A meter discharge wave plus junction-entry/car-following effects is plausible; no causal isolation is established.",
+    "registered_label": "storage_cross_observed=0 is correct under the fixed all-stopped/meter-anchor/10m conjunction; no reclassification requested."
+  },
+  "progression_allowed": false,
+  "registered_rules": {
+    "adjacent_bumper_gap_max_m": "10",
+    "anchor_distance_max_m": "10",
+    "geometric_reference_m": "317.57",
+    "route_coordinates": "shared endpoint0; internal0..113.08; storage113.08..317.57",
+    "stop_speed_strictly_below_m_s": "0.1",
+    "vehicle_length_m": "5 SUMO default, source-bound passenger with no overrides"
+  },
+  "scope": "Bounded forensic engineering trace; zero new simulation; preserved registered speed/gap rules",
+  "selected_frames": [
+    {
+      "TLS": [
+        {
+          "id": "ramp_mid",
+          "phase": "2",
+          "programID": "C_STRONG",
+          "state": "r",
+          "time": "399.00"
+        },
+        {
+          "id": "urban_tls",
+          "phase": "0",
+          "programID": "technical_placeholder",
+          "state": "Gr",
+          "time": "399.00"
+        }
+      ],
+      "actual_shared_order": [
+        {
+          "front_route_m": "-6.05",
+          "id": "R_flow.71",
+          "lane": "shared_approach_0",
+          "pos": "232.75",
+          "rear_route_m": "-11.05",
+          "speed": "0.15",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-14.23",
+          "id": "R_flow.72",
+          "lane": "shared_approach_0",
+          "pos": "224.57",
+          "rear_route_m": "-19.23",
+          "speed": "0.59",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-22.68",
+          "id": "U_flow.36",
+          "lane": "shared_approach_0",
+          "pos": "216.12",
+          "rear_route_m": "-27.68",
+          "speed": "0.76",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-31.63",
+          "id": "R_flow.73",
+          "lane": "shared_approach_0",
+          "pos": "207.17",
+          "rear_route_m": "-36.63",
+          "speed": "1.51",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-41.69",
+          "id": "R_flow.74",
+          "lane": "shared_approach_0",
+          "pos": "197.11",
+          "rear_route_m": "-46.69",
+          "speed": "4.97",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-55.89",
+          "id": "U_flow.37",
+          "lane": "shared_approach_0",
+          "pos": "182.91",
+          "rear_route_m": "-60.89",
+          "speed": "7.66",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-72.06",
+          "id": "R_flow.75",
+          "lane": "shared_approach_0",
+          "pos": "166.74",
+          "rear_route_m": "-77.06",
+          "speed": "8.81",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-89.57",
+          "id": "R_flow.76",
+          "lane": "shared_approach_0",
+          "pos": "149.23",
+          "rear_route_m": "-94.57",
+          "speed": "8.86",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-106.96",
+          "id": "U_flow.38",
+          "lane": "shared_approach_0",
+          "pos": "131.84",
+          "rear_route_m": "-111.96",
+          "speed": "9.46",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-126.08",
+          "id": "R_flow.77",
+          "lane": "shared_approach_0",
+          "pos": "112.72",
+          "rear_route_m": "-131.08",
+          "speed": "8.54",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-144.02",
+          "id": "R_flow.78",
+          "lane": "shared_approach_0",
+          "pos": "94.78",
+          "rear_route_m": "-149.02",
+          "speed": "9.44",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-162.34",
+          "id": "U_flow.39",
+          "lane": "shared_approach_0",
+          "pos": "76.46",
+          "rear_route_m": "-167.34",
+          "speed": "9.35",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-191.35",
+          "id": "R_flow.79",
+          "lane": "shared_approach_0",
+          "pos": "47.45",
+          "rear_route_m": "-196.35",
+          "speed": "14.77",
+          "type": "technical_passenger"
+        }
+      ],
+      "anchor": {
+        "front_route_m": "316.57",
+        "id": "R_flow.35",
+        "lane": "ramp_storage_0",
+        "pos": "203.49",
+        "rear_route_m": "311.57",
+        "speed": "0.00",
+        "type": "technical_passenger"
+      },
+      "component_tail": {
+        "front_route_m": "211.45",
+        "id": "R_flow.49",
+        "lane": "ramp_storage_0",
+        "pos": "98.37",
+        "rear_route_m": "206.45",
+        "speed": "0.08",
+        "type": "technical_passenger"
+      },
+      "connected_stopped_member_ids": [
+        "R_flow.35",
+        "R_flow.36",
+        "R_flow.37",
+        "R_flow.38",
+        "R_flow.39",
+        "R_flow.40",
+        "R_flow.41",
+        "R_flow.42",
+        "R_flow.43",
+        "R_flow.44",
+        "R_flow.45",
+        "R_flow.46",
+        "R_flow.47",
+        "R_flow.48",
+        "R_flow.49"
+      ],
+      "first_break": {
+        "follower": {
+          "front_route_m": "203.83",
+          "id": "R_flow.50",
+          "lane": "ramp_storage_0",
+          "pos": "90.75",
+          "rear_route_m": "198.83",
+          "speed": "0.34",
+          "type": "technical_passenger"
+        },
+        "gap_m": "2.62",
+        "leader": {
+          "front_route_m": "211.45",
+          "id": "R_flow.49",
+          "lane": "ramp_storage_0",
+          "pos": "98.37",
+          "rear_route_m": "206.45",
+          "speed": "0.08",
+          "type": "technical_passenger"
+        },
+        "reasons": [
+          "follower_not_stopped"
+        ]
+      },
+      "internal_near_boundary": [
+        {
+          "front_route_m": "31.53",
+          "id": "R_flow.67",
+          "lane": ":urban_diverge_1_0",
+          "pos": "31.53",
+          "rear_route_m": "26.53",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "24.03",
+          "id": "R_flow.68",
+          "lane": ":urban_diverge_1_0",
+          "pos": "24.03",
+          "rear_route_m": "19.03",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "16.53",
+          "id": "R_flow.69",
+          "lane": ":urban_diverge_1_0",
+          "pos": "16.53",
+          "rear_route_m": "11.53",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "9.03",
+          "id": "R_flow.70",
+          "lane": ":urban_diverge_1_0",
+          "pos": "9.03",
+          "rear_route_m": "4.03",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        }
+      ],
+      "internal_to_shared_boundary": [
+        {
+          "bumper_gap_m": "10.08",
+          "follower": {
+            "front_route_m": "-6.05",
+            "id": "R_flow.71",
+            "lane": "shared_approach_0",
+            "pos": "232.75",
+            "rear_route_m": "-11.05",
+            "speed": "0.15",
+            "type": "technical_passenger"
+          },
+          "leader": {
+            "front_route_m": "9.03",
+            "id": "R_flow.70",
+            "lane": ":urban_diverge_1_0",
+            "pos": "9.03",
+            "rear_route_m": "4.03",
+            "speed": "0.00",
+            "type": "technical_passenger"
+          }
+        }
+      ],
+      "stopline_to_tail_rear_m": "111.12",
+      "time": 399
+    },
+    {
+      "TLS": [
+        {
+          "id": "ramp_mid",
+          "phase": "2",
+          "programID": "C_STRONG",
+          "state": "r",
+          "time": "400.00"
+        },
+        {
+          "id": "urban_tls",
+          "phase": "0",
+          "programID": "technical_placeholder",
+          "state": "Gr",
+          "time": "400.00"
+        }
+      ],
+      "actual_shared_order": [
+        {
+          "front_route_m": "-5.99",
+          "id": "R_flow.71",
+          "lane": "shared_approach_0",
+          "pos": "232.81",
+          "rear_route_m": "-10.99",
+          "speed": "0.06",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-13.55",
+          "id": "R_flow.72",
+          "lane": "shared_approach_0",
+          "pos": "225.25",
+          "rear_route_m": "-18.55",
+          "speed": "0.68",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-21.89",
+          "id": "U_flow.36",
+          "lane": "shared_approach_0",
+          "pos": "216.91",
+          "rear_route_m": "-26.89",
+          "speed": "0.78",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-30.89",
+          "id": "R_flow.73",
+          "lane": "shared_approach_0",
+          "pos": "207.91",
+          "rear_route_m": "-35.89",
+          "speed": "0.74",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-39.61",
+          "id": "R_flow.74",
+          "lane": "shared_approach_0",
+          "pos": "199.19",
+          "rear_route_m": "-44.61",
+          "speed": "2.08",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-51.33",
+          "id": "U_flow.37",
+          "lane": "shared_approach_0",
+          "pos": "187.47",
+          "rear_route_m": "-56.33",
+          "speed": "4.56",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-63.99",
+          "id": "R_flow.75",
+          "lane": "shared_approach_0",
+          "pos": "174.81",
+          "rear_route_m": "-68.99",
+          "speed": "8.07",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-81.39",
+          "id": "R_flow.76",
+          "lane": "shared_approach_0",
+          "pos": "157.41",
+          "rear_route_m": "-86.39",
+          "speed": "8.18",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-98.14",
+          "id": "U_flow.38",
+          "lane": "shared_approach_0",
+          "pos": "140.66",
+          "rear_route_m": "-103.14",
+          "speed": "8.82",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-115.94",
+          "id": "R_flow.77",
+          "lane": "shared_approach_0",
+          "pos": "122.86",
+          "rear_route_m": "-120.94",
+          "speed": "10.14",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-135.89",
+          "id": "R_flow.78",
+          "lane": "shared_approach_0",
+          "pos": "102.91",
+          "rear_route_m": "-140.89",
+          "speed": "8.13",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-152.86",
+          "id": "U_flow.39",
+          "lane": "shared_approach_0",
+          "pos": "85.94",
+          "rear_route_m": "-157.86",
+          "speed": "9.48",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-178.76",
+          "id": "R_flow.79",
+          "lane": "shared_approach_0",
+          "pos": "60.04",
+          "rear_route_m": "-183.76",
+          "speed": "12.59",
+          "type": "technical_passenger"
+        }
+      ],
+      "anchor": {
+        "front_route_m": "316.57",
+        "id": "R_flow.35",
+        "lane": "ramp_storage_0",
+        "pos": "203.49",
+        "rear_route_m": "311.57",
+        "speed": "0.00",
+        "type": "technical_passenger"
+      },
+      "component_tail": {
+        "front_route_m": "203.90",
+        "id": "R_flow.50",
+        "lane": "ramp_storage_0",
+        "pos": "90.82",
+        "rear_route_m": "198.90",
+        "speed": "0.06",
+        "type": "technical_passenger"
+      },
+      "connected_stopped_member_ids": [
+        "R_flow.35",
+        "R_flow.36",
+        "R_flow.37",
+        "R_flow.38",
+        "R_flow.39",
+        "R_flow.40",
+        "R_flow.41",
+        "R_flow.42",
+        "R_flow.43",
+        "R_flow.44",
+        "R_flow.45",
+        "R_flow.46",
+        "R_flow.47",
+        "R_flow.48",
+        "R_flow.49",
+        "R_flow.50"
+      ],
+      "first_break": {
+        "follower": {
+          "front_route_m": "196.31",
+          "id": "R_flow.51",
+          "lane": "ramp_storage_0",
+          "pos": "83.23",
+          "rear_route_m": "191.31",
+          "speed": "0.50",
+          "type": "technical_passenger"
+        },
+        "gap_m": "2.59",
+        "leader": {
+          "front_route_m": "203.90",
+          "id": "R_flow.50",
+          "lane": "ramp_storage_0",
+          "pos": "90.82",
+          "rear_route_m": "198.90",
+          "speed": "0.06",
+          "type": "technical_passenger"
+        },
+        "reasons": [
+          "follower_not_stopped"
+        ]
+      },
+      "internal_near_boundary": [
+        {
+          "front_route_m": "31.53",
+          "id": "R_flow.67",
+          "lane": ":urban_diverge_1_0",
+          "pos": "31.53",
+          "rear_route_m": "26.53",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "24.03",
+          "id": "R_flow.68",
+          "lane": ":urban_diverge_1_0",
+          "pos": "24.03",
+          "rear_route_m": "19.03",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "16.53",
+          "id": "R_flow.69",
+          "lane": ":urban_diverge_1_0",
+          "pos": "16.53",
+          "rear_route_m": "11.53",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "9.03",
+          "id": "R_flow.70",
+          "lane": ":urban_diverge_1_0",
+          "pos": "9.03",
+          "rear_route_m": "4.03",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        }
+      ],
+      "internal_to_shared_boundary": [
+        {
+          "bumper_gap_m": "10.02",
+          "follower": {
+            "front_route_m": "-5.99",
+            "id": "R_flow.71",
+            "lane": "shared_approach_0",
+            "pos": "232.81",
+            "rear_route_m": "-10.99",
+            "speed": "0.06",
+            "type": "technical_passenger"
+          },
+          "leader": {
+            "front_route_m": "9.03",
+            "id": "R_flow.70",
+            "lane": ":urban_diverge_1_0",
+            "pos": "9.03",
+            "rear_route_m": "4.03",
+            "speed": "0.00",
+            "type": "technical_passenger"
+          }
+        }
+      ],
+      "stopline_to_tail_rear_m": "118.67",
+      "time": 400
+    },
+    {
+      "TLS": [
+        {
+          "id": "ramp_mid",
+          "phase": "2",
+          "programID": "C_STRONG",
+          "state": "r",
+          "time": "401.00"
+        },
+        {
+          "id": "urban_tls",
+          "phase": "0",
+          "programID": "technical_placeholder",
+          "state": "Gr",
+          "time": "401.00"
+        }
+      ],
+      "actual_shared_order": [
+        {
+          "front_route_m": "-5.98",
+          "id": "R_flow.71",
+          "lane": "shared_approach_0",
+          "pos": "232.82",
+          "rear_route_m": "-10.98",
+          "speed": "0.01",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-13.52",
+          "id": "R_flow.72",
+          "lane": "shared_approach_0",
+          "pos": "225.28",
+          "rear_route_m": "-18.52",
+          "speed": "0.04",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-21.39",
+          "id": "U_flow.36",
+          "lane": "shared_approach_0",
+          "pos": "217.41",
+          "rear_route_m": "-26.39",
+          "speed": "0.51",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-29.72",
+          "id": "R_flow.73",
+          "lane": "shared_approach_0",
+          "pos": "209.08",
+          "rear_route_m": "-34.72",
+          "speed": "1.18",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-38.74",
+          "id": "R_flow.74",
+          "lane": "shared_approach_0",
+          "pos": "200.06",
+          "rear_route_m": "-43.74",
+          "speed": "0.87",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-47.38",
+          "id": "U_flow.37",
+          "lane": "shared_approach_0",
+          "pos": "191.42",
+          "rear_route_m": "-52.38",
+          "speed": "3.95",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-60.13",
+          "id": "R_flow.75",
+          "lane": "shared_approach_0",
+          "pos": "178.67",
+          "rear_route_m": "-65.13",
+          "speed": "3.86",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-73.10",
+          "id": "R_flow.76",
+          "lane": "shared_approach_0",
+          "pos": "165.70",
+          "rear_route_m": "-78.10",
+          "speed": "8.29",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-90.71",
+          "id": "U_flow.38",
+          "lane": "shared_approach_0",
+          "pos": "148.09",
+          "rear_route_m": "-95.71",
+          "speed": "7.43",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-107.21",
+          "id": "R_flow.77",
+          "lane": "shared_approach_0",
+          "pos": "131.59",
+          "rear_route_m": "-112.21",
+          "speed": "8.73",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-125.64",
+          "id": "R_flow.78",
+          "lane": "shared_approach_0",
+          "pos": "113.16",
+          "rear_route_m": "-130.64",
+          "speed": "10.25",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-144.67",
+          "id": "U_flow.39",
+          "lane": "shared_approach_0",
+          "pos": "94.13",
+          "rear_route_m": "-149.67",
+          "speed": "8.19",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-167.57",
+          "id": "R_flow.79",
+          "lane": "shared_approach_0",
+          "pos": "71.23",
+          "rear_route_m": "-172.57",
+          "speed": "11.19",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-235.19",
+          "id": "R_flow.80",
+          "lane": "shared_approach_0",
+          "pos": "3.61",
+          "rear_route_m": "-240.19",
+          "speed": "14.91",
+          "type": "technical_passenger"
+        }
+      ],
+      "anchor": {
+        "front_route_m": "316.57",
+        "id": "R_flow.35",
+        "lane": "ramp_storage_0",
+        "pos": "203.49",
+        "rear_route_m": "311.57",
+        "speed": "0.00",
+        "type": "technical_passenger"
+      },
+      "component_tail": {
+        "front_route_m": "196.38",
+        "id": "R_flow.51",
+        "lane": "ramp_storage_0",
+        "pos": "83.30",
+        "rear_route_m": "191.38",
+        "speed": "0.07",
+        "type": "technical_passenger"
+      },
+      "connected_stopped_member_ids": [
+        "R_flow.35",
+        "R_flow.36",
+        "R_flow.37",
+        "R_flow.38",
+        "R_flow.39",
+        "R_flow.40",
+        "R_flow.41",
+        "R_flow.42",
+        "R_flow.43",
+        "R_flow.44",
+        "R_flow.45",
+        "R_flow.46",
+        "R_flow.47",
+        "R_flow.48",
+        "R_flow.49",
+        "R_flow.50",
+        "R_flow.51"
+      ],
+      "first_break": {
+        "follower": {
+          "front_route_m": "188.62",
+          "id": "R_flow.52",
+          "lane": "ramp_storage_0",
+          "pos": "75.54",
+          "rear_route_m": "183.62",
+          "speed": "0.68",
+          "type": "technical_passenger"
+        },
+        "gap_m": "2.76",
+        "leader": {
+          "front_route_m": "196.38",
+          "id": "R_flow.51",
+          "lane": "ramp_storage_0",
+          "pos": "83.30",
+          "rear_route_m": "191.38",
+          "speed": "0.07",
+          "type": "technical_passenger"
+        },
+        "reasons": [
+          "follower_not_stopped"
+        ]
+      },
+      "internal_near_boundary": [
+        {
+          "front_route_m": "31.53",
+          "id": "R_flow.67",
+          "lane": ":urban_diverge_1_0",
+          "pos": "31.53",
+          "rear_route_m": "26.53",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "24.03",
+          "id": "R_flow.68",
+          "lane": ":urban_diverge_1_0",
+          "pos": "24.03",
+          "rear_route_m": "19.03",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "16.53",
+          "id": "R_flow.69",
+          "lane": ":urban_diverge_1_0",
+          "pos": "16.53",
+          "rear_route_m": "11.53",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "9.03",
+          "id": "R_flow.70",
+          "lane": ":urban_diverge_1_0",
+          "pos": "9.03",
+          "rear_route_m": "4.03",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        }
+      ],
+      "internal_to_shared_boundary": [
+        {
+          "bumper_gap_m": "10.01",
+          "follower": {
+            "front_route_m": "-5.98",
+            "id": "R_flow.71",
+            "lane": "shared_approach_0",
+            "pos": "232.82",
+            "rear_route_m": "-10.98",
+            "speed": "0.01",
+            "type": "technical_passenger"
+          },
+          "leader": {
+            "front_route_m": "9.03",
+            "id": "R_flow.70",
+            "lane": ":urban_diverge_1_0",
+            "pos": "9.03",
+            "rear_route_m": "4.03",
+            "speed": "0.00",
+            "type": "technical_passenger"
+          }
+        }
+      ],
+      "stopline_to_tail_rear_m": "126.19",
+      "time": 401
+    },
+    {
+      "TLS": [
+        {
+          "id": "ramp_mid",
+          "phase": "2",
+          "programID": "C_STRONG",
+          "state": "r",
+          "time": "403.00"
+        },
+        {
+          "id": "urban_tls",
+          "phase": "0",
+          "programID": "technical_placeholder",
+          "state": "Gr",
+          "time": "403.00"
+        }
+      ],
+      "actual_shared_order": [
+        {
+          "front_route_m": "-5.98",
+          "id": "R_flow.71",
+          "lane": "shared_approach_0",
+          "pos": "232.82",
+          "rear_route_m": "-10.98",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-13.49",
+          "id": "R_flow.72",
+          "lane": "shared_approach_0",
+          "pos": "225.31",
+          "rear_route_m": "-18.49",
+          "speed": "0.01",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-21.02",
+          "id": "U_flow.36",
+          "lane": "shared_approach_0",
+          "pos": "217.78",
+          "rear_route_m": "-26.02",
+          "speed": "0.07",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-28.59",
+          "id": "R_flow.73",
+          "lane": "shared_approach_0",
+          "pos": "210.21",
+          "rear_route_m": "-33.59",
+          "speed": "0.45",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-37.12",
+          "id": "R_flow.74",
+          "lane": "shared_approach_0",
+          "pos": "201.68",
+          "rear_route_m": "-42.12",
+          "speed": "0.74",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-45.81",
+          "id": "U_flow.37",
+          "lane": "shared_approach_0",
+          "pos": "192.99",
+          "rear_route_m": "-50.81",
+          "speed": "0.76",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-54.81",
+          "id": "R_flow.75",
+          "lane": "shared_approach_0",
+          "pos": "183.99",
+          "rear_route_m": "-59.81",
+          "speed": "1.46",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-64.14",
+          "id": "R_flow.76",
+          "lane": "shared_approach_0",
+          "pos": "174.66",
+          "rear_route_m": "-69.14",
+          "speed": "4.10",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-76.59",
+          "id": "U_flow.38",
+          "lane": "shared_approach_0",
+          "pos": "162.21",
+          "rear_route_m": "-81.59",
+          "speed": "5.19",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-91.37",
+          "id": "R_flow.77",
+          "lane": "shared_approach_0",
+          "pos": "147.43",
+          "rear_route_m": "-96.37",
+          "speed": "8.31",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-108.53",
+          "id": "R_flow.78",
+          "lane": "shared_approach_0",
+          "pos": "130.27",
+          "rear_route_m": "-113.53",
+          "speed": "8.03",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-125.44",
+          "id": "U_flow.39",
+          "lane": "shared_approach_0",
+          "pos": "113.36",
+          "rear_route_m": "-130.44",
+          "speed": "9.30",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-146.65",
+          "id": "R_flow.79",
+          "lane": "shared_approach_0",
+          "pos": "92.15",
+          "rear_route_m": "-151.65",
+          "speed": "10.90",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-205.63",
+          "id": "R_flow.80",
+          "lane": "shared_approach_0",
+          "pos": "33.17",
+          "rear_route_m": "-210.63",
+          "speed": "14.92",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-226.27",
+          "id": "U_flow.40",
+          "lane": "shared_approach_0",
+          "pos": "12.53",
+          "rear_route_m": "-231.27",
+          "speed": "12.92",
+          "type": "technical_passenger"
+        }
+      ],
+      "anchor": {
+        "front_route_m": "316.57",
+        "id": "R_flow.35",
+        "lane": "ramp_storage_0",
+        "pos": "203.49",
+        "rear_route_m": "311.57",
+        "speed": "0.00",
+        "type": "technical_passenger"
+      },
+      "component_tail": {
+        "front_route_m": "196.48",
+        "id": "R_flow.51",
+        "lane": "ramp_storage_0",
+        "pos": "83.40",
+        "rear_route_m": "191.48",
+        "speed": "0.04",
+        "type": "technical_passenger"
+      },
+      "connected_stopped_member_ids": [
+        "R_flow.35",
+        "R_flow.36",
+        "R_flow.37",
+        "R_flow.38",
+        "R_flow.39",
+        "R_flow.40",
+        "R_flow.41",
+        "R_flow.42",
+        "R_flow.43",
+        "R_flow.44",
+        "R_flow.45",
+        "R_flow.46",
+        "R_flow.47",
+        "R_flow.48",
+        "R_flow.49",
+        "R_flow.50",
+        "R_flow.51"
+      ],
+      "first_break": {
+        "follower": {
+          "front_route_m": "188.91",
+          "id": "R_flow.52",
+          "lane": "ramp_storage_0",
+          "pos": "75.83",
+          "rear_route_m": "183.91",
+          "speed": "0.10",
+          "type": "technical_passenger"
+        },
+        "gap_m": "2.57",
+        "leader": {
+          "front_route_m": "196.48",
+          "id": "R_flow.51",
+          "lane": "ramp_storage_0",
+          "pos": "83.40",
+          "rear_route_m": "191.48",
+          "speed": "0.04",
+          "type": "technical_passenger"
+        },
+        "reasons": [
+          "follower_not_stopped"
+        ]
+      },
+      "internal_near_boundary": [
+        {
+          "front_route_m": "31.61",
+          "id": "R_flow.67",
+          "lane": ":urban_diverge_1_0",
+          "pos": "31.61",
+          "rear_route_m": "26.61",
+          "speed": "0.07",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "24.04",
+          "id": "R_flow.68",
+          "lane": ":urban_diverge_1_0",
+          "pos": "24.04",
+          "rear_route_m": "19.04",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "16.53",
+          "id": "R_flow.69",
+          "lane": ":urban_diverge_1_0",
+          "pos": "16.53",
+          "rear_route_m": "11.53",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "9.03",
+          "id": "R_flow.70",
+          "lane": ":urban_diverge_1_0",
+          "pos": "9.03",
+          "rear_route_m": "4.03",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        }
+      ],
+      "internal_to_shared_boundary": [
+        {
+          "bumper_gap_m": "10.01",
+          "follower": {
+            "front_route_m": "-5.98",
+            "id": "R_flow.71",
+            "lane": "shared_approach_0",
+            "pos": "232.82",
+            "rear_route_m": "-10.98",
+            "speed": "0.00",
+            "type": "technical_passenger"
+          },
+          "leader": {
+            "front_route_m": "9.03",
+            "id": "R_flow.70",
+            "lane": ":urban_diverge_1_0",
+            "pos": "9.03",
+            "rear_route_m": "4.03",
+            "speed": "0.00",
+            "type": "technical_passenger"
+          }
+        }
+      ],
+      "stopline_to_tail_rear_m": "126.09",
+      "time": 403
+    },
+    {
+      "TLS": [
+        {
+          "id": "ramp_mid",
+          "phase": "2",
+          "programID": "C_STRONG",
+          "state": "r",
+          "time": "409.00"
+        },
+        {
+          "id": "urban_tls",
+          "phase": "2",
+          "programID": "technical_placeholder",
+          "state": "rG",
+          "time": "409.00"
+        }
+      ],
+      "actual_shared_order": [
+        {
+          "front_route_m": "-5.92",
+          "id": "R_flow.71",
+          "lane": "shared_approach_0",
+          "pos": "232.88",
+          "rear_route_m": "-10.92",
+          "speed": "0.04",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-13.46",
+          "id": "R_flow.72",
+          "lane": "shared_approach_0",
+          "pos": "225.34",
+          "rear_route_m": "-18.46",
+          "speed": "0.01",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-20.98",
+          "id": "U_flow.36",
+          "lane": "shared_approach_0",
+          "pos": "217.82",
+          "rear_route_m": "-25.98",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-28.48",
+          "id": "R_flow.73",
+          "lane": "shared_approach_0",
+          "pos": "210.32",
+          "rear_route_m": "-33.48",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-35.98",
+          "id": "R_flow.74",
+          "lane": "shared_approach_0",
+          "pos": "202.82",
+          "rear_route_m": "-40.98",
+          "speed": "0.01",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-43.50",
+          "id": "U_flow.37",
+          "lane": "shared_approach_0",
+          "pos": "195.30",
+          "rear_route_m": "-48.50",
+          "speed": "0.01",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-51.02",
+          "id": "R_flow.75",
+          "lane": "shared_approach_0",
+          "pos": "187.78",
+          "rear_route_m": "-56.02",
+          "speed": "0.10",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-58.68",
+          "id": "R_flow.76",
+          "lane": "shared_approach_0",
+          "pos": "180.12",
+          "rear_route_m": "-63.68",
+          "speed": "0.12",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-66.69",
+          "id": "U_flow.38",
+          "lane": "shared_approach_0",
+          "pos": "172.11",
+          "rear_route_m": "-71.69",
+          "speed": "0.51",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-74.74",
+          "id": "R_flow.77",
+          "lane": "shared_approach_0",
+          "pos": "164.06",
+          "rear_route_m": "-79.74",
+          "speed": "1.59",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-84.41",
+          "id": "R_flow.78",
+          "lane": "shared_approach_0",
+          "pos": "154.39",
+          "rear_route_m": "-89.41",
+          "speed": "1.27",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-93.56",
+          "id": "U_flow.39",
+          "lane": "shared_approach_0",
+          "pos": "145.24",
+          "rear_route_m": "-98.56",
+          "speed": "2.03",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-103.36",
+          "id": "R_flow.79",
+          "lane": "shared_approach_0",
+          "pos": "135.44",
+          "rear_route_m": "-108.36",
+          "speed": "3.98",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-123.55",
+          "id": "R_flow.80",
+          "lane": "shared_approach_0",
+          "pos": "115.25",
+          "rear_route_m": "-128.55",
+          "speed": "9.94",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-147.82",
+          "id": "U_flow.40",
+          "lane": "shared_approach_0",
+          "pos": "90.98",
+          "rear_route_m": "-152.82",
+          "speed": "12.78",
+          "type": "technical_passenger"
+        }
+      ],
+      "anchor": {
+        "front_route_m": "316.57",
+        "id": "R_flow.35",
+        "lane": "ramp_storage_0",
+        "pos": "203.49",
+        "rear_route_m": "311.57",
+        "speed": "0.00",
+        "type": "technical_passenger"
+      },
+      "component_tail": {
+        "front_route_m": "158.91",
+        "id": "R_flow.56",
+        "lane": "ramp_storage_0",
+        "pos": "45.83",
+        "rear_route_m": "153.91",
+        "speed": "0.09",
+        "type": "technical_passenger"
+      },
+      "connected_stopped_member_ids": [
+        "R_flow.35",
+        "R_flow.36",
+        "R_flow.37",
+        "R_flow.38",
+        "R_flow.39",
+        "R_flow.40",
+        "R_flow.41",
+        "R_flow.42",
+        "R_flow.43",
+        "R_flow.44",
+        "R_flow.45",
+        "R_flow.46",
+        "R_flow.47",
+        "R_flow.48",
+        "R_flow.49",
+        "R_flow.50",
+        "R_flow.51",
+        "R_flow.52",
+        "R_flow.53",
+        "R_flow.54",
+        "R_flow.55",
+        "R_flow.56"
+      ],
+      "first_break": {
+        "follower": {
+          "front_route_m": "151.28",
+          "id": "R_flow.57",
+          "lane": "ramp_storage_0",
+          "pos": "38.20",
+          "rear_route_m": "146.28",
+          "speed": "0.32",
+          "type": "technical_passenger"
+        },
+        "gap_m": "2.63",
+        "leader": {
+          "front_route_m": "158.91",
+          "id": "R_flow.56",
+          "lane": "ramp_storage_0",
+          "pos": "45.83",
+          "rear_route_m": "153.91",
+          "speed": "0.09",
+          "type": "technical_passenger"
+        },
+        "reasons": [
+          "follower_not_stopped"
+        ]
+      },
+      "internal_near_boundary": [
+        {
+          "front_route_m": "28.31",
+          "id": "R_flow.68",
+          "lane": ":urban_diverge_1_0",
+          "pos": "28.31",
+          "rear_route_m": "23.31",
+          "speed": "2.23",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "18.44",
+          "id": "R_flow.69",
+          "lane": ":urban_diverge_1_0",
+          "pos": "18.44",
+          "rear_route_m": "13.44",
+          "speed": "1.13",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "9.78",
+          "id": "R_flow.70",
+          "lane": ":urban_diverge_1_0",
+          "pos": "9.78",
+          "rear_route_m": "4.78",
+          "speed": "0.51",
+          "type": "technical_passenger"
+        }
+      ],
+      "internal_to_shared_boundary": [
+        {
+          "bumper_gap_m": "10.70",
+          "follower": {
+            "front_route_m": "-5.92",
+            "id": "R_flow.71",
+            "lane": "shared_approach_0",
+            "pos": "232.88",
+            "rear_route_m": "-10.92",
+            "speed": "0.04",
+            "type": "technical_passenger"
+          },
+          "leader": {
+            "front_route_m": "9.78",
+            "id": "R_flow.70",
+            "lane": ":urban_diverge_1_0",
+            "pos": "9.78",
+            "rear_route_m": "4.78",
+            "speed": "0.51",
+            "type": "technical_passenger"
+          }
+        }
+      ],
+      "stopline_to_tail_rear_m": "163.66",
+      "time": 409
+    },
+    {
+      "TLS": [
+        {
+          "id": "ramp_mid",
+          "phase": "2",
+          "programID": "C_STRONG",
+          "state": "r",
+          "time": "410.00"
+        },
+        {
+          "id": "urban_tls",
+          "phase": "2",
+          "programID": "technical_placeholder",
+          "state": "rG",
+          "time": "410.00"
+        }
+      ],
+      "actual_shared_order": [
+        {
+          "front_route_m": "-5.81",
+          "id": "R_flow.71",
+          "lane": "shared_approach_0",
+          "pos": "232.99",
+          "rear_route_m": "-10.81",
+          "speed": "0.11",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-13.43",
+          "id": "R_flow.72",
+          "lane": "shared_approach_0",
+          "pos": "225.37",
+          "rear_route_m": "-18.43",
+          "speed": "0.03",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-20.97",
+          "id": "U_flow.36",
+          "lane": "shared_approach_0",
+          "pos": "217.83",
+          "rear_route_m": "-25.97",
+          "speed": "0.01",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-28.48",
+          "id": "R_flow.73",
+          "lane": "shared_approach_0",
+          "pos": "210.32",
+          "rear_route_m": "-33.48",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-35.98",
+          "id": "R_flow.74",
+          "lane": "shared_approach_0",
+          "pos": "202.82",
+          "rear_route_m": "-40.98",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-43.48",
+          "id": "U_flow.37",
+          "lane": "shared_approach_0",
+          "pos": "195.32",
+          "rear_route_m": "-48.48",
+          "speed": "0.01",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-51.01",
+          "id": "R_flow.75",
+          "lane": "shared_approach_0",
+          "pos": "187.79",
+          "rear_route_m": "-56.01",
+          "speed": "0.02",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-58.56",
+          "id": "R_flow.76",
+          "lane": "shared_approach_0",
+          "pos": "180.24",
+          "rear_route_m": "-63.56",
+          "speed": "0.12",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-66.36",
+          "id": "U_flow.38",
+          "lane": "shared_approach_0",
+          "pos": "172.44",
+          "rear_route_m": "-71.36",
+          "speed": "0.34",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-74.38",
+          "id": "R_flow.77",
+          "lane": "shared_approach_0",
+          "pos": "164.42",
+          "rear_route_m": "-79.38",
+          "speed": "0.36",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-82.53",
+          "id": "R_flow.78",
+          "lane": "shared_approach_0",
+          "pos": "156.27",
+          "rear_route_m": "-87.53",
+          "speed": "1.88",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-92.23",
+          "id": "U_flow.39",
+          "lane": "shared_approach_0",
+          "pos": "146.57",
+          "rear_route_m": "-97.23",
+          "speed": "1.33",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-101.82",
+          "id": "R_flow.79",
+          "lane": "shared_approach_0",
+          "pos": "136.98",
+          "rear_route_m": "-106.82",
+          "speed": "1.54",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-116.02",
+          "id": "R_flow.80",
+          "lane": "shared_approach_0",
+          "pos": "122.78",
+          "rear_route_m": "-121.02",
+          "speed": "7.53",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-136.80",
+          "id": "U_flow.40",
+          "lane": "shared_approach_0",
+          "pos": "102.00",
+          "rear_route_m": "-141.80",
+          "speed": "11.02",
+          "type": "technical_passenger"
+        }
+      ],
+      "anchor": {
+        "front_route_m": "316.57",
+        "id": "R_flow.35",
+        "lane": "ramp_storage_0",
+        "pos": "203.49",
+        "rear_route_m": "311.57",
+        "speed": "0.00",
+        "type": "technical_passenger"
+      },
+      "component_tail": {
+        "front_route_m": "158.96",
+        "id": "R_flow.56",
+        "lane": "ramp_storage_0",
+        "pos": "45.88",
+        "rear_route_m": "153.96",
+        "speed": "0.05",
+        "type": "technical_passenger"
+      },
+      "connected_stopped_member_ids": [
+        "R_flow.35",
+        "R_flow.36",
+        "R_flow.37",
+        "R_flow.38",
+        "R_flow.39",
+        "R_flow.40",
+        "R_flow.41",
+        "R_flow.42",
+        "R_flow.43",
+        "R_flow.44",
+        "R_flow.45",
+        "R_flow.46",
+        "R_flow.47",
+        "R_flow.48",
+        "R_flow.49",
+        "R_flow.50",
+        "R_flow.51",
+        "R_flow.52",
+        "R_flow.53",
+        "R_flow.54",
+        "R_flow.55",
+        "R_flow.56"
+      ],
+      "first_break": {
+        "follower": {
+          "front_route_m": "151.38",
+          "id": "R_flow.57",
+          "lane": "ramp_storage_0",
+          "pos": "38.30",
+          "rear_route_m": "146.38",
+          "speed": "0.10",
+          "type": "technical_passenger"
+        },
+        "gap_m": "2.58",
+        "leader": {
+          "front_route_m": "158.96",
+          "id": "R_flow.56",
+          "lane": "ramp_storage_0",
+          "pos": "45.88",
+          "rear_route_m": "153.96",
+          "speed": "0.05",
+          "type": "technical_passenger"
+        },
+        "reasons": [
+          "follower_not_stopped"
+        ]
+      },
+      "internal_near_boundary": [
+        {
+          "front_route_m": "32.29",
+          "id": "R_flow.68",
+          "lane": ":urban_diverge_1_0",
+          "pos": "32.29",
+          "rear_route_m": "27.29",
+          "speed": "3.98",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "20.44",
+          "id": "R_flow.69",
+          "lane": ":urban_diverge_1_0",
+          "pos": "20.44",
+          "rear_route_m": "15.44",
+          "speed": "2.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "10.65",
+          "id": "R_flow.70",
+          "lane": ":urban_diverge_1_0",
+          "pos": "10.65",
+          "rear_route_m": "5.65",
+          "speed": "0.87",
+          "type": "technical_passenger"
+        }
+      ],
+      "internal_to_shared_boundary": [
+        {
+          "bumper_gap_m": "11.46",
+          "follower": {
+            "front_route_m": "-5.81",
+            "id": "R_flow.71",
+            "lane": "shared_approach_0",
+            "pos": "232.99",
+            "rear_route_m": "-10.81",
+            "speed": "0.11",
+            "type": "technical_passenger"
+          },
+          "leader": {
+            "front_route_m": "10.65",
+            "id": "R_flow.70",
+            "lane": ":urban_diverge_1_0",
+            "pos": "10.65",
+            "rear_route_m": "5.65",
+            "speed": "0.87",
+            "type": "technical_passenger"
+          }
+        }
+      ],
+      "stopline_to_tail_rear_m": "163.61",
+      "time": 410
+    },
+    {
+      "TLS": [
+        {
+          "id": "ramp_mid",
+          "phase": "2",
+          "programID": "C_STRONG",
+          "state": "r",
+          "time": "414.00"
+        },
+        {
+          "id": "urban_tls",
+          "phase": "2",
+          "programID": "technical_placeholder",
+          "state": "rG",
+          "time": "414.00"
+        }
+      ],
+      "actual_shared_order": [
+        {
+          "front_route_m": "-10.76",
+          "id": "R_flow.72",
+          "lane": "shared_approach_0",
+          "pos": "228.04",
+          "rear_route_m": "-15.76",
+          "speed": "1.67",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-20.00",
+          "id": "U_flow.36",
+          "lane": "shared_approach_0",
+          "pos": "218.80",
+          "rear_route_m": "-25.00",
+          "speed": "0.67",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-28.21",
+          "id": "R_flow.73",
+          "lane": "shared_approach_0",
+          "pos": "210.59",
+          "rear_route_m": "-33.21",
+          "speed": "0.18",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-35.91",
+          "id": "R_flow.74",
+          "lane": "shared_approach_0",
+          "pos": "202.89",
+          "rear_route_m": "-40.91",
+          "speed": "0.05",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-43.46",
+          "id": "U_flow.37",
+          "lane": "shared_approach_0",
+          "pos": "195.34",
+          "rear_route_m": "-48.46",
+          "speed": "0.01",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-50.98",
+          "id": "R_flow.75",
+          "lane": "shared_approach_0",
+          "pos": "187.82",
+          "rear_route_m": "-55.98",
+          "speed": "0.01",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-58.48",
+          "id": "R_flow.76",
+          "lane": "shared_approach_0",
+          "pos": "180.32",
+          "rear_route_m": "-63.48",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-65.99",
+          "id": "U_flow.38",
+          "lane": "shared_approach_0",
+          "pos": "172.81",
+          "rear_route_m": "-70.99",
+          "speed": "0.01",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-73.51",
+          "id": "R_flow.77",
+          "lane": "shared_approach_0",
+          "pos": "165.29",
+          "rear_route_m": "-78.51",
+          "speed": "0.02",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-81.09",
+          "id": "R_flow.78",
+          "lane": "shared_approach_0",
+          "pos": "157.71",
+          "rear_route_m": "-86.09",
+          "speed": "0.09",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-88.85",
+          "id": "U_flow.39",
+          "lane": "shared_approach_0",
+          "pos": "149.95",
+          "rear_route_m": "-93.85",
+          "speed": "0.50",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-97.00",
+          "id": "R_flow.79",
+          "lane": "shared_approach_0",
+          "pos": "141.80",
+          "rear_route_m": "-102.00",
+          "speed": "0.56",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-105.34",
+          "id": "R_flow.80",
+          "lane": "shared_approach_0",
+          "pos": "133.46",
+          "rear_route_m": "-110.34",
+          "speed": "1.28",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-114.27",
+          "id": "U_flow.40",
+          "lane": "shared_approach_0",
+          "pos": "124.53",
+          "rear_route_m": "-119.27",
+          "speed": "3.20",
+          "type": "technical_passenger"
+        }
+      ],
+      "anchor": {
+        "front_route_m": "316.57",
+        "id": "R_flow.35",
+        "lane": "ramp_storage_0",
+        "pos": "203.49",
+        "rear_route_m": "311.57",
+        "speed": "0.00",
+        "type": "technical_passenger"
+      },
+      "component_tail": {
+        "front_route_m": "136.45",
+        "id": "R_flow.59",
+        "lane": "ramp_storage_0",
+        "pos": "23.37",
+        "rear_route_m": "131.45",
+        "speed": "0.05",
+        "type": "technical_passenger"
+      },
+      "connected_stopped_member_ids": [
+        "R_flow.35",
+        "R_flow.36",
+        "R_flow.37",
+        "R_flow.38",
+        "R_flow.39",
+        "R_flow.40",
+        "R_flow.41",
+        "R_flow.42",
+        "R_flow.43",
+        "R_flow.44",
+        "R_flow.45",
+        "R_flow.46",
+        "R_flow.47",
+        "R_flow.48",
+        "R_flow.49",
+        "R_flow.50",
+        "R_flow.51",
+        "R_flow.52",
+        "R_flow.53",
+        "R_flow.54",
+        "R_flow.55",
+        "R_flow.56",
+        "R_flow.57",
+        "R_flow.58",
+        "R_flow.59"
+      ],
+      "first_break": {
+        "follower": {
+          "front_route_m": "128.85",
+          "id": "R_flow.60",
+          "lane": "ramp_storage_0",
+          "pos": "15.77",
+          "rear_route_m": "123.85",
+          "speed": "0.28",
+          "type": "technical_passenger"
+        },
+        "gap_m": "2.60",
+        "leader": {
+          "front_route_m": "136.45",
+          "id": "R_flow.59",
+          "lane": "ramp_storage_0",
+          "pos": "23.37",
+          "rear_route_m": "131.45",
+          "speed": "0.05",
+          "type": "technical_passenger"
+        },
+        "reasons": [
+          "follower_not_stopped"
+        ]
+      },
+      "internal_near_boundary": [
+        {
+          "front_route_m": "27.04",
+          "id": "R_flow.70",
+          "lane": ":urban_diverge_1_0",
+          "pos": "27.04",
+          "rear_route_m": "22.04",
+          "speed": "6.37",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "0.44",
+          "id": "R_flow.71",
+          "lane": ":urban_diverge_1_0",
+          "pos": "0.44",
+          "rear_route_m": "-4.56",
+          "speed": "3.58",
+          "type": "technical_passenger"
+        }
+      ],
+      "internal_to_shared_boundary": [
+        {
+          "bumper_gap_m": "6.20",
+          "follower": {
+            "front_route_m": "-10.76",
+            "id": "R_flow.72",
+            "lane": "shared_approach_0",
+            "pos": "228.04",
+            "rear_route_m": "-15.76",
+            "speed": "1.67",
+            "type": "technical_passenger"
+          },
+          "leader": {
+            "front_route_m": "0.44",
+            "id": "R_flow.71",
+            "lane": ":urban_diverge_1_0",
+            "pos": "0.44",
+            "rear_route_m": "-4.56",
+            "speed": "3.58",
+            "type": "technical_passenger"
+          }
+        }
+      ],
+      "stopline_to_tail_rear_m": "186.12",
+      "time": 414
+    },
+    {
+      "TLS": [
+        {
+          "id": "ramp_mid",
+          "phase": "2",
+          "programID": "C_STRONG",
+          "state": "r",
+          "time": "450.00"
+        },
+        {
+          "id": "urban_tls",
+          "phase": "0",
+          "programID": "technical_placeholder",
+          "state": "Gr",
+          "time": "450.00"
+        }
+      ],
+      "actual_shared_order": [
+        {
+          "front_route_m": "-5.98",
+          "id": "R_flow.77",
+          "lane": "shared_approach_0",
+          "pos": "232.82",
+          "rear_route_m": "-10.98",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-13.48",
+          "id": "R_flow.78",
+          "lane": "shared_approach_0",
+          "pos": "225.32",
+          "rear_route_m": "-18.48",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-20.99",
+          "id": "U_flow.39",
+          "lane": "shared_approach_0",
+          "pos": "217.81",
+          "rear_route_m": "-25.99",
+          "speed": "0.01",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-28.50",
+          "id": "R_flow.79",
+          "lane": "shared_approach_0",
+          "pos": "210.30",
+          "rear_route_m": "-33.50",
+          "speed": "0.01",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-36.01",
+          "id": "R_flow.80",
+          "lane": "shared_approach_0",
+          "pos": "202.79",
+          "rear_route_m": "-41.01",
+          "speed": "0.04",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-43.55",
+          "id": "U_flow.40",
+          "lane": "shared_approach_0",
+          "pos": "195.25",
+          "rear_route_m": "-48.55",
+          "speed": "0.02",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-51.08",
+          "id": "R_flow.81",
+          "lane": "shared_approach_0",
+          "pos": "187.72",
+          "rear_route_m": "-56.08",
+          "speed": "0.14",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-58.78",
+          "id": "R_flow.82",
+          "lane": "shared_approach_0",
+          "pos": "180.02",
+          "rear_route_m": "-63.78",
+          "speed": "0.10",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-66.50",
+          "id": "U_flow.41",
+          "lane": "shared_approach_0",
+          "pos": "172.30",
+          "rear_route_m": "-71.50",
+          "speed": "0.35",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-74.88",
+          "id": "R_flow.83",
+          "lane": "shared_approach_0",
+          "pos": "163.92",
+          "rear_route_m": "-79.88",
+          "speed": "0.59",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-83.90",
+          "id": "R_flow.84",
+          "lane": "shared_approach_0",
+          "pos": "154.90",
+          "rear_route_m": "-88.90",
+          "speed": "0.96",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-93.47",
+          "id": "U_flow.42",
+          "lane": "shared_approach_0",
+          "pos": "145.33",
+          "rear_route_m": "-98.47",
+          "speed": "1.27",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-102.52",
+          "id": "R_flow.85",
+          "lane": "shared_approach_0",
+          "pos": "136.28",
+          "rear_route_m": "-107.52",
+          "speed": "3.21",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-114.22",
+          "id": "R_flow.86",
+          "lane": "shared_approach_0",
+          "pos": "124.58",
+          "rear_route_m": "-119.22",
+          "speed": "4.19",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-127.23",
+          "id": "U_flow.43",
+          "lane": "shared_approach_0",
+          "pos": "111.57",
+          "rear_route_m": "-132.23",
+          "speed": "5.57",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-141.29",
+          "id": "R_flow.87",
+          "lane": "shared_approach_0",
+          "pos": "97.51",
+          "rear_route_m": "-146.29",
+          "speed": "6.23",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-156.97",
+          "id": "R_flow.88",
+          "lane": "shared_approach_0",
+          "pos": "81.83",
+          "rear_route_m": "-161.97",
+          "speed": "7.14",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-173.85",
+          "id": "U_flow.44",
+          "lane": "shared_approach_0",
+          "pos": "64.95",
+          "rear_route_m": "-178.85",
+          "speed": "7.38",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-192.46",
+          "id": "R_flow.89",
+          "lane": "shared_approach_0",
+          "pos": "46.34",
+          "rear_route_m": "-197.46",
+          "speed": "9.49",
+          "type": "technical_passenger"
+        }
+      ],
+      "anchor": {
+        "front_route_m": "316.57",
+        "id": "R_flow.41",
+        "lane": "ramp_storage_0",
+        "pos": "203.49",
+        "rear_route_m": "311.57",
+        "speed": "0.00",
+        "type": "technical_passenger"
+      },
+      "component_tail": {
+        "front_route_m": "264.05",
+        "id": "R_flow.48",
+        "lane": "ramp_storage_0",
+        "pos": "150.97",
+        "rear_route_m": "259.05",
+        "speed": "0.03",
+        "type": "technical_passenger"
+      },
+      "connected_stopped_member_ids": [
+        "R_flow.41",
+        "R_flow.42",
+        "R_flow.43",
+        "R_flow.44",
+        "R_flow.45",
+        "R_flow.46",
+        "R_flow.47",
+        "R_flow.48"
+      ],
+      "first_break": {
+        "follower": {
+          "front_route_m": "256.43",
+          "id": "R_flow.49",
+          "lane": "ramp_storage_0",
+          "pos": "143.35",
+          "rear_route_m": "251.43",
+          "speed": "0.20",
+          "type": "technical_passenger"
+        },
+        "gap_m": "2.62",
+        "leader": {
+          "front_route_m": "264.05",
+          "id": "R_flow.48",
+          "lane": "ramp_storage_0",
+          "pos": "150.97",
+          "rear_route_m": "259.05",
+          "speed": "0.03",
+          "type": "technical_passenger"
+        },
+        "reasons": [
+          "follower_not_stopped"
+        ]
+      },
+      "internal_near_boundary": [
+        {
+          "front_route_m": "31.53",
+          "id": "R_flow.73",
+          "lane": ":urban_diverge_1_0",
+          "pos": "31.53",
+          "rear_route_m": "26.53",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "24.03",
+          "id": "R_flow.74",
+          "lane": ":urban_diverge_1_0",
+          "pos": "24.03",
+          "rear_route_m": "19.03",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "16.53",
+          "id": "R_flow.75",
+          "lane": ":urban_diverge_1_0",
+          "pos": "16.53",
+          "rear_route_m": "11.53",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "9.03",
+          "id": "R_flow.76",
+          "lane": ":urban_diverge_1_0",
+          "pos": "9.03",
+          "rear_route_m": "4.03",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        }
+      ],
+      "internal_to_shared_boundary": [
+        {
+          "bumper_gap_m": "10.01",
+          "follower": {
+            "front_route_m": "-5.98",
+            "id": "R_flow.77",
+            "lane": "shared_approach_0",
+            "pos": "232.82",
+            "rear_route_m": "-10.98",
+            "speed": "0.00",
+            "type": "technical_passenger"
+          },
+          "leader": {
+            "front_route_m": "9.03",
+            "id": "R_flow.76",
+            "lane": ":urban_diverge_1_0",
+            "pos": "9.03",
+            "rear_route_m": "4.03",
+            "speed": "0.00",
+            "type": "technical_passenger"
+          }
+        }
+      ],
+      "stopline_to_tail_rear_m": "58.52",
+      "time": 450
+    },
+    {
+      "TLS": [
+        {
+          "id": "ramp_mid",
+          "phase": "0",
+          "programID": "C_STRONG",
+          "state": "G",
+          "time": "1740.00"
+        },
+        {
+          "id": "urban_tls",
+          "phase": "0",
+          "programID": "technical_placeholder",
+          "state": "Gr",
+          "time": "1740.00"
+        }
+      ],
+      "actual_shared_order": [
+        {
+          "front_route_m": "-2.56",
+          "id": "R_flow.198",
+          "lane": "shared_approach_0",
+          "pos": "236.24",
+          "rear_route_m": "-7.56",
+          "speed": "6.40",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-17.45",
+          "id": "U_flow.99",
+          "lane": "shared_approach_0",
+          "pos": "221.35",
+          "rear_route_m": "-22.45",
+          "speed": "5.06",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-30.91",
+          "id": "R_flow.199",
+          "lane": "shared_approach_0",
+          "pos": "207.89",
+          "rear_route_m": "-35.91",
+          "speed": "2.80",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-41.39",
+          "id": "R_flow.200",
+          "lane": "shared_approach_0",
+          "pos": "197.41",
+          "rear_route_m": "-46.39",
+          "speed": "0.71",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-49.69",
+          "id": "U_flow.100",
+          "lane": "shared_approach_0",
+          "pos": "189.11",
+          "rear_route_m": "-54.69",
+          "speed": "0.60",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-57.89",
+          "id": "R_flow.201",
+          "lane": "shared_approach_0",
+          "pos": "180.91",
+          "rear_route_m": "-62.89",
+          "speed": "0.27",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-65.68",
+          "id": "R_flow.202",
+          "lane": "shared_approach_0",
+          "pos": "173.12",
+          "rear_route_m": "-70.68",
+          "speed": "0.15",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-73.35",
+          "id": "U_flow.101",
+          "lane": "shared_approach_0",
+          "pos": "165.45",
+          "rear_route_m": "-78.35",
+          "speed": "0.08",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-80.94",
+          "id": "R_flow.203",
+          "lane": "shared_approach_0",
+          "pos": "157.86",
+          "rear_route_m": "-85.94",
+          "speed": "0.03",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-88.48",
+          "id": "R_flow.204",
+          "lane": "shared_approach_0",
+          "pos": "150.32",
+          "rear_route_m": "-93.48",
+          "speed": "0.01",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-95.99",
+          "id": "U_flow.102",
+          "lane": "shared_approach_0",
+          "pos": "142.81",
+          "rear_route_m": "-100.99",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-103.49",
+          "id": "R_flow.205",
+          "lane": "shared_approach_0",
+          "pos": "135.31",
+          "rear_route_m": "-108.49",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-110.99",
+          "id": "R_flow.206",
+          "lane": "shared_approach_0",
+          "pos": "127.81",
+          "rear_route_m": "-115.99",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-118.49",
+          "id": "U_flow.103",
+          "lane": "shared_approach_0",
+          "pos": "120.31",
+          "rear_route_m": "-123.49",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-125.99",
+          "id": "R_flow.207",
+          "lane": "shared_approach_0",
+          "pos": "112.81",
+          "rear_route_m": "-130.99",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-133.49",
+          "id": "R_flow.208",
+          "lane": "shared_approach_0",
+          "pos": "105.31",
+          "rear_route_m": "-138.49",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-140.99",
+          "id": "U_flow.104",
+          "lane": "shared_approach_0",
+          "pos": "97.81",
+          "rear_route_m": "-145.99",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-148.50",
+          "id": "R_flow.209",
+          "lane": "shared_approach_0",
+          "pos": "90.30",
+          "rear_route_m": "-153.50",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-156.00",
+          "id": "R_flow.210",
+          "lane": "shared_approach_0",
+          "pos": "82.80",
+          "rear_route_m": "-161.00",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-163.51",
+          "id": "U_flow.105",
+          "lane": "shared_approach_0",
+          "pos": "75.29",
+          "rear_route_m": "-168.51",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-171.01",
+          "id": "R_flow.211",
+          "lane": "shared_approach_0",
+          "pos": "67.79",
+          "rear_route_m": "-176.01",
+          "speed": "0.01",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-178.53",
+          "id": "R_flow.212",
+          "lane": "shared_approach_0",
+          "pos": "60.27",
+          "rear_route_m": "-183.53",
+          "speed": "0.03",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-186.07",
+          "id": "U_flow.106",
+          "lane": "shared_approach_0",
+          "pos": "52.73",
+          "rear_route_m": "-191.07",
+          "speed": "0.04",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-193.63",
+          "id": "R_flow.213",
+          "lane": "shared_approach_0",
+          "pos": "45.17",
+          "rear_route_m": "-198.63",
+          "speed": "0.07",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-201.28",
+          "id": "R_flow.214",
+          "lane": "shared_approach_0",
+          "pos": "37.52",
+          "rear_route_m": "-206.28",
+          "speed": "0.12",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-208.91",
+          "id": "U_flow.107",
+          "lane": "shared_approach_0",
+          "pos": "29.89",
+          "rear_route_m": "-213.91",
+          "speed": "0.14",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-216.72",
+          "id": "R_flow.215",
+          "lane": "shared_approach_0",
+          "pos": "22.08",
+          "rear_route_m": "-221.72",
+          "speed": "0.20",
+          "type": "technical_passenger"
+        }
+      ],
+      "anchor": {
+        "front_route_m": "309.70",
+        "id": "R_flow.160",
+        "lane": "ramp_storage_0",
+        "pos": "196.62",
+        "rear_route_m": "304.70",
+        "speed": "0.00",
+        "type": "technical_passenger"
+      },
+      "component_tail": {
+        "front_route_m": "84.41",
+        "id": "R_flow.190",
+        "lane": ":urban_diverge_1_0",
+        "pos": "84.41",
+        "rear_route_m": "79.41",
+        "speed": "0.07",
+        "type": "technical_passenger"
+      },
+      "connected_stopped_member_ids": [
+        "R_flow.160",
+        "R_flow.161",
+        "R_flow.162",
+        "R_flow.163",
+        "R_flow.164",
+        "R_flow.165",
+        "R_flow.166",
+        "R_flow.167",
+        "R_flow.168",
+        "R_flow.169",
+        "R_flow.170",
+        "R_flow.171",
+        "R_flow.172",
+        "R_flow.173",
+        "R_flow.174",
+        "R_flow.175",
+        "R_flow.176",
+        "R_flow.177",
+        "R_flow.178",
+        "R_flow.179",
+        "R_flow.180",
+        "R_flow.181",
+        "R_flow.182",
+        "R_flow.183",
+        "R_flow.184",
+        "R_flow.185",
+        "R_flow.186",
+        "R_flow.187",
+        "R_flow.188",
+        "R_flow.189",
+        "R_flow.190"
+      ],
+      "first_break": {
+        "follower": {
+          "front_route_m": "76.81",
+          "id": "R_flow.191",
+          "lane": ":urban_diverge_1_0",
+          "pos": "76.81",
+          "rear_route_m": "71.81",
+          "speed": "0.21",
+          "type": "technical_passenger"
+        },
+        "gap_m": "2.60",
+        "leader": {
+          "front_route_m": "84.41",
+          "id": "R_flow.190",
+          "lane": ":urban_diverge_1_0",
+          "pos": "84.41",
+          "rear_route_m": "79.41",
+          "speed": "0.07",
+          "type": "technical_passenger"
+        },
+        "reasons": [
+          "follower_not_stopped"
+        ]
+      },
+      "internal_near_boundary": [
+        {
+          "front_route_m": "32.96",
+          "id": "R_flow.196",
+          "lane": ":urban_diverge_1_0",
+          "pos": "32.96",
+          "rear_route_m": "27.96",
+          "speed": "2.89",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "16.71",
+          "id": "R_flow.197",
+          "lane": ":urban_diverge_1_0",
+          "pos": "16.71",
+          "rear_route_m": "11.71",
+          "speed": "9.23",
+          "type": "technical_passenger"
+        }
+      ],
+      "internal_to_shared_boundary": [
+        {
+          "bumper_gap_m": "14.27",
+          "follower": {
+            "front_route_m": "-2.56",
+            "id": "R_flow.198",
+            "lane": "shared_approach_0",
+            "pos": "236.24",
+            "rear_route_m": "-7.56",
+            "speed": "6.40",
+            "type": "technical_passenger"
+          },
+          "leader": {
+            "front_route_m": "16.71",
+            "id": "R_flow.197",
+            "lane": ":urban_diverge_1_0",
+            "pos": "16.71",
+            "rear_route_m": "11.71",
+            "speed": "9.23",
+            "type": "technical_passenger"
+          }
+        }
+      ],
+      "stopline_to_tail_rear_m": "238.16",
+      "time": 1740
+    },
+    {
+      "TLS": [
+        {
+          "id": "ramp_mid",
+          "phase": "0",
+          "programID": "C_STRONG",
+          "state": "G",
+          "time": "1741.00"
+        },
+        {
+          "id": "urban_tls",
+          "phase": "0",
+          "programID": "technical_placeholder",
+          "state": "Gr",
+          "time": "1741.00"
+        }
+      ],
+      "actual_shared_order": [
+        {
+          "front_route_m": "-11.72",
+          "id": "U_flow.99",
+          "lane": "shared_approach_0",
+          "pos": "227.08",
+          "rear_route_m": "-16.72",
+          "speed": "5.73",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-26.46",
+          "id": "R_flow.199",
+          "lane": "shared_approach_0",
+          "pos": "212.34",
+          "rear_route_m": "-31.46",
+          "speed": "4.45",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-38.66",
+          "id": "R_flow.200",
+          "lane": "shared_approach_0",
+          "pos": "200.14",
+          "rear_route_m": "-43.66",
+          "speed": "2.73",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-49.04",
+          "id": "U_flow.100",
+          "lane": "shared_approach_0",
+          "pos": "189.76",
+          "rear_route_m": "-54.04",
+          "speed": "0.66",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-57.31",
+          "id": "R_flow.201",
+          "lane": "shared_approach_0",
+          "pos": "181.49",
+          "rear_route_m": "-62.31",
+          "speed": "0.58",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-65.51",
+          "id": "R_flow.202",
+          "lane": "shared_approach_0",
+          "pos": "173.29",
+          "rear_route_m": "-70.51",
+          "speed": "0.17",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-73.23",
+          "id": "U_flow.101",
+          "lane": "shared_approach_0",
+          "pos": "165.57",
+          "rear_route_m": "-78.23",
+          "speed": "0.12",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-80.89",
+          "id": "R_flow.203",
+          "lane": "shared_approach_0",
+          "pos": "157.91",
+          "rear_route_m": "-85.89",
+          "speed": "0.06",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-88.46",
+          "id": "R_flow.204",
+          "lane": "shared_approach_0",
+          "pos": "150.34",
+          "rear_route_m": "-93.46",
+          "speed": "0.02",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-95.98",
+          "id": "U_flow.102",
+          "lane": "shared_approach_0",
+          "pos": "142.82",
+          "rear_route_m": "-100.98",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-103.49",
+          "id": "R_flow.205",
+          "lane": "shared_approach_0",
+          "pos": "135.31",
+          "rear_route_m": "-108.49",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-110.99",
+          "id": "R_flow.206",
+          "lane": "shared_approach_0",
+          "pos": "127.81",
+          "rear_route_m": "-115.99",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-118.49",
+          "id": "U_flow.103",
+          "lane": "shared_approach_0",
+          "pos": "120.31",
+          "rear_route_m": "-123.49",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-125.99",
+          "id": "R_flow.207",
+          "lane": "shared_approach_0",
+          "pos": "112.81",
+          "rear_route_m": "-130.99",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-133.49",
+          "id": "R_flow.208",
+          "lane": "shared_approach_0",
+          "pos": "105.31",
+          "rear_route_m": "-138.49",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-140.99",
+          "id": "U_flow.104",
+          "lane": "shared_approach_0",
+          "pos": "97.81",
+          "rear_route_m": "-145.99",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-148.50",
+          "id": "R_flow.209",
+          "lane": "shared_approach_0",
+          "pos": "90.30",
+          "rear_route_m": "-153.50",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-156.00",
+          "id": "R_flow.210",
+          "lane": "shared_approach_0",
+          "pos": "82.80",
+          "rear_route_m": "-161.00",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-163.50",
+          "id": "U_flow.105",
+          "lane": "shared_approach_0",
+          "pos": "75.30",
+          "rear_route_m": "-168.50",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-171.01",
+          "id": "R_flow.211",
+          "lane": "shared_approach_0",
+          "pos": "67.79",
+          "rear_route_m": "-176.01",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-178.51",
+          "id": "R_flow.212",
+          "lane": "shared_approach_0",
+          "pos": "60.29",
+          "rear_route_m": "-183.51",
+          "speed": "0.02",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-186.05",
+          "id": "U_flow.106",
+          "lane": "shared_approach_0",
+          "pos": "52.75",
+          "rear_route_m": "-191.05",
+          "speed": "0.02",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-193.58",
+          "id": "R_flow.213",
+          "lane": "shared_approach_0",
+          "pos": "45.22",
+          "rear_route_m": "-198.58",
+          "speed": "0.06",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-201.14",
+          "id": "R_flow.214",
+          "lane": "shared_approach_0",
+          "pos": "37.66",
+          "rear_route_m": "-206.14",
+          "speed": "0.14",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-208.82",
+          "id": "U_flow.107",
+          "lane": "shared_approach_0",
+          "pos": "29.98",
+          "rear_route_m": "-213.82",
+          "speed": "0.09",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-216.45",
+          "id": "R_flow.215",
+          "lane": "shared_approach_0",
+          "pos": "22.35",
+          "rear_route_m": "-221.45",
+          "speed": "0.27",
+          "type": "technical_passenger"
+        }
+      ],
+      "anchor": null,
+      "component_tail": null,
+      "connected_stopped_member_ids": [],
+      "first_break": null,
+      "internal_near_boundary": [
+        {
+          "front_route_m": "34.78",
+          "id": "R_flow.196",
+          "lane": ":urban_diverge_1_0",
+          "pos": "34.78",
+          "rear_route_m": "29.78",
+          "speed": "1.82",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "22.92",
+          "id": "R_flow.197",
+          "lane": ":urban_diverge_1_0",
+          "pos": "22.92",
+          "rear_route_m": "17.92",
+          "speed": "6.20",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "6.09",
+          "id": "R_flow.198",
+          "lane": ":urban_diverge_1_0",
+          "pos": "6.09",
+          "rear_route_m": "1.09",
+          "speed": "8.65",
+          "type": "technical_passenger"
+        }
+      ],
+      "internal_to_shared_boundary": [
+        {
+          "bumper_gap_m": "12.81",
+          "follower": {
+            "front_route_m": "-11.72",
+            "id": "U_flow.99",
+            "lane": "shared_approach_0",
+            "pos": "227.08",
+            "rear_route_m": "-16.72",
+            "speed": "5.73",
+            "type": "technical_passenger"
+          },
+          "leader": {
+            "front_route_m": "6.09",
+            "id": "R_flow.198",
+            "lane": ":urban_diverge_1_0",
+            "pos": "6.09",
+            "rear_route_m": "1.09",
+            "speed": "8.65",
+            "type": "technical_passenger"
+          }
+        }
+      ],
+      "stopline_to_tail_rear_m": null,
+      "time": 1741
+    },
+    {
+      "TLS": [
+        {
+          "id": "ramp_mid",
+          "phase": "2",
+          "programID": "C_STRONG",
+          "state": "r",
+          "time": "2699.00"
+        },
+        {
+          "id": "urban_tls",
+          "phase": "3",
+          "programID": "technical_placeholder",
+          "state": "ry",
+          "time": "2699.00"
+        }
+      ],
+      "actual_shared_order": [
+        {
+          "front_route_m": "-13.64",
+          "id": "U_flow.145",
+          "lane": "shared_approach_0",
+          "pos": "225.16",
+          "rear_route_m": "-18.64",
+          "speed": "5.39",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-27.21",
+          "id": "R_flow.291",
+          "lane": "shared_approach_0",
+          "pos": "211.59",
+          "rear_route_m": "-32.21",
+          "speed": "3.96",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-39.49",
+          "id": "R_flow.292",
+          "lane": "shared_approach_0",
+          "pos": "199.31",
+          "rear_route_m": "-44.49",
+          "speed": "2.58",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-49.77",
+          "id": "U_flow.146",
+          "lane": "shared_approach_0",
+          "pos": "189.03",
+          "rear_route_m": "-54.77",
+          "speed": "0.78",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-58.13",
+          "id": "R_flow.293",
+          "lane": "shared_approach_0",
+          "pos": "180.67",
+          "rear_route_m": "-63.13",
+          "speed": "0.19",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-65.85",
+          "id": "R_flow.294",
+          "lane": "shared_approach_0",
+          "pos": "172.95",
+          "rear_route_m": "-70.85",
+          "speed": "0.05",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-73.42",
+          "id": "U_flow.147",
+          "lane": "shared_approach_0",
+          "pos": "165.38",
+          "rear_route_m": "-78.42",
+          "speed": "0.05",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-80.97",
+          "id": "R_flow.295",
+          "lane": "shared_approach_0",
+          "pos": "157.83",
+          "rear_route_m": "-85.97",
+          "speed": "0.01",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-88.48",
+          "id": "R_flow.296",
+          "lane": "shared_approach_0",
+          "pos": "150.32",
+          "rear_route_m": "-93.48",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-95.99",
+          "id": "U_flow.148",
+          "lane": "shared_approach_0",
+          "pos": "142.81",
+          "rear_route_m": "-100.99",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-103.49",
+          "id": "R_flow.297",
+          "lane": "shared_approach_0",
+          "pos": "135.31",
+          "rear_route_m": "-108.49",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-110.99",
+          "id": "R_flow.298",
+          "lane": "shared_approach_0",
+          "pos": "127.81",
+          "rear_route_m": "-115.99",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-118.49",
+          "id": "U_flow.149",
+          "lane": "shared_approach_0",
+          "pos": "120.31",
+          "rear_route_m": "-123.49",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "-125.99",
+          "id": "R_flow.299",
+          "lane": "shared_approach_0",
+          "pos": "112.81",
+          "rear_route_m": "-130.99",
+          "speed": "0.00",
+          "type": "technical_passenger"
+        }
+      ],
+      "anchor": {
+        "front_route_m": "316.57",
+        "id": "R_flow.252",
+        "lane": "ramp_storage_0",
+        "pos": "203.49",
+        "rear_route_m": "311.57",
+        "speed": "0.00",
+        "type": "technical_passenger"
+      },
+      "component_tail": {
+        "front_route_m": "106.30",
+        "id": "R_flow.280",
+        "lane": ":urban_diverge_1_0",
+        "pos": "106.30",
+        "rear_route_m": "101.30",
+        "speed": "0.09",
+        "type": "technical_passenger"
+      },
+      "connected_stopped_member_ids": [
+        "R_flow.252",
+        "R_flow.253",
+        "R_flow.254",
+        "R_flow.255",
+        "R_flow.256",
+        "R_flow.257",
+        "R_flow.258",
+        "R_flow.259",
+        "R_flow.260",
+        "R_flow.261",
+        "R_flow.262",
+        "R_flow.263",
+        "R_flow.264",
+        "R_flow.265",
+        "R_flow.266",
+        "R_flow.267",
+        "R_flow.268",
+        "R_flow.269",
+        "R_flow.270",
+        "R_flow.271",
+        "R_flow.272",
+        "R_flow.273",
+        "R_flow.274",
+        "R_flow.275",
+        "R_flow.276",
+        "R_flow.277",
+        "R_flow.278",
+        "R_flow.279",
+        "R_flow.280"
+      ],
+      "first_break": {
+        "follower": {
+          "front_route_m": "98.57",
+          "id": "R_flow.281",
+          "lane": ":urban_diverge_1_0",
+          "pos": "98.57",
+          "rear_route_m": "93.57",
+          "speed": "0.15",
+          "type": "technical_passenger"
+        },
+        "gap_m": "2.73",
+        "leader": {
+          "front_route_m": "106.30",
+          "id": "R_flow.280",
+          "lane": ":urban_diverge_1_0",
+          "pos": "106.30",
+          "rear_route_m": "101.30",
+          "speed": "0.09",
+          "type": "technical_passenger"
+        },
+        "reasons": [
+          "follower_not_stopped"
+        ]
+      },
+      "internal_near_boundary": [
+        {
+          "front_route_m": "32.16",
+          "id": "R_flow.288",
+          "lane": ":urban_diverge_1_0",
+          "pos": "32.16",
+          "rear_route_m": "27.16",
+          "speed": "3.79",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "18.58",
+          "id": "R_flow.289",
+          "lane": ":urban_diverge_1_0",
+          "pos": "18.58",
+          "rear_route_m": "13.58",
+          "speed": "5.87",
+          "type": "technical_passenger"
+        },
+        {
+          "front_route_m": "2.16",
+          "id": "R_flow.290",
+          "lane": ":urban_diverge_1_0",
+          "pos": "2.16",
+          "rear_route_m": "-2.84",
+          "speed": "7.31",
+          "type": "technical_passenger"
+        }
+      ],
+      "internal_to_shared_boundary": [
+        {
+          "bumper_gap_m": "10.80",
+          "follower": {
+            "front_route_m": "-13.64",
+            "id": "U_flow.145",
+            "lane": "shared_approach_0",
+            "pos": "225.16",
+            "rear_route_m": "-18.64",
+            "speed": "5.39",
+            "type": "technical_passenger"
+          },
+          "leader": {
+            "front_route_m": "2.16",
+            "id": "R_flow.290",
+            "lane": ":urban_diverge_1_0",
+            "pos": "2.16",
+            "rear_route_m": "-2.84",
+            "speed": "7.31",
+            "type": "technical_passenger"
+          }
+        }
+      ],
+      "stopline_to_tail_rear_m": "216.27",
+      "time": 2699
+    }
+  ],
+  "selected_native_lanechange_events": [
+    {
+      "dir": "1",
+      "followerGap": "121.21",
+      "followerSecureGap": "43.26",
+      "followerSpeed": "28.94",
+      "from": "merge_section_0",
+      "id": "R_flow.70",
+      "leaderGap": "19.82",
+      "leaderSecureGap": "12.08",
+      "leaderSpeed": "28.95",
+      "origLeaderGap": "None",
+      "origLeaderSecureGap": "None",
+      "origLeaderSpeed": "None",
+      "pos": "53.85",
+      "reason": "strategic|urgent",
+      "speed": "26.47",
+      "time": "794.00",
+      "to": "merge_section_1",
+      "type": "technical_passenger"
+    },
+    {
+      "dir": "1",
+      "followerGap": "69.70",
+      "followerSecureGap": "42.50",
+      "followerSpeed": "28.94",
+      "from": "merge_section_0",
+      "id": "R_flow.71",
+      "leaderGap": "46.51",
+      "leaderSecureGap": "27.38",
+      "leaderSpeed": "26.47",
+      "origLeaderGap": "None",
+      "origLeaderSecureGap": "None",
+      "origLeaderSpeed": "None",
+      "pos": "2.34",
+      "reason": "strategic|urgent",
+      "speed": "26.62",
+      "time": "794.00",
+      "to": "merge_section_1",
+      "type": "technical_passenger"
+    },
+    {
+      "dir": "1",
+      "followerGap": "None",
+      "followerSecureGap": "None",
+      "followerSpeed": "None",
+      "from": "merge_section_0",
+      "id": "R_flow.190",
+      "leaderGap": "34.92",
+      "leaderSecureGap": "22.48",
+      "leaderSpeed": "27.21",
+      "origLeaderGap": "None",
+      "origLeaderSecureGap": "None",
+      "origLeaderSpeed": "None",
+      "pos": "11.51",
+      "reason": "strategic|urgent",
+      "speed": "26.46",
+      "time": "2056.00",
+      "to": "merge_section_1",
+      "type": "technical_passenger"
+    },
+    {
+      "dir": "1",
+      "followerGap": "None",
+      "followerSecureGap": "None",
+      "followerSpeed": "None",
+      "from": "merge_section_0",
+      "id": "R_flow.191",
+      "leaderGap": "36.87",
+      "leaderSecureGap": "20.67",
+      "leaderSpeed": "29.83",
+      "origLeaderGap": "None",
+      "origLeaderSecureGap": "None",
+      "origLeaderSpeed": "None",
+      "pos": "27.09",
+      "reason": "strategic|urgent",
+      "speed": "28.52",
+      "time": "2058.00",
+      "to": "merge_section_1",
+      "type": "technical_passenger"
+    },
+    {
+      "dir": "1",
+      "followerGap": "None",
+      "followerSecureGap": "None",
+      "followerSpeed": "None",
+      "from": "merge_section_1",
+      "id": "R_flow.190",
+      "leaderGap": "None",
+      "leaderSecureGap": "None",
+      "leaderSpeed": "None",
+      "origLeaderGap": "35.12",
+      "origLeaderSecureGap": "32.19",
+      "origLeaderSpeed": "28.69",
+      "pos": "127.40",
+      "reason": "speedGain",
+      "speed": "29.19",
+      "time": "2060.00",
+      "to": "merge_section_2",
+      "type": "technical_passenger"
+    },
+    {
+      "dir": "1",
+      "followerGap": "None",
+      "followerSecureGap": "None",
+      "followerSpeed": "None",
+      "from": "merge_section_1",
+      "id": "R_flow.191",
+      "leaderGap": "37.92",
+      "leaderSecureGap": "21.63",
+      "leaderSpeed": "31.26",
+      "origLeaderGap": "75.89",
+      "origLeaderSecureGap": "34.49",
+      "origLeaderSpeed": "29.11",
+      "pos": "115.74",
+      "reason": "speedGain",
+      "speed": "29.88",
+      "time": "2061.00",
+      "to": "merge_section_2",
+      "type": "technical_passenger"
+    }
+  ],
+  "selected_vehicle_routes": [
+    {
+      "arrival": "454.00",
+      "id": "U_flow.36",
+      "routes": [
+        "urban_in shared_approach urban_out"
+      ]
+    },
+    {
+      "arrival": "821.00",
+      "id": "R_flow.70",
+      "routes": [
+        "urban_in shared_approach ramp_storage ramp_accel merge_section main_down"
+      ]
+    },
+    {
+      "arrival": "823.00",
+      "id": "R_flow.71",
+      "routes": [
+        "urban_in shared_approach ramp_storage ramp_accel merge_section main_down"
+      ]
+    },
+    {
+      "arrival": "2081.00",
+      "id": "R_flow.190",
+      "routes": [
+        "urban_in shared_approach ramp_storage ramp_accel merge_section main_down"
+      ]
+    },
+    {
+      "arrival": "2083.00",
+      "id": "R_flow.191",
+      "routes": [
+        "urban_in shared_approach ramp_storage ramp_accel merge_section main_down"
+      ]
+    }
+  ],
+  "structural_adjudication": {
+    "confirmed_junction_artifact": "NOT_ESTABLISHED",
+    "data_label_suitability": "junction_blocking_candidate acceptable only as a candidate flag for unanchored/shared entry-region stopping, not as proven structural fault or substitute storage_cross",
+    "invalid_network_or_route_evidence": "NONE_FOUND_IN_THIS_TRACE",
+    "large_internal_gap_as_general_explanation": "NOT_SUPPORTED_BY_MAXIMUM_EXTENT_FRAME; near-boundary10.01m gap and moving vehicles must be distinguished",
+    "required_next_step": "Scientific/data reviewers should retain strict gate failure and measurement limitations; do not infer absence of queue propagation, change thresholds post hoc, or claim structural causality from this trace."
+  }
+}

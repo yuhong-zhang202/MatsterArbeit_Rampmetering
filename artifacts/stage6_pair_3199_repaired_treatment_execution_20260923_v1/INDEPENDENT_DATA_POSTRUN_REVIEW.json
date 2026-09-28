@@ -1,0 +1,112 @@
+{
+  "schema": "stage6.repaired_pair.data_postrun_review.v1",
+  "review_role": "independent_data_lifecycle_and_premerge_gate",
+  "attempt_id": "PAIR3199_R720_DELAYED_S17_REPAIRED_V5_ATTEMPT1",
+  "execution_id": "b095cce4-baba-4c40-aa79-08b5e58b9ce1",
+  "card_sha256": "0801dc1e15ade92babe33640d521ba831174210a200b9e5a66aaeb3bd472e0ef",
+  "status": "NOT_EVALUABLE",
+  "findings": {
+    "blocker": 0,
+    "major": 1,
+    "required_minor": 0
+  },
+  "confidence": {
+    "raw_hash_lifecycle_and_measured_premerge_mismatch": "High",
+    "physical_explanation_and_implications": "Moderate"
+  },
+  "pre_meaningful_R_gate": {
+    "status": "NOT_PASSED",
+    "interval": "integer-second FCD labels t=0..590; exclusive cutoff 591 s",
+    "first_R_actual_departure_and_FCD_s": 540,
+    "first_R_acceleration_lane_FCD_s": 587,
+    "first_R_through_merge_FCD_and_native_lane_change_s": 591,
+    "common_MUX_vehicle_time_records": 41042,
+    "control_only_records": 0,
+    "treatment_only_records": 0,
+    "exact_FCD_tuple_matches": 40844,
+    "different_FCD_tuples": 198,
+    "match_fraction": 0.9951756737001121,
+    "different_records_by_class": {
+      "U": 198
+    },
+    "affected_vehicle_ids": [
+      "U_flow.53",
+      "U_flow.54",
+      "U_flow.55",
+      "U_flow.56",
+      "U_flow.57",
+      "U_flow.58",
+      "U_flow.59"
+    ],
+    "m_and_x_exact_through_cutoff": true,
+    "interpretation_boundary": "Material U source/approach trajectory divergence begins with R source insertion before through-merge exposure. Its possible R-related physical explanation does not establish pre-merge equivalence or clear possible effect on later onset. Stop before post-R classifier/event/witness interpretation."
+  },
+  "lifecycle": {
+    "planned_counts": {
+      "M": 1333,
+      "U": 150,
+      "X": 75,
+      "R": 192
+    },
+    "vehroute_ids_present": 1750,
+    "tripinfo_ids_present": 1750,
+    "fcd_ids_present": 1750,
+    "all_planned_ids_present_in_all_three": true,
+    "arrived": 1750,
+    "unfinished_or_missing_arrival": 0,
+    "fcd_labels": 2700,
+    "fcd_label_range": [
+      0,
+      2699
+    ],
+    "duplicate_route_or_trip_ids": 0,
+    "duplicate_fcd_time_id_records": 0
+  },
+  "r_timing": {
+    "first_actual_departure_s": 540,
+    "first_fcd_lane": "urban_in_0",
+    "first_ramp_acceleration_lane_fcd_s": 587,
+    "first_through_merge_entry_s": 591,
+    "native_certain_entry_bins": {
+      "bin_starts_s": [
+        570,
+        600,
+        630
+      ],
+      "entry_counts": [
+        3,
+        6,
+        4
+      ],
+      "confirmation_s": 660
+    }
+  },
+  "measurement_coverage": {
+    "e1_roles": 9,
+    "e1_complete_30s_intervals_each": 90,
+    "e1_window_s": [
+      0,
+      2700
+    ],
+    "e2_roles": 2,
+    "e2_complete_30s_intervals_each": 90,
+    "e2_window_s": [
+      0,
+      2700
+    ],
+    "post_R_detector_values_interpreted": false
+  },
+  "raw_manifest_hash_verification": "PASS_25_OF_25",
+  "locked_post_R_PSL_candidate_AC_run": false,
+  "post_R_event_or_witness_interpretation": false,
+  "raw_modified": false,
+  "sumo_starts_during_review": 0,
+  "traci_starts_during_review": 0,
+  "netconvert_starts_during_review": 0,
+  "derived_receipt_path": "data/processed/stage6_pair_3199_repaired_treatment_postrun_20260923_v1/postrun_data_gate_receipt.json",
+  "derived_receipt_sha256": "112d8721f3b7b524c21c3a9071a19e0eb19d70f226bc54d875eeaa3ae83275e1",
+  "analysis_script_path": "data/processed/stage6_pair_3199_repaired_treatment_postrun_20260923_v1/analyze_pre_r_gate.py",
+  "analysis_script_sha256": "1a33b6f90d0c4702d63ad291043d0d1020bf489d253ca6722acf38d8adb09c39",
+  "report_path": "artifacts/stage6_pair_3199_repaired_treatment_execution_20260923_v1/INDEPENDENT_DATA_POSTRUN_REVIEW.md",
+  "report_sha256": "fcabdde57ceb07a181b0878007ebf2bbdf501d532f36555c9d7bdccad4a1c20e"
+}

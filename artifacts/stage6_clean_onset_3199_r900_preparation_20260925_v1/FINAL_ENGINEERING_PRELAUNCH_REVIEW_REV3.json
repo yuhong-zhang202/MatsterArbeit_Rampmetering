@@ -1,0 +1,28 @@
+{
+  "card_sha256": "c70a5f275fb7d60f9c7609395a969f4a4868fc84d6538c52fa4d17bebc5837fe",
+  "confidence": "High",
+  "evidence": {
+    "adapter_sha256": "7eafdda0a9591d36a9a8d07fc3a3f3d48801a019585272f90afa31f87ee5d907",
+    "candidate_adapter_regression": "5/5 PASS",
+    "guardian_starts": 0,
+    "offline_start_v2_negative_mutations": "extra field, wrong path, wrong resource and wrong card hash all rejected",
+    "offline_start_v2_valid_request": "PASS",
+    "output_and_reservation": "ABSENT",
+    "py_compile": "PASS",
+    "r02_readonly_preflight": "PREFLIGHT_PASS_NO_PROCESS_STARTED; launch gated pending remaining review receipts",
+    "runner_sha256": "57dec7bef9dcb065c3447548f65105ce69b93f1085287d31749c18f106e5a5b8",
+    "runtime_binding_sha256": "d44192649ecfd7747c3236337ad4918b1fb7fae30c8c65d894f6c6048eab8b5a",
+    "sumo_starts": 0
+  },
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "note": "Engineering checks passed. This receipt itself does not authorize launch; launcher remains fail-closed until all exact-hash REV3 review receipts and aggregate binding pass.",
+  "review_scope": "Final exact execution binding, offline R02 preflight, Guardian START validation, resource enforcement and one-use launch controls.",
+  "reviewer_role": "simulation_engineer",
+  "run_id": "CLEAN3199_A_R900_DELAYED_S17",
+  "schema": "stage6_clean_onset_final_engineering_prelaunch_review_v1",
+  "status": "PASS_PRELAUNCH"
+}

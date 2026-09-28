@@ -1,0 +1,38 @@
+{
+  "schema_version": "1",
+  "package_id": "stage6_ramp_induced_validation_20260922_v1",
+  "status": "OFFLINE_PREPARATION_ONLY",
+  "design_path": "docs/methodology/STAGE6_RAMP_INDUCED_BREAKDOWN_VALIDATION_PLAN.md",
+  "design_sha256": "62fb63eb49ae98b58bc45ad6bc7d60cd21fcdb73b3327c34b97c5151b01ca355",
+  "locked_method_path": "docs/methodology/FREEWAY_PROTECTABLE_STATE_EXPLORATORY_DEFINITION.md",
+  "locked_method_sha256": "22fe22170c17ce74e261e717586a458a1b5173e9deabbee925bd4c1d606adfe7",
+  "accepted_network": {
+    "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+    "sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "action": "READ_ONLY_REFERENCE_NO_NETCONVERT"
+  },
+  "historical_input_reference": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/inputs/LOC_M3350_S17_attempt1/",
+  "control_prepared_inputs": {
+    "demand": "control_input/demand_control.rou.xml",
+    "sumocfg": "control_input/scenario_control.sumocfg",
+    "additional": "control_input/scenario_control.add.xml"
+  },
+  "control_condition": {
+    "run_id": "RI3350_CTRL_S17_attempt1",
+    "qMain": 3350.4,
+    "M_number": 1396,
+    "qRamp": 0,
+    "R_number": 0,
+    "qUrban": 360,
+    "U_number": 150,
+    "qX": 180,
+    "X_number": 75,
+    "demand_window": "[0,1500)",
+    "horizon_s": 2700,
+    "step_s": 1,
+    "seed": 17,
+    "meter_program": "A_OPEN",
+    "simulation_authorized": false
+  },
+  "prohibited_in_this_package": ["SUMO", "netconvert", "TraCI", "transition_run", "seed23", "qMain_escalation", "classifier_change", "formal_protocol_change"]
+}

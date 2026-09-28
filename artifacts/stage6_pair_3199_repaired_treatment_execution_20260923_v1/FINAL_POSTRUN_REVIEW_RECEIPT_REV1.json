@@ -1,0 +1,100 @@
+{
+  "schema_version": "1",
+  "final_contract_outcome": "NOT_EVALUABLE",
+  "run_id": "PAIR3199_R720_DELAYED_S17_REPAIRED_V5_ATTEMPT1",
+  "scenario_id": "A_OPEN_DELAYED_R720_REPAIRED_MATCHED_INPUTS",
+  "attempt_id": "PAIR3199_R720_DELAYED_S17_REPAIRED_V5_ATTEMPT1",
+  "execution_id": "b095cce4-baba-4c40-aa79-08b5e58b9ce1",
+  "card_sha256": "0801dc1e15ade92babe33640d521ba831174210a200b9e5a66aaeb3bd472e0ef",
+  "run_summary": {
+    "sumo_starts": 1,
+    "traci_starts": 0,
+    "netconvert_starts": 0,
+    "retry_count": 0,
+    "return_code": 0,
+    "runtime_seconds": 24.370309,
+    "payload_bytes": 23936627,
+    "wallclock_stop_trigger_seconds": 90,
+    "output_stop_trigger_bytes": 75000000,
+    "stop_trigger_fired": false,
+    "horizon_seconds": 2700
+  },
+  "engineering_review": {
+    "status": "ENGINEERING_POSTRUN_INTEGRITY_PASS",
+    "manifest_files_verified": "25/25",
+    "required_output_roles": "18/18"
+  },
+  "data_review": {
+    "disposition": "NOT_EVALUABLE",
+    "pre_meaningful_R_gate": "NOT_PASSED",
+    "findings": {
+      "blocker": 0,
+      "major": 1,
+      "required_minor": 0
+    },
+    "pre_exposure_interval_seconds": "[0,591)",
+    "common_vehicle_second_keys": 41042,
+    "exact_FCD_tuples": 40844,
+    "different_FCD_tuples": 198,
+    "difference_fraction": 0.0048243262998879195,
+    "different_class": "U only",
+    "affected_ids": [
+      "U_flow.53",
+      "U_flow.54",
+      "U_flow.55",
+      "U_flow.56",
+      "U_flow.57",
+      "U_flow.58",
+      "U_flow.59"
+    ],
+    "M_and_X_exact": true,
+    "first_U_difference_second": 540,
+    "first_actual_R_departure_second": 540,
+    "first_R_acceleration_lane_frame_second": 587,
+    "first_R_through_merge_lane_change_second": 591,
+    "post_R_PSL_AC_run": false,
+    "causal_interpretation_run": false
+  },
+  "scientific_review": {
+    "disposition": "NOT_EVALUABLE",
+    "findings": {
+      "blocker": 0,
+      "major": 1,
+      "required_minor": 0
+    },
+    "confidence": "High for contract disposition; Moderate for physical explanation"
+  },
+  "prelaunch_reviews": {
+    "engineering": "PASS_PRELAUNCH 0/0/0",
+    "data_provenance": "PASS_PRELAUNCH 0/0/0",
+    "scientific": "PASS_PRELAUNCH 0/0/0"
+  },
+  "historical_prior_attempt": {
+    "disposition": "NOT_EVALUABLE",
+    "card_or_raw_reused": false,
+    "prior_output_overwritten": false
+  },
+  "interpretation_boundary": "The planned M/U/X inputs matched in v5, but realized U trajectories diverged from R actual departure until before first meaningful R through-merge exposure. The pair did not pass the preregistered pre-merge trajectory gate. No post-R locked classifier result or witness/no-witness inference is available.",
+  "prohibited_followup_started": false,
+  "formal_protocol_modified": false,
+  "bound_hashes_sha256": {
+    "final_card": "0801dc1e15ade92babe33640d521ba831174210a200b9e5a66aaeb3bd472e0ef",
+    "prelaunch_review_binding": "75ad76dd8b8c0ca957e8ae0673e258de4358c6aa8bd5d044412a243307557032",
+    "engineering_integrity_review": "d0db9324efd940985aae22ea76918cc734444440d255d1911c81ba5e353806c7",
+    "engineering_integrity_json": "37d58b0b8ce9e4cad6504378a2fa425b917eb3398d4cb5b20d8ccec98de7ac2b",
+    "engineering_provenance_receipt": "d4c1d8eb600ebea1dd3dd693b16fbf949641e9bd5a169b8c9b70f892a78aac4c",
+    "data_review": "fcabdde57ceb07a181b0878007ebf2bbdf501d532f36555c9d7bdccad4a1c20e",
+    "data_review_json": "554cbe2443cacdb93ce2393ae50d526fadbd4829573036e25e2962268dee27ca",
+    "data_gate_receipt": "112d8721f3b7b524c21c3a9071a19e0eb19d70f226bc54d875eeaa3ae83275e1",
+    "data_analyzer": "1a33b6f90d0c4702d63ad291043d0d1020bf489d253ca6722acf38d8adb09c39",
+    "scientific_review": "95382de387c436dc0980dcc263b1e5a5ceb586abcfd0123ecdc428a9e0fac7a6",
+    "scientific_review_json": "d9f0614687656c81316e3f481efc248c14d8976165992f2e156a9aee70e7f117",
+    "output_manifest": "f36f336473792c2af246abf75c3b7b2e9217abb537e7b42e15685e6af46b7173",
+    "execution_receipt": "eb8444594881f4d02716c7312890e72caa6db9d208e72f315cefe090bfc34e2a",
+    "v5_invariant_report": "509f1a46873b6922ce22e18f4100fa2dcb84a632d80ee9a014750efc6c857d54",
+    "witness_contract": "958890a7dd017110787a85d77ebfa3e6dac2b7d862f0fd91f6bafb7cf1738d9a"
+  },
+  "raw_output_directory": "data/raw/stage6_bounded_pair_repaired_20260923_v2/PAIR3199_R720_DELAYED_S17_REPAIRED_V5_ATTEMPT1/outputs",
+  "raw_data_modified": false,
+  "stops_after_reviews": true
+}

@@ -1,0 +1,35 @@
+{
+  "schema": "stage6_minimal3350_e1_r900_retry3_final_read_only_preflight_v1",
+  "run_id": "MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY3",
+  "card_sha256": "c5e94245dc44cc190dbcb2e402c28213c7e7e3ea90edf35e708a8d332209f31a",
+  "status": "PREFLIGHT_PASS_NO_PROCESS_STARTED",
+  "launchable_now": false,
+  "process_starts": {"guardian": 0, "sumo": 0},
+  "review_validation": {
+    "engineering": "PASS",
+    "data_provenance": "PASS",
+    "scientific": "FAIL_SCHEMA_FIELD_MISMATCH"
+  },
+  "scientific_receipt_path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev20/SCIENTIFIC_PRELAUNCH_REVIEW.json",
+  "scientific_receipt_sha256": "0edb6d22d890802517722751e66520d520238fb844086bf2ef5969891b4a1e16",
+  "scientific_receipt_observed": {
+    "schema": "stage6_minimal3350_e1_r900_retry3_scientific_prelaunch_review_v1",
+    "status": "PASS_PRELAUNCH",
+    "disposition": null,
+    "findings": {"blocker": 0, "major": 0, "required_minor": 0},
+    "card_sha256": "c5e94245dc44cc190dbcb2e402c28213c7e7e3ea90edf35e708a8d332209f31a"
+  },
+  "runner_expected_scientific_receipt": {
+    "schema": "stage6_minimal3350_e1_r900_retry3_scientific_prelaunch_review_v1",
+    "field": "disposition",
+    "value": "PASS_PRELAUNCH"
+  },
+  "review_binding_path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev20/FINAL_PRELAUNCH_REVIEW_BINDING.json",
+  "review_binding_sha256": "35c63637ae4a8d1b29d4b19c0ab301780998324de0c0961efa40aa9f8f7e152c",
+  "nested_reference_validation": "PASS",
+  "guardian_request_validation": "PASS",
+  "configured_output_paths": 20,
+  "output_directory_exists": false,
+  "reservation_exists": false,
+  "note": "No process was launched. Do not launch until the exact independent scientific receipt is available in the fail-closed runner schema or a freshly reviewed runner/card revision resolves this schema mismatch."
+}

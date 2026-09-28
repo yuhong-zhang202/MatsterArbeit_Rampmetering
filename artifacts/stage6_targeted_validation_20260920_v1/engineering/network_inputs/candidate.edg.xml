@@ -1,0 +1,15 @@
+<?xml version='1.0' encoding='utf-8'?>
+<edges>
+  <edge id="main_up" from="main_in" to="freeway_merge" numLanes="2" priority="3" speed="33.33" width="3.2" spreadType="right" shape="-800,0 600,0" />
+  <edge id="main_down" from="merge_end" to="main_out" numLanes="2" priority="3" speed="33.33" width="3.2" spreadType="right" shape="900,0 1400,0" />
+  <edge id="urban_in" from="urban_in" to="urban_tls" numLanes="1" priority="2" speed="13.89" width="3.2" spreadType="right" shape="200,-900 200,-500" />
+  <edge id="shared_approach" from="urban_tls" to="urban_diverge" numLanes="1" priority="2" speed="13.89" width="3.2" spreadType="right" shape="200,-500 200,-250" />
+  <edge id="urban_out" from="urban_diverge" to="urban_out" numLanes="1" priority="2" speed="13.89" width="3.2" spreadType="right" shape="200,-250 650,-250" />
+  <edge id="cross_in" from="cross_in" to="urban_tls" numLanes="1" priority="1" speed="13.89" width="3.2" spreadType="right" shape="-250,-500 200,-500" />
+  <edge id="cross_out" from="urban_tls" to="cross_out" numLanes="1" priority="1" speed="13.89" width="3.2" spreadType="right" shape="200,-500 650,-500" />
+  <edge id="ramp_storage" from="urban_diverge" to="ramp_mid" numLanes="1" priority="2" speed="22.22" width="3.2" spreadType="right" shape="260,-160 340,-80 420,-35" />
+  <edge id="ramp_accel" from="ramp_mid" to="freeway_merge" numLanes="1" priority="2" speed="27.78" width="3.2" spreadType="right" shape="500,-15 550,-5 600,-6.4" />
+  <edge id="merge_section" from="freeway_merge" to="merge_end" numLanes="3" priority="3" speed="33.33" width="3.2" spreadType="right" shape="600,0 900,0">
+    <lane index="1" changeRight="authority" />
+  </edge>
+</edges>

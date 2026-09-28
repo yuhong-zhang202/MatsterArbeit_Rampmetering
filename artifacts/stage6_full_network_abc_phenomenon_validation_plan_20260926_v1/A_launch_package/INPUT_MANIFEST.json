@@ -1,0 +1,74 @@
+{
+  "common_materialized_demand": {
+    "check_report_path": "artifacts/stage6_full_network_abc_phenomenon_validation_plan_20260926_v1/A_launch_package/data_binding/DATA_BINDING_CHECK_REPORT.json",
+    "check_report_sha256": "ef89148273de854637c8fe24a192e8de9e0b5529a838897c2d46c1d77de44583",
+    "data_manifest_path": "artifacts/stage6_full_network_abc_phenomenon_validation_plan_20260926_v1/A_launch_package/data_binding/DATA_BINDING_MANIFEST.json",
+    "data_manifest_sha256": "3caa827b05726b6fe38cdac896ca6a565d664b6d30f868d0fc9777603bc067c5",
+    "demand_path": "data_binding/demand_A_materialized.rou.xml",
+    "demand_sha256": "69c10dafc607f616585d36b16a00a4c7d4e82eefc5c28878ea8e9dfe3c16c769",
+    "vehicle_binding_path": "artifacts/stage6_full_network_abc_phenomenon_validation_plan_20260926_v1/A_launch_package/data_binding/vehicle_binding.csv",
+    "vehicle_binding_sha256": "ab66c8924502d0feee94fced33da3d851c895c9df9fec356be50a12ae95cdacc"
+  },
+  "design_plan_path": "artifacts/stage6_full_network_abc_phenomenon_validation_plan_20260926_v1/FULL_NETWORK_ABC_PHENOMENON_VALIDATION_PLAN.md",
+  "design_plan_sha256": "03e9a4848ed499372f2ec2d4111a7d97070b9306503cc238781402ae1edc7fdd",
+  "historical_R0_disposition": "CONTROL_NOT_EVALUABLE; preserve; exploratory low-pressure comparator only",
+  "inputs": {
+    "additional": {
+      "bytes": 4022,
+      "path": "inputs/scenario.add.xml",
+      "sha256": "eda6351f5795269b1406945963eeeabe428737a1e3e8cfaab0363ff74434f0ee"
+    },
+    "demand": {
+      "bytes": 311089,
+      "path": "data_binding/demand_A_materialized.rou.xml",
+      "sha256": "69c10dafc607f616585d36b16a00a4c7d4e82eefc5c28878ea8e9dfe3c16c769"
+    },
+    "network": {
+      "bytes": 12814,
+      "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+      "sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca"
+    },
+    "sumocfg": {
+      "bytes": 2844,
+      "path": "inputs/scenario.sumocfg",
+      "sha256": "66b4932e3e247bfeacdb709a667e6db5bb59820954dec8fc1e3509b88f2923a5"
+    }
+  },
+  "output_role_source": {
+    "path": "artifacts/stage6_full_network_abc_phenomenon_validation_plan_20260926_v1/A_launch_package/output_roles.json",
+    "sha256": "811391a46c88511018fd698ac036d14deef0cf5169b8c722995e746815419dec"
+  },
+  "package_id": "stage6_full_network_abc_phenomenon_validation_plan_20260926_v1",
+  "pair_id": "FULLNET3350_ABC_S17",
+  "phenomenon_gate_path": "artifacts/stage6_phenomenon_level_abc_gate_20260925_v1/PHENOMENON_LEVEL_ABC_GATE.md",
+  "phenomenon_gate_sha256": "d202b0451d53b808202132f5d97213cba9eb75ffb6b196dc2c7869a21b201f3a",
+  "run_id": "FULLNET3350_A_R900_S17",
+  "runner": {
+    "path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+    "sha256": "ca5efa868df126a0628141fc0b95acb4754fd6cf706f55329323ff8acbeb990e"
+  },
+  "runtime_binding": {
+    "path": "artifacts/stage6_full_network_abc_phenomenon_validation_plan_20260926_v1/A_launch_package/runtime_binding.json",
+    "sha256": "2eff0a21aaf0025c49a3c4670c915e658bd3f22108c624eb3fb953714bf4ada9"
+  },
+  "schema_version": "1",
+  "starts": {
+    "Guardian": 0,
+    "SUMO": 0,
+    "TraCI": 0,
+    "netconvert": 0
+  },
+  "status": "DRAFT_NOT_AUTHORIZED",
+  "target_condition": {
+    "A_meter_program": "A_OPEN",
+    "R_count": 240,
+    "R_window_s": "[540,1500)",
+    "U": 150,
+    "X": 75,
+    "horizon_s": 2700,
+    "qMain_veh_per_h": 3350.4,
+    "qRamp_veh_per_h": 900,
+    "seed": 17,
+    "step_s": 1
+  }
+}

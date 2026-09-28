@@ -1,0 +1,22 @@
+{
+  "status": "PASS_POSTRUN_ENGINEERING",
+  "card_sha256": "00e095217e6dd66581707439c81ba15204c69e12de7d0f4a5f38e0fc04607bed",
+  "execution_receipt_sha256": "b4f181c499eb255090c7aa4cd7fa7c30512b474739958ea061d3edba4917c2da",
+  "output_manifest_sha256": "df6e663e91cb82c91ce7db1ba855f979a1289262cdf0efe817ac76a9910de000",
+  "open_findings": {"blocker": 0, "major": 0, "required_minor": 0},
+  "checks": {
+    "returncode_and_horizon": "PASS; rc=0, 0-2700 s",
+    "one_start_no_retry": "PASS; consumed=1, automatic_retry=false, no second attempt",
+    "manifest_and_output_sizes": "PASS; 24 manifest-bound files match; final directory 26679773 bytes",
+    "xml_roles_and_grids": "PASS; 18 XML roles, 11 E1/E2 files x 90 intervals",
+    "fcd_queue_summary_tls": "PASS; 2700 records/steps and 5400 TLS states",
+    "vehicle_outputs": "PASS; 1921 tripinfo and vehroute identities",
+    "logs_and_anomalies": "PASS; SUMO 1.26.0, 1921 inserted, no running/waiting, zero collisions/teleports/discarded, empty error/stdout/stderr",
+    "output_path_escape_and_stop_markers": "PASS; no escape, final_output_violation or physical_stop_request"
+  },
+  "limitations": [
+    "execution receipt does not persist final_directory_bytes although independent final size is recorded",
+    "process-table inspection unavailable in environment; completion receipt, no-retry reservation and no second attempt provide available evidence"
+  ],
+  "scientific_decision": "not assessed by engineering review"
+}

@@ -1,0 +1,46 @@
+{
+  "status": "PASS_PRELAUNCH",
+  "run_id": "MINIMAL3199_CTRL_S17_TECH_RETRY1",
+  "card_sha256": "027d7dc7b74561648ec6c0799abd64a99b7fb746273d1ecb78905c00c082c672",
+  "disposition": "PASS",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "confidence": "High",
+  "manifest_sha256": "1c718fba99ce217bccc69bd7adb4e7b555c92d034006c065c9762c882d73accc",
+  "runtime_binding_sha256": "5fdd6901c089d0df1346e0d01131c37d75682fe134f5c354d5ec2f3e74834052",
+  "runner_sha256": "25182434f7665778bb0c0a5dcefe39a5c3f0a1eb481935d3393e70ee4fddc428",
+  "input_invariants": {
+    "qMain_veh_per_h": 3199.2,
+    "seed": 17,
+    "TLS_program": "A_OPEN",
+    "R_veh_per_h": 0,
+    "U": 0,
+    "X": 0,
+    "M_count_each_arm": 1333,
+    "M_vehicle_identity_tuple_mismatches": 0,
+    "control_extra_identity_count": 0,
+    "treatment_only_demand": "R_flow.0-191",
+    "treatment_R_count": 192,
+    "explicit_zero_status": "PASS_ZERO"
+  },
+  "staged_inventory": {
+    "file_count": 2,
+    "sumocfg_bytes": 2802,
+    "sumocfg_sha256": "1906f98e1e108a9019919d29fa4c9c6086659fdbedd231d16531ec275505650c",
+    "additional_bytes": 3940,
+    "additional_sha256": "6b93195465eb66462394905fcf6bd450c8e3b863517bef436f5177f0a54c9470",
+    "replacement_counts": {
+      "sumocfg_output_path": 8,
+      "sumocfg_additional_path": 1,
+      "additional_xml_output_path": 12
+    },
+    "old_path_residuals": 0
+  },
+  "source_receipt_scope": "Historical rev3 input/design review only; its embedded runner hash is historical and not the current execution binding. Current runner binding is independently verified.",
+  "fresh_consumption_exists": false,
+  "prior_failed_attempt_preserved": true,
+  "processes_started": false
+}

@@ -1,0 +1,42 @@
+{
+  "authorization": {
+    "execution_authorized": false,
+    "netconvert_starts": 0,
+    "run_command": null,
+    "sumo_starts": 0,
+    "traci_starts": 0
+  },
+  "card_path": "artifacts/stage6_pair_3199_repaired_treatment_preparation_20260923_v1/PAIR_3199_R720_DELAYED_S17_CARD_DRAFT_NOT_AUTHORIZED_REV1.json",
+  "card_sha256": "593cabd4c82a8b7b735e6ebc000d836bebab80a9c8962e20f2865a5bbf4dbed0",
+  "matched_inputs": {
+    "exact_common_records": 1558,
+    "treatment_only_R_count": 192,
+    "treatment_only_ids": "R_flow.0\u2013R_flow.191",
+    "v5_common_records": 1558
+  },
+  "preflight_path": "artifacts/stage6_pair_3199_repaired_treatment_preparation_20260923_v1/R02_READONLY_PREFLIGHT_REV1.json",
+  "preflight_status": "PREFLIGHT_PASS_NO_PROCESS_STARTED",
+  "prelaunch_plan": {
+    "post_R_witness_analysis_only_after_pre_R_gate": true,
+    "pre_R_MUX_trajectory_equivalence_required": true,
+    "unexplained_material_pre_R_difference": "NOT_EVALUABLE"
+  },
+  "receipt_id": "PAIR3199_REPAIRED_TREATMENT_ENGINEERING_PRELAUNCH_REV1",
+  "resource_proposal": {
+    "output_size_stop_limit_bytes_decimal": 75000000,
+    "overshoot_accepted": true,
+    "polling_ms": 100,
+    "status": "PROPOSED_NOT_AUTHORIZED",
+    "wallclock_stop_limit_s": 90
+  },
+  "run_id": "PAIR_3199_R720_DELAYED_S17",
+  "runner_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+  "runner_sha256": "86faab71ea187be4f46fb89d2436fbfb679324297166c63ee376805c362fbdcf",
+  "runtime_binding_path": "artifacts/stage6_pair_3199_repaired_treatment_preparation_20260923_v1/runtime_bindings/PAIR_3199_R720_DELAYED_S17_PRELAUNCH_REV1.json",
+  "runtime_binding_sha256": "d1d86b35ffa0a55ccb4ed5ed0f4e654fc6a1ecfc0c722cdbd802ed0cf465932f",
+  "schema_version": "1",
+  "status": "ENGINEERING_PRELAUNCH_PASS_PREPARATION_ONLY_NOT_AUTHORIZED",
+  "test_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/test_runner.py",
+  "test_sha256": "eae75661d48282ba69913847c9e2482a3fbbbdd5040091d072eea81d4dda2fe9",
+  "tests": "22/22 PASS"
+}

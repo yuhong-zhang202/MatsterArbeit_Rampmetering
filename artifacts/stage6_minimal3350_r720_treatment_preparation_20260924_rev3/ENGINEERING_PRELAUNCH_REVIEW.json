@@ -1,0 +1,78 @@
+{
+  "bindings": {
+    "card_manifest_sha256": "56c06510e442dcc0f12c7a63f914957b964b64d5221d0c4d80779fbd9bc6aba3",
+    "input_hashes": {},
+    "manifest_sha256": "56c06510e442dcc0f12c7a63f914957b964b64d5221d0c4d80779fbd9bc6aba3",
+    "receipt_records_request_hash": true,
+    "request_receipt_sha256": "e3f5cd3f83b3e68077f8b74cb35daa822b137001d7bd98d24b75f76b141709f4",
+    "request_runner_sha256": "5181e5873774e91437ad42313225042264fdae55e43e87738b75f8c75cc171a7",
+    "request_runtime_sha256": "549a5f7c65a82f5626a40938145607816b3996404cd827a2d00a0c099fe10eb9",
+    "request_sha256": "630b18782bc598fea342da46f7dba5daa39e1d076a1f5b5defdb128b9e0c73af",
+    "runner_hash_match": true,
+    "runner_launch_target_is_bound_copy": true,
+    "runner_path": "artifacts/stage6_minimal3350_r720_treatment_preparation_20260924_rev3/r02_single_start/runner.py",
+    "runner_sha256": "5181e5873774e91437ad42313225042264fdae55e43e87738b75f8c75cc171a7",
+    "runtime_binding_sha256": "549a5f7c65a82f5626a40938145607816b3996404cd827a2d00a0c099fe10eb9"
+  },
+  "card_sha256": "f151ea300bd236aa30ef0baec9980a2c28b01e1e80bfaa4aa2f080a26934783c",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "focused_tests": {
+    "command": ".venv/bin/python -m unittest tests.test_minimal3350_treatment_adapter tests.test_minimal3350_treatment_binding",
+    "failed": 0,
+    "passed": 14,
+    "status": "PASS"
+  },
+  "limitations": [
+    "This engineering review does not substitute for data/provenance or independent scientific prelaunch review.",
+    "No SUMO, Guardian, TraCI, or netconvert process was launched."
+  ],
+  "matched_inputs": {
+    "M_count": 1396,
+    "M_exact_common_matches": 1396,
+    "R_count": 192,
+    "R_schedule_ms": [
+      540000,
+      1495000,
+      5000
+    ],
+    "U_explicit_zero": true,
+    "X_explicit_zero": true,
+    "demand_sha256": "569b9fb152b060c848b9c8da2c2c7d94e68da4fa7e7ab4c5a03a869f05ecce53",
+    "treatment_only_delta": "R_flow.0..R_flow.191"
+  },
+  "output_targets": {
+    "all_absent": true,
+    "all_resolve_under_bound_output_directory": true,
+    "count": 18,
+    "output_directory": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260924_v11/MINIMAL3350_R720_DELAYED_S17/outputs",
+    "output_parent_absent": true,
+    "role_source_sha256": "92ac74b6e51146942e76e29ea4e149599a3c833c2d496002ee8a4b4f2b76f043",
+    "unique": true
+  },
+  "resource_contract": {
+    "output_bytes": 75000000,
+    "overshoot_accepted": true,
+    "poll_interval_ms": 100,
+    "wallclock_s": 90
+  },
+  "run_id": "MINIMAL3350_R720_DELAYED_S17",
+  "schema": "stage6_minimal3350_treatment_engineering_prelaunch_review_v1",
+  "scope": "Engineering exact-card, adapter, runner/runtime/request/hash/output-path/resource/preflight checks only; no process launch.",
+  "static_preflight": {
+    "launchable_now": false,
+    "review_gate": "WAITING_FOR_REQUIRED_REVIEWS",
+    "simulator_process_started": false,
+    "starts": {
+      "guardian": 0,
+      "netconvert": 0,
+      "sumo": 0,
+      "traci": 0
+    },
+    "status": "PREFLIGHT_PASS_NO_PROCESS_STARTED"
+  },
+  "status": "PASS_PRELAUNCH"
+}

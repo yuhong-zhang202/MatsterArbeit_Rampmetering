@@ -1,0 +1,39 @@
+{
+  "schema": "minimal3350_r720_treatment_scientific_postrun_review_v1",
+  "run_id": "MINIMAL3350_R720_DELAYED_S17",
+  "control_run_id": "MINIMAL3350_CTRL_S17",
+  "treatment_card_sha256": "d610c5c47c440014a3b8254b36de8d93a48c5d32be928746b93f50003ebcb125",
+  "disposition": "NO_WITNESS",
+  "findings": {"blocker": 0, "major": 0, "required_minor": 0},
+  "confidence": {"locked_classification_and_pair_evaluability": "High", "physical_interpretation_and_generalization": "Moderate"},
+  "reviewer": "independent project-scoped scientific_reviewer (read-only)",
+  "scope": "3350.4 U=X=0 minimal pair only; no escalation outcome inspected.",
+  "checks": {
+    "pre_R_match": {"status": "PASS", "interval_s": "[0,540)", "identical_vehicle_second_tuples_per_arm": 34491, "missing_or_different": 0},
+    "lifecycle": {"M_inserted_arrived": "1396/1396 each arm", "R_inserted_arrived": "192/192 treatment", "unfinished": 0, "FCD_frames": 2700},
+    "R_exposure": {"first_departure_s": 540, "first_through_lane_entry_s": 582, "unique_entries_bins": [4, 5, 6], "T3_confirmed_s": 660},
+    "first_M_divergence_s": 584,
+    "locked_classifier": {"P_qualifying": 0, "S_qualifying": 0, "Candidate_A": 0, "Candidate_C_warning_bins_control": 28, "Candidate_C_warning_bins_treatment": 65, "qualifying_State1_event": false},
+    "alternatives": {"all_vehicles_arrived": true, "downstream_E1_passage": true, "mainline_red_records": 0, "ramp_mid_green": true, "queue_lane_arrays_available": false, "upstream_E1_count_each_arm": 1397, "planned_M": 1396, "identity_attribution_for_plus_one": false}
+  },
+  "limitations": [
+    "First small M divergence at 584 s followed first R through-lane entry at 582 s but preceded T3 confirmation at 660 s; no qualifying event ordering was established.",
+    "Candidate C warning differences and isolated P/S low bins are retained but do not meet locked sustained-event criteria.",
+    "Queue lane arrays are empty; queue morphology and queue absence cannot be claimed.",
+    "Upstream E1 reports one excess count in both arms without identity attribution.",
+    "One fixed seed/vector only; copied speedFactors establish within-pair matching, not an independent or representative U=X=0 random draw."
+  ],
+  "evidence_hashes": {
+    "engineering_postrun": "d5fdb0a361d32fd7c379dda979adde39f358fc1d533bdf6b0661c849275ef5c0",
+    "data_postrun": "0bee9d1b1b84e8981b0a8a9a6b21e23e7642f3e2f800d7500faf93f091dd560c",
+    "control_scientific_review": "8078d5ee902eb355623d29e7cc78c7d9cdf61e918903d9a3040fe0f320ae3738",
+    "locked_analysis": "036697e17f92fc8c7f4e4ff2d30a274e04fdb84bc3fec6ca2e41ebfea14a1e49",
+    "method": "22fe22170c17ce74e261e717586a458a1b5173e9deabbee925bd4c1d606adfe7",
+    "treatment_manifest": "b2badc4314347e06b2d5beaa63dc937845a89c1398f42671407b26a62588a885",
+    "control_manifest": "48456bb607b4e4679dd13274696c60ab7f5ae020aa6ecbf2462110e1fdcd752f",
+    "treatment_fcd": "fdad0ad4265de9838e18f14236e37d92d3433c257531b2b9eac324dccfeecf03",
+    "control_fcd": "f3e5d2fa4201a915df4f77ce7181e4ecd1d9f92775a19dbc2f0aa77093bd1a0c"
+  },
+  "raw_modified": false,
+  "processes_started_by_reviewer": 0
+}

@@ -1,0 +1,50 @@
+{
+  "schema_version": "1",
+  "readiness_id": "R03",
+  "control_run_id": "RI3350_CTRL_S17_attempt1",
+  "transition_run_id": "RI3350_RAMP_S17_attempt1_NOT_MATERIALIZED",
+  "status": "PASS_PLAN_AND_FIXTURES_ACTUAL_REALIZATION_UNKNOWN",
+  "plan_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r01_r03/R03_PAIRED_RANDOMIZATION_PLAN.md",
+  "plan_sha256": "5aeeca8265edd5f9fa18b72168a2a12961460388b76d75c7b88de29592a7f936",
+  "fixture_script_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r01_r03/test_r01_r03_fixtures.py",
+    "fixture_script_sha256": "5579ed7c355173c78df1cb1cc1aa57dff8aa7a983c5e48e52ee1386d373fbd86",
+  "comparator_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r01_r03/paired_matching.py",
+    "comparator_sha256": "5dd6a4184883a89ef1ee1d7495a84ab1eb89ef284a75467932dcc0a773e7c454",
+  "prelaunch_contract": {
+    "same_seed": 17,
+    "M_U_X_scheduled_counts": {"M": 1396, "U": 150, "X": 75},
+    "demand_window_s": "[0,1500)",
+    "horizon_s": 2700,
+    "step_s": 1,
+    "network_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "explicit_vehicle_attributes_and_routes": "must be identical; compare by class + vehicle ID",
+    "treatment_difference": "R absent in control; transition R192 over [540,1500)",
+    "stochastic_attributes": "do not pin or rewrite speedFactor; same seed does not guarantee common random numbers"
+  },
+  "fixture_results": {
+    "exact_match": "PASS",
+    "explicit_attribute_mismatch_visible": "PASS",
+    "pre_R_trajectory_value_mismatch_visible": "PASS",
+    "missing_ID_visible": "PASS",
+    "duplicate_ID_rejected": "PASS",
+    "required_field_missing_both_sides_incomplete": "PASS",
+    "required_field_missing_one_side_incomplete": "PASS",
+    "speedFactor_precise_mismatch_visible": "PASS",
+    "speedFactor_precise_missing_incomplete": "PASS",
+    "observed_pair_rows": 0
+  },
+  "postrun_required_fields": [
+    "scheduled and actual class/vehicle ID sets",
+    "scheduled time, route/type, explicit depart attributes",
+    "precise speedFactor from authoritative raw output",
+    "actual insertion/departure",
+    "FCD [0,540) time, lane, pos/x, speed for common M/U/X IDs",
+    "source file paths and SHA-256 for each arm"
+  ],
+  "limitations": [
+    "No transition input is present/materialized in this subtask; its input parity remains unverified.",
+    "No actual pair outputs exist for this audit; all realized matching remains UNKNOWN.",
+    "No numerical tolerance is added; no vehicle is dropped to force a match.",
+    "Post-R differences are outcomes and are not required to match."
+  ]
+}

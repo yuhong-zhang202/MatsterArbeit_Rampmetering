@@ -1,0 +1,20 @@
+{
+  "card_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision04/RUNTIME_VALIDATION_CARD.json",
+  "card_sha256": "0f74720eacd86d95490a9a32921f497a8e673453078dc71bc798dd1562c42557",
+  "cumulative_SUMO_starts_ceiling": 5,
+  "explicit_ceiling_change": "5 is one above revision03 operational ceiling 4; prior cumulative time/byte stop lines remain unchanged",
+  "max_SUMO_starts": 3,
+  "monitoring_semantics": "polling_50ms_possible_overshoot_preserved",
+  "prior_consumed_SUMO_starts": 2,
+  "provenance_note": "Standing user authorization covers evidence-based technical smoke troubleshooting and conditional limited dynamic validation. Primary binds this exact card after independent review; no claim that the user personally reviewed this later hash. Maximum scope is one smoke then R0/S17 and R720/S17 only behind complete gates, no automatic retry.",
+  "review_receipt": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision04/static_final_review_receipt.json",
+    "bytes": 4021,
+    "sha256": "1809ec3b36fa7a1e88e059dbf1d8166a1dc26ee4aa385abd1c5e347554ce49bb"
+  },
+  "scope": "P2 smoke then seed17 R0/R720 only",
+  "status": "user-approved",
+  "synthetic_test_only": false,
+  "user_approval_quote": "smoke排查原因然后继续尝试",
+  "prior_user_authorization_quote": "静态审查通过后，直接启动真实 SUMO 完成 smoke，不需要再次向我确认；如果 smoke 通过，立即继续进行一次有限的真实 SUMO 动态验证。若发现新的结构性问题，应停止并报告。"
+}

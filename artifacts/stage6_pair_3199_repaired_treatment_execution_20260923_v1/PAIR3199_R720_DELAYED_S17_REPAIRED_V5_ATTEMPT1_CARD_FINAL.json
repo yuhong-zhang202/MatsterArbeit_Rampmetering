@@ -1,0 +1,219 @@
+{
+  "LOW_R_BACKGROUND_ACCEPTABLE_required_for_release": false,
+  "TLS_program": "A_OPEN",
+  "approval_required": false,
+  "attempt_id": "PAIR3199_R720_DELAYED_S17_REPAIRED_V5_ATTEMPT1",
+  "authorization_record": {
+    "attempt_id": "PAIR3199_R720_DELAYED_S17_REPAIRED_V5_ATTEMPT1",
+    "authorization": "USER_AUTHORIZED_EXACTLY_ONE_REPAIRED_TREATMENT_START",
+    "authorization_source": "Current user message relayed in the active task: explicitly accepted 90s / 75,000,000-byte contract and authorized exactly one repaired treatment start, with prelaunch reviews required before launch.",
+    "exact_card_path": "artifacts/stage6_pair_3199_repaired_treatment_execution_20260923_v1/PAIR3199_R720_DELAYED_S17_REPAIRED_V5_ATTEMPT1_CARD_FINAL.json",
+    "execution_id": "b095cce4-baba-4c40-aa79-08b5e58b9ce1",
+    "max_starts": 1,
+    "output_polling_interval_ms": 100,
+    "output_size_stop_trigger_bytes_decimal": 75000000,
+    "polling_overshoot_accepted": true,
+    "prohibited_runs": [
+      "seed23",
+      "B",
+      "C",
+      "transition",
+      "other_qMain_qRamp"
+    ],
+    "run_id": "PAIR3199_R720_DELAYED_S17_REPAIRED_V5_ATTEMPT1",
+    "scenario_id": "PAIR_3199_R720_DELAYED_S17",
+    "technical_retries": 0,
+    "wallclock_stop_trigger_s": 90
+  },
+  "card_revision": 1,
+  "card_status": "FINAL_AUTHORIZED_FOR_ONE_START",
+  "condition": "A_OPEN_DELAYED_R720_REPAIRED_MATCHED_INPUTS",
+  "demand": {
+    "M_number": 1333,
+    "M_window_s": "[0,1500)",
+    "R_number": 192,
+    "R_window_s": "[540,1500)",
+    "U_number": 150,
+    "X_number": 75,
+    "qMain_veh_per_h": 3199.2,
+    "qRamp_veh_per_h": 720,
+    "qUrban_veh_per_h": 360,
+    "qX_veh_per_h": 180
+  },
+  "design_plan": "artifacts/stage6_final_bounded_demand_scan_plan_20260923_v1/BOUNDED_DEMAND_SCAN_PLAN.md",
+  "design_sha256": "5aeddf82bcaa7f2b559e7b6db951815c724cf7d3e8f14dd81158a6f9dbac1046",
+  "execution_authorized": true,
+  "execution_id": "b095cce4-baba-4c40-aa79-08b5e58b9ce1",
+  "geometry": "accepted network bytes; read-only; no netconvert",
+  "historical_prior_treatment": {
+    "authorization": "D-006_CONSUMED",
+    "disposition": "NOT_EVALUABLE",
+    "output_path_shared": false,
+    "prior_card_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/PAIR_3199_R720_DELAYED_S17_CARD_FINAL_REV1.json",
+    "prior_card_sha256": "08160a2ad225ee9fcc2abcc11d509a88ecf554252f1fb17e35dc69b9404351d4",
+    "reuse_or_reinterpret": false,
+    "scenario_id": "PAIR_3199_R720_DELAYED_S17"
+  },
+  "horizon_s": 2700,
+  "input_manifest": "inputs/treatment/expected_identity_manifest.json",
+  "input_manifest_sha256": "085d74f7bf12b1340f2a4ad90c2ae16074b91ffd5c98780c50321ffdb01d5cbd",
+  "input_sha256": {
+    "additional": "f5156ffc1df7115c131bd2cef7bf3c119d86d57d781174a8ade565fb819f49ee",
+    "demand": "b8aae801122e918731fb8e05a9aa8ca94873f02282d7f1afee57777f6bea96ea",
+    "network": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "output_roles": "3c69a6e38184683455d2103c35a80405877a8b015261ccf13891706842b36ee3",
+    "sumocfg": "2a16baa12bd1abcaae9bff46a8b48f9365064e87e05ae1d416ba695157d9538d"
+  },
+  "inputs": {
+    "additional": "inputs/treatment/scenario.add.xml",
+    "demand": "inputs/treatment/demand.rou.xml",
+    "network": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+    "output_roles": "inputs/treatment/output_roles.json",
+    "sumocfg": "inputs/treatment/scenario.sumocfg"
+  },
+  "matched_control_binding": {
+    "data_review_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/CONTROL_DATA_LIFECYCLE_REVIEW_FINAL_REV1.json",
+    "data_review_sha256": "6c8c2a381a5a2fc1102953ed58a5a1cd022a0c22789b0bbbd486d86a7b0ac799",
+    "exact_card_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/PAIR_3199_CTRL_S17_CARD_FINAL_REV1.json",
+    "exact_card_sha256": "0748d37719541d7c76adcd57e07fd764b413fbd21bb16e015b57024175e866da",
+    "execution_receipt_path": "data/raw/stage6_bounded_pair_20260923_v1/PAIR_3199_CTRL_S17/outputs/execution_receipt.json",
+    "execution_receipt_sha256": "a6a1a67282ff9e19f0205ce4b681cef34315bc04ad65f9588d7b269fadcfd336",
+    "historical_low_r_status": "NOT_EVALUABLE",
+    "output_manifest_path": "data/raw/stage6_bounded_pair_20260923_v1/PAIR_3199_CTRL_S17/outputs/output_manifest.json",
+    "output_manifest_sha256": "da15103c64be65eb6b83fc37a505418c81c33cf490db48f03a5fd15d984a74d8",
+    "raw_output_directory": "data/raw/stage6_bounded_pair_20260923_v1/PAIR_3199_CTRL_S17/outputs",
+    "run_id": "PAIR_3199_CTRL_S17",
+    "use_as_clean_normal_baseline": false
+  },
+  "matched_input_repair": {
+    "common_MUX_expected": 1558,
+    "common_full_record_matches": 1558,
+    "invariant_report_sha256": "509f1a46873b6922ce22e18f4100fa2dcb84a632d80ee9a014750efc6c857d54",
+    "package": "artifacts/stage6_pair_3199_matched_input_repair_20260923_v5",
+    "provenance_receipt_sha256": "3a2531c3bbf3d9d69ac6c94f0f2663b67b47ffde7ce36c7ea0e1a943b74e32c9",
+    "status": "v5_STATIC_INPUT_BINDING_PASS_NOT_TRAJECTORY_EQUIVALENCE",
+    "treatment_only_R_count": 192,
+    "treatment_only_ids": "R_flow.0-R_flow.191"
+  },
+  "max_starts": 1,
+  "output_directory": "data/raw/stage6_bounded_pair_repaired_20260923_v2/PAIR3199_R720_DELAYED_S17_REPAIRED_V5_ATTEMPT1/outputs",
+  "output_role_source": {
+    "path": "artifacts/stage6_pair_3199_repaired_treatment_execution_20260923_v1/inputs/treatment/output_roles.json",
+    "sha256": "3c69a6e38184683455d2103c35a80405877a8b015261ccf13891706842b36ee3"
+  },
+  "pair_id": "PAIR_3199_S17",
+  "pre_run_trajectory_gate": {
+    "failure": "Any material unexplained pre-R divergence makes pair NOT_EVALUABLE; do not interpret post-R event",
+    "post_R_witness_analysis": "Only after pre-R matching gate passes",
+    "required": "Compare M/U/X trajectory equivalence before first meaningful R exposure"
+  },
+  "prelaunch_review_gate": {
+    "binding_sidecar_path": "artifacts/stage6_pair_3199_repaired_treatment_execution_20260923_v1/FINAL_PRELAUNCH_REVIEW_BINDING.json",
+    "launch_blocked_until_reviews_pass": true,
+    "receipt_paths": {
+      "data_provenance": "artifacts/stage6_pair_3199_repaired_treatment_execution_20260923_v1/FINAL_DATA_PROVENANCE_PRELAUNCH_REVIEW.json",
+      "engineering": "artifacts/stage6_pair_3199_repaired_treatment_execution_20260923_v1/FINAL_ENGINEERING_PRELAUNCH_REVIEW.json",
+      "scientific": "artifacts/stage6_pair_3199_repaired_treatment_execution_20260923_v1/FINAL_SCIENTIFIC_PRELAUNCH_REVIEW.json"
+    },
+    "required_disposition": "PASS_PRELAUNCH",
+    "required_findings": "0/0/0 bound to this exact card SHA before launch",
+    "required_roles": [
+      "engineering",
+      "data_provenance",
+      "scientific"
+    ]
+  },
+  "preparation_parent": {
+    "package": "artifacts/stage6_pair_3199_repaired_treatment_preparation_20260923_v1",
+    "preparation_card_path": "artifacts/stage6_pair_3199_repaired_treatment_preparation_20260923_v1/PAIR_3199_R720_DELAYED_S17_CARD_DRAFT_NOT_AUTHORIZED_REV1.json",
+    "preparation_card_sha256": "593cabd4c82a8b7b735e6ebc000d836bebab80a9c8962e20f2865a5bbf4dbed0",
+    "tri_pass_receipt_path": "artifacts/stage6_pair_3199_repaired_treatment_preparation_20260923_v1/FINAL_PRELAUNCH_RECEIPT_REV1.json",
+    "tri_pass_receipt_sha256": "8f2a12a89fd59e7fb941e6215bd7bfd68bc46ebb28ec1abf334d0dcdfb576a81"
+  },
+  "progression_allowed": false,
+  "prohibitions": [
+    "Do not launch before exact-card engineering/data/scientific PASS receipts and review binding sidecar exist",
+    "No retry",
+    "No other demand, seed or controller",
+    "No classifier/threshold/witness-contract/formal-protocol/scientific-input changes"
+  ],
+  "required_event_timeline_markers": [
+    "R_demand_activation",
+    "first_scheduled_R_departure",
+    "first_actual_R_departure",
+    "first_R_arrival_near_merge",
+    "first_meaningful_merge_exposure",
+    "first_M_deterioration",
+    "State1_onset"
+  ],
+  "resource_limits": {
+    "runtime_s": 90,
+    "scope": "PAIR3199_R720_DELAYED_S17_REPAIRED_V5_ATTEMPT1",
+    "status": "AUTHORIZED_FOR_THIS_RUN",
+    "storage_bytes": 75000000,
+    "storage_enforcement": "100ms_polled_stop_trigger_with_possible_overshoot_not_hard_quota"
+  },
+  "run_command": null,
+  "run_id": "PAIR3199_R720_DELAYED_S17_REPAIRED_V5_ATTEMPT1",
+  "runner_binding": {
+    "card_path": "artifacts/stage6_pair_3199_repaired_treatment_execution_20260923_v1/PAIR3199_R720_DELAYED_S17_REPAIRED_V5_ATTEMPT1_CARD_FINAL.json",
+    "consumption_directory": "artifacts/stage6_pair_3199_repaired_treatment_execution_20260923_v1/r02_single_start/consumption",
+    "kind": "PAIR_RUN",
+    "output_directory": "data/raw/stage6_bounded_pair_repaired_20260923_v2/PAIR3199_R720_DELAYED_S17_REPAIRED_V5_ATTEMPT1/outputs",
+    "package_id": "stage6_pair_3199_repaired_treatment_execution_20260923_v1",
+    "run_id": "PAIR3199_R720_DELAYED_S17_REPAIRED_V5_ATTEMPT1"
+  },
+  "runner_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+  "runner_sha256": "0961912a46464eb9757ab245c26577e8f1de0985534f34db04a41a4dac45f9c8",
+  "runtime_binding": {
+    "additional_schema_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+    "additional_schema_sha256": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e",
+    "binary_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+    "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+    "binary_version": "1.26.0",
+    "guardian_runner_sha256": "0961912a46464eb9757ab245c26577e8f1de0985534f34db04a41a4dac45f9c8",
+    "max_output_bytes": 75000000,
+    "max_runtime_s": 90,
+    "python_environment": {
+      "executable_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+      "executable_sha256": "76c73e25cdd69650a897648666e41c364940fbcff0d1176572a667d4d470ec9e",
+      "implementation": "CPython",
+      "package_versions": {
+        "sumoITScontrol": "0.1.0",
+        "sumolib": "1.26.0",
+        "traci": "1.26.0"
+      },
+      "version": "3.13.0"
+    },
+    "resource_proposal": {
+      "basis": "User explicitly accepted and authorized these limits for exactly one repaired v5 treatment start in the current task; this is distinct from consumed D-006 and its old 120s/90MB contract.",
+      "enforcement": "100ms_polled_stop_trigger_with_possible_overshoot_not_hard_quota",
+      "output_size_stop_limit_bytes_decimal": 75000000,
+      "scenario_id": "PAIR_3199_R720_DELAYED_S17",
+      "scope": "PAIR3199_R720_DELAYED_S17_REPAIRED_V5_ATTEMPT1",
+      "status": "AUTHORIZED_FOR_THIS_RUN",
+      "wallclock_stop_limit_s": 90
+    },
+    "sumo_home": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo",
+    "version_evidence": {
+      "binary_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+      "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+      "query": "sumo --version (environment probe; no simulation)",
+      "reported_version": "1.26.0"
+    }
+  },
+  "runtime_binding_path": "artifacts/stage6_pair_3199_repaired_treatment_execution_20260923_v1/runtime_bindings/PAIR3199_R720_DELAYED_S17_REPAIRED_V5_ATTEMPT1_FINAL.json",
+  "runtime_binding_sha256": "4978450c6dd83f37377d1f1a454ba35d5944e4d7a0ed353ed5d43906793b4053",
+  "scenario_id": "PAIR_3199_R720_DELAYED_S17",
+  "schema_version": "1",
+  "seed": 17,
+  "step_s": 1,
+  "technical_retries": 0,
+  "treatment_release_gate": "STAGE6_EXPLORATORY_RAMP_INDUCED_WITNESS_CONTRACT_ONLY",
+  "vehicle_behavior": "technical_passenger unchanged; M/U/X per-vehicle attributes bound by v5; R is the only additional external demand",
+  "witness_contract": {
+    "path": "docs/methodology/STAGE6_EXPLORATORY_RAMP_INDUCED_WITNESS_CONTRACT.md",
+    "scope": "Stage 6 exploratory matched pair only; not formal protocol",
+    "sha256": "958890a7dd017110787a85d77ebfa3e6dac2b7d862f0fd91f6bafb7cf1738d9a"
+  }
+}

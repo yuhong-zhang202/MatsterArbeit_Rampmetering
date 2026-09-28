@@ -1,0 +1,51 @@
+{
+  "card_sha256": "087852e8bd826c7f6a5c754e4222a0a01ea2631ea830dd41e29a81039d21d353",
+  "data_review": {
+    "status": "PASS_STATIC_DATA",
+    "reviewer_role": "data_analyst",
+    "scope": "read-only review of diagnostic_gate_contract.json, DIAGNOSTIC_CONTRACT.md, observer.py, inputs/output_roles.json, and delivery_manifest.json",
+    "confidence": "High",
+    "findings": [
+      "All 111 delivery-manifest bindings match exact bytes and SHA-256; run root does not exist.",
+      "Output contract covers 18 XML roles, all 0..449 FCD labels, 385..430 plus 0/1/2 observer samples, and the required U/R vehicles.",
+      "The data contract distinguishes queried leaders, geometric adjacency, and inferred 5 m body occupancy across the shared/internal boundary.",
+      "Clock alignment and common-prefix neutrality remain post-run gates; cutoff/censoring and the unchanged strict storage-cross definition are correctly specified."
+    ],
+    "limitations": [
+      "No simulation or data-processing run was performed during this static review.",
+      "Static PASS does not establish runtime API behavior, trajectory neutrality, or the ultimate blocking cause."
+    ]
+  },
+  "delivery_manifest_sha256": "538f70f038f4413aedc5d513feaa1f9de9ab3b5456d7f84d996034dd26bbe01f",
+  "required_minor": 0,
+  "scientific_review": {
+    "status": "PASS_STATIC_FINAL",
+    "stage": "exact_o2_diagnostic_package",
+    "reviewer_role": "scientific_reviewer",
+    "confidence": "High for static scope and bindings; runtime neutrality and causal identification remain unverified",
+    "blocker_major_required_minor": "0/0/0",
+    "findings": [
+      "The conditional user authorization is met because existing C raw outputs lack selected leader and dynamic blocking information.",
+      "One C/seed17 run ending at 450 s is sufficient for the explicitly bounded U35 event around 398..413; it does not claim to adjudicate all congestion or all of O2.",
+      "The original network, demand, signals, model and 1 s step are preserved; only output paths, horizon and read-only instrumentation differ.",
+      "Full body occupancy, leader/API gap semantics, clock labels, no-setter restrictions, stop gates and the unchanged strict storage-cross rule are adequately documented.",
+      "A technical PASS will not automatically resolve O2 or authorize a follow-up start."
+    ],
+    "limitations": [
+      "Review is read-only; no scripts/tests/processes were run by the reviewer.",
+      "This receipt does not claim that a leader/foe query is a complete braking-cause sensor."
+    ]
+  },
+  "source_reviewed_files": {
+    "O2_DIAGNOSTIC_CARD.json": "087852e8bd826c7f6a5c754e4222a0a01ea2631ea830dd41e29a81039d21d353",
+    "DIAGNOSTIC_CONTRACT.md": "132e9f18cf8145d948f5c4a86998c56faf710f9e5818007faba04acfb94f79d4",
+    "diagnostic_gate_contract.json": "a8d1bb746b5abbed4baf0dcd7db118588d53de2b4379b78feb5b4adc98329cdb",
+    "delivery_manifest.json": "538f70f038f4413aedc5d513feaa1f9de9ab3b5456d7f84d996034dd26bbe01f",
+    "static_validation_receipt.json": "9e09d0426564767861e94b0e0b9ac75ab811c25a739cca629cdca5a07245e51a",
+    "observer.py": "23a0c064fbf218f4562de4056b7253c10ea694d2575a18a1097f882a4f551d94",
+    "runtime_executor.py": "cc42c3c2f17ec23943a246c5448a2d824ab50876ec2067ce159b0c8f0094eee0"
+  },
+  "stage": "exact_o2_diagnostic_package",
+  "status": "PASS_STATIC_FINAL",
+  "user_authorization_binding_sha256": "4a5c02d583c915f6b3675b254c797d54def3531f55a6f9e10afe3f38077cba96"
+}

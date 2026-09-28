@@ -1,0 +1,41 @@
+{
+  "schema": "stage6_minimal3350_scientific_prelaunch_review_v1",
+  "review_id": "MINIMAL3350_CTRL_S17_SCIENTIFIC_PRELAUNCH_REV1",
+  "status": "BLOCKED",
+  "disposition": "NOT_PASS_PRELAUNCH",
+  "date": "2026-09-24",
+  "reviewer": "independent project-scoped scientific_reviewer (read-only)",
+  "findings": {
+    "blocker": 1,
+    "major": 0,
+    "required_minor": 0
+  },
+  "confidence": "High",
+  "run_id": "MINIMAL3350_CTRL_S17",
+  "card_sha256": "6095e498eb560d2ed8dc16548e19902313d7a89be92057db0d2fae689497c2ac",
+  "engineering_prelaunch_review_sha256": "07da36f78e6accf3617ef6ade2b6390acc8cb67bd12009f1b604e04d4fe33d23",
+  "data_provenance_review_sha256": "d32bdeece24a9307a431cfd65ab15e264f00282daf776f3dd410a338071c512e",
+  "runner_sha256": "5cfbd1542016205203ed046756ef00800d1d5fe0070aa20878ebdd0d6a67384a",
+  "actual_configured_output_path": "<repo>/data/raw/data/raw/stage6_minimal3350_ux0_20260924_v2/MINIMAL3350_CTRL_S17/outputs",
+  "card_and_runner_output_path": "<repo>/data/raw/stage6_minimal3350_ux0_20260924_v2/MINIMAL3350_CTRL_S17/outputs",
+  "config_sha256": "468616e9e9d656010e5c59f1c11f06543dec3f63de83d06a21a5e1c549f0b8a1",
+  "additional_sha256": "6fee3eac4124dcbe7de7447fcc9e80c43c5d8b7c8930725589373b2901726b34",
+  "blocker": "scenario.sumocfg and scenario.add.xml add the data/raw prefix twice, so SUMO would write measured outputs outside the card/runner-monitored path. The card absent-path guard and resource polling would not cover actual outputs. The bound hashes consistently preserve this source path defect.",
+  "required_action": "Create a new immutable exact-card revision with a unique absent output path. Align every configured output path in sumocfg/additional with the card/runner path; verify all roles and repeat engineering/data/scientific prelaunch reviews.",
+  "scientific_input_assessment": "Apart from the path blocker, the fixed M vector is acceptable for this single exploratory contrast if treatment reuses the same manifest. It is not a representative independently sampled U=X=0 seed17 RNG realization; speedFactors came from a prior full-network qMain3350.4 seed17 vehroute.",
+  "execution": {
+    "guardian_starts": 0,
+    "sumo_starts": 0,
+    "traci_starts": 0,
+    "netconvert_starts": 0,
+    "traffic_raw_exists": false
+  },
+  "source_paths": {
+    "card": "artifacts/stage6_minimal3350_control_preparation_20260924_rev2/MINIMAL3350_CTRL_S17_CARD_FINAL.json",
+    "config": "artifacts/stage6_minimal3350_control_preparation_20260924_rev2/inputs/control/scenario.sumocfg",
+    "additional": "artifacts/stage6_minimal3350_control_preparation_20260924_rev2/inputs/control/scenario.add.xml",
+    "engineering_review": "artifacts/stage6_minimal3350_control_preparation_20260924_rev2/ENGINEERING_PRELAUNCH_REVIEW.json",
+    "data_review": "artifacts/stage6_minimal3350_control_preparation_20260924_rev2/DATA_PROVENANCE_PRELAUNCH_REVIEW.json",
+    "runner": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "status": "PASS_STATIC_FINAL",
+  "stage": "exact_runtime_package",
+  "card_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/RUNTIME_CARD.json",
+  "card_sha256": "8e54ab7ac73e3192a1db5ea249efbe610e1114d79980166baea83934a6601f4c",
+  "reviewer_role": "scientific_reviewer",
+  "reviewer_agent": "/root/p0_scientific_final",
+  "recorded_by": "primary_agent",
+  "recording_basis": "Transcription of the independent scientific_reviewer subagent's final exact-card review response in the current task; the reviewer remained read-only and did not author this file.",
+  "open_findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "scope_reviewed": [
+    "118 exact card/source/schema/binary/input bindings",
+    "common network and intervention isolation",
+    "meter program definition and initial selection",
+    "queue, storage-crossing, shared obstruction, and U-chain measurement contract",
+    "runtime gate sequence and logger-neutrality rule",
+    "resource bounds and retry governance"
+  ],
+  "review_conclusion": "Static package accepted for release of the first technical smoke only. This does not establish SUMO runtime behavior, logger neutrality, O1 merge validity, O2 causal trade-off, or scientific outcome.",
+  "released_attempt": "TV_SMOKE_B_LC_ON_S17_attempt1",
+  "not_released_by_this_review": [
+    "TV_SMOKE_B_LC_OFF_S17_attempt1",
+    "TV_A_S17_attempt1",
+    "TV_B_S17_attempt1",
+    "TV_C_S17_attempt1"
+  ],
+  "confidence": "High for exact static package consistency and smoke readiness; runtime and traffic behavior remain unverified."
+}

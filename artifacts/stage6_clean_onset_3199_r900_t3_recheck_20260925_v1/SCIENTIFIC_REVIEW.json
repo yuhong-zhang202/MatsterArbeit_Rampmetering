@@ -1,0 +1,30 @@
+{
+  "schema": "stage6_clean3199_r900_t3_recheck_scientific_review_v1",
+  "reviewer_role": "scientific_reviewer",
+  "review_scope": "T3 reconstruction and interpretation of conflicting adopted D-009 E1 wording only; no post-R outcome review",
+  "disposition": "PASS_T3_RECONSTRUCTION_HOLD_OUTCOME",
+  "confidence": {
+    "per_vehicle_T3_690_s": "High",
+    "literal_D009_E1_failure": "High",
+    "authority_resolution": "Unresolved"
+  },
+  "verified_facts": {
+    "R_id_count": 240,
+    "bounded_crossing_rows": 480,
+    "unknown_crossings": 0,
+    "strict_complete_bin_starts_s": [600, 630, 660],
+    "certain_R_auxiliary_entry_counts": [7, 2, 13],
+    "E1_entry_counts": [8, 0, 13],
+    "T3_by_original_per_vehicle_method_s": 690,
+    "literal_D009_E1_gate": "FAIL"
+  },
+  "package_quality_required_issues": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "unresolved_scientific_gate": "D-009 was adopted with literal auxiliary E1 wording; earlier per-vehicle documents supply methodological lineage but no independent overriding authority. A versioned clarification and explicit user adoption are required before retrospective post-R outcome analysis.",
+  "historical_disposition": "Preserve NOT_EVALUABLE / EXPOSURE_GATE_NOT_MET as a historical receipt; do not silently overwrite it.",
+  "post_R_PSL_candidate_matched_outcomes_reviewed": false,
+  "SUMO_starts_this_recheck": 0
+}

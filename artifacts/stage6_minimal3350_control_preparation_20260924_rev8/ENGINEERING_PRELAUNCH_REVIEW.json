@@ -1,0 +1,41 @@
+{
+  "card_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/MINIMAL3350_CTRL_S17_CARD_FINAL.json",
+  "card_sha256": "15544478e8e7ced98b12673bec65cfe646b1f73e9e471ed501ddee052306bbfd",
+  "checks": {
+    "canonical_request_bytes_match_R02_digest_validation": true,
+    "exact_run_card_status_zero_findings_and_sidecar_hashes_fail_closed": true,
+    "legacy_pretty_json_request_digest_rejected_by_regression": true,
+    "no_process_started": true,
+    "output_directory_and_parent_absent": true,
+    "request_card_runtime_runner_input_crossbindings": true,
+    "resource_contract_90s_60000000bytes_100ms": true,
+    "review_schema_gate_supports_declared_data_v2_v3_and_canonical_science": true,
+    "sumocfg_8_additional_12_roles_18_unique_targets": true
+  },
+  "evidence": {
+    "adapter_sha256": "a5ff65cf47ec4614781f66f2d1975e67499928478221724c247523fca39f056c",
+    "preflight": "Fresh exact-card data/scientific reviews pending; launch prohibited",
+    "provenance_receipt_sha256": "cfd1651a6fc364804a3626421b1b931246c0e66d341c86e4e6630ad3966dc7a2",
+    "runner_sha256": "33d8ff42f3c0de6aeb17705f7f7c75dcdf03ade3cc532fd7900f3b363d691f9f",
+    "test_command": ".venv/bin/python -m unittest -v tests/test_minimal3350_binding.py",
+    "test_result": "PASS (9 tests)"
+  },
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "limitations": [
+    "Data/provenance and scientific reviews must be repeated for this exact card and runner binding."
+  ],
+  "process_starts": {
+    "guardian": 0,
+    "netconvert": 0,
+    "sumo": 0,
+    "traci": 0
+  },
+  "reviewer": "simulation_engineer",
+  "run_id": "MINIMAL3350_CTRL_S17",
+  "schema": "stage6_engineering_prelaunch_review_v1",
+  "status": "PASS_PRELAUNCH"
+}

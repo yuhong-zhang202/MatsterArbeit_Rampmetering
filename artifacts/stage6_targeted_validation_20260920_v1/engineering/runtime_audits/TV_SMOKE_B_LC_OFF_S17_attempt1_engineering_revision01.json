@@ -1,0 +1,340 @@
+{
+  "attempt_id": "TV_SMOKE_B_LC_OFF_S17_attempt1",
+  "audit_utc": "2026-09-20T12:03:59.141537+00:00",
+  "bindings": {
+    "approval": {
+      "bytes": 2054,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/RUNTIME_user_approval_TV_SMOKE_B_LC_OFF_S17_attempt1.json",
+      "sha256": "5090e2f945970953231a4527f108742d6f248096c256079563ae1f593e627c6e"
+    },
+    "card": {
+      "bytes": 36472,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/RUNTIME_CARD.json",
+      "sha256": "8e54ab7ac73e3192a1db5ea249efbe610e1114d79980166baea83934a6601f4c"
+    },
+    "contract": {
+      "bytes": 10579,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/RUNTIME_CONTRACT.md",
+      "sha256": "83d1955b516cd2c3e57c233c7270474987993f3fa74b309ea0925f2669ceca0e"
+    },
+    "execution_receipt": {
+      "bytes": 942,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_OFF_S17_attempt1/execution_receipt.json",
+      "sha256": "9b11378cbc37eb599b04248865b37b6cb2d53650eed220b602493fb8ee83dd78"
+    },
+    "gate_contract": {
+      "bytes": 2024,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/gate_contract.json",
+      "sha256": "26a492814dfd012f6a074fcfff5c2bfeadf053e02d3783e4ce0895cfbdd36167"
+    },
+    "output_manifest": {
+      "bytes": 6998,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_OFF_S17_attempt1/output_manifest.json",
+      "sha256": "22cea39ac72060ca6f8c05eb8c1ab312b2e52a425e1fc693d7ba7926dea4eaae"
+    },
+    "reservation": {
+      "bytes": 935,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_OFF_S17_attempt1/reservation.json",
+      "sha256": "7b336e6e669263cdf3443decf528fa0d2d3f4e2aa4626c02baada1506c890044"
+    },
+    "review": {
+      "bytes": 1656,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/scientific_review_receipt.json",
+      "sha256": "bf9cd5058a674208f16a99a285e45743c266d4bcc09cfa5e49d7753b704a57bd"
+    },
+    "started": {
+      "bytes": 99,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_OFF_S17_attempt1/started.json",
+      "sha256": "18bccb1ed977878d364190729aff089676ce82a34a6a20f278fc76cdcb48eac5"
+    },
+    "summary": {
+      "bytes": 752714,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_OFF_S17_attempt1/outputs/sumo_summary.xml",
+      "sha256": "4807d9e1cc0ffe81f93f38c5b84bb5f5b3674838cd6ecaeb3371ba4dcf62589e"
+    }
+  },
+  "checks": {
+    "17_declared_XML_roles_exact": true,
+    "approval_reservation_binding": true,
+    "approval_review_exact": true,
+    "exact_card": true,
+    "final_output_violation_absent": true,
+    "inventory_only_ON_OFF_difference": true,
+    "lanechange_OFF_config_and_file_absent": true,
+    "log_completed0_2700": true,
+    "no_warning_physical_invalid_movement_log_indicators": true,
+    "output_manifest_integrity": true,
+    "physical_stop_marker_absent": true,
+    "pid_absent": true,
+    "process_group_absent": true,
+    "receipt_success": true,
+    "registered_argv": true,
+    "resource_below_monitor_stoplines": true,
+    "source_binding_current": true,
+    "stdout_stderr_errorlog_empty": true,
+    "summary_2700_consecutive_labels": true,
+    "summary_physical_events_zero": true
+  },
+  "confidence": "High for direct engineering facts",
+  "context_preflight": {
+    "blockers": "paired logger neutrality and independent OFF14gate/physical scientific review pending; obstacle not adjudicated",
+    "decisions": "D001-D004 unchanged; no science choices made",
+    "documents": [
+      "AGENTS.md",
+      "docs/PROJECT_STATE.md",
+      "docs/DECISIONS.md",
+      "docs/EXPERIMENT_PROTOCOL.md",
+      "docs/WORKLOG.md",
+      "RUNTIME_CARD.json",
+      "RUNTIME_CONTRACT.md",
+      "gate_contract.json"
+    ],
+    "phase": "new targeted exploratory validation; loggerON gate14PASS reviewed; loggerOFF process completed pending gates; A not released",
+    "protocol": "empty/unfrozen"
+  },
+  "documentation_impact": "Parent should record audit result and await independent data/scientific review; subagent modified no docs or raw inputs.",
+  "emergency_braking_log_indicators": 0,
+  "exact_run_directory_bytes": 28106167,
+  "expected_XML_roles": [
+    {
+      "binding": {
+        "bytes": 60649,
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_OFF_S17_attempt1/outputs/shared_boundary_e2.xml",
+        "sha256": "6c462af618ec53b266eb5044627b4a1ecd47c38e44414b757199f68bb8894107"
+      },
+      "exists": true,
+      "nonempty": true,
+      "role": "shared_boundary_e2.xml"
+    },
+    {
+      "binding": {
+        "bytes": 61205,
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_OFF_S17_attempt1/outputs/ramp_storage_e2.xml",
+        "sha256": "24eac1f5020c794c84e481369afe5c8d4fc14c8078c931e1124fe6e4af9710e4"
+      },
+      "exists": true,
+      "nonempty": true,
+      "role": "ramp_storage_e2.xml"
+    },
+    {
+      "binding": {
+        "bytes": 19866,
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_OFF_S17_attempt1/outputs/p1_main_up_1300_l0.xml",
+        "sha256": "a68f93e9c26305cde17ac0b911204af66fc27caa8240e1cb1c9002a9ff591dfb"
+      },
+      "exists": true,
+      "nonempty": true,
+      "role": "p1_main_up_1300_l0.xml"
+    },
+    {
+      "binding": {
+        "bytes": 19895,
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_OFF_S17_attempt1/outputs/p1_main_up_1300_l1.xml",
+        "sha256": "c4ec24968c4d61bc9b95741828c37808e20c7fe0b81e0c8e18efd5ed17f01b56"
+      },
+      "exists": true,
+      "nonempty": true,
+      "role": "p1_main_up_1300_l1.xml"
+    },
+    {
+      "binding": {
+        "bytes": 20106,
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_OFF_S17_attempt1/outputs/p1_merge_section_20_l0.xml",
+        "sha256": "b7f1934d064b53626a704fc13aec3f28db788f11ab51bdcd76b6d76d8c2ffb06"
+      },
+      "exists": true,
+      "nonempty": true,
+      "role": "p1_merge_section_20_l0.xml"
+    },
+    {
+      "binding": {
+        "bytes": 20248,
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_OFF_S17_attempt1/outputs/p1_merge_section_20_l1.xml",
+        "sha256": "3897a44a6256daa846080080f734898cdc133dad380e8668a0ba862bf68cc2d7"
+      },
+      "exists": true,
+      "nonempty": true,
+      "role": "p1_merge_section_20_l1.xml"
+    },
+    {
+      "binding": {
+        "bytes": 20262,
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_OFF_S17_attempt1/outputs/p1_merge_section_20_l2.xml",
+        "sha256": "22866d6ff50cd381f22e75d96fb78553b4d0061fbf847dd2fe98907bba2ef9dd"
+      },
+      "exists": true,
+      "nonempty": true,
+      "role": "p1_merge_section_20_l2.xml"
+    },
+    {
+      "binding": {
+        "bytes": 19906,
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_OFF_S17_attempt1/outputs/p1_main_down_20_l0.xml",
+        "sha256": "ba86c27cb792a585afdeeb2a702931832ca02cc027efe04f27a4437c76654200"
+      },
+      "exists": true,
+      "nonempty": true,
+      "role": "p1_main_down_20_l0.xml"
+    },
+    {
+      "binding": {
+        "bytes": 19923,
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_OFF_S17_attempt1/outputs/p1_main_down_20_l1.xml",
+        "sha256": "75681a6cbefee541a18a487eeccc783c0dab84430c8e2049fe725ea0159e624e"
+      },
+      "exists": true,
+      "nonempty": true,
+      "role": "p1_main_down_20_l1.xml"
+    },
+    {
+      "binding": {
+        "bytes": 19995,
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_OFF_S17_attempt1/outputs/p1_main_down_200_l0.xml",
+        "sha256": "08481323bfbf51c5a6ce6141be96697d5218f4a05b0bced242d66195da8d89ca"
+      },
+      "exists": true,
+      "nonempty": true,
+      "role": "p1_main_down_200_l0.xml"
+    },
+    {
+      "binding": {
+        "bytes": 20010,
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_OFF_S17_attempt1/outputs/p1_main_down_200_l1.xml",
+        "sha256": "e6268b1c70f368656520b9063ab7eba7e846830e23125d7f0984ee306de194f1"
+      },
+      "exists": true,
+      "nonempty": true,
+      "role": "p1_main_down_200_l1.xml"
+    },
+    {
+      "binding": {
+        "bytes": 24655984,
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_OFF_S17_attempt1/outputs/fcd.xml",
+        "sha256": "65d913a6bcd1142bb4cfdf83f6aa6938daa6fbb4f8de1ac298d1fd290b3dd675"
+      },
+      "exists": true,
+      "nonempty": true,
+      "role": "fcd.xml"
+    },
+    {
+      "binding": {
+        "bytes": 553484,
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_OFF_S17_attempt1/outputs/queues.xml",
+        "sha256": "01a8b54e59b67ae07ebdc67a4dc51288646581a9824678dde04ee0b35c08abc3"
+      },
+      "exists": true,
+      "nonempty": true,
+      "role": "queues.xml"
+    },
+    {
+      "binding": {
+        "bytes": 752714,
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_OFF_S17_attempt1/outputs/sumo_summary.xml",
+        "sha256": "4807d9e1cc0ffe81f93f38c5b84bb5f5b3674838cd6ecaeb3371ba4dcf62589e"
+      },
+      "exists": true,
+      "nonempty": true,
+      "role": "sumo_summary.xml"
+    },
+    {
+      "binding": {
+        "bytes": 858681,
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_OFF_S17_attempt1/outputs/tripinfo.xml",
+        "sha256": "e32353587e64674ba3b8422b5c0bb43efebf6e0e938465c3c8f3703b64f192fa"
+      },
+      "exists": true,
+      "nonempty": true,
+      "role": "tripinfo.xml"
+    },
+    {
+      "binding": {
+        "bytes": 462252,
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_OFF_S17_attempt1/outputs/vehroute.xml",
+        "sha256": "6c6d1b27ebbc8dbfa2d6352c0d12413f75630627c841587e78233049e8e842d1"
+      },
+      "exists": true,
+      "nonempty": true,
+      "role": "vehroute.xml"
+    },
+    {
+      "binding": {
+        "bytes": 511109,
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_OFF_S17_attempt1/outputs/tls_states.xml",
+        "sha256": "fbf098750d168c95ef23253c1bd2e20a2e173a7d8d049697863ecdc574d8e195"
+      },
+      "exists": true,
+      "nonempty": true,
+      "role": "tls_states.xml"
+    }
+  ],
+  "file_count": 25,
+  "fourteen_gate_status": "NOT_ADJUDICATED",
+  "limitations": [
+    "File inventory/hash checks do not validate all identity, detector, TLS and trajectory semantics.",
+    "No paired content equality or traffic-neutrality claim.",
+    "No O1/O2/obstacle or formal experiment acceptance."
+  ],
+  "logs": [
+    {
+      "binding": {
+        "bytes": 0,
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_OFF_S17_attempt1/stdout.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "indicator_lines": []
+    },
+    {
+      "binding": {
+        "bytes": 0,
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_OFF_S17_attempt1/stderr.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "indicator_lines": []
+    },
+    {
+      "binding": {
+        "bytes": 904,
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_OFF_S17_attempt1/outputs/sumo.log",
+        "sha256": "076edc784a00ff9056ffcac1c501ebf55b3c3be1104f74cf3e6e26fddee62601"
+      },
+      "indicator_lines": []
+    },
+    {
+      "binding": {
+        "bytes": 0,
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_OFF_S17_attempt1/outputs/sumo_error.log",
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "indicator_lines": []
+    }
+  ],
+  "new_simulation_calls": {
+    "GUI": 0,
+    "SUMO": 0,
+    "TraCI": 0,
+    "netconvert": 0
+  },
+  "paired_semantic_neutrality": "NOT_PERFORMED_DATA_ANALYST_OWNS",
+  "physical_scope": "log and native summary event checks only; not scientific suitability or full trajectory/topology audit",
+  "physical_suitability_status": "PASS",
+  "pid": 36022,
+  "post_monitor_metadata_bytes": 7940,
+  "progression_allowed": false,
+  "raw_manifest_bindings_checked": 23,
+  "receipt_observed_peak_bytes": 28098227,
+  "returncode": 0,
+  "scope": "Read-only engineering runtime/process/log/file inventory only; no paired semantic comparison",
+  "simulation_time": [
+    0,
+    2700
+  ],
+  "source_bindings_checked": 98,
+  "summary_event_maxima": {
+    "collisions": 0,
+    "discarded": 0,
+    "teleports": 0
+  },
+  "summary_labels": 2700,
+  "technical_process_status": "PASS",
+  "wallclock_s": 1.2459383329987759
+}

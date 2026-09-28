@@ -1,0 +1,36 @@
+{
+  "status": "PASS_PRELAUNCH",
+  "run_id": "MINIMAL3199_CTRL_S17_TECH_RETRY1",
+  "card_sha256": "027d7dc7b74561648ec6c0799abd64a99b7fb746273d1ecb78905c00c082c672",
+  "disposition": "PASS",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "confidence": "High",
+  "manifest_sha256": "1c718fba99ce217bccc69bd7adb4e7b555c92d034006c065c9762c882d73accc",
+  "runtime_binding_sha256": "5fdd6901c089d0df1346e0d01131c37d75682fe134f5c354d5ec2f3e74834052",
+  "runner_sha256": "25182434f7665778bb0c0a5dcefe39a5c3f0a1eb481935d3393e70ee4fddc428",
+  "conditions": {
+    "qMain_veh_per_h": 3199.2,
+    "seed": 17,
+    "M_count": 1333,
+    "R_veh_per_h": 0,
+    "U": 0,
+    "X": 0,
+    "TLS_program": "A_OPEN",
+    "horizon_s": 2700
+  },
+  "resource_contract": {
+    "wallclock_stop_trigger_s": 90,
+    "output_size_stop_trigger_bytes_decimal": 60000000,
+    "polling_interval_ms": 100,
+    "polling_overshoot_accepted": true,
+    "max_starts": 1,
+    "technical_retries": 0
+  },
+  "scientific_inputs_modified": false,
+  "no_outcome_inferred": true,
+  "review_gate_condition": "R02 must close exact-card review sidecar before launch; no process launched by reviewer."
+}

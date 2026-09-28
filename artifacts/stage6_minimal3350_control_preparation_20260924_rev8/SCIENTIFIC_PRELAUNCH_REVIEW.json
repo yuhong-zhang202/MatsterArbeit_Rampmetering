@@ -1,0 +1,33 @@
+{
+  "card_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/MINIMAL3350_CTRL_S17_CARD_FINAL.json",
+  "card_sha256": "15544478e8e7ced98b12673bec65cfe646b1f73e9e471ed501ddee052306bbfd",
+  "data_provenance_review_sha256": "53bac79e70cdae7153024ecc1b6a17f787c96a987824f03db6dd112b113b7fca",
+  "date": "2026-09-24",
+  "disposition": "PASS_PRELAUNCH",
+  "engineering_review_sha256": "9e04a6e7cb9738fe04a42efcfc49f183e2a94107871537e305cc991dca2666e1",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "findings_summary": "Independent reviewer returned PASS; 0 blockers, 0 major, 0 required minor. It verified serialization-only change, unchanged scientific demand/common-M hashes, and the conditional fixed-vector scope.",
+  "process_starts": {
+    "guardian": 0,
+    "netconvert": 0,
+    "sumo": 0,
+    "traci": 0
+  },
+  "review_id": "MINIMAL3350_CTRL_S17_SCIENTIFIC_PRELAUNCH_REV8",
+  "review_provenance": "Disposition recorded from the independent read-only reviewer response relayed by the primary agent; reviewer authored no project file.",
+  "reviewed_changes": {
+    "START_request_serialization": "Canonical R02 JSON serialization and digest binding verified; this is an engineering serialization correction only.",
+    "common_M_manifest_sha256": "2fb1383e709e2174e2623aae575649aba40937729325a5e9c43bcc2b76982865",
+    "demand_sha256": "da93237ed572b4103146b07b6e2b6ed4ffb9b95d21e7ed22e823ea427f8d477c",
+    "scientific_inputs_unchanged": true
+  },
+  "reviewer": "independent project-scoped scientific_reviewer (read-only)",
+  "run_id": "MINIMAL3350_CTRL_S17",
+  "schema": "stage6_minimal3350_scientific_prelaunch_review_v1",
+  "scientific_boundary": "PASS does not classify control suitability or release treatment; future treatment must reuse the exact common-M manifest and pass separate review.",
+  "scope": "qMain=3350.4, M=1396, seed17, A_OPEN, R=U=X=0; control only. Treatment remains conditional on control post-run disposition and a separate exact-card review."
+}

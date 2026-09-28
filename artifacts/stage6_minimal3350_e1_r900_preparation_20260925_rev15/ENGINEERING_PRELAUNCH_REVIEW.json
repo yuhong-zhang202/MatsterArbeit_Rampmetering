@@ -1,0 +1,83 @@
+{
+  "card_sha256": "95b577a8b62bb79cccbcba8aa04869a96d3c04fa9dcc7db6d38489627d94b148",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "provenance_checks": {
+    "adapter_sha256": "98d530ad4490c92c174233028cdb9d2388b5a4a945233f90aefa7c4613052148",
+    "card_sha256": "95b577a8b62bb79cccbcba8aa04869a96d3c04fa9dcc7db6d38489627d94b148",
+    "configured_unique_output_paths": 20,
+    "demand_sha256": "3b3da52ac2ddbe915b3f6578b515ace1a30b3f7a1169724528855a6387abaada",
+    "input_manifest_sha256": "389ee74637d6fcac45480ac2e5f9f41cd51a39b2aa605d710b882af40673e6f5",
+    "output_parent_absent": true,
+    "r_source_xml_sha256": "a6ae2649fe93c61460a52303b6358985c14270ce5ac5af02460af53880965851",
+    "r_vector_receipt_sha256": "4f23a508713b53b64c3d419e06d754d3032dce52a19f17f977a6508509d8c8fb",
+    "request_config_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/scenario_control.sumocfg",
+    "reservation_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev15/r02_single_start/consumption/MINIMAL3350_E1_R900_DELAYED_S17.json",
+    "runner_sha256": "2926918ffb8dfdbf64874946af2cf3b199735335e9cce299770b28c4aad41e6f",
+    "runtime_binding_sha256": "191674b9c8fdb2b05244f44fc9d98d31b6d279e3a870b0c1f3ff623716586bfd",
+    "start_request_receipt_sha256": "8d9c44ba3d26c9fc8a7d9a63e6106a994fc0adf3d25fb9e51b5b7912998046c6",
+    "start_request_sha256": "1bce0cf5c4cbc6cd3edd9843e2cfae09d291d0993f10e34ce185407ac46db931",
+    "sumo_guardian_traci_netconvert_starts": 0
+  },
+  "review_scope": "Engineering-only E1 START_REQUEST path binding repair; no process launch; fresh data/science reviews required.",
+  "run_id": "MINIMAL3350_E1_R900_DELAYED_S17",
+  "runner_sha256": "2926918ffb8dfdbf64874946af2cf3b199735335e9cce299770b28c4aad41e6f",
+  "runtime_binding_sha256": "191674b9c8fdb2b05244f44fc9d98d31b6d279e3a870b0c1f3ff623716586bfd",
+  "schema": "stage6_minimal3350_treatment_engineering_prelaunch_review_v1",
+  "static_preflight": {
+    "guardian_request_validation": "BLOCKED_BY_REVIEW_GATE",
+    "launchable_now": false,
+    "reason": "fresh data_provenance and scientific reviews missing",
+    "starts": {
+      "guardian": 0,
+      "netconvert": 0,
+      "sumo": 0,
+      "traci": 0
+    },
+    "status": "PREFLIGHT_PASS_NO_PROCESS_STARTED"
+  },
+  "status": "PASS_PRELAUNCH",
+  "tests": {
+    "command": ".venv/bin/python -m unittest artifacts.stage6_minimal3350_e1_r900_preparation_20260925_rev15.tests.test_e1_r900_preflight artifacts.stage6_minimal3350_e1_r900_preparation_20260925_rev15.tests.test_start_request_binding -v",
+    "coverage": [
+      "exact 1396-row M match",
+      "R 240 count and first/last/interval",
+      "reject R departure at exclusive 1500s endpoint",
+      "reject missing R_flow.239",
+      "separate original design and adopted escalation plan hashes",
+      "exact review schema accepted, wrong E1-specific schema rejected",
+      "persisted START request points to E1 R900 staged config and rev15 reservation",
+      "reject stale R720 config/reservation bindings",
+      "reject card, runner, runtime, output-directory mismatches",
+      "all 18 output roles match E1 output directory"
+    ],
+    "failed": 0,
+    "passed": 9,
+    "test_file_sha256": {
+      "test_e1_r900_preflight.py": "828092d623b2266ae3dbb66ade11234b552936a230a3bd612f412152c25a9693",
+      "test_start_request_binding.py": "b8aa547bc1093f65e0dca624ba88026ad8db7230cbf969dd085231a6a916c4d4"
+    }
+  },
+  "verified": {
+    "all_configured_output_paths": 20,
+    "configured_xml_output_roles": 18,
+    "m_exact_matches": 1396,
+    "output_parent_absent": true,
+    "r_count": 240,
+    "r_schedule_ms": [
+      540000,
+      1496000,
+      4000
+    ],
+    "resource_limits_s_bytes_poll": [
+      120,
+      100000000,
+      100
+    ],
+    "u_explicit_zero": true,
+    "x_explicit_zero": true
+  }
+}

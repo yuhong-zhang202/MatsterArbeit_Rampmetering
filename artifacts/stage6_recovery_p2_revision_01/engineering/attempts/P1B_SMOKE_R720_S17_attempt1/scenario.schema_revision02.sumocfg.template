@@ -1,0 +1,37 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sumoConfiguration>
+  <input>
+    <net-file value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_attempts/BUILD01/network.net.xml" />
+    <route-files value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/attempts/P1B_SMOKE_R720_S17_attempt1/demand.rou.xml" />
+    <additional-files value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/attempts/P1B_SMOKE_R720_S17_attempt1/scenario.add.xml.NOT_MATERIALIZED" />
+  </input>
+  <time>
+    <begin value="0" />
+    <end value="2700" />
+    <step-length value="1" />
+  </time>
+  <processing>
+    <time-to-teleport value="-1" />
+    <collision.action value="warn" />
+    <collision.check-junctions value="true" />
+    <extrapolate-departpos value="false" />
+  </processing>
+  <output>
+    <fcd-output value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/attempts/P1B_SMOKE_R720_S17_attempt1/outputs/fcd.xml" />
+    <queue-output value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/attempts/P1B_SMOKE_R720_S17_attempt1/outputs/queues.xml" />
+    <summary-output value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/attempts/P1B_SMOKE_R720_S17_attempt1/outputs/sumo_summary.xml" />
+    <tripinfo-output value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/attempts/P1B_SMOKE_R720_S17_attempt1/outputs/tripinfo.xml" />
+    <vehroute-output value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/attempts/P1B_SMOKE_R720_S17_attempt1/outputs/vehroute.xml" />
+    <tripinfo-output.write-unfinished value="true" />
+    <vehroute-output.write-unfinished value="true" />
+    <precision value="2" />
+  </output>
+  <random_number>
+    <seed value="17" />
+  </random_number>
+  <report>
+    <log value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/attempts/P1B_SMOKE_R720_S17_attempt1/outputs/sumo.log" />
+    <error-log value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/attempts/P1B_SMOKE_R720_S17_attempt1/outputs/sumo_error.log" />
+    <no-step-log value="true" />
+  </report>
+</sumoConfiguration>

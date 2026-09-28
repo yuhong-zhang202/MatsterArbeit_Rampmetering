@@ -1,0 +1,121 @@
+{
+  "TLS_program": "A_OPEN",
+  "approval_required": true,
+  "card_revision": 2,
+  "card_status": "DRAFT_NOT_AUTHORIZED",
+  "condition": "A_OPEN_R0_CONTROL",
+  "demand": {
+    "M_number": 1333,
+    "M_window_s": "[0,1500)",
+    "R_number": 0,
+    "R_window_s": "NO_R_SOURCE",
+    "U_number": 150,
+    "X_number": 75,
+    "qMain_veh_per_h": 3199.2,
+    "qRamp_veh_per_h": 0,
+    "qUrban_veh_per_h": 360,
+    "qX_veh_per_h": 180
+  },
+  "design_plan": "artifacts/stage6_final_bounded_demand_scan_plan_20260923_v1/BOUNDED_DEMAND_SCAN_PLAN.md",
+  "design_sha256": "5aeddf82bcaa7f2b559e7b6db951815c724cf7d3e8f14dd81158a6f9dbac1046",
+  "execution_authorized": false,
+  "geometry": "accepted network bytes; read-only; no netconvert",
+  "horizon_s": 2700,
+  "input_manifest": "inputs/control/expected_identity_manifest.json",
+  "input_manifest_sha256": "920f7d379c4a6509f2591447577688c372759f7b82c9cace166c0a95e51bec3f",
+  "input_sha256": {
+    "additional": "ed98832e73675aa95cb3cfc386c579db9525b942b2555e802f0a29324affc23e",
+    "demand": "6bbdc1d9148b05286c25b94f23c37174951c9f3e4a544ef8b9a322fbc42ab631",
+    "network": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "output_roles": "5fe6d340f7196a2afd91ad56cd3c6ed419e32501110ce21076771446b4299ad3",
+    "sumocfg": "6ea7306958543281b35a4c560e735d07e04c7658f73dc06f5cb174041baf0fe6"
+  },
+  "inputs": {
+    "additional": "inputs/control/scenario.add.xml",
+    "demand": "inputs/control/demand.rou.xml",
+    "network": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+    "output_roles": "inputs/control/output_roles.json",
+    "sumocfg": "inputs/control/scenario.sumocfg"
+  },
+  "max_starts": 1,
+  "output_directory": "data/raw/stage6_bounded_pair_20260923_v1/PAIR_3199_CTRL_S17/outputs",
+  "output_role_source": {
+    "path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/inputs/control/output_roles.json",
+    "sha256": "5fe6d340f7196a2afd91ad56cd3c6ed419e32501110ce21076771446b4299ad3"
+  },
+  "pair_id": "PAIR_3199_S17",
+  "pair_start_order": 1,
+  "progression_allowed": false,
+  "protocol_status": "UNFROZEN; no formal protocol change",
+  "required_unresolved_prelaunch_items": [
+    "Resource limits are proposed only and await separate user authorization",
+    "Card is DRAFT_NOT_AUTHORIZED; no execution command is enabled"
+  ],
+  "resource_limits": {
+    "runtime_s": 90,
+    "scope": "PAIR_3199_CTRL_S17",
+    "status": "PROPOSED_NOT_AUTHORIZED",
+    "storage_bytes": 60000000,
+    "storage_enforcement": "100ms_polled_stop_trigger_with_possible_overshoot_not_hard_quota"
+  },
+  "run_command": null,
+  "run_id": "PAIR_3199_CTRL_S17",
+  "runner_binding": {
+    "card_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/PAIR_3199_CTRL_S17_CARD_DRAFT_NOT_AUTHORIZED_REV2.json",
+    "consumption_directory": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/r02_single_start/consumption",
+    "kind": "PAIR_RUN",
+    "output_directory": "data/raw/stage6_bounded_pair_20260923_v1/PAIR_3199_CTRL_S17/outputs",
+    "package_id": "stage6_pair_3199_s17_preparation_20260923_v1",
+    "run_id": "PAIR_3199_CTRL_S17"
+  },
+  "runtime_binding": {
+    "additional_schema_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+    "additional_schema_sha256": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e",
+    "binary_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+    "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+    "binary_version": "1.26.0",
+    "guardian_runner_sha256": "ac0781d6f24657002e78dbf130519eb38090f4f8d91180548ec306d17080be9b",
+    "max_output_bytes": 60000000,
+    "max_runtime_s": 90,
+    "python_environment": {
+      "executable_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+      "executable_sha256": "76c73e25cdd69650a897648666e41c364940fbcff0d1176572a667d4d470ec9e",
+      "implementation": "CPython",
+      "package_versions": {
+        "sumoITScontrol": "0.1.0",
+        "sumolib": "1.26.0",
+        "traci": "1.26.0"
+      },
+      "version": "3.13.0"
+    },
+    "resource_proposal": {
+      "basis": "RI3350 technical_retry1 preserved receipt: 24.465112 s wall-clock and 21,720,062 payload bytes; pair-only proposal, no authorization",
+      "enforcement": "100ms polled stop trigger; output polling overshoot possible; not a hard quota",
+      "output_size_stop_limit_bytes_decimal": 60000000,
+      "scope": "PAIR_3199_CTRL_S17",
+      "status": "PROPOSED_NOT_AUTHORIZED",
+      "wallclock_stop_limit_s": 90
+    },
+    "sumo_home": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo",
+    "version_evidence": {
+      "binary_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+      "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+      "query": "sumo --version (environment probe; no simulation)",
+      "reported_version": "1.26.0"
+    }
+  },
+  "runtime_binding_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/runtime_bindings/PAIR_3199_CTRL_S17.json",
+  "runtime_binding_sha256": "b351f102a634cbef6aa8720381005881192bce71ffc4b9a319602ce36aafab0a",
+  "schema_version": "1",
+  "scope_prohibitions": [
+    "No SUMO/netconvert/TraCI execution before separate user authorization",
+    "No classifier or threshold changes",
+    "No scientific input changes",
+    "No other demand/seed/controller runs"
+  ],
+  "seed": 17,
+  "step_s": 1,
+  "technical_retries": 0,
+  "treatment_release": "Treatment requires independent LOW_R_BACKGROUND_ACCEPTABLE control adjudication under the full adopted plan and separate exact user authorization; no automatic release.",
+  "vehicle_behavior": "unchanged from bound route file: technical_passenger, no explicit per-vehicle overrides"
+}

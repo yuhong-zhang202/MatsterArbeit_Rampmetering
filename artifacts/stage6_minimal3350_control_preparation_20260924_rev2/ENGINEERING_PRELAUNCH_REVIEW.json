@@ -1,0 +1,37 @@
+{
+  "card_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev2/MINIMAL3350_CTRL_S17_CARD_FINAL.json",
+  "card_sha256": "6095e498eb560d2ed8dc16548e19902313d7a89be92057db0d2fae689497c2ac",
+  "checks": {
+    "common_m_manifest_and_demand_hash_bound": true,
+    "conditional_three_review_gate_enforced": true,
+    "exact_card_and_run_binding": true,
+    "guardian_request_validated_offline": true,
+    "m_count_1396_integer_schedule_1074ms": true,
+    "no_process_started": true,
+    "output_path_absent": true,
+    "qmain_3350_4_seed17_ux0_r0": true,
+    "r02_runner_and_guardian_v2_binding": true,
+    "resource_contract_90s_60000000bytes_100ms": true,
+    "sumo_1_26_runtime_and_schema_hash_bound": true
+  },
+  "evidence": {
+    "request_receipt_sha256": "9b4a76762b61c9a9a30fabc1cc275d3d135a542c53769e9ad3ffdb50b6577679",
+    "request_sha256": "17c2b0a44edd914aba31a41e504adf4eef1ce8f18d471d027bd867a8a6557dd6",
+    "runner_sha256": "5cfbd1542016205203ed046756ef00800d1d5fe0070aa20878ebdd0d6a67384a",
+    "static_preflight": "R02 verify_card + make_plan PASS; launchable_now=false because independent receipts pending",
+    "test_command": ".venv/bin/python -m unittest -v tests/test_minimal3350_binding.py",
+    "test_result": "PASS (4 tests)"
+  },
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "limitations": [
+    "The explicit speedFactor list is copied from the prior qMain=3350.4 seed17 full-network vehroute; U/X were nonzero in that source. This provenance is fully hash-bound but remains for data/scientific reviewer adjudication before launch."
+  ],
+  "reviewer": "simulation_engineer",
+  "run_id": "MINIMAL3350_CTRL_S17",
+  "schema": "stage6_engineering_prelaunch_review_v1",
+  "status": "PASS_PRELAUNCH"
+}

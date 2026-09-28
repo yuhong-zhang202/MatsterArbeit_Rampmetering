@@ -1,0 +1,15 @@
+# Independent engineering prelaunch review — repaired v5 attempt 1
+
+**Disposition: PASS_PRELAUNCH. Findings: Blocker/Major/required Minor = 0/0/0.**
+
+Reviewed the exact FINAL card for `PAIR_3199_R720_DELAYED_S17` attempt `PAIR3199_R720_DELAYED_S17_REPAIRED_V5_ATTEMPT1` (execution UUID `b095cce4-baba-4c40-aa79-08b5e58b9ce1`). The FINAL card SHA-256 is `0801dc1e15ade92babe33640d521ba831174210a200b9e5a66aaeb3bd472e0ef`. Runtime binding SHA-256 is `4978450c6dd83f37377d1f1a454ba35d5944e4d7a0ed353ed5d43906793b4053`; runner SHA-256 is `0961912a46464eb9757ab245c26577e8f1de0985534f34db04a41a4dac45f9c8`. Exact input hashes are recorded in the adjacent JSON receipt.
+
+The card maps the repaired scenario, unique run/attempt identity, UUID, exact card path, fresh output path, and separate one-use consumption path consistently. It binds the accepted SUMO 1.26.0 binary/runtime and project Python environment. The v5 invariant report remains PASS: 1,558/1,558 complete M/U/X input records match and the only treatment addition is 192 `R_flow.0–191` identities. User-authorized stop triggers are 90 s and 75,000,000 decimal bytes, polled every 100 ms with slight overshoot accepted. Maximum starts=1 and technical retries=0.
+
+Runner review: the exact-card path allowlist routes this attempt to its own output and consumption paths. `launch()` checks card/run binding and exact hash, then calls `repaired_final_review_gate()` before creating the one-use reservation. The gate requires all three JSON receipts to say `PASS_PRELAUNCH`, bind this FINAL card SHA, and report zero blocker/major/required-minor findings; the sidecar must bind the receipt hashes and card SHA. Current read-only preflight reports `WAITING_FOR_REQUIRED_REVIEWS` and `launchable_now=false`. Unit tests cover exact review binding and reject an altered card hash/sidecar. No `launch()` call was made.
+
+The pre-R matching gate is correctly registered: compare M/U/X trajectory equivalence before first meaningful R exposure; unexplained material divergence means the pair is `NOT_EVALUABLE`, with no post-R witness interpretation. Static input equality does not itself establish trajectory equivalence.
+
+Independent verification: ran `.venv/bin/python artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/test_runner.py` — **24/24 PASS**. Ran the read-only R02 `preflight` with the exact card hash — `PREFLIGHT_PASS_NO_PROCESS_STARTED`, reviews pending, `launchable_now=false`. Independently recomputed the card, runner, runtime, input, contract, v5 receipt and prior preparation-receipt hashes; all matched. Fresh output path, consumption directory/reservation, three final review receipts, and sidecar are absent. Prior NOT_EVALUABLE output/reservation paths are distinct and untouched. Starts: SUMO=0, TraCI=0, netconvert=0.
+
+**Authorization status:** the current user authorization for one attempt is present and valid. Do not execute until exact-card engineering, data/provenance, and scientific review receipts all PASS and the review-binding sidecar verifies; this review alone does not make the runner launchable.

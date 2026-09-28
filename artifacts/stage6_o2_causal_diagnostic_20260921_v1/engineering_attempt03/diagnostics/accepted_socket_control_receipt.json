@@ -1,0 +1,50 @@
+{
+  "SUMO_starts": 0,
+  "TraCI_sessions": 0,
+  "child_rc": 0,
+  "new_ESTABLISHED_check": {
+    "argv": [
+      "/usr/sbin/lsof",
+      "-nP",
+      "-a",
+      "-p",
+      "49419",
+      "-iTCP:8819",
+      "-sTCP:ESTABLISHED",
+      "-FpfntT"
+    ],
+    "client_endpoint": [
+      "127.0.0.1",
+      50950
+    ],
+    "elapsed_s": 0.009064749989192933,
+    "expected_server_socket": "127.0.0.1:8819->127.0.0.1:50950",
+    "kind": "connection_postconnect",
+    "matching_descriptors": [
+      {
+        "fd": "4",
+        "name": "127.0.0.1:8819->127.0.0.1:50950",
+        "pid": "49419",
+        "state": "ESTABLISHED",
+        "type": "IPv4"
+      }
+    ],
+    "returncode": 0,
+    "server_endpoint": [
+      "127.0.0.1",
+      8819
+    ],
+    "stderr": "",
+    "stdout": "p49419\nf4\ntIPv4\nn127.0.0.1:8819->127.0.0.1:50950\nTST=ESTABLISHED\nTQR=0\nTQS=0\n"
+  },
+  "old_LISTEN_check": {
+    "rc": 1,
+    "stderr": "",
+    "stdout": ""
+  },
+  "preconnect_exact_PID_pass": true,
+  "python_tcp_child_pid": 49419,
+  "reply": "PONG",
+  "status": "PASS",
+  "trace": "{\"argv\": [\"/usr/sbin/lsof\", \"-nP\", \"-a\", \"-p\", \"49419\", \"-iTCP:8819\", \"-sTCP:ESTABLISHED\", \"-FpfntT\"], \"client_endpoint\": [\"127.0.0.1\", 50950], \"elapsed_s\": 0.009064749989192933, \"expected_server_socket\": \"127.0.0.1:8819->127.0.0.1:50950\", \"kind\": \"connection_postconnect\", \"matching_descriptors\": [{\"fd\": \"4\", \"name\": \"127.0.0.1:8819->127.0.0.1:50950\", \"pid\": \"49419\", \"state\": \"ESTABLISHED\", \"type\": \"IPv4\"}], \"returncode\": 0, \"server_endpoint\": [\"127.0.0.1\", 8819], \"stderr\": \"\", \"stdout\": \"p49419\\nf4\\ntIPv4\\nn127.0.0.1:8819->127.0.0.1:50950\\nTST=ESTABLISHED\\nTQR=0\\nTQS=0\\n\"}\n"
+}

@@ -1,0 +1,65 @@
+{
+  "approval": {
+    "approval": {
+      "approval_basis": "The user explicitly instructed: diagnose the cause and keep attempting until successful. This BUILD02 card is a separately reviewed, evidence-based engineering implementation under that instruction; it is not represented as an exact-hash approval personally reviewed by the user.",
+      "approved_at": "2026-09-19T19:48:24Z",
+      "authority_mode": "continuing_user_instruction_with_independent_review",
+      "card_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_recovery_diagnosis_revision01/BUILD02_request_card_revision02.json",
+      "card_sha256": "0f80fff0ee7b434dbb30e796b30f67045bddb983ac173efd34e90c3797a90672",
+      "max_netconvert_starts": 1,
+      "monitoring_semantics": "polling_50ms_possible_overshoot_preserved",
+      "note": "Only this immutable BUILD02 attempt is activated. No automatic retry. Any later evidence-based attempt requires a new immutable card and independent review under the user's continuing instruction. SUMO/TraCI/GUI remain unauthorized.",
+      "review_receipt": {
+        "open_blocker_major_required_minor": "0/0/0",
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_recovery_diagnosis_revision01/BUILD02_independent_review_record.json",
+        "result": "PASS",
+        "sha256": "780f3a47dda62a94c61f0c922555f35c83024e3e2a29f4d31d162aa28bf00905"
+      },
+      "scope": "SG6-BUILD BUILD02 only",
+      "status": "user-approved",
+      "synthetic_test_only": false,
+      "user_approval_quote": "\u6392\u67e5\u539f\u56e0\uff0c\u5c1d\u8bd5\u76f4\u5230\u6210\u529f"
+    },
+    "card_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_recovery_diagnosis_revision01/BUILD02_request_card_revision02.json",
+    "card_sha256": "0f80fff0ee7b434dbb30e796b30f67045bddb983ac173efd34e90c3797a90672",
+    "sidecar_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_recovery_diagnosis_revision01/BUILD02_user_approval.json",
+    "sidecar_sha256": "ee3624eaa807afd3e411ab450e30cd53dba49fe85a595f6415e0aa4c73aaad86"
+  },
+  "automatic_retry": false,
+  "compiled_guard_acceptance": false,
+  "consumed_starts": 1,
+  "error": null,
+  "monitored_cap_bytes": 100000000,
+  "monitored_timeout_s": 30,
+  "observed_peak_bytes": 17609,
+  "outputs": {
+    "netconvert.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "netconvert.stdout.log": {
+      "bytes": 2195,
+      "sha256": "e25c5e6e77ade26d7bd3d1acbe79b5c45c78dc90cd41a1248d4f23ff019a6bdf"
+    },
+    "network.net.xml": {
+      "bytes": 12244,
+      "sha256": "e47b0f94521414e55d0e5337b87204dc38d98a0a3a7c5466f2a5883f80b52710"
+    },
+    "reservation.json": {
+      "bytes": 3076,
+      "sha256": "0d59f1af93d8f78b254ffbd8f8e4644307ae99a90d6a89b66f7b68972b44d38b"
+    },
+    "started.json": {
+      "bytes": 94,
+      "sha256": "1ed81e1d96be6a844481965714879045fdb2f2f704832bd423f772a39dfec2f9"
+    }
+  },
+  "polling_overshoot_possible": true,
+  "returncode": 0,
+  "scientific_acceptance": false,
+  "status": "completed_pending_compiled_review",
+  "stderr_nonempty": false,
+  "synthetic_test_only": false,
+  "termination_requested": false,
+  "wallclock_s": 4.657082666999486
+}

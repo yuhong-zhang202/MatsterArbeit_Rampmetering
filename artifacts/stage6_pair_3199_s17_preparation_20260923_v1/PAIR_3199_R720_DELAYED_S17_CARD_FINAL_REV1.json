@@ -1,0 +1,179 @@
+{
+  "LOW_R_BACKGROUND_ACCEPTABLE_required_for_release": false,
+  "TLS_program": "A_OPEN",
+  "approval_required": false,
+  "authorization_record": {
+    "authorization": "USER_AUTHORIZED_EXACTLY_ONE_TREATMENT_START",
+    "authorized_date": "2026-09-23",
+    "exact_card_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/PAIR_3199_R720_DELAYED_S17_CARD_FINAL_REV1.json",
+    "max_starts": 1,
+    "output_polling_interval_ms": 100,
+    "output_size_stop_trigger_bytes_decimal": 90000000,
+    "polling_overshoot_accepted": true,
+    "prohibited_runs": [
+      "seed23",
+      "B",
+      "C",
+      "transition",
+      "other_qMain_qRamp"
+    ],
+    "run_id": "PAIR_3199_R720_DELAYED_S17",
+    "technical_retries": 0,
+    "wallclock_stop_trigger_s": 120
+  },
+  "card_revision": 5,
+  "card_status": "FINAL_AUTHORIZED_FOR_ONE_START",
+  "condition": "A_OPEN_DELAYED_R720",
+  "demand": {
+    "M_number": 1333,
+    "M_window_s": "[0,1500)",
+    "R_number": 192,
+    "R_window_s": "[540,1500)",
+    "U_number": 150,
+    "X_number": 75,
+    "qMain_veh_per_h": 3199.2,
+    "qRamp_veh_per_h": 720,
+    "qUrban_veh_per_h": 360,
+    "qX_veh_per_h": 180
+  },
+  "design_plan": "artifacts/stage6_final_bounded_demand_scan_plan_20260923_v1/BOUNDED_DEMAND_SCAN_PLAN.md",
+  "design_sha256": "5aeddf82bcaa7f2b559e7b6db951815c724cf7d3e8f14dd81158a6f9dbac1046",
+  "execution_authorized": true,
+  "geometry": "accepted network bytes; read-only; no netconvert",
+  "horizon_s": 2700,
+  "input_manifest": "inputs/treatment/expected_identity_manifest.json",
+  "input_manifest_sha256": "a69ba23ed1a82957904c8abc4aee774decf94d0210c07d29d051c0162f7aef1b",
+  "input_sha256": {
+    "additional": "13dc69427f24014e02c4ded173ba5d2db12ebf2666c0b77f2cc486a19755332a",
+    "demand": "6fe53e5b294184704ee5dbd575ccb2c225c17b57014c5c981b60ba557a9ae400",
+    "network": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "output_roles": "7dab35372984ccd3e7f103afaaf0dff59ecf4df6dc13d4c66dea5190fa77155d",
+    "sumocfg": "70a082e81a32f3a759a8b26cd9cbf426358d7cf4f40eedcef72d3f272d851072"
+  },
+  "inputs": {
+    "additional": "inputs/treatment/scenario.add.xml",
+    "demand": "inputs/treatment/demand.rou.xml",
+    "network": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+    "output_roles": "inputs/treatment/output_roles.json",
+    "sumocfg": "inputs/treatment/scenario.sumocfg"
+  },
+  "matched_control_binding": {
+    "data_review_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/CONTROL_DATA_LIFECYCLE_REVIEW_FINAL_REV1.json",
+    "data_review_sha256": "6c8c2a381a5a2fc1102953ed58a5a1cd022a0c22789b0bbbd486d86a7b0ac799",
+    "exact_card_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/PAIR_3199_CTRL_S17_CARD_FINAL_REV1.json",
+    "exact_card_sha256": "0748d37719541d7c76adcd57e07fd764b413fbd21bb16e015b57024175e866da",
+    "execution_receipt_path": "data/raw/stage6_bounded_pair_20260923_v1/PAIR_3199_CTRL_S17/outputs/execution_receipt.json",
+    "execution_receipt_sha256": "a6a1a67282ff9e19f0205ce4b681cef34315bc04ad65f9588d7b269fadcfd336",
+    "output_manifest_path": "data/raw/stage6_bounded_pair_20260923_v1/PAIR_3199_CTRL_S17/outputs/output_manifest.json",
+    "output_manifest_sha256": "da15103c64be65eb6b83fc37a505418c81c33cf490db48f03a5fd15d984a74d8",
+    "preserved_candidate_c_warning": "EARLY_WARNING_PRESENT_NOT_STATE1",
+    "preserved_historical_low_r_status": "NOT_EVALUABLE",
+    "raw_output_directory": "data/raw/stage6_bounded_pair_20260923_v1/PAIR_3199_CTRL_S17/outputs",
+    "run_id": "PAIR_3199_CTRL_S17",
+    "use_as_clean_normal_baseline": false
+  },
+  "max_starts": 1,
+  "output_directory": "data/raw/stage6_bounded_pair_20260923_v1/PAIR_3199_R720_DELAYED_S17/outputs",
+  "output_role_source": {
+    "path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/inputs/treatment/output_roles.json",
+    "sha256": "7dab35372984ccd3e7f103afaaf0dff59ecf4df6dc13d4c66dea5190fa77155d"
+  },
+  "pair_id": "PAIR_3199_S17",
+  "pair_start_order": 2,
+  "progression_allowed": false,
+  "protocol_status": "UNFROZEN; no formal protocol change",
+  "provenance_binding": {
+    "approved_witness_contract_path": "docs/methodology/STAGE6_EXPLORATORY_RAMP_INDUCED_WITNESS_CONTRACT.md",
+    "approved_witness_contract_sha256": "958890a7dd017110787a85d77ebfa3e6dac2b7d862f0fd91f6bafb7cf1738d9a",
+    "control_execution_capture_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/R02_EXECUTION_CAPTURE_FINAL_REV1.json",
+    "control_execution_capture_sha256": "33b2a95dbe54ab05edd4ced2d1a4d53e79f4afcacdaa4b3e586c84e10a27a9be",
+    "control_provenance_receipt_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/PROVENANCE_RECEIPT_FINAL_REV1.json",
+    "control_provenance_receipt_sha256": "17ca7b35170534a02011e43d28394efe7a292d0e6360483b7bbd369132d3dc3d",
+    "preparation_parent_receipt_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/PROVENANCE_RECEIPT_REV2.json",
+    "preparation_parent_receipt_sha256": "701cd5351045b6b25ddeae888e2ac9ae08431c1e6bb8ae261849a4ff091bfb84"
+  },
+  "required_event_timeline_markers": [
+    "R_demand_activation",
+    "first_scheduled_R_departure",
+    "first_actual_R_departure",
+    "first_R_arrival_near_merge",
+    "first_meaningful_merge_exposure",
+    "first_M_deterioration",
+    "State1_onset"
+  ],
+  "required_unresolved_prelaunch_items": [],
+  "resource_limits": {
+    "runtime_s": 120,
+    "scope": "PAIR_3199_R720_DELAYED_S17",
+    "status": "AUTHORIZED_FOR_THIS_RUN",
+    "storage_bytes": 90000000,
+    "storage_enforcement": "100ms_polled_stop_trigger_with_possible_overshoot_not_hard_quota"
+  },
+  "run_command": null,
+  "run_id": "PAIR_3199_R720_DELAYED_S17",
+  "runner_binding": {
+    "card_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/PAIR_3199_R720_DELAYED_S17_CARD_FINAL_REV1.json",
+    "consumption_directory": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/r02_single_start/consumption",
+    "kind": "PAIR_RUN",
+    "output_directory": "data/raw/stage6_bounded_pair_20260923_v1/PAIR_3199_R720_DELAYED_S17/outputs",
+    "package_id": "stage6_pair_3199_s17_preparation_20260923_v1",
+    "run_id": "PAIR_3199_R720_DELAYED_S17"
+  },
+  "runtime_binding": {
+    "additional_schema_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+    "additional_schema_sha256": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e",
+    "binary_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+    "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+    "binary_version": "1.26.0",
+    "guardian_runner_sha256": "cbfa8937fe22dd0998667cc4fc3df6f44cd61cf1e5cd32c4a5507aa5bb425104",
+    "max_output_bytes": 90000000,
+    "max_runtime_s": 120,
+    "python_environment": {
+      "executable_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+      "executable_sha256": "76c73e25cdd69650a897648666e41c364940fbcff0d1176572a667d4d470ec9e",
+      "implementation": "CPython",
+      "package_versions": {
+        "sumoITScontrol": "0.1.0",
+        "sumolib": "1.26.0",
+        "traci": "1.26.0"
+      },
+      "version": "3.13.0"
+    },
+    "resource_proposal": {
+      "basis": "Explicit user acceptance for this treatment run only on 2026-09-23; derived treatment-specific proposal was 120 s and 90,000,000 decimal bytes.",
+      "enforcement": "100ms_polled_stop_trigger_with_possible_overshoot_not_hard_quota",
+      "output_size_stop_limit_bytes_decimal": 90000000,
+      "scope": "PAIR_3199_R720_DELAYED_S17",
+      "status": "AUTHORIZED_FOR_THIS_RUN",
+      "wallclock_stop_limit_s": 120
+    },
+    "sumo_home": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo",
+    "version_evidence": {
+      "binary_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+      "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+      "query": "sumo --version (environment probe; no simulation)",
+      "reported_version": "1.26.0"
+    }
+  },
+  "runtime_binding_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/runtime_bindings/PAIR_3199_R720_DELAYED_S17_FINAL_REV1.json",
+  "runtime_binding_sha256": "0b80e870722573ee0ff61a05109c2fc2f7263b6cf7e0fbf1fb4f8b5a7bf5131e",
+  "schema_version": "1",
+  "scope_prohibitions": [
+    "No SUMO/netconvert/TraCI execution before separate user authorization",
+    "No classifier or threshold changes",
+    "No scientific input changes",
+    "No other demand/seed/controller runs"
+  ],
+  "seed": 17,
+  "step_s": 1,
+  "technical_retries": 0,
+  "timeline_contract_note": "Keep scheduled and actual first R departure separate; record first R arrival near/at merge separately from first meaningful merge exposure, then first treatment-specific M deterioration and locked State1 onset.",
+  "treatment_release": "Adopted Stage 6 exploratory ramp-induced witness contract applies to this matched pair only; old LOW_R_BACKGROUND_ACCEPTABLE remains unchanged and is not the treatment release gate.",
+  "treatment_release_gate": "STAGE6_EXPLORATORY_RAMP_INDUCED_WITNESS_CONTRACT_ONLY",
+  "vehicle_behavior": "unchanged from bound route file: technical_passenger, no explicit per-vehicle overrides",
+  "witness_contract": {
+    "path": "docs/methodology/STAGE6_EXPLORATORY_RAMP_INDUCED_WITNESS_CONTRACT.md",
+    "scope": "This Stage 6 exploratory treatment only; not the formal experiment protocol",
+    "sha256": "958890a7dd017110787a85d77ebfa3e6dac2b7d862f0fd91f6bafb7cf1738d9a"
+  }
+}

@@ -1,0 +1,88 @@
+{
+  "schema_version": "1",
+  "receipt_id": "PAIR3199_R720_DELAYED_S17_DATA_PROVENANCE_PRELAUNCH_REV1",
+  "review_type": "READ_ONLY_STATIC_DATA_AND_PROVENANCE_PRELAUNCH",
+  "run_id": "PAIR_3199_R720_DELAYED_S17",
+  "disposition": "PASS",
+  "blocker_major_required_minor": [0, 0, 0],
+  "confidence": "High for static data/provenance binding",
+  "exact_treatment_card": {
+    "path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/PAIR_3199_R720_DELAYED_S17_CARD_PRELAUNCH_REV1.json",
+    "sha256": "263c63f356b02353655a5e8e06eb7089d527e82f8137f45a8ecaf63054fd38a4"
+  },
+  "contract": {
+    "path": "docs/methodology/STAGE6_EXPLORATORY_RAMP_INDUCED_WITNESS_CONTRACT.md",
+    "sha256": "958890a7dd017110787a85d77ebfa3e6dac2b7d862f0fd91f6bafb7cf1738d9a",
+    "scope": "User-adopted solely for Stage 6 exploratory validation and this PAIR3199 matched pair; not the formal protocol"
+  },
+  "input_hashes_verified": {
+    "demand": "6fe53e5b294184704ee5dbd575ccb2c225c17b57014c5c981b60ba557a9ae400",
+    "additional": "13dc69427f24014e02c4ded173ba5d2db12ebf2666c0b77f2cc486a19755332a",
+    "network": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "output_roles": "7dab35372984ccd3e7f103afaaf0dff59ecf4df6dc13d4c66dea5190fa77155d",
+    "sumocfg": "70a082e81a32f3a759a8b26cd9cbf426358d7cf4f40eedcef72d3f272d851072",
+    "expected_identity_manifest": "a69ba23ed1a82957904c8abc4aee774decf94d0210c07d29d051c0162f7aef1b"
+  },
+  "matched_design_verified": {
+    "qMain_veh_per_h": 3199.2,
+    "M": 1333,
+    "R": 192,
+    "R_window": "[540,1500)",
+    "qRamp_veh_per_h": 720,
+    "U": 150,
+    "X": 75,
+    "seed": 17,
+    "TLS_program": "A_OPEN",
+    "horizon_s": 2700,
+    "only_intended_scientific_demand_difference": "R source absent in control / R_flow in treatment"
+  },
+  "required_timeline_markers_present": [
+    "R_demand_activation",
+    "first_R_departure",
+    "first_meaningful_merge_exposure",
+    "first_M_deterioration",
+    "State1_onset"
+  ],
+  "matched_control": {
+    "run_id": "PAIR_3199_CTRL_S17",
+    "card_sha256": "0748d37719541d7c76adcd57e07fd764b413fbd21bb16e015b57024175e866da",
+    "data_review_sha256": "6c8c2a381a5a2fc1102953ed58a5a1cd022a0c22789b0bbbd486d86a7b0ac799",
+    "execution_receipt_sha256": "a6a1a67282ff9e19f0205ce4b681cef34315bc04ad65f9588d7b269fadcfd336",
+    "raw_output_manifest_sha256": "da15103c64be65eb6b83fc37a505418c81c33cf490db48f03a5fd15d984a74d8",
+    "verified_raw_files": 27,
+    "verified_processed_outputs": 25,
+    "historical_LOW_R_BACKGROUND_ACCEPTABLE": "NOT_EVALUABLE",
+    "fixed_screen_failures_preserved": true,
+    "candidate_C_warning_preserved": "EARLY_WARNING_PRESENT_NOT_STATE1",
+    "low_speed_warning_history_preserved": true,
+    "clean_normal_baseline_claim": false,
+    "inherited_control_review_DM01": "retained in original control review; not changed or cleared here"
+  },
+  "runtime_runner_binding": {
+    "runtime_sidecar_sha256": "184f640de731c3da26593e2da55ab81d5bb23232cb6e7a4c9a37645648d94a41",
+    "runner_sha256": "76175f1361bd007b5d9d7382b625fd0c3b81b2022022e4093ec5aa747685cdf3"
+  },
+  "resource_proposal": {
+    "wallclock_stop_trigger_s": 120,
+    "output_size_stop_trigger_bytes_decimal": 90000000,
+    "poll_interval_ms": 100,
+    "status": "PROPOSED_NOT_AUTHORIZED",
+    "execution_authorized": false
+  },
+  "exclusive_paths": {
+    "treatment_output_path_absent": true,
+    "treatment_reservation_path_absent": true,
+    "preflight_status": "PREFLIGHT_PASS_NO_PROCESS_STARTED"
+  },
+  "forbidden_actions": {
+    "SUMO_starts": 0,
+    "TraCI_starts": 0,
+    "netconvert_starts": 0,
+    "raw_or_processed_data_modified": false,
+    "scientific_input_modified": false
+  },
+  "limitations": [
+    "Static prelaunch review does not establish future treatment lifecycle, actual R merge exposure, chronology, or treatment effect.",
+    "Existing control remains historically NOT_EVALUABLE and is not certified as a clean normal baseline."
+  ]
+}

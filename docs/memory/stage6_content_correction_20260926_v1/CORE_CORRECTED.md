@@ -1,0 +1,37 @@
+# Masterarbeit-Ramp-Metering — Core Project Memory
+
+## Identity and authority
+
+This is auxiliary long-term memory for the TU Berlin ramp-metering master's thesis workspace. Repository documents remain authoritative. Read `AGENTS.md`; use `docs/PROJECT_STATE.md` for current phase, `docs/DECISIONS.md` for approved decisions, `docs/SUPERVISOR_FEEDBACK.md` and original sources for supervisor statements, and `docs/EXPERIMENT_PROTOCOL.md` before formal work. Later repository evidence overrides stale memory. AI memory is not academic evidence and creates no authorization.
+
+## Working research direction and approval boundary
+
+The provisional thesis direction is to study a ramp-metering acceptable outcome region in SUMO/`sumoITScontrol`: protect freeway operation without persistent ramp queues obstructing urban through-traffic. `qMain × qRamp` describes demand conditions, not an optimum. The initial comparison route is uncontrolled/open, standard ALINEA, and only if supported a transparent urban-protection override. No-override-needed and no-feasible-region outcomes remain possible.
+
+Robert Hilbrich supports `sumoITScontrol`, ALINEA as a starting point, a simple freeway/on-ramp/small urban network, uncontrolled demand exploration near breakdown, Krauß defaults initially, and checking realized insertion. He has **not** confirmed the final question, sweet-spot definition, exploratory phenomenon gate, controller settings, metrics, demand values or formal protocol. D-001–D-004 remain user-approved provisional directions. D-005–D-011 are scoped Stage 6 exploratory decisions; none freeze formal parameters. The full protocol file remains empty.
+
+## Completed exploratory stages
+
+Stage 1 instrumentation and the core literature/measurement gate are complete. Stage 2 was user-accepted as a finite uncontrolled diagnostic milestone, not formal baseline validation. Its eight logical records, including C17 and seven new runs, reconciled across retained raw; all vehicles eventually inserted and arrived, but R/U insertion after the demand window prevents treating clearance as zero-inflow recovery. No capacity, breakdown or sweet spot was established.
+
+Stage 3 archive-only diagnosis completed without simulations. It supported bounded observability and shared R/U stopped exposure, but did not identify freeway impairment or the intended two-sided trade-off. Stage 4 registered targeted qMain validation completed and supported its bounded `B_pattern` finding within tested points; it did not set formal demand parameters. Stage 5 T50–T53 completed with a `completed / specific_obstacle`, `preliminary_ready=false` recommendation; T54 user acceptance remains pending. These milestones did not make the scenario ready for formal experiments.
+
+## Current Stage 6 scientific state — 2026-09-26
+
+Stage 6 is **`PARTIAL`**. Two valid minimal U=X=0 matched pairs, 3199/R720 and 3350/R720, returned `NO_WITNESS` under the locked P/S/L rules. A 3350/R900 minimal treatment had greater measured R merge exposure than R720 and four consecutive P-low cell15 bins over [1260,1380), but its three onset-reference bins failed the locked 0.85 rule: `NOT_EVALUABLE / ONSET_REFERENCE_UNRESOLVED`, not State1 and not valid `NO_WITNESS`. A 3199/R900 retrospective sensitivity analysis confirmed R exposure and sustained local L-level episodes, but no P/S State1; reference failures and post-R source-region M feedback left pure merge-pressure attribution unresolved, so `NOT_EVALUABLE`. The bounded evidence permits only a qualified claim of R-admission-associated local sustained M deterioration *potential*. There is no confirmed ramp-induced State1 witness, capacity drop or full freeway–ramp–urban trade-off.
+
+The user adopted the reviewed `PHENOMENON_LEVEL_ABC_GATE` as D-011 for Stage 6 exploratory validation only. It asks for measurable direction and artifact checks across one comparable full-network A/B/C chain: A open-ramp pressure and sustained M deterioration; B moderate metering improving M with acceptable ramp/U cost; C stronger metering increasing ramp/urban cost. P/S/L and 0.85 remain diagnostics, unchanged. Retrospective old evidence was A `PARTIAL`, B `NOT_IDENTIFIED`, C cost direction `SUPPORTED` but complete chain `NOT_IDENTIFIED`. This gate is not a formal protocol or a real-traffic validation claim.
+
+Only the new full-network A_OPEN condition was authorized and run: `FULLNET3350_A_R900_S17`, qMain3350.4, delayed R900 [540,1500), U150/X75, seed17. Guardian/SUMO starts were 1/1, exit 0, and output inventory was complete. The matched low-pressure R0 control retains its historical `CONTROL_NOT_EVALUABLE`; use as a phenomenon comparator depended on a separate pre-R pairability gate. That gate failed: A had 19 fewer pre-R U insertions, 57 U insertion failures overall, and M/U/X FCD diverged before t=540. Independent science assigned **`A_NOT_EVALUABLE`** and stopped before post-R phenomenon or R merge-exposure assessment. B and C were neither prepared nor run.
+
+A subsequent read-only re-audit corrected the earlier prelaunch `PAIRABLE_WITH_EXPLICIT_LIMITATION` classification to **`NOT_PAIRABLE`** for this exact R0/A construction. R0 demanded symbolic `departLane=best`, `departSpeed=max`, and U/X `departPos=last`; A fixed numeric lane/position/speed values copied from R0 *realized output*. The exogenous departure rules differed before ramp activation. This concretely explains at least one U insertion failure; the complete M/X divergence path remains unresolved. Scientific recheck confirmed `NOT_PAIRABLE` and `A_NOT_EVALUABLE` with High confidence. Preserve the original audit and historical results; A raw is neither positive nor negative evidence for the full-network A phenomenon. No B/C launch, scientific-input change or formal-protocol change follows from this correction.
+
+A concise brief to Robert was prepared but **not sent**. There is no new supervisor feedback. The next scientific decision requires a properly reviewed matched comparison or explicit supervisor direction; neither is authorized by a memory update. Do not infer that Stage 6 has closed or that final A/B/C conditions are selected.
+
+## Operational boundaries
+
+Communicate in Chinese by default; separate observations, calculations, proposals, user approvals, supervisor statements and unknowns. Preserve raw data, historical receipts and the dirty worktree. Use the required simulation, data and scientific specialists for material work. No formal experiment has begun; `docs/EXPERIMENT_PROTOCOL.md` is empty and unfrozen.
+
+Keep ordinary Codex inference on the subscription provider. Tencent MemoryCore recall is an explicit, potentially stale local aid, not an authority. The formal volume is `tdai-ramp-metering-memory-v1`, service `ramp-metering-formal-memory-v1`, team `team-masterarbeit-ramp-metering`, agent `agent-project-memory`, user `user-yuhong-zhang`. The latest confirmed write is `stage6-partial-pairability-20260926-v1`; its approved content was persisted and verified by a fresh network-disabled readback. Every paid update needs fresh approval for the exact delta and complete L3 file hashes, `gpt-4.1-mini`, request cap and cost ceiling. The prior generated L2 includes broad user-trait inference and must not override reviewed L3 or repository facts.
+
+Stored content date: 2026-09-26. Detailed status labels and source hashes are in `docs/memory/incremental_update_20260926.md`.

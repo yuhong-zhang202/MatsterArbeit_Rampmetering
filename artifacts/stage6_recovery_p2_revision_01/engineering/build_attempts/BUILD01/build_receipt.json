@@ -1,0 +1,55 @@
+{
+  "approval": {
+    "approval": {
+      "approved_at": "2026-09-19",
+      "authority_source": "Current explicit user approval relayed by primary /root; not inferred from an old artifact.",
+      "card_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/SG6_BUILD_request_card_revision03.json",
+      "card_sha256": "33ee32943e8420a38514bd67d372204c7f019569187ed95202c8daf4961095bd",
+      "hash_reference_resolution": "Parent relayed exact user quote; \u201c\u8be5\u54c8\u5e0c\u201d refers to the preceding user-visible final card SHA 33ee32943e8420a38514bd67d372204c7f019569187ed95202c8daf4961095bd, also documented in docs/STAGE6_P2_IMPLEMENTATION_AND_BUILD_PACKAGES.md. Approval is for that disclosed card including monitoring semantics, one netconvert only, no SUMO/TraCI/GUI or retry.",
+      "max_netconvert_starts": 1,
+      "monitoring_semantics": "polling_50ms_possible_overshoot_preserved",
+      "recorded_at_utc": "2026-09-19T19:32:15.983891+00:00",
+      "scope": "SG6-BUILD BUILD01 only",
+      "status": "user-approved",
+      "synthetic_test_only": false,
+      "user_approval_quote": "\u6279\u51c6\u6309\u8be5\u54c8\u5e0c\u6267\u884c\u4e00\u6b21 SG6-BUILD"
+    },
+    "card_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/SG6_BUILD_request_card_revision03.json",
+    "card_sha256": "33ee32943e8420a38514bd67d372204c7f019569187ed95202c8daf4961095bd",
+    "sidecar_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/SG6_BUILD_user_approval.json",
+    "sidecar_sha256": "1e64e23b9ac79c005c77677ffde93ffd0020ddafc71740b8b6086d195f48d658"
+  },
+  "automatic_retry": false,
+  "compiled_guard_acceptance": false,
+  "consumed_starts": 1,
+  "error": null,
+  "monitored_cap_bytes": 100000000,
+  "monitored_timeout_s": 30,
+  "observed_peak_bytes": 2412,
+  "outputs": {
+    "netconvert.stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "netconvert.stdout.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "reservation.json": {
+      "bytes": 2319,
+      "sha256": "6117c58d05f2e34b75a93ba8beefb568b3530b4fd180922f9caa539b03f3a68d"
+    },
+    "started.json": {
+      "bytes": 93,
+      "sha256": "3e99c41b62274061095678e445f9f138a67a92105fdfa867412d1ed23230ec81"
+    }
+  },
+  "polling_overshoot_possible": true,
+  "returncode": -15,
+  "scientific_acceptance": false,
+  "status": "terminal_timeout",
+  "stderr_nonempty": false,
+  "synthetic_test_only": false,
+  "termination_requested": true,
+  "wallclock_s": 30.03202583300299
+}

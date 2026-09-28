@@ -1,0 +1,72 @@
+{
+  "status": "PASS_STATIC_ONLY",
+  "utc": "2026-09-20T13:16:10.623217+00:00",
+  "xsd_checks": [
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/routes_file.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/visual_replay/types.rou.xml"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/visual_replay/types.rou.xml validates\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/visual_replay/visual.add.xml"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/visual_replay/visual.add.xml validates\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/sumoConfiguration.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/visual_replay/visual.sumocfg"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/visual_replay/visual.sumocfg validates\n"
+    }
+  ],
+  "invariants": [
+    "source hashes match before and after",
+    "vType only; no route/flow/vehicle",
+    "only C WAUT and wautJunction; source nodes copied",
+    "no additional raw paths or output writers",
+    "no scientific output options/config sections/logs",
+    "raw path only FCD input",
+    "network unchanged and exact C phase durations+offset",
+    "gui initially paused",
+    "time0..2700 step1 seed17",
+    "required breakpoints exact"
+  ],
+  "new_process_counts": {
+    "sumo": 0,
+    "sumo-gui": 0,
+    "netconvert": 0,
+    "TraCI": 0
+  },
+  "runtime_alignment_verified": false,
+  "card_starts_reset": false,
+  "scope": "visual-only sidecar creation; no launch",
+  "context_preflight": {
+    "phase": "bounded report complete, O1 testedseed17only resolved, O2notresolved; manual inspection pending",
+    "protocol": "empty/unfrozen",
+    "decisions": "D001-D004 unchanged",
+    "parent_owns_documentation": true
+  }
+}

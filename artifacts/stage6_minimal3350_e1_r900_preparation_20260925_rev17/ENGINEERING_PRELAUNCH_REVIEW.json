@@ -1,0 +1,75 @@
+{
+  "card_sha256": "f0387580053ad6b862ec2874a4eb55e5c9a468a3f23db561af40d6c9e6499908",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "provenance_checks": {
+    "M_manifest_sha256": "2fb1383e709e2174e2623aae575649aba40937729325a5e9c43bcc2b76982865",
+    "R_vector_sha256": "4f23a508713b53b64c3d419e06d754d3032dce52a19f17f977a6508509d8c8fb",
+    "card_sha256": "f0387580053ad6b862ec2874a4eb55e5c9a468a3f23db561af40d6c9e6499908",
+    "configured_output_roles": 18,
+    "configured_unique_output_paths": 20,
+    "explicit_zero": {
+      "U": true,
+      "X": true
+    },
+    "input_manifest_sha256": "3e542e2dc60c669fa2ed0e845ef4ca83fc0601b41a31b4184fc4b80e686e53be",
+    "output_directory": "data/raw/stage6_minimal3350_ux0_20260925_v17/MINIMAL3350_E1_R900_DELAYED_S17/outputs",
+    "output_parent_absent": true,
+    "request_card_run_binding": true,
+    "request_config_and_reservation_binding": "PASS",
+    "reservation_absent": true,
+    "reservation_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev17/r02_single_start/consumption/MINIMAL3350_E1_R900_DELAYED_S17.json",
+    "runner_sha256": "8145b865846662c6189a2307a6cf38b1c19295293ae930830bfc8c8c61428eed",
+    "runtime_binding_sha256": "a9d82c778e132e28d08ade134ab3d5bf8ecaeb92c9d0a3529af5877db9fa3aab",
+    "science_inputs": {
+      "additional": "28a7bd6afbe5c0a151ce96dabfabf7aeaf5885ba38b6add36da7e1faa258369c",
+      "demand": "3b3da52ac2ddbe915b3f6578b515ace1a30b3f7a1169724528855a6387abaada",
+      "network": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+      "output_roles": "9462a1a6a28891239b270bbbe111a62e01d5b2b585c1428ccae91ee57dbee309",
+      "sumocfg": "f2883c2ad355a8a604fd20610380d0f648e175afcf8228b5f3b407bd149b851f"
+    },
+    "start_request_receipt_sha256": "7a2825befd4856180bb981e3d23db8f0c405b0dd4b47045e49b28f56f699cd9d",
+    "start_request_sha256": "2cea13ac94b72029db06c6e3ede862a0bd1b8f142458a28469292d16ff440bdf",
+    "sumo_guardian_traci_netconvert_starts": 0
+  },
+  "review_scope": "Engineering final-card and persisted R02 START-request validation only. No Guardian/SUMO/netconvert/TraCI process launch.",
+  "run_id": "MINIMAL3350_E1_R900_DELAYED_S17",
+  "runner_sha256": "8145b865846662c6189a2307a6cf38b1c19295293ae930830bfc8c8c61428eed",
+  "runtime_binding_sha256": "a9d82c778e132e28d08ade134ab3d5bf8ecaeb92c9d0a3529af5877db9fa3aab",
+  "schema": "stage6_minimal3350_treatment_engineering_prelaunch_review_v1",
+  "static_preflight": {
+    "guardian_request_validation": "PASS_PERSISTED_UNSENT",
+    "guardian_sumo_netconvert_traci_starts": [
+      0,
+      0,
+      0,
+      0
+    ],
+    "launch_authorized": true,
+    "launchable_now": false,
+    "review_gate": "WAITING_FOR_REQUIRED_REVIEWS",
+    "status": "PREFLIGHT_PASS_NO_PROCESS_STARTED"
+  },
+  "status": "PASS_PRELAUNCH",
+  "tests": {
+    "command": ".venv/bin/python -m unittest artifacts.stage6_minimal3350_e1_r900_preparation_20260925_rev17.tests.test_e1_r900_preflight artifacts.stage6_minimal3350_e1_r900_preparation_20260925_rev17.tests.test_start_request_binding -v",
+    "coverage": [
+      "E1 fixed R240 schedule and exact M1396 match",
+      "E1 command/config points at v17 output",
+      "reservation points at rev17 consumption record",
+      "R02 canonical persisted request rebuild passes while reviews are pending",
+      "stale R720 config/reservation fail closed",
+      "card/runner/runtime/output mismatch fails closed",
+      "scientific/input hashes and fixed condition unchanged"
+    ],
+    "failed": 0,
+    "passed": 12,
+    "test_hashes": {
+      "test_e1_r900_preflight.py": "025296674b68e771a1883aa1ee7cf9973626a05647dbc1a4019c9bfae1fdabe1",
+      "test_start_request_binding.py": "5cdaeddc7924daef191ab880e1f4f7220928ca2c01bf68bf5c9ff94fc1a30adb"
+    }
+  }
+}

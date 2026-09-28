@@ -1,0 +1,275 @@
+{
+  "bindings": {
+    "card": {
+      "bytes": 36472,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/RUNTIME_CARD.json",
+      "sha256": "8e54ab7ac73e3192a1db5ea249efbe610e1114d79980166baea83934a6601f4c"
+    },
+    "demand": {
+      "bytes": 1141,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_SMOKE_B_LC_ON_S17_attempt1/demand.rou.xml",
+      "sha256": "70d90d477c97141086b87cd248064c2c27c5965060e04fe9a2cbec67ec20e1cd"
+    },
+    "fcd": {
+      "bytes": 24656168,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_ON_S17_attempt1/outputs/fcd.xml",
+      "sha256": "3dad8dbc6edc1fc54fddf3414843f95fa47832e15834373e7e2ec1bad03c117e"
+    },
+    "lanechanges": {
+      "bytes": 269149,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_ON_S17_attempt1/outputs/lanechanges.xml",
+      "sha256": "72a3dd9e8d6b72dbe0a54a7d2607ad757a5b3fdf69b67bc0cec1f96bf94b6617"
+    },
+    "network": {
+      "bytes": 12814,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/build_attempts/TV_BUILD01/network.net.xml",
+      "sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca"
+    },
+    "prior_engineering_audit": {
+      "bytes": 14131,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/runtime_audits/TV_SMOKE_B_LC_ON_S17_attempt1_engineering_revision01.json",
+      "sha256": "dfcf8b04ef9b2083986dee5cb2547976795f0cf731efcb1455b5729db24866d0"
+    },
+    "vehroute": {
+      "bytes": 462436,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_ON_S17_attempt1/outputs/vehroute.xml",
+      "sha256": "6e4de2a1e267da32249824c9a509a8826b3a079942aa5ca5a01dfb98a7e0ca71"
+    }
+  },
+  "changes": "Only this new finding; raw/input/card/initial analyst failure untouched.",
+  "classification": "LEGAL",
+  "confidence": "High",
+  "context": "new targeted technical smoke under exact card; formal protocol empty; prior engineering process/log auditPASS",
+  "events": [
+    {
+      "FCD_after": {
+        "angle": "90.00",
+        "id": "M_flow.667",
+        "lane": "merge_section_2",
+        "pos": "25.23",
+        "slope": "0.00",
+        "speed": "27.15",
+        "time": 799,
+        "type": "technical_passenger",
+        "x": "1426.72",
+        "y": "898.40"
+      },
+      "FCD_at_event": {
+        "angle": "90.00",
+        "id": "M_flow.667",
+        "lane": ":freeway_merge_0_1",
+        "pos": "1.19",
+        "slope": "0.00",
+        "speed": "27.26",
+        "time": 798,
+        "type": "technical_passenger",
+        "x": "1399.57",
+        "y": "898.40"
+      },
+      "FCD_before": {
+        "angle": "90.00",
+        "id": "M_flow.667",
+        "lane": "main_up_0",
+        "pos": "1372.31",
+        "slope": "0.00",
+        "speed": "27.38",
+        "time": 797,
+        "type": "technical_passenger",
+        "x": "1372.31",
+        "y": "895.20"
+      },
+      "checks": {
+        "FCD_next_merge_section2": true,
+        "FCD_prior_main_up0": true,
+        "FCD_same_time_exact_lane_pos_speed": true,
+        "adjacent_same_internal_edge": true,
+        "incoming_distance_speed_match_at_output_precision": true,
+        "native_type_passenger": true,
+        "outgoing_distance_speed_match_at_output_precision": true,
+        "passenger_lane_and_left_change_not_restricted": true,
+        "position_inside_lane": true,
+        "straight_entry_and_exit": true
+      },
+      "classification": "LEGAL_UNDER_BOUND_SUMO_NETWORK",
+      "native_event": {
+        "dir": "1",
+        "followerGap": "122.65",
+        "followerSecureGap": "34.25",
+        "followerSpeed": "28.26",
+        "from": ":freeway_merge_0_0",
+        "id": "M_flow.667",
+        "leaderGap": "8.78",
+        "leaderSecureGap": "0.00",
+        "leaderSpeed": "35.38",
+        "origLeaderGap": "37.46",
+        "origLeaderSecureGap": "21.32",
+        "origLeaderSpeed": "28.25",
+        "pos": "1.19",
+        "reason": "cooperative|urgent",
+        "speed": "27.26",
+        "time": "798.00",
+        "to": ":freeway_merge_0_1",
+        "type": "technical_passenger"
+      },
+      "route": "main_up merge_section main_down"
+    },
+    {
+      "FCD_after": {
+        "angle": "90.00",
+        "id": "M_flow.797",
+        "lane": "merge_section_2",
+        "pos": "26.72",
+        "slope": "0.00",
+        "speed": "29.03",
+        "time": 941,
+        "type": "technical_passenger",
+        "x": "1428.21",
+        "y": "898.40"
+      },
+      "FCD_at_event": {
+        "angle": "90.00",
+        "id": "M_flow.797",
+        "lane": ":freeway_merge_0_1",
+        "pos": "0.80",
+        "slope": "0.00",
+        "speed": "29.51",
+        "time": 940,
+        "type": "technical_passenger",
+        "x": "1399.18",
+        "y": "898.40"
+      },
+      "FCD_before": {
+        "angle": "90.00",
+        "id": "M_flow.797",
+        "lane": "main_up_0",
+        "pos": "1369.67",
+        "slope": "0.00",
+        "speed": "30.13",
+        "time": 939,
+        "type": "technical_passenger",
+        "x": "1369.67",
+        "y": "895.20"
+      },
+      "checks": {
+        "FCD_next_merge_section2": true,
+        "FCD_prior_main_up0": true,
+        "FCD_same_time_exact_lane_pos_speed": true,
+        "adjacent_same_internal_edge": true,
+        "incoming_distance_speed_match_at_output_precision": true,
+        "native_type_passenger": true,
+        "outgoing_distance_speed_match_at_output_precision": true,
+        "passenger_lane_and_left_change_not_restricted": true,
+        "position_inside_lane": true,
+        "straight_entry_and_exit": true
+      },
+      "classification": "LEGAL_UNDER_BOUND_SUMO_NETWORK",
+      "native_event": {
+        "dir": "1",
+        "followerGap": "88.53",
+        "followerSecureGap": "45.39",
+        "followerSpeed": "31.74",
+        "from": ":freeway_merge_0_0",
+        "id": "M_flow.797",
+        "leaderGap": "63.04",
+        "leaderSecureGap": "55.21",
+        "leaderSpeed": "24.87",
+        "origLeaderGap": "91.39",
+        "origLeaderSecureGap": "73.54",
+        "origLeaderSpeed": "20.88",
+        "pos": "0.80",
+        "reason": "speedGain",
+        "speed": "29.51",
+        "time": "940.00",
+        "to": ":freeway_merge_0_1",
+        "type": "technical_passenger"
+      },
+      "route": "main_up merge_section main_down"
+    }
+  ],
+  "fourteen_gate_status": "NOT_ADJUDICATED",
+  "network_internal_edge": {
+    "function": "internal",
+    "id": ":freeway_merge_0"
+  },
+  "network_internal_lanes": [
+    {
+      "id": ":freeway_merge_0_0",
+      "index": "0",
+      "length": "3.11",
+      "shape": "1398.38,895.20 1401.49,895.20",
+      "speed": "33.33",
+      "width": "3.20"
+    },
+    {
+      "id": ":freeway_merge_0_1",
+      "index": "1",
+      "length": "3.11",
+      "shape": "1398.38,898.40 1401.49,898.40",
+      "speed": "33.33",
+      "width": "3.20"
+    }
+  ],
+  "new_simulation_calls": 0,
+  "official_sources": [
+    {
+      "supports": "Multi-lane internal edges group connections with common from/to edges; straight dir=s internal connections allow lane changing.",
+      "url": "https://sumo.dlr.de/docs/Networks/SUMO_Road_Networks.html#internal-edges"
+    },
+    {
+      "supports": "Native lateral event records lane IDs, time, position and signed lane-index direction.",
+      "url": "https://sumo.dlr.de/docs/Simulation/Output/Lanechange.html"
+    }
+  ],
+  "parser_recommendation": "Represent legal same-edge adjacent lane transitions separately from longitudinal connections, including straight multi-lane internal edges; honor vehicle class and directional change permissions. Avoid blanket all-internal-edge permissiveness. Preserve initial failing audit and produce an independently reviewed analysis revision.",
+  "permission_interpretation": "No lane class restriction or left-change restriction on these lanes. The changeRight=authority restriction on merge_section_1 is a different lane/direction and does not prohibit these internal0\u21921 left changes.",
+  "progression_allowed": false,
+  "raw_lanechange_lines": [
+    {
+      "line": 406,
+      "text": "<change id=\"M_flow.667\" type=\"technical_passenger\" time=\"798.00\" from=\":freeway_merge_0_0\" to=\":freeway_merge_0_1\" dir=\"1\" speed=\"27.26\" pos=\"1.19\" reason=\"cooperative|urgent\" leaderGap=\"8.78\" leaderSecureGap=\"0.00\" leaderSpeed=\"35.38\" followerGap=\"122.65\" followerSecureGap=\"34.25\" followerSpeed=\"28.26\" origLeaderGap=\"37.46\" origLeaderSecureGap=\"21.32\" origLeaderSpeed=\"28.25\"/>"
+    },
+    {
+      "line": 473,
+      "text": "<change id=\"M_flow.797\" type=\"technical_passenger\" time=\"940.00\" from=\":freeway_merge_0_0\" to=\":freeway_merge_0_1\" dir=\"1\" speed=\"29.51\" pos=\"0.80\" reason=\"speedGain\" leaderGap=\"63.04\" leaderSecureGap=\"55.21\" leaderSpeed=\"24.87\" followerGap=\"88.53\" followerSecureGap=\"45.39\" followerSpeed=\"31.74\" origLeaderGap=\"91.39\" origLeaderSecureGap=\"73.54\" origLeaderSpeed=\"20.88\"/>"
+    }
+  ],
+  "relevant_connections": [
+    {
+      "dir": "s",
+      "from": "main_up",
+      "fromLane": "0",
+      "state": "M",
+      "to": "merge_section",
+      "toLane": "1",
+      "via": ":freeway_merge_0_0"
+    },
+    {
+      "dir": "s",
+      "from": "main_up",
+      "fromLane": "1",
+      "state": "M",
+      "to": "merge_section",
+      "toLane": "2",
+      "via": ":freeway_merge_0_1"
+    },
+    {
+      "dir": "s",
+      "from": ":freeway_merge_0",
+      "fromLane": "0",
+      "state": "M",
+      "to": "merge_section",
+      "toLane": "1"
+    },
+    {
+      "dir": "s",
+      "from": ":freeway_merge_0",
+      "fromLane": "1",
+      "state": "M",
+      "to": "merge_section",
+      "toLane": "2"
+    }
+  ],
+  "scope": "independent read-only engineering check of two same-internal-edge lateral transitions; not a14-gate audit or release",
+  "structural_implication": "No structural repair or simulation rerun is justified by these events. They do not establish O1/O2 or empirical lane-change validity.",
+  "technical_conclusion": "The pure longitudinal connection graph lacks a permitted same-edge lateral arc. FCD before/at/after and nativeLC provide mutually consistent evidence; no invalid junction movement, route mismatch, or positional discontinuity is evidenced by these two events."
+}

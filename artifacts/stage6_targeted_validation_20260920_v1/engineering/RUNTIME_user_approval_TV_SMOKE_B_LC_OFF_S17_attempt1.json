@@ -1,0 +1,30 @@
+{
+  "authorization_provenance": "Parent-agent staged release under the user-authorized conditional sequence. The attached task authorizes bounded technical smoke and conditional limited diagnostics; it does not imply personal user review of later-generated hashes. The first logger-on smoke passed 14/14 technical gates, was judged physically suitable, and received an independent PASS output review. This sidecar releases only the second logger-off smoke; A/B/C remain gated.",
+  "card_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/RUNTIME_CARD.json",
+  "card_sha256": "8e54ab7ac73e3192a1db5ea249efbe610e1114d79980166baea83934a6601f4c",
+  "max_SUMO_starts": 5,
+  "output_gate_review_receipt": {
+    "bytes": 2818,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/smoke_gate_review_receipt.json",
+    "sha256": "3dc4fe0eed9234f3616a37260b4a0226ea7a6c786d11891cc7bd4f32b02c43e5"
+  },
+  "previous_gate": {
+    "bytes": 9111,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/gates/TV_SMOKE_B_LC_ON_S17_attempt1.json",
+    "sha256": "6ca95021e4e8bbb837d6bf77700ad1ebe780752a611635af4551d5e44d7cfecc"
+  },
+  "released_attempt": "TV_SMOKE_B_LC_OFF_S17_attempt1",
+  "review_receipt": {
+    "bytes": 1656,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/scientific_review_receipt.json",
+    "sha256": "bf9cd5058a674208f16a99a285e45743c266d4bcc09cfa5e49d7753b704a57bd"
+  },
+  "scope": "two technical fixtures then seed17 A/B/C",
+  "status": "authorized-under-user-task",
+  "synthetic_test_only": false,
+  "user_task_binding": {
+    "bytes": 45035,
+    "path": "/Users/yuhongzhang/.codex/attachments/6e3cc74b-84d3-471e-9426-4589a7a3b855/已粘贴的文本.txt",
+    "sha256": "6bb0eb4897939fa642065230ed623915a7f270e1d278d27d4187e28bb8225fbc"
+  }
+}

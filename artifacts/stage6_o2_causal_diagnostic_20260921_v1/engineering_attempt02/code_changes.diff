@@ -1,0 +1,54 @@
+--- preserved_attempt01/runtime_executor.py
++++ attempt02/runtime_executor.py
+@@ -5,7 +5,7 @@
+ ROOT=Path('/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering')
+ BASE=Path(__file__).absolute().parent
+ SUMO_HOME='/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo'
+-LIMITS={'SUMO_starts':1,'TraCI_connections':1,'netconvert':0,'GUI':0,'retry':0,'per_attempt_monitored_s':180,'total_monitored_s':180,'per_attempt_observed_bytes':200000000,'total_observed_bytes':200000000}
++LIMITS={'SUMO_starts':1,'TraCI_connections':1,'netconvert':0,'GUI':0,'retry':0,'per_attempt_monitored_s':180,'total_monitored_s':188.43560208400595,'per_attempt_observed_bytes':200000000,'total_observed_bytes':200013288}
+ def require(value,message):
+  if not value:raise ValueError(message)
+ def digest(p):
+@@ -115,8 +115,10 @@
+  require(os.environ.get('SUMO_HOME')==SUMO_HOME,'SUMO_HOME mismatch')
+  require(not any(k.startswith(('DYLD_','LD_','PYTHON')) for k in os.environ),'unsafe injected environment')
+  run=Path(card['attempt']['run_root']);no_symlink(run);require(not run.exists(),'attempt consumed')
+- require(run==ROOT/'data/raw/stage6_o2_causal_diagnostic_20260921_v1/O2_C_S17_450_attempt1','unexpected raw root')
+- if run.parent.exists():require(not list(run.parent.iterdir()),'unregistered prior attempt')
++ require(run==ROOT/'data/raw/stage6_o2_causal_diagnostic_20260921_v1/O2_C_S17_450_attempt2','unexpected raw root')
++ if run.parent.exists():require({p.name for p in run.parent.iterdir()}=={'O2_C_S17_450_attempt1'},'prior inventory mismatch')
++ prior=run.parent/'O2_C_S17_450_attempt1'
++ require(digest(prior/'execution_receipt.json')=='ceb91d360a1dea201b5d5151abe0cb0880c57b20768066d8a6923307e1e37114' and size(prior)==13288,'prior evidence changed')
+  # Checking port is not a SUMO start. No observer may attach to another server.
+  with socket.socket() as probe:probe.bind(('127.0.0.1',8819))
+  return card,approval
+@@ -131,7 +133,7 @@
+   card,approval=preflight(a.card.absolute(),a.approval.absolute())
+   def interrupted(signum,frame):raise KeyboardInterrupt('signal '+str(signum))
+   signal.signal(signal.SIGTERM,interrupted);signal.signal(signal.SIGHUP,interrupted)
+-  result=_run(card['attempt'],digest(a.card),binding(a.approval),timeout=180,cap=200000000)
++  result=_run(card['attempt'],digest(a.card),binding(a.approval),prior_time=8.43560208400595,prior_bytes=13288,timeout=180,cap=200000000)
+   print(json.dumps(result,sort_keys=True));return 0 if result['status']=='process_completed_pending_gate' else 2
+ if __name__=='__main__':
+  try:sys.exit(main())
+--- preserved_attempt01/observer.py
++++ attempt02/observer.py
+@@ -64,16 +64,8 @@
+    # Inherit supervisor process group. Exactly one Popen, no traci.start auto-retry.
+    p=subprocess.Popen(card['sumo_argv'],cwd=card['cwd'],env=os.environ.copy(),stdout=so,stderr=se)
+    supervisor.durable(run/'sumo_started.json',{'pid':p.pid,'pgid':os.getpgid(p.pid),'argv':card['sumo_argv'],'time_unix':time.time()})
+-   # Prove the loopback listener belongs to our sole child, not an unrelated server.
+-   deadline=time.monotonic()+8
+-   while True:
+-    supervisor.require(p.poll() is None,'SUMO exited before socket became ready')
+-    seen=subprocess.run(['/usr/sbin/lsof','-nP','-iTCP:8819','-sTCP:LISTEN','-t'],capture_output=True,text=True,timeout=2)
+-    emit(out,{'kind':'listener_preconnect','returncode':seen.returncode,'stdout':seen.stdout,'stderr':seen.stderr})
+-    owners=set(seen.stdout.split())
+-    if owners:
+-     supervisor.require(owners=={str(p.pid)},'TraCI listener owned by another process');break
+-    supervisor.require(time.monotonic()<deadline,'no owned TraCI listener in 8 seconds');time.sleep(0.05)
++   from startup_probe import wait_for_owned_listener
++   wait_for_owned_listener(p,out,run)
+    c=traci.connect(port=8819,host='127.0.0.1',numRetries=100,waitBetweenRetries=0.05,proc=p)
+    seen=subprocess.run(['/usr/sbin/lsof','-nP','-iTCP:8819','-sTCP:LISTEN','-t'],capture_output=True,text=True,timeout=2)
+    emit(out,{'kind':'listener_postconnect','returncode':seen.returncode,'stdout':seen.stdout,'stderr':seen.stderr})

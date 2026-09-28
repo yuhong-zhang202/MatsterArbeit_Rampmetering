@@ -1,0 +1,43 @@
+{
+  "status": "PASS_PRELAUNCH",
+  "run_id": "MINIMAL3199_CTRL_S17_TECH_RETRY1",
+  "card_sha256": "027d7dc7b74561648ec6c0799abd64a99b7fb746273d1ecb78905c00c082c672",
+  "disposition": "PASS_STATIC_EXECUTION_BINDING",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "confidence": "High",
+  "manifest_sha256": "1c718fba99ce217bccc69bd7adb4e7b555c92d034006c065c9762c882d73accc",
+  "runtime_binding_sha256": "5fdd6901c089d0df1346e0d01131c37d75682fe134f5c354d5ec2f3e74834052",
+  "runner_sha256": "25182434f7665778bb0c0a5dcefe39a5c3f0a1eb481935d3393e70ee4fddc428",
+  "relevant_tests": {
+    "modules_passed": "34/34",
+    "adapter_test_sha256": "bbc44d527c346895cb5fc1ec8311d4e29db6549e10a14d0657e9ef6a17c46c90",
+    "final_execution_test_sha256": "80596684893804fbab2c03edc87e7e35fbf521bcaa098317456e098bce647c9c",
+    "technical_retry_test_sha256": "154acb67566df00d569dfd49e5dcf71dd3e7958cb13aa8c4f46ce0a7bdecc6be"
+  },
+  "staged_sumocfg": {
+    "bytes": 2802,
+    "sha256": "1906f98e1e108a9019919d29fa4c9c6086659fdbedd231d16531ec275505650c"
+  },
+  "staged_additional": {
+    "bytes": 3940,
+    "sha256": "6b93195465eb66462394905fcf6bd450c8e3b863517bef436f5177f0a54c9470"
+  },
+  "replacement_counts": {
+    "sumocfg_output_path": 8,
+    "sumocfg_additional_path": 1,
+    "additional_xml_output_path": 12
+  },
+  "readonly_preflight": "PREFLIGHT_PASS_NO_PROCESS_STARTED",
+  "launchable_now": false,
+  "launch_gate_waiting_for_data_scientific_receipts": true,
+  "starts": {
+    "guardian": 0,
+    "sumo": 0,
+    "traci": 0,
+    "netconvert": 0
+  }
+}

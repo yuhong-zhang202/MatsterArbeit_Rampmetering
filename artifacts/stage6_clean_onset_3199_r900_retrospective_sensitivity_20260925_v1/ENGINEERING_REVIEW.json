@@ -1,0 +1,23 @@
+{
+  "schema": "stage6_clean3199_r900_D010_retrospective_engineering_review_v1",
+  "reviewer_role": "simulation_engineer",
+  "scope": "Read-only existing treatment/control raw and technical alternative-cause check",
+  "raw_config_lifecycle_integrity": "PASS",
+  "causal_alternative_clearance": "UNRESOLVED_SOURCE_REGION_DYNAMIC_DIFFERENCE",
+  "verified": {
+    "raw_manifest_hashes_each_arm": "25/25",
+    "treatment_card_input_hashes": "5/5",
+    "treatment_staged_hashes": "2/2",
+    "pre_R_M_exact_vehicle_seconds_each_arm": 32513,
+    "treatment_M_arrived": 1333,
+    "treatment_R_arrived": 240,
+    "control_M_arrived": 1333,
+    "unfinished": 0,
+    "R_departure_delay_s": 0,
+    "ramp_TLS": "A_OPEN/G throughout 2700 s",
+    "obvious_terminal_tailback": false,
+    "auxiliary_E1_20m_early_lane_change_mismatch": true
+  },
+  "unresolved": "First source-region M FCD divergence occurs at t=594, before clarified T3=690. Seventy-three realized M departure lanes and 327 departure speeds differ after treatment activation despite matched planned inputs. Raw alone cannot distinguish downstream feedback from stochastic/RNG/order coupling.",
+  "new_process_starts": {"SUMO": 0, "Guardian": 0, "TraCI": 0, "netconvert": 0}
+}

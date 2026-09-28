@@ -1,0 +1,49 @@
+{
+  "M_exact_common_matches": 1396,
+  "U_explicit_zero": true,
+  "X_explicit_zero": true,
+  "card_sha256": "f73da0e8e3d4bc063b4f81e287b3fc5551f77fa3f54a5260eaf4325ad7c38711",
+  "common_m_manifest_sha256": "2fb1383e709e2174e2623aae575649aba40937729325a5e9c43bcc2b76982865",
+  "control_binding": {
+    "card_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/MINIMAL3350_CTRL_S17_CARD_FINAL.json",
+    "card_sha256": "15544478e8e7ced98b12673bec65cfe646b1f73e9e471ed501ddee052306bbfd",
+    "data_review_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/DATA_POSTRUN_REVIEW.json",
+    "data_review_sha256": "24711f151751cb1d6b0ba852388824f1f8e69be7fea3678900b872498870ab4d",
+    "demand_input_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/inputs/control/demand.rou.xml",
+    "demand_input_sha256": "da93237ed572b4103146b07b6e2b6ed4ffb9b95d21e7ed22e823ea427f8d477c",
+    "output_manifest_path": "data/raw/stage6_minimal3350_ux0_20260924_v8/MINIMAL3350_CTRL_S17/outputs/output_manifest.json",
+    "output_manifest_sha256": "48456bb607b4e4679dd13274696c60ab7f5ae020aa6ecbf2462110e1fdcd752f",
+    "run_id": "MINIMAL3350_CTRL_S17",
+    "scientific_review_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/SCIENTIFIC_POSTRUN_REVIEW.json",
+    "scientific_review_sha256": "8078d5ee902eb355623d29e7cc78c7d9cdf61e918903d9a3040fe0f320ae3738"
+  },
+  "input_manifest_sha256": "713c1fbee9beed2a02bf8d665d0591390aae113744f66e32f8c9f4abf8a29540",
+  "output_directory": "data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs",
+  "output_parent_absent": true,
+  "process_starts": {
+    "guardian": 0,
+    "netconvert": 0,
+    "sumo": 0,
+    "traci": 0
+  },
+  "r_schedule_first_last_interval_ms": [
+    540000,
+    1496000,
+    4000
+  ],
+  "r_vector_sha256": "4f23a508713b53b64c3d419e06d754d3032dce52a19f17f977a6508509d8c8fb",
+  "resource_limits": {
+    "output_bytes": 100000000,
+    "overshoot_accepted": true,
+    "poll_interval_ms": 100,
+    "wallclock_s": 120
+  },
+  "run_id": "MINIMAL3350_E1_R900_DELAYED_S17",
+  "runner_sha256": "2fd3c68970c3df177150c6236b8d4f7e6971acbd94cb77a56c558da49c69bad7",
+  "runtime_binding_sha256": "626baed24bd89761298a7795dc884d5162554bb57a68224a8117797bc4daf1ba",
+  "schema": "stage6_minimal3350_e1_r900_provenance_receipt_v1",
+  "start_request_receipt_sha256": "07431b86e0100f13c4026dcb6f71d541d20675d303f66d1d8320a424e75cc54c",
+  "start_request_sha256": "af20c59243bb8b9a9780aa8d43fa8c581d216a63560c8494bbb2006267ac0c72",
+  "status": "PRELAUNCH_ONLY",
+  "treatment_only_delta": "R_flow.0..239"
+}

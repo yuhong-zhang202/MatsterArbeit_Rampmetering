@@ -1,0 +1,566 @@
+{
+  "GUI": 0,
+  "SUMO_starts": 0,
+  "TraCI_connections": 0,
+  "api_checks": [
+    {
+      "api": "vehicle.getLeader",
+      "line": 610,
+      "signature": "(vehID, dist=100.0)",
+      "source": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_vehicle.py",
+      "source_excerpt": "    def getLeader(self, vehID, dist=100.):\n        \"\"\"getLeader(string, double) -> (string, double)\n\n        Return the leading vehicle id together with the distance. The distance\n        is measured from the front + minGap to the back of the leader, so it does not include the\n        minGap of the vehicle.\n        The dist parameter defines the minimum lookahead, 0 calculates a lookahead from the brake gap.\n        Note that the returned leader may be further away than the given dist and that the vehicle\n        will only look on its current best lanes and not look beyond the end of its final route edge.\n\n        In the case where no leader is found, the function returns 'None'.\n        This special case is deprecated. The future behavior is to return the\n        pair (\"\", -1) when no leader is found.\n        The function 'traci.setLegacyGetLeader(bool) can be used to switch\n        between both behaviors.\n        \"\"\"\n        return self._getUniversal(tc.VAR_LEADER, vehID, \"d\", dist)\n"
+    },
+    {
+      "api": "vehicle.getMinGap",
+      "line": 163,
+      "signature": "(typeID)",
+      "source": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_vehicletype.py",
+      "source_excerpt": "    def getMinGap(self, typeID):\n        \"\"\"getMinGap(string) -> double\n\n        Returns the offset (gap to front vehicle if halting) of this type.\n        If called in the context of a person or vehicle, it will return the value for their current type.\n        Use the respective object ID as typeID value in said context.\n        \"\"\"\n        return self._getUniversal(tc.VAR_MINGAP, typeID)\n"
+    },
+    {
+      "api": "vehicle.getTypeID",
+      "line": 375,
+      "signature": "(vehID)",
+      "source": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_vehicle.py",
+      "source_excerpt": "    def getTypeID(self, vehID):\n        \"\"\"getTypeID(string) -> string\n\n        Returns the id of the type of the named vehicle.\n        \"\"\"\n        return self._getUniversal(tc.VAR_TYPE, vehID)\n"
+    },
+    {
+      "api": "vehicle.getRoute",
+      "line": 397,
+      "signature": "(vehID)",
+      "source": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_vehicle.py",
+      "source_excerpt": "    def getRoute(self, vehID):\n        \"\"\"getRoute(string) -> tuple(string)\n\n        Returns the ids of the edges the vehicle's route is made of.\n        \"\"\"\n        return self._getUniversal(tc.VAR_EDGES, vehID)\n"
+    },
+    {
+      "api": "vehicle.getRouteIndex",
+      "line": 389,
+      "signature": "(vehID)",
+      "source": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_vehicle.py",
+      "source_excerpt": "    def getRouteIndex(self, vehID):\n        \"\"\"getRouteIndex(string) -> int\n\n        Returns the index of the current edge within the vehicles route or -1 if the\n        vehicle has not yet departed\n        \"\"\"\n        return self._getUniversal(tc.VAR_ROUTE_INDEX, vehID)\n"
+    },
+    {
+      "api": "vehicle.getLaneID",
+      "line": 347,
+      "signature": "(vehID)",
+      "source": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_vehicle.py",
+      "source_excerpt": "    def getLaneID(self, vehID):\n        \"\"\"getLaneID(string) -> string\n\n        Returns the id of the lane the named vehicle was at within the last step.\n        \"\"\"\n        return self._getUniversal(tc.VAR_LANE_ID, vehID)\n"
+    },
+    {
+      "api": "vehicle.getLanePosition",
+      "line": 404,
+      "signature": "(vehID)",
+      "source": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_vehicle.py",
+      "source_excerpt": "    def getLanePosition(self, vehID):\n        \"\"\"getLanePosition(string) -> double\n\n        The position of the vehicle along the lane measured in m.\n        \"\"\"\n        return self._getUniversal(tc.VAR_LANEPOSITION, vehID)\n"
+    },
+    {
+      "api": "vehicle.getPosition",
+      "line": 305,
+      "signature": "(vehID)",
+      "source": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_vehicle.py",
+      "source_excerpt": "    def getPosition(self, vehID):\n        \"\"\"getPosition(string) -> (double, double)\n\n        Returns the position of the named vehicle within the last step [m,m].\n        \"\"\"\n        return self._getUniversal(tc.VAR_POSITION, vehID)\n"
+    },
+    {
+      "api": "vehicle.getAngle",
+      "line": 319,
+      "signature": "(vehID)",
+      "source": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_vehicle.py",
+      "source_excerpt": "    def getAngle(self, vehID):\n        \"\"\"getAngle(string) -> double\n\n        Returns the angle in degrees of the named vehicle within the last step.\n        \"\"\"\n        return self._getUniversal(tc.VAR_ANGLE, vehID)\n"
+    },
+    {
+      "api": "vehicle.getSpeed",
+      "line": 277,
+      "signature": "(vehID)",
+      "source": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_vehicle.py",
+      "source_excerpt": "    def getSpeed(self, vehID):\n        \"\"\"getSpeed(string) -> double\n\n        Returns the (longitudinal) speed in m/s of the named vehicle within the last step.\n        \"\"\"\n        return self._getUniversal(tc.VAR_SPEED, vehID)\n"
+    },
+    {
+      "api": "vehicle.getAcceleration",
+      "line": 291,
+      "signature": "(vehID)",
+      "source": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_vehicle.py",
+      "source_excerpt": "    def getAcceleration(self, vehID):\n        \"\"\"getAcceleration(string) -> double\n\n        Returns the acceleration in m/s^2 of the named vehicle within the last step.\n        \"\"\"\n        return self._getUniversal(tc.VAR_ACCELERATION, vehID)\n"
+    },
+    {
+      "api": "vehicle.getLength",
+      "line": 37,
+      "signature": "(typeID)",
+      "source": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_vehicletype.py",
+      "source_excerpt": "    def getLength(self, typeID):\n        \"\"\"getLength(string) -> double\n\n        Returns the length in m of this type.\n        If called in the context of a person or vehicle, it will return the value for their current type.\n        Use the respective object ID as typeID value in said context.\n        \"\"\"\n        return self._getUniversal(tc.VAR_LENGTH, typeID)\n"
+    },
+    {
+      "api": "vehicle.getNextTLS",
+      "line": 743,
+      "signature": "(vehID)",
+      "source": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_vehicle.py",
+      "source_excerpt": "    def getNextTLS(self, vehID):\n        \"\"\"getNextTLS(string) -> tuple(tuple(string, int, double, string))\n\n        Return tuple of upcoming traffic lights [(tlsID, tlsIndex, distance, state), ...]\n        \"\"\"\n        return self._getUniversal(tc.VAR_NEXT_TLS, vehID)\n"
+    },
+    {
+      "api": "vehicle.getNextLinks",
+      "line": 777,
+      "signature": "(vehID)",
+      "source": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_vehicle.py",
+      "source_excerpt": "    def getNextLinks(self, vehID):\n        \"\"\"getNextLinks(string) -> tuple(tuple(string, string, bool, bool, bool, string, string, double))\n\n        Return tuple of upcoming links along the route ((lane, via, priority, opened, foe,\n         state, direction, length), ...)\n        \"\"\"\n        return self._getUniversal(tc.VAR_NEXT_LINKS, vehID)\n"
+    },
+    {
+      "api": "vehicle.getJunctionFoes",
+      "line": 750,
+      "signature": "(vehID, dist=0.0)",
+      "source": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/exceptions.py",
+      "source_excerpt": "    @alias_param(\"dist\", \"distance\")\n    def getJunctionFoes(self, vehID, dist=0.):\n        \"\"\"getJunctionFoes(string, double) -> complex\n\n        Return tuple of junction foes [(foeId, egoDist, foeDist, egoExitDist, foeExitDist,\n        egoLane, foeLane, egoResponse, foeResponse), ...] within the given distance to the given vehicle.\n        \"\"\"\n        return self._getUniversal(tc.VAR_FOES, vehID, \"d\", dist)\n"
+    },
+    {
+      "api": "simulation.getTime",
+      "line": 252,
+      "signature": "()",
+      "source": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_simulation.py",
+      "source_excerpt": "    def getTime(self):\n        \"\"\"getTime() -> double\n\n        Returns the current simulation time in s.\n        \"\"\"\n        return self._getUniversal(tc.VAR_TIME)\n"
+    },
+    {
+      "api": "simulation.getDeltaT",
+      "line": 535,
+      "signature": "()",
+      "source": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_simulation.py",
+      "source_excerpt": "    def getDeltaT(self):\n        \"\"\"getDeltaT() -> double\n        Returns the length of one simulation step in seconds\n        \"\"\"\n        return self._getUniversal(tc.VAR_DELTA_T)\n"
+    },
+    {
+      "api": "simulation.getCollidingVehiclesIDList",
+      "line": 430,
+      "signature": "()",
+      "source": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_simulation.py",
+      "source_excerpt": "    def getCollidingVehiclesIDList(self):\n        \"\"\"getCollidingVehiclesIDList() -> tuple(string)\n        Return Ids of vehicles involved in a collision (typically 2 per\n        collision).\n        \"\"\"\n        return self._getUniversal(tc.VAR_COLLIDING_VEHICLES_IDS)\n"
+    },
+    {
+      "api": "simulation.getStartingTeleportIDList",
+      "line": 488,
+      "signature": "()",
+      "source": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_simulation.py",
+      "source_excerpt": "    def getStartingTeleportIDList(self):\n        \"\"\"getStartingTeleportIDList() -> tuple(string)\n\n        Returns a tuple of ids of vehicles which started to teleport in this time step.\n        \"\"\"\n        return self._getUniversal(tc.VAR_TELEPORT_STARTING_VEHICLES_IDS)\n"
+    },
+    {
+      "api": "simulation.getEndingTeleportIDList",
+      "line": 502,
+      "signature": "()",
+      "source": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_simulation.py",
+      "source_excerpt": "    def getEndingTeleportIDList(self):\n        \"\"\"getEndingTeleportIDList() -> tuple(string)\n\n        Returns a tuple of ids of vehicles which ended to be teleported in this time step.\n        \"\"\"\n        return self._getUniversal(tc.VAR_TELEPORT_ENDING_VEHICLES_IDS)\n"
+    },
+    {
+      "api": "simulation.getEmergencyStoppingVehiclesIDList",
+      "line": 443,
+      "signature": "()",
+      "source": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_simulation.py",
+      "source_excerpt": "    def getEmergencyStoppingVehiclesIDList(self):\n        \"\"\"getEmergencyStoppingVehiclesIDList() -> tuple(string)\n        Return Ids of vehicles that peformed an emergency stop in the last step\n        \"\"\"\n        return self._getUniversal(tc.VAR_EMERGENCYSTOPPING_VEHICLES_IDS)\n"
+    },
+    {
+      "api": "simulation.getDepartedIDList",
+      "line": 314,
+      "signature": "()",
+      "source": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_simulation.py",
+      "source_excerpt": "    def getDepartedIDList(self):\n        \"\"\"getDepartedIDList() -> tuple(string)\n\n        Returns a tuple of ids of vehicles which departed (were inserted into the road network) in this time step.\n        \"\"\"\n        return self._getUniversal(tc.VAR_DEPARTED_VEHICLES_IDS)\n"
+    },
+    {
+      "api": "simulation.getArrivedIDList",
+      "line": 329,
+      "signature": "()",
+      "source": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_simulation.py",
+      "source_excerpt": "    def getArrivedIDList(self):\n        \"\"\"getArrivedIDList() -> tuple(string)\n\n        Returns a tuple of ids of vehicles which arrived (have reached their destination and are removed from the road\n        network) in this time step.\n        \"\"\"\n        return self._getUniversal(tc.VAR_ARRIVED_VEHICLES_IDS)\n"
+    },
+    {
+      "api": "trafficlight.getProgram",
+      "line": 215,
+      "signature": "(tlsID)",
+      "source": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_trafficlight.py",
+      "source_excerpt": "    def getProgram(self, tlsID):\n        \"\"\"getProgram(string) -> string\n\n        Returns the id of the current program.\n        \"\"\"\n        return self._getUniversal(tc.TL_CURRENT_PROGRAM, tlsID)\n"
+    },
+    {
+      "api": "trafficlight.getPhase",
+      "line": 222,
+      "signature": "(tlsID)",
+      "source": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_trafficlight.py",
+      "source_excerpt": "    def getPhase(self, tlsID):\n        \"\"\"getPhase(string) -> integer\n\n        Returns the index of the current phase within the list of all phases of\n        the current program.\n        \"\"\"\n        return self._getUniversal(tc.TL_CURRENT_PHASE, tlsID)\n"
+    },
+    {
+      "api": "trafficlight.getRedYellowGreenState",
+      "line": 181,
+      "signature": "(tlsID)",
+      "source": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_trafficlight.py",
+      "source_excerpt": "    def getRedYellowGreenState(self, tlsID):\n        \"\"\"getRedYellowGreenState(string) -> string\n\n        Returns the named tl's state as a tuple of light definitions from\n        rugGyYoO, for red, yed-yellow, green, yellow, off, where lower case letters mean that the stream\n        has to decelerate.\n        \"\"\"\n        return self._getUniversal(tc.TL_RED_YELLOW_GREEN_STATE, tlsID)\n"
+    },
+    {
+      "api": "lane.getLinks",
+      "line": 120,
+      "signature": "(laneID, extended=True)",
+      "source": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/traci/_lane.py",
+      "source_excerpt": "    def getLinks(self, laneID, extended=True):\n        \"\"\"getLinks(string) -> tuple((string, bool, bool, bool))\n        A tuple containing id of successor lane together with priority, open and foe\n        for each link.\n        if extended=True, each result tuple contains\n        (string approachedLane, bool hasPrio, bool isOpen, bool hasFoe,\n        string approachedInternal, string state, string direction, float length)\n\n        isOpen: whether a vehicle driving at the speed limit (minimum auf\n                incoming and outgoing lane) could safely pass the junction with\n                regard to approaching foes if it were to enter it in this step\n                (false for red traffic light).\n                Foe vehicles that are already on the junction are ignored!\n        hasPrio: whether the link is the main road at a priority junction or\n                 currently has green light ('G')\n        hasFoe: whether any foe vehicles are approaching the junction or on the\n                junction that would interfere with passing it in the current time step\n        \"\"\"\n        complete_data = self._getUniversal(tc.LANE_LINKS, laneID)\n        if extended:\n            return complete_data\n        else:\n            # for downward compatibility\n            return [tuple(d[:4]) for d in complete_data]\n"
+    }
+  ],
+  "checks": [
+    {
+      "check": "demand_byte_identity",
+      "status": "PASS"
+    },
+    {
+      "check": "all_additional_behavior_and_schema_attributes_equal",
+      "status": "PASS"
+    },
+    {
+      "check": "config_only_permitted_changes",
+      "status": "PASS"
+    },
+    {
+      "check": "network_exact_hash",
+      "status": "PASS"
+    },
+    {
+      "check": "new_end_450",
+      "status": "PASS"
+    },
+    {
+      "check": "step1_seed17",
+      "status": "PASS"
+    },
+    {
+      "check": "leader600",
+      "status": "PASS"
+    },
+    {
+      "check": "new_raw_absent",
+      "status": "PASS"
+    },
+    {
+      "check": "isolated_output:scenario.sumocfg:fcd-output",
+      "status": "PASS"
+    },
+    {
+      "check": "isolated_output:scenario.sumocfg:queue-output",
+      "status": "PASS"
+    },
+    {
+      "check": "isolated_output:scenario.sumocfg:summary-output",
+      "status": "PASS"
+    },
+    {
+      "check": "isolated_output:scenario.sumocfg:tripinfo-output",
+      "status": "PASS"
+    },
+    {
+      "check": "isolated_output:scenario.sumocfg:vehroute-output",
+      "status": "PASS"
+    },
+    {
+      "check": "isolated_output:scenario.sumocfg:lanechange-output",
+      "status": "PASS"
+    },
+    {
+      "check": "isolated_output:scenario.sumocfg:log",
+      "status": "PASS"
+    },
+    {
+      "check": "isolated_output:scenario.sumocfg:error-log",
+      "status": "PASS"
+    },
+    {
+      "check": "isolated_output:scenario.add.xml:laneAreaDetector",
+      "status": "PASS"
+    },
+    {
+      "check": "isolated_output:scenario.add.xml:laneAreaDetector",
+      "status": "PASS"
+    },
+    {
+      "check": "isolated_output:scenario.add.xml:inductionLoop",
+      "status": "PASS"
+    },
+    {
+      "check": "isolated_output:scenario.add.xml:inductionLoop",
+      "status": "PASS"
+    },
+    {
+      "check": "isolated_output:scenario.add.xml:inductionLoop",
+      "status": "PASS"
+    },
+    {
+      "check": "isolated_output:scenario.add.xml:inductionLoop",
+      "status": "PASS"
+    },
+    {
+      "check": "isolated_output:scenario.add.xml:inductionLoop",
+      "status": "PASS"
+    },
+    {
+      "check": "isolated_output:scenario.add.xml:inductionLoop",
+      "status": "PASS"
+    },
+    {
+      "check": "isolated_output:scenario.add.xml:inductionLoop",
+      "status": "PASS"
+    },
+    {
+      "check": "isolated_output:scenario.add.xml:inductionLoop",
+      "status": "PASS"
+    },
+    {
+      "check": "isolated_output:scenario.add.xml:inductionLoop",
+      "status": "PASS"
+    },
+    {
+      "check": "isolated_output:scenario.add.xml:timedEvent",
+      "status": "PASS"
+    },
+    {
+      "check": "XSD:scenario.sumocfg",
+      "status": "PASS"
+    },
+    {
+      "check": "XSD:scenario.add.xml",
+      "status": "PASS"
+    },
+    {
+      "check": "XSD:demand.rou.xml",
+      "status": "PASS"
+    },
+    {
+      "check": "getter_dispatch:vehicle.getLeader",
+      "status": "PASS"
+    },
+    {
+      "check": "getter_dispatch:vehicle.getMinGap",
+      "status": "PASS"
+    },
+    {
+      "check": "getter_dispatch:vehicle.getTypeID",
+      "status": "PASS"
+    },
+    {
+      "check": "getter_dispatch:vehicle.getRoute",
+      "status": "PASS"
+    },
+    {
+      "check": "getter_dispatch:vehicle.getRouteIndex",
+      "status": "PASS"
+    },
+    {
+      "check": "getter_dispatch:vehicle.getLaneID",
+      "status": "PASS"
+    },
+    {
+      "check": "getter_dispatch:vehicle.getLanePosition",
+      "status": "PASS"
+    },
+    {
+      "check": "getter_dispatch:vehicle.getPosition",
+      "status": "PASS"
+    },
+    {
+      "check": "getter_dispatch:vehicle.getAngle",
+      "status": "PASS"
+    },
+    {
+      "check": "getter_dispatch:vehicle.getSpeed",
+      "status": "PASS"
+    },
+    {
+      "check": "getter_dispatch:vehicle.getAcceleration",
+      "status": "PASS"
+    },
+    {
+      "check": "getter_dispatch:vehicle.getLength",
+      "status": "PASS"
+    },
+    {
+      "check": "getter_dispatch:vehicle.getNextTLS",
+      "status": "PASS"
+    },
+    {
+      "check": "getter_dispatch:vehicle.getNextLinks",
+      "status": "PASS"
+    },
+    {
+      "check": "getter_dispatch:vehicle.getJunctionFoes",
+      "status": "PASS"
+    },
+    {
+      "check": "getter_dispatch:simulation.getTime",
+      "status": "PASS"
+    },
+    {
+      "check": "getter_dispatch:simulation.getDeltaT",
+      "status": "PASS"
+    },
+    {
+      "check": "getter_dispatch:simulation.getCollidingVehiclesIDList",
+      "status": "PASS"
+    },
+    {
+      "check": "getter_dispatch:simulation.getStartingTeleportIDList",
+      "status": "PASS"
+    },
+    {
+      "check": "getter_dispatch:simulation.getEndingTeleportIDList",
+      "status": "PASS"
+    },
+    {
+      "check": "getter_dispatch:simulation.getEmergencyStoppingVehiclesIDList",
+      "status": "PASS"
+    },
+    {
+      "check": "getter_dispatch:simulation.getDepartedIDList",
+      "status": "PASS"
+    },
+    {
+      "check": "getter_dispatch:simulation.getArrivedIDList",
+      "status": "PASS"
+    },
+    {
+      "check": "getter_dispatch:trafficlight.getProgram",
+      "status": "PASS"
+    },
+    {
+      "check": "getter_dispatch:trafficlight.getPhase",
+      "status": "PASS"
+    },
+    {
+      "check": "getter_dispatch:trafficlight.getRedYellowGreenState",
+      "status": "PASS"
+    },
+    {
+      "check": "getter_dispatch:lane.getLinks",
+      "status": "PASS"
+    }
+  ],
+  "netconvert": 0,
+  "schema_bindings": [
+    {
+      "bytes": 43827,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+      "sha256": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e"
+    },
+    {
+      "bytes": 1462,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/routes_file.xsd",
+      "sha256": "2ce8e88b6644d87cc6d8acd49b2fc9da29f74e953e67ab4c6e475de5cfe0cb11"
+    },
+    {
+      "bytes": 335,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/sumoConfiguration.xsd",
+      "sha256": "3a17f38bb69fcfaa46ae6e8e1dad548133a4e173368eab524d0cbef9eecad69b"
+    },
+    {
+      "bytes": 4408,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/types/activitygenConfigurationType.xsd",
+      "sha256": "9921e16415a77f0c6ced30b5e3c3f6c61ace40fcb38a09462095d22f7c6a3618"
+    },
+    {
+      "bytes": 21420,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/types/base.xsd",
+      "sha256": "263c8b163a876529f52c9ea6f5b5db0d9a8284b47e01fbb9118bb2c1a12e2b4e"
+    },
+    {
+      "bytes": 8398,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/types/dfrouterConfigurationType.xsd",
+      "sha256": "9fd27c111aeba6e6a250d0e1812ff9c1f75873df6c6c6ca1fe10f5dac268f91e"
+    },
+    {
+      "bytes": 11874,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/types/duarouterConfigurationType.xsd",
+      "sha256": "e5a59071ff6d3e4ba556e736b307de7183e5ceb95c464cb56fd395f7d511fab2"
+    },
+    {
+      "bytes": 8825,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/types/jtrrouterConfigurationType.xsd",
+      "sha256": "0cc1a156e3f40227c4929c2fd5cefbfb05d89964a1932bd0994b09a9529c2a34"
+    },
+    {
+      "bytes": 10744,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/types/marouterConfigurationType.xsd",
+      "sha256": "a957367cf19f63b4ed9e3ef2daf73459bc9847f210c4747c73504aa148a3c392"
+    },
+    {
+      "bytes": 2679,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/types/metadata.xsd",
+      "sha256": "671e571f3d111dbf30b8f1001ab1f14b033d852f48793289e4b223e77493ed92"
+    },
+    {
+      "bytes": 36121,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/types/netconvertConfigurationType.xsd",
+      "sha256": "8de323821fae9a20a4f27957d2d040a3f3b34ba6c05396670a7bc21fbf55973f"
+    },
+    {
+      "bytes": 42535,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/types/neteditConfigurationType.xsd",
+      "sha256": "e36c3a0b70ca2a456ab5613da306d09316bbe0d62381ad749f37fba573033398"
+    },
+    {
+      "bytes": 24232,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/types/netgenerateConfigurationType.xsd",
+      "sha256": "7058a35716c79c48ac4a767963ed7fef76d858f020a29de0bc72cdda46326c51"
+    },
+    {
+      "bytes": 6434,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/types/od2tripsConfigurationType.xsd",
+      "sha256": "398b4995dc4279bfe201f5c4f5eec41da01919753a51a678e104954664292c8c"
+    },
+    {
+      "bytes": 8157,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/types/polyconvertConfigurationType.xsd",
+      "sha256": "89a9aebb1ddf64761bc24be20a3fd5946999509c9b1802c4f0fff299a7c9abc0"
+    },
+    {
+      "bytes": 60260,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/types/route.xsd",
+      "sha256": "17fbf07672adb5beff77181763e3b10f0756bd3ff80bdd4ede92dfb4e9c32f84"
+    },
+    {
+      "bytes": 49525,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/types/sumoConfigurationType.xsd",
+      "sha256": "ac6c5b6139ab95fdfda504411e0fb93fedb88973336fcf246ed0e9d683dca810"
+    },
+    {
+      "bytes": 1310,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/types/taz.xsd",
+      "sha256": "65ecd0c8a57f8e563dfa4aa1ab5e60febde31427bc72fdfc5c040273c2ba8158"
+    }
+  ],
+  "scope": "static only; runtime alignment and neutrality remain unverified",
+  "status": "PASS",
+  "xml_checks": [
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/sumoConfiguration.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering_attempt03/inputs/scenario.sumocfg"
+      ],
+      "returncode": 0,
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering_attempt03/inputs/scenario.sumocfg validates\n",
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering_attempt03/inputs/scenario.add.xml"
+      ],
+      "returncode": 0,
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering_attempt03/inputs/scenario.add.xml validates\n",
+      "stdout": ""
+    },
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/routes_file.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering_attempt03/inputs/demand.rou.xml"
+      ],
+      "returncode": 0,
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering_attempt03/inputs/demand.rou.xml validates\n",
+      "stdout": ""
+    }
+  ]
+}

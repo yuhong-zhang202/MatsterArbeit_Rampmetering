@@ -1,0 +1,15 @@
+{
+  "status": "PASS_STATIC_SEMANTIC_DIFF",
+  "run_id": "LOC_M3350_S17_attempt1",
+  "source_condition": "accepted TV_A_S17_attempt1 / A_OPEN",
+  "point_condition": "LOC_M3350_S17 / A_OPEN",
+  "scientific_change_set": [{"element":"flow","id":"M_flow","attribute":"number","A0":"1333","Point1":"1396"}],
+  "allowed_scientific_change_count": 1,
+  "all_other_flow_counts_unchanged": {"R_flow":300,"U_flow":150,"X_flow":75},
+  "rates_veh_h": {"A0_qMain_exact":3199.2,"Point1_qMain_nominal":3350,"Point1_qMain_exact":3350.4,"qRamp":720,"qUrban":360,"qX":180},
+  "arithmetic": {"A0_M_number":1333,"Point1_M_number":1396,"M_count_delta":63,"demand_duration_s":1500,"exact_rate_formula":"number * 3600 / (end - begin)","A0_check":"1333*3600/1500=3199.2","Point1_check":"1396*3600/1500=3350.4","planned_total_count":1921},
+  "unchanged_scientific_dimensions": ["qRamp","qUrban","qX","seed=17","route IDs and route edge sequences","vehicle types and speedFactor semantics","depart settings","network bytes and geometry","A_OPEN selection","TLS programs/timing","detector IDs/lanes/positions/periods","simulation begin=0/end=2700/step=1","demand begin=0/end=1500","car-following and lane-change settings","locked classifier code and thresholds"],
+  "operational_path_rewrites_only": ["sumocfg network/route/additional input references point to immutable Point1 package copies","all output paths point into the exclusive new raw run directory"],
+  "not_included": ["Point2 3500","Point3 3650","seed23","geometry rebuild","controller/demand changes other than qMain","run result"],
+  "verification_method": "independent XML semantic normalization plus source/copy hash/size comparison; no simulation executable called"
+}

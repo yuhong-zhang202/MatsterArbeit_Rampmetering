@@ -1,0 +1,94 @@
+{
+  "schema_version": "1",
+  "status": "PAIR3199_REPAIRED_TREATMENT_PRELAUNCH_READY_AWAITING_AUTHORIZATION",
+  "scope": "prelaunch preparation and independent review only; no simulation or authorization",
+  "run_id": "PAIR_3199_R720_DELAYED_S17",
+  "card_status": "DRAFT_NOT_AUTHORIZED",
+  "execution_authorized": false,
+  "resource_proposal": {
+    "basis": "New proposal for this repaired treatment only. Full-horizon PAIR3199 control used 24.881003 s and 20,821,740 payload bytes; the superseded, non-comparable treatment used 19.921320 s and 21,066,503 bytes. Proposed 90 s and 75,000,000 bytes allow roughly 3.6x wall-clock and 3.6x output headroom over observed completed runs. No authorization is carried forward.",
+    "enforcement": "100ms_polled_stop_trigger_with_possible_overshoot_not_hard_quota",
+    "output_size_stop_limit_bytes_decimal": 75000000,
+    "scope": "PAIR_3199_R720_DELAYED_S17",
+    "status": "PROPOSED_NOT_AUTHORIZED",
+    "wallclock_stop_limit_s": 90
+  },
+  "review_dispositions": {
+    "engineering": {
+      "disposition": "PASS_PREPARATION_ONLY_NOT_AUTHORIZED",
+      "findings": {
+        "blocker": 0,
+        "major": 0,
+        "required_minor": 0
+      }
+    },
+    "data_provenance": {
+      "disposition": "PASS_STATIC_INPUT_PROVENANCE_PREPARATION_ONLY_NOT_AUTHORIZED",
+      "findings": {
+        "blocker": 0,
+        "major": 0,
+        "required_minor": 0
+      }
+    },
+    "scientific": {
+      "disposition": "PASS_PREPARATION_ONLY_NOT_AUTHORIZED",
+      "findings": {
+        "blocker": 0,
+        "major": 0,
+        "required_minor": 0,
+        "observations": 0
+      }
+    }
+  },
+  "bindings_sha256": {
+    "card": "593cabd4c82a8b7b735e6ebc000d836bebab80a9c8962e20f2865a5bbf4dbed0",
+    "runtime_binding": "d1d86b35ffa0a55ccb4ed5ed0f4e654fc6a1ecfc0c722cdbd802ed0cf465932f",
+    "runner": "86faab71ea187be4f46fb89d2436fbfb679324297166c63ee376805c362fbdcf",
+    "runner_tests": "eae75661d48282ba69913847c9e2482a3fbbbdd5040091d072eea81d4dda2fe9",
+    "readonly_preflight": "2a8cb596d27f6fa37ba8f7478672af6a6110f4bd1c396b215b14c17e313b8773",
+    "prep_provenance": "b79bcb2804e6af26742511fc08b65bac2c60ddad07211a1e2e5ae7b9cace7c4b",
+    "engineering_review_md": "fc674ca4f45c2e4bedb4b05713e19dcf096fca736287922f9c5036f82780bb64",
+    "engineering_review_json": "d1b10f57f90886b280339807e935fb525ac3efc9033ae7db70b92dceb4dba96c",
+    "data_review_md": "60e40551a1c5cd006d46e0e37cbbc2eeaebdb90c5c6c77299b4726dc080aaf48",
+    "data_review_json": "1d47d500403176cb7a9680821c0bb503166a5f88709395ee9d4c9cb931035f45",
+    "scientific_review_md": "ca38df05a890358f6013a5aa6a59a0577100949693e1a50aa27514c274d499fc",
+    "scientific_review_json": "5af66186e717af98ff77eb8070c9d211ed49b36f5ad62db9c5243023c7a7ba03",
+    "postrun_gate": "1581898624a22592775fd063e3b9ac86f4973ca981a340a53fc6ccdc4a2df791",
+    "treatment_demand": "b8aae801122e918731fb8e05a9aa8ca94873f02282d7f1afee57777f6bea96ea",
+    "treatment_sumocfg": "fb34dc3941d0802f9a3350eb26893f0187c9ba68cfb74d6245be5f7763f6bc71",
+    "treatment_additional": "7f885de61d50668c406a65f4a56c56f1110fcef91864bb5fd73468b4dc748f9a",
+    "expected_identity_manifest": "8d420f779c2a57b13d4b47dab859f3a51ee7513fa691f2f73d57292c51481299",
+    "output_roles": "cd72b0837b9de651dd229f8cc0fa644f81006221de9876a42ac039bc16f37203",
+    "v5_invariant_report": "509f1a46873b6922ce22e18f4100fa2dcb84a632d80ee9a014750efc6c857d54",
+    "v5_provenance_receipt": "3a2531c3bbf3d9d69ac6c94f0f2663b67b47ffde7ce36c7ea0e1a943b74e32c9",
+    "witness_contract": "958890a7dd017110787a85d77ebfa3e6dac2b7d862f0fd91f6bafb7cf1738d9a"
+  },
+  "static_input_claim": {
+    "common_MUX_records": 1558,
+    "exact_common_records": 1558,
+    "treatment_only_R_count": 192,
+    "treatment_only_ids": "R_flow.0–R_flow.191",
+    "planned_input_match_only": true,
+    "future_trajectory_equivalence_established": false
+  },
+  "pre_run_trajectory_gate": {
+    "failure": "Any material unexplained pre-R divergence makes pair NOT_EVALUABLE; do not interpret post-R event",
+    "post_R_witness_analysis": "Only after pre-R matching gate passes",
+    "required": "Compare M/U/X trajectory equivalence before first meaningful R exposure"
+  },
+  "output_directory": "data/raw/stage6_bounded_pair_repaired_20260923_v1/PAIR_3199_R720_DELAYED_S17/outputs",
+  "output_directory_exists_at_receipt": false,
+  "consumption_directory": "artifacts/stage6_pair_3199_repaired_treatment_preparation_20260923_v1/r02_single_start/consumption",
+  "consumption_files_at_receipt": [],
+  "execution_counters": {
+    "sumo_starts": 0,
+    "traci_starts": 0,
+    "netconvert_starts": 0,
+    "technical_retries": 0
+  },
+  "historical_prior_treatment": {
+    "disposition": "NOT_EVALUABLE",
+    "authorization": "consumed",
+    "reuse_or_reinterpret": false
+  }
+}

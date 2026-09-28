@@ -1,0 +1,60 @@
+{
+  "card_path": "artifacts/stage6_clean_onset_3199_r900_preparation_20260925_v1/CLEAN3199_A_R900_DELAYED_S17_CARD_FINAL_REV3.json",
+  "card_sha256": "c70a5f275fb7d60f9c7609395a969f4a4868fc84d6538c52fa4d17bebc5837fe",
+  "comparison": {
+    "authorization_resource_and_execution_binding_only_changed": true,
+    "parent_card_path": "artifacts/stage6_clean_onset_3199_r900_preparation_20260925_v1/CLEAN3199_A_R900_DELAYED_S17_CARD_PRELAUNCH_READY_NOT_AUTHORIZED_REV2.json",
+    "parent_card_sha256": "dfa567b166d937ded3ce014a1c40567be469253fb603bbda0400ac13c6a399b8",
+    "scientific_conditions_unchanged": true
+  },
+  "confidence": "High",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "limitations": "Static scientific prelaunch review only. No post-run data/outcome was inspected; future traffic result is unknown.",
+  "process_starts": {
+    "Guardian": 0,
+    "SUMO": 0,
+    "TraCI": 0,
+    "netconvert": 0
+  },
+  "review_scope": "Independent review of exact FINAL REV3 card after D-009, against reviewed REV2; prelaunch only.",
+  "reviewer_role": "scientific_reviewer",
+  "run_id": "CLEAN3199_A_R900_DELAYED_S17",
+  "schema": "stage6_clean_onset_scientific_prelaunch_review_v1",
+  "status": "PASS_PRELAUNCH",
+  "verified_scope": {
+    "D009_plan_sha256": "63f84a0ee6de30e912c32cac2ab236e9dcfeff70598e2c68624411207de360ee",
+    "M_count": 1333,
+    "R720_comparator_unique_through_lane_R_ids_inclusive": {
+      "1440": 167,
+      "1500": 183
+    },
+    "R_count": 240,
+    "R_veh_per_h": 900,
+    "R_window_s": "[540,1500)",
+    "TLS_program": "A_OPEN",
+    "U": 0,
+    "X": 0,
+    "control_disposition": "LOW_R_BACKGROUND_ACCEPTABLE_WITHIN_MINIMAL_UX0_MODULE_NOT_CLEAN_NORMAL_BASELINE",
+    "max_starts": 1,
+    "prohibited_runs": [
+      "R1080",
+      "other_qMain",
+      "seed23",
+      "B",
+      "C"
+    ],
+    "qMain_veh_per_h": 3199.2,
+    "resource_limits": {
+      "output_size_stop_trigger_bytes_decimal": 75000000,
+      "polling_interval_ms": 100,
+      "polling_overshoot_accepted": true,
+      "wallclock_stop_trigger_s": 90
+    },
+    "seed": 17,
+    "technical_retries": 0
+  }
+}

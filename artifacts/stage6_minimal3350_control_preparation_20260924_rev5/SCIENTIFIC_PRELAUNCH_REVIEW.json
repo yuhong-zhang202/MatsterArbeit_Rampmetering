@@ -1,0 +1,53 @@
+{
+  "schema": "stage6_minimal3350_scientific_prelaunch_review_v1",
+  "review_id": "MINIMAL3350_CTRL_S17_SCIENTIFIC_PRELAUNCH_REV2",
+  "date": "2026-09-24",
+  "reviewer": "independent project-scoped scientific_reviewer (read-only)",
+  "run_id": "MINIMAL3350_CTRL_S17",
+  "disposition": "PASS_PRELAUNCH",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "confidence": {
+    "card_and_design_alignment": "High",
+    "single_seed_fixed_vector_interpretation": "Moderate"
+  },
+  "scope": "qMain=3350.4 veh/h, seed17, U=X=0, R=0 minimal exploratory control only. No treatment outcome exists or was inspected.",
+  "card_sha256": "8dc216dcd99f86c2a47eb612ebd61b5c5c81e8fe6ab3d27d7f1c10e59032f6e1",
+  "engineering_review_sha256": "69b111cf6bbdd17c025ec60b09d1430a3bc1c952fd5a2830eacdb73753b4e8fd",
+  "data_provenance_review_sha256": "2160533d94be69cdafcf1feaa8bc703f97d39502dbfbcdcf4052bbed6027f6bc",
+  "common_m_manifest_sha256": "2fb1383e709e2174e2623aae575649aba40937729325a5e9c43bcc2b76982865",
+  "scientific_assessment": {
+    "M_count": 1396,
+    "unique_M_ids": 1396,
+    "schedule_offset_ms": 1074,
+    "last_departure_ms": 1498230,
+    "route_type_and_explicit_fields": "PASS",
+    "R_U_X_zero": "PASS",
+    "fixed_speedFactor_source": "prior qMain=3350.4 seed17 full-network vehroute with U/X present; 1396/1396 identity-keyed exact matches",
+    "interpretation": "Acceptable as a hash-bound fixed M vector for this conditional matched exploratory pair if future treatment reuses the exact common-M manifest. Does not establish representative or independently generated U=X=0 seed17 RNG realization."
+  },
+  "path_and_resource_assessment": {
+    "sumocfg_targets": 8,
+    "additional_targets": 12,
+    "output_roles": 18,
+    "unique_target_paths": 20,
+    "all_resolve_inside_single_card_runner_output_directory": true,
+    "all_targets_absent": true,
+    "output_directory": "data/raw/stage6_minimal3350_ux0_20260924_v5/MINIMAL3350_CTRL_S17/outputs",
+    "resource_contract": {
+      "wallclock_s": 90,
+      "output_bytes_decimal": 60000000,
+      "polling_ms": 100,
+      "slight_overshoot_accepted": true
+    },
+    "request": "PERSISTED_UNSENT"
+  },
+  "limitations": [
+    "No runtime detector or trajectory coverage exists before launch.",
+    "This review does not classify the control outcome, certify a clean high-mobility baseline, or release treatment."
+  ],
+  "reviewer_conclusion": "PASS for this control prelaunch under the approved exploratory gate. Treatment remains conditional on the control post-run disposition and its required reviews."
+}

@@ -1,0 +1,82 @@
+{
+  "binding_rules": {
+    "exact_final_control_card_path_is_allowlisted": true,
+    "final_control_run_id_path_hash_resource_and_provenance_fail_closed": true,
+    "legacy_RI3350_binding_preserved": true,
+    "max_starts": 1,
+    "rev2_control_draft_and_treatment_draft_bindings_preserved": true,
+    "technical_retries": 0,
+    "treatment_seed23_B_C_and_other_demand_prohibited": true
+  },
+  "card_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/PAIR_3199_CTRL_S17_CARD_FINAL_REV1.json",
+  "card_sha256": "0748d37719541d7c76adcd57e07fd764b413fbd21bb16e015b57024175e866da",
+  "execution": {
+    "SUMO_starts": 0,
+    "TraCI_starts": 0,
+    "netconvert_starts": 0,
+    "raw_outputs_created": 0,
+    "reservations_created": 0
+  },
+  "independent_reviews": "PENDING",
+  "input_hashes_unchanged_from_rev2": true,
+  "input_sha256": {
+    "additional": "ed98832e73675aa95cb3cfc386c579db9525b942b2555e802f0a29324affc23e",
+    "demand": "6bbdc1d9148b05286c25b94f23c37174951c9f3e4a544ef8b9a322fbc42ab631",
+    "network": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "output_roles": "5fe6d340f7196a2afd91ad56cd3c6ed419e32501110ce21076771446b4299ad3",
+    "sumocfg": "6ea7306958543281b35a4c560e735d07e04c7658f73dc06f5cb174041baf0fe6"
+  },
+  "parent_receipt": {
+    "path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/PROVENANCE_RECEIPT_REV2.json",
+    "sha256": "701cd5351045b6b25ddeae888e2ac9ae08431c1e6bb8ae261849a4ff091bfb84"
+  },
+  "receipt_id": "PAIR_3199_R02_ENGINEERING_BINDING_FINAL_REV1",
+  "resources": {
+    "runtime_s": 90,
+    "scope": "PAIR_3199_CTRL_S17",
+    "status": "AUTHORIZED_FOR_THIS_RUN",
+    "storage_bytes": 60000000,
+    "storage_enforcement": "100ms_polled_stop_trigger_with_possible_overshoot_not_hard_quota"
+  },
+  "run_id": "PAIR_3199_CTRL_S17",
+  "runner_contract_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/R02_RUNNER_CONTRACT.md",
+  "runner_contract_sha256": "71a0c346a0e311d83ab2bf950c7a31c41a45bc9e910cc430e9deeac277544ba9",
+  "runner_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+  "runner_sha256": "df8645414a6010b361fd68e298ea521f422eaa0ed969aa36419a1ba9e28ba81e",
+  "runtime_binding_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/runtime_bindings/PAIR_3199_CTRL_S17_FINAL_REV1.json",
+  "runtime_binding_sha256": "caa9839b29dfdbfb7c1bb67487a24d21f8fc4bf613dad23c4db9844c7f986ea0",
+  "status": "IMPLEMENTED_MOCK_TESTED_READONLY_PREFLIGHT_PASS_NO_SIMULATION",
+  "test_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/test_runner.py",
+  "test_sha256": "2341233ebfbfb61cecb5a16643345cbb3372d46410229032fe6336259127b673",
+  "user_authorization": {
+    "authorization": "USER_AUTHORIZED_EXACTLY_ONE_CONTROL_START",
+    "authorized_date": "2026-09-23",
+    "exact_card_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/PAIR_3199_CTRL_S17_CARD_FINAL_REV1.json",
+    "max_starts": 1,
+    "output_polling_interval_ms": 100,
+    "output_size_stop_trigger_bytes_decimal": 60000000,
+    "polling_overshoot_accepted": true,
+    "prohibited_runs": [
+      "PAIR_3199_R720_DELAYED_S17",
+      "seed23",
+      "B",
+      "C",
+      "other_qMain_qRamp"
+    ],
+    "run_id": "PAIR_3199_CTRL_S17",
+    "technical_retries": 0,
+    "wallclock_stop_trigger_s": 90
+  },
+  "verification": {
+    "compile": "PASS",
+    "compile_command": "python3 -m py_compile artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/test_runner.py",
+    "git_diff_check": "PASS",
+    "mock_test_command": "python3 -m unittest discover -s artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start -v",
+    "mock_tests_failed": 0,
+    "mock_tests_passed": 18,
+    "read_only_preflight_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/R02_READONLY_PREFLIGHT_FINAL_REV1.json",
+    "read_only_preflight_sha256": "04cb5d4413fe55073af389feff1aba7950d5c1ebd5a3588739f4dce241132f68",
+    "read_only_preflight_status": "PREFLIGHT_PASS_NO_PROCESS_STARTED",
+    "simulator_process_started": false
+  }
+}

@@ -1,0 +1,101 @@
+{
+  "status": "passed",
+  "phase": "test",
+  "created_at": "2026-09-26T13:16:06.091Z",
+  "volume": "tdai-ramp-memory-type-restore-test-20260926-v1",
+  "image": "sha256:9798254a8cc06276b7c5b3c19df49f136fae25d579564e1f01f9c4b9b8cd2d11",
+  "network": "none",
+  "model_calls": 0,
+  "source_sha256": "6ed07380b9a1559c2184c05942aadeba4d906cf665cfdf61b794d2fcf878e36c",
+  "patch_sha256": "ace9b8d1c87aace56ad0be506ddbad6cab0db066477fdfaa04795f195f0366b0",
+  "spec_sha256": "f5afeff075768a9868d13489aed8c0a3ec1c90866c1768e0ff8ef2b747f89fa9",
+  "baseline_receipt_sha256": "28e70d5591e6199ffc817cc94640e6bd2ed3f940c8f037f08325186e1d21875d",
+  "result": {
+    "status": "passed",
+    "network": "none",
+    "model_calls": 0,
+    "before": {
+      "layer_hashes": {
+        "l0": "b513c4577d645030826d5ee4bf286d7da1ec69ccf637ff7a9cb64765790a6b36",
+        "l1": "62ab07df64699537d39d074ead3a841af2565388077989ccf832c5844a13a8d2",
+        "l2": "2cdde3c76c63f03550164502c429456814385cbf999da9335459d5dc9308dcef",
+        "l2_documents": "128716c6e612bb435d65bcf0d7c2652e1764e6bb015194db350ca157e9073f61",
+        "l3": "a250c8408ec8579a4bb5a6563781d046101d067bc7f69825b2d50bb60e435bbe"
+      },
+      "target": {
+        "id": "m_1790425813551_503da35b",
+        "type": "persona",
+        "version": 1,
+        "content_sha256": "126ef8b51f4d949a67f0c417e7de5e912631abe0c78a0987c113cc4a2e6aa67f",
+        "background_sha256": "a8fb6dd827c6d2af7595cbff8557e5aae3f59c88ef6b212c9042a8596d7c16d7",
+        "item_sha256": "e016e0f7f121fd99b6008aabdc07209087c2eb66b217aaa820f2d2e55efd02b4"
+      }
+    },
+    "negative": [
+      {
+        "name": "missing_expected_type",
+        "http_status": 400,
+        "code": 400
+      },
+      {
+        "name": "extra_field",
+        "http_status": 400,
+        "code": 400
+      },
+      {
+        "name": "wrong_id",
+        "http_status": 400,
+        "code": 400
+      },
+      {
+        "name": "wrong_content",
+        "http_status": 400,
+        "code": 400
+      },
+      {
+        "name": "wrong_background",
+        "http_status": 400,
+        "code": 400
+      },
+      {
+        "name": "wrong_expected_type",
+        "http_status": 400,
+        "code": 400
+      },
+      {
+        "name": "wrong_expected_version",
+        "http_status": 400,
+        "code": 400
+      }
+    ],
+    "write_response": {
+      "id": "m_1790425813551_503da35b",
+      "version": "v2",
+      "updated_at": "2026-09-26T13:16:05.860Z"
+    },
+    "after": {
+      "layer_hashes": {
+        "l0": "b513c4577d645030826d5ee4bf286d7da1ec69ccf637ff7a9cb64765790a6b36",
+        "l1": "ac6a828cd6f995f22cc18a537922976f171032a1867966a15a46930383a1b689",
+        "l2": "2cdde3c76c63f03550164502c429456814385cbf999da9335459d5dc9308dcef",
+        "l2_documents": "128716c6e612bb435d65bcf0d7c2652e1764e6bb015194db350ca157e9073f61",
+        "l3": "a250c8408ec8579a4bb5a6563781d046101d067bc7f69825b2d50bb60e435bbe"
+      },
+      "target": {
+        "id": "m_1790425813551_503da35b",
+        "type": "episodic",
+        "version": 2,
+        "content_sha256": "126ef8b51f4d949a67f0c417e7de5e912631abe0c78a0987c113cc4a2e6aa67f",
+        "background_sha256": "a8fb6dd827c6d2af7595cbff8557e5aae3f59c88ef6b212c9042a8596d7c16d7",
+        "item_sha256": "2a4d3df4ba2d7a0f3f5e46d7368fff8218580731e774a32fe24ebc95d2024af1"
+      }
+    },
+    "replay_rejected": {
+      "http_status": 409,
+      "code": 409
+    },
+    "unrelated_l1_unchanged": true,
+    "l0_l2_l3_unchanged": true
+  },
+  "error": null
+}

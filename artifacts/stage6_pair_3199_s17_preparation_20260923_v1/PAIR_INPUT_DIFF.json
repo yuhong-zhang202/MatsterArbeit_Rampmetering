@@ -1,0 +1,67 @@
+{
+  "forbidden_differences": [],
+  "only_scientific_demand_difference": {
+    "control": "No R_flow source; explicit planned R=0",
+    "rate_check": "192 vehicles over 960 s = 720 veh/h",
+    "treatment": {
+      "begin": "540",
+      "departLane": "best",
+      "departPos": "last",
+      "departSpeed": "max",
+      "end": "1500",
+      "id": "R_flow",
+      "number": "192",
+      "route": "R_route",
+      "type": "technical_passenger"
+    }
+  },
+  "operational_differences": [
+    "distinct run IDs and exclusive output paths"
+  ],
+  "pair_id": "PAIR_3199_S17",
+  "schema_version": "1",
+  "shared": {
+    "TLS_program": "A_OPEN",
+    "flow_M_U_X": {
+      "M_flow": {
+        "begin": "0",
+        "departLane": "best",
+        "departPos": "100",
+        "departSpeed": "max",
+        "end": "1500",
+        "id": "M_flow",
+        "number": "1333",
+        "route": "M_route",
+        "type": "technical_passenger"
+      },
+      "U_flow": {
+        "begin": "0",
+        "departLane": "best",
+        "departPos": "last",
+        "departSpeed": "max",
+        "end": "1500",
+        "id": "U_flow",
+        "number": "150",
+        "route": "U_route",
+        "type": "technical_passenger"
+      },
+      "X_flow": {
+        "begin": "0",
+        "departLane": "best",
+        "departPos": "last",
+        "departSpeed": "max",
+        "end": "1500",
+        "id": "X_flow",
+        "number": "75",
+        "route": "X_route",
+        "type": "technical_passenger"
+      }
+    },
+    "horizon_s": 2700,
+    "network_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "seed": 17,
+    "step_s": 1,
+    "vehicle_type_and_routes_identical": true
+  },
+  "status": "STATIC_INPUT_DIFF_REVIEW_REQUIRED"
+}

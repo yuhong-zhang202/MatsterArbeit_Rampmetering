@@ -1,0 +1,29 @@
+{
+  "status": "PASS",
+  "scope": "read-only verification after immutable package delivery",
+  "checks": [
+    {
+      "check_id": "default_dry_run",
+      "status": "PASS",
+      "observed": "DRY_RUN_NO_PROCESS; no process factory invoked"
+    },
+    {
+      "check_id": "inactive_sidecar",
+      "status": "PASS",
+      "observed": "ValueError approval/card mismatch"
+    },
+    {
+      "check_id": "all_delivery_bindings",
+      "status": "PASS"
+    },
+    {
+      "check_id": "run_root_absent",
+      "status": "PASS",
+      "observed": true
+    }
+  ],
+  "real_SUMO_starts": 0,
+  "real_netconvert_starts": 0,
+  "card_sha256": "8e6c7ec0438393edfcdf8449cb479be97dd77305f9642d2a04e91417e62b5437",
+  "delivery_manifest_sha256": "f44de184dcc408d1a4ed03ffba27d952a79b5f32726fe3cb8012f13a35bafd10"
+}

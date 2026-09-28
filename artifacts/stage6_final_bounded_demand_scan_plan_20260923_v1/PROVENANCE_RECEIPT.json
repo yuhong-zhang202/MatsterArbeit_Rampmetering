@@ -1,0 +1,62 @@
+{
+  "schema_version": "1",
+  "package_status": "PROPOSED_PLAN_ONLY_NOT_AUTHORIZED",
+  "objective": "Stage 6 bounded exploratory existence witness scan; not formal demand optimization",
+  "created_date": "2026-09-23",
+  "plan_sha256s": {
+    "BOUNDED_DEMAND_SCAN_PLAN.md": "5aeddf82bcaa7f2b559e7b6db951815c724cf7d3e8f14dd81158a6f9dbac1046",
+    "CANDIDATE_MATRIX.csv": "5998085fe5a25cc70ec2ab4738e5611b324a09d14c53f715a644a9989e3fcf65",
+    "SEQUENTIAL_DECISION_TREE.md": "8663009cfd0ff49849b48825f7df32ed4a13a211c393f671fd84a7cda6a78007",
+    "WITNESS_ACCEPTANCE_CRITERIA.md": "f82a1f5893d15c8e30706a945b1241e597e7a2cacfea4562d48533344f72f51d",
+    "RUN_BUDGET_AND_STOP_RULES.md": "b845c18284a0fdb7d73b404dbaceef0d37636234a038bbbefd6adb7e1cf10533",
+    "ABC_FOLLOWUP_DRAFT.md": "f26b816edd661b5f2b12a4c1b7c49b856d872d58aad3e012cd72ad73633d4257"
+  },
+  "scientific_review": {
+    "path": "scientific_review.md",
+    "sha256": "27f6db1359cb1c632f7eea6ccd1bc77a6f732dca7f872bbae595ad21f5e8fca0",
+    "disposition": "PASS_PLAN_ONLY",
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0,
+    "reviewed_plan_sha256s_match": true
+  },
+  "source_bindings": {
+    "AGENTS.md": "4df6eb482d63f9d1e6d30dfea6d78c3645577cc08a9d944b818db53601ac281b",
+    "docs/PROJECT_STATE.md": "ca8b0a5867d77a60eb12fcadf882f07c77c5916857c6903cc5301450e1d3582f",
+    "docs/WORKLOG.md": "52ec18243ecea4ea34e17c154efe7880bf38cae7183a7320890b34f697d27ea1",
+    "docs/DECISIONS.md": "4e440204b812a9ed28181b6b4aa54818ca5e7a39d207aeaadcab12cf8cb00d7a",
+    "docs/EXPERIMENT_PROTOCOL.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/SUPERVISOR_FEEDBACK.md": "49d8d410f5c68e56c023b9e0f92b23cdf00bde55658e993a4f7ce5be996ec446",
+    "docs/supervision/2026-08-25_robert_hilbrich_reply.md": "e788f4c12d36118fab865ed6fe9a7f1f1d6a7255d907daf4fc2d1850ed4c5023",
+    "docs/methodology/FREEWAY_PROTECTABLE_STATE_EXPLORATORY_DEFINITION.md": "22fe22170c17ce74e261e717586a458a1b5173e9deabbee925bd4c1d606adfe7",
+    "docs/methodology/STAGE6_RAMP_INDUCED_BREAKDOWN_VALIDATION_PLAN.md": "62fb63eb49ae98b58bc45ad6bc7d60cd21fcdb73b3327c34b97c5151b01ca355",
+    "docs/methodology/STAGE6_RAMP_INDUCED_BREAKDOWN_LUNA_EXECUTION_SPEC.md": "2ff991be454ce47e8f374c9855ff954f893920a49e8628de9f09dcee4e89d187",
+    "docs/STAGE6_TARGETED_CAUSAL_VALIDATION_REPORT.md": "439eec6a5b8550ded85b86297d108eb9897c1fbadb7acca68d0838079d84d5bf",
+    "data/processed/stage6_A_P_failure_decomposition_20260921_v1/REPORT.md": "e0d14f577cf5a84bed1bb29948dcd36cda6948e52eb118244db7a911b2838a36",
+    "data/processed/stage6_ramp_induced_validation_20260922_v1/RI3350_CTRL_S17_technical_retry1_postrun_review_v3/POSTRUN_REPORT.md": "966b602c5d7a20b4ee163190591012e7d9daece57520c9267a16d57707ff6523",
+    "data/processed/stage6_ramp_induced_validation_20260922_v1/RI3350_CTRL_S17_control_suitability_diagnosis_v2/CONTROL_SUITABILITY_REPORT.md": "d3afed88b9d5592ccb0b141c0c1f51d3f5012fdc86a263a47b11cb30acda69da",
+    "data/processed/stage6_ramp_induced_validation_20260922_v1/RI3350_CTRL_S17_control_suitability_diagnosis_v2/scientific_review.md": "0752cfe543de21e8bd668474293cea42bebfd7e77b99f49a7833e7b8b0717968",
+    "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_A_S17_attempt1/demand.rou.xml": "70d90d477c97141086b87cd248064c2c27c5965060e04fe9a2cbec67ec20e1cd",
+    "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/inputs/LOC_M3350_S17_attempt1/demand.rou.xml": "e64057692b4194b6f395c7a5349104a407d806b2b5a6bda9efcbac29489fdac3",
+    "artifacts/stage6_ramp_induced_validation_20260922_v1/control_input/demand_control.rou.xml": "0edeb776e6656f3fd22f1e8d0b4c07ece17903695c901af576d93fb205b26865"
+  },
+  "verification": {
+    "candidate_matrix_rows": 14,
+    "count_rate_arithmetic": "PASS",
+    "branch_feasible_new_scan_starts_max": 4,
+    "optional_seed23_starts_max": 2,
+    "abc_followup_starts_max": 2,
+    "new_stage6_final_starts_total_max": 8,
+    "experiment_protocol_bytes": 0
+  },
+  "no_execution": {
+    "SUMO_starts": 0,
+    "TraCI_starts": 0,
+    "netconvert_starts": 0,
+    "demand_experiments": 0,
+    "run_cards_created": 0
+  },
+  "old_fixed_gate": "RI3350_R0_CONTROL_NOT_EVALUABLE_F5_UNCHANGED",
+  "formal_protocol": "UNFROZEN_UNCHANGED"
+}

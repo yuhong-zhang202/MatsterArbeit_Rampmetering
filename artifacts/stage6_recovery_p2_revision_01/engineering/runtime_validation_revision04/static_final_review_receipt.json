@@ -1,0 +1,45 @@
+{
+  "status": "PASS_STATIC_FINAL",
+  "stage": "exact_runtime_package",
+  "card_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision04/RUNTIME_VALIDATION_CARD.json",
+  "card_sha256": "0f74720eacd86d95490a9a32921f497a8e673453078dc71bc798dd1562c42557",
+  "reviewed_at_utc": "2026-09-19T22:16:51Z",
+  "reviewers": {
+    "simulation_engineer": {
+      "status": "PASS_STATIC",
+      "scope": "minimum detector-filter repair, SUMO 1.26 semantics, runtime package, tests, and cumulative envelope",
+      "evidence": "26/26 fake executor tests, 50/50 repair/invariant checks, 9/9 XSD validations; 156 manifest files and 228 unique nested bindings independently reported matched",
+      "limitation": "actual SUMO loader and traffic time steps remain untested"
+    },
+    "data_analyst": {
+      "status": "PASS_STATIC_DATA",
+      "scope": "exact card/input/manifest integrity, rev03-equivalence, detector changes, identity/output contracts, budget reconciliation",
+      "evidence": "228 unique bindings passed; 17 output roles and planned identities preserved; new run roots absent; prior failures and cumulative accounting preserved",
+      "limitation": "actual run XML and twelve output gates remain untested; rev04 analysis adapter preparation is tracked separately"
+    },
+    "scientific_reviewer": {
+      "status": "PASS_STATIC_FINAL",
+      "scope": "intended measurement semantics, no scientific parameter drift, authorization interpretation, bounded start/time/space limits, stop gates",
+      "open_blocker_major_required_minor": [
+        0,
+        0,
+        0
+      ],
+      "confidence": "High within static package review only",
+      "limitation": "real loading, detector output, merging, priority, lane change, bottleneck and specific_obstacle remain unverified"
+    }
+  },
+  "scope_decision": "At most one repaired RV4 smoke may start; only if it completes all technical/data/physical gates may RV4_R0_S17 then RV4_R720_S17 proceed. Any failure stops the card. No automatic retry, seed23, grid, ALINEA, GUI, TraCI, netconvert, or thesis-data production.",
+  "budget_change": "Cumulative SUMO-start ceiling is explicitly raised from revision03 operational ceiling 4 to 5 under the continuing user instruction to troubleshoot smoke and continue bounded attempts. Two starts are already consumed; at most three new starts remain. Original cumulative time and byte stop lines are unchanged and prior consumption is subtracted.",
+  "authorization_provenance": "The user authorized a technical SUMO smoke, conditional limited dynamic validation, stopping on structural issues, and later explicitly instructed: smoke排查原因然后继续尝试. Independent scientific review concluded one separately reviewed technical repair plus the original conditional seed17 pair is inside this continuing bounded scope. This exact card is reviewed and the user authorization sidecar binds it; there is no claim the user personally reviewed this later SHA.",
+  "known_technical_repair": "Omit only explicitly empty optional detector filters vTypes and nextEdges. Local SUMO 1.26 parser defaults and official E1/E2 documentation support all-vehicle/unrestricted-by-future-edge behavior. This restores intended unfiltered measurement semantics; actual runtime remains untested.",
+  "static_limits": "No dynamic observation is available. The package does not prove detectors run, vehicles enter/merge, lane changes occur, or specific_obstacle is resolved.",
+  "data_adapter_prepared_after_card_review": {
+    "status": "PASS_STATIC_DATA_SOURCE_BINDING_ONLY",
+    "path": "data/processed/stage6_obstacle_20260913_v1/runtime_gate_revision02/revision04/analysis_manifest.json",
+    "sha256": "7c28cee272f43b9f39ca207f76d1afa72bb5240c1884a10aa86126cc26467f96",
+    "tests": 16,
+    "bindings_rechecked": 325,
+    "boundary": "Source provenance adapter only; not the full twelve-gate analysis and contains no real RV4 output result."
+  }
+}

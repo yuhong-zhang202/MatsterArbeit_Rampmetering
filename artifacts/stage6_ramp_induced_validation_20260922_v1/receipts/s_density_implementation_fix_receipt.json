@@ -1,0 +1,37 @@
+{
+  "schema_version": "1",
+  "status": "IMPLEMENTATION_CORRECTED_HISTORICAL_SCIENTIFIC_CONCLUSIONS_UNCHANGED",
+  "scope": "S density gate only",
+  "locked_rule": "candidate density >= 1.25 * reference density",
+  "implementation": "integer comparison 4*candidate_sample_count >= 5*reference_median_sample_count; same-cell denominator cancels",
+  "float_boundary_policy": "Do not compare rounded serialized densities for S equality; use full integer density numerators. P/L strict comparisons unchanged.",
+  "method_file_modified": false,
+  "old_outputs_overwritten": false,
+  "patched_implementations": [
+    {"path":"data/processed/stage6_protectable_state_application_20260921_v1/apply_rule.py","sha256":"6ff2fab99d3291c326242c020d5af501700fb65a4e6c7b6cc0c08a409dac3f55"},
+    {"path":"artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/analysis/apply_rule.py","sha256":"78f001b7909bdda6797eae6aab5bf6bf0dd70bce83262d8f2619c3fa71149c55"}
+  ],
+  "boundary_fixture": {
+    "path":"artifacts/stage6_ramp_induced_validation_20260922_v1/offline_tests/test_s_density_boundary.py",
+    "sha256":"65d068c557e79ed8937f1b504fab66e95af2403d4395356ac22fc27d6188cdeb",
+    "result":"PASS exact=1.25 accepted; below rejected; above accepted for both patched implementations"
+  },
+  "historical_impact_audit": {
+    "path":"artifacts/stage6_ramp_induced_validation_20260922_v1/receipts/historical_s_boundary_impact.json",
+    "script_sha256":"34b166068ebab8a3e1f76480c180239af4b2677a4552485f0f6fd313ed1eca4f",
+    "sources": [
+      {"path":"results/tables/stage6_protectable_state_application_20260921_v1/cell_bin_metrics.csv","sha256":"9363bc9dd97959a07d4eb38599cd0251ee21fa8e4888e75a2fecc7f1e04c96bb"},
+      {"path":"data/processed/stage6_baseline_localization_20260921_v1/LOC_M3350_S17_attempt1/classifier_output/tables/cell_bin_metrics.csv","sha256":"d04d95a99935ae25b1809a83e48f44b13961c2bd31494c43dd47b2e440b19716"}
+    ],
+    "runs":"A/B/C and LOC_M3350",
+    "groups_scanned":88,
+    "qualification_bins_scanned":0,
+    "low_runs_scanned":4,
+    "low_runs_reference_ineligible":4,
+    "exact_boundary_rows":0,
+    "near_boundary_rows_abs_integer_delta_le_1":0,
+    "conclusion":"No historical classification was affected; historical scientific conclusions unchanged. Old outputs preserved."
+  },
+  "simulation_calls": 0,
+  "review_required": true
+}

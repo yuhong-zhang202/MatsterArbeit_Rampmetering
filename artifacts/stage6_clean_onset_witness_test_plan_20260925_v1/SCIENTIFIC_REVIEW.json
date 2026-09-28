@@ -1,0 +1,36 @@
+{
+  "schema": "stage6_clean_onset_witness_test_scientific_review_v1",
+  "reviewer": "independent scientific_reviewer (read-only subagent)",
+  "review_type": "plan_only_pre_execution_methodology_review",
+  "disposition": "PASS_PLAN_ONLY",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "reviewed_plan_sha256": "63f84a0ee6de30e912c32cac2ab236e9dcfeff70598e2c68624411207de360ee",
+  "final_plan_byte_identical_to_reviewed_draft": true,
+  "confidence": {
+    "boundary_and_stop_logic": "High",
+    "probability_of_eligible_onset": "Moderate"
+  },
+  "recommendation": "A: qMain3199.2/R900 first; B: qMain3199.2/R1080 only after A is valid NO_WITNESS, actual same-qMain merge exposure increases, and alternative-cause checks pass. Keep existing 3199/R0 as minimal-module comparator, not a clean-normal baseline. Do not select 3350 ramp-onset redesign as the current final step.",
+  "resolved_required_issues": [
+    "The two-SUMO-start cap is absolute for this plan and includes technical failures; further retries require a separate versioned, reviewed, adopted plan.",
+    "Freeze the existing 3199/R720 fixed-cutoff comparison method and counts before A prelaunch release or launch.",
+    "Count unique R identities at first through-lane entry, not merely auxiliary/merge-section approach."
+  ],
+  "interpretation_boundary": "This is a post-R900 adaptive exploratory proposal, not preregistered before the known 3350/R900 result and not formal/confirmatory evidence. D-008's stop remains operative until separate user adoption; scientific PASS does not authorize execution.",
+  "technical_limitations": [
+    "A lower qMain does not guarantee three eligible immediate treatment reference bins.",
+    "3199/R720 fixed-cutoff unique R counts still require a hash-bound read-only extraction before any A release.",
+    "Future R900/R1080 input binding, realized exposure, data integrity, and attribution remain unverified."
+  ],
+  "process_starts_this_review": {
+    "SUMO": 0,
+    "Guardian": 0,
+    "TraCI": 0,
+    "netconvert": 0
+  },
+  "recording_note": "The scientific reviewer remained read-only; the primary agent recorded its returned disposition."
+}

@@ -1,0 +1,119 @@
+{
+  "schema": "stage6_minimal3350_data_provenance_prelaunch_review_v3",
+  "review_type": "fresh_read_only_data_provenance_prelaunch",
+  "run_id": "MINIMAL3350_CTRL_S17",
+  "card_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev6/MINIMAL3350_CTRL_S17_CARD_FINAL.json",
+  "card_sha256": "b0a4a40c1efd01640277a915858196fd737f0ba4821d6a97ff59642ad9f3a7e7",
+  "status": "PASS_DATA_PROVENANCE_PRELAUNCH",
+  "findings": {"blocker": 0, "major": 0, "required_minor": 0},
+  "context": {
+    "phase": "Stage 6 minimal U=X=0 existence test; 3199.2 matched pair is reviewed NO_WITNESS; 3350.4 control is the next authorized arm and treatment remains conditional on control review.",
+    "D008": "The user-adopted second-tier stress plan applies only after the complete minimal3350 pair satisfies its conditional entry gate; it does not release R900/R1080 or higher-qMain runs now.",
+    "formal_protocol": "Unchanged and unfrozen.",
+    "prior_REV2_REV5": "This review is limited to immutable REV6. Earlier review artifacts and raw/input packages were not edited."
+  },
+  "checks": {
+    "exact_card_hash": true,
+    "input_manifest_hash_and_card_binding": true,
+    "common_M_manifest_hash_and_card_binding": true,
+    "runtime_binding_hash_and_card_binding": true,
+    "runner_and_adapter_hashes_actual_and_bound": true,
+    "network_source_flow_and_speedfactor_source_hashes_actual_and_bound": true,
+    "sumo_binary_python_and_additional_schema_hashes_actual_and_bound": true,
+    "start_request_receipt_schema_run_card_request_cross_binding": true,
+    "request_persisted_unsent": true,
+    "1396_unique_M_identities": true,
+    "desired_departure_integer_schedule_1074ms": true,
+    "M_route_vtype_and_behavior_fields_complete": true,
+    "speedFactor_identity_coverage_1396_of_1396": true,
+    "explicit_R_U_X_zero_ledger": true,
+    "sumocfg_8_targets_bound_output_directory": true,
+    "additional_xml_12_targets_bound_output_directory": true,
+    "18_output_roles_exact_reconciliation_and_uniqueness": true,
+    "all_physical_targets_unique": true,
+    "output_directory_and_arm_parent_absent": true,
+    "no_process_started": true
+  },
+  "common_M": {
+    "planned_and_materialized_count": 1396,
+    "unique_IDs": 1396,
+    "ID_sequence": "M_flow.0 through M_flow.1395, exactly once each",
+    "unique_desired_departures": 1396,
+    "departure_rule": "desired_depart_ms=i*1074; trunc(1500000ms/1396)=1074ms",
+    "first_desired_depart_s": 0.0,
+    "last_desired_depart_s": 1498.230,
+    "route": "M_route for every M identity",
+    "vType": "technical_passenger for every M identity",
+    "explicit_per_vehicle_fields": ["id", "depart", "desired_depart_ms", "route", "type", "departPos", "departLane", "departSpeed", "speedFactor"],
+    "speedFactor_source_matches": "1396/1396 identity-keyed exact text matches",
+    "manifest_sha256": "2fb1383e709e2174e2623aae575649aba40937729325a5e9c43bcc2b76982865",
+    "demand_sha256": "da93237ed572b4103146b07b6e2b6ed4ffb9b95d21e7ed22e823ea427f8d477c"
+  },
+  "class_ledger": {
+    "M": {"count": 1396, "status": "BOUND"},
+    "R": {"count": 0, "status": "PASS_ZERO"},
+    "U": {"count": 0, "status": "PASS_ZERO"},
+    "X": {"count": 0, "status": "PASS_ZERO"}
+  },
+  "speedFactor_provenance": {
+    "source_path": "data/raw/stage6_baseline_localization_20260921_v1/LOC_M3350_S17_attempt1/outputs/vehroute.xml",
+    "source_sha256": "0183782a60172b5c038d7c0dcd0a9172478803a1c1673df6eadb29f2a6ea1702",
+    "source_scope": "Prior qMain=3350.4, seed17 full-network run with nonzero U/X; all 1396 M identities have an explicit speedFactor and match the current manifest.",
+    "adjudication": "The pair is reproducible conditional on an explicitly fixed common M behavior vector. Reuse of this exact manifest in treatment preserves M equivalence and makes R the only added exogenous demand. It does not establish an independently sampled or representative U=X=0 seed17 RNG realization."
+  },
+  "output_path_audit": {
+    "card_output_directory": "data/raw/stage6_minimal3350_ux0_20260924_v6/MINIMAL3350_CTRL_S17/outputs",
+    "sumocfg_targets": {"count": 8, "simulator_outputs": 6, "logs": 2, "all_direct_children_of_card_output_directory": true},
+    "additional_XML_targets": {"count": 12, "all_direct_children_of_card_output_directory": true},
+    "output_roles": {"count": 18, "unique_paths": 18, "exact_set_equals_six_config_outputs_plus_12_additional_targets": true},
+    "target_names_unique_across_all_roles_and_logs": true,
+    "output_directory_absent": true,
+    "run_parent_absent": true,
+    "all_targets_bind_same_run_ID_and_card_path": true
+  },
+  "execution_binding": {
+    "runner_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+    "runner_sha256": "a789925aab725bc3db6e229b246d8267c1c1e1db75db8c736ea6c971da1b0841",
+    "adapter_path": "scripts/stage6/minimal3350/minimal3350_control_adapter.py",
+    "adapter_sha256": "3fd66455cc79a1178e8f23d0d4bfc57064f6ca0b8736b3a5fa107f937cc79291",
+    "runtime_binding_sha256": "b89be00598eb75f6e2ac0e2a49da43e089d0eec92cc38b6000ba621e8159ca16",
+    "SUMO_version": "1.26.0",
+    "SUMO_binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+    "SUMO_HOME": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo",
+    "additional_schema_sha256": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e",
+    "resource_contract": {"wallclock_s": 90, "output_size_limit_bytes_decimal": 60000000, "polling_ms": 100, "slight_overshoot_accepted": true},
+    "START_request_sha256": "c08f6a8e825a0a5302df3ec845bb3d5127d792e63a4e0ffeaa3c600ad4258cd8",
+    "START_request_receipt_sha256": "cca8ea18675cf2bc94e381100e0cc7674303965083d64647827590f7eb2a216a",
+    "request_state": "PASS_PERSISTED_UNSENT",
+    "receipt_state": {"dispatched": false, "guardian_started": false, "sumo_started": false}
+  },
+  "engineering_status_observed": {
+    "status": "PASS_PRELAUNCH",
+    "findings": {"blocker": 0, "major": 0, "required_minor": 0},
+    "focused_tests": "8 passed",
+    "static_preflight": "Pending exact-card data/scientific reviews; must remain non-launchable until required receipts bind."
+  },
+  "limitations": [
+    "The speedFactor vector was copied from a prior full-network run with U/X nonzero. This paired comparison is conditional on the fixed hash-bound M vector, not an independent or representative U=X=0 RNG realization.",
+    "No future treatment was reviewed here. It must bind and validate the identical common-M manifest and all per-vehicle attributes before any treatment launch.",
+    "This report does not classify control suitability or authorize/launch a process; there is no traffic outcome in scope."
+  ],
+  "reviewed_hashes": {
+    "card": "b0a4a40c1efd01640277a915858196fd737f0ba4821d6a97ff59642ad9f3a7e7",
+    "common_M_manifest": "2fb1383e709e2174e2623aae575649aba40937729325a5e9c43bcc2b76982865",
+    "input_manifest": "0bf988a66db883ee3336dcbd098e600f5e18a7ed5277760562574478ebc56f10",
+    "runtime_binding": "b89be00598eb75f6e2ac0e2a49da43e089d0eec92cc38b6000ba621e8159ca16",
+    "provenance_receipt": "b8c42fad079030db64f701ec5eb208a5a80d25fa914c9fae1e177e90ed1dc745",
+    "start_request": "c08f6a8e825a0a5302df3ec845bb3d5127d792e63a4e0ffeaa3c600ad4258cd8",
+    "start_request_receipt": "cca8ea18675cf2bc94e381100e0cc7674303965083d64647827590f7eb2a216a",
+    "source_flow": "e64057692b4194b6f395c7a5349104a407d806b2b5a6bda9efcbac29489fdac3",
+    "source_vehroute": "0183782a60172b5c038d7c0dcd0a9172478803a1c1673df6eadb29f2a6ea1702",
+    "network": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "demand": "da93237ed572b4103146b07b6e2b6ed4ffb9b95d21e7ed22e823ea427f8d477c",
+    "sumocfg": "31598634602becc25c8ef35f89e51c68baeb9ce3abe4957e7bef9502a8bbb050",
+    "additional": "d36ca8a14e2d90f0918bc18c58e681851728bb3131968d322b703ac687f0c58c",
+    "output_roles": "57ce587f5afc0580b62097577043fc3c663ddd35a18ec3c6749db5d29695939e",
+    "runner": "a789925aab725bc3db6e229b246d8267c1c1e1db75db8c736ea6c971da1b0841",
+    "adapter": "3fd66455cc79a1178e8f23d0d4bfc57064f6ca0b8736b3a5fa107f937cc79291"
+  }
+}

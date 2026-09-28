@@ -1,0 +1,39 @@
+{
+  "candidate_accounting": {
+    "FCD_planning_envelope_bytes": 1284249600,
+    "crude_population_times_labels_ceiling": 5016600,
+    "largest_planned_population": 1858,
+    "note": "Overcounts population because scheduled entry is spread; conservative finite envelope.256bytes exceeds observed165; neither guarantees arbitrary diagnostic output size.",
+    "planning_bytes_per_record": 256,
+    "time_labels": 2700
+  },
+  "disk_basis": "1.2842496GB FCD planning envelope plus about0.216GB allowance for other17-role files/logs. Watchdog required; abort and preserve if exceeded. This is new candidate budgeting, not inherited old2GB/120s allowance.",
+  "historical_record_check": {
+    "FCD": {
+      "bytes": 54149610,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/attempts/S6_V1_C_S17_attempt1/outputs/fcd.xml",
+      "sha256": "d5e3d22a175aff3cfe94ffd7e315df97de91511baf8f0a791c61886ab433ab07"
+    },
+    "budget_journal": {
+      "bytes": 12044,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/budget_journal/event_0011.json",
+      "sha256": "b8ade0acac72df10ca8b14d275c9f77c8b27620cfccb523322078badfb1539eb"
+    },
+    "execution_receipt": {
+      "bytes": 12874,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/attempts/S6_V1_C_S17_attempt1/execution_receipt.json",
+      "sha256": "4ebe5ba781b45d5ac51b66b25907a91cea02a6d720b2fb365d96632c48c5764c"
+    },
+    "max_vehicle_record_bytes": 165,
+    "vehicle_samples": 343495,
+    "wallclock_s_C17": 3.7455701250000857
+  },
+  "project_cumulative": "parent must reconcile all previous stages; this bounded estimate does not claim complete project cumulative usage",
+  "proposed_management_limits": {
+    "SUMO_per_attempt_wallclock_s": 180,
+    "SUMO_total_wallclock_s": 1080,
+    "per_attempt_archive_bytes": 1500000000,
+    "total_archive_bytes": 9000000000
+  },
+  "wallclock_basis": "Historical343495samples took3.745570s; scaling crudely to5016600samples gives54.70s.180s ceiling includes >3x rough slack; nonlinear lane-change cost may invalidate estimate and triggers stop, not automatic extension."
+}

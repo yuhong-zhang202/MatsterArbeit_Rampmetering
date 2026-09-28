@@ -1,0 +1,23 @@
+{
+  "schema": "clean_onset_candidate_a_engineering_prelaunch_v1",
+  "status": "PASS_FOR_PREPARATION_ONLY",
+  "disposition": "PASS_FOR_PREPARATION_ONLY",
+  "run_id": "CLEAN3199_A_R900_DELAYED_S17",
+  "card_sha256": "7aa14b8dc69e70c67e64ffdaa570d6e30cc7d71cb6dfb84e6d812d52853718f2",
+  "findings": {"blocker": 0, "major": 0, "required_minor": 0},
+  "confidence": "High",
+  "reviewer": "simulation_engineer",
+  "scope": "Read-only exact-card/static runner and staging review. No process started.",
+  "verified": [
+    "Card, runner, runtime, input manifest, and candidate adapter hashes agree.",
+    "M 1333 full-attribute records match the accepted control; R240 attributes and integer-ms 4-second schedule match the bound REV20 R900 source; U=X=0.",
+    "Nested references cover 18 XML roles plus sumo.log and sumo_error.log under the unique run root.",
+    "Deterministic staged sumocfg/additional bytes and SHA-256 are bound and rechecked by the candidate adapter and launch branch.",
+    "R02 preflight returns PASS_NO_PROCESS_STARTED with launch_authorized=false and launchable_now=false."
+  ],
+  "limitations": [
+    "No FINAL card or persisted START request exists because execution is not authorized.",
+    "A future launch requires a new authorization, a separate FINAL exact card, and a fresh full START preflight/review."
+  ],
+  "process_starts": {"SUMO": 0, "Guardian": 0, "TraCI": 0, "netconvert": 0}
+}

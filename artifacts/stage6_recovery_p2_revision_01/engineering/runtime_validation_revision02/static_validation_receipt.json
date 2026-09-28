@@ -1,0 +1,37 @@
+{
+  "checks": [
+    {
+      "check_id": "revision01_all_delivery_bindings_unchanged",
+      "file_count": 129,
+      "status": "PASS"
+    },
+    {
+      "check_id": "revision01_static_inputs_and_XSD_pass",
+      "evidence": {
+        "bytes": 19965,
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision01/static_validation_receipt_revision02.json",
+        "sha256": "039432d40d6003f566f46328fd65621fc675ac3f861954026fd1b892be9e4cd1"
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "revision02_fake_tests_pass",
+      "evidence": {
+        "bytes": 837,
+        "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision02/executor_test_receipt.json",
+        "sha256": "cd7d7e44b66bb0a299508baf74b3e84d0e855c6d1366e87e0c0f6db74f0432df"
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "all_registered_run_roots_still_absent",
+      "status": "PASS"
+    }
+  ],
+  "real_SUMO_starts": 0,
+  "real_netconvert_starts": 0,
+  "retained_XML_XSD_checks": 9,
+  "retained_input_checks": 73,
+  "revision_change": "executor review enforcement and operator physical-stop contract only; no science/input bytes changed",
+  "status": "PASS"
+}

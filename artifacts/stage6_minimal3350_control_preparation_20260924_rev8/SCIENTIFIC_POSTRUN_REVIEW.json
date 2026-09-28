@@ -1,0 +1,36 @@
+{
+  "schema": "stage6_minimal3350_scientific_postrun_review_v1",
+  "run_id": "MINIMAL3350_CTRL_S17",
+  "card_sha256": "15544478e8e7ced98b12673bec65cfe646b1f73e9e471ed501ddee052306bbfd",
+  "disposition": "LOW_R_BACKGROUND_ACCEPTABLE",
+  "findings": {"blocker": 0, "major": 0, "required_minor": 0},
+  "confidence": {
+    "lifecycle_exposure_locked_classification": "High",
+    "physical_interpretation": "Moderate"
+  },
+  "reviewer": "independent project-scoped scientific_reviewer (read-only)",
+  "scope": "Control only; no treatment or escalation outcome inspected.",
+  "summary": {
+    "lifecycle": "1396/1396 M inserted and arrived; no unfinished, discarded, waiting, or vaporized vehicles; R/U/X explicit zero.",
+    "exposure": "Complete FCD grid 0-2699s; 1396 M passed all three named E1 stations; merge core [720,1440) has 677 unique M IDs and 7096 samples.",
+    "locked_classifier": "P/S/L NO_QUALIFYING_EVENT; Candidate A absent; 28 one-bin Candidate C warnings across 11 bins retained; no same-cell consecutive Candidate C bins.",
+    "historical_gate": "Strict high-mobility screen remains FAIL and is not changed.",
+    "alternatives": "No clear source, downstream, TLS, geometry, lane-mapping, lifecycle, or measurement alternative invalidates the classification.",
+    "limitations": [
+      "Queue export contains no lane records; queue morphology and queue absence cannot be claimed.",
+      "SpeedFactor vector is a fixed matched vector copied from a prior full-network seed17 run with U/X present; no independent/representative U=X=0 RNG or across-seed inference.",
+      "Independent raw-FCD reconciliation was a spot-check, not a full classifier reimplementation.",
+      "Analysis-pipeline regression protection was not verified; this is non-blocking for this run."
+    ],
+    "treatment": "Control disposition only; treatment remains a separately carded and reviewed conditional arm."
+  },
+  "evidence_hashes": {
+    "engineering_review": "657e5951469b86e43d72782a3f154f288aa57c1f68d2caac339adfef1af75cac",
+    "data_review": "24711f151751cb1d6b0ba852388824f1f8e69be7fea3678900b872498870ab4d",
+    "machine_report": "1f6f125ab9d8a3458d81df74ae7a75d10fa2ca9c712f46692b5c72fbef412869",
+    "cell_metrics_csv": "c599b6dd9c40f2995ee259cef2c2785a38a6a72fdcf83ad0ebca4434deb73f09",
+    "output_manifest": "48456bb607b4e4679dd13274696c60ab7f5ae020aa6ecbf2462110e1fdcd752f"
+  },
+  "processes_started_by_reviewer": 0,
+  "raw_modified": false
+}

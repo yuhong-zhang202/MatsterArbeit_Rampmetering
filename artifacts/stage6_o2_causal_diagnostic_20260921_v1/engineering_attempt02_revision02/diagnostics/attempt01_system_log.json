@@ -1,0 +1,63 @@
+[{
+  "timezoneName" : "",
+  "messageType" : "Default",
+  "eventType" : "logEvent",
+  "source" : null,
+  "formatString" : "Validation category policy: Notifying syspolicyd about %s with PID %d",
+  "userID" : 0,
+  "activityIdentifier" : 0,
+  "subsystem" : "",
+  "category" : "",
+  "threadID" : 1823818,
+  "senderImageUUID" : "6AC2AC45-1672-39BB-8227-703AAD8E49F6",
+  "backtrace" : {
+    "frames" : [
+      {
+        "imageOffset" : 30052,
+        "imageUUID" : "6AC2AC45-1672-39BB-8227-703AAD8E49F6"
+      }
+    ]
+  },
+  "bootUUID" : "D712C43B-0A63-4DCA-A03A-D6978D55DDE0",
+  "processImagePath" : "\/kernel",
+  "senderImagePath" : "\/System\/Library\/Extensions\/AppleSystemPolicy.kext\/Contents\/MacOS\/AppleSystemPolicy",
+  "timestamp" : "2026-09-21 16:28:19.173187+0200",
+  "machTimestamp" : 8497138584278,
+  "eventMessage" : "Validation category policy: Notifying syspolicyd about \/Library\/Frameworks\/EclipseSUMO.framework\/Versions\/1.26.0\/EclipseSUMO\/bin\/sumo with PID 46760",
+  "processImageUUID" : "11F36980-B7BB-30DE-98D4-D52EEA979C99",
+  "traceID" : 48468706459652,
+  "processID" : 0,
+  "senderProgramCounter" : 30052,
+  "parentActivityIdentifier" : 0
+},{
+  "timezoneName" : "",
+  "messageType" : "Default",
+  "eventType" : "logEvent",
+  "source" : null,
+  "formatString" : "%@ with PID %d violates validation category policy. This will likely result in a block in the future",
+  "userID" : 0,
+  "activityIdentifier" : 0,
+  "subsystem" : "com.apple.syspolicy.exec",
+  "category" : "default",
+  "threadID" : 1823629,
+  "senderImageUUID" : "4C616638-884F-3FBC-BAED-D716E2B7D93A",
+  "backtrace" : {
+    "frames" : [
+      {
+        "imageOffset" : 213808,
+        "imageUUID" : "4C616638-884F-3FBC-BAED-D716E2B7D93A"
+      }
+    ]
+  },
+  "bootUUID" : "D712C43B-0A63-4DCA-A03A-D6978D55DDE0",
+  "processImagePath" : "\/usr\/libexec\/syspolicyd",
+  "senderImagePath" : "\/usr\/libexec\/syspolicyd",
+  "timestamp" : "2026-09-21 16:28:19.178323+0200",
+  "machTimestamp" : 8497138707536,
+  "eventMessage" : "<private> with PID 46760 violates validation category policy. This will likely result in a block in the future",
+  "processImageUUID" : "4C616638-884F-3FBC-BAED-D716E2B7D93A",
+  "traceID" : 4094207673368580,
+  "processID" : 495,
+  "senderProgramCounter" : 213808,
+  "parentActivityIdentifier" : 0
+}]

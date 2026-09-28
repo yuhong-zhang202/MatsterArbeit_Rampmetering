@@ -1,0 +1,43 @@
+{
+  "schema_version": "1",
+  "status": "PASS_LOGIC_HELPERS_AND_COVERAGE_AUDIT_APPLICATION_PENDING",
+  "scope": "R05 direct PRE screen and R06 route-bounded crossing/exposure helper readiness; no run data applied",
+  "locked_method_sha256": "22fe22170c17ce74e261e717586a458a1b5173e9deabbee925bd4c1d606adfe7",
+  "R05": {
+    "status": "PASS_PRE_SCREEN_LOGIC_FIXTURES_PRODUCTION_ADAPTER_PENDING",
+    "screen_rows": 30,
+    "gate": "two fixed 90s blocks x cells 13-17 x lane0/lane1/pooled; all rows required",
+    "boundary_fixtures": ["complete empty catalogue receipt", "missing/hash-mismatched catalogue UNKNOWN", "ratio exactly 0.85 PASS", "below 0.85 FAIL", "all 30 exact keys required", "pooled cannot conceal lane failure", "missing bin UNKNOWN", "observed zero-population bin FAIL", "fractional unique_M UNKNOWN", "fractional mask coordinate rejected", "neighbor mask and half-open event boundary"],
+    "implementation_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r05_r06/direct_screen_exposure.py",
+    "implementation_sha256": "83a80d53a0f2d84c4d01d1dcf73e48f5a4aefadb7a17b5014bdecb9620cc4a9b",
+    "test_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r05_r06/test_direct_screen_exposure.py",
+    "test_sha256": "f4d7d4a45c40b3b469a2ff7db566c406d31d92b6ee0eba999dece2b9c3572caf",
+    "actual_control_result": "NOT_AVAILABLE_NO_CONTROL_RAW",
+    "remaining_integration": "raw XML parser and verified exact locked-classifier metrics adapter are not included; byte hash/count checks cannot prove canonical parser-row correspondence; R04 is still partial"
+  },
+  "R06": {
+    "status": "PASS_INTERVAL_HELPER_FIXTURES_ROUTE_MAPPING_REQUIRED_FOR_APPLICATION",
+    "boundary_fixtures": ["hash-bound source receipt", "exact expected-vs-lifecycle R identity set", "missing/mismatched receipt cannot produce zero", "route-bounded crossing bracket", "skipped auxiliary observation only with route progress evidence", "exact 30s crossing", "(29,30] cross-bin uncertainty", "certain/possible sets not summed", "missing route/bounds UNKNOWN", "duplicate identity rejection", "nonfinite bounds rejected", "overlapping T2 earliest intervals", "T3 complete-bin and 720s boundary", "ongoing exposure PASS/FAIL/UNKNOWN"],
+    "implementation_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r05_r06/direct_screen_exposure.py",
+    "implementation_sha256": "83a80d53a0f2d84c4d01d1dcf73e48f5a4aefadb7a17b5014bdecb9620cc4a9b",
+    "application_contract_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r05_r06/APPLICATION_CONTRACT.md",
+    "application_contract_sha256": "cbff00453e7930ad5571d68c8ba15e57b0c81c91b505213f9f821e6f6ec4fa92",
+    "remaining_precondition": "future route_progress must be derived from vehroute + accepted compiled network/lane topology; helper verifies source-byte hashes and exact scheduled/lifecycle R ID sets, but parser attestations of full FCD/route traversal remain caller-generated and are not independently semantically re-parsed",
+    "actual_control_or_transition_result": "NOT_AVAILABLE_NO_RAMP_RUN",
+    "unknown_policy": "retain known counts and mark affected bins UNKNOWN; empty crossings are zero only after raw coverage and R cohort reconciliation"
+  },
+  "test_execution": {
+    "command": "python3 -m unittest discover -s artifacts/stage6_ramp_induced_validation_20260922_v1/r05_r06 -v",
+    "result": "PASS",
+    "tests_passed": 16,
+    "tests_failed": 0,
+    "scope": "synthetic offline fixtures only",
+    "R07_test_result": "PASS",
+    "R07_test_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/test_r07_coverage_audit.py",
+    "R07_test_sha256": "e51a31f84742bc3b762d81dd2a926aae91b105e76fb4c8ffaaa730fb14ca8fa0",
+    "R07_audit_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r07_coverage_audit.json",
+    "R07_audit_sha256": "a79c3b3dd193abecb2d271356f35795ac124e19f777d07d8428ec8842beb0e4e",
+    "R07_audit_script_sha256": "b10c542ad7534bb4e11c3799c471f722b9c1ca9668be1c00b6382d1466c7856b"
+  },
+  "prohibitions_respected": ["no SUMO", "no netconvert", "no TraCI", "no raw-data edits", "no demand/classifier/geometry/protocol changes", "no R0 PRE application or future run classification"]
+}

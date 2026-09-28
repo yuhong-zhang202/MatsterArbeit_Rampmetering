@@ -1,0 +1,22 @@
+<?xml version='1.0' encoding='utf-8'?>
+<tlLogics xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://sumo.dlr.de/xsd/tllogic_file.xsd">
+  <tlLogic id="urban_tls" type="static" programID="technical_placeholder" offset="0">
+    <phase duration="45" state="Gr" />
+    <phase duration="3" state="yr" />
+    <phase duration="9" state="rG" />
+    <phase duration="3" state="ry" />
+  </tlLogic>
+  <tlLogic id="ramp_mid" type="static" programID="A_OPEN" offset="0">
+    <phase duration="60" state="G" />
+  </tlLogic>
+  <tlLogic id="ramp_mid" type="static" programID="B_MODERATE" offset="0">
+    <phase duration="22" state="G" />
+    <phase duration="3" state="y" />
+    <phase duration="35" state="r" />
+  </tlLogic>
+  <tlLogic id="ramp_mid" type="static" programID="C_STRONG" offset="0">
+    <phase duration="12" state="G" />
+    <phase duration="3" state="y" />
+    <phase duration="45" state="r" />
+  </tlLogic>
+</tlLogics>

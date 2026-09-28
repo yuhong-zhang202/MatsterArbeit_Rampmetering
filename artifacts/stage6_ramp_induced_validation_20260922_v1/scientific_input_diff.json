@@ -1,0 +1,26 @@
+{
+  "schema_version": "1",
+  "status": "STATIC_DIFF_PREPARED_NOT_EXECUTED",
+  "baseline_reference": "historical LOC_M3350_S17_attempt1 inputs",
+  "allowed_changes": [
+    "new isolated run_id and output placeholders",
+    "remove R_flow entirely for the M-only control",
+    "route-files/additional/output paths point to new isolated preparation package"
+  ],
+  "expected_unchanged": [
+    "M flow: number=1396 begin=0 end=1500 departPos=100 departLane=best departSpeed=max",
+    "U flow: number=150 begin=0 end=1500 departPos=last departLane=best departSpeed=max",
+    "X flow: number=75 begin=0 end=1500 departPos=last departLane=best departSpeed=max",
+    "network bytes and hash",
+    "seed=17, horizon=2700, step=1",
+    "A_OPEN and fixed urban TLS/additional detector semantics",
+    "vehicle type and route definitions for M/U/X"
+  ],
+  "ramp_change": {
+    "historical": "R_flow number=300 begin=0 end=1500",
+    "control": "R_flow absent; scheduled R count=0",
+    "rate_change": "not applicable; control only"
+  },
+  "scientific_interpretation": "Control is M-only freeway demand with U/X urban background retained; no transition input is included.",
+  "unknown_until_static_parser": ["XML schema validation", "resolved absolute output path materialization", "semantic comparison of every additional-file element", "runtime binary identity"]
+}

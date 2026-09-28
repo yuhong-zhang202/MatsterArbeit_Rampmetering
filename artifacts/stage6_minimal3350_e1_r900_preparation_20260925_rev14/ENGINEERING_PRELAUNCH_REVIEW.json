@@ -1,0 +1,60 @@
+{
+  "card_sha256": "cb9bba717e262cdc9328495b6b71b7dff5244094d05c9ad92acfdbcb43e7376b",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "provenance_checks": {
+    "adapter_sha256": "98d530ad4490c92c174233028cdb9d2388b5a4a945233f90aefa7c4613052148",
+    "card_sha256": "cb9bba717e262cdc9328495b6b71b7dff5244094d05c9ad92acfdbcb43e7376b",
+    "configured_unique_output_paths": 20,
+    "demand_sha256": "3b3da52ac2ddbe915b3f6578b515ace1a30b3f7a1169724528855a6387abaada",
+    "input_manifest_sha256": "718ea05976343ae4cf2163f5d5b6fbe43ce93aeb083032886e1521a0f05f380e",
+    "output_parent_absent": true,
+    "r_source_xml_sha256": "a6ae2649fe93c61460a52303b6358985c14270ce5ac5af02460af53880965851",
+    "r_vector_receipt_sha256": "4f23a508713b53b64c3d419e06d754d3032dce52a19f17f977a6508509d8c8fb",
+    "runner_sha256": "91fb54f5facb454a05313d6fe84e3c900739e02eb4a5b8ff968c88732c9717f3",
+    "runtime_binding_sha256": "a8ccaacfe718d863e64e09d53a8ee36e5326f20f80a03d6eb0d39086672ae00d",
+    "sumo_guardian_traci_netconvert_starts": 0
+  },
+  "review_scope": "Engineering/static only; no launch; fresh independent data/science reviews required.",
+  "run_id": "MINIMAL3350_E1_R900_DELAYED_S17",
+  "runner_sha256": "91fb54f5facb454a05313d6fe84e3c900739e02eb4a5b8ff968c88732c9717f3",
+  "runtime_binding_sha256": "a8ccaacfe718d863e64e09d53a8ee36e5326f20f80a03d6eb0d39086672ae00d",
+  "schema": "stage6_minimal3350_treatment_engineering_prelaunch_review_v1",
+  "status": "PASS_PRELAUNCH",
+  "tests": {
+    "command": ".venv/bin/python -m unittest artifacts.stage6_minimal3350_e1_r900_preparation_20260925_rev14.tests.test_e1_r900_preflight -v",
+    "coverage": [
+      "exact 1396-row M match",
+      "R 240 count and first/last/interval",
+      "reject R departure at exclusive 1500s endpoint",
+      "reject missing R_flow.239",
+      "separate original design and adopted escalation plan hashes",
+      "exact review schema accepted, wrong E1-specific schema rejected"
+    ],
+    "failed": 0,
+    "passed": 5,
+    "test_file_sha256": "ca0de4226ab859e9842d28a77d0067f24e55ee1dd6d323239953dab5bcfd0646"
+  },
+  "verified": {
+    "all_configured_output_paths": 20,
+    "configured_xml_output_roles": 18,
+    "m_exact_matches": 1396,
+    "output_parent_absent": true,
+    "r_count": 240,
+    "r_schedule_ms": [
+      540000,
+      1496000,
+      4000
+    ],
+    "resource_limits_s_bytes_poll": [
+      120,
+      100000000,
+      100
+    ],
+    "u_explicit_zero": true,
+    "x_explicit_zero": true
+  }
+}

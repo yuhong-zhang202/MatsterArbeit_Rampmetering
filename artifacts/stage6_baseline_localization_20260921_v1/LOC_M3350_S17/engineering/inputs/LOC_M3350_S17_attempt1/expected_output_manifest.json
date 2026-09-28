@@ -1,0 +1,24 @@
+{
+  "attempt_id": "LOC_M3350_S17_attempt1",
+  "status": "EXPECTED_ONLY_NOT_RUNTIME_EVIDENCE",
+  "role_manifest_path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/inputs/LOC_M3350_S17_attempt1/output_roles.json",
+  "required_xml_role_count": 18,
+  "required_xml_roles_are_defined_by": "output_roles.json:required_xml_roles; do not infer output roles from files present",
+  "expected_detector_intervals": 90,
+  "expected_full_horizon_labels": {"fcd": [0, 2699], "summary": [0, 2699], "queues": [0, 2699], "tls_states_per_registered_tls": [0, 2699]},
+  "expected_tls_ids": ["ramp_mid", "urban_tls"],
+  "expected_non_xml_runtime_records": [
+    {"role":"sumo.log","path":"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_baseline_localization_20260921_v1/LOC_M3350_S17_attempt1/outputs/sumo.log","producer":"SUMO report/log option"},
+    {"role":"sumo_error.log","path":"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_baseline_localization_20260921_v1/LOC_M3350_S17_attempt1/outputs/sumo_error.log","producer":"SUMO error-log option"},
+    {"role":"stdout.log","path":"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_baseline_localization_20260921_v1/LOC_M3350_S17_attempt1/stdout.log","producer":"one-attempt process supervisor"},
+    {"role":"stderr.log","path":"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_baseline_localization_20260921_v1/LOC_M3350_S17_attempt1/stderr.log","producer":"one-attempt process supervisor"},
+    {"role":"reservation.json","path":"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_baseline_localization_20260921_v1/LOC_M3350_S17_attempt1/reservation.json","producer":"one-attempt process supervisor"},
+    {"role":"started.json","path":"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_baseline_localization_20260921_v1/LOC_M3350_S17_attempt1/started.json","producer":"one-attempt process supervisor"},
+    {"role":"output_manifest.json","path":"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_baseline_localization_20260921_v1/LOC_M3350_S17_attempt1/output_manifest.json","producer":"one-attempt process supervisor"},
+    {"role":"execution_receipt.json","path":"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_baseline_localization_20260921_v1/LOC_M3350_S17_attempt1/execution_receipt.json","producer":"one-attempt process supervisor"}
+  ],
+  "large_file_stream_count_for_hard_bound": 22,
+  "future_output_root": "data/raw/stage6_baseline_localization_20260921_v1/LOC_M3350_S17_attempt1",
+  "exclusive_create_required": true,
+  "note": "No runtime outputs or output manifest have been created by this prelaunch package."
+}

@@ -1,0 +1,25 @@
+{
+  "status": "PASS_PRELAUNCH_ENGINEERING",
+  "card_sha256": "57714636d8b71c5a003f5ebca59da2dcfa2d85ab80a3266d6d6f08c6fc3a61d3",
+  "input_manifest_sha256": "131f3b6c8506edbd3e905d5f3e737ecb770601e6e6fbb27c1e365f8504f22ffc",
+  "open_findings": {"blocker": 0, "major": 0, "required_minor": 0},
+  "review_scope": "static-only engineering review; exact Point 1 inputs, network/environment/output paths, launcher, process supervisor, limits, approval and hash bindings",
+  "checks": {
+    "qMain_only_semantic_change": "PASS",
+    "accepted_network_and_geometry_hash": "PASS",
+    "routes_detectors_TLS_and_output_paths": "PASS",
+    "XML_and_local_XSD_static_validation": "PASS",
+    "one_start_no_retry": "PASS",
+    "future_output_exclusive_and_absent": "PASS",
+    "SUMO_and_Python_environment_binding": "PASS",
+    "no_hidden_GUI_netconvert_or_TraCI": "PASS",
+    "22_stream_size_accounting": "PASS; 18 XML + two SUMO report logs + stdout/stderr; 65,000,000 bytes per-file kernel cap; 1.43 GB aggregate maximum for configured streams; 70 MB directory headroom",
+    "wallclock_stop_line": "PASS; 180 seconds",
+    "approval_and_card_hash_preflight": "PASS"
+  },
+  "limitation": "Aggregate output bound assumes the hash-bound configuration writes only the 22 declared large streams; the 50 ms directory monitor and output-role gate are secondary deviation checks, not a standalone instantaneous aggregate quota.",
+  "runtime_invocations": 0,
+  "sumo_starts": 0,
+  "netconvert_starts": 0,
+  "TraCI_sessions": 0
+}

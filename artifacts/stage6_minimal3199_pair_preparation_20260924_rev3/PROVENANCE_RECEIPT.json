@@ -1,0 +1,97 @@
+{
+  "bindings": {
+    "adapter": {
+      "path": "scripts/stage6/minimal3199/minimal3199_adapter.py",
+      "sha256": "9f7a459a167884533f5f044018bf209a24ed154173d044ce80baa7640a6311b8"
+    },
+    "approved_plan": {
+      "path": "artifacts/stage6_minimal_ramp_induced_breakdown_existence_test_20260924_v1/PLAN.md",
+      "sha256": "06b0f04f1144ef8497b4d64906ae27b1377b544abd6e0639133c8d85a3fabc23"
+    },
+    "control_card": {
+      "path": "scripts/stage6/minimal3199/prepared_rev3/MINIMAL3199_CTRL_S17_CARD_DRAFT_NOT_AUTHORIZED_REV3.json",
+      "sha256": "e64e88c8fa40cb22da3f8c02a8e9fca1b9f284d9df4452564fa6dda135ea116f"
+    },
+    "input_manifest": {
+      "path": "scripts/stage6/minimal3199/prepared_rev3/INPUT_MANIFEST.json",
+      "sha256": "6c4ea95baf16fa339e9fcc0fe1060daae9cb06f5e0d52de8ca779ff146471d40"
+    },
+    "package_receipt": {
+      "path": "scripts/stage6/minimal3199/prepared_rev3/PROVENANCE_RECEIPT.json",
+      "sha256": "28addb6e2c26ee2de3810f88fb8896134393793e820874da61ebdbef316b1f44"
+    },
+    "runner": {
+      "path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+      "sha256": "373c0609f9c8a21bbf3e91c0f2a1e9df8fed2bee78ba6807fe50edd376b73cb8"
+    },
+    "tests": {
+      "path": "tests/test_minimal3199_adapter.py",
+      "sha256": "0fa573adf0f898dc89479c8aab726d7690458e16b9f89f3eb53fe6f040b2f2b7"
+    },
+    "treatment_card_draft_unreleased": {
+      "path": "scripts/stage6/minimal3199/prepared_rev3/MINIMAL3199_R720_DELAYED_S17_CARD_DRAFT_NOT_AUTHORIZED_REV3.json",
+      "sha256": "f717a9e8cac24de991c57dab3dfe234ee369dab195f8c61529a7bf5a7ac0b9e8"
+    }
+  },
+  "netconvert_starts": 0,
+  "resource_proposals_not_authorized": {
+    "control": {
+      "output_size_stop_limit_bytes_decimal": 60000000,
+      "overshoot_accepted": true,
+      "poll_interval_s": 0.1,
+      "wallclock_stop_limit_s": 90
+    },
+    "treatment": {
+      "output_size_stop_limit_bytes_decimal": 75000000,
+      "overshoot_accepted": true,
+      "poll_interval_s": 0.1,
+      "wallclock_stop_limit_s": 90
+    }
+  },
+  "review_files": {
+    "DATA_PROVENANCE_REVIEW.md": {
+      "path": "DATA_PROVENANCE_REVIEW.md",
+      "sha256": "0c87df5f443a714fec97256ceb89fa551fdd034e52dc0dbbbd4ffe45a9f8f7c4"
+    },
+    "ENGINEERING_REVIEW.md": {
+      "path": "ENGINEERING_REVIEW.md",
+      "sha256": "280ad3a647cd8ea5e0799ad7d18f99dac1a3b5f33306ae9b3c00bff0b3628ff5"
+    },
+    "PRELAUNCH_REVIEW_SUMMARY.md": {
+      "path": "PRELAUNCH_REVIEW_SUMMARY.md",
+      "sha256": "2e59946defe72246679dffa572d8bfef6373030289ee929cf3a25b654aa19c33"
+    },
+    "SCIENTIFIC_REVIEW.md": {
+      "path": "SCIENTIFIC_REVIEW.md",
+      "sha256": "6e626cc8885a2b4cd4144b2a663f8be6b9ef269cd22bd7b275435fd1bca656d5"
+    }
+  },
+  "reviews": {
+    "data_provenance": {
+      "blocker": 0,
+      "disposition": "PASS",
+      "major": 0,
+      "package_hashes_recomputed": "14/14",
+      "required_minor": 0,
+      "tests_passed": "20/20"
+    },
+    "engineering": {
+      "blocker": 0,
+      "disposition": "PASS_STATIC_EXECUTION_BINDING",
+      "limitation": "No dedicated adversarial XML regression fixture; parser rejection code reviewed.",
+      "major": 0,
+      "required_minor": 0
+    },
+    "scientific": {
+      "blocker": 0,
+      "confidence": "High for static input/design alignment",
+      "disposition": "PASS_BOUNDED_CONTROL_INPUT_ALIGNMENT",
+      "major": 0,
+      "required_minor": 0
+    }
+  },
+  "scope": "control_prelaunch_preparation_only",
+  "status": "MINIMAL3199_CTRL_PRELAUNCH_READY_AWAITING_AUTHORIZATION",
+  "sumo_starts": 0,
+  "traci_starts": 0
+}

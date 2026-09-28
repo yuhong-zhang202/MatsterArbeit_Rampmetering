@@ -1,0 +1,66 @@
+{
+  "schema_version": "1",
+  "review_id": "PAIR_3199_R720_DELAYED_S17_ENGINEERING_UX_RECONCILIATION_ADDENDUM_REV1",
+  "disposition": "EXECUTION_AND_RAW_INTEGRITY_PASS; INPUT_REALIZATION_FAILURE_CONFIRMED",
+  "traffic_or_witness_outcome": "NOT_CLASSIFIED_BY_ENGINEERING",
+  "issue_counts": {
+    "blocker": 0,
+    "major": 0,
+    "previously_open_required_data_reconciliation_issue": "CLOSED_BY_HASH_BOUND_DATA_REVIEW"
+  },
+  "run_id": "PAIR_3199_R720_DELAYED_S17",
+  "prior_engineering_review_sha256": "81483835553e7cc7e50849f353cae18364d9e2bba132a378ae554673794a61da",
+  "data_lifecycle_review_path": "data/processed/stage6_pair_3199_s17_treatment_postrun_20260923_v1/analysis_rev6/DATA_LIFECYCLE_REVIEW.md",
+  "data_lifecycle_review_sha256": "54e7830620f9d945749b5c8bb215182b05f2e34575b93484be6d38dfc6032509",
+  "data_review_receipt_path": "data/processed/stage6_pair_3199_s17_treatment_postrun_20260923_v1/analysis_rev6/DATA_REVIEW_RECEIPT.json",
+  "data_review_receipt_sha256": "7074ebce98e42b1bc730f832b73032945188dad6f568f64b5ff2e7ac20b68338",
+  "execution_integrity": {
+    "final_card_sha256": "08160a2ad225ee9fcc2abcc11d509a88ecf554252f1fb17e35dc69b9404351d4",
+    "execution_capture_sha256": "00e061736a21c3031b476b2e9c0c1bcee2b669179e48bb375778c070d5f56374",
+    "execution_receipt_sha256": "7d77da828ca962178432150bccf26ea7922d59428b31eda564ad4c3c64628d5a",
+    "output_manifest_sha256": "92dbe5627f8afbfe26f50bc8d62207ca9a9ed579c6f707481079d8ad795228dd",
+    "authorized_starts": 1,
+    "consumed_starts": 1,
+    "return_code": 0,
+    "horizon_s": 2700,
+    "wallclock_runtime_s": 19.92132,
+    "payload_bytes": 21066503,
+    "wallclock_stop_trigger_s": 120,
+    "output_size_stop_trigger_bytes": 90000000,
+    "retry_allowed": false,
+    "raw_integrity": "PASS_18_OF_18_ROLES_25_OF_25_FILES"
+  },
+  "input_realization": {
+    "planned_identity_counts": {
+      "M": 1333,
+      "R": 192,
+      "U": 150,
+      "X": 75
+    },
+    "observed_route_tripinfo_fcd_identity_counts": {
+      "M": 1333,
+      "R": 192,
+      "U": 0,
+      "X": 0
+    },
+    "scheduled_U_X_identity_absences": 225,
+    "sumo_log_sha256": "4be0e443c50ca88ac78e924ac7f4ae2067bd2b7cd5e78b650ead89a2ad563e2a",
+    "flow_warning_evidence": [
+      "Route file should be sorted by departure time, ignoring 'U_flow'!",
+      "Route file should be sorted by departure time, ignoring 'X_flow'!"
+    ],
+    "sumo_reported_inserted": 1525,
+    "absence_means_never_inserted": false,
+    "control_realized_U_X": true,
+    "matched_R_only_contrast_valid": false,
+    "data_disposition": "NOT_EVALUABLE"
+  },
+  "scope": "Read-only engineering addendum; no raw or scientific interpretation changes",
+  "simulator_starts_during_addendum": {
+    "SUMO": 0,
+    "TraCI": 0,
+    "netconvert": 0
+  },
+  "raw_modified": false,
+  "addendum_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/ENGINEERING_POSTRUN_UX_RECONCILIATION_ADDENDUM_FINAL_REV1.md"
+}

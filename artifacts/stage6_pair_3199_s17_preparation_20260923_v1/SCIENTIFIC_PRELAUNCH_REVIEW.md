@@ -1,0 +1,11 @@
+# Independent scientific prelaunch review — PAIR_3199_S17
+
+**Disposition:** PASS for scientific design, Blocker/Major/required Minor **0/0/0**. Confidence: High for internal coherence; Moderate for prospective exploratory validity. Reviewer: project `scientific_reviewer`, read-only.
+
+The reviewer completed Context Preflight and inspected the adopted bounded plan and its review, locked P/S/L definition, earlier validation plan/spec, both pair drafts/manifests/configs/output roles, pair input diff, stop/budget, provenance, explicit user scope override, and engineering/data reviews.
+
+The reviewer accepts proceeding directly to the lower exploratory qMain3199.2 pair under the user's explicit instruction that 3350.4/R0 suitability work is not a prerequisite. This pair is candidate-specific, one-seed exploratory evidence, not a capacity bracket or unbiased confirmatory test. Existing 3350.4 statuses remain unchanged. Demand, schedule, accepted-network, seed, TLS, vehicle type/route, step and horizon bindings are coherent. Control has explicit R=0; treatment alone adds R192 on [540,1500), nominal 720 veh/h. No claim follows from nominal R alone.
+
+The pair now requires independent `LOW_R_BACKGROUND_ACCEPTABLE` before any treatment release: adequate M exposure; no locked P/S/L sustained event; no established sustained collective self-congestion; relevant C/L/long-low-ratio patterns adjudicated; and no unresolved source, downstream, geometry, TLS or measurement alternative. P/S/L negativity alone is insufficient. Treatment witness evidence must establish actual R merge exposure before any post-R sustained collective M deterioration, with locked rules unchanged and alternative causes checked. Finite stop rules and zero retry prevent result chasing.
+
+This scientific PASS is separate from operational readiness. Overall exact-pair prelaunch remains **BLOCKED** because current R02 is bound to RI3350 and rejects both new run IDs, and the drafts lack exact binary/version/Python/Guardian/run-command binding plus positive finite per-run runtime/storage stop triggers. Raw runtime coverage, realized flow reconciliation and postrun analysis remain unverified until after a separately authorized run. Neither card is executable or authorized.

@@ -1,0 +1,37 @@
+{
+  "schema_version": "1",
+  "card_status": "DRAFT_NOT_AUTHORIZED",
+  "card_revision": 2,
+  "run_id": "RI3350_CTRL_S17_attempt1",
+  "pair_id": "RI3350",
+  "condition": "M_ONLY_URBAN_BACKGROUND",
+  "design_sha256": "62fb63eb49ae98b58bc45ad6bc7d60cd21fcdb73b3327c34b97c5151b01ca355",
+  "input_manifest": "input_manifest.json",
+  "input_manifest_sha256": "ebb8647e8441183cd57c0b5e56053cffc598b718421e5460e60687eead46fc5d",
+  "control_inputs": {
+    "demand": "control_input/demand_control.rou.xml",
+    "sumocfg": "control_input/scenario_control.sumocfg",
+    "additional": "control_input/scenario_control.add.xml",
+    "network": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml"
+  },
+  "seed": 17,
+  "horizon_s": 2700,
+  "max_starts": 1,
+  "technical_retries": 0,
+  "progression_allowed": false,
+  "approval_required": true,
+  "run_command": null,
+  "execution_authorized": false,
+  "resource_limits": {"status":"NOT_SET_UNTIL_EXACT_CARD_APPROVAL","runtime_s":null,"storage_bytes":null},
+  "readiness_status": "PREPARATION_BLOCKED_OTHER_READINESS_ITEMS",
+  "blockers": [
+    "R02: isolated single-start runner is not implemented; mock-only test cannot launch safely",
+    "R04: inclusive S boundary bug is fixed, but full path-isolated locked-classifier adapter and historical regression contract remain incomplete",
+    "R05: screen logic fixtures pass, but the R04 normalized-output producer and actual control raw application are pending",
+    "R06: interval logic fixtures pass, but route-progress mapping and any R-arm raw application are pending",
+    "R07: only bounded coverage audit is complete; historical and future G6 direct R-to-U linkage remains NOT_ESTABLISHED/UNKNOWN and blocks baseline suitability",
+    "R09: bounded offline review passed, but this does not clear implementation, raw-application, or G6 limitations",
+    "R01/card binding: __CONTROL_OUTPUT__ paths, exact runtime binary identity, resource stop-line, and executable launch argv are not materialized"
+  ],
+  "user_approval_required_text": "This draft is not a launch authorization. Approve only after blockers are resolved and a new revision/hash is presented."
+}

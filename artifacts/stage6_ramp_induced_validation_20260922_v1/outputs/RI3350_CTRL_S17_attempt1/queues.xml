@@ -1,0 +1,52 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!-- generated on 2026-09-23T14:42:05.037760+01:00 by Eclipse SUMO sumo 1.26.0
+<sumoConfiguration xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/sumoConfiguration.xsd">
+
+    <input>
+        <net-file value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml"/>
+        <route-files value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_ramp_induced_validation_20260922_v1/control_input/demand_control.rou.xml"/>
+        <additional-files value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_ramp_induced_validation_20260922_v1/outputs/RI3350_CTRL_S17_attempt1/scenario_control.add.xml"/>
+    </input>
+
+    <output>
+        <precision value="2"/>
+        <fcd-output value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_ramp_induced_validation_20260922_v1/outputs/RI3350_CTRL_S17_attempt1/fcd.xml"/>
+        <queue-output value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_ramp_induced_validation_20260922_v1/outputs/RI3350_CTRL_S17_attempt1/queues.xml"/>
+        <summary-output value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_ramp_induced_validation_20260922_v1/outputs/RI3350_CTRL_S17_attempt1/sumo_summary.xml"/>
+        <tripinfo-output value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_ramp_induced_validation_20260922_v1/outputs/RI3350_CTRL_S17_attempt1/tripinfo.xml"/>
+        <tripinfo-output.write-undeparted value="true"/>
+        <vehroute-output value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_ramp_induced_validation_20260922_v1/outputs/RI3350_CTRL_S17_attempt1/vehroute.xml"/>
+        <vehroute-output.write-unfinished value="true"/>
+        <lanechange-output value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_ramp_induced_validation_20260922_v1/outputs/RI3350_CTRL_S17_attempt1/lanechanges.xml"/>
+    </output>
+
+    <time>
+        <begin value="0"/>
+        <end value="2700"/>
+        <step-length value="1"/>
+    </time>
+
+    <processing>
+        <extrapolate-departpos value="false"/>
+        <collision.action value="warn"/>
+        <collision.check-junctions value="true"/>
+        <time-to-teleport value="-1"/>
+    </processing>
+
+    <report>
+        <xml-validation value="always"/>
+        <log value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_ramp_induced_validation_20260922_v1/outputs/RI3350_CTRL_S17_attempt1/sumo.log"/>
+        <error-log value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_ramp_induced_validation_20260922_v1/outputs/RI3350_CTRL_S17_attempt1/sumo_error.log"/>
+        <no-step-log value="true"/>
+    </report>
+
+    <random_number>
+        <seed value="17"/>
+    </random_number>
+
+</sumoConfiguration>
+-->
+
+<queue-export xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/queue_file.xsd">
+</queue-export>

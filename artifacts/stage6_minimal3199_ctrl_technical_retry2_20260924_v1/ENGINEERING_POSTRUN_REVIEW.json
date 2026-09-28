@@ -1,0 +1,333 @@
+{
+  "schema_version": "1",
+  "review_type": "ENGINEERING_POSTRUN_INTEGRITY_ONLY",
+  "disposition": "PASS_ENGINEERING_POSTRUN_INTEGRITY",
+  "scope": "Attempt execution provenance, one-start/exit status, resource limits, staged-input byte provenance, output inventory/role hashes. No lifecycle/data or scientific outcome interpretation.",
+  "run_id": "MINIMAL3199_CTRL_S17_TECH_RETRY2",
+  "review_timestamp_utc": "2026-09-24T15:25:32Z",
+  "root_bindings": {
+    "card": {
+      "path": "artifacts/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/MINIMAL3199_CTRL_S17_TECH_RETRY2_CARD_FINAL.json",
+      "sha256": "b387a750f9f41fe7439d79ead7133fc07ac817fe8da497a8e045433a4accee5a"
+    },
+    "execution_manifest": {
+      "path": "artifacts/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/EXECUTION_MANIFEST.json",
+      "sha256": "551fdfbe78530662f2a437436d8a36813902d5728ac88b03a7a316382d7bca9a"
+    },
+    "runtime_binding": {
+      "path": "artifacts/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/runtime_binding_final.json",
+      "sha256": "95f3d7bdae0dfd5f629d28e1ebf2bcdb0e957c6eb790f61307442704a82c373d"
+    },
+    "runner": {
+      "path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+      "sha256": "4f31c3e1be5d4aba841ebb2ca00a6f7df90f2d6a434819ac83ed262d4401b529"
+    },
+    "reservation": {
+      "path": "artifacts/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/consumption/MINIMAL3199_CTRL_S17_TECH_RETRY2.json",
+      "sha256": "0a22193f9dc0d400c3c9f07b1f79087d76daf40ebade3819b9d09dc30bed977c"
+    },
+    "start_request": {
+      "path": "artifacts/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/START_REQUEST.json",
+      "sha256": "45d6f25b3f2f099cf67286859c0421cf23f0e0055ca6c31cea8d380c17fac64e"
+    }
+  },
+  "execution": {
+    "guardian_start_count": 1,
+    "sumo_start_count": 1,
+    "guardian_pid": 5312,
+    "simulator_pid": 5313,
+    "simulator_pgid": 5313,
+    "reservation_status": "FINAL_STATUS_HANDED_OFF",
+    "process_status": "PROCESS_EXITED",
+    "return_code": 0,
+    "stop_reason": null,
+    "retry_allowed": false,
+    "started_at_utc": "2026-09-24T15:18:24.920217Z",
+    "finished_at_utc": "2026-09-24T15:18:49.428498Z"
+  },
+  "resources": {
+    "wallclock_runtime_s": 24.507769,
+    "wallclock_trigger_s": 90,
+    "output_payload_bytes": 18261973,
+    "output_size_trigger_bytes_decimal": 60000000,
+    "polling_interval_ms": 100,
+    "polling_overshoot_accepted": true,
+    "wallclock_trigger_reached": false,
+    "output_trigger_reached": false
+  },
+  "staged_input_provenance": {
+    "sumocfg_source_sha256": "a6be97aba1ab00d6f17ae15788d45765d0a0efca7e297cc1423e4fb720853b1c",
+    "sumocfg_staged_bytes": 2802,
+    "sumocfg_staged_sha256": "f91c2fa87b12e83e39d27051e01d56f231d9a0a074e6ea445200d294adbf677b",
+    "additional_source_sha256": "6bd3555c983db506800cab40524767229a3a03c94e893e0ccdc506f95690d8ef",
+    "additional_staged_bytes": 3940,
+    "additional_staged_sha256": "354c1dcffc9f4b18d6e92f1dd4658098f0e24b3d2ab30671df4a1faefb6d62f3",
+    "ordered_transform_rules": [
+      {
+        "expected_occurrences": 8,
+        "file": "sumocfg",
+        "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3199_existence_20260924_v1/MINIMAL3199_CTRL_S17/outputs",
+        "target": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3199_existence_20260924_v3/MINIMAL3199_CTRL_S17_TECH_RETRY2/outputs"
+      },
+      {
+        "expected_occurrences": 1,
+        "file": "sumocfg",
+        "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/stage6/minimal3199/prepared_rev3/control/scenario.add.xml",
+        "target": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3199_existence_20260924_v3/MINIMAL3199_CTRL_S17_TECH_RETRY2/outputs/scenario_control.add.xml"
+      },
+      {
+        "expected_occurrences": 12,
+        "file": "additional",
+        "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3199_existence_20260924_v1/MINIMAL3199_CTRL_S17/outputs",
+        "target": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3199_existence_20260924_v3/MINIMAL3199_CTRL_S17_TECH_RETRY2/outputs"
+      }
+    ],
+    "sumocfg_replacement_counts": {
+      "output_destination_prefix": 8,
+      "additional_file_path": 1
+    },
+    "additional_output_destination_prefix_replacements": 12,
+    "staged_files_byte_equal_to_deterministic_transform": true,
+    "old_output_root_residuals": 0
+  },
+  "outputs": {
+    "directory": "data/raw/stage6_minimal3199_existence_20260924_v3/MINIMAL3199_CTRL_S17_TECH_RETRY2/outputs",
+    "file_count_including_manifest_and_receipt": 27,
+    "manifest_inventory_file_count_excluding_manifest_and_receipt": 25,
+    "required_traffic_roles_expected": 18,
+    "required_traffic_roles_present": 18,
+    "missing_roles": [],
+    "unclassified_files": [],
+    "payload_bytes_excluding_manifest_and_receipt": 18261973,
+    "directory_bytes_including_manifest_and_receipt": 18269264,
+    "output_manifest": {
+      "path": "data/raw/stage6_minimal3199_existence_20260924_v3/MINIMAL3199_CTRL_S17_TECH_RETRY2/outputs/output_manifest.json",
+      "sha256": "07cd3cd1707e3717f9401f3e164a932cb6c10196af1461f267869f1d582e5e5e",
+      "size_bytes": 6789
+    },
+    "execution_receipt": {
+      "path": "data/raw/stage6_minimal3199_existence_20260924_v3/MINIMAL3199_CTRL_S17_TECH_RETRY2/outputs/execution_receipt.json",
+      "sha256": "f9f783f19cc61d342de09ab7dc6172e56645b7e1604d7447ad6e0582a7bd2348",
+      "size_bytes": 502
+    },
+    "artifact_roles": [
+      {
+        "role": "fcd.xml",
+        "kind": "trajectory_or_status",
+        "relative_path": "fcd.xml",
+        "size_bytes": 15470751,
+        "sha256": "5727f60d6641f59bb64bd3dcbea4b9dd3149afd437403a12b273938ec2f7ca8f",
+        "status": "PRESENT"
+      },
+      {
+        "role": "lanechanges.xml",
+        "kind": "native_lanechange",
+        "relative_path": "lanechanges.xml",
+        "size_bytes": 127566,
+        "sha256": "6dee7c9a5267331cd367115309fff54fab289d6f44ea015868ec389392484f83",
+        "status": "PRESENT"
+      },
+      {
+        "role": "p1_main_down_200_l0.xml",
+        "kind": "E1",
+        "relative_path": "p1_main_down_200_l0.xml",
+        "size_bytes": 20149,
+        "sha256": "5010e2fa864e46d5423c224dae345da68396f599d2e81a4dd700ec5c84711235",
+        "status": "PRESENT"
+      },
+      {
+        "role": "p1_main_down_200_l1.xml",
+        "kind": "E1",
+        "relative_path": "p1_main_down_200_l1.xml",
+        "size_bytes": 20178,
+        "sha256": "6ac54ee1a9d371e2154953ac44490fcda2f7e30ec0c53fe94c48771e65d5885a",
+        "status": "PRESENT"
+      },
+      {
+        "role": "p1_main_down_20_l0.xml",
+        "kind": "E1",
+        "relative_path": "p1_main_down_20_l0.xml",
+        "size_bytes": 20051,
+        "sha256": "9218d277145f2377a76216a0f2b91495d02e87d195a36c48f7b9f64ac03f770a",
+        "status": "PRESENT"
+      },
+      {
+        "role": "p1_main_down_20_l1.xml",
+        "kind": "E1",
+        "relative_path": "p1_main_down_20_l1.xml",
+        "size_bytes": 20092,
+        "sha256": "3008486b7ddf3459c342fe9ee05014838f763608e90b36a145700de9e77b4069",
+        "status": "PRESENT"
+      },
+      {
+        "role": "p1_main_up_1300_l0.xml",
+        "kind": "E1",
+        "relative_path": "p1_main_up_1300_l0.xml",
+        "size_bytes": 20063,
+        "sha256": "f0ed50368cf5602770a6c6827750d038e36ed01ae2b1b88f11a336d11c65727b",
+        "status": "PRESENT"
+      },
+      {
+        "role": "p1_main_up_1300_l1.xml",
+        "kind": "E1",
+        "relative_path": "p1_main_up_1300_l1.xml",
+        "size_bytes": 20088,
+        "sha256": "93eada7598a9e0c0aa4a144aee3981ff77bf36f31feeef69d62886ef53cb2b85",
+        "status": "PRESENT"
+      },
+      {
+        "role": "p1_merge_section_20_l0.xml",
+        "kind": "E1",
+        "relative_path": "p1_merge_section_20_l0.xml",
+        "size_bytes": 20241,
+        "sha256": "94304741861c3565fd2f8b85dd595a1081ba747ae5f0f53054808859cbf19716",
+        "status": "PRESENT"
+      },
+      {
+        "role": "p1_merge_section_20_l1.xml",
+        "kind": "E1",
+        "relative_path": "p1_merge_section_20_l1.xml",
+        "size_bytes": 20416,
+        "sha256": "4c5e4f1399fc10140c743594e8a2a4a9b61ea0e8c3276ff3d2655af1896cc951",
+        "status": "PRESENT"
+      },
+      {
+        "role": "p1_merge_section_20_l2.xml",
+        "kind": "E1",
+        "relative_path": "p1_merge_section_20_l2.xml",
+        "size_bytes": 20449,
+        "sha256": "bdfdd6adb9bc7ffbd03f2263d6ba9a999690a40d2d330af94b601903f748d5ed",
+        "status": "PRESENT"
+      },
+      {
+        "role": "queues.xml",
+        "kind": "trajectory_or_status",
+        "relative_path": "queues.xml",
+        "size_bytes": 161413,
+        "sha256": "7fdd8edb1f34a5e95a96ea906280f89568ac7e10631123f3c292556ee03dfcbe",
+        "status": "PRESENT"
+      },
+      {
+        "role": "ramp_storage_e2.xml",
+        "kind": "E2",
+        "relative_path": "ramp_storage_e2.xml",
+        "size_bytes": 60291,
+        "sha256": "dc23b0617ecbccbc38e07e0157d1aaeb116de351b3a83f67e2e0903a880833c8",
+        "status": "PRESENT"
+      },
+      {
+        "role": "shared_boundary_e2.xml",
+        "kind": "E2",
+        "relative_path": "shared_boundary_e2.xml",
+        "size_bytes": 60561,
+        "sha256": "75175adcb7068eef07199adb1d08b26d8d600cb3f2e9ec21313143c7954954b6",
+        "status": "PRESENT"
+      },
+      {
+        "role": "sumo_summary.xml",
+        "kind": "trajectory_or_status",
+        "relative_path": "sumo_summary.xml",
+        "size_bytes": 750211,
+        "sha256": "bbcf98042636522f5d7766c62bc7e5e9b373227e0312470cd8ce5ad07b2c9719",
+        "status": "PRESENT"
+      },
+      {
+        "role": "tls_states.xml",
+        "kind": "trajectory_or_status",
+        "relative_path": "tls_states.xml",
+        "size_bytes": 500501,
+        "sha256": "b8ed7b9f0f0959c281e362fb3eadb988e5157a73cca62c26c976f7cf0e092d76",
+        "status": "PRESENT"
+      },
+      {
+        "role": "tripinfo.xml",
+        "kind": "trajectory_or_status",
+        "relative_path": "tripinfo.xml",
+        "size_bytes": 617359,
+        "sha256": "5509acf7ef8a1058bd4db629c79f7e7fed7e970a5deb0307592d1c42f5b89f3b",
+        "status": "PRESENT"
+      },
+      {
+        "role": "vehroute.xml",
+        "kind": "trajectory_or_status",
+        "relative_path": "vehroute.xml",
+        "size_bytes": 323981,
+        "sha256": "41f74c6ff4ade6439ac986437f71422db85687bd0412d3eae0c5740f1b91774c",
+        "status": "PRESENT"
+      }
+    ],
+    "support_files": [
+      {
+        "category": "log",
+        "relative_path": "guardian_stderr.log",
+        "size_bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "category": "log",
+        "relative_path": "runner_stderr.log",
+        "size_bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "category": "log",
+        "relative_path": "runner_stdout.log",
+        "size_bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      {
+        "category": "materialized_config",
+        "relative_path": "scenario_control.add.xml",
+        "size_bytes": 3940,
+        "sha256": "354c1dcffc9f4b18d6e92f1dd4658098f0e24b3d2ab30671df4a1faefb6d62f3"
+      },
+      {
+        "category": "materialized_config",
+        "relative_path": "scenario_control.sumocfg",
+        "size_bytes": 2802,
+        "sha256": "f91c2fa87b12e83e39d27051e01d56f231d9a0a074e6ea445200d294adbf677b"
+      },
+      {
+        "category": "log",
+        "relative_path": "sumo.log",
+        "size_bytes": 870,
+        "sha256": "fc48fb24beba84213d02313232b14c54d9a05cc38aca5aa6620a88dd8a284c07"
+      },
+      {
+        "category": "log",
+        "relative_path": "sumo_error.log",
+        "size_bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      }
+    ]
+  },
+  "verification_checks": {
+    "card_hash_reservation_and_start_request_match": true,
+    "manifest_hash_bound_by_card": true,
+    "runtime_hash_card_and_request_match": true,
+    "runner_hash_card_and_request_match": true,
+    "reservation_single_use_consumed_no_retry": true,
+    "process_exit_success": true,
+    "run_id_consistency": true,
+    "manifest_and_receipt_hash_chain": true,
+    "receipt_and_reservation_runtime_match": true,
+    "all_18_required_roles_present": true,
+    "no_missing_or_unclassified_files": true,
+    "all_manifest_file_sizes_and_hashes_match": true,
+    "payload_size_recomputed": true,
+    "source_hashes_match_manifest": true,
+    "sumocfg_rule_8_occurrences": true,
+    "sumocfg_rule_1_occurrences": true,
+    "additional_rule_12_occurrences": true,
+    "staged_config_exact_bytes_hash_and_size": true,
+    "staged_additional_exact_bytes_hash_and_size": true,
+    "no_stale_old_output_root_in_staged_files": true,
+    "resource_triggers_not_reached": true,
+    "run_log_completed_horizon": true
+  },
+  "limitations": [
+    "No data/lifecycle reconciliation or scientific classification was performed; the raw is ready for those separate reviews.",
+    "No independent inspection of the OS process table was attempted; process counts and status are based on the immutable R02 reservation and execution receipt, with SUMO completion also reflected in sumo.log."
+  ],
+  "confidence": "High for integrity/provenance and recorded process/resource status."
+}

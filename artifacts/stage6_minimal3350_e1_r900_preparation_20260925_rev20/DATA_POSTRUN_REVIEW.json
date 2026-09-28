@@ -1,0 +1,81 @@
+{
+  "analysis_script_sha256": "1f864d065d11c51b0508f0fdf36626482fbbbd891e22a3d5b1ff97279b81033e",
+  "card_sha256": "c5e94245dc44cc190dbcb2e402c28213c7e7e3ea90edf35e708a8d332209f31a",
+  "checks": {
+    "R_T3_by_720": true,
+    "R_exposure_increased_vs_R720_by_1440_and_1500": true,
+    "candidate_A": 0,
+    "explicit_U_X_zero": true,
+    "lifecycle_complete": true,
+    "locked_core_PSL_qualifying_event": false,
+    "pre_R_M_match": "PASS",
+    "queue_morphology_available": false,
+    "raw_manifest_entries_all_match": true
+  },
+  "counts": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "data_side_recommendation": "NO_WITNESS",
+  "derived_outputs": {
+    "DATA_LIFECYCLE_REVIEW.md": "7cc996b9e3959e29248239cd87e676c5ca96e188e6fccbb86ae7a24c2e153efe",
+    "alternative_cause_checks.json": "82b7e08bd7c2864f0f8db00f32d78f69bc590838c2d5644fb3ba60ddff275cae",
+    "analyze_retry3.py": "1f864d065d11c51b0508f0fdf36626482fbbbd891e22a3d5b1ff97279b81033e",
+    "cell_bin_metrics.csv": "351c297fc5147e9b5e6e5f81a69146bc321d9216f3018e4d8e1e0f768bfb9c86",
+    "lifecycle_reconciliation.json": "f4ad10dc6dfbda79a653d6b30b2bbdb51fcf48321c96677efdaf5468972325a6",
+    "locked_classifier_summary.json": "5add43a46fc874d7425c05908ba079fc7f220016d3f64898a552101b68c50124",
+    "matched_pair_analysis.json": "83a7a2363fc0011c3dcec12344768382a4df04ced73e7c07f619afac887ee784",
+    "matched_same_time_lane_cell_metrics.csv": "feb09130cc17f8803cd8ff2c62341129d640372a64b4c2e8f3c5517544ebd071",
+    "pre_R_M_trajectory_comparison.json": "91a29801fcc960448a866fcbc0cf630322fdf80383b7072c82f3b8e3d13e69cf",
+    "r_exposure_first_entries.csv": "21a9b78e2f7f518ea592a069f257811686263bc34461e7639c8fd50e2b7746bc",
+    "r_exposure_first_entries_by_bin.csv": "e7b9867b38fd2bbc664fec8f34778a7916c7cc4920665b067ba052a1997d111f",
+    "r_exposure_summary.json": "63776957357925a7b460ad32b2f65488315a84ff54d5343358a7d421b60b3daf",
+    "raw_hash_manifest.json": "f7acd6103b25a85f2c30cbafefd889a2fe7fd348cd60a7bc14621232384a4851"
+  },
+  "disposition": "DATA_REVIEW_PASS",
+  "execution_receipt_sha256": "d8a4801db1fcf8100c866f2d71c811f7ddc75d1e6409058bcbea61d0b5101687",
+  "independent_scientific_disposition": "PENDING",
+  "key_numbers": {
+    "Candidate_C_core_bins_720_1440_R900": 40,
+    "Candidate_C_core_bins_720_1440_control": 0,
+    "R720_merge_entries_by_1440_exclusive": 166,
+    "R720_merge_entries_by_1500_exclusive": 183,
+    "R900_T3_s": 660,
+    "R900_merge_entries_by_1440_exclusive": 209,
+    "R900_merge_entries_by_1500_exclusive": 223,
+    "control_loaded_inserted_arrived": 1396,
+    "first_post_R_M_tuple_divergence": [
+      585,
+      "M_flow.494"
+    ],
+    "pre_R_M_vehicle_seconds": 34491,
+    "pre_R_tuple_divergences": 0,
+    "r720_loaded_inserted_arrived": 1588,
+    "r900_R_depart_arrive": "240/240",
+    "r900_loaded_inserted_arrived": 1636
+  },
+  "limitations": [
+    "one seed/materialized vector",
+    "queue file has no lane samples",
+    "E1 aggregates do not identify classes/IDs",
+    "upstream E1 total differs slightly from expected M count",
+    "final scientific disposition pending independent review"
+  ],
+  "output_manifest_sha256": "46be6b1681837e4f77224ebcd02eb13216a5e2e6b81818d5b610c64d7a3e9aeb",
+  "package": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev20",
+  "run_id": "MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY3",
+  "schema": "stage6_minimal3350_e1_r900_retry3_data_lifecycle_postrun_review_v1",
+  "source_hashes": {
+    "card": "c5e94245dc44cc190dbcb2e402c28213c7e7e3ea90edf35e708a8d332209f31a",
+    "classifier_definition": "22fe22170c17ce74e261e717586a458a1b5173e9deabbee925bd4c1d606adfe7",
+    "engineering_integrity_review": "66a00df33e18eb22eaf5ce48be7c2d78c0c3e1a676fcd0b32ba6fee37784e439",
+    "execution_receipt": "d8a4801db1fcf8100c866f2d71c811f7ddc75d1e6409058bcbea61d0b5101687",
+    "existence_plan": "06b0f04f1144ef8497b4d64906ae27b1377b544abd6e0639133c8d85a3fabc23",
+    "input_manifest": "f7b5364c85a88de37d668818cc066c2e95697536993321dc06723f80e413d962",
+    "output_manifest": "46be6b1681837e4f77224ebcd02eb13216a5e2e6b81818d5b610c64d7a3e9aeb",
+    "prelaunch_data_review": "d9725df2efb4ace44f458602e8b7b7ea52c4cfae6a0aa38ad08839ab2de8f7bb",
+    "prelaunch_science_review": "58bb204f3401c9daef4f164b8c32f0c297cc1df5579e4a0aac493731e63ddfb5",
+    "witness_contract": "958890a7dd017110787a85d77ebfa3e6dac2b7d862f0fd91f6bafb7cf1738d9a"
+  }
+}

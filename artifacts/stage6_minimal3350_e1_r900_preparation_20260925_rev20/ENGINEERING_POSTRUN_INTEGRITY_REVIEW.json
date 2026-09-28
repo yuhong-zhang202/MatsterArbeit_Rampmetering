@@ -1,0 +1,52 @@
+{
+  "card_sha256": "c5e94245dc44cc190dbcb2e402c28213c7e7e3ea90edf35e708a8d332209f31a",
+  "execution_receipt_path": "data/raw/stage6_minimal3350_ux0_20260925_v20/MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY3/outputs/execution_receipt.json",
+  "execution_receipt_sha256": "d8a4801db1fcf8100c866f2d71c811f7ddc75d1e6409058bcbea61d0b5101687",
+  "inventory": {
+    "inventory_entries_validated": 25,
+    "manifest_file_count": 25,
+    "missing_or_hash_mismatches": [],
+    "payload_bytes": 22841112,
+    "role_entries": 18,
+    "support_entries": 7
+  },
+  "output_directory": "data/raw/stage6_minimal3350_ux0_20260925_v20/MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY3/outputs",
+  "output_manifest_path": "data/raw/stage6_minimal3350_ux0_20260925_v20/MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY3/outputs/output_manifest.json",
+  "output_manifest_sha256": "46be6b1681837e4f77224ebcd02eb13216a5e2e6b81818d5b610c64d7a3e9aeb",
+  "process": {
+    "finished_at_utc": "2026-09-25T01:21:58.591503Z",
+    "guardian_pid": 39839,
+    "guardian_starts": 1,
+    "process_status": "PROCESS_EXITED",
+    "return_code": 0,
+    "started_at_utc": "2026-09-25T01:21:55.711670Z",
+    "stop_reason": null,
+    "sumo_pid": 39840,
+    "sumo_starts": 1,
+    "wallclock_runtime_s": 2.879677
+  },
+  "reservation_path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev20/r02_single_start/consumption/MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY3.json",
+  "reservation_sha256": "7837fe8baead707edd18183403284fccca31fcaae83eb89b79c87883a192dbc4",
+  "resource_contract": {
+    "output_payload_limit_bytes": 100000000,
+    "overshoot_accepted": true,
+    "payload_bytes": 22841112,
+    "payload_within_limit": true,
+    "polling_interval_ms": 100,
+    "runtime_within_limit": true,
+    "wallclock_limit_s": 120
+  },
+  "review_scope": "Engineering process/provenance/resource/output-integrity only; no lifecycle reconciliation or scientific outcome assessment performed.",
+  "run_id": "MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY3",
+  "schema": "stage6_minimal3350_e1_r900_retry3_engineering_postrun_integrity_review_v1",
+  "staged_input_hashes": {
+    "source_additional_sha256": "5b1298bf6fd6f7834a9ad9dcd1bb04d61bfe3f3191708b4a6a2005d897f8d324",
+    "source_sumocfg_sha256": "6e33bfb998584699396b7e1308162f2f85e0f7005779dcceba8f0371d8075087",
+    "staged_additional_bytes": 4012,
+    "staged_additional_sha256": "5b1298bf6fd6f7834a9ad9dcd1bb04d61bfe3f3191708b4a6a2005d897f8d324",
+    "staged_sumocfg_bytes": 2888,
+    "staged_sumocfg_sha256": "1d8b94361831d425a8f64533b422065c12beaad47a6e4d76e91cb67453d69765"
+  },
+  "status": "ENGINEERING_POSTRUN_INTEGRITY_PASS",
+  "sumo_log_summary": "Simulation ended at time 2700.00; final simulation step reached; exit returned 0."
+}

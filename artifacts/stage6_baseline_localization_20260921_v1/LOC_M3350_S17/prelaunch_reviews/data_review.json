@@ -1,0 +1,22 @@
+{
+  "status": "PASS_PRELAUNCH_DATA",
+  "card_sha256": "57714636d8b71c5a003f5ebca59da2dcfa2d85ab80a3266d6d6f08c6fc3a61d3",
+  "input_manifest_sha256": "131f3b6c8506edbd3e905d5f3e737ecb770601e6e6fbb27c1e365f8504f22ffc",
+  "open_findings": {"blocker": 0, "major": 0, "required_minor": 0},
+  "review_scope": "read-only prelaunch data and measurement review; exact point, input/output bindings, locked methodology, classifier adapter, data gates and terminal labels",
+  "checks": {
+    "all_input_manifest_bindings_and_source_copy_assertions": "PASS; 40 bindings and six assertions",
+    "single_scientific_input_difference": "PASS; M_flow number 1333 to 1396 only",
+    "scheduled_identity_count_and_exact_rates": "PASS; 1,921 planned IDs, qMain 3350.4 and qRamp/qUrban/qX 720/360/180 veh/h",
+    "locked_classifier_and_analyzer_binding": "PASS; method hash matches and 22/22 offline fixtures pass",
+    "raw_output_exclusivity_and_absence": "PASS",
+    "G0_G7_and_point1_terminal_stop_logic": "PASS; every terminal result stops, no automatic Point 2/3 or seed23",
+    "A0_reference_gate": "PASS; technical PASS, physical suitable, 14/14"
+  },
+  "post_run_accounting_limitation": "The bound classifier adapter does not itself emit the full class-specific M/R/U/X insertion-window, late/never-inserted, arrival, unfinished/last-location, and depart-delay ledger. Before any candidate or release label, G2/G3 require a separate independently generated and reconciled ledger following the exact fields, identity reconciliation, categorical pass criteria, and source-context rules in docs/methodology/STAGE6_MINIMAL_BASELINE_DEMAND_LOCALIZATION_PLAN.md sections 7 and 9 and engineering/gate_contract.json. If that ledger is absent or cannot reconcile, G2/G3 fail and G7 must not issue an acceptance or release label. This is a post-run gate, not automated by the classifier adapter.",
+  "raw_data_analysis_performed": false,
+  "runtime_invocations": 0,
+  "sumo_starts": 0,
+  "netconvert_starts": 0,
+  "TraCI_sessions": 0
+}

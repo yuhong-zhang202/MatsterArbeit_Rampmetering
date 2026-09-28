@@ -1,0 +1,133 @@
+{
+  "review_id": "MINIMAL3199_R720_DELAYED_S17_UX0_ATTEMPT1_SCIENTIFIC_POSTRUN_REVIEW_REV1",
+  "date": "2026-09-24",
+  "review_type": "independent_scientific_post_run_review",
+  "reviewer": "scientific_reviewer (read-only independent subagent)",
+  "run_id": "MINIMAL3199_R720_DELAYED_S17_UX0_ATTEMPT1",
+  "scope": "Stage 6 exploratory minimal U=X=0 ramp-induced breakdown existence test only; matched qMain=3199.2, seed17, R=0 control versus delayed R=720 treatment.",
+  "disposition": "NO_WITNESS",
+  "confidence": {
+    "locked_rule_classification": "High",
+    "physical_interpretation_of_L_only_difference": "Moderate"
+  },
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "execution": {
+    "guardian_starts": 1,
+    "sumo_starts": 1,
+    "exit_code": 0,
+    "simulation_end_s": 2700,
+    "wall_clock_s": 3.165857,
+    "output_payload_bytes": 21151489,
+    "wall_clock_trigger_s": 90,
+    "output_size_trigger_bytes": 75000000,
+    "triggered": false,
+    "retry": false
+  },
+  "engineering_review": {
+    "disposition": "PASS_ENGINEERING_POSTRUN",
+    "findings": "0/0/0",
+    "receipt": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_rev2/ENGINEERING_POSTRUN_REVIEW_REV1.json",
+    "sha256": "e7a3f43e1576cb0693acdf6814d155c2c41ec5f80afe4fd3d04e72bd5c6572d1"
+  },
+  "data_review": {
+    "disposition": "PASS_DATA_LIFECYCLE_RECONCILIATION",
+    "locked_outcome": "NO_WITNESS",
+    "findings": "0/0/0",
+    "confidence": "High for locked-rule classification",
+    "limitation": "queue-export has no lane-occupancy sequence; queue absence cannot be claimed"
+  },
+  "pre_r_gate": {
+    "disposition": "PASS",
+    "fcd_frames_per_arm": 540,
+    "matched_pre540_departures": 480,
+    "exact_matched_m_vehicle_seconds_per_arm": 32513,
+    "comparison_window_s": "[0,540)",
+    "mismatches": 0
+  },
+  "lifecycle": {
+    "M": {
+      "planned": 1333,
+      "arrived": 1333,
+      "unfinished": 0
+    },
+    "R": {
+      "planned": 192,
+      "arrived": 192,
+      "unfinished": 0
+    },
+    "U": 0,
+    "X": 0,
+    "fcd_frames": "2700/2700",
+    "e1_bins": "9 detectors x 90 bins",
+    "e2_bins": "2 detectors x 90 bins"
+  },
+  "r_exposure": {
+    "activation_s": 540,
+    "first_departure_s": 540,
+    "shared_approach_s": 541,
+    "ramp_storage_s": 566,
+    "acceleration_lane_s": 578,
+    "auxiliary_merge_section_s": 582,
+    "first_through_lane_entry_s": 583,
+    "t3_confirmed_s": 660,
+    "t3_e1_positive_bins": {
+      "[570,600)": 4,
+      "[600,630)": 3,
+      "[630,660)": 6
+    }
+  },
+  "locked_analysis": {
+    "P_numerical_positives": 0,
+    "S_numerical_positives": 0,
+    "Candidate_A": 0,
+    "Candidate_C": "warnings retained",
+    "L_numeric_candidate": {
+      "count": 1,
+      "location": "merge-core cell 13",
+      "window_s": "[720,780)"
+    },
+    "interpretation": "The L-only candidate does not satisfy the approved plan witness rule (P primary or coherent qualifying S). It is retained as sensitivity evidence, not erased or promoted."
+  },
+  "matched_comparison": {
+    "cell": 13,
+    "treatment_control_window_s": "[750,780)",
+    "lanes": [
+      "lane0",
+      "lane1"
+    ],
+    "speed_ratio_delta_treatment_minus_control": {
+      "lane0": -0.0864,
+      "lane1": -0.1017
+    },
+    "control_context": "one low-speed warning in [720,750), then recovery; treatment lower in both physical lanes in [750,780)"
+  },
+  "alternative_cause_and_limitations": {
+    "ramp_storage_e2_max_vehicles": 8,
+    "reported_jam_length": 0,
+    "queue_lane_occupancy": "unavailable",
+    "downstream_and_measurement": "complete detector coverage and lifecycle reconciliation; limitation does not establish absence of queue or all physical alternatives",
+    "effect_interpretation": "NO_WITNESS is a locked-rule pair disposition; does not imply no disturbance, no R effect, or a negative result over other qMain values."
+  },
+  "provenance": {
+    "plan": "artifacts/stage6_minimal_ramp_induced_breakdown_existence_test_20260924_v1/PLAN.md",
+    "plan_sha256": "06b0f04f1144ef8497b4d64906ae27b1377b544abd6e0639133c8d85a3fabc23",
+    "witness_contract": "docs/methodology/STAGE6_EXPLORATORY_RAMP_INDUCED_WITNESS_CONTRACT.md",
+    "witness_contract_sha256": "958890a7dd017110787a85d77ebfa3e6dac2b7d862f0fd91f6bafb7cf1738d9a",
+    "control_card_sha256": "b387a750f9f41fe7439d79ead7133fc07ac817fe8da497a8e045433a4accee5a",
+    "control_scientific_review_sha256": "f7892d4d6fa974dbea2c373092760749b5764c8c79fbd01cd2ec49e6ca99784d",
+    "treatment_card_sha256": "f3d7d03e0b521d330a6ccc07d807bd88149ce4eb424e3f3895f917e083234b5e",
+    "engineering_postrun_review_sha256": "e7a3f43e1576cb0693acdf6814d155c2c41ec5f80afe4fd3d04e72bd5c6572d1",
+    "data_lifecycle_report_sha256": "cef61be96edcc374351646e8698583fbf1b80807b05dbbbc5d3b265a8cffcfae",
+    "processing_manifest_sha256": "9cee58d6e64d90b1bf9b2cdd9ccb193aa48b12b61fa69c5b9a580974692c002d",
+    "pre_r_gate_sha256": "458ed7d12e74b0509a1bd15188d167eba0f720d596d76aa16af1c23dc4bd3560",
+    "locked_classifier_summary_sha256": "a921dd50bb4a82d3571a06240cbc0335744c4fb28603debb9fa33265f5c9a4e5",
+    "matched_lane_cell_table_sha256": "d4cb38b7cba44f0adc3cdbbcc06fcc65435e076117ea6b3a141da283caa9ee43",
+    "execution_receipt_sha256": "ed0eec75933f905693f63bf645ee0ccaac15ff25c3413d9d02199a3b3338d36f",
+    "raw_output_manifest_sha256": "c5a856fb8fb15b2a5c87851bed57a5602e6d952dd7f6900d24d7bfe113fff64b"
+  },
+  "reviewer_conclusion": "NO_WITNESS for this matched pair only. Locked P/S criteria were not met. The L-only difference remains sensitivity evidence; queue occupancy uncertainty constrains physical interpretation and queue-free claims but does not make the locked classification non-evaluable. STOP; no additional demand scan or B/C."
+}

@@ -1,0 +1,25 @@
+{
+  "run_id": "MINIMAL3199_CTRL_S17_TECH_RETRY1",
+  "card_sha256": "027d7dc7b74561648ec6c0799abd64a99b7fb746273d1ecb78905c00c082c672",
+  "disposition": "NOT_EVALUABLE",
+  "confidence": "High",
+  "evidence": {
+    "simulator_pid": null,
+    "sumo_starts": 0,
+    "traffic_output_roles_present": 0,
+    "traffic_output_roles_required": 18,
+    "output_manifest_present": false,
+    "execution_receipt_present": false,
+    "data_lifecycle_disposition": "NOT_EVALUABLE"
+  },
+  "forbidden_inferences": [
+    "LOW_R_BACKGROUND_ACCEPTABLE",
+    "LOW_R_SELF_CONGESTED",
+    "P/S/L outcome",
+    "Candidate A/C outcome",
+    "negative traffic result"
+  ],
+  "guardian_termination_verification": "OS denied process-table inspection; Guardian termination unverified. Guardian rejected request before SUMO child spawn according to handshake/reservation evidence.",
+  "protocol_frozen": false,
+  "review_process_starts": 0
+}

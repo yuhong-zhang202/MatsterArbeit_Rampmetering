@@ -1,0 +1,95 @@
+{
+  "schema_version": "1",
+  "review_type": "INDEPENDENT_ENGINEERING_PRELAUNCH_REVIEW",
+  "disposition": "PASS_PRELAUNCH",
+  "status": "PASS_PRELAUNCH",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "reviewed_identity": {
+    "scenario_id": "PAIR_3199_R720_DELAYED_S17",
+    "run_id": "PAIR3199_R720_DELAYED_S17_REPAIRED_V5_ATTEMPT1",
+    "attempt_id": "PAIR3199_R720_DELAYED_S17_REPAIRED_V5_ATTEMPT1",
+    "execution_id": "b095cce4-baba-4c40-aa79-08b5e58b9ce1",
+    "card_path": "artifacts/stage6_pair_3199_repaired_treatment_execution_20260923_v1/PAIR3199_R720_DELAYED_S17_REPAIRED_V5_ATTEMPT1_CARD_FINAL.json",
+    "card_sha256": "0801dc1e15ade92babe33640d521ba831174210a200b9e5a66aaeb3bd472e0ef"
+  },
+  "hashes": {
+    "card": "0801dc1e15ade92babe33640d521ba831174210a200b9e5a66aaeb3bd472e0ef",
+    "runner": "0961912a46464eb9757ab245c26577e8f1de0985534f34db04a41a4dac45f9c8",
+    "runtime": "4978450c6dd83f37377d1f1a454ba35d5944e4d7a0ed353ed5d43906793b4053",
+    "demand": "b8aae801122e918731fb8e05a9aa8ca94873f02282d7f1afee57777f6bea96ea",
+    "sumocfg": "2a16baa12bd1abcaae9bff46a8b48f9365064e87e05ae1d416ba695157d9538d",
+    "additional": "f5156ffc1df7115c131bd2cef7bf3c119d86d57d781174a8ade565fb819f49ee",
+    "output_roles": "3c69a6e38184683455d2103c35a80405877a8b015261ccf13891706842b36ee3",
+    "network": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "manifest": "085d74f7bf12b1340f2a4ad90c2ae16074b91ffd5c98780c50321ffdb01d5cbd",
+    "contract": "958890a7dd017110787a85d77ebfa3e6dac2b7d862f0fd91f6bafb7cf1738d9a",
+    "v5_invariant_report": "509f1a46873b6922ce22e18f4100fa2dcb84a632d80ee9a014750efc6c857d54",
+    "v5_provenance_receipt": "3a2531c3bbf3d9d69ac6c94f0f2663b67b47ffde7ce36c7ea0e1a943b74e32c9",
+    "preparation_tri_pass": "8f2a12a89fd59e7fb941e6215bd7bfd68bc46ebb28ec1abf334d0dcdfb576a81"
+  },
+  "runtime": {
+    "sumo_version": "1.26.0",
+    "sumo_binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+    "sumo_home": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo",
+    "python_executable": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+    "python_executable_sha256": "76c73e25cdd69650a897648666e41c364940fbcff0d1176572a667d4d470ec9e",
+    "runner_sha256": "0961912a46464eb9757ab245c26577e8f1de0985534f34db04a41a4dac45f9c8",
+    "runtime_binding_sha256": "4978450c6dd83f37377d1f1a454ba35d5944e4d7a0ed353ed5d43906793b4053"
+  },
+  "matched_inputs": {
+    "v5_status": "v5_STATIC_INPUT_BINDING_PASS_NOT_TRAJECTORY_EQUIVALENCE",
+    "common_MUX_full_record_matches": 1558,
+    "common_MUX_expected": 1558,
+    "treatment_only_R_count": 192,
+    "treatment_only_R_ids": "R_flow.0-R_flow.191",
+    "v5_invariant_report_status": "PASS"
+  },
+  "resources": {
+    "wallclock_stop_trigger_s": 90,
+    "output_size_stop_trigger_bytes_decimal": 75000000,
+    "polling_ms": 100,
+    "overshoot_accepted": true,
+    "max_starts": 1,
+    "technical_retries": 0
+  },
+  "execution_gate": {
+    "current_user_authorization_present": true,
+    "runner_review_gate_status": "WAITING_FOR_REQUIRED_REVIEWS",
+    "launchable_now": false,
+    "launch_called": false,
+    "reservation_created": false,
+    "actual_sumo_or_traci_or_netconvert_started": false,
+    "required_receipt_paths": {
+      "data_provenance": "artifacts/stage6_pair_3199_repaired_treatment_execution_20260923_v1/FINAL_DATA_PROVENANCE_PRELAUNCH_REVIEW.json",
+      "engineering": "artifacts/stage6_pair_3199_repaired_treatment_execution_20260923_v1/FINAL_ENGINEERING_PRELAUNCH_REVIEW.json",
+      "scientific": "artifacts/stage6_pair_3199_repaired_treatment_execution_20260923_v1/FINAL_SCIENTIFIC_PRELAUNCH_REVIEW.json"
+    },
+    "review_binding_sidecar": "artifacts/stage6_pair_3199_repaired_treatment_execution_20260923_v1/FINAL_PRELAUNCH_REVIEW_BINDING.json"
+  },
+  "path_state": {
+    "output_exists": false,
+    "new_consumption_exists": false,
+    "new_reservation_exists": false,
+    "review_receipts_exist": {
+      "data_provenance": false,
+      "engineering": false,
+      "scientific": false
+    },
+    "review_sidecar_exists": false,
+    "prior_output_exists": false,
+    "prior_consumed_reservation_exists": false
+  },
+  "pre_R_gate": {
+    "failure": "Any material unexplained pre-R divergence makes pair NOT_EVALUABLE; do not interpret post-R event",
+    "post_R_witness_analysis": "Only after pre-R matching gate passes",
+    "required": "Compare M/U/X trajectory equivalence before first meaningful R exposure"
+  },
+  "limitations": [
+    "This is an engineering prelaunch review of static bindings and runner behavior; it does not establish future realized trajectory equivalence or run output.",
+    "Execution remains blocked until data/provenance and scientific reviews pass for this exact card and the runner review-binding sidecar hashes all three exact-card receipts."
+  ]
+}

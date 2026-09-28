@@ -1,0 +1,182 @@
+{
+  "authorization": {
+    "authorization": "USER_AUTHORIZED_BOUNDED_AUTONOMOUS_R900_RECOVERY_CYCLE3",
+    "execution_authorized": true,
+    "max_starts": 1,
+    "output_size_stop_limit_bytes_decimal": 100000000,
+    "review_gate_required": true,
+    "run_id": "MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY3",
+    "status": "AUTHORIZED_EXACTLY_ONE_START_AFTER_FRESH_REVIEWS",
+    "technical_retries": 0,
+    "wallclock_stop_limit_s": 120
+  },
+  "class_counts": {
+    "M": {
+      "planned_count": 1396,
+      "status": "BOUND"
+    },
+    "R": {
+      "planned_count": 240,
+      "status": "BOUND"
+    },
+    "U": {
+      "planned_count": 0,
+      "status": "PASS_ZERO"
+    },
+    "X": {
+      "planned_count": 0,
+      "status": "PASS_ZERO"
+    }
+  },
+  "common_m_manifest": {
+    "path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/COMMON_M_DEMAND_MANIFEST.json",
+    "sha256": "2fb1383e709e2174e2623aae575649aba40937729325a5e9c43bcc2b76982865"
+  },
+  "control_binding": {
+    "card_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/MINIMAL3350_CTRL_S17_CARD_FINAL.json",
+    "card_sha256": "15544478e8e7ced98b12673bec65cfe646b1f73e9e471ed501ddee052306bbfd",
+    "data_review_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/DATA_POSTRUN_REVIEW.json",
+    "data_review_sha256": "24711f151751cb1d6b0ba852388824f1f8e69be7fea3678900b872498870ab4d",
+    "demand_input_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/inputs/control/demand.rou.xml",
+    "demand_input_sha256": "da93237ed572b4103146b07b6e2b6ed4ffb9b95d21e7ed22e823ea427f8d477c",
+    "output_manifest_path": "data/raw/stage6_minimal3350_ux0_20260924_v8/MINIMAL3350_CTRL_S17/outputs/output_manifest.json",
+    "output_manifest_sha256": "48456bb607b4e4679dd13274696c60ab7f5ae020aa6ecbf2462110e1fdcd752f",
+    "run_id": "MINIMAL3350_CTRL_S17",
+    "scientific_review_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/SCIENTIFIC_POSTRUN_REVIEW.json",
+    "scientific_review_sha256": "8078d5ee902eb355623d29e7cc78c7d9cdf61e918903d9a3040fe0f320ae3738"
+  },
+  "design_plan_sha256": "06b0f04f1144ef8497b4d64906ae27b1377b544abd6e0639133c8d85a3fabc23",
+  "escalation_plan_sha256": "dee35d966d3fb00b1320092e49c1ebc228fbbbe3c5a8c3320e7966960e976776",
+  "failure_predecessor": {
+    "run_id": "MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY2",
+    "card_sha256": "cea374f60db487ce9b4bd0c5f45ed28996b298a710af2da33aca6ae9f3bae380",
+    "reservation_sha256": "d27a977678871885d376272b56b945e9d1f28a7728b22fd63dedd05da3aaaa45",
+    "failure_disposition_sha256": "d4515c6dc57a9eb942f40eeaae00ccf453625aa6933c3b0c1b3011b3ec49eb44",
+    "status": "FAILED_PRESPAWN",
+    "retry_allowed": false
+  },
+  "fixed_conditions": {
+    "A": "A_OPEN",
+    "R_window_s": "[540,1500)",
+    "U": 0,
+    "X": 0,
+    "horizon_s": 2700,
+    "qMain_veh_per_h": 3350.4,
+    "qRamp_veh_per_h": 900,
+    "seed": 17,
+    "step_s": 1
+  },
+  "guardian_request_binding": {
+    "schema": "r02-start-v2",
+    "request_path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev20/START_REQUEST.json",
+    "receipt_path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev20/START_REQUEST_RECEIPT.json",
+    "status": "PERSISTED_UNSENT"
+  },
+  "inputs": {
+    "additional": {
+      "path": "inputs/treatment/scenario.add.xml",
+      "bytes": 4012,
+      "sha256": "5b1298bf6fd6f7834a9ad9dcd1bb04d61bfe3f3191708b4a6a2005d897f8d324"
+    },
+    "demand": {
+      "path": "inputs/treatment/demand.rou.xml",
+      "bytes": 263175,
+      "sha256": "3b3da52ac2ddbe915b3f6578b515ace1a30b3f7a1169724528855a6387abaada"
+    },
+    "network": {
+      "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+      "bytes": 12814,
+      "sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca"
+    },
+    "output_roles": {
+      "path": "inputs/treatment/output_roles.json",
+      "bytes": 6929,
+      "sha256": "7c2b9fd54d2f1f1c4f1c859ccc250161f3f0f583cda5583a5064d47b58e097c1"
+    },
+    "sumocfg": {
+      "path": "inputs/treatment/scenario.sumocfg",
+      "bytes": 2864,
+      "sha256": "6e33bfb998584699396b7e1308162f2f85e0f7005779dcceba8f0371d8075087"
+    }
+  },
+  "output_directory": "data/raw/stage6_minimal3350_ux0_20260925_v20/MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY3/outputs",
+  "package_id": "stage6_minimal3350_e1_r900_preparation_20260925_rev20",
+  "pair_id": "MINIMAL3350_UX0_S17",
+  "path_binding": {
+    "additional_source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev20/inputs/treatment/scenario.add.xml",
+    "route_files_source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev20/inputs/treatment/demand.rou.xml",
+    "staged_additional": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v20/MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY3/outputs/scenario_control.add.xml"
+  },
+  "plan_sha256": "dee35d966d3fb00b1320092e49c1ebc228fbbbe3c5a8c3320e7966960e976776",
+  "provenance": {
+    "scope": "PRELAUNCH_ONLY_NO_GUARDIAN_NO_SIMULATOR",
+    "guardian_starts": 0,
+    "sumo_starts": 0,
+    "traci_starts": 0,
+    "netconvert_starts": 0
+  },
+  "r_vector_note": "Fixed reused identity-keyed speedFactors; no qRamp900 capacity inference.",
+  "r_vector_provenance": {
+    "path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev20/R900_MATERIALIZED_VECTOR.json",
+    "sha256": "4f23a508713b53b64c3d419e06d754d3032dce52a19f17f977a6508509d8c8fb"
+  },
+  "r_vector_sha256": "4f23a508713b53b64c3d419e06d754d3032dce52a19f17f977a6508509d8c8fb",
+  "r_vehicle_source": {
+    "path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev20/inputs/treatment/r900_vehicle_source.rou.xml",
+    "sha256": "a6ae2649fe93c61460a52303b6358985c14270ce5ac5af02460af53880965851"
+  },
+  "r_vehicle_source_sha256": "a6ae2649fe93c61460a52303b6358985c14270ce5ac5af02460af53880965851",
+  "resource_limits": {
+    "output_bytes": 100000000,
+    "overshoot_accepted": true,
+    "poll_interval_ms": 100,
+    "wallclock_s": 120
+  },
+  "retry_context": {
+    "type": "INDEPENDENT_TECHNICAL_RETRY",
+    "retry_of_run_id": "MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY2",
+    "retry_of_card_sha256": "cea374f60db487ce9b4bd0c5f45ed28996b298a710af2da33aca6ae9f3bae380",
+    "retry_of_reservation_sha256": "d27a977678871885d376272b56b945e9d1f28a7728b22fd63dedd05da3aaaa45",
+    "retry_of_failure_disposition_path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev19/TECH_RETRY2_FAILURE_DISPOSITION.json",
+    "retry_of_failure_disposition_sha256": "d4515c6dc57a9eb942f40eeaae00ccf453625aa6933c3b0c1b3011b3ec49eb44",
+    "scientific_condition_unchanged": true
+  },
+  "run_id": "MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY3",
+  "run_ids": {
+    "treatment": "MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY3"
+  },
+  "runner_path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev20/r02_single_start/runner.py",
+  "runner_sha256": "85a25ab9efbe4d92c1153c15148c287c31a3a61d24251e379aa9e48eb9640aed",
+  "runtime_binding_sha256": "b4e65f0a03f16e0de8cbb4c5630591f3a9f9a52c3d950a2a2cac135ef02a1e80",
+  "schema": "stage6_minimal3350_e1_r900_technical_retry_execution_manifest_v1",
+  "staged_config": {
+    "schema": "e1-staged-reference-closure-v1",
+    "source_sumocfg_sha256": "6e33bfb998584699396b7e1308162f2f85e0f7005779dcceba8f0371d8075087",
+    "source_demand_sha256": "3b3da52ac2ddbe915b3f6578b515ace1a30b3f7a1169724528855a6387abaada",
+    "source_additional_sha256": "5b1298bf6fd6f7834a9ad9dcd1bb04d61bfe3f3191708b4a6a2005d897f8d324",
+    "staged_sumocfg_sha256": "1d8b94361831d425a8f64533b422065c12beaad47a6e4d76e91cb67453d69765",
+    "staged_sumocfg_bytes": 2888,
+    "staged_additional_sha256": "5b1298bf6fd6f7834a9ad9dcd1bb04d61bfe3f3191708b4a6a2005d897f8d324",
+    "staged_additional_bytes": 4012,
+    "staged_additional_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v20/MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY3/outputs/scenario_control.add.xml",
+    "validated_actual_staged_bytes": true,
+    "route_file_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev20/inputs/treatment/demand.rou.xml",
+    "network_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+    "configured_unique_paths": 20,
+    "configured_role_records": 18,
+    "config_outputs": 8,
+    "additional_outputs": 12
+  },
+  "staging_preview": {
+    "sumocfg": {
+      "path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev20/staging_preview/scenario_control.sumocfg",
+      "bytes": 2888,
+      "sha256": "1d8b94361831d425a8f64533b422065c12beaad47a6e4d76e91cb67453d69765"
+    },
+    "additional": {
+      "path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev20/staging_preview/scenario_control.add.xml",
+      "bytes": 4012,
+      "sha256": "5b1298bf6fd6f7834a9ad9dcd1bb04d61bfe3f3191708b4a6a2005d897f8d324"
+    }
+  }
+}

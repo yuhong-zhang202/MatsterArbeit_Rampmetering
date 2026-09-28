@@ -1,0 +1,44 @@
+{
+  "schema_version": "1",
+  "package_id": "stage6_full_network_abc_phenomenon_validation_plan_20260926_v1_A_PAIRABILITY_AND_LAUNCH_DRAFT",
+  "disposition": "PAIRABLE_WITH_EXPLICIT_LIMITATION",
+  "package_status": "PREPARED_NOT_AUTHORIZED",
+  "execution_authorized": false,
+  "historical_R0_disposition_preserved": "CONTROL_NOT_EVALUABLE",
+  "reviews": {
+    "engineering": "PASS_STATIC_BINDING_AND_FAIL_CLOSED_TESTS_3_OF_3",
+    "data_provenance": "PASS_DATA_BINDING_AND_SOURCE_HASH_CHECKS",
+    "independent_scientific": "PASS_WITH_EXPLICIT_LIMITATIONS"
+  },
+  "starts": {
+    "SUMO": 0,
+    "Guardian": 0,
+    "TraCI": 0,
+    "netconvert": 0
+  },
+  "sha256": {
+    "PAIRABILITY_AUDIT.md": "dfefaf5ee696793816c2470bf21d7ccc7e33ec5ed0a1a393a98daf24f6a61a79",
+    "SCIENTIFIC_PRELAUNCH_REVIEW.md": "635c7cb6d99972c210cf29a315e13a4bfa487760cf068dc3810cc7765c855980",
+    "ENGINEERING_BINDING_REVIEW.md": "378591f1167641cc29614d51a66ab6ddd41588407ad4e556354fa0bd93560a3a",
+    "PREPARATION_RECEIPT.json": "cb0aaaf27d08c2fffc54cec600f2ff00aa91ded1f6921ef14979d998e494fac9",
+    "INPUT_MANIFEST.json": "977f6a1c955e0da9234d4d677d78af3f4de2b5d4bf2e24a33d06485d5eb0afbf",
+    "data_binding/DATA_BINDING_MANIFEST.json": "3caa827b05726b6fe38cdac896ca6a565d664b6d30f868d0fc9777603bc067c5",
+    "data_binding/DATA_BINDING_CHECK_REPORT.json": "ef89148273de854637c8fe24a192e8de9e0b5529a838897c2d46c1d77de44583",
+    "data_binding/demand_A_materialized.rou.xml": "69c10dafc607f616585d36b16a00a4c7d4e82eefc5c28878ea8e9dfe3c16c769",
+    "data_binding/vehicle_binding.csv": "ab66c8924502d0feee94fced33da3d851c895c9df9fec356be50a12ae95cdacc",
+    "inputs/scenario.sumocfg": "66b4932e3e247bfeacdb709a667e6db5bb59820954dec8fc1e3509b88f2923a5",
+    "inputs/scenario.add.xml": "eda6351f5795269b1406945963eeeabe428737a1e3e8cfaab0363ff74434f0ee",
+    "output_roles.json": "811391a46c88511018fd698ac036d14deef0cf5169b8c722995e746815419dec",
+    "runtime_binding.json": "2eff0a21aaf0025c49a3c4670c915e658bd3f22108c624eb3fb953714bf4ada9",
+    "../../../artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py": "ca5efa868df126a0628141fc0b95acb4754fd6cf706f55329323ff8acbeb990e",
+    "FULLNET3350_A_R900_S17_CARD_DRAFT_NOT_AUTHORIZED_REV1.json": "25afc8d86e98ad319f9b25a61679b4ceb6de67f2cd4e45631527624730a0b5f2"
+  },
+  "unresolved_postrun_gate": "After A only, compare actual M/U/X departures and trajectories against R0 over t<540; any unexplained material mismatch yields NOT_EVALUABLE and stops before B/C.",
+  "resource_contract": {
+    "wallclock_seconds": 90,
+    "output_bytes_decimal": 75000000,
+    "polling_ms": 100,
+    "slight_overshoot_permitted": true,
+    "status": "PROPOSAL_ONLY_NOT_ACCEPTED"
+  }
+}

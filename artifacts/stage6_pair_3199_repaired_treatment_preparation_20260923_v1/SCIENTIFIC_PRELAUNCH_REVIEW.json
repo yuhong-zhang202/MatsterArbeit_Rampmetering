@@ -1,0 +1,83 @@
+{
+  "schema_version": "1",
+  "review_type": "independent_scientific_prelaunch_review",
+  "package": "artifacts/stage6_pair_3199_repaired_treatment_preparation_20260923_v1",
+  "run_id": "PAIR_3199_R720_DELAYED_S17",
+  "disposition": "PASS_PREPARATION_ONLY_NOT_AUTHORIZED",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0,
+    "observations": 0
+  },
+  "confidence": {
+    "static_design_and_input_claim": "High",
+    "future_single_run_attribution": "Moderate"
+  },
+  "context_preflight": {
+    "read": [
+      "AGENTS.md",
+      "docs/PROJECT_STATE.md",
+      "docs/DECISIONS.md",
+      "docs/EXPERIMENT_PROTOCOL.md",
+      "docs/WORKLOG.md",
+      "artifacts/stage6_final_bounded_demand_scan_plan_20260923_v1/BOUNDED_DEMAND_SCAN_PLAN.md",
+      "docs/methodology/STAGE6_EXPLORATORY_RAMP_INDUCED_WITNESS_CONTRACT.md"
+    ],
+    "phase": "offline v5 common-input repair and separately reviewed treatment preparation",
+    "stage6": "PARTIAL",
+    "o2": "NOT_RESOLVED",
+    "formal_protocol": "empty_unfrozen",
+    "adopted_decision": "D-005 scoped to PAIR3199 exploratory matched pair",
+    "prior_treatment": "NOT_EVALUABLE; D-006 authorization consumed; old raw/card not reused"
+  },
+  "review_scope": "scientific suitability of the new repaired treatment preparation and preregistered post-run trajectory gate; no data reanalysis or execution",
+  "bindings": {
+    "card_sha256": "593cabd4c82a8b7b735e6ebc000d836bebab80a9c8962e20f2865a5bbf4dbed0",
+    "v5_invariant_report_sha256": "509f1a46873b6922ce22e18f4100fa2dcb84a632d80ee9a014750efc6c857d54",
+    "v5_provenance_receipt_sha256": "3a2531c3bbf3d9d69ac6c94f0f2663b67b47ffde7ce36c7ea0e1a943b74e32c9",
+    "witness_contract_sha256": "958890a7dd017110787a85d77ebfa3e6dac2b7d862f0fd91f6bafb7cf1738d9a",
+    "engineering_review_sha256": "fc674ca4f45c2e4bedb4b05713e19dcf096fca736287922f9c5036f82780bb64",
+    "data_review_sha256": "60e40551a1c5cd006d46e0e37cbbc2eeaebdb90c5c6c77299b4726dc080aaf48",
+    "postrun_gate_sha256": "1581898624a22592775fd063e3b9ac86f4973ca981a340a53fc6ccdc4a2df791",
+    "package_provenance_receipt_sha256": "b79bcb2804e6af26742511fc08b65bac2c60ddad07211a1e2e5ae7b9cace7c4b"
+  },
+  "scientific_checks": {
+    "planned_MUX_records_match": "PASS per v5 hash-bound invariant and independent reviews; 1558/1558",
+    "treatment_only_demand": "PASS per v5 hash-bound invariant; exactly R_flow.0-R_flow.191, 192 records on [540,1500)",
+    "input_match_vs_trajectory_equivalence_distinguished": true,
+    "actual_trajectory_equivalence_claimed_pre_run": false,
+    "historical_control_not_evaluable_preserved": true,
+    "clean_normal_baseline_claimed": false,
+    "old_treatment_not_evaluable_and_consumed_authorization_preserved": true,
+    "pre_meaningful_R_trajectory_gate_pre_registered": true,
+    "unexplained_material_pre_R_divergence_disposition": "PAIR_NOT_EVALUABLE",
+    "post_R_witness_analysis_condition": "only after pre-R gate is evaluable and passes",
+    "locked_classifier_thresholds_and_contract_unchanged": true,
+    "formal_protocol_changed": false,
+    "result_chasing_or_overclaiming_identified": false
+  },
+  "resource_and_authorization": {
+    "wallclock_stop_trigger_s": 90,
+    "output_size_stop_trigger_bytes_decimal": 75000000,
+    "polling_ms": 100,
+    "status": "PROPOSED_NOT_AUTHORIZED",
+    "card_status": "DRAFT_NOT_AUTHORIZED",
+    "execution_authorized": false,
+    "run_command": null,
+    "max_starts": 1,
+    "technical_retries": 0,
+    "authorization_granted_by_review": false
+  },
+  "measurement_checks": {
+    "status": "NOT_APPLICABLE",
+    "reason": "Prelaunch design review; no measurement outputs or processing implementation reviewed. Future raw coverage, lifecycle, FCD and detector reconciliation remain post-run requirements."
+  },
+  "execution": {
+    "sumo_starts": 0,
+    "traci_starts": 0,
+    "netconvert_starts": 0
+  },
+  "recommendation": "PASS_PREPARATION_ONLY_NOT_AUTHORIZED",
+  "review_file": "artifacts/stage6_pair_3199_repaired_treatment_preparation_20260923_v1/SCIENTIFIC_PRELAUNCH_REVIEW.md"
+}

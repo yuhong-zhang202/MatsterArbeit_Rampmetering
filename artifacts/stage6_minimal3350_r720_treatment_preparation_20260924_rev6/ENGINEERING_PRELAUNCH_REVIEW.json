@@ -1,0 +1,111 @@
+{
+  "bindings": {
+    "card_manifest_sha256": "a8419090fdd61bed39f975b1494ebd492a03b8444d6d774bce0343e40e9e6cf8",
+    "inputs": {
+      "additional": {
+        "path": "inputs/treatment/scenario.add.xml",
+        "sha256": "26953d96ed4c25f9dfc68cd043222759b7ef9bcee4075e688a962ca28d5e3f80"
+      },
+      "demand": {
+        "path": "inputs/treatment/demand.rou.xml",
+        "sha256": "569b9fb152b060c848b9c8da2c2c7d94e68da4fa7e7ab4c5a03a869f05ecce53"
+      },
+      "network": {
+        "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+        "sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca"
+      },
+      "output_roles": {
+        "path": "inputs/treatment/output_roles.json",
+        "sha256": "ebd49a1b42e13c983113013b7feb765b877a4dbdf41f085f59f92184455b271d"
+      },
+      "sumocfg": {
+        "path": "inputs/treatment/scenario.sumocfg",
+        "sha256": "584951d04d05092afc4cf9adc16342b602aadb087fe9bd1c3fd27a7fd381be4e"
+      }
+    },
+    "manifest_sha256": "a8419090fdd61bed39f975b1494ebd492a03b8444d6d774bce0343e40e9e6cf8",
+    "request_receipt_hash_match": true,
+    "request_receipt_sha256": "36ff1d1d8a5940fe505e380943c402da59ad7adfff1019f13f7dd9a36c0a1f3d",
+    "request_sha256": "8100357ca942e96113db958ff866caa0f2361054a0c3cef765a4bc05f0b9b60b",
+    "runner_hash_match": true,
+    "runner_path": "artifacts/stage6_minimal3350_r720_treatment_preparation_20260924_rev6/r02_single_start/runner.py",
+    "runner_sha256": "273570bb4def647c7c1801e8649d5918c97d1c7281df5db852883f3462fa8fa9",
+    "runtime_binding_sha256": "e15b0ac1739f8b2040757dc6b5c0bca0b0a1a9ce09aefafbe8330e31fcb96ac2"
+  },
+  "card_sha256": "dadbfd3c3dd1460a648b478ff9c0f4a7c69806d605e27fc951de1082cfa9cca7",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "focused_tests": {
+    "command": ".venv/bin/python -m unittest tests.test_minimal3350_treatment_adapter tests.test_minimal3350_treatment_binding tests.test_minimal3350_treatment_control_gate",
+    "failed": 0,
+    "passed": 20,
+    "status": "PASS"
+  },
+  "limitations": [
+    "Fresh REV6 data/provenance and independent scientific prelaunch reviews remain pending.",
+    "No SUMO, Guardian, TraCI, or netconvert process was launched."
+  ],
+  "matched_control_gate": {
+    "control_card_sha256": "15544478e8e7ced98b12673bec65cfe646b1f73e9e471ed501ddee052306bbfd",
+    "control_data_review_sha256": "24711f151751cb1d6b0ba852388824f1f8e69be7fea3678900b872498870ab4d",
+    "control_run_id": "MINIMAL3350_CTRL_S17",
+    "control_scientific_disposition": "LOW_R_BACKGROUND_ACCEPTABLE",
+    "control_scientific_findings": {
+      "blocker": 0,
+      "major": 0,
+      "required_minor": 0
+    },
+    "control_scientific_review_sha256": "8078d5ee902eb355623d29e7cc78c7d9cdf61e918903d9a3040fe0f320ae3738",
+    "legacy_clean_high_mobility_screen_required_for_release": false,
+    "preflight_gate_enforced": true,
+    "required_disposition": "LOW_R_BACKGROUND_ACCEPTABLE",
+    "stage6_exploratory_control_disposition_required_for_release": true
+  },
+  "matched_inputs": {
+    "M_count": 1396,
+    "M_exact_common_matches": 1396,
+    "R_count": 192,
+    "R_schedule_ms": [
+      540000,
+      1495000,
+      5000
+    ],
+    "U_explicit_zero": true,
+    "X_explicit_zero": true,
+    "demand_sha256": "569b9fb152b060c848b9c8da2c2c7d94e68da4fa7e7ab4c5a03a869f05ecce53",
+    "treatment_only_delta": "R_flow.0..R_flow.191"
+  },
+  "output_targets": {
+    "all_absent": true,
+    "all_under_bound_output_directory": true,
+    "count": 18,
+    "output_directory": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260924_v14/MINIMAL3350_R720_DELAYED_S17/outputs",
+    "output_parent_absent": true,
+    "output_roles_sha256": "ebd49a1b42e13c983113013b7feb765b877a4dbdf41f085f59f92184455b271d",
+    "unique": true
+  },
+  "resource_contract": {
+    "output_bytes": 75000000,
+    "overshoot_accepted": true,
+    "poll_interval_ms": 100,
+    "wallclock_s": 90
+  },
+  "run_id": "MINIMAL3350_R720_DELAYED_S17",
+  "schema": "stage6_minimal3350_treatment_engineering_prelaunch_review_v1",
+  "scope": "REV6 engineering review: explicit matched-control LOW_R release gate, exact runner/card/input/runtime/request/output/resource and static preflight; no process launch.",
+  "static_preflight": {
+    "launchable_now": false,
+    "review_gate": "WAITING_FOR_REQUIRED_REVIEWS",
+    "starts": {
+      "guardian": 0,
+      "netconvert": 0,
+      "sumo": 0,
+      "traci": 0
+    },
+    "status": "PREFLIGHT_PASS_NO_PROCESS_STARTED"
+  },
+  "status": "PASS_PRELAUNCH"
+}

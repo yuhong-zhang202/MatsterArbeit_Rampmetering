@@ -1,0 +1,64 @@
+{
+  "all_prelaunch_reviews_pass": false,
+  "budget": {
+    "current_starts": 0,
+    "max_pair_starts_if_later_authorized": 2,
+    "technical_retries": 0
+  },
+  "cards_authorized": 0,
+  "data_scope_limitations": [
+    "Static source/provenance validation only; no raw run data exists.",
+    "Runtime detector/internal-lane coverage, actual insertion/merge exposure and postrun parser/lifecycle reconciliation are not verified."
+  ],
+  "engineering_blockers": [
+    "R02 runner is hard-bound to RI3350 package/run ID/input/output-role/retry parent; does not accept PAIR_3199_CTRL_S17 or PAIR_3199_R720_DELAYED_S17.",
+    "Neither draft binds exact executable/version/Python/Guardian/run command.",
+    "Per-run positive finite runtime and output-size limits are null; prior RI3350 retry caps do not transfer."
+  ],
+  "execution_authorized": false,
+  "no_execution": {
+    "SUMO_starts": 0,
+    "TraCI_starts": 0,
+    "netconvert_starts": 0
+  },
+  "overall_disposition": "PREPARATION_BLOCKED",
+  "pair_id": "PAIR_3199_S17",
+  "pair_run_ids": [
+    "PAIR_3199_CTRL_S17",
+    "PAIR_3199_R720_DELAYED_S17"
+  ],
+  "reviews": {
+    "data_analyst": {
+      "blocker_major_required_minor": [
+        0,
+        0,
+        0
+      ],
+      "confidence": "High",
+      "disposition": "PASS_DATA_PROVENANCE",
+      "evidence": "DATA_PROVENANCE_PRELAUNCH_REVIEW.md"
+    },
+    "scientific_reviewer": {
+      "blocker_major_required_minor": [
+        0,
+        0,
+        0
+      ],
+      "confidence": "High internal coherence; Moderate prospective exploratory validity",
+      "disposition": "PASS",
+      "evidence": "SCIENTIFIC_PRELAUNCH_REVIEW.md"
+    },
+    "simulation_engineer": {
+      "blocker_major_required_minor": [
+        2,
+        0,
+        0
+      ],
+      "disposition": "BLOCKED",
+      "evidence": "ENGINEERING_PRELAUNCH_REVIEW.md",
+      "scope": "static engineering card/input/runner/resource review"
+    }
+  },
+  "schema_version": "1",
+  "user_scope_override": "3350.4/R0 offline suitability audit is not a prerequisite for this first pair; no such audit performed here."
+}

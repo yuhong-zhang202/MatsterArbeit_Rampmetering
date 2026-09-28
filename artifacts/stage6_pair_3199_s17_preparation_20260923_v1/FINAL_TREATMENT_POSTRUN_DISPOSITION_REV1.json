@@ -1,0 +1,83 @@
+{
+  "run_id": "PAIR_3199_R720_DELAYED_S17",
+  "final_card_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/PAIR_3199_R720_DELAYED_S17_CARD_FINAL_REV1.json",
+  "final_card_sha256": "08160a2ad225ee9fcc2abcc11d509a88ecf554252f1fb17e35dc69b9404351d4",
+  "witness_contract_path": "docs/methodology/STAGE6_EXPLORATORY_RAMP_INDUCED_WITNESS_CONTRACT.md",
+  "witness_contract_sha256": "958890a7dd017110787a85d77ebfa3e6dac2b7d862f0fd91f6bafb7cf1738d9a",
+  "execution": {
+    "SUMO_starts": 1,
+    "TraCI_starts": 0,
+    "netconvert_starts": 0,
+    "retry_allowed": false,
+    "return_code": 0,
+    "normal_exit_at_horizon_s": 2700,
+    "wallclock_s": 19.92132,
+    "payload_bytes": 21066503,
+    "output_roles_present": 18,
+    "output_roles_required": 18,
+    "wallclock_stop_trigger_s": 120,
+    "output_size_stop_trigger_bytes": 90000000,
+    "wallclock_trigger_fired": false,
+    "output_size_trigger_fired": false,
+    "capture_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/R02_EXECUTION_CAPTURE_TREATMENT_FINAL_REV1.json",
+    "capture_sha256": "00e061736a21c3031b476b2e9c0c1bcee2b669179e48bb375778c070d5f56374",
+    "execution_receipt_path": "data/raw/stage6_bounded_pair_20260923_v1/PAIR_3199_R720_DELAYED_S17/outputs/execution_receipt.json",
+    "execution_receipt_sha256": "7d77da828ca962178432150bccf26ea7922d59428b31eda564ad4c3c64628d5a",
+    "raw_manifest_path": "data/raw/stage6_bounded_pair_20260923_v1/PAIR_3199_R720_DELAYED_S17/outputs/output_manifest.json",
+    "raw_manifest_sha256": "92dbe5627f8afbfe26f50bc8d62207ca9a9ed579c6f707481079d8ad795228dd"
+  },
+  "reviews": {
+    "engineering": {
+      "execution_integrity": "PASS",
+      "input_realization": "FAIL_U_X_FLOWS_IGNORED",
+      "report_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/ENGINEERING_POSTRUN_REVIEW_TREATMENT_FINAL_REV1.md",
+      "report_sha256": "81483835553e7cc7e50849f353cae18364d9e2bba132a378ae554673794a61da",
+      "addendum_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/ENGINEERING_POSTRUN_UX_RECONCILIATION_ADDENDUM_FINAL_REV1.md",
+      "addendum_sha256": "71e1ef8ec6c6124735c23b99e05daac146db94231ab871cdcd24893bd54b657e"
+    },
+    "data_lifecycle": {
+      "disposition": "NOT_EVALUABLE",
+      "report_path": "data/processed/stage6_pair_3199_s17_treatment_postrun_20260923_v1/analysis_rev6/DATA_LIFECYCLE_REVIEW.md",
+      "report_sha256": "54e7830620f9d945749b5c8bb215182b05f2e34575b93484be6d38dfc6032509",
+      "receipt_path": "data/processed/stage6_pair_3199_s17_treatment_postrun_20260923_v1/analysis_rev6/DATA_REVIEW_RECEIPT.json",
+      "receipt_sha256": "7074ebce98e42b1bc730f832b73032945188dad6f568f64b5ff2e7ac20b68338"
+    },
+    "scientific": {
+      "disposition": "NOT_EVALUABLE",
+      "blocker_major_required_minor": "0/1/0",
+      "confidence": "High for contract disposition; Moderate for underlying traffic interpretation",
+      "report_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/SCIENTIFIC_POSTRUN_REVIEW_TREATMENT_FINAL_REV1.md",
+      "report_sha256": "9c600bf9ed86ac6b01e7ae0e36a462b8016e094a7140e795d7830cca41940d7f"
+    }
+  },
+  "contract_outcome": "NOT_EVALUABLE",
+  "major_reasons": [
+    "SUMO ignored U_flow and X_flow; all 225 planned U/X identities are absent from treatment route/tripinfo/FCD while control realized them.",
+    "Only 2 of 1,333 M speedFactors match the control and material pre-R trajectory differences already exist."
+  ],
+  "R_merge_exposure": {
+    "first_depart_s": 540,
+    "first_near_merge_fcd_sample_s": 578,
+    "T2_interval_s": "(577,578]",
+    "T3_certain_entry_counts": [
+      5,
+      6,
+      5
+    ],
+    "T3_confirmation_s": 690,
+    "route_bracketed_R_aux_entries": 192,
+    "native_R_through_lane_entries": 192,
+    "status": "PASS"
+  },
+  "locked_classifier": {
+    "P": "NO_QUALIFYING_EVENT",
+    "S": "NO_QUALIFYING_EVENT",
+    "L": "NO_QUALIFYING_EVENT",
+    "Candidate_C": "EARLY_WARNING_PRESENT_NOT_STATE1",
+    "Candidate_A": "NO_SPATIAL_CANDIDATE",
+    "late_one_bin_P_candidates": "cells14/15 at 1440s; outside fixed onset window and persistence rule"
+  },
+  "follow_up": "STOP; no retry, additional demand/seed, transition, or B/C preparation/execution.",
+  "formal_protocol_changed": false,
+  "scientific_inputs_changed": false
+}

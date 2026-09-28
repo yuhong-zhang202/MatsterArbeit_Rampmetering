@@ -1,0 +1,33 @@
+{
+  "condition_evaluation": "Parent and scientific reviewer report existing C lacks selected leader/blocking reason; minimum single C seed17 end450 instrumentation is within this conditional instruction. This file records provenance, not a claim the user saw the later card SHA.",
+  "evidence": {
+    "fcd": {
+      "bytes": 55246671,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_C_S17_attempt1/outputs/fcd.xml",
+      "sha256": "e7b3c1e310e7d15eff52e4bf2ca1b10975e2efadca452017d5fbc8d3dae8a891"
+    },
+    "missing_fields": [
+      "leaderID",
+      "leaderGap",
+      "leaderSpeed",
+      "selected_blocking_cause"
+    ],
+    "observed_vehicle_fields": [
+      "angle",
+      "id",
+      "lane",
+      "pos",
+      "slope",
+      "speed",
+      "type",
+      "x",
+      "y"
+    ],
+    "scope_of_absence": "Archived FCD has no such selected leader fields; native LC and existing frame evidence do not identify actual U35/R70 blocking cause."
+  },
+  "requires_before_launch": "Parent exact final scientific/static review and bound release sidecar; no further user confirmation for this approved scope.",
+  "scope": "one C seed17 reproduction, 0-450s, original behavior inputs, native leader plus read-only TraCI, no setters, no retry, no further start",
+  "source": "current user instruction in this task",
+  "status": "conditional_user_authorization_package_only_pending_exact_static_review",
+  "user_exact_quote": "\u53ea\u6709\u73b0\u6709\u6570\u636e\u786e\u5b9e\u4e0d\u8db3\u4ee5\u533a\u5206\u4e0a\u8ff0\u673a\u5236\u65f6\uff0c\u624d\u63d0\u51fa\u5e76\u6267\u884c\u6700\u5c0f\u5fc5\u8981\u7684\u65b0 instrumentation / validation run\u3002"
+}

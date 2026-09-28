@@ -1,0 +1,80 @@
+{
+  "arm": "control",
+  "arm_inputs": {
+    "control": {
+      "additional": {
+        "path": "inputs/control/scenario.add.xml",
+        "sha256": "05afdc377c196629a4f868a0a21665e88d579641c71dc7a6ba2cc86d7649bfd2"
+      },
+      "demand": {
+        "path": "inputs/control/demand.rou.xml",
+        "sha256": "da93237ed572b4103146b07b6e2b6ed4ffb9b95d21e7ed22e823ea427f8d477c"
+      },
+      "network": {
+        "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+        "sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca"
+      },
+      "output_roles": {
+        "path": "inputs/control/output_roles.json",
+        "sha256": "e9d218b28bc2b3c9f3772cfd4c5ee3df50c3719960f8937f179bfaf199d14f5e"
+      },
+      "sumocfg": {
+        "path": "inputs/control/scenario.sumocfg",
+        "sha256": "a35f9acc4ba22a6d3e4b3060ed66437753c6d02d22f02ab7bb5afc8eed45649b"
+      }
+    }
+  },
+  "class_counts": {
+    "control": {
+      "M": {
+        "planned_count": 1396,
+        "status": "BOUND"
+      },
+      "R": {
+        "planned_count": 0,
+        "status": "PASS_ZERO"
+      },
+      "U": {
+        "planned_count": 0,
+        "status": "PASS_ZERO"
+      },
+      "X": {
+        "planned_count": 0,
+        "status": "PASS_ZERO"
+      }
+    }
+  },
+  "common_m_manifest": {
+    "path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev4/COMMON_M_DEMAND_MANIFEST.json",
+    "sha256": "2fb1383e709e2174e2623aae575649aba40937729325a5e9c43bcc2b76982865"
+  },
+  "design_path": "artifacts/stage6_minimal_ramp_induced_breakdown_existence_test_20260924_v1/PLAN.md",
+  "design_plan_sha256": "06b0f04f1144ef8497b4d64906ae27b1377b544abd6e0639133c8d85a3fabc23",
+  "locked_method": {
+    "path": "docs/methodology/FREEWAY_PROTECTABLE_STATE_EXPLORATORY_DEFINITION.md",
+    "sha256": "22fe22170c17ce74e261e717586a458a1b5173e9deabbee925bd4c1d606adfe7"
+  },
+  "output_role_source": {
+    "path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev4/inputs/control/output_roles.json",
+    "sha256": "e9d218b28bc2b3c9f3772cfd4c5ee3df50c3719960f8937f179bfaf199d14f5e"
+  },
+  "package_id": "stage6_minimal3350_control_preparation_20260924_rev4",
+  "pair_id": "MINIMAL3350_UX0_S17",
+  "run_id": "MINIMAL3350_CTRL_S17",
+  "runner_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+  "runner_sha256": "b8bbc57797485021637488bff1931ca62d9724031a152d7fedf0304cf3196cfe",
+  "runtime_binding_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev4/runtime_binding.json",
+  "runtime_binding_sha256": "9479ad20baf85c354307617257b37e4e685d9caacbaa5070fc2aecfe0ac55f27",
+  "schema": "stage6_minimal3350_control_execution_manifest_v1",
+  "source_hashes": {
+    "locked_method": "22fe22170c17ce74e261e717586a458a1b5173e9deabbee925bd4c1d606adfe7",
+    "materializer": "7b18ca17a6f241379c1a16e320bf86cd7edcb28c730c608b3f532d700e881b13",
+    "network": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "plan": "06b0f04f1144ef8497b4d64906ae27b1377b544abd6e0639133c8d85a3fabc23",
+    "source_flow": "e64057692b4194b6f395c7a5349104a407d806b2b5a6bda9efcbac29489fdac3",
+    "source_vehroute": "0183782a60172b5c038d7c0dcd0a9172478803a1c1673df6eadb29f2a6ea1702",
+    "template_additional": "6bd3555c983db506800cab40524767229a3a03c94e893e0ccdc506f95690d8ef",
+    "template_output_roles": "3ff931a5f088180f6f37fbf8a782985a3a805c8c02b0cfdce3aa018df195b0f6",
+    "template_sumocfg": "a6be97aba1ab00d6f17ae15788d45765d0a0efca7e297cc1423e4fb720853b1c"
+  }
+}

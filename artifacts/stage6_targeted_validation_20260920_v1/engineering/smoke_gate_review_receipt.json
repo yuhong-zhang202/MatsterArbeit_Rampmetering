@@ -1,0 +1,41 @@
+{
+  "status": "PASS_OUTPUT_GATE_FINAL",
+  "reviewer_role": "scientific_reviewer",
+  "reviewer_agent": "/root/p0_scientific_final",
+  "recorded_by": "primary_agent",
+  "recording_basis": "Transcription of the independent scientific_reviewer subagent's read-only final gate-review decision in this task. The reviewer did not author this record.",
+  "attempt_id": "TV_SMOKE_B_LC_ON_S17_attempt1",
+  "gate_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_ON_S17_attempt1/revision02/gate.json",
+  "gate_sha256": "6ca95021e4e8bbb837d6bf77700ad1ebe780752a611635af4551d5e44d7cfecc",
+  "review_finding_counts": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "independent_checks_reported": {
+    "deduplicated_bindings_verified": 163,
+    "binding_mismatches": 0,
+    "FCD_vs_trip_lifecycle_identity_set_differences": 0,
+    "native_lane_change_events_individually_checked": 721,
+    "event_lane_adjacency_direction_permissions_and_same_label_FCD_destination_consistent": true,
+    "meter_crossing_bracket_subclasses": {
+      "r_to_G": 27,
+      "G_to_y": 15,
+      "y_to_y": 1,
+      "r_to_r": 0
+    },
+    "missing_auxiliary_lane_1Hz_samples": 70,
+    "physical_suitability": "suitable"
+  },
+  "analysis_revision_assessment": "Revision02 removes only the erroneous blanket exclusion of lateral adjacency on internal edges; it does not change simulation, thresholds, or raw data. The original 13/14 FAIL remains preserved. Independent network/FCD evidence and positive/negative lane-permission regression assertions support this correction for the bound network.",
+  "measurement_review": {
+    "identity_and_trip_lifecycle": "PASS; 2700 per-second FCD identity sets match trip lifecycle.",
+    "lane_change_scope": "PASS for this bound network and observed event set; do not generalize the internal-edge rule to every turning connector.",
+    "meter_crossing_resolution": "All 300 are 1-second brackets; 43 contain yellow/red endpoints (27 r->G, 15 G->y, 1 y->y). No red-to-red bracket; no sub-second passage time inferred.",
+    "auxiliary_lane_sampling": "70 R lack a 1-Hz aux sample; native merge events do not invent their unobserved trajectory locations.",
+    "detector_extent": "No claim that detector live coverage was queried through TraCI.",
+    "emergency_braking": "Zero in this run; any later nonzero count must be adjudicated under the contract rather than automatically treated as structural failure."
+  },
+  "release_decision": "PASS technical output gate; release only TV_SMOKE_B_LC_OFF_S17_attempt1 under the existing card and user-authorized conditional sequence.",
+  "scope_limit": "This is a technical smoke gate review only. It does not release A/B/C, establish O1/O2, or resolve specific_obstacle."
+}

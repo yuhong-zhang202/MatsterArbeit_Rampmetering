@@ -1,0 +1,30 @@
+{
+  "schema_version": "1",
+  "audit_type": "READ_ONLY_PRE_R_PAIRABILITY_REAUDIT",
+  "historical_prelaunch_disposition": "PAIRABLE_WITH_EXPLICIT_LIMITATION",
+  "corrected_prelaunch_disposition": "NOT_PAIRABLE",
+  "postrun_disposition_preserved": "A_NOT_EVALUABLE",
+  "independent_scientific_review": {
+    "Blocker": 1,
+    "Major": 1,
+    "required_Minor": 0,
+    "confidence_on_dispositions": "High",
+    "complete_M_X_divergence_mechanism": "Unresolved"
+  },
+  "sha256": {
+    "PAIRABILITY_REAUDIT_CORRECTION_20260926.md": "b623c49e757c651b594b7adb267b163adcfbb6fc7f42bee69bf60cbe7143b43a",
+    "R0_source_demand": "0edeb776e6656f3fd22f1e8d0b4c07ece17903695c901af576d93fb205b26865",
+    "R0_vehroute": "68ac83552dd1e07b9b23caae4a8e3153feac0a649d0c39a7d1ab5df6a910f1b7",
+    "A_materialized_demand": "69c10dafc607f616585d36b16a00a4c7d4e82eefc5c28878ea8e9dfe3c16c769",
+    "A_sumo_error_log": "3bfbd9c52101072ea83c31d94a4d878920f1703d2112d1f817f6076a91048f96",
+    "PRE_R_PAIRABILITY_REPORT.md": "7cba57c3b1480c26c510eaf39a3e7f6cbfef5b1d6cfb7ad66f9438ff165e01aa",
+    "A_output_manifest": "301636c785128f062b33f5a48d814a2fd46ccc32f2e4165fb70fe08208a42d40"
+  },
+  "starts_in_this_reaudit": {
+    "SUMO": 0,
+    "Guardian": 0,
+    "TraCI": 0,
+    "netconvert": 0
+  },
+  "record_policy": "Original audit, reviews, run card, raw and A_NOT_EVALUABLE remain preserved; this versioned correction supersedes the original prelaunch pairability claim only."
+}

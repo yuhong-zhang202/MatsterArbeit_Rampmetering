@@ -1,0 +1,53 @@
+{
+  "TLS_records": {
+    "ramp_mid": 2700,
+    "urban_tls": 2700
+  },
+  "meter_state_and_crossing_contract": "Selected program and every recorded phase/state match exact plan. R stopline crossings bracketed and counts reconciled with trajectory identity; lane topology internally reachable. Zero crossing is an observation, not automatically technical failure. Red/yellow bracket ambiguity retained.",
+  "native_lanechange_contract": "ON:root lanechanges; event IDs,time,from/to lanes validated including R aux0\u2192mainlane; None gap values NA. OFF:explicit configuration logger absent and file absent. Empty ON events legal; absence of evidence not absence of movement.",
+  "neutrality_exclusions": [
+    "XML comments",
+    "format whitespace",
+    "summary/step@duration computational time only"
+  ],
+  "neutrality_required_roles": 17,
+  "physical_status": [
+    "suitable",
+    "partial_evidence_physical",
+    "complete_evidence_but_comparison_unsuitable_physical_event"
+  ],
+  "progression": "True iff every14checkPASS and physical suitable, plus prior neutral gate before primary",
+  "required_bindings": [
+    "card_sha256",
+    "attempt_id",
+    "execution_receipt_sha256",
+    "output_manifest_sha256",
+    "analysis_version_binding"
+  ],
+  "required_check_ids": [
+    "source_binding_exact",
+    "execution_complete_2700",
+    "output_role_set_exact",
+    "xml_roots_and_timegrids",
+    "planned_identity_coverage",
+    "departed_route_and_fcd_consistency",
+    "population_conservation",
+    "actual_lane_and_connection_consistency",
+    "detector_output_contract",
+    "tls_state_contract",
+    "output_manifest_complete",
+    "m_insertion_contract",
+    "native_lanechange_contract",
+    "meter_state_and_crossing_contract"
+  ],
+  "role_counts": {
+    "OFF": 17,
+    "ON": 18
+  },
+  "technical_status": [
+    "PASS",
+    "FAIL",
+    "NOT_COMPLETE"
+  ],
+  "vehicle_length_contract": "sole passenger type with no override: SUMO1.26 default5m supported by archived version source; no actual TraCI read claim"
+}

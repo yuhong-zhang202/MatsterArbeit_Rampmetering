@@ -1,0 +1,83 @@
+{
+  "current_disposition": "PAIR_3199_CTRL_FINAL_REV1_PREPARED_AWAITING_INDEPENDENT_PRELAUNCH_REVIEWS",
+  "engineering_receipt": {
+    "path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/R02_ENGINEERING_BINDING_RECEIPT_FINAL_REV1.json",
+    "sha256": "7b1152211ff77e55bdf254fddee1a85f098408609ac58e101f936344d5d59fd9"
+  },
+  "execution": {
+    "SUMO_starts": 0,
+    "TraCI_starts": 0,
+    "control_output_absent": true,
+    "netconvert_starts": 0,
+    "raw_outputs_created": 0,
+    "reservations_created": 0,
+    "treatment_binding_unchanged": true,
+    "treatment_output_absent": true
+  },
+  "notes": [
+    "Rev2 cards and receipts are preserved unchanged.",
+    "No SUMO start or one-use reservation has been made.",
+    "The preflight receipt is read-only and did not create the output path.",
+    "Runner, card, runtime and receipts require independent review before any launch."
+  ],
+  "parent_receipt": {
+    "path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/PROVENANCE_RECEIPT_REV2.json",
+    "sha256": "701cd5351045b6b25ddeae888e2ac9ae08431c1e6bb8ae261849a4ff091bfb84"
+  },
+  "read_only_preflight": {
+    "path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/R02_READONLY_PREFLIGHT_FINAL_REV1.json",
+    "sha256": "04cb5d4413fe55073af389feff1aba7950d5c1ebd5a3588739f4dce241132f68",
+    "status": "PREFLIGHT_PASS_NO_PROCESS_STARTED"
+  },
+  "receipt_id": "PAIR_3199_PROVENANCE_FINAL_REV1",
+  "reviews": {
+    "data_provenance": "PENDING_INDEPENDENT_REVIEW",
+    "engineering": "PENDING_INDEPENDENT_REVIEW",
+    "scientific": "PENDING_INDEPENDENT_REVIEW"
+  },
+  "run_binding": {
+    "card_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/PAIR_3199_CTRL_S17_CARD_FINAL_REV1.json",
+    "card_sha256": "0748d37719541d7c76adcd57e07fd764b413fbd21bb16e015b57024175e866da",
+    "card_status": "FINAL_AUTHORIZED_FOR_ONE_START",
+    "input_sha256": {
+      "additional": "ed98832e73675aa95cb3cfc386c579db9525b942b2555e802f0a29324affc23e",
+      "demand": "6bbdc1d9148b05286c25b94f23c37174951c9f3e4a544ef8b9a322fbc42ab631",
+      "network": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+      "output_roles": "5fe6d340f7196a2afd91ad56cd3c6ed419e32501110ce21076771446b4299ad3",
+      "sumocfg": "6ea7306958543281b35a4c560e735d07e04c7658f73dc06f5cb174041baf0fe6"
+    },
+    "output_directory": "data/raw/stage6_bounded_pair_20260923_v1/PAIR_3199_CTRL_S17/outputs",
+    "resource_limits": {
+      "runtime_s": 90,
+      "scope": "PAIR_3199_CTRL_S17",
+      "status": "AUTHORIZED_FOR_THIS_RUN",
+      "storage_bytes": 60000000,
+      "storage_enforcement": "100ms_polled_stop_trigger_with_possible_overshoot_not_hard_quota"
+    },
+    "run_id": "PAIR_3199_CTRL_S17",
+    "runner_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+    "runner_sha256": "df8645414a6010b361fd68e298ea521f422eaa0ed969aa36419a1ba9e28ba81e",
+    "runtime_binding_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/runtime_bindings/PAIR_3199_CTRL_S17_FINAL_REV1.json",
+    "runtime_binding_sha256": "caa9839b29dfdbfb7c1bb67487a24d21f8fc4bf613dad23c4db9844c7f986ea0"
+  },
+  "scientific_inputs_unchanged_from_rev2": true,
+  "source_bindings": {
+    "accepted_network": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "bounded_scan_plan": "5aeddf82bcaa7f2b559e7b6db951815c724cf7d3e8f14dd81158a6f9dbac1046",
+    "control_additional": "ed98832e73675aa95cb3cfc386c579db9525b942b2555e802f0a29324affc23e",
+    "control_card_final_rev1": "0748d37719541d7c76adcd57e07fd764b413fbd21bb16e015b57024175e866da",
+    "control_demand": "6bbdc1d9148b05286c25b94f23c37174951c9f3e4a544ef8b9a322fbc42ab631",
+    "control_input_manifest": "920f7d379c4a6509f2591447577688c372759f7b82c9cace166c0a95e51bec3f",
+    "control_output_roles": "5fe6d340f7196a2afd91ad56cd3c6ed419e32501110ce21076771446b4299ad3",
+    "control_runtime_binding_final_rev1": "caa9839b29dfdbfb7c1bb67487a24d21f8fc4bf613dad23c4db9844c7f986ea0",
+    "control_sumocfg": "6ea7306958543281b35a4c560e735d07e04c7658f73dc06f5cb174041baf0fe6",
+    "docs_DECISIONS": "4e440204b812a9ed28181b6b4aa54818ca5e7a39d207aeaadcab12cf8cb00d7a",
+    "docs_EXPERIMENT_PROTOCOL": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "read_only_preflight": "04cb5d4413fe55073af389feff1aba7950d5c1ebd5a3588739f4dce241132f68",
+    "rev2_parent_receipt": "701cd5351045b6b25ddeae888e2ac9ae08431c1e6bb8ae261849a4ff091bfb84",
+    "runner": "df8645414a6010b361fd68e298ea521f422eaa0ed969aa36419a1ba9e28ba81e",
+    "runner_contract": "71a0c346a0e311d83ab2bf950c7a31c41a45bc9e910cc430e9deeac277544ba9",
+    "runner_tests": "2341233ebfbfb61cecb5a16643345cbb3372d46410229032fe6336259127b673",
+    "witness_contract": "f82a1f5893d15c8e30706a945b1241e597e7a2cacfea4562d48533344f72f51d"
+  }
+}

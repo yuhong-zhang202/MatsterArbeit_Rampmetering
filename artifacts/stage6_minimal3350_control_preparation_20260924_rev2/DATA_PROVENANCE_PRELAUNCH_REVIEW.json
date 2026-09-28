@@ -1,0 +1,94 @@
+{
+  "schema": "stage6_minimal3350_data_provenance_prelaunch_review_v1",
+  "review_type": "read_only_data_provenance_prelaunch",
+  "run_id": "MINIMAL3350_CTRL_S17",
+  "card_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev2/MINIMAL3350_CTRL_S17_CARD_FINAL.json",
+  "card_sha256": "6095e498eb560d2ed8dc16548e19902313d7a89be92057db0d2fae689497c2ac",
+  "status": "PASS_DATA_PROVENANCE_PRELAUNCH",
+  "findings": {"blocker": 0, "major": 0, "required_minor": 0},
+  "context": {
+    "phase": "Stage 6 minimal U=X=0 existence test; qMain=3199.2 pair is valid NO_WITNESS; qMain=3350.4 control is authorized and treatment remains conditional on reviewed control acceptance.",
+    "adopted_second_tier_plan": "User-adopted for Stage 6 exploratory validation only; it does not authorize any run before the complete minimal3350 pair is reviewed.",
+    "formal_protocol": "Unchanged and unfrozen.",
+    "3199_result_reused": "Context only; not reanalyzed. Prior independent result is LOW_R_BACKGROUND_ACCEPTABLE for that control and the matched pair result is NO_WITNESS."
+  },
+  "checks": {
+    "exact_card_sha256": true,
+    "card_bound_common_m_manifest_sha256": true,
+    "card_bound_input_manifest_sha256": true,
+    "card_bound_runtime_binding_sha256": true,
+    "start_request_hash_and_card_receipt_match": true,
+    "start_request_is_persisted_unsent": true,
+    "runner_hash_binding_consistent": true,
+    "runtime_sumohome_and_schema_hashes_bound": true,
+    "output_directory_absent": true,
+    "source_flow_and_speedfactor_source_hashes_match": true,
+    "planned_M_identity_count_and_uniqueness": true,
+    "integer_SUMOTime_schedule_1074ms": true,
+    "M_route_type_and_explicit_behavior_attributes_complete": true,
+    "R_U_X_explicit_zero_not_missing": true,
+    "no_traffic_process_started": true
+  },
+  "common_M": {
+    "planned_and_materialized_count": 1396,
+    "unique_ids": 1396,
+    "id_pattern": "M_flow.0 through M_flow.1395, one each",
+    "unique_desired_depart_ms": 1396,
+    "schedule": "SUMO 1.26.0 integer repetition offset: trunc(1500000/1396)=1074 ms; desired_depart_ms=i*1074; first=0 ms; last=1498230 ms (1498.230 s)",
+    "route": "M_route for all 1396",
+    "type": "technical_passenger for all 1396",
+    "bound_vehicle_fields": ["id", "desired_depart_ms", "type", "route", "departPos", "departLane", "departSpeed", "speedFactor"],
+    "speedFactor_values_verified_against_source": "1396/1396 exact identity-keyed matches",
+    "input_demand_sha256": "da93237ed572b4103146b07b6e2b6ed4ffb9b95d21e7ed22e823ea427f8d477c",
+    "manifest_sha256": "2fb1383e709e2174e2623aae575649aba40937729325a5e9c43bcc2b76982865"
+  },
+  "class_ledger": {
+    "M": {"count": 1396, "status": "BOUND"},
+    "R": {"count": 0, "status": "PASS_ZERO"},
+    "U": {"count": 0, "status": "PASS_ZERO"},
+    "X": {"count": 0, "status": "PASS_ZERO"}
+  },
+  "speedfactor_provenance_adjudication": {
+    "source_path": "data/raw/stage6_baseline_localization_20260921_v1/LOC_M3350_S17_attempt1/outputs/vehroute.xml",
+    "source_sha256": "0183782a60172b5c038d7c0dcd0a9172478803a1c1673df6eadb29f2a6ea1702",
+    "source_scope": "Earlier qMain=3350.4, seed17 full-network run with nonzero U/X; source contains 1396 unique M_flow identities and an exact speedFactor value for every one.",
+    "assessment": "This closes reproducibility of the fixed M attribute vector and permits a direct common-M control/treatment comparison if the future treatment reuses this exact manifest. It does not establish an independently generated or representative U=X=0 random realization. Since the M values are explicit fixed inputs in the control and must be byte/identity matched in treatment, the treatment-only exogenous demand remains R."
+  },
+  "execution_binding": {
+    "runner_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+    "runner_sha256": "5cfbd1542016205203ed046756ef00800d1d5fe0070aa20878ebdd0d6a67384a",
+    "runtime_binding_sha256": "602f29fbf9ec66f39b422e1ce7273875c071e112017241e66412c9d3dfeadb00",
+    "sumo_version": "1.26.0",
+    "sumo_binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+    "sumo_home": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo",
+    "additional_schema_sha256": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e",
+    "resource_contract": {"wallclock_s": 90, "output_bytes_decimal": 60000000, "polling_ms": 100, "slight_overshoot_accepted": true},
+    "guardian_start_request_sha256": "17c2b0a44edd914aba31a41e504adf4eef1ce8f18d471d027bd867a8a6557dd6",
+    "guardian_start_request_receipt_sha256": "9b4a76762b61c9a9a30fabc1cc275d3d135a542c53769e9ad3ffdb50b6577679",
+    "request_state": "PASS_PERSISTED_UNSENT",
+    "output_directory": "data/raw/stage6_minimal3350_ux0_20260924_v2/MINIMAL3350_CTRL_S17/outputs",
+    "output_directory_exists_at_review": false,
+    "starts_during_this_review": {"guardian": 0, "sumo": 0, "traci": 0, "netconvert": 0}
+  },
+  "limitations": [
+    "The per-vehicle speedFactor vector was copied from a prior full-network run where U/X were present. The current arms therefore test an explicitly fixed, hash-bound M vector; they do not sample or establish an independent U=X=0 seed17 RNG realization.",
+    "A paired causal contrast is supported only if the future treatment uses the exact same common-M manifest and all M input fields remain identical. This review cannot certify future treatment matching or outcomes.",
+    "No traffic run or post-run evidence was inspected for this 3350 candidate; no treatment outcome exists in scope."
+  ],
+  "reviewed_hashes": {
+    "card": "6095e498eb560d2ed8dc16548e19902313d7a89be92057db0d2fae689497c2ac",
+    "common_m_manifest": "2fb1383e709e2174e2623aae575649aba40937729325a5e9c43bcc2b76982865",
+    "input_manifest": "50707d0df1069328dbe85621f57a242b90ad267c312bc6a5d7fe9656b5238213",
+    "runtime_binding": "602f29fbf9ec66f39b422e1ce7273875c071e112017241e66412c9d3dfeadb00",
+    "start_request": "17c2b0a44edd914aba31a41e504adf4eef1ce8f18d471d027bd867a8a6557dd6",
+    "start_request_receipt": "9b4a76762b61c9a9a30fabc1cc275d3d135a542c53769e9ad3ffdb50b6577679",
+    "source_flow": "e64057692b4194b6f395c7a5349104a407d806b2b5a6bda9efcbac29489fdac3",
+    "source_vehroute": "0183782a60172b5c038d7c0dcd0a9172478803a1c1673df6eadb29f2a6ea1702",
+    "network": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "demand": "da93237ed572b4103146b07b6e2b6ed4ffb9b95d21e7ed22e823ea427f8d477c",
+    "additional": "6fee3eac4124dcbe7de7447fcc9e80c43c5d8b7c8930725589373b2901726b34",
+    "sumocfg": "468616e9e9d656010e5c59f1c11f06543dec3f63de83d06a21a5e1c549f0b8a1",
+    "output_roles": "1cd309a542c9fae891932eb9506375e18ebfd19316b98461a0f316d76e261b95",
+    "runner": "5cfbd1542016205203ed046756ef00800d1d5fe0070aa20878ebdd0d6a67384a"
+  }
+}

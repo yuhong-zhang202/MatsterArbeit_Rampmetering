@@ -1,0 +1,99 @@
+{
+  "schema": "stage6_minimal3350_treatment_data_provenance_prelaunch_review_v1",
+  "status": "PASS_DATA_PROVENANCE_PRELAUNCH",
+  "run_id": "MINIMAL3350_E1_R900_DELAYED_S17",
+  "package_id": "stage6_minimal3350_e1_r900_preparation_20260925_rev17",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "confidence": "High",
+  "bindings": {
+    "card_path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev17/MINIMAL3350_E1_R900_DELAYED_S17_CARD_FINAL_REV1.json",
+    "card_sha256": "f0387580053ad6b862ec2874a4eb55e5c9a468a3f23db561af40d6c9e6499908",
+    "input_manifest_sha256": "3e542e2dc60c669fa2ed0e845ef4ca83fc0601b41a31b4184fc4b80e686e53be",
+    "runtime_binding_sha256": "a9d82c778e132e28d08ade134ab3d5bf8ecaeb92c9d0a3529af5877db9fa3aab",
+    "runner_sha256": "8145b865846662c6189a2307a6cf38b1c19295293ae930830bfc8c8c61428eed",
+    "start_request_sha256": "2cea13ac94b72029db06c6e3ede862a0bd1b8f142458a28469292d16ff440bdf",
+    "start_request_receipt_sha256": "7a2825befd4856180bb981e3d23db8f0c405b0dd4b47045e49b28f56f699cd9d",
+    "provenance_receipt_sha256": "45db9124e2d043f13c3472a0c302319f4d8fff3c6ea72d42b17e8bfa46c12937",
+    "design_plan_sha256": "06b0f04f1144ef8497b4d64906ae27b1377b544abd6e0639133c8d85a3fabc23",
+    "witness_contract_sha256": "958890a7dd017110787a85d77ebfa3e6dac2b7d862f0fd91f6bafb7cf1738d9a",
+    "adapter_sha256": "98d530ad4490c92c174233028cdb9d2388b5a4a945233f90aefa7c4613052148"
+  },
+  "matched_control_gate": {
+    "run_id": "MINIMAL3350_CTRL_S17",
+    "card_sha256": "15544478e8e7ced98b12673bec65cfe646b1f73e9e471ed501ddee052306bbfd",
+    "data_review_sha256": "24711f151751cb1d6b0ba852388824f1f8e69be7fea3678900b872498870ab4d",
+    "data_review_disposition": "PASS_DATA_LIFECYCLE",
+    "data_side_control_category": "LOW_R_BACKGROUND_ACCEPTABLE",
+    "scientific_review_sha256": "8078d5ee902eb355623d29e7cc78c7d9cdf61e918903d9a3040fe0f320ae3738",
+    "scientific_disposition": "LOW_R_BACKGROUND_ACCEPTABLE",
+    "scientific_findings": {
+      "blocker": 0,
+      "major": 0,
+      "required_minor": 0
+    },
+    "output_manifest_sha256": "48456bb607b4e4679dd13274696c60ab7f5ae020aa6ecbf2462110e1fdcd752f",
+    "result": "PASS_EXACT_BOUND_CONTROL_RECEIPTS"
+  },
+  "condition_check": {
+    "qMain_veh_per_h": 3350.4,
+    "seed": 17,
+    "R_veh_per_h": 900,
+    "R_window_s": "[540,1500)",
+    "U": 0,
+    "X": 0,
+    "legacy_clean_high_mobility_screen_required_for_release": false,
+    "stage6_exploratory_control_disposition_required_for_release": true,
+    "required_exploratory_control_disposition": "LOW_R_BACKGROUND_ACCEPTABLE"
+  },
+  "data_checks": {
+    "M_count": 1396,
+    "M_exact_matches": 1396,
+    "M_fields": [
+      "id",
+      "desired_depart_ms",
+      "route",
+      "vType",
+      "speedFactor",
+      "departPos",
+      "departLane",
+      "departSpeed"
+    ],
+    "R_count": 240,
+    "R_only_delta": "R_flow.0..239",
+    "R_schedule_ms": [
+      540000,
+      1496000,
+      4000
+    ],
+    "U_explicit_zero": true,
+    "X_explicit_zero": true,
+    "output_role_count": 18,
+    "runner_log_targets": 2,
+    "all_20_output_targets_unique_and_absent": true,
+    "output_directory_absent": true,
+    "reservation_absent": true,
+    "start_request_sha256": "2cea13ac94b72029db06c6e3ede862a0bd1b8f142458a28469292d16ff440bdf",
+    "start_request_receipt_sha256": "7a2825befd4856180bb981e3d23db8f0c405b0dd4b47045e49b28f56f699cd9d",
+    "request_status": "PASS_PERSISTED_UNSENT",
+    "dispatched": false,
+    "focused_tests_passed": 12,
+    "focused_tests_failed": 0,
+    "static_preflight": "PREFLIGHT_PASS_NO_PROCESS_STARTED",
+    "launchable_now": false,
+    "process_starts": {
+      "guardian": 0,
+      "sumo": 0,
+      "traci": 0,
+      "netconvert": 0
+    }
+  },
+  "limitations": [
+    "This pass is limited to data/provenance prelaunch consistency. It does not authorize execution by itself.",
+    "The adopted second-tier plan does not itself grant run authorization. The current card encodes separate conditional user authorization and remains gated on fresh exact-card reviews.",
+    "The fixed identity-keyed R speedFactor vector is provenance-bound reuse; no claim of independent U=X=0 RNG generation or capacity is made."
+  ]
+}

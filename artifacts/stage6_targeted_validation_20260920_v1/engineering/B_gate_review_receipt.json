@@ -1,0 +1,43 @@
+{
+  "status": "PASS_OUTPUT_GATE_FINAL",
+  "reviewer_role": "scientific_reviewer",
+  "reviewer_agent": "/root/p0_scientific_final",
+  "recorded_by": "primary_agent",
+  "recording_basis": "Transcription of the independent scientific_reviewer subagent's read-only final B-gate decision; reviewer did not author this file.",
+  "attempt_id": "TV_B_S17_attempt1",
+  "gate_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_targeted_validation_20260920_v1/TV_B_S17_attempt1/revision01/gate.json",
+  "gate_sha256": "7b0c9f0c935ca1efbe0e1cf1b31d9275fc83b6e11d08bef7d6ea613df47f2104",
+  "review_finding_counts": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "independent_checks_reported": {
+    "deduplicated_bindings_verified": 160,
+    "binding_mismatches": 0,
+    "B_MODERATE_labels_verified": 2700,
+    "B_MODERATE_cycle": "22G/3y/35r, offset 0",
+    "phase_label_counts": {
+      "G": 990,
+      "y": 135,
+      "r": 1575
+    },
+    "planned_identities": 1858,
+    "per_second_FCD_vs_trip_lifecycle_differences": 0,
+    "fcd_samples": 155442,
+    "native_lane_change_events_individually_verified": 721,
+    "R_with_merge_events": 300,
+    "R_without_auxiliary_1Hz_sample": 70,
+    "meter_crossing_brackets": {
+      "total": 300,
+      "G_to_G": 257,
+      "r_to_G": 27,
+      "G_to_y": 15,
+      "y_to_y": 1,
+      "bracket_width_s": 1
+    },
+    "physical_suitability": "suitable"
+  },
+  "release_decision": "PASS exact B technical gate; release only TV_C_S17_attempt1, which is the final start in this card.",
+  "scope_limit": "No A/B/C effect interpretation, O1/O2, or specific_obstacle conclusion; C must pass its own gate and review."
+}

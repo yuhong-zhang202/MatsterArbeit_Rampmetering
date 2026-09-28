@@ -1,0 +1,30 @@
+{
+  "system_log_argv": [
+    "/usr/bin/log",
+    "show",
+    "--style",
+    "json",
+    "--start",
+    "2026-09-21 16:28:17",
+    "--end",
+    "2026-09-21 16:28:30",
+    "--predicate",
+    "processID == 46760 OR eventMessage CONTAINS \"sumo(46760)\" OR eventMessage CONTAINS \"46760\""
+  ],
+  "timezone": "Europe/Berlin CEST UTC+02:00",
+  "sumo_started_unix": 1790000899.0824802,
+  "log_export_returncode": 0,
+  "code_sign_argv": [
+    "/usr/bin/codesign",
+    "-dv",
+    "--verbose=4",
+    "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo"
+  ],
+  "xattr_argv": [
+    "/usr/bin/xattr",
+    "-l",
+    "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo"
+  ],
+  "new_SUMO_starts": 0,
+  "scope": "read-only startup evidence and Python TCP fixture; no bypass or environment policy change"
+}

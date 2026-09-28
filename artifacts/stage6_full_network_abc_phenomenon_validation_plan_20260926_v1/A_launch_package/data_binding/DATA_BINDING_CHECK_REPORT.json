@@ -1,0 +1,171 @@
+{
+  "schema_version": "1",
+  "status": "PASS_DATA_BINDING_WITH_REQUIRED_SCIENTIFIC_REVIEW_AND_POSTRUN_GATE",
+  "scope": "offline binding verification only; not launch authorization",
+  "counts": {
+    "M": 1396,
+    "U": 150,
+    "X": 75,
+    "R": 240,
+    "total": 1861
+  },
+  "checks": {
+    "mux_identity_sets_exact_and_unique": true,
+    "mux_required_vehicle_attributes_present_for_all": true,
+    "mux_integer_ms_desired_schedule_exact": true,
+    "mux_route_definitions_match_full_network_source": true,
+    "r_identity_set_exact_0_to_239": true,
+    "r_integer_ms_departures_exact_4s_[540,1500)": true,
+    "r_technical_passenger_route_and_departure_defaults_match_validated_full_network_flow": true,
+    "r_speedfactor_vector_present_240_of_240": true,
+    "r_speedfactor_raw_manifest_hash_verified": true,
+    "all_A_B_C_can_reuse_this_byte_identical_demand_file": true,
+    "generated_vehicle_records_total_1861": true,
+    "actual_A_vs_R0_pre540_insertion_or_trajectory_match_demonstrated": false,
+    "historical_R0_literal_input_XML_equal_to_materialized_input": false,
+    "R_factor_source_context_equals_target_qMain_UX": false
+  },
+  "source_hashes": {
+    "artifacts/stage6_ramp_induced_validation_20260922_v1/control_input/demand_control.rou.xml": {
+      "path": "artifacts/stage6_ramp_induced_validation_20260922_v1/control_input/demand_control.rou.xml",
+      "bytes": 882,
+      "sha256": "0edeb776e6656f3fd22f1e8d0b4c07ece17903695c901af576d93fb205b26865"
+    },
+    "artifacts/stage6_ramp_induced_validation_20260922_v1/outputs/RI3350_CTRL_S17_technical_retry1/vehroute.xml": {
+      "path": "artifacts/stage6_ramp_induced_validation_20260922_v1/outputs/RI3350_CTRL_S17_technical_retry1/vehroute.xml",
+      "bytes": 392845,
+      "sha256": "68ac83552dd1e07b9b23caae4a8e3153feac0a649d0c39a7d1ab5df6a910f1b7"
+    },
+    "artifacts/stage6_ramp_induced_validation_20260922_v1/outputs/RI3350_CTRL_S17_technical_retry1/tripinfo.xml": {
+      "path": "artifacts/stage6_ramp_induced_validation_20260922_v1/outputs/RI3350_CTRL_S17_technical_retry1/tripinfo.xml",
+      "bytes": 749455,
+      "sha256": "77af448dd892fe4b2d0180efbcf6d431cfe3f114e27cab1afc2279e22168e765"
+    },
+    "artifacts/stage6_ramp_induced_validation_20260922_v1/outputs/RI3350_CTRL_S17_technical_retry1/fcd.xml": {
+      "path": "artifacts/stage6_ramp_induced_validation_20260922_v1/outputs/RI3350_CTRL_S17_technical_retry1/fcd.xml",
+      "bytes": 18560588,
+      "sha256": "d88b84cac46578bfccb84e529677867a980228c0488268b6c19dd4900e68f565"
+    },
+    "artifacts/stage6_ramp_induced_validation_20260922_v1/control_input/scenario_control.sumocfg": {
+      "path": "artifacts/stage6_ramp_induced_validation_20260922_v1/control_input/scenario_control.sumocfg",
+      "bytes": 1715,
+      "sha256": "87ba0d7d671f1f72f45d7fda3c3e857a1622263a9c2ce4d3f1ef625745f7ab7c"
+    },
+    "artifacts/stage6_ramp_induced_validation_20260922_v1/control_input/scenario_control.add.xml": {
+      "path": "artifacts/stage6_ramp_induced_validation_20260922_v1/control_input/scenario_control.add.xml",
+      "bytes": 2426,
+      "sha256": "6355c6a6deaf0b7aadbdca59a8349c4e0e96e47b9ff5f89b8498b9ad02adcd59"
+    },
+    "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml": {
+      "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+      "bytes": 12814,
+      "sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca"
+    },
+    "artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_A_S17_attempt1/demand.rou.xml": {
+      "path": "artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_A_S17_attempt1/demand.rou.xml",
+      "bytes": 1141,
+      "sha256": "70d90d477c97141086b87cd248064c2c27c5965060e04fe9a2cbec67ec20e1cd"
+    },
+    "artifacts/stage6_full_network_abc_phenomenon_validation_plan_20260926_v1/FULL_NETWORK_ABC_PHENOMENON_VALIDATION_PLAN.md": {
+      "path": "artifacts/stage6_full_network_abc_phenomenon_validation_plan_20260926_v1/FULL_NETWORK_ABC_PHENOMENON_VALIDATION_PLAN.md",
+      "bytes": 12681,
+      "sha256": "03e9a4848ed499372f2ec2d4111a7d97070b9306503cc238781402ae1edc7fdd"
+    },
+    "data/raw/stage6_clean_onset_3199_ux0_20260925_v1/CLEAN3199_A_R900_DELAYED_S17/outputs/vehroute.xml": {
+      "path": "data/raw/stage6_clean_onset_3199_ux0_20260925_v1/CLEAN3199_A_R900_DELAYED_S17/outputs/vehroute.xml",
+      "bytes": 391658,
+      "sha256": "0c482d22ab7b673f5e8ab266da4557b6ec096b9cac248d544b8d3dc7970041f0"
+    },
+    "data/raw/stage6_clean_onset_3199_ux0_20260925_v1/CLEAN3199_A_R900_DELAYED_S17/outputs/output_manifest.json": {
+      "path": "data/raw/stage6_clean_onset_3199_ux0_20260925_v1/CLEAN3199_A_R900_DELAYED_S17/outputs/output_manifest.json",
+      "bytes": 6816,
+      "sha256": "5b98af3847d621511f7bf16a0f6bd7939edea920b8b2792f6793dbdb2425106a"
+    },
+    "data/raw/stage6_clean_onset_3199_ux0_20260925_v1/CLEAN3199_A_R900_DELAYED_S17/outputs/execution_receipt.json": {
+      "path": "data/raw/stage6_clean_onset_3199_ux0_20260925_v1/CLEAN3199_A_R900_DELAYED_S17/outputs/execution_receipt.json",
+      "bytes": 498,
+      "sha256": "53758c3c3a060605abf19f5d097ff08d511e0bcdd8c12d65610fe5d7dd21441c"
+    },
+    "artifacts/stage6_clean_onset_3199_r900_preparation_20260925_v1/CLEAN3199_A_R900_DELAYED_S17_CARD_FINAL_REV3.json": {
+      "path": "artifacts/stage6_clean_onset_3199_r900_preparation_20260925_v1/CLEAN3199_A_R900_DELAYED_S17_CARD_FINAL_REV3.json",
+      "bytes": 11671,
+      "sha256": "c70a5f275fb7d60f9c7609395a969f4a4868fc84d6538c52fa4d17bebc5837fe"
+    },
+    "artifacts/stage6_clean_onset_3199_r900_preparation_20260925_v1/ENGINEERING_POSTRUN_INTEGRITY_REV3.json": {
+      "path": "artifacts/stage6_clean_onset_3199_r900_preparation_20260925_v1/ENGINEERING_POSTRUN_INTEGRITY_REV3.json",
+      "bytes": 3002,
+      "sha256": "1ff5418c4bed0c451c404530ea1bf6ae342381b597cbc248c05249f6ed85ddd5"
+    },
+    "artifacts/stage6_clean_onset_3199_r900_preparation_20260925_v1/SCIENTIFIC_POSTRUN_REVIEW_REV3.json": {
+      "path": "artifacts/stage6_clean_onset_3199_r900_preparation_20260925_v1/SCIENTIFIC_POSTRUN_REVIEW_REV3.json",
+      "bytes": 2969,
+      "sha256": "23c0b5112dcf621d5d628177cac959ef7ed15c4490e7ef152dac0c5e0f5b5aa7"
+    }
+  },
+  "output_hashes": {
+    "demand_A_materialized.rou.xml": {
+      "path": "artifacts/stage6_full_network_abc_phenomenon_validation_plan_20260926_v1/A_launch_package/data_binding/demand_A_materialized.rou.xml",
+      "bytes": 311089,
+      "sha256": "69c10dafc607f616585d36b16a00a4c7d4e82eefc5c28878ea8e9dfe3c16c769"
+    },
+    "vehicle_binding.csv": {
+      "path": "artifacts/stage6_full_network_abc_phenomenon_validation_plan_20260926_v1/A_launch_package/data_binding/vehicle_binding.csv",
+      "bytes": 378880,
+      "sha256": "ab66c8924502d0feee94fced33da3d851c895c9df9fec356be50a12ae95cdacc"
+    }
+  },
+  "R0_pre540": {
+    "M": {
+      "planned_desired_before_540": 503,
+      "actual_departed_before_540": 502,
+      "fcd_observed_identity_count_before_540": 502,
+      "fcd_rows_before_540": 34786,
+      "fcd_time_range_s": [
+        0,
+        539
+      ],
+      "scheduled_but_not_departed": [
+        "M_flow.502"
+      ]
+    },
+    "U": {
+      "planned_desired_before_540": 54,
+      "actual_departed_before_540": 54,
+      "fcd_observed_identity_count_before_540": 54,
+      "fcd_rows_before_540": 3066,
+      "fcd_time_range_s": [
+        0,
+        539
+      ],
+      "scheduled_but_not_departed": []
+    },
+    "X": {
+      "planned_desired_before_540": 27,
+      "actual_departed_before_540": 27,
+      "fcd_observed_identity_count_before_540": 27,
+      "fcd_rows_before_540": 1749,
+      "fcd_time_range_s": [
+        0,
+        539
+      ],
+      "scheduled_but_not_departed": []
+    }
+  },
+  "boundary_vehicle": {
+    "id": "M_flow.502",
+    "desired_depart_ms": 539148,
+    "R0_actual_depart_s": "540.00",
+    "implication": "scheduled before activation but inserted at activation boundary; retain as explicit post-run comparison item"
+  },
+  "open_gates": [
+    "Independent scientific review of cross-context R speedFactor vector source before any launch.",
+    "Post-A empirical pre-540 M/U/X insertion and trajectory comparison.",
+    "Do not rewrite RI3350 historical CONTROL_NOT_EVALUABLE status."
+  ],
+  "starts": {
+    "SUMO": 0,
+    "Guardian": 0,
+    "TraCI": 0,
+    "netconvert": 0
+  }
+}

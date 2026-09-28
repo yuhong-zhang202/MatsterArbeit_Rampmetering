@@ -1,0 +1,155 @@
+{
+  "card_id": "STAGE6_MINIMAL_BASELINE_DEMAND_LOCALIZATION_DRAFT_20260921_V1",
+  "status": "DRAFT_NOT_AUTHORIZED_NOT_MATERIALIZED",
+  "execution_authorized": false,
+  "scope": "exploratory uncontrolled baseline demand localization only",
+  "formal_experiment": false,
+  "prohibited_processes_now": [
+    "SUMO",
+    "netconvert",
+    "TraCI",
+    "sumo-gui"
+  ],
+  "source_bindings": {
+    "accepted_network": {
+      "path": "artifacts/stage6_targeted_validation_20260920_v1/engineering/build_attempts/TV_BUILD01/network.net.xml",
+      "sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca"
+    },
+    "A_demand_reference": {
+      "path": "artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_A_S17_attempt1/demand.rou.xml",
+      "sha256": "70d90d477c97141086b87cd248064c2c27c5965060e04fe9a2cbec67ec20e1cd"
+    },
+    "A_config_reference": {
+      "path": "artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_A_S17_attempt1/scenario.sumocfg",
+      "sha256": "793d6ecd387f5ed958eb9aff0f13f1628f64bf1422d28c5400db0ddc34ff3c7c"
+    },
+    "A_additional_reference": {
+      "path": "artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_A_S17_attempt1/scenario.add.xml",
+      "sha256": "4198c04ce39bdfb5b91d965f2ec2ca9c7de42777415d77f68e87d4b239a22c2b"
+    },
+    "locked_classifier_method": {
+      "path": "docs/methodology/FREEWAY_PROTECTABLE_STATE_EXPLORATORY_DEFINITION.md",
+      "sha256": "22fe22170c17ce74e261e717586a458a1b5173e9deabbee925bd4c1d606adfe7"
+    },
+    "reference_analyzer": {
+      "path": "data/processed/stage6_protectable_state_application_20260921_v1/apply_rule.py",
+      "sha256": "786376e2371909609612c5834a26bc1fd6c4cc6984607ab931796938deb935b3",
+      "role": "reference implementation only; future new-run analyzer package remains pending"
+    },
+    "reference_fixture_receipt": {
+      "path": "data/processed/stage6_protectable_state_application_20260921_v1/fixture_test_receipt.csv",
+      "sha256": "a802120a70cc521466b61d749bdadb1210e58312055322e8fc113168f176a412"
+    },
+    "SUMO_binary_reference": {
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+      "version": "1.26.0",
+      "sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+      "execution_binding": "must be reverified in final materialized card"
+    }
+  },
+  "fixed_scientific_inputs": {
+    "program": "A_OPEN_60G",
+    "demand_begin_s": 0,
+    "demand_end_s": 1500,
+    "simulation_begin_s": 0,
+    "simulation_end_s": 2700,
+    "step_s": 1,
+    "qRamp_veh_h": 720,
+    "R_number": 300,
+    "qUrban_veh_h": 360,
+    "U_number": 150,
+    "qX_veh_h": 180,
+    "X_number": 75,
+    "vehicle_model_and_parameters": "byte-identical to A reference",
+    "lane_change_parameters": "byte-identical to A reference",
+    "geometry_and_TLS": "byte-identical except future exclusive output paths; A_OPEN remains active",
+    "classifier": "byte-identical locked P/S/L/Candidate A/Candidate C definition"
+  },
+  "only_permitted_scientific_variations": [
+    "M_flow number according to the selected matrix row",
+    "seed 17 for localization or seed 23 for the one selected confirmation row"
+  ],
+  "sequential_rows": [
+    {
+      "point_id": "LOC_M3350_S17",
+      "qMain_nominal_veh_h": 3350,
+      "M_number": 1396,
+      "qMain_exact_veh_h": 3350.4,
+      "seed": 17
+    },
+    {
+      "point_id": "LOC_M3500_S17",
+      "qMain_nominal_veh_h": 3500,
+      "M_number": 1458,
+      "qMain_exact_veh_h": 3499.2,
+      "seed": 17
+    },
+    {
+      "point_id": "LOC_M3650_S17",
+      "qMain_nominal_veh_h": 3650,
+      "M_number": 1521,
+      "qMain_exact_veh_h": 3650.4,
+      "seed": 17
+    }
+  ],
+  "confirmation_rule": {
+    "seed": 23,
+    "demand": "exactly the earliest seed17 point passing BASELINE_CANDIDATE_GATE",
+    "maximum_confirmation_starts": 1,
+    "all_other_confirmation_rows_cancelled": true
+  },
+  "gates": {
+    "success": "locked P positive plus complete BASELINE_CANDIDATE_GATE; stop increasing demand",
+    "demand_realization": "all planned M/R/U/X inserted within demand period with exact identity accounting; all M complete by horizon",
+    "M_source_context": "compare requested versus actual M identity sets in locked 30 s bins; only exact bin-set agreement in all decision-relevant bins is PASS; a cross-bin delayed identity is M_SOURCE_CONTEXT_UNRESOLVED and stops the ladder",
+    "overload": "apply predeclared categorical OVERLOAD_REJECTION_GATE from plan",
+    "continue_to_next_qMain_only_if": "classifier result is complete NO_QUALIFYING_EVENT and raw completeness, demand realization, M source context, measurement, attribution context, artifact, and overload release gates all PASS",
+    "stop_without_higher_qMain": [
+      "STATE1_EXPLORATORY_RULE_POSITIVE whether suitable or unsuitable",
+      "ONSET_REFERENCE_UNRESOLVED",
+      "CANDIDATE_ATTRIBUTION_UNRESOLVED",
+      "M_SOURCE_CONTEXT_UNRESOLVED",
+      "NOT_EVALUABLE or LOCALIZATION_NOT_EVALUABLE",
+      "DEMAND_REALIZATION_FAIL",
+      "OVERLOADED_NOT_SUITABLE_BASELINE",
+      "material artifact or unresolved technical failure",
+      "hard-cap exhaustion",
+      "final L3 result of any kind"
+    ],
+    "P_positive_but_unsuitable_closeout": "stop demand increase; classify OVERLOADED_ONLY, BORDERLINE_ONLY, or LOCALIZATION_NOT_EVALUABLE according to the failed gate; do not release confirmation unless the complete candidate gate passed",
+    "urban_harm_link": "hard condition requires registered same-identity/time/location R-blocker/U-victim evidence and overlapping positive U insertion-delay interval or unfinished U victim; otherwise ambiguity is BORDERLINE_ONLY after P-positive or LOCALIZATION_NOT_EVALUABLE after P-negative"
+  },
+  "budget": {
+    "MAX_NEW_DEMAND_POINTS": 3,
+    "MAX_NEW_SUMO_STARTS_INCLUDING_FAILURES_AND_RETRIES": 4,
+    "MAX_CONFIRMATION_STARTS": 1,
+    "MAX_TECHNICAL_RETRIES": 0,
+    "AUTOMATIC_RETRY": false,
+    "EXPECTED_PER_START_WALL_S": 3,
+    "EXPECTED_PER_START_OUTPUT_BYTES": 75000000,
+    "FUTURE_OPERATIONAL_PER_START_MONITORED_S": 180,
+    "FUTURE_OPERATIONAL_PER_START_OBSERVED_BYTES": 1500000000,
+    "FUTURE_OPERATIONAL_AGGREGATE_MONITORED_S": 720,
+    "FUTURE_OPERATIONAL_AGGREGATE_OBSERVED_BYTES": 6000000000
+  },
+  "materialization": {
+    "performed": false,
+    "future_input_hashes": "PENDING",
+    "future_output_roots": "PENDING_EXCLUSIVE_PATHS",
+    "future_executable_binding": "PENDING",
+    "future_analyzer_binding": "PENDING",
+    "future_card_sha256": "PENDING"
+  },
+  "required_before_any_execution": [
+    "deterministic materialization in new exclusive paths",
+    "proof that only registered fields differ",
+    "engineering review",
+    "independent data review",
+    "independent scientific review",
+    "final exact-card hash",
+    "explicit user approval citing the final exact card"
+  ],
+  "formal_protocol_modified": false,
+  "O2_resolved": false,
+  "stage6_complete": false
+}

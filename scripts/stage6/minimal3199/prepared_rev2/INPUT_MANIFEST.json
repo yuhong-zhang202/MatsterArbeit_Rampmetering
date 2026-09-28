@@ -1,0 +1,166 @@
+{
+  "arm_inputs": {
+    "control": {
+      "additional": {
+        "path": "control/scenario.add.xml",
+        "sha256": "6bd3555c983db506800cab40524767229a3a03c94e893e0ccdc506f95690d8ef"
+      },
+      "demand": {
+        "path": "control/demand.rou.xml",
+        "sha256": "5df62660b9b9e2cc02734794ef2d361a3a97c30fa38a1e4fcbf550f0a2a1e405"
+      },
+      "network": {
+        "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+        "sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca"
+      },
+      "output_roles": {
+        "path": "control/output_roles.json",
+        "sha256": "3ff931a5f088180f6f37fbf8a782985a3a805c8c02b0cfdce3aa018df195b0f6"
+      },
+      "path_prefix": "control",
+      "sumocfg": {
+        "path": "control/scenario.sumocfg",
+        "sha256": "fdd6c179d330a63d4f4fee81883ec1f27dcaa340f19676a76f5aa70b98574740"
+      }
+    },
+    "treatment": {
+      "additional": {
+        "path": "treatment/scenario.add.xml",
+        "sha256": "4a80f635e4cd967c520ed466df3c2a8dfff5a68e8ad0b675473feb53c8509f16"
+      },
+      "demand": {
+        "path": "treatment/demand.rou.xml",
+        "sha256": "b57a0f3723be40bd1725a478f4ec7f57c1aacfbac0f2e57a5d94f31dce758c83"
+      },
+      "network": {
+        "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+        "sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca"
+      },
+      "output_roles": {
+        "path": "treatment/output_roles.json",
+        "sha256": "32056005f915229daebc8193a4e4aa0d80d54d9f0caa0f296014b7a72c05b996"
+      },
+      "path_prefix": "treatment",
+      "sumocfg": {
+        "path": "treatment/scenario.sumocfg",
+        "sha256": "5c42f7464f987eae27ae8abd2610463d38733f36c13a51c68e2f6c7c80aaa3c9"
+      }
+    }
+  },
+  "authorization": {
+    "execution_authorized": false,
+    "max_starts": 0,
+    "run_command": null,
+    "technical_retries": 0
+  },
+  "class_counts": {
+    "control": {
+      "M": {
+        "planned_count": 1333,
+        "status": "BOUND"
+      },
+      "R": {
+        "planned_count": 0,
+        "status": "PASS_ZERO"
+      },
+      "U": {
+        "planned_count": 0,
+        "status": "PASS_ZERO"
+      },
+      "X": {
+        "planned_count": 0,
+        "status": "PASS_ZERO"
+      }
+    },
+    "treatment": {
+      "M": {
+        "planned_count": 1333,
+        "status": "BOUND"
+      },
+      "R": {
+        "planned_count": 192,
+        "status": "BOUND"
+      },
+      "U": {
+        "planned_count": 0,
+        "status": "PASS_ZERO"
+      },
+      "X": {
+        "planned_count": 0,
+        "status": "PASS_ZERO"
+      }
+    }
+  },
+  "design_path": "artifacts/stage6_minimal_ramp_induced_breakdown_existence_test_20260924_v1/PLAN.md",
+  "design_plan_sha256": "06b0f04f1144ef8497b4d64906ae27b1377b544abd6e0639133c8d85a3fabc23",
+  "execution_authorized": false,
+  "fixed_conditions": {
+    "A": "A_OPEN",
+    "R_window_s": "[540,1500)",
+    "U": 0,
+    "X": 0,
+    "horizon_s": 2700,
+    "qMain_veh_per_h": 3199.2,
+    "qRamp_veh_per_h": {
+      "control": 0,
+      "treatment": 720
+    },
+    "seed": 17,
+    "step_s": 1
+  },
+  "locked_R04_reference": {
+    "path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r04_adapter/ri3350_control_adapter.py",
+    "sha256": "d423563e6f88a8e7356a041f7e28f8d7204055465d069db4173f453d96f7f490",
+    "status": "HASH_BOUND_REFERENCE_ONLY_NOT_ADAPTED_OR_EXECUTED"
+  },
+  "locked_method": {
+    "path": "docs/methodology/FREEWAY_PROTECTABLE_STATE_EXPLORATORY_DEFINITION.md",
+    "sha256": "22fe22170c17ce74e261e717586a458a1b5173e9deabbee925bd4c1d606adfe7"
+  },
+  "outputs": {
+    "control": "data/raw/stage6_minimal3199_existence_20260924_v1/MINIMAL3199_CTRL_S17/outputs",
+    "treatment": "data/raw/stage6_minimal3199_existence_20260924_v1/MINIMAL3199_R720_DELAYED_S17/outputs"
+  },
+  "pair_id": "MINIMAL3199_UX0_S17",
+  "run_ids": {
+    "control": "MINIMAL3199_CTRL_S17",
+    "treatment": "MINIMAL3199_R720_DELAYED_S17"
+  },
+  "runner": {
+    "path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+    "sha256": "34c39ec6e0082e76363fa7a07a7577e89c5264193d2e546201c8e022d3974659",
+    "status": "EXACT_CARD_PRELAUNCH_BINDING_PRESENT_LAUNCH_BLOCKED_BY_DRAFT_STATUS"
+  },
+  "runner_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+  "runner_sha256": "34c39ec6e0082e76363fa7a07a7577e89c5264193d2e546201c8e022d3974659",
+  "runtime": {
+    "reference_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/runtime_bindings/PAIR_3199_CTRL_S17_FINAL_REV1.json",
+    "reference_sha256": "caa9839b29dfdbfb7c1bb67487a24d21f8fc4bf613dad23c4db9844c7f986ea0",
+    "status": "READONLY_HOST_HASHES_VERIFIED_VERSION_EVIDENCE_PRIOR_PROBE_NO_SIMULATOR_PROCESS"
+  },
+  "schema_version": "1",
+  "source_hashes": {
+    "additional_template": "ed98832e73675aa95cb3cfc386c579db9525b942b2555e802f0a29324affc23e",
+    "network": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "output_roles_template": "5fe6d340f7196a2afd91ad56cd3c6ed419e32501110ce21076771446b4299ad3",
+    "plan": "06b0f04f1144ef8497b4d64906ae27b1377b544abd6e0639133c8d85a3fabc23",
+    "v5_manifest": "8d6a78b941ba26af3f0305b60c770a48c0c79925410d78c5d19a571cfe3b58cd",
+    "v5_receipt": "3a2531c3bbf3d9d69ac6c94f0f2663b67b47ffde7ce36c7ea0e1a943b74e32c9"
+  },
+  "source_vehicle_records": {
+    "M_source": "reviewed v5 COMMON_DEMAND_MANIFEST.shared_vehicle_records",
+    "R_source": "reviewed v5 COMMON_DEMAND_MANIFEST.treatment_only_vehicle_records",
+    "materialization": "explicit per-vehicle records globally sorted by integer depart_ms then id; no randomized flow expansion"
+  },
+  "status": "DRAFT_INPUTS_NOT_AUTHORIZED",
+  "validation_code": {
+    "adapter": {
+      "path": "scripts/stage6/minimal3199/minimal3199_adapter.py",
+      "sha256": "c397665019e0140fc9f616903d14a9baf09c02a52143eb33a2b3ca388249daa9"
+    },
+    "regression_tests": {
+      "path": "tests/test_minimal3199_adapter.py",
+      "sha256": "192ed3d46d1d138e3abb53249cc018b71d116dfb698ef19710d939c278a2837b"
+    }
+  }
+}

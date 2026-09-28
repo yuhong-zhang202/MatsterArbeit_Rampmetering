@@ -1,0 +1,14 @@
+# Engineering prelaunch review — repaired PAIR3199 treatment
+
+**Disposition: PASS for preparation and read-only preflight only. No execution authorization.**
+
+- Exact card: `artifacts/stage6_pair_3199_repaired_treatment_preparation_20260923_v1/PAIR_3199_R720_DELAYED_S17_CARD_DRAFT_NOT_AUTHORIZED_REV1.json`; SHA-256 `593cabd4c82a8b7b735e6ebc000d836bebab80a9c8962e20f2865a5bbf4dbed0`; `DRAFT_NOT_AUTHORIZED`; `execution_authorized=false`; `run_command=null`.
+- V5 demand input is byte-identical to the reviewed treatment input: `b8aae801122e918731fb8e05a9aa8ca94873f02282d7f1afee57777f6bea96ea`. The v5 invariant report records M/U/X 1,558/1,558 exact vehicle records and exactly `R_flow.0–191` as the 192 treatment-only identities.
+- Accepted network SHA-256 `887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca`. The remaining config/additional/output-role files bind this demand to a distinct output root `data/raw/stage6_bounded_pair_repaired_20260923_v1/PAIR_3199_R720_DELAYED_S17/outputs`; both root and output directory are absent.
+- Runtime sidecar SHA-256 `d1d86b35ffa0a55ccb4ed5ed0f4e654fc6a1ecfc0c722cdbd802ed0cf465932f` binds the recorded SUMO 1.26.0 binary, Python executable/packages, SUMO_HOME and local XSD. R02 runner SHA-256 `86faab71ea187be4f46fb89d2436fbfb679324297166c63ee376805c362fbdcf` is included in runtime and card provenance.
+- New run-specific resource proposal: 90 s and 75,000,000 decimal bytes; output monitoring at 100 ms with possible slight overshoot. This is `PROPOSED_NOT_AUTHORIZED`, not an acceptance or launch grant. Basis: prior full-horizon control 24.881003 s / 20,821,740 bytes; superseded treatment 19.921320 s / 21,066,503 bytes.
+- The R02 allowlist adds the exact new card path as a prelaunch-only binding. Prior mappings, including D-006's consumed card/reservation/output, are unchanged. New targeted tests verify exact-card preflight, and refusal on wrong approved hash, run ID, output path, runner binding and relocated card path.
+- R02 read-only preflight: `PREFLIGHT_PASS_NO_PROCESS_STARTED`; `launch_authorized=false`. Full runner tests: 22/22 PASS. v5 common-input checker against the new treatment demand: PASS, 1,558/1,558 full records and 192/192 treatment-only R identities. XML/JSON parse and all card/runtime/runner/input hash checks pass.
+- Post-run plan is preregistered: compare M/U/X trajectories before meaningful R exposure first; material unexplained pre-R divergence yields pair `NOT_EVALUABLE`; only a passing/evaluable pre-R gate permits post-R witness evaluation. No numeric threshold was added.
+
+The previous treatment remains `NOT_EVALUABLE`; no previous card/raw is reused. This engineering review covers binding/technical preparation, not scientific adequacy or data/provenance review. SUMO/TraCI/netconvert starts: 0/0/0.

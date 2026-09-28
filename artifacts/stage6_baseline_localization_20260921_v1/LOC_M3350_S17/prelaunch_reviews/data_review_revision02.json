@@ -1,0 +1,22 @@
+{
+  "status": "PASS_PRELAUNCH_DATA",
+  "card_sha256": "00e095217e6dd66581707439c81ba15204c69e12de7d0f4a5f38e0fc04607bed",
+  "input_manifest_sha256": "131f3b6c8506edbd3e905d5f3e737ecb770601e6e6fbb27c1e365f8504f22ffc",
+  "open_findings": {"blocker": 0, "major": 0, "required_minor": 0},
+  "review_scope": "fresh revision-2 read-only data and measurement prelaunch audit after revision-1 card/launcher interface correction",
+  "checks": {
+    "all_input_manifest_bindings_and_source_copy_assertions": "PASS; 40 bindings and six assertions",
+    "single_scientific_input_difference": "PASS; M_flow number 1333 to 1396 only",
+    "exact_scheduled_rates_and_planned_ids": "PASS; qMain 3350.4 and qRamp/qUrban/qX 720/360/180 veh/h; M/R/U/X 1396/300/150/75, total 1921",
+    "locked_classifier_and_analyzer_binding": "PASS; method hash matches and 22/22 offline fixtures pass",
+    "registered_output_roles_and_absence": "PASS; 18 XML roles plus SUMO logs; raw/processed future outputs absent",
+    "G0_G7_and_point1_stop_logic": "PASS; every terminal result stops, no automatic Point 2/3 or seed23",
+    "authorization_boundary": "PASS; user_approved=false and authorized_starts=0"
+  },
+  "post_run_accounting_limitation": "The bound classifier adapter does not itself emit the full class-specific M/R/U/X insertion-window, late/never-inserted, arrival, unfinished/last-location, and depart-delay ledger. Before any candidate or release label, G2/G3 require a separate independently generated and reconciled ledger following the exact fields, identity reconciliation, categorical pass criteria, and source-context rules in the localization plan sections 7 and 9 and engineering/gate_contract.json. If absent or unresolved, G2/G3 fail and G7 must not issue an acceptance or release label.",
+  "raw_data_analysis_performed": false,
+  "runtime_invocations": 0,
+  "sumo_starts": 0,
+  "netconvert_starts": 0,
+  "TraCI_sessions": 0
+}

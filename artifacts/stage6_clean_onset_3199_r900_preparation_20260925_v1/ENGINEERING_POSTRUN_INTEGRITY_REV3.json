@@ -1,0 +1,74 @@
+{
+  "card_path": "artifacts/stage6_clean_onset_3199_r900_preparation_20260925_v1/CLEAN3199_A_R900_DELAYED_S17_CARD_FINAL_REV3.json",
+  "card_sha256": "c70a5f275fb7d60f9c7609395a969f4a4868fc84d6538c52fa4d17bebc5837fe",
+  "confidence": "High",
+  "execution": {
+    "finished_at_utc": "2026-09-25T13:03:17.248155Z",
+    "guardian_pid": 55733,
+    "max_starts": 1,
+    "process_status": "PROCESS_EXITED",
+    "reservation_status": "FINAL_STATUS_HANDED_OFF",
+    "retry_allowed": false,
+    "return_code": 0,
+    "simulator_pid": 55734,
+    "started_at_utc": "2026-09-25T13:03:03.343138Z",
+    "stop_reason": null,
+    "wallclock_runtime_s": 13.905088
+  },
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "integrity": {
+    "arrived": 1573,
+    "execution_receipt_sha256": "53758c3c3a060605abf19f5d097ff08d511e0bcdd8c12d65610fe5d7dd21441c",
+    "inserted": 1573,
+    "manifest_actual_file_count": 25,
+    "manifest_entries_verified": "25/25 sizes and SHA-256",
+    "manifest_path": "data/raw/stage6_clean_onset_3199_ux0_20260925_v1/CLEAN3199_A_R900_DELAYED_S17/outputs/output_manifest.json",
+    "manifest_sha256": "5b98af3847d621511f7bf16a0f6bd7939edea920b8b2792f6793dbdb2425106a",
+    "output_directory_file_count": 27,
+    "required_output_roles": "18/18 present",
+    "reservation_output_manifest_sha256_matches": true,
+    "reservation_path": "artifacts/stage6_clean_onset_3199_r900_preparation_20260925_v1/consumption/CLEAN3199_A_R900_DELAYED_S17.json",
+    "reservation_sha256": "5234b0c2441426afcb20abda33fc5c97520100fe81f934d862443ce59db6fa4f",
+    "running": 0,
+    "simulation_final_step_s": 2700,
+    "staged_additional": {
+      "bytes": 3880,
+      "sha256": "b3796d28fc67f1c544d527c7d033057e7e884eb02c604368ad8eec57e6f663ac"
+    },
+    "staged_sumocfg": {
+      "bytes": 2788,
+      "sha256": "0d9233b1d76638de0f7e5f900f4012ae491232ea413fce5f86989a0e56e000d2"
+    },
+    "summary_final_step_s": 2699,
+    "sumo_error_log_bytes": 0,
+    "waiting": 0,
+    "xml_files_parsed": "19/19"
+  },
+  "note": "The single user-authorized run completed normally and its one-start authorization is consumed. No retry or other run.",
+  "raw_mutated_by_reviewer": false,
+  "resource_limits": {
+    "output_size_bytes": 75000000,
+    "output_trigger_reached": false,
+    "payload_bytes": 21847447,
+    "polling_interval_ms": 100,
+    "polling_overshoot_accepted": true,
+    "polling_telemetry": "Runner loop is configured at 100 ms; no persistent per-poll sample log exists, so measured poll cadence cannot be independently reconstructed. No resource trigger fired.",
+    "wallclock_s": 90,
+    "wallclock_trigger_reached": false
+  },
+  "reviewer_role": "simulation_engineer",
+  "run_id": "CLEAN3199_A_R900_DELAYED_S17",
+  "schema": "stage6_clean_onset_engineering_postrun_integrity_v1",
+  "scientific_outcome_interpreted": false,
+  "start_counts": {
+    "Guardian": 1,
+    "SUMO": 1,
+    "TraCI": 0,
+    "netconvert": 0
+  },
+  "status": "PASS_ENGINEERING_POSTRUN_INTEGRITY"
+}

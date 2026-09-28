@@ -1,0 +1,65 @@
+{
+  "M_vehicle_match": {
+    "control_path": "scripts/stage6/minimal3199/prepared_rev3/control/demand.rou.xml",
+    "exact": true,
+    "fields_checked": [
+      "id",
+      "depart",
+      "route",
+      "type",
+      "speedFactor",
+      "departLane",
+      "departPos",
+      "departSpeed",
+      "arrivalLane",
+      "arrivalPos",
+      "arrivalSpeed",
+      "line",
+      "color",
+      "personNumber",
+      "containerNumber"
+    ],
+    "identity_count": 1333
+  },
+  "R_ids": [
+    "R_flow.0",
+    "R_flow.239"
+  ],
+  "R_only_delta": true,
+  "design_plan_sha256": "63f84a0ee6de30e912c32cac2ab236e9dcfeff70598e2c68624411207de360ee",
+  "exact_depart_ties_count": 27,
+  "input_order": "global stable sort by SUMOTime integer milliseconds, then vehicle ID; retained control ordering except R insertion",
+  "input_sha256": {
+    "additional": "b3796d28fc67f1c544d527c7d033057e7e884eb02c604368ad8eec57e6f663ac",
+    "demand": "0843d22672927b980431348a56d3ffe68fce7090099254856c9920a5d87602bf",
+    "network": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "output_roles": "5218679efd9a74249a8d34d33cfe5403d768c7670a42473fc4e36d4bc7d3bd0b",
+    "sumocfg": "c59d73debe3550fef1159516e1336694159b0e525da9fde7f349686800712f9a"
+  },
+  "inputs": {
+    "additional": "inputs/treatment/scenario.add.xml",
+    "demand": "inputs/treatment/demand.rou.xml",
+    "network": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+    "output_roles": "inputs/treatment/output_roles.json",
+    "sumocfg": "inputs/treatment/scenario.sumocfg"
+  },
+  "output_directory": "data/raw/stage6_clean_onset_3199_ux0_20260925_v1/CLEAN3199_A_R900_DELAYED_S17/outputs",
+  "output_path_status": "ABSENT_PARENT_ABSENT_NO_DIRECTORY_CREATED",
+  "pair_id": "PAIR_3199_S17",
+  "planned_counts": {
+    "M": 1333,
+    "R": 240,
+    "U": 0,
+    "X": 0
+  },
+  "run_id": "CLEAN3199_A_R900_DELAYED_S17",
+  "schema": "clean_onset_candidate_a_input_manifest_v1",
+  "source_hashes": {
+    "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev20/inputs/treatment/r900_vehicle_source.rou.xml": "a6ae2649fe93c61460a52303b6358985c14270ce5ac5af02460af53880965851",
+    "scripts/stage6/minimal3199/prepared_rev3/control/demand.rou.xml": "5df62660b9b9e2cc02734794ef2d361a3a97c30fa38a1e4fcbf550f0a2a1e405",
+    "scripts/stage6/minimal3199/prepared_rev3/control/output_roles.json": "3ff931a5f088180f6f37fbf8a782985a3a805c8c02b0cfdce3aa018df195b0f6",
+    "scripts/stage6/minimal3199/prepared_rev3/control/scenario.add.xml": "6bd3555c983db506800cab40524767229a3a03c94e893e0ccdc506f95690d8ef",
+    "scripts/stage6/minimal3199/prepared_rev3/control/scenario.sumocfg": "a6be97aba1ab00d6f17ae15788d45765d0a0efca7e297cc1423e4fb720853b1c"
+  }
+}

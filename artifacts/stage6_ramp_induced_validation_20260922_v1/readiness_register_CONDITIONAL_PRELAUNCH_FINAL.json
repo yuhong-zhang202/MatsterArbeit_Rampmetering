@@ -1,0 +1,61 @@
+{
+  "schema_version": "3",
+  "package_id": "stage6_ramp_induced_validation_20260922_v1",
+  "run_id": "RI3350_CTRL_S17_attempt1",
+  "status": "PRELAUNCH_GATES_PASS_CONDITIONAL_AUTHORIZATION_SATISFIED",
+  "supersedes_current_status_in": [
+    "readiness_register.json",
+    "readiness_register_CONDITIONAL_PRELAUNCH_REV2.json"
+  ],
+  "starts_consumed": 0,
+  "technical_retries": 0,
+  "progression_allowed": false,
+  "resource_contract": {
+    "scope": "this exact run only",
+    "wallclock_stop_trigger_s": 180,
+    "output_size_stop_trigger_bytes_decimal": 300000000,
+    "poll_interval_ms": 100,
+    "output_overshoot_accepted": true,
+    "strict_disk_quota": false,
+    "source": "user conditional authorization in current task"
+  },
+  "final_review": {
+    "path": "FINAL_PRELAUNCH_REVIEW_REV2.md",
+    "sha256": "4ae1f4522773911d8ed55e298d35fc777bec707252e385a0b86c01776d19f489",
+    "engineering": {"status": "PASS", "blocker": 0, "major": 0, "required_minor": 0},
+    "data": {"status": "PASS_STATIC_PRODUCTION_MAPPING", "blocker": 0, "major": 0, "required_minor": 0},
+    "scientific": {"status": "PASS_SCIENTIFIC_PRELAUNCH", "blocker": 0, "major": 0, "required_minor": 0}
+  },
+  "checks": {
+    "R01": "PASS_BOUNDED_STATIC_INPUT_HASH_VALIDATION",
+    "R02": "PASS_INDEPENDENT_ENGINEERING_REVIEW_AND_23_FIXTURES",
+    "R03": "PLAN_AND_FIXTURES_PASS; ACTUAL_PAIRING_DEFERRED_UNTIL_TRANSITION_RAW",
+    "R04": "PASS_STATIC_HASH_BOUND_LOCKED_SOURCE_MAPPING_AND_40_FIXTURES; REAL_RAW_APPLICATION_POST_RUN",
+    "R05": "FIXTURES_PASS; REAL_RAW_APPLICATION_POST_RUN",
+    "R06": "NOT_APPLICABLE_TO_R0_CONTROL; NO_R_EXPOSURE_INFERRED",
+    "R07_G6": "UNKNOWN_ALLOWED_FOR_THIS_CONTROL_ONLY; NOT_PASS",
+    "R09_ENGINEERING": "PASS_0_0_0",
+    "R09_DATA": "PASS_0_0_0",
+    "R09_SCIENTIFIC": "PASS_0_0_0"
+  },
+  "authorization": {
+    "source": "current user message with conditional execution authorization",
+    "authorized_run_id": "RI3350_CTRL_S17_attempt1",
+    "max_sumo_starts": 1,
+    "technical_retries": 0,
+    "condition": "All final engineering, data, and scientific reviews pass 0/0/0",
+    "condition_met": true,
+    "card_and_preflight": "Create one new final exact card, compute and bind its exact SHA-256, run read-only preflight, then launch only if preflight passes",
+    "after_run": "Complete post-run reviews, then STOP"
+  },
+  "prohibited": [
+    "transition_run",
+    "seed23",
+    "B_or_C_control",
+    "technical_retry",
+    "any_other_SUMO_start",
+    "classifier_or_scientific_input_change",
+    "formal_protocol_change",
+    "mark_G6_PASS"
+  ]
+}

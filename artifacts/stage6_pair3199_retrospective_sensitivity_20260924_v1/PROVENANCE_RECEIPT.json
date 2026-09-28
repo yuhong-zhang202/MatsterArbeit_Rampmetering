@@ -1,0 +1,63 @@
+{
+  "receipt_type": "STAGE6_PAIR3199_RETROSPECTIVE_EXPLORATORY_SENSITIVITY_ANALYSIS",
+  "date": "2026-09-24",
+  "required_label": "RETROSPECTIVE_EXPLORATORY_SENSITIVITY_ANALYSIS",
+  "final_disposition": "NOT_EVALUABLE",
+  "stop_gate": "B_U_SOURCE_INSERTION_RANDOMNESS_ALTERNATIVE_UNRESOLVED",
+  "adoption_scope": "Stage 6 exploratory sensitivity analysis for PAIR3199_CTRL_S17 and PAIR3199_R720_DELAYED_S17_REPAIRED_V5_ATTEMPT1 only",
+  "decision_record": "D-007",
+  "review_disposition": {
+    "gate_a": "PASS",
+    "gate_b_m": "PASS",
+    "gate_b_u": "NOT_CLEARED",
+    "gate_b_x": "MATCHED_DESCRIPTIVELY_BUT_NOT_VERIFIED_OUTSIDE_TREATMENT_PATHWAY",
+    "scientific_review": "STOP_NOT_EVALUABLE",
+    "blocker_major_required_minor": "0/1/0",
+    "confidence": "High for gate disposition; Moderate for U physical mechanism"
+  },
+  "analysis_plan_sha256": "078deb0f8194d9679313bcbc3ce90a57152a6e600e957c47b6b8ce264d808dbf",
+  "files_sha256": {
+    "docs/methodology/STAGE6_EXPLORATORY_RAMP_INDUCED_WITNESS_CONTRACT_AMENDMENT_V1.md": "89a8c30df302620a5d7d2fa1e6fb7f4cde350a7321ba270005a6d008605ed719",
+    "docs/methodology/STAGE6_EXPLORATORY_RAMP_INDUCED_WITNESS_CONTRACT.md": "958890a7dd017110787a85d77ebfa3e6dac2b7d862f0fd91f6bafb7cf1738d9a",
+    "artifacts/stage6_pair3199_retrospective_sensitivity_20260924_v1/ANALYSIS_PLAN_FROZEN.md": "078deb0f8194d9679313bcbc3ce90a57152a6e600e957c47b6b8ce264d808dbf",
+    "artifacts/stage6_pair3199_retrospective_sensitivity_20260924_v1/ENGINEERING_GATE_REVIEW.md": "5b2bfc76226c9baa3efa285e2fc01f40deef2fa5e927efe5836fbe8091c01ed4",
+    "artifacts/stage6_pair3199_retrospective_sensitivity_20260924_v1/SCIENTIFIC_GATE_REVIEW.md": "6828f5da3b691970d25d2134a4a9b2dd326f6594802d5992f108a6d06aa43603",
+    "artifacts/stage6_pair3199_retrospective_sensitivity_20260924_v1/RETROSPECTIVE_SENSITIVITY_ANALYSIS_REPORT.md": "5999cfdc2617e72eacef9d5dcfc03e6a8c1456f68266a4b787cb53534970a5f4",
+    "data/processed/stage6_pair3199_retrospective_sensitivity_20260924_v1/gates_ab/GATE_A_B_DATA_REVIEW.md": "c37b8958a7020d966453df28ad036f7bf0e199c4f8f2d39389cebf4c56a1c4dd",
+    "data/processed/stage6_pair3199_retrospective_sensitivity_20260924_v1/gates_ab/gate_ab_summary.json": "68936637286a135200bd851e4a989a2a73bb2a7392fa4ee0cabfacf75eccc4ed",
+    "data/processed/stage6_pair3199_retrospective_sensitivity_20260924_v1/gates_ab/U_divergences_B.csv": "27429231aa15472df3b25038379069393cbd2d61fa0831265bc4a7e133a9e405",
+    "data/processed/stage6_pair3199_retrospective_sensitivity_20260924_v1/gates_ab/LIFECYCLE_COMPLETENESS_SUPPLEMENT.md": "9b78c749312556a95509c6764bff1160899909e303780e9b05caf7bef234d82f",
+    "data/processed/stage6_pair3199_retrospective_sensitivity_20260924_v1/gates_ab/PROVENANCE_RECEIPT.json": "d4f50386aec97f39d91d97ab7bcb403321f2270695dafe4c91fad84aecf17118"
+  },
+  "sequence_deviation": {
+    "occurred": true,
+    "description": "Engineering reviewer inspected treatment records labeled 591-659 and detector coverage before independent Gate A/B signoffs.",
+    "impact_assessment": "Disclosed; no Gate C disposition was adopted from this inspection. It did not alter Gate A/B data or scientific disposition. No t>=660 outcome was opened.",
+    "data_analyst_opened_label_591_or_later": false,
+    "scientific_reviewer_inspected_gate_c_or_gate_d": false
+  },
+  "outcome_boundary": {
+    "formal_gate_c_evaluation": false,
+    "gate_d_opened": false,
+    "t_ge_660_p_s_l_candidate_a_c_or_witness_analysis": false,
+    "post_exposure_m_deterioration_analysis": false
+  },
+  "process_counts": {
+    "sumo_starts": 0,
+    "traci_starts": 0,
+    "netconvert_starts": 0
+  },
+  "preservation": {
+    "raw_modified": false,
+    "parent_contract_modified": false,
+    "historical_not_evaluable_changed": false,
+    "threshold_or_event_window_modified": false,
+    "formal_protocol_modified": false,
+    "b_or_c_prepared_or_run": false
+  },
+  "documentation_updated": [
+    "docs/DECISIONS.md",
+    "docs/PROJECT_STATE.md",
+    "docs/WORKLOG.md"
+  ]
+}

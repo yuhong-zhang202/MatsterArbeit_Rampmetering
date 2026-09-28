@@ -1,0 +1,47 @@
+{
+  "schema_version": 1,
+  "correction_id": "stage6-content-correction-20260926-v1",
+  "source_receipt": "data/processed/memory_incremental_stage6-partial-pairability-20260926-v1/receipt.json",
+  "source_receipt_sha256": "2bfd7df3c2305f00afc953fa8a4d134f2d741a1a4e89b9c917246b53cf784ea2",
+  "project": "Masterarbeit-Ramp-Metering",
+  "service_id": "ramp-metering-formal-memory-v1",
+  "volume": "tdai-ramp-metering-memory-v1",
+  "team_id": "team-masterarbeit-ramp-metering",
+  "agent_id": "agent-project-memory",
+  "user_id": "user-yuhong-zhang",
+  "expected_before_layer_hashes": {
+    "l0": "b513c4577d645030826d5ee4bf286d7da1ec69ccf637ff7a9cb64765790a6b36",
+    "l1": "1eb00e18cf093f309d38d91978721ccad8c5187f42bf5afcbdf62208aa7ce452",
+    "l2": "6ec13d55564c29cc97fc1a70cd30ffe285edd03522a692d4d943e9f353d8e010",
+    "l2_documents": "500d10c7b33454607a71cbe35402b06bfd097b89a2bea8c91eef680584207d58",
+    "l3": "2b5d157de4a2bc035cc0d8edab3c73f413c36e1a07b5fe5c0440cafcdb1eb149"
+  },
+  "atomic": {
+    "id": "m_1790425813551_503da35b",
+    "expected_version": 0,
+    "old_content_sha256": "576dfe8dce6400779de8207a271651d5bb108b9fcdc41c24d0f9741aca54e4e3",
+    "new_content": "The user reviewed and approved the incremental project-memory update for stage 6 partial pairability on 2026-09-26, confirming the preservation of approval levels, evidence boundaries, superseded state, and uncertainty exactly; the approved update was written to Tencent MemoryCore and verified by a fresh network-disabled readback.",
+    "new_content_sha256": "126ef8b51f4d949a67f0c417e7de5e912631abe0c78a0987c113cc4a2e6aa67f",
+    "background": "我在和用户做增量项目记忆阶段6审查和更新"
+  },
+  "scenario": {
+    "path": "Project-Memory-Management-Stage6.md",
+    "expected_version": 0,
+    "old_content_sha256": "c0adf8800e2cd6eaa16d9579abb370164f767f201d42dc876bb29980088a2b61",
+    "new_body_path": "SCENARIO_BODY_CORRECTED.md",
+    "new_body_sha256": "536951e1cc4b1d26734540c0f5637c3149ded04ddfd3bf95549ae67ff5017fe1"
+  },
+  "core": {
+    "expected_version": 0,
+    "old_content_sha256": "750018619d885e46a9a6076280078eb0e7dba3824448c82bb09b5a69e2da2fe3",
+    "new_content_path": "CORE_CORRECTED.md",
+    "new_content_sha256": "4a466d42643a5c8448654a35ccd4a6cbed747f0b2fff9d58e16a4eb4a1b05203"
+  },
+  "forbidden_error_phrases": [
+    "without writing to the Tencent MemoryCore",
+    "without writing to the Tencent MemoryCore system",
+    "candidate only",
+    "The last confirmed write was `stage2-closeout-20260910-v1`"
+  ],
+  "no_model_calls": true
+}

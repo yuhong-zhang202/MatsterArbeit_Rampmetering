@@ -1,0 +1,123 @@
+{
+  "SUMO_HOME": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo",
+  "actual_calls": {
+    "GUI": 0,
+    "SUMO": 0,
+    "TraCI": 0,
+    "netconvert": 1
+  },
+  "approval": {
+    "bytes": 1160,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/SG6_BUILD_user_approval.json",
+    "sha256": "1e64e23b9ac79c005c77677ffde93ffd0020ddafc71740b8b6086d195f48d658"
+  },
+  "argv": [
+    "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/netconvert",
+    "-c",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/network_inputs/candidate.schema_revision02.netccfg"
+  ],
+  "automatic_retry": false,
+  "card": {
+    "bytes": 14902,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/SG6_BUILD_request_card_revision03.json",
+    "sha256": "33ee32943e8420a38514bd67d372204c7f019569187ed95202c8daf4961095bd"
+  },
+  "compiled_gates": [
+    {
+      "gate": "No runtime release from process exit0 alone",
+      "reason": "BUILD01 timeout; no compiled file; runtime remains blocked and compiled file was not edited",
+      "status": "PASS_ENFORCED"
+    },
+    {
+      "gate": "Independent compiled geometry/requests/permission/domain/detector/path-storage review",
+      "reason": "BUILD01 timeout; no compiled file; runtime remains blocked and compiled file was not edited",
+      "status": "NOT_EVALUABLE_NO_COMPILED_NETWORK"
+    },
+    {
+      "gate": "Urban/TLS semantic invariants; three entry movements nonconflicting; aux0 outgoing0",
+      "reason": "BUILD01 timeout; no compiled file; runtime remains blocked and compiled file was not edited",
+      "status": "NOT_EVALUABLE_NO_COMPILED_NETWORK"
+    },
+    {
+      "gate": "Aux usable length[280,300]m and downstream>400m; no clipping",
+      "reason": "BUILD01 timeout; no compiled file; runtime remains blocked and compiled file was not edited",
+      "status": "NOT_EVALUABLE_NO_COMPILED_NETWORK"
+    },
+    {
+      "gate": "No manual compiled XML edits",
+      "reason": "BUILD01 timeout; no compiled file; runtime remains blocked and compiled file was not edited",
+      "status": "PASS_ENFORCED"
+    },
+    {
+      "gate": "Finalize additional endPos and all runtime hashes only after acceptance",
+      "reason": "BUILD01 timeout; no compiled file; runtime remains blocked and compiled file was not edited",
+      "status": "NOT_EVALUABLE_NO_COMPILED_NETWORK"
+    }
+  ],
+  "compiled_network": {
+    "exists": false,
+    "sha256": null
+  },
+  "cwd": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering",
+  "diagnosis": "Unknown. Process did not emit stdout/stderr or network before monitored timeout. No evidence supports attributing cause to geometry, TLS, permission, macOS startup, or other environment issue. No second process was started for diagnosis.",
+  "execution_receipt": {
+    "bytes": 2776,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_attempts/BUILD01/build_receipt.json",
+    "sha256": "902956e03e04e516da3e43725205d220fa8a4b6249572782339e4c728ee7e7f3"
+  },
+  "files": [
+    {
+      "bytes": 2776,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_attempts/BUILD01/build_receipt.json",
+      "sha256": "902956e03e04e516da3e43725205d220fa8a4b6249572782339e4c728ee7e7f3"
+    },
+    {
+      "bytes": 0,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_attempts/BUILD01/netconvert.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_attempts/BUILD01/netconvert.stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 2319,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_attempts/BUILD01/reservation.json",
+      "sha256": "6117c58d05f2e34b75a93ba8beefb568b3530b4fd180922f9caa539b03f3a68d"
+    },
+    {
+      "bytes": 93,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_attempts/BUILD01/started.json",
+      "sha256": "3e99c41b62274061095678e445f9f138a67a92105fdfa867412d1ed23230ec81"
+    }
+  ],
+  "final_build_directory_bytes": 5188,
+  "historical_lower_bounds_after_this_attempt": {
+    "GUI": "unknown",
+    "SUMO": 25,
+    "TraCI": 1,
+    "netconvert": 13,
+    "scope": "previous reconciled specified evidence plus this BUILD01, not lifetime total"
+  },
+  "next_gate": "No second build under this consumed card. Any changed build budget/inputs/runner or diagnostic invocation requires a separately reviewed plan and authorization. SUMO remains separately blocked.",
+  "observed_timeout_trigger_s": 30,
+  "output_stop_bytes": 100000000,
+  "peak_bytes_before_receipt": 2412,
+  "post_termination_pid_check": "pid_absent",
+  "preflight": {
+    "bytes": 17232,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/BUILD01_actual_preflight_receipt.json",
+    "sha256": "cc427ab7477eb3e5c4a0e440a877860d6dc86d87af6a8f3b2d36341cf249ad01"
+  },
+  "process_pid": 21722,
+  "recorded_at_utc": "2026-09-19T19:33:59.532483+00:00",
+  "remaining_netconvert_starts": 0,
+  "returncode": -15,
+  "scientific_implication": "No candidate traffic behavior observed; specific_obstacle remains unresolved; no revision of P1 scientific conclusions follows from this timeout.",
+  "status": "BUILD_FAILED_TIMEOUT_STOPPED_NO_RETRY",
+  "stderr_bytes": 0,
+  "stdout_bytes": 0,
+  "timeout_trigger_lag_plus_termination_s": 0.03202583300299011,
+  "wallclock_s": 30.03202583300299
+}

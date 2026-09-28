@@ -1,0 +1,52 @@
+{
+  "assessment": {
+    "M_identity_schedule_speedFactor": {
+      "count": 1396,
+      "identity_matched_speedFactors": "1396/1396",
+      "last_departure_ms": 1498230,
+      "schedule_offset_ms": 1074
+    },
+    "fixed_speedFactor_vector": "Acceptable as a hash-bound common vector for this conditional exploratory comparison; not evidence of an independently sampled or representative U=X=0 seed17 RNG realization.",
+    "output_bindings": {
+      "additional_destinations": 12,
+      "required_output_roles": 18,
+      "sumocfg_targets": 8,
+      "under_same_absent_output_directory": true,
+      "unique_configured_paths": 20
+    },
+    "resource_contract": {
+      "output_size_bytes_decimal": 60000000,
+      "polling_ms": 100,
+      "slight_overshoot_accepted": true,
+      "wallclock_s": 90
+    },
+    "treatment_boundary": "Future treatment must bind this exact common-M manifest and independently verify all M identities and attributes. This review does not classify the control or release treatment."
+  },
+  "card_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev7/MINIMAL3350_CTRL_S17_CARD_FINAL.json",
+  "card_sha256": "c488ab86fd29799bba1aea882cae2aad908cd2e0b45ae8cef01ad13b7a9385f4",
+  "confidence": {
+    "control_design_and_card_alignment": "High",
+    "interpretation_beyond_fixed_M_vector_and_seed": "Moderate"
+  },
+  "data_provenance_review_sha256": "dcbfedc3840ab78994080aec81498b3090cb17f58e078a3e2306e3d109e8535d",
+  "date": "2026-09-24",
+  "disposition": "PASS_PRELAUNCH",
+  "engineering_review_sha256": "8bd34fd64615d6c1008d3f8b54ce10af476306016c37c2de24fded6dba290cd7",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "process_starts": {
+    "guardian": 0,
+    "netconvert": 0,
+    "sumo": 0,
+    "traci": 0
+  },
+  "review_id": "MINIMAL3350_CTRL_S17_SCIENTIFIC_PRELAUNCH_REV7",
+  "review_provenance": "Disposition and findings recorded from the independent reviewer read-only response; reviewer authored no project files.",
+  "reviewer": "independent project-scoped scientific_reviewer (read-only)",
+  "run_id": "MINIMAL3350_CTRL_S17",
+  "schema": "stage6_minimal3350_scientific_prelaunch_review_v1",
+  "scope": "qMain=3350.4, M=1396, seed17, A_OPEN, R=U=X=0; control only. Treatment is conditional on the control post-run category and its separate exact-card review."
+}

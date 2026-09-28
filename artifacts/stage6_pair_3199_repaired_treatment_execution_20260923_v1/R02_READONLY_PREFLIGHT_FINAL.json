@@ -1,0 +1,41 @@
+{
+  "status": "PREFLIGHT_PASS_NO_PROCESS_STARTED",
+  "run_id": "PAIR3199_R720_DELAYED_S17_REPAIRED_V5_ATTEMPT1",
+  "approved_card_sha256": "0801dc1e15ade92babe33640d521ba831174210a200b9e5a66aaeb3bd472e0ef",
+  "output_directory": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_bounded_pair_repaired_20260923_v2/PAIR3199_R720_DELAYED_S17_REPAIRED_V5_ATTEMPT1/outputs",
+  "binary_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+  "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+  "binary_version": "1.26.0",
+  "sumo_home": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo",
+  "additional_schema_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+  "additional_schema_sha256": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e",
+  "python_executable": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+  "python_version": "3.13.0",
+  "guardian_runner_sha256": "0961912a46464eb9757ab245c26577e8f1de0985534f34db04a41a4dac45f9c8",
+  "output_role_source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_pair_3199_repaired_treatment_execution_20260923_v1/inputs/treatment/output_roles.json",
+  "output_role_source_sha256": "3c69a6e38184683455d2103c35a80405877a8b015261ccf13891706842b36ee3",
+  "max_starts": 1,
+  "technical_retries": 0,
+  "simulator_process_started": false,
+  "launch_authorized": true,
+  "launch_review_gate": {
+    "status": "WAITING_FOR_REQUIRED_REVIEWS",
+    "reviews": {
+      "engineering": {
+        "status": "MISSING",
+        "path": "artifacts/stage6_pair_3199_repaired_treatment_execution_20260923_v1/FINAL_ENGINEERING_PRELAUNCH_REVIEW.json"
+      },
+      "data_provenance": {
+        "status": "MISSING",
+        "path": "artifacts/stage6_pair_3199_repaired_treatment_execution_20260923_v1/FINAL_DATA_PROVENANCE_PRELAUNCH_REVIEW.json"
+      },
+      "scientific": {
+        "status": "MISSING",
+        "path": "artifacts/stage6_pair_3199_repaired_treatment_execution_20260923_v1/FINAL_SCIENTIFIC_PRELAUNCH_REVIEW.json"
+      }
+    },
+    "review_binding_path": "artifacts/stage6_pair_3199_repaired_treatment_execution_20260923_v1/FINAL_PRELAUNCH_REVIEW_BINDING.json",
+    "review_binding_status": "PENDING_REVIEWS"
+  },
+  "launchable_now": false
+}

@@ -1,0 +1,181 @@
+{
+  "attempt_id": "MINIMAL3350_E1_R900_DELAYED_S17",
+  "authorization_consumed": true,
+  "created_by": "engineering post-failure disposition; read-only diagnosis with artifact-only receipt write",
+  "disposition": "ENGINEERING_FAILURE_PRE_TRAFFIC_RAW_NOT_EVALUABLE",
+  "execution": {
+    "card_path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev17/MINIMAL3350_E1_R900_DELAYED_S17_CARD_FINAL_REV1.json",
+    "card_sha256": "f0387580053ad6b862ec2874a4eb55e5c9a468a3f23db561af40d6c9e6499908",
+    "consumption_receipt_path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev17/r02_single_start/consumption/MINIMAL3350_E1_R900_DELAYED_S17.json",
+    "consumption_receipt_sha256": "17f21d690985069be7c893e90da33ccabc4127382d5a8a88416a38bae74a8c16",
+    "execution_receipt_path": "data/raw/stage6_minimal3350_ux0_20260925_v17/MINIMAL3350_E1_R900_DELAYED_S17/outputs/execution_receipt.json",
+    "execution_receipt_sha256": "3d4b795ecebe38cc1dc01749b2f2c2c7fd25a9afdbdc7f732c149aeded27c62b",
+    "finished_at_utc": "2026-09-24T23:36:56.994351Z",
+    "measured_output_directory_bytes_including_manifest_receipt": 33348,
+    "measured_payload_bytes": 26800,
+    "output_manifest_path": "data/raw/stage6_minimal3350_ux0_20260925_v17/MINIMAL3350_E1_R900_DELAYED_S17/outputs/output_manifest.json",
+    "output_manifest_sha256": "d7d70dc04722bdce1d510961393c79a7095a9e1d658fd3353e57e011d8cca707",
+    "output_manifest_size_bytes": 6050,
+    "resource_contract": {
+      "output_size_limit_bytes_decimal": 100000000,
+      "overshoot_accepted": true,
+      "polling_interval_ms": 100,
+      "wallclock_limit_s": 120
+    },
+    "return_code": 1,
+    "runner_path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev17/r02_single_start/runner.py",
+    "runner_sha256": "8145b865846662c6189a2307a6cf38b1c19295293ae930830bfc8c8c61428eed",
+    "started_at_utc": "2026-09-24T23:36:33.470893Z",
+    "stop_reason": null,
+    "wallclock_runtime_s": 23.522957
+  },
+  "preservation": "No file under data/raw/ was written, renamed, deleted, or modified by this engineering disposition. No simulator or related process was run.",
+  "raw_inventory": {
+    "files": {
+      "execution_receipt.json": {
+        "bytes": 498,
+        "sha256": "3d4b795ecebe38cc1dc01749b2f2c2c7fd25a9afdbdc7f732c149aeded27c62b"
+      },
+      "fcd.xml": {
+        "bytes": 3183,
+        "sha256": "ef488e7ee4a94f01202af787154fb84316235abb66a8a15ed87f6257b9e2bdaf"
+      },
+      "guardian_stderr.log": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "lanechanges.xml": {
+        "bytes": 3063,
+        "sha256": "409a034ca692da7421f7892df12f30c9dff272de0c343131ccfec8e709546f6c"
+      },
+      "output_manifest.json": {
+        "bytes": 6050,
+        "sha256": "d7d70dc04722bdce1d510961393c79a7095a9e1d658fd3353e57e011d8cca707"
+      },
+      "queues.xml": {
+        "bytes": 3189,
+        "sha256": "c54c9f525477fa223f74df3b132c6bf9a94dfd0cd8c46bebf892a4ad8c0ebca4"
+      },
+      "runner_stderr.log": {
+        "bytes": 249,
+        "sha256": "27170fc40d47672cbfca2c01060e1802c36bf2162db8ca8c175185e100ba6097"
+      },
+      "runner_stdout.log": {
+        "bytes": 0,
+        "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+      },
+      "scenario_control.add.xml": {
+        "bytes": 3868,
+        "sha256": "28a7bd6afbe5c0a151ce96dabfabf7aeaf5885ba38b6add36da7e1faa258369c"
+      },
+      "scenario_control.sumocfg": {
+        "bytes": 2768,
+        "sha256": "f2883c2ad355a8a604fd20610380d0f648e175afcf8228b5f3b407bd149b851f"
+      },
+      "sumo.log": {
+        "bytes": 686,
+        "sha256": "417ef83838421ffdb52e5e38f61992a02142aab10ea7dd921792469b73c87a9c"
+      },
+      "sumo_error.log": {
+        "bytes": 249,
+        "sha256": "27170fc40d47672cbfca2c01060e1802c36bf2162db8ca8c175185e100ba6097"
+      },
+      "sumo_summary.xml": {
+        "bytes": 3181,
+        "sha256": "ca8b25008042f8d95fc37e36e571d7736f4f9d3ba1b08860d4157e0d0998565b"
+      },
+      "tripinfo.xml": {
+        "bytes": 3186,
+        "sha256": "ca1d657965d842878dd8a9c63478e0ed9ac2b475bc7f33c71e3948dae4ef57e9"
+      },
+      "vehroute.xml": {
+        "bytes": 3178,
+        "sha256": "1f5171173bc30c7da04d2d1ef640bdb70e885a1f68a0b0135cb6421faaeb1f1c"
+      }
+    },
+    "inspection_only_no_writes": true,
+    "interpretation": "Only small failure/placeholder outputs and logs exist. SUMO aborted during additional-file loading; there is no complete traffic raw suitable for scientific evaluation.",
+    "manifest_actual_file_count": 13,
+    "missing_required_roles": [
+      "p1_main_down_200_l0.xml",
+      "p1_main_down_200_l1.xml",
+      "p1_main_down_20_l0.xml",
+      "p1_main_down_20_l1.xml",
+      "p1_main_up_1300_l0.xml",
+      "p1_main_up_1300_l1.xml",
+      "p1_merge_section_20_l0.xml",
+      "p1_merge_section_20_l1.xml",
+      "p1_merge_section_20_l2.xml",
+      "ramp_storage_e2.xml",
+      "shared_boundary_e2.xml",
+      "tls_states.xml"
+    ],
+    "path": "data/raw/stage6_minimal3350_ux0_20260925_v17/MINIMAL3350_E1_R900_DELAYED_S17/outputs"
+  },
+  "retry_allowed": false,
+  "root_cause": {
+    "direct_log_evidence": "Loading net-file from '/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml' ... done (2ms).\nLoading additional-files from '/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev14/inputs/treatment/scenario.add.xml' ...\nError: Could not build output file '/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/shared_boundary_e2.xml' (No such file or directory).\nLoading of additional-files failed.\nQuitting (on error).",
+    "executed_config_sha256": "f2883c2ad355a8a604fd20610380d0f648e175afcf8228b5f3b407bd149b851f",
+    "old_additional_detector_target_count": 12,
+    "old_additional_detector_targets_unique": [
+      "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/p1_main_down_200_l0.xml",
+      "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/p1_main_down_200_l1.xml",
+      "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/p1_main_down_20_l0.xml",
+      "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/p1_main_down_20_l1.xml",
+      "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/p1_main_up_1300_l0.xml",
+      "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/p1_main_up_1300_l1.xml",
+      "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/p1_merge_section_20_l0.xml",
+      "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/p1_merge_section_20_l1.xml",
+      "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/p1_merge_section_20_l2.xml",
+      "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/ramp_storage_e2.xml",
+      "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/shared_boundary_e2.xml",
+      "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/tls_states.xml"
+    ],
+    "related_stale_route_path": "The staged sumocfg also references the REV14 demand.rou.xml path; its SHA-256 equals the REV17 bound demand SHA (3b3da52ac2ddbe915b3f6578b515ace1a30b3f7a1169724528855a6387abaada), so path provenance is stale but bytes are identical.",
+    "rev14_additional_sha256": "5e2d659b3c615b97c68381f72ebab2ae0606a3835ba2b9875c21df72323e6d62",
+    "source_path_binding_defect": "The config references rev14 scenario.add.xml, while card/input binding resolves the intended additional source to rev17 inputs/treatment/scenario.add.xml. Those files differ: rev14 embeds v16 output targets; rev17 staged file embeds v17 targets.",
+    "staged_additional_sha256": "28a7bd6afbe5c0a151ce96dabfabf7aeaf5885ba38b6add36da7e1faa258369c",
+    "summary": "The staged sumocfg retained an additional-files reference to REV14 inputs/treatment/scenario.add.xml. SUMO therefore ignored the staged REV17 scenario_control.add.xml, loaded the old REV14 additional file, and that file directed detector outputs to the stale REV16 raw directory. The requested REV17 detector parent did not exist, so SUMO aborted while loading additional files before traffic simulation.",
+    "sumocfg_references": {
+      "additional-files": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev14/inputs/treatment/scenario.add.xml",
+      "error-log": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v17/MINIMAL3350_E1_R900_DELAYED_S17/outputs/sumo_error.log",
+      "fcd-output": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v17/MINIMAL3350_E1_R900_DELAYED_S17/outputs/fcd.xml",
+      "lanechange-output": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v17/MINIMAL3350_E1_R900_DELAYED_S17/outputs/lanechanges.xml",
+      "log": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v17/MINIMAL3350_E1_R900_DELAYED_S17/outputs/sumo.log",
+      "net-file": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+      "queue-output": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v17/MINIMAL3350_E1_R900_DELAYED_S17/outputs/queues.xml",
+      "route-files": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev14/inputs/treatment/demand.rou.xml",
+      "summary-output": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v17/MINIMAL3350_E1_R900_DELAYED_S17/outputs/sumo_summary.xml",
+      "tripinfo-output": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v17/MINIMAL3350_E1_R900_DELAYED_S17/outputs/tripinfo.xml",
+      "vehroute-output": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v17/MINIMAL3350_E1_R900_DELAYED_S17/outputs/vehroute.xml"
+    }
+  },
+  "run_id": "MINIMAL3350_E1_R900_DELAYED_S17",
+  "schema": "stage6_e1_r900_post_failure_engineering_disposition_v1",
+  "starts": {
+    "additional_guardian_or_sumo_starts_by_this_review": 0,
+    "guardian": 1,
+    "netconvert": 0,
+    "sumo": 1,
+    "traci": 0
+  },
+  "why_preflight_missed": {
+    "prelaunch_gate_record": {
+      "launchable_now": true,
+      "sha256": "a2a9a9c15c3e991776ec1d827038f274c428bb90840f3bf0155cdb93bf7e435b",
+      "source": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev17/FINAL_HASH_BINDING_RECEIPT.json"
+    },
+    "prelaunch_test_record": {
+      "failed": 0,
+      "passed": 12,
+      "sha256": "6aa81e5784603927eb07b6e7e9b705536f662e8163f5069c7683940912571a66",
+      "source": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev17/ENGINEERING_PRELAUNCH_REVIEW.json",
+      "status": "PASS_PRELAUNCH"
+    },
+    "relevant_code": "stage_minimal3199_inputs (runner.py:589-629) implements strict reference replacement for 3199 only. In the generic E1 path, runner.py around 2882-2910 replaces OUTPUT_TOKEN and str(files[\"additional\"]), but does not assert the resulting XML reference target; REV17 config already contained the different rev14 path. The staged hash comparison around 2929-2940 validated those stale bytes. E1 preflight tests asserted command points at v17 output and role paths, but did not assert the nested additional-files config binding.",
+    "runner_path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev17/r02_single_start/runner.py",
+    "runner_sha256": "8145b865846662c6189a2307a6cf38b1c19295293ae930830bfc8c8c61428eed",
+    "summary": "The exact-byte gate verified hashes for the staged config and staged additional, and request binding verified that SUMO would be invoked with the staged config path. It did not parse the staged sumocfg and assert that its additional-files attribute resolves to the staged additional path. Because the stale rev14 source path did not equal the rev17 input path string, the generic staging replacement did not change it; the resulting bytes nevertheless matched the bound expected config hash.",
+    "test_commands_executed_during_this_disposition": []
+  }
+}

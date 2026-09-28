@@ -1,0 +1,256 @@
+{
+  "schema_version": "1",
+  "review_type": "DATA_PROVENANCE_PRELAUNCH_REV2",
+  "run_id": "MINIMAL3199_R720_DELAYED_S17_UX0_ATTEMPT1",
+  "exact_card_path": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_rev2/MINIMAL3199_R720_DELAYED_S17_UX0_ATTEMPT1_CARD_FINAL_REV2.json",
+  "exact_card_sha256": "f3d7d03e0b521d330a6ccc07d807bd88149ce4eb424e3f3895f917e083234b5e",
+  "disposition": "PASS_PRELAUNCH",
+  "confidence": "High",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "context_preflight": {
+    "AGENTS.md": "read",
+    "PROJECT_STATE.md": "read",
+    "DECISIONS.md": "read",
+    "EXPERIMENT_PROTOCOL.md": "read",
+    "WORKLOG.md": "read",
+    "approved_plan": {
+      "path": "artifacts/stage6_minimal_ramp_induced_breakdown_existence_test_20260924_v1/PLAN.md",
+      "sha256": "06b0f04f1144ef8497b4d64906ae27b1377b544abd6e0639133c8d85a3fabc23"
+    }
+  },
+  "hash_bindings": {
+    "card": {
+      "path": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_rev2/MINIMAL3199_R720_DELAYED_S17_UX0_ATTEMPT1_CARD_FINAL_REV2.json",
+      "sha256": "f3d7d03e0b521d330a6ccc07d807bd88149ce4eb424e3f3895f917e083234b5e"
+    },
+    "input_manifest": {
+      "path": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_rev2/INPUT_MANIFEST.json",
+      "sha256": "3c5b8f27850c96f32b044537b4299a5a8b7260f894567813ae955b8fb7bab34d"
+    },
+    "staging_provenance": {
+      "path": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_rev2/STAGING_PROVENANCE.json",
+      "sha256": "387fd4bb11b7d8e78315f76699ec4ab633b17af81c4c9587590fa9752d3ecf89"
+    },
+    "runtime_binding": {
+      "path": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_rev2/runtime_binding_final.json",
+      "sha256": "f73c7731926d00fe65bc58c9e2a4340456cc8065c42349bec0fe053a29ead0bf"
+    },
+    "runner": {
+      "path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+      "sha256": "a4c7c5952522286c35764d1a6a05eff46e78311bf3afc06785474c64127aa064"
+    },
+    "engineering_review": {
+      "path": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_rev2/FINAL_ENGINEERING_PRELAUNCH_REVIEW.json",
+      "sha256": "3187def2fd6f21908373c3327ef81db9b72dfcceb4ae0276b9fd60d9a07609df"
+    },
+    "start_request": {
+      "path": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_rev2/START_REQUEST.json",
+      "sha256": "6019c720af6a65138ed71a10c3d89e83fb05274cbffe34c23a0caaf70c4e450a"
+    },
+    "start_request_receipt": {
+      "path": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_rev2/START_REQUEST_RECEIPT.json",
+      "sha256": "5846d84b8c2711a5a1c4b6788a0a7446d5d1708cf0a03174e6049f8edefd572b"
+    },
+    "plan": {
+      "path": "artifacts/stage6_minimal_ramp_induced_breakdown_existence_test_20260924_v1/PLAN.md",
+      "sha256": "06b0f04f1144ef8497b4d64906ae27b1377b544abd6e0639133c8d85a3fabc23"
+    },
+    "locked_method": {
+      "path": "docs/methodology/FREEWAY_PROTECTABLE_STATE_EXPLORATORY_DEFINITION.md",
+      "sha256": "22fe22170c17ce74e261e717586a458a1b5173e9deabbee925bd4c1d606adfe7"
+    },
+    "control_card": {
+      "path": "artifacts/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/MINIMAL3199_CTRL_S17_TECH_RETRY2_CARD_FINAL.json",
+      "sha256": "b387a750f9f41fe7439d79ead7133fc07ac817fe8da497a8e045433a4accee5a"
+    },
+    "control_data_review": {
+      "path": "artifacts/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/DATA_LIFECYCLE_POSTRUN_REVIEW.json",
+      "sha256": "3579107c935b3f0a91f1f4f79d0791742b462a45548917c8ad317304fff70b37"
+    },
+    "control_scientific_review": {
+      "path": "artifacts/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/SCIENTIFIC_POSTRUN_REVIEW.json",
+      "sha256": "f7892d4d6fa974dbea2c373092760749b5764c8c79fbd01cd2ec49e6ca99784d"
+    },
+    "control_output_manifest": {
+      "path": "data/raw/stage6_minimal3199_existence_20260924_v3/MINIMAL3199_CTRL_S17_TECH_RETRY2/outputs/output_manifest.json",
+      "sha256": "07cd3cd1707e3717f9401f3e164a932cb6c10196af1461f267869f1d582e5e5e"
+    },
+    "control_execution_receipt": {
+      "path": "data/raw/stage6_minimal3199_existence_20260924_v3/MINIMAL3199_CTRL_S17_TECH_RETRY2/outputs/execution_receipt.json",
+      "sha256": "f9f783f19cc61d342de09ab7dc6172e56645b7e1604d7447ad6e0582a7bd2348"
+    },
+    "control_input_demand": {
+      "path": "scripts/stage6/minimal3199/prepared_rev3/control/demand.rou.xml",
+      "sha256": "5df62660b9b9e2cc02734794ef2d361a3a97c30fa38a1e4fcbf550f0a2a1e405"
+    },
+    "treatment_input_demand": {
+      "path": "scripts/stage6/minimal3199/prepared_rev3/treatment/demand.rou.xml",
+      "sha256": "b57a0f3723be40bd1725a478f4ec7f57c1aacfbac0f2e57a5d94f31dce758c83"
+    },
+    "control_roles": {
+      "path": "scripts/stage6/minimal3199/prepared_rev3/control/output_roles.json",
+      "sha256": "3ff931a5f088180f6f37fbf8a782985a3a805c8c02b0cfdce3aa018df195b0f6"
+    },
+    "treatment_roles": {
+      "path": "scripts/stage6/minimal3199/prepared_rev3/treatment/output_roles.json",
+      "sha256": "32056005f915229daebc8193a4e4aa0d80d54d9f0caa0f296014b7a72c05b996"
+    },
+    "network": {
+      "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+      "sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca"
+    },
+    "sumo_binary": {
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+      "sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179"
+    },
+    "additional_schema": {
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+      "sha256": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e"
+    },
+    "python_executable": {
+      "path": ".venv/bin/python",
+      "sha256": "76c73e25cdd69650a897648666e41c364940fbcff0d1176572a667d4d470ec9e"
+    },
+    "shared_runner_test": {
+      "path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/test_runner.py",
+      "sha256": "9a61aff7ca44a342af9f4174d8a3c7e1c87d4d6822ec1307a2878be341a2d007"
+    },
+    "treatment_attempt_test": {
+      "path": "tests/test_minimal3199_treatment_attempt.py",
+      "sha256": "eb32bd9dea16837c45a2977655e3cecdb0516f0d8ee9d34165eab93fadf34b24"
+    }
+  },
+  "control_binding": {
+    "run_id": "MINIMAL3199_CTRL_S17_TECH_RETRY2",
+    "scientific_disposition": "LOW_R_BACKGROUND_ACCEPTABLE",
+    "data_review_disposition": "PASS_DATA_LIFECYCLE_WITH_RETAINED_CANDIDATE_C_WARNINGS",
+    "card_hash_matches": true,
+    "data_review_hash_matches": true,
+    "scientific_review_hash_matches": true,
+    "output_manifest_hash_matches": true,
+    "limitation": "LOW_R_BACKGROUND_ACCEPTABLE is scoped only to the minimal U=X=0 control gate; Candidate C warnings and high-mobility FAIL remain recorded; it is not a clean high-mobility baseline."
+  },
+  "matched_input_audit": {
+    "M_count_control": 1333,
+    "M_count_treatment": 1333,
+    "ID_equal": true,
+    "M_attribute_fields": [
+      "desired_depart",
+      "route",
+      "vType",
+      "speedFactor",
+      "departPos",
+      "departLane",
+      "departSpeed"
+    ],
+    "M_attribute_mismatch_counts": {
+      "desired_depart": 0,
+      "route": 0,
+      "vType": 0,
+      "speedFactor": 0,
+      "departPos": 0,
+      "departLane": 0,
+      "departSpeed": 0
+    },
+    "control_actual_vehroute_count": 1333,
+    "control_actual_route_vType_speedFactor_mismatches": 0,
+    "control_R": 0,
+    "treatment_identity_count": 1525,
+    "treatment_classes": {
+      "M": 1333,
+      "R": 192
+    },
+    "R_identity_range": [
+      "R_flow.0",
+      "R_flow.191"
+    ],
+    "R_depart_s": [
+      540,
+      1495
+    ],
+    "R_spacing_s": 5,
+    "R_route_edges": "urban_in shared_approach ramp_storage ramp_accel merge_section main_down",
+    "treatment_only_delta": "R_flow.0–R_flow.191",
+    "U_X_explicit_zero": true,
+    "no_other_ids_or_duplicates": true,
+    "globally_sorted_by_depart_ms_id": true
+  },
+  "request_receipt_audit": {
+    "request_bytes": 7274,
+    "request_sha256": "6019c720af6a65138ed71a10c3d89e83fb05274cbffe34c23a0caaf70c4e450a",
+    "receipt_sha256": "5846d84b8c2711a5a1c4b6788a0a7446d5d1708cf0a03174e6049f8edefd572b",
+    "receipt_binds_request_hash_and_size": true,
+    "receipt_binds_card_hash": true,
+    "request_binds_card_hash_and_path": true,
+    "request_schema": "r02-start-v2",
+    "request_schema_match": true,
+    "dispatched": false,
+    "status": "PERSISTED_UNSENT",
+    "request_run_matches": true,
+    "runtime_schema_hash_matches": true,
+    "runner_hash_matches": true,
+    "limits_match_card": true,
+    "output_path_matches": true,
+    "command_path_matches": true,
+    "output_role_hash_matches": true,
+    "reservation_path_matches": true,
+    "consumption_directory_absent": true
+  },
+  "staging_audit": {
+    "scenario_control.sumocfg": {
+      "size_bytes": 2885,
+      "sha256": "839cd0604aa2eef5da3677dae06296995fc3c017b9a84f1f8cf0ed0315d47d54",
+      "replacement_counts": {
+        "old_output_root": 8,
+        "additional_source": 1
+      },
+      "deterministic_reconstruction": "PASS",
+      "old_root_residual_count": 0
+    },
+    "scenario_control.add.xml": {
+      "size_bytes": 4048,
+      "sha256": "0a476ff96e378ae8972de96cba1b1748274158a29bc7f9f3408be70996e3b2f0",
+      "replacement_counts": {
+        "old_output_root": 12
+      },
+      "deterministic_reconstruction": "PASS",
+      "old_root_residual_count": 0
+    }
+  },
+  "freshness": {
+    "output_files": [
+      "scenario_control.add.xml",
+      "scenario_control.sumocfg"
+    ],
+    "only_two_staged_inputs": true,
+    "consumption_absent": true,
+    "dispatch_absent": true,
+    "guardian_sumo_process_count_reported_by_engineering": 0
+  },
+  "fixed_conditions": {
+    "qMain_veh_per_h": 3199.2,
+    "seed": 17,
+    "R_veh_per_h": 720,
+    "R_window": "[540,1500)",
+    "U": 0,
+    "X": 0,
+    "A": "A_OPEN",
+    "horizon_s": 2700,
+    "step_s": 1,
+    "network_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "conditions_match_plan": true
+  },
+  "engineering_tests": {
+    "treatment_tests": 35,
+    "treatment_failures": 0,
+    "shared_runner_tests": 24,
+    "shared_runner_failures": 0,
+    "reexecuted_by_data_review": false
+  },
+  "interpretation_boundary": "This review validates only data/provenance. The control disposition is restricted to the approved minimal test; no treatment result or clean high-mobility-baseline claim is inferred. Prior REV1 blocked review remains unchanged and historical.",
+  "status": "PASS_PRELAUNCH"
+}

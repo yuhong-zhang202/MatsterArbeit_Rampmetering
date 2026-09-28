@@ -1,0 +1,317 @@
+{
+  "analysis_version_binding": {
+    "bytes": 1559,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/runtime_gate_revision02/revision04/real_R0_audit01/analysis_version_manifest.json",
+    "sha256": "310c9cfdf3f404c5ab7712639cd1cd7dac2d6842f702aabc6525e1305d72c70a"
+  },
+  "attempt_id": "RV4_R0_S17_attempt1",
+  "card_sha256": "0f74720eacd86d95490a9a32921f497a8e673453078dc71bc798dd1562c42557",
+  "checks": [
+    {
+      "check_id": "source_binding_exact",
+      "evidence": {
+        "frozen_analysis_manifest": {
+          "bytes": 93182,
+          "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/runtime_gate_revision02/revision04/analysis_manifest.json",
+          "sha256": "7c28cee272f43b9f39ca207f76d1afa72bb5240c1884a10aa86126cc26467f96"
+        },
+        "source_context": "source_context.json"
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "execution_complete_2700",
+      "evidence": {
+        "last_summary_label": "2699.00",
+        "log_end": 2700,
+        "returncode": 0
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "output_role_set_17_exact",
+      "evidence": {
+        "logs_separate": [
+          "sumo.log",
+          "sumo_error.log"
+        ],
+        "roles": [
+          "shared_boundary_e2.xml",
+          "ramp_storage_e2.xml",
+          "p1_main_up_1300_l0.xml",
+          "p1_main_up_1300_l1.xml",
+          "p1_merge_section_20_l0.xml",
+          "p1_merge_section_20_l1.xml",
+          "p1_merge_section_20_l2.xml",
+          "p1_main_down_20_l0.xml",
+          "p1_main_down_20_l1.xml",
+          "p1_main_down_200_l0.xml",
+          "p1_main_down_200_l1.xml",
+          "fcd.xml",
+          "queues.xml",
+          "sumo_summary.xml",
+          "tripinfo.xml",
+          "vehroute.xml",
+          "tls_states.xml"
+        ]
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "xml_roots_and_timegrids",
+      "evidence": {
+        "fcd.xml": {
+          "records": 2700,
+          "root": "fcd-export"
+        },
+        "p1_main_down_200_l0.xml": {
+          "records": 90,
+          "root": "detector"
+        },
+        "p1_main_down_200_l1.xml": {
+          "records": 90,
+          "root": "detector"
+        },
+        "p1_main_down_20_l0.xml": {
+          "records": 90,
+          "root": "detector"
+        },
+        "p1_main_down_20_l1.xml": {
+          "records": 90,
+          "root": "detector"
+        },
+        "p1_main_up_1300_l0.xml": {
+          "records": 90,
+          "root": "detector"
+        },
+        "p1_main_up_1300_l1.xml": {
+          "records": 90,
+          "root": "detector"
+        },
+        "p1_merge_section_20_l0.xml": {
+          "records": 90,
+          "root": "detector"
+        },
+        "p1_merge_section_20_l1.xml": {
+          "records": 90,
+          "root": "detector"
+        },
+        "p1_merge_section_20_l2.xml": {
+          "records": 90,
+          "root": "detector"
+        },
+        "queues.xml": {
+          "records": 2700,
+          "root": "queue-export"
+        },
+        "ramp_storage_e2.xml": {
+          "records": 90,
+          "root": "detector"
+        },
+        "shared_boundary_e2.xml": {
+          "records": 90,
+          "root": "detector"
+        },
+        "sumo_summary.xml": {
+          "records": 2700,
+          "root": "summary"
+        },
+        "tls_states.xml": {
+          "records": 2700,
+          "root": "tlsStates"
+        },
+        "tripinfo.xml": {
+          "records": 1558,
+          "root": "tripinfos"
+        },
+        "vehroute.xml": {
+          "records": 1558,
+          "root": "routes"
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "planned_identity_coverage",
+      "evidence": {
+        "expected_counts": {
+          "M": 1333,
+          "R": 0,
+          "U": 150,
+          "X": 75
+        },
+        "never_inserted": 0,
+        "observed_tripinfo": 1558
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "departed_route_and_fcd_consistency",
+      "evidence": {
+        "FCD_samples": 111883,
+        "continuous_lifecycle_tracks": 1558,
+        "errors": [],
+        "vehroute_count": 1558
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "population_conservation",
+      "evidence": {
+        "2700_label_summary_FCD_trip_reconciliation_bad_labels": [],
+        "class_accounts": {
+          "M": {
+            "arrived": 1333,
+            "departed": 1333,
+            "in_network_at_end": 0,
+            "never_inserted": 0,
+            "planned": 1333
+          },
+          "R": {
+            "arrived": 0,
+            "departed": 0,
+            "in_network_at_end": 0,
+            "never_inserted": 0,
+            "planned": 0
+          },
+          "U": {
+            "arrived": 150,
+            "departed": 150,
+            "in_network_at_end": 0,
+            "never_inserted": 0,
+            "planned": 150
+          },
+          "X": {
+            "arrived": 75,
+            "departed": 75,
+            "in_network_at_end": 0,
+            "never_inserted": 0,
+            "planned": 75
+          }
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "actual_lane_and_connection_consistency",
+      "evidence": {
+        "errors": [],
+        "method": "compiled directed lane graph plus passenger-permitted lateral edges; skipped internals allowed",
+        "observed_lane_transitions": 4197
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "detector_output_contract",
+      "evidence": {
+        "detectors": {
+          "p1_main_down_200_l0": {
+            "intervals": 90,
+            "sum_nVehEntered": 555
+          },
+          "p1_main_down_200_l1": {
+            "intervals": 90,
+            "sum_nVehEntered": 778
+          },
+          "p1_main_down_20_l0": {
+            "intervals": 90,
+            "sum_nVehEntered": 556
+          },
+          "p1_main_down_20_l1": {
+            "intervals": 90,
+            "sum_nVehEntered": 777
+          },
+          "p1_main_up_1300_l0": {
+            "intervals": 90,
+            "sum_nVehEntered": 562
+          },
+          "p1_main_up_1300_l1": {
+            "intervals": 90,
+            "sum_nVehEntered": 772
+          },
+          "p1_merge_section_20_l0": {
+            "intervals": 90,
+            "sum_nVehEntered": 0
+          },
+          "p1_merge_section_20_l1": {
+            "intervals": 90,
+            "sum_nVehEntered": 560
+          },
+          "p1_merge_section_20_l2": {
+            "intervals": 90,
+            "sum_nVehEntered": 773
+          },
+          "ramp_storage_e2": {
+            "intervals": 90,
+            "sum_nVehEntered": 0
+          },
+          "shared_boundary_e2": {
+            "intervals": 90,
+            "sum_nVehEntered": 150
+          }
+        },
+        "errors": [],
+        "loaded_extent_direct_query": "not_performed; bound positions plus actual continuous output only"
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "tls_state_contract",
+      "evidence": {
+        "cycle": "45Gr/3yr/9rG/3ry offset0",
+        "labels": 2700,
+        "state_counts": {
+          "Gr": 2025,
+          "rG": 405,
+          "ry": 135,
+          "yr": 135
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "output_manifest_complete",
+      "evidence": {
+        "entries": 23,
+        "exact_directory_bytes": 20475694,
+        "manifest": {
+          "bytes": 7654,
+          "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision04/runs/RV4_R0_S17_attempt1/output_manifest.json",
+          "sha256": "0f37bdc4b8af9830558693f9622a256297ffb6129db838bc772d2688d3c32a40"
+        },
+        "writer_inspection": {
+          "method": "os.kill/os.killpg0 and lsof +D; before/after rehash",
+          "open_files_absent": true,
+          "pid_absent": true,
+          "process_group_absent": true
+        }
+      },
+      "status": "PASS"
+    },
+    {
+      "check_id": "m_insertion_contract",
+      "evidence": {
+        "actual_M_departed": 1333,
+        "bad_IDs": [],
+        "domain": "main_up1200 to main_down200; no old feeder substitution"
+      },
+      "status": "PASS"
+    }
+  ],
+  "execution_receipt_sha256": "eb82468fb0593a27112ff2ba32036104fb40463340c949b4edeb63b25499e1b7",
+  "mechanism_binding": {
+    "bytes": 689,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/runtime_gate_revision02/revision04/real_R0_audit01/mechanism_observations.json",
+    "sha256": "6b6b061eadff5e73cebf6a3a0a35130059265991922fc41399ad964569e3eacb"
+  },
+  "output_manifest_sha256": "0f37bdc4b8af9830558693f9622a256297ffb6129db838bc772d2688d3c32a40",
+  "physical_observations": {
+    "collisions_max": 0,
+    "emergency_braking_log_lines": 0,
+    "teleports_max": 0
+  },
+  "physical_status": "suitable",
+  "progression_allowed": true,
+  "scientific_acceptance": "not_assessed",
+  "technical_status": "PASS"
+}

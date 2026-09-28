@@ -1,0 +1,26 @@
+{
+  "status": "passed",
+  "source_container": "tdai-type-restore-row-audit-20260926",
+  "audit_script_sha256": "4cd5ab931e6449b2a1aeeac4b1891d6904dcced1f01fa2fc2c7f558cc4f41903",
+  "result": {
+    "status": "passed",
+    "source_mounts": "readonly",
+    "database_copies": "tmpfs",
+    "rows_before": 13,
+    "rows_after": 13,
+    "target_id": "m_1790425813551_503da35b",
+    "changed_columns": [
+      "type",
+      "version",
+      "updated_time"
+    ],
+    "type_before": "persona",
+    "type_after": "episodic",
+    "version_before": 1,
+    "version_after": 2,
+    "content_sha256": "126ef8b51f4d949a67f0c417e7de5e912631abe0c78a0987c113cc4a2e6aa67f",
+    "unrelated_rows_unchanged": true,
+    "before_db_sha256": "2132d79f62abc95e4fe438ec2d18bb903f1ce75de966bc7b23ee838a7b14aa87",
+    "after_db_sha256": "ea9010a2f777aec38d6247afe5eb126f962d7fe50c7b739720077157e4e80bba"
+  }
+}

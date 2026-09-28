@@ -1,0 +1,28 @@
+{
+  "SUMO_starts": 0,
+  "TraCI_connections": 0,
+  "approval_release_exists": false,
+  "fixed_defect": "Generator RUN constant pointed to preserved attempt1, despite attempt_id and XML writers identifying attempt2. Corrected constant to attempt2, fresh package location; all stale cards preserved.",
+  "new_card": {
+    "bytes": 60102,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering_attempt02_revision02/O2_DIAGNOSTIC_CARD.json",
+    "sha256": "c5b86295f41a9dedbd59cfd10427b34a9d50d522fd941b1df83fc89fd0d261f2"
+  },
+  "old_rejected_card": {
+    "bytes": 59935,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering_attempt02/O2_DIAGNOSTIC_CARD.json",
+    "sha256": "fce5fc6f4580557528d2d1f182ed0fc933fec3e2e8b9b77c1fa9e93dde8cfbbc"
+  },
+  "runtime_code_unchanged_from_attempt02": {
+    "observer.py": true,
+    "runtime_executor.py": true,
+    "startup_probe.py": true
+  },
+  "science_input_checks": {
+    "additional_semantics_equal_attempt1_except_paths": true,
+    "config_semantics_equal_attempt1_except_paths": true,
+    "demand_byte_equal_attempt1": true,
+    "network_path_exact_equal_attempt1": true
+  },
+  "status": "PASS"
+}

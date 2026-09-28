@@ -1,0 +1,63 @@
+{
+  "schema": "stage6_e1_r900_pre_spawn_engineering_failure_v1",
+  "status": "FAILED_PRE_SPAWN_ENGINEERING",
+  "run_id": "MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY2",
+  "package_id": "stage6_minimal3350_e1_r900_preparation_20260925_rev19",
+  "card_sha256": "cea374f60db487ce9b4bd0c5f45ed28996b298a710af2da33aca6ae9f3bae380",
+  "reservation_sha256": "d27a977678871885d376272b56b945e9d1f28a7728b22fd63dedd05da3aaaa45",
+  "reservation_status": "FAILED",
+  "retry_allowed": false,
+  "simulator_pid": null,
+  "guardian_starts": 0,
+  "sumo_starts": 0,
+  "traci_starts": 0,
+  "netconvert_starts": 0,
+  "failure": {
+    "exception": "FileExistsError",
+    "message": "exclusive write failed for scenario_control.add.xml because the launch branch had already written the same staged file earlier in the same launch call",
+    "failure_point": "runner.py launch staging lifecycle, immediately before Guardian START request handoff",
+    "traffic_simulation_started": false,
+    "complete_traffic_raw_produced": false,
+    "output_directory": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v19/MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY2/outputs",
+    "output_inventory": [
+      {
+        "path": "scenario_control.add.xml",
+        "bytes": 4012,
+        "sha256": "fcc47b936eaf2577c459b4f7282c0ed0d9dba8418a49f4ce0f7cd0e7e8f453b3"
+      },
+      {
+        "path": "scenario_control.sumocfg",
+        "bytes": 2888,
+        "sha256": "7f7329b91c77b3f10e38659875a78aa3ed7bb58a85ebe6ba735e07bdea9d6bfc"
+      }
+    ],
+    "expected_staged_hashes_match": true,
+    "other_output_files_present": false
+  },
+  "root_cause": "R900-specific launch branch wrote staged additional/config once; generic launch staging block then attempted the same exclusive writes again. The additional XML was already present from the first write when the second write raised FileExistsError.",
+  "repair_cycle": 2,
+  "fix_test_evidence": "Pending isolated regression evidence; REV20 package tests must demonstrate single-write lifecycle and fail-closed handling of pre-existing output before any later launch.",
+  "provenance": {
+    "card": {
+      "path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev19/MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY2_CARD_FINAL_REV1.json",
+      "sha256": "cea374f60db487ce9b4bd0c5f45ed28996b298a710af2da33aca6ae9f3bae380"
+    },
+    "reservation": {
+      "path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev19/r02_single_start/consumption/MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY2.json",
+      "sha256": "d27a977678871885d376272b56b945e9d1f28a7728b22fd63dedd05da3aaaa45"
+    },
+    "runner": {
+      "path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev19/r02_single_start/runner.py",
+      "sha256": "d6bde894ec724ded810f9d5f28c39e62d269a70c345be79ca2fdfa467c1c502a"
+    },
+    "staged_additional": {
+      "path": "data/raw/stage6_minimal3350_ux0_20260925_v19/MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY2/outputs/scenario_control.add.xml",
+      "sha256": "fcc47b936eaf2577c459b4f7282c0ed0d9dba8418a49f4ce0f7cd0e7e8f453b3"
+    },
+    "staged_sumocfg": {
+      "path": "data/raw/stage6_minimal3350_ux0_20260925_v19/MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY2/outputs/scenario_control.sumocfg",
+      "sha256": "7f7329b91c77b3f10e38659875a78aa3ed7bb58a85ebe6ba735e07bdea9d6bfc"
+    }
+  },
+  "scope": "No scientific input, geometry, vehicle behavior, classifier, threshold, witness contract, or formal protocol was changed."
+}

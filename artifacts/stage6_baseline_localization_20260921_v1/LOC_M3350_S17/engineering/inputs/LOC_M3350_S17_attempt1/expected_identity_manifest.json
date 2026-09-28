@@ -1,0 +1,17 @@
+{
+  "attempt_id": "LOC_M3350_S17_attempt1",
+  "logical_condition": "A_OPEN",
+  "seed": 17,
+  "schedule_contract": "SUMO number-flow ID range contract; scheduled expectations, not realized insertion or arrival claims",
+  "demand_interval_s": [0, 1500],
+  "interval_convention": "half-open [begin,end)",
+  "planned_counts": {"M": 1396, "R": 300, "U": 150, "X": 75},
+  "expected_id_patterns": {
+    "M": {"flow_id": "M_flow", "inclusive_index_min": 0, "inclusive_index_max": 1395},
+    "R": {"flow_id": "R_flow", "inclusive_index_min": 0, "inclusive_index_max": 299},
+    "U": {"flow_id": "U_flow", "inclusive_index_min": 0, "inclusive_index_max": 149},
+    "X": {"flow_id": "X_flow", "inclusive_index_min": 0, "inclusive_index_max": 74}
+  },
+  "expected_total_scheduled": 1921,
+  "realized_accounting": "must be independently reconciled from FCD, vehroute, tripinfo and summary; this manifest is not realization evidence"
+}

@@ -1,0 +1,15 @@
+stage,priority,qMain_veh_per_h,M_number,qRamp_veh_per_h,R_number,R_begin_s,R_end_s,seed,condition,existing_run,reuse_status,new_starts_if_selected,reason
+archive,0,3199.2,1333,720,300,0,1500,17,A_OPEN,TV_A_S17_attempt1,PRIOR_ONLY_NOT_DELAYED_ARM,0,Accepted geometry historical P-negative high-ramp context
+archive,0,3350.4,1396,720,300,0,1500,17,A_OPEN,LOC_M3350_S17_attempt1,PRIOR_ONLY_NOT_DELAYED_ARM,0,Accepted geometry historical high-ramp context with P reference unresolved
+A,1,3350.4,1396,0,0,NA,NA,17,A_OPEN,RI3350_CTRL_S17_technical_retry1,CONDITIONAL_REUSE_AFTER_OFFLINE_ADJUDICATION,0,Existing R0 anchor retains F5 and suitability C until new prospective background gate adjudication
+A,2,3350.4,1396,720,192,540,1500,17,A_OPEN,NONE,PROPOSED_DISTINCT_DELAYED_TREATMENT,1,First new start only if 3350 R0 background is adjudicated usable
+A,3H,3499.2,1458,0,0,NA,NA,17,A_OPEN,NONE,PROPOSED_CONTROL,1,Higher branch if 3350 high ramp valid negative or 3350 R0 point-specific unresolved
+A,4H,3499.2,1458,720,192,540,1500,17,A_OPEN,NONE,CONDITIONAL_AFTER_MATCHED_R0,1,Tests ramp-induced event only if its R0 has no adjudicated sustained self-congestion
+A,3L,3199.2,1333,0,0,NA,NA,17,A_OPEN,NONE,LOWER_FALLBACK_CONTROL,1,Lower branch if 3350 truly self-congested or 3350 unusable plus 3499 R0 self-congested
+A,4L,3199.2,1333,720,192,540,1500,17,A_OPEN,NONE,CONDITIONAL_AFTER_MATCHED_R0,1,Delayed R differs from historical A0 t0 R720
+B,7,3420.0,1425,0,0,NA,NA,17,A_OPEN,NONE,BRACKET_ONLY_CONTROL,1,Only if 3350 high R valid negative and 3499 R0 self-congested
+B,8,3420.0,1425,720,192,540,1500,17,A_OPEN,NONE,CONDITIONAL_AFTER_MATCHED_R0,1,One intermediate pair then stop
+confirmation,9,WITNESS_QMAIN,WITNESS_M_NUMBER,0,0,NA,NA,23,A_OPEN,NONE,OPTIONAL_MATCHED_PAIR_CONTROL,1,Only after seed17 witness and separate exact approval
+confirmation,10,WITNESS_QMAIN,WITNESS_M_NUMBER,720,192,540,1500,23,A_OPEN,NONE,OPTIONAL_MATCHED_PAIR_TREATMENT,1,No transition-only confirmation
+ABC,11,WITNESS_QMAIN,WITNESS_M_NUMBER,720,192,540,1500,17,B_METER,NONE,SEPARATE_FOLLOWUP_DESIGN_ONLY,1,Requires prospectively reviewed B program
+ABC,12,WITNESS_QMAIN,WITNESS_M_NUMBER,720,192,540,1500,17,C_METER,NONE,SEPARATE_FOLLOWUP_DESIGN_ONLY,1,Requires prospectively reviewed C program

@@ -1,0 +1,90 @@
+{
+  "card_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev6/MINIMAL3350_CTRL_S17_CARD_FINAL.json",
+  "card_sha256": "b0a4a40c1efd01640277a915858196fd737f0ba4821d6a97ff59642ad9f3a7e7",
+  "files": {
+    "adapter": {
+      "bytes": 28765,
+      "path": "scripts/stage6/minimal3350/minimal3350_control_adapter.py",
+      "sha256": "3fd66455cc79a1178e8f23d0d4bfc57064f6ca0b8736b3a5fa107f937cc79291"
+    },
+    "additional": {
+      "bytes": 3724,
+      "path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev6/inputs/control/scenario.add.xml",
+      "sha256": "d36ca8a14e2d90f0918bc18c58e681851728bb3131968d322b703ac687f0c58c"
+    },
+    "card": {
+      "bytes": 7108,
+      "path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev6/MINIMAL3350_CTRL_S17_CARD_FINAL.json",
+      "sha256": "b0a4a40c1efd01640277a915858196fd737f0ba4821d6a97ff59642ad9f3a7e7"
+    },
+    "common_m_manifest": {
+      "bytes": 387756,
+      "path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev6/COMMON_M_DEMAND_MANIFEST.json",
+      "sha256": "2fb1383e709e2174e2623aae575649aba40937729325a5e9c43bcc2b76982865"
+    },
+    "demand": {
+      "bytes": 224520,
+      "path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev6/inputs/control/demand.rou.xml",
+      "sha256": "da93237ed572b4103146b07b6e2b6ed4ffb9b95d21e7ed22e823ea427f8d477c"
+    },
+    "input_manifest": {
+      "bytes": 3606,
+      "path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev6/INPUT_MANIFEST.json",
+      "sha256": "0bf988a66db883ee3336dcbd098e600f5e18a7ed5277760562574478ebc56f10"
+    },
+    "output_roles": {
+      "bytes": 6497,
+      "path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev6/inputs/control/output_roles.json",
+      "sha256": "57ce587f5afc0580b62097577043fc3c663ddd35a18ec3c6749db5d29695939e"
+    },
+    "runner": {
+      "bytes": 164203,
+      "path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+      "sha256": "a789925aab725bc3db6e229b246d8267c1c1e1db75db8c736ea6c971da1b0841"
+    },
+    "runtime_binding": {
+      "bytes": 1983,
+      "path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev6/runtime_binding.json",
+      "sha256": "b89be00598eb75f6e2ac0e2a49da43e089d0eec92cc38b6000ba621e8159ca16"
+    },
+    "start_request": {
+      "bytes": 8152,
+      "path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev6/START_REQUEST.json",
+      "sha256": "c08f6a8e825a0a5302df3ec845bb3d5127d792e63a4e0ffeaa3c600ad4258cd8"
+    },
+    "start_request_receipt": {
+      "bytes": 370,
+      "path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev6/START_REQUEST_RECEIPT.json",
+      "sha256": "cca8ea18675cf2bc94e381100e0cc7674303965083d64647827590f7eb2a216a"
+    },
+    "sumocfg": {
+      "bytes": 2666,
+      "path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev6/inputs/control/scenario.sumocfg",
+      "sha256": "31598634602becc25c8ef35f89e51c68baeb9ce3abe4957e7bef9502a8bbb050"
+    }
+  },
+  "output_directory": "data/raw/stage6_minimal3350_ux0_20260924_v6/MINIMAL3350_CTRL_S17/outputs",
+  "output_directory_absent": true,
+  "process_starts": {
+    "guardian": 0,
+    "netconvert": 0,
+    "sumo": 0,
+    "traci": 0
+  },
+  "resource_contract": {
+    "output_size_stop_trigger_bytes": 60000000,
+    "overshoot_accepted": true,
+    "polling_interval_ms": 100,
+    "wallclock_stop_trigger_s": 90
+  },
+  "run_id": "MINIMAL3350_CTRL_S17",
+  "schema": "stage6_minimal3350_rev6_provenance_receipt_v1",
+  "status": "PASS_STATIC_BINDING_NO_PROCESS",
+  "verified_output_targets": {
+    "additional": 12,
+    "all_under_bound_output_directory": true,
+    "output_roles": 18,
+    "sumocfg": 8,
+    "unique_configured_paths": 20
+  }
+}

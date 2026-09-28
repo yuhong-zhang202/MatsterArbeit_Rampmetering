@@ -1,0 +1,78 @@
+{
+  "card_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/MINIMAL3350_CTRL_S17_CARD_FINAL.json",
+  "card_sha256": "15544478e8e7ced98b12673bec65cfe646b1f73e9e471ed501ddee052306bbfd",
+  "checks": {
+    "all_18_output_roles_hash_size_verified": true,
+    "all_7_support_files_hash_size_verified": true,
+    "guardian_start_count": 1,
+    "horizon_2700_reached": true,
+    "manifest_actual_file_count_25": true,
+    "netconvert_start_count": 0,
+    "one_irreversible_reservation": true,
+    "output_receipt_hash_verified": true,
+    "payload_under_60000000_bytes": true,
+    "raw_preserved_immutable": true,
+    "resource_stop_reason_none": true,
+    "retry_disabled": true,
+    "return_code_zero": true,
+    "staged_config_hashes_match_reservation": true,
+    "staged_source_hashes_match_card": true,
+    "sumo_and_guardian_error_logs_empty": true,
+    "sumo_start_count": 1,
+    "traci_start_count": 0,
+    "wallclock_under_90s": true
+  },
+  "execution": {
+    "guardian_pid": 21103,
+    "guardian_starts": 1,
+    "netconvert_starts": 0,
+    "output_size_limit_bytes": 60000000,
+    "payload_bytes": 19047639,
+    "process_status": "PROCESS_EXITED",
+    "retry_allowed": false,
+    "return_code": 0,
+    "simulated_until_s": 2700,
+    "simulator_pid": 21104,
+    "stop_reason": null,
+    "sumo_starts": 1,
+    "traci_starts": 0,
+    "wallclock_limit_s": 90,
+    "wallclock_runtime_s": 24.9565
+  },
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "output": {
+    "actual_file_count_excluding_manifest_receipt": 25,
+    "directory": "data/raw/stage6_minimal3350_ux0_20260924_v8/MINIMAL3350_CTRL_S17/outputs",
+    "execution_receipt_sha256": "e250f0938d7ecf7e888593bc263b8dda17d18877fa00be8ac401351f38c78b93",
+    "manifest_sha256": "48456bb607b4e4679dd13274696c60ab7f5ae020aa6ecbf2462110e1fdcd752f",
+    "output_manifest_size_bytes": 6806,
+    "payload_bytes": 19047639,
+    "required_role_count": 18,
+    "support_file_count": 7
+  },
+  "provenance": {
+    "prelaunch_sidecar_sha256": "6f55ce10b86a7402e719cd2d924fcb95e5e13c64a6ec93f77ab8fbc29e770d46",
+    "reservation_sha256": "3bd3d04516edfef64d4218160ae7787075ff81a860598520dd8a4f2920aa5f39",
+    "runner_sha256": "33d8ff42f3c0de6aeb17705f7f7c75dcdf03ade3cc532fd7900f3b363d691f9f",
+    "runtime_binding_sha256": "b97c467b379adea1b4246b72da0d4231b4490b8fcf4eeeacf39ab64564fa2ca0",
+    "start_request_sha256": "fca034d475dbbd104b9a0466d877792b119c0299d05db65d393375d5b69c4c25"
+  },
+  "raw_mutated": false,
+  "reviewer": "simulation_engineer",
+  "run_id": "MINIMAL3350_CTRL_S17",
+  "schema": "stage6_engineering_postrun_review_v1",
+  "scope_boundary": "Engineering integrity only. No lifecycle analysis, classifier evaluation, control suitability category, treatment preparation, or treatment authorization is included.",
+  "staging": {
+    "source_additional_sha256": "63d966376571e1aa4730bdb4187dd4b73230a8fe4a30b369f867eb11d48b7f9a",
+    "source_sumocfg_sha256": "e3e3a3d5e1c7c5b4e145e3c20cab58359bea7391a3386a87f1386620f1d442fc",
+    "staged_additional_bytes": 3724,
+    "staged_additional_sha256": "63d966376571e1aa4730bdb4187dd4b73230a8fe4a30b369f867eb11d48b7f9a",
+    "staged_sumocfg_bytes": 2669,
+    "staged_sumocfg_sha256": "9bc58eac66be4cb3a24ec01abda24b0fb3b8ad2e02f9f853568eba517d5327ce"
+  },
+  "status": "PASS_ENGINEERING_POSTRUN"
+}

@@ -1,0 +1,39 @@
+{
+  "additional_schema_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+  "additional_schema_sha256": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e",
+  "binary_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+  "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+  "binary_version": "1.26.0",
+  "guardian_runner_sha256": "373c0609f9c8a21bbf3e91c0f2a1e9df8fed2bee78ba6807fe50edd376b73cb8",
+  "max_output_bytes": 60000000,
+  "max_runtime_s": 90,
+  "python_environment": {
+    "executable_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+    "executable_sha256": "76c73e25cdd69650a897648666e41c364940fbcff0d1176572a667d4d470ec9e",
+    "implementation": "CPython",
+    "package_versions": {
+      "sumoITScontrol": "0.1.0",
+      "sumolib": "1.26.0",
+      "traci": "1.26.0"
+    },
+    "version": "3.13.0"
+  },
+  "resource_proposal": {
+    "basis": "proposal only; prior full-horizon control observed 24.881003 s and 20,821,740 bytes; prior treatment observed 24.370309 s and 23,936,627 bytes; new U=X0 output sizes unobserved",
+    "enforcement": "100ms_polled_stop_trigger_with_possible_overshoot_not_hard_quota",
+    "output_size_stop_limit_bytes_decimal": 60000000,
+    "overshoot_accepted": true,
+    "poll_interval_s": 0.1,
+    "scope": "MINIMAL3199_CTRL_S17",
+    "status": "PROPOSED_NOT_AUTHORIZED",
+    "wallclock_stop_limit_s": 90
+  },
+  "runtime_provenance_status": "READONLY_PATH_AND_HASH_VERIFIED_NO_SUMO_VERSION_PROCESS",
+  "sumo_home": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo",
+  "version_evidence": {
+    "binary_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+    "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+    "query": "sumo --version (environment probe; no simulation)",
+    "reported_version": "1.26.0"
+  }
+}

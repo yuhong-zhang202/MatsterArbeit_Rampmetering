@@ -1,0 +1,42 @@
+{
+  "current_recovery_actual_before_this_package": {
+    "GUI": 0,
+    "SUMO": 0,
+    "TraCI": 0,
+    "netconvert": 2
+  },
+  "derivation": {
+    "FCD_planning_bytes": 1284249600,
+    "bytes_per_record_planning": 256,
+    "historical_s": 3.7455701250000857,
+    "historical_samples": 343495,
+    "labels": 2700,
+    "max_population": 1858,
+    "records_overestimate": 5016600,
+    "remaining_other_output_bytes": 215750400,
+    "rough_scaled_s": 54.702476277894675,
+    "scope_total_s": 540,
+    "timeout_s": 180
+  },
+  "historical_count_note": "not a complete project lifetime total; no transfer of old six-start budget",
+  "historical_estimate_source": {
+    "bytes": 2362,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/candidate_resource_estimate.json",
+    "sha256": "b7adeb324fd117329df98e590aaf6dc7cff40f98706120f285b6506d655860a5"
+  },
+  "limits": {
+    "GUI": 0,
+    "SUMO_starts": 3,
+    "TraCI": 0,
+    "netconvert": 0,
+    "per_attempt_monitored_s": 180,
+    "per_attempt_observed_bytes": 1500000000,
+    "retry": 0,
+    "seed23_starts": 0,
+    "total_monitored_s": 540,
+    "total_observed_bytes": 4500000000
+  },
+  "maximum_overshoot_bytes": "unknown; not hard quota",
+  "monitoring_semantics": "polling_50ms_possible_overshoot_preserved",
+  "status": "Proposed_operational_ceiling_under_current_three_start_authorization"
+}

@@ -1,7 +1,7 @@
 {
   "schema_version": 1,
   "created_at": "2026-09-09T15:53:10.838Z",
-  "updated_at": "2026-09-09T22:14:21.089Z",
+  "updated_at": "2026-09-26T12:30:18.239Z",
   "policy_hash": "88a0df82b84beb420c26fdc94e999e7306033f79a382f4249fa978bd7deda331",
   "policy": {
     "model": "gpt-4.1-mini",
@@ -11,7 +11,7 @@
     "upstream_origin": "https://api.openai.com",
     "upstream_path": "/v1/chat/completions"
   },
-  "claimed_attempts": 5,
+  "claimed_attempts": 8,
   "attempts": [
     {
       "id": "9baa1cbf-cd11-4b08-9b51-461258c5984b",
@@ -132,6 +132,61 @@
         }
       },
       "finished_at": "2026-09-09T22:14:21.089Z"
+    },
+    {
+      "id": "2271a614-8da3-4d8a-aeb5-1a626874da3b",
+      "claimed_at": "2026-09-26T12:30:07.908Z",
+      "request_bytes": 13229,
+      "requested_output_tokens": 4096,
+      "outcome": "response_received",
+      "upstream_status": 200,
+      "usage": {
+        "prompt_tokens": 3453,
+        "completion_tokens": 482,
+        "total_tokens": 3935,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "finished_at": "2026-09-26T12:30:13.471Z"
+    },
+    {
+      "id": "4a6c5b54-ab37-47d3-8d3b-7366e03e97bb",
+      "claimed_at": "2026-09-26T12:30:14.606Z",
+      "request_bytes": 16743,
+      "requested_output_tokens": 4096,
+      "outcome": "response_received",
+      "upstream_status": 200,
+      "usage": {
+        "prompt_tokens": 4502,
+        "completion_tokens": 515,
+        "total_tokens": 5017,
+        "prompt_tokens_details": {
+          "cached_tokens": 0,
+          "audio_tokens": 0
+        },
+        "completion_tokens_details": {
+          "reasoning_tokens": 0,
+          "audio_tokens": 0,
+          "accepted_prediction_tokens": 0,
+          "rejected_prediction_tokens": 0
+        }
+      },
+      "finished_at": "2026-09-26T12:30:18.214Z"
+    },
+    {
+      "id": "0d257e42-400f-4c9b-8aa9-7fabb4b3698a",
+      "claimed_at": "2026-09-26T12:30:18.239Z",
+      "request_bytes": 19613,
+      "requested_output_tokens": 4096,
+      "outcome": "claimed_before_forward"
     }
   ]
 }

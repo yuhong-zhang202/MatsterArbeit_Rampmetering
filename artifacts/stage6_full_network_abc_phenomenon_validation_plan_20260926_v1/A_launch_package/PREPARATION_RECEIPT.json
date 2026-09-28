@@ -1,0 +1,42 @@
+{
+  "additional_sha256": "eda6351f5795269b1406945963eeeabe428737a1e3e8cfaab0363ff74434f0ee",
+  "card_sha256": "25afc8d86e98ad319f9b25a61679b4ceb6de67f2cd4e45631527624730a0b5f2",
+  "execution_authorized": false,
+  "input_manifest_sha256": "977f6a1c955e0da9234d4d677d78af3f4de2b5d4bf2e24a33d06485d5eb0afbf",
+  "materialized_demand_sha256": "69c10dafc607f616585d36b16a00a4c7d4e82eefc5c28878ea8e9dfe3c16c769",
+  "offline_tests": {
+    "command": ".venv/bin/python -m unittest discover -s artifacts/stage6_full_network_abc_phenomenon_validation_plan_20260926_v1/A_launch_package/tests -v",
+    "result": "3 passed"
+  },
+  "output_roles": {
+    "all_under_A_root": true,
+    "count": 18,
+    "unique_paths": 18
+  },
+  "output_roles_sha256": "811391a46c88511018fd698ac036d14deef0cf5169b8c722995e746815419dec",
+  "resource_proposal_only": {
+    "accepted": false,
+    "output_size_stop_bytes_decimal": 75000000,
+    "overshoot_accepted": true,
+    "polling_interval_ms": 100,
+    "wallclock_stop_s": 90
+  },
+  "run_id": "FULLNET3350_A_R900_S17",
+  "runner_sha256": "ca5efa868df126a0628141fc0b95acb4754fd6cf706f55329323ff8acbeb990e",
+  "runtime_binding_sha256": "2eff0a21aaf0025c49a3c4670c915e658bd3f22108c624eb3fb953714bf4ada9",
+  "schema_version": "1",
+  "starts": {
+    "Guardian": 0,
+    "SUMO": 0,
+    "TraCI": 0,
+    "netconvert": 0
+  },
+  "static_preflight": {
+    "launch_authorized": false,
+    "launchable_now": false,
+    "simulator_process_started": false,
+    "status": "PREFLIGHT_PASS_NO_PROCESS_STARTED"
+  },
+  "status": "DRAFT_NOT_AUTHORIZED",
+  "sumocfg_sha256": "66b4932e3e247bfeacdb709a667e6db5bb59820954dec8fc1e3509b88f2923a5"
+}

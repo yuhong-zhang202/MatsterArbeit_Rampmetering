@@ -1,0 +1,64 @@
+{
+  "card_path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev18/MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY1_CARD_FINAL_REV1.json",
+  "card_sha256": "d71c0580a4020b3f94a39d8d8e134560ca1181dd2c08d06ae230ff7218377f5d",
+  "evidence": {
+    "actual_staged_bytes_parsed": true,
+    "configured_output_paths": 20,
+    "failure_mechanism_regression": "sumocfg additional-files points to REV14 preparation scenario.add.xml while the active staged additional/output-role paths target v18; preflight rejects mismatch before process launch.",
+    "guardian_sumo_netconvert_traci_starts": {
+      "guardian": 0,
+      "netconvert": 0,
+      "sumo": 0,
+      "traci": 0
+    },
+    "launchable_now": false,
+    "nested_reference_helper_path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev18/r02_single_start/e1_nested_reference_binding.py",
+    "nested_reference_helper_sha256": "464744ec509108a76432c6cb1731eac7376c1adc6ed78c2167d415d01835860a",
+    "py_compile_command": ".venv/bin/python -m py_compile <runner.py> <e1_nested_reference_binding.py> <minimal3350_e1_r900_adapter.py>",
+    "py_compile_result": "PASS",
+    "raw_output_directory": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v18/MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY1/outputs",
+    "raw_output_directory_exists": false,
+    "review_gate_status": "WAITING_FOR_REQUIRED_REVIEWS",
+    "runner_path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev18/r02_single_start/runner.py",
+    "runner_sha256": "20774ee143a92d4534e5870ace3a3f4616dffb10e1ce2025a5ec775bee6be980",
+    "simulator_process_started": false,
+    "staging_preview": {
+      "additional_outputs": 12,
+      "config_outputs": 8,
+      "configured_role_records": 18,
+      "configured_unique_paths": 20,
+      "network_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+      "route_file_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev18/inputs/treatment/demand.rou.xml",
+      "schema": "e1-staged-reference-closure-v1",
+      "source_additional_sha256": "3cfa42bd3fd8066f3c400684168f410ca0bd178fc0d433e6db616583dfa96a53",
+      "source_demand_sha256": "3b3da52ac2ddbe915b3f6578b515ace1a30b3f7a1169724528855a6387abaada",
+      "source_sumocfg_sha256": "946ecf5fdb6aa81be5a3641f25cb182cde5d03492949e7a5ee7f52a7300ad75f",
+      "staged_additional_bytes": 4012,
+      "staged_additional_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v18/MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY1/outputs/scenario_control.add.xml",
+      "staged_additional_sha256": "3cfa42bd3fd8066f3c400684168f410ca0bd178fc0d433e6db616583dfa96a53",
+      "staged_sumocfg_bytes": 2888,
+      "staged_sumocfg_sha256": "674d11df107491ae42d8115513feeab89abd741efd337044fc43dd0a08513304",
+      "status": "PASS",
+      "validated_actual_staged_bytes": true
+    },
+    "static_preflight_path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev18/STATIC_PREFLIGHT_FINAL.json",
+    "static_preflight_sha256": "70bf4de3edb7aed2f864d40539c6ab4e9e3722b5563bc1955559fde6fc9c90ef",
+    "static_preflight_status": "PREFLIGHT_PASS_NO_PROCESS_STARTED",
+    "test_command": ".venv/bin/python -m unittest discover -s artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev18/tests -v",
+    "test_log_path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev18/tests/verification.log",
+    "test_log_sha256": "a2398caf65b648b0fa99889b71440d71102a8e9739459bb7cfdf92c16d5ad49c",
+    "test_result": "PASS_22_TESTS"
+  },
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "limitations": [
+    "Data/provenance and independent scientific prelaunch reviews are pending; launchable_now=false."
+  ],
+  "run_id": "MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY1",
+  "schema": "stage6_minimal3350_e1_r900_retry1_engineering_prelaunch_review_v1",
+  "scope": "Engineering-only independent technical retry preparation; no process launch.",
+  "status": "PASS_PRELAUNCH"
+}

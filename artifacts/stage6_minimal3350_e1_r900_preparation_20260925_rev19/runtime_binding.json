@@ -1,0 +1,39 @@
+{
+  "additional_schema_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+  "additional_schema_sha256": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e",
+  "binary_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+  "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+  "binary_version": "1.26.0",
+  "guardian_runner_sha256": "d6bde894ec724ded810f9d5f28c39e62d269a70c345be79ca2fdfa467c1c502a",
+  "max_output_bytes": 100000000,
+  "max_runtime_s": 120,
+  "python_environment": {
+    "executable_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+    "executable_sha256": "76c73e25cdd69650a897648666e41c364940fbcff0d1176572a667d4d470ec9e",
+    "implementation": "CPython",
+    "package_versions": {
+      "sumoITScontrol": "0.1.0",
+      "sumolib": "1.26.0",
+      "traci": "1.26.0"
+    },
+    "version": "3.13.0"
+  },
+  "resource_proposal": {
+    "basis": "Observed qRamp720 24.638514 s / 22,012,984 bytes, 192 planned R; E1 adds 25% vehicles. 120 s / 100,000,000 B are bounded headroom, not capacity or size guarantee.",
+    "enforcement": "100ms_polled_stop_trigger_with_possible_overshoot_not_hard_quota",
+    "output_size_stop_limit_bytes_decimal": 100000000,
+    "overshoot_accepted": true,
+    "poll_interval_s": 0.1,
+    "scope": "MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY2",
+    "status": "AUTHORIZED_FOR_THIS_RUN",
+    "wallclock_stop_limit_s": 120
+  },
+  "runtime_provenance_status": "READONLY_PATH_AND_HASH_VERIFIED_NO_SIMULATOR_PROCESS",
+  "sumo_home": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo",
+  "version_evidence": {
+    "binary_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+    "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+    "query": "sumo --version (environment probe; no simulation)",
+    "reported_version": "1.26.0"
+  }
+}

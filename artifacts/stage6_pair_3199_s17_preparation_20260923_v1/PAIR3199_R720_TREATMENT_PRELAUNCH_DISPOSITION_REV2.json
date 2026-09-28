@@ -1,0 +1,72 @@
+{
+  "status": "PAIR3199_R720_DELAYED_PRELAUNCH_READY_AWAITING_AUTHORIZATION",
+  "run_id": "PAIR_3199_R720_DELAYED_S17",
+  "card_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/PAIR_3199_R720_DELAYED_S17_CARD_PRELAUNCH_REV2.json",
+  "card_sha256": "6e810adfe70c03ff321ba47a4fff6593323e5b4a78884ce8e6971ffd86bb8d25",
+  "contract_path": "docs/methodology/STAGE6_EXPLORATORY_RAMP_INDUCED_WITNESS_CONTRACT.md",
+  "contract_sha256": "958890a7dd017110787a85d77ebfa3e6dac2b7d862f0fd91f6bafb7cf1738d9a",
+  "runtime_sidecar_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/runtime_bindings/PAIR_3199_R720_DELAYED_S17_PRELAUNCH_REV2.json",
+  "runtime_sidecar_sha256": "5c72fa902c828b2d85efc4f5adf4ff1d534526d2ccebdf352fb5c2d703cefb6f",
+  "runner_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+  "runner_sha256": "482056a14df16af779ef8c8ad8182c313775a3392caa24e1e5224e9f0c1c8a37",
+  "required_event_timeline_markers": [
+    "R_demand_activation",
+    "first_scheduled_R_departure",
+    "first_actual_R_departure",
+    "first_R_arrival_near_merge",
+    "first_meaningful_merge_exposure",
+    "first_M_deterioration",
+    "State1_onset"
+  ],
+  "reviews": {
+    "engineering": {
+      "status": "PASS",
+      "blocker_major_required_minor": "0/0/0",
+      "path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/ENGINEERING_TREATMENT_PRELAUNCH_REVIEW_INDEPENDENT_REV2.md",
+      "sha256": "1d0981273c97b40f61631793abac6e32f85fdf19fa0a62ba2f942a1a84ee54bd"
+    },
+    "data_provenance": {
+      "status": "PASS",
+      "blocker_major_required_minor": "0/0/0",
+      "path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/DATA_TREATMENT_PRELAUNCH_REVIEW_REV2.md",
+      "sha256": "9d38be393475670ec781d5f932f7172171e2c0ec274007172b940b8acdd4bd8a",
+      "receipt_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/DATA_TREATMENT_PRELAUNCH_REVIEW_RECEIPT_REV2.json",
+      "receipt_sha256": "a8ede781d2a508bbe8ac5366409cea84be1f87c803be16e7a5fd2d664f16d68a"
+    },
+    "scientific": {
+      "status": "PASS",
+      "blocker_major_required_minor": "0/0/0",
+      "confidence": "High for card-contract alignment; Moderate for future one-case attribution",
+      "path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/SCIENTIFIC_TREATMENT_PRELAUNCH_REVIEW_REV2.md",
+      "sha256": "b6d2bc61465bbff5e500311f2482861dd93ef0648cb153c025ee7a27551c61c1"
+    }
+  },
+  "resource_proposal": {
+    "run_id": "PAIR_3199_R720_DELAYED_S17",
+    "wallclock_stop_trigger_s": 120,
+    "output_size_stop_trigger_bytes_decimal": 90000000,
+    "output_polling_interval_ms": 100,
+    "polling_overshoot_accepted": true,
+    "status": "PROPOSED_NOT_AUTHORIZED"
+  },
+  "execution_authorized": false,
+  "max_starts_after_separate_authorization": 1,
+  "technical_retries": 0,
+  "output_path_absent": true,
+  "reservation_absent": true,
+  "execution_counts": {
+    "SUMO_starts": 0,
+    "TraCI_starts": 0,
+    "netconvert_starts": 0,
+    "launch_commands": 0
+  },
+  "control_history_preserved": {
+    "LOW_R_BACKGROUND_ACCEPTABLE": "NOT_EVALUABLE",
+    "fixed_screens": "FAIL",
+    "low_speed_and_candidate_C_warnings": "retained",
+    "clean_normal_baseline": false
+  },
+  "formal_protocol_changed": false,
+  "scientific_inputs_changed": false,
+  "rev1_history": "Preserved; superseded by REV2 solely to add distinct scheduled/actual departure and near-merge arrival timeline markers before any start."
+}

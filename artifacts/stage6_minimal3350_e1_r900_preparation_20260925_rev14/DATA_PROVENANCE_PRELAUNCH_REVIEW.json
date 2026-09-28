@@ -1,0 +1,107 @@
+{
+  "M_adapter_validation": "PASS, all 1396 M identity/type/route/depart/speedFactor/etc fields match control common manifest and control demand",
+  "R_vector_check": {
+    "240_R_ids": 240,
+    "demand_sha256": "3b3da52ac2ddbe915b3f6578b515ace1a30b3f7a1169724528855a6387abaada",
+    "historical_source_path": "artifacts/stage4_qmain_sequential_20260912_v1/runtime_archive/QM3500S17_attempt1/outputs/vehroute.xml",
+    "historical_source_sha256": "d4b0b50501df0f0bed2e69ba0db1dd6481a8cf81c11afbcf54fad417e0c9de88",
+    "source_speedFactors_differ_from_hash_bound_historical_realized_vehroute": 0,
+    "source_speedFactors_differ_from_materialized_vector": 0,
+    "treatment_and_vehicle_source_differing_fields": 0,
+    "vector_sha256": "4f23a508713b53b64c3d419e06d754d3032dce52a19f17f977a6508509d8c8fb",
+    "vehicle_source_sha256": "a6ae2649fe93c61460a52303b6358985c14270ce5ac5af02460af53880965851"
+  },
+  "blocker": "START_REQUEST.json names E1 run/card/output but command -c points to prior R720 raw v15 scenario_control.sumocfg, and reservation_path points to prior R720 REV7 consumption record. Expected config is E1 output v16 scenario_control.sumocfg; expected reservation is this E1 REV14 package consumption/MINIMAL3350_E1_R900_DELAYED_S17.json. Receipt is internally hash-consistent with the stale request, not with correct E1 binding. Static preflight is blocked on missing reviews and does not validate persisted request; tests do not cover stale command/reservation paths. Require new immutable revision with rebuilt request/receipt and negative tests before PASS.",
+  "card_status": "PRELAUNCH_READY_AWAITING_AUTHORIZATION",
+  "disposition": "BLOCKED_DATA_PROVENANCE_PRELAUNCH",
+  "evidence_hashes": {
+    "ENGINEERING_PRELAUNCH_REVIEW.json": "2c89c678f0ffbeb5ea8d573c706b4a937ac8e6a6629b767027773254f7c66582",
+    "INPUT_MANIFEST.json": "718ea05976343ae4cf2163f5d5b6fbe43ce93aeb083032886e1521a0f05f380e",
+    "PROVENANCE_RECEIPT.json": "a0bb92a5ed84aa4b027386a5d4a804651cc1100a5f2c69c50a307bab8cc8d089",
+    "R900_MATERIALIZED_VECTOR.json": "4f23a508713b53b64c3d419e06d754d3032dce52a19f17f977a6508509d8c8fb",
+    "minimal3350_e1_r900_adapter.py": "98d530ad4490c92c174233028cdb9d2388b5a4a945233f90aefa7c4613052148",
+    "r02_single_start/runner.py": "91fb54f5facb454a05313d6fe84e3c900739e02eb4a5b8ff968c88732c9717f3",
+    "runtime_binding.json": "a8ccaacfe718d863e64e09d53a8ee36e5326f20f80a03d6eb0d39086672ae00d",
+    "tests/test_e1_r900_preflight.py": "ca0de4226ab859e9842d28a77d0067f24e55ee1dd6d323239953dab5bcfd0646"
+  },
+  "exact_card_sha256": "cb9bba717e262cdc9328495b6b71b7dff5244094d05c9ad92acfdbcb43e7376b",
+  "execution_authorized": false,
+  "findings": {
+    "blocker": 1,
+    "major": 0,
+    "required_minor": 0
+  },
+  "output_targets": {
+    "all_under_output": true,
+    "count": 18,
+    "output_parent_absent": true,
+    "role_name_set_matches": true,
+    "unique": 18
+  },
+  "planned": {
+    "M": 1396,
+    "R": 240,
+    "U_explicit_zero": true,
+    "X_explicit_zero": true,
+    "qMain": 3350.4,
+    "schedule_ms": [
+      540000,
+      1496000,
+      4000
+    ],
+    "seed": 17,
+    "treatment_only_delta": "R_flow.0..239"
+  },
+  "request_bindings": {
+    "card_hash_matches": true,
+    "command_actual": [
+      "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+      "-c",
+      "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260924_v15/MINIMAL3350_R720_DELAYED_S17/outputs/scenario_control.sumocfg"
+    ],
+    "command_expected": [
+      "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+      "-c",
+      "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/scenario_control.sumocfg"
+    ],
+    "command_matches_expected": false,
+    "receipt_binds_request": true,
+    "request_output_matches": true,
+    "request_receipt_sha256": "369da5bbf82cd72c6f668e2506351220e47a927ed109adbc731dc0c562b9e967",
+    "request_run_id_matches": true,
+    "request_sha256": "e20bb6fccaecaf10cfa19ab1bf7a725d4f77907f50d118ed401357c9a18466bd",
+    "reservation_actual": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_minimal3350_r720_treatment_preparation_20260924_rev7/r02_single_start/consumption/MINIMAL3350_R720_DELAYED_S17.json",
+    "reservation_expected": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev14/r02_single_start/consumption/MINIMAL3350_E1_R900_DELAYED_S17.json",
+    "reservation_matches_expected": false
+  },
+  "resource_contract": {
+    "max_starts": 1,
+    "output_size_bytes": 100000000,
+    "overshoot_accepted": true,
+    "poll_ms": 100,
+    "technical_retries": 0,
+    "wallclock_s": 120
+  },
+  "review_and_tests": {
+    "engineering": "PASS_PRELAUNCH; 0/0/0",
+    "focused_tests_failed": 0,
+    "focused_tests_passed": 5,
+    "process_starts": {
+      "guardian": 0,
+      "netconvert": 0,
+      "sumo": 0,
+      "traci": 0
+    },
+    "static_preflight": "PREFLIGHT_PASS_NO_PROCESS_STARTED; launchable_now=false; persisted guardian request validation was skipped because reviews pending",
+    "test_file_sha256": "ca0de4226ab859e9842d28a77d0067f24e55ee1dd6d323239953dab5bcfd0646"
+  },
+  "run_id": "MINIMAL3350_E1_R900_DELAYED_S17",
+  "runtime": {
+    "adapter_sha256": "98d530ad4490c92c174233028cdb9d2388b5a4a945233f90aefa7c4613052148",
+    "runner_sha256": "91fb54f5facb454a05313d6fe84e3c900739e02eb4a5b8ff968c88732c9717f3",
+    "runtime_binding_sha256": "a8ccaacfe718d863e64e09d53a8ee36e5326f20f80a03d6eb0d39086672ae00d",
+    "sumo_binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+    "sumo_version": "1.26.0"
+  },
+  "schema": "stage6_minimal3350_e1_r900_data_provenance_prelaunch_review_v1"
+}

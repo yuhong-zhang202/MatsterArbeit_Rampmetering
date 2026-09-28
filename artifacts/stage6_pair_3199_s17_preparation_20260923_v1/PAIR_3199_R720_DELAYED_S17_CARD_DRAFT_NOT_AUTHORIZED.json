@@ -1,0 +1,70 @@
+{
+  "TLS_program": "A_OPEN",
+  "approval_required": true,
+  "card_revision": 1,
+  "card_status": "DRAFT_NOT_AUTHORIZED",
+  "condition": "A_OPEN_DELAYED_R720",
+  "demand": {
+    "M_number": 1333,
+    "M_window_s": "[0,1500)",
+    "R_number": 192,
+    "R_window_s": "[540,1500)",
+    "U_number": 150,
+    "X_number": 75,
+    "qMain_veh_per_h": 3199.2,
+    "qRamp_veh_per_h": 720,
+    "qUrban_veh_per_h": 360,
+    "qX_veh_per_h": 180
+  },
+  "design_plan": "artifacts/stage6_final_bounded_demand_scan_plan_20260923_v1/BOUNDED_DEMAND_SCAN_PLAN.md",
+  "design_sha256": "5aeddf82bcaa7f2b559e7b6db951815c724cf7d3e8f14dd81158a6f9dbac1046",
+  "execution_authorized": false,
+  "geometry": "accepted network bytes; read-only; no netconvert",
+  "horizon_s": 2700,
+  "input_manifest": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/inputs/treatment/expected_identity_manifest.json",
+  "input_manifest_sha256": "a69ba23ed1a82957904c8abc4aee774decf94d0210c07d29d051c0162f7aef1b",
+  "input_sha256": {
+    "additional": "13dc69427f24014e02c4ded173ba5d2db12ebf2666c0b77f2cc486a19755332a",
+    "demand": "6fe53e5b294184704ee5dbd575ccb2c225c17b57014c5c981b60ba557a9ae400",
+    "network": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "output_roles": "7dab35372984ccd3e7f103afaaf0dff59ecf4df6dc13d4c66dea5190fa77155d",
+    "sumocfg": "70a082e81a32f3a759a8b26cd9cbf426358d7cf4f40eedcef72d3f272d851072"
+  },
+  "inputs": {
+    "additional": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/inputs/treatment/scenario.add.xml",
+    "demand": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/inputs/treatment/demand.rou.xml",
+    "network": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+    "output_roles": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/inputs/treatment/output_roles.json",
+    "sumocfg": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/inputs/treatment/scenario.sumocfg"
+  },
+  "max_starts": 1,
+  "output_directory": "data/raw/stage6_bounded_pair_20260923_v1/PAIR_3199_R720_DELAYED_S17",
+  "pair_id": "PAIR_3199_S17",
+  "pair_start_order": 2,
+  "pair_start_rule": "Do not start unless the control raw has passed technical/data integrity and the independent control adjudication is LOW_R_BACKGROUND_ACCEPTABLE under the adopted plan. P/S/L negative alone does not release treatment. Separate exact user authorization required; no automatic sequential execution.",
+  "progression_allowed": false,
+  "protocol_status": "UNFROZEN; no formal protocol change",
+  "required_unresolved_prelaunch_items": [
+    "R02 runner is hard-bound to RI3350_CTRL_S17_technical_retry1 and cannot accept this new run_id",
+    "Exact runtime binary/version/python/guardian bindings for this new card not established",
+    "positive finite runtime and storage stop triggers have not been approved/bound"
+  ],
+  "resource_limits": {
+    "runtime_s": null,
+    "status": "NOT_BOUND_FOR_THIS_RUNNER",
+    "storage_bytes": null
+  },
+  "run_command": null,
+  "run_id": "PAIR_3199_R720_DELAYED_S17",
+  "schema_version": "1",
+  "scope_prohibitions": [
+    "No SUMO/netconvert/TraCI execution before separate user authorization",
+    "No classifier or threshold changes",
+    "No other qMain/qRamp/seed/controller arms",
+    "No 3350.4/R0 diagnostic gate in this pair task per explicit user direction"
+  ],
+  "seed": 17,
+  "step_s": 1,
+  "technical_retries": 0,
+  "vehicle_behavior": "unchanged from bound route file: technical_passenger, no explicit per-vehicle overrides"
+}

@@ -1,0 +1,130 @@
+{
+  "R_exposure": {
+    "R_first_departure_s": 540,
+    "T3_confirmation_s": 660,
+    "T3_pass_by_720": true,
+    "actual_R_departure_arrival": "192/192",
+    "auxiliary_E1_lane2_counts_570_660": [
+      12,
+      19,
+      18
+    ],
+    "first_through_lane_entry_s": 582,
+    "unique_through_lane_R_by_30s_bins": [
+      {
+        "begin": 570,
+        "end": 600,
+        "n": 4
+      },
+      {
+        "begin": 600,
+        "end": 630,
+        "n": 5
+      },
+      {
+        "begin": 630,
+        "end": 660,
+        "n": 6
+      }
+    ]
+  },
+  "alternative_causes": {
+    "E1_identity_attribution_available": false,
+    "downstream_E1_passage": true,
+    "mainline_red_records": 0,
+    "planned_M": 1396,
+    "queue_morphology_available": false,
+    "queues_frames": 2700,
+    "queues_lane_records": 0,
+    "ramp_mid_TLS_green": true,
+    "upstream_two_lane_E1_entered_total_control": 1397,
+    "upstream_two_lane_E1_entered_total_treatment": 1397,
+    "vehicles_all_arrived": true
+  },
+  "cards": {
+    "control_sha256": "15544478e8e7ced98b12673bec65cfe646b1f73e9e471ed501ddee052306bbfd",
+    "treatment_sha256": "d610c5c47c440014a3b8254b36de8d93a48c5d32be928746b93f50003ebcb125"
+  },
+  "condition": {
+    "M": 1396,
+    "R": 192,
+    "R_window_s": "[540,1500)",
+    "U_explicit_zero": true,
+    "X_explicit_zero": true,
+    "qMain_veh_per_h": 3350.4,
+    "seed": 17
+  },
+  "disposition": "NO_WITNESS",
+  "lifecycle": {
+    "E1_intervals_per_role": 90,
+    "FCD_frames_each": "2700 (0..2699)",
+    "control_M_inserted_arrived": "1396/1396",
+    "treatment_M_inserted_arrived": "1396/1396",
+    "treatment_R_inserted_arrived": "192/192",
+    "unfinished": 0
+  },
+  "limitations": [
+    "Historical strict high-mobility screen remains FAIL; this is not a clean-normal claim.",
+    "Candidate C warnings remain and are not erased.",
+    "Queue export lane arrays are empty; queue morphology cannot be verified.",
+    "Upstream E1 aggregate is +1 in both arms versus planned M; no identity attribution is available.",
+    "M speedFactor vector came from an earlier full-network run; paired identity and exact pre-R trajectory match establish within-pair matching, not a fresh independent U=X=0 RNG draw.",
+    "Single seed/vector only; exploratory result is not a general impossibility claim."
+  ],
+  "locked_classifier": {
+    "Candidate_A_control": 0,
+    "Candidate_A_treatment": 0,
+    "Candidate_C_bins_control": 28,
+    "Candidate_C_bins_treatment": 65,
+    "Candidate_C_core_bins_720_1440_control": 0,
+    "Candidate_C_core_bins_720_1440_treatment": 28,
+    "P_or_S_qualifying_control": 0,
+    "P_or_S_qualifying_treatment": 0,
+    "analysis_sha256": "036697e17f92fc8c7f4e4ff2d30a274e04fdb84bc3fec6ca2e41ebfea14a1e49",
+    "locked_result": "NO_QUALIFYING_EVENT",
+    "method_sha256": "22fe22170c17ce74e261e717586a458a1b5173e9deabbee925bd4c1d606adfe7",
+    "treatment_isolated_P_lows_core_all_time": 10,
+    "treatment_isolated_S_lows_core_all_time": 1
+  },
+  "post_entry_M_timing": {
+    "M_tuple_differences_540_591": 26,
+    "first_M_trajectory_difference_s": 584,
+    "first_R_through_lane_entry_s": 582,
+    "interpretation": "post-treatment divergence after actual R through-lane entry; not pre-R mismatch"
+  },
+  "pre_R_match": {
+    "M_vehicle_second_records_each_arm": 34491,
+    "disposition": "PASS",
+    "interval_s": "[0,540)",
+    "missing_keys": 0,
+    "tuple_divergences": 0
+  },
+  "processed_hashes": {
+    "control_cell_bin_metrics.csv": "b5a25fb367b9efc0c7026b20332b3496a5bf6b3e1141cf5a72a0f4be5695b7c8",
+    "locked_classifier_matched_analysis.json": "036697e17f92fc8c7f4e4ff2d30a274e04fdb84bc3fec6ca2e41ebfea14a1e49",
+    "matched_same_time_cell_metrics.csv": "89d1730684b6061575cd8fe998bd4495a45550f7665c883db1bfcb94d24a307f",
+    "matched_same_time_lane_cell_metrics.csv": "b93e18f489dd8c385762c13ee89142ba24e79cdafefe6eeac9a75bbb51409d75",
+    "treatment_cell_bin_metrics.csv": "a348b1b5f2d0c85f92e5ae69cc968ac5f357f28743d12c43aa4784733862b57a"
+  },
+  "raw_manifests": {
+    "control": {
+      "all_manifest_entries_match": true,
+      "manifest_entries": 25,
+      "manifest_sha256": "48456bb607b4e4679dd13274696c60ab7f5ae020aa6ecbf2462110e1fdcd752f"
+    },
+    "treatment": {
+      "all_manifest_entries_match": true,
+      "manifest_entries": 25,
+      "manifest_sha256": "b2badc4314347e06b2d5beaa63dc937845a89c1398f42671407b26a62588a885"
+    }
+  },
+  "receipts": {
+    "control_data_review_sha256": "24711f151751cb1d6b0ba852388824f1f8e69be7fea3678900b872498870ab4d",
+    "control_scientific_review_sha256": "8078d5ee902eb355623d29e7cc78c7d9cdf61e918903d9a3040fe0f320ae3738",
+    "engineering_postrun_sha256": "d5fdb0a361d32fd7c379dda979adde39f358fc1d533bdf6b0661c849275ef5c0",
+    "treatment_execution_receipt_sha256": "dd907cd84c629daa92b03a6cc1d9a4979df31371251e8b16f41db62aa4d7d4e2",
+    "treatment_input_manifest_sha256": "622b28e0fdb7659e75acdcc89b90a8e0038dc0eed052b4fdb0d188162fb4a95f"
+  },
+  "schema": "minimal3350_r720_treatment_data_lifecycle_postrun_review_v2",
+  "scope": "Independent data/lifecycle and locked classifier review for MINIMAL3350_R720_DELAYED_S17 REV7 versus MINIMAL3350_CTRL_S17 REV8."
+}

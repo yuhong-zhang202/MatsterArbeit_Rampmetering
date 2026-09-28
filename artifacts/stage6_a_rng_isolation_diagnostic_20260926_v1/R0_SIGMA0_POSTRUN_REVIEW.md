@@ -1,0 +1,7 @@
+# R0_SIGMA0 post-run eligibility review, 2026-09-26
+
+**Scientific disposition: `PASS_R0_COMPARATOR_FOR_A_SIGMA0_PRELAUNCH`** (Blocker 0, Major 0; eligibility confidence High). This releases preparation and exact-card review of A_SIGMA0, not its execution or any default-model A/B conclusion.
+
+R0 V2 card SHA-256 `9ccbfcc40528d25e55c69af18b7ca0cd3d5211ad773eda8cca5de49afb97f87a`; run receipt SHA-256 `1883c7ab926dee17cb0d67a0d830768facbcba22f21f6fa58f8a865cdde26628`. One SUMO start completed to 2700 s, exit 0, 24.73575 s wall, 20,896,023 output bytes, no resource stop. The engineering reviewer independently checked reservation/receipt binding, 22/22 raw file hashes, 18 valid required XML, 2700 FCD and summary steps, detector/TLS coverage, and empty error logs. The data analyst independently verified all M1396/U150/X75 planned, inserted and arrived, zero unfinished/never inserted, and actual pre-540 M502/U54/X27; `M_flow.502` first entered at the 540 s boundary. The data review is reproducible at `data/processed/stage6_a_rng_isolation_diagnostic_20260926_v1/r0_review/R0_POSTRUN_REVIEW.json`.
+
+The scientific reviewer found no R0 execution or population anomaly that prevents a matched A comparison. It explicitly does not call this a clean/free-flow baseline. A must still pass its own three-party exact-card prelaunch review, then strict `[0,540)` actual M/U/X FCD/departure equality and actual R exposure before post-R M interpretation. The default-model A remains `A_ATTRIBUTION_HOLD / NOT_IDENTIFIED`; B remains held.

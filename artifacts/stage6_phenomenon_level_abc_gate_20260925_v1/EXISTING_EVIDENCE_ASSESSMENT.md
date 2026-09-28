@@ -1,0 +1,23 @@
+# Existing evidence against the proposed phenomenon-level gate
+
+**Audit status:** retrospective reading of existing, independently reviewed seed17 evidence only. These labels assess what is presently *identified*; they do not replace historical locked P/S/L or scientific dispositions. No new simulation, recalculation of raw outputs or formal protocol change.
+
+| Gate leg | Present status | Quantitative evidence and limit |
+| --- | --- | --- |
+| **A — ramp pressure and sustained local M deterioration** | **`PARTIAL` — descriptive local pattern in U=X=0** | Both minimal R720 pairs are valid `NO_WITNESS`. At 3350.4/R900, actual R merge exposure exceeds R720 and merge-core cell15 has four consecutive P-low bins, **120 s [1260,1380)**, but all three immediate reference bins are below 0.85; historical result is `NOT_EVALUABLE`. At 3199.2/R900, certain-entry T3=690 and six 60 s-or-longer L episodes are measured, with no qualifying P/S; post-R source-region M feedback and 73 realized departure-lane differences leave pure merge-pressure attribution unresolved. These are local, single-seed, U=X=0 patterns; they do not establish the full-network open A state or confirmed State1. |
+| **B — moderate meter improves M with manageable R cost** | **`NOT_IDENTIFIED`** | In the historical matched full-network A/B pair, M mean full-route time worsens **73.459→74.224 s** and recorded timeLoss worsens **9.715→10.480 s**. Local M travel-time measurement bounds cross zero; unique M downstream passages are 1,071 in both. B's anchored ramp queue max is **148.58 m/19 vehicles**, while the U restricted system-time mean is nearly unchanged **67.213→67.227 s** (not proof of equivalence). The required M benefit is missing. |
+| **C — stronger meter increases R/U cost relative to B** | **`SUPPORTED` for cost direction; complete trade-off `NOT_IDENTIFIED`** | In the same full-network B/C pair, anchored queue maximum grows **148.58→238.16 m**, count **19→31**; R internal/shared front-lane presence grows **2,412→30,341** and **6,682→39,426 vehicle-s**. U complete-cohort restricted system-time mean grows **67.227→556.280 s**, including **212.413 s** mean external insertion wait in C; six U remain unfinished. Strict registered storage-cross labels are **0 in all arms**, and these U losses are not a pure spillback estimate. With no B freeway benefit, this is a cost pattern, not a demonstrated freeway–urban protection trade-off. |
+
+The historical full-network A/B/C runs use matched network, nominal demand, source file, seed17, M/R/U/X definitions and horizon; the intended difference is the meter program. They also have different *realized* R/U insertion under strong C, which is retained as part of its response and censoring. The minimal R900 pressure contrasts have U=X=0 and delayed R demand; they cannot be spliced into the historical full-network A/B/C chain. Actual R merge exposure, M-only measures, source dynamics and detector coverage must remain separate evidence fields.
+
+**Smallest scientific gap:** the full-network matched chain lacks an identified, directional **B-versus-open-A M improvement under an A condition with measurable sustained local M pressure**. C's ramp/urban cost direction already has substantial evidence. The present minimal-module A signal is useful plausibility evidence, but source feedback and cross-scenario mismatch keep the full chain incomplete. This is an evidence gap statement, not a proposal for another qMain/qRamp or simulation.
+
+**State1 boundary:** continued pursuit of a *confirmed State1* is not a prerequisite for the proposed exploratory A/B/C phenomenon gate. P/S/L and the 0.85 reference remain reported diagnostics, and none of the existing `NOT_EVALUABLE` cases is reclassified. If the later thesis claim specifically concerns **breakdown prevention**, it will need a separately reviewed and frozen formal outcome definition; this audit does not supply one.
+
+## Reviewed project evidence
+
+- Full-network matched A/B/C: `data/processed/stage6_o2_matched_abc_assessment_20260921_v1/REPORT_revision03.md` and adjacent final scientific review.
+- Minimal 3199/R720: `artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_rev2/SCIENTIFIC_POSTRUN_REVIEW_REV1.json`.
+- Minimal 3350/R720: `artifacts/stage6_minimal3350_r720_treatment_preparation_20260924_rev7/SCIENTIFIC_POSTRUN_REVIEW.json`.
+- Minimal 3350/R900: `artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev20/SCIENTIFIC_POSTRUN_REVIEW.json`.
+- Minimal 3199/R900: `artifacts/stage6_clean_onset_3199_r900_retrospective_sensitivity_20260925_v1/RETROSPECTIVE_SENSITIVITY_REPORT.md` and `SCIENTIFIC_REVIEW.json`.

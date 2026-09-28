@@ -1,0 +1,86 @@
+[
+  {
+    "name": "binary_file",
+    "argv": [
+      "/usr/bin/file",
+      "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/netconvert"
+    ],
+    "returncode": 0,
+    "stdout_bytes": 117,
+    "stderr_bytes": 0,
+    "stdout_sha256": "d5008764a0d68290ee90905a615aee0cea6b2694e817af0c5f375783e81a5adb",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "linked_libraries",
+    "argv": [
+      "/usr/bin/otool",
+      "-L",
+      "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/netconvert"
+    ],
+    "returncode": 0,
+    "stdout_bytes": 1024,
+    "stderr_bytes": 0,
+    "stdout_sha256": "b9dfec4792f100a7701bb96479a5396614680eb31a58d377a939f8b238730157",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "load_commands",
+    "argv": [
+      "/usr/bin/otool",
+      "-l",
+      "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/netconvert"
+    ],
+    "returncode": 0,
+    "stdout_bytes": 7647,
+    "stderr_bytes": 0,
+    "stdout_sha256": "64ccfd3a4a9c272afb6e10d379d9dcc3bfd03a10da3a17e2720a994a36f7abd2",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "binary_xattrs",
+    "argv": [
+      "/usr/bin/xattr",
+      "-l",
+      "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/netconvert"
+    ],
+    "returncode": 0,
+    "stdout_bytes": 0,
+    "stderr_bytes": 0,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "name": "signature",
+    "argv": [
+      "/usr/bin/codesign",
+      "-dvv",
+      "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/netconvert"
+    ],
+    "returncode": 0,
+    "stdout_bytes": 0,
+    "stderr_bytes": 449,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "0de0547f5d64df987c67997bfce5e8028d0bfb66caf0932b2c02b566e23c644d"
+  },
+  {
+    "name": "scoped_system_log",
+    "argv": [
+      "/usr/bin/log",
+      "show",
+      "--style",
+      "json",
+      "--start",
+      "2026-09-19 21:32:20",
+      "--end",
+      "2026-09-19 21:33:05",
+      "--predicate",
+      "processID == 21722 OR (eventMessage CONTAINS \"netconvert\")"
+    ],
+    "returncode": 64,
+    "stdout_bytes": 0,
+    "stderr_bytes": 32,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "3d1bfc20628becabc4bda68e57c58ad567d3a8aa0c8aa281f68b58bb28a3d0e5"
+  }
+]

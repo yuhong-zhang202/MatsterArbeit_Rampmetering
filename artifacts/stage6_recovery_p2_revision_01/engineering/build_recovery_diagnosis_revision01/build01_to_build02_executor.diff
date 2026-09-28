@@ -1,0 +1,70 @@
+--- /Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build01_executor.py
++++ /Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_recovery_diagnosis_revision01/build02_executor.py
+@@ -1,5 +1,5 @@
+ #!/usr/bin/env python3
+-"""BUILD01-only approval-bound launcher. Import/preflight never starts a binary."""
++"""BUILD02-only approval-bound launcher. Import/preflight never starts a binary."""
+ import argparse
+ import hashlib
+ import json
+@@ -13,7 +13,7 @@
+ 
+ ROOT = Path('/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering')
+ BASE = ROOT / 'artifacts/stage6_recovery_p2_revision_01/engineering'
+-OUTPUT = BASE / 'build_attempts/BUILD01'
++OUTPUT = BASE / 'build_attempts/BUILD02'
+ BINARY = Path('/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/netconvert')
+ BINARY_SHA = '919f8491518379daeaf2e215a96e58edb4bed4894cbf6ef948788170d5bea9b5'
+ SUMO_HOME = '/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo'
+@@ -55,7 +55,7 @@
+     approval = json.loads(Path(approval_path).read_text())
+     require(approval.get('status') == 'user-approved', 'No explicit approval')
+     require(approval.get('synthetic_test_only') is False, 'Synthetic approval forbidden')
+-    require(approval.get('scope') == 'SG6-BUILD BUILD01 only', 'Wrong approval scope')
++    require(approval.get('scope') == 'SG6-BUILD BUILD02 only', 'Wrong approval scope')
+     require(approval.get('card_sha256') == digest(card_path), 'Approval card SHA mismatch')
+     require(approval.get('card_path') == str(card_path), 'Approval card path mismatch')
+     require(approval.get('max_netconvert_starts') == 1, 'Wrong approval budget')
+@@ -67,17 +67,17 @@
+ def validate_card(card_path, approval_path, environment):
+     card = json.loads(Path(card_path).read_text())
+     require(card.get('kind') == 'SG6_BUILD_REQUEST_FINAL_OFFLINE', 'Not final BUILD card')
+-    require(card.get('attempt_id') == 'BUILD01', 'Only BUILD01 supported')
++    require(card.get('attempt_id') == 'BUILD02', 'Only BUILD02 supported')
+     require(card.get('approved') is False and card.get('authorized_starts') == 0, 'Card must remain inactive; approval lives in sidecar')
+     require(card.get('proposed_limits') == LIMITS, 'Limits changed')
+-    require(card.get('argv') == [str(BINARY), '-c', str(BASE / 'network_inputs/candidate.schema_revision02.netccfg')], 'Wrong command')
++    require(card.get('argv') == [str(BINARY), '-c', str(BASE / 'network_inputs/candidate.schema_revision02.netccfg'), '--output-file', str(OUTPUT / 'network.net.xml'), '--verbose', 'true'], 'Wrong command')
+     require(card.get('cwd') == str(ROOT), 'Wrong cwd')
+-    require(card.get('output_dir') == str(OUTPUT), 'Wrong BUILD01 directory')
++    require(card.get('output_dir') == str(OUTPUT), 'Wrong BUILD02 directory')
+     require(card.get('network_output') == str(OUTPUT / 'network.net.xml'), 'Wrong network output')
+     for key, name in [('stdout_path','netconvert.stdout.log'),('stderr_path','netconvert.stderr.log'),('receipt_path','build_receipt.json')]:
+         require(card.get(key) == str(OUTPUT / name), 'Wrong ' + key)
+     no_symlink(OUTPUT)
+-    require(not OUTPUT.exists(), 'BUILD01 already claimed; consumed, no automatic retry')
++    require(not OUTPUT.exists(), 'BUILD02 already claimed; consumed, no automatic retry')
+     require(card.get('environment_overrides') == {'SUMO_HOME': SUMO_HOME}, 'Wrong SUMO_HOME binding')
+     require(environment.get('SUMO_HOME') == SUMO_HOME, 'Calling SUMO_HOME must exactly match')
+     require(not any(k.startswith(('DYLD_', 'LD_')) for k in environment), 'Dynamic-loader overrides rejected')
+@@ -95,7 +95,7 @@
+     require(test_receipt.get('status') == 'PASS' and test_receipt.get('real_simulator_starts') == 0, 'Executor tests absent or failed')
+     require(test_receipt.get('executor_sha256') == digest(__file__), 'Tests bind another executor')
+     config = ET.parse(card['argv'][2]).getroot()
+-    require(config.find('output/output-file').get('value') == str(OUTPUT / 'network.net.xml'), 'Config output differs')
++    require(config.find('output/output-file').get('value') == str(BASE / 'build_attempts/BUILD01/network.net.xml'), 'Original config output changed; command line must override it')
+     for tag, suffix in [('node-files','nod'),('edge-files','edg'),('connection-files','con'),('tllogic-files','tll')]:
+         require(config.find('input/' + tag).get('value') == str(BASE / ('network_inputs/candidate.' + suffix + '.xml')), 'Config source differs')
+     approval = check_approval(card_path, approval_path)
+@@ -153,9 +153,9 @@
+     output = Path(output)
+     no_symlink(output)
+     output.parent.mkdir(parents=True, exist_ok=True)
+-    os.mkdir(output)  # Exclusive claim: even an empty orphan claim consumes BUILD01.
++    os.mkdir(output)  # Exclusive claim: even an empty orphan claim consumes BUILD02.
+     fsync_dir(output.parent)
+-    reservation = dict(attempt_id='BUILD01', reserved_starts=1, consumed_starts=1,
++    reservation = dict(attempt_id='BUILD02', reserved_starts=1, consumed_starts=1,
+                        automatic_retry=False, synthetic_test_only=synthetic,
+                        argv=argv, approval=approval_record, reserved_at=time.time(),
+                        crash_rule='Any claimed directory without terminal receipt is terminal_unknown_consumed; never relaunch')

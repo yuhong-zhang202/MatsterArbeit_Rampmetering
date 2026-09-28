@@ -1,0 +1,95 @@
+{
+  "checks": {
+    "P_S_L_negative_alone_releases_treatment": false,
+    "no_raw_output_directories_created": true,
+    "no_simulation_executed": true,
+    "output_paths_pair_exclusive": true,
+    "rates_veh_per_h": {
+      "M": 3199.2,
+      "R_treatment": 720.0,
+      "U": 360.0,
+      "X": 180.0
+    },
+    "schedule_counts": {
+      "M": 1333,
+      "R_control": 0,
+      "R_treatment": 192,
+      "U": 150,
+      "X": 75
+    },
+    "sumocfg_additional_binding": "PASS_PAIR_SPECIFIC",
+    "treatment_release_requires_low_r_background_acceptable": true,
+    "xml_parsed": true
+  },
+  "created_files": {
+    "DATA_PROVENANCE_PRELAUNCH_REVIEW.md": "7e34e909f2e5850f7a3a9e07a0e911f2bd0eea7352293c645848439aaaff5ab2",
+    "ENGINEERING_PRELAUNCH_REVIEW.md": "0b2d0b0a5b87e525b9d129ab7cec7bb4e0eaff66f64f5036f9b924d35965f20d",
+    "FINAL_PAIR_PRELAUNCH_DISPOSITION.json": "c6843ae7e2b934db3db075fda8af5856cb6ebd8258ab73fa31c13d4504d44d27",
+    "FINAL_PAIR_PRELAUNCH_DISPOSITION.md": "5d05d611790691bdeda308c0fa49654e9cebb77954a76309f0f16d2591aea1cd",
+    "PAIR_3199_CTRL_S17_CARD_DRAFT_NOT_AUTHORIZED.json": "a92312dce4fbf93827391d6178eb3634b0cf504bd19ba43eb5782107e97f9e1f",
+    "PAIR_3199_R720_DELAYED_S17_CARD_DRAFT_NOT_AUTHORIZED.json": "802e270751435fac1cde7cc80f21fbb9d6e217356c24dd236c1ba2d1405903ad",
+    "PAIR_BUDGET_AND_STOP_RULES.json": "30028c634e20189e2f82a1ba8bfe8472e7e30608ea7a3611236c63904703749c",
+    "PAIR_INPUT_DIFF.json": "c804f6ae44a899266c9a9a3abbe0c0a1d790f29a2cb976fe15910b780b28afa9",
+    "SCIENTIFIC_PRELAUNCH_REVIEW.md": "525e1864a3d7ea98242d06714c64e2a341aee752792addd4257869e045e45d4a",
+    "SCOPE_OVERRIDE.md": "e6f598efed677906534fc825591edad44c2594100239188287f2a655578d9d34",
+    "inputs/control/demand.rou.xml": "6bbdc1d9148b05286c25b94f23c37174951c9f3e4a544ef8b9a322fbc42ab631",
+    "inputs/control/expected_identity_manifest.json": "920f7d379c4a6509f2591447577688c372759f7b82c9cace166c0a95e51bec3f",
+    "inputs/control/output_roles.json": "5fe6d340f7196a2afd91ad56cd3c6ed419e32501110ce21076771446b4299ad3",
+    "inputs/control/scenario.add.xml": "ed98832e73675aa95cb3cfc386c579db9525b942b2555e802f0a29324affc23e",
+    "inputs/control/scenario.sumocfg": "6ea7306958543281b35a4c560e735d07e04c7658f73dc06f5cb174041baf0fe6",
+    "inputs/treatment/demand.rou.xml": "6fe53e5b294184704ee5dbd575ccb2c225c17b57014c5c981b60ba557a9ae400",
+    "inputs/treatment/expected_identity_manifest.json": "a69ba23ed1a82957904c8abc4aee774decf94d0210c07d29d051c0162f7aef1b",
+    "inputs/treatment/output_roles.json": "7dab35372984ccd3e7f103afaaf0dff59ecf4df6dc13d4c66dea5190fa77155d",
+    "inputs/treatment/scenario.add.xml": "13dc69427f24014e02c4ded173ba5d2db12ebf2666c0b77f2cc486a19755332a",
+    "inputs/treatment/scenario.sumocfg": "70a082e81a32f3a759a8b26cd9cbf426358d7cf4f40eedcef72d3f272d851072"
+  },
+  "engineering_review_status": "BLOCKED_R02_RUN_ID_AND_RESOURCE_BINDING",
+  "execution": {
+    "SUMO_starts": 0,
+    "TraCI_starts": 0,
+    "cards_authorized": 0,
+    "netconvert_starts": 0
+  },
+  "overall_prelaunch": "PREPARATION_BLOCKED",
+  "package_id": "stage6_pair_3199_s17_preparation_20260923_v1",
+  "plan_disposition": "PASS_PLAN_ONLY",
+  "plan_package": "artifacts/stage6_final_bounded_demand_scan_plan_20260923_v1",
+  "review_status": {
+    "data_provenance": "PASS",
+    "engineering": "BLOCKED",
+    "scientific": "PASS"
+  },
+  "reviews": {
+    "data_review_sha256": "7e34e909f2e5850f7a3a9e07a0e911f2bd0eea7352293c645848439aaaff5ab2",
+    "engineering_review_sha256": "0b2d0b0a5b87e525b9d129ab7cec7bb4e0eaff66f64f5036f9b924d35965f20d",
+    "final_disposition_sha256": "c6843ae7e2b934db3db075fda8af5856cb6ebd8258ab73fa31c13d4504d44d27",
+    "scientific_review_sha256": "525e1864a3d7ea98242d06714c64e2a341aee752792addd4257869e045e45d4a"
+  },
+  "schema_version": "1",
+  "source_bindings": {
+    "AGENTS.md": "4df6eb482d63f9d1e6d30dfea6d78c3645577cc08a9d944b818db53601ac281b",
+    "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "artifacts/stage6_final_bounded_demand_scan_plan_20260923_v1/BOUNDED_DEMAND_SCAN_PLAN.md": "5aeddf82bcaa7f2b559e7b6db951815c724cf7d3e8f14dd81158a6f9dbac1046",
+    "artifacts/stage6_final_bounded_demand_scan_plan_20260923_v1/RUN_BUDGET_AND_STOP_RULES.md": "b845c18284a0fdb7d73b404dbaceef0d37636234a038bbbefd6adb7e1cf10533",
+    "artifacts/stage6_final_bounded_demand_scan_plan_20260923_v1/SEQUENTIAL_DECISION_TREE.md": "8663009cfd0ff49849b48825f7df32ed4a13a211c393f671fd84a7cda6a78007",
+    "artifacts/stage6_final_bounded_demand_scan_plan_20260923_v1/WITNESS_ACCEPTANCE_CRITERIA.md": "f82a1f5893d15c8e30706a945b1241e597e7a2cacfea4562d48533344f72f51d",
+    "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/R02_RUNNER_CONTRACT.md": "a2adcd9fdccec3251f743caea3ead1f7a76ee8b481a1c9fad123e2c4a0553fbe",
+    "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py": "abba1b31970a4690a262881cec1ea0957b2386c65a20c4105a711cebf3c80154",
+    "artifacts/stage6_ramp_induced_validation_20260922_v1/r04_adapter/locked_event_source_adapter.py": "a5becfcf327dc2b9bc02ca6336526cd3a98509ffc2c7c2356a65d4088ce6bf6a",
+    "artifacts/stage6_ramp_induced_validation_20260922_v1/r04_adapter/reviewed_attribution_interface.py": "d8b078ded1e8b7da38da9ef953cf263db8a063204e4496bf36aae27261cde777",
+    "artifacts/stage6_ramp_induced_validation_20260922_v1/r05_r06/APPLICATION_CONTRACT.md": "cbff00453e7930ad5571d68c8ba15e57b0c81c91b505213f9f821e6f6ec4fa92",
+    "artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_A_S17_attempt1/demand.rou.xml": "70d90d477c97141086b87cd248064c2c27c5965060e04fe9a2cbec67ec20e1cd",
+    "artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_A_S17_attempt1/output_roles.json": "c88c958231069f3da0771f6261e7892ade4382b74890b6b2e91f20f09ff21c1a",
+    "artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_A_S17_attempt1/scenario.add.xml": "4198c04ce39bdfb5b91d965f2ec2ca9c7de42777415d77f68e87d4b239a22c2b",
+    "artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_A_S17_attempt1/scenario.sumocfg": "793d6ecd387f5ed958eb9aff0f13f1628f64bf1422d28c5400db0ddc34ff3c7c",
+    "docs/DECISIONS.md": "4e440204b812a9ed28181b6b4aa54818ca5e7a39d207aeaadcab12cf8cb00d7a",
+    "docs/EXPERIMENT_PROTOCOL.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/PROJECT_STATE.md": "85e5d1263a51525ad37b7fc3130325c566078f9e2b95e8543f05d54a576b5331",
+    "docs/WORKLOG.md": "c427cfdc019af48ab5cde925137c4bbcded57feb4a0a2dbe864bf91f491878ef",
+    "docs/methodology/FREEWAY_PROTECTABLE_STATE_EXPLORATORY_DEFINITION.md": "22fe22170c17ce74e261e717586a458a1b5173e9deabbee925bd4c1d606adfe7",
+    "docs/methodology/STAGE6_RAMP_INDUCED_BREAKDOWN_LUNA_EXECUTION_SPEC.md": "2ff991be454ce47e8f374c9855ff954f893920a49e8628de9f09dcee4e89d187",
+    "docs/methodology/STAGE6_RAMP_INDUCED_BREAKDOWN_VALIDATION_PLAN.md": "62fb63eb49ae98b58bc45ad6bc7d60cd21fcdb73b3327c34b97c5151b01ca355"
+  },
+  "status": "DRAFT_PREPARATION_NOT_AUTHORIZED",
+  "user_scope_override": "3350.4/R0 offline suitability audit is not a prerequisite for this first pair; no such audit performed in this task"
+}

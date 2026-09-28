@@ -1,0 +1,57 @@
+{
+  "after_completion_physical_event": "first discovered afterward: complete_evidence_but_comparison_unsuitable_physical_event; later stage blocked",
+  "allowed_physical_status": [
+    "suitable",
+    "complete_evidence_but_comparison_unsuitable_physical_event"
+  ],
+  "allowed_technical_status": [
+    "PASS",
+    "FAIL"
+  ],
+  "checks": {
+    "actual_lane_and_connection_consistency": "actual lanes/route and compiled reachable lane chains; do not require every internal at1Hz; aux0 skip alone is limitation",
+    "departed_route_and_fcd_consistency": "vehroute covers departed; never-inserted may absent; times/routes/FCD consistent; unfinished explicitly sourced",
+    "detector_output_contract": "all fixed IDs/roles period30/positions; no detector loading error; real output not claim TraCI loaded coverage",
+    "execution_complete_2700": "zero process exit; complete full window; no engine Error; all raw evidence retained",
+    "m_insertion_contract": "actual M first insertion main_up lane0/1 pos100\u00b10.02, full primary domain main_up1200\u2192main_down200",
+    "output_manifest_complete": "verify all actual raw output hashes; no partial/extra unexplained XML; logs reviewed; live writer absent; exact final bytes",
+    "output_role_set_17_exact": "9 E1 + 2 E2 + FCD/queues/summary/tripinfo/vehroute/TLS, each required file exactly once",
+    "planned_identity_coverage": "M1333,U150,X75,R300 or0; tripinfo all planned IDs exactly once including depart<0 never-inserted; no unknown IDs",
+    "population_conservation": "planned=never_inserted+departed; departed=arrived+in_network; integer residual0; physical events separate",
+    "source_binding_exact": "all card/input/output identities and hashes exact",
+    "tls_state_contract": "complete TLS states match registered cycle45Gr/3yr/9rG/3ry offset0 and lane links",
+    "xml_roots_and_timegrids": "parse all XML; FCD/TLS/summary/queue labels0..2699; detectors90 consecutive30s intervals0..2700; no required frame gaps"
+  },
+  "mandatory_bindings": [
+    "card_sha256",
+    "attempt_id",
+    "execution_receipt_sha256",
+    "output_manifest_sha256",
+    "analysis_version_binding"
+  ],
+  "no_new_user_prompt_between_passed_stages": true,
+  "observations_separate": [
+    "R route inference versus observed lane changes",
+    "R passage absence itself not technical failure",
+    "M/U effect sign not acceptance gate",
+    "emergency_braking_count",
+    "first_R_aux0_1Hz_coverage_limit"
+  ],
+  "progression_rule": "all exactly 12 checks PASS AND technical PASS AND physical suitable AND no output violation; previous gates smoke then R0 required",
+  "required_check_ids": [
+    "source_binding_exact",
+    "execution_complete_2700",
+    "output_role_set_17_exact",
+    "xml_roots_and_timegrids",
+    "planned_identity_coverage",
+    "departed_route_and_fcd_consistency",
+    "population_conservation",
+    "actual_lane_and_connection_consistency",
+    "detector_output_contract",
+    "tls_state_contract",
+    "output_manifest_complete",
+    "m_insertion_contract"
+  ],
+  "runtime_physical_event": "operator-observed collision/teleport while live: immediately stop; partial_evidence_physical; any later stage blocked",
+  "schema_version": 1
+}

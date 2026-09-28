@@ -1,0 +1,41 @@
+{
+  "schema": "stage6_final_mechanism_closeout_reassessment_provenance_v1",
+  "date": "2026-09-25",
+  "status": "REVIEWED_PASS_RECOMMENDATION_ONLY",
+  "scope": "Offline Stage 6 exploratory mechanism closeout reassessment; no adopted formal protocol or new simulation authorization.",
+  "files_sha256": {
+    "REASSESSMENT_REVIEWED_DRAFT.md": "786103e93e3cdbc480eec94f4f588b7bd53e23b8f581a540e0b1b444f667faa9",
+    "REASSESSMENT.md": "44a477dc5cfbbcabb9611b3a743177e83d1e029b2323637b17f8b3cf71f60894",
+    "ROBERT_TECHNICAL_SUMMARY.md": "f964b56248d2f34ad8d342407dc50c22468f6c549a05ec6d6bd8d7b7666ca055",
+    "SCIENTIFIC_REVIEW.json": "1cb41cd3ef03d55dd25af44ff55e00c8b1ebde9fe8b6d05784bddeb9a207660b",
+    "SCIENTIFIC_REVIEW.md": "cbbdaca20a2fda51694d42c9116590bf754482e603025a1726cd570a3860c4d9"
+  },
+  "reviewed_draft_to_final_change": "Only the status line changed from draft for review to independent scientific review PASS; substantive scientific content unchanged.",
+  "source_receipts_sha256": {
+    "minimal3199_R720_science": "291570279be3bef29b31bf079455ff140e91b5c68254ad252eeba81a2e9b004e",
+    "minimal3350_R720_science": "99c938a83f41724420d5d5cdd48aa0835f07d8a34c0bac6d0e72a92bb3bc2642",
+    "minimal3350_R900_science": "7c621613ad7ebe33c00fa0295e5517613861105ee9869932440fa3307c63f2f3",
+    "minimal3350_R900_data_correction": "c700e2d0c4d3c66cd8115e46cb8058e902a6cb79dd20e45bfddc308a610dc653",
+    "R900_matched_lane_cell_table": "feb09130cc17f8803cd8ff2c62341129d640372a64b4c2e8f3c5517544ebd071",
+    "M_speedFactor_serialization_audit": "eddb602a707cb5a0a54beca0af4a7714f6c1c1336c7a6feab01efedd1399e3a2",
+    "second_tier_plan": "dee35d966d3fb00b1320092e49c1ebc228fbbbe3c5a8c3320e7966960e976776",
+    "locked_methodology": "22fe22170c17ce74e261e717586a458a1b5173e9deabbee925bd4c1d606adfe7",
+    "Robert_original_email": "e788f4c12d36118fab865ed6fe9a7f1f1d6a7255d907daf4fc2d1850ed4c5023"
+  },
+  "source_paths": {
+    "minimal3199_R720_science": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_rev2/SCIENTIFIC_POSTRUN_REVIEW_REV1.json",
+    "minimal3350_R720_science": "artifacts/stage6_minimal3350_r720_treatment_preparation_20260924_rev7/SCIENTIFIC_POSTRUN_REVIEW.json",
+    "minimal3350_R900_science": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev20/SCIENTIFIC_POSTRUN_REVIEW.json",
+    "minimal3350_R900_data_correction": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev20/DATA_POSTRUN_REVIEW_CORRECTION_V3.json",
+    "R900_matched_lane_cell_table": "data/processed/stage6_minimal3350_e1_r900_retry3_20260925_v1/matched_same_time_lane_cell_metrics.csv",
+    "M_speedFactor_serialization_audit": "data/processed/stage6_final_mechanism_closeout_reassessment_20260925_v1/M_SPEEDFACTOR_SERIALIZATION_AUDIT_V2.json",
+    "second_tier_plan": "artifacts/stage6_second_tier_stress_escalation_plan_20260924_v1/SECOND_TIER_STRESS_ESCALATION_PLAN.md",
+    "locked_methodology": "docs/methodology/FREEWAY_PROTECTABLE_STATE_EXPLORATORY_DEFINITION.md",
+    "Robert_original_email": "docs/supervision/2026-08-25_robert_hilbrich_reply.md"
+  },
+  "review_disposition": {"scientific": "PASS", "blocker": 0, "major": 0, "required_minor": 0},
+  "new_process_starts": {"SUMO": 0, "Guardian": 0, "TraCI": 0, "netconvert": 0},
+  "scientific_inputs_modified": false,
+  "classifier_or_threshold_modified": false,
+  "formal_protocol_modified": false
+}

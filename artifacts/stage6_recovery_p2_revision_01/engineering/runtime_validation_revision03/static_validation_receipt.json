@@ -1,0 +1,397 @@
+{
+  "checks": [
+    {
+      "check_id": "RV3_SMOKE_R720_S17_attempt1.hint.scenario.add.xml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "RV3_SMOKE_R720_S17_attempt1.negative_missing_hint.scenario.add.xml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "RV3_SMOKE_R720_S17_attempt1.negative_wrong_hint.scenario.add.xml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "RV3_SMOKE_R720_S17_attempt1.semantic_identity.scenario.add.xml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "RV3_SMOKE_R720_S17_attempt1.hint.demand.rou.xml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "RV3_SMOKE_R720_S17_attempt1.negative_missing_hint.demand.rou.xml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "RV3_SMOKE_R720_S17_attempt1.negative_wrong_hint.demand.rou.xml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "RV3_SMOKE_R720_S17_attempt1.semantic_identity.demand.rou.xml",
+      "status": "PASS"
+    },
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/inputs/RV3_SMOKE_R720_S17_attempt1/scenario.add.xml"
+      ],
+      "check_id": "RV3_SMOKE_R720_S17_attempt1.xsd.scenario.add.xml",
+      "status": "PASS",
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/inputs/RV3_SMOKE_R720_S17_attempt1/scenario.add.xml validates\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/routes_file.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/inputs/RV3_SMOKE_R720_S17_attempt1/demand.rou.xml"
+      ],
+      "check_id": "RV3_SMOKE_R720_S17_attempt1.xsd.demand.rou.xml",
+      "status": "PASS",
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/inputs/RV3_SMOKE_R720_S17_attempt1/demand.rou.xml validates\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/sumoConfiguration.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/inputs/RV3_SMOKE_R720_S17_attempt1/scenario.sumocfg"
+      ],
+      "check_id": "RV3_SMOKE_R720_S17_attempt1.xsd.scenario.sumocfg",
+      "status": "PASS",
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/inputs/RV3_SMOKE_R720_S17_attempt1/scenario.sumocfg validates\n"
+    },
+    {
+      "check_id": "RV3_SMOKE_R720_S17_attempt1.all_config_values_identical",
+      "status": "PASS"
+    },
+    {
+      "check_id": "RV3_SMOKE_R720_S17_attempt1.new_run_absent",
+      "status": "PASS"
+    },
+    {
+      "check_id": "RV3_SMOKE_R720_S17_attempt1.input_hashes",
+      "status": "PASS"
+    },
+    {
+      "check_id": "RV3_R0_S17_attempt1.hint.scenario.add.xml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "RV3_R0_S17_attempt1.negative_missing_hint.scenario.add.xml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "RV3_R0_S17_attempt1.negative_wrong_hint.scenario.add.xml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "RV3_R0_S17_attempt1.semantic_identity.scenario.add.xml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "RV3_R0_S17_attempt1.hint.demand.rou.xml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "RV3_R0_S17_attempt1.negative_missing_hint.demand.rou.xml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "RV3_R0_S17_attempt1.negative_wrong_hint.demand.rou.xml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "RV3_R0_S17_attempt1.semantic_identity.demand.rou.xml",
+      "status": "PASS"
+    },
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/inputs/RV3_R0_S17_attempt1/scenario.add.xml"
+      ],
+      "check_id": "RV3_R0_S17_attempt1.xsd.scenario.add.xml",
+      "status": "PASS",
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/inputs/RV3_R0_S17_attempt1/scenario.add.xml validates\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/routes_file.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/inputs/RV3_R0_S17_attempt1/demand.rou.xml"
+      ],
+      "check_id": "RV3_R0_S17_attempt1.xsd.demand.rou.xml",
+      "status": "PASS",
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/inputs/RV3_R0_S17_attempt1/demand.rou.xml validates\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/sumoConfiguration.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/inputs/RV3_R0_S17_attempt1/scenario.sumocfg"
+      ],
+      "check_id": "RV3_R0_S17_attempt1.xsd.scenario.sumocfg",
+      "status": "PASS",
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/inputs/RV3_R0_S17_attempt1/scenario.sumocfg validates\n"
+    },
+    {
+      "check_id": "RV3_R0_S17_attempt1.all_config_values_identical",
+      "status": "PASS"
+    },
+    {
+      "check_id": "RV3_R0_S17_attempt1.new_run_absent",
+      "status": "PASS"
+    },
+    {
+      "check_id": "RV3_R0_S17_attempt1.input_hashes",
+      "status": "PASS"
+    },
+    {
+      "check_id": "RV3_R720_S17_attempt1.hint.scenario.add.xml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "RV3_R720_S17_attempt1.negative_missing_hint.scenario.add.xml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "RV3_R720_S17_attempt1.negative_wrong_hint.scenario.add.xml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "RV3_R720_S17_attempt1.semantic_identity.scenario.add.xml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "RV3_R720_S17_attempt1.hint.demand.rou.xml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "RV3_R720_S17_attempt1.negative_missing_hint.demand.rou.xml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "RV3_R720_S17_attempt1.negative_wrong_hint.demand.rou.xml",
+      "status": "PASS"
+    },
+    {
+      "check_id": "RV3_R720_S17_attempt1.semantic_identity.demand.rou.xml",
+      "status": "PASS"
+    },
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/inputs/RV3_R720_S17_attempt1/scenario.add.xml"
+      ],
+      "check_id": "RV3_R720_S17_attempt1.xsd.scenario.add.xml",
+      "status": "PASS",
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/inputs/RV3_R720_S17_attempt1/scenario.add.xml validates\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/routes_file.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/inputs/RV3_R720_S17_attempt1/demand.rou.xml"
+      ],
+      "check_id": "RV3_R720_S17_attempt1.xsd.demand.rou.xml",
+      "status": "PASS",
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/inputs/RV3_R720_S17_attempt1/demand.rou.xml validates\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/sumoConfiguration.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/inputs/RV3_R720_S17_attempt1/scenario.sumocfg"
+      ],
+      "check_id": "RV3_R720_S17_attempt1.xsd.scenario.sumocfg",
+      "status": "PASS",
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/inputs/RV3_R720_S17_attempt1/scenario.sumocfg validates\n"
+    },
+    {
+      "check_id": "RV3_R720_S17_attempt1.all_config_values_identical",
+      "status": "PASS"
+    },
+    {
+      "check_id": "RV3_R720_S17_attempt1.new_run_absent",
+      "status": "PASS"
+    },
+    {
+      "check_id": "RV3_R720_S17_attempt1.input_hashes",
+      "status": "PASS"
+    }
+  ],
+  "count": 42,
+  "input_manifest": {
+    "bytes": 15207,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/runtime_input_manifest.json",
+    "sha256": "958775b08792da19d404a6a5a91ca8c1110b935e786d8ab139f6aacf98027be6"
+  },
+  "known_limit": "canonical SUMO URI format verified locally; actual runtime schema resolution remains untested",
+  "local_syntax_sources": [
+    {
+      "bytes": 4248,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/sumolib/xml/__init__.py",
+      "sha256": "bd57f94de7bb317f2c9f9a9b44a7bdb467b0cb71d7af0c74d98a133f3aef8d63"
+    },
+    {
+      "bytes": 1353,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/game/rail/stops.add.xml",
+      "sha256": "299c9426acadd499bc2dad949f546f1beef7bead4722285f263e7fd1010f6b74"
+    }
+  ],
+  "real_SUMO_starts": 0,
+  "real_netconvert_starts": 0,
+  "schema_bindings": [
+    {
+      "bytes": 4724,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/nodes_file.xsd",
+      "sha256": "83e62500ea1058b2a222862f664017daacde51c96057cfee420cb7e10d6d7e78"
+    },
+    {
+      "bytes": 21420,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/types/base.xsd",
+      "sha256": "263c8b163a876529f52c9ea6f5b5db0d9a8284b47e01fbb9118bb2c1a12e2b4e"
+    },
+    {
+      "bytes": 5807,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/edges_file.xsd",
+      "sha256": "58d0e671608763190e2bb48526c0b71a8f914d2b7b198e86fd7e97354279392d"
+    },
+    {
+      "bytes": 5298,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/connections_file.xsd",
+      "sha256": "553936b8a24d0092336b456854e7d7626286652482568b3ae14b1b7628f5502a"
+    },
+    {
+      "bytes": 1506,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/tllogic_file.xsd",
+      "sha256": "726bd33e2b14df5ed4c7a9cc6c737ad65c644fb13dcdd0156ce0cc79e8d9416f"
+    },
+    {
+      "bytes": 353,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/netconvertConfiguration.xsd",
+      "sha256": "210b0f51f373c4750a28f2f750a90304fed06edc042b947e91278ee743a22ecf"
+    },
+    {
+      "bytes": 36121,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/types/netconvertConfigurationType.xsd",
+      "sha256": "8de323821fae9a20a4f27957d2d040a3f3b34ba6c05396670a7bc21fbf55973f"
+    },
+    {
+      "bytes": 1462,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/routes_file.xsd",
+      "sha256": "2ce8e88b6644d87cc6d8acd49b2fc9da29f74e953e67ab4c6e475de5cfe0cb11"
+    },
+    {
+      "bytes": 60260,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/types/route.xsd",
+      "sha256": "17fbf07672adb5beff77181763e3b10f0756bd3ff80bdd4ede92dfb4e9c32f84"
+    },
+    {
+      "bytes": 335,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/sumoConfiguration.xsd",
+      "sha256": "3a17f38bb69fcfaa46ae6e8e1dad548133a4e173368eab524d0cbef9eecad69b"
+    },
+    {
+      "bytes": 49525,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/types/sumoConfigurationType.xsd",
+      "sha256": "ac6c5b6139ab95fdfda504411e0fb93fedb88973336fcf246ed0e9d683dca810"
+    },
+    {
+      "bytes": 43827,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+      "sha256": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e"
+    },
+    {
+      "bytes": 2679,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/types/metadata.xsd",
+      "sha256": "671e571f3d111dbf30b8f1001ab1f14b033d852f48793289e4b223e77493ed92"
+    },
+    {
+      "bytes": 4408,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/types/activitygenConfigurationType.xsd",
+      "sha256": "9921e16415a77f0c6ced30b5e3c3f6c61ace40fcb38a09462095d22f7c6a3618"
+    },
+    {
+      "bytes": 8398,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/types/dfrouterConfigurationType.xsd",
+      "sha256": "9fd27c111aeba6e6a250d0e1812ff9c1f75873df6c6c6ca1fe10f5dac268f91e"
+    },
+    {
+      "bytes": 11874,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/types/duarouterConfigurationType.xsd",
+      "sha256": "e5a59071ff6d3e4ba556e736b307de7183e5ceb95c464cb56fd395f7d511fab2"
+    },
+    {
+      "bytes": 8825,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/types/jtrrouterConfigurationType.xsd",
+      "sha256": "0cc1a156e3f40227c4929c2fd5cefbfb05d89964a1932bd0994b09a9529c2a34"
+    },
+    {
+      "bytes": 10744,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/types/marouterConfigurationType.xsd",
+      "sha256": "a957367cf19f63b4ed9e3ef2daf73459bc9847f210c4747c73504aa148a3c392"
+    },
+    {
+      "bytes": 42535,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/types/neteditConfigurationType.xsd",
+      "sha256": "e36c3a0b70ca2a456ab5613da306d09316bbe0d62381ad749f37fba573033398"
+    },
+    {
+      "bytes": 24232,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/types/netgenerateConfigurationType.xsd",
+      "sha256": "7058a35716c79c48ac4a767963ed7fef76d858f020a29de0bc72cdda46326c51"
+    },
+    {
+      "bytes": 6434,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/types/od2tripsConfigurationType.xsd",
+      "sha256": "398b4995dc4279bfe201f5c4f5eec41da01919753a51a678e104954664292c8c"
+    },
+    {
+      "bytes": 8157,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/types/polyconvertConfigurationType.xsd",
+      "sha256": "89a9aebb1ddf64761bc24be20a3fd5946999509c9b1802c4f0fff299a7c9abc0"
+    },
+    {
+      "bytes": 1310,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/types/taz.xsd",
+      "sha256": "65ecd0c8a57f8e563dfa4aa1ab5e60febde31427bc72fdfc5c040273c2ba8158"
+    }
+  ],
+  "status": "PASS",
+  "validator": {
+    "bytes": 3059,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/validate_schema_repair.py",
+    "sha256": "dd4da5fd317a184d122544d894b1cbc10fc4120ea79d0c96abaf62ef73d007ca"
+  }
+}

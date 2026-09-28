@@ -1,0 +1,48 @@
+{
+  "schema_version": "1",
+  "diagnosis_id": "STAGE6_CROSS_CONTROL_ARTIFACT_DIAGNOSIS_20260923_V1",
+  "disposition": "NO_SYSTEMATIC_ARTIFACT_EVIDENCE",
+  "confidence": "Moderate",
+  "scientific_blocker_major_required_minor": [
+    0,
+    0,
+    0
+  ],
+  "scope": {
+    "runs": [
+      "RI3350_CTRL_S17_technical_retry1",
+      "PAIR_3199_CTRL_S17"
+    ],
+    "SUMO_starts": 0,
+    "TraCI_starts": 0,
+    "netconvert_starts": 0,
+    "treatment_prepared_or_run": false,
+    "classifier_threshold_screen_changed": false
+  },
+  "hashes_sha256": {
+    "data_report": "c777ee00ed75349e612baf8cbd0918fb19640fbbc312a37bafb52105b24caddd",
+    "data_comparison": "d517ee1422622977686242221c2fedb142887cf8d7c9b4c120173c1cce997f3f",
+    "data_script": "6ac8f34c69fbfc970809caab35bcc2c97a1955463ad671bc77149e140d3b7cb0",
+    "engineering_review": "414321ad1c3f6904b6bcf608bfc6210fbbb969dcc3fc0fa1f168deae029cc1c6",
+    "scientific_review": "a29be67c66af46aaab0605130a0de4604fa16099fe21f06a8d61e21eab241ff1",
+    "final_disposition": "0b49f856ee1099db1cb40ba3c365280bffa69aa82701c95dc382e947d3fbdbcf",
+    "project_state": "59dd1bfda525c6fc54279564619c9c5708f6b3d865332aa7f4c8e937b004fbb5",
+    "worklog": "4c76bb6e5219b334d5b017fa1763df6f598e33656f0f2e99ac7a9a7c38abc31c",
+    "witness_criteria": "f82a1f5893d15c8e30706a945b1241e597e7a2cacfea4562d48533344f72f51d"
+  },
+  "paths": {
+    "data_report": "data/processed/stage6_cross_control_artifact_diagnosis_20260923_v1/DATA_DIAGNOSIS.md",
+    "data_comparison": "data/processed/stage6_cross_control_artifact_diagnosis_20260923_v1/cross_control_comparison_rev2.json",
+    "data_script": "data/processed/stage6_cross_control_artifact_diagnosis_20260923_v1/compare_controls.py",
+    "engineering_review": "artifacts/stage6_cross_control_artifact_diagnosis_20260923_v1/engineering/ENGINEERING_CROSS_CONTROL_REVIEW.md",
+    "scientific_review": "artifacts/stage6_cross_control_artifact_diagnosis_20260923_v1/SCIENTIFIC_REVIEW.md",
+    "final_disposition": "artifacts/stage6_cross_control_artifact_diagnosis_20260923_v1/FINAL_DISPOSITION.md",
+    "project_state": "docs/PROJECT_STATE.md",
+    "worklog": "docs/WORKLOG.md",
+    "witness_criteria": "artifacts/stage6_final_bounded_demand_scan_plan_20260923_v1/WITNESS_ACCEPTANCE_CRITERIA.md"
+  },
+  "limitations": [
+    "Does not clear existing control NOT_EVALUABLE dispositions.",
+    "No vehicle-linked causal lane-change reconstruction; E1 taps have bounded downstream coverage."
+  ]
+}

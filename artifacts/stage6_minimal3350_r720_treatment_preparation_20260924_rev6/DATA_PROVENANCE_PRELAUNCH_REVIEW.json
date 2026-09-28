@@ -1,0 +1,150 @@
+{
+  "schema": "stage6_minimal3350_treatment_data_provenance_prelaunch_review_v1",
+  "run_id": "MINIMAL3350_R720_DELAYED_S17",
+  "package_id": "stage6_minimal3350_r720_treatment_preparation_20260924_rev6",
+  "review_scope": "Independent read-only data/provenance prelaunch review of REV6 only; no treatment outcomes inspected and no process launched.",
+  "status": "PASS_DATA_PROVENANCE_PRELAUNCH",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "bindings": {
+    "card_path": "artifacts/stage6_minimal3350_r720_treatment_preparation_20260924_rev6/MINIMAL3350_R720_DELAYED_S17_CARD_REV1.json",
+    "card_sha256": "dadbfd3c3dd1460a648b478ff9c0f4a7c69806d605e27fc951de1082cfa9cca7",
+    "input_manifest_sha256": "a8419090fdd61bed39f975b1494ebd492a03b8444d6d774bce0343e40e9e6cf8",
+    "runtime_binding_sha256": "e15b0ac1739f8b2040757dc6b5c0bca0b0a1a9ce09aefafbe8330e31fcb96ac2",
+    "runner_sha256": "273570bb4def647c7c1801e8649d5918c97d1c7281df5db852883f3462fa8fa9",
+    "start_request_sha256": "8100357ca942e96113db958ff866caa0f2361054a0c3cef765a4bc05f0b9b60b",
+    "start_request_receipt_sha256": "36ff1d1d8a5940fe505e380943c402da59ad7adfff1019f13f7dd9a36c0a1f3d",
+    "provenance_receipt_sha256": "6c93fad1b31966426526cc2f662f298e0fb7a8a03c726200765d2f0e2d7e48aa",
+    "design_plan_sha256": "06b0f04f1144ef8497b4d64906ae27b1377b544abd6e0639133c8d85a3fabc23",
+    "witness_contract_sha256": "958890a7dd017110787a85d77ebfa3e6dac2b7d862f0fd91f6bafb7cf1738d9a",
+    "adapter_sha256": "3ab2560ad9364da07572053b685bc4d2d92844c030d6bb53273eb3d7677ac434"
+  },
+  "condition_check": {
+    "qMain_veh_per_h": 3350.4,
+    "seed": 17,
+    "R_veh_per_h": 720,
+    "R_window_s": "[540,1500)",
+    "U": 0,
+    "U_status": "PASS_ZERO",
+    "X": 0,
+    "X_status": "PASS_ZERO",
+    "legacy_clean_high_mobility_screen_required_for_release": false,
+    "stage6_exploratory_control_disposition_required_for_release": true,
+    "required_exploratory_control_disposition": "LOW_R_BACKGROUND_ACCEPTABLE"
+  },
+  "matched_control_gate": {
+    "run_id": "MINIMAL3350_CTRL_S17",
+    "card_sha256": "15544478e8e7ced98b12673bec65cfe646b1f73e9e471ed501ddee052306bbfd",
+    "data_review_sha256": "24711f151751cb1d6b0ba852388824f1f8e69be7fea3678900b872498870ab4d",
+    "data_review_disposition": "PASS_DATA_LIFECYCLE",
+    "data_side_control_category": "LOW_R_BACKGROUND_ACCEPTABLE",
+    "scientific_review_sha256": "8078d5ee902eb355623d29e7cc78c7d9cdf61e918903d9a3040fe0f320ae3738",
+    "scientific_disposition": "LOW_R_BACKGROUND_ACCEPTABLE",
+    "scientific_findings": {
+      "blocker": 0,
+      "major": 0,
+      "required_minor": 0
+    },
+    "output_manifest_sha256": "48456bb607b4e4679dd13274696c60ab7f5ae020aa6ecbf2462110e1fdcd752f",
+    "result": "PASS_EXACT_BOUND_CONTROL_RECEIPTS"
+  },
+  "common_M_binding": {
+    "manifest_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev8/COMMON_M_DEMAND_MANIFEST.json",
+    "manifest_sha256": "2fb1383e709e2174e2623aae575649aba40937729325a5e9c43bcc2b76982865",
+    "planned_identity_count": 1396,
+    "control_identity_count": 1396,
+    "treatment_identity_count": 1396,
+    "id_sets_equal": true,
+    "per_vehicle_fields_checked": [
+      "id",
+      "desired_depart_ms",
+      "depart",
+      "route",
+      "type",
+      "speedFactor",
+      "departLane",
+      "departPos",
+      "departSpeed"
+    ],
+    "exact_mismatches": 0,
+    "integer_SUMOTime_schedule": "desired_depart_ms(i)=i*1074 for i=0..1395; all 1,396 records match",
+    "route_and_type_definitions_equal": true
+  },
+  "treatment_delta": {
+    "only_new_vehicle_id_family": "R_flow.0..R_flow.191",
+    "R_count": 192,
+    "first_depart_ms": 540000,
+    "last_depart_ms": 1495000,
+    "interval_ms": 5000,
+    "schedule_exact": true,
+    "control_R_count": 0,
+    "control_U_count": 0,
+    "control_X_count": 0,
+    "treatment_U_count": 0,
+    "treatment_X_count": 0,
+    "result": "TREATMENT_ADDS_ONLY_R_AND_ZERO_CLASSES_ARE_EXPLICIT"
+  },
+  "source_scope_limitation": {
+    "M_speedFactor_source_sha256": "0183782a60172b5c038d7c0dcd0a9172478803a1c1673df6eadb29f2a6ea1702",
+    "source": "data/raw/stage6_baseline_localization_20260921_v1/LOC_M3350_S17_attempt1/outputs/vehroute.xml",
+    "scope_note": "M speedFactor values were materialized from the earlier qMain=3350.4 seed17 full-network run with nonzero U/X. The same complete explicit M vector is used in control and treatment. This closes the matched-input identity/attribute comparison; it does not claim an independently sampled U=X=0 RNG realization.",
+    "classification": "DISCLOSED_NONBLOCKING_LIMITATION_FOR_THIS_MATCHED_INPUT_PROVENANCE_REVIEW"
+  },
+  "input_hash_validation": {
+    "additional": "26953d96ed4c25f9dfc68cd043222759b7ef9bcee4075e688a962ca28d5e3f80",
+    "demand": "569b9fb152b060c848b9c8da2c2c7d94e68da4fa7e7ab4c5a03a869f05ecce53",
+    "network": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "output_roles": "ebd49a1b42e13c983113013b7feb765b877a4dbdf41f085f59f92184455b271d",
+    "sumocfg": "584951d04d05092afc4cf9adc16342b602aadb087fe9bd1c3fd27a7fd381be4e",
+    "all_match_card_manifest_and_actual_bytes": true
+  },
+  "runtime_and_request": {
+    "sumo_version": "1.26.0",
+    "sumo_binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+    "additional_schema_sha256": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e",
+    "python_executable_sha256": "76c73e25cdd69650a897648666e41c364940fbcff0d1176572a667d4d470ec9e",
+    "runner_request_card_runtime_bindings_consistent": true,
+    "request_status": "PERSISTED_UNSENT",
+    "request_dispatched": false
+  },
+  "output_targets": {
+    "expected_role_count": 18,
+    "actual_role_count": 18,
+    "unique": true,
+    "all_under_exact_bound_output_directory": true,
+    "output_directory": "data/raw/stage6_minimal3350_ux0_20260924_v14/MINIMAL3350_R720_DELAYED_S17/outputs",
+    "parent_directory_absent": true,
+    "all_targets_absent": true
+  },
+  "resource_contract": {
+    "wallclock_stop_trigger_s": 90,
+    "output_size_stop_trigger_bytes": 75000000,
+    "poll_interval_ms": 100,
+    "slight_polling_overshoot_accepted": true,
+    "technical_retries": 0,
+    "max_starts": 1
+  },
+  "process_and_launch_status": {
+    "preparation_receipts_report_guardian_sumo_traci_netconvert_starts": 0,
+    "static_preflight_status": "PREFLIGHT_PASS_NO_PROCESS_STARTED",
+    "launchable_now_at_review_capture": false,
+    "reason": "Fresh exact-card review binding was pending; this review does not itself authorize or launch a process.",
+    "live_process_list": "Not independently inspected: operating-system process listing was denied by execution environment. No process-start action was made; persisted receipts and absent output targets show no launch for this revision at review capture."
+  },
+  "review_evidence": {
+    "engineering_review_sha256": "c981fe64217203fe18afcfbe8f261bca0cf45a3617c2b2859aed66428be87b03",
+    "focused_tests_reported_by_engineering": {
+      "passed": 20,
+      "failed": 0,
+      "coverage_note": "Includes the exact bound-control category prerequisite and fail-closed negative fixtures for missing/false prerequisite, missing/mismatched control binding, missing review receipts, wrong category, nonzero findings, and wrong control identity/hash. Test suite was inspected; not rerun in this read-only review."
+    }
+  },
+  "limitations": [
+    "This is a prelaunch provenance review, not an execution authorization, post-run analysis, or scientific evaluation of a treatment outcome.",
+    "M speedFactor source scope is explicitly disclosed above and is not evidence of an independent U=X=0 stochastic realization.",
+    "The host process list could not be inspected because the environment denied the read-only process-list command; the persisted unsent request, zero-start preparation receipts, static preflight, and absent raw output path are consistent with no launch."
+  ]
+}

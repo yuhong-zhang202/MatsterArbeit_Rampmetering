@@ -1,0 +1,37 @@
+{
+  "status": "PASS_STATIC_FINAL",
+  "stage": "exact_o2_diagnostic_package",
+  "card_sha256": "c5b86295f41a9dedbd59cfd10427b34a9d50d522fd941b1df83fc89fd0d261f2",
+  "blocker_major_required_minor": [
+    0,
+    0,
+    0
+  ],
+  "scope": "single_C_seed17_end450_readonly_diagnostic",
+  "scientific_review": {
+    "status": "PASS_STATIC_FINAL",
+    "agent": "/root/p0_scientific_final",
+    "confidence": "High (static scope only)",
+    "findings": [
+      "C/seed17/0-450 s and 1 s step; no condition, demand, seed, geometry, signal, restriction, car-following, lane-changing, or observer scientific-scope change.",
+      "New attempt02 roots are unique; attempt01 remains hash-protected; startup wait/sample change is technical troubleshooting only.",
+      "Static review does not establish runtime neutrality, diagnostic completion, or O2 resolution."
+    ]
+  },
+  "data_review": {
+    "status": "PASS_STATIC_DATA",
+    "agent": "/root/p0_data",
+    "confidence": "High (static bindings and path review)",
+    "card_binding_count": 217,
+    "input_manifest_binding_count": 6,
+    "prior_accounting_binding_count": 14,
+    "delivery_manifest_binding_count": 78,
+    "delivery_manifest_sha256": "9bf70837ca0ddaefd677829f359889183cdcf718c6a7de3216acb1e1ac10d9c5",
+    "findings": [
+      "Card, 18 output roles, and all 20 configured XML/log destinations point to the fresh attempt02 root.",
+      "Attempt01 eleven files and 13,288 bytes retain their recorded hashes and failure accounting.",
+      "Existing C-prefix comparison remains a required post-run gate."
+    ]
+  },
+  "execution_authorization_basis": "User explicitly authorized continued technical troubleshooting retries until the unchanged 0-450 s diagnostic succeeds; exact review of this card permits only one attempt02 start. No approval for broader scientific runs is inferred."
+}

@@ -1,0 +1,91 @@
+{
+  "schema_version": "2",
+  "package_id": "stage6_ramp_induced_validation_20260922_v1",
+  "run_id": "RI3350_CTRL_S17_attempt1",
+  "status": "PRELAUNCH_REVIEW_PENDING_FINAL_SCIENTIFIC_REVIEW",
+  "historical_register": "readiness_register.json (preserved; superseded for current status)",
+  "starts_consumed": 0,
+  "technical_retries": 0,
+  "progression_allowed": false,
+  "resource_contract": {
+    "scope": "this exact run only",
+    "wallclock_stop_trigger_s": 180,
+    "output_size_stop_trigger_bytes_decimal": 300000000,
+    "poll_interval_ms": 100,
+    "output_overshoot_accepted": true,
+    "strict_disk_quota": false,
+    "source": "user conditional authorization in current task"
+  },
+  "checks": [
+    {
+      "id": "R01",
+      "status": "PASS_BOUNDED_STATIC_INPUT_BINDING",
+      "evidence": "r01_r03/r01_static_audit_receipt.json; no XSD/runtime execution claimed"
+    },
+    {
+      "id": "R02",
+      "status": "PASS_MOCKED_AND_INDEPENDENT_ENGINEERING_REVIEWED",
+      "evidence": "r02_single_start/r02_runner_receipt.json; R02 suite 23/23; final engineering review 0/0/0; exact runner SHA is separately hash-bound into the final card"
+    },
+    {
+      "id": "R03",
+      "status": "PASS_PLAN_FIXTURES_ACTUAL_PAIRING_DEFERRED",
+      "evidence": "r01_r03/r03_pairing_readiness_receipt.json; actual paired realization is post-run/future and not this R=0 prelaunch blocker"
+    },
+    {
+      "id": "R04",
+      "status": "PASS_STATIC_PRODUCTION_MAPPING_REAL_RAW_APPLICATION_DEFERRED",
+      "evidence": "r04_adapter/locked_event_source_adapter.py; exact complete source coverage and gate map; R04 suite 40/40; independent data and bounded scientific review 0/0/0; raw absence is not treated as zero events"
+    },
+    {
+      "id": "R05",
+      "status": "PASS_SYNTHETIC_FIXTURES_REAL_RAW_APPLICATION_DEFERRED",
+      "evidence": "r05_r06/r05_r06_readiness_receipt.json; actual application occurs after control raw exists"
+    },
+    {
+      "id": "R06",
+      "status": "NOT_APPLICABLE_TO_SCHEDULED_R_ZERO_CONTROL",
+      "evidence": "r05_r06/r05_r06_readiness_receipt.json; no R exposure is inferred; actual-R validation is deferred"
+    },
+    {
+      "id": "R07_G6",
+      "status": "UNKNOWN_ALLOWED_FOR_THIS_CONTROL_ONLY",
+      "evidence": "r07_coverage_audit.json; not a PASS, not baseline suitability, and cannot authorize progression"
+    },
+    {
+      "id": "R08",
+      "status": "POST_RUN_CONCLUSION_RULES_PREBOUND",
+      "evidence": "docs/methodology/STAGE6_RAMP_INDUCED_BREAKDOWN_LUNA_EXECUTION_SPEC.md and R04/R05/R07 bounded outputs; no outcome inferred before raw exists"
+    },
+    {
+      "id": "R09_ENGINEERING",
+      "status": "PASS",
+      "findings": {"blocker": 0, "major": 0, "required_minor": 0},
+      "evidence": "R02 final independent engineering review; 23/23 fixture suite"
+    },
+    {
+      "id": "R09_DATA",
+      "status": "PASS_STATIC_PRODUCTION_MAPPING",
+      "findings": {"blocker": 0, "major": 0, "required_minor": 0},
+      "evidence": "R04 final independent data review; 40/40 fixture suite; no real-raw application required prelaunch"
+    },
+    {
+      "id": "R09_SCIENTIFIC",
+      "status": "PENDING_FINAL_INDEPENDENT_REVIEW",
+      "findings": null,
+      "evidence": "final reviewer disposition not yet received"
+    }
+  ],
+  "prelaunch_gate": "DO_NOT_CREATE_FINAL_CARD_UNTIL_R09_SCIENTIFIC_PASS_0_0_0",
+  "conditional_authorization": "If all three final prelaunch reviews are PASS with blocker/major/required minor 0/0/0, create and execute exactly one final exact card for this run; technical retry 0; after post-run reviews STOP.",
+  "prohibited": [
+    "transition_run",
+    "seed23",
+    "B_or_C_control",
+    "technical_retry",
+    "any_other_SUMO_start",
+    "classifier_or_scientific_input_change",
+    "formal_protocol_change",
+    "mark_G6_PASS"
+  ]
+}

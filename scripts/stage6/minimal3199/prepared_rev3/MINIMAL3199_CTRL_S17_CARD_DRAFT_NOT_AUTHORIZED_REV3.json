@@ -1,0 +1,112 @@
+{
+  "R_veh_per_h": 0,
+  "R_window_s": "NO_R_SOURCE",
+  "TLS_program": "A_OPEN",
+  "U": 0,
+  "X": 0,
+  "approval_required": true,
+  "card_revision": 3,
+  "card_status": "DRAFT_NOT_AUTHORIZED",
+  "condition": "A_OPEN_R0_CONTROL",
+  "design_plan": "artifacts/stage6_minimal_ramp_induced_breakdown_existence_test_20260924_v1/PLAN.md",
+  "design_sha256": "06b0f04f1144ef8497b4d64906ae27b1377b544abd6e0639133c8d85a3fabc23",
+  "execution_authorized": false,
+  "horizon_s": 2700,
+  "input_manifest": "INPUT_MANIFEST.json",
+  "input_manifest_sha256": "6c4ea95baf16fa339e9fcc0fe1060daae9cb06f5e0d52de8ca779ff146471d40",
+  "input_sha256": {
+    "additional": "6bd3555c983db506800cab40524767229a3a03c94e893e0ccdc506f95690d8ef",
+    "demand": "5df62660b9b9e2cc02734794ef2d361a3a97c30fa38a1e4fcbf550f0a2a1e405",
+    "network": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "output_roles": "3ff931a5f088180f6f37fbf8a782985a3a805c8c02b0cfdce3aa018df195b0f6",
+    "sumocfg": "a6be97aba1ab00d6f17ae15788d45765d0a0efca7e297cc1423e4fb720853b1c"
+  },
+  "inputs": {
+    "additional": "control/scenario.add.xml",
+    "demand": "control/demand.rou.xml",
+    "network": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+    "output_roles": "control/output_roles.json",
+    "sumocfg": "control/scenario.sumocfg"
+  },
+  "max_starts": 1,
+  "note": "Exact offline input card draft only; does not authorize execution.",
+  "output_directory": "data/raw/stage6_minimal3199_existence_20260924_v1/MINIMAL3199_CTRL_S17/outputs",
+  "output_role_source": {
+    "path": "scripts/stage6/minimal3199/prepared_rev3/control/output_roles.json",
+    "sha256": "3ff931a5f088180f6f37fbf8a782985a3a805c8c02b0cfdce3aa018df195b0f6"
+  },
+  "pair_id": "MINIMAL3199_UX0_S17",
+  "prelaunch_disposition": "DRAFT_NOT_AUTHORIZED_RUNNER_WILL_REFUSE_LAUNCH",
+  "qMain_veh_per_h": 3199.2,
+  "resource_limits": {
+    "runtime_s": 90,
+    "scope": "MINIMAL3199_CTRL_S17",
+    "status": "PROPOSED_NOT_AUTHORIZED",
+    "storage_bytes": 60000000
+  },
+  "run_command": null,
+  "run_id": "MINIMAL3199_CTRL_S17",
+  "runner": {
+    "path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+    "sha256": "373c0609f9c8a21bbf3e91c0f2a1e9df8fed2bee78ba6807fe50edd376b73cb8",
+    "status": "EXACT_CARD_PRELAUNCH_BINDING_PRESENT_LAUNCH_BLOCKED_BY_DRAFT_STATUS"
+  },
+  "runner_binding": {
+    "card_path": "scripts/stage6/minimal3199/prepared_rev3/MINIMAL3199_CTRL_S17_CARD_DRAFT_NOT_AUTHORIZED_REV3.json",
+    "consumption_directory": "scripts/stage6/minimal3199/consumption",
+    "kind": "MINIMAL3199_DRAFT",
+    "output_directory": "data/raw/stage6_minimal3199_existence_20260924_v1/MINIMAL3199_CTRL_S17/outputs",
+    "package_id": "MINIMAL3199_UX0_S17_PREPARATION_REV3",
+    "run_id": "MINIMAL3199_CTRL_S17"
+  },
+  "runtime_binding": {
+    "additional_schema_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+    "additional_schema_sha256": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e",
+    "binary_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+    "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+    "binary_version": "1.26.0",
+    "guardian_runner_sha256": "373c0609f9c8a21bbf3e91c0f2a1e9df8fed2bee78ba6807fe50edd376b73cb8",
+    "max_output_bytes": 60000000,
+    "max_runtime_s": 90,
+    "python_environment": {
+      "executable_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+      "executable_sha256": "76c73e25cdd69650a897648666e41c364940fbcff0d1176572a667d4d470ec9e",
+      "implementation": "CPython",
+      "package_versions": {
+        "sumoITScontrol": "0.1.0",
+        "sumolib": "1.26.0",
+        "traci": "1.26.0"
+      },
+      "version": "3.13.0"
+    },
+    "resource_proposal": {
+      "basis": "proposal only; prior full-horizon control observed 24.881003 s and 20,821,740 bytes; prior treatment observed 24.370309 s and 23,936,627 bytes; new U=X0 output sizes unobserved",
+      "enforcement": "100ms_polled_stop_trigger_with_possible_overshoot_not_hard_quota",
+      "output_size_stop_limit_bytes_decimal": 60000000,
+      "overshoot_accepted": true,
+      "poll_interval_s": 0.1,
+      "scope": "MINIMAL3199_CTRL_S17",
+      "status": "PROPOSED_NOT_AUTHORIZED",
+      "wallclock_stop_limit_s": 90
+    },
+    "runtime_provenance_status": "READONLY_PATH_AND_HASH_VERIFIED_NO_SUMO_VERSION_PROCESS",
+    "sumo_home": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo",
+    "version_evidence": {
+      "binary_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+      "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+      "query": "sumo --version (environment probe; no simulation)",
+      "reported_version": "1.26.0"
+    }
+  },
+  "runtime_binding_path": "scripts/stage6/minimal3199/prepared_rev3/control/runtime_binding.json",
+  "runtime_binding_sha256": "5909cdee4359719f8acc9dc8ed473e0aa760ff85251d22ab940cb27e69926bec",
+  "schema_version": "1",
+  "scope_prohibitions": [
+    "No SUMO/netconvert/TraCI before separate authorization",
+    "No other qMain/qRamp/seed/controller",
+    "No scientific-input, geometry, classifier, threshold, or vehicle-behavior changes"
+  ],
+  "seed": 17,
+  "step_s": 1,
+  "technical_retries": 0
+}

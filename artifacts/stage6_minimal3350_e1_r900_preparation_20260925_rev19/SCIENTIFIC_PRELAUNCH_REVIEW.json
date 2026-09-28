@@ -1,0 +1,44 @@
+{
+  "schema": "stage6_minimal3350_e1_r900_retry2_scientific_prelaunch_review_v1",
+  "disposition": "PASS_PRELAUNCH",
+  "run_id": "MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY2",
+  "card_sha256": "cea374f60db487ce9b4bd0c5f45ed28996b298a710af2da33aca6ae9f3bae380",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "confidence": {
+    "scientific_condition_continuity": "High",
+    "cross_rate_exposure_interpretation": "Moderate"
+  },
+  "reviewer": "independent scientific_reviewer",
+  "scope": "Exact REV19 technical retry2 prelaunch review only; no post-run outcomes reviewed.",
+  "review_basis": "Independent reviewer report returned to primary agent; this receipt records the reported disposition without changing its findings.",
+  "checks": {
+    "qMain_veh_per_h": 3350.4,
+    "seed": 17,
+    "U": 0,
+    "X": 0,
+    "A": "OPEN",
+    "R_veh_per_h": 900,
+    "R_window_s": "[540,1500)",
+    "R_planned_count": 240,
+    "M_count": 1396,
+    "M_common_vehicle_vector_unchanged": true,
+    "demand_network_common_M_R_vector_witness_contract_unchanged": true,
+    "technical_staging_path_only_change": true,
+    "rev18_pre_spawn_failure_has_no_scientific_outcome": true,
+    "rev18_one_start_reservation_consumed_and_preserved": true,
+    "v19_independent_output_and_attempt_identity_absent_prelaunch": true,
+    "resource_contract": {
+      "wallclock_stop_trigger_s": 120,
+      "output_size_stop_trigger_bytes": 100000000,
+      "polling_interval_ms": 100,
+      "max_starts": 1,
+      "technical_retries": 0
+    }
+  },
+  "retained_observation": "The 192 shared R identities have 0/192 speedFactor matches to the R720 vector. This is not a blocker for R900 versus R0 but limits attribution of any R900-versus-R720 exposure difference solely to nominal qRamp.",
+  "authorization_boundary": "This review covers only MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY2; it does not authorize E2, R1080, another qMain, seed23, B/C, or any scientific-input change."
+}

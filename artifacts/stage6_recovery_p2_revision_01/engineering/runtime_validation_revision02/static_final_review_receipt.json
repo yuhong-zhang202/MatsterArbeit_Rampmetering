@@ -1,0 +1,36 @@
+{
+  "card_sha256": "66016480131a800d25193422326c239492af0e9067de095ee1241072bc15aded",
+  "independent_reviews": [
+    {
+      "evidence": "24/24 executor tests; 73 input checks; 9 XML/XSD checks; dry-run no process; exact hash and physical stop behavior verified; real SUMO starts 0",
+      "role": "simulation_engineer",
+      "status": "PASS_STATIC"
+    },
+    {
+      "analysis_manifest_sha256": "9f604c402cb6d859eb4f5b100a5b0b5b47941a586eb4a5e826a2565a93223686",
+      "blockers": 0,
+      "evidence": "181 package bindings; 13 synthetic adapter tests; 308 analysis-manifest bindings; all three production run dirs absent",
+      "role": "data_analyst",
+      "status": "PASS_STATIC_DATA_SCOPE"
+    },
+    {
+      "blocker_major_required_minor": [
+        0,
+        0,
+        0
+      ],
+      "evidence": "exact card SHA reviewed; authorization and scope fit; final review guard and physical stop semantics pass; no scientific parameter drift",
+      "role": "scientific_reviewer",
+      "status": "PASS_STATIC_FINAL"
+    }
+  ],
+  "limitations": [
+    "Runtime SUMO behavior is unverified until run.",
+    "Single-seed outputs are diagnostic only; do not claim P1 two-seed completion or resolve specific_obstacle from this static review.",
+    "Operator monitoring follows documented cadence and may not continuously observe buffered events."
+  ],
+  "reviewed_at": "2026-09-19",
+  "scope": "technical smoke R720/S17 followed only if gates pass by R0/S17 then R720/S17; maximum three starts; no retry, seed23, new build, TraCI, GUI, controller comparison, formal grid or thesis data",
+  "stage": "exact_runtime_package",
+  "status": "PASS_STATIC_FINAL"
+}

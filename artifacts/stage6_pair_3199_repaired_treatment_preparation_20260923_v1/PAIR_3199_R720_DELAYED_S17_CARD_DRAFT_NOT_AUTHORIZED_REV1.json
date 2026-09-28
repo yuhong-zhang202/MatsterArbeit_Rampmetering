@@ -1,0 +1,176 @@
+{
+  "LOW_R_BACKGROUND_ACCEPTABLE_required_for_release": false,
+  "TLS_program": "A_OPEN",
+  "approval_required": true,
+  "card_revision": 1,
+  "card_status": "DRAFT_NOT_AUTHORIZED",
+  "condition": "A_OPEN_DELAYED_R720_REPAIRED_MATCHED_INPUTS",
+  "demand": {
+    "M_number": 1333,
+    "M_window_s": "[0,1500)",
+    "R_number": 192,
+    "R_window_s": "[540,1500)",
+    "U_number": 150,
+    "X_number": 75,
+    "qMain_veh_per_h": 3199.2,
+    "qRamp_veh_per_h": 720,
+    "qUrban_veh_per_h": 360,
+    "qX_veh_per_h": 180
+  },
+  "design_plan": "artifacts/stage6_final_bounded_demand_scan_plan_20260923_v1/BOUNDED_DEMAND_SCAN_PLAN.md",
+  "design_sha256": "5aeddf82bcaa7f2b559e7b6db951815c724cf7d3e8f14dd81158a6f9dbac1046",
+  "execution_authorized": false,
+  "geometry": "accepted network bytes; read-only; no netconvert",
+  "horizon_s": 2700,
+  "input_manifest": "inputs/treatment/expected_identity_manifest.json",
+  "input_manifest_sha256": "8d420f779c2a57b13d4b47dab859f3a51ee7513fa691f2f73d57292c51481299",
+  "input_sha256": {
+    "additional": "7f885de61d50668c406a65f4a56c56f1110fcef91864bb5fd73468b4dc748f9a",
+    "demand": "b8aae801122e918731fb8e05a9aa8ca94873f02282d7f1afee57777f6bea96ea",
+    "network": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "output_roles": "cd72b0837b9de651dd229f8cc0fa644f81006221de9876a42ac039bc16f37203",
+    "sumocfg": "fb34dc3941d0802f9a3350eb26893f0187c9ba68cfb74d6245be5f7763f6bc71"
+  },
+  "inputs": {
+    "additional": "inputs/treatment/scenario.add.xml",
+    "demand": "inputs/treatment/demand.rou.xml",
+    "network": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+    "output_roles": "inputs/treatment/output_roles.json",
+    "sumocfg": "inputs/treatment/scenario.sumocfg"
+  },
+  "matched_control_binding": {
+    "data_review_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/CONTROL_DATA_LIFECYCLE_REVIEW_FINAL_REV1.json",
+    "data_review_sha256": "6c8c2a381a5a2fc1102953ed58a5a1cd022a0c22789b0bbbd486d86a7b0ac799",
+    "exact_card_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/PAIR_3199_CTRL_S17_CARD_FINAL_REV1.json",
+    "exact_card_sha256": "0748d37719541d7c76adcd57e07fd764b413fbd21bb16e015b57024175e866da",
+    "execution_receipt_path": "data/raw/stage6_bounded_pair_20260923_v1/PAIR_3199_CTRL_S17/outputs/execution_receipt.json",
+    "execution_receipt_sha256": "a6a1a67282ff9e19f0205ce4b681cef34315bc04ad65f9588d7b269fadcfd336",
+    "historical_low_r_status": "NOT_EVALUABLE",
+    "output_manifest_path": "data/raw/stage6_bounded_pair_20260923_v1/PAIR_3199_CTRL_S17/outputs/output_manifest.json",
+    "output_manifest_sha256": "da15103c64be65eb6b83fc37a505418c81c33cf490db48f03a5fd15d984a74d8",
+    "raw_output_directory": "data/raw/stage6_bounded_pair_20260923_v1/PAIR_3199_CTRL_S17/outputs",
+    "run_id": "PAIR_3199_CTRL_S17",
+    "use_as_clean_normal_baseline": false
+  },
+  "matched_input_repair": {
+    "common_MUX_expected": 1558,
+    "common_full_record_matches": 1558,
+    "invariant_report_sha256": "509f1a46873b6922ce22e18f4100fa2dcb84a632d80ee9a014750efc6c857d54",
+    "package": "artifacts/stage6_pair_3199_matched_input_repair_20260923_v5",
+    "receipt_sha256": "3a2531c3bbf3d9d69ac6c94f0f2663b67b47ffde7ce36c7ea0e1a943b74e32c9",
+    "status": "v5_STATIC_INPUT_BINDING_PASS_NOT_TRAJECTORY_EQUIVALENCE",
+    "treatment_only_R_count": 192,
+    "treatment_only_ids": "R_flow.0\u2013R_flow.191"
+  },
+  "max_starts": 1,
+  "output_directory": "data/raw/stage6_bounded_pair_repaired_20260923_v1/PAIR_3199_R720_DELAYED_S17/outputs",
+  "output_role_source": {
+    "path": "artifacts/stage6_pair_3199_repaired_treatment_preparation_20260923_v1/inputs/treatment/output_roles.json",
+    "sha256": "cd72b0837b9de651dd229f8cc0fa644f81006221de9876a42ac039bc16f37203"
+  },
+  "pair_id": "PAIR_3199_S17",
+  "pre_run_trajectory_gate": {
+    "failure": "Any material unexplained pre-R divergence makes pair NOT_EVALUABLE; do not interpret post-R event",
+    "post_R_witness_analysis": "Only after pre-R matching gate passes",
+    "required": "Compare M/U/X trajectory equivalence before first meaningful R exposure"
+  },
+  "prior_treatment_disposition": {
+    "card_path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/PAIR_3199_R720_DELAYED_S17_CARD_FINAL_REV1.json",
+    "card_sha256": "08160a2ad225ee9fcc2abcc11d509a88ecf554252f1fb17e35dc69b9404351d4",
+    "disposition": "NOT_EVALUABLE",
+    "prior_authorization": "consumed",
+    "reuse_or_reinterpret": false
+  },
+  "progression_allowed": false,
+  "prohibitions": [
+    "No SUMO/netconvert/TraCI before separate exact-card authorization",
+    "No retry",
+    "No other demand, seed or controller",
+    "No classifier/threshold/witness-contract/protocol/scientific-input changes"
+  ],
+  "required_event_timeline_markers": [
+    "R_demand_activation",
+    "first_scheduled_R_departure",
+    "first_actual_R_departure",
+    "first_R_arrival_near_merge",
+    "first_meaningful_merge_exposure",
+    "first_M_deterioration",
+    "State1_onset"
+  ],
+  "resource_limits": {
+    "runtime_s": 90,
+    "scope": "PAIR_3199_R720_DELAYED_S17",
+    "status": "PROPOSED_NOT_AUTHORIZED",
+    "storage_bytes": 75000000,
+    "storage_enforcement": "100ms_polled_stop_trigger_with_possible_overshoot_not_hard_quota"
+  },
+  "resource_proposal": {
+    "basis": "New proposal for this repaired treatment only. Full-horizon PAIR3199 control used 24.881003 s and 20,821,740 payload bytes; the superseded, non-comparable treatment used 19.921320 s and 21,066,503 bytes. Proposed 90 s and 75,000,000 bytes allow roughly 3.6x wall-clock and 3.6x output headroom over observed completed runs. No authorization is carried forward.",
+    "enforcement": "100ms_polled_stop_trigger_with_possible_overshoot_not_hard_quota",
+    "output_size_stop_limit_bytes_decimal": 75000000,
+    "scope": "PAIR_3199_R720_DELAYED_S17",
+    "status": "PROPOSED_NOT_AUTHORIZED",
+    "wallclock_stop_limit_s": 90
+  },
+  "run_command": null,
+  "run_id": "PAIR_3199_R720_DELAYED_S17",
+  "runner_binding": {
+    "card_path": "artifacts/stage6_pair_3199_repaired_treatment_preparation_20260923_v1/PAIR_3199_R720_DELAYED_S17_CARD_DRAFT_NOT_AUTHORIZED_REV1.json",
+    "consumption_directory": "artifacts/stage6_pair_3199_repaired_treatment_preparation_20260923_v1/r02_single_start/consumption",
+    "kind": "PAIR_RUN",
+    "output_directory": "data/raw/stage6_bounded_pair_repaired_20260923_v1/PAIR_3199_R720_DELAYED_S17/outputs",
+    "package_id": "stage6_pair_3199_repaired_treatment_preparation_20260923_v1",
+    "run_id": "PAIR_3199_R720_DELAYED_S17"
+  },
+  "runner_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+  "runner_sha256": "86faab71ea187be4f46fb89d2436fbfb679324297166c63ee376805c362fbdcf",
+  "runtime_binding": {
+    "additional_schema_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+    "additional_schema_sha256": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e",
+    "binary_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+    "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+    "binary_version": "1.26.0",
+    "guardian_runner_sha256": "86faab71ea187be4f46fb89d2436fbfb679324297166c63ee376805c362fbdcf",
+    "max_output_bytes": 75000000,
+    "max_runtime_s": 90,
+    "python_environment": {
+      "executable_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+      "executable_sha256": "76c73e25cdd69650a897648666e41c364940fbcff0d1176572a667d4d470ec9e",
+      "implementation": "CPython",
+      "package_versions": {
+        "sumoITScontrol": "0.1.0",
+        "sumolib": "1.26.0",
+        "traci": "1.26.0"
+      },
+      "version": "3.13.0"
+    },
+    "resource_proposal": {
+      "basis": "New proposal for this repaired treatment only. Full-horizon PAIR3199 control used 24.881003 s and 20,821,740 payload bytes; the superseded, non-comparable treatment used 19.921320 s and 21,066,503 bytes. Proposed 90 s and 75,000,000 bytes allow roughly 3.6x wall-clock and 3.6x output headroom over observed completed runs. No authorization is carried forward.",
+      "enforcement": "100ms_polled_stop_trigger_with_possible_overshoot_not_hard_quota",
+      "output_size_stop_limit_bytes_decimal": 75000000,
+      "scope": "PAIR_3199_R720_DELAYED_S17",
+      "status": "PROPOSED_NOT_AUTHORIZED",
+      "wallclock_stop_limit_s": 90
+    },
+    "sumo_home": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo",
+    "version_evidence": {
+      "binary_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+      "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+      "query": "sumo --version (environment probe; no simulation)",
+      "reported_version": "1.26.0"
+    }
+  },
+  "runtime_binding_path": "artifacts/stage6_pair_3199_repaired_treatment_preparation_20260923_v1/runtime_bindings/PAIR_3199_R720_DELAYED_S17_PRELAUNCH_REV1.json",
+  "runtime_binding_sha256": "d1d86b35ffa0a55ccb4ed5ed0f4e654fc6a1ecfc0c722cdbd802ed0cf465932f",
+  "schema_version": "1",
+  "seed": 17,
+  "step_s": 1,
+  "technical_retries": 0,
+  "treatment_release_gate": "STAGE6_EXPLORATORY_RAMP_INDUCED_WITNESS_CONTRACT_ONLY",
+  "vehicle_behavior": "unchanged technical_passenger vType; M/U/X per-vehicle attributes bound by v5; treatment-only R identities bound by v5",
+  "witness_contract": {
+    "path": "docs/methodology/STAGE6_EXPLORATORY_RAMP_INDUCED_WITNESS_CONTRACT.md",
+    "scope": "Stage 6 exploratory pair only; not formal protocol",
+    "sha256": "958890a7dd017110787a85d77ebfa3e6dac2b7d862f0fd91f6bafb7cf1738d9a"
+  }
+}

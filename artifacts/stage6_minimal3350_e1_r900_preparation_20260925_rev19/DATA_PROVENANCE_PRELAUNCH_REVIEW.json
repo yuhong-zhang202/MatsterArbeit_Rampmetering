@@ -1,0 +1,136 @@
+{
+  "schema": "stage6_minimal3350_e1_r900_retry2_data_provenance_prelaunch_review_v1",
+  "status": "PASS_DATA_PROVENANCE_PRELAUNCH",
+  "run_id": "MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY2",
+  "package_id": "stage6_minimal3350_e1_r900_preparation_20260925_rev19",
+  "card_sha256": "cea374f60db487ce9b4bd0c5f45ed28996b298a710af2da33aca6ae9f3bae380",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "confidence": "High",
+  "bindings": {
+    "card_path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev19/MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY2_CARD_FINAL_REV1.json",
+    "card_sha256": "cea374f60db487ce9b4bd0c5f45ed28996b298a710af2da33aca6ae9f3bae380",
+    "input_manifest_sha256": "c47d41d66f9e7cb92068d1daefcd20e1b121398992f3b37a4fc7f740ae4fe292",
+    "runtime_binding_sha256": "63f2059410ecefb3a4ba069458110c2be54d1010d93e29f3e77ac29a4a6bdbc3",
+    "runner_sha256": "d6bde894ec724ded810f9d5f28c39e62d269a70c345be79ca2fdfa467c1c502a",
+    "start_request_sha256": "7e36469eca7bce04054a2b7033244c9c671605c77e661e6a22e761f3845c0556",
+    "start_request_receipt_sha256": "2f51529eaa4477a5fc25c554626560cb3ee813d359897f88c0f5111d58b4b55d",
+    "provenance_receipt_sha256": "aaeea57b8fd30c173009f15d5bfaba39da844ac2a7012382357794e03dc8e0ba",
+    "design_plan_sha256": "06b0f04f1144ef8497b4d64906ae27b1377b544abd6e0639133c8d85a3fabc23",
+    "witness_contract_sha256": "958890a7dd017110787a85d77ebfa3e6dac2b7d862f0fd91f6bafb7cf1738d9a",
+    "adapter_sha256": "98d530ad4490c92c174233028cdb9d2388b5a4a945233f90aefa7c4613052148"
+  },
+  "matched_control_gate": {
+    "run_id": "MINIMAL3350_CTRL_S17",
+    "card_sha256": "15544478e8e7ced98b12673bec65cfe646b1f73e9e471ed501ddee052306bbfd",
+    "data_review_sha256": "24711f151751cb1d6b0ba852388824f1f8e69be7fea3678900b872498870ab4d",
+    "data_review_disposition": "PASS_DATA_LIFECYCLE",
+    "data_side_control_category": "LOW_R_BACKGROUND_ACCEPTABLE",
+    "scientific_review_sha256": "8078d5ee902eb355623d29e7cc78c7d9cdf61e918903d9a3040fe0f320ae3738",
+    "scientific_disposition": "LOW_R_BACKGROUND_ACCEPTABLE",
+    "scientific_findings": {
+      "blocker": 0,
+      "major": 0,
+      "required_minor": 0
+    },
+    "output_manifest_sha256": "48456bb607b4e4679dd13274696c60ab7f5ae020aa6ecbf2462110e1fdcd752f",
+    "result": "PASS_EXACT_BOUND_CONTROL_RECEIPTS"
+  },
+  "condition_check": {
+    "qMain_veh_per_h": 3350.4,
+    "seed": 17,
+    "R_veh_per_h": 900,
+    "R_window_s": "[540,1500)",
+    "U": 0,
+    "X": 0,
+    "legacy_clean_high_mobility_screen_required_for_release": false,
+    "stage6_exploratory_control_disposition_required_for_release": true,
+    "required_exploratory_control_disposition": "LOW_R_BACKGROUND_ACCEPTABLE"
+  },
+  "data_checks": {
+    "conditions_unchanged_vs_retry1": true,
+    "qMain_R_seed_R_window_U_X_M_TLS_horizon_step_exact_match": true,
+    "M_count": 1396,
+    "M_exact_matches_to_common_manifest_and_control": 1396,
+    "M_fields": [
+      "id",
+      "integer-ms desired departure",
+      "route",
+      "vType",
+      "speedFactor",
+      "departPos",
+      "departLane",
+      "departSpeed"
+    ],
+    "common_M_manifest_sha256": "2fb1383e709e2174e2623aae575649aba40937729325a5e9c43bcc2b76982865",
+    "R_count": 240,
+    "R_only_delta": "R_flow.0..239",
+    "R_schedule_ms": [
+      540000,
+      1496000,
+      4000
+    ],
+    "R_vehicle_source_and_materialized_vector_hash_bound": true,
+    "U_explicit_zero": true,
+    "X_explicit_zero": true,
+    "demand_source_sha256": "3b3da52ac2ddbe915b3f6578b515ace1a30b3f7a1169724528855a6387abaada",
+    "R_vector_sha256": "4f23a508713b53b64c3d419e06d754d3032dce52a19f17f977a6508509d8c8fb",
+    "R_vehicle_source_sha256": "a6ae2649fe93c61460a52303b6358985c14270ce5ac5af02460af53880965851",
+    "sumocfg_source_sha256": "2193c7e925b8fe2a5f9b53f2aa2293ce24aeae2263c10be3474fa6244e170fce",
+    "additional_source_sha256": "fcc47b936eaf2577c459b4f7282c0ed0d9dba8418a49f4ce0f7cd0e7e8f453b3",
+    "staged_sumocfg_sha256": "7f7329b91c77b3f10e38659875a78aa3ed7bb58a85ebe6ba735e07bdea9d6bfc",
+    "staged_sumocfg_bytes": 2888,
+    "staged_additional_sha256": "fcc47b936eaf2577c459b4f7282c0ed0d9dba8418a49f4ce0f7cd0e7e8f453b3",
+    "staged_additional_bytes": 4012,
+    "nested_reference_closure_match": true,
+    "sumocfg_additional_file_resolves_exactly_to_staged_v19_additional": true,
+    "configured_unique_output_paths": 20,
+    "configured_role_records": 18,
+    "paths_absolute_canonical_revision_local_unique": true,
+    "no_stale_revision_or_output_path": true,
+    "v19_output_root_absent": true,
+    "attempt_output_directory_absent": true,
+    "writable_existing_ancestor": "data/raw",
+    "runner_creates_output_with_parents_true_exist_ok_false": true,
+    "retry2_consumption_reservation_absent": true,
+    "request_schema": "r02-start-v2",
+    "request_exact_runner_validator": "PASS",
+    "request_status": "PASS_PERSISTED_UNSENT",
+    "dispatched": false,
+    "static_preflight": "PREFLIGHT_PASS_NO_PROCESS_STARTED",
+    "launchable_now": false,
+    "engineering_tests_passed": 23,
+    "engineering_tests_failed": 0,
+    "process_starts": {
+      "guardian": 0,
+      "sumo": 0,
+      "traci": 0,
+      "netconvert": 0
+    }
+  },
+  "retry_predecessor": {
+    "run_id": "MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY1",
+    "reservation_sha256": "ca665df555c2294d5da027ab87e862b38e8bbc5d7693d5a434743851c819fcbd",
+    "reservation_status": "FAILED",
+    "retry_allowed": false,
+    "simulator_pid": null,
+    "v18_raw_output_directory_exists": false,
+    "prior_original_attempt_raw_preserved": "15/15 files retain previous size/SHA256"
+  },
+  "resource_contract": {
+    "wallclock_stop_trigger_s": 120,
+    "output_size_stop_trigger_bytes_decimal": 100000000,
+    "polling_interval_ms": 100,
+    "slight_polling_overshoot_accepted": true,
+    "max_starts": 1,
+    "technical_retries": 0
+  },
+  "limitations": [
+    "This is data/provenance prelaunch review only; it does not assert the scientific reviewer exists or disposition and does not itself permit launch.",
+    "REV18 attempt is recorded as FAILED with retry_allowed=false and simulator_pid=null. Its exact failure was FileNotFoundError resolving a package-relative path; no v18 raw output directory exists.",
+    "R speedFactors are a fixed reused identity-keyed vector; this review makes no independent RNG or capacity claim."
+  ]
+}

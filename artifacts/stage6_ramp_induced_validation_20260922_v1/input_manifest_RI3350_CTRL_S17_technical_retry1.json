@@ -1,0 +1,70 @@
+{
+  "schema_version": "1",
+  "package_id": "stage6_ramp_induced_validation_20260922_v1",
+  "status": "CONDITIONALLY_AUTHORIZED_TECHNICAL_RETRY",
+  "design_path": "docs/methodology/STAGE6_RAMP_INDUCED_BREAKDOWN_VALIDATION_PLAN.md",
+  "design_sha256": "62fb63eb49ae98b58bc45ad6bc7d60cd21fcdb73b3327c34b97c5151b01ca355",
+  "locked_method_path": "docs/methodology/FREEWAY_PROTECTABLE_STATE_EXPLORATORY_DEFINITION.md",
+  "locked_method_sha256": "22fe22170c17ce74e261e717586a458a1b5173e9deabbee925bd4c1d606adfe7",
+  "accepted_network": {
+    "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+    "sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "action": "READ_ONLY_REFERENCE_NO_NETCONVERT"
+  },
+  "historical_input_reference": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/inputs/LOC_M3350_S17_attempt1/",
+  "control_prepared_inputs": {
+    "demand": "control_input/demand_control.rou.xml",
+    "sumocfg": "control_input/scenario_control.sumocfg",
+    "additional": "control_input/scenario_control.add.xml"
+  },
+  "control_condition": {
+    "run_id": "RI3350_CTRL_S17_technical_retry1",
+    "qMain": 3350.4,
+    "M_number": 1396,
+    "qRamp": 0,
+    "R_number": 0,
+    "qUrban": 360,
+    "U_number": 150,
+    "qX": 180,
+    "X_number": 75,
+    "demand_window": "[0,1500)",
+    "horizon_s": 2700,
+    "step_s": 1,
+    "seed": 17,
+    "meter_program": "A_OPEN",
+    "simulation_authorized": true
+  },
+  "prohibited_in_this_package": [
+    "transition_run",
+    "seed23",
+    "qMain_escalation",
+    "classifier_change",
+    "formal_protocol_change",
+    "additional_technical_retry",
+    "any_other_SUMO_start"
+  ],
+  "derived_from_manifest_sha256": "ebb8647e8441183cd57c0b5e56053cffc598b718421e5460e60687eead46fc5d",
+  "retry_context": {
+    "type": "TECHNICAL_RETRY",
+    "retry_of_run_id": "RI3350_CTRL_S17_attempt1",
+    "retry_of_card_sha256": "c306646c4b73ec86b243a7936e2bf5f838d4c764c37756d763e9c4c2365c97e3",
+    "retry_of_reservation_sha256": "309759c8fa498cedac00ff2bc865b86432658e26552c4830912790960ead37d9",
+    "scientific_inputs_unchanged": true,
+    "max_starts": 1,
+    "technical_retries": 0
+  },
+  "authorized_execution": {
+    "authorization_source": "User message dated 2026-09-23: proceed if all final prelaunch gates pass",
+    "condition_met": true,
+    "max_sumo_starts": 1,
+    "technical_retries": 0,
+    "progression_allowed": false,
+    "resource_contract": {
+      "wallclock_stop_trigger_s": 180,
+      "output_size_stop_trigger_bytes_decimal": 300000000,
+      "poll_interval_ms": 100,
+      "output_overshoot_accepted": true,
+      "strict_disk_quota": false
+    }
+  }
+}

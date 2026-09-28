@@ -1,0 +1,21 @@
+{
+  "schema_version": "1",
+  "package_id": "stage6_ramp_induced_validation_20260922_v1",
+  "overall_status": "PREPARATION_BLOCKED_NO_EXECUTABLE_CARD",
+  "starts_consumed": 0,
+  "retry_count": 0,
+  "progression_allowed": false,
+  "checks": [
+    {"id":"R01","name":"source/hash/input diff","status":"PASS_STATIC_SEMANTIC_DIFF_WITH_OUTPUT_PLACEHOLDERS","evidence":"r01_r03/r01_static_audit_receipt.json; static XML semantic audit exact; no XSD/runtime validation; __CONTROL_OUTPUT__ remains unresolved"},
+    {"id":"R02","name":"single-start runner","status":"MOCK_CONTRACT_PASS_RUNNER_NOT_IMPLEMENTED","evidence":"offline_tests/test_single_start_contract.py; duplicate reservation and card-hash mismatch blocked without process"},
+    {"id":"R03","name":"paired random implementation","status":"PASS_PLAN_AND_FIXTURES_ACTUAL_REALIZATION_UNKNOWN","evidence":"r01_r03/r03_pairing_readiness_receipt.json; planned comparator and mismatch fixtures pass; no transition inputs or observed paired realization"},
+    {"id":"R04","name":"classifier adapter","status":"PARTIAL_BUGFIX_PASS","evidence":"s_density_implementation_fix_receipt.json; exact-boundary fixture PASS; full adapter/new-output validation remains open"},
+    {"id":"R05","name":"direct R0 PRE screen","status":"PASS_LOGIC_FIXTURES_PRODUCTION_ADAPTER_PENDING","evidence":"r05_r06/r05_r06_readiness_receipt.json; exact 30-row logic and byte-hash-bound completeness fixture pass; awaits R04 normalized locked-classifier output and future control raw"},
+    {"id":"R06","name":"R interval exposure","status":"PASS_INTERVAL_HELPER_FIXTURES_ROUTE_MAPPING_AND_APPLICATION_PENDING","evidence":"r05_r06/r05_r06_readiness_receipt.json; unknown-bin propagation, bounds and T2/T3 fixtures pass; route-progress mapping from vehroute+accepted network and actual R raw remain absent"},
+    {"id":"R07","name":"urban/source attribution coverage","status":"PASS_COVERAGE_AUDIT_WITH_G6_LIMITATION","evidence":"r07_coverage_audit.json; existing outputs allow conditional evidence review only; direct same-ID/time/location R-to-U obstruction and G6 remain NOT_ESTABLISHED/UNKNOWN"},
+    {"id":"R08","name":"deterministic conclusion logic","status":"SPECIFIED_NOT_EXECUTED","evidence":"Luna execution specification §12 and fixtures"},
+    {"id":"R09","name":"engineering/data/scientific review","status":"PASS_BOUNDED_OFFLINE_REVIEW_WITH_APPLICATION_LIMITATIONS","evidence":"receipts/final_scientific_review_status.json; R01/R03 engineering static audit; R05-R07 data audit; final scientific review PASS limited to offline readiness artifacts; R03 realization, R05/R06 raw application, and G6 remain UNKNOWN/pending"}
+  ],
+  "stop_reason": "Do not produce an executable/authorized card or start: R02 runner is not implemented, R04 full classifier adapter remains incomplete, output destination and runtime binary identity are unresolved. R03 realized matching and R05-R06 future raw application remain unknown by design. R07 audit is bounded and G6 cannot be treated as cleared.",
+  "next_action": "In a separately authorized offline task, address R02/R04 and card-specific output/binary/resource bindings; implement the R05/R06 production adapters if needed for the approved workflow. Any later execution still requires a new exact launch-card approval."
+}

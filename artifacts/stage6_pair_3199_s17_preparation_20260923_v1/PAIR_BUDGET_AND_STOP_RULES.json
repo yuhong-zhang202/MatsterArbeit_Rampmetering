@@ -1,0 +1,23 @@
+{
+  "automatic_retry": false,
+  "current_starts": 0,
+  "order": [
+    "PAIR_3199_CTRL_S17",
+    "PAIR_3199_R720_DELAYED_S17"
+  ],
+  "package_new_sumo_starts_max": 2,
+  "pair_id": "PAIR_3199_S17",
+  "per_card_max_starts": 1,
+  "prelaunch_starts_authorized": 0,
+  "stop_after_control_if": [
+    "locked P/S/L sustained event in R0",
+    "no adequate M exposure",
+    "established sustained collective self-congestion",
+    "relevant C/L/long-low-ratio pattern or source/downstream/geometry/TLS/measurement alternative remains unresolved",
+    "source/insertion/mapping/measurement/global artifact",
+    "control raw not evaluable or fails technical integrity"
+  ],
+  "stop_after_treatment": "Stop this candidate pair after valid witness, valid negative, or NOT_EVALUABLE; no automatic further qMain/qRamp/seed starts. Every started or incomplete run consumes its one start.",
+  "technical_retries": 0,
+  "treatment_release": "Only after independent review determines LOW_R_BACKGROUND_ACCEPTABLE using the full adopted-plan criteria (P/S/L negative alone is insufficient), and a separate exact user authorization; no automatic sequential execution."
+}

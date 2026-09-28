@@ -1,0 +1,570 @@
+{
+  "GUI": 0,
+  "SUMO_starts": 0,
+  "TraCI_connections": 0,
+  "all_package_files_before_this_manifest": [
+    {
+      "bytes": 9251,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/DIAGNOSTIC_CONTRACT.md",
+      "sha256": "132e9f18cf8145d948f5c4a86998c56faf710f9e5818007faba04acfb94f79d4"
+    },
+    {
+      "bytes": 4447,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/HANDOFF.md",
+      "sha256": "3e0a0f7bf4da84f01e9a178291d963dfd5f10cbc1a7eeb3502f1dff709f77d90"
+    },
+    {
+      "bytes": 49383,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/O2_DIAGNOSTIC_CARD.json",
+      "sha256": "087852e8bd826c7f6a5c754e4222a0a01ea2631ea830dd41e29a81039d21d353"
+    },
+    {
+      "bytes": 760,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/O2_RELEASE_APPROVAL.template.json",
+      "sha256": "21ec0380c3f6c84704483baa2eeebfcab70355ddf9e519e05c11db6bf7f622cf"
+    },
+    {
+      "bytes": 1721,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/authorization_provenance.json",
+      "sha256": "4a5c02d583c915f6b3675b254c797d54def3531f55a6f9e10afe3f38077cba96"
+    },
+    {
+      "bytes": 2829,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/diagnostic_gate_contract.json",
+      "sha256": "a8d1bb746b5abbed4baf0dcd7db118588d53de2b4379b78feb5b4adc98329cdb"
+    },
+    {
+      "bytes": 738,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/dry_run_receipt.json",
+      "sha256": "23810265434cabd1029a9c8b449d120f5c102967bf676b7a5f3028bc3acc4d69"
+    },
+    {
+      "bytes": 4118,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/executor_tail.txt",
+      "sha256": "826fa04ba028597cfd78651157d7a1e5d53710d938aabd3ea017f108d19958f2"
+    },
+    {
+      "bytes": 8587,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/finalize_package.py",
+      "sha256": "b69cb9e47992d948f1b45010cd858148987b9e1e57a124f93ebead0cba94dbf3"
+    },
+    {
+      "bytes": 2362,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/input_manifest.json",
+      "sha256": "2d0181ae0d1b6c482ce9df1272e9db0808ebe835f3377b252f3803ba694fd42d"
+    },
+    {
+      "bytes": 1141,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/inputs/demand.rou.xml",
+      "sha256": "70d90d477c97141086b87cd248064c2c27c5965060e04fe9a2cbec67ec20e1cd"
+    },
+    {
+      "bytes": 37529,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/inputs/original_expected_identity_manifest.json",
+      "sha256": "b92c52c7a233d82a7f8aa76f0ef131fb35812ff6aa75f495711424e3da647219"
+    },
+    {
+      "bytes": 6703,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/inputs/output_roles.json",
+      "sha256": "49e1662f58904342d184d1d1583054e80010dde908e8f28543cfe2e860db8b46"
+    },
+    {
+      "bytes": 3799,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/inputs/scenario.add.xml",
+      "sha256": "ebde358419b27db8650fecb53f8553eca2157a3756637ce60564b718ab27a491"
+    },
+    {
+      "bytes": 2731,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/inputs/scenario.sumocfg",
+      "sha256": "63b72b0a17ff6bf608a703b5a7e94c5551b9d8f1b80a22659cb56f9c2fadc0dd"
+    },
+    {
+      "bytes": 6951,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/observer.py",
+      "sha256": "23a0c064fbf218f4562de4056b7253c10ea694d2575a18a1097f882a4f551d94"
+    },
+    {
+      "bytes": 619,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/offline_test_receipt.json",
+      "sha256": "e74a3ddf2fefa8ab858897595bb897032b0ecd6c499615ec604c1b520aa62fa3"
+    },
+    {
+      "bytes": 619,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/offline_test_receipt_revision02.json",
+      "sha256": "8677529cf297e81a3a993e6b7df76b51767605a7222a81c94f0f32b5740f4128"
+    },
+    {
+      "bytes": 753,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/preparation_history.json",
+      "sha256": "7bb01557bd01dae8dc5bfafd8ff306c0eaa8ca0f52d01fc6e7439426241c5f91"
+    },
+    {
+      "bytes": 5101,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/prepare_inputs.py",
+      "sha256": "5be28aa0c844f03f8e307edf35b0b9e7d1d5240e601aed0c875964b70503ce4b"
+    },
+    {
+      "bytes": 6783,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/references/source_bindings.json",
+      "sha256": "ab32ca7d1f15fdabcec62791597e833394fa9919033898164c54d1781356af43"
+    },
+    {
+      "bytes": 10392,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/runtime_executor.py",
+      "sha256": "cc42c3c2f17ec23943a246c5448a2d824ab50876ec2067ce159b0c8f0094eee0"
+    },
+    {
+      "bytes": 5093,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/static_validate.py",
+      "sha256": "986cb6981635b9b16be282aa346c60de4dcceffb43218d4c6e5fd512febddbdb"
+    },
+    {
+      "bytes": 28277,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/static_validation_receipt.json",
+      "sha256": "9e09d0426564767861e94b0e0b9ac75ab811c25a739cca629cdca5a07245e51a"
+    },
+    {
+      "bytes": 650,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/collision_stream.jsonl",
+      "sha256": "ef4668d6baef42299a6659406718e2addab507374ed075c77414c405cf49569a"
+    },
+    {
+      "bytes": 141,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/nonpass.json",
+      "sha256": "686b9776dfc6fdb93c9c4a1d7d14464f804abb8e18454507a595ea4d927e1b19"
+    },
+    {
+      "bytes": 841,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/nonpass_approval.json",
+      "sha256": "9b877c3ac276d229fef9b64d29154211e1c0c76806a125934ed16c4bda7486cf"
+    },
+    {
+      "bytes": 26,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/nonpass_auth.json",
+      "sha256": "82de8d7e9121c804de06ae8fe7e52c5d4f8ad8bc9ae4687c200ee8e46cd1e0ee"
+    },
+    {
+      "bytes": 19,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/nonpass_card.json",
+      "sha256": "c5be80febc21169a75eb06c26638a3355519fcff10f98f17fc34cfcaeb0b4fd2"
+    },
+    {
+      "bytes": 138,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/old.json",
+      "sha256": "75e2f12839c79526ff7d62dab287d77baa18917463297b701d98b34e1a302785"
+    },
+    {
+      "bytes": 833,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/old_approval.json",
+      "sha256": "77f7f7298256683da09f1c39b0b5448d417a953bb5bb91cf2433079cf39126ac"
+    },
+    {
+      "bytes": 26,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/old_auth.json",
+      "sha256": "82de8d7e9121c804de06ae8fe7e52c5d4f8ad8bc9ae4687c200ee8e46cd1e0ee"
+    },
+    {
+      "bytes": 19,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/old_card.json",
+      "sha256": "c5be80febc21169a75eb06c26638a3355519fcff10f98f17fc34cfcaeb0b4fd2"
+    },
+    {
+      "bytes": 154,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/pass.json",
+      "sha256": "cbd0df82b7654d83b24d882807e771560a706860ad4be7a48ce4ca5bbf673a1b"
+    },
+    {
+      "bytes": 835,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/pass_approval.json",
+      "sha256": "cf09113bacb9dc55ef8581a90a4a34803746410a02c7dfa6a33493cd4c2a39d5"
+    },
+    {
+      "bytes": 26,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/pass_auth.json",
+      "sha256": "82de8d7e9121c804de06ae8fe7e52c5d4f8ad8bc9ae4687c200ee8e46cd1e0ee"
+    },
+    {
+      "bytes": 19,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/pass_card.json",
+      "sha256": "c5be80febc21169a75eb06c26638a3355519fcff10f98f17fc34cfcaeb0b4fd2"
+    },
+    {
+      "bytes": 616,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/physical.json",
+      "sha256": "fafd2a2a4a8793ae10438fa672611d7ba21269a031e299373a3f6c582815c747"
+    },
+    {
+      "bytes": 838,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/python_fail/execution_receipt.json",
+      "sha256": "e2424a2e169e47d45e595400a2097e6e1d0d43a5114576c58d1eba212f2e3bdf"
+    },
+    {
+      "bytes": 1387,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/python_fail/output_manifest.json",
+      "sha256": "a98cb443f304682f5e391cde3fa2fe6b5fec4f4909f655062020dbf164151873"
+    },
+    {
+      "bytes": 472,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/python_fail/reservation.json",
+      "sha256": "7020806d2c3d8039b7a603264a47263749e953bb7bf2846a5d3d594da492d5e1"
+    },
+    {
+      "bytes": 97,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/python_fail/started.json",
+      "sha256": "eabb794ca1b7fbffb2553d6c3c838e54d9b145036a59281e1ba8e2d105a1da81"
+    },
+    {
+      "bytes": 0,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/python_fail/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/python_fail/stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 858,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/python_output/execution_receipt.json",
+      "sha256": "fc12370349abdea89b9ebbb396cddaead392a96dae546e609b531292bef4ae13"
+    },
+    {
+      "bytes": 1397,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/python_output/output_manifest.json",
+      "sha256": "ee087b5b86d8675b5e356f3a3551abd45fe056e8b8f43b5b36ec851456bde95f"
+    },
+    {
+      "bytes": 477,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/python_output/reservation.json",
+      "sha256": "0080875402084b0a66d344a93387db3863d228da3814aaa717d8fb163a4fcb62"
+    },
+    {
+      "bytes": 97,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/python_output/started.json",
+      "sha256": "2b3df5e8f4772a1f7e79762d854c6ad3568223a76aa12850990402d6dc1b91b7"
+    },
+    {
+      "bytes": 0,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/python_output/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/python_output/stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 859,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/python_success/execution_receipt.json",
+      "sha256": "ff7021e23ee094a23b218e453632ecebdd501acad0a383b0f0454d9c1db9e2bd"
+    },
+    {
+      "bytes": 1402,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/python_success/output_manifest.json",
+      "sha256": "228fb4f63ff5af1ca69fd0fb8e6b6fd861ea2dc1390f1a3d1570828e5f132968"
+    },
+    {
+      "bytes": 473,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/python_success/reservation.json",
+      "sha256": "c404e0dcfe813ff1a5d79e636a7f8052751423285baf138c149e08226dfc85c3"
+    },
+    {
+      "bytes": 97,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/python_success/started.json",
+      "sha256": "8c69dc9197892ee0c07cf62a849711ce98ddeaa793a2ff70651da199e1f71d7d"
+    },
+    {
+      "bytes": 0,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/python_success/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 9,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/python_success/stdout.log",
+      "sha256": "d25a40aa4f234dff3cf60d2afe65a6596d7232e6603ef7cf36984836fd6046aa"
+    },
+    {
+      "bytes": 845,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/python_timeout/execution_receipt.json",
+      "sha256": "c10bc11d73965fe290f6f76e4ca3bf9a283ca9ac0bdbbc9aee9db1ecab586193"
+    },
+    {
+      "bytes": 1402,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/python_timeout/output_manifest.json",
+      "sha256": "91be058b7ebb430ce5373803d7c680ee4fd2b8543665e1fea4b63e5d80e03718"
+    },
+    {
+      "bytes": 478,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/python_timeout/reservation.json",
+      "sha256": "cc8f989c4953c5457abed349e83dd2d1883324e2100c422e2b53b0dbca55842e"
+    },
+    {
+      "bytes": 97,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/python_timeout/started.json",
+      "sha256": "996b3408cb705c86a3eb41c9162b63e16e576ec4ffd6a53dc6a10f5bd407bc3f"
+    },
+    {
+      "bytes": 0,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/python_timeout/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/python_timeout/stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 104,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/wrong.json",
+      "sha256": "cc639ea0df5ae961907979dd00e09a3b4f6bce9b8f39f5037fd3b9f1c4f48f04"
+    },
+    {
+      "bytes": 837,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/wrong_approval.json",
+      "sha256": "b6b7980c28e07946e245d70fe5df838f03ab623f3ba38c1d14a8b519842d7592"
+    },
+    {
+      "bytes": 26,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/wrong_auth.json",
+      "sha256": "82de8d7e9121c804de06ae8fe7e52c5d4f8ad8bc9ae4687c200ee8e46cd1e0ee"
+    },
+    {
+      "bytes": 19,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt1/wrong_card.json",
+      "sha256": "c5be80febc21169a75eb06c26638a3355519fcff10f98f17fc34cfcaeb0b4fd2"
+    },
+    {
+      "bytes": 650,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/collision_stream.jsonl",
+      "sha256": "ef4668d6baef42299a6659406718e2addab507374ed075c77414c405cf49569a"
+    },
+    {
+      "bytes": 141,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/nonpass.json",
+      "sha256": "686b9776dfc6fdb93c9c4a1d7d14464f804abb8e18454507a595ea4d927e1b19"
+    },
+    {
+      "bytes": 841,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/nonpass_approval.json",
+      "sha256": "e4ed455bb0f039d0675a244a2bfadc90552bfb77d37b6472792bded3eaecc924"
+    },
+    {
+      "bytes": 26,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/nonpass_auth.json",
+      "sha256": "82de8d7e9121c804de06ae8fe7e52c5d4f8ad8bc9ae4687c200ee8e46cd1e0ee"
+    },
+    {
+      "bytes": 19,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/nonpass_card.json",
+      "sha256": "c5be80febc21169a75eb06c26638a3355519fcff10f98f17fc34cfcaeb0b4fd2"
+    },
+    {
+      "bytes": 138,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/old.json",
+      "sha256": "75e2f12839c79526ff7d62dab287d77baa18917463297b701d98b34e1a302785"
+    },
+    {
+      "bytes": 833,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/old_approval.json",
+      "sha256": "4b23d24e4b5eb62c487e72601ebaa107df00ca0d7b1c85e106903cfa72632cf7"
+    },
+    {
+      "bytes": 26,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/old_auth.json",
+      "sha256": "82de8d7e9121c804de06ae8fe7e52c5d4f8ad8bc9ae4687c200ee8e46cd1e0ee"
+    },
+    {
+      "bytes": 19,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/old_card.json",
+      "sha256": "c5be80febc21169a75eb06c26638a3355519fcff10f98f17fc34cfcaeb0b4fd2"
+    },
+    {
+      "bytes": 154,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/pass.json",
+      "sha256": "cbd0df82b7654d83b24d882807e771560a706860ad4be7a48ce4ca5bbf673a1b"
+    },
+    {
+      "bytes": 835,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/pass_approval.json",
+      "sha256": "228548304d48320df63e98d33e1b470c8a1a72523bcbce2fe5309df69590660e"
+    },
+    {
+      "bytes": 26,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/pass_auth.json",
+      "sha256": "82de8d7e9121c804de06ae8fe7e52c5d4f8ad8bc9ae4687c200ee8e46cd1e0ee"
+    },
+    {
+      "bytes": 19,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/pass_card.json",
+      "sha256": "c5be80febc21169a75eb06c26638a3355519fcff10f98f17fc34cfcaeb0b4fd2"
+    },
+    {
+      "bytes": 615,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/physical.json",
+      "sha256": "90c5df3027445500182845c8d61571a80f2714c2b8defef1a51b4970a9b37316"
+    },
+    {
+      "bytes": 838,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/python_fail/execution_receipt.json",
+      "sha256": "b4c63a4d77a51dd1bf044afbd31f79e1500a334ef4d9e26e245271ef98657980"
+    },
+    {
+      "bytes": 1387,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/python_fail/output_manifest.json",
+      "sha256": "13644102cd1c9f35212acbe94c576d3e8c81e3a7c2b8a8bf23455ea65c780a60"
+    },
+    {
+      "bytes": 473,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/python_fail/reservation.json",
+      "sha256": "fbfd3d15fcf4a23253a644b9e3e2d0045ea887d4098742dec8b9d4cb44da8e70"
+    },
+    {
+      "bytes": 98,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/python_fail/started.json",
+      "sha256": "e9f20cfe147c7d19d9f5b732dba89bb0e3f2314726d80abb59c860f73e9ff9a7"
+    },
+    {
+      "bytes": 0,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/python_fail/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/python_fail/stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 859,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/python_output/execution_receipt.json",
+      "sha256": "5e2b5996c0df71d9d456aecab58664d341d38d034f18d1d514c6f3d1c2f8b14e"
+    },
+    {
+      "bytes": 1397,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/python_output/output_manifest.json",
+      "sha256": "3450fd2be2ac1b8419679b47f622e82a356d58a54b6b8266dc04bccaaf1a4afc"
+    },
+    {
+      "bytes": 477,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/python_output/reservation.json",
+      "sha256": "02d5444a8059a1da483ecab434f2d2f6869fc10dfd5f7ff28492a72bbb463972"
+    },
+    {
+      "bytes": 98,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/python_output/started.json",
+      "sha256": "f035de3baa8f90de84386dd10005c94d1e606ecab98012edad57edc49436d680"
+    },
+    {
+      "bytes": 0,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/python_output/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/python_output/stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 858,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/python_success/execution_receipt.json",
+      "sha256": "ce4a8306b9b382fbe29c97f1cadeedabb28cb7d6cf3ca42fa0925e36f111ff8c"
+    },
+    {
+      "bytes": 1402,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/python_success/output_manifest.json",
+      "sha256": "7420340fdc380d2f4f69efcf4f250f49684121303760c4dd3e746c98df3ba7e9"
+    },
+    {
+      "bytes": 472,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/python_success/reservation.json",
+      "sha256": "810cdc0d1726bd7aa90603016adac89f9ab94a101aecb18fd5d3e06ed8b04357"
+    },
+    {
+      "bytes": 98,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/python_success/started.json",
+      "sha256": "c5a8d8a9fbda10e7f41730fd6758751107f12a56485206dd543fcd134291da1d"
+    },
+    {
+      "bytes": 0,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/python_success/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 9,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/python_success/stdout.log",
+      "sha256": "d25a40aa4f234dff3cf60d2afe65a6596d7232e6603ef7cf36984836fd6046aa"
+    },
+    {
+      "bytes": 845,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/python_timeout/execution_receipt.json",
+      "sha256": "e0f19a8cb36622b67f08d4490044a23931e7e2c5d3f3061e5369401496086e68"
+    },
+    {
+      "bytes": 1402,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/python_timeout/output_manifest.json",
+      "sha256": "d1e6b9acdd9a01fd0c222e1219a72a8c4d7420d7cbf368d3864135ed1d609b63"
+    },
+    {
+      "bytes": 478,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/python_timeout/reservation.json",
+      "sha256": "89c187b97120c0fa0890f1115fd3c8c8ae2d589a4f76032710aaaf371b41f0e7"
+    },
+    {
+      "bytes": 98,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/python_timeout/started.json",
+      "sha256": "769ad6168d98d558e75a309d3ee5587334e87929bcc7bc9419dd6a4c50727104"
+    },
+    {
+      "bytes": 0,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/python_timeout/stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 0,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/python_timeout/stdout.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 104,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/wrong.json",
+      "sha256": "cc639ea0df5ae961907979dd00e09a3b4f6bce9b8f39f5037fd3b9f1c4f48f04"
+    },
+    {
+      "bytes": 837,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/wrong_approval.json",
+      "sha256": "8dc28139f088c271d78de6a0bd214f24796600026266b62b26f232fcc733e77f"
+    },
+    {
+      "bytes": 26,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/wrong_auth.json",
+      "sha256": "82de8d7e9121c804de06ae8fe7e52c5d4f8ad8bc9ae4687c200ee8e46cd1e0ee"
+    },
+    {
+      "bytes": 19,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/fixtures_attempt2/wrong_card.json",
+      "sha256": "c5be80febc21169a75eb06c26638a3355519fcff10f98f17fc34cfcaeb0b4fd2"
+    },
+    {
+      "bytes": 4933,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/static_validate_initial_failure.py",
+      "sha256": "5117aa8c657ffb4e559bc9f2dc67654acefc30a684956bf547fc45b61efd0738"
+    },
+    {
+      "bytes": 6612,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/test_offline.py",
+      "sha256": "2ebdfa23a1c6d9a2f4a06375d6f082908650cca32b80725ca88b5f0a5fc1aa99"
+    },
+    {
+      "bytes": 6586,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/tests/test_offline_initial_failure.py",
+      "sha256": "003bdbfe1de7d48b0aa23b52995fc602f1e620717e5a8d6ff410de97b1d4050f"
+    }
+  ],
+  "card": {
+    "bytes": 49383,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_o2_causal_diagnostic_20260921_v1/engineering/O2_DIAGNOSTIC_CARD.json",
+    "sha256": "087852e8bd826c7f6a5c754e4222a0a01ea2631ea830dd41e29a81039d21d353"
+  },
+  "netconvert": 0,
+  "raw_outputs_written": false,
+  "status": "STATIC_PACKAGE_READY_FOR_INDEPENDENT_REVIEW"
+}

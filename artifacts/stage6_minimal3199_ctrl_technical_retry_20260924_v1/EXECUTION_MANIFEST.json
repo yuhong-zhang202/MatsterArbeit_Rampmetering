@@ -1,0 +1,224 @@
+{
+  "arm_inputs": {
+    "control": {
+      "additional": {
+        "path": "control/scenario.add.xml",
+        "sha256": "6bd3555c983db506800cab40524767229a3a03c94e893e0ccdc506f95690d8ef"
+      },
+      "demand": {
+        "path": "control/demand.rou.xml",
+        "sha256": "5df62660b9b9e2cc02734794ef2d361a3a97c30fa38a1e4fcbf550f0a2a1e405"
+      },
+      "network": {
+        "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+        "sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca"
+      },
+      "output_roles": {
+        "path": "control/output_roles.json",
+        "sha256": "3ff931a5f088180f6f37fbf8a782985a3a805c8c02b0cfdce3aa018df195b0f6"
+      },
+      "path_prefix": "control",
+      "sumocfg": {
+        "path": "control/scenario.sumocfg",
+        "sha256": "a6be97aba1ab00d6f17ae15788d45765d0a0efca7e297cc1423e4fb720853b1c"
+      }
+    },
+    "treatment": {
+      "additional": {
+        "path": "treatment/scenario.add.xml",
+        "sha256": "4a80f635e4cd967c520ed466df3c2a8dfff5a68e8ad0b675473feb53c8509f16"
+      },
+      "demand": {
+        "path": "treatment/demand.rou.xml",
+        "sha256": "b57a0f3723be40bd1725a478f4ec7f57c1aacfbac0f2e57a5d94f31dce758c83"
+      },
+      "network": {
+        "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+        "sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca"
+      },
+      "output_roles": {
+        "path": "treatment/output_roles.json",
+        "sha256": "32056005f915229daebc8193a4e4aa0d80d54d9f0caa0f296014b7a72c05b996"
+      },
+      "path_prefix": "treatment",
+      "sumocfg": {
+        "path": "treatment/scenario.sumocfg",
+        "sha256": "7b78607a3858d56e2828c2425d323cff8e4a9e9bc985c2cab5a09cd8fc2ce319"
+      }
+    }
+  },
+  "authorization": {
+    "execution_authorized": true,
+    "max_starts": 1,
+    "output_polling_interval_ms": 100,
+    "output_size_stop_limit_bytes_decimal": 60000000,
+    "polling_overshoot_accepted": true,
+    "run_id": "MINIMAL3199_CTRL_S17_TECH_RETRY1",
+    "status": "AUTHORIZED_EXACTLY_ONE_START",
+    "technical_retries": 0,
+    "wallclock_stop_limit_s": 90
+  },
+  "class_counts": {
+    "control": {
+      "M": {
+        "planned_count": 1333,
+        "status": "BOUND"
+      },
+      "R": {
+        "planned_count": 0,
+        "status": "PASS_ZERO"
+      },
+      "U": {
+        "planned_count": 0,
+        "status": "PASS_ZERO"
+      },
+      "X": {
+        "planned_count": 0,
+        "status": "PASS_ZERO"
+      }
+    },
+    "treatment": {
+      "M": {
+        "planned_count": 1333,
+        "status": "BOUND"
+      },
+      "R": {
+        "planned_count": 192,
+        "status": "BOUND"
+      },
+      "U": {
+        "planned_count": 0,
+        "status": "PASS_ZERO"
+      },
+      "X": {
+        "planned_count": 0,
+        "status": "PASS_ZERO"
+      }
+    }
+  },
+  "design_path": "artifacts/stage6_minimal_ramp_induced_breakdown_existence_test_20260924_v1/PLAN.md",
+  "design_plan_sha256": "06b0f04f1144ef8497b4d64906ae27b1377b544abd6e0639133c8d85a3fabc23",
+  "execution_authorized": true,
+  "fixed_conditions": {
+    "A": "A_OPEN",
+    "R_window_s": "[540,1500)",
+    "U": 0,
+    "X": 0,
+    "horizon_s": 2700,
+    "qMain_veh_per_h": 3199.2,
+    "qRamp_veh_per_h": {
+      "control": 0,
+      "treatment": 720
+    },
+    "seed": 17,
+    "step_s": 1
+  },
+  "locked_method": {
+    "path": "docs/methodology/FREEWAY_PROTECTABLE_STATE_EXPLORATORY_DEFINITION.md",
+    "sha256": "22fe22170c17ce74e261e717586a458a1b5173e9deabbee925bd4c1d606adfe7"
+  },
+  "one_use_binding": {
+    "consumption_path": "artifacts/stage6_minimal3199_ctrl_technical_retry_20260924_v1/consumption/MINIMAL3199_CTRL_S17_TECH_RETRY1.json",
+    "status": "AUTHORIZED_UNCONSUMED"
+  },
+  "outputs": {
+    "control": "data/raw/stage6_minimal3199_existence_20260924_v2/MINIMAL3199_CTRL_S17_TECH_RETRY1/outputs",
+    "treatment": "data/raw/stage6_minimal3199_existence_20260924_v1/MINIMAL3199_R720_DELAYED_S17/outputs"
+  },
+  "pair_id": "MINIMAL3199_UX0_S17",
+  "run_ids": {
+    "control": "MINIMAL3199_CTRL_S17_TECH_RETRY1",
+    "treatment": "MINIMAL3199_R720_DELAYED_S17"
+  },
+  "runner_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+  "runner_sha256": "25182434f7665778bb0c0a5dcefe39a5c3f0a1eb481935d3393e70ee4fddc428",
+  "runtime_binding": {
+    "path": "control/runtime_binding_final.json",
+    "sha256": "5fdd6901c089d0df1346e0d01131c37d75682fe134f5c354d5ec2f3e74834052"
+  },
+  "runtime_binding_path": "control/runtime_binding_final.json",
+  "runtime_binding_sha256": "5fdd6901c089d0df1346e0d01131c37d75682fe134f5c354d5ec2f3e74834052",
+  "schema_version": "1",
+  "source_engineering_review": {
+    "disposition": "PASS_STATIC_BINDING_EXECUTION_UNAUTHORIZED",
+    "path": "artifacts/stage6_minimal3199_ctrl_technical_retry_20260924_v1/ENGINEERING_REVIEW.md",
+    "sha256": "9d3794b8940b6c5e23fd0f0467d32e432c44fdb96817eb44ea89cfaaa04e976e"
+  },
+  "source_failed_attempt": {
+    "path": "artifacts/stage6_minimal3199_ctrl_execution_20260924_v1/consumption/MINIMAL3199_CTRL_S17.json",
+    "sha256": "6d1414879f24277280850c2e510e9404c8662168dbb798f9652a67114ec29c22",
+    "status": "PRESERVED_FAILED_PRE_GUARDIAN_NO_REUSE"
+  },
+  "source_prelaunch_review_bundle": {
+    "path": "artifacts/stage6_minimal3199_pair_preparation_20260924_rev3/PROVENANCE_RECEIPT.json",
+    "sha256": "21dcf1337c8627eed94572b200080b780f9973ac13e77bffef4d4a68e4edd527"
+  },
+  "source_prelaunch_review_bundle_scope": {
+    "current_runner_sha256": "25182434f7665778bb0c0a5dcefe39a5c3f0a1eb481935d3393e70ee4fddc428",
+    "purpose": "Bind the unchanged rev3 U=X0 scientific input and pair-design review only.",
+    "runner_hash_interpretation": "The runner hash inside the rev3 source receipt is historical to that review and is not the execution binding for this attempt. Current execution runner is bound independently in this manifest, FINAL card, FINAL runtime sidecar, and fresh exact-card engineering review.",
+    "source_receipt_is_historical": true
+  },
+  "source_rev3_receipt": {
+    "path": "scripts/stage6/minimal3199/prepared_rev3/PROVENANCE_RECEIPT.json",
+    "sha256": "28addb6e2c26ee2de3810f88fb8896134393793e820874da61ebdbef316b1f44"
+  },
+  "staged_config": {
+    "additional_source": {
+      "bytes": 3796,
+      "path": "control/scenario.add.xml",
+      "sha256": "6bd3555c983db506800cab40524767229a3a03c94e893e0ccdc506f95690d8ef"
+    },
+    "sumocfg_source": {
+      "bytes": 2656,
+      "path": "control/scenario.sumocfg",
+      "sha256": "a6be97aba1ab00d6f17ae15788d45765d0a0efca7e297cc1423e4fb720853b1c"
+    },
+    "transform": {
+      "additional": {
+        "expected_staged_bytes": 3940,
+        "expected_staged_sha256": "6b93195465eb66462394905fcf6bd450c8e3b863517bef436f5177f0a54c9470"
+      },
+      "encoding": "UTF-8",
+      "rules_in_order": [
+        {
+          "expected_occurrences": 8,
+          "file": "sumocfg",
+          "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3199_existence_20260924_v1/MINIMAL3199_CTRL_S17/outputs",
+          "target": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3199_existence_20260924_v2/MINIMAL3199_CTRL_S17_TECH_RETRY1/outputs"
+        },
+        {
+          "expected_occurrences": 1,
+          "file": "sumocfg",
+          "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/stage6/minimal3199/prepared_rev3/control/scenario.add.xml",
+          "target": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3199_existence_20260924_v2/MINIMAL3199_CTRL_S17_TECH_RETRY1/outputs/scenario_control.add.xml"
+        },
+        {
+          "expected_occurrences": 12,
+          "file": "additional",
+          "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3199_existence_20260924_v1/MINIMAL3199_CTRL_S17/outputs",
+          "target": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3199_existence_20260924_v2/MINIMAL3199_CTRL_S17_TECH_RETRY1/outputs"
+        }
+      ],
+      "sumocfg": {
+        "expected_staged_bytes": 2802,
+        "expected_staged_sha256": "1906f98e1e108a9019919d29fa4c9c6086659fdbedd231d16531ec275505650c"
+      }
+    }
+  },
+  "status": "FINAL_AUTHORIZED_EXACTLY_ONE_START_AWAITING_FINAL_REVIEW_GATE",
+  "validation_code": {
+    "adapter": {
+      "path": "scripts/stage6/minimal3199/minimal3199_adapter.py",
+      "sha256": "9f7a459a167884533f5f044018bf209a24ed154173d044ce80baa7640a6311b8"
+    },
+    "execution_tests": {
+      "path": "tests/test_minimal3199_final_execution.py",
+      "sha256": "80596684893804fbab2c03edc87e7e35fbf521bcaa098317456e098bce647c9c"
+    },
+    "regression_tests": {
+      "path": "tests/test_minimal3199_adapter.py",
+      "sha256": "bbc44d527c346895cb5fc1ec8311d4e29db6549e10a14d0657e9ef6a17c46c90"
+    }
+  }
+}

@@ -1,0 +1,114 @@
+{
+  "card_sha256": "f3d7d03e0b521d330a6ccc07d807bd88149ce4eb424e3f3895f917e083234b5e",
+  "confidence": "High for static engineering binding, request schema, runtime and file-hash verification; no simulator outcome assessed.",
+  "exact_card_path": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_rev2/MINIMAL3199_R720_DELAYED_S17_UX0_ATTEMPT1_CARD_FINAL_REV2.json",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "offline_tests": {
+    "command": ".venv/bin/python -m unittest tests.test_minimal3199_treatment_attempt tests.test_minimal3199_adapter tests.test_minimal3199_final_execution",
+    "failed": 0,
+    "passed": 35,
+    "status": "PASS"
+  },
+  "persisted_start_request": {
+    "digest_cycle_note": "Request digest is in the sidecar and not embedded into its own request or card. The card binds request/sidecar paths and schema only; sidecar binds the exact card hash and canonical request hash.",
+    "dispatched": false,
+    "receipt_card_sha256": "f3d7d03e0b521d330a6ccc07d807bd88149ce4eb424e3f3895f917e083234b5e",
+    "reconstruction_match": "PASS_BYTE_FOR_BYTE",
+    "request_bytes": 7274,
+    "request_card_sha256": "f3d7d03e0b521d330a6ccc07d807bd88149ce4eb424e3f3895f917e083234b5e",
+    "request_sha256": "6019c720af6a65138ed71a10c3d89e83fb05274cbffe34c23a0caaf70c4e450a",
+    "schema": "r02-start-v2",
+    "sidecar_binds_card_and_request": true,
+    "status": "PERSISTED_UNSENT"
+  },
+  "prelaunch_gate": {
+    "data_provenance_receipt": "PENDING",
+    "engineering_receipt": "PASS_PRELAUNCH",
+    "launchable_now": false,
+    "make_plan_status": "PREFLIGHT_PASS_NO_PROCESS_STARTED",
+    "note": "Launch remains blocked until fresh data/provenance and scientific receipts and a receipt-hash sidecar PASS against this exact card.",
+    "scientific_receipt": "PENDING"
+  },
+  "resource_binding": {
+    "max_starts": 1,
+    "output_size_stop_trigger_bytes_decimal": 75000000,
+    "overshoot_accepted": true,
+    "poll_interval_ms": 100,
+    "technical_retries": 0,
+    "wall_clock_stop_trigger_s": 90
+  },
+  "review_role": "engineering",
+  "reviewed_at_local_date": "2026-09-24",
+  "run_id": "MINIMAL3199_R720_DELAYED_S17_UX0_ATTEMPT1",
+  "schema_version": "1",
+  "scientific_condition_static_check": {
+    "M_attributes": [
+      "id",
+      "desired_depart",
+      "route",
+      "vType",
+      "speedFactor",
+      "departPos",
+      "departLane",
+      "departSpeed"
+    ],
+    "M_count": 1333,
+    "M_matched_count": 1333,
+    "R_veh_per_h": 720,
+    "R_window_s": "[540,1500)",
+    "TLS": "A_OPEN",
+    "U": 0,
+    "X": 0,
+    "control_R_count": 0,
+    "horizon_s": 2700,
+    "qMain_veh_per_h": 3199.2,
+    "seed": 17,
+    "treatment_R_count": 192,
+    "treatment_only_difference": "R_flow.0..191"
+  },
+  "scope": "Exact-card revision-2 engineering prelaunch review. No Guardian request dispatched; no SUMO, TraCI, netconvert, or child process started.",
+  "shared_runner_tests": {
+    "command": "../../../.venv/bin/python -m unittest test_runner (cwd artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start)",
+    "failed": 0,
+    "passed": 24,
+    "status": "PASS"
+  },
+  "staging_check": {
+    "consumption_absent": true,
+    "only_files": [
+      "scenario_control.add.xml",
+      "scenario_control.sumocfg"
+    ],
+    "output_path": "data/raw/stage6_minimal3199_existence_20260924_v4/MINIMAL3199_R720_DELAYED_S17_UX0_ATTEMPT1/outputs",
+    "scenario_control.add.xml": {
+      "bytes": 4048,
+      "sha256": "0a476ff96e378ae8972de96cba1b1748274158a29bc7f9f3408be70996e3b2f0"
+    },
+    "scenario_control.sumocfg": {
+      "bytes": 2885,
+      "sha256": "839cd0604aa2eef5da3677dae06296995fc3c017b9a84f1f8cf0ed0315d47d54"
+    },
+    "source_replacement_counts": "sumocfg output=8, add-file input=1; additional output=12; no prior output-root residual"
+  },
+  "status": "PASS_PRELAUNCH",
+  "verified_bindings": {
+    "input_manifest_path": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_rev2/INPUT_MANIFEST.json",
+    "input_manifest_sha256": "3c5b8f27850c96f32b044537b4299a5a8b7260f894567813ae955b8fb7bab34d",
+    "persisted_request_path": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_rev2/START_REQUEST.json",
+    "persisted_request_receipt_path": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_rev2/START_REQUEST_RECEIPT.json",
+    "persisted_request_receipt_sha256": "5846d84b8c2711a5a1c4b6788a0a7446d5d1708cf0a03174e6049f8edefd572b",
+    "persisted_request_sha256": "6019c720af6a65138ed71a10c3d89e83fb05274cbffe34c23a0caaf70c4e450a",
+    "runner_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+    "runner_sha256": "a4c7c5952522286c35764d1a6a05eff46e78311bf3afc06785474c64127aa064",
+    "runtime_binding_path": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_rev2/runtime_binding_final.json",
+    "runtime_binding_sha256": "f73c7731926d00fe65bc58c9e2a4340456cc8065c42349bec0fe053a29ead0bf",
+    "staging_provenance_path": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_rev2/STAGING_PROVENANCE.json",
+    "staging_provenance_sha256": "387fd4bb11b7d8e78315f76699ec4ab633b17af81c4c9587590fa9752d3ecf89",
+    "treatment_tests_path": "tests/test_minimal3199_treatment_attempt.py",
+    "treatment_tests_sha256": "eb32bd9dea16837c45a2977655e3cecdb0516f0d8ee9d34165eab93fadf34b24"
+  }
+}

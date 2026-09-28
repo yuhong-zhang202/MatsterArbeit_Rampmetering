@@ -1,0 +1,32 @@
+{
+  "status": "PASS_PRELAUNCH_SCIENTIFIC",
+  "card_sha256": "00e095217e6dd66581707439c81ba15204c69e12de7d0f4a5f38e0fc04607bed",
+  "input_manifest_sha256": "131f3b6c8506edbd3e905d5f3e737ecb770601e6e6fbb27c1e365f8504f22ffc",
+  "gate_contract_sha256": "a9cea8ac59073b21a59afd14f41afdbb0d3f2545214cf866f7fe7c8a152f5566",
+  "open_findings": {"blocker": 0, "major": 0, "required_minor": 0},
+  "review_scope": "fresh final read-only scientific prelaunch review of exact revision-2 card after interface correction and fresh engineering/data reviews",
+  "checks": {
+    "revision_supersession_and_interface_correction": "PASS; revision 1 dry-run failed closed before child on key mismatch; revision 2 uses input_manifest",
+    "qMain_only_scope": "PASS; M 1333 to 1396, exact 3350.4 veh/h, all other scientific inputs fixed",
+    "no_post_hoc_classifier_or_result_chasing": "PASS; locked hashes, immutable thresholds, 22/22 fixtures, no reclassification drift",
+    "demand_realization_overload_attribution": "PASS_WITH_REQUIRED_POST_RUN_GATE; complete independent M/R/U/X ledger required before G2/G3/G7 acceptance/release",
+    "stop_and_overload_logic": "PASS; failures/ambiguity stop, no automatic Point 2/3/seed23/retry",
+    "authorization_boundary": "PASS; awaiting explicit approval, starts=0, max=1, retries=0, output absent, no sidecar",
+    "formal_protocol_boundary": "PASS; protocol empty and unchanged",
+    "measurement_target": "PASS at prelaunch specification level",
+    "actual_runtime_coverage_and_reconciliation": "NOT_YET_VERIFIABLE; no raw Point1 data",
+    "prelaunch_regression_controls": "PASS; runtime behavior remains pending authorization",
+    "aggregate_output_limit": "PASS_WITH_LIMITATION; declared 22-stream bound and secondary directory monitor"
+  },
+  "limitations": [
+    "one exploratory point and one seed cannot establish suitable baseline or stochastic robustness",
+    "P-negative is not absence of congestion and P-positive is not physical breakdown or metering benefit",
+    "runtime completeness, insertion, detector coverage, censoring and result reconciliation remain unverified",
+    "65 MB per-file/1.43 GB aggregate bound depends on registered streams"
+  ],
+  "runtime_invocations": 0,
+  "sumo_starts": 0,
+  "netconvert_starts": 0,
+  "TraCI_sessions": 0,
+  "user_execution_authorization": false
+}

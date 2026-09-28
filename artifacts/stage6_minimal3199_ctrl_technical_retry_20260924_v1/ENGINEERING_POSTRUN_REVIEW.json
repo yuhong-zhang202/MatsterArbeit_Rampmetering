@@ -1,0 +1,37 @@
+{
+  "run_id": "MINIMAL3199_CTRL_S17_TECH_RETRY1",
+  "card_sha256": "027d7dc7b74561648ec6c0799abd64a99b7fb746273d1ecb78905c00c082c672",
+  "status": "TECHNICAL_FAILURE_PRE_SUMO",
+  "reservation_status": "GUARDIAN_HANDOFF_PENDING",
+  "reservation_path": "artifacts/stage6_minimal3199_ctrl_technical_retry_20260924_v1/consumption/MINIMAL3199_CTRL_S17_TECH_RETRY1.json",
+  "failure": "GUARDIAN_SPAWN_HANDSHAKE_FAILED:INVALID_START_REQUEST",
+  "root_cause": "MINIMAL3199_CTRL_S17_TECH_RETRY1 is dispatched by _run_binding but missing from SUPPORTED_RUN_BINDINGS consulted by guardian_main().",
+  "simulator_pid": null,
+  "guardian_start_attempted": true,
+  "sumo_starts": 0,
+  "retry_allowed": false,
+  "wallclock_runtime_s": 0.022354,
+  "resource_limits_exceeded": false,
+  "output_bytes": 6742,
+  "output_size_trigger_bytes": 60000000,
+  "output_roles_present": 0,
+  "output_roles_required": 18,
+  "output_manifest_present": false,
+  "execution_receipt_present": false,
+  "inventory": {
+    "scenario_control.sumocfg": {
+      "bytes": 2802,
+      "sha256": "1906f98e1e108a9019919d29fa4c9c6086659fdbedd231d16531ec275505650c"
+    },
+    "scenario_control.add.xml": {
+      "bytes": 3940,
+      "sha256": "6b93195465eb66462394905fcf6bd450c8e3b863517bef436f5177f0a54c9470"
+    },
+    "guardian_stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "process_table_check": "OS_DENIED",
+  "retry_or_repair_performed": false
+}

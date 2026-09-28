@@ -1,0 +1,51 @@
+{
+  "schema": "stage6_final_mechanism_closeout_scientific_review_v1",
+  "disposition": "PASS",
+  "findings": {"blocker": 0, "major": 0, "required_minor": 0},
+  "reviewer": "independent scientific_reviewer",
+  "reviewed_materials": {
+    "REASSESSMENT_REVIEWED_DRAFT.md": "786103e93e3cdbc480eec94f4f588b7bd53e23b8f581a540e0b1b444f667faa9",
+    "ROBERT_TECHNICAL_SUMMARY.md": "f964b56248d2f34ad8d342407dc50c22468f6c549a05ec6d6bd8d7b7666ca055"
+  },
+  "final_report_sha256": "44a477dc5cfbbcabb9611b3a743177e83d1e029b2323637b17f8b3cf71f60894",
+  "finalization_change": "The reviewed reassessment draft was preserved byte-for-byte. Only its status line was updated in the final report after PASS; no scientific content changed.",
+  "decisions": {
+    "mechanism_claim": "A qualified, credible R-admission-associated sustained local M deterioration potential is supported in the U=X=0 module; an unqualified ramp-pressure-induced freeway-breakdown claim overstates causality and spatial extent.",
+    "mechanism_confidence": "Moderate",
+    "descriptive_120s_low_state": "SUPPORTED_WITH_ONSET_REFERENCE_UNRESOLVED_RETAINED",
+    "descriptive_confidence": "High",
+    "stage6_status_recommendation": "B_PARTIAL_REPORT_TO_ROBERT",
+    "stage6_status_confidence": "High",
+    "mandatory_additional_offline_check_for_limited_report": false,
+    "offline_check_confidence": "Moderate",
+    "R1080": "STOP_UNDER_PREREGISTERED_E1_NOT_EVALUABLE_RULE",
+    "R1080_stop_confidence": "High"
+  },
+  "observations": {
+    "R900_cell15_four_low_bins_s": "[1260,1380)",
+    "R900_pooled_M_speed_ratios": [0.537, 0.553, 0.576, 0.675],
+    "R0_pooled_M_speed_ratios_same_cell_bins": [0.818, 0.882, 0.845, 0.809],
+    "R900_pooled_M_densities": [25.5, 23.0, 24.33, 23.5],
+    "R0_pooled_M_densities_same_cell_bins": [17.17, 14.83, 17.5, 19.5],
+    "immediately_prior_reference_ratios": [0.839884, 0.780261, 0.762122],
+    "reference_threshold": 0.85,
+    "locked_R900_disposition": "NOT_EVALUABLE_ONSET_REFERENCE_UNRESOLVED"
+  },
+  "limitations": [
+    "No locked State1 witness or complete freeway-protection/ramp-urban-cost chain was established.",
+    "Queue XML has 2700 time labels but no lane records; queue morphology is unavailable.",
+    "E1 aggregates cannot identify M vehicles; the reviewer did not recompute the full classification from raw in this closeout review.",
+    "The U=X=0 module, exact demands and seed were not approved by Robert as formal thesis settings.",
+    "Twelve tripinfo speedFactor decimal half-ties remain a formatter-specific caveat; the locked speed ratio uses exact vehroute speedFactor."
+  ],
+  "reviewed_source_hashes": {
+    "R900_scientific_postrun": "7c621613ad7ebe33c00fa0295e5517613861105ee9869932440fa3307c63f2f3",
+    "R900_corrected_data": "c700e2d0c4d3c66cd8115e46cb8058e902a6cb79dd20e45bfddc308a610dc653",
+    "R900_matched_lane_cell_table": "feb09130cc17f8803cd8ff2c62341129d640372a64b4c2e8f3c5517544ebd071",
+    "locked_methodology": "22fe22170c17ce74e261e717586a458a1b5173e9deabbee925bd4c1d606adfe7",
+    "second_tier_plan": "dee35d966d3fb00b1320092e49c1ebc228fbbbe3c5a8c3320e7966960e976776",
+    "Robert_original_source": "e788f4c12d36118fab865ed6fe9a7f1f1d6a7255d907daf4fc2d1850ed4c5023",
+    "speedFactor_audit": "eddb602a707cb5a0a54beca0af4a7714f6c1c1336c7a6feab01efedd1399e3a2"
+  },
+  "process_starts_this_review": {"SUMO": 0, "Guardian": 0, "TraCI": 0, "netconvert": 0}
+}

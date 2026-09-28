@@ -1,0 +1,479 @@
+{
+  "allowed_differences": [
+    "output paths/identity labels",
+    "WAUT startProg A/B/C only traffic intervention selector",
+    "technical LC off fixture omits native logger only"
+  ],
+  "attempts": [
+    {
+      "argv": [
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+        "-c",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_SMOKE_B_LC_ON_S17_attempt1/scenario.sumocfg"
+      ],
+      "attempt_id": "TV_SMOKE_B_LC_ON_S17_attempt1",
+      "inputs": [
+        {
+          "bytes": 1141,
+          "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_SMOKE_B_LC_ON_S17_attempt1/demand.rou.xml",
+          "sha256": "70d90d477c97141086b87cd248064c2c27c5965060e04fe9a2cbec67ec20e1cd"
+        },
+        {
+          "bytes": 37543,
+          "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_SMOKE_B_LC_ON_S17_attempt1/expected_identity_manifest.json",
+          "sha256": "58b6856457d3705dddbc272ecbf399d841f2aebdead9642ebc25fc6ddb48b4f9"
+        },
+        {
+          "bytes": 6731,
+          "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_SMOKE_B_LC_ON_S17_attempt1/output_roles.json",
+          "sha256": "3e296b218d28ac809baa53faacf455881e6f378f26209844755cecbd15b0b90d"
+        },
+        {
+          "bytes": 3884,
+          "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_SMOKE_B_LC_ON_S17_attempt1/scenario.add.xml",
+          "sha256": "55557a0eec53e89adcf5321e44f46b801ffcb0bccb06c1e315c8e6c3527da743"
+        },
+        {
+          "bytes": 2794,
+          "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_SMOKE_B_LC_ON_S17_attempt1/scenario.sumocfg",
+          "sha256": "a334720a8426ad6a826f06f49df85d07947566636c2c11ca139e812060d6b539"
+        }
+      ],
+      "lanechange_logging": true,
+      "output_root": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_ON_S17_attempt1/outputs",
+      "program": "B_MODERATE",
+      "purpose": "technical_logger_on",
+      "run_root": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_ON_S17_attempt1",
+      "seed": 17
+    },
+    {
+      "argv": [
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+        "-c",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_SMOKE_B_LC_OFF_S17_attempt1/scenario.sumocfg"
+      ],
+      "attempt_id": "TV_SMOKE_B_LC_OFF_S17_attempt1",
+      "inputs": [
+        {
+          "bytes": 1141,
+          "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_SMOKE_B_LC_OFF_S17_attempt1/demand.rou.xml",
+          "sha256": "70d90d477c97141086b87cd248064c2c27c5965060e04fe9a2cbec67ec20e1cd"
+        },
+        {
+          "bytes": 37544,
+          "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_SMOKE_B_LC_OFF_S17_attempt1/expected_identity_manifest.json",
+          "sha256": "d40158e91852fee5185d5115aeb7dd3e4148fd263b893acba0794761e7b18b1e"
+        },
+        {
+          "bytes": 6429,
+          "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_SMOKE_B_LC_OFF_S17_attempt1/output_roles.json",
+          "sha256": "2c2b4e1327bb1c1ed8ef67f40016648f4d7038591ad597421b01873ccc539229"
+        },
+        {
+          "bytes": 3896,
+          "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_SMOKE_B_LC_OFF_S17_attempt1/scenario.add.xml",
+          "sha256": "aa66c9197af06d4f764e3ed95de069c27fcd8e8a1e2a5199b8a976e19690bea9"
+        },
+        {
+          "bytes": 2613,
+          "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_SMOKE_B_LC_OFF_S17_attempt1/scenario.sumocfg",
+          "sha256": "973af4877c2837dbbea95cb8d54b8d7537530995c9698e2fba13dbb7d7547f7b"
+        }
+      ],
+      "lanechange_logging": false,
+      "output_root": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_OFF_S17_attempt1/outputs",
+      "program": "B_MODERATE",
+      "purpose": "technical_logger_off",
+      "run_root": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_SMOKE_B_LC_OFF_S17_attempt1",
+      "seed": 17
+    },
+    {
+      "argv": [
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+        "-c",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_A_S17_attempt1/scenario.sumocfg"
+      ],
+      "attempt_id": "TV_A_S17_attempt1",
+      "inputs": [
+        {
+          "bytes": 1141,
+          "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_A_S17_attempt1/demand.rou.xml",
+          "sha256": "70d90d477c97141086b87cd248064c2c27c5965060e04fe9a2cbec67ec20e1cd"
+        },
+        {
+          "bytes": 37527,
+          "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_A_S17_attempt1/expected_identity_manifest.json",
+          "sha256": "134b16cd4db2f52f8a47b133b36235f30ff176a10afe8e2763165de72064aab6"
+        },
+        {
+          "bytes": 6515,
+          "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_A_S17_attempt1/output_roles.json",
+          "sha256": "c88c958231069f3da0771f6261e7892ade4382b74890b6b2e91f20f09ff21c1a"
+        },
+        {
+          "bytes": 3736,
+          "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_A_S17_attempt1/scenario.add.xml",
+          "sha256": "4198c04ce39bdfb5b91d965f2ec2ca9c7de42777415d77f68e87d4b239a22c2b"
+        },
+        {
+          "bytes": 2674,
+          "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_A_S17_attempt1/scenario.sumocfg",
+          "sha256": "793d6ecd387f5ed958eb9aff0f13f1628f64bf1422d28c5400db0ddc34ff3c7c"
+        }
+      ],
+      "lanechange_logging": true,
+      "output_root": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_A_S17_attempt1/outputs",
+      "program": "A_OPEN",
+      "purpose": "primary",
+      "run_root": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_A_S17_attempt1",
+      "seed": 17
+    },
+    {
+      "argv": [
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+        "-c",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_B_S17_attempt1/scenario.sumocfg"
+      ],
+      "attempt_id": "TV_B_S17_attempt1",
+      "inputs": [
+        {
+          "bytes": 1141,
+          "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_B_S17_attempt1/demand.rou.xml",
+          "sha256": "70d90d477c97141086b87cd248064c2c27c5965060e04fe9a2cbec67ec20e1cd"
+        },
+        {
+          "bytes": 37531,
+          "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_B_S17_attempt1/expected_identity_manifest.json",
+          "sha256": "23efd33dc61d454badd0a1c5c32a96958bb21c878b52e7671db028729e337455"
+        },
+        {
+          "bytes": 6515,
+          "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_B_S17_attempt1/output_roles.json",
+          "sha256": "968ebb337fc3dd79423dabbf383557dd7e651e66f460af690d22f727d52ddf54"
+        },
+        {
+          "bytes": 3740,
+          "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_B_S17_attempt1/scenario.add.xml",
+          "sha256": "70989c9e2180b618292095515293b11e3c6fc440fd2dd4279dce5071890eb324"
+        },
+        {
+          "bytes": 2674,
+          "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_B_S17_attempt1/scenario.sumocfg",
+          "sha256": "db68a041efe94657af905e5ec651724ca2a62f863eb49fdf83e6cd37540445f9"
+        }
+      ],
+      "lanechange_logging": true,
+      "output_root": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_B_S17_attempt1/outputs",
+      "program": "B_MODERATE",
+      "purpose": "primary",
+      "run_root": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_B_S17_attempt1",
+      "seed": 17
+    },
+    {
+      "argv": [
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+        "-c",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_C_S17_attempt1/scenario.sumocfg"
+      ],
+      "attempt_id": "TV_C_S17_attempt1",
+      "inputs": [
+        {
+          "bytes": 1141,
+          "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_C_S17_attempt1/demand.rou.xml",
+          "sha256": "70d90d477c97141086b87cd248064c2c27c5965060e04fe9a2cbec67ec20e1cd"
+        },
+        {
+          "bytes": 37529,
+          "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_C_S17_attempt1/expected_identity_manifest.json",
+          "sha256": "b92c52c7a233d82a7f8aa76f0ef131fb35812ff6aa75f495711424e3da647219"
+        },
+        {
+          "bytes": 6515,
+          "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_C_S17_attempt1/output_roles.json",
+          "sha256": "aff1e2707554a824572a58d2cd7973fe9e46e52ed7e5ab7f500f0166195ba4a0"
+        },
+        {
+          "bytes": 3738,
+          "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_C_S17_attempt1/scenario.add.xml",
+          "sha256": "0f1bfa1a4d977f8cb1382394a476756a41b7b20b7d79559221c0e65378aad971"
+        },
+        {
+          "bytes": 2674,
+          "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_C_S17_attempt1/scenario.sumocfg",
+          "sha256": "65e0ef661dbc21a9a49be60119393e595b769bd61960074b76a53684c55bc068"
+        }
+      ],
+      "lanechange_logging": true,
+      "output_root": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_C_S17_attempt1/outputs",
+      "program": "C_STRONG",
+      "purpose": "primary",
+      "run_root": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_targeted_validation_20260920_v1/TV_C_S17_attempt1",
+      "seed": 17
+    }
+  ],
+  "common_network": {
+    "bytes": 12814,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/build_attempts/TV_BUILD01/network.net.xml",
+    "sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca"
+  },
+  "demand_window": [
+    0,
+    1500
+  ],
+  "planned_population": {
+    "M": 1333,
+    "R": 300,
+    "U": 150,
+    "X": 75
+  },
+  "programs": {
+    "A_OPEN": [
+      [
+        60,
+        "G"
+      ]
+    ],
+    "B_MODERATE": [
+      [
+        22,
+        "G"
+      ],
+      [
+        3,
+        "y"
+      ],
+      [
+        35,
+        "r"
+      ]
+    ],
+    "C_STRONG": [
+      [
+        12,
+        "G"
+      ],
+      [
+        3,
+        "y"
+      ],
+      [
+        45,
+        "r"
+      ]
+    ]
+  },
+  "schema_checks": [
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/sumoConfiguration.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_SMOKE_B_LC_ON_S17_attempt1/scenario.sumocfg"
+      ],
+      "returncode": 0,
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_SMOKE_B_LC_ON_S17_attempt1/scenario.sumocfg validates\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_SMOKE_B_LC_ON_S17_attempt1/scenario.add.xml"
+      ],
+      "returncode": 0,
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_SMOKE_B_LC_ON_S17_attempt1/scenario.add.xml validates\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/routes_file.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_SMOKE_B_LC_ON_S17_attempt1/demand.rou.xml"
+      ],
+      "returncode": 0,
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_SMOKE_B_LC_ON_S17_attempt1/demand.rou.xml validates\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/sumoConfiguration.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_SMOKE_B_LC_OFF_S17_attempt1/scenario.sumocfg"
+      ],
+      "returncode": 0,
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_SMOKE_B_LC_OFF_S17_attempt1/scenario.sumocfg validates\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_SMOKE_B_LC_OFF_S17_attempt1/scenario.add.xml"
+      ],
+      "returncode": 0,
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_SMOKE_B_LC_OFF_S17_attempt1/scenario.add.xml validates\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/routes_file.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_SMOKE_B_LC_OFF_S17_attempt1/demand.rou.xml"
+      ],
+      "returncode": 0,
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_SMOKE_B_LC_OFF_S17_attempt1/demand.rou.xml validates\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/sumoConfiguration.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_A_S17_attempt1/scenario.sumocfg"
+      ],
+      "returncode": 0,
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_A_S17_attempt1/scenario.sumocfg validates\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_A_S17_attempt1/scenario.add.xml"
+      ],
+      "returncode": 0,
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_A_S17_attempt1/scenario.add.xml validates\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/routes_file.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_A_S17_attempt1/demand.rou.xml"
+      ],
+      "returncode": 0,
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_A_S17_attempt1/demand.rou.xml validates\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/sumoConfiguration.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_B_S17_attempt1/scenario.sumocfg"
+      ],
+      "returncode": 0,
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_B_S17_attempt1/scenario.sumocfg validates\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_B_S17_attempt1/scenario.add.xml"
+      ],
+      "returncode": 0,
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_B_S17_attempt1/scenario.add.xml validates\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/routes_file.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_B_S17_attempt1/demand.rou.xml"
+      ],
+      "returncode": 0,
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_B_S17_attempt1/demand.rou.xml validates\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/sumoConfiguration.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_C_S17_attempt1/scenario.sumocfg"
+      ],
+      "returncode": 0,
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_C_S17_attempt1/scenario.sumocfg validates\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_C_S17_attempt1/scenario.add.xml"
+      ],
+      "returncode": 0,
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_C_S17_attempt1/scenario.add.xml validates\n"
+    },
+    {
+      "argv": [
+        "/usr/bin/xmllint",
+        "--nonet",
+        "--noout",
+        "--schema",
+        "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/routes_file.xsd",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_C_S17_attempt1/demand.rou.xml"
+      ],
+      "returncode": 0,
+      "stderr": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_targeted_validation_20260920_v1/engineering/inputs/TV_C_S17_attempt1/demand.rou.xml validates\n"
+    }
+  ],
+  "simulation_window": [
+    0,
+    2700
+  ],
+  "source_input_bindings": [
+    {
+      "bytes": 1141,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision04/inputs/RV4_R720_S17_attempt1/demand.rou.xml",
+      "sha256": "70d90d477c97141086b87cd248064c2c27c5965060e04fe9a2cbec67ec20e1cd"
+    },
+    {
+      "bytes": 37529,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision04/inputs/RV4_R720_S17_attempt1/expected_identity_manifest.json",
+      "sha256": "ca95d3992a5c53f9894bbb7d5b58f14577800a7666808c1d676ac4befbfbb1e0"
+    },
+    {
+      "bytes": 6983,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision04/inputs/RV4_R720_S17_attempt1/output_roles.json",
+      "sha256": "ef533440ca74d4f984889a900739b4d57f6ba8c3f93fdcbce5851402870882f2"
+    },
+    {
+      "bytes": 4135,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision04/inputs/RV4_R720_S17_attempt1/scenario.add.xml",
+      "sha256": "c5d241d36311de855c6f8ee95110832b43dbcff430046f8bed5baff4ffdf963f"
+    },
+    {
+      "bytes": 2845,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision04/inputs/RV4_R720_S17_attempt1/scenario.sumocfg",
+      "sha256": "d719674ff5987018920b5e5a83f574c9da1ac1505d2542e45672aa7adc38daa6"
+    }
+  ],
+  "step_s": 1
+}

@@ -3,31 +3,133 @@
   "authorization": {
     "user_text": "按照方案执行",
     "authorized_plan": "docs/STAGE6_OBSTACLE_RESOLUTION_EXECUTION_PLAN.md",
-    "does_not_imply": ["T54 acceptance", "SG6-BUILD approval", "SG6-P launch approval", "SG6-R acceptance", "protocol freeze", "Robert communication"]
+    "does_not_imply": [
+      "T54 acceptance",
+      "SG6-BUILD approval",
+      "SG6-P launch approval",
+      "SG6-R acceptance",
+      "protocol freeze",
+      "Robert communication"
+    ]
   },
   "current_stage": "S6-E02_negative_stop_pending_user_acceptance",
   "obstacle_status": "not_resolved_candidate",
   "steps": [
-    {"step_id": "S6-A00", "status": "completed", "owner": "primary+simulation_engineer", "verification": "12/12 runs; 348/348 archive files; duplicate=0; unexplained_hash_conflict=0"},
-    {"step_id": "S6-A01", "status": "completed", "owner": "data_analyst", "verification": "independent raw XML reconstruction passed; 12 A01 fixtures passed"},
-    {"step_id": "S6-A02", "status": "completed", "owner": "data_analyst+simulation_engineer+scientific_reviewer", "verification": "H1-H6=6/6; scientific PASS; Blocker/Major=0/0"},
-    {"step_id": "S6-A03", "status": "completed", "owner": "primary+simulation_engineer+scientific_reviewer", "verification": "H2 selected as sole proposed B candidate; report and candidate register complete"},
-    {"step_id": "S6-B00", "status": "completed_proposed", "owner": "primary+simulation_engineer+scientific_reviewer", "verification": "H2 intervention/reference/challenge fixed in revision_03; user numeric acceptance pending"},
-    {"step_id": "S6-B01", "status": "completed_proposed", "owner": "data_analyst+scientific_reviewer", "verification": "primary/support/R/RU/Q4/reference/inflow/boundary/sensitivity rules reviewed"},
-    {"step_id": "S6-B02", "status": "completed_proposed", "owner": "primary+simulation_engineer+data_analyst", "verification": "8 logical cells; 4 reused V0; 4 new V1; proposed max 6 SUMO starts; no execution authorized"},
-    {"step_id": "S6-B03", "status": "completed_user_accepted", "owner": "primary+scientific_reviewer", "verification": "revision_03 PASS; user explicitly approved scientific values and C00-C02; launch remains unauthorized"},
-    {"step_id": "S6-C00", "status": "completed", "owner": "simulation_engineer", "verification": "isolated candidate configuration and offline entry implemented; no simulator executor"},
-    {"step_id": "S6-C01", "status": "completed", "owner": "simulation_engineer+data_analyst", "verification": "measurement/materialization/source identity contracts implemented and independently reviewed"},
-    {"step_id": "S6-C02", "status": "SG6-L_passed", "owner": "simulation_engineer+data_analyst+scientific_reviewer", "verification": "open Blocker/Major/required Minor=0/0/0 within offline scope"},
-    {"step_id": "S6-C03", "status": "passed_static_reuse_only", "owner": "simulation_engineer+data_analyst+scientific_reviewer", "verification": "existing compiled network reuse; netconvert planned/actual=0/0; open B/M/required minor=0/0/0"},
-    {"step_id": "S6-C04", "status": "SG6-P_passed_and_user_approved", "owner": "simulation_engineer+data_analyst+scientific_reviewer", "verification": "offline preparation passed; user approved bound launch card, stable payload and gate policy"},
-    {"step_id": "S6-D00", "status": "completed_after_one_registered_retry", "owner": "simulation_engineer+data_analyst+scientific_reviewer", "verification": "attempt1 technical failure retained; attempt2 smoke accepted 0/0/0; retry exhausted"},
-    {"step_id": "S6-D01", "status": "FAIL_STOP_NOT_RESOLVED", "owner": "simulation_engineer+data_analyst+scientific_reviewer", "verification": "seed17 ML/C qualified; 74 required=69 pass/5 not_resolved/0 missing; 7/7 sensitivities not_resolved"},
-    {"step_id": "S6-D02", "status": "cancelled_by_stop_rule", "owner": "primary", "verification": "seed23 not started because the registered all-seed success rule could no longer pass"},
-    {"step_id": "S6-D03", "status": "completed_for_executed_scope", "owner": "data_analyst+scientific_reviewer", "verification": "new V1 raw XML independently reconstructed; historical V0 exact registered reuse; fixed denominators retained"},
-    {"step_id": "S6-E02", "status": "negative_stop_package_prepared_pending_user_acceptance", "owner": "primary+scientific_reviewer", "verification": "SG6-R candidate not_resolved; formal design locked; Robert brief prepared but not sent"}
+    {
+      "step_id": "S6-A00",
+      "status": "completed",
+      "owner": "primary+simulation_engineer",
+      "verification": "12/12 runs; 348/348 archive files; duplicate=0; unexplained_hash_conflict=0"
+    },
+    {
+      "step_id": "S6-A01",
+      "status": "completed",
+      "owner": "data_analyst",
+      "verification": "independent raw XML reconstruction passed; 12 A01 fixtures passed"
+    },
+    {
+      "step_id": "S6-A02",
+      "status": "completed",
+      "owner": "data_analyst+simulation_engineer+scientific_reviewer",
+      "verification": "H1-H6=6/6; scientific PASS; Blocker/Major=0/0"
+    },
+    {
+      "step_id": "S6-A03",
+      "status": "completed",
+      "owner": "primary+simulation_engineer+scientific_reviewer",
+      "verification": "H2 selected as sole proposed B candidate; report and candidate register complete"
+    },
+    {
+      "step_id": "S6-B00",
+      "status": "completed_proposed",
+      "owner": "primary+simulation_engineer+scientific_reviewer",
+      "verification": "H2 intervention/reference/challenge fixed in revision_03; user numeric acceptance pending"
+    },
+    {
+      "step_id": "S6-B01",
+      "status": "completed_proposed",
+      "owner": "data_analyst+scientific_reviewer",
+      "verification": "primary/support/R/RU/Q4/reference/inflow/boundary/sensitivity rules reviewed"
+    },
+    {
+      "step_id": "S6-B02",
+      "status": "completed_proposed",
+      "owner": "primary+simulation_engineer+data_analyst",
+      "verification": "8 logical cells; 4 reused V0; 4 new V1; proposed max 6 SUMO starts; no execution authorized"
+    },
+    {
+      "step_id": "S6-B03",
+      "status": "completed_user_accepted",
+      "owner": "primary+scientific_reviewer",
+      "verification": "revision_03 PASS; user explicitly approved scientific values and C00-C02; launch remains unauthorized"
+    },
+    {
+      "step_id": "S6-C00",
+      "status": "completed",
+      "owner": "simulation_engineer",
+      "verification": "isolated candidate configuration and offline entry implemented; no simulator executor"
+    },
+    {
+      "step_id": "S6-C01",
+      "status": "completed",
+      "owner": "simulation_engineer+data_analyst",
+      "verification": "measurement/materialization/source identity contracts implemented and independently reviewed"
+    },
+    {
+      "step_id": "S6-C02",
+      "status": "SG6-L_passed",
+      "owner": "simulation_engineer+data_analyst+scientific_reviewer",
+      "verification": "open Blocker/Major/required Minor=0/0/0 within offline scope"
+    },
+    {
+      "step_id": "S6-C03",
+      "status": "passed_static_reuse_only",
+      "owner": "simulation_engineer+data_analyst+scientific_reviewer",
+      "verification": "existing compiled network reuse; netconvert planned/actual=0/0; open B/M/required minor=0/0/0"
+    },
+    {
+      "step_id": "S6-C04",
+      "status": "SG6-P_passed_and_user_approved",
+      "owner": "simulation_engineer+data_analyst+scientific_reviewer",
+      "verification": "offline preparation passed; user approved bound launch card, stable payload and gate policy"
+    },
+    {
+      "step_id": "S6-D00",
+      "status": "completed_after_one_registered_retry",
+      "owner": "simulation_engineer+data_analyst+scientific_reviewer",
+      "verification": "attempt1 technical failure retained; attempt2 smoke accepted 0/0/0; retry exhausted"
+    },
+    {
+      "step_id": "S6-D01",
+      "status": "FAIL_STOP_NOT_RESOLVED",
+      "owner": "simulation_engineer+data_analyst+scientific_reviewer",
+      "verification": "seed17 ML/C qualified; 74 required=69 pass/5 not_resolved/0 missing; 7/7 sensitivities not_resolved"
+    },
+    {
+      "step_id": "S6-D02",
+      "status": "cancelled_by_stop_rule",
+      "owner": "primary",
+      "verification": "seed23 not started because the registered all-seed success rule could no longer pass"
+    },
+    {
+      "step_id": "S6-D03",
+      "status": "completed_for_executed_scope",
+      "owner": "data_analyst+scientific_reviewer",
+      "verification": "new V1 raw XML independently reconstructed; historical V0 exact registered reuse; fixed denominators retained"
+    },
+    {
+      "step_id": "S6-E02",
+      "status": "negative_stop_package_prepared_pending_user_acceptance",
+      "owner": "primary+scientific_reviewer",
+      "verification": "SG6-R candidate not_resolved; formal design locked; Robert brief prepared but not sent"
+    }
   ],
-  "simulation_invocations": {"SUMO": 4, "netconvert": 0, "TraCI": 0, "GUI": 0},
+  "simulation_invocations": {
+    "SUMO": 4,
+    "netconvert": 0,
+    "TraCI": 0,
+    "GUI": 0
+  },
   "current_evidence": {
     "source_registry": "data/processed/stage6_obstacle_20260913_v1/source_registry.csv",
     "data_ledger": "data/processed/stage6_obstacle_20260913_v1/data_execution_ledger.json",
@@ -43,5 +145,411 @@
     "sg6r_acceptance_package": "docs/STAGE6_OBSTACLE_RESOLUTION_ACCEPTANCE_PACKAGE.md",
     "robert_obstacle_brief": "docs/STAGE6_ROBERT_OBSTACLE_BRIEF.md"
   },
-  "next_action": "User-requested Astra reassessment produced docs/STAGE6_ASTRA_REASSESSMENT_AND_RECOVERY_PLAN.md: preserve the old-card not_resolved stop; proposed P0 archive mechanism diagnosis precedes selection of one new candidate. SG6-R negative acceptance remains pending. No new simulation, formal design or Robert message is released."
+  "recovery_stage": "P2_REV04_BOUNDED_RUNTIME_DIAGNOSTIC_COMPLETE_TECHNICAL_PASS_SPECIFIC_OBSTACLE_UNRESOLVED",
+  "recovery_p0": {
+    "step_id": "Recovery-P0",
+    "status": "completed_archive_diagnosis_scientific_PASS",
+    "owner": "primary+simulation_engineer+data_analyst+scientific_reviewer",
+    "verification": "independent data PASS; scientific PASS B/M/required Minor=0/0/0; no new simulator calls; no P1 authorization inferred"
+  },
+  "recovery_evidence": {
+    "report": "docs/STAGE6_P0_MECHANISM_DIAGNOSTIC_REPORT.md",
+    "independent_receipt": "data/processed/stage6_obstacle_20260913_v1/recovery_diagnostic_revision_01/independent/final_independent_receipt.json"
+  },
+  "recovery_p1": {
+    "status": "review_PASS_candidate_B_used_as_P2_working_basis_values_remain_proposed",
+    "report": "docs/STAGE6_P1_CANDIDATE_DESIGN_AND_REGISTRATION.md",
+    "candidate": "B_shared_edge_auxiliary_300m",
+    "new_simulation_calls": 0,
+    "launch_eligible": false,
+    "selection_note": "P2 instruction authorizes implementation using this candidate/proposed registration as working basis; no formal protocol freeze."
+  },
+  "next_action": "No further simulation under the exhausted five-start card. Review the paired diagnostic and specific_obstacle boundaries with the supervisor/user before defining any new registered validation or formal experiment. Formal protocol remains unfrozen; do not treat this single-seed result as causal or statistical.",
+  "recovery_p2": {
+    "status": "PASS_STATIC_COMPILED_ONLY_RUNTIME_LAUNCH_BLOCKED",
+    "report": "docs/STAGE6_P2_IMPLEMENTATION_AND_BUILD_PACKAGES.md",
+    "authorization": "data/processed/stage6_obstacle_20260913_v1/recovery_candidate_design_revision_01/p2_authorization.json",
+    "candidate": "B_shared_edge_auxiliary_300m",
+    "engineering_manifest": {
+      "path": "artifacts/stage6_recovery_p2_revision_01/engineering/engineering_P2_executor_delivery_manifest.json",
+      "sha256": "74f373c5aeebb81d3d16454b3823cb485a3a5dfa668609850436097ca376c0ce",
+      "bound_files_verified": "231/231"
+    },
+    "engineering_checks": {
+      "offline_checks": 178,
+      "complete_xml_xsd_pass": 15,
+      "expected_pending_additional_reject": 5,
+      "unsafe_negative_cases_rejected": 5
+    },
+    "data_receipt": {
+      "path": "data/processed/stage6_obstacle_20260913_v1/recovery_p2_revision_01/data/offline_adapter_receipt_revision02.json",
+      "sha256": "de6fa2bc67664d605f6a3e7388dcd42a2b5cbc86ea000a3aaabb7e2bf287bf22",
+      "input_checks": 140,
+      "tests": 42
+    },
+    "build_executor_tests": {
+      "path": "artifacts/stage6_recovery_p2_revision_01/engineering/fake_process_tests_revision02/test_receipt.json",
+      "sha256": "868e37452051823eb6bae016315c8df257bfc7be708ced400fc0a3264a63e21d",
+      "tests": 19,
+      "real_traffic_binaries": 0
+    },
+    "scientific_review": {
+      "status": "PASS_prebuild_only",
+      "open_blocker_major_required_minor": "0/0/0"
+    },
+    "build_request_card": {
+      "path": "artifacts/stage6_recovery_p2_revision_01/engineering/SG6_BUILD_request_card_revision03.json",
+      "sha256": "33ee32943e8420a38514bd67d372204c7f019569187ed95202c8daf4961095bd",
+      "approved": false,
+      "launch_eligible": false,
+      "proposed_limits": {
+        "netconvert_starts": 1,
+        "retry": 0,
+        "monitored_wallclock_s": 30,
+        "observed_output_stop_bytes": 100000000,
+        "SUMO": 0,
+        "TraCI": 0,
+        "GUI": 0
+      }
+    },
+    "build01_execution": {
+      "status": "BUILD_FAILED_TIMEOUT_STOPPED_NO_RETRY",
+      "failure_closeout": "artifacts/stage6_recovery_p2_revision_01/engineering/BUILD01_failure_closeout.json",
+      "execution_delivery_manifest": "artifacts/stage6_recovery_p2_revision_01/engineering/BUILD01_execution_delivery_manifest.json",
+      "receipt": "artifacts/stage6_recovery_p2_revision_01/engineering/build_attempts/BUILD01/build_receipt.json",
+      "netconvert_starts": 1,
+      "wallclock_s": 30.03202583300299,
+      "returncode": -15,
+      "stdout_bytes": 0,
+      "stderr_bytes": 0,
+      "compiled_network_exists": false,
+      "root_cause": "unknown",
+      "original_card_reused": false
+    },
+    "build02_execution": {
+      "status": "completed_pending_compiled_review_then_pass_static_only",
+      "card": "artifacts/stage6_recovery_p2_revision_01/engineering/build_recovery_diagnosis_revision01/BUILD02_request_card_revision02.json",
+      "card_sha256": "0f80fff0ee7b434dbb30e796b30f67045bddb983ac173efd34e90c3797a90672",
+      "approval_sidecar": "artifacts/stage6_recovery_p2_revision_01/engineering/build_recovery_diagnosis_revision01/BUILD02_user_approval.json",
+      "approval_sidecar_sha256": "ee3624eaa807afd3e411ab450e30cd53dba49fe85a595f6415e0aa4c73aaad86",
+      "independent_scientific_review": "PASS_STATIC_COMPILED_ONLY; open Blocker/Major/required Minor=0/0/0",
+      "receipt": "artifacts/stage6_recovery_p2_revision_01/engineering/build_attempts/BUILD02/build_receipt.json",
+      "receipt_sha256": "4b9d667bd280cd5846cb85cd8427fa111b9848e78ef3fa49bca9b524ce4d89c3",
+      "network": "artifacts/stage6_recovery_p2_revision_01/engineering/build_attempts/BUILD02/network.net.xml",
+      "network_sha256": "e47b0f94521414e55d0e5337b87204dc38d98a0a3a7c5466f2a5883f80b52710",
+      "network_bytes": 12244,
+      "returncode": 0,
+      "wallclock_s": 4.657082666999486,
+      "exact_attempt_directory_bytes": 21096,
+      "sample": "not_started; first parent PID observation found process absent; exact t+2 timing unknown and disclosed",
+      "engineering_audit": "artifacts/stage6_recovery_p2_revision_01/engineering/build02_compiled_review_revision02/ENGINEERING_COMPILED_REVIEW.md",
+      "engineering_audit_status": "155 PASS / 0 FAIL / 4 runtime NOT_EVALUABLE",
+      "engineering_closeout_sha256": "79844b941ec10c1393894daf2528f5e31dc84a510436961b88cb02d45079ef4a",
+      "engineering_manifest_sha256": "e6a8f5de91ce31dd640d4b58a11c1cb066c94e8602ea04c88297b33dbb677210",
+      "independent_data_audit": "data/processed/stage6_obstacle_20260913_v1/recovery_p2_revision_01/data/build02_compiled_independent_revision01/REPORT.md",
+      "independent_data_status": "207 PASS / 0 FAIL / 5 NOT_EVALUABLE",
+      "data_receipt_sha256": "bf5442818a96183effbdff80228199c75ffead29da5971c6e52cbcfe6af3df14",
+      "data_manifest_sha256": "5d762e5816ca2d2eb0a19903f94bd492a5621a0a0eed2801b64dd237a8f5c61b",
+      "compiled_gate": "PASS_STATIC_COMPILED_ONLY",
+      "runtime_launch_released": false
+    },
+    "cumulative_budget": {
+      "path": "artifacts/stage6_recovery_p2_revision_01/engineering/budget_reconciliation_revision02.json",
+      "sha256": "a3f853ea5a919fe55aeaea62a7a0558333ffbf69a5781b7d5e978cb6fc2260d4",
+      "status": "reconciled_with_explicit_exclusions",
+      "verified_lower_bounds_specified_scope": {
+        "SUMO": 25,
+        "netconvert": 12,
+        "TraCI": 1,
+        "GUI": "unknown"
+      },
+      "unused_historical_budget_transferred": false
+    },
+    "launch_card": {
+      "path": "artifacts/stage6_recovery_p2_revision_01/engineering/SG6_LAUNCH_request_card_draft.json",
+      "status": "BLOCKED_PENDING_RUNTIME_INPUTS_AND_SEPARATE_USER_APPROVAL",
+      "approved": false,
+      "launch_eligible": false,
+      "authorized_starts": {
+        "SUMO": 0,
+        "netconvert": 0,
+        "TraCI": 0,
+        "GUI": 0
+      }
+    },
+    "simulation_invocations_new_recovery": {
+      "SUMO": 0,
+      "netconvert": 2,
+      "TraCI": 0,
+      "GUI": 0
+    },
+    "compiled_scientific_review": {
+      "status": "PASS_STATIC_COMPILED_ONLY",
+      "open_blocker_major_required_minor": "0/0/0",
+      "confidence": "High for static compiled-network acceptance; runtime behavior unknown",
+      "sumo_launch_released": false
+    },
+    "limitations": [
+      "No SUMO/runtime validation; compiled-network gate is static only",
+      "100MB observed stop line and 30s observed timeout are not hard caps",
+      "wrapper hard crash may require manual child-process inspection",
+      "specific_obstacle remains unresolved",
+      "BUILD02 reached the requested compilation success; stop build attempts",
+      "Compiler-generated auxiliary-lane acceleration=1 is bound to the network hash; runtime effect is untested",
+      "The live sample condition at t+2 was not documented precisely; the process was absent at first parent observation and the diagnostic gap is disclosed"
+    ]
+  },
+  "simulation_invocations_new_recovery": {
+    "SUMO": 5,
+    "netconvert": 2,
+    "TraCI": 0,
+    "GUI": 0
+  },
+  "recovery_runtime_smoke_attempt01": {
+    "status": "terminal_nonzero_technical_failure",
+    "attempt_id": "RV_SMOKE_R720_S17_attempt1",
+    "card": "artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision02/RUNTIME_VALIDATION_CARD.json",
+    "card_sha256": "66016480131a800d25193422326c239492af0e9067de095ee1241072bc15aded",
+    "authorization_sidecar": "artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision02/RUNTIME_user_approval.json",
+    "receipt": "artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision01/runs/RV_SMOKE_R720_S17_attempt1/execution_receipt.json",
+    "receipt_sha256": "611e6d1cf7649f4bf22e7494909a0dec51af170f7c164ee98887bef8808622a6",
+    "output_manifest": "artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision01/runs/RV_SMOKE_R720_S17_attempt1/output_manifest.json",
+    "output_manifest_sha256": "d761a40d28dff4700ff77dc9f969a43973e8f0b0ea628a51e8d71aa23744efc7",
+    "returncode": 1,
+    "wallclock_s": 9.373882084000797,
+    "network_load": "BUILD02 network loaded successfully before additional file failure",
+    "failure": "SUMO rejected scenario.add.xml: no declaration found for element additional; exited before traffic time steps",
+    "dynamic_evidence": "none; parsed output shells contain zero observations and detector/TLS outputs are absent",
+    "automatic_retry": false,
+    "later_validation_starts": 0,
+    "specific_obstacle": "not evaluated by this attempt"
+  },
+  "recovery_runtime_revision03_review": {
+    "status": "PASS_STATIC_FINAL_READY_FOR_SMOKE",
+    "card": "artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/RUNTIME_VALIDATION_CARD.json",
+    "card_sha256": "c6dd680580ed3ca78400811d2b78bba9050b1da570a717310eb0428551b8b742",
+    "review_receipt": "artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/static_final_review_receipt.json",
+    "review_receipt_sha256": "87e3dcd4b4984496906d94dd74f921f938e212df577c68b5e9bec8e6998fd1aa",
+    "authorization_sidecar": "artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/RUNTIME_user_approval.json",
+    "new_starts_authorized_by_existing_user_scope": 3,
+    "new_starts_consumed": 0,
+    "old_failure_preserved": true,
+    "specific_obstacle": "not evaluated by static package review"
+  },
+  "recovery_runtime_smoke_attempt02": {
+    "status": "terminal_nonzero_technical_failure_before_timestep",
+    "attempt_id": "RV3_SMOKE_R720_S17_attempt1",
+    "card": "artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/RUNTIME_VALIDATION_CARD.json",
+    "card_sha256": "c6dd680580ed3ca78400811d2b78bba9050b1da570a717310eb0428551b8b742",
+    "authorization_sidecar": "artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/RUNTIME_user_approval.json",
+    "receipt": "artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/runs/RV3_SMOKE_R720_S17_attempt1/execution_receipt.json",
+    "receipt_sha256": "aa843ec4cdbcacf9ebd4988905af9670b676ad18302abf65d2ca3483716c1f8e",
+    "output_manifest": "artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/runs/RV3_SMOKE_R720_S17_attempt1/output_manifest.json",
+    "output_manifest_sha256": "f4af1d6ca3642fb108cec594176a034fa554ca7e9da10e5e49d10d0e580792bf",
+    "returncode": 1,
+    "wallclock_s": 12.658840542004327,
+    "final_directory_bytes": 29199,
+    "network_load": "BUILD02 network loaded successfully",
+    "failure": "SUMO additional loader rejected explicit empty vTypes and nextEdges attributes on 11 detector definitions (22 errors)",
+    "dynamic_evidence": "none; terminated before time steps",
+    "automatic_retry": false,
+    "later_validation_starts": 0,
+    "specific_obstacle": "not evaluated by this attempt"
+  },
+  "runtime_attempts_cumulative_after_revision03": {
+    "sumo_starts_including_original_revision02_failure": 2,
+    "wallclock_s": 22.032722626005125,
+    "final_run_directory_bytes": 52751,
+    "remaining_to_revision03_cumulative_start_ceiling_4": 2,
+    "qualification": "The two revision03 validation slots are currently smoke-gate blocked and cannot be repurposed without a new reviewed exact card."
+  },
+  "recovery_runtime_revision04_review": {
+    "status": "PASS_STATIC_FINAL_READY_FOR_SMOKE",
+    "card": "artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision04/RUNTIME_VALIDATION_CARD.json",
+    "card_sha256": "0f74720eacd86d95490a9a32921f497a8e673453078dc71bc798dd1562c42557",
+    "delivery_manifest_sha256": "0e7991496c365310aedaf54709dbe6053115fbfb49f95a632c0537ccb8fa9592",
+    "review_receipt": "artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision04/static_final_review_receipt.json",
+    "review_receipt_sha256": "1809ec3b36fa7a1e88e059dbf1d8166a1dc26ee4aa385abd1c5e347554ce49bb",
+    "approval_sidecar": "artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision04/RUNTIME_user_approval.json",
+    "analysis_manifest": "data/processed/stage6_obstacle_20260913_v1/runtime_gate_revision02/revision04/analysis_manifest.json",
+    "analysis_manifest_sha256": "7c28cee272f43b9f39ca207f76d1afa72bb5240c1884a10aa86126cc26467f96",
+    "new_start_ceiling": 3,
+    "cumulative_start_ceiling": 5,
+    "prior_consumed_starts": 2,
+    "remaining_time_s": 527.3411594579957,
+    "remaining_bytes": 4499970801,
+    "specific_obstacle": "not evaluated; no dynamic run yet"
+  },
+  "recovery_runtime_smoke_attempt03": {
+    "status": "process_completed_pending_gate",
+    "attempt_id": "RV4_SMOKE_R720_S17_attempt1",
+    "card": "artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision04/RUNTIME_VALIDATION_CARD.json",
+    "card_sha256": "0f74720eacd86d95490a9a32921f497a8e673453078dc71bc798dd1562c42557",
+    "receipt": "artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision04/runs/RV4_SMOKE_R720_S17_attempt1/execution_receipt.json",
+    "receipt_sha256": "c9d7c4b1941b39850f69dd0ee46770b9f57d80c520b61207018f2f09eedaceb1",
+    "output_manifest": "artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision04/runs/RV4_SMOKE_R720_S17_attempt1/output_manifest.json",
+    "output_manifest_sha256": "34b48fff76bbcbab8ca60ab7f8e3290a0db5ddedfbe64d30029916e9486b0de5",
+    "returncode": 0,
+    "wallclock_s": 1.1996024170002784,
+    "run_directory_bytes": 25044468,
+    "output_roles_generated": 17,
+    "simulation_window_s": [
+      0,
+      2700
+    ],
+    "reported_inserted": 1858,
+    "gate_status": "pending_independent_data_and_physical_audit",
+    "later_validation_starts": 0,
+    "specific_obstacle": "not yet evaluated by independent gate"
+  },
+  "runtime_attempts_cumulative_after_revision04_smoke": {
+    "sumo_starts_including_original_revision02_failure": 3,
+    "wallclock_s": "23.2323250430054024",
+    "final_run_directory_bytes": 25097219,
+    "maximum_cumulative_starts": 5,
+    "remaining_start_ceiling": 2,
+    "qualification": "Process completed; smoke gate pending. Remaining R0/R720 starts are blocked until all required gates pass."
+  },
+  "recovery_runtime_smoke_review": {
+    "status": "PASS_TECHNICAL_GATE_SCIENTIFIC_REVIEW_RELEASED_R0",
+    "gate": "data/processed/stage6_obstacle_20260913_v1/runtime_gate_revision02/revision04/real_smoke_audit01/gate.json",
+    "gate_sha256": "c2f5048ff753b342e796fb1e78d0fb030d1b542f3c075ccc8d0d22b1619676ea",
+    "audit_manifest_sha256": "3331516131c503ca440d64af7a2b5ef6738eef0c322dafb818284d12fad3a4a2",
+    "checks": "12/12 PASS",
+    "technical_status": "PASS",
+    "physical_status": "suitable",
+    "progression_allowed": true,
+    "reviewer": "scientific_reviewer",
+    "review_result": "PASS for technical completeness/physical stop gate; release RV4_R0_S17_attempt1 only",
+    "limitations": [
+      "71/300 R vehicles lack direct aux0 sample; merge position is inferred/unknown for them",
+      "smoke is not a treatment effect or independent replicate",
+      "specific_obstacle not assessed"
+    ]
+  },
+  "recovery_runtime_r0_attempt01": {
+    "status": "process_completed_pending_gate",
+    "attempt_id": "RV4_R0_S17_attempt1",
+    "card": "artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision04/RUNTIME_VALIDATION_CARD.json",
+    "card_sha256": "0f74720eacd86d95490a9a32921f497a8e673453078dc71bc798dd1562c42557",
+    "receipt": "artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision04/runs/RV4_R0_S17_attempt1/execution_receipt.json",
+    "receipt_sha256": "eb82468fb0593a27112ff2ba32036104fb40463340c949b4edeb63b25499e1b7",
+    "output_manifest": "artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision04/runs/RV4_R0_S17_attempt1/output_manifest.json",
+    "output_manifest_sha256": "0f37bdc4b8af9830558693f9622a256297ffb6129db838bc772d2688d3c32a40",
+    "returncode": 0,
+    "wallclock_s": 0.9498029579990543,
+    "run_directory_bytes": 20475694,
+    "output_roles_generated": 17,
+    "simulation_window_s": [
+      0,
+      2700
+    ],
+    "reported_inserted": 1558,
+    "gate_status": "pending_independent_data_and_scientific_review",
+    "later_validation_starts": 0,
+    "specific_obstacle": "not yet evaluated by independent gate"
+  },
+  "runtime_attempts_cumulative_after_r0": {
+    "sumo_starts_including_original_revision02_failure": 4,
+    "wallclock_s": "24.1821280010044567",
+    "final_run_directory_bytes": 45572913,
+    "maximum_cumulative_starts": 5,
+    "remaining_start_ceiling": 1,
+    "remaining_time_s": "525.1917540829963433",
+    "remaining_bytes": 4454450639,
+    "qualification": "R0 process and all twelve gates passed; scientific review passed after correcting remaining-budget arithmetic in state/worklog/P2/ledger."
+  },
+  "recovery_runtime_r0_review": {
+    "status": "PASS_TECHNICAL_GATE_SCIENTIFIC_REVIEW_NO_SUBSTANTIVE_BLOCKER",
+    "gate": "data/processed/stage6_obstacle_20260913_v1/runtime_gate_revision02/revision04/real_R0_audit01/gate.json",
+    "gate_sha256": "ad39fae7016163b59c778ab8b031b43112c409fd1dd7def3804580da993f6570",
+    "audit_manifest_sha256": "8945f1b9c50acfa568f67704e42db2b73fb4ea24a2330edf88c12fa61cbbc4d7",
+    "checks": "12/12 PASS",
+    "technical_status": "PASS",
+    "physical_status": "suitable",
+    "progression_allowed": true,
+    "reviewer": "scientific_reviewer",
+    "review_result": "No substantive blocker; cumulative budget arithmetic correction required and has been applied before R720",
+    "limitations": [
+      "R metrics and aux0 coverage are not applicable in zero-R-demand R0",
+      "E1 entry counts are detector lane-events, not unique identities",
+      "single-arm/single-seed R0 does not assess specific_obstacle"
+    ]
+  },
+  "card_gate_mirrors": {
+    "smoke": {
+      "path": "artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision04/gates/RV4_SMOKE_R720_S17_attempt1.json",
+      "sha256": "c2f5048ff753b342e796fb1e78d0fb030d1b542f3c075ccc8d0d22b1619676ea",
+      "byte_identical_to_processed_gate": true
+    },
+    "r0": {
+      "path": "artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision04/gates/RV4_R0_S17_attempt1.json",
+      "sha256": "ad39fae7016163b59c778ab8b031b43112c409fd1dd7def3804580da993f6570",
+      "byte_identical_to_processed_gate": true
+    }
+  },
+  "final_r720_release": {
+    "attempt_id": "RV4_R720_S17_attempt1",
+    "release_status": "released_after_smoke_and_R0_12_gate_plus_scientific_pass",
+    "start_number_cumulative": 5,
+    "final_allowed_start": true,
+    "post_run_additional_starts_allowed": 0,
+    "status": "completed_technical_gate_pass_scientific_paired_review_pass_all_starts_consumed"
+  },
+  "recovery_runtime_r720_attempt01": {
+    "status": "process_completed_pending_gate",
+    "attempt_id": "RV4_R720_S17_attempt1",
+    "card": "artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision04/RUNTIME_VALIDATION_CARD.json",
+    "card_sha256": "0f74720eacd86d95490a9a32921f497a8e673453078dc71bc798dd1562c42557",
+    "receipt": "artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision04/runs/RV4_R720_S17_attempt1/execution_receipt.json",
+    "receipt_sha256": "cc5c1844be0d88dbac0da6563ffdecf36d3240a651142e38395bae26417b2f2a",
+    "output_manifest": "artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision04/runs/RV4_R720_S17_attempt1/output_manifest.json",
+    "output_manifest_sha256": "7eab504a11c56ff4586d4b666163b8583e822cd09de777a1746d9c523481bcf7",
+    "returncode": 0,
+    "wallclock_s": 1.122348625001905,
+    "run_directory_bytes": 25043371,
+    "output_roles_generated": 17,
+    "simulation_window_s": [
+      0,
+      2700
+    ],
+    "reported_inserted": 1858,
+    "gate_status": "12/12_PASS_physical_suitable_scientifically_reviewed",
+    "later_validation_starts": 0,
+    "specific_obstacle": "pending paired evidence review",
+    "gate": "data/processed/stage6_obstacle_20260913_v1/runtime_gate_revision02/revision04/real_R720_audit01/gate.json",
+    "gate_sha256": "09496387f1a5aec00f31cfd9a865b4301d7e3c0405db3a86d236ec8df7a9aea1",
+    "card_gate_mirror": "artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision04/gates/RV4_R720_S17_attempt1.json",
+    "card_gate_mirror_sha256": "09496387f1a5aec00f31cfd9a865b4301d7e3c0405db3a86d236ec8df7a9aea1"
+  },
+  "runtime_attempts_cumulative_final": {
+    "sumo_starts_including_two_technical_failures": 5,
+    "maximum_cumulative_starts": 5,
+    "wallclock_s": "25.3044766260063617",
+    "final_run_directory_bytes": 70616284,
+    "remaining_start_ceiling": 0,
+    "remaining_time_s": "524.0694054579944383",
+    "remaining_bytes": 4429407268,
+    "qualification": "All starts consumed; technical and physical gates for smoke/R0/R720 passed; no further run permitted under the card."
+  },
+  "paired_seed17_diagnostic": {
+    "status": "complete_bounded_descriptive_pending_no_further_simulation",
+    "report": "data/processed/stage6_obstacle_20260913_v1/runtime_gate_revision02/revision04/paired_seed17_comparison01/REPORT.md",
+    "report_sha256": "89584754169062f9cf6c27b6539abfccfc034faf0634b62388b844b4cfbe5a40",
+    "report_manifest_sha256": "8ab1f3f7c40417883238e2b81991cb77d4548c6464229665c9cd4ed1603f95c3",
+    "computation_manifest_sha256": "d7b5ec3d94162003b4db0b7d371332420e30f611986ac5222c695f0ef768eb6b",
+    "M_B_R720_minus_R0_bound_s": [
+      -1.894065,
+      2.108106
+    ],
+    "M_B_classification": "positive_response_unidentified",
+    "R_downstream_observed": 300,
+    "R_direct_aux0_merge_bracket": 229,
+    "R_merge_position_unknown_due_to_aux0_sampling": 71,
+    "U_restricted_system_time_difference_s": 6.773333,
+    "causal_spillback_attribution": "not_identified",
+    "old_operational_symptom": "not_reproduced_in_candidate_seed17_run_only",
+    "specific_obstacle": "unresolved; preserve old D2 not_resolved; do not close or claim tradeoff established",
+    "scientific_review": "PASS bounded diagnostic interpretation; Blocker/Major/required Minor 0/0/0"
+  }
 }

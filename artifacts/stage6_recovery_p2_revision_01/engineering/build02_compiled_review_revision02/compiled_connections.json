@@ -1,0 +1,176 @@
+[
+  {
+    "dir": "s",
+    "from": "cross_in",
+    "fromLane": "0",
+    "linkIndex": "1",
+    "state": "o",
+    "tl": "urban_tls",
+    "to": "cross_out",
+    "toLane": "0",
+    "via": ":urban_tls_1_0"
+  },
+  {
+    "dir": "s",
+    "from": "main_up",
+    "fromLane": "0",
+    "state": "M",
+    "to": "merge_section",
+    "toLane": "1",
+    "via": ":freeway_merge_0_0"
+  },
+  {
+    "dir": "s",
+    "from": "main_up",
+    "fromLane": "1",
+    "state": "M",
+    "to": "merge_section",
+    "toLane": "2",
+    "via": ":freeway_merge_0_1"
+  },
+  {
+    "dir": "s",
+    "from": "merge_section",
+    "fromLane": "1",
+    "state": "M",
+    "to": "main_down",
+    "toLane": "0",
+    "via": ":merge_end_0_0"
+  },
+  {
+    "dir": "s",
+    "from": "merge_section",
+    "fromLane": "2",
+    "state": "M",
+    "to": "main_down",
+    "toLane": "1",
+    "via": ":merge_end_0_1"
+  },
+  {
+    "dir": "s",
+    "from": "ramp_accel",
+    "fromLane": "0",
+    "state": "M",
+    "to": "merge_section",
+    "toLane": "0",
+    "via": ":freeway_merge_2_0"
+  },
+  {
+    "dir": "s",
+    "from": "ramp_storage",
+    "fromLane": "0",
+    "state": "M",
+    "to": "ramp_accel",
+    "toLane": "0",
+    "via": ":ramp_mid_0_0"
+  },
+  {
+    "dir": "r",
+    "from": "shared_approach",
+    "fromLane": "0",
+    "state": "M",
+    "to": "urban_out",
+    "toLane": "0",
+    "via": ":urban_diverge_0_0"
+  },
+  {
+    "dir": "R",
+    "from": "shared_approach",
+    "fromLane": "0",
+    "state": "M",
+    "to": "ramp_storage",
+    "toLane": "0",
+    "via": ":urban_diverge_1_0"
+  },
+  {
+    "dir": "s",
+    "from": "urban_in",
+    "fromLane": "0",
+    "linkIndex": "0",
+    "state": "O",
+    "tl": "urban_tls",
+    "to": "shared_approach",
+    "toLane": "0",
+    "via": ":urban_tls_0_0"
+  },
+  {
+    "dir": "s",
+    "from": ":freeway_merge_0",
+    "fromLane": "0",
+    "state": "M",
+    "to": "merge_section",
+    "toLane": "1"
+  },
+  {
+    "dir": "s",
+    "from": ":freeway_merge_0",
+    "fromLane": "1",
+    "state": "M",
+    "to": "merge_section",
+    "toLane": "2"
+  },
+  {
+    "dir": "s",
+    "from": ":freeway_merge_2",
+    "fromLane": "0",
+    "state": "M",
+    "to": "merge_section",
+    "toLane": "0"
+  },
+  {
+    "dir": "s",
+    "from": ":merge_end_0",
+    "fromLane": "0",
+    "state": "M",
+    "to": "main_down",
+    "toLane": "0"
+  },
+  {
+    "dir": "s",
+    "from": ":merge_end_0",
+    "fromLane": "1",
+    "state": "M",
+    "to": "main_down",
+    "toLane": "1"
+  },
+  {
+    "dir": "s",
+    "from": ":ramp_mid_0",
+    "fromLane": "0",
+    "state": "M",
+    "to": "ramp_accel",
+    "toLane": "0"
+  },
+  {
+    "dir": "r",
+    "from": ":urban_diverge_0",
+    "fromLane": "0",
+    "state": "M",
+    "to": "urban_out",
+    "toLane": "0"
+  },
+  {
+    "dir": "R",
+    "from": ":urban_diverge_1",
+    "fromLane": "0",
+    "state": "M",
+    "to": "ramp_storage",
+    "toLane": "0"
+  },
+  {
+    "dir": "s",
+    "from": ":urban_tls_0",
+    "fromLane": "0",
+    "state": "M",
+    "to": "shared_approach",
+    "toLane": "0"
+  },
+  {
+    "dir": "s",
+    "from": ":urban_tls_1",
+    "fromLane": "0",
+    "state": "M",
+    "to": "cross_out",
+    "toLane": "0"
+  }
+]

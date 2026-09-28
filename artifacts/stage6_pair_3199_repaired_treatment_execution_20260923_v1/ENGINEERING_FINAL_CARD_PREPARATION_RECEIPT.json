@@ -1,0 +1,51 @@
+{
+  "attempt_id": "PAIR3199_R720_DELAYED_S17_REPAIRED_V5_ATTEMPT1",
+  "card_path": "artifacts/stage6_pair_3199_repaired_treatment_execution_20260923_v1/PAIR3199_R720_DELAYED_S17_REPAIRED_V5_ATTEMPT1_CARD_FINAL.json",
+  "card_sha256": "0801dc1e15ade92babe33640d521ba831174210a200b9e5a66aaeb3bd472e0ef",
+  "common_MUX_exact": "1558/1558",
+  "consumption_reservation_absent": true,
+  "execution_id": "b095cce4-baba-4c40-aa79-08b5e58b9ce1",
+  "git_diff_check": "PASS",
+  "launch_command": ".venv/bin/python artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py launch --repo \"$PWD\" --card artifacts/stage6_pair_3199_repaired_treatment_execution_20260923_v1/PAIR3199_R720_DELAYED_S17_REPAIRED_V5_ATTEMPT1_CARD_FINAL.json --approved-card-sha256 0801dc1e15ade92babe33640d521ba831174210a200b9e5a66aaeb3bd472e0ef",
+  "netconvert_starts": 0,
+  "output_absent": true,
+  "preparation_parent_card_sha256": "593cabd4c82a8b7b735e6ebc000d836bebab80a9c8962e20f2865a5bbf4dbed0",
+  "preparation_tri_pass_receipt_sha256": "8f2a12a89fd59e7fb941e6215bd7bfd68bc46ebb28ec1abf334d0dcdfb576a81",
+  "py_compile": "PASS",
+  "read_only_preflight": {
+    "launch_authorized": true,
+    "launchable_now": false,
+    "review_gate": "WAITING_FOR_REQUIRED_REVIEWS",
+    "simulator_process_started": false,
+    "status": "PREFLIGHT_PASS_NO_PROCESS_STARTED"
+  },
+  "receipt_id": "PAIR3199_REPAIRED_V5_FINAL_CARD_ENGINEERING_PREPARATION",
+  "required_review_receipts": {
+    "data_provenance": "artifacts/stage6_pair_3199_repaired_treatment_execution_20260923_v1/FINAL_DATA_PROVENANCE_PRELAUNCH_REVIEW.json",
+    "engineering": "artifacts/stage6_pair_3199_repaired_treatment_execution_20260923_v1/FINAL_ENGINEERING_PRELAUNCH_REVIEW.json",
+    "scientific": "artifacts/stage6_pair_3199_repaired_treatment_execution_20260923_v1/FINAL_SCIENTIFIC_PRELAUNCH_REVIEW.json"
+  },
+  "resources": {
+    "output_bytes_decimal": 75000000,
+    "overshoot_accepted": true,
+    "polling_ms": 100,
+    "status": "USER_AUTHORIZED_FOR_ONE_START",
+    "wallclock_s": 90
+  },
+  "review_binding_sidecar": "artifacts/stage6_pair_3199_repaired_treatment_execution_20260923_v1/FINAL_PRELAUNCH_REVIEW_BINDING.json",
+  "run_id": "PAIR3199_R720_DELAYED_S17_REPAIRED_V5_ATTEMPT1",
+  "runner_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+  "runner_sha256": "0961912a46464eb9757ab245c26577e8f1de0985534f34db04a41a4dac45f9c8",
+  "runner_tests": "24/24 PASS",
+  "runtime_path": "artifacts/stage6_pair_3199_repaired_treatment_execution_20260923_v1/runtime_bindings/PAIR3199_R720_DELAYED_S17_REPAIRED_V5_ATTEMPT1_FINAL.json",
+  "runtime_sha256": "4978450c6dd83f37377d1f1a454ba35d5944e4d7a0ed353ed5d43906793b4053",
+  "scenario_id": "PAIR_3199_R720_DELAYED_S17",
+  "schema_version": "1",
+  "status": "FINAL_CARD_READY_FOR_FRESH_PRELAUNCH_REVIEWS_NO_LAUNCH",
+  "sumo_starts": 0,
+  "test_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/test_runner.py",
+  "test_sha256": "c96539a61ea1bd99e8675afea1e090ab8d241dbdad4a046c2ddfa0f1dcc627ec",
+  "traci_starts": 0,
+  "treatment_only_R": "192 exactly R_flow.0-R_flow.191",
+  "v5_invariant_report_sha256": "509f1a46873b6922ce22e18f4100fa2dcb84a632d80ee9a014750efc6c857d54"
+}

@@ -1,0 +1,39 @@
+{
+  "additional_staged": {
+    "bytes": 3940,
+    "sha256": "6b93195465eb66462394905fcf6bd450c8e3b863517bef436f5177f0a54c9470"
+  },
+  "card_sha256": "9f3876a563919435cd1c4d5d20ded6d0d13f4bcb707f97f2147aca6dcfa531d4",
+  "confidence": "High",
+  "disposition": "HOLD_SHARED_RUNNER_HISTORICAL_IMPACT_AUDIT",
+  "engineering_gate_pass": false,
+  "findings": {
+    "blocker": 0,
+    "major": 1,
+    "required_minor": 0
+  },
+  "hold_reason": "Focused technical-retry tests pass 10/10 and exact-card preflight binds correctly, but three failures were reported in broader historical modules after shared R02 runner changes. Exact test identifiers and whether these are stale expectations or compatibility regressions remain under investigation. This receipt does not satisfy the R02 FINAL review gate.",
+  "launch_gate_waiting_for_data_scientific_receipts": true,
+  "launchable_now": false,
+  "manifest_sha256": "04bb8aadb11a5f118e97325d2a6a881d3df760149fa38b78fb99ba172ff02ca2",
+  "readonly_preflight": "PREFLIGHT_PASS_NO_PROCESS_STARTED",
+  "replacement_counts": {
+    "additional_xml_output_path": 12,
+    "sumocfg_additional_path": 1,
+    "sumocfg_output_path": 8
+  },
+  "run_id": "MINIMAL3199_CTRL_S17_TECH_RETRY1",
+  "runner_sha256": "25182434f7665778bb0c0a5dcefe39a5c3f0a1eb481935d3393e70ee4fddc428",
+  "runtime_binding_sha256": "5fdd6901c089d0df1346e0d01131c37d75682fe134f5c354d5ec2f3e74834052",
+  "starts": {
+    "guardian": 0,
+    "netconvert": 0,
+    "sumo": 0,
+    "traci": 0
+  },
+  "status": "HOLD_SHARED_RUNNER_HISTORICAL_IMPACT_AUDIT",
+  "sumocfg_staged": {
+    "bytes": 2802,
+    "sha256": "1906f98e1e108a9019919d29fa4c9c6086659fdbedd231d16531ec275505650c"
+  }
+}

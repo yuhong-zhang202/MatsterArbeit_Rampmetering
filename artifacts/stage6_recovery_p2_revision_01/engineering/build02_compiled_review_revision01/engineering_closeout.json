@@ -1,0 +1,130 @@
+{
+  "SUMO_launch_released": false,
+  "annotations": {
+    "explicit_width_serialization": "Candidate emits width3.20 on every lane; baseline omitted it. Physical urban shape/length/speed and normalized width unchanged; local sumolib parser defaults missing width3.2 at line820.",
+    "generated_auxiliary_attribute": {
+      "acceleration": "1",
+      "lane": "merge_section_0",
+      "scope": "Compiler-generated lane metadata, preserved; not a new manually tuned CF/LC setting. Runtime consequences not evaluated.",
+      "source_plain_attribute_present": false
+    },
+    "timestamp_metadata": "netconvert XML comment timezone suffix+01:00 conflicts with local+02:00 receipt context; use wrapper UTC epoch for execution timing. Does not change geometry.",
+    "width_source": {
+      "bytes": 44256,
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/tools/sumolib/net/__init__.py",
+      "sha256": "5f31b455c8d18e2a32ba205edddc7e9dc41615f1b00873b03190118525b540bd"
+    }
+  },
+  "attempt_files": [
+    {
+      "bytes": 2195,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_attempts/BUILD02/netconvert.stdout.log",
+      "sha256": "e25c5e6e77ade26d7bd3d1acbe79b5c45c78dc90cd41a1248d4f23ff019a6bdf"
+    },
+    {
+      "bytes": 12244,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_attempts/BUILD02/network.net.xml",
+      "sha256": "e47b0f94521414e55d0e5337b87204dc38d98a0a3a7c5466f2a5883f80b52710"
+    },
+    {
+      "bytes": 94,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_attempts/BUILD02/started.json",
+      "sha256": "1ed81e1d96be6a844481965714879045fdb2f2f704832bd423f772a39dfec2f9"
+    },
+    {
+      "bytes": 0,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_attempts/BUILD02/netconvert.stderr.log",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "bytes": 3076,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_attempts/BUILD02/reservation.json",
+      "sha256": "0d59f1af93d8f78b254ffbd8f8e4644307ae99a90d6a89b66f7b68972b44d38b"
+    },
+    {
+      "bytes": 3487,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_attempts/BUILD02/build_receipt.json",
+      "sha256": "4b9d667bd280cd5846cb85cd8427fa111b9848e78ef3fa49bca9b524ce4d89c3"
+    }
+  ],
+  "compiled_geometry": {
+    "aux_m": 294.51,
+    "main_down_m": 496.0,
+    "main_up_m": 1398.38
+  },
+  "confidence": "High for static XML and file accounting; Unknown for traffic behavior",
+  "counts": {
+    "FAIL": 0,
+    "NOT_EVALUABLE": 4,
+    "PASS": 155
+  },
+  "exact_final_attempt_bytes": 21096,
+  "independent_acceptance_pending": true,
+  "network": {
+    "bytes": 12244,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_attempts/BUILD02/network.net.xml",
+    "sha256": "e47b0f94521414e55d0e5337b87204dc38d98a0a3a7c5466f2a5883f80b52710"
+  },
+  "no_build_or_simulation_calls_by_this_audit": true,
+  "paths": {
+    "M_local_primary_lane_longitudinal_sum_m": 704.0000000000001,
+    "M_primary_components": [
+      {
+        "from": 1200,
+        "lane": "main_up_0",
+        "to": 1398.38
+      },
+      {
+        "from": 0,
+        "lane": ":freeway_merge_0_0",
+        "to": 3.11
+      },
+      {
+        "from": 0,
+        "lane": "merge_section_1",
+        "to": 294.51
+      },
+      {
+        "from": 0,
+        "lane": ":merge_end_0_0",
+        "to": 8.0
+      },
+      {
+        "from": 0,
+        "lane": "main_down_0",
+        "to": 200
+      }
+    ],
+    "M_total_route_longitudinal_sum_m": 2200.0,
+    "R_components": {
+      ":freeway_merge_2_0": 3.11,
+      ":ramp_mid_0_0": 81.98,
+      ":urban_diverge_1_0": 113.08,
+      "merge_section_0": 294.51,
+      "ramp_accel_0": 99.07,
+      "ramp_storage_0": 204.49
+    },
+    "R_only_from_shared_exit_to_aux_terminal_m": 796.24,
+    "downstream_background_m": 200,
+    "downstream_tail_m": 96.0,
+    "interpretation": "Longitudinal geometry sums, not storage vehicle capacity or realized route length; R must perform a safe left lane change within merge_section. Primary same across both M lanes.",
+    "shared_RU_m": 238.8
+  },
+  "process": {
+    "pid": "absent",
+    "process_group": "absent"
+  },
+  "sample": {
+    "consequence": "No live stack evidence; this limits diagnosis, not XML existence. Independent reviewer must assess this procedural deviation.",
+    "matching_files": [],
+    "parent_evidence": "Primary first inspected after executor tool yielded; os.kill and os.getpgid for24060 both raised ProcessLookupError. No sample command was started.",
+    "status": "NOT_STARTED_PARENT_OBSERVED_PID_ALREADY_ABSENT",
+    "timing_deviation": "The first observation time relative to t+2 was not recorded; cannot claim an exact2s skip. No post-hoc sample was attempted."
+  },
+  "status": "PASS_STATIC_COMPILED_ONLY",
+  "wrapper_receipt_immutable": {
+    "bytes": 3487,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/build_attempts/BUILD02/build_receipt.json",
+    "sha256": "4b9d667bd280cd5846cb85cd8427fa111b9848e78ef3fa49bca9b524ce4d89c3"
+  }
+}

@@ -1,0 +1,125 @@
+{
+  "detectors": [
+    {
+      "actual_loaded_coverage": "NOT_EVALUABLE_NO_SUMO",
+      "id": "shared_boundary_e2",
+      "lane": "shared_approach_0",
+      "pos": 0.0,
+      "resolved_endPos": 238.8
+    },
+    {
+      "actual_loaded_coverage": "NOT_EVALUABLE_NO_SUMO",
+      "id": "ramp_storage_e2",
+      "lane": "ramp_storage_0",
+      "pos": 0.0,
+      "resolved_endPos": 204.49
+    },
+    {
+      "actual_loaded_coverage": "NOT_EVALUABLE_NO_SUMO",
+      "id": "p1_main_up_1300_l0",
+      "lane": "main_up_0",
+      "pos": 1300.0,
+      "resolved_endPos": 1300.0
+    },
+    {
+      "actual_loaded_coverage": "NOT_EVALUABLE_NO_SUMO",
+      "id": "p1_main_up_1300_l1",
+      "lane": "main_up_1",
+      "pos": 1300.0,
+      "resolved_endPos": 1300.0
+    },
+    {
+      "actual_loaded_coverage": "NOT_EVALUABLE_NO_SUMO",
+      "id": "p1_merge_section_20_l0",
+      "lane": "merge_section_0",
+      "pos": 20.0,
+      "resolved_endPos": 20.0
+    },
+    {
+      "actual_loaded_coverage": "NOT_EVALUABLE_NO_SUMO",
+      "id": "p1_merge_section_20_l1",
+      "lane": "merge_section_1",
+      "pos": 20.0,
+      "resolved_endPos": 20.0
+    },
+    {
+      "actual_loaded_coverage": "NOT_EVALUABLE_NO_SUMO",
+      "id": "p1_merge_section_20_l2",
+      "lane": "merge_section_2",
+      "pos": 20.0,
+      "resolved_endPos": 20.0
+    },
+    {
+      "actual_loaded_coverage": "NOT_EVALUABLE_NO_SUMO",
+      "id": "p1_main_down_20_l0",
+      "lane": "main_down_0",
+      "pos": 20.0,
+      "resolved_endPos": 20.0
+    },
+    {
+      "actual_loaded_coverage": "NOT_EVALUABLE_NO_SUMO",
+      "id": "p1_main_down_20_l1",
+      "lane": "main_down_1",
+      "pos": 20.0,
+      "resolved_endPos": 20.0
+    },
+    {
+      "actual_loaded_coverage": "NOT_EVALUABLE_NO_SUMO",
+      "id": "p1_main_down_200_l0",
+      "lane": "main_down_0",
+      "pos": 200.0,
+      "resolved_endPos": 200.0
+    },
+    {
+      "actual_loaded_coverage": "NOT_EVALUABLE_NO_SUMO",
+      "id": "p1_main_down_200_l1",
+      "lane": "main_down_1",
+      "pos": 200.0,
+      "resolved_endPos": 200.0
+    }
+  ],
+  "paths": {
+    "M_local_primary_lane_longitudinal_sum_m": 704.0000000000001,
+    "M_primary_components": [
+      {
+        "from": 1200,
+        "lane": "main_up_0",
+        "to": 1398.38
+      },
+      {
+        "from": 0,
+        "lane": ":freeway_merge_0_0",
+        "to": 3.11
+      },
+      {
+        "from": 0,
+        "lane": "merge_section_1",
+        "to": 294.51
+      },
+      {
+        "from": 0,
+        "lane": ":merge_end_0_0",
+        "to": 8.0
+      },
+      {
+        "from": 0,
+        "lane": "main_down_0",
+        "to": 200
+      }
+    ],
+    "M_total_route_longitudinal_sum_m": 2200.0,
+    "R_components": {
+      ":freeway_merge_2_0": 3.11,
+      ":ramp_mid_0_0": 81.98,
+      ":urban_diverge_1_0": 113.08,
+      "merge_section_0": 294.51,
+      "ramp_accel_0": 99.07,
+      "ramp_storage_0": 204.49
+    },
+    "R_only_from_shared_exit_to_aux_terminal_m": 796.24,
+    "downstream_background_m": 200,
+    "downstream_tail_m": 96.0,
+    "interpretation": "Longitudinal geometry sums, not storage vehicle capacity or realized route length; R must perform a safe left lane change within merge_section. Primary same across both M lanes.",
+    "shared_RU_m": 238.8
+  }
+}

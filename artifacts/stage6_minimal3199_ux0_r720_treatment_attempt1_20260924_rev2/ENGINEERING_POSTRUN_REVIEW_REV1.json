@@ -1,0 +1,112 @@
+{
+  "card_path": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_rev2/MINIMAL3199_R720_DELAYED_S17_UX0_ATTEMPT1_CARD_FINAL_REV2.json",
+  "card_sha256": "f3d7d03e0b521d330a6ccc07d807bd88149ce4eb424e3f3895f917e083234b5e",
+  "checks": {
+    "18_of_18_roles": true,
+    "all_role_xml_wellformed_and_roots_match": true,
+    "complete_horizon_logged": true,
+    "expected_role_list_matches_manifest": true,
+    "manifest_hash_inventory_pass": true,
+    "no_retry_and_single_start_evidence": true,
+    "no_unexpected_output_files": true,
+    "output_under_resource_limit": true,
+    "receipt_hash_links_pass": true,
+    "request_sidecar_binds_exact_card_and_request": true,
+    "runtime_under_resource_limit": true,
+    "staging_transform_matches_raw": true
+  },
+  "confidence": "High for process receipt consistency, output integrity, and resource-limit evidence. No traffic metrics or scientific outcomes reviewed.",
+  "execution": {
+    "execution_receipt_path": "data/raw/stage6_minimal3199_existence_20260924_v4/MINIMAL3199_R720_DELAYED_S17_UX0_ATTEMPT1/outputs/execution_receipt.json",
+    "execution_receipt_sha256": "dda79ff2916dbe751e7421e04bef1cc31f924733273ba7743f10893e20a6bb25",
+    "finished_at_utc": "2026-09-24T17:54:48.383289Z",
+    "guardian_pid": 9492,
+    "max_starts": 1,
+    "output_manifest_path": "data/raw/stage6_minimal3199_existence_20260924_v4/MINIMAL3199_R720_DELAYED_S17_UX0_ATTEMPT1/outputs/output_manifest.json",
+    "output_manifest_sha256": "c5a856fb8fb15b2a5c87851bed57a5602e6d952dd7f6900d24d7bfe113fff64b",
+    "process_status": "PROCESS_EXITED",
+    "reservation_path": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_rev2/consumption/MINIMAL3199_R720_DELAYED_S17_UX0_ATTEMPT1.json",
+    "reservation_sha256": "ed0eec75933f905693f63bf645ee0ccaac15ff25c3413d9d02199a3b3338d36f",
+    "retry_allowed": false,
+    "return_code": 0,
+    "simulator_pgid": 9493,
+    "simulator_pid": 9493,
+    "started_at_utc": "2026-09-24T17:54:45.217275Z",
+    "stop_reason": null,
+    "sumo_starts": 1,
+    "wallclock_runtime_s": 3.165857
+  },
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "inventory": {
+    "artifact_role_hashes": {
+      "fcd.xml": "2c07f8cb9835b4198ab3292b8961c51d04055aed6560973d4403e753372f5a04",
+      "lanechanges.xml": "8cbad8c88d5fb259e7b7edf2caa38f2b3839cce58c9f5c00c3d64508b595d1c3",
+      "p1_main_down_200_l0.xml": "a5f64e38c2cd44c83b55a2f4afba0f372aae8b7258e5eeec3dbcc560ba710e33",
+      "p1_main_down_200_l1.xml": "1badd42c77c5935b386b8d5ec9f461b50c9e3d06500690074575b584c13e3888",
+      "p1_main_down_20_l0.xml": "41753b5dbb0b1181ec862be22c2ca246973ac977f4019db33963ff937d3a7d74",
+      "p1_main_down_20_l1.xml": "a29ac81a98a112ec627de2614fb94d86b179c4193e89c2e0323d79747b3dc915",
+      "p1_main_up_1300_l0.xml": "e1d05ac1ac9cc9fc9544df96052a201319acd98a6d277839050d3c799e2f3dfa",
+      "p1_main_up_1300_l1.xml": "f842596fadf251acfdf3fbabe71f9eb7e1ba8a55fcfd9cd965c0bb0c4f83e049",
+      "p1_merge_section_20_l0.xml": "e4c3fb3a93210aee83b9d5e76b83c4bd7053022bd8614d425fbaa608ac5040f6",
+      "p1_merge_section_20_l1.xml": "364f36731b227198cc81bcbcb30fd55ec161c91c8afc79df8365eab73bfd4657",
+      "p1_merge_section_20_l2.xml": "f75fa54a9052cace89dab2d05b7ec0cfb4eaecd62b83c917f40afd4c408aeff5",
+      "queues.xml": "846b02b8624e0d285fc109cc1f42731fa03eacfd9e27e1bb4e6f6af09ee87529",
+      "ramp_storage_e2.xml": "fbe01860cdc8208daa15d909c080770a2eb39f7cf03a5fc599b6f0fd518190bb",
+      "shared_boundary_e2.xml": "467f9da29e10b5c3912cb6ed01c273558b6d15517beb5d686367adba686c73cc",
+      "sumo_summary.xml": "710a1fb028e1ad3eff45aa0e5b9ecb5130bf4794791cc31c8d2e898c417228df",
+      "tls_states.xml": "f771d018c5fc1fad9095a85a6e57727746f0d723d552f3281e68290368df1b75",
+      "tripinfo.xml": "623e929f6d7e6e3a5ee8517898df2bb987812d61bb5e1f1b0806955d6a181275",
+      "vehroute.xml": "22ef22167c17ae8b4a67ec0f2ea1ff7d775e7ed7dd46d6b281d8dfa2cf7ad71f"
+    },
+    "manifest_actual_file_count": 25,
+    "manifest_role_count": 18,
+    "manifest_support_file_count": 7,
+    "on_disk_file_count_including_manifest_receipt": 27,
+    "payload_bytes_excluding_manifest_receipt": 21151489,
+    "required_xml_roles": 18,
+    "support_file_hashes": {
+      "guardian_stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "runner_stderr.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "runner_stdout.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "scenario_control.add.xml": "0a476ff96e378ae8972de96cba1b1748274158a29bc7f9f3408be70996e3b2f0",
+      "scenario_control.sumocfg": "839cd0604aa2eef5da3677dae06296995fc3c017b9a84f1f8cf0ed0315d47d54",
+      "sumo.log": "841f051eadc3172738bedac06ea510114f6da9e547aa0aa5296fac8e1293f094",
+      "sumo_error.log": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  },
+  "limitations": [
+    "Process counts are based on immutable R02 reservation and execution receipts; no live process-table query was performed.",
+    "No lifecycle, traffic, classifier, witness, or causal interpretation was performed in this engineering review."
+  ],
+  "mismatches": [],
+  "provenance": {
+    "input_manifest_sha256": "3c5b8f27850c96f32b044537b4299a5a8b7260f894567813ae955b8fb7bab34d",
+    "prelaunch_review_binding_sha256": "ae96adbb98ba6aeb00b1098d36a170c107d7838bfaf8532b291f1c7ee92b5bfb",
+    "prelaunch_review_card_sha256": "f3d7d03e0b521d330a6ccc07d807bd88149ce4eb424e3f3895f917e083234b5e",
+    "runner_sha256": "a4c7c5952522286c35764d1a6a05eff46e78311bf3afc06785474c64127aa064",
+    "runtime_binding_sha256": "f73c7731926d00fe65bc58c9e2a4340456cc8065c42349bec0fe053a29ead0bf",
+    "staging_provenance_sha256": "387fd4bb11b7d8e78315f76699ec4ab633b17af81c4c9587590fa9752d3ecf89",
+    "start_request_receipt_sha256": "5846d84b8c2711a5a1c4b6788a0a7446d5d1708cf0a03174e6049f8edefd572b",
+    "start_request_receipt_state": "PERSISTED_UNSENT at persistence time; dispatch subsequently evidenced by the one-use reservation and execution receipt; no mutation to the immutable sidecar.",
+    "start_request_sha256": "6019c720af6a65138ed71a10c3d89e83fb05274cbffe34c23a0caaf70c4e450a"
+  },
+  "resources": {
+    "actual_directory_bytes": 21158799,
+    "either_trigger_fired": false,
+    "observed_payload_bytes": 21151489,
+    "observed_wallclock_s": 3.165857,
+    "output_size_stop_trigger_bytes": 75000000,
+    "polling_ms": 100.0,
+    "slight_overshoot_accepted": true,
+    "wallclock_stop_trigger_s": 90
+  },
+  "review_role": "engineering_postrun",
+  "review_scope": "Engineering post-run integrity only. Raw data remained read-only; no new process or output analysis was run.",
+  "run_id": "MINIMAL3199_R720_DELAYED_S17_UX0_ATTEMPT1",
+  "schema_version": "1",
+  "status": "PASS_ENGINEERING_POSTRUN"
+}

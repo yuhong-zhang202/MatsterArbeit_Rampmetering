@@ -1,0 +1,64 @@
+{
+  "card_path": "artifacts/stage6_clean_onset_3199_r900_preparation_20260925_v1/CLEAN3199_A_R900_DELAYED_S17_CARD_FINAL_REV3.json",
+  "card_sha256": "c70a5f275fb7d60f9c7609395a969f4a4868fc84d6538c52fa4d17bebc5837fe",
+  "confidence": "High",
+  "created_at_utc": "2026-09-25T18:17:46+00:00",
+  "evidence_reviewed": {
+    "D009_plan_path": "artifacts/stage6_clean_onset_witness_test_plan_20260925_v1/CLEAN_ONSET_WITNESS_TEST.md",
+    "D009_plan_sha256": "63f84a0ee6de30e912c32cac2ab236e9dcfeff70598e2c68624411207de360ee",
+    "T3_confirmation_s": null,
+    "auxiliary_E1_bin_counts_from_data_receipt": [
+      2,
+      8,
+      0,
+      13,
+      3
+    ],
+    "data_receipt_path": "data/processed/stage6_clean_onset_3199_r900_postrun_20260925_v3/DATA_POSTRUN_REVIEW.json",
+    "data_receipt_sha256": "8c82d169ab5b6bd4a291ad8650aaaf3b9e0a95e5c41a1da9fb2ae31eae14f19a",
+    "engineering_receipt_path": "artifacts/stage6_clean_onset_3199_r900_preparation_20260925_v1/ENGINEERING_POSTRUN_INTEGRITY_REV3.json",
+    "engineering_receipt_sha256": "1ff5418c4bed0c451c404530ea1bf6ae342381b597cbc248c05249f6ed85ddd5",
+    "first_freeway_through_lane_R_s": 584,
+    "frozen_R720_unique_R_ids_by_t1440_t1500": [
+      167,
+      183
+    ],
+    "unique_R_ids_by_t1440_t1500": [
+      209,
+      225
+    ]
+  },
+  "final_run_disposition": "NOT_EVALUABLE / EXPOSURE_GATE_NOT_MET",
+  "findings": {
+    "blocker": 0,
+    "major": 1,
+    "required_minor": 0
+  },
+  "limitations": "Reviewer interpreted the hash-bound data receipt and plan; did not independently reparse raw FCD or recalculate detector coverage. Physical or measurement cause of the zero E1 bin remains unknown. No post-R classifier outcome was inspected.",
+  "major_finding": "Predeclared D-009 meaningful-exposure T3 gate not met by t<=720; this is a failed eligibility gate, not a new methodology defect.",
+  "not_performed": [
+    "locked P/S/L post-R classification",
+    "Candidate A/C post-R analysis",
+    "post-R matched time/location/lane/cell outcome analysis",
+    "witness or NO_WITNESS inference"
+  ],
+  "process_starts_by_review": {
+    "Guardian": 0,
+    "SUMO": 0,
+    "TraCI": 0,
+    "netconvert": 0
+  },
+  "review_scope": "Independent adjudication of the data receipt and adopted D-009 sequential gate; no post-R outcome analysis.",
+  "reviewer_role": "scientific_reviewer",
+  "rule_application": "D-009 requires three consecutive positive complete 30-second auxiliary E1 bins and T3 by t<=720 before the locked outcome stage. The zero [630,660) bin interrupts the sequence. First through-lane entry and later cumulative counts do not replace T3. Therefore stop before P/S/L, Candidate A/C and post-R matched lane/cell outcome analysis.",
+  "run_id": "CLEAN3199_A_R900_DELAYED_S17",
+  "schema": "stage6_clean_onset_scientific_postrun_contract_review_v1",
+  "scope_stop": [
+    "No retry",
+    "No R1080",
+    "No other qMain",
+    "No seed23",
+    "No B/C"
+  ],
+  "status": "PASS_STOP_RULE_APPLICATION"
+}

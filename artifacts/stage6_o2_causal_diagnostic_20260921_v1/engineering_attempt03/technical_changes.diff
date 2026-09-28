@@ -1,0 +1,51 @@
+--- attempt02/observer.py
++++ attempt03/observer.py
+@@ -67,9 +67,8 @@
+    from startup_probe import wait_for_owned_listener
+    wait_for_owned_listener(p,out,run)
+    c=traci.connect(port=8819,host='127.0.0.1',numRetries=100,waitBetweenRetries=0.05,proc=p)
+-   seen=subprocess.run(['/usr/sbin/lsof','-nP','-iTCP:8819','-sTCP:LISTEN','-t'],capture_output=True,text=True,timeout=2)
+-   emit(out,{'kind':'listener_postconnect','returncode':seen.returncode,'stdout':seen.stdout,'stderr':seen.stderr})
+-   supervisor.require(set(seen.stdout.split())=={str(p.pid)} and p.poll() is None,'server ownership changed before observation')
++   from connection_ownership import verify_established_connection
++   verify_established_connection(p,c._socket,out)
+    version=c.getVersion();supervisor.require('1.26.0' in version[1],'runtime SUMO version mismatch')
+    emit(out,{'kind':'initial','version':version,'time':c.simulation.getTime(),'dt':c.simulation.getDeltaT()})
+    counts=advance(c,out,run/'physical_stop_request.json')
+--- attempt02/runtime_executor.py
++++ attempt03/runtime_executor.py
+@@ -5,7 +5,7 @@
+ ROOT=Path('/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering')
+ BASE=Path(__file__).absolute().parent
+ SUMO_HOME='/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo'
+-LIMITS={'SUMO_starts':1,'TraCI_connections':1,'netconvert':0,'GUI':0,'retry':0,'per_attempt_monitored_s':180,'total_monitored_s':188.43560208400595,'per_attempt_observed_bytes':200000000,'total_observed_bytes':200013288}
++LIMITS={'SUMO_starts':1,'TraCI_connections':1,'netconvert':0,'GUI':0,'retry':0,'per_attempt_monitored_s':180,'total_monitored_s':208.54239662599866,'per_attempt_observed_bytes':200000000,'total_observed_bytes':200118166}
+ def require(value,message):
+  if not value:raise ValueError(message)
+ def digest(p):
+@@ -115,10 +115,12 @@
+  require(os.environ.get('SUMO_HOME')==SUMO_HOME,'SUMO_HOME mismatch')
+  require(not any(k.startswith(('DYLD_','LD_','PYTHON')) for k in os.environ),'unsafe injected environment')
+  run=Path(card['attempt']['run_root']);no_symlink(run);require(not run.exists(),'attempt consumed')
+- require(run==ROOT/'data/raw/stage6_o2_causal_diagnostic_20260921_v1/O2_C_S17_450_attempt2','unexpected raw root')
+- if run.parent.exists():require({p.name for p in run.parent.iterdir()}=={'O2_C_S17_450_attempt1'},'prior inventory mismatch')
+- prior=run.parent/'O2_C_S17_450_attempt1'
+- require(digest(prior/'execution_receipt.json')=='ceb91d360a1dea201b5d5151abe0cb0880c57b20768066d8a6923307e1e37114' and size(prior)==13288,'prior evidence changed')
++ require(run==ROOT/'data/raw/stage6_o2_causal_diagnostic_20260921_v1/O2_C_S17_450_attempt3','unexpected raw root')
++ if run.parent.exists():require({p.name for p in run.parent.iterdir()}=={'O2_C_S17_450_attempt1','O2_C_S17_450_attempt2'},'prior inventory mismatch')
++ prior=card['prior_diagnostic_attempts']
++ require(sum(size(Path(a['run_root'])) for a in prior['attempts'])==118166,'prior total changed')
++ for a in prior['attempts']:
++  verify(a['receipt']);require(size(Path(a['run_root']))==a['bytes'],'prior attempt bytes changed')
+  # Checking port is not a SUMO start. No observer may attach to another server.
+  with socket.socket() as probe:probe.bind(('127.0.0.1',8819))
+  return card,approval
+@@ -133,7 +135,7 @@
+   card,approval=preflight(a.card.absolute(),a.approval.absolute())
+   def interrupted(signum,frame):raise KeyboardInterrupt('signal '+str(signum))
+   signal.signal(signal.SIGTERM,interrupted);signal.signal(signal.SIGHUP,interrupted)
+-  result=_run(card['attempt'],digest(a.card),binding(a.approval),prior_time=8.43560208400595,prior_bytes=13288,timeout=180,cap=200000000)
++  result=_run(card['attempt'],digest(a.card),binding(a.approval),prior_time=28.542396625998663,prior_bytes=118166,timeout=180,cap=200000000)
+   print(json.dumps(result,sort_keys=True));return 0 if result['status']=='process_completed_pending_gate' else 2
+ if __name__=='__main__':
+  try:sys.exit(main())

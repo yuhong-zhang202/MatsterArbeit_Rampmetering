@@ -1,0 +1,248 @@
+{
+  "schema_version": "1",
+  "review_type": "EXACT_CARD_DATA_PROVENANCE_PRELAUNCH",
+  "run_id": "MINIMAL3199_R720_DELAYED_S17_UX0_ATTEMPT1",
+  "exact_card_sha256": "924d4fce7098d5d69e60dc6ecb50b00b6c1a4b0eb527d0153f7681969b58d714",
+  "disposition": "BLOCKED",
+  "confidence": "High",
+  "finding_counts": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 1
+  },
+  "scope": "Read-only data/provenance audit of the exact U=X0 treatment proposal, including matched comparison to the completed retry2 control. No process or simulation was run; no inputs were changed.",
+  "context_preflight": {
+    "AGENTS.md": "read",
+    "docs/PROJECT_STATE.md": "read; control is LOW_R_BACKGROUND_ACCEPTABLE only under minimal-plan gate; treatment may proceed to fresh 3-way reviews",
+    "docs/WORKLOG.md": "read; retry2 science review final and treatment reviews pending",
+    "approved_plan": {
+      "path": "artifacts/stage6_minimal_ramp_induced_breakdown_existence_test_20260924_v1/PLAN.md",
+      "sha256": "06b0f04f1144ef8497b4d64906ae27b1377b544abd6e0639133c8d85a3fabc23"
+    },
+    "locked_method": {
+      "path": "docs/methodology/FREEWAY_PROTECTABLE_STATE_EXPLORATORY_DEFINITION.md",
+      "sha256": "22fe22170c17ce74e261e717586a458a1b5173e9deabbee925bd4c1d606adfe7"
+    }
+  },
+  "control_scope_check": {
+    "control_run_id": "MINIMAL3199_CTRL_S17_TECH_RETRY2",
+    "scientific_disposition": "LOW_R_BACKGROUND_ACCEPTABLE",
+    "control_card_hash_matches": true,
+    "control_data_review_hash_matches": true,
+    "control_scientific_review_hash_matches": true,
+    "control_raw_manifest_hash_matches": true,
+    "limitation": "LOW_R_BACKGROUND_ACCEPTABLE is scoped to the approved U=X0 minimal-test control gate only; recurring one-bin Candidate C patches and strict high-mobility screen FAIL remain recorded. It is not a clean high-mobility baseline or a treatment result."
+  },
+  "matched_input_audit": {
+    "M_input_count": 1333,
+    "treatment_M_count": 1333,
+    "M_ID_set_equal": true,
+    "M_input_attribute_mismatches": {
+      "depart": 0,
+      "route": 0,
+      "type": 0,
+      "speedFactor": 0,
+      "departPos": 0,
+      "departLane": 0,
+      "departSpeed": 0
+    },
+    "control_raw_vehroute_count": 1333,
+    "control_raw_M_ID_coverage": 1333,
+    "control_raw_route_type_speedFactor_mismatches": 0,
+    "treatment_total_vehicle_count": 1525,
+    "treatment_class_counts": {
+      "M": 1333,
+      "R": 192
+    },
+    "treatment_flow_element_count": 0,
+    "R_indices_contiguous": true,
+    "R_schedule_exact": true,
+    "global_order": true,
+    "control_raw_route_mismatches": 0,
+    "control_raw_type_mismatches": 0,
+    "control_raw_speedFactor_mismatches": 0,
+    "treatment_R_count": 192,
+    "R_desired_depart_first_last_s": [
+      540.0,
+      1495.0
+    ],
+    "R_interval_s_unique": [
+      5.0
+    ],
+    "R_route": "urban_in shared_approach ramp_storage ramp_accel merge_section main_down",
+    "R_treatment_only": true,
+    "duplicate_treatment_ids": false,
+    "U_X_ids_present": false
+  },
+  "fixed_conditions": {
+    "qMain_veh_per_h": 3199.2,
+    "seed": 17,
+    "U": 0,
+    "X": 0,
+    "A": "A_OPEN",
+    "R_veh_per_h": 720,
+    "R_window": "[540,1500)",
+    "horizon_s": 2700,
+    "step_s": 1,
+    "network_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "all_match_approved_plan": true
+  },
+  "hash_bindings": {
+    "card": {
+      "path": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_v1/MINIMAL3199_R720_DELAYED_S17_UX0_ATTEMPT1_CARD_FINAL.json",
+      "sha256": "924d4fce7098d5d69e60dc6ecb50b00b6c1a4b0eb527d0153f7681969b58d714"
+    },
+    "input_manifest": {
+      "path": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_v1/INPUT_MANIFEST.json",
+      "sha256": "7c79180c2ee5cd9c678ae3b366d28751e020122a1c42ebf524cc319b3cb5cc64"
+    },
+    "staging_provenance": {
+      "path": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_v1/STAGING_PROVENANCE.json",
+      "sha256": "0bf654a4db1c51fbc32c6212c9949ef84ecf15a90ad0beabb4ed94c49d1c9ef0"
+    },
+    "runtime_binding": {
+      "path": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_v1/runtime_binding_final.json",
+      "sha256": "a6c9b26f2dc40a3f95a1438160b4a8cd08b0756156263bf16772b55d234f63fe"
+    },
+    "runner": {
+      "path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+      "sha256": "1d30a28284589ed8f36a2672e51f1ca2584599d782d989072c397c3e18b2b687"
+    },
+    "engineering_review": {
+      "path": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_v1/FINAL_ENGINEERING_PRELAUNCH_REVIEW.json",
+      "sha256": "528845845bdf7d0e304a39fa6389fdb64b88c27c99f150d7a5026dc796d7b5cf"
+    },
+    "minimal_plan": {
+      "path": "artifacts/stage6_minimal_ramp_induced_breakdown_existence_test_20260924_v1/PLAN.md",
+      "sha256": "06b0f04f1144ef8497b4d64906ae27b1377b544abd6e0639133c8d85a3fabc23"
+    },
+    "locked_method": {
+      "path": "docs/methodology/FREEWAY_PROTECTABLE_STATE_EXPLORATORY_DEFINITION.md",
+      "sha256": "22fe22170c17ce74e261e717586a458a1b5173e9deabbee925bd4c1d606adfe7"
+    },
+    "control_card": {
+      "path": "artifacts/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/MINIMAL3199_CTRL_S17_TECH_RETRY2_CARD_FINAL.json",
+      "sha256": "b387a750f9f41fe7439d79ead7133fc07ac817fe8da497a8e045433a4accee5a"
+    },
+    "control_data_review": {
+      "path": "artifacts/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/DATA_LIFECYCLE_POSTRUN_REVIEW.json",
+      "sha256": "3579107c935b3f0a91f1f4f79d0791742b462a45548917c8ad317304fff70b37"
+    },
+    "control_scientific_review": {
+      "path": "artifacts/stage6_minimal3199_ctrl_technical_retry2_20260924_v1/SCIENTIFIC_POSTRUN_REVIEW.json",
+      "sha256": "f7892d4d6fa974dbea2c373092760749b5764c8c79fbd01cd2ec49e6ca99784d"
+    },
+    "control_raw_manifest": {
+      "path": "data/raw/stage6_minimal3199_existence_20260924_v3/MINIMAL3199_CTRL_S17_TECH_RETRY2/outputs/output_manifest.json",
+      "sha256": "07cd3cd1707e3717f9401f3e164a932cb6c10196af1461f267869f1d582e5e5e"
+    },
+    "control_exec_receipt": {
+      "path": "data/raw/stage6_minimal3199_existence_20260924_v3/MINIMAL3199_CTRL_S17_TECH_RETRY2/outputs/execution_receipt.json",
+      "sha256": "f9f783f19cc61d342de09ab7dc6172e56645b7e1604d7447ad6e0582a7bd2348"
+    },
+    "treatment_demand": {
+      "path": "scripts/stage6/minimal3199/prepared_rev3/treatment/demand.rou.xml",
+      "sha256": "b57a0f3723be40bd1725a478f4ec7f57c1aacfbac0f2e57a5d94f31dce758c83"
+    },
+    "control_demand": {
+      "path": "scripts/stage6/minimal3199/prepared_rev3/control/demand.rou.xml",
+      "sha256": "5df62660b9b9e2cc02734794ef2d361a3a97c30fa38a1e4fcbf550f0a2a1e405"
+    },
+    "treatment_output_roles": {
+      "path": "scripts/stage6/minimal3199/prepared_rev3/treatment/output_roles.json",
+      "sha256": "32056005f915229daebc8193a4e4aa0d80d54d9f0caa0f296014b7a72c05b996"
+    },
+    "control_output_roles": {
+      "path": "scripts/stage6/minimal3199/prepared_rev3/control/output_roles.json",
+      "sha256": "3ff931a5f088180f6f37fbf8a782985a3a805c8c02b0cfdce3aa018df195b0f6"
+    },
+    "network": {
+      "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+      "sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca"
+    },
+    "binary": {
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+      "sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179"
+    },
+    "schema": {
+      "path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+      "sha256": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e"
+    },
+    "python": {
+      "path": ".venv/bin/python",
+      "sha256": "76c73e25cdd69650a897648666e41c364940fbcff0d1176572a667d4d470ec9e"
+    },
+    "runner_test": {
+      "path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/test_runner.py",
+      "sha256": "9a61aff7ca44a342af9f4174d8a3c7e1c87d4d6822ec1307a2878be341a2d007"
+    }
+  },
+  "staging_audit": {
+    "source_to_staged": {
+      "scenario_control.sumocfg": {
+        "bytes": 2885,
+        "sha256": "839cd0604aa2eef5da3677dae06296995fc3c017b9a84f1f8cf0ed0315d47d54",
+        "deterministically_reconstructed_bytes_match": true,
+        "replacement_rules": [
+          {
+            "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3199_existence_20260924_v1/MINIMAL3199_R720_DELAYED_S17/outputs",
+            "expected_occurrences": 8,
+            "observed_before_rewrite": 8,
+            "pass": true
+          },
+          {
+            "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/stage6/minimal3199/prepared_rev3/treatment/scenario.add.xml",
+            "expected_occurrences": 1,
+            "observed_before_rewrite": 1,
+            "pass": true
+          }
+        ],
+        "old_root_residual_occurrences": 0
+      },
+      "scenario_control.add.xml": {
+        "bytes": 4048,
+        "sha256": "0a476ff96e378ae8972de96cba1b1748274158a29bc7f9f3408be70996e3b2f0",
+        "deterministically_reconstructed_bytes_match": true,
+        "replacement_rules": [
+          {
+            "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3199_existence_20260924_v1/MINIMAL3199_R720_DELAYED_S17/outputs",
+            "expected_occurrences": 12,
+            "observed_before_rewrite": 12,
+            "pass": true
+          }
+        ],
+        "old_root_residual_occurrences": 0
+      }
+    },
+    "output_directory": "data/raw/stage6_minimal3199_existence_20260924_v4/MINIMAL3199_R720_DELAYED_S17_UX0_ATTEMPT1/outputs",
+    "output_directory_files": [
+      "scenario_control.add.xml",
+      "scenario_control.sumocfg"
+    ],
+    "output_dir_contains_only_staged_inputs": true,
+    "consumption_directory": "artifacts/stage6_minimal3199_ux0_r720_treatment_attempt1_20260924_v1/consumption",
+    "consumption_directory_exists": false,
+    "start_request_expected": "START_REQUEST.json",
+    "start_request_present": false,
+    "start_request_sha256": null,
+    "start_request_state": "MISSING_NO_REQUEST_BYTES_AVAILABLE_TO_REVIEW",
+    "no_guardian_or_sumo_dispatch": true
+  },
+  "review_gate": {
+    "card_status": "FINAL_AUTHORIZED_FOR_ONE_START",
+    "review_gate_status": "PENDING_EXACT_CARD_RECEIPTS",
+    "progression_allowed": false,
+    "engineering_review_status": "PASS_PRELAUNCH",
+    "data_receipt_current": false,
+    "scientific_receipt_current": false
+  },
+  "findings": [
+    {
+      "severity": "required_minor",
+      "code": "START_REQUEST_NOT_PERSISTED",
+      "description": "The assigned exact-card review requires verifying a persisted but unsent START_REQUEST with its request values/hash. No START_REQUEST.json exists in this package, and no request hash is bound in the final card or INPUT_MANIFEST. Engineering review confirms no Guardian dispatch, but that does not supply request bytes or the required hash verification.",
+      "required_resolution": "Persist the exact-card-bound Guardian request without dispatch (or record a hash-bound engineering rationale that request persistence occurs only after all three review receipts), then rerun this data/provenance check."
+    }
+  ],
+  "status": "BLOCKED_MISSING_START_REQUEST"
+}

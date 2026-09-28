@@ -1,0 +1,62 @@
+{
+  "status": "passed",
+  "created_at": "2026-09-26T13:19:35.953Z",
+  "image": "sha256:9798254a8cc06276b7c5b3c19df49f136fae25d579564e1f01f9c4b9b8cd2d11",
+  "volume": "tdai-ramp-memory-type-restore-postread-20260926-v1",
+  "network": "none",
+  "mount": "isolated-snapshot-readwrite-for-sqlite",
+  "model_calls": 0,
+  "production_receipt_sha256": "1e26972e6ed1e53313513664bde1ce88ad87c1daf530cce39d6c49e3f6424a53",
+  "result": {
+    "status": "passed",
+    "network": "none",
+    "model_calls": 0,
+    "unpatched_gateway": true,
+    "layer_counts": {
+      "l0": 10,
+      "l1": 13,
+      "l2": 2,
+      "l3": true
+    },
+    "layer_hashes": {
+      "l0": "b513c4577d645030826d5ee4bf286d7da1ec69ccf637ff7a9cb64765790a6b36",
+      "l1": "2fd421b7228f45bf81e4f16a6ef3f4047ca0dc775c5f1a8929ef3b7db3f76b69",
+      "l2": "2cdde3c76c63f03550164502c429456814385cbf999da9335459d5dc9308dcef",
+      "l2_documents": "128716c6e612bb435d65bcf0d7c2652e1764e6bb015194db350ca157e9073f61",
+      "l3": "a250c8408ec8579a4bb5a6563781d046101d067bc7f69825b2d50bb60e435bbe"
+    },
+    "target": {
+      "id": "m_1790425813551_503da35b",
+      "type": "episodic",
+      "version": 2,
+      "content_sha256": "126ef8b51f4d949a67f0c417e7de5e912631abe0c78a0987c113cc4a2e6aa67f",
+      "background_sha256": "a8fb6dd827c6d2af7595cbff8557e5aae3f59c88ef6b212c9042a8596d7c16d7",
+      "item_sha256": "ff77e81a03a32f33bb39831088288da466dc8e270ad07cb5184f9bf102ad994f"
+    },
+    "type_filter": {
+      "episodic_contains_target": true,
+      "persona_contains_target": false
+    },
+    "forbidden_error_phrases_present": {
+      "l1": {
+        "without writing to the Tencent MemoryCore": false,
+        "without writing to the Tencent MemoryCore system": false,
+        "candidate only": false,
+        "The last confirmed write was `stage2-closeout-20260910-v1`": false
+      },
+      "l2": {
+        "without writing to the Tencent MemoryCore": false,
+        "without writing to the Tencent MemoryCore system": false,
+        "candidate only": false,
+        "The last confirmed write was `stage2-closeout-20260910-v1`": false
+      },
+      "l3": {
+        "without writing to the Tencent MemoryCore": false,
+        "without writing to the Tencent MemoryCore system": false,
+        "candidate only": false,
+        "The last confirmed write was `stage2-closeout-20260910-v1`": false
+      }
+    }
+  },
+  "error": null
+}

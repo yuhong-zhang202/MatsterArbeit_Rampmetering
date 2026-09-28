@@ -1,0 +1,22 @@
+{
+  "schema": "clean_onset_candidate_a_data_provenance_prelaunch_v1",
+  "status": "PASS_PRELAUNCH",
+  "disposition": "PASS_PRELAUNCH",
+  "run_id": "CLEAN3199_A_R900_DELAYED_S17",
+  "card_sha256": "7aa14b8dc69e70c67e64ffdaa570d6e30cc7d71cb6dfb84e6d812d52853718f2",
+  "findings": {"blocker": 0, "major": 0, "required_minor": 0},
+  "confidence": "High",
+  "reviewer": "data_analyst",
+  "checks_passed": 44,
+  "scope": "Read-only exact-card data/provenance review; raw remains immutable.",
+  "verified": [
+    "M IDs 1333/1333 and all XML attribute dictionaries match control.",
+    "Treatment-only delta is exactly R_flow.0..239; explicit U=X=0; R schedule is 540000+4000*i ms.",
+    "Input/source/control/evidence/plan/adoption/runtime/runner hashes match bindings.",
+    "R720 unique first through-lane exposure is 167 by inclusive t=1440 and 183 by inclusive t=1500."
+  ],
+  "limitations": [
+    "R720 historical scientific receipt execution-hash field equals the reservation hash; the actual raw execution receipt is independently bound by engineering review and this anomaly is preserved."
+  ],
+  "process_starts": {"SUMO": 0, "Guardian": 0, "TraCI": 0, "netconvert": 0}
+}

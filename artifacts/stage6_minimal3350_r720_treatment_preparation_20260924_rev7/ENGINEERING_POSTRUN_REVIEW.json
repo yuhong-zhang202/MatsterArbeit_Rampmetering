@@ -1,0 +1,51 @@
+{
+  "card_sha256": "d610c5c47c440014a3b8254b36de8d93a48c5d32be928746b93f50003ebcb125",
+  "disposition": "PASS_ENGINEERING_POSTRUN",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "inventory": {
+    "all_manifest_entries_exist_and_match_size_hash": true,
+    "manifest_actual_file_count": 25,
+    "mismatched_paths": [],
+    "payload_bytes_excluding_manifest_and_receipt": 22012984,
+    "role_count": 18,
+    "support_file_count": 7
+  },
+  "launch_and_resources": {
+    "guardian_starts": 1,
+    "netconvert_starts": 0,
+    "output_cap_bytes": 75000000,
+    "output_payload_bytes": 22012984,
+    "process_status": "PROCESS_EXITED",
+    "retry_allowed": false,
+    "return_code": 0,
+    "stop_reason": null,
+    "sumo_starts": 1,
+    "traci_starts": 0,
+    "wallclock_cap_s": 90,
+    "wallclock_runtime_s": 24.638514,
+    "within_caps": true
+  },
+  "limitations": [
+    "This does not replace data/lifecycle or independent scientific post-run review."
+  ],
+  "provenance": {
+    "execution_receipt_sha256": "dd907cd84c629daa92b03a6cc1d9a4979df31371251e8b16f41db62aa4d7d4e2",
+    "output_manifest_sha256": "b2badc4314347e06b2d5beaa63dc937845a89c1398f42671407b26a62588a885",
+    "reservation_manifest_hash_matches": true,
+    "reservation_sha256": "99d9286e91522a0dce18d67d3dc1d607bceea9ff0e0f7b1dc6a1fbc8c7a56f13",
+    "source_additional_sha256": "bf30adcd2cd26a8982096d0f6a5c2758a3cc3255d272d55bae72876777844d15",
+    "source_sumocfg_sha256": "d8c53d9c3ab30fe0cf91eba848dbc3c9c79a7e4a273cd61fce1b9091051c4195",
+    "staged_additional_bytes": 3832,
+    "staged_additional_sha256": "bf30adcd2cd26a8982096d0f6a5c2758a3cc3255d272d55bae72876777844d15",
+    "staged_sumocfg_bytes": 2759,
+    "staged_sumocfg_sha256": "40f7ab9305d75c5a629d4ea533eff83b15d94b939d669fa0709316bbd3d75baa"
+  },
+  "raw_status": "Preserved immutable after completed single launch.",
+  "run_id": "MINIMAL3350_R720_DELAYED_S17",
+  "schema": "stage6_minimal3350_treatment_engineering_postrun_review_v1",
+  "scope": "Engineering inventory/integrity only; no lifecycle reconciliation or scientific outcome interpretation."
+}

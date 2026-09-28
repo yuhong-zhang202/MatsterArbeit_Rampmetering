@@ -1,0 +1,46 @@
+{
+  "card_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev6/MINIMAL3350_CTRL_S17_CARD_FINAL.json",
+  "card_sha256": "b0a4a40c1efd01640277a915858196fd737f0ba4821d6a97ff59642ad9f3a7e7",
+  "checks": {
+    "all_18_output_roles_match_and_20_configured_targets_unique": true,
+    "duplicated_raw_prefix_rejected": true,
+    "exact_card_runner_runtime_hashes_match": true,
+    "guardian_request_hash_and_receipt_bound": true,
+    "no_process_started": true,
+    "output_directory_and_parent_absent": true,
+    "resource_contract_90s_60000000bytes_100ms": true,
+    "review_receipt_schema_run_card_and_zero_findings_enforced": true,
+    "review_sidecar_requires_exact_role_hash_map": true,
+    "review_status_normalization_is_run_specific_and_fail_closed": true,
+    "sumocfg_8_targets_and_additional_12_targets_match_runner_output_directory": true
+  },
+  "evidence": {
+    "adapter_sha256": "3fd66455cc79a1178e8f23d0d4bfc57064f6ca0b8736b3a5fa107f937cc79291",
+    "configured_unique_output_targets": 20,
+    "output_directory_absent": true,
+    "provenance_receipt_sha256": "b8c42fad079030db64f701ec5eb208a5a80d25fa914c9fae1e177e90ed1dc745",
+    "runner_sha256": "a789925aab725bc3db6e229b246d8267c1c1e1db75db8c736ea6c971da1b0841",
+    "static_preflight": "pending exact-card data/scientific review receipts; must remain non-launchable",
+    "test_command": ".venv/bin/python -m unittest -v tests/test_minimal3350_binding.py",
+    "test_result": "PASS (8 tests)"
+  },
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "limitations": [
+    "Fresh data/provenance and independent scientific reviews for this runner/card hash are required before launch.",
+    "This review does not classify control suitability or release treatment."
+  ],
+  "process_starts": {
+    "guardian": 0,
+    "netconvert": 0,
+    "sumo": 0,
+    "traci": 0
+  },
+  "reviewer": "simulation_engineer",
+  "run_id": "MINIMAL3350_CTRL_S17",
+  "schema": "stage6_engineering_prelaunch_review_v1",
+  "status": "PASS_PRELAUNCH"
+}

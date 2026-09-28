@@ -1,0 +1,80 @@
+{
+  "schema_version": "1",
+  "run_id": "PAIR_3199_CTRL_S17",
+  "pair_id": "PAIR_3199_S17",
+  "review_type": "READ_ONLY_RAW_DATA_LIFECYCLE_AND_LOCKED_CLASSIFIER_REVIEW",
+  "overall_disposition": "NOT_EVALUABLE",
+  "raw_data_lifecycle_disposition": "PASS",
+  "low_r_background_status": "NOT_EVALUABLE",
+  "counts": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 1
+  },
+  "required_minor_findings": [
+    {
+      "id": "DM-01",
+      "finding": "Exact FINAL_REV1 card has nonempty required_unresolved_prelaunch_items despite the bound final disposition and three exact-hash reviewer receipts showing PASS. Preserve metadata; require engineering/scientific review to resolve its meaning. This does not alter bound scientific inputs or raw hash integrity.",
+      "card_sha256": "0748d37719541d7c76adcd57e07fd764b413fbd21bb16e015b57024175e866da"
+    }
+  ],
+  "confidence": {
+    "raw_hash_and_identity_integrity": "High",
+    "locked_classifier_labels": "High",
+    "LOW_R_BACKGROUND_ADJUDICATION": "Moderate"
+  },
+  "technical_summary": {
+    "raw_manifest_sha256": "da15103c64be65eb6b83fc37a505418c81c33cf490db48f03a5fd15d984a74d8",
+    "required_roles": "18/18",
+    "manifested_files": "25/25",
+    "FCD_labels": "2700; exact 0..2699",
+    "scheduled_vehicle_ids": 1558,
+    "FCD_time_id_rows": 111883,
+    "R_zero": "PASS_ZERO",
+    "M": "1333 scheduled/inserted/arrived; 0 late/never/unfinished",
+    "U": "150 scheduled/inserted/arrived; 0 late/never/unfinished",
+    "X": "75 scheduled/inserted/arrived; 0 late/never/unfinished"
+  },
+  "locked_results": {
+    "P": "NO_QUALIFYING_EVENT",
+    "S": "NO_QUALIFYING_EVENT",
+    "L": "NO_QUALIFYING_EVENT",
+    "Candidate_A": "NO_SPATIAL_CANDIDATE",
+    "Candidate_C": "EARLY_WARNING_PRESENT_NOT_STATE1",
+    "Candidate_C_core_cell_warning_rows": 20,
+    "total_locked_L_short_candidate_rows": 42,
+    "physical_episode_count": "NOT_ESTIMATED"
+  },
+  "fixed_screens": {
+    "PRE": {
+      "rows": 30,
+      "PASS": 3,
+      "FAIL": 27
+    },
+    "control_540_1440": {
+      "rows": 150,
+      "PASS": 17,
+      "FAIL": 133
+    }
+  },
+  "exposure": {
+    "unique_M_ids_observed_upstream_core_downstream": 1333,
+    "samples": {
+      "upstream_800_1300": 23223,
+      "core_1300_1800": 23654,
+      "downstream_1800_2200": 18861
+    },
+    "core_samples_540_1440": 14237,
+    "treatment_R_exposure": "NOT_APPLICABLE_TO_CONTROL; no R"
+  },
+  "interpretation": "P/S/L negativity is retained verbatim. Repeated low speed-ratio evidence and Candidate C warnings are not themselves State1, but they leave the required no-self-congestion question unresolved. Do not label the control accepted or release treatment based solely on this control analysis.",
+  "forbidden_actions_respected": {
+    "SUMO_starts": 0,
+    "TraCI_starts": 0,
+    "netconvert_starts": 0,
+    "treatment_inspected": false,
+    "new_run_created": false,
+    "raw_modified": false,
+    "scientific_inputs_or_classifier_changed": false
+  }
+}

@@ -1,0 +1,63 @@
+{
+  "card_path": "artifacts/stage6_clean_onset_3199_r900_preparation_20260925_v1/CLEAN3199_A_R900_DELAYED_S17_CARD_PRELAUNCH_READY_NOT_AUTHORIZED_REV2.json",
+  "card_sha256": "dfa567b166d937ded3ce014a1c40567be469253fb603bbda0400ac13c6a399b8",
+  "d009_adoption": {
+    "decision_id": "D-009",
+    "path": "artifacts/stage6_clean_onset_witness_test_plan_20260925_v1/ADOPTION_RECEIPT.json",
+    "sha256": "18de90300420263218d978ace9081e31a3b80aacadd7e9ef7810de176eeb6255"
+  },
+  "execution_authorized": false,
+  "final_card_exists": false,
+  "launchable_now": false,
+  "output_path_status": "ABSENT",
+  "process_starts": {
+    "Guardian": 0,
+    "SUMO": 0,
+    "TraCI": 0,
+    "netconvert": 0
+  },
+  "r02_preflight": {
+    "approved_card_sha256": "dfa567b166d937ded3ce014a1c40567be469253fb603bbda0400ac13c6a399b8",
+    "launch_authorized": false,
+    "launchable_now": false,
+    "path": "artifacts/stage6_clean_onset_3199_r900_preparation_20260925_v1/R02_PREFLIGHT_NO_PROCESS_REV2.json",
+    "runner_sha256": "3c7305c37d4fadc92de42b297ee439d7d9f166106c5f5ab92c49322bb9c6e34d",
+    "runtime_binding_sha256": "64dfb32c694f6fd5bd9008a17ba607b45bb5ab2f08aa388c607c50a2b725d09a",
+    "sha256": "5f4ac8b7ece14c74070fdc7e5d0d423c68c2b0468d4227e30f84499348e28ad7",
+    "status": "PREFLIGHT_PASS_NO_PROCESS_STARTED"
+  },
+  "r720_comparator": {
+    "counts_inclusive": {
+      "1440": 167,
+      "1500": 183
+    },
+    "receipt_path": "data/processed/stage6_clean_onset_3199_r720_exposure_baseline_20260925_v1/SUMMARY_METHOD_RECEIPT.json",
+    "receipt_sha256": "19db932892bee42e4ddbcc32c1651048d7781f2c68d5c44dccff238ee4c7e77f"
+  },
+  "reviewer_findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "reviews": {
+    "data_provenance": {
+      "path": "artifacts/stage6_clean_onset_3199_r900_preparation_20260925_v1/DATA_PROVENANCE_PRELAUNCH_REVIEW_REV2.json",
+      "sha256": "d215cf48cc2a2d494a21dd1cf55874683b0bb7c15b61848794c3fdc1b47a2ffd",
+      "status": "PASS_PRELAUNCH"
+    },
+    "engineering": {
+      "path": "artifacts/stage6_clean_onset_3199_r900_preparation_20260925_v1/ENGINEERING_PRELAUNCH_REVIEW_REV2.json",
+      "sha256": "d3c1d60db163708f8a2838c32f310465f4cb64ea181a799e9a42887a994f9bc2",
+      "status": "PASS_PRELAUNCH_READY_NOT_AUTHORIZED"
+    },
+    "scientific": {
+      "path": "artifacts/stage6_clean_onset_3199_r900_preparation_20260925_v1/SCIENTIFIC_PRELAUNCH_REVIEW_REV2.json",
+      "sha256": "e09c9c1a2b0e928817e3ffd0af10442b10908f285317707d63183a7166d325fa",
+      "status": "PASS_STATIC_SCIENTIFIC_PRELAUNCH"
+    }
+  },
+  "run_id": "CLEAN3199_A_R900_DELAYED_S17",
+  "schema": "clean_onset_candidate_a_prelaunch_review_binding_v2",
+  "start_request_exists": false,
+  "status": "PASS_ALL_PRELAUNCH_ROLES_READY_AWAITING_AUTHORIZATION"
+}

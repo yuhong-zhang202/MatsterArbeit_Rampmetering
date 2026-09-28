@@ -1,0 +1,41 @@
+{
+  "cumulative_bytes": 4500023552,
+  "cumulative_starts_max": 5,
+  "cumulative_time_s": 549.3738820840008,
+  "effective_attempt_allowance": "smaller of per-attempt ceiling and remaining cumulative envelope",
+  "explicit_start_ceiling_change": "one above revision03 ceiling4; exactly one new technical smoke retry, conditional seed17 pair, no automatic repeats",
+  "limits": {
+    "GUI": 0,
+    "SUMO_starts": 3,
+    "TraCI": 0,
+    "netconvert": 0,
+    "per_attempt_monitored_s": 180,
+    "per_attempt_observed_bytes": 1500000000,
+    "retry": 0,
+    "seed23_starts": 0,
+    "total_monitored_s": 549.3738820840008,
+    "total_observed_bytes": 4500023552
+  },
+  "maximum_overshoot": "unknown; not hard quota",
+  "monitoring_semantics": "polling_50ms_possible_overshoot_preserved",
+  "new_starts_max": 3,
+  "no_reset": true,
+  "original_estimation_basis": {
+    "bytes": 1455,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision03/resource_budget.json",
+    "sha256": "baf6ba2abe621e1f26196e7f78d23038af89da5bfcb437a8e545ef23745c109a"
+  },
+  "per_attempt_byte_stop": 1500000000,
+  "per_attempt_time_stop_s": 180,
+  "prior_bytes": 52751,
+  "prior_consumption": {
+    "bytes": 11416,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/runtime_validation_revision04/prior_attempt_ledger.json",
+    "sha256": "69ffa77b11b711a4cfdd0762da6c5ecd0f5b19d48df154698f0b5ee9420831a2"
+  },
+  "prior_starts": 2,
+  "prior_time_decimal_s": "22.032722626005124",
+  "remaining_bytes": 4499970801,
+  "remaining_time_decimal_s": "527.341159457995676",
+  "status": "Proposed_operational_ceiling_under_continuing_bounded_smoke_troubleshooting_authorization"
+}

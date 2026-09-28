@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sumoConfiguration>
+  <input>
+    <net-file value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml" />
+    <route-files value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_minimal3350_r720_treatment_preparation_20260924_rev3/inputs/treatment/demand.rou.xml" />
+    <additional-files value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_minimal3350_r720_treatment_preparation_20260924_rev3/inputs/treatment/scenario.add.xml" />
+  </input>
+  <time>
+    <begin value="0" />
+    <end value="2700" />
+    <step-length value="1" />
+  </time>
+  <processing>
+    <time-to-teleport value="-1" />
+    <collision.action value="warn" />
+    <collision.check-junctions value="true" />
+    <extrapolate-departpos value="false" />
+  </processing>
+  <output>
+    <fcd-output value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260924_v11/MINIMAL3350_R720_DELAYED_S17/outputs/fcd.xml" />
+    <queue-output value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260924_v11/MINIMAL3350_R720_DELAYED_S17/outputs/queues.xml" />
+    <summary-output value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260924_v11/MINIMAL3350_R720_DELAYED_S17/outputs/sumo_summary.xml" />
+    <tripinfo-output value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260924_v11/MINIMAL3350_R720_DELAYED_S17/outputs/tripinfo.xml" />
+    <vehroute-output value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260924_v11/MINIMAL3350_R720_DELAYED_S17/outputs/vehroute.xml" />
+    <lanechange-output value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260924_v11/MINIMAL3350_R720_DELAYED_S17/outputs/lanechanges.xml" />
+    <tripinfo-output.write-unfinished value="true" />
+    <vehroute-output.write-unfinished value="true" />
+    <precision value="2" />
+    <tripinfo-output.write-undeparted value="true" />
+  </output>
+  <random_number>
+    <seed value="17" />
+  </random_number>
+  <report>
+    <log value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260924_v11/MINIMAL3350_R720_DELAYED_S17/outputs/sumo.log" />
+    <error-log value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260924_v11/MINIMAL3350_R720_DELAYED_S17/outputs/sumo_error.log" />
+    <no-step-log value="true" />
+    <xml-validation value="always" />
+  </report>
+</sumoConfiguration>

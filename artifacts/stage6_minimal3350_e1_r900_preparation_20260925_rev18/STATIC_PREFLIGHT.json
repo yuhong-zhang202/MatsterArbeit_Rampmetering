@@ -1,0 +1,67 @@
+{
+  "status": "PREFLIGHT_PASS_NO_PROCESS_STARTED",
+  "run_id": "MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY1",
+  "approved_card_sha256": "d71c0580a4020b3f94a39d8d8e134560ca1181dd2c08d06ae230ff7218377f5d",
+  "output_directory": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v18/MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY1/outputs",
+  "binary_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+  "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+  "binary_version": "1.26.0",
+  "sumo_home": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo",
+  "additional_schema_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+  "additional_schema_sha256": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e",
+  "python_executable": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+  "python_version": "3.13.0",
+  "guardian_runner_sha256": "20774ee143a92d4534e5870ace3a3f4616dffb10e1ce2025a5ec775bee6be980",
+  "output_role_source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev18/inputs/treatment/output_roles.json",
+  "output_role_source_sha256": "5c0ff3e01712859fe640cff43a3e108507fa9131583fb110e4d08fc7e7a67cad",
+  "max_starts": 1,
+  "technical_retries": 0,
+  "simulator_process_started": false,
+  "launch_authorized": true,
+  "launch_review_gate": {
+    "status": "WAITING_FOR_REQUIRED_REVIEWS",
+    "reviews": {
+      "engineering": {
+        "status": "MISSING",
+        "path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev18/ENGINEERING_PRELAUNCH_REVIEW.json"
+      },
+      "data_provenance": {
+        "status": "MISSING",
+        "path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev18/DATA_PROVENANCE_PRELAUNCH_REVIEW.json"
+      },
+      "scientific": {
+        "status": "MISSING",
+        "path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev18/SCIENTIFIC_PRELAUNCH_REVIEW.json"
+      }
+    },
+    "review_binding_path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev18/FINAL_PRELAUNCH_REVIEW_BINDING.json",
+    "review_binding_status": "PENDING_REVIEWS"
+  },
+  "launchable_now": false,
+  "guardian_request_validation": {
+    "status": "PASS",
+    "request_schema": "r02-start-v2",
+    "request_sha256": "0b82847e86b006396edddc4268e6b1380f90f816881ddfac93c2904343644a74",
+    "persisted_request": "PASS_UNSENT",
+    "simulator_process_started": false
+  },
+  "nested_reference_validation": {
+    "status": "PASS",
+    "schema": "e1-staged-reference-closure-v1",
+    "source_sumocfg_sha256": "946ecf5fdb6aa81be5a3641f25cb182cde5d03492949e7a5ee7f52a7300ad75f",
+    "source_demand_sha256": "3b3da52ac2ddbe915b3f6578b515ace1a30b3f7a1169724528855a6387abaada",
+    "source_additional_sha256": "3cfa42bd3fd8066f3c400684168f410ca0bd178fc0d433e6db616583dfa96a53",
+    "staged_sumocfg_sha256": "674d11df107491ae42d8115513feeab89abd741efd337044fc43dd0a08513304",
+    "staged_sumocfg_bytes": 2888,
+    "staged_additional_sha256": "3cfa42bd3fd8066f3c400684168f410ca0bd178fc0d433e6db616583dfa96a53",
+    "staged_additional_bytes": 4012,
+    "staged_additional_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v18/MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY1/outputs/scenario_control.add.xml",
+    "validated_actual_staged_bytes": true,
+    "route_file_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev18/inputs/treatment/demand.rou.xml",
+    "network_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+    "configured_unique_paths": 20,
+    "configured_role_records": 18,
+    "config_outputs": 8,
+    "additional_outputs": 12
+  }
+}

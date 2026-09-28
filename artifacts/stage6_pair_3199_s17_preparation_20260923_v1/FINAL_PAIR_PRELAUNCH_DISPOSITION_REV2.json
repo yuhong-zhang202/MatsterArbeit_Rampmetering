@@ -1,0 +1,72 @@
+{
+  "all_prelaunch_reviews_pass": true,
+  "cards_status": "DRAFT_NOT_AUTHORIZED",
+  "disposition": "PAIR_3199_PRELAUNCH_READY_AWAITING_RESOURCE_AUTHORIZATION",
+  "execution_authorized": false,
+  "execution_limits": {
+    "automatic_treatment_launch": false,
+    "control_first": true,
+    "max_starts_each": 1,
+    "netconvert_starts": 0,
+    "runtime_probes": 0,
+    "sumo_starts": 0,
+    "technical_retries": 0,
+    "traci_starts": 0
+  },
+  "pair_id": "PAIR_3199_S17",
+  "remaining_before_any_start": [
+    "user must separately authorize per-run resource values and exact revised card hashes; cards are still drafts",
+    "later preflight must verify current runtime against bound binary/Python/SUMO_HOME/schema hashes",
+    "control raw must independently pass full LOW_R_BACKGROUND_ACCEPTABLE gate before any treatment authorization"
+  ],
+  "resource_authorization": "PENDING_USER_AUTHORIZATION",
+  "resource_proposals": {
+    "PAIR_3199_CTRL_S17": {
+      "basis": "RI3350_CTRL_S17_technical_retry1 actual wallclock 24.465112 s; payload bytes 21720062",
+      "enforcement": "100ms polled stop trigger; output overshoot possible; not a hard quota",
+      "output_size_stop_limit_bytes_decimal": 60000000,
+      "status": "PROPOSED_NOT_AUTHORIZED",
+      "wallclock_stop_limit_s": 90
+    },
+    "PAIR_3199_R720_DELAYED_S17": {
+      "basis": "RI3350_CTRL_S17_technical_retry1 actual wallclock 24.465112 s; payload bytes 21720062",
+      "enforcement": "100ms polled stop trigger; output overshoot possible; not a hard quota",
+      "output_size_stop_limit_bytes_decimal": 60000000,
+      "status": "PROPOSED_NOT_AUTHORIZED",
+      "wallclock_stop_limit_s": 90
+    }
+  },
+  "reviews": {
+    "data_provenance": {
+      "blocker_major_required_minor": [
+        0,
+        0,
+        0
+      ],
+      "confidence": "High",
+      "disposition": "PASS",
+      "sha256": "2d497e0ef3b12cd2ec3a30c90235c98ae04b99d1b5790127bcef4a14037bb47b"
+    },
+    "engineering": {
+      "blocker_major_required_minor": [
+        0,
+        0,
+        0
+      ],
+      "confidence": "High",
+      "disposition": "PASS",
+      "sha256": "384e616e2725bf8fc76a61c6c2be6891b0230fcbab295a159e4547ba67f1f3c6"
+    },
+    "scientific": {
+      "blocker_major_required_minor": [
+        0,
+        0,
+        0
+      ],
+      "confidence": "High internal consistency; Moderate exploratory validity",
+      "disposition": "PASS",
+      "sha256": "697ab9b0024968f34ba0c54e2c29ddb069f7f2b07424470693e1863f1648ff9e"
+    }
+  },
+  "schema_version": "1"
+}

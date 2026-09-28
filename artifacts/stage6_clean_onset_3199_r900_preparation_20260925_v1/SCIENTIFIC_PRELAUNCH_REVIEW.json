@@ -1,0 +1,25 @@
+{
+  "schema": "clean_onset_candidate_a_scientific_prelaunch_v1",
+  "status": "PASS_STATIC_SCIENTIFIC_PRELAUNCH",
+  "disposition": "PASS_STATIC_SCIENTIFIC_PRELAUNCH",
+  "run_id": "CLEAN3199_A_R900_DELAYED_S17",
+  "card_path": "artifacts/stage6_clean_onset_3199_r900_preparation_20260925_v1/CLEAN3199_A_R900_DELAYED_S17_CARD_DRAFT_NOT_AUTHORIZED_REV1.json",
+  "card_sha256": "7aa14b8dc69e70c67e64ffdaa570d6e30cc7d71cb6dfb84e6d812d52853718f2",
+  "findings": {"blocker": 0, "major": 0, "required_minor": 0},
+  "confidence": "High for static scientific design and scope; future traffic outcome unknown.",
+  "reviewer": "scientific_reviewer",
+  "scope": "Exact-card static prelaunch review only; no post-treatment outcome inspected; no execution authorized.",
+  "summary": [
+    "D-009 adopted CLEAN_ONSET_WITNESS_TEST is bound as the Candidate A evaluation contract.",
+    "Candidate A is qMain3199.2, seed17, U=X=0, delayed R900 on [540,1500), reusing the previously accepted minimal-module R0 control.",
+    "M 1333 identities are exactly matched; R_flow.0..239 are the only added exogenous vehicles; U and X are explicit zero.",
+    "The existing R720 comparator method and inclusive cutoff counts are fixed at 167 by t=1440 and 183 by t=1500.",
+    "The R0 control is not relabeled a clean normal baseline and is not re-screened under the legacy high-mobility gate.",
+    "The historical R720 scientific receipt execution-hash field anomaly is disclosed and independently resolved against engineering/raw receipt evidence."
+  ],
+  "limitations": [
+    "Future insertion, detector/FCD coverage, actual merge exposure and locked event outcome require raw post-run review.",
+    "PASS does not substitute for engineering/data-provenance prelaunch PASS or a separate user launch authorization."
+  ],
+  "process_starts": {"SUMO": 0, "Guardian": 0, "TraCI": 0, "netconvert": 0}
+}

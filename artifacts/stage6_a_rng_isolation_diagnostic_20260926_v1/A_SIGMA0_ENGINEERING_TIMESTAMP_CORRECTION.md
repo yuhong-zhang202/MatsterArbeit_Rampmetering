@@ -1,0 +1,7 @@
+# A_SIGMA0 engineering FCD timestamp correction, 2026-09-26
+
+The engineering post-run integrity review remains PASS, but its preliminary statement that the first R appeared in FCD at t539 and first reached a through lane at t591 was incorrect and is withdrawn. Its `xml.etree.ElementTree.iterparse` check read `<vehicle>` end events while updating the time variable only on the parent `<timestep>` end event. This assigned every vehicle to the preceding FCD frame, a systematic one-second parsing error. The raw and original review messages remain preserved.
+
+Re-reading child vehicles only after each complete `<timestep time>` gives **zero R records for t<540**. `R_flow.0` first appears at t540 on `urban_in_0` (x1001.60 m), is on internal connector `:freeway_merge_2_0` at t591, and first appears on `merge_section_1` at t592 (x1425.97 m). Among 240 R, 185 first enter the merge-section edge on lane `_0` and 55 on `_1`; all 240 later occupy `_1` or `_2` through lanes and all arrived. The lane-1-only early count is a narrower observation than first entry to the merge-section edge. The data-side versioned exposure correction and counts are in `data/processed/stage6_a_rng_isolation_diagnostic_20260926_v1/phase1_rev2/EXPOSURE_MEASUREMENT_CORRECTION.md`.
+
+The predeclared `[0,540)` M/U/X FCD equality gate is unchanged and was checked independently by data analysis. The earlier warning about an R row in the t539 FCD frame no longer applies. This correction does not read or interpret post-R M outcomes, alter raw inputs/outputs or change Stage 6 status.

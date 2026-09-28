@@ -1,0 +1,25 @@
+{
+  "schema": "clean_onset_candidate_a_engineering_prelaunch_v2",
+  "status": "PASS_PRELAUNCH_READY_NOT_AUTHORIZED",
+  "disposition": "PASS_PRELAUNCH_READY_NOT_AUTHORIZED",
+  "run_id": "CLEAN3199_A_R900_DELAYED_S17",
+  "card_sha256": "dfa567b166d937ded3ce014a1c40567be469253fb603bbda0400ac13c6a399b8",
+  "runner_sha256": "3c7305c37d4fadc92de42b297ee439d7d9f166106c5f5ab92c49322bb9c6e34d",
+  "runtime_binding_sha256": "64dfb32c694f6fd5bd9008a17ba607b45bb5ab2f08aa388c607c50a2b725d09a",
+  "findings": {"blocker": 0, "major": 0, "required_minor": 0},
+  "confidence": "High",
+  "reviewer": "simulation_engineer",
+  "scope": "Read-only REV2 exact-card, runner, runtime and R02 preflight review.",
+  "verified": [
+    "REV2 hash is exact; runner/runtime hashes and references agree.",
+    "Scientific condition and all input hashes are unchanged from reviewed REV1.",
+    "Candidate adapter binds full M/R vectors, source schedule, U=X zero ledger, comparator/control evidence, nested output paths, staged bytes and hashes.",
+    "R02 preflight exits 0 with PREFLIGHT_PASS_NO_PROCESS_STARTED; launch_authorized=false; launchable_now=false.",
+    "Output parent remains absent."
+  ],
+  "limitations": [
+    "No FINAL card or persisted START request exists. Separate user authorization and fresh FINAL-card/START preflight remain required.",
+    "A runner status description still says draft-only; operative card/preflight authorization flags are correct and false."
+  ],
+  "process_starts": {"SUMO": 0, "Guardian": 0, "TraCI": 0, "netconvert": 0}
+}

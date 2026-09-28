@@ -1,0 +1,183 @@
+{
+  "action": "START",
+  "additional_schema_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+  "additional_schema_sha256": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e",
+  "card_path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev16/MINIMAL3350_E1_R900_DELAYED_S17_CARD_FINAL_REV1.json",
+  "card_sha256": "95b577a8b62bb79cccbcba8aa04869a96d3c04fa9dcc7db6d38489627d94b148",
+  "command": [
+    "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+    "-c",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/scenario_control.sumocfg"
+  ],
+  "cwd": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering",
+  "max_output_bytes": 100000000,
+  "max_runtime_s": 120,
+  "output_directory": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs",
+  "output_role_source": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev16/inputs/treatment/output_roles.json",
+  "output_role_source_sha256": "e216b3ce6ece63f356e7c60576e50c905cb199a7df64a9ebad1536cafb947770",
+  "output_roles": [
+    {
+      "detector_id": "shared_boundary_e2",
+      "endPos": "238.8",
+      "kind": "E2",
+      "lane": "shared_approach_0",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/shared_boundary_e2.xml",
+      "period_s": 30,
+      "pos": 0,
+      "role": "shared_boundary_e2.xml",
+      "root": "detector"
+    },
+    {
+      "detector_id": "ramp_storage_e2",
+      "endPos": "204.49",
+      "kind": "E2",
+      "lane": "ramp_storage_0",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/ramp_storage_e2.xml",
+      "period_s": 30,
+      "pos": 0,
+      "role": "ramp_storage_e2.xml",
+      "root": "detector"
+    },
+    {
+      "detector_id": "p1_main_up_1300_l0",
+      "kind": "E1",
+      "lane": "main_up_0",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/p1_main_up_1300_l0.xml",
+      "period_s": 30,
+      "pos": 1300,
+      "role": "p1_main_up_1300_l0.xml",
+      "root": "detector"
+    },
+    {
+      "detector_id": "p1_main_up_1300_l1",
+      "kind": "E1",
+      "lane": "main_up_1",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/p1_main_up_1300_l1.xml",
+      "period_s": 30,
+      "pos": 1300,
+      "role": "p1_main_up_1300_l1.xml",
+      "root": "detector"
+    },
+    {
+      "detector_id": "p1_merge_section_20_l0",
+      "kind": "E1",
+      "lane": "merge_section_0",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/p1_merge_section_20_l0.xml",
+      "period_s": 30,
+      "pos": 20,
+      "role": "p1_merge_section_20_l0.xml",
+      "root": "detector"
+    },
+    {
+      "detector_id": "p1_merge_section_20_l1",
+      "kind": "E1",
+      "lane": "merge_section_1",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/p1_merge_section_20_l1.xml",
+      "period_s": 30,
+      "pos": 20,
+      "role": "p1_merge_section_20_l1.xml",
+      "root": "detector"
+    },
+    {
+      "detector_id": "p1_merge_section_20_l2",
+      "kind": "E1",
+      "lane": "merge_section_2",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/p1_merge_section_20_l2.xml",
+      "period_s": 30,
+      "pos": 20,
+      "role": "p1_merge_section_20_l2.xml",
+      "root": "detector"
+    },
+    {
+      "detector_id": "p1_main_down_20_l0",
+      "kind": "E1",
+      "lane": "main_down_0",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/p1_main_down_20_l0.xml",
+      "period_s": 30,
+      "pos": 20,
+      "role": "p1_main_down_20_l0.xml",
+      "root": "detector"
+    },
+    {
+      "detector_id": "p1_main_down_20_l1",
+      "kind": "E1",
+      "lane": "main_down_1",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/p1_main_down_20_l1.xml",
+      "period_s": 30,
+      "pos": 20,
+      "role": "p1_main_down_20_l1.xml",
+      "root": "detector"
+    },
+    {
+      "detector_id": "p1_main_down_200_l0",
+      "kind": "E1",
+      "lane": "main_down_0",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/p1_main_down_200_l0.xml",
+      "period_s": 30,
+      "pos": 200,
+      "role": "p1_main_down_200_l0.xml",
+      "root": "detector"
+    },
+    {
+      "detector_id": "p1_main_down_200_l1",
+      "kind": "E1",
+      "lane": "main_down_1",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/p1_main_down_200_l1.xml",
+      "period_s": 30,
+      "pos": 200,
+      "role": "p1_main_down_200_l1.xml",
+      "root": "detector"
+    },
+    {
+      "kind": "trajectory_or_status",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/fcd.xml",
+      "role": "fcd.xml",
+      "root": "fcd-export"
+    },
+    {
+      "kind": "trajectory_or_status",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/queues.xml",
+      "role": "queues.xml",
+      "root": "queue-export"
+    },
+    {
+      "kind": "trajectory_or_status",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/sumo_summary.xml",
+      "role": "sumo_summary.xml",
+      "root": "summary"
+    },
+    {
+      "kind": "trajectory_or_status",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/tripinfo.xml",
+      "role": "tripinfo.xml",
+      "root": "tripinfos"
+    },
+    {
+      "kind": "trajectory_or_status",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/vehroute.xml",
+      "role": "vehroute.xml",
+      "root": "routes"
+    },
+    {
+      "kind": "trajectory_or_status",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/tls_states.xml",
+      "role": "tls_states.xml",
+      "root": "tlsStates"
+    },
+    {
+      "empty_events_permitted": true,
+      "kind": "native_lanechange",
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_minimal3350_ux0_20260925_v16/MINIMAL3350_E1_R900_DELAYED_S17/outputs/lanechanges.xml",
+      "role": "lanechanges.xml",
+      "root": "lanechanges"
+    }
+  ],
+  "request_schema": "r02-start-v2",
+  "reservation_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev16/r02_single_start/consumption/MINIMAL3350_E1_R900_DELAYED_S17.json",
+  "run_id": "MINIMAL3350_E1_R900_DELAYED_S17",
+  "runner_path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev16/r02_single_start/runner.py",
+  "runner_sha256": "2926918ffb8dfdbf64874946af2cf3b199735335e9cce299770b28c4aad41e6f",
+  "runtime_binding_path": "artifacts/stage6_minimal3350_e1_r900_preparation_20260925_rev16/runtime_binding.json",
+  "runtime_binding_sha256": "191674b9c8fdb2b05244f44fc9d98d31b6d279e3a870b0c1f3ff623716586bfd",
+  "sumo_home": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo"
+}

@@ -1,0 +1,45 @@
+{
+  "card_path": "artifacts/stage6_minimal3350_control_preparation_20260924_rev5/MINIMAL3350_CTRL_S17_CARD_FINAL.json",
+  "card_sha256": "8dc216dcd99f86c2a47eb612ebd61b5c5c81e8fe6ab3d27d7f1c10e59032f6e1",
+  "checks": {
+    "additional_xml_all_output_paths_match_runner_directory": true,
+    "all_18_output_role_paths_match_runner_directory": true,
+    "duplicated_data_raw_prefix_rejected_by_regression": true,
+    "exact_card_runner_runtime_hashes_match": true,
+    "no_process_started": true,
+    "output_directory_and_arm_parent_absent": true,
+    "r02_start_request_hash_and_receipt_bound": true,
+    "resource_contract_90s_60000000bytes_100ms": true,
+    "rev2_preserved_and_not_reused": true,
+    "sumocfg_configured_output_paths_match_runner_directory": true
+  },
+  "evidence": {
+    "adapter_sha256": "041690e14479cae7b70f77e0842e661ed4a1b416f6f44877c63f241610d2aad9",
+    "output_directory": "data/raw/stage6_minimal3350_ux0_20260924_v5/MINIMAL3350_CTRL_S17/outputs",
+    "output_directory_absent": true,
+    "provenance_receipt_sha256": "c03a52365fd8ad11f73580d53bc5d6b4b95f77481730a0de77a1774c641d88a2",
+    "runner_sha256": "9df4628a0dfc3119b83cef8d34407f543a79035f015637d15bdd60ebd17f50a6",
+    "static_preflight": "PREFLIGHT_PASS_NO_PROCESS_STARTED; launchable_now=false pending three fresh review receipts",
+    "test_command": ".venv/bin/python -m unittest -v tests/test_minimal3350_binding.py",
+    "test_result": "PASS (6 tests)"
+  },
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "limitations": [
+    "Data/provenance and independent scientific prelaunch receipts are pending.",
+    "SpeedFactor realization provenance remains disclosed for their adjudication."
+  ],
+  "process_starts": {
+    "guardian": 0,
+    "netconvert": 0,
+    "sumo": 0,
+    "traci": 0
+  },
+  "reviewer": "simulation_engineer",
+  "run_id": "MINIMAL3350_CTRL_S17",
+  "schema": "stage6_engineering_prelaunch_review_v1",
+  "status": "PASS_PRELAUNCH"
+}

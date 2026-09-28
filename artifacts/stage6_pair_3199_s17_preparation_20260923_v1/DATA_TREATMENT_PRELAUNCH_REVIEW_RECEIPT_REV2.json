@@ -1,0 +1,97 @@
+{
+  "schema_version": "1",
+  "receipt_id": "PAIR3199_R720_DELAYED_S17_DATA_PROVENANCE_PRELAUNCH_REV2",
+  "review_type": "READ_ONLY_STATIC_DATA_AND_PROVENANCE_PRELAUNCH",
+  "run_id": "PAIR_3199_R720_DELAYED_S17",
+  "disposition": "PASS",
+  "blocker_major_required_minor": [0, 0, 0],
+  "confidence": "High for static provenance and exact binding",
+  "exact_card": {
+    "path": "artifacts/stage6_pair_3199_s17_preparation_20260923_v1/PAIR_3199_R720_DELAYED_S17_CARD_PRELAUNCH_REV2.json",
+    "sha256": "6e810adfe70c03ff321ba47a4fff6593323e5b4a78884ce8e6971ffd86bb8d25",
+    "card_revision": 4,
+    "execution_authorized": false
+  },
+  "runtime_sidecar_sha256": "5c72fa902c828b2d85efc4f5adf4ff1d534526d2ccebdf352fb5c2d703cefb6f",
+  "runner_sha256": "482056a14df16af779ef8c8ad8182c313775a3392caa24e1e5224e9f0c1c8a37",
+  "contract": {
+    "path": "docs/methodology/STAGE6_EXPLORATORY_RAMP_INDUCED_WITNESS_CONTRACT.md",
+    "sha256": "958890a7dd017110787a85d77ebfa3e6dac2b7d862f0fd91f6bafb7cf1738d9a",
+    "scope": "User-adopted only for Stage 6 exploratory validation of this matched pair; not formal protocol"
+  },
+  "input_hashes_verified": {
+    "demand": "6fe53e5b294184704ee5dbd575ccb2c225c17b57014c5c981b60ba557a9ae400",
+    "additional": "13dc69427f24014e02c4ded173ba5d2db12ebf2666c0b77f2cc486a19755332a",
+    "network": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "output_roles": "7dab35372984ccd3e7f103afaaf0dff59ecf4df6dc13d4c66dea5190fa77155d",
+    "sumocfg": "70a082e81a32f3a759a8b26cd9cbf426358d7cf4f40eedcef72d3f272d851072",
+    "expected_identity_manifest": "a69ba23ed1a82957904c8abc4aee774decf94d0210c07d29d051c0162f7aef1b"
+  },
+  "verified_design": {
+    "qMain_veh_per_h": 3199.2,
+    "M": 1333,
+    "R": 192,
+    "R_window": "[540,1500)",
+    "qRamp_veh_per_h": 720,
+    "U": 150,
+    "X": 75,
+    "seed": 17,
+    "TLS_program": "A_OPEN",
+    "horizon_s": 2700,
+    "only_intended_scientific_demand_difference": "R source absent in control / R_flow present in treatment"
+  },
+  "seven_timeline_markers_verified": [
+    "R_demand_activation",
+    "first_scheduled_R_departure",
+    "first_actual_R_departure",
+    "first_R_arrival_near_merge",
+    "first_meaningful_merge_exposure",
+    "first_M_deterioration",
+    "State1_onset"
+  ],
+  "old_low_r_gate_required_for_treatment_release": false,
+  "matched_control": {
+    "run_id": "PAIR_3199_CTRL_S17",
+    "card_sha256": "0748d37719541d7c76adcd57e07fd764b413fbd21bb16e015b57024175e866da",
+    "data_review_sha256": "6c8c2a381a5a2fc1102953ed58a5a1cd022a0c22789b0bbbd486d86a7b0ac799",
+    "execution_receipt_sha256": "a6a1a67282ff9e19f0205ce4b681cef34315bc04ad65f9588d7b269fadcfd336",
+    "raw_manifest_sha256": "da15103c64be65eb6b83fc37a505418c81c33cf490db48f03a5fd15d984a74d8",
+    "raw_files_hash_verified": 27,
+    "processed_outputs_hash_verified": 25,
+    "explicit_R_zero": "PASS_ZERO",
+    "historical_overall_and_LOW_R_status": "NOT_EVALUABLE",
+    "P_S_L": "NO_QUALIFYING_EVENT",
+    "fixed_screens": {
+      "PRE": "3/30 PASS; 27/30 FAIL",
+      "control_540_1440": "17/150 PASS; 133/150 FAIL"
+    },
+    "candidate_C": "EARLY_WARNING_PRESENT_NOT_STATE1",
+    "low_speed_warning_history_preserved": true,
+    "clean_normal_baseline_claim": false,
+    "inherited_control_DM01_changed": false
+  },
+  "resource_metadata": {
+    "wallclock_stop_trigger_s": 120,
+    "output_size_stop_trigger_bytes_decimal": 90000000,
+    "poll_interval_ms": 100,
+    "overshoot_possible": true,
+    "status": "PROPOSED_NOT_AUTHORIZED"
+  },
+  "exclusive_paths": {
+    "output_directory_absent": true,
+    "reservation_file_absent": true,
+    "readonly_preflight": "PREFLIGHT_PASS_NO_PROCESS_STARTED",
+    "launch_authorized": false
+  },
+  "forbidden_actions": {
+    "SUMO_starts": 0,
+    "TraCI_starts": 0,
+    "netconvert_starts": 0,
+    "raw_or_processed_data_modified": false,
+    "scientific_input_modified": false
+  },
+  "limitations": [
+    "Static review cannot verify future treatment lifecycle, actual R departure/merge exposure, event chronology, output completeness, or witness status.",
+    "Existing matched control remains historically NOT_EVALUABLE and is not certified as a clean normal baseline."
+  ]
+}

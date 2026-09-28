@@ -1,0 +1,104 @@
+{
+  "schema_version": "1",
+  "check_id": "R02_RI3350_CTRL_S17_SINGLE_START_RUNNER",
+  "status": "PASS_MOCK_AND_GUARDIAN_TESTS_PRELAUNCH_BLOCKED",
+  "run_id": "RI3350_CTRL_S17_attempt1",
+  "simulation_started": false,
+  "sumo_version_probe_process_count_by_primary": 1,
+  "sumo_version_probe_by_this_agent": false,
+  "netconvert_started": false,
+  "traci_started": false,
+  "tests": {
+    "command": ".venv/bin/python -m unittest discover -s artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start -v",
+    "result": "PASS",
+    "passed": 23,
+    "failed": 0,
+    "test_scope": "temporary fixture repositories; fake Python children; mocked launcher orchestration plus real Python Guardian process; no real simulator",
+    "durability_fixture": "asserts atomic replace precedes parent-directory fsync; normal Guardian handoff asserts durability marker before DISARMED; initial reservation directory fsync occurs before Guardian startup"
+  },
+  "draft_card_preflight": {
+    "result": "BLOCKED_AS_EXPECTED",
+    "reason": "CARD_NOT_EXACTLY_AUTHORIZED",
+    "exit_code": 2,
+    "simulation_started": false
+  },
+  "runtime_environment": {
+    "python_executable": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+    "python_resolved_executable": "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3.13",
+    "python_sha256": "76c73e25cdd69650a897648666e41c364940fbcff0d1176572a667d4d470ec9e",
+    "python_implementation": "CPython",
+    "python_version": "3.13.0",
+    "packages": {"traci":"1.26.0", "sumolib":"1.26.0", "sumoITScontrol":"0.1.0"},
+    "sumo_executable": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+    "sumo_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+    "sumo_reported_version": "1.26.0",
+    "sumo_version_query": "sumo --version; environment probe only, executed by primary agent; no simulation command/run"
+  },
+  "output_manifest_contract": {
+    "role_source": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/inputs/LOC_M3350_S17_attempt1/output_roles.json",
+    "role_source_sha256": "e33b7439cc15b7b68048fa2bf63f659769b93e4718650c11eeda46959404b2b3",
+    "output_path": "artifacts/stage6_ramp_induced_validation_20260922_v1/outputs/RI3350_CTRL_S17_attempt1",
+    "required_role_entries": 18,
+    "manifest": "output_manifest.json",
+    "final_execution_receipt": "execution_receipt.json",
+    "manifest_excludes": ["output_manifest.json", "execution_receipt.json"],
+    "generated_configs_and_logs": "Included as support_files; unexpected outputs remain listed as unclassified_output.",
+    "manifest_order": "UTF-8 relative POSIX path lexicographic; required role entries sorted by role name"
+  },
+  "guardian_contract": {
+    "runner_file_hash_bound_in_exact_card": true,
+    "runtime_binding_field": "guardian_runner_sha256",
+    "simulator_child_spawned_by": "independent Guardian after READY handshake",
+    "launcher_liveness": "control-pipe EOF; no parent PID polling",
+    "launcher_crash_cleanup": "Guardian terminates simulator process group, then self-writes manifest/receipt and reservation status",
+    "normal_disarm": "only after Guardian verifies receipt+manifest hashes, fsyncs reservation temp file, atomically replaces state with FINAL_STATUS_HANDED_OFF, fsyncs reservation parent directory, then acknowledges DISARMED",
+    "reservation_atomic_status_order": "temporary file write+file fsync; atomic replace; containing directory fsync",
+    "wallclock_stop_trigger_s": 180,
+    "output_stop_trigger_bytes": 300000000,
+    "poll_interval_s": 0.1,
+    "approval_scope": "user conditionally authorized exactly this run after all required final reviews pass; no other run is authorized",
+    "initial_reservation_durability": "exclusive reservation file fsync, then consumption-directory fsync before Guardian startup",
+    "polling_overshoot_accepted": true,
+    "termination": "SIGTERM process group, wait 5 s, then SIGKILL if still alive",
+    "scope": "this exact run only; monitored tripwire, not hard disk quota",
+    "guardian_crash_or_host_failure_covered": false
+  },
+  "sha256": {
+    "runner.py": "f8c3129e193fad38feddb8b4853638303faf1ee2f92706753db611fb50909a54",
+    "test_runner.py": "94d29353cc59ee90467a9eb88e5feeb5595037d26e6a4ae4ace7c28165184265",
+    "R02_RUNNER_CONTRACT.md": "5960d01cbcf623af666cd4d93f98c739b20e1dd74763f6eae35add059dc272a0",
+    "RI3350_CTRL_S17_FINALIZATION_PROPOSAL_REV1.md": "f534c42415e842d9b3a499877a1d05aac84ffa86f876eb0df2c32196dc67fbac",
+    "runtime_environment_evidence.json": "5bf815085e2ca2acb53d33e0d5df353568413c21753eab30cbdb867d7e4c149b"
+  },
+  "implemented_guards": [
+    "exact approved card digest",
+    "run/seed/horizon/start/retry/progression authorization fields",
+    "manifest/design/locked-method and source-input hashes",
+    "absolute SUMO executable path, SHA-256, and bound version-probe evidence",
+    "exact project venv path/hash, Python implementation/version, and package versions",
+    "new exclusive package-owned output destination; immutable data/raw is rejected",
+    "exact per-run stop triggers are 180 s and 300,000,000 bytes with 100 ms polling, for this run only",
+    "independent Guardian READY handshake precedes child spawn; Guardian runner SHA-256 is required in runtime binding",
+    "launcher EOF triggers process-group cleanup and Guardian self-finalization; normal disarm requires verified durable handoff",
+    "resource limit fields must be explicit and agree between runtime_binding and resource_limits",
+    "runtime limit must be finite and strictly positive; NaN and positive/negative infinity are rejected",
+    "persistent exclusive reservation before spawn; a second attempt is rejected",
+    "spawn failure, timeout, nonzero exit, and cap breach remain consumed; no retry path",
+    "stdout/stderr preserved; Guardian monitors wall-clock/output stop triggers and terminates the simulator process group"
+  ],
+  "prelaunch_blockers": [
+    "existing card is DRAFT_NOT_AUTHORIZED and still needs a new exact user-approved revision/hash binding the Guardian runner hash and one-run resource semantics",
+    "the polling output tripwire is not a strict quota; overshoot is accepted for this run",
+    "Guardian process crash/kill, operating-system failure, machine shutdown, or power loss are not covered by launcher-death cleanup"
+  ],
+  "verification_limits": [
+    "mock tests do not verify real SUMO command compatibility or output semantics",
+    "fake-process Guardian tests verify timeout/cap termination and launcher crash cleanup on this host, but not SUMO-specific behavior",
+    "mock tests verify manifest determinism, required-role PRESENT/MISSING entries, support/unclassified files, and non-recursion only with fixture outputs",
+    "no disk image was created or mounted",
+    "the primary agent ran the bound SUMO executable with --version and observed 1.26.0; this was one environment-probe process, not a simulation/run",
+    "mock tests do not invoke the actual SUMO executable"
+  ],
+  "launch_authorized": false,
+  "next_safe_action": "Prepare a new exact card revision with the verified runner/Guardian SHA-256, accepted one-run monitored triggers, Python/SUMO environment hashes, package-owned output, one start/retry zero, and all bound inputs. Keep it DRAFT until explicitly approved; preflight does not authorize launch."
+}

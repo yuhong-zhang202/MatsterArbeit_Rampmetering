@@ -1,0 +1,25 @@
+{
+  "schema": "clean_onset_candidate_a_scientific_prelaunch_v2",
+  "status": "PASS_STATIC_SCIENTIFIC_PRELAUNCH",
+  "disposition": "PASS_STATIC_SCIENTIFIC_PRELAUNCH",
+  "run_id": "CLEAN3199_A_R900_DELAYED_S17",
+  "card_path": "artifacts/stage6_clean_onset_3199_r900_preparation_20260925_v1/CLEAN3199_A_R900_DELAYED_S17_CARD_PRELAUNCH_READY_NOT_AUTHORIZED_REV2.json",
+  "card_sha256": "dfa567b166d937ded3ce014a1c40567be469253fb603bbda0400ac13c6a399b8",
+  "findings": {"blocker": 0, "major": 0, "required_minor": 0},
+  "confidence": "High for static scientific condition and scope; future outcome unknown.",
+  "reviewer": "scientific_reviewer",
+  "scope": "Exact REV2 static scientific prelaunch review; no outcome inspection and no execution authorization.",
+  "verified": [
+    "qMain=3199.2, seed17, U=X=0, A_OPEN, delayed R900 on [540,1500).",
+    "The D-009 adopted CLEAN_ONSET_WITNESS_TEST is the treatment evaluation contract; no formal protocol or historical gate is changed.",
+    "The previously reviewed minimal-module R=0 control remains the comparator and is not described as a clean normal baseline.",
+    "The frozen R720 same-qMain exposure baseline remains 167 unique first through-lane R identities by inclusive t=1440 and 183 by t=1500.",
+    "Static M/R/zero ledgers and input/runtime/provenance bindings are unchanged from the independently reviewed exact input package."
+  ],
+  "limitations": [
+    "This is static review; actual insertion, detector coverage, merge exposure and P/S/L outcome require post-run raw review.",
+    "The prelaunch-ready status is not launch authorization: execution_authorized=false, approval_required=true, and resources remain proposals.",
+    "The historic R720 scientific receipt execution-hash field anomaly is documented; actual raw receipt is independently bound by engineering evidence."
+  ],
+  "process_starts": {"SUMO": 0, "Guardian": 0, "TraCI": 0, "netconvert": 0}
+}

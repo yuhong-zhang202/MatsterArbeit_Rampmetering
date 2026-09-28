@@ -1,0 +1,22 @@
+{
+  "kind": "python_tcp_fixture_no_SUMO",
+  "child_pid": 47374,
+  "exact_lsof_argv": [
+    "/usr/sbin/lsof",
+    "-nP",
+    "-iTCP:8819",
+    "-sTCP:LISTEN",
+    "-t"
+  ],
+  "lsof_rc": 0,
+  "lsof_stdout": "47374\n",
+  "lsof_stderr": "",
+  "identified_correct_child": true,
+  "loopback_reply": "PONG",
+  "child_rc": 0,
+  "child_stdout": "",
+  "child_stderr": "",
+  "SUMO_starts": 0,
+  "TraCI_connections": 0,
+  "unix_time": 1790001241.3055491
+}

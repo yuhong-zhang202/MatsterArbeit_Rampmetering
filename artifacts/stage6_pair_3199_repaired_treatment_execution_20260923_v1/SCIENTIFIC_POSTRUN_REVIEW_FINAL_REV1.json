@@ -1,0 +1,74 @@
+{
+  "schema": "stage6.repaired_pair.scientific_postrun_review.v1",
+  "review_role": "independent_scientific_postrun_contract_adjudication",
+  "attempt_id": "PAIR3199_R720_DELAYED_S17_REPAIRED_V5_ATTEMPT1",
+  "execution_id": "b095cce4-baba-4c40-aa79-08b5b58b9ce1",
+  "scenario_id": "PAIR_3199_R720_DELAYED_S17",
+  "card_sha256": "0801dc1e15ade92babe33640d521ba831174210a200b9e5a66aaeb3bd472e0ef",
+  "witness_contract_sha256": "958890a7dd017110787a85d77ebfa3e6dac2b7d862f0fd91f6bafb7cf1738d9a",
+  "v5_input_invariant_report_sha256": "509f1a46873b6922ce22e18f4100fa2dcb84a632d80ee9a014750efc6c857d54",
+  "raw_output_manifest_sha256": "f36f336473792c2af246abf75c3b7b2e9217abb537e7b42e15685e6af46b7173",
+  "raw_fcd_sha256": "ac5b74632b6d445aea5d5dfc4d58b3cc4b38d379418483bc71c408daf3c94f89",
+  "engineering_postrun_report_sha256": "d0db9324efd940985aae22ea76918cc734444440d255d1911c81ba5e353806c7",
+  "engineering_postrun_receipt_sha256": "d4c1d8eb600ebea1dd3dd693b16fbf949641e9bd5a169b8c9b70f892a78aac4c",
+  "data_postrun_report_sha256": "fcabdde57ceb07a181b0878007ebf2bbdf501d532f36555c9d7bdccad4a1c20e",
+  "data_postrun_review_json_sha256": "554cbe2443cacdb93ce2393ae50d526fadbd4829573036e25e2962268dee27ca",
+  "data_gate_receipt_sha256": "112d8721f3b7b524c21c3a9071a19e0eb19d70f226bc54d875eeaa3ae83275e1",
+  "status": "NOT_EVALUABLE",
+  "findings": {
+    "blocker": 0,
+    "major": 1,
+    "required_minor": 0
+  },
+  "confidence": {
+    "contract_disposition": "High",
+    "physical_explanation_and_downstream_implications": "Moderate"
+  },
+  "pre_meaningful_merge_gate": {
+    "status": "NOT_PASSED",
+    "comparison_interval": "integer-second FCD labels 0..590; first observed R through-merge frame at 591 s",
+    "common_MUX_vehicle_time_records": 41042,
+    "exact_tuple_matches": 40844,
+    "different_tuples": 198,
+    "different_tuple_fraction": 0.004824326299887902,
+    "affected_class": "U only",
+    "affected_vehicle_count": 7,
+    "affected_vehicle_ids": [
+      "U_flow.53",
+      "U_flow.54",
+      "U_flow.55",
+      "U_flow.56",
+      "U_flow.57",
+      "U_flow.58",
+      "U_flow.59"
+    ],
+    "M_and_X_exact": true,
+    "first_R_actual_departure_s": 540,
+    "first_R_acceleration_lane_sample_s": 587,
+    "first_R_through_merge_sample_s": 591,
+    "meaningful_R_exposure_confirmation_s": 660,
+    "scientific_interpretation": "The divergence is pre-meaningful-merge, but post-R activation/actual departure. Its timing/location is consistent with a possible R-related source/approach interaction; the interaction's effect on later onset is unresolved. No post-R event result is inferred."
+  },
+  "execution_integrity": {
+    "engineering_disposition": "PASS",
+    "normal_horizon_completion": true,
+    "required_output_roles_present": "18/18",
+    "manifest_files_verified": "25/25",
+    "retry_allowed": false,
+    "scientific_eligibility": "NOT_EVALUABLE"
+  },
+  "post_R_classifier_or_witness_analysis_performed": false,
+  "allowed_outcome_labels": [
+    "RAMP_INDUCED_WITNESS_ESTABLISHED",
+    "NO_WITNESS",
+    "NOT_EVALUABLE"
+  ],
+  "final_label": "NOT_EVALUABLE",
+  "bounded_claim": "Planned M/U/X common-input binding passed, but realized U trajectories diverged before meaningful R merge exposure while M/X matched. The preregistered pair gate did not pass; no witness or evaluable-negative conclusion is supported.",
+  "further_simulation_recommended": false,
+  "simulator_starts_during_review": {
+    "sumo": 0,
+    "traci": 0,
+    "netconvert": 0
+  }
+}

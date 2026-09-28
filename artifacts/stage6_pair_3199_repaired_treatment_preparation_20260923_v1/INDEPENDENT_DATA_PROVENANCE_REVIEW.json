@@ -1,0 +1,88 @@
+{
+  "schema_version": "1",
+  "review_id": "PAIR3199_REPAIRED_TREATMENT_INDEPENDENT_DATA_PROVENANCE_PRELAUNCH_REV1",
+  "status": "PASS_STATIC_INPUT_PROVENANCE_PREPARATION_ONLY_NOT_AUTHORIZED",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "context": {
+    "project_phase": "Offline v5 matched-input repair and separate repaired-treatment preparation; Stage 6 partial; O2 unresolved; formal protocol unfrozen.",
+    "prior_treatment": "NOT_EVALUABLE; prior D-006 authorization consumed; prior card/raw not reused or reinterpreted.",
+    "witness_contract_scope": "Adopted for the exploratory pair only; not the formal protocol.",
+    "engineering_review": "PASS_PREPARATION_ONLY_NOT_AUTHORIZED; 0/0/0."
+  },
+  "checks": {
+    "offline_v5_checker": "PASS",
+    "counts": {
+      "control": {"M": 1333, "U": 150, "X": 75, "R": 0},
+      "treatment": {"M": 1333, "U": 150, "X": 75, "R": 192}
+    },
+    "common_MUX": {
+      "expected": 1558,
+      "id_matches": 1558,
+      "desired_depart_integer_ms_matches": 1558,
+      "route_type_matches": 1558,
+      "speedFactor_matches": 1558,
+      "full_record_matches": 1558,
+      "route_definitions_equal": true,
+      "vtype_definitions_equal": true
+    },
+    "control_only_identity_count": 0,
+    "treatment_only_identity_count": 192,
+    "treatment_only_ids": "R_flow.0-R_flow.191",
+    "R_schedule": {
+      "window_s": "[540,1500)",
+      "count": 192,
+      "integer_offset_ms": 5000,
+      "first_depart_s": 540.0,
+      "last_depart_s": 1495.0,
+      "route": "R_route",
+      "vType": "technical_passenger"
+    },
+    "new_treatment_demand_sha256": "b8aae801122e918731fb8e05a9aa8ca94873f02282d7f1afee57777f6bea96ea",
+    "new_card_sha256": "593cabd4c82a8b7b735e6ebc000d836bebab80a9c8962e20f2865a5bbf4dbed0",
+    "v5_invariant_report_sha256": "509f1a46873b6922ce22e18f4100fa2dcb84a632d80ee9a014750efc6c857d54",
+    "v5_data_review_sha256": "9af0dbe6d6a0edd95a6a2be560387893d81af3563aa8bf4034db3a4d5c186df8",
+    "v5_provenance_receipt_sha256": "3a2531c3bbf3d9d69ac6c94f0f2663b67b47ffde7ce36c7ea0e1a943b74e32c9",
+    "package_receipt_files_verified": 11,
+    "control_original_demand_sha256": "6bbdc1d9148b05286c25b94f23c37174951c9f3e4a544ef8b9a322fbc42ab631",
+    "control_raw_card_sha256": "0748d37719541d7c76adcd57e07fd764b413fbd21bb16e015b57024175e866da",
+    "control_data_review_sha256": "6c8c2a381a5a2fc1102953ed58a5a1cd022a0c22789b0bbbd486d86a7b0ac799",
+    "control_execution_receipt_sha256": "a6a1a67282ff9e19f0205ce4b681cef34315bc04ad65f9588d7b269fadcfd336",
+    "control_output_manifest_sha256": "da15103c64be65eb6b83fc37a505418c81c33cf490db48f03a5fd15d984a74d8",
+    "historical_control_status_preserved": "NOT_EVALUABLE",
+    "control_promoted_to_clean_baseline": false,
+    "new_output_directory_absent": true,
+    "new_output_path_distinct": true,
+    "new_consumption_directory_empty": true,
+    "card_status": "DRAFT_NOT_AUTHORIZED",
+    "execution_authorized": false,
+    "run_command": null,
+    "resource_proposal": {
+      "wallclock_stop_trigger_s": 90,
+      "output_size_stop_trigger_bytes_decimal": 75000000,
+      "polling_ms": 100,
+      "slight_overshoot_possible": true,
+      "status": "PROPOSED_NOT_AUTHORIZED"
+    }
+  },
+  "postrun_boundary": {
+    "planned_input_match_established": true,
+    "future_trajectory_equivalence_established": false,
+    "pre_meaningful_R_MUX_trajectory_gate_required_first": true,
+    "material_unexplained_pre_R_difference": "PAIR_NOT_EVALUABLE",
+    "post_R_witness_analysis_only_after_gate_pass": true
+  },
+  "limitations": [
+    "Static inputs do not establish insertion, lifecycle completeness, realized attributes, or trajectory equivalence.",
+    "Future simulation-time randomness and unrecorded floating-point realization remain unverified.",
+    "Resource proposal is not user authorization."
+  ],
+  "process_counts": {
+    "sumo_starts": 0,
+    "traci_starts": 0,
+    "netconvert_starts": 0
+  }
+}

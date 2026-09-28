@@ -1,0 +1,123 @@
+{
+  "confidence": "High for bound ledger scope and current zero starts; incomplete lifetime reconciliation explicitly retained",
+  "explicit_exclusions": [
+    "Earlier ALINEA/scaffold integration runs not reconciled per process",
+    "Early GUI attempts cannot be counted exactly",
+    "Stage1 netconvert count unknown",
+    "No-step TraCI probe does not by itself imply a separate SUMO start",
+    "Unitemized early integration tests may add starts",
+    "These lower bounds are not a complete project total"
+  ],
+  "new_card_budget_only": {
+    "GUI": 0,
+    "SUMO": 0,
+    "TraCI": 0,
+    "monitored_timeout_s": 30,
+    "netconvert_starts": 1,
+    "observed_output_stop_bytes": 100000000,
+    "retry": 0
+  },
+  "prior_unused_budget_transfer": false,
+  "reconciliation_provenance": "Parent relay of independent data_analyst read-only audit, 2026-09-19; source hashes rechecked by engineering. Stage2 cumulative14 is broader than the seven-start completion ledger alone.",
+  "scope": "Specified project evidence only; not exact lifetime total",
+  "source_bindings": [
+    {
+      "bytes": 3442,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/historical_worklog_evidence_snapshot.json",
+      "sha256": "4c50d5d6a1db822e4bb8e88496b3c49c35c0fc4ec50a575c3e6ae1369b3ec624"
+    },
+    {
+      "bytes": 63649,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage2_completion_20260909_v1/execution_ledger.json",
+      "sha256": "b8653755666f0bbc5a1b265f6c3928486732dcfcb3ad7870744ab96b7c0db27a"
+    },
+    {
+      "bytes": 3962788,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage2_completion_20260909_v1/runtime_archive/C17_reused/summary.json",
+      "sha256": "4e80da39f4e3000122d30eb8f0d05500c8e6aa4491a9e91bc3f928d8f6cca4b1"
+    },
+    {
+      "bytes": 3994967,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage2_completion_20260909_v1/runtime_archive/C23_attempt1/summary.json",
+      "sha256": "c781fd57b6cef5e96e9f2cba2bed5353b37b80752c761af0f0ca1a1bdf875028"
+    },
+    {
+      "bytes": 38817,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage4_qmain_sequential_20260912_v1/execution_ledger.json",
+      "sha256": "79d5fbc107faf3088d8ff86ce5fff2f1b588ade52a6d7ad8efbea2e7199880dd"
+    },
+    {
+      "bytes": 12874,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_obstacle_20260913_v1/c04_launch_preparation_revision_03/attempts/S6_V1_C_S17_attempt1/execution_receipt.json",
+      "sha256": "4ebe5ba781b45d5ac51b66b25907a91cea02a6d720b2fb365d96632c48c5764c"
+    },
+    {
+      "bytes": 10941,
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/stage2_historical_count_evidence_snapshot.json",
+      "sha256": "49c10e80be7bc704b5256da4a99d1bbc1449ebd07e0fffbadf56e7cd0f5419a7"
+    }
+  ],
+  "specified_scope_lower_bounds": {
+    "GUI": "unknown",
+    "SUMO": 25,
+    "TraCI": 1,
+    "netconvert": 12
+  },
+  "stage_counts": [
+    {
+      "GUI": "unknown",
+      "SUMO_lower_bound": 3,
+      "TraCI": "unknown",
+      "basis": "Three explicitly described low/custom/stress runs; excludes earlier scaffold/ALINEA/GUI and unitemized integration calls",
+      "netconvert": "unknown",
+      "stage": "Stage1 instrumentation"
+    },
+    {
+      "GUI": "unknown",
+      "SUMO_lower_bound": 14,
+      "SUMO_lower_bound_decomposition": {
+        "S3_S5_C17_internal_E1_validation": 1,
+        "five_retained_timing_runs": 5,
+        "matched_measurement_repair": 1,
+        "seven_completion_runs": 7
+      },
+      "TraCI_lower_bound": 1,
+      "basis": "Five unique retained timing runs + one matched repair + one C17 internal-E1 validation + seven completion runs =14. C17 plus seven completion summaries establish >=8 netconvert. WORKLOG no-step probe establishes >=1 TraCI; do not infer a further SUMO start.",
+      "netconvert_lower_bound": 8,
+      "netconvert_lower_bound_decomposition": {
+        "C17_summary_plus_seven_completion_runs": 8
+      },
+      "stage": "Stage2 including prior measurement work"
+    },
+    {
+      "GUI": 0,
+      "SUMO": 4,
+      "TraCI": 0,
+      "count_quality": "exact registered stage",
+      "netconvert": 4,
+      "stage": "Stage4"
+    },
+    {
+      "GUI": 0,
+      "SUMO": 4,
+      "TraCI": 0,
+      "count_quality": "exact registered stage",
+      "netconvert": 0,
+      "stage": "Old Stage6 approved D1/D2"
+    },
+    {
+      "GUI": 0,
+      "SUMO": 0,
+      "TraCI": 0,
+      "count_quality": "current added traffic-tool starts; fake Python tests excluded",
+      "netconvert": 0,
+      "stage": "Recovery P0/P1/P2"
+    }
+  ],
+  "status": "reconciled_with_explicit_exclusions",
+  "supersedes": {
+    "bytes": 4212,
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_recovery_p2_revision_01/engineering/budget_reconciliation.json",
+    "sha256": "ae67d9acc36c27535344b732f047f090aa039dcef4b0b41e6321df393e0fa153"
+  }
+}

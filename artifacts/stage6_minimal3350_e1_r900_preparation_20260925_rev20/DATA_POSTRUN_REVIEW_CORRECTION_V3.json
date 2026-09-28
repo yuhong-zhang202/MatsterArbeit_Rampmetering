@@ -1,0 +1,321 @@
+{
+  "card_sha256": "c5e94245dc44cc190dbcb2e402c28213c7e7e3ea90edf35e708a8d332209f31a",
+  "corrected_status": "ONSET_REFERENCE_UNRESOLVED",
+  "correction_scope": "retry3-specific derived reporting adapter only; shared analyzer/classifier, thresholds, witness contract and raw unchanged",
+  "derived_v2_output_hashes": {
+    "corrected_classifier_adapter.py": "4e896c683085325e33ee8de89e23fef17755a4e154073a94808e99a228f7e6f8",
+    "corrected_reporting_summary.json": "8efff58940551fc60c1cb755467e7c5645d7aa0d75c3e9b3533335080a7053e7",
+    "corrected_reporting_summary.md": "43a44272f4cd81a92cbf950aec69c080d9c36ccd061ba163bc744cdf9005338a",
+    "fixtures/p_cell15_ineligible_reference.json": "efdfbcdd5fe0c563d482bd0738eae435450bfd55a4eab50a897829be76537b77",
+    "test_corrected_classifier_adapter.py": "af901cdc9f1583c1f190e1e18392bd618d7a3ccdd96f3fa0340619482f0838a5"
+  },
+  "historical_v1_data_receipt_sha256": "c3d387a12d27470e03aea766b725906cc2894d72f83d422f9a350b1ee7a41f96",
+  "primary_window_profile_status": {
+    "L": "ONSET_REFERENCE_UNRESOLVED",
+    "P": "ONSET_REFERENCE_UNRESOLVED",
+    "S": "NO_QUALIFYING_EVENT"
+  },
+  "prior_correction_v2_receipt_sha256": "6f5de9bf9c4bbef297e8d78b665dc5547523d701dea688d9604a8a55d20f5071",
+  "prior_data_side_NO_WITNESS": "WITHDRAWN",
+  "raw_execution_receipt_sha256": "d8a4801db1fcf8100c866f2d71c811f7ddc75d1e6409058bcbea61d0b5101687",
+  "raw_modified": false,
+  "raw_output_manifest_sha256": "46be6b1681837e4f77224ebcd02eb13216a5e2e6b81818d5b610c64d7a3e9aeb",
+  "regression_issue": "Duration-qualified low-state run with ineligible immediate reference was previously collapsed to NO_QUALIFYING_EVENT.",
+  "run_id": "MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY3",
+  "same_time_and_alternative_evidence_reused_and_hash_bound": {
+    "E1_summary": {
+      "control": {
+        "p1_main_down_200_l0.xml": {
+          "positive_intervals": 52,
+          "total_nVehEntered": 587.0
+        },
+        "p1_main_down_200_l1.xml": {
+          "positive_intervals": 51,
+          "total_nVehEntered": 809.0
+        },
+        "p1_main_down_20_l0.xml": {
+          "positive_intervals": 51,
+          "total_nVehEntered": 592.0
+        },
+        "p1_main_down_20_l1.xml": {
+          "positive_intervals": 51,
+          "total_nVehEntered": 804.0
+        },
+        "p1_main_up_1300_l0.xml": {
+          "positive_intervals": 51,
+          "total_nVehEntered": 595.0
+        },
+        "p1_main_up_1300_l1.xml": {
+          "positive_intervals": 51,
+          "total_nVehEntered": 802.0
+        },
+        "p1_merge_section_20_l0.xml": {
+          "positive_intervals": 0,
+          "total_nVehEntered": 0
+        },
+        "p1_merge_section_20_l1.xml": {
+          "positive_intervals": 51,
+          "total_nVehEntered": 598.0
+        },
+        "p1_merge_section_20_l2.xml": {
+          "positive_intervals": 51,
+          "total_nVehEntered": 800.0
+        }
+      },
+      "r720": {
+        "p1_main_down_200_l0.xml": {
+          "positive_intervals": 52,
+          "total_nVehEntered": 715.0
+        },
+        "p1_main_down_200_l1.xml": {
+          "positive_intervals": 52,
+          "total_nVehEntered": 873.0
+        },
+        "p1_main_down_20_l0.xml": {
+          "positive_intervals": 51,
+          "total_nVehEntered": 718.0
+        },
+        "p1_main_down_20_l1.xml": {
+          "positive_intervals": 52,
+          "total_nVehEntered": 870.0
+        },
+        "p1_main_up_1300_l0.xml": {
+          "positive_intervals": 51,
+          "total_nVehEntered": 588.0
+        },
+        "p1_main_up_1300_l1.xml": {
+          "positive_intervals": 51,
+          "total_nVehEntered": 809.0
+        },
+        "p1_merge_section_20_l0.xml": {
+          "positive_intervals": 33,
+          "total_nVehEntered": 158.0
+        },
+        "p1_merge_section_20_l1.xml": {
+          "positive_intervals": 51,
+          "total_nVehEntered": 614.0
+        },
+        "p1_merge_section_20_l2.xml": {
+          "positive_intervals": 51,
+          "total_nVehEntered": 828.0
+        }
+      },
+      "r900": {
+        "p1_main_down_200_l0.xml": {
+          "positive_intervals": 52,
+          "total_nVehEntered": 751.0
+        },
+        "p1_main_down_200_l1.xml": {
+          "positive_intervals": 52,
+          "total_nVehEntered": 885.0
+        },
+        "p1_main_down_20_l0.xml": {
+          "positive_intervals": 52,
+          "total_nVehEntered": 754.0
+        },
+        "p1_main_down_20_l1.xml": {
+          "positive_intervals": 51,
+          "total_nVehEntered": 882.0
+        },
+        "p1_main_up_1300_l0.xml": {
+          "positive_intervals": 51,
+          "total_nVehEntered": 592.0
+        },
+        "p1_main_up_1300_l1.xml": {
+          "positive_intervals": 51,
+          "total_nVehEntered": 806.0
+        },
+        "p1_merge_section_20_l0.xml": {
+          "positive_intervals": 31,
+          "total_nVehEntered": 205.0
+        },
+        "p1_merge_section_20_l1.xml": {
+          "positive_intervals": 51,
+          "total_nVehEntered": 605.0
+        },
+        "p1_merge_section_20_l2.xml": {
+          "positive_intervals": 51,
+          "total_nVehEntered": 831.0
+        }
+      }
+    },
+    "R720_merge_entries_by_1440_exclusive": 166,
+    "R720_merge_entries_by_1500_exclusive": 183,
+    "R900_T3_s": 660,
+    "R900_merge_entries_by_1440_exclusive": 209,
+    "R900_merge_entries_by_1500_exclusive": 223,
+    "TLS": {
+      "control": {
+        "counts_by_id_program_state": {
+          "ramp_mid|A_OPEN|G": 2700,
+          "urban_tls|technical_placeholder|Gr": 2025,
+          "urban_tls|technical_placeholder|rG": 405,
+          "urban_tls|technical_placeholder|ry": 135,
+          "urban_tls|technical_placeholder|yr": 135
+        },
+        "mainline_red_records": 0,
+        "ramp_mid_non_green_count": 0,
+        "records": 5400
+      },
+      "r720": {
+        "counts_by_id_program_state": {
+          "ramp_mid|A_OPEN|G": 2700,
+          "urban_tls|technical_placeholder|Gr": 2025,
+          "urban_tls|technical_placeholder|rG": 405,
+          "urban_tls|technical_placeholder|ry": 135,
+          "urban_tls|technical_placeholder|yr": 135
+        },
+        "mainline_red_records": 0,
+        "ramp_mid_non_green_count": 0,
+        "records": 5400
+      },
+      "r900": {
+        "counts_by_id_program_state": {
+          "ramp_mid|A_OPEN|G": 2700,
+          "urban_tls|technical_placeholder|Gr": 2025,
+          "urban_tls|technical_placeholder|rG": 405,
+          "urban_tls|technical_placeholder|ry": 135,
+          "urban_tls|technical_placeholder|yr": 135
+        },
+        "mainline_red_records": 0,
+        "ramp_mid_non_green_count": 0,
+        "records": 5400
+      }
+    },
+    "matched_same_time_cell_table": {
+      "core_bins_with_both_arms": 346,
+      "core_common_vehicle_seconds": 6725,
+      "core_rows": 409,
+      "core_speed_difference_rows": 259,
+      "measure": "same 30s time bin, same lane and 100m cell; all pooled cell metrics also reported separately",
+      "rows": 1177
+    },
+    "pre_R_M_match": {
+      "common_keys": 34491,
+      "control_records": 34491,
+      "disposition": "PASS",
+      "exact_tuple_divergences": 0,
+      "fields_compared": [
+        "lane",
+        "x",
+        "y",
+        "angle",
+        "type",
+        "speed",
+        "pos",
+        "slope"
+      ],
+      "first_divergence": null,
+      "interval": "[0,540)",
+      "missing_control_keys": 0,
+      "missing_treatment_keys": 0,
+      "treatment_records": 34491
+    },
+    "queues": {
+      "control": {
+        "frames": 2700,
+        "labels_complete": true,
+        "lane_records": 0,
+        "total_frame_children": 2700
+      },
+      "r720": {
+        "frames": 2700,
+        "labels_complete": true,
+        "lane_records": 0,
+        "total_frame_children": 2700
+      },
+      "r900": {
+        "frames": 2700,
+        "labels_complete": true,
+        "lane_records": 0,
+        "total_frame_children": 2700
+      }
+    },
+    "raw_manifest_entries_match_all_runs": true
+  },
+  "schema": "stage6_minimal3350_e1_r900_retry3_data_postrun_reporting_correction_v3",
+  "source_hashes": {
+    "locked_methodology": "22fe22170c17ce74e261e717586a458a1b5173e9deabbee925bd4c1d606adfe7",
+    "v1_alternative_cause_checks": "82b7e08bd7c2864f0f8db00f32d78f69bc590838c2d5644fb3ba60ddff275cae",
+    "v1_cell_bin_metrics": "351c297fc5147e9b5e6e5f81a69146bc321d9216f3018e4d8e1e0f768bfb9c86",
+    "v1_locked_classifier": "5add43a46fc874d7425c05908ba079fc7f220016d3f64898a552101b68c50124",
+    "v1_matched_pair_analysis": "83a7a2363fc0011c3dcec12344768382a4df04ced73e7c07f619afac887ee784"
+  },
+  "state1_positive_established": false,
+  "target_P_event": {
+    "cell": 15,
+    "first_low_bin": 42,
+    "first_low_start_s": 1260,
+    "low_state_bins": [
+      {
+        "bin": 42,
+        "low_state": true,
+        "mean_ratio": 0.5369827554977787,
+        "simultaneous_seconds": 30,
+        "slow_fraction": 0.6143790849673203,
+        "start_s": 1260,
+        "valid": true
+      },
+      {
+        "bin": 43,
+        "low_state": true,
+        "mean_ratio": 0.5530579749607741,
+        "simultaneous_seconds": 21,
+        "slow_fraction": 0.5942028985507246,
+        "start_s": 1290,
+        "valid": true
+      },
+      {
+        "bin": 44,
+        "low_state": true,
+        "mean_ratio": 0.5760086613348261,
+        "simultaneous_seconds": 29,
+        "slow_fraction": 0.5616438356164384,
+        "start_s": 1320,
+        "valid": true
+      },
+      {
+        "bin": 45,
+        "low_state": true,
+        "mean_ratio": 0.6754980395277811,
+        "simultaneous_seconds": 23,
+        "slow_fraction": 0.524822695035461,
+        "start_s": 1350,
+        "valid": true
+      }
+    ],
+    "profile": "P",
+    "reference_bins": [
+      {
+        "bin": 39,
+        "density": 14.333333333333334,
+        "mean_ratio": 0.8398842336998615,
+        "valid": true
+      },
+      {
+        "bin": 40,
+        "density": 16.833333333333332,
+        "mean_ratio": 0.7802611347734754,
+        "valid": true
+      },
+      {
+        "bin": 41,
+        "density": 18.666666666666668,
+        "mean_ratio": 0.7621222379449313,
+        "valid": true
+      }
+    ],
+    "reference_eligible": false,
+    "required_bins": 3,
+    "run_bins": 4,
+    "status": "ONSET_REFERENCE_UNRESOLVED"
+  },
+  "test_evidence": {
+    "command": "python3 -m unittest discover -s data/processed/stage6_minimal3350_e1_r900_retry3_20260925_v2 -p test_*.py -v",
+    "failures": 0,
+    "fixture_sha256": "efdfbcdd5fe0c563d482bd0738eae435450bfd55a4eab50a897829be76537b77",
+    "tests_passed": 3
+  },
+  "thresholds_or_classifier_rules_changed": false,
+  "unresolved_event_count": 7
+}

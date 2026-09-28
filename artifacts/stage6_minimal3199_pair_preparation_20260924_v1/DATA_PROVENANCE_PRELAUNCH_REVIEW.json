@@ -1,0 +1,40 @@
+{
+  "review_type": "independent_data_provenance_prelaunch",
+  "scope": "static MINIMAL3199 U=X=0 matched-pair input, exact-card and execution provenance review",
+  "disposition": "BLOCKED_PENDING_REQUIRED_REGRESSION_FIXTURE_COVERAGE",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 1,
+    "required_minor_details": [
+      "Add mutation fixtures for M ID, desired departure, route and vType mismatches and malformed/missing/shifted R ID/departure schedule; rerun targeted suite. Existing implementation checks these, but current tests do not demonstrate rejection."
+    ]
+  },
+  "confidence": {
+    "static_input_and_binding": "High",
+    "test_coverage_gap": "High"
+  },
+  "checks": {
+    "M_count_control": 1333,
+    "M_count_treatment": 1333,
+    "M_full_record_matches": 1333,
+    "M_fields": [
+      "id", "desired_depart_ms", "route", "vType", "speedFactor", "departPos", "departLane", "departSpeed"
+    ],
+    "vehicle_order": "PASS_GLOBAL_(depart_ms,id)_SORT",
+    "control_R": "PASS_ZERO_AND_NO_R_IDENTITIES",
+    "treatment_R": "PASS_R_flow.0..191_192_IDENTITIES_540_to_1495_s_5s_spacing",
+    "treatment_only_demand": "R",
+    "U_X_both_arms": "PASS_ZERO_EXPLICIT",
+    "package_receipt_hashes": "15/15_MATCH",
+    "runtime_runner_hash_and_output_absence": "PASS_STATIC_BOUND_FIELDS_AND_PATHS",
+    "tests": "10/10_PASS_WITH_BOUND_PROJECT_PYTHON",
+    "draft_authorization_state": "DRAFT_NOT_AUTHORIZED"
+  },
+  "execution_counts": {
+    "sumo_starts": 0,
+    "traci_starts": 0,
+    "netconvert_starts": 0
+  },
+  "run_authorization": "NONE"
+}

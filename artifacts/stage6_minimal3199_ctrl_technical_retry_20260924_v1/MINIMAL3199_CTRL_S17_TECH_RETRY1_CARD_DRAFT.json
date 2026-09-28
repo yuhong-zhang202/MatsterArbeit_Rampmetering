@@ -1,0 +1,116 @@
+{
+  "R_veh_per_h": 0,
+  "R_window_s": "NO_R_SOURCE",
+  "TLS_program": "A_OPEN",
+  "U": 0,
+  "X": 0,
+  "approval_required": true,
+  "card_revision": 1,
+  "card_status": "DRAFT_NOT_AUTHORIZED",
+  "condition": "A_OPEN_R0_CONTROL",
+  "design_plan": "artifacts/stage6_minimal_ramp_induced_breakdown_existence_test_20260924_v1/PLAN.md",
+  "design_sha256": "06b0f04f1144ef8497b4d64906ae27b1377b544abd6e0639133c8d85a3fabc23",
+  "execution_authorized": false,
+  "horizon_s": 2700,
+  "input_manifest": "INPUT_MANIFEST.json",
+  "input_manifest_sha256": "6944ba949a0e9aa40c11cfc22e430248a61e748aa789685a8b14812fc3ab313e",
+  "input_sha256": {
+    "additional": "6bd3555c983db506800cab40524767229a3a03c94e893e0ccdc506f95690d8ef",
+    "demand": "5df62660b9b9e2cc02734794ef2d361a3a97c30fa38a1e4fcbf550f0a2a1e405",
+    "network": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "output_roles": "3ff931a5f088180f6f37fbf8a782985a3a805c8c02b0cfdce3aa018df195b0f6",
+    "sumocfg": "a6be97aba1ab00d6f17ae15788d45765d0a0efca7e297cc1423e4fb720853b1c"
+  },
+  "inputs": {
+    "additional": "control/scenario.add.xml",
+    "demand": "control/demand.rou.xml",
+    "network": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+    "output_roles": "control/output_roles.json",
+    "sumocfg": "control/scenario.sumocfg"
+  },
+  "max_starts": 1,
+  "note": "Fresh technical-retry draft only. Prior MINIMAL3199_CTRL_S17 one-start reservation and partial raw remain consumed/immutable. This card grants no execution authority.",
+  "output_directory": "data/raw/stage6_minimal3199_existence_20260924_v2/MINIMAL3199_CTRL_S17_TECH_RETRY1/outputs",
+  "output_role_source": {
+    "path": "scripts/stage6/minimal3199/prepared_rev3/control/output_roles.json",
+    "sha256": "3ff931a5f088180f6f37fbf8a782985a3a805c8c02b0cfdce3aa018df195b0f6"
+  },
+  "pair_id": "MINIMAL3199_UX0_S17",
+  "prelaunch_disposition": "ENGINEERING_PASS_AWAITING_DATA_AND_SCIENTIFIC_REVIEW",
+  "qMain_veh_per_h": 3199.2,
+  "resource_limits": {
+    "runtime_s": 90,
+    "scope": "MINIMAL3199_CTRL_S17_TECH_RETRY1",
+    "status": "PROPOSED_NOT_AUTHORIZED",
+    "storage_bytes": 60000000
+  },
+  "run_command": null,
+  "run_id": "MINIMAL3199_CTRL_S17_TECH_RETRY1",
+  "runner": {
+    "path": "artifacts/stage6_ramp_induced_validation_20260922_v1/r02_single_start/runner.py",
+    "sha256": "74a9d51716006e5283e7e04cef0f0a82df17f26695b7fb444c8ffd29d41e664a",
+    "status": "EXACT_RUN_ID_AND_CARD_BINDING_DRAFT_ONLY"
+  },
+  "runner_binding": {
+    "card_path": "artifacts/stage6_minimal3199_ctrl_technical_retry_20260924_v1/MINIMAL3199_CTRL_S17_TECH_RETRY1_CARD_DRAFT.json",
+    "consumption_directory": "artifacts/stage6_minimal3199_ctrl_technical_retry_20260924_v1/consumption",
+    "kind": "MINIMAL3199_TECH_RETRY_DRAFT",
+    "output_directory": "data/raw/stage6_minimal3199_existence_20260924_v2/MINIMAL3199_CTRL_S17_TECH_RETRY1/outputs",
+    "package_id": "stage6_minimal3199_ctrl_technical_retry_20260924_v1",
+    "run_id": "MINIMAL3199_CTRL_S17_TECH_RETRY1"
+  },
+  "runtime_binding": {
+    "additional_schema_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+    "additional_schema_sha256": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e",
+    "binary_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+    "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+    "binary_version": "1.26.0",
+    "guardian_runner_sha256": "74a9d51716006e5283e7e04cef0f0a82df17f26695b7fb444c8ffd29d41e664a",
+    "max_output_bytes": 60000000,
+    "max_runtime_s": 90,
+    "python_environment": {
+      "executable_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+      "executable_sha256": "76c73e25cdd69650a897648666e41c364940fbcff0d1176572a667d4d470ec9e",
+      "implementation": "CPython",
+      "package_versions": {
+        "sumoITScontrol": "0.1.0",
+        "sumolib": "1.26.0",
+        "traci": "1.26.0"
+      },
+      "version": "3.13.0"
+    },
+    "resource_proposal": {
+      "basis": "proposal for fresh technical retry only; prior attempt failed before simulator spawn and is preserved; limits require separate user acceptance",
+      "enforcement": "100ms_polled_stop_trigger_with_possible_overshoot_not_hard_quota",
+      "output_size_stop_limit_bytes_decimal": 60000000,
+      "overshoot_accepted": true,
+      "poll_interval_s": 0.1,
+      "scope": "MINIMAL3199_CTRL_S17_TECH_RETRY1",
+      "status": "PROPOSED_NOT_AUTHORIZED",
+      "wallclock_stop_limit_s": 90
+    },
+    "runtime_provenance_status": "READONLY_PATH_AND_HASH_VERIFIED_NO_SUMO_VERSION_PROCESS",
+    "sumo_home": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo",
+    "version_evidence": {
+      "binary_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+      "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+      "query": "sumo --version (environment probe; no simulation)",
+      "reported_version": "1.26.0"
+    }
+  },
+  "runtime_binding_path": "artifacts/stage6_minimal3199_ctrl_technical_retry_20260924_v1/control/runtime_binding.json",
+  "runtime_binding_sha256": "3bb37acdcea05687cc779a361dfd5c7f824421a30469ae9ec0858884c49300b4",
+  "schema_version": "1",
+  "scope_prohibitions": [
+    "No SUMO/netconvert/TraCI before separate authorization",
+    "No treatment, seed23, B/C, transition, or other qMain/qRamp",
+    "No geometry, demand, classifier, threshold, vehicle-behavior or protocol changes"
+  ],
+  "seed": 17,
+  "staged_additional_bytes": 3940,
+  "staged_additional_sha256": "6b93195465eb66462394905fcf6bd450c8e3b863517bef436f5177f0a54c9470",
+  "staged_config_bytes": 2802,
+  "staged_config_sha256": "1906f98e1e108a9019919d29fa4c9c6086659fdbedd231d16531ec275505650c",
+  "step_s": 1,
+  "technical_retries": 0
+}

@@ -1,0 +1,16 @@
+{
+  "schema": "stage6_minimal3350_e1_r900_retry3_scientific_postrun_review_v1",
+  "run_id": "MINIMAL3350_E1_R900_DELAYED_S17_TECH_RETRY3",
+  "card_sha256": "c5e94245dc44cc190dbcb2e402c28213c7e7e3ea90edf35e708a8d332209f31a",
+  "disposition": "NOT_EVALUABLE",
+  "confidence": "High",
+  "findings": {"blocker": 0, "major": 1, "required_minor": 0},
+  "reviewer": "independent scientific_reviewer",
+  "primary_reason": "A duration-qualified low-state P run in core cell 15 over [1260,1380) has no eligible immediate reference: the three prior mean-ratio bins are 0.840, 0.780 and 0.762, below the locked 0.85 criterion. Locked status is ONSET_REFERENCE_UNRESOLVED, so neither a State1-positive event nor a valid NO_WITNESS is established.",
+  "locked_status": {"P": "ONSET_REFERENCE_UNRESOLVED", "L": "ONSET_REFERENCE_UNRESOLVED", "S": "NO_QUALIFYING_EVENT", "Candidate_A": 0, "Candidate_C_primary_core_warning_bins": 40},
+  "validity_evidence": {"lifecycle_complete": true, "pre_R_M_vehicle_seconds": 34491, "pre_R_M_tuple_divergences": 0, "R_T3_s": 660, "R900_merge_entries_by_1440": 209, "R720_merge_entries_by_1440": 166, "R900_merge_entries_by_1500": 223, "R720_merge_entries_by_1500": 183},
+  "limits": ["Same-time/lane/cell differences are descriptive and do not resolve the missing onset reference.", "Queue XML contains no lane records; queue morphology is unavailable.", "E1 data are aggregate and do not identify vehicle class or identity.", "One seed and materialized vector limit generalization.", "The corrected adapter is RETRY3-specific; the shared analyzer/classifier is unchanged."],
+  "regression_protection": {"status": "CLOSED_FOR_RETRY3_REPORT", "fixture_sha256": "efdfbcdd5fe0c563d482bd0738eae435450bfd55a4eab50a897829be76537b77", "focused_tests": "3 passed"},
+  "evidence": {"execution_receipt_sha256": "d8a4801db1fcf8100c866f2d71c811f7ddc75d1e6409058bcbea61d0b5101687", "output_manifest_sha256": "46be6b1681837e4f77224ebcd02eb13216a5e2e6b81818d5b610c64d7a3e9aeb", "engineering_integrity_review_sha256": "66a00df33e18eb22eaf5ce48be7c2d78c0c3e1a676fcd0b32ba6fee37784e439", "corrected_data_review_sha256": "c700e2d0c4d3c66cd8115e46cb8058e902a6cb79dd20e45bfddc308a610dc653", "corrected_reporting_summary_sha256": "8efff58940551fc60c1cb755467e7c5645d7aa0d75c3e9b3533335080a7053e7", "methodology_sha256": "22fe22170c17ce74e261e717586a458a1b5173e9deabbee925bd4c1d606adfe7", "witness_contract_sha256": "958890a7dd017110787a85d77ebfa3e6dac2b7d862f0fd91f6bafb7cf1738d9a"},
+  "no_additional_run_authorized_or_started": true
+}

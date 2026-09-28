@@ -1,0 +1,26 @@
+{
+  "status": "PASS_PRELAUNCH_ENGINEERING",
+  "card_sha256": "00e095217e6dd66581707439c81ba15204c69e12de7d0f4a5f38e0fc04607bed",
+  "input_manifest_sha256": "131f3b6c8506edbd3e905d5f3e737ecb770601e6e6fbb27c1e365f8504f22ffc",
+  "launcher_sha256": "261e040b646407110d931ee0735c1e89f9d7d7f1504f1a5c0fd939b1719c6c74",
+  "open_findings": {"blocker": 0, "major": 0, "required_minor": 0},
+  "review_scope": "fresh revision-2 read-only static engineering prelaunch audit after revision-1 fail-closed interface correction",
+  "checks": {
+    "revision2_manifest_key_matches_launcher": "PASS; input_manifest exposed and old immutable_input_manifest key absent",
+    "revision1_failure_closed_before_child": "PASS; KeyError occurred in non-executing dry-run; no runtime started",
+    "manifest_bindings": "PASS; 40/40 zero mismatch",
+    "qMain_only_semantic_change": "PASS; M 1333 to 1396, R/U/X unchanged",
+    "accepted_network_and_geometry": "PASS; source/copy hash 887c2324...c700ca",
+    "XML_static_preflight_and_roles": "PASS; 18 unique XML roles and 22 declared large streams",
+    "environment_and_direct_argv": "PASS; SUMO binary/config binding, no TraCI/netconvert/GUI/helper",
+    "pre_Popen_hash_checks": "PASS",
+    "one_start_no_retry_exclusive_path": "PASS",
+    "resource_limits": "PASS; 65,000,000 bytes/file, 1.43 GB declared aggregate, 70 MB headroom, 180 s",
+    "output_root_absent": "PASS"
+  },
+  "limitation": "RLIMIT_FSIZE is per file and assumes only the 22 registered streams are large child writers; unregistered outputs are caught by the role gate and secondary directory monitor.",
+  "runtime_invocations": 0,
+  "sumo_starts": 0,
+  "netconvert_starts": 0,
+  "TraCI_sessions": 0
+}

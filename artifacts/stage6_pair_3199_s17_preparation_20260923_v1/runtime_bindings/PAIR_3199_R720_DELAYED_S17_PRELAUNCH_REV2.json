@@ -1,0 +1,36 @@
+{
+  "additional_schema_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo/data/xsd/additional_file.xsd",
+  "additional_schema_sha256": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e",
+  "binary_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+  "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+  "binary_version": "1.26.0",
+  "guardian_runner_sha256": "482056a14df16af779ef8c8ad8182c313775a3392caa24e1e5224e9f0c1c8a37",
+  "max_output_bytes": 90000000,
+  "max_runtime_s": 120,
+  "python_environment": {
+    "executable_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+    "executable_sha256": "76c73e25cdd69650a897648666e41c364940fbcff0d1176572a667d4d470ec9e",
+    "implementation": "CPython",
+    "package_versions": {
+      "sumoITScontrol": "0.1.0",
+      "sumolib": "1.26.0",
+      "traci": "1.26.0"
+    },
+    "version": "3.13.0"
+  },
+  "resource_proposal": {
+    "basis": "Completed matched PAIR_3199_CTRL_S17 full-horizon run: 24.881003 s and 20,821,740 payload bytes. The earlier TV_A_S17_attempt1 capture was short (1.143858 s) and is not treated as a full-horizon comparator. Proposed margins are treatment-specific only.",
+    "enforcement": "100ms polled stop trigger; output polling overshoot possible; not a hard quota",
+    "output_size_stop_limit_bytes_decimal": 90000000,
+    "scope": "PAIR_3199_R720_DELAYED_S17",
+    "status": "PROPOSED_NOT_AUTHORIZED",
+    "wallclock_stop_limit_s": 120
+  },
+  "sumo_home": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo",
+  "version_evidence": {
+    "binary_path": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+    "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+    "query": "sumo --version (environment probe; no simulation)",
+    "reported_version": "1.26.0"
+  }
+}

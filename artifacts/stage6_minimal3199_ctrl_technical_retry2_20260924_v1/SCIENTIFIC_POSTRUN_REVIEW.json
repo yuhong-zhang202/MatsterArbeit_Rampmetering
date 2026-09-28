@@ -1,0 +1,40 @@
+{
+  "basis": {
+    "candidate_A": "NO_SPATIAL_CANDIDATE",
+    "candidate_C": "20 merge-core warning rows and 42 L rows retained; every L row is a single 30-second bin, short of locked two-bin sustained duration.",
+    "downstream_and_measurement": "Downstream detectors each have entries for all 1,333 M vehicles; complete FCD/E1 coverage. Queue export has timestamps but empty lane arrays.",
+    "engineering_integrity": "PASS; all 18 roles and hashes match.",
+    "legacy_high_mobility_screen": "FAIL (160/180); unchanged and not relabeled.",
+    "lifecycle": "M 1333/1333 inserted and arrived; 0 unfinished; R/U/X=0.",
+    "locked_PSL": "NO_QUALIFYING_EVENT"
+  },
+  "confidence": "Moderate-High",
+  "disposition": "LOW_R_BACKGROUND_ACCEPTABLE",
+  "findings": {
+    "blocker": 0,
+    "major": 0,
+    "required_minor": 0
+  },
+  "limitations": [
+    "Recurring Candidate C patches mean this must not be described as a clean normal/high-mobility baseline.",
+    "Queue occupancy itself remains unverified because queue-export lane arrays are empty; other exposure and detector checks bound but do not eliminate transient-queue uncertainty.",
+    "This single control establishes neither a ramp-induced witness nor a treatment contrast; the category is restricted to the minimal plan control gate.",
+    "Scientific reviewer relied on the hash-bound data/lifecycle review for measurement check 4; raw vehicle-record recomputation was not repeated in the scientific review."
+  ],
+  "no_threshold_classifier_or_protocol_changes": true,
+  "recording_note": "Scientific reviewer is read-only; this file records its returned disposition and rationale, written by the primary agent.",
+  "review_type": "independent_scientific_postrun_review",
+  "reviewed_hashes": {
+    "card": "b387a750f9f41fe7439d79ead7133fc07ac817fe8da497a8e045433a4accee5a",
+    "data_lifecycle_postrun_review": "3579107c935b3f0a91f1f4f79d0791742b462a45548917c8ad317304fff70b37",
+    "engineering_postrun_review": "3c7d798178dbb2bdfbddf732f88356621025c25a092167cf6f86dad54e1b117c",
+    "execution_manifest": "551fdfbe78530662f2a437436d8a36813902d5728ac88b03a7a316382d7bca9a",
+    "locked_method": "22fe22170c17ce74e261e717586a458a1b5173e9deabbee925bd4c1d606adfe7",
+    "minimal_plan": "06b0f04f1144ef8497b4d64906ae27b1377b544abd6e0639133c8d85a3fabc23",
+    "v8_processing_manifest": "047b19ed237d8fb2575373ac937cb5baac0ec009fe23fbba5c4be5d5bf32878b"
+  },
+  "run_id": "MINIMAL3199_CTRL_S17_TECH_RETRY2",
+  "schema_version": "1",
+  "scope": "Only as the R=0 control for the approved minimal U=X=0 exploratory existence-test plan; not a clean high-mobility baseline or general background conclusion.",
+  "stop_recommended": true
+}
