@@ -1,0 +1,27 @@
+{
+  "status": "PASS_FOR_EXPLORATORY_EXECUTION",
+  "scientific_verdict": "PASS_FOR_TECHNICAL_ACTUATOR_REPAIR_EXECUTION",
+  "scope": "single S17 V9 technical actuator repair validation only; no other seeds",
+  "authorization": "D-014 D-015 D-016",
+  "reviewer": "scientific_reviewer /root/boundary_design_review",
+  "review_result": "Exact card preflight and necessary guard/credit/source diff PASS; independent data compatibility confirmed. Real safety, credit service,238XML/pre600/lifecycle gates pending. Due attempts are not independent vehicle slots.",
+  "cards": {
+    "M3600_R900_S17_ALINEA_TRACI_V9": "086e5812e409125db9ebe509a51932b4c65c39a6b9d2ee27008f55034eb61507"
+  },
+  "runner_sha256": "12a276f44b8a92e1a29c35899848c557c9e90a0580147e7e419c57a2e34baffc",
+  "controller_sha256": "a282302ecc5fefd8d1810c07d1340f9bd1dbe0e3316b718ce991e5c5bea185ab",
+  "plan_sha256": "9f1beac000200b5fce89427121b14df353190851c2b98bbdf686d7339e51a28f",
+  "limits": {
+    "experiment_starts": 40,
+    "new_experiment_starts": 8,
+    "poll_s": 0.1,
+    "run_bytes": 250000000,
+    "total_raw_bytes": 8000000000,
+    "wall_s": 120
+  },
+  "expected_physical_starts_before": 25,
+  "expected_physical_starts_after": 26,
+  "expected_technical_starts_after": 7,
+  "expected_experiment_starts": 19,
+  "expected_controlled_experiment_starts": 1
+}

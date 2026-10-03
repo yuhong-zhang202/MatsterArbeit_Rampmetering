@@ -1,0 +1,17 @@
+{
+  "status": "PASS_FOR_EXPLORATORY_EXECUTION",
+  "scientific_verdict": "PASS_FOR_SINGLE_TECHNICAL_ACTUATOR_PILOT",
+  "scope": "single S17 V15 technical actuator validation only; S23 and S42 not released",
+  "authorization": "D-017",
+  "reviewer": "scientific_reviewer /root/boundary_design_review",
+  "review_result": "V14 correctly admitted the intended front but post-green interlock double-counted a further acceleration step. V15 uses observed post-green speed for immediate-red normal stopping; pre-green envelope and all other safety/feedback rules unchanged. Actual safety, rate, detector, pairing and lifecycle gates remain empirical.",
+  "cards": {
+    "M3600_R900_S17_ALINEA_TRACI_V15": "f7b7c373f67e913521d6cc9bdfb84a343d90f6edab6a47e9a55b4f8639d98066"
+  },
+  "runner_sha256": "cb05feb9beb90aa41508102d4e37f897f942bf26278428ad868f04f1816fd0b9",
+  "plan_sha256": "88a0532f1c60e91667d5793b5b2c9d18d6fa106ff7b81944d8212754ed6b4339",
+  "expected_physical_starts_before": 29,
+  "expected_physical_starts_after": 30,
+  "expected_technical_starts_after": 11,
+  "expected_experiment_starts": 19
+}

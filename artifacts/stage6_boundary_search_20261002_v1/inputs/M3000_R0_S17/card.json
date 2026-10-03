@@ -1,0 +1,68 @@
+{
+  "background_rates_veh_h": {
+    "U": 360,
+    "X": 180
+  },
+  "classification": "EXPLORATORY",
+  "counts": {
+    "M": 2500,
+    "R": 0,
+    "U": 300,
+    "X": 150
+  },
+  "horizon_s": 4200,
+  "input_sha256": {
+    "demand.rou.xml": "af405b638034aff511637f70c3eed4b271f4cc20ac7678f2bb9c21d4ef00e60a",
+    "scenario.add.xml": "3a0738d8a103225587975689b1f4e7de7c1353e96f2e7a723686a8822007d5b0",
+    "scenario.sumocfg": "a38540b62ef461d5a7f4ff2f46dee2676eeb7dd75bd1b23b0b398a1eae8210cc"
+  },
+  "limits": {
+    "poll_seconds": 0.1,
+    "run_bytes": 250000000,
+    "seconds": 120,
+    "starts": 40,
+    "total_raw_bytes": 8000000000
+  },
+  "mode": "OPEN",
+  "network_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+  "output": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_boundary_search_20261002_v1/M3000_R0_S17/outputs",
+  "package": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_boundary_search_20261002_v1/inputs/M3000_R0_S17",
+  "plan": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_boundary_search_20261002_v1/PLAN.md",
+  "plan_sha256": "9c218bbf1f1ac421dc0f1a41050112b9cca8434009cd6fa4b884f97a5695d06e",
+  "python": {
+    "full_version": "3.13.0 (v3.13.0:60403a5409f, Oct  7 2024, 00:37:40) [Clang 15.0.0 (clang-1500.3.9.4)]",
+    "implementation": "CPython",
+    "version": "3.13.0"
+  },
+  "q_main_veh_h": 3000,
+  "q_ramp_veh_h": 0,
+  "reference_sha256": {
+    "demand.rou.xml": "12e2e4e003089dad489a2ea1323cd44ef54dea39f994f1bb5fe61e45c7f03be0",
+    "scenario.add.xml": "6c3f027ef7a923b21be54968e8bc429ae3feffc4bccca0411bb9014ee41e68b1",
+    "scenario.sumocfg": "e844969b31734a90026a8493d2cb33417db584a1268b941e4624ec713ac90d84"
+  },
+  "run_id": "M3000_R0_S17",
+  "runner_sha256": "1484b8d754bce55538cbd95ee06bfe110237b802a9a153bab47da701c2d6adcd",
+  "schedule": {
+    "M": [
+      0,
+      3000
+    ],
+    "R": [
+      600,
+      3000
+    ],
+    "U": [
+      0,
+      3000
+    ],
+    "X": [
+      0,
+      3000
+    ]
+  },
+  "schema_version": 1,
+  "seed": 17,
+  "speed_factors": "SHA256(stage6-boundary-v1|seed|class|index) seeded Python Random.gauss(1,0.1), rejection [0.2,2], ten decimals",
+  "sumo_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179"
+}

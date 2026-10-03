@@ -79,3 +79,65 @@ This file records choices explicitly approved by the user. A user-approved item 
 - **Status:** `User-approved — Stage 6 exploratory validation only`
 - **Decision:** The user explicitly adopted `artifacts/stage6_phenomenon_level_abc_gate_20260925_v1/PHENOMENON_LEVEL_ABC_GATE.md` (reviewed file SHA-256 `d202b0451d53b808202132f5d97213cba9eb75ffb6b196dc2c7869a21b201f3a`; independent scientific review `PASS_FOR_PROPOSED_STAGE6_EXPLORATORY_SCOPE`, open Blocker/Major/required Minor `0/0/0`) for Stage 6 exploratory evaluation of the measurable A/B/C phenomenon chain. Confirmed State1 is no longer the sole Stage 6 exploratory acceptance condition; P/S/L and the 0.85 onset reference remain diagnostics.
 - **Boundary:** This adoption does not reclassify or overwrite historical P/S/L, `NO_WITNESS` or `NOT_EVALUABLE` results, does not change scientific inputs or `docs/EXPERIMENT_PROTOCOL.md`, and is not supervisor confirmation, formal experiment approval, a run authorization or permission to tune qMain/qRamp/controllers after outcomes. A separately reviewed bounded full-network A/B/C plan and any later exact-card/resource/execution authorizations are distinct steps.
+
+
+## D-012 — Scoped exploratory capability closeout and formal-design handoff
+
+- **Date:** 2026-10-03 (Europe/Rome)
+- **Status:** `Rejected by user — superseded by D-013; historical scientific scoped-PASS retained`
+- **Historical authorization interpretation (withdrawn):** The user requested checking the early criteria and, once satisfied, formally recording exploration ended and updating documents/Dashboard; clarified that the phase demonstrates thesis-relevant phenomena before large formal experiments and checks modelling-error alternatives, in light of Robert's latest reply; then explicitly requested “OK，请核对旧证据的适用性后重新评估结项”. The user subsequently explicitly rejected this limited closeout. It must not be treated as current user acceptance.
+- **Historical closeout record (withdrawn):** Record current Stage6 scenario-capability exploration `COMPLETE_WITH_LIMITATIONS`, with formal experiment design next/not started. Engineering transfer12/12 checks confirm mechanism-relevant shared network/default/routes/city signals/insertion/detector semantics; independent oldV2 A/B22 raw recheck supports sharedR/U obstruction/internal cost; new18-run three-seed uncontrolled results support mainline critical-state capability. Final independent scientific review is `PASS_FOR_SCOPED_EXPLORATORY_CLOSEOUT`, no open material blocker for this purpose. Relevant evidence is in `docs/探索验证阶段/STAGE6_EXPLORATORY_CAPABILITY_CLOSEOUT_20261003.md`.
+- **Scope:** Different operating conditions may support the two capability layers; identical demand or prior successful ALINEA/ABC/sweetspot is not required. D-011 retains its historical approval and unmet results, but is not the current capability-closeout prerequisite under the user's clarified purpose. No oldState1/T54/SG6-R result is retrospectively reclassified; originalRI3350 NOT_PAIRABLE/A_NOT_EVALUABLE remains. City evidence is single-seed, continuousall-connector spillback unproven, oldnonlocalM coupling unresolved; no newR900 city-effect prediction, quantified controller benefit or real-world calibration.
+- **Execution boundary:** No further exploratory simulation is needed or authorized. Formal design/protocol parameters remain Proposed; EXPERIMENT_PROTOCOL is empty/unfrozen, formal runs not started. This closeout does not authorize a controller/pilot/formal run, freeze a protocol, send a message, update external apps or publish.
+
+
+## D-013 — Current-version standard-metering validation required before exploratory closeout
+
+- **Date:** 2026-10-03 (Europe/Rome)
+- **Status:** `User-approved scope correction — design authorized; parameters Proposed and new runs not authorized`
+- **Source:** The user explicitly said: “我希望在当前版本的基础上设计临界点的标准 ramp metering 比较，补充探索验证阶段的证据。不接受有限范围完成”.
+- **Decision:** Restore Stage6 `PARTIAL / PLANNING_CURRENT_VERSION_CONTROL_VALIDATION`. The primary exploration evidence should be one coherent current-version series: existing uncontrolled demand localization, then matched standard ramp-metering comparison at a scientifically selected critical operating point. Historical fixed22/28ABC results remain method-development/history evidence and cannot replace the current controlled evidence required for acceptance. D-012's limited closeout is rejected.
+- **Design scope:** Reuse valid current OPEN baselines, preserve network/default behavior/explicit vehicle attributes/request schedules/urbanTLS/windows, and compare standardALINEA with measured actuation and complete mainline/ramp/urban costs and queue exposure. Numeric choices, seed coverage and revised completion gates must be stated as Proposed and independently reviewed. The user has not required manufacturing ABC or guaranteed sweetspot success.
+- **Boundary:** This authorizes design and current-state/document/Dashboard correction. It does not approve exact ALINEA parameters, implementation, simulation cards, a pilot/formal run, protocol freeze or thesis-structure changes. Formal protocol remains empty/unfrozen. Keep all original inputs/raw/results and scientific historical classifications; report negative/mixed results and unresolved evidence honestly.
+
+## D-014 — Execute the bounded current-version standard-metering plan
+
+- **Date:** 2026-10-03.
+- **Status:** `User-approved execution direction — conditional sequential gates remain mandatory`.
+- **Source:** User references STAGE6_CURRENT_VERSION_STANDARD_METERING_PLAN_20261003.md and explicitly requests “请严格按照该方案执行”.
+- **Decision:** Implement and review S0/S1, then execute eligible S2–S4 technical/exploratory runs and S5 analysis/review under the plan. No repeated blanket permission is required for already specified steps once their release gates pass. Exact inputs/code/cards and implementation-specific service/crossing rules must be reviewed before the applicable start. Existing numerical candidates may be prospectively locked for this exploratory comparison only after their declared scientific/technical checks.
+- **Boundary:** No formal protocol freeze or formal runs, no unreviewed parameter/model/demand change, automatic retry, cap reset, unconditional batch, guaranteed positive response or automatic exploration acceptance. The plan's failures/stops and full requested-cohort accounting remain binding. D-013's design-only permission describes the previous turn; this explicit new request expands permission to gated execution.
+
+## D-015 — Repair technical failures and continue the authorized sequence
+
+- **Date:** 2026-10-03.
+- **Status:** `User-approved technical repair and gated continuation`.
+- **Source:** User comments on “S17中性运行未能建立TraCI连接”: “技术问题的话，排查然后解决，非技术问题再停下”; then “解决完然后继续未完成的工作”.
+- **Decision:** Continue root-cause diagnosis/minimal technical repair, appropriate no-SUMO regression tests and necessary bounded technical/replacement starts under new revision cards and independent releases, then resume incomplete S2–S5. The earlier no-automatic-retry rule prevents blind restart; it does not prohibit an explicitly authorized reviewed repair attempt.
+- **Boundary:** Current19/40 total and1/8 control-technical counts are not reset; oldfailedraw/card preserved. No unreviewed scientific parameter/demand/model changes, formal freeze/runs or invented traffic result. If diagnosis cannot establish an appropriate repair, report what evidence is missing and design only the smallest discriminating technical check.
+
+## D-016 — Technical repair starts recorded separately from experiment allowance
+
+Date:2026-10-03. Status:User-approved, bounded resource-accounting correction. Source: user reply “技术故障排查和解决不占用次数”, followed by “解决后先尝试重试，避免不必要的测试浪费额度，重点放在仿真”.
+
+Technical diagnosis/repair starts, including connection/measurement NOOP validation, are retained in the physical launch ledger but excluded from the experiment-start allowance. Prior failures are not erased or relabeled as completed experiments. Existing18 uncontrolled experiment starts remain counted; no controlled experiment has yet started. Future actual controller trials count as experiments, including failed controller starts unless explicitly technical and documented; classification cannot be based on whether results are favourable. Original per-run120s,250MB and shared8GB raw limits, matching, prelaunch review and sequential data/scientific gates remain. Avoid optional testing and unsupported blind retries; perform minimal necessary repair followed by a reviewed single technical retry. This explicit user resource correction supersedes D-015's technical-start cap conflict; no formal protocol change.
+
+## D-017 — Design and execute a safe, rate-capable standard metering comparison
+
+Date: 2026-10-03. Status: User-approved research direction and gated exploratory execution.
+
+Source: The user references `STAGE6_SAFETY_AND_RATE_TRACKING_GPT_SOL_HANDOFF_20261003.md` and requests: “根据该文档继续设计能安全实现所需速率的标准执行器，并执行新方案，技术问题不占有预算次数，避免不必要的测试浪费额度，重点放在仿真结果，推进到三次控制仿真有明确可用结果为止”.
+
+Decision: Revise the actuator design to attain a defensible feasible service range safely, then execute a reviewed, matched current-version comparison for seeds 17, 23 and 42. Reuse the existing valid OPEN baselines only if the simulation inputs and no-intervention behavior remain equivalent. Preserve the sequential technical, data and independent scientific gates; a failed S17 gate requires mechanism diagnosis before proceeding. Count technical repair starts separately under D-016 while retaining every physical start and raw result.
+
+Boundary: This direction authorizes prospective exploratory design and eligible reviewed runs; it does not assert that the former 1200 veh/h bound is physically achievable, approve a particular new phase/rate parameter before design review, guarantee favorable outcomes, close Stage 6, freeze `EXPERIMENT_PROTOCOL.md`, or authorize formal experiments. No outcome-driven parameter tuning or unexplained repeat simulations.
+
+## D-018 — Close current-version Stage 6 exploration and enter formal design
+
+Date: 2026-10-03. Status: `User-condition satisfied; exploratory completion recorded after independent scientific PASS`.
+
+Authorization: The user required checking the original and supplemented exploratory criteria, then explicitly instructed that, if every required item is supported, exploration should be formally ended and the related files and Dashboard updated. The user rejected the earlier limited D-012 closeout, required current-version standard metering evidence (D-013), authorized its gated execution (D-014–D-017), and requested an explicit closure decision once evidence sufficed. This is the conditional authorization for the present record, not an invented new supervisor approval.
+
+Evidence and decision: The existing 18-run uncontrolled search localizes a sampled M3600/R750–900 transition; the reviewed V15 actuator completed matched OPEN/control pairs at M3600/R900 for seeds17/23/42 with safety, rate tracking, detector, pre-control pairability and complete 4050-vehicle gates independently passed. All three show M protection with increased R/U system cost and current-version R slow presence on the shared road plus directly observed U slow behind R during urban green. Independent scientific review judged the full exploratory purpose met: `completed / preliminary_ready` for **formal experiment design**. Exact data and limits are recorded in `docs/探索验证阶段/STAGE6_EXPLORATORY_CLOSEOUT_AND_FORMAL_HANDOFF_20261003.md` and the three-seed reports. Stop exploratory runs now; further runs require a new formal-design reason, not merely availability.
+
+Limits: The prespecified ≥30 s continuous slow-chain remains negative in all three seeds; no sweet spot or total-network net benefit was found for this tested policy. Source waiting is separated from shared-road exposure. This is one demand and three observed seeds, with S17 used during actuator development; it is not an independent formal confirmation, precise capacity estimate, real-world calibration or Robert-confirmed parameter set. Do not retrospectively mark old RI3350/ABC, strict State1/T54 or D-012 as passed. `docs/EXPERIMENT_PROTOCOL.md` remains empty/unfrozen; formal parameters, additional seeds/demand range and formal simulations await explicit design review and approval.

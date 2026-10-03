@@ -1,0 +1,17 @@
+{
+  "status": "PASS_FOR_EXPLORATORY_EXECUTION",
+  "scientific_verdict": "PASS_FOR_SINGLE_TECHNICAL_ACTUATOR_PILOT",
+  "scope": "single S17 V13 technical actuator validation only; S23 and S42 not released",
+  "authorization": "D-017",
+  "reviewer": "scientific_reviewer /root/boundary_design_review",
+  "review_result": "V12 failed before SUMO because system Python lacked traci. V13 binds the project virtualenv interpreter and checks traci at preflight. Scientific parameters, safe actuator and plan are unchanged. Actual safety, rate, detector, pairing and lifecycle gates remain empirical.",
+  "cards": {
+    "M3600_R900_S17_ALINEA_TRACI_V13": "4c5da4fae946a5f1721c28655481a4ee22da44fb96a88293616fa79e5dbfbbd9"
+  },
+  "runner_sha256": "0d9df9c2895911d3db9cfd1a271c0a9d06b75d442e89057111ce2e3ad688e0a4",
+  "plan_sha256": "3c408e95c543eb3d091fb856c5d9adb351fd05b9aa07631ed79718b53f8d7228",
+  "expected_physical_starts_before": 27,
+  "expected_physical_starts_after": 28,
+  "expected_technical_starts_after": 9,
+  "expected_experiment_starts": 19
+}

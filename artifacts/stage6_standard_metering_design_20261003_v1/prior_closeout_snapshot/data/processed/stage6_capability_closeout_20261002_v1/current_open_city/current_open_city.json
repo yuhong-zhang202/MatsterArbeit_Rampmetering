@@ -1,0 +1,1243 @@
+{
+  "scope": "Three existing current OPEN runs only; no new simulation, no old/new numeric causal subtraction",
+  "windows": {
+    "whole": [
+      0,
+      4200
+    ],
+    "active": [
+      600,
+      3000
+    ],
+    "evaluation": [
+      1200,
+      3000
+    ]
+  },
+  "thresholds": {
+    "historical_slow_mps": 1.389,
+    "stop_mps": 0.1,
+    "other_diagnostic_slow_mps": 5
+  },
+  "sources": {
+    "data/raw/stage6_boundary_search_20261002_v1/M3600_R1200_S17/outputs/fcd.xml.gz": "fa9c6d860861047cc3be0d87c1b43839b3d4e94f0af1f32e8c1334819c344a25",
+    "data/raw/stage6_boundary_search_20261002_v1/M3600_R1200_S17/outputs/tls_states.xml": "6a290ae2f432b76b5c6c3e48a93ded8854fc9b6c81de3fb5b5e636a1e69eb547",
+    "data/processed/stage6_boundary_search_20261002_v1/M3600_R1200_S17/summary.json": "46b4980c8d02d1c46acbb0ea1016ecb35dd616fb245e8c14046c5159fd88d973",
+    "data/raw/stage6_boundary_search_20261002_v1/M3000_R1200_S17/outputs/fcd.xml.gz": "02986168e91c1cd7a9cf675c4bbed22447c87a3b7967e94f881bcb73dbbb754f",
+    "data/raw/stage6_boundary_search_20261002_v1/M3000_R1200_S17/outputs/tls_states.xml": "f492d31c699eafccbd2334b56cc7fa60e3d116ad1f4aa8661ea0fde05e97aef4",
+    "data/processed/stage6_boundary_search_20261002_v1/M3000_R1200_S17/summary.json": "de5708d19e72e3bfd8208d7d7ee61aea1a1cd6585d8fac3509fe1c90ad8a4ae0",
+    "data/raw/stage6_boundary_search_20261002_v1/M3600_R900_S17/outputs/fcd.xml.gz": "89a14f50c6a627276e9f3562f002376f362025e471de77b413cac7666972a790",
+    "data/raw/stage6_boundary_search_20261002_v1/M3600_R900_S17/outputs/tls_states.xml": "721939620389245acb8e1dd08c692a7a8c775d31876606f0b1d762800d98d7e0",
+    "data/processed/stage6_boundary_search_20261002_v1/M3600_R900_S17/summary.json": "c0f7ca7b62ea53f3964c258503a8eac38aae8722853471290b330c0e3dc299df"
+  },
+  "runs": [
+    {
+      "run_id": "M3600_R1200_S17",
+      "fcd_seconds": 4200,
+      "ramp_continuous_G": true,
+      "classes_from_verified_summary": [
+        {
+          "vehicle_class": "M",
+          "planned": 3000,
+          "inserted": 3000,
+          "arrived": 3000,
+          "unfinished": 0,
+          "undeparted": 0,
+          "max_departDelay_s": 151.0,
+          "mean_completed_duration_s": 159.288,
+          "scheduled_system_time_observed_total_s": 574035.0,
+          "external_wait_observed_total_s": 96171.0,
+          "in_network_observed_total_s": 477864.0
+        },
+        {
+          "vehicle_class": "R",
+          "planned": 800,
+          "inserted": 800,
+          "arrived": 800,
+          "unfinished": 0,
+          "undeparted": 0,
+          "max_departDelay_s": 274.0,
+          "mean_completed_duration_s": 159.9175,
+          "scheduled_system_time_observed_total_s": 217427.0,
+          "external_wait_observed_total_s": 89493.0,
+          "in_network_observed_total_s": 127934.0
+        },
+        {
+          "vehicle_class": "U",
+          "planned": 300,
+          "inserted": 300,
+          "arrived": 300,
+          "unfinished": 0,
+          "undeparted": 0,
+          "max_departDelay_s": 275.0,
+          "mean_completed_duration_s": 111.07,
+          "scheduled_system_time_observed_total_s": 60178.0,
+          "external_wait_observed_total_s": 26857.0,
+          "in_network_observed_total_s": 33321.0
+        },
+        {
+          "vehicle_class": "X",
+          "planned": 150,
+          "inserted": 150,
+          "arrived": 150,
+          "unfinished": 0,
+          "undeparted": 0,
+          "max_departDelay_s": 0.0,
+          "mean_completed_duration_s": 68.59333333333333,
+          "scheduled_system_time_observed_total_s": 10289.0,
+          "external_wait_observed_total_s": 0.0,
+          "in_network_observed_total_s": 10289.0
+        }
+      ],
+      "shared_slow_snapshots": [],
+      "e2_from_verified_processed": [
+        {
+          "source": "ramp_storage_e2.xml",
+          "positive_jam_bins": 0,
+          "bins": 140,
+          "max_jam_vehicles": 0.0
+        },
+        {
+          "source": "shared_boundary_e2.xml",
+          "positive_jam_bins": 0,
+          "bins": 140,
+          "max_jam_vehicles": 0.0
+        }
+      ]
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "fcd_seconds": 4200,
+      "ramp_continuous_G": true,
+      "classes_from_verified_summary": [
+        {
+          "vehicle_class": "M",
+          "planned": 2500,
+          "inserted": 2500,
+          "arrived": 2500,
+          "unfinished": 0,
+          "undeparted": 0,
+          "max_departDelay_s": 0.8000000000001819,
+          "mean_completed_duration_s": 74.2016,
+          "scheduled_system_time_observed_total_s": 186504.0,
+          "external_wait_observed_total_s": 999.9999999999998,
+          "in_network_observed_total_s": 185504.0
+        },
+        {
+          "vehicle_class": "R",
+          "planned": 800,
+          "inserted": 800,
+          "arrived": 800,
+          "unfinished": 0,
+          "undeparted": 0,
+          "max_departDelay_s": 274.0,
+          "mean_completed_duration_s": 143.87875,
+          "scheduled_system_time_observed_total_s": 204596.0,
+          "external_wait_observed_total_s": 89493.0,
+          "in_network_observed_total_s": 115103.0
+        },
+        {
+          "vehicle_class": "U",
+          "planned": 300,
+          "inserted": 300,
+          "arrived": 300,
+          "unfinished": 0,
+          "undeparted": 0,
+          "max_departDelay_s": 275.0,
+          "mean_completed_duration_s": 111.07,
+          "scheduled_system_time_observed_total_s": 60178.0,
+          "external_wait_observed_total_s": 26857.0,
+          "in_network_observed_total_s": 33321.0
+        },
+        {
+          "vehicle_class": "X",
+          "planned": 150,
+          "inserted": 150,
+          "arrived": 150,
+          "unfinished": 0,
+          "undeparted": 0,
+          "max_departDelay_s": 0.0,
+          "mean_completed_duration_s": 68.59333333333333,
+          "scheduled_system_time_observed_total_s": 10289.0,
+          "external_wait_observed_total_s": 0.0,
+          "in_network_observed_total_s": 10289.0
+        }
+      ],
+      "shared_slow_snapshots": [],
+      "e2_from_verified_processed": [
+        {
+          "source": "ramp_storage_e2.xml",
+          "positive_jam_bins": 0,
+          "bins": 140,
+          "max_jam_vehicles": 0.0
+        },
+        {
+          "source": "shared_boundary_e2.xml",
+          "positive_jam_bins": 0,
+          "bins": 140,
+          "max_jam_vehicles": 0.0
+        }
+      ]
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "fcd_seconds": 4200,
+      "ramp_continuous_G": true,
+      "classes_from_verified_summary": [
+        {
+          "vehicle_class": "M",
+          "planned": 3000,
+          "inserted": 3000,
+          "arrived": 3000,
+          "unfinished": 0,
+          "undeparted": 0,
+          "max_departDelay_s": 58.0,
+          "mean_completed_duration_s": 149.156,
+          "scheduled_system_time_observed_total_s": 467230.0,
+          "external_wait_observed_total_s": 19762.0,
+          "in_network_observed_total_s": 447468.0
+        },
+        {
+          "vehicle_class": "R",
+          "planned": 600,
+          "inserted": 600,
+          "arrived": 600,
+          "unfinished": 0,
+          "undeparted": 0,
+          "max_departDelay_s": 0.0,
+          "mean_completed_duration_s": 98.30666666666667,
+          "scheduled_system_time_observed_total_s": 58984.0,
+          "external_wait_observed_total_s": 0.0,
+          "in_network_observed_total_s": 58984.0
+        },
+        {
+          "vehicle_class": "U",
+          "planned": 300,
+          "inserted": 300,
+          "arrived": 300,
+          "unfinished": 0,
+          "undeparted": 0,
+          "max_departDelay_s": 0.0,
+          "mean_completed_duration_s": 66.29333333333334,
+          "scheduled_system_time_observed_total_s": 19888.0,
+          "external_wait_observed_total_s": 0.0,
+          "in_network_observed_total_s": 19888.0
+        },
+        {
+          "vehicle_class": "X",
+          "planned": 150,
+          "inserted": 150,
+          "arrived": 150,
+          "unfinished": 0,
+          "undeparted": 0,
+          "max_departDelay_s": 0.0,
+          "mean_completed_duration_s": 68.59333333333333,
+          "scheduled_system_time_observed_total_s": 10289.0,
+          "external_wait_observed_total_s": 0.0,
+          "in_network_observed_total_s": 10289.0
+        }
+      ],
+      "shared_slow_snapshots": [],
+      "e2_from_verified_processed": [
+        {
+          "source": "ramp_storage_e2.xml",
+          "positive_jam_bins": 0,
+          "bins": 140,
+          "max_jam_vehicles": 0.0
+        },
+        {
+          "source": "shared_boundary_e2.xml",
+          "positive_jam_bins": 0,
+          "bins": 140,
+          "max_jam_vehicles": 0.0
+        }
+      ]
+    }
+  ],
+  "lane_exposure": [
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "whole",
+      "vehicle_class": "R",
+      "lane": "urban_in_0",
+      "vehicle_seconds": 50031,
+      "slow_lt1p389_vehicle_seconds": 15415,
+      "stopped_lt0p1_vehicle_seconds": 3637,
+      "slow_lt5_vehicle_seconds": 24327
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "whole",
+      "vehicle_class": "R",
+      "lane": "shared_approach_0",
+      "vehicle_seconds": 18870,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 303
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "whole",
+      "vehicle_class": "R",
+      "lane": ":urban_diverge_0_0",
+      "vehicle_seconds": 0,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "whole",
+      "vehicle_class": "R",
+      "lane": ":urban_diverge_1_0",
+      "vehicle_seconds": 6347,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 27
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "whole",
+      "vehicle_class": "R",
+      "lane": "ramp_storage_0",
+      "vehicle_seconds": 8239,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "whole",
+      "vehicle_class": "U",
+      "lane": "urban_in_0",
+      "vehicle_seconds": 15167,
+      "slow_lt1p389_vehicle_seconds": 4675,
+      "stopped_lt0p1_vehicle_seconds": 1118,
+      "slow_lt5_vehicle_seconds": 7380
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "whole",
+      "vehicle_class": "U",
+      "lane": "shared_approach_0",
+      "vehicle_seconds": 6868,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 67
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "whole",
+      "vehicle_class": "U",
+      "lane": ":urban_diverge_0_0",
+      "vehicle_seconds": 398,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 60
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "whole",
+      "vehicle_class": "U",
+      "lane": ":urban_diverge_1_0",
+      "vehicle_seconds": 0,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "whole",
+      "vehicle_class": "U",
+      "lane": "ramp_storage_0",
+      "vehicle_seconds": 0,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "active",
+      "vehicle_class": "R",
+      "lane": "urban_in_0",
+      "vehicle_seconds": 43863,
+      "slow_lt1p389_vehicle_seconds": 13482,
+      "stopped_lt0p1_vehicle_seconds": 3194,
+      "slow_lt5_vehicle_seconds": 21298
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "active",
+      "vehicle_class": "R",
+      "lane": "shared_approach_0",
+      "vehicle_seconds": 16433,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 247
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "active",
+      "vehicle_class": "R",
+      "lane": ":urban_diverge_0_0",
+      "vehicle_seconds": 0,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "active",
+      "vehicle_class": "R",
+      "lane": ":urban_diverge_1_0",
+      "vehicle_seconds": 5480,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 22
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "active",
+      "vehicle_class": "R",
+      "lane": "ramp_storage_0",
+      "vehicle_seconds": 7093,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "active",
+      "vehicle_class": "U",
+      "lane": "urban_in_0",
+      "vehicle_seconds": 13154,
+      "slow_lt1p389_vehicle_seconds": 4028,
+      "stopped_lt0p1_vehicle_seconds": 930,
+      "slow_lt5_vehicle_seconds": 6392
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "active",
+      "vehicle_class": "U",
+      "lane": "shared_approach_0",
+      "vehicle_seconds": 4991,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 57
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "active",
+      "vehicle_class": "U",
+      "lane": ":urban_diverge_0_0",
+      "vehicle_seconds": 274,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 36
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "active",
+      "vehicle_class": "U",
+      "lane": ":urban_diverge_1_0",
+      "vehicle_seconds": 0,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "active",
+      "vehicle_class": "U",
+      "lane": "ramp_storage_0",
+      "vehicle_seconds": 0,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "evaluation",
+      "vehicle_class": "R",
+      "lane": "urban_in_0",
+      "vehicle_seconds": 36212,
+      "slow_lt1p389_vehicle_seconds": 11074,
+      "stopped_lt0p1_vehicle_seconds": 2475,
+      "slow_lt5_vehicle_seconds": 17761
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "evaluation",
+      "vehicle_class": "R",
+      "lane": "shared_approach_0",
+      "vehicle_seconds": 12477,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 214
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "evaluation",
+      "vehicle_class": "R",
+      "lane": ":urban_diverge_0_0",
+      "vehicle_seconds": 0,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "evaluation",
+      "vehicle_class": "R",
+      "lane": ":urban_diverge_1_0",
+      "vehicle_seconds": 4161,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 19
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "evaluation",
+      "vehicle_class": "R",
+      "lane": "ramp_storage_0",
+      "vehicle_seconds": 5397,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "evaluation",
+      "vehicle_class": "U",
+      "lane": "urban_in_0",
+      "vehicle_seconds": 10852,
+      "slow_lt1p389_vehicle_seconds": 3321,
+      "stopped_lt0p1_vehicle_seconds": 725,
+      "slow_lt5_vehicle_seconds": 5330
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "evaluation",
+      "vehicle_class": "U",
+      "lane": "shared_approach_0",
+      "vehicle_seconds": 3765,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 50
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "evaluation",
+      "vehicle_class": "U",
+      "lane": ":urban_diverge_0_0",
+      "vehicle_seconds": 206,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 32
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "evaluation",
+      "vehicle_class": "U",
+      "lane": ":urban_diverge_1_0",
+      "vehicle_seconds": 0,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "evaluation",
+      "vehicle_class": "U",
+      "lane": "ramp_storage_0",
+      "vehicle_seconds": 0,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "whole",
+      "vehicle_class": "R",
+      "lane": "urban_in_0",
+      "vehicle_seconds": 50031,
+      "slow_lt1p389_vehicle_seconds": 15415,
+      "stopped_lt0p1_vehicle_seconds": 3637,
+      "slow_lt5_vehicle_seconds": 24327
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "whole",
+      "vehicle_class": "R",
+      "lane": "shared_approach_0",
+      "vehicle_seconds": 18870,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 303
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "whole",
+      "vehicle_class": "R",
+      "lane": ":urban_diverge_0_0",
+      "vehicle_seconds": 0,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "whole",
+      "vehicle_class": "R",
+      "lane": ":urban_diverge_1_0",
+      "vehicle_seconds": 6347,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 27
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "whole",
+      "vehicle_class": "R",
+      "lane": "ramp_storage_0",
+      "vehicle_seconds": 8239,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "whole",
+      "vehicle_class": "U",
+      "lane": "urban_in_0",
+      "vehicle_seconds": 15167,
+      "slow_lt1p389_vehicle_seconds": 4675,
+      "stopped_lt0p1_vehicle_seconds": 1118,
+      "slow_lt5_vehicle_seconds": 7380
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "whole",
+      "vehicle_class": "U",
+      "lane": "shared_approach_0",
+      "vehicle_seconds": 6868,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 67
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "whole",
+      "vehicle_class": "U",
+      "lane": ":urban_diverge_0_0",
+      "vehicle_seconds": 398,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 60
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "whole",
+      "vehicle_class": "U",
+      "lane": ":urban_diverge_1_0",
+      "vehicle_seconds": 0,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "whole",
+      "vehicle_class": "U",
+      "lane": "ramp_storage_0",
+      "vehicle_seconds": 0,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "active",
+      "vehicle_class": "R",
+      "lane": "urban_in_0",
+      "vehicle_seconds": 43863,
+      "slow_lt1p389_vehicle_seconds": 13482,
+      "stopped_lt0p1_vehicle_seconds": 3194,
+      "slow_lt5_vehicle_seconds": 21298
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "active",
+      "vehicle_class": "R",
+      "lane": "shared_approach_0",
+      "vehicle_seconds": 16433,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 247
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "active",
+      "vehicle_class": "R",
+      "lane": ":urban_diverge_0_0",
+      "vehicle_seconds": 0,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "active",
+      "vehicle_class": "R",
+      "lane": ":urban_diverge_1_0",
+      "vehicle_seconds": 5480,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 22
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "active",
+      "vehicle_class": "R",
+      "lane": "ramp_storage_0",
+      "vehicle_seconds": 7093,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "active",
+      "vehicle_class": "U",
+      "lane": "urban_in_0",
+      "vehicle_seconds": 13154,
+      "slow_lt1p389_vehicle_seconds": 4028,
+      "stopped_lt0p1_vehicle_seconds": 930,
+      "slow_lt5_vehicle_seconds": 6392
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "active",
+      "vehicle_class": "U",
+      "lane": "shared_approach_0",
+      "vehicle_seconds": 4991,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 57
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "active",
+      "vehicle_class": "U",
+      "lane": ":urban_diverge_0_0",
+      "vehicle_seconds": 274,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 36
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "active",
+      "vehicle_class": "U",
+      "lane": ":urban_diverge_1_0",
+      "vehicle_seconds": 0,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "active",
+      "vehicle_class": "U",
+      "lane": "ramp_storage_0",
+      "vehicle_seconds": 0,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "evaluation",
+      "vehicle_class": "R",
+      "lane": "urban_in_0",
+      "vehicle_seconds": 36212,
+      "slow_lt1p389_vehicle_seconds": 11074,
+      "stopped_lt0p1_vehicle_seconds": 2475,
+      "slow_lt5_vehicle_seconds": 17761
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "evaluation",
+      "vehicle_class": "R",
+      "lane": "shared_approach_0",
+      "vehicle_seconds": 12477,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 214
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "evaluation",
+      "vehicle_class": "R",
+      "lane": ":urban_diverge_0_0",
+      "vehicle_seconds": 0,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "evaluation",
+      "vehicle_class": "R",
+      "lane": ":urban_diverge_1_0",
+      "vehicle_seconds": 4161,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 19
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "evaluation",
+      "vehicle_class": "R",
+      "lane": "ramp_storage_0",
+      "vehicle_seconds": 5397,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "evaluation",
+      "vehicle_class": "U",
+      "lane": "urban_in_0",
+      "vehicle_seconds": 10852,
+      "slow_lt1p389_vehicle_seconds": 3321,
+      "stopped_lt0p1_vehicle_seconds": 725,
+      "slow_lt5_vehicle_seconds": 5330
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "evaluation",
+      "vehicle_class": "U",
+      "lane": "shared_approach_0",
+      "vehicle_seconds": 3765,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 50
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "evaluation",
+      "vehicle_class": "U",
+      "lane": ":urban_diverge_0_0",
+      "vehicle_seconds": 206,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 32
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "evaluation",
+      "vehicle_class": "U",
+      "lane": ":urban_diverge_1_0",
+      "vehicle_seconds": 0,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "evaluation",
+      "vehicle_class": "U",
+      "lane": "ramp_storage_0",
+      "vehicle_seconds": 0,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "whole",
+      "vehicle_class": "R",
+      "lane": "urban_in_0",
+      "vehicle_seconds": 3537,
+      "slow_lt1p389_vehicle_seconds": 729,
+      "stopped_lt0p1_vehicle_seconds": 426,
+      "slow_lt5_vehicle_seconds": 1181
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "whole",
+      "vehicle_class": "R",
+      "lane": "shared_approach_0",
+      "vehicle_seconds": 13935,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 216
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "whole",
+      "vehicle_class": "R",
+      "lane": ":urban_diverge_0_0",
+      "vehicle_seconds": 0,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "whole",
+      "vehicle_class": "R",
+      "lane": ":urban_diverge_1_0",
+      "vehicle_seconds": 4835,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 24
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "whole",
+      "vehicle_class": "R",
+      "lane": "ramp_storage_0",
+      "vehicle_seconds": 6105,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "whole",
+      "vehicle_class": "U",
+      "lane": "urban_in_0",
+      "vehicle_seconds": 1796,
+      "slow_lt1p389_vehicle_seconds": 360,
+      "stopped_lt0p1_vehicle_seconds": 243,
+      "slow_lt5_vehicle_seconds": 618
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "whole",
+      "vehicle_class": "U",
+      "lane": "shared_approach_0",
+      "vehicle_seconds": 6779,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 63
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "whole",
+      "vehicle_class": "U",
+      "lane": ":urban_diverge_0_0",
+      "vehicle_seconds": 396,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 51
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "whole",
+      "vehicle_class": "U",
+      "lane": ":urban_diverge_1_0",
+      "vehicle_seconds": 0,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "whole",
+      "vehicle_class": "U",
+      "lane": "ramp_storage_0",
+      "vehicle_seconds": 0,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "active",
+      "vehicle_class": "R",
+      "lane": "urban_in_0",
+      "vehicle_seconds": 3523,
+      "slow_lt1p389_vehicle_seconds": 723,
+      "stopped_lt0p1_vehicle_seconds": 422,
+      "slow_lt5_vehicle_seconds": 1170
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "active",
+      "vehicle_class": "R",
+      "lane": "shared_approach_0",
+      "vehicle_seconds": 13851,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 214
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "active",
+      "vehicle_class": "R",
+      "lane": ":urban_diverge_0_0",
+      "vehicle_seconds": 0,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "active",
+      "vehicle_class": "R",
+      "lane": ":urban_diverge_1_0",
+      "vehicle_seconds": 4765,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 23
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "active",
+      "vehicle_class": "R",
+      "lane": "ramp_storage_0",
+      "vehicle_seconds": 5998,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "active",
+      "vehicle_class": "U",
+      "lane": "urban_in_0",
+      "vehicle_seconds": 1617,
+      "slow_lt1p389_vehicle_seconds": 288,
+      "stopped_lt0p1_vehicle_seconds": 185,
+      "slow_lt5_vehicle_seconds": 538
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "active",
+      "vehicle_class": "U",
+      "lane": "shared_approach_0",
+      "vehicle_seconds": 5592,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 62
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "active",
+      "vehicle_class": "U",
+      "lane": ":urban_diverge_0_0",
+      "vehicle_seconds": 313,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 36
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "active",
+      "vehicle_class": "U",
+      "lane": ":urban_diverge_1_0",
+      "vehicle_seconds": 0,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "active",
+      "vehicle_class": "U",
+      "lane": "ramp_storage_0",
+      "vehicle_seconds": 0,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "evaluation",
+      "vehicle_class": "R",
+      "lane": "urban_in_0",
+      "vehicle_seconds": 2689,
+      "slow_lt1p389_vehicle_seconds": 550,
+      "stopped_lt0p1_vehicle_seconds": 319,
+      "slow_lt5_vehicle_seconds": 893
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "evaluation",
+      "vehicle_class": "R",
+      "lane": "shared_approach_0",
+      "vehicle_seconds": 10505,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 181
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "evaluation",
+      "vehicle_class": "R",
+      "lane": ":urban_diverge_0_0",
+      "vehicle_seconds": 0,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "evaluation",
+      "vehicle_class": "R",
+      "lane": ":urban_diverge_1_0",
+      "vehicle_seconds": 3616,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 17
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "evaluation",
+      "vehicle_class": "R",
+      "lane": "ramp_storage_0",
+      "vehicle_seconds": 4566,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "evaluation",
+      "vehicle_class": "U",
+      "lane": "urban_in_0",
+      "vehicle_seconds": 1232,
+      "slow_lt1p389_vehicle_seconds": 217,
+      "stopped_lt0p1_vehicle_seconds": 140,
+      "slow_lt5_vehicle_seconds": 411
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "evaluation",
+      "vehicle_class": "U",
+      "lane": "shared_approach_0",
+      "vehicle_seconds": 4223,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 49
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "evaluation",
+      "vehicle_class": "U",
+      "lane": ":urban_diverge_0_0",
+      "vehicle_seconds": 237,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 27
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "evaluation",
+      "vehicle_class": "U",
+      "lane": ":urban_diverge_1_0",
+      "vehicle_seconds": 0,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "evaluation",
+      "vehicle_class": "U",
+      "lane": "ramp_storage_0",
+      "vehicle_seconds": 0,
+      "slow_lt1p389_vehicle_seconds": 0,
+      "stopped_lt0p1_vehicle_seconds": 0,
+      "slow_lt5_vehicle_seconds": 0
+    }
+  ],
+  "shared_context": [
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "whole",
+      "U_slow_vehicle_seconds": 0,
+      "U_slow_with_shared_R_slow_vehicle_seconds": 0,
+      "U_slow_urban_green_vehicle_seconds": 0,
+      "seconds_U_slow": 0,
+      "seconds_U_and_R_slow": 0
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "active",
+      "U_slow_vehicle_seconds": 0,
+      "U_slow_with_shared_R_slow_vehicle_seconds": 0,
+      "U_slow_urban_green_vehicle_seconds": 0,
+      "seconds_U_slow": 0,
+      "seconds_U_and_R_slow": 0
+    },
+    {
+      "run_id": "M3600_R1200_S17",
+      "window": "evaluation",
+      "U_slow_vehicle_seconds": 0,
+      "U_slow_with_shared_R_slow_vehicle_seconds": 0,
+      "U_slow_urban_green_vehicle_seconds": 0,
+      "seconds_U_slow": 0,
+      "seconds_U_and_R_slow": 0
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "whole",
+      "U_slow_vehicle_seconds": 0,
+      "U_slow_with_shared_R_slow_vehicle_seconds": 0,
+      "U_slow_urban_green_vehicle_seconds": 0,
+      "seconds_U_slow": 0,
+      "seconds_U_and_R_slow": 0
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "active",
+      "U_slow_vehicle_seconds": 0,
+      "U_slow_with_shared_R_slow_vehicle_seconds": 0,
+      "U_slow_urban_green_vehicle_seconds": 0,
+      "seconds_U_slow": 0,
+      "seconds_U_and_R_slow": 0
+    },
+    {
+      "run_id": "M3000_R1200_S17",
+      "window": "evaluation",
+      "U_slow_vehicle_seconds": 0,
+      "U_slow_with_shared_R_slow_vehicle_seconds": 0,
+      "U_slow_urban_green_vehicle_seconds": 0,
+      "seconds_U_slow": 0,
+      "seconds_U_and_R_slow": 0
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "whole",
+      "U_slow_vehicle_seconds": 0,
+      "U_slow_with_shared_R_slow_vehicle_seconds": 0,
+      "U_slow_urban_green_vehicle_seconds": 0,
+      "seconds_U_slow": 0,
+      "seconds_U_and_R_slow": 0
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "active",
+      "U_slow_vehicle_seconds": 0,
+      "U_slow_with_shared_R_slow_vehicle_seconds": 0,
+      "U_slow_urban_green_vehicle_seconds": 0,
+      "seconds_U_slow": 0,
+      "seconds_U_and_R_slow": 0
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "window": "evaluation",
+      "U_slow_vehicle_seconds": 0,
+      "U_slow_with_shared_R_slow_vehicle_seconds": 0,
+      "U_slow_urban_green_vehicle_seconds": 0,
+      "seconds_U_slow": 0,
+      "seconds_U_and_R_slow": 0
+    }
+  ],
+  "script_sha256": "00ad202ade7393afb81a3c4314d4be106f7422e36b27a066085a683263ecb5cb"
+}

@@ -1,0 +1,1297 @@
+{
+  "canonical_definitions": {
+    "detectors_and_WAUT_without_dest": {
+      "A": [
+        {
+          "endPos": "238.8",
+          "friendlyPos": "false",
+          "id": "shared_boundary_e2",
+          "jamThreshold": "10",
+          "lane": "shared_approach_0",
+          "period": "30",
+          "pos": "0",
+          "speedThreshold": "1.3888888888888888",
+          "tag": "laneAreaDetector",
+          "timeThreshold": "1"
+        },
+        {
+          "endPos": "204.49",
+          "friendlyPos": "false",
+          "id": "ramp_storage_e2",
+          "jamThreshold": "10",
+          "lane": "ramp_storage_0",
+          "period": "30",
+          "pos": "0",
+          "speedThreshold": "1.3888888888888888",
+          "tag": "laneAreaDetector",
+          "timeThreshold": "1"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_main_up_1300_l0",
+          "lane": "main_up_0",
+          "length": "0",
+          "period": "30",
+          "pos": "1300",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_main_up_1300_l1",
+          "lane": "main_up_1",
+          "length": "0",
+          "period": "30",
+          "pos": "1300",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_merge_section_20_l0",
+          "lane": "merge_section_0",
+          "length": "0",
+          "period": "30",
+          "pos": "20",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_merge_section_20_l1",
+          "lane": "merge_section_1",
+          "length": "0",
+          "period": "30",
+          "pos": "20",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_merge_section_20_l2",
+          "lane": "merge_section_2",
+          "length": "0",
+          "period": "30",
+          "pos": "20",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_main_down_20_l0",
+          "lane": "main_down_0",
+          "length": "0",
+          "period": "30",
+          "pos": "20",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_main_down_20_l1",
+          "lane": "main_down_1",
+          "length": "0",
+          "period": "30",
+          "pos": "20",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_main_down_200_l0",
+          "lane": "main_down_0",
+          "length": "0",
+          "period": "30",
+          "pos": "200",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_main_down_200_l1",
+          "lane": "main_down_1",
+          "length": "0",
+          "period": "30",
+          "pos": "200",
+          "tag": "inductionLoop"
+        },
+        {
+          "tag": "timedEvent",
+          "type": "SaveTLSStates"
+        },
+        {
+          "id": "targeted_program_selector",
+          "refTime": "0",
+          "startProg": "A_OPEN",
+          "tag": "WAUT"
+        },
+        {
+          "junctionID": "ramp_mid",
+          "tag": "wautJunction",
+          "wautID": "targeted_program_selector"
+        }
+      ],
+      "B22": [
+        {
+          "endPos": "238.8",
+          "friendlyPos": "false",
+          "id": "shared_boundary_e2",
+          "jamThreshold": "10",
+          "lane": "shared_approach_0",
+          "period": "30",
+          "pos": "0",
+          "speedThreshold": "1.3888888888888888",
+          "tag": "laneAreaDetector",
+          "timeThreshold": "1"
+        },
+        {
+          "endPos": "204.49",
+          "friendlyPos": "false",
+          "id": "ramp_storage_e2",
+          "jamThreshold": "10",
+          "lane": "ramp_storage_0",
+          "period": "30",
+          "pos": "0",
+          "speedThreshold": "1.3888888888888888",
+          "tag": "laneAreaDetector",
+          "timeThreshold": "1"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_main_up_1300_l0",
+          "lane": "main_up_0",
+          "length": "0",
+          "period": "30",
+          "pos": "1300",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_main_up_1300_l1",
+          "lane": "main_up_1",
+          "length": "0",
+          "period": "30",
+          "pos": "1300",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_merge_section_20_l0",
+          "lane": "merge_section_0",
+          "length": "0",
+          "period": "30",
+          "pos": "20",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_merge_section_20_l1",
+          "lane": "merge_section_1",
+          "length": "0",
+          "period": "30",
+          "pos": "20",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_merge_section_20_l2",
+          "lane": "merge_section_2",
+          "length": "0",
+          "period": "30",
+          "pos": "20",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_main_down_20_l0",
+          "lane": "main_down_0",
+          "length": "0",
+          "period": "30",
+          "pos": "20",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_main_down_20_l1",
+          "lane": "main_down_1",
+          "length": "0",
+          "period": "30",
+          "pos": "20",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_main_down_200_l0",
+          "lane": "main_down_0",
+          "length": "0",
+          "period": "30",
+          "pos": "200",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_main_down_200_l1",
+          "lane": "main_down_1",
+          "length": "0",
+          "period": "30",
+          "pos": "200",
+          "tag": "inductionLoop"
+        },
+        {
+          "tag": "timedEvent",
+          "type": "SaveTLSStates"
+        },
+        {
+          "id": "targeted_program_selector",
+          "refTime": "0",
+          "startProg": "B_MODERATE",
+          "tag": "WAUT"
+        },
+        {
+          "junctionID": "ramp_mid",
+          "tag": "wautJunction",
+          "wautID": "targeted_program_selector"
+        }
+      ],
+      "NEW_S17": [
+        {
+          "endPos": "238.8",
+          "friendlyPos": "false",
+          "id": "shared_boundary_e2",
+          "jamThreshold": "10",
+          "lane": "shared_approach_0",
+          "period": "30",
+          "pos": "0",
+          "speedThreshold": "1.3888888888888888",
+          "tag": "laneAreaDetector",
+          "timeThreshold": "1"
+        },
+        {
+          "endPos": "204.49",
+          "friendlyPos": "false",
+          "id": "ramp_storage_e2",
+          "jamThreshold": "10",
+          "lane": "ramp_storage_0",
+          "period": "30",
+          "pos": "0",
+          "speedThreshold": "1.3888888888888888",
+          "tag": "laneAreaDetector",
+          "timeThreshold": "1"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_main_up_1300_l0",
+          "lane": "main_up_0",
+          "length": "0",
+          "period": "30",
+          "pos": "1300",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_main_up_1300_l1",
+          "lane": "main_up_1",
+          "length": "0",
+          "period": "30",
+          "pos": "1300",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_merge_section_20_l0",
+          "lane": "merge_section_0",
+          "length": "0",
+          "period": "30",
+          "pos": "20",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_merge_section_20_l1",
+          "lane": "merge_section_1",
+          "length": "0",
+          "period": "30",
+          "pos": "20",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_merge_section_20_l2",
+          "lane": "merge_section_2",
+          "length": "0",
+          "period": "30",
+          "pos": "20",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_main_down_20_l0",
+          "lane": "main_down_0",
+          "length": "0",
+          "period": "30",
+          "pos": "20",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_main_down_20_l1",
+          "lane": "main_down_1",
+          "length": "0",
+          "period": "30",
+          "pos": "20",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_main_down_200_l0",
+          "lane": "main_down_0",
+          "length": "0",
+          "period": "30",
+          "pos": "200",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_main_down_200_l1",
+          "lane": "main_down_1",
+          "length": "0",
+          "period": "30",
+          "pos": "200",
+          "tag": "inductionLoop"
+        },
+        {
+          "tag": "timedEvent",
+          "type": "SaveTLSStates"
+        },
+        {
+          "id": "targeted_program_selector",
+          "refTime": "0",
+          "startProg": "A_OPEN",
+          "tag": "WAUT"
+        },
+        {
+          "junctionID": "ramp_mid",
+          "tag": "wautJunction",
+          "wautID": "targeted_program_selector"
+        }
+      ],
+      "NEW_S23": [
+        {
+          "endPos": "238.8",
+          "friendlyPos": "false",
+          "id": "shared_boundary_e2",
+          "jamThreshold": "10",
+          "lane": "shared_approach_0",
+          "period": "30",
+          "pos": "0",
+          "speedThreshold": "1.3888888888888888",
+          "tag": "laneAreaDetector",
+          "timeThreshold": "1"
+        },
+        {
+          "endPos": "204.49",
+          "friendlyPos": "false",
+          "id": "ramp_storage_e2",
+          "jamThreshold": "10",
+          "lane": "ramp_storage_0",
+          "period": "30",
+          "pos": "0",
+          "speedThreshold": "1.3888888888888888",
+          "tag": "laneAreaDetector",
+          "timeThreshold": "1"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_main_up_1300_l0",
+          "lane": "main_up_0",
+          "length": "0",
+          "period": "30",
+          "pos": "1300",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_main_up_1300_l1",
+          "lane": "main_up_1",
+          "length": "0",
+          "period": "30",
+          "pos": "1300",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_merge_section_20_l0",
+          "lane": "merge_section_0",
+          "length": "0",
+          "period": "30",
+          "pos": "20",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_merge_section_20_l1",
+          "lane": "merge_section_1",
+          "length": "0",
+          "period": "30",
+          "pos": "20",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_merge_section_20_l2",
+          "lane": "merge_section_2",
+          "length": "0",
+          "period": "30",
+          "pos": "20",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_main_down_20_l0",
+          "lane": "main_down_0",
+          "length": "0",
+          "period": "30",
+          "pos": "20",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_main_down_20_l1",
+          "lane": "main_down_1",
+          "length": "0",
+          "period": "30",
+          "pos": "20",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_main_down_200_l0",
+          "lane": "main_down_0",
+          "length": "0",
+          "period": "30",
+          "pos": "200",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_main_down_200_l1",
+          "lane": "main_down_1",
+          "length": "0",
+          "period": "30",
+          "pos": "200",
+          "tag": "inductionLoop"
+        },
+        {
+          "tag": "timedEvent",
+          "type": "SaveTLSStates"
+        },
+        {
+          "id": "targeted_program_selector",
+          "refTime": "0",
+          "startProg": "A_OPEN",
+          "tag": "WAUT"
+        },
+        {
+          "junctionID": "ramp_mid",
+          "tag": "wautJunction",
+          "wautID": "targeted_program_selector"
+        }
+      ],
+      "NEW_S42": [
+        {
+          "endPos": "238.8",
+          "friendlyPos": "false",
+          "id": "shared_boundary_e2",
+          "jamThreshold": "10",
+          "lane": "shared_approach_0",
+          "period": "30",
+          "pos": "0",
+          "speedThreshold": "1.3888888888888888",
+          "tag": "laneAreaDetector",
+          "timeThreshold": "1"
+        },
+        {
+          "endPos": "204.49",
+          "friendlyPos": "false",
+          "id": "ramp_storage_e2",
+          "jamThreshold": "10",
+          "lane": "ramp_storage_0",
+          "period": "30",
+          "pos": "0",
+          "speedThreshold": "1.3888888888888888",
+          "tag": "laneAreaDetector",
+          "timeThreshold": "1"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_main_up_1300_l0",
+          "lane": "main_up_0",
+          "length": "0",
+          "period": "30",
+          "pos": "1300",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_main_up_1300_l1",
+          "lane": "main_up_1",
+          "length": "0",
+          "period": "30",
+          "pos": "1300",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_merge_section_20_l0",
+          "lane": "merge_section_0",
+          "length": "0",
+          "period": "30",
+          "pos": "20",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_merge_section_20_l1",
+          "lane": "merge_section_1",
+          "length": "0",
+          "period": "30",
+          "pos": "20",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_merge_section_20_l2",
+          "lane": "merge_section_2",
+          "length": "0",
+          "period": "30",
+          "pos": "20",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_main_down_20_l0",
+          "lane": "main_down_0",
+          "length": "0",
+          "period": "30",
+          "pos": "20",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_main_down_20_l1",
+          "lane": "main_down_1",
+          "length": "0",
+          "period": "30",
+          "pos": "20",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_main_down_200_l0",
+          "lane": "main_down_0",
+          "length": "0",
+          "period": "30",
+          "pos": "200",
+          "tag": "inductionLoop"
+        },
+        {
+          "friendlyPos": "false",
+          "id": "p1_main_down_200_l1",
+          "lane": "main_down_1",
+          "length": "0",
+          "period": "30",
+          "pos": "200",
+          "tag": "inductionLoop"
+        },
+        {
+          "tag": "timedEvent",
+          "type": "SaveTLSStates"
+        },
+        {
+          "id": "targeted_program_selector",
+          "refTime": "0",
+          "startProg": "A_OPEN",
+          "tag": "WAUT"
+        },
+        {
+          "junctionID": "ramp_mid",
+          "tag": "wautJunction",
+          "wautID": "targeted_program_selector"
+        }
+      ]
+    },
+    "route_and_vtype": [
+      {
+        "id": "technical_passenger",
+        "tag": "vType",
+        "vClass": "passenger"
+      },
+      {
+        "edges": "main_up merge_section main_down",
+        "id": "M_route",
+        "tag": "route"
+      },
+      {
+        "edges": "urban_in shared_approach ramp_storage ramp_accel merge_section main_down",
+        "id": "R_route",
+        "tag": "route"
+      },
+      {
+        "edges": "urban_in shared_approach urban_out",
+        "id": "U_route",
+        "tag": "route"
+      },
+      {
+        "edges": "cross_in cross_out",
+        "id": "X_route",
+        "tag": "route"
+      }
+    ]
+  },
+  "cases": {
+    "A": {
+      "cfg": {
+        "end": "2700",
+        "fcd_filename": "fcd.xml",
+        "output_roles": [
+          "fcd-output",
+          "lanechange-output",
+          "precision",
+          "queue-output",
+          "summary-output",
+          "tripinfo-output",
+          "tripinfo-output.write-undeparted",
+          "tripinfo-output.write-unfinished",
+          "vehroute-output",
+          "vehroute-output.write-unfinished"
+        ],
+        "processing": {
+          "collision.action": "warn",
+          "collision.check-junctions": "true",
+          "extrapolate-departpos": "false",
+          "time-to-teleport": "-1"
+        },
+        "seed": "17",
+        "step_length": "1"
+      },
+      "cohorts": {
+        "M": {
+          "count": 1396,
+          "depart_rules": [
+            [
+              "best",
+              "100",
+              "max"
+            ]
+          ],
+          "requested_depart_max_s": 1498.23,
+          "requested_depart_min_s": 0.0
+        },
+        "R": {
+          "count": 240,
+          "depart_rules": [
+            [
+              "best",
+              "last",
+              "max"
+            ]
+          ],
+          "requested_depart_max_s": 1496.0,
+          "requested_depart_min_s": 540.0
+        },
+        "U": {
+          "count": 150,
+          "depart_rules": [
+            [
+              "best",
+              "last",
+              "max"
+            ]
+          ],
+          "requested_depart_max_s": 1490.0,
+          "requested_depart_min_s": 0.0
+        },
+        "X": {
+          "count": 75,
+          "depart_rules": [
+            [
+              "best",
+              "last",
+              "max"
+            ]
+          ],
+          "requested_depart_max_s": 1480.0,
+          "requested_depart_min_s": 0.0
+        }
+      },
+      "files": {
+        "demand.rou.xml": {
+          "path": "artifacts/stage6_full_network_abc_matched_rebuild_20260926_v1/inputs_retry2/A/demand.rou.xml",
+          "sha256": "12e2e4e003089dad489a2ea1323cd44ef54dea39f994f1bb5fe61e45c7f03be0"
+        },
+        "scenario.add.xml": {
+          "path": "artifacts/stage6_full_network_abc_matched_rebuild_20260926_v1/inputs_retry2/A/scenario.add.xml",
+          "sha256": "6c3f027ef7a923b21be54968e8bc429ae3feffc4bccca0411bb9014ee41e68b1"
+        },
+        "scenario.sumocfg": {
+          "path": "artifacts/stage6_full_network_abc_matched_rebuild_20260926_v1/inputs_retry2/A/scenario.sumocfg",
+          "sha256": "e844969b31734a90026a8493d2cb33417db584a1268b941e4624ec713ac90d84"
+        }
+      },
+      "network_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+      "network_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+      "ramp_program": "A_OPEN"
+    },
+    "B22": {
+      "cfg": {
+        "end": "2700",
+        "fcd_filename": "fcd.xml",
+        "output_roles": [
+          "fcd-output",
+          "lanechange-output",
+          "precision",
+          "queue-output",
+          "summary-output",
+          "tripinfo-output",
+          "tripinfo-output.write-undeparted",
+          "tripinfo-output.write-unfinished",
+          "vehroute-output",
+          "vehroute-output.write-unfinished"
+        ],
+        "processing": {
+          "collision.action": "warn",
+          "collision.check-junctions": "true",
+          "extrapolate-departpos": "false",
+          "time-to-teleport": "-1"
+        },
+        "seed": "17",
+        "step_length": "1"
+      },
+      "cohorts": {
+        "M": {
+          "count": 1396,
+          "depart_rules": [
+            [
+              "best",
+              "100",
+              "max"
+            ]
+          ],
+          "requested_depart_max_s": 1498.23,
+          "requested_depart_min_s": 0.0
+        },
+        "R": {
+          "count": 240,
+          "depart_rules": [
+            [
+              "best",
+              "last",
+              "max"
+            ]
+          ],
+          "requested_depart_max_s": 1496.0,
+          "requested_depart_min_s": 540.0
+        },
+        "U": {
+          "count": 150,
+          "depart_rules": [
+            [
+              "best",
+              "last",
+              "max"
+            ]
+          ],
+          "requested_depart_max_s": 1490.0,
+          "requested_depart_min_s": 0.0
+        },
+        "X": {
+          "count": 75,
+          "depart_rules": [
+            [
+              "best",
+              "last",
+              "max"
+            ]
+          ],
+          "requested_depart_max_s": 1480.0,
+          "requested_depart_min_s": 0.0
+        }
+      },
+      "files": {
+        "demand.rou.xml": {
+          "path": "artifacts/stage6_full_network_abc_matched_rebuild_20260926_v1/inputs_retry2/B/demand.rou.xml",
+          "sha256": "12e2e4e003089dad489a2ea1323cd44ef54dea39f994f1bb5fe61e45c7f03be0"
+        },
+        "scenario.add.xml": {
+          "path": "artifacts/stage6_full_network_abc_matched_rebuild_20260926_v1/inputs_retry2/B/scenario.add.xml",
+          "sha256": "4c9e551c866f03f8bfc9c050a646539d75547cf403a37183f517a0850b500e39"
+        },
+        "scenario.sumocfg": {
+          "path": "artifacts/stage6_full_network_abc_matched_rebuild_20260926_v1/inputs_retry2/B/scenario.sumocfg",
+          "sha256": "c0c19ff03e6d7d434568cfd9fcc37dc677b414e81381a87a06a4db6df5ed255b"
+        }
+      },
+      "network_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+      "network_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+      "ramp_program": "B_MODERATE"
+    },
+    "NEW_S17": {
+      "cfg": {
+        "end": "4200",
+        "fcd_filename": "fcd.xml.gz",
+        "output_roles": [
+          "fcd-output",
+          "lanechange-output",
+          "precision",
+          "queue-output",
+          "summary-output",
+          "tripinfo-output",
+          "tripinfo-output.write-undeparted",
+          "tripinfo-output.write-unfinished",
+          "vehroute-output",
+          "vehroute-output.write-unfinished"
+        ],
+        "processing": {
+          "collision.action": "warn",
+          "collision.check-junctions": "true",
+          "extrapolate-departpos": "false",
+          "time-to-teleport": "-1"
+        },
+        "seed": "17",
+        "step_length": "1"
+      },
+      "cohorts": {
+        "M": {
+          "count": 3000,
+          "depart_rules": [
+            [
+              "best",
+              "100",
+              "max"
+            ]
+          ],
+          "requested_depart_max_s": 2999.0,
+          "requested_depart_min_s": 0.0
+        },
+        "R": {
+          "count": 600,
+          "depart_rules": [
+            [
+              "best",
+              "last",
+              "max"
+            ]
+          ],
+          "requested_depart_max_s": 2996.0,
+          "requested_depart_min_s": 600.0
+        },
+        "U": {
+          "count": 300,
+          "depart_rules": [
+            [
+              "best",
+              "last",
+              "max"
+            ]
+          ],
+          "requested_depart_max_s": 2990.0,
+          "requested_depart_min_s": 0.0
+        },
+        "X": {
+          "count": 150,
+          "depart_rules": [
+            [
+              "best",
+              "last",
+              "max"
+            ]
+          ],
+          "requested_depart_max_s": 2980.0,
+          "requested_depart_min_s": 0.0
+        }
+      },
+      "files": {
+        "demand.rou.xml": {
+          "path": "artifacts/stage6_boundary_search_20261002_v1/inputs/M3600_R900_S17/demand.rou.xml",
+          "sha256": "99151ed51419c8d490c0f0b1a91bea23f6be70c5486890a04e1e06b3de5d808e"
+        },
+        "scenario.add.xml": {
+          "path": "artifacts/stage6_boundary_search_20261002_v1/inputs/M3600_R900_S17/scenario.add.xml",
+          "sha256": "de029a937d0d2713d2634f5b14e2f5ab39e7cbdf32f02fc33763aac7f17c3400"
+        },
+        "scenario.sumocfg": {
+          "path": "artifacts/stage6_boundary_search_20261002_v1/inputs/M3600_R900_S17/scenario.sumocfg",
+          "sha256": "8b7e9209244e8dfa6cc142bd579740884fa438ac5d622fd301e81e73d05f9bf5"
+        }
+      },
+      "network_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+      "network_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+      "ramp_program": "A_OPEN"
+    },
+    "NEW_S23": {
+      "cfg": {
+        "end": "4200",
+        "fcd_filename": "fcd.xml.gz",
+        "output_roles": [
+          "fcd-output",
+          "lanechange-output",
+          "precision",
+          "queue-output",
+          "summary-output",
+          "tripinfo-output",
+          "tripinfo-output.write-undeparted",
+          "tripinfo-output.write-unfinished",
+          "vehroute-output",
+          "vehroute-output.write-unfinished"
+        ],
+        "processing": {
+          "collision.action": "warn",
+          "collision.check-junctions": "true",
+          "extrapolate-departpos": "false",
+          "time-to-teleport": "-1"
+        },
+        "seed": "23",
+        "step_length": "1"
+      },
+      "cohorts": {
+        "M": {
+          "count": 3000,
+          "depart_rules": [
+            [
+              "best",
+              "100",
+              "max"
+            ]
+          ],
+          "requested_depart_max_s": 2999.0,
+          "requested_depart_min_s": 0.0
+        },
+        "R": {
+          "count": 600,
+          "depart_rules": [
+            [
+              "best",
+              "last",
+              "max"
+            ]
+          ],
+          "requested_depart_max_s": 2996.0,
+          "requested_depart_min_s": 600.0
+        },
+        "U": {
+          "count": 300,
+          "depart_rules": [
+            [
+              "best",
+              "last",
+              "max"
+            ]
+          ],
+          "requested_depart_max_s": 2990.0,
+          "requested_depart_min_s": 0.0
+        },
+        "X": {
+          "count": 150,
+          "depart_rules": [
+            [
+              "best",
+              "last",
+              "max"
+            ]
+          ],
+          "requested_depart_max_s": 2980.0,
+          "requested_depart_min_s": 0.0
+        }
+      },
+      "files": {
+        "demand.rou.xml": {
+          "path": "artifacts/stage6_boundary_search_20261002_v1/inputs/M3600_R900_S23/demand.rou.xml",
+          "sha256": "d6c89772b9038c459f9f80631834909287d7a0b8ed588356b2ac2d8affac9a08"
+        },
+        "scenario.add.xml": {
+          "path": "artifacts/stage6_boundary_search_20261002_v1/inputs/M3600_R900_S23/scenario.add.xml",
+          "sha256": "3fd90aed90ad8c974a467f91b00343522287483fbe81dcc6a264b9b2bbbc0a1c"
+        },
+        "scenario.sumocfg": {
+          "path": "artifacts/stage6_boundary_search_20261002_v1/inputs/M3600_R900_S23/scenario.sumocfg",
+          "sha256": "db9767973f333434c27a602264e406ae4ce67fc599380b35612a2e7e69d67dd4"
+        }
+      },
+      "network_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+      "network_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+      "ramp_program": "A_OPEN"
+    },
+    "NEW_S42": {
+      "cfg": {
+        "end": "4200",
+        "fcd_filename": "fcd.xml.gz",
+        "output_roles": [
+          "fcd-output",
+          "lanechange-output",
+          "precision",
+          "queue-output",
+          "summary-output",
+          "tripinfo-output",
+          "tripinfo-output.write-undeparted",
+          "tripinfo-output.write-unfinished",
+          "vehroute-output",
+          "vehroute-output.write-unfinished"
+        ],
+        "processing": {
+          "collision.action": "warn",
+          "collision.check-junctions": "true",
+          "extrapolate-departpos": "false",
+          "time-to-teleport": "-1"
+        },
+        "seed": "42",
+        "step_length": "1"
+      },
+      "cohorts": {
+        "M": {
+          "count": 3000,
+          "depart_rules": [
+            [
+              "best",
+              "100",
+              "max"
+            ]
+          ],
+          "requested_depart_max_s": 2999.0,
+          "requested_depart_min_s": 0.0
+        },
+        "R": {
+          "count": 600,
+          "depart_rules": [
+            [
+              "best",
+              "last",
+              "max"
+            ]
+          ],
+          "requested_depart_max_s": 2996.0,
+          "requested_depart_min_s": 600.0
+        },
+        "U": {
+          "count": 300,
+          "depart_rules": [
+            [
+              "best",
+              "last",
+              "max"
+            ]
+          ],
+          "requested_depart_max_s": 2990.0,
+          "requested_depart_min_s": 0.0
+        },
+        "X": {
+          "count": 150,
+          "depart_rules": [
+            [
+              "best",
+              "last",
+              "max"
+            ]
+          ],
+          "requested_depart_max_s": 2980.0,
+          "requested_depart_min_s": 0.0
+        }
+      },
+      "files": {
+        "demand.rou.xml": {
+          "path": "artifacts/stage6_boundary_search_20261002_v1/inputs/M3600_R900_S42/demand.rou.xml",
+          "sha256": "6c3e8a3943a14f24cf862b62b5ea2417ebf9bd49d524fff6319dd2778fe66076"
+        },
+        "scenario.add.xml": {
+          "path": "artifacts/stage6_boundary_search_20261002_v1/inputs/M3600_R900_S42/scenario.add.xml",
+          "sha256": "e82110a550d89a8e0e3048bf2c7d5b36ef5e694c1f1428aff5279f9479fca8c8"
+        },
+        "scenario.sumocfg": {
+          "path": "artifacts/stage6_boundary_search_20261002_v1/inputs/M3600_R900_S42/scenario.sumocfg",
+          "sha256": "e518ba3b671c8fcc78823958753c410be4aa5fea517681307c0780e67addb286"
+        }
+      },
+      "network_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+      "network_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+      "ramp_program": "A_OPEN"
+    }
+  },
+  "checks": {
+    "new_seed_structures_same": true,
+    "old_A_B_demand_byte_identical": true,
+    "old_A_new_ramp_program_same": true,
+    "old_B_ramp_program_B22": true,
+    "same_depart_rules_all": true,
+    "same_detectors_and_additional_except_WAUT_all": true,
+    "same_network_hash_all": true,
+    "same_network_path_all": true,
+    "same_output_roles_all": true,
+    "same_processing_all": true,
+    "same_route_and_vtype_all": true,
+    "same_step_length_all": true
+  },
+  "date": "2026-10-02",
+  "network": {
+    "lane_counts": {
+      "cross_in": 1,
+      "cross_out": 1,
+      "main_down": 2,
+      "main_up": 2,
+      "merge_section": 3,
+      "ramp_accel": 1,
+      "ramp_storage": 1,
+      "shared_approach": 1,
+      "urban_in": 1,
+      "urban_out": 1
+    },
+    "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+    "relevant_connections": [
+      {
+        "dir": "s",
+        "from": "cross_in",
+        "fromLane": "0",
+        "linkIndex": "1",
+        "state": "o",
+        "tl": "urban_tls",
+        "to": "cross_out",
+        "toLane": "0",
+        "via": ":urban_tls_1_0"
+      },
+      {
+        "dir": "s",
+        "from": "main_up",
+        "fromLane": "0",
+        "state": "M",
+        "to": "merge_section",
+        "toLane": "1",
+        "via": ":freeway_merge_0_0"
+      },
+      {
+        "dir": "s",
+        "from": "main_up",
+        "fromLane": "1",
+        "state": "M",
+        "to": "merge_section",
+        "toLane": "2",
+        "via": ":freeway_merge_0_1"
+      },
+      {
+        "dir": "s",
+        "from": "merge_section",
+        "fromLane": "1",
+        "state": "M",
+        "to": "main_down",
+        "toLane": "0",
+        "via": ":merge_end_0_0"
+      },
+      {
+        "dir": "s",
+        "from": "merge_section",
+        "fromLane": "2",
+        "state": "M",
+        "to": "main_down",
+        "toLane": "1",
+        "via": ":merge_end_0_1"
+      },
+      {
+        "dir": "s",
+        "from": "ramp_accel",
+        "fromLane": "0",
+        "state": "M",
+        "to": "merge_section",
+        "toLane": "0",
+        "via": ":freeway_merge_2_0"
+      },
+      {
+        "dir": "s",
+        "from": "ramp_storage",
+        "fromLane": "0",
+        "linkIndex": "0",
+        "state": "O",
+        "tl": "ramp_mid",
+        "to": "ramp_accel",
+        "toLane": "0",
+        "via": ":ramp_mid_0_0"
+      },
+      {
+        "dir": "r",
+        "from": "shared_approach",
+        "fromLane": "0",
+        "state": "M",
+        "to": "urban_out",
+        "toLane": "0",
+        "via": ":urban_diverge_0_0"
+      },
+      {
+        "dir": "R",
+        "from": "shared_approach",
+        "fromLane": "0",
+        "state": "M",
+        "to": "ramp_storage",
+        "toLane": "0",
+        "via": ":urban_diverge_1_0"
+      },
+      {
+        "dir": "s",
+        "from": "urban_in",
+        "fromLane": "0",
+        "linkIndex": "0",
+        "state": "O",
+        "tl": "urban_tls",
+        "to": "shared_approach",
+        "toLane": "0",
+        "via": ":urban_tls_0_0"
+      }
+    ],
+    "sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+    "tls": {
+      "ramp_mid": {
+        "phases": [
+          {
+            "duration": "12",
+            "state": "G"
+          },
+          {
+            "duration": "3",
+            "state": "y"
+          },
+          {
+            "duration": "45",
+            "state": "r"
+          }
+        ],
+        "program": "C_STRONG"
+      },
+      "urban_tls": {
+        "phases": [
+          {
+            "duration": "45",
+            "state": "Gr"
+          },
+          {
+            "duration": "3",
+            "state": "yr"
+          },
+          {
+            "duration": "9",
+            "state": "rG"
+          },
+          {
+            "duration": "3",
+            "state": "ry"
+          }
+        ],
+        "program": "technical_placeholder"
+      }
+    }
+  },
+  "runtime": {
+    "new_log": "data/raw/stage6_boundary_search_20261002_v1/M3600_R900_S17/outputs/sumo.log",
+    "new_python": {
+      "full_version": "3.13.0 (v3.13.0:60403a5409f, Oct  7 2024, 00:37:40) [Clang 15.0.0 (clang-1500.3.9.4)]",
+      "implementation": "CPython",
+      "version": "3.13.0"
+    },
+    "new_sumo_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+    "old_log": "data/raw/stage6_fullnet_abc_matched_rebuild_20260926_v1_retry2/B/outputs/sumo.log",
+    "old_sumo_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179"
+  },
+  "schema_version": 1,
+  "scope": "technical input transfer audit; no new control-effect conclusion",
+  "speed_factor_common_ids": {
+    "identical_speed_factors_count": 0,
+    "old_A_vs_B_identical_count": 1861,
+    "old_A_vs_NEW_S17_common_ids": 1861
+  }
+}

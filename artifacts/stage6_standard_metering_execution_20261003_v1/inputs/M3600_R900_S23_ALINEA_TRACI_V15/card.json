@@ -1,0 +1,149 @@
+{
+  "actuator_guard": {
+    "credit_policy": "defer_at_most_one;drop_excess;min_two_red_seconds",
+    "dynamics_source": "TraCI actual vehicle type accel/decel/emergencyDecel/tau/actionStepLength",
+    "follower_distance_rule": "gap>=margin+(v+a*dt)*dt+(v+a*dt)^2/(2*b)",
+    "leader_rule": "route-aware getLeader; getSecureGap at v+a and actual leader emergency decel; covered no-leader is clear",
+    "margin_m": 1.1,
+    "post_green_rule": "one intended crossing then all remaining normally stoppable; empty green may turn red only if all stoppable; otherwise abort before next step",
+    "post_green_stop_distance_rule": "1.1m + v*1s + v^2/(2*normalDecel) from observed post-step speed; pre-green retains v+a envelope",
+    "step_s": 1.0,
+    "version": "moving_front_route_gap_and_post_green_interlock_v10"
+  },
+  "base_card_sha256": "9768624907691fc76b7a6c931c0ee01d649c7fe9e5bc44fb2f76e5c73e2ec552",
+  "base_input_sha256": {
+    "demand.rou.xml": "d6c89772b9038c459f9f80631834909287d7a0b8ed588356b2ac2d8affac9a08",
+    "scenario.add.xml": "3fd90aed90ad8c974a467f91b00343522287483fbe81dcc6a264b9b2bbbc0a1c",
+    "scenario.sumocfg": "db9767973f333434c27a602264e406ae4ce67fc599380b35612a2e7e69d67dd4"
+  },
+  "base_output": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_boundary_search_20261002_v1/M3600_R900_S23/outputs",
+  "base_receipt_sha256": "0ac47c74c8786ec725e718b1ba7b46de90bf7bed772e5dc83ed4f931eef23603",
+  "budget_accounting": {
+    "experiment_start": true,
+    "policy": "D-016",
+    "technical_start": false
+  },
+  "budget_at_prepare": {
+    "experiment_starts": 19,
+    "global_starts": 30,
+    "new_experiment_starts": 1,
+    "new_raw_bytes": 141358259,
+    "new_starts": 12,
+    "old_raw_bytes": 197935338,
+    "old_starts": 18,
+    "physical_starts": 30,
+    "shared_raw_bytes": 339293597,
+    "technical_starts": 11
+  },
+  "classification": "EXPLORATORY",
+  "controller_sha256": "a282302ecc5fefd8d1810c07d1340f9bd1dbe0e3316b718ce991e5c5bea185ab",
+  "counts": {
+    "M": 3000,
+    "R": 600,
+    "U": 300,
+    "X": 150
+  },
+  "feedback": {
+    "gain_veh_h_per_pct": 70.0,
+    "initial_veh_h": 900.0,
+    "maximum_veh_h": 900.0,
+    "minimum_veh_h": 300.0,
+    "target_pct": 11.0
+  },
+  "feedback_update_s": [
+    630,
+    4170,
+    30
+  ],
+  "first_nominal_slot_at_initial_rate_s": 603,
+  "horizon_s": 4200,
+  "initial_credit": 0.0,
+  "input_sha256": {
+    "demand.rou.xml": "d6c89772b9038c459f9f80631834909287d7a0b8ed588356b2ac2d8affac9a08",
+    "scenario.add.xml": "5b120796aecccb058985ab794939a5c2b735faeabf50bdd1935938ce9dcce72c",
+    "scenario.sumocfg": "a2b6ecef86e9082be0646a47994b31841e74ce76bd5bd7edeaabc013549ef7c3"
+  },
+  "limits": {
+    "experiment_starts": 40,
+    "new_experiment_starts": 8,
+    "poll_s": 0.1,
+    "run_bytes": 250000000,
+    "total_raw_bytes": 8000000000,
+    "wall_s": 120
+  },
+  "meter_controlled_link": {
+    "from": "ramp_storage_0",
+    "link_index": 0,
+    "storage_length_m": 204.49,
+    "tls": "ramp_mid",
+    "to": "ramp_accel_0",
+    "via": ":ramp_mid_0_0"
+  },
+  "meter_start_s": 600,
+  "mode": "ALINEA",
+  "network_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+  "occupancy_sampling": {
+    "aggregation": "sum per-vehicle clipped detector residence seconds / 30 * 100",
+    "event_key": "detector_id, vehicle_id, entry_time_s",
+    "first_decision_s": 630,
+    "first_step_end_s": 601,
+    "last_decision_s": 4170,
+    "legacy_interval_api": "observation only",
+    "ongoing_leave_time_s": -1.0,
+    "source": "TraCI E1 getVehicleData",
+    "window": "30 consecutive post-step event observations for [decision_time-30,decision_time)"
+  },
+  "output": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_standard_metering_20261003_v1/M3600_R900_S23_ALINEA_TRACI_V15/outputs",
+  "package": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_standard_metering_execution_20261003_v1/inputs/M3600_R900_S23_ALINEA_TRACI_V15",
+  "plan": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/docs/stage6/STAGE6_SAFE_ACTUATOR_EXPLORATORY_DESIGN_20261003.md",
+  "plan_sha256": "88a0532f1c60e91667d5793b5b2c9d18d6fa106ff7b81944d8212754ed6b4339",
+  "purpose": "EXPLORATORY_COMPARISON",
+  "python": "3.13.0",
+  "python_executable": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+  "revision": "V15",
+  "run_id": "M3600_R900_S23_ALINEA_TRACI_V15",
+  "runner_sha256": "cb05feb9beb90aa41508102d4e37f897f942bf26278428ad868f04f1816fd0b9",
+  "safe_actuator_sha256": "c48b743972e44cdac8d53b6276efeed75c8bcd45a36c13940735e9d3f317f2d7",
+  "schema_version": 1,
+  "seed": 23,
+  "service_candidate": {
+    "continuous_supply": "storage vehicle count >= 1 every decision second",
+    "minimum_crossing_ratio": 0.9,
+    "minimum_qualified_slots_across_run": 20,
+    "qualified_slot": "due, queued, receiver-clear and safety-accepted front",
+    "rate_gate": "at least one eligible window; every eligible window passes",
+    "rate_tracking_windows_s": [
+      [
+        1200,
+        1500
+      ],
+      [
+        1500,
+        1800
+      ],
+      [
+        1800,
+        2100
+      ],
+      [
+        2100,
+        2400
+      ],
+      [
+        2400,
+        2700
+      ],
+      [
+        2700,
+        3000
+      ]
+    ],
+    "receiver_obstruction": "reported, never excluded after the fact",
+    "relative_error_limit": 0.1
+  },
+  "startup_deadline_s": 60.0,
+  "status": "PREPARED_NOT_RELEASED",
+  "sumo_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+  "sumoitscontrol_version_expected": "0.1.0",
+  "traci_version_expected": "1.26.0"
+}

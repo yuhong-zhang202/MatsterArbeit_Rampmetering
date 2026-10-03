@@ -2,9 +2,9 @@
   "meta": {
     "title": "高速公路匝道调节的 Sweet Spot 研究",
     "degree": "TU Berlin · Planung und Betrieb im Verkehrswesen (M.Sc.)",
-    "currentPhase": "准备阶段：自建最小场景与无控制基线",
-    "updatedAt": "2026年8月31日",
-    "nextMilestone": "阶段二：加入清空时段并运行少量无控制代表条件",
+    "currentPhase": "探索验证已结项；进入正式实验方案设计",
+    "updatedAt": "2026年10月3日",
+    "nextMilestone": "设计并审查正式实验协议；批准冻结后再运行",
     "researchQuestion": "暂定研究 ramp-metering sweet spot：在不同需求条件下平衡高速保护与城市回溢风险；正式定义与范围仍待 Robert 确认。",
     "supervisors": [
       {
@@ -156,22 +156,19 @@
     {
       "id": "exploratory-uncontrolled-grid",
       "chapterId": "ch4",
-      "title": "阶段二：检查少量代表性无控制需求条件",
-      "status": "doing",
+      "title": "完成无控需求定位与技术核查（18运行）",
+      "status": "done",
       "priority": "high",
       "type": "simulation",
-      "due": "2026-09-22",
+      "due": "2026-10-02",
       "boardOrder": 1,
       "subtasks": [
-        "核心文献阅读门槛已完成",
-        "恢复仿真前加入需求结束后的清空期并记录截断处理",
-        "按时间序列解释 E1 数据，不用全时段均值宣称容量",
-        "完成人工视觉核验以确认合流、检测器与储存边界",
-        "只选畅通、临界、初步拥堵与明显过载等少量代表条件",
-        "核对实际车辆注入而非只使用设定需求",
-        "观察自由流、Breakdown 与明显拥堵区域",
-        "检查 Capacity Drop 是否出现且不强行调参制造",
-        "不扩展为完整网格并保留探索与正式实验边界"
+        "18/18无控运行完成；原始输出与生命周期核账通过",
+        "两主线+独立辅助道及实际R换道已核查",
+        "M3600/R750–900弱/强状态区间获三种子支持",
+        "区分源头限制、移动慢车团及持续Merge回堵",
+        "无控定位停止；不追加仿真",
+        "无控定位已完成；整体探索未结项，需当前版本标准控制比较"
       ]
     },
     {
@@ -338,6 +335,38 @@
         "根据反馈形成研究问题、方法和初步结果页面",
         "准备标题候选、限制说明与后续正式实验计划",
         "预留修改、排练与技术故障缓冲"
+      ]
+    },
+    {
+      "id": "formal-experiment-design",
+      "chapterId": "ch4",
+      "title": "正式实验方案设计与协议审查",
+      "status": "todo",
+      "priority": "high",
+      "type": "writing",
+      "due": "",
+      "boardOrder": 0,
+      "subtasks": [
+        "以当前版本三种子探索结果为设计输入，保留旧ABC与V8/V9历史范围",
+        "预先确定新种子、需求范围、控制策略、主线与R/U/X全请求成本及失败规则",
+        "独立审查并经用户批准后冻结实验协议；此步骤不包含正式仿真"
+      ]
+    },
+    {
+      "id": "stage6-standard-metering-validation",
+      "chapterId": "ch4",
+      "title": "当前版本标准控制三种子探索比较",
+      "status": "done",
+      "priority": "high",
+      "type": "simulation",
+      "due": "",
+      "boardOrder": 0,
+      "subtasks": [
+        "V15 S17/23/42与各自OPEN匹配，4200秒、4050辆/臂、238个E1窗口均核账通过",
+        "每种子600/600单车正确过线，六个预设速率窗口均通过安全与放行门",
+        "三种子均观察到主线改善、R/U成本上升和共享区R/U暴露",
+        "严格连续30秒慢行链均为0；测试策略总系统时间上升，未发现sweet spot",
+        "原始V8/V9与失败技术卡保留，正式实验协议仍未冻结"
       ]
     }
   ],
@@ -608,13 +637,25 @@
       "id": "e1",
       "code": "E1",
       "rq": "探索基线",
-      "title": "项目自建最小无控制场景",
-      "status": "doing",
-      "next": "核心文献与测量知识门槛已完成；阶段二开始前先处理清空期和时间序列测量",
+      "title": "Stage 6 探索验证：当前版本证据已结项",
+      "status": "done",
+      "next": "独立科学复核PASS；32次物理启动（11次技术、21次计额实验）。进入正式设计，不追加无目的探索仿真",
       "taskIds": [
         "minimal-uncontrolled-scenario",
         "stage-one-observation-instrumentation",
-        "exploratory-uncontrolled-grid"
+        "exploratory-uncontrolled-grid",
+        "stage6-standard-metering-validation"
+      ]
+    },
+    {
+      "id": "formal-design",
+      "code": "F-DESIGN",
+      "rq": "正式阶段准备",
+      "title": "正式实验方案设计与协议审查",
+      "status": "todo",
+      "next": "依据D-018结项证据制定新种子/需求/策略和评价规则；独立审查、批准并冻结协议后才正式运行。",
+      "taskIds": [
+        "formal-experiment-design"
       ]
     }
   ],
@@ -645,6 +686,27 @@
       "date": "2026-08-31",
       "title": "主问题保持 Sweet Spot，override 作为子层",
       "detail": "主问题关注高速保护与城市回溢之间的平衡；持续回溢损失与简单 override 的适用性作为子问题。正式措辞与贡献范围待 Robert 确认。",
+      "status": "accepted"
+    },
+    {
+      "id": "d-stage6-capability-closeout",
+      "date": "2026-10-03",
+      "title": "探索验证按场景能力限定结项",
+      "detail": "用户于2026-10-03明确不接受有限范围完成；此结项解释撤回，D-013要求当前版本标准控制比较补探索证据。旧科学限定意见保留，非当前用户验收。",
+      "status": "rejected"
+    },
+    {
+      "id": "d-stage6-current-control-evidence",
+      "date": "2026-10-03",
+      "title": "补当前版本标准控制比较（D-013）",
+      "detail": "用户要求的当前版本OPEN/标准ramp metering证据已按D-017实施，S17/23/42三种子技术与数据审计通过；D-013此前的待实施状态已由D-018结项取代。",
+      "status": "accepted"
+    },
+    {
+      "id": "d-stage6-current-closeout",
+      "date": "2026-10-03",
+      "title": "当前版本探索验证结项（D-018）",
+      "detail": "用户条件授权经证据核查后结项；独立科学复核PASS，当前阶段completed/preliminary_ready。主线保护与R/U代价权衡可观测；严格30秒连续链未证、该策略总系统时间上升。下一步仅正式方案设计，协议未冻结、正式仿真未授权。",
       "status": "accepted"
     }
   ],

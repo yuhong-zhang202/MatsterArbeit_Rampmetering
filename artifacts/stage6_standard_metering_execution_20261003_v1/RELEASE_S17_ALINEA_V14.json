@@ -1,0 +1,17 @@
+{
+  "status": "PASS_FOR_EXPLORATORY_EXECUTION",
+  "scientific_verdict": "PASS_FOR_SINGLE_TECHNICAL_ACTUATOR_PILOT",
+  "scope": "single S17 V14 technical actuator validation only; S23 and S42 not released",
+  "authorization": "D-017",
+  "reviewer": "scientific_reviewer /root/boundary_design_review",
+  "review_result": "V13 connected to SUMO but failed at t=1 from uninitialized interlock logging variable. V14 initializes it on the common branch. Independent engineering review found no further deterministic local-variable omissions. Scientific parameters, safety module and plan unchanged; empirical gates pending.",
+  "cards": {
+    "M3600_R900_S17_ALINEA_TRACI_V14": "7926522f5d8dcd81437b3a10076d3b903f1013db7abd07fed94aa23be4dfe463"
+  },
+  "runner_sha256": "f3e1a700ae63ce027d1adbe816c67e2aa70ee36a05689c221a5d21a196e7782f",
+  "plan_sha256": "3c408e95c543eb3d091fb856c5d9adb351fd05b9aa07631ed79718b53f8d7228",
+  "expected_physical_starts_before": 28,
+  "expected_physical_starts_after": 29,
+  "expected_technical_starts_after": 10,
+  "expected_experiment_starts": 19
+}

@@ -1,0 +1,116 @@
+{
+  "actuator_guard": {
+    "credit_policy": "defer_at_most_one;drop_excess;min_two_red_seconds",
+    "dynamics_source": "TraCI actual vehicle type accel/decel/tau/actionStepLength",
+    "follower_distance_rule": "gap>=margin+(v+a*dt)*dt+(v+a*dt)^2/(2*b)",
+    "margin_m": 1.1,
+    "step_s": 1.0,
+    "version": "stopped_front_and_follower_braking_v1"
+  },
+  "base_card_sha256": "e92e5ff28c9695822dc58f1f90d5f3b36ab163b97590d08e11f9ee0e8a778ee6",
+  "base_input_sha256": {
+    "demand.rou.xml": "99151ed51419c8d490c0f0b1a91bea23f6be70c5486890a04e1e06b3de5d808e",
+    "scenario.add.xml": "de029a937d0d2713d2634f5b14e2f5ab39e7cbdf32f02fc33763aac7f17c3400",
+    "scenario.sumocfg": "8b7e9209244e8dfa6cc142bd579740884fa438ac5d622fd301e81e73d05f9bf5"
+  },
+  "base_output": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_boundary_search_20261002_v1/M3600_R900_S17/outputs",
+  "base_receipt_sha256": "3aa195cc5b6094a8d5ab0fd7dba398df4417ae8db090c7e9092a0267b82c37fb",
+  "budget_accounting": {
+    "experiment_start": false,
+    "policy": "D-016",
+    "technical_start": true
+  },
+  "budget_at_prepare": {
+    "experiment_starts": 19,
+    "global_starts": 25,
+    "new_experiment_starts": 1,
+    "new_raw_bytes": 64405590,
+    "new_starts": 7,
+    "old_raw_bytes": 197935338,
+    "old_starts": 18,
+    "physical_starts": 25,
+    "shared_raw_bytes": 262340928,
+    "technical_starts": 6
+  },
+  "classification": "EXPLORATORY",
+  "controller_sha256": "a282302ecc5fefd8d1810c07d1340f9bd1dbe0e3316b718ce991e5c5bea185ab",
+  "counts": {
+    "M": 3000,
+    "R": 600,
+    "U": 300,
+    "X": 150
+  },
+  "feedback": {
+    "gain_veh_h_per_pct": 70.0,
+    "initial_veh_h": 900.0,
+    "maximum_veh_h": 1200.0,
+    "minimum_veh_h": 300.0,
+    "target_pct": 11.0
+  },
+  "feedback_update_s": [
+    630,
+    4170,
+    30
+  ],
+  "first_nominal_slot_at_initial_rate_s": 603,
+  "horizon_s": 4200,
+  "initial_credit": 0.0,
+  "input_sha256": {
+    "demand.rou.xml": "99151ed51419c8d490c0f0b1a91bea23f6be70c5486890a04e1e06b3de5d808e",
+    "scenario.add.xml": "ee8e8c59ae149162907517b85485047c33c60214015fffcdefce08b27b60aa90",
+    "scenario.sumocfg": "7aabc4df134aba75f5d5965ee90beda2ef621922dacd883d6df68dce453a0d70"
+  },
+  "limits": {
+    "experiment_starts": 40,
+    "new_experiment_starts": 8,
+    "poll_s": 0.1,
+    "run_bytes": 250000000,
+    "total_raw_bytes": 8000000000,
+    "wall_s": 120
+  },
+  "meter_controlled_link": {
+    "from": "ramp_storage_0",
+    "link_index": 0,
+    "storage_length_m": 204.49,
+    "tls": "ramp_mid",
+    "to": "ramp_accel_0",
+    "via": ":ramp_mid_0_0"
+  },
+  "meter_start_s": 600,
+  "mode": "ALINEA",
+  "network_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+  "occupancy_sampling": {
+    "aggregation": "sum per-vehicle clipped detector residence seconds / 30 * 100",
+    "event_key": "detector_id, vehicle_id, entry_time_s",
+    "first_decision_s": 630,
+    "first_step_end_s": 601,
+    "last_decision_s": 4170,
+    "legacy_interval_api": "observation only",
+    "ongoing_leave_time_s": -1.0,
+    "source": "TraCI E1 getVehicleData",
+    "window": "30 consecutive post-step event observations for [decision_time-30,decision_time)"
+  },
+  "output": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_standard_metering_20261003_v1/M3600_R900_S17_ALINEA_TRACI_V9/outputs",
+  "package": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_standard_metering_execution_20261003_v1/inputs/M3600_R900_S17_ALINEA_TRACI_V9",
+  "plan": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/docs/stage6/STAGE6_CURRENT_VERSION_STANDARD_METERING_PLAN_20261003.md",
+  "plan_sha256": "9f1beac000200b5fce89427121b14df353190851c2b98bbdf686d7339e51a28f",
+  "purpose": "TECHNICAL_ACTUATOR_REPAIR_VALIDATION",
+  "python": "3.13.0",
+  "revision": "V9",
+  "run_id": "M3600_R900_S17_ALINEA_TRACI_V9",
+  "runner_sha256": "12a276f44b8a92e1a29c35899848c557c9e90a0580147e7e419c57a2e34baffc",
+  "schema_version": 1,
+  "seed": 17,
+  "service_candidate": {
+    "downstream_clearance": "nearest_internal_vehicle_rear >= front_length+front_minGap",
+    "minimum_crossing_ratio": 0.9,
+    "minimum_qualified_slots_across_run": 20,
+    "queue_distance_to_stopline_m": 1.1,
+    "queue_speed_strictly_below_m_s": 0.1
+  },
+  "startup_deadline_s": 60.0,
+  "status": "PREPARED_NOT_RELEASED",
+  "sumo_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+  "sumoitscontrol_version_expected": "0.1.0",
+  "traci_version_expected": "1.26.0"
+}

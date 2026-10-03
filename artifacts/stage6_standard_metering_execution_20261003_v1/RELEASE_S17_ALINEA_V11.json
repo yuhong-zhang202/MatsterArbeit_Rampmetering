@@ -1,0 +1,19 @@
+{
+  "status": "SUPERSEDED_NO_SIMULATION",
+  "superseded_reason": "Independent data review required post-green per-vehicle input evidence; V12 replaces this unstarted card.",
+  "scientific_verdict": "PASS_FOR_SINGLE_TECHNICAL_ACTUATOR_PILOT",
+  "scope": "single S17 V11 technical actuator validation only; S23 and S42 not released",
+  "authorization": "D-017",
+  "reviewer": "scientific_reviewer /root/boundary_design_review",
+  "review_result": "Exact code, plan, card, route-aware safety inputs and post-green interlock reviewed prospectively. Actual safety, command tracking, 238 detector windows, pre-600 equivalence and all 4050 vehicles remain empirical gates. At least one continuously supplied 300 s window and every eligible window must pass the prospective 10 percent rate screen.",
+  "cards": {
+    "M3600_R900_S17_ALINEA_TRACI_V11": "be6379b453809f55a1f1feceb7708f120b8069eebfb42d771c7468a50316df18"
+  },
+  "runner_sha256": "1f144a806d28898a75d1d41a4fbb9ebd569a61d9f6a520f9c97c04d19a5b2669",
+  "safe_actuator_sha256": "7cd0122b3fad12f50e385946c976c602af33a699e2807359c7e0e001e74499fc",
+  "plan_sha256": "3c408e95c543eb3d091fb856c5d9adb351fd05b9aa07631ed79718b53f8d7228",
+  "expected_physical_starts_before": 26,
+  "expected_physical_starts_after": 27,
+  "expected_technical_starts_after": 8,
+  "expected_experiment_starts": 19
+}

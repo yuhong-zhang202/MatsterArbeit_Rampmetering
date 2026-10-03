@@ -1,0 +1,25 @@
+{
+  "status": "PASS_FOR_EXPLORATORY_EXECUTION",
+  "scope": "single V8 NOOP technical repair retry only; no ALINEA",
+  "authorization": "D-014 D-015 D-016",
+  "reviewer": "scientific_reviewer /root/boundary_design_review",
+  "review_result": "Exact V7-V8 diff and preflight PASS; startup60s, removed hidden attempt limit, synchronized probes and separate technical accounting. Actual238 XML/neutrality/lifecycle gates remain required.",
+  "cards": {
+    "M3600_R900_S17_NOOP_TRACI_V8": "9441de6c7f7e67c088205bbba005de6a44e968c18329b8164bb16641ffd5ae69"
+  },
+  "runner_sha256": "27207f56e76e2724413a93f69336bd1c994922431e0bc266dfc6585ff7aa874f",
+  "controller_sha256": "81783bf8f62d724e8a31d39fc987cfc6c3f5718d2f46c08cdf52e4138659a782",
+  "plan_sha256": "9f1beac000200b5fce89427121b14df353190851c2b98bbdf686d7339e51a28f",
+  "limits": {
+    "experiment_starts": 40,
+    "new_experiment_starts": 8,
+    "poll_s": 0.1,
+    "run_bytes": 250000000,
+    "total_raw_bytes": 8000000000,
+    "wall_s": 120
+  },
+  "expected_physical_starts_before": 23,
+  "expected_physical_starts_after": 24,
+  "expected_experiment_starts": 18,
+  "expected_controlled_starts": 0
+}

@@ -35,10 +35,10 @@ test("keeps the dashboard phase-first with a three-column task board", async () 
     await readFile(new URL("../data/thesis-dashboard.json", import.meta.url), "utf8"),
   );
 
-  assert.equal(data.meta.currentPhase, "准备阶段：自建最小场景与无控制基线");
+  assert.equal(data.meta.currentPhase, "探索验证已结项；进入正式实验方案设计");
   assert.equal(
     data.meta.nextMilestone,
-    "阶段二：加入清空时段并运行少量无控制代表条件",
+    "设计并审查正式实验协议；批准冻结后再运行",
   );
   assert.equal(
     data.tasks.find((task) => task.id === "stage-one-observation-instrumentation")?.status,
@@ -50,8 +50,12 @@ test("keeps the dashboard phase-first with a three-column task board", async () 
   );
   assert.equal(
     data.tasks.find((task) => task.id === "exploratory-uncontrolled-grid")?.status,
-    "doing",
+    "done",
   );
+  assert.equal(data.experiments.find((item) => item.id === "e1")?.status, "done");
+  assert.equal(data.experiments.find((item) => item.id === "formal-design")?.status, "todo");
+  assert.equal(data.tasks.find((item) => item.id === "formal-experiment-design")?.status, "todo");
+  assert.equal(data.tasks.find((item) => item.id === "stage6-standard-metering-validation")?.status, "done");
   assert.ok(data.tasks.length >= 2);
   assert.ok(data.tasks.every((task) => ["todo", "doing", "blocked", "done"].includes(task.status)));
   assert.equal(data.chapters.length, 7);

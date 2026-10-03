@@ -1,0 +1,705 @@
+{
+  "meta": {
+    "title": "高速公路匝道调节的 Sweet Spot 研究",
+    "degree": "TU Berlin · Planung und Betrieb im Verkehrswesen (M.Sc.)",
+    "currentPhase": "正式实验方案设计：探索验证已结项",
+    "updatedAt": "2026年10月3日",
+    "nextMilestone": "提交正式实验设计与协议草案，经审查批准后冻结",
+    "researchQuestion": "暂定研究 ramp-metering sweet spot：在不同需求条件下平衡高速保护与城市回溢风险；正式定义与范围仍待 Robert 确认。",
+    "supervisors": [
+      {
+        "name": "Robert Hilbrich",
+        "role": "实际指导"
+      },
+      {
+        "name": "Kai Nagel",
+        "role": "期中汇报与最终答辩评审"
+      },
+      {
+        "name": "Peter Wagner",
+        "role": "原课题提出者"
+      }
+    ]
+  },
+  "chapters": [
+    {
+      "id": "ch1",
+      "number": "01",
+      "title": "引言",
+      "subtitle": "Introduction",
+      "goal": "初步章节占位，仅用于导航；具体内容与范围等待 Robert 确认。",
+      "sections": [],
+      "status": "Provisional / 初步结构，尚未确认"
+    },
+    {
+      "id": "ch2",
+      "number": "02",
+      "title": "理论基础与研究现状",
+      "subtitle": "Background & Related Work",
+      "goal": "初步章节占位，仅用于导航；具体内容与范围等待 Robert 确认。",
+      "sections": [],
+      "status": "Provisional / 初步结构，尚未确认"
+    },
+    {
+      "id": "ch3",
+      "number": "03",
+      "title": "研究方法与实验设计",
+      "subtitle": "Methodology",
+      "goal": "初步章节占位，仅用于导航；具体内容与范围等待 Robert 确认。",
+      "sections": [],
+      "status": "Provisional / 初步结构，尚未确认"
+    },
+    {
+      "id": "ch4",
+      "number": "04",
+      "title": "无控系统行为与容量边界",
+      "subtitle": "Baseline Results",
+      "goal": "初步章节占位，仅用于导航；具体内容与范围等待 Robert 确认。",
+      "sections": [],
+      "status": "Provisional / 初步结构，尚未确认"
+    },
+    {
+      "id": "ch5",
+      "number": "05",
+      "title": "调节效果与 Sweet Spot",
+      "subtitle": "Control & Sweet-Spot Results",
+      "goal": "初步章节占位，仅用于导航；具体内容与范围等待 Robert 确认。",
+      "sections": [],
+      "status": "Provisional / 初步结构，尚未确认"
+    },
+    {
+      "id": "ch6",
+      "number": "06",
+      "title": "讨论",
+      "subtitle": "Discussion",
+      "goal": "初步章节占位，仅用于导航；具体内容与范围等待 Robert 确认。",
+      "sections": [],
+      "status": "Provisional / 初步结构，尚未确认"
+    },
+    {
+      "id": "ch7",
+      "number": "07",
+      "title": "结论",
+      "subtitle": "Conclusion",
+      "goal": "初步章节占位，仅用于导航；具体内容与范围等待 Robert 确认。",
+      "sections": [],
+      "status": "Provisional / 初步结构，尚未确认"
+    }
+  ],
+  "tasks": [
+    {
+      "id": "environment-alinea-example",
+      "chapterId": "",
+      "title": "配置环境并跑通 sumoITScontrol 的 ALINEA 基础示例",
+      "status": "done",
+      "priority": "high",
+      "type": "environment",
+      "due": "",
+      "subtasks": [
+        "检查 Mac 上的 Python、SUMO、TraCI 和 SUMO_HOME",
+        "创建项目虚拟环境并安装缺失组件",
+        "使用 sumo-gui 跑通示例",
+        "使用无界面 sumo 跑通示例",
+        "记录检测器、控制器和输出文件"
+      ]
+    },
+    {
+      "id": "await-robert-scope",
+      "chapterId": "",
+      "title": "初步基线后向 Robert 确认 Sweet Spot 定义与正式范围",
+      "status": "todo",
+      "priority": "high",
+      "type": "confirmation",
+      "due": "2026-09-25",
+      "boardOrder": 2,
+      "subtasks": [
+        "确认评价导向是否足以构成硕士论文贡献",
+        "确认 Sweet Spot 可接受区域的高层定义",
+        "确认主研究问题、子问题与题目方向",
+        "确认 qUrban 与匝道储存的正式实验角色"
+      ]
+    },
+    {
+      "id": "minimal-uncontrolled-scenario",
+      "chapterId": "ch3",
+      "title": "设计并验证项目自建的最小无控制 SUMO 场景",
+      "status": "done",
+      "priority": "high",
+      "type": "simulation",
+      "due": "",
+      "boardOrder": 0,
+      "subtasks": [
+        "建立高速主线、单匝道、小型城市路网与固定时制信号",
+        "区分 M、R、U 三类路线并验证车辆路径",
+        "验证设定需求、实际出发、在网与到达车辆",
+        "验证有限储存边界与共享道路回溢机制",
+        "记录技术警告并明确标记为探索性测试"
+      ]
+    },
+    {
+      "id": "stage-one-observation-instrumentation",
+      "chapterId": "ch3",
+      "title": "阶段一：补充合流观测、参数化需求与质量门槛",
+      "status": "done",
+      "priority": "high",
+      "type": "simulation",
+      "due": "2026-09-07",
+      "boardOrder": 0,
+      "subtasks": [
+        "增加高速合流上游与下游技术观测点",
+        "将 qMain 与 qRamp 变为可调输入",
+        "输出计划、实际注入、到达、在网与未出发车辆",
+        "建立警告、注入不足、守恒与结束截断质量门槛",
+        "完成低负荷、自定义需求与视觉技术验证"
+      ]
+    },
+    {
+      "id": "exploratory-uncontrolled-grid",
+      "chapterId": "ch4",
+      "title": "完成无控需求定位与技术核查（18运行）",
+      "status": "done",
+      "priority": "high",
+      "type": "simulation",
+      "due": "2026-10-02",
+      "boardOrder": 1,
+      "subtasks": [
+        "18/18无控运行完成；原始输出与生命周期核账通过",
+        "两主线+独立辅助道及实际R换道已核查",
+        "M3600/R750–900弱/强状态区间获三种子支持",
+        "区分源头限制、移动慢车团及持续Merge回堵",
+        "无控定位停止；不追加仿真",
+        "探索能力已限定结项：旧城市证据适用性与原始复核通过；限制见2026-10-03结项报告"
+      ]
+    },
+    {
+      "id": "task-1787441450213-zqdd5",
+      "title": "阅读文献：Hall & Agyemang-Duah (1991) — Freeway Capacity Drop and the Definition of Capacity",
+      "chapterId": "ch1",
+      "priority": "high",
+      "status": "done",
+      "type": "literature",
+      "due": "2026-09-18",
+      "boardOrder": 11,
+      "referenceId": "ref-task-1787441450213-zqdd5"
+    },
+    {
+      "id": "task-1787441471815-4zz8y",
+      "title": "阅读文献：Persaud, Yagar & Brownlee (1998) — Exploration of the Breakdown Phenomenon in Freeway Traffic",
+      "chapterId": "ch1",
+      "priority": "high",
+      "status": "done",
+      "type": "literature",
+      "due": "2026-09-18",
+      "boardOrder": 12,
+      "referenceId": "ref-task-1787441471815-4zz8y"
+    },
+    {
+      "id": "task-1787441492889-a64pr",
+      "title": "Papageorgiou, Hadj-Salem & Blosseville (1991) — ALINEA: A Local Feedback Control Law for On-Ramp Metering",
+      "chapterId": "ch1",
+      "priority": "medium",
+      "status": "done",
+      "type": "literature",
+      "due": "",
+      "boardOrder": 3,
+      "referenceId": "ref3"
+    },
+    {
+      "id": "task-1787441515284-7e4vr",
+      "title": "Papageorgiou & Kotsialos (2002) — Freeway Ramp Metering: An Overview",
+      "chapterId": "ch1",
+      "priority": "medium",
+      "status": "done",
+      "type": "literature",
+      "due": "",
+      "boardOrder": 4,
+      "referenceId": "ref2"
+    },
+    {
+      "id": "task-1787441575610-xn207",
+      "title": "Zhang & Levinson (2010) — Ramp Metering and Freeway Bottleneck Capacity",
+      "chapterId": "ch1",
+      "priority": "medium",
+      "status": "done",
+      "type": "literature",
+      "due": "",
+      "boardOrder": 5,
+      "referenceId": "ref-task-1787441575610-xn207"
+    },
+    {
+      "id": "task-1787441586727-tcswo",
+      "title": "Spiliopoulou et al. (2010) — Queue Management Techniques for Metered Freeway On-Ramps",
+      "chapterId": "ch1",
+      "priority": "medium",
+      "status": "done",
+      "type": "literature",
+      "due": "",
+      "boardOrder": 6,
+      "referenceId": "ref-task-1787441586727-tcswo"
+    },
+    {
+      "id": "task-1787441598105-nrtl3",
+      "title": "Smaragdis, Papageorgiou & Kosmatopoulos (2004) — A Flow-Maximizing Adaptive Local Ramp Metering Strategy",
+      "chapterId": "ch1",
+      "priority": "medium",
+      "status": "done",
+      "type": "literature",
+      "due": "",
+      "boardOrder": 7,
+      "referenceId": "ref-task-1787441598105-nrtl3"
+    },
+    {
+      "id": "task-1787441612057-q4zau",
+      "title": "Alvarez Lopez et al. (2018) — Microscopic Traffic Simulation using SUMO",
+      "chapterId": "ch1",
+      "priority": "medium",
+      "status": "done",
+      "type": "literature",
+      "due": "",
+      "boardOrder": 8,
+      "referenceId": "ref-task-1787441612057-q4zau"
+    },
+    {
+      "id": "task-1787441622094-hpsav",
+      "title": "Riehl, Kouvelas & Makridis (2026) — sumoITScontrol: Traffic Controller Collection for SUMO Traffic Simulations",
+      "chapterId": "ch1",
+      "priority": "medium",
+      "status": "done",
+      "type": "literature",
+      "due": "",
+      "boardOrder": 9,
+      "referenceId": "ref-task-1787441622094-hpsav"
+    },
+    {
+      "id": "task-1787441632597-t4t7r",
+      "title": "Cazorla et al. (2022) — Ramp Metering Strategies: A Literature Review",
+      "chapterId": "ch1",
+      "priority": "medium",
+      "status": "done",
+      "type": "literature",
+      "due": "",
+      "boardOrder": 10,
+      "referenceId": "ref-task-1787441632597-t4t7r"
+    },
+    {
+      "id": "task-1787441645841-bos0y",
+      "title": "Treiber & Kesting — Traffic Flow Dynamics: Data, Models and Simulation。",
+      "chapterId": "ch1",
+      "priority": "high",
+      "status": "done",
+      "type": "literature",
+      "due": "2026-09-18",
+      "boardOrder": 0,
+      "referenceId": "ref-task-1787441645841-bos0y"
+    },
+    {
+      "id": "task-1787442175508-x2n53",
+      "title": "sumoITScontrol: Traffic Controller Collection for SUMO Traffic Simulations",
+      "chapterId": "ch1",
+      "priority": "high",
+      "status": "done",
+      "type": "literature",
+      "due": "",
+      "boardOrder": 1,
+      "referenceId": "ref1"
+    },
+    {
+      "id": "task-1787503668452-ce9ys",
+      "due": "2026-09-18",
+      "title": "阶段二前完成核心文献与 SUMO 测量知识",
+      "chapterId": "ch1",
+      "priority": "high",
+      "status": "done",
+      "type": "decision",
+      "boardOrder": 2,
+      "subtasks": [
+        "理解计划需求、实际注入流量与检测流量的区别",
+        "理解 Breakdown、持续拥堵与 Capacity Drop 的区别",
+        "阅读 Hall & Agyemang-Duah、Persaud 及 Treiber & Kesting 相关章节",
+        "核对 SUMO flow、检测器与 unfinished vehicles 官方文档",
+        "能够说明哪些运行点必须因数据质量问题而拒绝"
+      ]
+    },
+    {
+      "id": "interim-presentation-preparation",
+      "chapterId": "",
+      "title": "准备十月底或十一月初中期汇报",
+      "status": "todo",
+      "priority": "high",
+      "type": "writing",
+      "due": "2026-10-20",
+      "boardOrder": 3,
+      "subtasks": [
+        "9月下旬前整理场景图、注入检查与代表性无控制现象",
+        "向 Robert 确认 Sweet Spot、研究范围与题目方向",
+        "根据反馈形成研究问题、方法和初步结果页面",
+        "准备标题候选、限制说明与后续正式实验计划",
+        "预留修改、排练与技术故障缓冲"
+      ]
+    },
+    {
+      "id": "formal-experiment-design",
+      "chapterId": "ch4",
+      "title": "起草正式实验设计与协议（待开始）",
+      "status": "todo",
+      "priority": "high",
+      "type": "writing",
+      "due": "",
+      "boardOrder": 0,
+      "subtasks": [
+        "读取2026-10-03限定用途结项和GPT sol交接",
+        "确定候选运行点、匹配控制、状态与M/R/U/X完整群体成本",
+        "审查ALINEA执行器、反馈测量、独立种子与精度/停止规则；参数Proposed",
+        "独立科学审查后提交用户；明确批准才能冻结协议",
+        "正式/pilot仿真另需运行授权；不追加场景能力探索"
+      ]
+    }
+  ],
+  "references": [
+    {
+      "id": "ref1",
+      "key": "Riehl2026",
+      "authors": "Riehl, K.; Kouvelas, A.; Makridis, M. A.",
+      "year": "2026",
+      "title": "sumoITScontrol: Traffic Controller Collection for SUMO Traffic Simulations",
+      "status": "done",
+      "chapterIds": [
+        "ch2",
+        "ch3"
+      ],
+      "url": "https://arxiv.org/abs/2604.23240",
+      "note": "控制器实现、重复实验和统计评测的直接基础。",
+      "taskId": "task-1787442175508-x2n53"
+    },
+    {
+      "id": "ref2",
+      "key": "Papageorgiou2002",
+      "authors": "Papageorgiou, M.; Kotsialos, A.",
+      "year": "2002",
+      "title": "Freeway Ramp Metering: An Overview",
+      "status": "done",
+      "chapterIds": [
+        "ch2"
+      ],
+      "url": "https://doi.org/10.1109/TITS.2002.806803",
+      "note": "Ramp metering 与 ALINEA 的经典综述。",
+      "taskId": "task-1787441515284-7e4vr"
+    },
+    {
+      "id": "ref3",
+      "key": "Papageorgiou1991",
+      "authors": "Papageorgiou et al.",
+      "year": "1991",
+      "title": "ALINEA 原始研究（完整书目信息待核验）",
+      "status": "done",
+      "chapterIds": [
+        "ch2",
+        "ch3"
+      ],
+      "url": "",
+      "note": "核验控制律、目标占有率与反馈增益。",
+      "taskId": "task-1787441492889-a64pr"
+    },
+    {
+      "id": "ref-task-1787441450213-zqdd5",
+      "taskId": "task-1787441450213-zqdd5",
+      "key": "TaskRef-zqdd5",
+      "authors": "",
+      "year": "",
+      "title": "阅读文献：Hall & Agyemang-Duah (1991) — Freeway Capacity Drop and the Definition of Capacity",
+      "status": "done",
+      "chapterIds": [
+        "ch1"
+      ],
+      "url": "",
+      "note": "由任务看板同步创建；书目信息待补充。"
+    },
+    {
+      "id": "ref-task-1787441471815-4zz8y",
+      "taskId": "task-1787441471815-4zz8y",
+      "key": "TaskRef-4zz8y",
+      "authors": "",
+      "year": "",
+      "title": "阅读文献：Persaud, Yagar & Brownlee (1998) — Exploration of the Breakdown Phenomenon in Freeway Traffic",
+      "status": "done",
+      "chapterIds": [
+        "ch1"
+      ],
+      "url": "",
+      "note": "由任务看板同步创建；书目信息待补充。"
+    },
+    {
+      "id": "ref-task-1787441575610-xn207",
+      "taskId": "task-1787441575610-xn207",
+      "key": "TaskRef-xn207",
+      "authors": "",
+      "year": "",
+      "title": "Zhang & Levinson (2010) — Ramp Metering and Freeway Bottleneck Capacity",
+      "status": "done",
+      "chapterIds": [
+        "ch1"
+      ],
+      "url": "",
+      "note": "由任务看板同步创建；书目信息待补充。"
+    },
+    {
+      "id": "ref-task-1787441586727-tcswo",
+      "taskId": "task-1787441586727-tcswo",
+      "key": "TaskRef-tcswo",
+      "authors": "",
+      "year": "",
+      "title": "Spiliopoulou et al. (2010) — Queue Management Techniques for Metered Freeway On-Ramps",
+      "status": "done",
+      "chapterIds": [
+        "ch1"
+      ],
+      "url": "",
+      "note": "由任务看板同步创建；书目信息待补充。"
+    },
+    {
+      "id": "ref-task-1787441598105-nrtl3",
+      "taskId": "task-1787441598105-nrtl3",
+      "key": "TaskRef-nrtl3",
+      "authors": "",
+      "year": "",
+      "title": "Smaragdis, Papageorgiou & Kosmatopoulos (2004) — A Flow-Maximizing Adaptive Local Ramp Metering Strategy",
+      "status": "done",
+      "chapterIds": [
+        "ch1"
+      ],
+      "url": "",
+      "note": "由任务看板同步创建；书目信息待补充。"
+    },
+    {
+      "id": "ref-task-1787441612057-q4zau",
+      "taskId": "task-1787441612057-q4zau",
+      "key": "TaskRef-q4zau",
+      "authors": "",
+      "year": "",
+      "title": "Alvarez Lopez et al. (2018) — Microscopic Traffic Simulation using SUMO",
+      "status": "done",
+      "chapterIds": [
+        "ch1"
+      ],
+      "url": "",
+      "note": "由任务看板同步创建；书目信息待补充。"
+    },
+    {
+      "id": "ref-task-1787441622094-hpsav",
+      "taskId": "task-1787441622094-hpsav",
+      "key": "TaskRef-hpsav",
+      "authors": "",
+      "year": "",
+      "title": "Riehl, Kouvelas & Makridis (2026) — sumoITScontrol: Traffic Controller Collection for SUMO Traffic Simulations",
+      "status": "done",
+      "chapterIds": [
+        "ch1"
+      ],
+      "url": "",
+      "note": "由任务看板同步创建；书目信息待补充。"
+    },
+    {
+      "id": "ref-task-1787441632597-t4t7r",
+      "taskId": "task-1787441632597-t4t7r",
+      "key": "TaskRef-t4t7r",
+      "authors": "",
+      "year": "",
+      "title": "Cazorla et al. (2022) — Ramp Metering Strategies: A Literature Review",
+      "status": "done",
+      "chapterIds": [
+        "ch1"
+      ],
+      "url": "",
+      "note": "由任务看板同步创建；书目信息待补充。"
+    },
+    {
+      "id": "ref-task-1787441645841-bos0y",
+      "taskId": "task-1787441645841-bos0y",
+      "key": "TaskRef-bos0y",
+      "authors": "",
+      "year": "",
+      "title": "Treiber & Kesting — Traffic Flow Dynamics: Data, Models and Simulation。",
+      "status": "done",
+      "chapterIds": [
+        "ch1"
+      ],
+      "url": "",
+      "note": "由任务看板同步创建；书目信息待补充。"
+    }
+  ],
+  "feedback": [
+    {
+      "id": "f1",
+      "date": "2026-07-15",
+      "author": "Peter Wagner",
+      "summary": "先阅读 sumoITScontrol 论文，并将其中算法运行起来。",
+      "action": "技术 smoke test 已完成；上游示例不作为正式实验。",
+      "status": "done",
+      "chapterIds": [
+        "ch2",
+        "ch4"
+      ],
+      "source": "邮件"
+    },
+    {
+      "id": "f2",
+      "date": "2026-07-15",
+      "author": "Peter Wagner",
+      "summary": "从合成场景出发，先对 qRamp 和 qMain 进行系统扫描，观察旅行时间、速度、密度和容量边界。",
+      "action": "完成无控基线粗网格扫描，再叠加控制算法。",
+      "status": "accepted",
+      "chapterIds": [
+        "ch3",
+        "ch4"
+      ],
+      "source": "邮件"
+    },
+    {
+      "id": "f3",
+      "date": "2026-07-15",
+      "author": "Peter Wagner",
+      "summary": "重点关注相连城市路网发生了什么，具体细节需要后续共同讨论。",
+      "action": "在场景中加入城市横向交通，并准备 Sweet Spot 指标方案与导师确认。",
+      "status": "open",
+      "chapterIds": [
+        "ch3",
+        "ch5"
+      ],
+      "source": "邮件"
+    },
+    {
+      "id": "f4",
+      "date": "2026-07-15",
+      "author": "Peter Wagner",
+      "summary": "真实数据本身具有较高风险；可以查看德国真实案例，但不宜一开始依赖真实检测器数据。",
+      "action": "采用合成场景起步；真实案例仅作后续方向性参考，具体几何仍待验证。",
+      "status": "accepted",
+      "chapterIds": [
+        "ch3"
+      ],
+      "source": "邮件"
+    },
+    {
+      "id": "f5",
+      "date": "2026-08-22",
+      "author": "项目状态更新",
+      "summary": "Robert Hilbrich 接替因身体原因无法继续指导的 Peter Wagner，成为实际指导者；Kai Nagel 参与期中汇报和最终答辩。",
+      "action": "后续将关键实验实现、验证和指标定义与 Robert 确认。",
+      "status": "done",
+      "chapterIds": [
+        "ch3"
+      ],
+      "source": "指导安排"
+    },
+    {
+      "id": "f6",
+      "date": "2026-08-25",
+      "author": "Robert Hilbrich",
+      "summary": "支持 sumoITScontrol、以 ALINEA 起步、简单高速—单匝道—小型城市路网与固定时制信号，并建议先做无控制需求扫描；有限匝道储存下何时为下级路网减弱或覆盖控制是值得研究的核心。",
+      "action": "先完成项目自建场景、实际车辆注入检查和无控制初步结果，再集中确认 Sweet Spot 定义、研究问题与正式范围。",
+      "status": "doing",
+      "chapterIds": [
+        "ch3",
+        "ch4",
+        "ch5"
+      ],
+      "source": "邮件"
+    }
+  ],
+  "experiments": [
+    {
+      "id": "e0",
+      "code": "E0",
+      "rq": "准备",
+      "title": "环境与 ALINEA 基础示例",
+      "status": "done",
+      "next": "技术 smoke test 已完成；该上游示例不作为论文证据",
+      "taskIds": [
+        "environment-alinea-example"
+      ]
+    },
+    {
+      "id": "e1",
+      "code": "E1",
+      "rq": "探索基线",
+      "title": "Stage 6 探索验证：场景能力已确认（有限范围）",
+      "status": "done",
+      "next": "已结项；三种子无控主线证据与可沿用旧城市证据通过独立复审。控制收益/sweetspot留待后续研究。",
+      "taskIds": [
+        "minimal-uncontrolled-scenario",
+        "stage-one-observation-instrumentation",
+        "exploratory-uncontrolled-grid"
+      ]
+    },
+    {
+      "id": "formal-design",
+      "code": "F-DESIGN",
+      "rq": "正式阶段准备",
+      "title": "正式实验方案设计与协议审查",
+      "status": "todo",
+      "next": "尚未开始；先设计和审查，不启动仿真或自动冻结协议。",
+      "taskIds": [
+        "formal-experiment-design"
+      ]
+    }
+  ],
+  "decisions": [
+    {
+      "id": "d1",
+      "date": "2026-08-25",
+      "title": "采用简单合成场景作为起点",
+      "detail": "Robert 支持高速、单匝道、小型上游城市路网与固定时制信号的简单起点；具体几何与参数仍未确认。",
+      "status": "confirmed"
+    },
+    {
+      "id": "d2",
+      "date": "2026-08-31",
+      "title": "评价导向范围，以 ALINEA 为首个控制器",
+      "detail": "用户认可 Sweet Spot 为主问题、ALINEA 为起点、简单 override 为可能干预；除非 Robert 认为贡献不足，否则不把复杂算法开发作为核心。待 Robert 确认。",
+      "status": "accepted"
+    },
+    {
+      "id": "d3",
+      "date": "2026-08-31",
+      "title": "Sweet Spot 暂定为可接受控制区域",
+      "detail": "用户认可先要求高速与城市满足最低保护要求，再在区域内比较系统总体损失；完整 Pareto 分析暂不作为必要内容。正式指标与阈值待 Robert 确认。",
+      "status": "accepted"
+    },
+    {
+      "id": "d4",
+      "date": "2026-08-31",
+      "title": "主问题保持 Sweet Spot，override 作为子层",
+      "detail": "主问题关注高速保护与城市回溢之间的平衡；持续回溢损失与简单 override 的适用性作为子问题。正式措辞与贡献范围待 Robert 确认。",
+      "status": "accepted"
+    },
+    {
+      "id": "d-stage6-capability-closeout",
+      "date": "2026-10-03",
+      "title": "探索验证按场景能力限定结项",
+      "detail": "按用户条件授权，经工程12项不变性、城市原始复算及独立科学PASS，登记COMPLETE_WITH_LIMITATIONS；旧ABC/State1未追认，正式协议未冻结。来源：docs/stage6/STAGE6_EXPLORATORY_CAPABILITY_CLOSEOUT_20261003.md，DECISIONS D-012。",
+      "status": "accepted"
+    }
+  ],
+  "pendingConfirmations": [
+    {
+      "id": "sweet-spot-definition",
+      "title": "请 Robert 确认 Sweet Spot 可接受区域定义"
+    },
+    {
+      "id": "research-question",
+      "title": "请 Robert 确认主研究问题、子问题与评价导向范围"
+    },
+    {
+      "id": "english-and-interim-date",
+      "title": "确认英文写作规则与中期汇报确切日期"
+    },
+    {
+      "id": "formal-experiment-design",
+      "title": "正式指标、需求范围、seeds 与统计规则"
+    },
+    {
+      "id": "urban-network-scope",
+      "title": "城市路网、qUrban 与匝道储存的正式角色"
+    }
+  ]
+}

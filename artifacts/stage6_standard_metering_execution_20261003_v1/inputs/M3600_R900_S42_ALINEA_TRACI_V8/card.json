@@ -1,0 +1,107 @@
+{
+  "base_card_sha256": "2e54941c5faf259935dcf5bcd87d14f38c378b91606afe339eb39039465c2748",
+  "base_input_sha256": {
+    "demand.rou.xml": "6c3e8a3943a14f24cf862b62b5ea2417ebf9bd49d524fff6319dd2778fe66076",
+    "scenario.add.xml": "e82110a550d89a8e0e3048bf2c7d5b36ef5e694c1f1428aff5279f9479fca8c8",
+    "scenario.sumocfg": "e518ba3b671c8fcc78823958753c410be4aa5fea517681307c0780e67addb286"
+  },
+  "base_output": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_boundary_search_20261002_v1/M3600_R900_S42/outputs",
+  "base_receipt_sha256": "c936390870b26d1172bc8fd02b34dab7579fc08bf936d89f8ea4a986f2fb150a",
+  "budget_accounting": {
+    "experiment_start": true,
+    "policy": "D-016",
+    "technical_start": false
+  },
+  "budget_at_prepare": {
+    "experiment_starts": 19,
+    "global_starts": 25,
+    "new_experiment_starts": 1,
+    "new_raw_bytes": 64405590,
+    "new_starts": 7,
+    "old_raw_bytes": 197935338,
+    "old_starts": 18,
+    "physical_starts": 25,
+    "shared_raw_bytes": 262340928,
+    "technical_starts": 6
+  },
+  "classification": "EXPLORATORY",
+  "controller_sha256": "81783bf8f62d724e8a31d39fc987cfc6c3f5718d2f46c08cdf52e4138659a782",
+  "counts": {
+    "M": 3000,
+    "R": 600,
+    "U": 300,
+    "X": 150
+  },
+  "feedback": {
+    "gain_veh_h_per_pct": 70.0,
+    "initial_veh_h": 900.0,
+    "maximum_veh_h": 1200.0,
+    "minimum_veh_h": 300.0,
+    "target_pct": 11.0
+  },
+  "feedback_update_s": [
+    630,
+    4170,
+    30
+  ],
+  "first_slot_at_initial_rate_s": 603,
+  "horizon_s": 4200,
+  "initial_credit": 0.0,
+  "input_sha256": {
+    "demand.rou.xml": "6c3e8a3943a14f24cf862b62b5ea2417ebf9bd49d524fff6319dd2778fe66076",
+    "scenario.add.xml": "54fa5049c55e9cdb3d7bc71454b792d0c457a4909d346b041821b1dc81089dc9",
+    "scenario.sumocfg": "d67a2743f0d3a94aa87fea4688a35aecda2047ad673322f549eb8d3689b6595e"
+  },
+  "limits": {
+    "experiment_starts": 40,
+    "new_experiment_starts": 8,
+    "poll_s": 0.1,
+    "run_bytes": 250000000,
+    "total_raw_bytes": 8000000000,
+    "wall_s": 120
+  },
+  "meter_controlled_link": {
+    "from": "ramp_storage_0",
+    "link_index": 0,
+    "storage_length_m": 204.49,
+    "tls": "ramp_mid",
+    "to": "ramp_accel_0",
+    "via": ":ramp_mid_0_0"
+  },
+  "meter_start_s": 600,
+  "mode": "ALINEA",
+  "network_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+  "occupancy_sampling": {
+    "aggregation": "sum per-vehicle clipped detector residence seconds / 30 * 100",
+    "event_key": "detector_id, vehicle_id, entry_time_s",
+    "first_decision_s": 630,
+    "first_step_end_s": 601,
+    "last_decision_s": 4170,
+    "legacy_interval_api": "observation only",
+    "ongoing_leave_time_s": -1.0,
+    "source": "TraCI E1 getVehicleData",
+    "window": "30 consecutive post-step event observations for [decision_time-30,decision_time)"
+  },
+  "output": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_standard_metering_20261003_v1/M3600_R900_S42_ALINEA_TRACI_V8/outputs",
+  "package": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_standard_metering_execution_20261003_v1/inputs/M3600_R900_S42_ALINEA_TRACI_V8",
+  "plan": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/docs/stage6/STAGE6_CURRENT_VERSION_STANDARD_METERING_PLAN_20261003.md",
+  "plan_sha256": "9f1beac000200b5fce89427121b14df353190851c2b98bbdf686d7339e51a28f",
+  "python": "3.13.0",
+  "revision": "V8",
+  "run_id": "M3600_R900_S42_ALINEA_TRACI_V8",
+  "runner_sha256": "27207f56e76e2724413a93f69336bd1c994922431e0bc266dfc6585ff7aa874f",
+  "schema_version": 1,
+  "seed": 42,
+  "service_candidate": {
+    "downstream_clearance": "nearest_internal_vehicle_rear >= front_length+front_minGap",
+    "minimum_crossing_ratio": 0.9,
+    "minimum_qualified_slots_across_run": 20,
+    "queue_distance_to_stopline_m": 1.1,
+    "queue_speed_strictly_below_m_s": 0.1
+  },
+  "startup_deadline_s": 60.0,
+  "status": "PREPARED_NOT_RELEASED",
+  "sumo_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+  "sumoitscontrol_version_expected": "0.1.0",
+  "traci_version_expected": "1.26.0"
+}

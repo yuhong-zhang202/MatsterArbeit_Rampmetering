@@ -1,0 +1,23 @@
+{
+  "status": "PASS_FOR_EXPLORATORY_EXECUTION",
+  "scope": "One V3 diagnostic NOOP replacement only; no ALINEA release",
+  "authorization": "D-014 execution plus D-015 explicit technical repair continuation",
+  "reviewer": "scientific_reviewer /root/boundary_design_review",
+  "review_result": "Independent source/card/staticpreflight and13 mock/static tests PASS; ten-second startup/earlyexit/handshake diagnosis; no root-cause certainty inferred",
+  "cards": {
+    "M3600_R900_S17_NOOP_TRACI_V3": "8da06bd3b31dc4455f8e2ac1d6765112987ccfca2697e9498b5656783b65de21"
+  },
+  "runner_sha256": "05f447bbb70a91b40df78e6539408145229cbed5ac7f50126766f80540bf8ac8",
+  "controller_sha256": "81783bf8f62d724e8a31d39fc987cfc6c3f5718d2f46c08cdf52e4138659a782",
+  "plan_sha256": "9f1beac000200b5fce89427121b14df353190851c2b98bbdf686d7339e51a28f",
+  "limits": {
+    "global_starts": 40,
+    "new_control_technical_starts": 8,
+    "poll_s": 0.1,
+    "run_bytes": 250000000,
+    "total_raw_bytes": 8000000000,
+    "wall_s": 120
+  },
+  "expected_cumulative_starts_before": 19,
+  "expected_cumulative_starts_after": 20
+}

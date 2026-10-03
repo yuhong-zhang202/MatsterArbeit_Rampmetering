@@ -1,6 +1,6 @@
 # Supervisor Feedback
 
-**Last updated:** 2026-08-25
+**Last updated:** 2026-09-30
 **Document role:** Evidence-based record of explicit supervisor feedback. Current operational status belongs in `PROJECT_STATE.md`.
 
 ## Recording Rules
@@ -140,3 +140,24 @@ The reply does not determine:
 - whether the initial model produces plausible breakdown and capacity drop;
 - the final scope after the interim presentation;
 - whether institutional rules permit the thesis to be written in English.
+
+### 2026-09-30 — Merge validation before an uncontrolled demand grid
+
+**Source:** Robert Hilbrich email dated 2026-09-30 12:57:52 UTC. The original email is retained locally at `docs/supervision/2026-09-30_robert_hilbrich_reply.md` and omitted from public GitHub synchronization; this record preserves the explicit guidance needed for the project.
+
+**Record status:** Current supervisor guidance; the email does not approve an exact new network, demand grid, controller or formal experiment.
+
+#### Explicit Feedback
+
+Robert Hilbrich advised that:
+
+- the fixed 22 s and 28 s green-time programs should not currently be used to establish the A/B/C relationship; pulsed release at qRamp=900 veh/h could create dense vehicle platoons and disturb the mainline more than an open ramp, so fewer ramp vehicles per minute do not necessarily imply less freeway disturbance;
+- the freeway and ramp merge should first be checked for correct, capacity-relevant representation: two mainline lanes, a separate ramp acceleration lane creating a short three-lane section, and a return to two lanes after ramp vehicles change lanes into the mainline;
+- lane-to-lane connections should preserve both mainline lanes and lead the ramp into its own acceleration lane, rather than directly combining ramp and mainline traffic into one downstream lane at a junction; possible unnecessary mainline use of the acceleration lane and suitable lane-change restrictions should be checked;
+- actual mainline insertion should be checked against requested demand, including `departLane`, `departPos`, `departSpeed` and accumulated `departDelay`; `best`/`last`/`max` were examples, not a frozen parameter set;
+- after these checks, an uncontrolled `qMain × qRamp` grid should identify where the modeled merge approaches its critical range and breakdown; suitable operating points could then be selected for comparing control methods;
+- the previous exploratory work should not be regarded as failed merely because the system's capacity boundary has not yet been located.
+
+#### Project Relevance and Limits
+
+The email establishes an order for the next exploratory checks. It does not confirm that the current model has plausible breakdown, identify its capacity boundary, choose grid values or seed count, validate a controller, mark Stage 6 complete, or freeze `docs/EXPERIMENT_PROTOCOL.md`.

@@ -1,0 +1,86 @@
+{
+  "base_card_sha256": "e92e5ff28c9695822dc58f1f90d5f3b36ab163b97590d08e11f9ee0e8a778ee6",
+  "base_input_sha256": {
+    "demand.rou.xml": "99151ed51419c8d490c0f0b1a91bea23f6be70c5486890a04e1e06b3de5d808e",
+    "scenario.add.xml": "de029a937d0d2713d2634f5b14e2f5ab39e7cbdf32f02fc33763aac7f17c3400",
+    "scenario.sumocfg": "8b7e9209244e8dfa6cc142bd579740884fa438ac5d622fd301e81e73d05f9bf5"
+  },
+  "base_output": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_boundary_search_20261002_v1/M3600_R900_S17/outputs",
+  "base_receipt_sha256": "3aa195cc5b6094a8d5ab0fd7dba398df4417ae8db090c7e9092a0267b82c37fb",
+  "budget_at_prepare": {
+    "global_starts": 18,
+    "new_raw_bytes": 0,
+    "new_starts": 0,
+    "old_raw_bytes": 197935338,
+    "old_starts": 18,
+    "shared_raw_bytes": 197935338
+  },
+  "classification": "EXPLORATORY",
+  "controller_sha256": "81783bf8f62d724e8a31d39fc987cfc6c3f5718d2f46c08cdf52e4138659a782",
+  "counts": {
+    "M": 3000,
+    "R": 600,
+    "U": 300,
+    "X": 150
+  },
+  "feedback": {
+    "gain_veh_h_per_pct": 70.0,
+    "initial_veh_h": 900.0,
+    "maximum_veh_h": 1200.0,
+    "minimum_veh_h": 300.0,
+    "target_pct": 11.0
+  },
+  "feedback_update_s": [
+    630,
+    4170,
+    30
+  ],
+  "first_slot_at_initial_rate_s": 603,
+  "horizon_s": 4200,
+  "initial_credit": 0.0,
+  "input_sha256": {
+    "demand.rou.xml": "99151ed51419c8d490c0f0b1a91bea23f6be70c5486890a04e1e06b3de5d808e",
+    "scenario.add.xml": "8fd2d26af9adf8e94be29b985039b45ec7077a65cfc9ac60ba680c65aafbf36e",
+    "scenario.sumocfg": "64f87131c9a1d9bc343bc30a4724cd8b3165f4b0e31a04c059845199686b34bb"
+  },
+  "limits": {
+    "global_starts": 40,
+    "new_control_technical_starts": 8,
+    "poll_s": 0.1,
+    "run_bytes": 250000000,
+    "total_raw_bytes": 8000000000,
+    "wall_s": 120
+  },
+  "meter_controlled_link": {
+    "from": "ramp_storage_0",
+    "link_index": 0,
+    "storage_length_m": 204.49,
+    "tls": "ramp_mid",
+    "to": "ramp_accel_0",
+    "via": ":ramp_mid_0_0"
+  },
+  "meter_start_s": 600,
+  "mode": "NOOP",
+  "network_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+  "output": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_standard_metering_20261003_v1/M3600_R900_S17_NOOP_TRACI_V1/outputs",
+  "package": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_standard_metering_execution_20261003_v1/inputs/M3600_R900_S17_NOOP_TRACI_V1",
+  "plan": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/docs/stage6/STAGE6_CURRENT_VERSION_STANDARD_METERING_PLAN_20261003.md",
+  "plan_sha256": "9f1beac000200b5fce89427121b14df353190851c2b98bbdf686d7339e51a28f",
+  "python": "3.13.0",
+  "revision": "V1",
+  "run_id": "M3600_R900_S17_NOOP_TRACI_V1",
+  "runner_sha256": "4116b65953734a50846423351b336bcc7e1508f46336dcddb306db16c99a0d57",
+  "schema_version": 1,
+  "seed": 17,
+  "service_candidate": {
+    "downstream_clearance": "nearest_internal_vehicle_rear >= front_length+front_minGap",
+    "minimum_crossing_ratio": 0.9,
+    "minimum_qualified_slots_across_run": 20,
+    "queue_distance_to_stopline_m": 1.1,
+    "queue_speed_strictly_below_m_s": 0.1
+  },
+  "status": "PREPARED_NOT_RELEASED",
+  "sumo_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+  "sumoitscontrol_version_expected": "0.1.0",
+  "traci_version_expected": "1.26.0"
+}

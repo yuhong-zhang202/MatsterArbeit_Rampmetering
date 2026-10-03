@@ -1,0 +1,23 @@
+{
+  "status": "PASS_FOR_EXPLORATORY_EXECUTION",
+  "scope": "one V5 passive startup diagnostic and eligible NOOP only",
+  "authorization": "D-015 user technical repair and continuation",
+  "reviewer": "scientific_reviewer /root/boundary_design_review",
+  "review_result": "source/card/preflight plus15 pure mock/static tests PASS; shared startup deadline passive ps/lsof/sample; OS timing readback required,120s guardian unchanged; no ALINEA release",
+  "cards": {
+    "M3600_R900_S17_NOOP_TRACI_V5": "f42a00a41f7fd92dcaa5d7de82c54bc7af91c63d614b5a04f860217cad1e0206"
+  },
+  "runner_sha256": "5c35338f408865672fecef83316c4b4edb6fc99a186e9b0e4d1ad762d98916ad",
+  "controller_sha256": "81783bf8f62d724e8a31d39fc987cfc6c3f5718d2f46c08cdf52e4138659a782",
+  "plan_sha256": "9f1beac000200b5fce89427121b14df353190851c2b98bbdf686d7339e51a28f",
+  "limits": {
+    "global_starts": 40,
+    "new_control_technical_starts": 8,
+    "poll_s": 0.1,
+    "run_bytes": 250000000,
+    "total_raw_bytes": 8000000000,
+    "wall_s": 120
+  },
+  "expected_cumulative_starts_before": 20,
+  "expected_cumulative_starts_after": 21
+}
