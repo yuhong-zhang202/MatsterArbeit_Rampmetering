@@ -1,0 +1,49 @@
+{
+  "run_id": "DEV_M3600_R750_S23_T1_A03",
+  "status": "COMPLETED",
+  "command": ".venv/bin/python -B scripts/formal_development_20261007_v1/runner.py launch --card artifacts/formal_development_20261007_v1/inputs/DEV_M3600_R750_S23_T1_A03/card.json --release artifacts/formal_development_20261007_v1/RELEASE_FIX02_SEEDS23_42_A03.json",
+  "permission_path": "require_escalated local TraCI approved",
+  "card_sha256": "f76b9652b0ccb76fe18e91ad2fd8a253679eb7cde72f948ceabf05c228361ac7",
+  "receipt_sha256": "2d7f6f2a2812584d86760a87dc727e1ea64ed149ede33419e433da8df9a2e343",
+  "wall_s": 52.35104437501286,
+  "output_bytes": 97967724,
+  "new_raw_bytes": 810596573,
+  "manifest_files_verified": 34,
+  "manifest_errors": [],
+  "return_code": 0,
+  "sumo_log_end_s": 4200.0,
+  "sumo_log_counts": {
+    "Inserted": 3950,
+    "Running": 0,
+    "Waiting": 0
+  },
+  "logged_service_summary": {
+    "window_begin_s": "600",
+    "window_end_s": "4200",
+    "nominal_slots": "1953",
+    "guard_rejected_slots": "1453",
+    "scheduled_slots": "500",
+    "queued_unblocked_slots": "500",
+    "crossings_in_slots": "500",
+    "empty_slots": "ALL",
+    "red_crossings": "0",
+    "repeated_slots": "0",
+    "wrong_vehicle_slots": "0",
+    "classification": "PASS_TECHNICAL_SERVICE"
+  },
+  "entrant_coverage": {
+    "action_step_s": 1.0,
+    "coverage": "all current storage followers and all internal-lane R; others/new route entrants cannot reach storage in one green step",
+    "maximum_one_step_advance_m": 58.15555555555556,
+    "maximum_type_speed_m_s": 55.55555555555556,
+    "revision": "FIX02_GREEN_ADVANCE_PLUS_POST_RED",
+    "tau_s": 1.0,
+    "type_accel_m_s2": 2.6,
+    "upstream_lane": ":urban_diverge_1_0",
+    "upstream_length_m": 113.08
+  },
+  "sumo_error_bytes": 0,
+  "sumo_stderr_bytes": 0,
+  "retained_warning": "TraCI API UserWarning retained",
+  "next_gate": "Independent persisted integrity/data/safety/rule gate before next authorized run. No final data/rate qualification inferred here."
+}

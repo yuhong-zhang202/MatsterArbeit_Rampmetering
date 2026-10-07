@@ -1,0 +1,79 @@
+{
+  "status": "PASS_OPEN_NEUTRALITY_AND_DATA",
+  "new_run_id": "DEV_M3600_R900_S17_OPEN_A03",
+  "data_classification": "DEVELOPMENT",
+  "pre600_equal": true,
+  "full_traffic_equal": true,
+  "traffic_files_compared": 17,
+  "neutrality_exception": "Only SUMO summary computational duration ignored; traffic quantities all compared.",
+  "queue_observation_phase": "Pre-step t equals native FCD label t-1; 3600 complete snapshots independently checked.",
+  "spatial_queue": {
+    "status": "PASS",
+    "prestep_snapshots_checked": 3600,
+    "max_position_precision_residual_m": 0.00499992738622268,
+    "max_speed_precision_residual_m_s": 0.004999839748890622,
+    "fcd_low_speed_boundary_ambiguous_observations": 0,
+    "scope": "Complete logged high-precision lane snapshots validated against previous-step rounded FCD and actual length metadata; risk recomputed independently. Rounded speed boundary cases retain ambiguity, not substituted into high-precision state decisions."
+  },
+  "all_green_actual_control": "NOT_TESTED_NO_CONTROL; added monitor does not actuate.",
+  "strict_continuous_30s_shared_episodes": 0,
+  "endpoint_vehicles": 0,
+  "classes": [
+    {
+      "vehicle_class": "M",
+      "planned": 3000,
+      "inserted": 3000,
+      "arrived": 3000,
+      "unfinished": 0,
+      "undeparted": 0,
+      "max_departDelay_s": 58.0,
+      "mean_completed_duration_s": 149.156,
+      "scheduled_system_time_observed_total_s": 467230.0,
+      "external_wait_observed_total_s": 19762.0,
+      "in_network_observed_total_s": 447468.0
+    },
+    {
+      "vehicle_class": "R",
+      "planned": 600,
+      "inserted": 600,
+      "arrived": 600,
+      "unfinished": 0,
+      "undeparted": 0,
+      "max_departDelay_s": 0.0,
+      "mean_completed_duration_s": 98.30666666666667,
+      "scheduled_system_time_observed_total_s": 58984.0,
+      "external_wait_observed_total_s": 0.0,
+      "in_network_observed_total_s": 58984.0
+    },
+    {
+      "vehicle_class": "U",
+      "planned": 300,
+      "inserted": 300,
+      "arrived": 300,
+      "unfinished": 0,
+      "undeparted": 0,
+      "max_departDelay_s": 0.0,
+      "mean_completed_duration_s": 66.29333333333334,
+      "scheduled_system_time_observed_total_s": 19888.0,
+      "external_wait_observed_total_s": 0.0,
+      "in_network_observed_total_s": 19888.0
+    },
+    {
+      "vehicle_class": "X",
+      "planned": 150,
+      "inserted": 150,
+      "arrived": 150,
+      "unfinished": 0,
+      "undeparted": 0,
+      "max_departDelay_s": 0.0,
+      "mean_completed_duration_s": 68.59333333333333,
+      "scheduled_system_time_observed_total_s": 10289.0,
+      "external_wait_observed_total_s": 0.0,
+      "in_network_observed_total_s": 10289.0
+    }
+  ],
+  "source_script_sha256": "43c844c4629c12b49e570465ce60fc5eb3245b98b9b081956cebcce32aad4a74",
+  "source_snapshot_sha256": "43c844c4629c12b49e570465ce60fc5eb3245b98b9b081956cebcce32aad4a74",
+  "failed_A02": "Preserved SUMO-before-spawn worker sandbox failure; excluded from traffic outcomes, not a missing valid cohort.",
+  "existing_reuse_disposition": "Six old OPEN and three R900 V15 qualified for same-input development reuse after full wrapper neutrality; old T1 code/parameters unchanged per engineering/scientific review."
+}

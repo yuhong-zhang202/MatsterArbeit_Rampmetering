@@ -1,0 +1,55 @@
+{
+  "run_id": "DEV_M3600_R900_S17_T1_A03",
+  "status": "COMPLETED_4200_PENDING_INDEPENDENT_DATA",
+  "classification": "DEVELOPMENT_FIX02_CONTROL_REPLACEMENT",
+  "command": ".venv/bin/python -B scripts/formal_development_20261007_v1/runner.py launch --card artifacts/formal_development_20261007_v1/inputs/DEV_M3600_R900_S17_T1_A03/card.json --release artifacts/formal_development_20261007_v1/RELEASE_FIX02_T1_S17_R900_A03.json",
+  "permission_path": "require_escalated local TraCI approved",
+  "card_sha256": "d88dc20ec1fd388cd70b8478d7dd62acc97d3baa847c7abc4c5dad81f8a5f157",
+  "receipt_sha256": "aa1f18b1804e725ce62e6b9d59f2ee364c8491b67e613347b15fb1f6d9247ff0",
+  "wall_s": 65.94889237501775,
+  "output_bytes": 111818896,
+  "new_raw_bytes": 282686580,
+  "manifest_files_verified": 34,
+  "manifest_errors": [],
+  "return_code": 0,
+  "sumo_log_end_s": 4200,
+  "sumo_log_counts": {
+    "Inserted": 4050,
+    "Running": 66,
+    "Waiting": 0
+  },
+  "logged_service_summary": {
+    "window_begin_s": "600",
+    "window_end_s": "4200",
+    "nominal_slots": "1982",
+    "guard_rejected_slots": "1432",
+    "scheduled_slots": "550",
+    "queued_unblocked_slots": "550",
+    "crossings_in_slots": "550",
+    "empty_slots": "ALL",
+    "red_crossings": "0",
+    "repeated_slots": "0",
+    "wrong_vehicle_slots": "0",
+    "classification": "PASS_TECHNICAL_SERVICE"
+  },
+  "entrant_coverage": {
+    "action_step_s": 1.0,
+    "coverage": "all current storage followers and all internal-lane R; others/new route entrants cannot reach storage in one green step",
+    "maximum_one_step_advance_m": 58.15555555555556,
+    "maximum_type_speed_m_s": 55.55555555555556,
+    "revision": "FIX02_GREEN_ADVANCE_PLUS_POST_RED",
+    "tau_s": 1.0,
+    "type_accel_m_s2": 2.6,
+    "upstream_lane": ":urban_diverge_1_0",
+    "upstream_length_m": 113.08
+  },
+  "sumo_error_bytes": 0,
+  "sumo_stderr_bytes": 0,
+  "retained_warning": "TraCI UserWarning: API change now handles step as floating point seconds",
+  "attempt_delta": {
+    "worker": 1,
+    "SUMO": 1,
+    "completed": 1
+  },
+  "next_gate": "Independent runtime/safety/data audit before separately released T2; no further launch."
+}

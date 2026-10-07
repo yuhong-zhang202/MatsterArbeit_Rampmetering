@@ -1,0 +1,109 @@
+{
+  "status": "PASS_ACCOUNTING_NO_PARAMETER_CHANGE",
+  "raw_sha256": "d78a506c74b912ae1dc8c791c466b20eeadf25c77b8367373e0895a36889ec30",
+  "pulse_replay_mismatches": [],
+  "windows": [
+    {
+      "begin": 1200,
+      "end": 1500,
+      "command_credit": 75.0,
+      "credit_before": 0.25,
+      "credit_after": 0.5,
+      "dropped_credit": 10.749999999999996,
+      "green_slots": 64,
+      "actual_crossings": 64,
+      "accounting_residual": 3.552713678800501e-15,
+      "drop_observed_by_reason_not_causal": {
+        "FOLLOWER_STOP_DISTANCE": 8.499999999999996,
+        "INTERNAL_RECEIVER_CLEARANCE": 2.0,
+        "LEADER_SECURE_GAP": 0.25
+      }
+    },
+    {
+      "begin": 1500,
+      "end": 1800,
+      "command_credit": 75.0,
+      "credit_before": 0.5,
+      "credit_after": 0.5,
+      "dropped_credit": 11.0,
+      "green_slots": 64,
+      "actual_crossings": 64,
+      "accounting_residual": 0.0,
+      "drop_observed_by_reason_not_causal": {
+        "FOLLOWER_STOP_DISTANCE": 9.25,
+        "INTERNAL_RECEIVER_CLEARANCE": 1.75
+      }
+    },
+    {
+      "begin": 1800,
+      "end": 2100,
+      "command_credit": 75.0,
+      "credit_before": 0.5,
+      "credit_after": 0.25,
+      "dropped_credit": 11.25,
+      "green_slots": 64,
+      "actual_crossings": 64,
+      "accounting_residual": 0.0,
+      "drop_observed_by_reason_not_causal": {
+        "FOLLOWER_STOP_DISTANCE": 9.25,
+        "INTERNAL_RECEIVER_CLEARANCE": 2.0
+      }
+    },
+    {
+      "begin": 2100,
+      "end": 2400,
+      "command_credit": 75.0,
+      "credit_before": 0.25,
+      "credit_after": 0.75,
+      "dropped_credit": 8.5,
+      "green_slots": 66,
+      "actual_crossings": 66,
+      "accounting_residual": 0.0,
+      "drop_observed_by_reason_not_causal": {
+        "INTERNAL_RECEIVER_CLEARANCE": 1.5,
+        "FOLLOWER_STOP_DISTANCE": 6.75,
+        "LEADER_SECURE_GAP": 0.25
+      }
+    },
+    {
+      "begin": 2400,
+      "end": 2700,
+      "command_credit": 75.0,
+      "credit_before": 0.75,
+      "credit_after": 0.75,
+      "dropped_credit": 9.0,
+      "green_slots": 66,
+      "actual_crossings": 66,
+      "accounting_residual": 0.0,
+      "drop_observed_by_reason_not_causal": {
+        "FOLLOWER_STOP_DISTANCE": 8.25,
+        "INTERNAL_RECEIVER_CLEARANCE": 0.5,
+        "LEADER_SECURE_GAP": 0.25
+      }
+    },
+    {
+      "begin": 2700,
+      "end": 3000,
+      "command_credit": 75.0,
+      "credit_before": 0.75,
+      "credit_after": 1.0,
+      "dropped_credit": 8.75,
+      "green_slots": 66,
+      "actual_crossings": 66,
+      "accounting_residual": 0.0,
+      "drop_observed_by_reason_not_causal": {
+        "FOLLOWER_STOP_DISTANCE": 7.5,
+        "INTERNAL_RECEIVER_CLEARANCE": 1.25
+      }
+    }
+  ],
+  "due_denial_leader_lanes": {
+    "LEADER_SECURE_GAP": {
+      ":ramp_mid_0_0": 259
+    },
+    "INTERNAL_RECEIVER_CLEARANCE": {
+      ":ramp_mid_0_0": 112
+    }
+  },
+  "scope": "Recorded guard inputs replay, not traffic counterfactual or causal denial allocation; no simulation."
+}

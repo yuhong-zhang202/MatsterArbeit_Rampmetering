@@ -1,0 +1,24 @@
+{
+  "status": "TECHNICAL_RUN_COMPLETED_PENDING_INDEPENDENT_DATA_GATE",
+  "run_id": "DEV_M3600_R900_S17_OPEN_A03",
+  "receipt": "artifacts/formal_development_20261007_v1/receipts/DEV_M3600_R900_S17_OPEN_A03.json",
+  "raw": "data/raw/formal_development_20261007_v1/DEV_M3600_R900_S17_OPEN_A03/outputs",
+  "command": ".venv/bin/python scripts/formal_development_20261007_v1/runner.py launch --card artifacts/formal_development_20261007_v1/inputs/DEV_M3600_R900_S17_OPEN_A03/card.json --release artifacts/formal_development_20261007_v1/RELEASE_OPEN_S17_R900_A03.json",
+  "permission": "require_escalated to restore authorized local127.0.0.1 TraCI bind; prior sandbox failure retained",
+  "guardian_wall_s": 39.69211591599742,
+  "output_bytes": 21103674,
+  "sumo_log_report": {
+    "version": "1.26.0",
+    "end_s": 4200,
+    "inserted": 4050,
+    "running_end": 0,
+    "waiting_end": 0,
+    "duration_s": 13.75,
+    "traci_duration_s": 8.93
+  },
+  "warnings": "Inherited TraCI UserWarning API change now handles step as floating point seconds; preserved worker stderr. SUMO stderr/error log empty.",
+  "worker_physical_attempts": 2,
+  "sumo_physical_starts": 1,
+  "completed_combinations": 1,
+  "next_gate": "Independent full OPEN neutrality and data qualification; no automatic control launch"
+}

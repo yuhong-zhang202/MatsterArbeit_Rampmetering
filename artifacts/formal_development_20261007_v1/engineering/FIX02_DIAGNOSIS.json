@@ -1,0 +1,72 @@
+{
+  "status": "VERIFIED_PRE_GUARD_DOES_NOT_IMPLY_POST_INTERLOCK",
+  "run_id": "DEV_M3600_R750_S17_T1_A02",
+  "raw_sha256": {
+    "controller_steps.csv": "8eeec08422ce4f8bac68b4e114c41bf6dbea527c78aeca91e71b2a7130d3f4d3",
+    "worker_stderr.log": "fc66e5be367c76fa1a914206a8b8f6b8ef1985ee2599e9d295fe5280a063acc2",
+    "fcd.xml.gz": "cb6972f00cfb0c5ce7a6384570ab8a7bf947eaffdd3e01d5365cc715c04db6ab"
+  },
+  "card_sha256": "02446edf7096e87ddfc09b5f6685929e1677476ac745c06b4841c2aafa9c451a",
+  "guard_source_sha256": "c48b743972e44cdac8d53b6276efeed75c8bcd45a36c13940735e9d3f317f2d7",
+  "pre_time_s": 653,
+  "post_time_s": 654,
+  "fcd_post_label_s": 653,
+  "pre_full_guard": {
+    "allowed": true,
+    "reason": "STOPPED_READY",
+    "front_id": "R_flow.0",
+    "branch": "stopped"
+  },
+  "post_full_guard": {
+    "safe_to_red": false,
+    "abort": true,
+    "reason": "UNSAFE_GREEN_TO_RED",
+    "unsafe_ids": [
+      "R_flow.3"
+    ],
+    "empty_green": false
+  },
+  "minimal_pre_population": {
+    "R_flow.0": {
+      "position_m": 203.4889673768885,
+      "speed_m_s": 0.0002900831042285037,
+      "length_m": 5.0,
+      "min_gap_m": 2.5,
+      "accel_m_s2": 2.6,
+      "normal_decel_m_s2": 4.5
+    },
+    "R_flow.3": {
+      "position_m": 114.69805754172151,
+      "speed_m_s": 20.619372099020346,
+      "length_m": 5.0,
+      "min_gap_m": 2.5,
+      "accel_m_s2": 2.6,
+      "normal_decel_m_s2": 4.5
+    }
+  },
+  "minimal_pre_guard": {
+    "allowed": true,
+    "reason": "STOPPED_READY",
+    "front_id": "R_flow.0",
+    "branch": "stopped"
+  },
+  "minimal_post_follower": {
+    "position_m": 135.57582460911183,
+    "speed_m_s": 20.877767067390323,
+    "length_m": 5.0,
+    "min_gap_m": 2.5,
+    "accel_m_s2": 2.6,
+    "normal_decel_m_s2": 4.5
+  },
+  "pre_follower_gap_m": 89.7919424582785,
+  "pre_required_m": 84.22373217377196,
+  "pre_margin_m": 5.568210284506534,
+  "post_follower_gap_m": 68.91417539088818,
+  "post_required_m": 70.4090068140801,
+  "post_margin_m": -1.4948314231919255,
+  "green_step_advance_m": 20.877767067390323,
+  "pre_gap_needed_for_observed_post_requirement_m": 91.28677388147042,
+  "scope": "Actual recorded pair and pure guard replay, not a prospective next-speed prediction or repaired controller.",
+  "simulation_starts": 0,
+  "source_changes": false
+}

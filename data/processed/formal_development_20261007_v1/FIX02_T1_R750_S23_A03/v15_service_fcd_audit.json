@@ -1,0 +1,15 @@
+{
+  "status": "PASS_V15_FCD_SERVICE",
+  "counts": {
+    "multiple_slots": 0,
+    "red_crossings": 0,
+    "qualified": 500,
+    "qualified_front_crossings": 500,
+    "wrong_front": 0,
+    "qualified_STOPPED_READY": 406,
+    "qualified_MOVING_READY": 94
+  },
+  "mismatches": [],
+  "qualification": "Independent stopped and moving V15 guards, not historical stopped-only 1.1m geometry. FCD is rounded; native pre-step sensors are independently replayed and compared with previous label. SecureGap remains conditional on logged SUMO value.",
+  "supersedes_only": "Historical sampled_service.json stopped-only geometry interpretation; original result retained."
+}

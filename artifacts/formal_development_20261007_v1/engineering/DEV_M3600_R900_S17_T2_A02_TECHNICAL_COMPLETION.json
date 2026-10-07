@@ -1,0 +1,24 @@
+{
+  "status": "TECHNICAL_RUN_COMPLETED_PENDING_INDEPENDENT_DATA_GATE",
+  "run_id": "DEV_M3600_R900_S17_T2_A02",
+  "receipt": "artifacts/formal_development_20261007_v1/receipts/DEV_M3600_R900_S17_T2_A02.json",
+  "raw": "data/raw/formal_development_20261007_v1/DEV_M3600_R900_S17_T2_A02/outputs",
+  "command": ".venv/bin/python scripts/formal_development_20261007_v1/runner.py launch --card artifacts/formal_development_20261007_v1/inputs/DEV_M3600_R900_S17_T2_A02/card.json --release artifacts/formal_development_20261007_v1/RELEASE_T2_S17_R900_A02.json",
+  "permission": "require_escalated authorized local TraCI connection",
+  "guardian_wall_s": 34.71290999997291,
+  "output_bytes": 52057016,
+  "sumo_log_report": {
+    "version": "1.26.0",
+    "end_s": 4200,
+    "inserted": 4050,
+    "running_end": 0,
+    "waiting_end": 0,
+    "duration_s": 32.47,
+    "traci_duration_s": 28.15
+  },
+  "warnings": "Inherited TraCI floating-point-step API UserWarning retained; SUMO stderr/error logs empty.",
+  "worker_physical_attempts": 3,
+  "sumo_physical_starts": 2,
+  "completed_combinations": 2,
+  "next_gate": "Independent T2 data qualification before R750 startup; no outcome interpretation by engineer"
+}

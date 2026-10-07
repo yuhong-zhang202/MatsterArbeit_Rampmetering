@@ -1,0 +1,29 @@
+{
+  "status": "PASS_FOR_DEVELOPMENT_EXECUTION",
+  "classification": "DEVELOPMENT_FIX02",
+  "cards": {
+    "DEV_M3600_R900_S23_T1_A03": "008f2d507c7d9436d632e974445febd9f2d2df3556a5f954d226ad36cee4a498",
+    "DEV_M3600_R900_S23_T2_A03": "ce9ee15b064ca5b995d74370eee0a15ceacb6633a24aacdb44b53b3648760a22",
+    "DEV_M3600_R750_S23_T1_A03": "f76b9652b0ccb76fe18e91ad2fd8a253679eb7cde72f948ceabf05c228361ac7",
+    "DEV_M3600_R750_S23_T2_A03": "f320e5d7d35e1a005b4740f090abd9d8420b785133972748847113b21d6aa8eb",
+    "DEV_M3600_R900_S42_T1_A03": "41892d919f533a20ca010ac85b78212fd60044b282ee539a0792e9f277cbdc82",
+    "DEV_M3600_R900_S42_T2_A03": "e12edf228a258a52a2904da498842bd7a9bcda954ee05be39e0740340e8fc941",
+    "DEV_M3600_R750_S42_T1_A03": "f156263f56a163d10002eb1fbc12e0a6d7ab058eed6423f6d206e928315fc232",
+    "DEV_M3600_R750_S42_T2_A03": "adf69d98d1cc56f32780865864c182c6be9c3ef87066bdece437c9c21cc6d691"
+  },
+  "contract_sha256": "31f439c1a83f724259d7a74a382b3d03b6cb82378ec145b85431739655ca07f3",
+  "repair_addendum_sha256": "3b002f0ed82f233efe24968cf72963e311caf78c10224909dfe43f3882fba5a9",
+  "date": "2026-10-07",
+  "order": [
+    "DEV_M3600_R900_S23_T1_A03",
+    "DEV_M3600_R900_S23_T2_A03",
+    "DEV_M3600_R750_S23_T1_A03",
+    "DEV_M3600_R750_S23_T2_A03",
+    "DEV_M3600_R900_S42_T1_A03",
+    "DEV_M3600_R900_S42_T2_A03",
+    "DEV_M3600_R750_S42_T1_A03",
+    "DEV_M3600_R750_S42_T2_A03"
+  ],
+  "review": "SCIENCE_FIX02_REMAINING_EIGHT_REVIEW.md",
+  "conditions": "Sequential execution; independent persisted integrity/data/safety/rule PASS after each run; rate qualification failure and accounted residual vehicles are valid outcomes; stop on actual technical/data/resource gate failure; no mutations to frozen sources/parameters."
+}

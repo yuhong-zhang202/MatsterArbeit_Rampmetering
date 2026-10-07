@@ -1,0 +1,33 @@
+{
+  "classification": "DEVELOPMENT_DESCRIPTIVE_PAIRED_WITHIN_DEMAND_SEED",
+  "source_sha256": {
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T1_R900_S17_A03/FIX02_DATA_GATE.json": "1565baede32c9a0cbbd4687c41d066920a65b1e801a98c02a534de6ad963a968",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T2_R900_S17_A03/FIX02_DATA_GATE.json": "f8678c5083238c4ebaabca9906280e00b11178c4267f7a0e4757ee88eeec95fd",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/reuse_audit.json": "4621548eb9dd46248881dab6cda9be37ca532c10039d51e026b59d3de9f9ea28"
+  },
+  "script_sha256": "b205afb8f9d4c5c994004aa95a94674307859865a33d765640f35dbcf1021c3b",
+  "table": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/tables/formal_development_20261007_v1/paired_costs_fix02_R900_S17.csv",
+  "table_sha256": "00247fe7799e9b5b98aa9f13b988b8673a98d26df8495aa4b6949f2d1a493c65",
+  "rows": 15,
+  "unfinished_by_treatment": {
+    "T0": {
+      "M": 0,
+      "R": 0,
+      "U": 0,
+      "X": 0
+    },
+    "T1": {
+      "M": 0,
+      "R": 56,
+      "U": 10,
+      "X": 0
+    },
+    "T2": {
+      "M": 0,
+      "R": 54,
+      "U": 8,
+      "X": 0
+    }
+  },
+  "interpretation": "Restricted all-planned-cohort costs through4200s, not completed-only. Rate-screen failures remain NOT_QUALIFIED and do not become qualified900 service. No formal inference, causal city-delay decomposition, or sweet-spot acceptance. Legacy controls excluded."
+}

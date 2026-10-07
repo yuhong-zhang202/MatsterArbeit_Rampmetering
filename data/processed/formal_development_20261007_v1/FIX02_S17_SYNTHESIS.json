@@ -1,0 +1,184 @@
+{
+  "reviewer_role": "data_analyst",
+  "classification": "DEVELOPMENT_S17_CHECKPOINT_FIX02",
+  "source_sha256": {
+    "data/processed/formal_development_20261007_v1/FIX02_T1_R750_S17_A03/FIX02_DATA_GATE.json": "bcee58fc0e14e024e1a50c84de86c8548aef967f71e3a4b8b43c445a0d3c078c",
+    "data/processed/formal_development_20261007_v1/FIX02_T2_R750_S17_A03/FIX02_DATA_GATE.json": "c0ea330e06fc0ac25889a77a2e1e3294c6338ca842ab03c2f8767b02aa95b816",
+    "data/processed/formal_development_20261007_v1/FIX02_T1_R900_S17_A03/FIX02_DATA_GATE.json": "1565baede32c9a0cbbd4687c41d066920a65b1e801a98c02a534de6ad963a968",
+    "data/processed/formal_development_20261007_v1/FIX02_T2_R900_S17_A03/FIX02_DATA_GATE.json": "f8678c5083238c4ebaabca9906280e00b11178c4267f7a0e4757ee88eeec95fd"
+  },
+  "runs": [
+    {
+      "run_id": "DEV_M3600_R750_S17_T1_A03",
+      "q_ramp": 750,
+      "treatment": "T1",
+      "data": "PASS",
+      "safety": "PASS_OBSERVED_RUN",
+      "rate": "NOT_QUALIFIED",
+      "planned": 3950,
+      "inserted": 3950,
+      "arrived": 3950,
+      "unfinished": {
+        "M": 0,
+        "R": 0,
+        "U": 0,
+        "X": 0
+      },
+      "undeparted": 0,
+      "total_system_time_s": 579622.0,
+      "source_wait_s": 79666.0,
+      "post_margin_min_m": 1.7454154971216411,
+      "greens": 500,
+      "eligible_rate_windows": 6,
+      "failed_rate_windows": 6,
+      "queue": {
+        "status": "PASS",
+        "active_seconds": 0,
+        "transitions": [],
+        "release_coverage": false,
+        "scope": "Prospective rule replay from logged complete risk observations; FCD/body-coordinate mapping separately checked."
+      },
+      "strict_shared_30s_episodes": 0
+    },
+    {
+      "run_id": "DEV_M3600_R750_S17_T2_A03",
+      "q_ramp": 750,
+      "treatment": "T2",
+      "data": "PASS",
+      "safety": "PASS_OBSERVED_RUN",
+      "rate": "NOT_QUALIFIED",
+      "planned": 3950,
+      "inserted": 3950,
+      "arrived": 3950,
+      "unfinished": {
+        "M": 0,
+        "R": 0,
+        "U": 0,
+        "X": 0
+      },
+      "undeparted": 0,
+      "total_system_time_s": 575140.0,
+      "source_wait_s": 76858.0,
+      "post_margin_min_m": 1.0702973228476473,
+      "greens": 500,
+      "eligible_rate_windows": 6,
+      "failed_rate_windows": 6,
+      "queue": {
+        "status": "PASS",
+        "active_seconds": 2741,
+        "transitions": [
+          {
+            "time": 1091,
+            "transition": "ACTIVATE",
+            "risk_extent_m": 291.6954535990145
+          },
+          {
+            "time": 3832,
+            "transition": "RELEASE",
+            "risk_extent_m": 66.80055133637052
+          }
+        ],
+        "release_coverage": true,
+        "scope": "Prospective rule replay from logged complete risk observations; FCD/body-coordinate mapping separately checked."
+      },
+      "strict_shared_30s_episodes": 0
+    },
+    {
+      "run_id": "DEV_M3600_R900_S17_T1_A03",
+      "q_ramp": 900,
+      "treatment": "T1",
+      "data": "PASS",
+      "safety": "PASS_OBSERVED_RUN",
+      "rate": "NOT_QUALIFIED",
+      "planned": 4050,
+      "inserted": 4050,
+      "arrived": 3984,
+      "unfinished": {
+        "M": 0,
+        "R": 56,
+        "U": 10,
+        "X": 0
+      },
+      "undeparted": 0,
+      "total_system_time_s": 881319.0,
+      "source_wait_s": 306391.0,
+      "post_margin_min_m": 1.9786287137702283,
+      "greens": 550,
+      "eligible_rate_windows": 6,
+      "failed_rate_windows": 6,
+      "queue": {
+        "status": "PASS",
+        "active_seconds": 0,
+        "transitions": [],
+        "release_coverage": false,
+        "scope": "Prospective rule replay from logged complete risk observations; FCD/body-coordinate mapping separately checked."
+      },
+      "strict_shared_30s_episodes": 0
+    },
+    {
+      "run_id": "DEV_M3600_R900_S17_T2_A03",
+      "q_ramp": 900,
+      "treatment": "T2",
+      "data": "PASS",
+      "safety": "PASS_OBSERVED_RUN",
+      "rate": "NOT_QUALIFIED",
+      "planned": 4050,
+      "inserted": 4050,
+      "arrived": 3988,
+      "unfinished": {
+        "M": 0,
+        "R": 54,
+        "U": 8,
+        "X": 0
+      },
+      "undeparted": 0,
+      "total_system_time_s": 876315.0,
+      "source_wait_s": 302983.0,
+      "post_margin_min_m": 1.9096296077092783,
+      "greens": 552,
+      "eligible_rate_windows": 6,
+      "failed_rate_windows": 6,
+      "queue": {
+        "status": "PASS",
+        "active_seconds": 3292,
+        "transitions": [
+          {
+            "time": 908,
+            "transition": "ACTIVATE",
+            "risk_extent_m": 290.6542707528167
+          }
+        ],
+        "release_coverage": false,
+        "scope": "Prospective rule replay from logged complete risk observations; FCD/body-coordinate mapping separately checked."
+      },
+      "strict_shared_30s_episodes": 0
+    }
+  ],
+  "current_version_coverage": {
+    "qualified_open": 6,
+    "audited_fix02_controls": 4,
+    "pending_fix02_controls": 8,
+    "total_authorized_cells": 18
+  },
+  "data_disposition": "All four FIX02 S17 raw datasets pass independent observed safety, rule and data checks. Service capability NOT_QUALIFIED in all24 eligible300s windows. This is a preserved negative capability outcome, not a launch recommendation or a qualified900-service claim.",
+  "queue_coverage": "R750 T2 naturally activates1091/releases3832; R900 T2 activates908 and stays active to4200. T1 never activates. Nominal feedback independently evolves in T2 and final commands/rules replay exactly.",
+  "endpoint": "R750 both treatments clear3950. R900 T1 leavesR56/U10; T2 leavesR54/U8. All planned vehicles retained with restricted4200 cost and endpoint records; no extension or imputed arrival.",
+  "within_demand_descriptive_costs": {
+    "R750": {
+      "T1_minus_OPEN_s": 272768,
+      "T2_minus_OPEN_s": 268286,
+      "T2_minus_T1_s": -4482
+    },
+    "R900": {
+      "T1_minus_OPEN_s": 324928,
+      "T2_minus_OPEN_s": 319924,
+      "T2_minus_T1_s": -5004
+    }
+  },
+  "boundaries": [
+    "One development seed, not uncertainty evidence or formal inference.",
+    "Old V15 controls and old T2 are excluded from FIX02 paired effects.",
+    "Strict shared30s chain remains negative4/4; shared exposure is not all U delay.",
+    "Remaining eight same-version authorized cells require primary/scientific release; no parameter change justified by outcomes."
+  ]
+}

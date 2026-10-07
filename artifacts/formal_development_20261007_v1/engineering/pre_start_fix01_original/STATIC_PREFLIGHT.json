@@ -1,0 +1,64 @@
+{
+  "status": "PASS_NO_SIMULATION",
+  "cards": [
+    {
+      "run_id": "DEV_M3600_R750_S17_T1_A01",
+      "card": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/formal_development_20261007_v1/inputs/DEV_M3600_R750_S17_T1_A01/card.json",
+      "card_sha256": "6805607388111ec3fffec02eb9a093c9367a37ed3f0df316da226b2b0d4fca5d",
+      "status": "STATIC_PREFLIGHT_PASS_NO_SIMULATION",
+      "counts": {
+        "M": 3000,
+        "R": 500,
+        "U": 300,
+        "X": 150
+      }
+    },
+    {
+      "run_id": "DEV_M3600_R750_S17_T2_A01",
+      "card": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/formal_development_20261007_v1/inputs/DEV_M3600_R750_S17_T2_A01/card.json",
+      "card_sha256": "979202ce906aee9091a71687d4ac7126fc00884c9d376786f3cef1f385ccfa66",
+      "status": "STATIC_PREFLIGHT_PASS_NO_SIMULATION",
+      "counts": {
+        "M": 3000,
+        "R": 500,
+        "U": 300,
+        "X": 150
+      }
+    },
+    {
+      "run_id": "DEV_M3600_R900_S17_OPEN_A01",
+      "card": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/formal_development_20261007_v1/inputs/DEV_M3600_R900_S17_OPEN_A01/card.json",
+      "card_sha256": "bd409dc251e6f722266a33c218ce395ba77852eaaa9cbe11ca5a66cbded6feda",
+      "status": "STATIC_PREFLIGHT_PASS_NO_SIMULATION",
+      "counts": {
+        "M": 3000,
+        "R": 600,
+        "U": 300,
+        "X": 150
+      }
+    },
+    {
+      "run_id": "DEV_M3600_R900_S17_T2_A01",
+      "card": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/formal_development_20261007_v1/inputs/DEV_M3600_R900_S17_T2_A01/card.json",
+      "card_sha256": "6dd722e4fdad8fbd2192d28aac355de047321904b0ab137181b45d5bfd4dffad",
+      "status": "STATIC_PREFLIGHT_PASS_NO_SIMULATION",
+      "counts": {
+        "M": 3000,
+        "R": 600,
+        "U": 300,
+        "X": 150
+      }
+    }
+  ],
+  "contract_sha256": "31f439c1a83f724259d7a74a382b3d03b6cb82378ec145b85431739655ca07f3",
+  "source_sha256": {
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/formal_development_20261007_v1/control.py": "a282302ecc5fefd8d1810c07d1340f9bd1dbe0e3316b718ce991e5c5bea185ab",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/formal_development_20261007_v1/queue_protection.py": "3a4488d2b9e5802b61188bf9e45bef5af15f369ebce73b7df88647f0267203dc",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/formal_development_20261007_v1/runner.py": "b61b6df1e55e62a82605d9495443314dc52630eb2fab9ac78f5832cde70f7102",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/formal_development_20261007_v1/test_offline.py": "4981333d969afc78287ba1d7775ce056b222598e204aac5aeb53e69076963fbe",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/formal_development_20261007_v1/v15_worker.py": "c5b9bfdff8da3f356daf086deca186fd95d03dd8a25e8a2a4f888d386cc324df",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/stage6/standard_metering_20261003/control.py": "a282302ecc5fefd8d1810c07d1340f9bd1dbe0e3316b718ce991e5c5bea185ab",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/stage6/standard_metering_20261003/runner.py": "cb05feb9beb90aa41508102d4e37f897f942bf26278428ad868f04f1816fd0b9",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/stage6_safe_actuator_v10.py": "c48b743972e44cdac8d53b6276efeed75c8bcd45a36c13940735e9d3f317f2d7"
+  }
+}

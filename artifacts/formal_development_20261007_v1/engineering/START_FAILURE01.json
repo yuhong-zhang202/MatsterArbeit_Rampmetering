@@ -1,0 +1,11 @@
+{
+  "status": "TECHNICAL_PERMISSION_FAILURE_BEFORE_SUMO_SPAWN",
+  "run_id": "DEV_M3600_R900_S17_OPEN_A02",
+  "worker_physical_attempts": 1,
+  "sumo_physical_starts": 0,
+  "failure": "PermissionError: [Errno 1] Operation not permitted at free_port socket.bind((127.0.0.1,0))",
+  "source_or_parameter_changes": false,
+  "receipt": "artifacts/formal_development_20261007_v1/receipts/DEV_M3600_R900_S17_OPEN_A02.json",
+  "raw": "data/raw/formal_development_20261007_v1/DEV_M3600_R900_S17_OPEN_A02/outputs",
+  "recovery": "New immutable prepared card and parent release; same authorized local TraCI command with sandbox permission escalation. No blind reuse of failed raw."
+}

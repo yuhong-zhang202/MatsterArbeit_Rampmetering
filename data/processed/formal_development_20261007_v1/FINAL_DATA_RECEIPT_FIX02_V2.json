@@ -1,0 +1,253 @@
+{
+  "classification": "DEVELOPMENT_CURRENT_FIX02_FINAL",
+  "coverage": 18,
+  "class_rows": 72,
+  "control_gates": 12,
+  "totals": {
+    "planned": 72000,
+    "inserted": 72000,
+    "arrived": 71591,
+    "unfinished": 409,
+    "undeparted": 0
+  },
+  "all_run_totals_scope": "Summed run accounting, not one shared population.",
+  "rate_windows": 72,
+  "rate_failures": 71,
+  "rate_not_tested": 0,
+  "strict30s_shared_episodes": 0,
+  "attempts": 16,
+  "SUMO_starts": 15,
+  "completed_attempts": 14,
+  "wall_s": 875.3074192490312,
+  "raw_manifest_bytes": 1323070588,
+  "raw_directory_bytes": 1323153268,
+  "stratified_resource_samples": {
+    "OPEN": {
+      "n": 1,
+      "mean_wall_s": 39.69211591599742,
+      "min_wall_s": 39.69211591599742,
+      "max_wall_s": 39.69211591599742,
+      "mean_bytes": 21103674,
+      "min_bytes": 21103674,
+      "max_bytes": 21103674
+    },
+    "T1": {
+      "n": 6,
+      "mean_wall_s": 69.22190554833894,
+      "min_wall_s": 52.35104437501286,
+      "max_wall_s": 99.31693758300389,
+      "mean_bytes": 104518550.5,
+      "min_bytes": 95507120,
+      "max_bytes": 112299779
+    },
+    "T2": {
+      "n": 6,
+      "mean_wall_s": 60.02787206950112,
+      "min_wall_s": 49.848133708001114,
+      "max_wall_s": 70.4065679589985,
+      "mean_bytes": 103436909.5,
+      "min_bytes": 94580952,
+      "max_bytes": 111624403
+    }
+  },
+  "resource_estimates": {
+    "60": {
+      "runs_by_treatment": {
+        "OPEN": 30,
+        "T1": 30,
+        "T2": 0
+      },
+      "wall_mean_minutes": 54.45701073216818,
+      "wall_observed_range_minutes": [
+        46.02158014550514,
+        69.50452674950066
+      ],
+      "mean_decimal_GB": 3.768666735,
+      "observed_range_decimal_GB": [
+        3.49832382,
+        4.00210359
+      ]
+    },
+    "90": {
+      "runs_by_treatment": {
+        "OPEN": 30,
+        "T1": 30,
+        "T2": 30
+      },
+      "wall_mean_minutes": 84.47094676691874,
+      "wall_observed_range_minutes": [
+        70.9456469995057,
+        104.7078107289999
+      ],
+      "mean_decimal_GB": 6.87177402,
+      "observed_range_decimal_GB": [
+        6.33575238,
+        7.35083568
+      ]
+    }
+  },
+  "resource_scope": "Draft60 =30OPEN+30T1; draft90 =30OPEN+30T1+30T2. Current empirical strata OPENn1/T1n6/T2n6. Arithmetic ranges, not confidence intervals or future bounds; setup/analysis/review/retries/changed logging excluded; no run authorization.",
+  "sources": {
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/OPEN_R900_S17_A03/summary.json": "9cfb571786b3c2790b1dd993654557c5a55de52cf03b49889ba2672455815395",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T1_R900_S17_A03/summary.json": "ce7a00f71be29f674967408a1161c38c65b5af2cf09accb83162eea982a99c16",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T1_R900_S17_A03/FIX02_DATA_GATE.json": "1565baede32c9a0cbbd4687c41d066920a65b1e801a98c02a534de6ad963a968",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T1_R900_S17_A03/city_evidence.json": "b8daff13a8b0567547ae6ea2fd38e45c2b265be58ced3716f98ded4f33dd557e",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T2_R900_S17_A03/summary.json": "56e5935f12eb31ef046c790da5dd65e93aa0beb12028b694679f875ac373ed5d",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T2_R900_S17_A03/FIX02_DATA_GATE.json": "f8678c5083238c4ebaabca9906280e00b11178c4267f7a0e4757ee88eeec95fd",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T2_R900_S17_A03/city_evidence.json": "3188fab352f8ebcf84937e321d30dbd0b9c0d8aeac2185f56e01fec7259bc901",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_boundary_search_20261002_v1/M3600_R750_S17/summary.json": "bb80d6901668b7c3651ce19069ca2649d411a6482811de346f625776bf1098e1",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T1_R750_S17_A03/summary.json": "d5b603735b72f3ea7b3829d33328b57e561f85a557c5673324ebb9525cf1daa9",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T1_R750_S17_A03/FIX02_DATA_GATE.json": "bcee58fc0e14e024e1a50c84de86c8548aef967f71e3a4b8b43c445a0d3c078c",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T1_R750_S17_A03/city_evidence.json": "f4d7ee8a35ab9761afed2617dad3c340aecc8732ee2b4d83faa98ded8cbeed52",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T2_R750_S17_A03/summary.json": "434f18f589b99926c5d6c5d12e8e54a5883c504d95e54529beaba4ce51ee5304",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T2_R750_S17_A03/FIX02_DATA_GATE.json": "c0ea330e06fc0ac25889a77a2e1e3294c6338ca842ab03c2f8767b02aa95b816",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T2_R750_S17_A03/city_evidence.json": "7a5e693f75c072717d159a399d838c7b4430f702f18469877a871f6634aaf67a",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_boundary_search_20261002_v1/M3600_R900_S23/summary.json": "a2f89f9bacad7b6ca77c2f77a8c2e90c35354198bbc3d11b909d5c2e8f8b5ab7",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T1_R900_S23_A03/summary.json": "bcf007120bd1421fcff4f1b09d61701a46abe7c653825984e7005a04e677fcf1",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T1_R900_S23_A03/FIX02_DATA_GATE.json": "4a65f73a360b0f518e7c3e553447ee5fce142bdaab2f5088a82b36e0d7a07ba1",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T1_R900_S23_A03/city_evidence.json": "a27f6a53e3b719a5c2cd710bdeec8a3ba11a942206e5372465179090572fb179",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T2_R900_S23_A03/summary.json": "975b29f979ba3b6fad18d2b2dfb7d91a7e50af31cb389e55752ebff9cc659181",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T2_R900_S23_A03/FIX02_DATA_GATE.json": "dd6193c935561243ed2c9099164a2334fe340df3da1d1538e17b6c67f23f5a61",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T2_R900_S23_A03/city_evidence.json": "00ceb11597cca71428f8d70565d7551bd7789cebeb074026f86864091735b8ed",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_boundary_search_20261002_v1/M3600_R750_S23/summary.json": "acc368e20a4474f5870169f561c83f2a5d1ff0c6083edb5864038f17a8a8163b",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T1_R750_S23_A03/summary.json": "528209b8dc0c870bd16de4cd94e630f74e470002150f40d42a52a749cdd3374b",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T1_R750_S23_A03/FIX02_DATA_GATE.json": "0ebc7fc3ee9c98a9a8ab3d2a8dceebcc5437e8663240f15c6a8be92e43dade97",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T1_R750_S23_A03/city_evidence.json": "b8c686c223781910cb8f3923b07a1c440b30a1e084e420e5dac9fc304be2bf48",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T2_R750_S23_A03/summary.json": "a493ad18ea3673328a2d0623622751a2449ef021a0e813deecd5989d6f4990e1",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T2_R750_S23_A03/FIX02_DATA_GATE.json": "c5d589bbb97ccf7ab5dde8897cf5b639c7cde3c933f870a9936a960ceb3f48c0",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T2_R750_S23_A03/city_evidence.json": "92d2c6606298ebb0b27e7277904baad93aa44f5a016ff023e48f331dfae4b12a",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_boundary_search_20261002_v1/M3600_R900_S42/summary.json": "9769d7b8dab6b3757507caaf7f309afd2ed0b5ed844110f98b02a81ca58edbb8",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T1_R900_S42_A03/summary.json": "1a224663b860647ed739cafba8c5e9034c564ed0d6d9e0f723d5f72a28db1e77",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T1_R900_S42_A03/FIX02_DATA_GATE.json": "947491d8090e12dc33c30c8e1bfdc060a453b0e1871d0e2ef5ee675953ff7dfd",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T1_R900_S42_A03/city_evidence.json": "7f5a9e072432196b2da5fb0b3fa18d11fd02e1425d375ced8e0acfaaa3a1e6d7",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T2_R900_S42_A03/summary.json": "0272109129701fcbc3f0cf3ca621a84cbe4079720e180ed97e091d4b765263cd",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T2_R900_S42_A03/FIX02_DATA_GATE.json": "92c9ea15bbe5bbe482514584d16a9bf9e129f125c838e7ba529976ce01bf385a",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T2_R900_S42_A03/city_evidence.json": "3b578670121fcc27ff565640be520827881f80b61d296f922a5cbe589a44cf8a",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/stage6_boundary_search_20261002_v1/M3600_R750_S42/summary.json": "14b046afbe5c0d03842e89c15ab5ea0eda295f3f023a44b84f56196db2e1e3aa",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T1_R750_S42_A03/summary.json": "f796bb5aade4aa414337b184b5c3f57c824f71c3d540106870ccdc6885ea9e9c",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T1_R750_S42_A03/FIX02_DATA_GATE.json": "b74f0c8eb04db2a90499c6c3729b2a5aff241542f9f1ace0af0dd457307d2fb1",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T1_R750_S42_A03/city_evidence.json": "8dd51074fb81515d7ab39cfaf21fd2be152ee449743aeeecdf23a7d1797b4b65",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T2_R750_S42_A03/summary.json": "df74b65a52c069fe281da0b751f6c48d93c2166a43bde4e0869a3a33ac3cac28",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T2_R750_S42_A03/FIX02_DATA_GATE.json": "419e57298cf8f90e54cdb3ccfd7d77e97dba232e91b6e9bedd9caeb704ddb2c1",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/formal_development_20261007_v1/FIX02_T2_R750_S42_A03/city_evidence.json": "bf42e9a346d5cd29c629c834f7db0d7601d56e2ed88e71fe908a5c1a7a5240c7",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/formal_development_20261007_v1/receipts/DEV_M3600_R750_S17_T1_A02.json": "ca0a8bffc37fca3e99e1d12aff7e112b7907d2c4eea65b889f9842b14629872d",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/formal_development_20261007_v1/receipts/DEV_M3600_R750_S17_T1_A03.json": "fe874f7a12a45e23eb907afedbf00c65bf0828ede17d276155d785109f277100",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/formal_development_20261007_v1/receipts/DEV_M3600_R750_S17_T2_A03.json": "b18dad9779f0c517f567cad6a70dd6e821f9cd837dd46efacb34b478dfa1761e",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/formal_development_20261007_v1/receipts/DEV_M3600_R750_S23_T1_A03.json": "2d7f6f2a2812584d86760a87dc727e1ea64ed149ede33419e433da8df9a2e343",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/formal_development_20261007_v1/receipts/DEV_M3600_R750_S23_T2_A03.json": "da52143d0af42dac3411e8f0dde9dd6025a5c993bec3ec6afc5197bb7fd6259c",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/formal_development_20261007_v1/receipts/DEV_M3600_R750_S42_T1_A03.json": "6ddc72248487515ee6d1aff1e3702f7092095267d409bd870c4b1c3acc89674f",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/formal_development_20261007_v1/receipts/DEV_M3600_R750_S42_T2_A03.json": "8fb193ebef384511127bfcccb3ccc4925a5778a63371e4d3b18495a2a1d62f50",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/formal_development_20261007_v1/receipts/DEV_M3600_R900_S17_OPEN_A02.json": "b29565ccfe5c6fcec1292b8d967c58c5adad6fd7aaa7cdff67ac57d98461cf10",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/formal_development_20261007_v1/receipts/DEV_M3600_R900_S17_OPEN_A03.json": "5aa72234e66dfaa3e6e3ffa1f00569e07cbc7ff4dedacf3f3e68d6df2abea101",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/formal_development_20261007_v1/receipts/DEV_M3600_R900_S17_T1_A03.json": "aa1f18b1804e725ce62e6b9d59f2ee364c8491b67e613347b15fb1f6d9247ff0",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/formal_development_20261007_v1/receipts/DEV_M3600_R900_S17_T2_A02.json": "c6fc719e4970d3e4102e22073d25203e7ecbba6de84a70c1c620b8b7c1704b66",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/formal_development_20261007_v1/receipts/DEV_M3600_R900_S17_T2_A03.json": "3d52444ecd68eb0074777c351f5ef1c08b937223ada91da43c9f9b893a6739d8",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/formal_development_20261007_v1/receipts/DEV_M3600_R900_S23_T1_A03.json": "2ac56eb485a71c664e7ad900984d36393c4fb269e2ecb0be7dd4c5b250e14259",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/formal_development_20261007_v1/receipts/DEV_M3600_R900_S23_T2_A03.json": "f2fa6f423e97ba0492f05116df139f7858670bad8ec4267a73587e44079cddf2",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/formal_development_20261007_v1/receipts/DEV_M3600_R900_S42_T1_A03.json": "5b18cc3f98605403349bf2c621a8473ff5c087c6fe3045ad38d25b14337d0171",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/formal_development_20261007_v1/receipts/DEV_M3600_R900_S42_T2_A03.json": "557f3d8715d32f43651dc548cdaaeeab4902df30c92692fcf01f841014b5a3c0"
+  },
+  "outputs": {
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/tables/formal_development_20261007_v1/shared_exposure_controls_fix02_final.csv": "2f42fa7f20f77c28491abf4eb2620a6a50726eca7087e496894e34f0b7c26300",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/tables/formal_development_20261007_v1/paired_descriptive_fix02_final.csv": "2d67bffd9dbb8d5512b6640460558a19f827edaffa812bfd9a44a02adebe8aed",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/tables/formal_development_20261007_v1/service_windows_fix02_final.csv": "1621add26e5ed5237f3cefe064e46e0654788e0cab30e3d105f7a83d787c06c0",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/tables/formal_development_20261007_v1/override_coverage_fix02_final.csv": "041e4c3da5ded71da2c34d704b6399bc4a8aafde36158a5559f00eac3b7774de",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/tables/formal_development_20261007_v1/total_cost_contrasts_fix02_final.csv": "0bc8f7b617b088bdc8c01d1963362ac2a6de48a6fadfe0c73745da548b6d5e08",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/tables/formal_development_20261007_v1/coverage_fix02_final.csv": "a5e37c30cab1bbfd27f9e3069de1a947a8cdeef285b232238dade505889d22ad",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/tables/formal_development_20261007_v1/attempt_ledger_fix02_final.csv": "f101ec196212dbc467c9c2a378bd2adba3db1240c39fce48f6bcfe809fd7ee5a",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/tables/formal_development_20261007_v1/class_costs_fix02_final.csv": "ce500ba095302bac02c3736341a858f752f84750325d28feaad606adab06f842",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/tables/formal_development_20261007_v1/endpoint_vehicles_fix02_final.csv": "206baefcd8ebb06fe31147c58b68e54b3ea7099de65f56ea8e0cf3e968e88453",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/figures/formal_development_20261007_v1/commands_R750_S42_T2_fix02_final.png": "3afe3cde37940682f246fd200bc6f1ef476dc753a034f7e279cf788fceb08835",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/figures/formal_development_20261007_v1/commands_R900_S17_T2_fix02_final.png": "88bdcffed14ab588b32c10a83d546258d5b39def2bd46ff4b5f95ec3a267fbd4",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/figures/formal_development_20261007_v1/commands_R900_S23_T1_fix02_final.png": "731dd6ac35d685a5ef29ed44cce69e1e1162d4708b615ffb374fd45cf158d1fd",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/figures/formal_development_20261007_v1/commands_R900_S42_T2_fix02_final.png": "fdb246efe5f6a5c26fdb5b5cd390d421ebc7060e464ea9d8e32b0442bc14033b",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/figures/formal_development_20261007_v1/mainline_M3600_R750_fix02_final.png": "1f793b9988726bd3db3272f8e2b883f7d5229df4e24f955a747ea3e6c2fddb14",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/figures/formal_development_20261007_v1/class_costs_R750_fix02_final.png": "5e0fbea7a4e223f65957579207383712117a4f335acaf11491e01f41e261a6fc",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/figures/formal_development_20261007_v1/commands_R750_S23_T1_fix02_final.png": "9de4c2575739c58dc2e180c4d8fa8cc67320fcb43551312cdf4cac015bc525f7",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/figures/formal_development_20261007_v1/commands_R750_S17_T2_fix02_final.png": "f2be9d8728c5677a8248ac2aea85fd71b8a726c1c464f776dc352297acf93c4b",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/figures/formal_development_20261007_v1/commands_R900_S17_T1_fix02_final.png": "ea49aae9cb04dac2e609f3c48f5eb2d34f57390a4422795e52c71d8cc2a2eeb2",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/figures/formal_development_20261007_v1/mainline_M3600_R900_fix02_final.png": "0168b1f20b6f9d52a3f5bdc74c5e48850ca4734d6ce2f157c88f9b1d791f7703",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/figures/formal_development_20261007_v1/class_costs_R900_fix02_final.png": "90c75e1f540716fa2c82c2c749c14cc167e69655c22356d6f28aa3e10c309721",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/figures/formal_development_20261007_v1/failed_R750_S17_envelope_fix02_final.png": "ac23badb9fe94ae195d4b0142f00b816ace6fdff72f9f9d3141d90c4ea644b19",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/figures/formal_development_20261007_v1/commands_R900_S23_T2_fix02_final.png": "77e0b4726de432fda0670064bb0d9139eae39d4c41bf0179639a72cd2cc1d265",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/figures/formal_development_20261007_v1/commands_R750_S42_T1_fix02_final.png": "97ff59bcc0b85f451cbc134868dfbd580d164822252ab7f696b2f1ce384d771a",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/figures/formal_development_20261007_v1/commands_R750_S23_T2_fix02_final.png": "7776add4e8f8ebbb21e085e526f33b7ba389a88728ff76ef508351312bf02514",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/figures/formal_development_20261007_v1/commands_R750_S17_T1_fix02_final.png": "85924691eb7417a6fd873c197f19d74ccace496f205fbd73d42f9df4eb4c7fc7",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/results/figures/formal_development_20261007_v1/commands_R900_S42_T1_fix02_final.png": "07ede3dfe37a3f88f93e3c714b459e97f7384f60bc1bdffc0792439a2e341181"
+  },
+  "contrasts": [
+    {
+      "q_ramp": "750",
+      "seed": "17",
+      "T0": 306854.0,
+      "T1": 579622.0,
+      "T2": 575140.0,
+      "T1_minus_T0": 272768.0,
+      "T2_minus_T0": 268286.0,
+      "T2_minus_T1": -4482.0
+    },
+    {
+      "q_ramp": "750",
+      "seed": "23",
+      "T0": 305410.0,
+      "T1": 607444.0,
+      "T2": 582152.0,
+      "T1_minus_T0": 302034.0,
+      "T2_minus_T0": 276742.0,
+      "T2_minus_T1": -25292.0
+    },
+    {
+      "q_ramp": "750",
+      "seed": "42",
+      "T0": 303560.0,
+      "T1": 604597.0,
+      "T2": 578653.0,
+      "T1_minus_T0": 301037.0,
+      "T2_minus_T0": 275093.0,
+      "T2_minus_T1": -25944.0
+    },
+    {
+      "q_ramp": "900",
+      "seed": "17",
+      "T0": 556391.0,
+      "T1": 881319.0,
+      "T2": 876315.0,
+      "T1_minus_T0": 324928.0,
+      "T2_minus_T0": 319924.0,
+      "T2_minus_T1": -5004.0
+    },
+    {
+      "q_ramp": "900",
+      "seed": "23",
+      "T0": 417743.0,
+      "T1": 904315.0,
+      "T2": 891536.0,
+      "T1_minus_T0": 486572.0,
+      "T2_minus_T0": 473793.0,
+      "T2_minus_T1": -12779.0
+    },
+    {
+      "q_ramp": "900",
+      "seed": "42",
+      "T0": 507666.0,
+      "T1": 891784.0,
+      "T2": 886504.0,
+      "T1_minus_T0": 384118.0,
+      "T2_minus_T0": 378838.0,
+      "T2_minus_T1": -5280.0
+    }
+  ],
+  "offline_repair_events": [
+    "FIX01 missing startup field repaired before worker; see engineering/TECHNICAL_FIX01.md; not a worker/SUMO attempt.",
+    "FIX02 pre/post condition correction; exact source versions are preserved in each card and attempt ledger."
+  ],
+  "limits": [
+    "Development seeds17/23/42; no significance or acceptable-region inference.",
+    "Historical pre-FIX02 controls are diagnostic only; all attempts preserved.",
+    "R750/S17 old OPEN plotted panel independently raw-reaggregated because historical analyzer source drift; unchanged classifier not newly validated by that panel check.",
+    "Native TraCI safety/API values audited arithmetically; FCD rounded to0.01.",
+    "Stopped-only legacy sampled_service diagnostic is superseded for FIX02 qualification by branch-aware v15_service audit plus FIX02 adapter."
+  ],
+  "supersedes_resource_composition_only": "FINAL_DATA_RECEIPT_FIX02.json used alternative20each60-run composition; actual draft60 is30OPEN+30T1.",
+  "correction_script_sha256": "0739cb5b6d530e3ad52ee3b5cd069739240448a4efe4be95e155da4692a2836e"
+}

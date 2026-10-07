@@ -1,0 +1,49 @@
+{
+  "status": "PASS_OFFLINE_ONLY_PENDING_INDEPENDENT_EXACT_RELEASE",
+  "tests": {
+    "command": ".venv/bin/python -B -m unittest discover -s scripts/formal_development_20261007_v1 -p test_offline.py -v",
+    "count": 15,
+    "result": "PASS"
+  },
+  "syntax": {
+    "command": "ast.parse for all six scripts/formal_development_20261007_v1/*.py",
+    "result": "PASS"
+  },
+  "open_branch": {
+    "command": ".venv/bin/python -B artifacts/formal_development_20261007_v1/engineering/verify_fix02_open_path.py",
+    "result": "PASS"
+  },
+  "exact_counterexample": {
+    "command": ".venv/bin/python -B artifacts/formal_development_20261007_v1/engineering/verify_fix02_evidence.py",
+    "result": "PASS"
+  },
+  "prepare": {
+    "command": ".venv/bin/python -B scripts/formal_development_20261007_v1/runner.py prepare --ramp 750 --seed 17 --treatment T1 --attempt 3",
+    "result": "PREPARED_NO_SIMULATION"
+  },
+  "preflight": {
+    "command": ".venv/bin/python -B scripts/formal_development_20261007_v1/runner.py preflight --card artifacts/formal_development_20261007_v1/inputs/DEV_M3600_R750_S17_T1_A03/card.json",
+    "result": "PASS"
+  },
+  "source_sha256": {
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/formal_development_20261007_v1/control.py": "a282302ecc5fefd8d1810c07d1340f9bd1dbe0e3316b718ce991e5c5bea185ab",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/formal_development_20261007_v1/queue_protection.py": "3a4488d2b9e5802b61188bf9e45bef5af15f369ebce73b7df88647f0267203dc",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/formal_development_20261007_v1/runner.py": "4d166ea8c73e98474f37925f66feafc59d3a7e0b232d036102f166671f3370fa",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/formal_development_20261007_v1/safe_actuator_fix02.py": "636125577811cfbb266e4136cb7a2de08f7d010006c1d92457f321ba819b62a9",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/formal_development_20261007_v1/test_offline.py": "ef1e5badb726feab42696596f667be8685367b82f992fc78a1adc4a5ceaff9ae",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/formal_development_20261007_v1/v15_worker.py": "f90e181707b0be69f733988885ae093a47dbbf8fe0a4d916b623253d1b082a43",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/stage6/standard_metering_20261003/control.py": "a282302ecc5fefd8d1810c07d1340f9bd1dbe0e3316b718ce991e5c5bea185ab",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/stage6/standard_metering_20261003/runner.py": "cb05feb9beb90aa41508102d4e37f897f942bf26278428ad868f04f1816fd0b9",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/stage6_safe_actuator_v10.py": "c48b743972e44cdac8d53b6276efeed75c8bcd45a36c13940735e9d3f317f2d7"
+  },
+  "contract_sha256": "31f439c1a83f724259d7a74a382b3d03b6cb82378ec145b85431739655ca07f3",
+  "repair_addendum_sha256": "3b002f0ed82f233efe24968cf72963e311caf78c10224909dfe43f3882fba5a9",
+  "new_worker_attempts": 0,
+  "new_sumo_starts": 0,
+  "new_raw_files": 0,
+  "limitations": [
+    "Actual entrant dynamics are queried and validated at runtime before stepping; synthetic tests do not establish live values.",
+    "Safety and requested-versus-actual rate remain separate gates.",
+    "Old control reuse remains data/science audit disposition; no pooling assumed."
+  ]
+}
