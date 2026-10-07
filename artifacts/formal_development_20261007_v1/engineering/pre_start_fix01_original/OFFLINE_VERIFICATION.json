@@ -1,0 +1,40 @@
+{
+  "status": "PASS_OFFLINE_ONLY_NO_SUMO_START",
+  "checks": [
+    {
+      "command": [
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+        "-m",
+        "py_compile",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/formal_development_20261007_v1/queue_protection.py",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/formal_development_20261007_v1/runner.py",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/formal_development_20261007_v1/test_offline.py",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/formal_development_20261007_v1/control.py",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/formal_development_20261007_v1/v15_worker.py"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    },
+    {
+      "command": [
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/formal_development_20261007_v1/test_offline.py"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "......\n----------------------------------------------------------------------\nRan 6 tests in 0.000s\n\nOK\n"
+    }
+  ],
+  "immutable_feedback_pulse_byte_parity": true,
+  "legacy_helper_AST_parity": {
+    "assert_network_controlled_link": true,
+    "checked_downstream_geometry": true,
+    "connect_traci": true,
+    "passive_startup_probe": true,
+    "due_startup_probes": true,
+    "DetectorEventLedger": true,
+    "validate_output": true
+  },
+  "not_tested": "actual TraCI/traffic behavior, queue effect, neutrality; requires reviewed development runs"
+}

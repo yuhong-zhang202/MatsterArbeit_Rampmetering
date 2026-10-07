@@ -1,0 +1,76 @@
+{
+  "attempt": 2,
+  "base_output": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_boundary_search_20261002_v1/M3600_R900_S17/outputs",
+  "baseline_receipt_sha256": "3aa195cc5b6094a8d5ab0fd7dba398df4417ae8db090c7e9092a0267b82c37fb",
+  "classification": "DEVELOPMENT",
+  "contract_sha256": "31f439c1a83f724259d7a74a382b3d03b6cb82378ec145b85431739655ca07f3",
+  "counts": {
+    "M": 3000,
+    "R": 600,
+    "U": 300,
+    "X": 150
+  },
+  "feedback": {
+    "gain_veh_h_per_pct": 70.0,
+    "initial_veh_h": 900.0,
+    "maximum_veh_h": 900.0,
+    "minimum_veh_h": 300.0,
+    "target_pct": 11.0
+  },
+  "horizon_s": 4200,
+  "input_sha256": {
+    "demand.rou.xml": "99151ed51419c8d490c0f0b1a91bea23f6be70c5486890a04e1e06b3de5d808e",
+    "scenario.add.xml": "3f5ce434802b829d4de83f34d1a7175344d9f0d4342913dce3782fe05cb1d398",
+    "scenario.sumocfg": "abb2c5c6227f0268198966938f0b82b87089245cd49751d7b8e6ef20cbbedebc"
+  },
+  "legacy_card": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_boundary_search_20261002_v1/inputs/M3600_R900_S17/card.json",
+  "legacy_card_sha256": "e92e5ff28c9695822dc58f1f90d5f3b36ab163b97590d08e11f9ee0e8a778ee6",
+  "main_veh_h": 3600,
+  "matching": "complete same legacy request; no realized-departure substitution",
+  "meter_controlled_link": {
+    "storage_length_m": 204.49,
+    "via": ":ramp_mid_0_0"
+  },
+  "meter_start_s": 600,
+  "mode": "ALINEA",
+  "network_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+  "observation_timing": "queue pre-step t; command held [t,t+1); crossing bracket after step t+1",
+  "output": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/formal_development_20261007_v1/DEV_M3600_R900_S17_T2_A02/outputs",
+  "package": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/formal_development_20261007_v1/inputs/DEV_M3600_R900_S17_T2_A02",
+  "python_executable": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+  "queue_protection": {
+    "end_s": 4200,
+    "low_speed_m_s": 1.389,
+    "protected_rate_veh_h": 900.0,
+    "release_confirm_s": 30,
+    "release_distance_m": 102.245,
+    "start_s": 600,
+    "trigger_confirm_s": 10,
+    "trigger_distance_m": 261.03
+  },
+  "ramp_veh_h": 900,
+  "resources": {
+    "minimum_free_bytes": 5000000000,
+    "new_raw_limit_bytes": 4000000000,
+    "run_limit_bytes": 300000000,
+    "startup_limit_s": 60,
+    "wall_limit_s": 180
+  },
+  "run_id": "DEV_M3600_R900_S17_T2_A02",
+  "schema_version": 1,
+  "seed": 17,
+  "source_sha256": {
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/formal_development_20261007_v1/control.py": "a282302ecc5fefd8d1810c07d1340f9bd1dbe0e3316b718ce991e5c5bea185ab",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/formal_development_20261007_v1/queue_protection.py": "3a4488d2b9e5802b61188bf9e45bef5af15f369ebce73b7df88647f0267203dc",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/formal_development_20261007_v1/runner.py": "5e1d69ec132f63a88887d7176cc91ecf8781381c23bed0b3ef5eed810d262ce1",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/formal_development_20261007_v1/test_offline.py": "33a29d93c7818ce97268f7f6e75156955f11a7329b42b99face35d36e0168ac6",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/formal_development_20261007_v1/v15_worker.py": "8bea1b729ea3df8e73d138fa1d05cb8ff7e1d6adfb4ea6f51c40bc9442f322eb",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/stage6/standard_metering_20261003/control.py": "a282302ecc5fefd8d1810c07d1340f9bd1dbe0e3316b718ce991e5c5bea185ab",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/stage6/standard_metering_20261003/runner.py": "cb05feb9beb90aa41508102d4e37f897f942bf26278428ad868f04f1816fd0b9",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/stage6_safe_actuator_v10.py": "c48b743972e44cdac8d53b6276efeed75c8bcd45a36c13940735e9d3f317f2d7"
+  },
+  "startup_deadline_s": 60,
+  "status": "PREPARED_NOT_RELEASED",
+  "sumo_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+  "treatment": "T2"
+}

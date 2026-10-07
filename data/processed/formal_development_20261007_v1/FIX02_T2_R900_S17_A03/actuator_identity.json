@@ -1,0 +1,24 @@
+{
+  "status": "PASS",
+  "counts": {
+    "actual_crossings": 552,
+    "greens": 552,
+    "NO_FRONT": 37,
+    "due_attempts": 2471,
+    "denied_due": 1919,
+    "FRONT_NOT_ONE_STEP_REACHABLE": 864,
+    "FOLLOWER_STOP_DISTANCE": 289,
+    "FOLLOWER_POST_RED_PREDICTION": 949,
+    "STOPPED_READY": 412,
+    "STOPPED_FRONT_OR_RECEIVER_NOT_READY": 252,
+    "LEADER_SECURE_GAP": 471,
+    "INTERNAL_RECEIVER_CLEARANCE": 186,
+    "MOVING_READY": 140
+  },
+  "command_credit": 898.1333342330215,
+  "dropped_credit": 345.13333423302146,
+  "final_credit": 1.0,
+  "credit_residual": 5.684341886080802e-14,
+  "min_post_green_stop_margin_m": 1.9096296077092783,
+  "scope": "Independent arithmetic conditional on logged TraCI sensor/secureGap values; FCD sensor identity is checked separately."
+}

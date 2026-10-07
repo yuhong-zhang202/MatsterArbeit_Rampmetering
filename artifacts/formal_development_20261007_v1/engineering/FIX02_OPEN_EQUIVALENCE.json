@@ -1,0 +1,8 @@
+{
+  "status": "PASS_NOOP_WORKER_AST_EQUIVALENCE",
+  "old_source_sha256": "8bea1b729ea3df8e73d138fa1d05cb8ff7e1d6adfb4ea6f51c40bc9442f322eb",
+  "new_source_sha256": "f90e181707b0be69f733988885ae093a47dbbf8fe0a4d916b623253d1b082a43",
+  "method": "Specialize all mode comparisons and Boolean conditionals with mode=NOOP; complete worker AST including traffic commands, step loop and output code remains byte-identical as AST. New helper import is pure; extra card field validation only occurs before TraCI import/spawn.",
+  "limits": "Static equivalence for validated new card and same runtime inputs. Not a new empirical run; existing full OPEN A03 neutrality remains its empirical evidence.",
+  "simulation_starts": 0
+}

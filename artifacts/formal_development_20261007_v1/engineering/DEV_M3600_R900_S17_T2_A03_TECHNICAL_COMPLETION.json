@@ -1,0 +1,54 @@
+{
+  "run_id": "DEV_M3600_R900_S17_T2_A03",
+  "status": "COMPLETED_4200_PENDING_INDEPENDENT_DATA",
+  "command": ".venv/bin/python -B scripts/formal_development_20261007_v1/runner.py launch --card artifacts/formal_development_20261007_v1/inputs/DEV_M3600_R900_S17_T2_A03/card.json --release artifacts/formal_development_20261007_v1/RELEASE_FIX02_T2_S17_R900_A03.json",
+  "permission_path": "require_escalated local TraCI approved",
+  "card_sha256": "c31039791f2206d2e47bdf551edc08b8bb1732034ca1cb5dfebbe6fec6019559",
+  "receipt_sha256": "3d52444ecd68eb0074777c351f5ef1c08b937223ada91da43c9f9b893a6739d8",
+  "wall_s": 62.85228329201345,
+  "output_bytes": 111409887,
+  "new_raw_bytes": 394101917,
+  "manifest_files_verified": 34,
+  "manifest_errors": [],
+  "return_code": 0,
+  "sumo_log_end_s": 4200,
+  "sumo_log_counts": {
+    "Inserted": 4050,
+    "Running": 62,
+    "Waiting": 0
+  },
+  "logged_service_summary": {
+    "window_begin_s": "600",
+    "window_end_s": "4200",
+    "nominal_slots": "2471",
+    "guard_rejected_slots": "1919",
+    "scheduled_slots": "552",
+    "queued_unblocked_slots": "552",
+    "crossings_in_slots": "552",
+    "empty_slots": "ALL",
+    "red_crossings": "0",
+    "repeated_slots": "0",
+    "wrong_vehicle_slots": "0",
+    "classification": "PASS_TECHNICAL_SERVICE"
+  },
+  "entrant_coverage": {
+    "action_step_s": 1.0,
+    "coverage": "all current storage followers and all internal-lane R; others/new route entrants cannot reach storage in one green step",
+    "maximum_one_step_advance_m": 58.15555555555556,
+    "maximum_type_speed_m_s": 55.55555555555556,
+    "revision": "FIX02_GREEN_ADVANCE_PLUS_POST_RED",
+    "tau_s": 1.0,
+    "type_accel_m_s2": 2.6,
+    "upstream_lane": ":urban_diverge_1_0",
+    "upstream_length_m": 113.08
+  },
+  "sumo_error_bytes": 0,
+  "sumo_stderr_bytes": 0,
+  "retained_warning": "TraCI UserWarning: API change now handles step as floating point seconds",
+  "attempt_delta": {
+    "worker": 1,
+    "SUMO": 1,
+    "completed": 1
+  },
+  "next_gate": "Independent runtime/safety/data audit before separately released R750T2; no further launch."
+}

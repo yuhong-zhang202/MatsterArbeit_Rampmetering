@@ -1,0 +1,118 @@
+{
+  "status": "PASS",
+  "analysis_classification": "DEVELOPMENT",
+  "source_audit_sha256": "4621548eb9dd46248881dab6cda9be37ca532c10039d51e026b59d3de9f9ea28",
+  "script_sha256": "422f17f0042cb685cc445c7b075bfde8b0b81fdc0ec5b0c3e93f902537faa817",
+  "known_example_cases": 3,
+  "runs": [
+    {
+      "run_id": "M3600_R750_S17",
+      "source_wait_integral_s": 200.0,
+      "in_network_integral_s": 306654,
+      "system_time_integral_s": 306854.0,
+      "residuals_s": {
+        "source_wait_T_s": -2.2737367544323206e-13,
+        "in_network_T_s": 0.0,
+        "system_time_T_s": 0.0
+      },
+      "summary_sha256": "2d475379b01074948bf314b679738263d8d8aeb87419866f0976adc3ef7d832d"
+    },
+    {
+      "run_id": "M3600_R750_S23",
+      "source_wait_integral_s": 200.0,
+      "in_network_integral_s": 305210,
+      "system_time_integral_s": 305410.0,
+      "residuals_s": {
+        "source_wait_T_s": -2.2737367544323206e-13,
+        "in_network_T_s": 0.0,
+        "system_time_T_s": 0.0
+      },
+      "summary_sha256": "50d1143d9821e760a519d3606b6841992c9cb231d0dc168ba6af07e99bb6306e"
+    },
+    {
+      "run_id": "M3600_R750_S42",
+      "source_wait_integral_s": 200.0,
+      "in_network_integral_s": 303360,
+      "system_time_integral_s": 303560.0,
+      "residuals_s": {
+        "source_wait_T_s": -2.2737367544323206e-13,
+        "in_network_T_s": 0.0,
+        "system_time_T_s": 0.0
+      },
+      "summary_sha256": "a048a9c2ff1a0ee4466fa853c05e6ffae6bc7dd9f36defeca78613e686cf436e"
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "source_wait_integral_s": 19762.0,
+      "in_network_integral_s": 536629,
+      "system_time_integral_s": 556391.0,
+      "residuals_s": {
+        "source_wait_T_s": 0.0,
+        "in_network_T_s": 0.0,
+        "system_time_T_s": 0.0
+      },
+      "summary_sha256": "517275f87ef25bed8ff6a3d9b703f4247432386e12871c0bedcaaf6929791122"
+    },
+    {
+      "run_id": "M3600_R900_S23",
+      "source_wait_integral_s": 0.0,
+      "in_network_integral_s": 417743,
+      "system_time_integral_s": 417743.0,
+      "residuals_s": {
+        "source_wait_T_s": 0.0,
+        "in_network_T_s": 0.0,
+        "system_time_T_s": 0.0
+      },
+      "summary_sha256": "6337cba0311e01b074cd464df5015b4b8d1133ff7b484c853aacf8efbf6c6014"
+    },
+    {
+      "run_id": "M3600_R900_S42",
+      "source_wait_integral_s": 19452.0,
+      "in_network_integral_s": 488214,
+      "system_time_integral_s": 507666.0,
+      "residuals_s": {
+        "source_wait_T_s": 0.0,
+        "in_network_T_s": 0.0,
+        "system_time_T_s": 0.0
+      },
+      "summary_sha256": "b5fb9e3bce46b100eca1dc35b5132d43fd318696fbfc96cf042d342b9bba4c12"
+    },
+    {
+      "run_id": "M3600_R900_S17_ALINEA_TRACI_V15",
+      "source_wait_integral_s": 201122.0,
+      "in_network_integral_s": 515793,
+      "system_time_integral_s": 716915.0,
+      "residuals_s": {
+        "source_wait_T_s": 0.0,
+        "in_network_T_s": 0.0,
+        "system_time_T_s": 0.0
+      },
+      "summary_sha256": "6339de895a4aaefa4853758df8d581d9d03b435151b8ce336c68c5360f43bf8e"
+    },
+    {
+      "run_id": "M3600_R900_S23_ALINEA_TRACI_V15",
+      "source_wait_integral_s": 237903.0,
+      "in_network_integral_s": 524843,
+      "system_time_integral_s": 762746.0,
+      "residuals_s": {
+        "source_wait_T_s": 0.0,
+        "in_network_T_s": 0.0,
+        "system_time_T_s": 0.0
+      },
+      "summary_sha256": "78539138fe5452de275d2abb9e4fdcaf888a6c91031c135f799eb6c4c0392dcb"
+    },
+    {
+      "run_id": "M3600_R900_S42_ALINEA_TRACI_V15",
+      "source_wait_integral_s": 246051.0,
+      "in_network_integral_s": 528419,
+      "system_time_integral_s": 774470.0,
+      "residuals_s": {
+        "source_wait_T_s": 0.0,
+        "in_network_T_s": 0.0,
+        "system_time_T_s": 0.0
+      },
+      "summary_sha256": "a8174fd858292a9625cf15d23d89e1d3cc44cc026b3eee5c976f85ea4bb9d633"
+    }
+  ],
+  "scope": "Aggregate independent cumulative-count integral, 1s labels, all nine runs complete; not an FCD lane-level or controller re-audit."
+}

@@ -1,0 +1,94 @@
+{
+  "status": "PROPOSED_TEMPORARY_DEVELOPMENT_PRELAUNCH_REVIEW",
+  "authorization": "artifacts/formal_development_20261007_v1/AUTHORIZATION.md",
+  "classification": "DEVELOPMENT_NOT_FORMAL",
+  "scope": {
+    "main_veh_h": 3600,
+    "ramp_veh_h": [
+      750,
+      900
+    ],
+    "urban_veh_h": 360,
+    "cross_veh_h": 180,
+    "seeds": [
+      17,
+      23,
+      42
+    ],
+    "treatments": [
+      "OPEN",
+      "T1",
+      "T2"
+    ]
+  },
+  "feedback": {
+    "target_pct": 11.0,
+    "gain_veh_h_per_pct": 70.0,
+    "minimum_veh_h": 300.0,
+    "maximum_veh_h": 900.0,
+    "initial_veh_h": 900.0,
+    "period_s": 30,
+    "occupancy": "previous complete interval two-lane arithmetic mean; vehicle-event residence percentage"
+  },
+  "queue_protection": {
+    "trigger_distance_m": 261.03,
+    "release_distance_m": 102.245,
+    "trigger_confirm_s": 10,
+    "release_confirm_s": 30,
+    "low_speed_m_s": 1.389,
+    "protected_rate_veh_h": 900.0,
+    "start_s": 600,
+    "end_s": 4200
+  },
+  "queue_observation": {
+    "lanes": {
+      "shared_approach_0": 238.8,
+      ":urban_diverge_1_0": 113.08,
+      "ramp_storage_0": 204.49
+    },
+    "risk_lanes": [
+      ":urban_diverge_1_0",
+      "ramp_storage_0"
+    ],
+    "time": "pre-step t, update every1s, command [t,t+1)",
+    "definition": "max upstream distance of actual rear of R speed<1.389 in risk lanes; 0 if none; gaps allowed; not anchored continuous queue",
+    "shared_lane": "observed/logged independently; shared-only city-red R cannot trigger",
+    "threshold_basis": "trigger=204.49+113.08/2=261.03m, release=204.49/2=102.245m; temporary geometric development fractions, no empirical safety claim",
+    "confirmation_basis": "10 consecutive1s trigger and30 consecutive1s release; transparent temporary debounce, not calibrated",
+    "nominal_feedback": "independent clipped nominal state continues; final override command never written back",
+    "initial": "inactive at600; streaks0; no decisions before600; no post4200 command",
+    "invalid": "raise before next SUMO step; no imputation/no stale fallback; retain failed output"
+  },
+  "time": {
+    "end_s": 4200,
+    "step_s": 1,
+    "r_start_s": 600,
+    "demand_end_s": 3000,
+    "evaluation_s": [
+      1200,
+      3000
+    ],
+    "feedback_decisions_s": [
+      630,
+      4170,
+      30
+    ]
+  },
+  "resources": {
+    "wall_limit_s": 180,
+    "startup_limit_s": 60,
+    "run_limit_bytes": 300000000,
+    "new_raw_limit_bytes": 4000000000,
+    "minimum_free_bytes": 5000000000,
+    "poll_s": 0.2,
+    "failure": "stop process group, preserve every output and receipt; no raw deletion"
+  },
+  "reuse": "six legacy OPEN and three R900 V15 eligible conditional on independent audit and wrapper neutrality; first new900S17 OPEN replaces/qualifies baseline, not duplicate new NOOP",
+  "run_count": "9 new controls plus1 OPEN when reuse qualifies; technical attempts separate from combo coverage",
+  "gates": {
+    "launch": "independent exact-card PASS_FOR_DEVELOPMENT_EXECUTION release and root release required",
+    "rate": "six fixed300s windows, all continuously nonempty storage eligible; integrate final command, include denials/receiver obstruction; eligible window relative error<=10%; no eligible window NOT_TESTED, not automatic scientific failure",
+    "science": "no formal sweet-spot/significance/acceptability conclusion; outcome poor/uncleared does not justify retuning"
+  },
+  "immutable_model": "SUMO1.26.0 bound binary, compiled network, defaultKrauss/sigma0.5; explicit speedFactors; existingV15 pulse/safety preserved"
+}

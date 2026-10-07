@@ -1,0 +1,416 @@
+{
+  "scope": "Mechanical PR packaging only; no new simulation, analysis or scientific decision",
+  "base_branch": "main",
+  "base_commit": "48d3b327fee805e7f9bb6d2cc04d2fee955c242d",
+  "historical_tests": "Executed before the delivery commit; matched worktree source snapshots on baseline, not claimed as previously executed commit tests",
+  "source_snapshot_matches": [
+    {
+      "path": "scripts/formal_development_20261007_v1/control.py",
+      "sha256": "a282302ecc5fefd8d1810c07d1340f9bd1dbe0e3316b718ce991e5c5bea185ab",
+      "matches_historical_test_snapshot": true
+    },
+    {
+      "path": "scripts/formal_development_20261007_v1/queue_protection.py",
+      "sha256": "3a4488d2b9e5802b61188bf9e45bef5af15f369ebce73b7df88647f0267203dc",
+      "matches_historical_test_snapshot": true
+    },
+    {
+      "path": "scripts/formal_development_20261007_v1/runner.py",
+      "sha256": "4d166ea8c73e98474f37925f66feafc59d3a7e0b232d036102f166671f3370fa",
+      "matches_historical_test_snapshot": true
+    },
+    {
+      "path": "scripts/formal_development_20261007_v1/safe_actuator_fix02.py",
+      "sha256": "636125577811cfbb266e4136cb7a2de08f7d010006c1d92457f321ba819b62a9",
+      "matches_historical_test_snapshot": true
+    },
+    {
+      "path": "scripts/formal_development_20261007_v1/test_offline.py",
+      "sha256": "ef1e5badb726feab42696596f667be8685367b82f992fc78a1adc4a5ceaff9ae",
+      "matches_historical_test_snapshot": true
+    },
+    {
+      "path": "scripts/formal_development_20261007_v1/v15_worker.py",
+      "sha256": "f90e181707b0be69f733988885ae093a47dbbf8fe0a4d916b623253d1b082a43",
+      "matches_historical_test_snapshot": true
+    },
+    {
+      "path": "scripts/stage6/standard_metering_20261003/control.py",
+      "sha256": "a282302ecc5fefd8d1810c07d1340f9bd1dbe0e3316b718ce991e5c5bea185ab",
+      "matches_historical_test_snapshot": true
+    },
+    {
+      "path": "scripts/stage6/standard_metering_20261003/runner.py",
+      "sha256": "cb05feb9beb90aa41508102d4e37f897f942bf26278428ad868f04f1816fd0b9",
+      "matches_historical_test_snapshot": true
+    },
+    {
+      "path": "src/stage6_safe_actuator_v10.py",
+      "sha256": "c48b743972e44cdac8d53b6276efeed75c8bcd45a36c13940735e9d3f317f2d7",
+      "matches_historical_test_snapshot": true
+    }
+  ],
+  "final_sealed_files_verified": [
+    {
+      "path": "data/processed/formal_development_20261007_v1/DATA_REPORT_FIX02_FINAL_V2.md",
+      "sha256": "9f0d6fbb88e24b1e7b482633c7384f34d35f80c70b1a83e84e5115303f359160"
+    },
+    {
+      "path": "data/processed/formal_development_20261007_v1/FINAL_DATA_RECEIPT_FIX02_V2.json",
+      "sha256": "14dd038d7b08087ec6ada6c8db64f75a6884c3f4f6ebbd53d63a51b892dbbdba"
+    },
+    {
+      "path": "data/processed/formal_development_20261007_v1/correct_resource_composition_v2.py",
+      "sha256": "0739cb5b6d530e3ad52ee3b5cd069739240448a4efe4be95e155da4692a2836e"
+    },
+    {
+      "path": "data/processed/formal_development_20261007_v1/DIAGNOSTIC_RENDER_RECEIPT_FIX02.json",
+      "sha256": "32c8e9695dee6fe0407ed2c1b3b1350707c14ddb985cd7556ed4b96c6f70776a"
+    },
+    {
+      "path": "results/tables/formal_development_20261007_v1/shared_exposure_controls_fix02_final.csv",
+      "sha256": "2f42fa7f20f77c28491abf4eb2620a6a50726eca7087e496894e34f0b7c26300"
+    },
+    {
+      "path": "results/tables/formal_development_20261007_v1/paired_descriptive_fix02_final.csv",
+      "sha256": "2d67bffd9dbb8d5512b6640460558a19f827edaffa812bfd9a44a02adebe8aed"
+    },
+    {
+      "path": "results/tables/formal_development_20261007_v1/service_windows_fix02_final.csv",
+      "sha256": "1621add26e5ed5237f3cefe064e46e0654788e0cab30e3d105f7a83d787c06c0"
+    },
+    {
+      "path": "results/tables/formal_development_20261007_v1/override_coverage_fix02_final.csv",
+      "sha256": "041e4c3da5ded71da2c34d704b6399bc4a8aafde36158a5559f00eac3b7774de"
+    },
+    {
+      "path": "results/tables/formal_development_20261007_v1/total_cost_contrasts_fix02_final.csv",
+      "sha256": "0bc8f7b617b088bdc8c01d1963362ac2a6de48a6fadfe0c73745da548b6d5e08"
+    },
+    {
+      "path": "results/tables/formal_development_20261007_v1/coverage_fix02_final.csv",
+      "sha256": "a5e37c30cab1bbfd27f9e3069de1a947a8cdeef285b232238dade505889d22ad"
+    },
+    {
+      "path": "results/tables/formal_development_20261007_v1/attempt_ledger_fix02_final.csv",
+      "sha256": "f101ec196212dbc467c9c2a378bd2adba3db1240c39fce48f6bcfe809fd7ee5a"
+    },
+    {
+      "path": "results/tables/formal_development_20261007_v1/class_costs_fix02_final.csv",
+      "sha256": "ce500ba095302bac02c3736341a858f752f84750325d28feaad606adab06f842"
+    },
+    {
+      "path": "results/tables/formal_development_20261007_v1/endpoint_vehicles_fix02_final.csv",
+      "sha256": "206baefcd8ebb06fe31147c58b68e54b3ea7099de65f56ea8e0cf3e968e88453"
+    },
+    {
+      "path": "results/figures/formal_development_20261007_v1/commands_R750_S42_T2_fix02_final.png",
+      "sha256": "3afe3cde37940682f246fd200bc6f1ef476dc753a034f7e279cf788fceb08835"
+    },
+    {
+      "path": "results/figures/formal_development_20261007_v1/commands_R900_S17_T2_fix02_final.png",
+      "sha256": "88bdcffed14ab588b32c10a83d546258d5b39def2bd46ff4b5f95ec3a267fbd4"
+    },
+    {
+      "path": "results/figures/formal_development_20261007_v1/commands_R900_S23_T1_fix02_final.png",
+      "sha256": "731dd6ac35d685a5ef29ed44cce69e1e1162d4708b615ffb374fd45cf158d1fd"
+    },
+    {
+      "path": "results/figures/formal_development_20261007_v1/commands_R900_S42_T2_fix02_final.png",
+      "sha256": "fdb246efe5f6a5c26fdb5b5cd390d421ebc7060e464ea9d8e32b0442bc14033b"
+    },
+    {
+      "path": "results/figures/formal_development_20261007_v1/endpoint_residuals_fix02_final.png",
+      "sha256": "97fca7181082915e6110a04896468d51dbeb077fa772e33d774802bc9eca1d11"
+    },
+    {
+      "path": "results/figures/formal_development_20261007_v1/mainline_M3600_R750_fix02_final.png",
+      "sha256": "1f793b9988726bd3db3272f8e2b883f7d5229df4e24f955a747ea3e6c2fddb14"
+    },
+    {
+      "path": "results/figures/formal_development_20261007_v1/class_costs_R750_fix02_final.png",
+      "sha256": "5e0fbea7a4e223f65957579207383712117a4f335acaf11491e01f41e261a6fc"
+    },
+    {
+      "path": "results/figures/formal_development_20261007_v1/commands_R750_S23_T1_fix02_final.png",
+      "sha256": "9de4c2575739c58dc2e180c4d8fa8cc67320fcb43551312cdf4cac015bc525f7"
+    },
+    {
+      "path": "results/figures/formal_development_20261007_v1/commands_R750_S17_T2_fix02_final.png",
+      "sha256": "f2be9d8728c5677a8248ac2aea85fd71b8a726c1c464f776dc352297acf93c4b"
+    },
+    {
+      "path": "results/figures/formal_development_20261007_v1/commands_R900_S17_T1_fix02_final.png",
+      "sha256": "ea49aae9cb04dac2e609f3c48f5eb2d34f57390a4422795e52c71d8cc2a2eeb2"
+    },
+    {
+      "path": "results/figures/formal_development_20261007_v1/mainline_M3600_R900_fix02_final.png",
+      "sha256": "0168b1f20b6f9d52a3f5bdc74c5e48850ca4734d6ce2f157c88f9b1d791f7703"
+    },
+    {
+      "path": "results/figures/formal_development_20261007_v1/class_costs_R900_fix02_final.png",
+      "sha256": "90c75e1f540716fa2c82c2c749c14cc167e69655c22356d6f28aa3e10c309721"
+    },
+    {
+      "path": "results/figures/formal_development_20261007_v1/failed_R750_S17_envelope_fix02_final.png",
+      "sha256": "ac23badb9fe94ae195d4b0142f00b816ace6fdff72f9f9d3141d90c4ea644b19"
+    },
+    {
+      "path": "results/figures/formal_development_20261007_v1/commands_R900_S23_T2_fix02_final.png",
+      "sha256": "77e0b4726de432fda0670064bb0d9139eae39d4c41bf0179639a72cd2cc1d265"
+    },
+    {
+      "path": "results/figures/formal_development_20261007_v1/commands_R750_S42_T1_fix02_final.png",
+      "sha256": "97ff59bcc0b85f451cbc134868dfbd580d164822252ab7f696b2f1ce384d771a"
+    },
+    {
+      "path": "results/figures/formal_development_20261007_v1/service_error_fix02_final.png",
+      "sha256": "cbb6386f0beb4213db42007a1aa29c78437cd16076c6af9fe27ce298ad4cc9d3"
+    },
+    {
+      "path": "results/figures/formal_development_20261007_v1/commands_R750_S23_T2_fix02_final.png",
+      "sha256": "7776add4e8f8ebbb21e085e526f33b7ba389a88728ff76ef508351312bf02514"
+    },
+    {
+      "path": "results/figures/formal_development_20261007_v1/commands_R750_S17_T1_fix02_final.png",
+      "sha256": "85924691eb7417a6fd873c197f19d74ccace496f205fbd73d42f9df4eb4c7fc7"
+    },
+    {
+      "path": "results/figures/formal_development_20261007_v1/commands_R900_S42_T1_fix02_final.png",
+      "sha256": "07ede3dfe37a3f88f93e3c714b459e97f7384f60bc1bdffc0792439a2e341181"
+    }
+  ],
+  "raw_receipts_verified": 16,
+  "raw_manifest_files_rehashed": 512,
+  "raw_manifest_bytes_rehashed": 1323070588,
+  "unrelated_worklog_section": "Preserved in working tree; intentionally absent from staged WORKLOG",
+  "worklog_staged_sha256": "501b6dbdd18497d02f348ddd2878c16ebfcea25f0bdf07bd14e5d1b78efcdc7d",
+  "formal_protocol_bytes": 0,
+  "tests_rerun_for_pr": [],
+  "reason_no_reruns": "No implementation or scientific input changes; source and sealed evidence identities match.",
+  "subagent_routing": "All three not required for mechanical packaging; prior role-specific reviews published as historical evidence.",
+  "receipt_bound_cards_and_inputs": [
+    {
+      "run_id": "DEV_M3600_R750_S17_T1_A02",
+      "card_sha256": "02446edf7096e87ddfc09b5f6685929e1677476ac745c06b4841c2aafa9c451a",
+      "input_files_verified": [
+        "demand.rou.xml",
+        "scenario.add.xml",
+        "scenario.sumocfg"
+      ],
+      "corrected_source_matches": false,
+      "old_versions": "Historical source snapshot retained; not pooled with FIX02"
+    },
+    {
+      "run_id": "DEV_M3600_R750_S17_T1_A03",
+      "card_sha256": "9f4bda513b06171f0f817e4a5c5b25e1041b2d06df5d86ba415cab71ba67e5fd",
+      "input_files_verified": [
+        "demand.rou.xml",
+        "scenario.add.xml",
+        "scenario.sumocfg"
+      ],
+      "corrected_source_matches": true,
+      "old_versions": null
+    },
+    {
+      "run_id": "DEV_M3600_R750_S17_T2_A03",
+      "card_sha256": "d294c4c7887403d58e63f515bb10d75f20bf27f040da6f14b835903b0af5c09e",
+      "input_files_verified": [
+        "demand.rou.xml",
+        "scenario.add.xml",
+        "scenario.sumocfg"
+      ],
+      "corrected_source_matches": true,
+      "old_versions": null
+    },
+    {
+      "run_id": "DEV_M3600_R750_S23_T1_A03",
+      "card_sha256": "f76b9652b0ccb76fe18e91ad2fd8a253679eb7cde72f948ceabf05c228361ac7",
+      "input_files_verified": [
+        "demand.rou.xml",
+        "scenario.add.xml",
+        "scenario.sumocfg"
+      ],
+      "corrected_source_matches": true,
+      "old_versions": null
+    },
+    {
+      "run_id": "DEV_M3600_R750_S23_T2_A03",
+      "card_sha256": "f320e5d7d35e1a005b4740f090abd9d8420b785133972748847113b21d6aa8eb",
+      "input_files_verified": [
+        "demand.rou.xml",
+        "scenario.add.xml",
+        "scenario.sumocfg"
+      ],
+      "corrected_source_matches": true,
+      "old_versions": null
+    },
+    {
+      "run_id": "DEV_M3600_R750_S42_T1_A03",
+      "card_sha256": "f156263f56a163d10002eb1fbc12e0a6d7ab058eed6423f6d206e928315fc232",
+      "input_files_verified": [
+        "demand.rou.xml",
+        "scenario.add.xml",
+        "scenario.sumocfg"
+      ],
+      "corrected_source_matches": true,
+      "old_versions": null
+    },
+    {
+      "run_id": "DEV_M3600_R750_S42_T2_A03",
+      "card_sha256": "adf69d98d1cc56f32780865864c182c6be9c3ef87066bdece437c9c21cc6d691",
+      "input_files_verified": [
+        "demand.rou.xml",
+        "scenario.add.xml",
+        "scenario.sumocfg"
+      ],
+      "corrected_source_matches": true,
+      "old_versions": null
+    },
+    {
+      "run_id": "DEV_M3600_R900_S17_OPEN_A02",
+      "card_sha256": "43cac63df671c4c69b4de278b5ac50f2b3f834906a8a412a915a52a9d0b40cfb",
+      "input_files_verified": [
+        "demand.rou.xml",
+        "scenario.add.xml",
+        "scenario.sumocfg"
+      ],
+      "corrected_source_matches": false,
+      "old_versions": "Historical source snapshot retained; not pooled with FIX02"
+    },
+    {
+      "run_id": "DEV_M3600_R900_S17_OPEN_A03",
+      "card_sha256": "d51d1742c4082823dbf4bef81735983b3b8c6609d4ebb9b47efd84ef37baad1e",
+      "input_files_verified": [
+        "demand.rou.xml",
+        "scenario.add.xml",
+        "scenario.sumocfg"
+      ],
+      "corrected_source_matches": false,
+      "old_versions": "Historical source snapshot retained; not pooled with FIX02"
+    },
+    {
+      "run_id": "DEV_M3600_R900_S17_T1_A03",
+      "card_sha256": "d88dc20ec1fd388cd70b8478d7dd62acc97d3baa847c7abc4c5dad81f8a5f157",
+      "input_files_verified": [
+        "demand.rou.xml",
+        "scenario.add.xml",
+        "scenario.sumocfg"
+      ],
+      "corrected_source_matches": true,
+      "old_versions": null
+    },
+    {
+      "run_id": "DEV_M3600_R900_S17_T2_A02",
+      "card_sha256": "e529e1b3bfc2dcf25e06102e4f3559003a80a4fb67dbef0f23f84daf7a076478",
+      "input_files_verified": [
+        "demand.rou.xml",
+        "scenario.add.xml",
+        "scenario.sumocfg"
+      ],
+      "corrected_source_matches": false,
+      "old_versions": "Historical source snapshot retained; not pooled with FIX02"
+    },
+    {
+      "run_id": "DEV_M3600_R900_S17_T2_A03",
+      "card_sha256": "c31039791f2206d2e47bdf551edc08b8bb1732034ca1cb5dfebbe6fec6019559",
+      "input_files_verified": [
+        "demand.rou.xml",
+        "scenario.add.xml",
+        "scenario.sumocfg"
+      ],
+      "corrected_source_matches": true,
+      "old_versions": null
+    },
+    {
+      "run_id": "DEV_M3600_R900_S23_T1_A03",
+      "card_sha256": "008f2d507c7d9436d632e974445febd9f2d2df3556a5f954d226ad36cee4a498",
+      "input_files_verified": [
+        "demand.rou.xml",
+        "scenario.add.xml",
+        "scenario.sumocfg"
+      ],
+      "corrected_source_matches": true,
+      "old_versions": null
+    },
+    {
+      "run_id": "DEV_M3600_R900_S23_T2_A03",
+      "card_sha256": "ce9ee15b064ca5b995d74370eee0a15ceacb6633a24aacdb44b53b3648760a22",
+      "input_files_verified": [
+        "demand.rou.xml",
+        "scenario.add.xml",
+        "scenario.sumocfg"
+      ],
+      "corrected_source_matches": true,
+      "old_versions": null
+    },
+    {
+      "run_id": "DEV_M3600_R900_S42_T1_A03",
+      "card_sha256": "41892d919f533a20ca010ac85b78212fd60044b282ee539a0792e9f277cbdc82",
+      "input_files_verified": [
+        "demand.rou.xml",
+        "scenario.add.xml",
+        "scenario.sumocfg"
+      ],
+      "corrected_source_matches": true,
+      "old_versions": null
+    },
+    {
+      "run_id": "DEV_M3600_R900_S42_T2_A03",
+      "card_sha256": "e12edf228a258a52a2904da498842bd7a9bcda954ee05be39e0740340e8fc941",
+      "input_files_verified": [
+        "demand.rou.xml",
+        "scenario.add.xml",
+        "scenario.sumocfg"
+      ],
+      "corrected_source_matches": true,
+      "old_versions": null
+    }
+  ],
+  "credential_marker_scan": "No common private-key/token/Gmail/library-file markers in selected new content; not a universal secret detector",
+  "default_git_diff_cached_check": {
+    "status": "FAIL_FORMAT_WARNINGS_PRESERVED",
+    "exit": 2,
+    "warning_count": 1253,
+    "affected_files": [
+      "artifacts/formal_development_20261007_v1/engineering/FIX02_IMPLEMENTATION.patch",
+      "artifacts/formal_development_20261007_v1/engineering/FIX02_before/v15_worker.py",
+      "artifacts/formal_development_20261007_v1/engineering/FIX02_candidate/v15_worker.py",
+      "artifacts/formal_development_20261007_v1/engineering/pre_fix02_sources/v15_worker.py",
+      "artifacts/formal_development_20261007_v1/engineering/pre_start_fix01_original/v15_worker.py",
+      "data/processed/formal_development_20261007_v1/FAILED_R750_S17_T1_A02_audit3/endpoint_vehicles.csv",
+      "data/processed/formal_development_20261007_v1/FIX02_T1_R750_S17_A03/classes.csv",
+      "data/processed/formal_development_20261007_v1/FIX02_T1_R750_S23_A03/classes.csv",
+      "data/processed/formal_development_20261007_v1/FIX02_T1_R750_S42_A03/classes.csv",
+      "data/processed/formal_development_20261007_v1/FIX02_T1_R900_S17_A03/classes.csv",
+      "data/processed/formal_development_20261007_v1/FIX02_T1_R900_S23_A03/classes.csv",
+      "data/processed/formal_development_20261007_v1/FIX02_T1_R900_S42_A03/classes.csv",
+      "data/processed/formal_development_20261007_v1/FIX02_T2_R750_S17_A03/classes.csv",
+      "data/processed/formal_development_20261007_v1/FIX02_T2_R750_S23_A03/classes.csv",
+      "data/processed/formal_development_20261007_v1/FIX02_T2_R750_S42_A03/classes.csv",
+      "data/processed/formal_development_20261007_v1/FIX02_T2_R900_S17_A03/classes.csv",
+      "data/processed/formal_development_20261007_v1/FIX02_T2_R900_S23_A03/classes.csv",
+      "data/processed/formal_development_20261007_v1/FIX02_T2_R900_S42_A03/classes.csv",
+      "data/processed/formal_development_20261007_v1/OPEN_R900_S17_A03/classes.csv",
+      "results/tables/formal_development_20261007_v1/attempt_ledger_checkpoint_s17_hold.csv",
+      "results/tables/formal_development_20261007_v1/attempt_ledger_fix02_final.csv",
+      "results/tables/formal_development_20261007_v1/class_costs_checkpoint_s17_hold.csv",
+      "results/tables/formal_development_20261007_v1/class_costs_fix02_final.csv",
+      "results/tables/formal_development_20261007_v1/coverage_checkpoint_s17_hold.csv",
+      "results/tables/formal_development_20261007_v1/coverage_fix02_final.csv",
+      "results/tables/formal_development_20261007_v1/endpoint_vehicles_fix02_final.csv",
+      "results/tables/formal_development_20261007_v1/initial_coverage.csv",
+      "results/tables/formal_development_20261007_v1/override_coverage_fix02_final.csv",
+      "results/tables/formal_development_20261007_v1/paired_costs_fix02_R750_S17.csv",
+      "results/tables/formal_development_20261007_v1/paired_costs_fix02_R900_S17.csv",
+      "results/tables/formal_development_20261007_v1/paired_descriptive_checkpoint_s17_hold.csv",
+      "results/tables/formal_development_20261007_v1/paired_descriptive_fix02_final.csv",
+      "results/tables/formal_development_20261007_v1/reused_class_costs.csv",
+      "results/tables/formal_development_20261007_v1/service_windows_fix02_final.csv",
+      "results/tables/formal_development_20261007_v1/shared_exposure_controls_fix02_final.csv",
+      "results/tables/formal_development_20261007_v1/total_cost_contrasts_fix02_final.csv"
+    ],
+    "explanation": "Original hashed CSV CRLF, archived patch context spaces, and historical source EOF blank lines are preserved. No simulation source/data reformatted to hide warnings."
+  },
+  "documentation_diff_check": "PASS"
+}

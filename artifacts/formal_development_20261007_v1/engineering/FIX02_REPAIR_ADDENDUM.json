@@ -1,0 +1,53 @@
+{
+  "classification": "DEVELOPMENT_TECHNICAL_SAFETY_REPAIR",
+  "revision": "FIX02_GREEN_ADVANCE_PLUS_POST_RED",
+  "authority": "D-019 and ../SCIENCE_FIX02_REPAIR_SCOPE.md",
+  "original_parameter_contract_sha256": "31f439c1a83f724259d7a74a382b3d03b6cb82378ec145b85431739655ca07f3",
+  "original_post_guard_sha256": "c48b743972e44cdac8d53b6276efeed75c8bcd45a36c13940735e9d3f317f2d7",
+  "precondition": "For each current storage follower and each vehicle on the upstream internal connector: distance_to_meter >= (v+a)*1s + immediate_red_stop_requirement(v+a).",
+  "derivation": "At fixed dt=1, speed_next<=v+a, displacement_green<=v+a. Post requirement is monotone nondecreasing for nonnegative speed, including its stopped shortcut. Subtracting displacement from pre distance leaves at least the unchanged post requirement.",
+  "coverage": "All current connector vehicles are observed. Checked route/input topology and actual type maximum speed plus acceleration below connector length exclude vehicles further upstream or newly inserted from entering storage during one green step.",
+  "front_limit": "Intended front retains legacy route/receiver/reachability gate. Empty-green front and crossings remain protected by the unchanged mandatory post interlock; follower bound is not a proof that every intended moving front crosses.",
+  "unchanged": [
+    "post interlock and 1.1m margin",
+    "1s step/green and >=2s red",
+    "network, model, vehicle requests, seeds, demand",
+    "nominal feedback and queue override definitions",
+    "900 cap and 10% service screen",
+    "credit scheduler",
+    "runtime/storage rules"
+  ],
+  "reuse": "Old controlled evidence must pass decision and pulse/credit equivalence, not only sampled post safety. Replacements remain within same authorized combinations.",
+  "release": "HOLD pending exact corrected source/card and independent release",
+  "pre_fix02_source_archive": {
+    "scripts/formal_development_20261007_v1/control.py": {
+      "sha256": "a282302ecc5fefd8d1810c07d1340f9bd1dbe0e3316b718ce991e5c5bea185ab",
+      "archived_path": "artifacts/formal_development_20261007_v1/engineering/pre_fix02_sources/control.py"
+    },
+    "scripts/formal_development_20261007_v1/queue_protection.py": {
+      "sha256": "3a4488d2b9e5802b61188bf9e45bef5af15f369ebce73b7df88647f0267203dc",
+      "archived_path": "artifacts/formal_development_20261007_v1/engineering/pre_fix02_sources/queue_protection.py"
+    },
+    "scripts/formal_development_20261007_v1/runner.py": {
+      "sha256": "5e1d69ec132f63a88887d7176cc91ecf8781381c23bed0b3ef5eed810d262ce1",
+      "archived_path": "artifacts/formal_development_20261007_v1/engineering/pre_fix02_sources/runner.py"
+    },
+    "scripts/formal_development_20261007_v1/safe_actuator_fix02.py": {
+      "sha256": "f8241223a362eda8ef86a52064bd0ece4a1d8f0295a4111d9d068625440316e3",
+      "archived_path": "artifacts/formal_development_20261007_v1/engineering/pre_fix02_sources/safe_actuator_fix02.py"
+    },
+    "scripts/formal_development_20261007_v1/test_offline.py": {
+      "sha256": "33a29d93c7818ce97268f7f6e75156955f11a7329b42b99face35d36e0168ac6",
+      "archived_path": "artifacts/formal_development_20261007_v1/engineering/pre_fix02_sources/test_offline.py"
+    },
+    "scripts/formal_development_20261007_v1/v15_worker.py": {
+      "sha256": "8bea1b729ea3df8e73d138fa1d05cb8ff7e1d6adfb4ea6f51c40bc9442f322eb",
+      "archived_path": "artifacts/formal_development_20261007_v1/engineering/pre_fix02_sources/v15_worker.py"
+    }
+  },
+  "dynamics_documentation": {
+    "url": "https://sumo.dlr.de/docs/Simulation/VehicleSpeed.html",
+    "read_date": "2026-10-07",
+    "support": "Vehicle type maxSpeed is an absolute speed cap; default car-following acceleration is bounded by accel. No TraCI speed/model mutation is introduced. Runtime live values still require validation, not assumed defaults."
+  }
+}

@@ -116,3 +116,9 @@ Stage 6 exploration is `completed / preliminary_ready` under D-018 after current
 The [full exploratory validation report](docs/探索验证阶段/STAGE6_EXPLORATORY_VALIDATION_FULL_REPORT_20261003.md) lists the original O/G/Q criteria, all 18 current-version uncontrolled outcomes, the three paired V15 results, technical failures, evidence limits and final item-by-item disposition.
 
 The V15 exploratory runner is `scripts/stage6/standard_metering_20261003/runner.py` and requires the project `.venv/bin/python` with TraCI. Existing card/release/receipt identities are one-use and must not be relaunched. Any future formal run requires a separately reviewed and frozen protocol.
+
+## Bounded formal-design development (2026-10-07)
+
+The user-authorized D-019 trial has its own [plan](docs/development/DEVELOPMENT_TRIAL_PLAN_20261007.md), [development summary](docs/development/DEVELOPMENT_TRIAL_SUMMARY_20261007.md) and immutable authorization/parameter/release records under `artifacts/formal_development_20261007_v1/`. Read the summary and current project state for its completion and qualification status. The [original formal design draft](docs/正式实验设计草案v1.md) remains a preserved proposal; development does not freeze the formal protocol.
+
+The separate development entry point is `.venv/bin/python -B scripts/formal_development_20261007_v1/runner.py`. `preflight --card <existing-card.json>` checks a card without launching; `launch --card <card.json> --release <release.json>` requires an exact reviewed release and unused output location. Local TraCI socket permissions are required for execution. Completed or failed run identities are never relaunched. Independent raw-bound analyses, source snapshots and gates are under `data/processed/formal_development_20261007_v1/`; tables and figures use the matching `results/tables/` and `results/figures/` subdirectories. Historical controls and the FIX02 development implementation must not be pooled into one policy effect.

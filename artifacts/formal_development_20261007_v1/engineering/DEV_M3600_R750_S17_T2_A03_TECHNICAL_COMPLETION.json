@@ -1,0 +1,54 @@
+{
+  "run_id": "DEV_M3600_R750_S17_T2_A03",
+  "status": "COMPLETED_4200_PENDING_INDEPENDENT_DATA",
+  "command": ".venv/bin/python -B scripts/formal_development_20261007_v1/runner.py launch --card artifacts/formal_development_20261007_v1/inputs/DEV_M3600_R750_S17_T2_A03/card.json --release artifacts/formal_development_20261007_v1/RELEASE_FIX02_T2_S17_R750_A03.json",
+  "permission_path": "require_escalated local TraCI approved",
+  "card_sha256": "d294c4c7887403d58e63f515bb10d75f20bf27f040da6f14b835903b0af5c09e",
+  "receipt_sha256": "b18dad9779f0c517f567cad6a70dd6e821f9cd837dd46efacb34b478dfa1761e",
+  "wall_s": 49.848133708001114,
+  "output_bytes": 94580952,
+  "new_raw_bytes": 488688319,
+  "manifest_files_verified": 34,
+  "manifest_errors": [],
+  "return_code": 0,
+  "sumo_log_end_s": 4200,
+  "sumo_log_counts": {
+    "Inserted": 3950,
+    "Running": 0,
+    "Waiting": 0
+  },
+  "logged_service_summary": {
+    "window_begin_s": "600",
+    "window_end_s": "4200",
+    "nominal_slots": "2570",
+    "guard_rejected_slots": "2070",
+    "scheduled_slots": "500",
+    "queued_unblocked_slots": "500",
+    "crossings_in_slots": "500",
+    "empty_slots": "ALL",
+    "red_crossings": "0",
+    "repeated_slots": "0",
+    "wrong_vehicle_slots": "0",
+    "classification": "PASS_TECHNICAL_SERVICE"
+  },
+  "entrant_coverage": {
+    "action_step_s": 1.0,
+    "coverage": "all current storage followers and all internal-lane R; others/new route entrants cannot reach storage in one green step",
+    "maximum_one_step_advance_m": 58.15555555555556,
+    "maximum_type_speed_m_s": 55.55555555555556,
+    "revision": "FIX02_GREEN_ADVANCE_PLUS_POST_RED",
+    "tau_s": 1.0,
+    "type_accel_m_s2": 2.6,
+    "upstream_lane": ":urban_diverge_1_0",
+    "upstream_length_m": 113.08
+  },
+  "sumo_error_bytes": 0,
+  "sumo_stderr_bytes": 0,
+  "retained_warning": "TraCI UserWarning: API change now handles step as floating point seconds",
+  "attempt_delta": {
+    "worker": 1,
+    "SUMO": 1,
+    "completed": 1
+  },
+  "next_gate": "Independent R750T2/S17 synthesis and new exact scientific review before separately released seeds23/42; no further launch."
+}

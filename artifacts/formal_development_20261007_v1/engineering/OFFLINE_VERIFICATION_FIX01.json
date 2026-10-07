@@ -1,0 +1,33 @@
+{
+  "status": "PASS_OFFLINE_ONLY_NO_SUMO_START",
+  "checks": [
+    {
+      "command": [
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/formal_development_20261007_v1/test_offline.py"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": "..........\n----------------------------------------------------------------------\nRan 10 tests in 0.018s\n\nOK\n"
+    },
+    {
+      "command": [
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+        "-m",
+        "py_compile",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/formal_development_20261007_v1/queue_protection.py",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/formal_development_20261007_v1/runner.py",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/formal_development_20261007_v1/test_offline.py",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/formal_development_20261007_v1/control.py",
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/formal_development_20261007_v1/v15_worker.py"
+      ],
+      "returncode": 0,
+      "stdout": "",
+      "stderr": ""
+    }
+  ],
+  "tests": 10,
+  "actual_worker_missing_startup_Popen_assertion": "PASS; no spawn",
+  "worker_card_schema_all_direct_reads_AST_coverage": "PASS",
+  "physical_starts": 0
+}

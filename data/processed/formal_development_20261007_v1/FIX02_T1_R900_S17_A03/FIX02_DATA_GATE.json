@@ -1,0 +1,264 @@
+{
+  "reviewer_role": "data_analyst",
+  "reviewer_task": "/root/development_data_fix02",
+  "run_id": "DEV_M3600_R900_S17_T1_A03",
+  "classification": "DEVELOPMENT_ONLY_FIX02",
+  "data_layer": "PASS",
+  "safety_and_rule_replay": "PASS_OBSERVED_RUN",
+  "rate_capability": "NOT_QUALIFIED",
+  "traffic_effect": "DESCRIPTIVE_ONLY_NOT_ACCEPTANCE",
+  "cohort": [
+    {
+      "vehicle_class": "M",
+      "planned": 3000,
+      "inserted": 3000,
+      "arrived": 3000,
+      "unfinished": 0,
+      "undeparted": 0,
+      "max_departDelay_s": 0.0,
+      "mean_completed_duration_s": 76.495,
+      "scheduled_system_time_observed_total_s": 229485.0,
+      "external_wait_observed_total_s": 0.0,
+      "in_network_observed_total_s": 229485.0
+    },
+    {
+      "vehicle_class": "R",
+      "planned": 600,
+      "inserted": 600,
+      "arrived": 544,
+      "unfinished": 56,
+      "undeparted": 0,
+      "max_departDelay_s": 1034.0,
+      "mean_completed_duration_s": 458.96691176470586,
+      "scheduled_system_time_observed_total_s": 488033.0,
+      "external_wait_observed_total_s": 218889.0,
+      "in_network_observed_total_s": 269144.0
+    },
+    {
+      "vehicle_class": "U",
+      "planned": 300,
+      "inserted": 300,
+      "arrived": 290,
+      "unfinished": 10,
+      "undeparted": 0,
+      "max_departDelay_s": 1031.0,
+      "mean_completed_duration_s": 216.6,
+      "scheduled_system_time_observed_total_s": 152856.0,
+      "external_wait_observed_total_s": 87502.0,
+      "in_network_observed_total_s": 65354.0
+    },
+    {
+      "vehicle_class": "X",
+      "planned": 150,
+      "inserted": 150,
+      "arrived": 150,
+      "unfinished": 0,
+      "undeparted": 0,
+      "max_departDelay_s": 0.0,
+      "mean_completed_duration_s": 72.96666666666667,
+      "scheduled_system_time_observed_total_s": 10945.0,
+      "external_wait_observed_total_s": 0.0,
+      "in_network_observed_total_s": 10945.0
+    }
+  ],
+  "total_system_time_s": 881319.0,
+  "total_source_wait_s": 306391.0,
+  "endpoint_vehicles": 66,
+  "pre600": {
+    "records_compared": 600,
+    "different_records": 0,
+    "first_difference": null,
+    "equal": true
+  },
+  "feedback_xml": {
+    "checked_lane_intervals": 238,
+    "occupancy_xml_rounding_tolerance_pct": 0.0050001,
+    "status": "PASS"
+  },
+  "entrant_and_post_sensors": {
+    "status": "PASS",
+    "prestep_snapshots": 3600,
+    "entrant_observations": 38853,
+    "post_green_snapshots": 550,
+    "scope": "Every connector entrant independently matched to FCD label t-1; rounded position/speed tolerance 0.005001. Native bounds independently recomputed. Runtime dynamic coverage remains conditional on version-bound worker and logged type contract."
+  },
+  "actuator": {
+    "status": "PASS",
+    "counts": {
+      "actual_crossings": 550,
+      "greens": 550,
+      "NO_FRONT": 37,
+      "due_attempts": 1982,
+      "denied_due": 1432,
+      "FRONT_NOT_ONE_STEP_REACHABLE": 847,
+      "FOLLOWER_STOP_DISTANCE": 301,
+      "FOLLOWER_POST_RED_PREDICTION": 930,
+      "STOPPED_READY": 432,
+      "STOPPED_FRONT_OR_RECEIVER_NOT_READY": 262,
+      "LEADER_SECURE_GAP": 459,
+      "INTERNAL_RECEIVER_CLEARANCE": 191,
+      "MOVING_READY": 141
+    },
+    "command_credit": 805.6396877459601,
+    "dropped_credit": 255.13968774595995,
+    "final_credit": 0.5,
+    "credit_residual": 1.9895196601282805e-13,
+    "min_post_green_stop_margin_m": 1.9786287137702283,
+    "scope": "Independent arithmetic conditional on logged TraCI sensor/secureGap values; FCD sensor identity is checked separately."
+  },
+  "actual_service": {
+    "status": "PASS_V15_FCD_SERVICE",
+    "counts": {
+      "multiple_slots": 0,
+      "red_crossings": 0,
+      "qualified": 550,
+      "qualified_front_crossings": 550,
+      "wrong_front": 0,
+      "qualified_STOPPED_READY": 420,
+      "qualified_MOVING_READY": 130
+    },
+    "mismatches": [],
+    "qualification": "Independent stopped and moving V15 guards, not historical stopped-only 1.1m geometry. FCD is rounded; native pre-step sensors are independently replayed and compared with previous label. SecureGap remains conditional on logged SUMO value.",
+    "supersedes_only": "Historical sampled_service.json stopped-only geometry interpretation; original result retained."
+  },
+  "capacity_windows": [
+    {
+      "begin": 1200,
+      "end": 1500,
+      "final_command_credit": 68.92741996075677,
+      "actual_crossings": 47,
+      "storage_supply_seconds": 300,
+      "eligible_continuous_supply": true,
+      "relative_error": 0.3181233241174696,
+      "engineering_status": "FAIL",
+      "denied_due_seconds": 116
+    },
+    {
+      "begin": 1500,
+      "end": 1800,
+      "final_command_credit": 55.249901790554965,
+      "actual_crossings": 45,
+      "storage_supply_seconds": 300,
+      "eligible_continuous_supply": true,
+      "relative_error": 0.18551891421293346,
+      "engineering_status": "FAIL",
+      "denied_due_seconds": 65
+    },
+    {
+      "begin": 1800,
+      "end": 2100,
+      "final_command_credit": 64.65905162865234,
+      "actual_crossings": 47,
+      "storage_supply_seconds": 300,
+      "eligible_continuous_supply": true,
+      "relative_error": 0.2731102789764254,
+      "engineering_status": "FAIL",
+      "denied_due_seconds": 102
+    },
+    {
+      "begin": 2100,
+      "end": 2400,
+      "final_command_credit": 63.63840742373049,
+      "actual_crossings": 47,
+      "storage_supply_seconds": 300,
+      "eligible_continuous_supply": true,
+      "relative_error": 0.26145229111321383,
+      "engineering_status": "FAIL",
+      "denied_due_seconds": 95
+    },
+    {
+      "begin": 2400,
+      "end": 2700,
+      "final_command_credit": 53.94301681030959,
+      "actual_crossings": 44,
+      "storage_supply_seconds": 300,
+      "eligible_continuous_supply": true,
+      "relative_error": 0.18432444824645547,
+      "engineering_status": "FAIL",
+      "denied_due_seconds": 66
+    },
+    {
+      "begin": 2700,
+      "end": 3000,
+      "final_command_credit": 62.34704671006887,
+      "actual_crossings": 47,
+      "storage_supply_seconds": 300,
+      "eligible_continuous_supply": true,
+      "relative_error": 0.24615515120446535,
+      "engineering_status": "FAIL",
+      "denied_due_seconds": 100
+    }
+  ],
+  "queue": {
+    "status": "PASS",
+    "active_seconds": 0,
+    "transitions": [],
+    "release_coverage": false,
+    "scope": "Prospective rule replay from logged complete risk observations; FCD/body-coordinate mapping separately checked."
+  },
+  "queue_spatial": {
+    "status": "PASS",
+    "prestep_snapshots_checked": 3600,
+    "max_position_precision_residual_m": 0.004999996393650008,
+    "max_speed_precision_residual_m_s": 0.004999915897733853,
+    "fcd_low_speed_boundary_ambiguous_observations": 937,
+    "scope": "Complete logged high-precision lane snapshots validated against previous-step rounded FCD and actual length metadata; risk recomputed independently. Rounded speed boundary cases retain ambiguity, not substituted into high-precision state decisions."
+  },
+  "integral": {
+    "status": "PASS",
+    "integral_costs_s": {
+      "scheduled_system_time_observed_total_s": 881319.0,
+      "external_wait_observed_total_s": 306391.0,
+      "in_network_observed_total_s": 574928
+    },
+    "residuals_s": {
+      "scheduled_system_time_observed_total_s": 0.0,
+      "external_wait_observed_total_s": 0.0,
+      "in_network_observed_total_s": 0.0
+    },
+    "scope": "Independent whole-cohort cumulative summary integral; no lane-count double counting."
+  },
+  "strict_continuous_30s_shared_episodes": 0,
+  "warnings": [],
+  "runtime_wall_s": 65.94889237501775,
+  "raw_payload_bytes": 111818896,
+  "card_sha256": "d88dc20ec1fd388cd70b8478d7dd62acc97d3baa847c7abc4c5dad81f8a5f157",
+  "raw_receipt_sha256": "aa1f18b1804e725ce62e6b9d59f2ee364c8491b67e613347b15fb1f6d9247ff0",
+  "gate_script_sha256": "fce85f1d5dd936a7c21eac66300c509c1e58fa2338ef880d19890d3e8009edfe",
+  "output_sha256": {
+    "summary.json": "ce7a00f71be29f674967408a1161c38c65b5af2cf09accb83162eea982a99c16",
+    "adapter_provenance.json": "afb6535c2eb2116b9332de3474b62997fafad8bb7d9c608009bf9874e33ce81c",
+    "fix02_entrant_fcd_audit.json": "ce7eb44cd416df05e43fae48372c832a45a231394068230572538e97302a3150",
+    "analyze_run_source_snapshot.py": "09ca5992c9520c98d4be8bd83303d35873f6def3546b0c49d08789bfa06aae78",
+    "detectors.csv": "0bb4fbd49633708796dcb471cf7c01d5220eda161dac866a7b795a7b82c5d81c",
+    "urban_ramp_queue.csv": "bd5830958c9ce7abdb0974d91a29971ce1df47d4d3653d6db4fa2e1b874b619c",
+    "operational_chain.json": "cfd1e7f780880e072535e53c8a73558cac9ad4ac04c8fe38aafd48718081060d",
+    "audit_v15_service_source_snapshot.py": "e4763796dab02a05e0a211d071f753068ffca1882f7dfefa368eed41a34a3060",
+    "v15_service_analysis_provenance.json": "aab63ec5a0b64f2dbea658586edc1eda3ec088f5a5b91e3bbe65582819899701",
+    "analyze_fix02_source_snapshot.py": "539e6b6ef40789e5abdbe172990cfc7e6962cec8f53f5f9ec5368ee305466bdc",
+    "endpoint_vehicles.json": "3cbb6094cfe351bd4477862a52accbd2ea821b280e1090f0d50d862f74c86f3a",
+    "pre600_comparison.json": "842b15a01b9edd6177bd23be72b44a9caf8d976588bac86bc2afc228a2c28501",
+    "integral_cost_audit.json": "3803f62a64f952b0f3e4092a495593019139a17401945bdc04d5a9ea5847df45",
+    "sampled_service.json": "dfc5ebf21554416a07529ae203fef13472ae682fd9802b07f14dafd6573d466a",
+    "queue_identity.json": "35472f2f1dd034a27ae2d9e520a642114da61771530ee5088f55e26aa780f8fe",
+    "classes.csv": "259ce8bb20ab72e84f32f4fedf2cc890be5da1453a50b56ed3c4c4c5bc46fbfa",
+    "feedback_xml_audit.json": "f7e673dfd7e6d7d9f2413838a62496949d31469aae9dbe1f084286f1d9c0509e",
+    "event_feedback_audit.json": "d5a6cb2fb6da290ac026e74d7ba3168428777d18a404de1e56db8267bfab16f7",
+    "final_command_windows.json": "3beaae965d339c83a07c20d306681139f1016a53338290e76f6f5572824f7100",
+    "actuator_identity.json": "02af1122f5dc4190d56e09dff0538cbdcba47ffc898d80b28b0a0f95025355c0",
+    "events.csv": "df65e6741439e5dad4344867362171f9cf1a909daf8ec9fb69f23ba6345336e5",
+    "fix02_adapter_provenance.json": "357de711c4df9ed02297e1c1b2abec0371ac47b2df88b74770c1c19e580bf364",
+    "queue_spatial_audit.json": "02c201b65c473101a88a0c6910e9064ecb0978e4d5991021413c15af2d7f66e2",
+    "v15_service_fcd_audit.json": "0750d5281105f39a910d16b4fb160af53367aeb99086ef93d058d44f904119b9",
+    "cumulative.csv": "499820a5db1db60a864fdebfa2e9eb77dc7495db60f6e1cc00fe0b6d0638c14b",
+    "vehicles.csv": "1a23af35f3c70e60a3f4e5135a1aff27146790c70a8f7c7dc4799adee44eb2a9",
+    "mainline_cells.csv": "9517624b565df9a6a9c5ac9da487d8e15b98f7822c2a17dff9035eb8c8dbb7f6",
+    "city_evidence.json": "b8daff13a8b0567547ae6ea2fd38e45c2b265be58ced3716f98ded4f33dd557e",
+    "write_fix02_gate_source_snapshot.py": "fce85f1d5dd936a7c21eac66300c509c1e58fa2338ef880d19890d3e8009edfe"
+  },
+  "limits": [
+    "SecureGap and actual vehicle dynamics remain conditional on version-bound native TraCI logs; sensors matched to rounded FCD.",
+    "Rate refusals are not uniquely causal allocations of missed crossings. Every fixed window is retained.",
+    "No formal inference, sweet-spot threshold or new simulation authorized. Scientific review required before subsequent release."
+  ]
+}

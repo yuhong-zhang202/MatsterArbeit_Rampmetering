@@ -1,0 +1,158 @@
+{
+  "attempt": 3,
+  "card_sha256": "ce9ee15b064ca5b995d74370eee0a15ceacb6633a24aacdb44b53b3648760a22",
+  "classification": "DEVELOPMENT",
+  "failure": null,
+  "finished_at": "2026-10-07T14:46:41.703899+00:00",
+  "new_raw_bytes": 712623400,
+  "output_bytes": 111624403,
+  "output_manifest": {
+    "controller_steps.csv": {
+      "bytes": 51027889,
+      "sha256": "7bfc4bd91e69c82c9034e919adaaa08a4dae6f1e75401cb96f0e22fb91098122"
+    },
+    "detector_vehicle_events.csv": {
+      "bytes": 497085,
+      "sha256": "bcd35f19a5420c4747f3ef1485e0cd4580d241b364a63f8d2b9f862079b3f044"
+    },
+    "fcd.xml.gz": {
+      "bytes": 8841378,
+      "sha256": "eabd8e2e020f365dd153198058511f58b91e94a905489a82f4eac57db2c0cca6"
+    },
+    "feedback_updates.csv": {
+      "bytes": 29335,
+      "sha256": "c32ab500f4cc28a6f857944bd1cd62909cabd6dc507e2b28add945de3f65d5b5"
+    },
+    "fix02_entrant_coverage.json": {
+      "bytes": 427,
+      "sha256": "2e6bec4dd2ede0c887172fbdea89c73c38a95247956e42486984195e0627f0f5"
+    },
+    "lanechanges.xml": {
+      "bytes": 439738,
+      "sha256": "d56978dfad7a201091de7a755dc3056689781718de028d749340e067cf5ab2ee"
+    },
+    "p1_main_down_200_l0.xml": {
+      "bytes": 29749,
+      "sha256": "4ae7667ad230d3333f48875ba57b708ce8be76f55e5c57e86080cdd405a58694"
+    },
+    "p1_main_down_200_l1.xml": {
+      "bytes": 29737,
+      "sha256": "4c0be8643173f58fedbccc15389daeb5fdc932cf30f8fbe8d495a924ac39801b"
+    },
+    "p1_main_down_20_l0.xml": {
+      "bytes": 29617,
+      "sha256": "6565cf590e27128a60ba82b969b4445cb4242615f646d0d61b104192ac012996"
+    },
+    "p1_main_down_20_l1.xml": {
+      "bytes": 29597,
+      "sha256": "f463ecce07acdef30fd39286c7056d0840f6455f0db0e79ac56efeee058f35f5"
+    },
+    "p1_main_up_1300_l0.xml": {
+      "bytes": 29530,
+      "sha256": "11271b10f8f120ca181e2deddd66a39507a200af2952f78472e61eb3c652bd48"
+    },
+    "p1_main_up_1300_l1.xml": {
+      "bytes": 29558,
+      "sha256": "172051c92d4067a5d1c442bd084fe4fa6eefee64655d3cb36de9bc898ed7564d"
+    },
+    "p1_merge_section_20_l0.xml": {
+      "bytes": 29777,
+      "sha256": "81394a313b99019a5509a4d6225ea403e50ba44fb3d6ccc25235250443615159"
+    },
+    "p1_merge_section_20_l1.xml": {
+      "bytes": 30154,
+      "sha256": "d1818a35c7fbce3e9b5f570af50acf38fe229e30f3d3dfffa67a98b2ff15a32b"
+    },
+    "p1_merge_section_20_l2.xml": {
+      "bytes": 30134,
+      "sha256": "400b3724985de6be375efcda1bfc27600553bfa87f22b2c01f9cd6105b459fba"
+    },
+    "queue_override.csv": {
+      "bytes": 42966859,
+      "sha256": "6a1c95dcc59f80a5f2f02dd40064827651b27939f4263c4bc8247f3f772d7d6c"
+    },
+    "queues.xml": {
+      "bytes": 2326008,
+      "sha256": "e6b5173b40f8700939fde65ff2d43ef4fcaea00457e686302c814497da21c212"
+    },
+    "ramp_storage_e2.xml": {
+      "bytes": 94222,
+      "sha256": "d60bb75138c1091738b2112ccaf645a1bad70f31f27d86b5395b9fc359c4daf2"
+    },
+    "service_windows.csv": {
+      "bytes": 1990,
+      "sha256": "67df93ca2adfc1c14ccfc6265c9b5552d3815b776e1f12e02f2c94914481ae8c"
+    },
+    "shared_boundary_e2.xml": {
+      "bytes": 94273,
+      "sha256": "657421c4d88cb9f0536e35899275d630c0b908755c5417e5cd5feb3fbe4d3b63"
+    },
+    "startup_context.json": {
+      "bytes": 1009,
+      "sha256": "abdaf5c2e73ad192f8df15329c61a7ec82fee398fb8799f10af2842130b266f2"
+    },
+    "startup_probe.jsonl": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "sumo.log": {
+      "bytes": 916,
+      "sha256": "1e7735f4c6ac01cbaf3e2b2b8ecb54309ecb75df3f6d485e2d06cb8d05ce2fb6"
+    },
+    "sumo_error.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "sumo_stderr.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "sumo_stdout.log": {
+      "bytes": 0,
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    "sumo_summary.xml": {
+      "bytes": 1180621,
+      "sha256": "8c0a5f211c7700786d5c7ea072cd9d02b3ce359513e64e3b22175dde40e2a6e3"
+    },
+    "tls_states.xml": {
+      "bytes": 777945,
+      "sha256": "cddf5d6c5315d0d21a1158af5d26edb7b582865bc703736cefc2797b49aed3bd"
+    },
+    "traci_startup.jsonl": {
+      "bytes": 1248,
+      "sha256": "dfc1aeb55b6556f76a17c5810ef1b78b998cdf37ac2c6b15f0641252357cb8c9"
+    },
+    "tripinfo.xml": {
+      "bytes": 1878781,
+      "sha256": "972a4cc67798b7832c18dc62f86b691cb6083bb82f240246abfaacae8e1456ab"
+    },
+    "vehicle_metadata.csv": {
+      "bytes": 190615,
+      "sha256": "f5195894a18af75caf2d6546f0929362b6a14e8cc9fe29789af66be7b4c0c1dd"
+    },
+    "vehroute.xml": {
+      "bytes": 1004808,
+      "sha256": "8b7ce07f380138eeae4153a5eaf14b6605ca3a7643a4d670a9c3d2fc922daccc"
+    },
+    "worker_stderr.log": {
+      "bytes": 1368,
+      "sha256": "78d0cfd7ed5137f95422a012012332d639d601339737335da27e1c7506fd6cb9"
+    },
+    "worker_stdout.log": {
+      "bytes": 35,
+      "sha256": "d105ecac4db5d521093890090742078cf58a968dd39e1cf1e1c192533b50ddd4"
+    }
+  },
+  "purpose": "DEVELOPMENT_COMPARISON",
+  "ramp_veh_h": 900,
+  "release_sha256": "442f18fe1a570be5ff2691dfae27a695612c0156705629116055a8698f46650a",
+  "return_code": 0,
+  "run_id": "DEV_M3600_R900_S23_T2_A03",
+  "seed": 23,
+  "started_at": "2026-10-07T14:45:31.296840+00:00",
+  "status": "COMPLETED",
+  "stop_reason": null,
+  "treatment": "T2",
+  "wall_s": 70.4065679589985
+}

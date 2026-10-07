@@ -1,0 +1,30 @@
+{
+  "reviewer_role": "data_analyst",
+  "reviewer_task": "/root/development_data_fix02",
+  "date": "2026-10-07",
+  "status": "PASS_FROZEN_RECEIPT_READBACK",
+  "receipt": "data/processed/formal_development_20261007_v1/FIX02_REUSE_AUDIT_PRIMARY_EXECUTION/REUSE_FIX02_AUDIT.json",
+  "receipt_sha256": "ba158b7a2320c200f935f8e6b11675f7f037dd5b953b92898df39b6893a6f924",
+  "helper_sha256": "636125577811cfbb266e4136cb7a2de08f7d010006c1d92457f321ba819b62a9",
+  "audit_script_sha256": "ba8264c3afa975f027f8c37ccaf4d7173fabb7f67bf69f8705ff677292312cb4",
+  "actual_green_counts": [
+    600,
+    600,
+    600,
+    600
+  ],
+  "newly_refused_old_green_counts": [
+    429,
+    396,
+    392,
+    543
+  ],
+  "run_ids": [
+    "M3600_R900_S17_ALINEA_TRACI_V15",
+    "M3600_R900_S23_ALINEA_TRACI_V15",
+    "M3600_R900_S42_ALINEA_TRACI_V15",
+    "DEV_M3600_R900_S17_T2_A02"
+  ],
+  "disposition": "All four historical controls are NOT_REUSABLE_UNDER_FIX02. Same-combination replacements required for the corrected series; prior outputs preserved. Six OPEN reuse qualifications unchanged.",
+  "limitations": "Old-trace counts are not corrected-run predictions. Native storage witnesses refute equivalence without rounded entrant reconstruction. No simulation. No formal statistics."
+}

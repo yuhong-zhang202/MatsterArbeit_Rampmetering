@@ -1,0 +1,5610 @@
+{
+  "classification": "DEVELOPMENT_REUSE_AUDIT",
+  "script_sha256": "24b83473d1c081150bc0bf99731dbff7b5758c0e85d8da45d82d0aeba77522ab",
+  "runs": [
+    {
+      "run_id": "M3600_R750_S17",
+      "treatment": "T0",
+      "seed": 17,
+      "raw": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_boundary_search_20261002_v1/M3600_R750_S17/outputs",
+      "card": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_boundary_search_20261002_v1/inputs/M3600_R750_S17/card.json",
+      "card_sha256": "31bceb80f2a2330d2b78403eb4ed69f5f0a7c6402aff97263d51a45b70c977de",
+      "receipt_sha256": "9a91d8cb6d6a83201818ec5874ae603a6fdea145f9ed35e3f2dece4a77e7e1f2",
+      "manifest_files": 22,
+      "bad_manifest_files": [],
+      "checks": {
+        "receipt_card_sha": true,
+        "completed": true,
+        "manifest_all_bound": true,
+        "input_hashes": true,
+        "network_hash": true,
+        "sumo_hash": true,
+        "time_seed": true,
+        "requested_counts": true,
+        "materialized_no_flow": true,
+        "depart_semantics": true,
+        "explicit_speed_factors": true,
+        "schedule": true,
+        "trip_identity": true,
+        "summary_labels": true,
+        "summary_lifecycle": true,
+        "no_lifecycle_anomaly": true,
+        "no_sumo_warning": true,
+        "measurement_count": true
+      },
+      "eligible_existing_data": true,
+      "classes": [
+        {
+          "run_id": "M3600_R750_S17",
+          "treatment": "T0",
+          "seed": 17,
+          "q_ramp": 750,
+          "vehicle_class": "M",
+          "planned": 3000,
+          "inserted": 3000,
+          "arrived": 3000,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 232782.0,
+          "source_wait_T_s": 0.0,
+          "in_network_T_s": 232782.0,
+          "mean_system_time_T_s": 77.594
+        },
+        {
+          "run_id": "M3600_R750_S17",
+          "treatment": "T0",
+          "seed": 17,
+          "q_ramp": 750,
+          "vehicle_class": "R",
+          "planned": 500,
+          "inserted": 500,
+          "arrived": 500,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 44353.0,
+          "source_wait_T_s": 200.00000000000023,
+          "in_network_T_s": 44153.0,
+          "mean_system_time_T_s": 88.706
+        },
+        {
+          "run_id": "M3600_R750_S17",
+          "treatment": "T0",
+          "seed": 17,
+          "q_ramp": 750,
+          "vehicle_class": "U",
+          "planned": 300,
+          "inserted": 300,
+          "arrived": 300,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 19430.0,
+          "source_wait_T_s": 0.0,
+          "in_network_T_s": 19430.0,
+          "mean_system_time_T_s": 64.76666666666667
+        },
+        {
+          "run_id": "M3600_R750_S17",
+          "treatment": "T0",
+          "seed": 17,
+          "q_ramp": 750,
+          "vehicle_class": "X",
+          "planned": 150,
+          "inserted": 150,
+          "arrived": 150,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 10289.0,
+          "source_wait_T_s": 0.0,
+          "in_network_T_s": 10289.0,
+          "mean_system_time_T_s": 68.59333333333333
+        }
+      ],
+      "network_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+      "sumo_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+      "demand_sha256": "34b30ca81c3339a84249e822171bd71312e32ec5402e60e7d931bb9a790faf52",
+      "measurement": [
+        [
+          "laneAreaDetector",
+          [
+            [
+              "endPos",
+              "238.8"
+            ],
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "shared_boundary_e2"
+            ],
+            [
+              "jamThreshold",
+              "10"
+            ],
+            [
+              "lane",
+              "shared_approach_0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "0"
+            ],
+            [
+              "speedThreshold",
+              "1.3888888888888888"
+            ],
+            [
+              "timeThreshold",
+              "1"
+            ]
+          ],
+          []
+        ],
+        [
+          "laneAreaDetector",
+          [
+            [
+              "endPos",
+              "204.49"
+            ],
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "ramp_storage_e2"
+            ],
+            [
+              "jamThreshold",
+              "10"
+            ],
+            [
+              "lane",
+              "ramp_storage_0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "0"
+            ],
+            [
+              "speedThreshold",
+              "1.3888888888888888"
+            ],
+            [
+              "timeThreshold",
+              "1"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_up_1300_l0"
+            ],
+            [
+              "lane",
+              "main_up_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "1300"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_up_1300_l1"
+            ],
+            [
+              "lane",
+              "main_up_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "1300"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_merge_section_20_l0"
+            ],
+            [
+              "lane",
+              "merge_section_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_merge_section_20_l1"
+            ],
+            [
+              "lane",
+              "merge_section_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_merge_section_20_l2"
+            ],
+            [
+              "lane",
+              "merge_section_2"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_20_l0"
+            ],
+            [
+              "lane",
+              "main_down_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_20_l1"
+            ],
+            [
+              "lane",
+              "main_down_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_200_l0"
+            ],
+            [
+              "lane",
+              "main_down_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "200"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_200_l1"
+            ],
+            [
+              "lane",
+              "main_down_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "200"
+            ]
+          ],
+          []
+        ],
+        [
+          "timedEvent",
+          [
+            [
+              "type",
+              "SaveTLSStates"
+            ]
+          ],
+          []
+        ]
+      ],
+      "urban": [],
+      "config_processing": [
+        "processing",
+        [],
+        [
+          [
+            "time-to-teleport",
+            [
+              [
+                "value",
+                "-1"
+              ]
+            ],
+            []
+          ],
+          [
+            "collision.action",
+            [
+              [
+                "value",
+                "warn"
+              ]
+            ],
+            []
+          ],
+          [
+            "collision.check-junctions",
+            [
+              [
+                "value",
+                "true"
+              ]
+            ],
+            []
+          ],
+          [
+            "extrapolate-departpos",
+            [
+              [
+                "value",
+                "false"
+              ]
+            ],
+            []
+          ]
+        ]
+      ],
+      "types_routes": [
+        [
+          "vType",
+          [
+            [
+              "id",
+              "technical_passenger"
+            ],
+            [
+              "vClass",
+              "passenger"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "main_up merge_section main_down"
+            ],
+            [
+              "id",
+              "M_route"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "urban_in shared_approach ramp_storage ramp_accel merge_section main_down"
+            ],
+            [
+              "id",
+              "R_route"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "urban_in shared_approach urban_out"
+            ],
+            [
+              "id",
+              "U_route"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "cross_in cross_out"
+            ],
+            [
+              "id",
+              "X_route"
+            ]
+          ],
+          []
+        ]
+      ],
+      "last_summary": {
+        "time": "4199.00",
+        "loaded": "3950",
+        "inserted": "3950",
+        "running": "0",
+        "waiting": "0",
+        "ended": "3950",
+        "arrived": "3950",
+        "collisions": "0",
+        "teleports": "0",
+        "halting": "0",
+        "stopped": "0",
+        "meanWaitingTime": "0.10",
+        "meanTravelTime": "77.63",
+        "meanSpeed": "-1.00",
+        "meanSpeedRelative": "-1.00",
+        "discarded": "0",
+        "duration": "0"
+      },
+      "runtime_wall_s": 4.393477749981685,
+      "raw_payload_bytes": 10772941,
+      "shared_scene_equivalence": {
+        "network_sha256": true,
+        "sumo_sha256": true,
+        "measurement": true,
+        "urban": true,
+        "config_processing": true,
+        "types_routes": true
+      }
+    },
+    {
+      "run_id": "M3600_R750_S23",
+      "treatment": "T0",
+      "seed": 23,
+      "raw": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_boundary_search_20261002_v1/M3600_R750_S23/outputs",
+      "card": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_boundary_search_20261002_v1/inputs/M3600_R750_S23/card.json",
+      "card_sha256": "09019e76ac98026a47cc264593bc761beb2e62857502a4f119cf8f79b8b4a803",
+      "receipt_sha256": "c81de2020cd237adb486235216ab99b83e86a430c3a29483b4a96bb1058e6a8c",
+      "manifest_files": 22,
+      "bad_manifest_files": [],
+      "checks": {
+        "receipt_card_sha": true,
+        "completed": true,
+        "manifest_all_bound": true,
+        "input_hashes": true,
+        "network_hash": true,
+        "sumo_hash": true,
+        "time_seed": true,
+        "requested_counts": true,
+        "materialized_no_flow": true,
+        "depart_semantics": true,
+        "explicit_speed_factors": true,
+        "schedule": true,
+        "trip_identity": true,
+        "summary_labels": true,
+        "summary_lifecycle": true,
+        "no_lifecycle_anomaly": true,
+        "no_sumo_warning": true,
+        "measurement_count": true
+      },
+      "eligible_existing_data": true,
+      "classes": [
+        {
+          "run_id": "M3600_R750_S23",
+          "treatment": "T0",
+          "seed": 23,
+          "q_ramp": 750,
+          "vehicle_class": "M",
+          "planned": 3000,
+          "inserted": 3000,
+          "arrived": 3000,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 231250.0,
+          "source_wait_T_s": 0.0,
+          "in_network_T_s": 231250.0,
+          "mean_system_time_T_s": 77.08333333333333
+        },
+        {
+          "run_id": "M3600_R750_S23",
+          "treatment": "T0",
+          "seed": 23,
+          "q_ramp": 750,
+          "vehicle_class": "R",
+          "planned": 500,
+          "inserted": 500,
+          "arrived": 500,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 44275.0,
+          "source_wait_T_s": 200.00000000000023,
+          "in_network_T_s": 44075.0,
+          "mean_system_time_T_s": 88.55
+        },
+        {
+          "run_id": "M3600_R750_S23",
+          "treatment": "T0",
+          "seed": 23,
+          "q_ramp": 750,
+          "vehicle_class": "U",
+          "planned": 300,
+          "inserted": 300,
+          "arrived": 300,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 19582.0,
+          "source_wait_T_s": 0.0,
+          "in_network_T_s": 19582.0,
+          "mean_system_time_T_s": 65.27333333333333
+        },
+        {
+          "run_id": "M3600_R750_S23",
+          "treatment": "T0",
+          "seed": 23,
+          "q_ramp": 750,
+          "vehicle_class": "X",
+          "planned": 150,
+          "inserted": 150,
+          "arrived": 150,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 10303.0,
+          "source_wait_T_s": 0.0,
+          "in_network_T_s": 10303.0,
+          "mean_system_time_T_s": 68.68666666666667
+        }
+      ],
+      "network_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+      "sumo_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+      "demand_sha256": "ecc6391e157d19555949f5e35415d463f35c0b620a2500d72d0507dc88fbe634",
+      "measurement": [
+        [
+          "laneAreaDetector",
+          [
+            [
+              "endPos",
+              "238.8"
+            ],
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "shared_boundary_e2"
+            ],
+            [
+              "jamThreshold",
+              "10"
+            ],
+            [
+              "lane",
+              "shared_approach_0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "0"
+            ],
+            [
+              "speedThreshold",
+              "1.3888888888888888"
+            ],
+            [
+              "timeThreshold",
+              "1"
+            ]
+          ],
+          []
+        ],
+        [
+          "laneAreaDetector",
+          [
+            [
+              "endPos",
+              "204.49"
+            ],
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "ramp_storage_e2"
+            ],
+            [
+              "jamThreshold",
+              "10"
+            ],
+            [
+              "lane",
+              "ramp_storage_0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "0"
+            ],
+            [
+              "speedThreshold",
+              "1.3888888888888888"
+            ],
+            [
+              "timeThreshold",
+              "1"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_up_1300_l0"
+            ],
+            [
+              "lane",
+              "main_up_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "1300"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_up_1300_l1"
+            ],
+            [
+              "lane",
+              "main_up_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "1300"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_merge_section_20_l0"
+            ],
+            [
+              "lane",
+              "merge_section_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_merge_section_20_l1"
+            ],
+            [
+              "lane",
+              "merge_section_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_merge_section_20_l2"
+            ],
+            [
+              "lane",
+              "merge_section_2"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_20_l0"
+            ],
+            [
+              "lane",
+              "main_down_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_20_l1"
+            ],
+            [
+              "lane",
+              "main_down_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_200_l0"
+            ],
+            [
+              "lane",
+              "main_down_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "200"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_200_l1"
+            ],
+            [
+              "lane",
+              "main_down_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "200"
+            ]
+          ],
+          []
+        ],
+        [
+          "timedEvent",
+          [
+            [
+              "type",
+              "SaveTLSStates"
+            ]
+          ],
+          []
+        ]
+      ],
+      "urban": [],
+      "config_processing": [
+        "processing",
+        [],
+        [
+          [
+            "time-to-teleport",
+            [
+              [
+                "value",
+                "-1"
+              ]
+            ],
+            []
+          ],
+          [
+            "collision.action",
+            [
+              [
+                "value",
+                "warn"
+              ]
+            ],
+            []
+          ],
+          [
+            "collision.check-junctions",
+            [
+              [
+                "value",
+                "true"
+              ]
+            ],
+            []
+          ],
+          [
+            "extrapolate-departpos",
+            [
+              [
+                "value",
+                "false"
+              ]
+            ],
+            []
+          ]
+        ]
+      ],
+      "types_routes": [
+        [
+          "vType",
+          [
+            [
+              "id",
+              "technical_passenger"
+            ],
+            [
+              "vClass",
+              "passenger"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "main_up merge_section main_down"
+            ],
+            [
+              "id",
+              "M_route"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "urban_in shared_approach ramp_storage ramp_accel merge_section main_down"
+            ],
+            [
+              "id",
+              "R_route"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "urban_in shared_approach urban_out"
+            ],
+            [
+              "id",
+              "U_route"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "cross_in cross_out"
+            ],
+            [
+              "id",
+              "X_route"
+            ]
+          ],
+          []
+        ]
+      ],
+      "last_summary": {
+        "time": "4199.00",
+        "loaded": "3950",
+        "inserted": "3950",
+        "running": "0",
+        "waiting": "0",
+        "ended": "3950",
+        "arrived": "3950",
+        "collisions": "0",
+        "teleports": "0",
+        "halting": "0",
+        "stopped": "0",
+        "meanWaitingTime": "0.10",
+        "meanTravelTime": "77.27",
+        "meanSpeed": "-1.00",
+        "meanSpeedRelative": "-1.00",
+        "discarded": "0",
+        "duration": "0"
+      },
+      "runtime_wall_s": 7.306761165993521,
+      "raw_payload_bytes": 10745331,
+      "shared_scene_equivalence": {
+        "network_sha256": true,
+        "sumo_sha256": true,
+        "measurement": true,
+        "urban": true,
+        "config_processing": true,
+        "types_routes": true
+      }
+    },
+    {
+      "run_id": "M3600_R750_S42",
+      "treatment": "T0",
+      "seed": 42,
+      "raw": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_boundary_search_20261002_v1/M3600_R750_S42/outputs",
+      "card": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_boundary_search_20261002_v1/inputs/M3600_R750_S42/card.json",
+      "card_sha256": "a2f6d687c43506773ffe81fb27e635ddd35579a0f6686937a48901835c776796",
+      "receipt_sha256": "382f002871da311b8409af4ecb5c8c442391b880db0f993415ff306bed4087f6",
+      "manifest_files": 22,
+      "bad_manifest_files": [],
+      "checks": {
+        "receipt_card_sha": true,
+        "completed": true,
+        "manifest_all_bound": true,
+        "input_hashes": true,
+        "network_hash": true,
+        "sumo_hash": true,
+        "time_seed": true,
+        "requested_counts": true,
+        "materialized_no_flow": true,
+        "depart_semantics": true,
+        "explicit_speed_factors": true,
+        "schedule": true,
+        "trip_identity": true,
+        "summary_labels": true,
+        "summary_lifecycle": true,
+        "no_lifecycle_anomaly": true,
+        "no_sumo_warning": true,
+        "measurement_count": true
+      },
+      "eligible_existing_data": true,
+      "classes": [
+        {
+          "run_id": "M3600_R750_S42",
+          "treatment": "T0",
+          "seed": 42,
+          "q_ramp": 750,
+          "vehicle_class": "M",
+          "planned": 3000,
+          "inserted": 3000,
+          "arrived": 3000,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 229875.0,
+          "source_wait_T_s": 0.0,
+          "in_network_T_s": 229875.0,
+          "mean_system_time_T_s": 76.625
+        },
+        {
+          "run_id": "M3600_R750_S42",
+          "treatment": "T0",
+          "seed": 42,
+          "q_ramp": 750,
+          "vehicle_class": "R",
+          "planned": 500,
+          "inserted": 500,
+          "arrived": 500,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 43979.0,
+          "source_wait_T_s": 200.00000000000023,
+          "in_network_T_s": 43779.0,
+          "mean_system_time_T_s": 87.958
+        },
+        {
+          "run_id": "M3600_R750_S42",
+          "treatment": "T0",
+          "seed": 42,
+          "q_ramp": 750,
+          "vehicle_class": "U",
+          "planned": 300,
+          "inserted": 300,
+          "arrived": 300,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 19351.0,
+          "source_wait_T_s": 0.0,
+          "in_network_T_s": 19351.0,
+          "mean_system_time_T_s": 64.50333333333333
+        },
+        {
+          "run_id": "M3600_R750_S42",
+          "treatment": "T0",
+          "seed": 42,
+          "q_ramp": 750,
+          "vehicle_class": "X",
+          "planned": 150,
+          "inserted": 150,
+          "arrived": 150,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 10355.0,
+          "source_wait_T_s": 0.0,
+          "in_network_T_s": 10355.0,
+          "mean_system_time_T_s": 69.03333333333333
+        }
+      ],
+      "network_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+      "sumo_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+      "demand_sha256": "1a96354185edbae19ddfb8ffa9101ebca946810a8c336743b6fa644a023cf738",
+      "measurement": [
+        [
+          "laneAreaDetector",
+          [
+            [
+              "endPos",
+              "238.8"
+            ],
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "shared_boundary_e2"
+            ],
+            [
+              "jamThreshold",
+              "10"
+            ],
+            [
+              "lane",
+              "shared_approach_0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "0"
+            ],
+            [
+              "speedThreshold",
+              "1.3888888888888888"
+            ],
+            [
+              "timeThreshold",
+              "1"
+            ]
+          ],
+          []
+        ],
+        [
+          "laneAreaDetector",
+          [
+            [
+              "endPos",
+              "204.49"
+            ],
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "ramp_storage_e2"
+            ],
+            [
+              "jamThreshold",
+              "10"
+            ],
+            [
+              "lane",
+              "ramp_storage_0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "0"
+            ],
+            [
+              "speedThreshold",
+              "1.3888888888888888"
+            ],
+            [
+              "timeThreshold",
+              "1"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_up_1300_l0"
+            ],
+            [
+              "lane",
+              "main_up_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "1300"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_up_1300_l1"
+            ],
+            [
+              "lane",
+              "main_up_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "1300"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_merge_section_20_l0"
+            ],
+            [
+              "lane",
+              "merge_section_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_merge_section_20_l1"
+            ],
+            [
+              "lane",
+              "merge_section_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_merge_section_20_l2"
+            ],
+            [
+              "lane",
+              "merge_section_2"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_20_l0"
+            ],
+            [
+              "lane",
+              "main_down_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_20_l1"
+            ],
+            [
+              "lane",
+              "main_down_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_200_l0"
+            ],
+            [
+              "lane",
+              "main_down_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "200"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_200_l1"
+            ],
+            [
+              "lane",
+              "main_down_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "200"
+            ]
+          ],
+          []
+        ],
+        [
+          "timedEvent",
+          [
+            [
+              "type",
+              "SaveTLSStates"
+            ]
+          ],
+          []
+        ]
+      ],
+      "urban": [],
+      "config_processing": [
+        "processing",
+        [],
+        [
+          [
+            "time-to-teleport",
+            [
+              [
+                "value",
+                "-1"
+              ]
+            ],
+            []
+          ],
+          [
+            "collision.action",
+            [
+              [
+                "value",
+                "warn"
+              ]
+            ],
+            []
+          ],
+          [
+            "collision.check-junctions",
+            [
+              [
+                "value",
+                "true"
+              ]
+            ],
+            []
+          ],
+          [
+            "extrapolate-departpos",
+            [
+              [
+                "value",
+                "false"
+              ]
+            ],
+            []
+          ]
+        ]
+      ],
+      "types_routes": [
+        [
+          "vType",
+          [
+            [
+              "id",
+              "technical_passenger"
+            ],
+            [
+              "vClass",
+              "passenger"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "main_up merge_section main_down"
+            ],
+            [
+              "id",
+              "M_route"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "urban_in shared_approach ramp_storage ramp_accel merge_section main_down"
+            ],
+            [
+              "id",
+              "R_route"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "urban_in shared_approach urban_out"
+            ],
+            [
+              "id",
+              "U_route"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "cross_in cross_out"
+            ],
+            [
+              "id",
+              "X_route"
+            ]
+          ],
+          []
+        ]
+      ],
+      "last_summary": {
+        "time": "4199.00",
+        "loaded": "3950",
+        "inserted": "3950",
+        "running": "0",
+        "waiting": "0",
+        "ended": "3950",
+        "arrived": "3950",
+        "collisions": "0",
+        "teleports": "0",
+        "halting": "0",
+        "stopped": "0",
+        "meanWaitingTime": "0.10",
+        "meanTravelTime": "76.80",
+        "meanSpeed": "-1.00",
+        "meanSpeedRelative": "-1.00",
+        "discarded": "0",
+        "duration": "0"
+      },
+      "runtime_wall_s": 5.944398749998072,
+      "raw_payload_bytes": 10705297,
+      "shared_scene_equivalence": {
+        "network_sha256": true,
+        "sumo_sha256": true,
+        "measurement": true,
+        "urban": true,
+        "config_processing": true,
+        "types_routes": true
+      }
+    },
+    {
+      "run_id": "M3600_R900_S17",
+      "treatment": "T0",
+      "seed": 17,
+      "raw": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_boundary_search_20261002_v1/M3600_R900_S17/outputs",
+      "card": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_boundary_search_20261002_v1/inputs/M3600_R900_S17/card.json",
+      "card_sha256": "e92e5ff28c9695822dc58f1f90d5f3b36ab163b97590d08e11f9ee0e8a778ee6",
+      "receipt_sha256": "3aa195cc5b6094a8d5ab0fd7dba398df4417ae8db090c7e9092a0267b82c37fb",
+      "manifest_files": 22,
+      "bad_manifest_files": [],
+      "checks": {
+        "receipt_card_sha": true,
+        "completed": true,
+        "manifest_all_bound": true,
+        "input_hashes": true,
+        "network_hash": true,
+        "sumo_hash": true,
+        "time_seed": true,
+        "requested_counts": true,
+        "materialized_no_flow": true,
+        "depart_semantics": true,
+        "explicit_speed_factors": true,
+        "schedule": true,
+        "trip_identity": true,
+        "summary_labels": true,
+        "summary_lifecycle": true,
+        "no_lifecycle_anomaly": true,
+        "no_sumo_warning": true,
+        "measurement_count": true
+      },
+      "eligible_existing_data": true,
+      "classes": [
+        {
+          "run_id": "M3600_R900_S17",
+          "treatment": "T0",
+          "seed": 17,
+          "q_ramp": 900,
+          "vehicle_class": "M",
+          "planned": 3000,
+          "inserted": 3000,
+          "arrived": 3000,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 467230.0,
+          "source_wait_T_s": 19762.0,
+          "in_network_T_s": 447468.0,
+          "mean_system_time_T_s": 155.74333333333334
+        },
+        {
+          "run_id": "M3600_R900_S17",
+          "treatment": "T0",
+          "seed": 17,
+          "q_ramp": 900,
+          "vehicle_class": "R",
+          "planned": 600,
+          "inserted": 600,
+          "arrived": 600,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 58984.0,
+          "source_wait_T_s": 0.0,
+          "in_network_T_s": 58984.0,
+          "mean_system_time_T_s": 98.30666666666667
+        },
+        {
+          "run_id": "M3600_R900_S17",
+          "treatment": "T0",
+          "seed": 17,
+          "q_ramp": 900,
+          "vehicle_class": "U",
+          "planned": 300,
+          "inserted": 300,
+          "arrived": 300,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 19888.0,
+          "source_wait_T_s": 0.0,
+          "in_network_T_s": 19888.0,
+          "mean_system_time_T_s": 66.29333333333334
+        },
+        {
+          "run_id": "M3600_R900_S17",
+          "treatment": "T0",
+          "seed": 17,
+          "q_ramp": 900,
+          "vehicle_class": "X",
+          "planned": 150,
+          "inserted": 150,
+          "arrived": 150,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 10289.0,
+          "source_wait_T_s": 0.0,
+          "in_network_T_s": 10289.0,
+          "mean_system_time_T_s": 68.59333333333333
+        }
+      ],
+      "network_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+      "sumo_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+      "demand_sha256": "99151ed51419c8d490c0f0b1a91bea23f6be70c5486890a04e1e06b3de5d808e",
+      "measurement": [
+        [
+          "laneAreaDetector",
+          [
+            [
+              "endPos",
+              "238.8"
+            ],
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "shared_boundary_e2"
+            ],
+            [
+              "jamThreshold",
+              "10"
+            ],
+            [
+              "lane",
+              "shared_approach_0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "0"
+            ],
+            [
+              "speedThreshold",
+              "1.3888888888888888"
+            ],
+            [
+              "timeThreshold",
+              "1"
+            ]
+          ],
+          []
+        ],
+        [
+          "laneAreaDetector",
+          [
+            [
+              "endPos",
+              "204.49"
+            ],
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "ramp_storage_e2"
+            ],
+            [
+              "jamThreshold",
+              "10"
+            ],
+            [
+              "lane",
+              "ramp_storage_0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "0"
+            ],
+            [
+              "speedThreshold",
+              "1.3888888888888888"
+            ],
+            [
+              "timeThreshold",
+              "1"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_up_1300_l0"
+            ],
+            [
+              "lane",
+              "main_up_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "1300"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_up_1300_l1"
+            ],
+            [
+              "lane",
+              "main_up_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "1300"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_merge_section_20_l0"
+            ],
+            [
+              "lane",
+              "merge_section_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_merge_section_20_l1"
+            ],
+            [
+              "lane",
+              "merge_section_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_merge_section_20_l2"
+            ],
+            [
+              "lane",
+              "merge_section_2"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_20_l0"
+            ],
+            [
+              "lane",
+              "main_down_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_20_l1"
+            ],
+            [
+              "lane",
+              "main_down_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_200_l0"
+            ],
+            [
+              "lane",
+              "main_down_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "200"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_200_l1"
+            ],
+            [
+              "lane",
+              "main_down_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "200"
+            ]
+          ],
+          []
+        ],
+        [
+          "timedEvent",
+          [
+            [
+              "type",
+              "SaveTLSStates"
+            ]
+          ],
+          []
+        ]
+      ],
+      "urban": [],
+      "config_processing": [
+        "processing",
+        [],
+        [
+          [
+            "time-to-teleport",
+            [
+              [
+                "value",
+                "-1"
+              ]
+            ],
+            []
+          ],
+          [
+            "collision.action",
+            [
+              [
+                "value",
+                "warn"
+              ]
+            ],
+            []
+          ],
+          [
+            "collision.check-junctions",
+            [
+              [
+                "value",
+                "true"
+              ]
+            ],
+            []
+          ],
+          [
+            "extrapolate-departpos",
+            [
+              [
+                "value",
+                "false"
+              ]
+            ],
+            []
+          ]
+        ]
+      ],
+      "types_routes": [
+        [
+          "vType",
+          [
+            [
+              "id",
+              "technical_passenger"
+            ],
+            [
+              "vClass",
+              "passenger"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "main_up merge_section main_down"
+            ],
+            [
+              "id",
+              "M_route"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "urban_in shared_approach ramp_storage ramp_accel merge_section main_down"
+            ],
+            [
+              "id",
+              "R_route"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "urban_in shared_approach urban_out"
+            ],
+            [
+              "id",
+              "U_route"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "cross_in cross_out"
+            ],
+            [
+              "id",
+              "X_route"
+            ]
+          ],
+          []
+        ]
+      ],
+      "last_summary": {
+        "time": "4199.00",
+        "loaded": "4050",
+        "inserted": "4050",
+        "running": "0",
+        "waiting": "0",
+        "ended": "4050",
+        "arrived": "4050",
+        "collisions": "0",
+        "teleports": "0",
+        "halting": "0",
+        "stopped": "0",
+        "meanWaitingTime": "4.88",
+        "meanTravelTime": "132.50",
+        "meanSpeed": "-1.00",
+        "meanSpeedRelative": "-1.00",
+        "discarded": "0",
+        "duration": "0"
+      },
+      "runtime_wall_s": 6.711600749986246,
+      "raw_payload_bytes": 15181261,
+      "shared_scene_equivalence": {
+        "network_sha256": true,
+        "sumo_sha256": true,
+        "measurement": true,
+        "urban": true,
+        "config_processing": true,
+        "types_routes": true
+      }
+    },
+    {
+      "run_id": "M3600_R900_S23",
+      "treatment": "T0",
+      "seed": 23,
+      "raw": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_boundary_search_20261002_v1/M3600_R900_S23/outputs",
+      "card": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_boundary_search_20261002_v1/inputs/M3600_R900_S23/card.json",
+      "card_sha256": "9768624907691fc76b7a6c931c0ee01d649c7fe9e5bc44fb2f76e5c73e2ec552",
+      "receipt_sha256": "0ac47c74c8786ec725e718b1ba7b46de90bf7bed772e5dc83ed4f931eef23603",
+      "manifest_files": 22,
+      "bad_manifest_files": [],
+      "checks": {
+        "receipt_card_sha": true,
+        "completed": true,
+        "manifest_all_bound": true,
+        "input_hashes": true,
+        "network_hash": true,
+        "sumo_hash": true,
+        "time_seed": true,
+        "requested_counts": true,
+        "materialized_no_flow": true,
+        "depart_semantics": true,
+        "explicit_speed_factors": true,
+        "schedule": true,
+        "trip_identity": true,
+        "summary_labels": true,
+        "summary_lifecycle": true,
+        "no_lifecycle_anomaly": true,
+        "no_sumo_warning": true,
+        "measurement_count": true
+      },
+      "eligible_existing_data": true,
+      "classes": [
+        {
+          "run_id": "M3600_R900_S23",
+          "treatment": "T0",
+          "seed": 23,
+          "q_ramp": 900,
+          "vehicle_class": "M",
+          "planned": 3000,
+          "inserted": 3000,
+          "arrived": 3000,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 330104.0,
+          "source_wait_T_s": 0.0,
+          "in_network_T_s": 330104.0,
+          "mean_system_time_T_s": 110.03466666666667
+        },
+        {
+          "run_id": "M3600_R900_S23",
+          "treatment": "T0",
+          "seed": 23,
+          "q_ramp": 900,
+          "vehicle_class": "R",
+          "planned": 600,
+          "inserted": 600,
+          "arrived": 600,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 57314.0,
+          "source_wait_T_s": 0.0,
+          "in_network_T_s": 57314.0,
+          "mean_system_time_T_s": 95.52333333333333
+        },
+        {
+          "run_id": "M3600_R900_S23",
+          "treatment": "T0",
+          "seed": 23,
+          "q_ramp": 900,
+          "vehicle_class": "U",
+          "planned": 300,
+          "inserted": 300,
+          "arrived": 300,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 20022.0,
+          "source_wait_T_s": 0.0,
+          "in_network_T_s": 20022.0,
+          "mean_system_time_T_s": 66.74
+        },
+        {
+          "run_id": "M3600_R900_S23",
+          "treatment": "T0",
+          "seed": 23,
+          "q_ramp": 900,
+          "vehicle_class": "X",
+          "planned": 150,
+          "inserted": 150,
+          "arrived": 150,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 10303.0,
+          "source_wait_T_s": 0.0,
+          "in_network_T_s": 10303.0,
+          "mean_system_time_T_s": 68.68666666666667
+        }
+      ],
+      "network_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+      "sumo_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+      "demand_sha256": "d6c89772b9038c459f9f80631834909287d7a0b8ed588356b2ac2d8affac9a08",
+      "measurement": [
+        [
+          "laneAreaDetector",
+          [
+            [
+              "endPos",
+              "238.8"
+            ],
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "shared_boundary_e2"
+            ],
+            [
+              "jamThreshold",
+              "10"
+            ],
+            [
+              "lane",
+              "shared_approach_0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "0"
+            ],
+            [
+              "speedThreshold",
+              "1.3888888888888888"
+            ],
+            [
+              "timeThreshold",
+              "1"
+            ]
+          ],
+          []
+        ],
+        [
+          "laneAreaDetector",
+          [
+            [
+              "endPos",
+              "204.49"
+            ],
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "ramp_storage_e2"
+            ],
+            [
+              "jamThreshold",
+              "10"
+            ],
+            [
+              "lane",
+              "ramp_storage_0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "0"
+            ],
+            [
+              "speedThreshold",
+              "1.3888888888888888"
+            ],
+            [
+              "timeThreshold",
+              "1"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_up_1300_l0"
+            ],
+            [
+              "lane",
+              "main_up_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "1300"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_up_1300_l1"
+            ],
+            [
+              "lane",
+              "main_up_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "1300"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_merge_section_20_l0"
+            ],
+            [
+              "lane",
+              "merge_section_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_merge_section_20_l1"
+            ],
+            [
+              "lane",
+              "merge_section_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_merge_section_20_l2"
+            ],
+            [
+              "lane",
+              "merge_section_2"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_20_l0"
+            ],
+            [
+              "lane",
+              "main_down_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_20_l1"
+            ],
+            [
+              "lane",
+              "main_down_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_200_l0"
+            ],
+            [
+              "lane",
+              "main_down_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "200"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_200_l1"
+            ],
+            [
+              "lane",
+              "main_down_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "200"
+            ]
+          ],
+          []
+        ],
+        [
+          "timedEvent",
+          [
+            [
+              "type",
+              "SaveTLSStates"
+            ]
+          ],
+          []
+        ]
+      ],
+      "urban": [],
+      "config_processing": [
+        "processing",
+        [],
+        [
+          [
+            "time-to-teleport",
+            [
+              [
+                "value",
+                "-1"
+              ]
+            ],
+            []
+          ],
+          [
+            "collision.action",
+            [
+              [
+                "value",
+                "warn"
+              ]
+            ],
+            []
+          ],
+          [
+            "collision.check-junctions",
+            [
+              [
+                "value",
+                "true"
+              ]
+            ],
+            []
+          ],
+          [
+            "extrapolate-departpos",
+            [
+              [
+                "value",
+                "false"
+              ]
+            ],
+            []
+          ]
+        ]
+      ],
+      "types_routes": [
+        [
+          "vType",
+          [
+            [
+              "id",
+              "technical_passenger"
+            ],
+            [
+              "vClass",
+              "passenger"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "main_up merge_section main_down"
+            ],
+            [
+              "id",
+              "M_route"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "urban_in shared_approach ramp_storage ramp_accel merge_section main_down"
+            ],
+            [
+              "id",
+              "R_route"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "urban_in shared_approach urban_out"
+            ],
+            [
+              "id",
+              "U_route"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "cross_in cross_out"
+            ],
+            [
+              "id",
+              "X_route"
+            ]
+          ],
+          []
+        ]
+      ],
+      "last_summary": {
+        "time": "4199.00",
+        "loaded": "4050",
+        "inserted": "4050",
+        "running": "0",
+        "waiting": "0",
+        "ended": "4050",
+        "arrived": "4050",
+        "collisions": "0",
+        "teleports": "0",
+        "halting": "0",
+        "stopped": "0",
+        "meanWaitingTime": "0.00",
+        "meanTravelTime": "103.15",
+        "meanSpeed": "-1.00",
+        "meanSpeedRelative": "-1.00",
+        "discarded": "0",
+        "duration": "0"
+      },
+      "runtime_wall_s": 5.3707017920096405,
+      "raw_payload_bytes": 12944131,
+      "shared_scene_equivalence": {
+        "network_sha256": true,
+        "sumo_sha256": true,
+        "measurement": true,
+        "urban": true,
+        "config_processing": true,
+        "types_routes": true
+      }
+    },
+    {
+      "run_id": "M3600_R900_S42",
+      "treatment": "T0",
+      "seed": 42,
+      "raw": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_boundary_search_20261002_v1/M3600_R900_S42/outputs",
+      "card": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_boundary_search_20261002_v1/inputs/M3600_R900_S42/card.json",
+      "card_sha256": "2e54941c5faf259935dcf5bcd87d14f38c378b91606afe339eb39039465c2748",
+      "receipt_sha256": "c936390870b26d1172bc8fd02b34dab7579fc08bf936d89f8ea4a986f2fb150a",
+      "manifest_files": 22,
+      "bad_manifest_files": [],
+      "checks": {
+        "receipt_card_sha": true,
+        "completed": true,
+        "manifest_all_bound": true,
+        "input_hashes": true,
+        "network_hash": true,
+        "sumo_hash": true,
+        "time_seed": true,
+        "requested_counts": true,
+        "materialized_no_flow": true,
+        "depart_semantics": true,
+        "explicit_speed_factors": true,
+        "schedule": true,
+        "trip_identity": true,
+        "summary_labels": true,
+        "summary_lifecycle": true,
+        "no_lifecycle_anomaly": true,
+        "no_sumo_warning": true,
+        "measurement_count": true
+      },
+      "eligible_existing_data": true,
+      "classes": [
+        {
+          "run_id": "M3600_R900_S42",
+          "treatment": "T0",
+          "seed": 42,
+          "q_ramp": 900,
+          "vehicle_class": "M",
+          "planned": 3000,
+          "inserted": 3000,
+          "arrived": 3000,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 418512.0,
+          "source_wait_T_s": 19452.0,
+          "in_network_T_s": 399060.0,
+          "mean_system_time_T_s": 139.504
+        },
+        {
+          "run_id": "M3600_R900_S42",
+          "treatment": "T0",
+          "seed": 42,
+          "q_ramp": 900,
+          "vehicle_class": "R",
+          "planned": 600,
+          "inserted": 600,
+          "arrived": 600,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 58971.0,
+          "source_wait_T_s": 0.0,
+          "in_network_T_s": 58971.0,
+          "mean_system_time_T_s": 98.285
+        },
+        {
+          "run_id": "M3600_R900_S42",
+          "treatment": "T0",
+          "seed": 42,
+          "q_ramp": 900,
+          "vehicle_class": "U",
+          "planned": 300,
+          "inserted": 300,
+          "arrived": 300,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 19828.0,
+          "source_wait_T_s": 0.0,
+          "in_network_T_s": 19828.0,
+          "mean_system_time_T_s": 66.09333333333333
+        },
+        {
+          "run_id": "M3600_R900_S42",
+          "treatment": "T0",
+          "seed": 42,
+          "q_ramp": 900,
+          "vehicle_class": "X",
+          "planned": 150,
+          "inserted": 150,
+          "arrived": 150,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 10355.0,
+          "source_wait_T_s": 0.0,
+          "in_network_T_s": 10355.0,
+          "mean_system_time_T_s": 69.03333333333333
+        }
+      ],
+      "network_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+      "sumo_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+      "demand_sha256": "6c3e8a3943a14f24cf862b62b5ea2417ebf9bd49d524fff6319dd2778fe66076",
+      "measurement": [
+        [
+          "laneAreaDetector",
+          [
+            [
+              "endPos",
+              "238.8"
+            ],
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "shared_boundary_e2"
+            ],
+            [
+              "jamThreshold",
+              "10"
+            ],
+            [
+              "lane",
+              "shared_approach_0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "0"
+            ],
+            [
+              "speedThreshold",
+              "1.3888888888888888"
+            ],
+            [
+              "timeThreshold",
+              "1"
+            ]
+          ],
+          []
+        ],
+        [
+          "laneAreaDetector",
+          [
+            [
+              "endPos",
+              "204.49"
+            ],
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "ramp_storage_e2"
+            ],
+            [
+              "jamThreshold",
+              "10"
+            ],
+            [
+              "lane",
+              "ramp_storage_0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "0"
+            ],
+            [
+              "speedThreshold",
+              "1.3888888888888888"
+            ],
+            [
+              "timeThreshold",
+              "1"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_up_1300_l0"
+            ],
+            [
+              "lane",
+              "main_up_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "1300"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_up_1300_l1"
+            ],
+            [
+              "lane",
+              "main_up_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "1300"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_merge_section_20_l0"
+            ],
+            [
+              "lane",
+              "merge_section_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_merge_section_20_l1"
+            ],
+            [
+              "lane",
+              "merge_section_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_merge_section_20_l2"
+            ],
+            [
+              "lane",
+              "merge_section_2"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_20_l0"
+            ],
+            [
+              "lane",
+              "main_down_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_20_l1"
+            ],
+            [
+              "lane",
+              "main_down_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_200_l0"
+            ],
+            [
+              "lane",
+              "main_down_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "200"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_200_l1"
+            ],
+            [
+              "lane",
+              "main_down_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "200"
+            ]
+          ],
+          []
+        ],
+        [
+          "timedEvent",
+          [
+            [
+              "type",
+              "SaveTLSStates"
+            ]
+          ],
+          []
+        ]
+      ],
+      "urban": [],
+      "config_processing": [
+        "processing",
+        [],
+        [
+          [
+            "time-to-teleport",
+            [
+              [
+                "value",
+                "-1"
+              ]
+            ],
+            []
+          ],
+          [
+            "collision.action",
+            [
+              [
+                "value",
+                "warn"
+              ]
+            ],
+            []
+          ],
+          [
+            "collision.check-junctions",
+            [
+              [
+                "value",
+                "true"
+              ]
+            ],
+            []
+          ],
+          [
+            "extrapolate-departpos",
+            [
+              [
+                "value",
+                "false"
+              ]
+            ],
+            []
+          ]
+        ]
+      ],
+      "types_routes": [
+        [
+          "vType",
+          [
+            [
+              "id",
+              "technical_passenger"
+            ],
+            [
+              "vClass",
+              "passenger"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "main_up merge_section main_down"
+            ],
+            [
+              "id",
+              "M_route"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "urban_in shared_approach ramp_storage ramp_accel merge_section main_down"
+            ],
+            [
+              "id",
+              "R_route"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "urban_in shared_approach urban_out"
+            ],
+            [
+              "id",
+              "U_route"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "cross_in cross_out"
+            ],
+            [
+              "id",
+              "X_route"
+            ]
+          ],
+          []
+        ]
+      ],
+      "last_summary": {
+        "time": "4199.00",
+        "loaded": "4050",
+        "inserted": "4050",
+        "running": "0",
+        "waiting": "0",
+        "ended": "4050",
+        "arrived": "4050",
+        "collisions": "0",
+        "teleports": "0",
+        "halting": "0",
+        "stopped": "0",
+        "meanWaitingTime": "4.80",
+        "meanTravelTime": "120.55",
+        "meanSpeed": "-1.00",
+        "meanSpeedRelative": "-1.00",
+        "discarded": "0",
+        "duration": "0"
+      },
+      "runtime_wall_s": 7.163982958009001,
+      "raw_payload_bytes": 14309785,
+      "shared_scene_equivalence": {
+        "network_sha256": true,
+        "sumo_sha256": true,
+        "measurement": true,
+        "urban": true,
+        "config_processing": true,
+        "types_routes": true
+      }
+    },
+    {
+      "run_id": "M3600_R900_S17_ALINEA_TRACI_V15",
+      "treatment": "T1",
+      "seed": 17,
+      "raw": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_standard_metering_20261003_v1/M3600_R900_S17_ALINEA_TRACI_V15/outputs",
+      "card": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_standard_metering_execution_20261003_v1/inputs/M3600_R900_S17_ALINEA_TRACI_V15/card.json",
+      "card_sha256": "f7b7c373f67e913521d6cc9bdfb84a343d90f6edab6a47e9a55b4f8639d98066",
+      "receipt_sha256": "0e34703653f9ccdbfd0353438906f291f8096763eaca304c109f43e210dbf63d",
+      "manifest_files": 32,
+      "bad_manifest_files": [],
+      "checks": {
+        "receipt_card_sha": true,
+        "completed": true,
+        "manifest_all_bound": true,
+        "input_hashes": true,
+        "network_hash": true,
+        "sumo_hash": true,
+        "time_seed": true,
+        "requested_counts": true,
+        "materialized_no_flow": true,
+        "depart_semantics": true,
+        "explicit_speed_factors": true,
+        "schedule": true,
+        "trip_identity": true,
+        "summary_labels": true,
+        "summary_lifecycle": true,
+        "no_lifecycle_anomaly": true,
+        "no_sumo_warning": true,
+        "measurement_count": true,
+        "base_receipt_sha": true,
+        "base_demand_sha": true,
+        "reference_parameters": true
+      },
+      "eligible_existing_data": true,
+      "classes": [
+        {
+          "run_id": "M3600_R900_S17_ALINEA_TRACI_V15",
+          "treatment": "T1",
+          "seed": 17,
+          "q_ramp": 900,
+          "vehicle_class": "M",
+          "planned": 3000,
+          "inserted": 3000,
+          "arrived": 3000,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 230515.0,
+          "source_wait_T_s": 0.0,
+          "in_network_T_s": 230515.0,
+          "mean_system_time_T_s": 76.83833333333334
+        },
+        {
+          "run_id": "M3600_R900_S17_ALINEA_TRACI_V15",
+          "treatment": "T1",
+          "seed": 17,
+          "q_ramp": 900,
+          "vehicle_class": "R",
+          "planned": 600,
+          "inserted": 600,
+          "arrived": 600,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 365441.0,
+          "source_wait_T_s": 143668.0,
+          "in_network_T_s": 221773.0,
+          "mean_system_time_T_s": 609.0683333333334
+        },
+        {
+          "run_id": "M3600_R900_S17_ALINEA_TRACI_V15",
+          "treatment": "T1",
+          "seed": 17,
+          "q_ramp": 900,
+          "vehicle_class": "U",
+          "planned": 300,
+          "inserted": 300,
+          "arrived": 300,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 110473.0,
+          "source_wait_T_s": 57454.0,
+          "in_network_T_s": 53019.0,
+          "mean_system_time_T_s": 368.24333333333334
+        },
+        {
+          "run_id": "M3600_R900_S17_ALINEA_TRACI_V15",
+          "treatment": "T1",
+          "seed": 17,
+          "q_ramp": 900,
+          "vehicle_class": "X",
+          "planned": 150,
+          "inserted": 150,
+          "arrived": 150,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 10486.0,
+          "source_wait_T_s": 0.0,
+          "in_network_T_s": 10486.0,
+          "mean_system_time_T_s": 69.90666666666667
+        }
+      ],
+      "network_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+      "sumo_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+      "demand_sha256": "99151ed51419c8d490c0f0b1a91bea23f6be70c5486890a04e1e06b3de5d808e",
+      "measurement": [
+        [
+          "laneAreaDetector",
+          [
+            [
+              "endPos",
+              "238.8"
+            ],
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "shared_boundary_e2"
+            ],
+            [
+              "jamThreshold",
+              "10"
+            ],
+            [
+              "lane",
+              "shared_approach_0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "0"
+            ],
+            [
+              "speedThreshold",
+              "1.3888888888888888"
+            ],
+            [
+              "timeThreshold",
+              "1"
+            ]
+          ],
+          []
+        ],
+        [
+          "laneAreaDetector",
+          [
+            [
+              "endPos",
+              "204.49"
+            ],
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "ramp_storage_e2"
+            ],
+            [
+              "jamThreshold",
+              "10"
+            ],
+            [
+              "lane",
+              "ramp_storage_0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "0"
+            ],
+            [
+              "speedThreshold",
+              "1.3888888888888888"
+            ],
+            [
+              "timeThreshold",
+              "1"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_up_1300_l0"
+            ],
+            [
+              "lane",
+              "main_up_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "1300"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_up_1300_l1"
+            ],
+            [
+              "lane",
+              "main_up_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "1300"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_merge_section_20_l0"
+            ],
+            [
+              "lane",
+              "merge_section_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_merge_section_20_l1"
+            ],
+            [
+              "lane",
+              "merge_section_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_merge_section_20_l2"
+            ],
+            [
+              "lane",
+              "merge_section_2"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_20_l0"
+            ],
+            [
+              "lane",
+              "main_down_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_20_l1"
+            ],
+            [
+              "lane",
+              "main_down_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_200_l0"
+            ],
+            [
+              "lane",
+              "main_down_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "200"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_200_l1"
+            ],
+            [
+              "lane",
+              "main_down_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "200"
+            ]
+          ],
+          []
+        ],
+        [
+          "timedEvent",
+          [
+            [
+              "type",
+              "SaveTLSStates"
+            ]
+          ],
+          []
+        ]
+      ],
+      "urban": [],
+      "config_processing": [
+        "processing",
+        [],
+        [
+          [
+            "time-to-teleport",
+            [
+              [
+                "value",
+                "-1"
+              ]
+            ],
+            []
+          ],
+          [
+            "collision.action",
+            [
+              [
+                "value",
+                "warn"
+              ]
+            ],
+            []
+          ],
+          [
+            "collision.check-junctions",
+            [
+              [
+                "value",
+                "true"
+              ]
+            ],
+            []
+          ],
+          [
+            "extrapolate-departpos",
+            [
+              [
+                "value",
+                "false"
+              ]
+            ],
+            []
+          ]
+        ]
+      ],
+      "types_routes": [
+        [
+          "vType",
+          [
+            [
+              "id",
+              "technical_passenger"
+            ],
+            [
+              "vClass",
+              "passenger"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "main_up merge_section main_down"
+            ],
+            [
+              "id",
+              "M_route"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "urban_in shared_approach ramp_storage ramp_accel merge_section main_down"
+            ],
+            [
+              "id",
+              "R_route"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "urban_in shared_approach urban_out"
+            ],
+            [
+              "id",
+              "U_route"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "cross_in cross_out"
+            ],
+            [
+              "id",
+              "X_route"
+            ]
+          ],
+          []
+        ]
+      ],
+      "last_summary": {
+        "time": "4199.00",
+        "loaded": "4050",
+        "inserted": "4050",
+        "running": "0",
+        "waiting": "0",
+        "ended": "4050",
+        "arrived": "4050",
+        "collisions": "0",
+        "teleports": "0",
+        "halting": "0",
+        "stopped": "0",
+        "meanWaitingTime": "49.66",
+        "meanTravelTime": "127.36",
+        "meanSpeed": "-1.00",
+        "meanSpeedRelative": "-1.00",
+        "discarded": "0",
+        "duration": "0"
+      },
+      "runtime_wall_s": 24.99404470800073,
+      "raw_payload_bytes": 34235613,
+      "shared_scene_equivalence": {
+        "network_sha256": true,
+        "sumo_sha256": true,
+        "measurement": true,
+        "urban": true,
+        "config_processing": true,
+        "types_routes": true
+      },
+      "demand_byte_matched_OPEN": true
+    },
+    {
+      "run_id": "M3600_R900_S23_ALINEA_TRACI_V15",
+      "treatment": "T1",
+      "seed": 23,
+      "raw": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_standard_metering_20261003_v1/M3600_R900_S23_ALINEA_TRACI_V15/outputs",
+      "card": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_standard_metering_execution_20261003_v1/inputs/M3600_R900_S23_ALINEA_TRACI_V15/card.json",
+      "card_sha256": "4ea609521b8ef60bb04d733c8532e981203fe1cf4aecd7519891ff3bbe0bd796",
+      "receipt_sha256": "f44fddd17edb8a28fcdd313846a882b74fe85ac0d8b0410420eb7c2fd859ede2",
+      "manifest_files": 32,
+      "bad_manifest_files": [],
+      "checks": {
+        "receipt_card_sha": true,
+        "completed": true,
+        "manifest_all_bound": true,
+        "input_hashes": true,
+        "network_hash": true,
+        "sumo_hash": true,
+        "time_seed": true,
+        "requested_counts": true,
+        "materialized_no_flow": true,
+        "depart_semantics": true,
+        "explicit_speed_factors": true,
+        "schedule": true,
+        "trip_identity": true,
+        "summary_labels": true,
+        "summary_lifecycle": true,
+        "no_lifecycle_anomaly": true,
+        "no_sumo_warning": true,
+        "measurement_count": true,
+        "base_receipt_sha": true,
+        "base_demand_sha": true,
+        "reference_parameters": true
+      },
+      "eligible_existing_data": true,
+      "classes": [
+        {
+          "run_id": "M3600_R900_S23_ALINEA_TRACI_V15",
+          "treatment": "T1",
+          "seed": 23,
+          "q_ramp": 900,
+          "vehicle_class": "M",
+          "planned": 3000,
+          "inserted": 3000,
+          "arrived": 3000,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 228936.0,
+          "source_wait_T_s": 0.0,
+          "in_network_T_s": 228936.0,
+          "mean_system_time_T_s": 76.312
+        },
+        {
+          "run_id": "M3600_R900_S23_ALINEA_TRACI_V15",
+          "treatment": "T1",
+          "seed": 23,
+          "q_ramp": 900,
+          "vehicle_class": "R",
+          "planned": 600,
+          "inserted": 600,
+          "arrived": 600,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 399909.0,
+          "source_wait_T_s": 169917.0,
+          "in_network_T_s": 229992.0,
+          "mean_system_time_T_s": 666.515
+        },
+        {
+          "run_id": "M3600_R900_S23_ALINEA_TRACI_V15",
+          "treatment": "T1",
+          "seed": 23,
+          "q_ramp": 900,
+          "vehicle_class": "U",
+          "planned": 300,
+          "inserted": 300,
+          "arrived": 300,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 123469.0,
+          "source_wait_T_s": 67986.0,
+          "in_network_T_s": 55483.0,
+          "mean_system_time_T_s": 411.56333333333333
+        },
+        {
+          "run_id": "M3600_R900_S23_ALINEA_TRACI_V15",
+          "treatment": "T1",
+          "seed": 23,
+          "q_ramp": 900,
+          "vehicle_class": "X",
+          "planned": 150,
+          "inserted": 150,
+          "arrived": 150,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 10432.0,
+          "source_wait_T_s": 0.0,
+          "in_network_T_s": 10432.0,
+          "mean_system_time_T_s": 69.54666666666667
+        }
+      ],
+      "network_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+      "sumo_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+      "demand_sha256": "d6c89772b9038c459f9f80631834909287d7a0b8ed588356b2ac2d8affac9a08",
+      "measurement": [
+        [
+          "laneAreaDetector",
+          [
+            [
+              "endPos",
+              "238.8"
+            ],
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "shared_boundary_e2"
+            ],
+            [
+              "jamThreshold",
+              "10"
+            ],
+            [
+              "lane",
+              "shared_approach_0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "0"
+            ],
+            [
+              "speedThreshold",
+              "1.3888888888888888"
+            ],
+            [
+              "timeThreshold",
+              "1"
+            ]
+          ],
+          []
+        ],
+        [
+          "laneAreaDetector",
+          [
+            [
+              "endPos",
+              "204.49"
+            ],
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "ramp_storage_e2"
+            ],
+            [
+              "jamThreshold",
+              "10"
+            ],
+            [
+              "lane",
+              "ramp_storage_0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "0"
+            ],
+            [
+              "speedThreshold",
+              "1.3888888888888888"
+            ],
+            [
+              "timeThreshold",
+              "1"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_up_1300_l0"
+            ],
+            [
+              "lane",
+              "main_up_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "1300"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_up_1300_l1"
+            ],
+            [
+              "lane",
+              "main_up_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "1300"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_merge_section_20_l0"
+            ],
+            [
+              "lane",
+              "merge_section_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_merge_section_20_l1"
+            ],
+            [
+              "lane",
+              "merge_section_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_merge_section_20_l2"
+            ],
+            [
+              "lane",
+              "merge_section_2"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_20_l0"
+            ],
+            [
+              "lane",
+              "main_down_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_20_l1"
+            ],
+            [
+              "lane",
+              "main_down_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_200_l0"
+            ],
+            [
+              "lane",
+              "main_down_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "200"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_200_l1"
+            ],
+            [
+              "lane",
+              "main_down_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "200"
+            ]
+          ],
+          []
+        ],
+        [
+          "timedEvent",
+          [
+            [
+              "type",
+              "SaveTLSStates"
+            ]
+          ],
+          []
+        ]
+      ],
+      "urban": [],
+      "config_processing": [
+        "processing",
+        [],
+        [
+          [
+            "time-to-teleport",
+            [
+              [
+                "value",
+                "-1"
+              ]
+            ],
+            []
+          ],
+          [
+            "collision.action",
+            [
+              [
+                "value",
+                "warn"
+              ]
+            ],
+            []
+          ],
+          [
+            "collision.check-junctions",
+            [
+              [
+                "value",
+                "true"
+              ]
+            ],
+            []
+          ],
+          [
+            "extrapolate-departpos",
+            [
+              [
+                "value",
+                "false"
+              ]
+            ],
+            []
+          ]
+        ]
+      ],
+      "types_routes": [
+        [
+          "vType",
+          [
+            [
+              "id",
+              "technical_passenger"
+            ],
+            [
+              "vClass",
+              "passenger"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "main_up merge_section main_down"
+            ],
+            [
+              "id",
+              "M_route"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "urban_in shared_approach ramp_storage ramp_accel merge_section main_down"
+            ],
+            [
+              "id",
+              "R_route"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "urban_in shared_approach urban_out"
+            ],
+            [
+              "id",
+              "U_route"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "cross_in cross_out"
+            ],
+            [
+              "id",
+              "X_route"
+            ]
+          ],
+          []
+        ]
+      ],
+      "last_summary": {
+        "time": "4199.00",
+        "loaded": "4050",
+        "inserted": "4050",
+        "running": "0",
+        "waiting": "0",
+        "ended": "4050",
+        "arrived": "4050",
+        "collisions": "0",
+        "teleports": "0",
+        "halting": "0",
+        "stopped": "0",
+        "meanWaitingTime": "58.74",
+        "meanTravelTime": "129.59",
+        "meanSpeed": "-1.00",
+        "meanSpeedRelative": "-1.00",
+        "discarded": "0",
+        "duration": "0"
+      },
+      "runtime_wall_s": 25.076261459005764,
+      "raw_payload_bytes": 34732001,
+      "shared_scene_equivalence": {
+        "network_sha256": true,
+        "sumo_sha256": true,
+        "measurement": true,
+        "urban": true,
+        "config_processing": true,
+        "types_routes": true
+      },
+      "demand_byte_matched_OPEN": true
+    },
+    {
+      "run_id": "M3600_R900_S42_ALINEA_TRACI_V15",
+      "treatment": "T1",
+      "seed": 42,
+      "raw": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/stage6_standard_metering_20261003_v1/M3600_R900_S42_ALINEA_TRACI_V15/outputs",
+      "card": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_standard_metering_execution_20261003_v1/inputs/M3600_R900_S42_ALINEA_TRACI_V15/card.json",
+      "card_sha256": "16ccc167f1501d00f1d1ec84fb7f73087633a6a33e6ec3e4e2e1a295756c8f26",
+      "receipt_sha256": "9eb433d7b5054f17aea5a52dff83637726b3281fbb6509c66ef4b6d718cc1786",
+      "manifest_files": 32,
+      "bad_manifest_files": [],
+      "checks": {
+        "receipt_card_sha": true,
+        "completed": true,
+        "manifest_all_bound": true,
+        "input_hashes": true,
+        "network_hash": true,
+        "sumo_hash": true,
+        "time_seed": true,
+        "requested_counts": true,
+        "materialized_no_flow": true,
+        "depart_semantics": true,
+        "explicit_speed_factors": true,
+        "schedule": true,
+        "trip_identity": true,
+        "summary_labels": true,
+        "summary_lifecycle": true,
+        "no_lifecycle_anomaly": true,
+        "no_sumo_warning": true,
+        "measurement_count": true,
+        "base_receipt_sha": true,
+        "base_demand_sha": true,
+        "reference_parameters": true
+      },
+      "eligible_existing_data": true,
+      "classes": [
+        {
+          "run_id": "M3600_R900_S42_ALINEA_TRACI_V15",
+          "treatment": "T1",
+          "seed": 42,
+          "q_ramp": 900,
+          "vehicle_class": "M",
+          "planned": 3000,
+          "inserted": 3000,
+          "arrived": 3000,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 227221.0,
+          "source_wait_T_s": 0.0,
+          "in_network_T_s": 227221.0,
+          "mean_system_time_T_s": 75.74033333333334
+        },
+        {
+          "run_id": "M3600_R900_S42_ALINEA_TRACI_V15",
+          "treatment": "T1",
+          "seed": 42,
+          "q_ramp": 900,
+          "vehicle_class": "R",
+          "planned": 600,
+          "inserted": 600,
+          "arrived": 600,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 409993.0,
+          "source_wait_T_s": 175759.0,
+          "in_network_T_s": 234234.0,
+          "mean_system_time_T_s": 683.3216666666667
+        },
+        {
+          "run_id": "M3600_R900_S42_ALINEA_TRACI_V15",
+          "treatment": "T1",
+          "seed": 42,
+          "q_ramp": 900,
+          "vehicle_class": "U",
+          "planned": 300,
+          "inserted": 300,
+          "arrived": 300,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 126519.0,
+          "source_wait_T_s": 70292.0,
+          "in_network_T_s": 56227.0,
+          "mean_system_time_T_s": 421.73
+        },
+        {
+          "run_id": "M3600_R900_S42_ALINEA_TRACI_V15",
+          "treatment": "T1",
+          "seed": 42,
+          "q_ramp": 900,
+          "vehicle_class": "X",
+          "planned": 150,
+          "inserted": 150,
+          "arrived": 150,
+          "unfinished": 0,
+          "undeparted": 0,
+          "system_time_T_s": 10737.0,
+          "source_wait_T_s": 0.0,
+          "in_network_T_s": 10737.0,
+          "mean_system_time_T_s": 71.58
+        }
+      ],
+      "network_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+      "sumo_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+      "demand_sha256": "6c3e8a3943a14f24cf862b62b5ea2417ebf9bd49d524fff6319dd2778fe66076",
+      "measurement": [
+        [
+          "laneAreaDetector",
+          [
+            [
+              "endPos",
+              "238.8"
+            ],
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "shared_boundary_e2"
+            ],
+            [
+              "jamThreshold",
+              "10"
+            ],
+            [
+              "lane",
+              "shared_approach_0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "0"
+            ],
+            [
+              "speedThreshold",
+              "1.3888888888888888"
+            ],
+            [
+              "timeThreshold",
+              "1"
+            ]
+          ],
+          []
+        ],
+        [
+          "laneAreaDetector",
+          [
+            [
+              "endPos",
+              "204.49"
+            ],
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "ramp_storage_e2"
+            ],
+            [
+              "jamThreshold",
+              "10"
+            ],
+            [
+              "lane",
+              "ramp_storage_0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "0"
+            ],
+            [
+              "speedThreshold",
+              "1.3888888888888888"
+            ],
+            [
+              "timeThreshold",
+              "1"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_up_1300_l0"
+            ],
+            [
+              "lane",
+              "main_up_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "1300"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_up_1300_l1"
+            ],
+            [
+              "lane",
+              "main_up_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "1300"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_merge_section_20_l0"
+            ],
+            [
+              "lane",
+              "merge_section_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_merge_section_20_l1"
+            ],
+            [
+              "lane",
+              "merge_section_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_merge_section_20_l2"
+            ],
+            [
+              "lane",
+              "merge_section_2"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_20_l0"
+            ],
+            [
+              "lane",
+              "main_down_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_20_l1"
+            ],
+            [
+              "lane",
+              "main_down_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "20"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_200_l0"
+            ],
+            [
+              "lane",
+              "main_down_0"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "200"
+            ]
+          ],
+          []
+        ],
+        [
+          "inductionLoop",
+          [
+            [
+              "friendlyPos",
+              "false"
+            ],
+            [
+              "id",
+              "p1_main_down_200_l1"
+            ],
+            [
+              "lane",
+              "main_down_1"
+            ],
+            [
+              "length",
+              "0"
+            ],
+            [
+              "period",
+              "30"
+            ],
+            [
+              "pos",
+              "200"
+            ]
+          ],
+          []
+        ],
+        [
+          "timedEvent",
+          [
+            [
+              "type",
+              "SaveTLSStates"
+            ]
+          ],
+          []
+        ]
+      ],
+      "urban": [],
+      "config_processing": [
+        "processing",
+        [],
+        [
+          [
+            "time-to-teleport",
+            [
+              [
+                "value",
+                "-1"
+              ]
+            ],
+            []
+          ],
+          [
+            "collision.action",
+            [
+              [
+                "value",
+                "warn"
+              ]
+            ],
+            []
+          ],
+          [
+            "collision.check-junctions",
+            [
+              [
+                "value",
+                "true"
+              ]
+            ],
+            []
+          ],
+          [
+            "extrapolate-departpos",
+            [
+              [
+                "value",
+                "false"
+              ]
+            ],
+            []
+          ]
+        ]
+      ],
+      "types_routes": [
+        [
+          "vType",
+          [
+            [
+              "id",
+              "technical_passenger"
+            ],
+            [
+              "vClass",
+              "passenger"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "main_up merge_section main_down"
+            ],
+            [
+              "id",
+              "M_route"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "urban_in shared_approach ramp_storage ramp_accel merge_section main_down"
+            ],
+            [
+              "id",
+              "R_route"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "urban_in shared_approach urban_out"
+            ],
+            [
+              "id",
+              "U_route"
+            ]
+          ],
+          []
+        ],
+        [
+          "route",
+          [
+            [
+              "edges",
+              "cross_in cross_out"
+            ],
+            [
+              "id",
+              "X_route"
+            ]
+          ],
+          []
+        ]
+      ],
+      "last_summary": {
+        "time": "4199.00",
+        "loaded": "4050",
+        "inserted": "4050",
+        "running": "0",
+        "waiting": "0",
+        "ended": "4050",
+        "arrived": "4050",
+        "collisions": "0",
+        "teleports": "0",
+        "halting": "0",
+        "stopped": "0",
+        "meanWaitingTime": "60.75",
+        "meanTravelTime": "130.47",
+        "meanSpeed": "-1.00",
+        "meanSpeedRelative": "-1.00",
+        "discarded": "0",
+        "duration": "0"
+      },
+      "runtime_wall_s": 25.557851499994285,
+      "raw_payload_bytes": 35091731,
+      "shared_scene_equivalence": {
+        "network_sha256": true,
+        "sumo_sha256": true,
+        "measurement": true,
+        "urban": true,
+        "config_processing": true,
+        "types_routes": true
+      },
+      "demand_byte_matched_OPEN": true
+    }
+  ],
+  "qualification": "Existing raw/input eligibility only. Reuse in new wrapper additionally requires unchanged input contract and T1 behavior equivalence.",
+  "new_required": [
+    {
+      "q_main": 3600,
+      "q_ramp": 900,
+      "seed": 17,
+      "treatment": "T2"
+    },
+    {
+      "q_main": 3600,
+      "q_ramp": 750,
+      "seed": 17,
+      "treatment": "T1"
+    },
+    {
+      "q_main": 3600,
+      "q_ramp": 750,
+      "seed": 17,
+      "treatment": "T2"
+    },
+    {
+      "q_main": 3600,
+      "q_ramp": 900,
+      "seed": 23,
+      "treatment": "T2"
+    },
+    {
+      "q_main": 3600,
+      "q_ramp": 750,
+      "seed": 23,
+      "treatment": "T1"
+    },
+    {
+      "q_main": 3600,
+      "q_ramp": 750,
+      "seed": 23,
+      "treatment": "T2"
+    },
+    {
+      "q_main": 3600,
+      "q_ramp": 900,
+      "seed": 42,
+      "treatment": "T2"
+    },
+    {
+      "q_main": 3600,
+      "q_ramp": 750,
+      "seed": 42,
+      "treatment": "T1"
+    },
+    {
+      "q_main": 3600,
+      "q_ramp": 750,
+      "seed": 42,
+      "treatment": "T2"
+    }
+  ]
+}
