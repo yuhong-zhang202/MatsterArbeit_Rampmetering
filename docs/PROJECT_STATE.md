@@ -5,7 +5,9 @@
 
 ## Current Phase
 
-**Development PR review handoff:** The user requested delivery on `codex/development-trial-review-20261007` against verified `main` (baseline `48d3b327fee805e7f9bb6d2cc04d2fee955c242d`), explicitly before an Issue exists. Issue and its acceptance conditions remain未指定／待确认; Draft PR review does not change D-018/D-019 or constitute user acceptance. See [review guide](development/PR_REVIEW_GUIDE_20261007.md) for published versus local-only evidence.
+**2026-10-07 Issue #2 technical investigation: delivered for Draft PR review.** Independent work on `codex/issue-2-actuator-investigation` is bound to PR #1 head `e8bf608a15cf4c4484914467c5550d041c017a62`. The [investigation](development/ACTUATOR_TECHNICAL_INVESTIGATION_20261007.md) and source ledger explain all12 FIX02/72 service windows through credit conservation, compare two actuator sketches, and provide10 passing offline tests; new SUMO scenario starts0. Independent science: `PASS_FOR_BOUNDED_TECHNICAL_INVESTIGATION_DELIVERY`. A-first remains Proposed;300–900 coverage is conditional mathematical opportunity coverage, with actual service/transition safety NOT_VERIFIED. The2008 overview was checked at publisher-abstract level; fulltext access failed and remains limited. Existing12NOT_QUALIFIED/71FAIL/1PASS and R9004200s truncation remain. User/Chat review and a new bounded engineering task are next; no further run is released. Stage6 stays closed; no formal experiment/protocol/decision change; PR #1 neither modified nor merged. Issue source: `artifacts/actuator_investigation_20261007_v1/ISSUE_2_SNAPSHOT.json`.
+
+**PR #1 development review handoff (historical submission context):** Delivery on `codex/development-trial-review-20261007` against verified `main` (baseline `48d3b327fee805e7f9bb6d2cc04d2fee955c242d`) preceded an Issue; its original acceptance conditions were未指定／待确认. The subsequent actuator investigation has Issue #2 above. Draft PR review does not change D-018/D-019 or constitute user acceptance. See [review guide](development/PR_REVIEW_GUIDE_20261007.md) for published versus local-only evidence.
 
 The complete criterion-by-criterion evidence and operation record is `docs/探索验证阶段/STAGE6_EXPLORATORY_VALIDATION_FULL_REPORT_20261003.md`; the shorter next-stage instructions remain in `docs/探索验证阶段/STAGE6_EXPLORATORY_CLOSEOUT_AND_FORMAL_HANDOFF_20261003.md`.
 
@@ -297,7 +299,9 @@ The following issues still require project development, discussion, or instituti
 - confirmation from the chair or examination rules that the thesis may be written in English;
 - the exact date of the interim presentation and subsequent registration.
 
-## Current Blockers and Boundaries
+## Historical Blockers and Boundaries (through 2026-09-30; superseded)
+
+The remaining sections below preserve earlier operational checkpoints. Their Stage6 `PARTIAL`, unidentified-boundary, drafting-lock and permitted-run statements are historical, superseded by D-018/D-019 and the current phase above. They do not authorize new runs. Current unresolved issues are actuator service qualification and formal-design decisions; the protocol remains empty/unfrozen.
 
 The Candidate-C disturbance data contract has now been completed offline for A0 and LOC_M3350 from the locked application outputs. This does not change the P/S/L classifier, the protectable-state interpretation, O2 (`NOT_RESOLVED`), Stage 6 (`PARTIAL`), or the unfrozen formal protocol. The resulting reference periods are screened high-mobility contexts only; they are not proof of normal traffic and are not yet a formal thesis baseline.
 
@@ -307,7 +311,7 @@ The final research question, formal parameters, metrics, replication design, and
 
 There is no remaining blocker to reproducing the fixed upstream smoke test or the project-owned headless minimal-scenario check. The upstream demo warnings remain technical limitations, and visual inspection of the new scenario remains incomplete because the automatic GUI snapshots were unusable.
 
-## Work That May Proceed Now
+## Historical Work That May Proceed (superseded)
 
 - maintain the local project structure and collaboration rules;
 - archive original project and supervisor materials;
@@ -317,7 +321,7 @@ There is no remaining blocker to reproducing the fixed upstream smoke test or th
 - perform environment checks, scenario validation, and explicitly exploratory uncontrolled runs to establish whether intended demand is realized and plausible breakdown and capacity drop occur;
 - repeat the fixed environment check or smoke test when tool versions change.
 
-## Work Deferred Until Formal Design Approval
+## Historical Work Deferred Until Formal Design Approval
 
 - formal or thesis-evidence demand-grid experiments;
 - formal data production;
@@ -326,7 +330,7 @@ There is no remaining blocker to reproducing the fixed upstream smoke test or th
 - drawing thesis conclusions from preliminary runs;
 - large-scale drafting of results or discussion chapters.
 
-## Next Actions
+## Historical Next Actions (superseded)
 
 The versioned Candidate-C catalogue and unchanged-rule reference-library rerun are complete for offline review. A0 has 82 accepted fixed 90 s pooled periods (7,380 s); LOC_M3350 has 38 (3,420 s). Independent structural/hash and four-slice raw numerical checks pass, and route/additional/config/TLS snapshots are hash-bound. Scientific disposition is `PASS_WITH_LIMITED_EXPLORATORY_SCOPE`; the periods remain screened reference contexts, not a formal baseline or normality proof, and do not authorize a baseline/control comparison or a new run.
 

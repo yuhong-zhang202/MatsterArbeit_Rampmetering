@@ -1,0 +1,187 @@
+{
+  "classification": "TECHNICAL_EXPLORATORY_NOT_FORMAL",
+  "base_commit": "e8bf608a15cf4c4484914467c5550d041c017a62",
+  "python": "3.12.4",
+  "script_sha256": "98a3c43408d00b2f06e8c9ad8a082bb6e8e151c3fc5acbe685bb3b58c024fd81",
+  "raw_rows": 50400,
+  "controlled_rows": 43200,
+  "runs": 12,
+  "windows": 72,
+  "window_status_counts": {
+    "FAIL": 71,
+    "PASS": 1
+  },
+  "run_rate_qualification": "12 NOT_QUALIFIED per retained authoritative gates",
+  "actual_crossings_full_control": 6288,
+  "max_step_credit_residual": 2.842170943040401e-14,
+  "full_command_credit": 10142.511991601605,
+  "full_dropped_credit": 3844.261991601604,
+  "evaluation_command_credit": 4905.0891784446385,
+  "evaluation_actual_crossings": 3331,
+  "evaluation_dropped_credit": 1572.0036676489306,
+  "pass_windows": [
+    {
+      "run_id": "DEV_M3600_R750_S23_T1_A03",
+      "q_ramp": 750,
+      "seed": 23,
+      "treatment": "T1",
+      "begin": 2100,
+      "end": 2400,
+      "command_credit": 46.529768362114375,
+      "greens": 43,
+      "actual_crossings": 43,
+      "dropped_credit": 3.516572604996398,
+      "initial_credit": 0.07547754048074995,
+      "final_credit": 0.08867329759874565,
+      "credit_balance_residual": -1.887379141862766e-14,
+      "storage_supply_seconds": 300,
+      "denied_due_seconds": 26,
+      "ideal_unguarded_opportunities": 47,
+      "ideal_window_count_difference": -0.4702316378856253,
+      "denied_reasons_json": "{\"FOLLOWER_POST_RED_PREDICTION\": 20, \"FOLLOWER_STOP_DISTANCE\": 5, \"LEADER_SECURE_GAP\": 1}",
+      "dropped_credit_same_step_reason_json": "{\"FOLLOWER_POST_RED_PREDICTION\": 2.9161952619697047, \"FOLLOWER_STOP_DISTANCE\": 0.5695833629789604, \"LEADER_SECURE_GAP\": 0.030793980047732816, \"MOVING_READY\": 0.0, \"NOT_DUE_OR_MIN_RED\": 0.0, \"STOPPED_READY\": 0.0}",
+      "relative_error": 0.07586043271576642,
+      "engineering_status": "PASS"
+    }
+  ],
+  "max_abs_ideal_window_count_difference": 0.9605429879285197,
+  "input_bindings": [
+    {
+      "path": "results/tables/formal_development_20261007_v1/service_windows_fix02_final.csv",
+      "sha256": "1621add26e5ed5237f3cefe064e46e0654788e0cab30e3d105f7a83d787c06c0"
+    },
+    {
+      "path": "data/raw/formal_development_20261007_v1/DEV_M3600_R750_S17_T1_A03/outputs/controller_steps.csv",
+      "sha256": "630476b455441594d6b662831a7e7bcbc97b3d4089223334403d31586db03757",
+      "bytes": 44469670
+    },
+    {
+      "path": "data/processed/formal_development_20261007_v1/FIX02_T1_R750_S17_A03/FIX02_DATA_GATE.json",
+      "sha256": "bcee58fc0e14e024e1a50c84de86c8548aef967f71e3a4b8b43c445a0d3c078c"
+    },
+    {
+      "path": "data/raw/formal_development_20261007_v1/DEV_M3600_R750_S17_T2_A03/outputs/controller_steps.csv",
+      "sha256": "2f788290c34501f792bd6733294d2feb38aa7601f226438c5cadafd85273de46",
+      "bytes": 44086196
+    },
+    {
+      "path": "data/processed/formal_development_20261007_v1/FIX02_T2_R750_S17_A03/FIX02_DATA_GATE.json",
+      "sha256": "c0ea330e06fc0ac25889a77a2e1e3294c6338ca842ab03c2f8767b02aa95b816"
+    },
+    {
+      "path": "data/raw/formal_development_20261007_v1/DEV_M3600_R750_S23_T1_A03/outputs/controller_steps.csv",
+      "sha256": "cb447d17aca397dce761495fb188337ad1939b6a0b0c5da4ec5ed2a3d99f5ba7",
+      "bytes": 45323549
+    },
+    {
+      "path": "data/processed/formal_development_20261007_v1/FIX02_T1_R750_S23_A03/FIX02_DATA_GATE.json",
+      "sha256": "0ebc7fc3ee9c98a9a8ab3d2a8dceebcc5437e8663240f15c6a8be92e43dade97"
+    },
+    {
+      "path": "data/raw/formal_development_20261007_v1/DEV_M3600_R750_S23_T2_A03/outputs/controller_steps.csv",
+      "sha256": "208258f815f5ac2819a3da910205102c7dc4edcb55d2eb19fdcf696fb33135fc",
+      "bytes": 44524148
+    },
+    {
+      "path": "data/processed/formal_development_20261007_v1/FIX02_T2_R750_S23_A03/FIX02_DATA_GATE.json",
+      "sha256": "c5d589bbb97ccf7ab5dde8897cf5b639c7cde3c933f870a9936a960ceb3f48c0"
+    },
+    {
+      "path": "data/raw/formal_development_20261007_v1/DEV_M3600_R750_S42_T1_A03/outputs/controller_steps.csv",
+      "sha256": "76f88681fe6bf30f5e1cd79b47b9dcf34118bd6ae4d22a00051202cc27a023b0",
+      "bytes": 45333226
+    },
+    {
+      "path": "data/processed/formal_development_20261007_v1/FIX02_T1_R750_S42_A03/FIX02_DATA_GATE.json",
+      "sha256": "b74f0c8eb04db2a90499c6c3729b2a5aff241542f9f1ace0af0dd457307d2fb1"
+    },
+    {
+      "path": "data/raw/formal_development_20261007_v1/DEV_M3600_R750_S42_T2_A03/outputs/controller_steps.csv",
+      "sha256": "e69d8cf3a63ad42ffe55b1e1f4872a0ea039e19258331e799e7ff994e4362f1c",
+      "bytes": 44545335
+    },
+    {
+      "path": "data/processed/formal_development_20261007_v1/FIX02_T2_R750_S42_A03/FIX02_DATA_GATE.json",
+      "sha256": "419e57298cf8f90e54cdb3ccfd7d77e97dba232e91b6e9bedd9caeb704ddb2c1"
+    },
+    {
+      "path": "data/raw/formal_development_20261007_v1/DEV_M3600_R900_S17_T1_A03/outputs/controller_steps.csv",
+      "sha256": "25c34fcf7bc6240e6fb197dfc76e96fc8b2cd1ee8e7a70cd9db85caba263abce",
+      "bytes": 51109045
+    },
+    {
+      "path": "data/processed/formal_development_20261007_v1/FIX02_T1_R900_S17_A03/FIX02_DATA_GATE.json",
+      "sha256": "1565baede32c9a0cbbd4687c41d066920a65b1e801a98c02a534de6ad963a968"
+    },
+    {
+      "path": "data/raw/formal_development_20261007_v1/DEV_M3600_R900_S17_T2_A03/outputs/controller_steps.csv",
+      "sha256": "07e887546fd0fbca55929acaac2eeb5713b71634e056ca3a6372c78f46afc152",
+      "bytes": 51013911
+    },
+    {
+      "path": "data/processed/formal_development_20261007_v1/FIX02_T2_R900_S17_A03/FIX02_DATA_GATE.json",
+      "sha256": "f8678c5083238c4ebaabca9906280e00b11178c4267f7a0e4757ee88eeec95fd"
+    },
+    {
+      "path": "data/raw/formal_development_20261007_v1/DEV_M3600_R900_S23_T1_A03/outputs/controller_steps.csv",
+      "sha256": "c1c52c2fc840b1a44c32c596df0343a3bb3057ca2433fb1a9c1efa27e8cd4179",
+      "bytes": 51182819
+    },
+    {
+      "path": "data/processed/formal_development_20261007_v1/FIX02_T1_R900_S23_A03/FIX02_DATA_GATE.json",
+      "sha256": "4a65f73a360b0f518e7c3e553447ee5fce142bdaab2f5088a82b36e0d7a07ba1"
+    },
+    {
+      "path": "data/raw/formal_development_20261007_v1/DEV_M3600_R900_S23_T2_A03/outputs/controller_steps.csv",
+      "sha256": "7bfc4bd91e69c82c9034e919adaaa08a4dae6f1e75401cb96f0e22fb91098122",
+      "bytes": 51027889
+    },
+    {
+      "path": "data/processed/formal_development_20261007_v1/FIX02_T2_R900_S23_A03/FIX02_DATA_GATE.json",
+      "sha256": "dd6193c935561243ed2c9099164a2334fe340df3da1d1538e17b6c67f23f5a61"
+    },
+    {
+      "path": "data/raw/formal_development_20261007_v1/DEV_M3600_R900_S42_T1_A03/outputs/controller_steps.csv",
+      "sha256": "b7615681d34f06ecd25eaa5311f6ecc8a4a3d9847d6f1163d5dc77a0a7ed5ab0",
+      "bytes": 51022056
+    },
+    {
+      "path": "data/processed/formal_development_20261007_v1/FIX02_T1_R900_S42_A03/FIX02_DATA_GATE.json",
+      "sha256": "947491d8090e12dc33c30c8e1bfdc060a453b0e1871d0e2ef5ee675953ff7dfd"
+    },
+    {
+      "path": "data/raw/formal_development_20261007_v1/DEV_M3600_R900_S42_T2_A03/outputs/controller_steps.csv",
+      "sha256": "7d6e3ade547d04eb245c9c1ba215800ea1ff0694fd0387a206a6bf5afa54aa07",
+      "bytes": 50951103
+    },
+    {
+      "path": "data/processed/formal_development_20261007_v1/FIX02_T2_R900_S42_A03/FIX02_DATA_GATE.json",
+      "sha256": "92c9ea15bbe5bbe482514584d16a9bf9e129f125c838e7ba529976ce01bf385a"
+    }
+  ],
+  "table_bindings": [
+    {
+      "path": "results/tables/actuator_investigation_20261007_v1/category_step_accounting.csv",
+      "sha256": "27aa024fae7ad03443d701360fbb6cc98521905927e578f49e3ad1abb03927e1"
+    },
+    {
+      "path": "results/tables/actuator_investigation_20261007_v1/reason_step_accounting.csv",
+      "sha256": "9575a8fe3423adb11fdac8f2a2b70638b4bc6c6187c23ba99be0b59d0887e603"
+    },
+    {
+      "path": "results/tables/actuator_investigation_20261007_v1/run_credit_balance.csv",
+      "sha256": "ee98d3dec6c02682a3f12f9ff8834165bb32d6def089c9cb3a0a64ddb37b66d3"
+    },
+    {
+      "path": "results/tables/actuator_investigation_20261007_v1/window_credit_balance.csv",
+      "sha256": "d2d04651b165680b7704c17c50dda680f2b36c214ea3c0c477354f8ef04dd6d4"
+    }
+  ],
+  "limitations": [
+    "Logged reasons are priority-selected, not exhaustive independent constraints. Same-step dropped-credit association is an accounting partition, not recoverable causal service after removing one guard.",
+    "Unguarded replay keeps observed final command sequence; it is only scheduler arithmetic. Removing safety would change trajectories and feedback.",
+    "Actual crossing counts independently reconciled to raw step brackets; physical/FCD safety is inherited from version-bound FIX02 gates, not freshly rerun here.",
+    "Raw outputs remain local-only and immutable; no network/model/controller/parameters/thresholds changed.",
+    "R900 endpoint truncation retained; this audit does not re-estimate traffic effects."
+  ]
+}

@@ -1,0 +1,50 @@
+{
+  "repository": "DerKevinRiehl/sumoITScontrol",
+  "read_date": "2026-10-07",
+  "commit": "48a88131f35e2a42f6e0b4511f2f1ee0792daa40",
+  "sources": [
+    {
+      "path": "src/sumoITScontrol/ramp_meter.py",
+      "sha256": "db47dff0cbb3d852989996121f86d8b592297cedb2d664614b143bd631ad6868",
+      "line_count": 118,
+      "anchors": {
+        "18": "saturation_flow_veh_per_sec=0.5,",
+        "83": "def _update_ramp_signal_control_logic_alinea(",
+        "95": "green_time = int(metering_rate * cycle_duration)",
+        "96": "red_time = cycle_duration - green_time",
+        "108": "traci.trafficlight.setProgramLogic(self.tl_id, traffic_light_logic)",
+        "110": "traci.trafficlight.setPhase(self.tl_id, 0)"
+      },
+      "url": "https://github.com/DerKevinRiehl/sumoITScontrol/blob/48a88131f35e2a42f6e0b4511f2f1ee0792daa40/src/sumoITScontrol/ramp_meter.py"
+    },
+    {
+      "path": "src/sumoITScontrol/control/ramp_metering/ALINEA.py",
+      "sha256": "5bb8966798a6060753066fed6eabc5c3dc2b54244f02fd0ebcf32dde5f44bb71",
+      "line_count": 75,
+      "anchors": {
+        "73": "metering_rate=alinea_metering_rate / 100,"
+      },
+      "url": "https://github.com/DerKevinRiehl/sumoITScontrol/blob/48a88131f35e2a42f6e0b4511f2f1ee0792daa40/src/sumoITScontrol/control/ramp_metering/ALINEA.py"
+    }
+  ],
+  "environment": {
+    "python": "3.13.0 (v3.13.0:60403a5409f, Oct  7 2024, 00:37:40) [Clang 15.0.0 (clang-1500.3.9.4)]",
+    "packages": {
+      "traci": "1.26.0",
+      "sumolib": "1.26.0",
+      "sumoITScontrol": "0.1.0"
+    },
+    "sumo_version_method": "live sumo --version reported Eclipse SUMO sumo 1.26.0; version-only process, no scenario or simulation start",
+    "sumo_binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179"
+  },
+  "installed_framework_sources": [
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/lib/python3.13/site-packages/sumoITScontrol/control/ramp_metering/ALINEA.py",
+      "sha256": "70b5a433f40f683cb3160761c4828d5271feed4e570cc2e6217f5a9dd2cd3d81"
+    },
+    {
+      "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/lib/python3.13/site-packages/sumoITScontrol/ramp_meter.py",
+      "sha256": "dd821ce235a4cd8be24067432c1855c0b5a5605e9e0c6c52b5ff350b1d3f00b5"
+    }
+  ]
+}
