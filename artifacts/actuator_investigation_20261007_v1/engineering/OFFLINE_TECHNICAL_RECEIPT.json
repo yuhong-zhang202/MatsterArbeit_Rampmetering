@@ -1,0 +1,168 @@
+{
+  "base_commit": "e8bf608a15cf4c4484914467c5550d041c017a62",
+  "classification": "OFFLINE_TECHNICAL_ONLY",
+  "date": "2026-10-07",
+  "verification_command": ".venv/bin/python -m unittest discover -s tests/actuator_investigation_20261007 -v",
+  "observed_test_result": {
+    "tests": 10,
+    "passed": 10,
+    "failed": 0,
+    "elapsed_s": 18.594
+  },
+  "tested_source_sha256": {
+    "src/actuator_investigation_20261007/offline_contracts.py": "930e5c70e4bb119232eccefb22160662ead8c093579d4d43a6e0c1668a0875d5",
+    "tests/actuator_investigation_20261007/test_offline_contracts.py": "4426611a6874b687741e0a1148d6c7138546be81e6115197bffd059d89aa1d2e"
+  },
+  "protected_baseline_checks": {
+    "AGENTS.md": true,
+    "docs/EXPERIMENT_PROTOCOL.md": true,
+    "docs/DECISIONS.md": true,
+    "scripts/formal_development_20261007_v1/queue_protection.py": true,
+    "scripts/formal_development_20261007_v1/runner.py": true,
+    "scripts/formal_development_20261007_v1/test_offline.py": true,
+    "scripts/formal_development_20261007_v1/control.py": true,
+    "scripts/formal_development_20261007_v1/v15_worker.py": true,
+    "scripts/formal_development_20261007_v1/safe_actuator_fix02.py": true,
+    "src/stage6_safe_actuator_v10.py": true,
+    "docs/development/DEVELOPMENT_TRIAL_SUMMARY_20261007.md": true
+  },
+  "candidate_cycle_fixtures": [
+    {
+      "classification": "UNQUALIFIED_ARITHMETIC_FIXTURE_NOT_SIGNAL_PARAMETERS",
+      "nominal_vehicles_per_cycle": 1,
+      "illustrative_envelope_s": {
+        "nominal_vehicles": 1,
+        "green_s": 1,
+        "yellow_s": 1,
+        "minimum_red_s": 1
+      },
+      "worst_nearest_cycle_mapping_error_integer_rates_300_900": {
+        "relative_error": 0.1111111111111111,
+        "command_veh_h": 810
+      },
+      "rows": [
+        {
+          "command_veh_h": 300,
+          "ideal_cycle_s": "12",
+          "lower_period_s": 12,
+          "upper_period_s": 12,
+          "fraction_cycles_upper": "0",
+          "nearest_period_s": 12,
+          "nearest_nominal_rate_veh_h": 300.0,
+          "relative_mapping_error": 0.0
+        },
+        {
+          "command_veh_h": 450,
+          "ideal_cycle_s": "8",
+          "lower_period_s": 8,
+          "upper_period_s": 8,
+          "fraction_cycles_upper": "0",
+          "nearest_period_s": 8,
+          "nearest_nominal_rate_veh_h": 450.0,
+          "relative_mapping_error": 0.0
+        },
+        {
+          "command_veh_h": 600,
+          "ideal_cycle_s": "6",
+          "lower_period_s": 6,
+          "upper_period_s": 6,
+          "fraction_cycles_upper": "0",
+          "nearest_period_s": 6,
+          "nearest_nominal_rate_veh_h": 600.0,
+          "relative_mapping_error": 0.0
+        },
+        {
+          "command_veh_h": 750,
+          "ideal_cycle_s": "24/5",
+          "lower_period_s": 4,
+          "upper_period_s": 5,
+          "fraction_cycles_upper": "4/5",
+          "nearest_period_s": 5,
+          "nearest_nominal_rate_veh_h": 720.0,
+          "relative_mapping_error": 0.04
+        },
+        {
+          "command_veh_h": 900,
+          "ideal_cycle_s": "4",
+          "lower_period_s": 4,
+          "upper_period_s": 4,
+          "fraction_cycles_upper": "0",
+          "nearest_period_s": 4,
+          "nearest_nominal_rate_veh_h": 900.0,
+          "relative_mapping_error": 0.0
+        }
+      ]
+    },
+    {
+      "classification": "UNQUALIFIED_ARITHMETIC_FIXTURE_NOT_SIGNAL_PARAMETERS",
+      "nominal_vehicles_per_cycle": 2,
+      "illustrative_envelope_s": {
+        "nominal_vehicles": 2,
+        "green_s": 3,
+        "yellow_s": 2,
+        "minimum_red_s": 3
+      },
+      "worst_nearest_cycle_mapping_error_integer_rates_300_900": {
+        "relative_error": 0.058823529411764705,
+        "command_veh_h": 850
+      },
+      "rows": [
+        {
+          "command_veh_h": 300,
+          "ideal_cycle_s": "24",
+          "lower_period_s": 24,
+          "upper_period_s": 24,
+          "fraction_cycles_upper": "0",
+          "nearest_period_s": 24,
+          "nearest_nominal_rate_veh_h": 300.0,
+          "relative_mapping_error": 0.0
+        },
+        {
+          "command_veh_h": 450,
+          "ideal_cycle_s": "16",
+          "lower_period_s": 16,
+          "upper_period_s": 16,
+          "fraction_cycles_upper": "0",
+          "nearest_period_s": 16,
+          "nearest_nominal_rate_veh_h": 450.0,
+          "relative_mapping_error": 0.0
+        },
+        {
+          "command_veh_h": 600,
+          "ideal_cycle_s": "12",
+          "lower_period_s": 12,
+          "upper_period_s": 12,
+          "fraction_cycles_upper": "0",
+          "nearest_period_s": 12,
+          "nearest_nominal_rate_veh_h": 600.0,
+          "relative_mapping_error": 0.0
+        },
+        {
+          "command_veh_h": 750,
+          "ideal_cycle_s": "48/5",
+          "lower_period_s": 9,
+          "upper_period_s": 10,
+          "fraction_cycles_upper": "3/5",
+          "nearest_period_s": 10,
+          "nearest_nominal_rate_veh_h": 720.0,
+          "relative_mapping_error": 0.04
+        },
+        {
+          "command_veh_h": 900,
+          "ideal_cycle_s": "8",
+          "lower_period_s": 8,
+          "upper_period_s": 8,
+          "fraction_cycles_upper": "0",
+          "nearest_period_s": 8,
+          "nearest_nominal_rate_veh_h": 900.0,
+          "relative_mapping_error": 0.0
+        }
+      ]
+    }
+  ],
+  "simulation_starts": 0,
+  "new_formal_runs": 0,
+  "runtime_safety_or_service_qualification": "NOT_RUN_NOT_CLAIMED",
+  "environment_receipt": "PUBLIC_SOURCE_AND_ENVIRONMENT_RECEIPT.json",
+  "technical_shell_error": "Initial gh tree path lacked shell quotes and failed with zsh no matches; fixed quoting and read-only query then passed. No scenario was started."
+}
