@@ -1,0 +1,314 @@
+{
+  "classification": "POST_FAILURE_ENGINEERING_DIAGNOSTIC_NOT_QUALIFICATION",
+  "run_id": "CA_FIXED_R300_S17_A07",
+  "exact_command": ".venv/bin/python scripts/candidate_a_qualification_20261008_v1/runner.py --launch config/candidate_a_qualification_20261008_v1/CA_FIXED_R300_S17_A07/card.json --release artifacts/candidate_a_qualification_20261008_v1/RELEASE_FIXED_R300_A07.json",
+  "permission": "require_escalated for authorized local TraCI socket",
+  "worker": {
+    "run_id": "CA_FIXED_R300_S17_A07",
+    "card_sha256": "69fa8d4584b8b52868efd68eb9fc4d5153dc92fd29811be9aaf3a4724b95412d",
+    "status": "ABORTED_SAFETY_BEFORE_RED",
+    "error": "RuntimeError: STOP unsafe prospective native yellow-to-red transition",
+    "sumo_started": true,
+    "last_completed_step_s": 1206,
+    "decision_time_s": 1206,
+    "prefix_total_crossings": 0,
+    "prefix_crossings_by_segment": {
+      "PRECONTROL": 0,
+      "EXTERNAL_HOLD": 0
+    },
+    "accounting": {
+      "C": 0.5,
+      "C_applied": 0.5,
+      "E": 0,
+      "N": 1,
+      "mapping_command_latency": 0.0,
+      "mapping_quantization": 0.5,
+      "physical_shortfall": -1,
+      "C_minus_E": 0.5,
+      "E_minus_N": -1
+    },
+    "cycle_count": 1,
+    "runtime_qualification": "PENDING_INDEPENDENT_DATA_AND_SCIENCE",
+    "last_accounted_s": 1206,
+    "accounting_complete": true,
+    "accounting_status": "RECONCILED_COMPLETED_PREFIX",
+    "unaccounted_completed_interval_s": null,
+    "qualification_accounting_supported": true
+  },
+  "guardian": {
+    "worker_exit_code": 1,
+    "guardian_reason": "",
+    "elapsed_s": 32.41214854200007,
+    "payload_bytes": 10797838,
+    "card_sha256": "69fa8d4584b8b52868efd68eb9fc4d5153dc92fd29811be9aaf3a4724b95412d",
+    "release_sha256": "bf53fc44b63a9734b879d82a9172064dee49f1867a3070ca04fde224ba754ddd"
+  },
+  "connected": {
+    "attempt": 221,
+    "at_utc": "2026-10-08T00:00:28.570598+00:00",
+    "elapsed_since_start_s": 23.197924250000142,
+    "startup_deadline_monotonic_s": 4071.10039325,
+    "duration_s": 0.001099790999887773,
+    "poll_before": null,
+    "poll_after": null,
+    "outcome": "CONNECTED"
+  },
+  "segments": {
+    "PRECONTROL": {
+      "rows": 600,
+      "first_s": 0,
+      "last_completed_s": 600,
+      "motion_state_counts": {
+        "G": 600
+      },
+      "crossings": 0,
+      "storage_supplied_steps": 0
+    },
+    "EXTERNAL_HOLD": {
+      "rows": 600,
+      "first_s": 600,
+      "last_completed_s": 1200,
+      "motion_state_counts": {
+        "y": 3,
+        "r": 597
+      },
+      "crossings": 0,
+      "storage_supplied_steps": 563
+    },
+    "QUALIFICATION": {
+      "rows": 6,
+      "first_s": 1200,
+      "last_completed_s": 1206,
+      "motion_state_counts": {
+        "G": 3,
+        "y": 3
+      },
+      "crossings": 1,
+      "storage_supplied_steps": 6
+    }
+  },
+  "rows_sequential": true,
+  "native_motion_matches_prediction_for_recorded_steps": true,
+  "native_phase_API_calls": [
+    {
+      "time_s": 0,
+      "method": "setProgram",
+      "value": "A_OPEN",
+      "call_completed": true,
+      "recorded_time_begin_s": 0
+    },
+    {
+      "time_s": 0,
+      "method": "setPhase",
+      "value": 0,
+      "call_completed": true,
+      "recorded_time_begin_s": 0
+    },
+    {
+      "time_s": 600,
+      "method": "setProgram",
+      "value": "CA_C8",
+      "call_completed": true,
+      "recorded_time_begin_s": 600
+    },
+    {
+      "time_s": 600,
+      "method": "setPhase",
+      "value": 1,
+      "call_completed": true,
+      "recorded_time_begin_s": 600
+    },
+    {
+      "time_s": 1200,
+      "method": "setProgram",
+      "value": "CA_C24",
+      "call_completed": true,
+      "recorded_time_begin_s": 1200
+    },
+    {
+      "time_s": 1200,
+      "method": "setPhase",
+      "value": 2,
+      "call_completed": true,
+      "recorded_time_begin_s": 1200
+    },
+    {
+      "time_s": 1200,
+      "method": "setPhase",
+      "value": 0,
+      "call_completed": true,
+      "recorded_time_begin_s": 1200
+    }
+  ],
+  "cycles": [
+    {
+      "cycle_id": "0",
+      "begin_s": "1200",
+      "end_s": "1224",
+      "period_s": "24",
+      "nominal_n": "2",
+      "applied_command_veh_h": "300.0",
+      "command_requested_s": "1200",
+      "command_applied_s": "1200",
+      "application_delay_s": "0",
+      "executed": "True",
+      "denial_reason": "",
+      "completed": "False",
+      "N_G": "1",
+      "N_y": "0",
+      "N_r": "0",
+      "crossing_ids_json": "[\"R_flow.0\"]"
+    }
+  ],
+  "crossings": [
+    {
+      "vehicle_id": "R_flow.0",
+      "crossing_time_lower_s": "1200",
+      "crossing_time_upper_s": "1201",
+      "time_interval": "(lower,upper]",
+      "cycle_id": "0",
+      "motion_signal_state": "G",
+      "state_before": "G",
+      "state_after": "G",
+      "segment": "QUALIFICATION"
+    }
+  ],
+  "duplicate_crossing_ids": false,
+  "red_guard_replay_matches_failure_snapshot": true,
+  "red_guard_unsafe_witnesses": [
+    {
+      "vehicle_id": "R_flow.1",
+      "population": "storage",
+      "gap_m": 1.001999189766508,
+      "required_normal_red_m": 1.1459706723353782,
+      "margin_m": -0.14397148256887027,
+      "safe": false
+    }
+  ],
+  "red_guard_storage_count": 27,
+  "red_guard_ingress_count": 15,
+  "failure_receiver": {
+    "available": true,
+    "reason": "AVAILABLE",
+    "front_id": "R_flow.1",
+    "nearest_internal": "R_flow.0",
+    "leader": {
+      "vehicle_id": "R_flow.0",
+      "lane_id": ":ramp_mid_0_0",
+      "gap_excluding_minGap_m": 30.063050567261598,
+      "secure_gap_m": 0.6365211315041015
+    },
+    "nearest_internal_rear_clearance_m": 31.56105137749509,
+    "required_front_clearance_m": 7.5
+  },
+  "warning_counts": {
+    "self_loop_red_initialization": 17,
+    "collision": 0,
+    "teleport": 0,
+    "emergency braking": 0,
+    "emergency stop": 0
+  },
+  "minimum_recorded_actual_deceleration_m_s2": -4.5,
+  "service_windows": [
+    {
+      "window_s": [
+        1200,
+        1500
+      ],
+      "recorded_steps": 6,
+      "supply_all_recorded_steps": true,
+      "full_window_covered": false,
+      "screen": "NOT_TESTED_INCOMPLETE_WINDOW",
+      "observed_prefix_C": 0.5,
+      "observed_prefix_E": 0.0,
+      "observed_prefix_N": 1,
+      "relative_tracking_error": null
+    },
+    {
+      "window_s": [
+        1500,
+        1800
+      ],
+      "recorded_steps": 0,
+      "supply_all_recorded_steps": null,
+      "full_window_covered": false,
+      "screen": "NOT_TESTED_INCOMPLETE_WINDOW",
+      "observed_prefix_C": 0,
+      "observed_prefix_E": 0,
+      "observed_prefix_N": 0,
+      "relative_tracking_error": null
+    },
+    {
+      "window_s": [
+        1800,
+        2100
+      ],
+      "recorded_steps": 0,
+      "supply_all_recorded_steps": null,
+      "full_window_covered": false,
+      "screen": "NOT_TESTED_INCOMPLETE_WINDOW",
+      "observed_prefix_C": 0,
+      "observed_prefix_E": 0,
+      "observed_prefix_N": 0,
+      "relative_tracking_error": null
+    },
+    {
+      "window_s": [
+        2100,
+        2400
+      ],
+      "recorded_steps": 0,
+      "supply_all_recorded_steps": null,
+      "full_window_covered": false,
+      "screen": "NOT_TESTED_INCOMPLETE_WINDOW",
+      "observed_prefix_C": 0,
+      "observed_prefix_E": 0,
+      "observed_prefix_N": 0,
+      "relative_tracking_error": null
+    },
+    {
+      "window_s": [
+        2400,
+        2700
+      ],
+      "recorded_steps": 0,
+      "supply_all_recorded_steps": null,
+      "full_window_covered": false,
+      "screen": "NOT_TESTED_INCOMPLETE_WINDOW",
+      "observed_prefix_C": 0,
+      "observed_prefix_E": 0,
+      "observed_prefix_N": 0,
+      "relative_tracking_error": null
+    },
+    {
+      "window_s": [
+        2700,
+        3000
+      ],
+      "recorded_steps": 0,
+      "supply_all_recorded_steps": null,
+      "full_window_covered": false,
+      "screen": "NOT_TESTED_INCOMPLETE_WINDOW",
+      "observed_prefix_C": 0,
+      "observed_prefix_E": 0,
+      "observed_prefix_N": 0,
+      "relative_tracking_error": null
+    }
+  ],
+  "manifest_files_verified": 45,
+  "manifest_mismatches": [],
+  "protected_files_verified": 67,
+  "protected_mismatches": [],
+  "failure_snapshot_sha256": "0cb77aa1549d500628fa136742d5119d0cdbdd94c5e23f357090b44c6ccc984d",
+  "worker_receipt_sha256": "3222e28366ec3d38c19cb69a7645e58641b1f78bed24561b04c06ef956bc6103",
+  "guardian_receipt_sha256": "95a263217ccefcddfdb3871080ded7a947111ab75dbc64430bc5323e106b4b04",
+  "ledger_rows": 3,
+  "actual_sumo_starts": 3,
+  "effective_qualification_runs": 0,
+  "changed_production_source": false,
+  "additional_Sumo_starts": 0,
+  "remaining_rates_and_PhaseC": "HOLD",
+  "disposition": "STOP_EXPANSION_PENDING_INDEPENDENT_DATA_AND_SCIENCE",
+  "technical_fix_proposed": null,
+  "limitation": "guard refusal is not an observed collision/emergency event; no motion after1206 was executed; incomplete cycle E0 is prescribed; no supplied full service window or verified safe rate"
+}

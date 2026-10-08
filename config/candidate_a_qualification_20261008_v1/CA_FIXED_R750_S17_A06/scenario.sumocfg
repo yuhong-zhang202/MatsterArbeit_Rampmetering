@@ -1,0 +1,40 @@
+<?xml version='1.0' encoding='utf-8'?>
+<sumoConfiguration>
+  <input>
+    <net-file value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml" />
+    <route-files value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/config/candidate_a_qualification_20261008_v1/CA_FIXED_R750_S17_A06/demand.rou.xml" />
+    <additional-files value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/config/candidate_a_qualification_20261008_v1/CA_FIXED_R750_S17_A06/scenario.add.xml" />
+  </input>
+  <time>
+    <begin value="0" />
+    <end value="4200" />
+    <step-length value="1" />
+  </time>
+  <processing>
+    <time-to-teleport value="-1" />
+    <collision.action value="warn" />
+    <collision.check-junctions value="true" />
+    <extrapolate-departpos value="false" />
+  </processing>
+  <output>
+    <fcd-output value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/candidate_a_qualification_20261008_v1/CA_FIXED_R750_S17_A06/outputs/fcd.xml.gz" />
+    <queue-output value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/candidate_a_qualification_20261008_v1/CA_FIXED_R750_S17_A06/outputs/queues.xml" />
+    <summary-output value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/candidate_a_qualification_20261008_v1/CA_FIXED_R750_S17_A06/outputs/sumo_summary.xml" />
+    <tripinfo-output value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/candidate_a_qualification_20261008_v1/CA_FIXED_R750_S17_A06/outputs/tripinfo.xml" />
+    <vehroute-output value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/candidate_a_qualification_20261008_v1/CA_FIXED_R750_S17_A06/outputs/vehroute.xml" />
+    <tripinfo-output.write-unfinished value="true" />
+    <vehroute-output.write-unfinished value="true" />
+    <precision value="2" />
+    <tripinfo-output.write-undeparted value="true" />
+    <lanechange-output value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/candidate_a_qualification_20261008_v1/CA_FIXED_R750_S17_A06/outputs/lanechanges.xml" />
+  </output>
+  <random_number>
+    <seed value="17" />
+  </random_number>
+  <report>
+    <log value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/candidate_a_qualification_20261008_v1/CA_FIXED_R750_S17_A06/outputs/sumo.log" />
+    <error-log value="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/candidate_a_qualification_20261008_v1/CA_FIXED_R750_S17_A06/outputs/sumo_error.log" />
+    <no-step-log value="true" />
+    <xml-validation value="always" />
+  </report>
+</sumoConfiguration>

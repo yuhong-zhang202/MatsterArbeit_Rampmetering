@@ -1,0 +1,71 @@
+{
+  "classification": "INDEPENDENT_MEASUREMENT_PREREVIEW_NOT_RUNTIME_QUALIFICATION",
+  "scope": "A02 before post-advance repair; replacement A03 requires delta review",
+  "base_commit": "35651751a2e03d1906ff32a267a95077553c4404",
+  "cards": [
+    {
+      "rate": 300,
+      "card_path": "config/candidate_a_qualification_20261008_v1/CA_FIXED_R300_S17_A02/card.json",
+      "card_sha256": "303dabf459278911876cb18f0b7484a317888db55a2c2f201bfaca916e7a831a",
+      "status": "OFFLINE_PASS_NOT_RELEASED"
+    },
+    {
+      "rate": 450,
+      "card_path": "config/candidate_a_qualification_20261008_v1/CA_FIXED_R450_S17_A02/card.json",
+      "card_sha256": "da71e94059e9092f856a685976443634a0ffe9dde0839516e317cdc20ed1a39d",
+      "status": "OFFLINE_PASS_NOT_RELEASED"
+    },
+    {
+      "rate": 600,
+      "card_path": "config/candidate_a_qualification_20261008_v1/CA_FIXED_R600_S17_A02/card.json",
+      "card_sha256": "798ee4205df46aacf2b7b24dd7cfc71a1dd9c926cb9d03a1f579f53d4a32d841",
+      "status": "OFFLINE_PASS_NOT_RELEASED"
+    },
+    {
+      "rate": 750,
+      "card_path": "config/candidate_a_qualification_20261008_v1/CA_FIXED_R750_S17_A02/card.json",
+      "card_sha256": "aa64460a36e946abd1f7c88b2a380ce98f6d5a33cd9a17dbed43d6581c15e2b2",
+      "status": "OFFLINE_PASS_NOT_RELEASED"
+    },
+    {
+      "rate": 900,
+      "card_path": "config/candidate_a_qualification_20261008_v1/CA_FIXED_R900_S17_A02/card.json",
+      "card_sha256": "97d33941cd5bb1d6c4a0d61f7c70999478899b5fb404c3f5c593aed89d65dab9",
+      "status": "OFFLINE_PASS_NOT_RELEASED"
+    }
+  ],
+  "card_source_bindings": {
+    "config/candidate_a_qualification_20261008_v1/PHASE_RATE_CONTRACT.json": "f4af413e055e9f5d9404df0b3644c0538e7fb4cd6082b0e0722cff7740f9ec59",
+    "scripts/candidate_a_qualification_20261008_v1/runner.py": "d0f16717d80ba2dbbf5f93ea4878916caa570e8b75ae95f0c9c4d05dceedff4d",
+    "scripts/candidate_a_qualification_20261008_v1/worker.py": "32c8be6d08336d4b297040bbbd2735828ca2f9c7a80535f161371d361d3d1ea4",
+    "src/candidate_a_qualification_20261008/actor.py": "bbfeaeb8168ed55f6001e4aec19d4e54c984aa45933a339d5c5b78479279be68",
+    "src/candidate_a_qualification_20261008/safety.py": "f11e1854821ba613045f15c7561e41c1baa6fee06e83ff87790e51d4fffe11b5",
+    "tests/candidate_a_qualification_20261008/test_contract.py": "6664f86b944b585732862161d3a1f55c01475b47d6a0a5e693554030ca9ec395"
+  },
+  "context_bindings": {
+    "AGENTS.md": "4df6eb482d63f9d1e6d30dfea6d78c3645577cc08a9d944b818db53601ac281b",
+    "docs/PROJECT_STATE.md": "50588a97afcf04c222c7a9175d81afe11d3c7c3539038e66307014a64d8a7623",
+    "docs/DECISIONS.md": "c4d1e315ac05c22600b6e005aa51b1ef1e984f31dbec9d58f8860fb296613b4f",
+    "docs/EXPERIMENT_PROTOCOL.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "docs/WORKLOG.md": "d05bbda33149686ae4c3714e10fed4b6b8621c071242bd394df45c0ac69aff10",
+    "artifacts/candidate_a_qualification_20261008_v1/AUTHORIZATION.md": "087433a6b5bebe57c5c2967eebf172d6603b9801ad794c14c1a200929b28545b",
+    "artifacts/candidate_a_qualification_20261008_v1/ISSUE_4_SNAPSHOT.json": "152147202ea907a745c0b43b95120ef4d1f4981e1d8d4c6ab317511cbdb9ced1",
+    "config/candidate_a_qualification_20261008_v1/PHASE_RATE_CONTRACT.json": "f4af413e055e9f5d9404df0b3644c0538e7fb4cd6082b0e0722cff7740f9ec59"
+  },
+  "checks": {
+    "all_five_card_hashes": "PASS",
+    "qMain3600_qRamp900_seed17_step1_horizon4200": "PASS",
+    "demand_byte_identity_to_existing_input": "PASS",
+    "all67_protected_input_hashes": "PASS",
+    "six_original300s_windows_and10pct_tolerance": "PASS",
+    "C_E_N_units_and_ledger_observability": "PASS_WITH_POST_ADVANCE_FAILURE_GAP"
+  },
+  "blockers": [
+    "A02 worker can advance SUMO then fail before ledger.end_step. last_completed is greater than actually-accounted time; must explicitly mark unaccounted step and prohibit qualification. Engineer is preparing minimal A03 correction, no launch."
+  ],
+  "nonblocking_notes": [
+    "external_hold_crossings receipt name currently includes all pre-activation crossings, PRECONTROL plus EXTERNAL_HOLD; raw segment rows allow independent separation.",
+    "No actual service/safety/phase qualification can be assigned before raw audit.",
+    "Mapping identity alone is algebraic, not independent physical crossing verification; raw rate/cycle/phase/FCD crosschecks required."
+  ]
+}

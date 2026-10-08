@@ -1,0 +1,105 @@
+{
+  "classification": "READ_ONLY_POSTREFUSAL_NATIVE_SEMANTICS_DIAGNOSTIC",
+  "xml": {
+    "vTypes": [
+      {
+        "id": "technical_passenger",
+        "vClass": "passenger"
+      }
+    ],
+    "custom_junction_stopline_parameters": [],
+    "relevant_lane_or_edge_stop_offset_overrides": [],
+    "step_length_s": "1",
+    "ballistic_override": false,
+    "action_step_override": false,
+    "demand_sha256": "99151ed51419c8d490c0f0b1a91bea23f6be70c5486890a04e1e06b3de5d808e",
+    "demand_matches_reviewed_card": true
+  },
+  "protected_old_helper_sha256": "c48b743972e44cdac8d53b6276efeed75c8bcd45a36c13940735e9d3f317f2d7",
+  "candidate_helper_sha256": "f11e1854821ba613045f15c7561e41c1baa6fee06e83ff87790e51d4fffe11b5",
+  "old_helper_stopped_threshold_m_s": 0.1,
+  "candidate_helper_stopped_threshold": "exactly_zero",
+  "candidate_review_path": "artifacts/candidate_a_qualification_20261008_v1/engineering/PHASE_A_ENGINEERING_REVIEW.md",
+  "candidate_review_sha256": "cf15bb3d1557e4e5f46f29430f396b8d9ac9e5fd2ce3f2651488e33f5dc3e95e",
+  "contract_path": "config/candidate_a_qualification_20261008_v1/PHASE_RATE_CONTRACT.json",
+  "contract_sha256": "f4af413e055e9f5d9404df0b3644c0538e7fb4cd6082b0e0722cff7740f9ec59",
+  "low_positive_speed_regression_test": "test_low_positive_speed_near_line_is_not_stopped_shortcut",
+  "test_source_sha256": "8d94bb1c043e76a234bdf33a38e74f45b677493b92327708c4ab8ab53981b0d6",
+  "native_source_receipt_sha256": "2d2a778c865daeee014245ff0555cbdf077233628c88319b0d3842dbb80439b4",
+  "timeline": [
+    {
+      "time_begin_s": 1198,
+      "motion_state": "r",
+      "position_m": 195.9879543879801,
+      "speed_m_s": 0.0,
+      "lane_end_gap_m": 8.502045612019913
+    },
+    {
+      "time_begin_s": 1199,
+      "motion_state": "r",
+      "position_m": 195.9879543879801,
+      "speed_m_s": 0.0,
+      "lane_end_gap_m": 8.502045612019913
+    },
+    {
+      "time_begin_s": 1200,
+      "motion_state": "G",
+      "position_m": 195.9879543879801,
+      "speed_m_s": 0.0,
+      "lane_end_gap_m": 8.502045612019913
+    },
+    {
+      "time_begin_s": 1201,
+      "motion_state": "G",
+      "position_m": 195.9879543879801,
+      "speed_m_s": 0.0,
+      "lane_end_gap_m": 8.502045612019913
+    },
+    {
+      "time_begin_s": 1202,
+      "motion_state": "G",
+      "position_m": 196.78184475495854,
+      "speed_m_s": 0.7938903669784366,
+      "lane_end_gap_m": 7.708155245041468
+    },
+    {
+      "time_begin_s": 1203,
+      "motion_state": "y",
+      "position_m": 199.48162035357157,
+      "speed_m_s": 2.699775598613039,
+      "lane_end_gap_m": 5.008379646428438
+    },
+    {
+      "time_begin_s": 1204,
+      "motion_state": "y",
+      "position_m": 203.27675032768028,
+      "speed_m_s": 3.795129974108697,
+      "lane_end_gap_m": 1.2132496723197335
+    },
+    {
+      "time_begin_s": 1205,
+      "motion_state": "y",
+      "position_m": 203.44226258074664,
+      "speed_m_s": 0.16551225306636716,
+      "lane_end_gap_m": 1.047737419253366
+    },
+    {
+      "time_begin_s": 1206,
+      "motion_state": "r_REFUSED_NOT_EXECUTED",
+      "position_m": 203.4880008102335,
+      "speed_m_s": 0.04573822948686786,
+      "lane_end_gap_m": 1.001999189766508
+    }
+  ],
+  "source_based_facts": [
+    "default jmStoplineGap1.0; absent lane offset returns0",
+    "yellow/red native braking is active before red and uses normal4.5m/s2 for this type under unoverridden default yellow3.0",
+    "TLS events occur before motion after TraCI commands",
+    "default semi-implicit Euler and1s action step; no local overrides"
+  ],
+  "engineering_inference": "observed near1m slow approach is consistent with native braking, while extra1.1m+reaction envelope denies it; no counterfactual red safety certificate",
+  "no_bug_found": "state coordinates, formula, replay and predicted pending transition agree with deliberately reviewed implementation",
+  "minimal_fix_without_contract_change_identified": false,
+  "no_900_physical_feasibility_inference": true,
+  "all_remaining_runs": "HOLD"
+}

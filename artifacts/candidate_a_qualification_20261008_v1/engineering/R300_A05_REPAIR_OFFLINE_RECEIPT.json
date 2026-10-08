@@ -1,0 +1,25 @@
+{
+  "classification": "MINIMAL_TECHNICAL_REPAIR_READY_FOR_REVIEW_NOT_RELEASED",
+  "unit_command": ".venv/bin/python -m unittest discover -s tests/candidate_a_qualification_20261008 -v",
+  "tests": 24,
+  "test_exit_code": 0,
+  "unit_log_sha256": "84620aade0f3f86eac68c43db497655b7c963087aa7b924228dc032b754d2678",
+  "syntax_command": ".venv/bin/python -m py_compile scripts/candidate_a_qualification_20261008_v1/runner.py scripts/candidate_a_qualification_20261008_v1/worker.py src/candidate_a_qualification_20261008/actor.py src/candidate_a_qualification_20261008/safety.py tests/candidate_a_qualification_20261008/test_contract.py",
+  "syntax_exit_code": 0,
+  "tested_sources_sha256": {
+    "config/candidate_a_qualification_20261008_v1/PHASE_RATE_CONTRACT.json": "f4af413e055e9f5d9404df0b3644c0538e7fb4cd6082b0e0722cff7740f9ec59",
+    "scripts/candidate_a_qualification_20261008_v1/runner.py": "d0f16717d80ba2dbbf5f93ea4878916caa570e8b75ae95f0c9c4d05dceedff4d",
+    "scripts/candidate_a_qualification_20261008_v1/worker.py": "0cb0895e20be739bea7a3808af95b29ac5da2f05dbe2b1534c3e33dc43878052",
+    "src/candidate_a_qualification_20261008/actor.py": "bbfeaeb8168ed55f6001e4aec19d4e54c984aa45933a339d5c5b78479279be68",
+    "src/candidate_a_qualification_20261008/safety.py": "f11e1854821ba613045f15c7561e41c1baa6fee06e83ff87790e51d4fffe11b5",
+    "tests/candidate_a_qualification_20261008/test_contract.py": "5bb4e7493dd77d3071b440e71219ed561fa8c3f3a9167693449f182f7ffad830"
+  },
+  "protected_files_verified": 67,
+  "card_path": "config/candidate_a_qualification_20261008_v1/CA_FIXED_R300_S17_A05/card.json",
+  "card_sha256": "9998db8a4d69eca7a6e3c5aa9e562adc4a460892f322b72e5aef67b2de6802f9",
+  "replaces_run_id": "CA_FIXED_R300_S17_A04",
+  "failure_snapshot_sha256": "44cf27e50063570d8460079169b773ba7301b0fd300d5ae83b600f4516c8197b",
+  "new_sumo_scenario_starts": 1,
+  "replacement_starts": 0,
+  "phaseC_authorized": false
+}

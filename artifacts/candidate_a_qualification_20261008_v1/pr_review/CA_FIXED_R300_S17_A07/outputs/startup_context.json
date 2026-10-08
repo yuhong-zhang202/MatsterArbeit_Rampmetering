@@ -1,0 +1,20 @@
+{
+  "command": [
+    "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+    "-c",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/config/candidate_a_qualification_20261008_v1/CA_FIXED_R300_S17_A07/scenario.sumocfg",
+    "--remote-port",
+    "52226"
+  ],
+  "worker_cwd": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering",
+  "sumo_home": "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/share/sumo",
+  "environment_override_keys": [
+    "SUMO_HOME"
+  ],
+  "other_environment": "inherited unchanged from guardian",
+  "schema_sha256": {
+    "routes_file.xsd": "2ce8e88b6644d87cc6d8acd49b2fc9da29f74e953e67ab4c6e475de5cfe0cb11",
+    "additional_file.xsd": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e",
+    "sumoConfiguration.xsd": "3a17f38bb69fcfaa46ae6e8e1dad548133a4e173368eab524d0cbef9eecad69b"
+  }
+}
