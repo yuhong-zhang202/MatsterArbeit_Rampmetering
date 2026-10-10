@@ -2230,3 +2230,18 @@ Final verification:handoff independent scientific PASS (slow<1.389m/s clarificat
 - Three actual starts/0complete4200s qualifications/0qualified rates; remaining4fixed rates and2conditionalC held. Completed1206s prefix reconciles; only6candidate seconds, C/applied C=.5/E0/N1; all full-window errors null. Final science checked45raw and18derived hashes with0mismatch;67protected hashes preserved.
 - Added full Issue8criteria report and recorded final scientific review, curated byte-identical public evidence/manifests and README entrypoint/HOLD notice. PROJECT_STATE now records final STOP, replacing pending operational status. Earlier checkpoints/failed attempts retained. DECISIONS/protocol/Stage6 closure unchanged; unrelated MemoryCore/private email changes excluded from delivery.
 - Subagent routing: simulation_engineer used for implementation/runtime/native diagnosis; data_analyst used for independent raw/time/CEN/identity/endpoint audit; scientific_reviewer used for final validity/STOP/evidence bounds. Findings reconciled, delivery findings0/0/0; advancement blocker remains. Next user/Chat review and separate decision on a sourced safety-contract reassessment. Next suggestion is not execution authorization or user acceptance.
+
+
+### 2026-10-11 — PR #5 reviewer P2 correction authorized
+
+- GitHub reviewer completed review of30e547cbca1fa7ef97a0c9b0e043b4d870a1ab98 and reported oneP2: sum(empty) writes measured/derived zero for5unobserved300s windows; contradicts prior no-zero-imputation text. Source discussion_r4239491964. User explicitly authorizes originalPR5 repair without newIssue.
+- Scope: null-vs-observed-zero/partial semantics, versioned derived outputs preserving alloldraw/results/audit records, three-class regression and data_analyst then scientific_reviewer. No SUMO,guard/contract/model/config/B/protocol change. PRE_FIX_BINDINGS records original bytes; correction and STOP3 re-review pending. Unrelated MemoryCore work preserved.
+
+
+### 2026-10-11 — PR #5 P2 corrected with versioned evidence and independent review
+
+- Minimal analysis repair now distinguishes observedzero/empty/partialwindows. NewV3JSON usesnull andCSVblank for7measurement fields in5emptywindows;6sfirstrow unchanged. Oldresults/reviews preserved and inaccurateoldno-zero-imputation claim explicitlysuperseded. Originalanalysis source snapshot preserved. No SUMO/guard/contract/model/config changes; original3starts unchanged.
+-6/6offline regressionPASS; fullrawreanalysis45manifest/67protected/1206steps/21170prestates passed.283oldbindings including113raw zero drift;7nonwindowCSV byte-identical; only35measurementcells change inCSV/JSON. V3binding15filesSHA7e1aa4ff8f9f6823e7209194dfec1b669c23f17b8c42a91cd8275ea189a523dc.
+- Independent scientific re-review PASS_FOR_PR5_P2_DATA_EXPRESSION_CORRECTION, findings0/0/0; currentcontractSTOP3 remains supported byunchangedrawguard witness/boundedengineeringdiagnosis, not realredunsafe/Ainfeasible/900physicalimpossible. Qualifiedrates0/highestunknown/900not tested; further rates/C remainheld.
+- UpdatedSTATE, correctionreport, oldreportcurrent-pointer andREADME; noDECISIONS/protocol/AGENTS/Stage6statuschanges. OriginalPR5 updated only, preservingPR1→PR3→PR5 and unrelatedMemoryCore/privateemail. NoautoGithubreview/resolve/merge/close. Next user/Chatreviews; noexecutionauthorization fromthiscorrection.
+- Subagent routing: simulation_engineer not required(analysis-only,noSUMO); data_analyst used forrepair/regression/reanalysis/preservation; scientific_reviewer used forindependentmeasurements/STOP3scope. Findings addressed, fullqualification stillunverified.

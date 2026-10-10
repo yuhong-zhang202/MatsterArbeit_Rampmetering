@@ -127,3 +127,6 @@ The separate development entry point is `.venv/bin/python -B scripts/formal_deve
 ## Candidate A engineering qualification — Issue #4 (2026-10-08)
 
 Read the [qualification/STOP report](docs/development/CANDIDATE_A_QUALIFICATION_20261008.md). Separate actor/runner: `scripts/candidate_a_qualification_20261008_v1/runner.py`; offline tests: `.venv/bin/python -m unittest discover -s tests/candidate_a_qualification_20261008 -v`. Execution requires exact unused reviewed card/release, local TraCI socket access and installed SUMO1.26 schemas. Current result is **NOT_QUALIFIED / STOP_EXPANSION**; consumed cards/releases cannot be reused and no further launch is released. Highest verified rate and900capability remain unknown. This is engineering evidence, not formal results or a Stage6 reopening.
+
+
+PR #5 [2026-10-11 missing-window correction](docs/development/PR5_MISSING_WINDOW_CORRECTION_20261011.md) makes V3 audit outputs current while preserving older data/reviews. Unobserved window measurements are JSONnull/CSVblank;6sactual prefix unchanged. Six analysis regression tests pass; independent science confirms the existing current-contract STOP3. Qualification and900capability remain unverified. Analysis tests: `.venv/bin/python -m unittest discover -s tests/candidate_a_analysis_20261011 -v`; no SUMO rerun.

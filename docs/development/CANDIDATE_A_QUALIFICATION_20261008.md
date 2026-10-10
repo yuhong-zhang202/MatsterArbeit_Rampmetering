@@ -1,5 +1,7 @@
 # Candidate A minimal implementation and qualification — Issue #4
 
+> **Current data correction, 2026-10-11:** [PR #5 P2 correction and re-review](PR5_MISSING_WINDOW_CORRECTION_20261011.md) supersedes the original missing-value representation and no-zero-imputation claim. Use V3 data gate/CSV: five unobserved windows have null measurements; the first6srecord remains unchanged. Original results/reviews below are retained as historical evidence. Qualification not passed; current-contract STOP3 confirmed unchanged.
+
 Date: 2026-10-08. Delivery status: **部分完成，待用户/Chat审查**. Engineering result: **NOT_QUALIFIED_PROSPECTIVE_RED_GUARD_STOP**. Current-contract **Issue STOP3 / STOP_EXPANSION**; no further runs. This report delivers implementation and a scientifically reviewed negative qualification attempt, not formal traffic results.
 
 ## Authority and stack

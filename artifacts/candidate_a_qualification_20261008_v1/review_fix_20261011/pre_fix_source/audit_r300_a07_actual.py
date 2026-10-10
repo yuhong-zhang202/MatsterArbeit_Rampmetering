@@ -55,7 +55,7 @@ def table(name, rows, fields=None):
     writer = csv.DictWriter(s, fieldnames=fields or list(rows[0]))
     writer.writeheader()
     writer.writerows(rows)
-    save(TABLE / name.replace('.csv', '_V3.csv'), s.getvalue())
+    save(TABLE / name, s.getvalue())
 
 
 def close(a, b, tol=1e-8):
@@ -70,18 +70,16 @@ def service(rows, begin, end):
     selected = [r for r in rows if begin <= int(r['time_begin_s']) < end]
     complete = len(selected) == end-begin
     supplied = complete and all(r['storage_supply'] == 'True' for r in selected)
-    # No recorded step is missing evidence, not an observed zero measurement.
-    C = sum(float(r['C_delta']) for r in selected) if selected else None
-    A = sum(float(r['C_applied_delta']) for r in selected) if selected else None
-    E = sum(int(r['E_delta']) for r in selected) if selected else None
-    N = sum(int(r['N_delta']) for r in selected) if selected else None
+    C = sum(float(r['C_delta']) for r in selected)
+    A = sum(float(r['C_applied_delta']) for r in selected)
+    E = sum(int(r['E_delta']) for r in selected)
+    N = sum(int(r['N_delta']) for r in selected)
     error = abs(C-N)/C if complete and supplied and C else None
     status = 'NOT_TESTED_INCOMPLETE_WINDOW' if not complete else 'NOT_TESTED_SUPPLY' if not supplied else 'PASS' if error <= .1+1e-12 else 'FAIL'
     return dict(begin_s=begin, end_s=end, observed_steps=len(selected), required_steps=end-begin,
                 full_window=complete, sustained_supply_verified=supplied, C_observed=C,
                 C_applied_observed=A, E_observed=E, N_observed=N,
-                command_latency=C-A if selected else None, quantization=A-E if selected else None,
-                physical_shortfall=E-N if selected else None,
+                command_latency=C-A, quantization=A-E, physical_shortfall=E-N,
                 tracking_error=error, status=status)
 
 
@@ -342,12 +340,7 @@ def main():
         documentation_impact='Parent must update PROJECT_STATE and WORKLOG with actual early safety stop; analyst write scope excludes governance.',
         bindings={str((RAW/'guardian_receipt.json').relative_to(ROOT)):sha(RAW/'guardian_receipt.json'),str(release.relative_to(ROOT)):sha(release),str(Path(__file__).relative_to(ROOT)):sha(__file__),
                   'raw_manifest':manifest})
-    report['schema_version'] = 3
-    report['supersedes'] = 'R300_A07_ACTUAL_DATA_GATE_V2.json'
-    report['supersedes_sha256'] = sha(DEST/'R300_A07_ACTUAL_DATA_GATE_V2.json')
-    report['missing_value_policy'] = 'Wholly unobserved windows: JSON null / CSV blank for all measurement sums and differences; observed zero remains numeric zero; partial observed sums retained with no qualification.'
-    report['historical_correction'] = 'The earlier V2 service(empty) zero sums and no-zero-imputation prose were inconsistent. V3 corrects expression only; original V2 artifacts/reviews are preserved, not valid missing-value evidence.'
-    save(DEST/'R300_A07_ACTUAL_DATA_GATE_V3.json',json.dumps(report,indent=2)+'\n')
+    save(DEST/'R300_A07_ACTUAL_DATA_GATE_V2.json',json.dumps(report,indent=2)+'\n')
     print(json.dumps({k:report[k] for k in ['disposition','last_completed_s','C','E','N','manifest_files_verified','pre_state_observations_checked','source_backlog_due']},indent=2))
 
 
