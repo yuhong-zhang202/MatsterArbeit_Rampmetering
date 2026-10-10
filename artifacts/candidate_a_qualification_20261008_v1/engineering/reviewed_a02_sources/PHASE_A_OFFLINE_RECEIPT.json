@@ -1,0 +1,67 @@
+{
+  "classification": "OFFLINE_GATE_READY_FOR_INDEPENDENT_REVIEW",
+  "base_commit": "35651751a2e03d1906ff32a267a95077553c4404",
+  "unit_command": ".venv/bin/python -m unittest discover -s tests/candidate_a_qualification_20261008 -v",
+  "tests": 18,
+  "test_exit_code": 0,
+  "unit_log_sha256": "263266967d92f9d229a81317090d33ddcb6611efd5457edd9de40c75652e7467",
+  "syntax_command": ".venv/bin/python -m py_compile src/candidate_a_qualification_20261008/actor.py src/candidate_a_qualification_20261008/safety.py scripts/candidate_a_qualification_20261008_v1/runner.py scripts/candidate_a_qualification_20261008_v1/worker.py tests/candidate_a_qualification_20261008/test_contract.py",
+  "syntax_exit_code": 0,
+  "tested_sources_sha256": {
+    "config/candidate_a_qualification_20261008_v1/PHASE_RATE_CONTRACT.json": "f4af413e055e9f5d9404df0b3644c0538e7fb4cd6082b0e0722cff7740f9ec59",
+    "scripts/candidate_a_qualification_20261008_v1/runner.py": "d0f16717d80ba2dbbf5f93ea4878916caa570e8b75ae95f0c9c4d05dceedff4d",
+    "scripts/candidate_a_qualification_20261008_v1/worker.py": "32c8be6d08336d4b297040bbbd2735828ca2f9c7a80535f161371d361d3d1ea4",
+    "src/candidate_a_qualification_20261008/actor.py": "bbfeaeb8168ed55f6001e4aec19d4e54c984aa45933a339d5c5b78479279be68",
+    "src/candidate_a_qualification_20261008/safety.py": "f11e1854821ba613045f15c7561e41c1baa6fee06e83ff87790e51d4fffe11b5",
+    "tests/candidate_a_qualification_20261008/test_contract.py": "6664f86b944b585732862161d3a1f55c01475b47d6a0a5e693554030ca9ec395"
+  },
+  "protected_files_verified": 67,
+  "cards": [
+    {
+      "rate": 300,
+      "card_path": "config/candidate_a_qualification_20261008_v1/CA_FIXED_R300_S17_A02/card.json",
+      "card_sha256": "303dabf459278911876cb18f0b7484a317888db55a2c2f201bfaca916e7a831a",
+      "status": "OFFLINE_PASS_NOT_RELEASED"
+    },
+    {
+      "rate": 450,
+      "card_path": "config/candidate_a_qualification_20261008_v1/CA_FIXED_R450_S17_A02/card.json",
+      "card_sha256": "da71e94059e9092f856a685976443634a0ffe9dde0839516e317cdc20ed1a39d",
+      "status": "OFFLINE_PASS_NOT_RELEASED"
+    },
+    {
+      "rate": 600,
+      "card_path": "config/candidate_a_qualification_20261008_v1/CA_FIXED_R600_S17_A02/card.json",
+      "card_sha256": "798ee4205df46aacf2b7b24dd7cfc71a1dd9c926cb9d03a1f579f53d4a32d841",
+      "status": "OFFLINE_PASS_NOT_RELEASED"
+    },
+    {
+      "rate": 750,
+      "card_path": "config/candidate_a_qualification_20261008_v1/CA_FIXED_R750_S17_A02/card.json",
+      "card_sha256": "aa64460a36e946abd1f7c88b2a380ce98f6d5a33cd9a17dbed43d6581c15e2b2",
+      "status": "OFFLINE_PASS_NOT_RELEASED"
+    },
+    {
+      "rate": 900,
+      "card_path": "config/candidate_a_qualification_20261008_v1/CA_FIXED_R900_S17_A02/card.json",
+      "card_sha256": "97d33941cd5bb1d6c4a0d61f7c70999478899b5fb404c3f5c593aed89d65dab9",
+      "status": "OFFLINE_PASS_NOT_RELEASED"
+    }
+  ],
+  "new_sumo_scenario_starts": 0,
+  "phaseC_authorized": false,
+  "resource_limits": {
+    "wall_limit_s": 180,
+    "startup_limit_s": 60,
+    "run_limit_bytes": 300000000,
+    "new_raw_limit_bytes": 4000000000,
+    "minimum_free_bytes": 5000000000,
+    "poll_s": 0.2
+  },
+  "limitations": [
+    "No runtime phase/service/safety qualification yet",
+    "n=2 and timings are prospective engineering choices",
+    "XSD gate not run offline: lxml unavailable; native xml-validation always retained",
+    "A01 prepared snapshots were never launched; use final A02 only"
+  ]
+}

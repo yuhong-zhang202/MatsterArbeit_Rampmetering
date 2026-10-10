@@ -1,0 +1,15 @@
+# R300 A05 technical failure and A06 installed-schema repair
+
+A05 exact-card single replacement was executed using `runner.py --launch .../CA_FIXED_R300_S17_A05/card.json --release artifacts/candidate_a_qualification_20261008_v1/RELEASE_FIXED_R300_A05.json`. An earlier release-field preflight rejection occurred before any reservation/process; root separately preserved it. Corrected release hash is recorded in the actual guardian receipt.
+
+The repaired callback works: startup trace records213 attempts ending CONNECTED at22.3403 s. SUMO then exits on route schema loading before the first simulationStep: `no declaration found for element routes`; worker observes `FatalTraCIError: Connection closed by SUMO.` Last completed/accounted0, C/E/N0, cycle0, empty service/phase/crossing rows. This is the second technical failure, **not** a supplied service failure or effective qualification. No traffic-state safety inference is supported.
+
+Guardian34.47609 s,912457 bytes, no budget trigger. Native warnings explicitly retain missing/incorrect SUMO_HOME, unavailable guessed local schemas and17 expected self-loop red program warnings. No collision/braking/teleport traffic event is observed because no step advances. Entire immutable output at `data/raw/candidate_a_qualification_20261008_v1/CA_FIXED_R300_S17_A05/outputs/`, including startup JSONL, native logs, raw output headers, worker/failure/guardian receipts and exact source/card/input snapshots. Execution ledger retains A04 and A05; A05 release binds A04 failed snapshot. A05 failure snapshot SHA256 `1ffebe091210c55a64955f5eb080569c155c7c68d8649cd053614b6c69ecdd54`.
+
+## Cause and minimal repair
+
+New worker omitted the protected `v15_worker.py:388-399` local override `SUMO_HOME=SUMO.parent.parent/share/sumo`. Installed schemas actually exist under `EclipseSUMO/share/sumo/data/xsd`, rather than the fallback `EclipseSUMO/data/xsd`. A06 restores exactly the previous worker override and passes the resulting environment only to the owned SUMO child; other inherited environment is unchanged. It verifies routes/additional/configuration schemas exist before launch and records exact command, cwd, override key and schema hashes in startup_context.json. `xml-validation always`, all XML bytes and model/phase/demand/step/feedback parameters remain unchanged. No dependency installation or fallback validation relaxation.
+
+Full25/25 offline tests pass, including actual callback mock and correct installed-schema environment preservation; syntax and67 protected hashes pass. No extra SUMO/neutral startup test. A06 current source/card bindings are in `R300_A06_REPAIR_OFFLINE_RECEIPT.json` and five-card manifest `PHASE_A_A06_FINAL_CARDS.json`. Historical static audit's missing-schema guess is superseded by the verified installed share/sumo path; offline XSD validation itself is still not performed.
+
+Actual SUMO starts2; technical failures2; effective qualification runs0. A06 has not started. Root must bind independent exact increment review and A05 failure/repair evidence before one R300 A06 retry. Other rates and Phase C remain HOLD. No result-based parameter search is authorized.

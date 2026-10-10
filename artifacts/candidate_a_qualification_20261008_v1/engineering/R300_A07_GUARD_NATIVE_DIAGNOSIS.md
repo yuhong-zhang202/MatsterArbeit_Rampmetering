@@ -1,0 +1,29 @@
+# R300 A07 native stopping and prospective guard diagnostic
+
+Disposition: **no contract-preserving software repair identified; retain HOLD pending independent scientific STOP classification**. A07 demonstrates rejection by the registered conservative witness. It does not demonstrate an executed unsafe red transition, a physical900 veh/h ceiling, or an observed per-cycle standard packet of1.
+
+## Reproducible primary-source check
+
+Read only official SUMO tag `v1_26_0`. Raw HTTP bytes, exact SHA-256 and physical file line anchors are saved in `R300_A07_NATIVE_SOURCE_RECEIPT.json`; rendered web line numbers compress source spacing and must not replace these physical lines. An initial sandbox DNS request failed without writing a receipt; a read-only network escalation obtained all6 sources. No installation, compilation, dependency/environment change or additional SUMO execution occurred.
+
+Native red/yellow stopping uses default `jmStoplineGap=1.0 m` when unset, combined with the lane stop offset; absent lane offsets return0. It can adapt the desired offset to available braking space. Neither this default nor the custom guard is a scientific clearance standard. See [MSVehicle.cpp, physical lines125,2728–2776](https://github.com/eclipse-sumo/sumo/blob/v1_26_0/src/microsim/MSVehicle.cpp#L2728), [MSLane.cpp3792–3800](https://github.com/eclipse-sumo/sumo/blob/v1_26_0/src/microsim/MSLane.cpp#L3792).
+
+The snapshotted type only specifies `id=technical_passenger, vClass=passenger`; no junction stopline override or relevant edge/lane stopOffset is present. Step1 s is explicit, with no ballistic or default-action-step override. Parsed XML checks and hashes are in `R300_A07_GUARD_NATIVE_DIAGNOSIS_RECEIPT.json`. The protected route, network, type and native safety modes remain unchanged.
+
+TLS events execute after TraCI commands and before motion, matching the worker's prospective1206 transition check and all1206 actual post-step state observations. [MSNet.cpp795,832,853,859](https://github.com/eclipse-sumo/sumo/blob/v1_26_0/src/microsim/MSNet.cpp#L795). Yellow and red both enter native braking checks; the native stopDecel is at least the type's normal deceleration. With the unoverridden yellow-min-decel default3.0 and the observed normal4.5 m/s², that expression selects4.5. [MSVehicle.cpp2740,2851,2871](https://github.com/eclipse-sumo/sumo/blob/v1_26_0/src/microsim/MSVehicle.cpp#L2740), [MSFrame.cpp506](https://github.com/eclipse-sumo/sumo/blob/v1_26_0/src/microsim/MSFrame.cpp#L506).
+
+Krauss calls native safe-stop calculation with the action-step headway. Default semi-implicit Euler braking uses a discrete stopping calculation; it is not exactly the guard's continuous `v²/(2b)` plus another reaction step. [MSCFModel_Krauss.cpp101–107](https://github.com/eclipse-sumo/sumo/blob/v1_26_0/src/microsim/cfmodels/MSCFModel_Krauss.cpp#L101), [MSCFModel.cpp92,849](https://github.com/eclipse-sumo/sumo/blob/v1_26_0/src/microsim/cfmodels/MSCFModel.cpp#L849), [MSFrame.cpp367](https://github.com/eclipse-sumo/sumo/blob/v1_26_0/src/microsim/MSFrame.cpp#L367). These mechanisms explain why a sufficient custom witness can fail without proving a native unsafe outcome. This is source-based inference, not a simulated counterfactual.
+
+## Margin provenance and exact refusal
+
+`src/stage6_safe_actuator_v10.py:12` describes1.1 m as reused from the reviewed V9 guard. The old helper exempts speeds below0.1 m/s; old FIX02/V15 results cannot certify Candidate A. Candidate A `safety.py` intentionally exempts exactly zero only. Its current test `test_low_positive_speed_near_line_is_not_stopped_shortcut`, contract and `PHASE_A_ENGINEERING_REVIEW.md` explicitly require every positive speed. Hashes of all these supporting files are in the diagnosis receipt. No source-derived or empirical minimum-clearance justification for1.1 m is established by this diagnosis.
+
+The last observed front approaches the native stop point during yellow: at1204 gap1.2132496723 m/speed3.7951299741 m/s; at1205 gap1.0477374193 m/speed0.1655122531 m/s; at1206 gap1.0019991898 m/speed0.0457382295 m/s. The full-precision offline replay reproduces the sole failure: required1.1459706723 m, margin−0.1439714826 m. No coordinate error, missing identity, stale-event error or mistaken helper branch is identified. See runtime diagnostic JSON for all42 checked storage/ingress states and the exact replay equality.
+
+A future native step might stop this vehicle safely; that statement is unverified because the step was deliberately refused. Restoring the old below0.1 shortcut, reducing1.1 m, deleting the reaction allowance, extending yellow or changing nominal packet would alter the reviewed contract or timing. None is proposed as an ordinary bug fix. No evidence supports lowering model safety, clearance, the10% service screen or other protected settings.
+
+## Qualification boundary and handoff
+
+The planned24 s cycle has only6 motion seconds observed (3G,3y),1G crossing, no completed-cycle E packet. This partial prefix cannot estimate normal packet size or safe sustainable rate. C0.5/E0/N1 closes under the unfinished-cycle convention; all6 full service windows remain untested. Native collision/emergency events were not observed in the executed prefix; the red transition itself is unexecuted. Other rates and natural T1 integrations remain held.
+
+Issue STOP3 asks whether a safety problem can be solved minimally. The current software implements its reviewed witness correctly and no repair retaining that witness has been identified. This is enough to stop expansion and deliver negative/unverified qualification evidence now. A conclusive physical impossibility claim, or revised engineering safety contract and any later run authorization, requires the independent data/scientific decision. This specialist makes neither decision.
