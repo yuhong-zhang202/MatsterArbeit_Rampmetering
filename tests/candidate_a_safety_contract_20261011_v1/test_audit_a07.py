@@ -4,8 +4,10 @@ from __future__ import annotations
 
 import importlib.util
 import math
+import tempfile
 import unittest
 from pathlib import Path
+from unittest.mock import patch
 
 SCRIPT = Path(__file__).resolve().parents[2] / "scripts/candidate_a_safety_contract_20261011_v1/audit_a07.py"
 SPEC = importlib.util.spec_from_file_location("candidate_a_a07_audit", SCRIPT)
@@ -74,9 +76,26 @@ class AuditA07Tests(unittest.TestCase):
     def test_bound_recorded_inputs(self):
         result = audit_module.audit()
         self.assertEqual(result["status"], "PASS")
+        self.assertTrue(result["public_evidence_only"])
+        self.assertFalse(result["local_raw_verified"])
+        self.assertFalse(result["thin_phase_fields_reconciled_to_local_raw"])
         self.assertEqual(result["guard_witnesses"], 42)
         self.assertEqual(result["unsafe_ids"], ["R_flow.1"])
         self.assertEqual(result["service_observed_steps"], [6, 0, 0, 0, 0, 0])
+
+    def test_public_audit_does_not_require_ignored_raw(self):
+        with tempfile.TemporaryDirectory() as directory:
+            missing_raw = Path(directory) / "intentionally_absent_raw"
+            with patch.object(audit_module, "RAW", missing_raw):
+                self.assertEqual(audit_module.audit()["status"], "PASS")
+                with self.assertRaises(FileNotFoundError):
+                    audit_module.audit(verify_local_raw=True)
+
+    def test_public_phase_derivative_is_bound_but_not_raw_reconstruction(self):
+        result = audit_module.audit()
+        self.assertEqual(result["last_completed_s"], 1206)
+        self.assertFalse(result["thin_phase_fields_reconciled_to_local_raw"])
+        self.assertEqual(result["phase_thin_sha256"], audit_module.sha256(audit_module.PHASE_THIN))
 
 
 if __name__ == "__main__":

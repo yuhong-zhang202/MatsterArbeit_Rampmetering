@@ -10,14 +10,18 @@ import csv
 import hashlib
 import json
 import math
+import argparse
 from collections import Counter
 from pathlib import Path
 
 ROOT = Path(__file__).resolve().parents[2]
 RAW = ROOT / "data/raw/candidate_a_qualification_20261008_v1/CA_FIXED_R300_S17_A07"
 PUBLIC = ROOT / "artifacts/candidate_a_qualification_20261008_v1/pr_review/CA_FIXED_R300_S17_A07/outputs"
+PUBLIC_RECEIPT = PUBLIC.parent / "guardian_receipt.json"
 GATE = ROOT / "data/processed/candidate_a_qualification_20261008_v1/R300_A07_ACTUAL_DATA_GATE_V3.json"
 WINDOW_CSV = ROOT / "results/tables/candidate_a_qualification_20261008_v1/R300_A07_SERVICE_WINDOWS_V3.csv"
+PHASE_THIN = ROOT / "results/tables/candidate_a_qualification_20261008_v1/R300_A07_PHASE_LEDGER_THIN_V3.csv"
+BINDINGS = ROOT / "data/processed/candidate_a_qualification_20261008_v1/R300_A07_FINAL_DERIVED_BINDINGS_V3.json"
 SNAPSHOT_SHA256 = "0cb77aa1549d500628fa136742d5119d0cdbdd94c5e23f357090b44c6ccc984d"
 WINDOW_FIELDS = (
     "C_observed", "C_applied_observed", "E_observed", "N_observed",
@@ -64,17 +68,50 @@ def validate_windows(windows: list[dict], csv_rows: list[dict]) -> list[int]:
     return observed
 
 
-def audit() -> dict:
-    output = RAW / "outputs"
-    raw_snapshot = output / "failure_snapshot.json"
-    guardian = json.loads((RAW / "guardian_receipt.json").read_text())
-    for name in ("failure_snapshot.json", "phase_steps.csv", "cycles.csv", "crossings.csv"):
-        if sha256(output / name) != guardian["files_sha256"][name]:
-            raise ValueError(f"guardian hash mismatch: {name}")
-    if sha256(raw_snapshot) != SNAPSHOT_SHA256 or sha256(PUBLIC / "failure_snapshot.json") != SNAPSHOT_SHA256:
-        raise ValueError("bound raw/public snapshot hash mismatch")
+def audit(*, verify_local_raw: bool = False) -> dict:
+    """Audit committed evidence; optionally verify local raw against its guardian.
 
-    failure = json.loads(raw_snapshot.read_text())
+    The thin phase ledger is a committed derivative, not a byte-identical copy
+    of the ignored raw phase_steps.csv. Its source-level reconstruction remains
+    outside the public-only audit.
+    """
+    guardian = json.loads(PUBLIC_RECEIPT.read_text())
+    for name in ("failure_snapshot.json", "cycles.csv", "crossings.csv"):
+        if sha256(PUBLIC / name) != guardian["files_sha256"][name]:
+            raise ValueError(f"public guardian hash mismatch: {name}")
+    if sha256(PUBLIC / "failure_snapshot.json") != SNAPSHOT_SHA256:
+        raise ValueError("bound public snapshot hash mismatch")
+
+    bindings = json.loads(BINDINGS.read_text())["files_sha256"]
+    for path in (GATE, WINDOW_CSV, PHASE_THIN):
+        relative = path.relative_to(ROOT).as_posix()
+        if sha256(path) != bindings[relative]:
+            raise ValueError(f"V3 binding mismatch: {relative}")
+
+    if verify_local_raw:
+        output = RAW / "outputs"
+        if sha256(RAW / "guardian_receipt.json") != sha256(PUBLIC_RECEIPT):
+            raise ValueError("public/local guardian receipt drift")
+        raw_guardian = json.loads((RAW / "guardian_receipt.json").read_text())
+        for name in ("failure_snapshot.json", "phase_steps.csv", "cycles.csv", "crossings.csv"):
+            if sha256(output / name) != raw_guardian["files_sha256"][name]:
+                raise ValueError(f"local guardian hash mismatch: {name}")
+        if sha256(output / "failure_snapshot.json") != SNAPSHOT_SHA256:
+            raise ValueError("bound local raw snapshot hash mismatch")
+        for name in ("failure_snapshot.json", "cycles.csv", "crossings.csv"):
+            if sha256(output / name) != sha256(PUBLIC / name):
+                raise ValueError(f"public/local byte drift: {name}")
+        with (output / "phase_steps.csv").open(newline="") as stream:
+            raw_phases = list(csv.DictReader(stream))
+        with PHASE_THIN.open(newline="") as stream:
+            thin_phases = list(csv.DictReader(stream))
+        if len(raw_phases) != len(thin_phases) or any(
+            any(raw_row.get(key) != value for key, value in thin_row.items())
+            for raw_row, thin_row in zip(raw_phases, thin_phases)
+        ):
+            raise ValueError("committed thin phase fields drift from local raw")
+
+    failure = json.loads((PUBLIC / "failure_snapshot.json").read_text())
     snapshot = failure["snapshot"]
     if not (
         failure["status"] == "ABORTED_SAFETY_BEFORE_RED"
@@ -116,14 +153,16 @@ def audit() -> dict:
     if not sensitivity > gap:
         raise ValueError("one-constant algebra sensitivity unexpectedly passes")
 
-    with (output / "phase_steps.csv").open(newline="") as stream:
+    with PHASE_THIN.open(newline="") as stream:
         phases = list(csv.DictReader(stream))
-    with (output / "crossings.csv").open(newline="") as stream:
+    with (PUBLIC / "crossings.csv").open(newline="") as stream:
         crossings = list(csv.DictReader(stream))
-    with (output / "cycles.csv").open(newline="") as stream:
+    with (PUBLIC / "cycles.csv").open(newline="") as stream:
         cycles = list(csv.DictReader(stream))
     if len(phases) != 1206 or phases[-1]["time_end_s"] != "1206" or phases[-1]["state_after"] != "y":
-        raise ValueError("completed phase prefix mismatch")
+        raise ValueError("committed thin phase prefix mismatch")
+    if any(int(row["time_begin_s"]) != i or int(row["time_end_s"]) != i + 1 for i, row in enumerate(phases)):
+        raise ValueError("committed thin phase prefix has missing or duplicate steps")
     if len(crossings) != 1 or crossings[0]["vehicle_id"] != "R_flow.0" or crossings[0]["motion_signal_state"] != "G":
         raise ValueError("crossing prefix mismatch")
     if len(cycles) != 1 or cycles[0]["completed"] != "False":
@@ -140,8 +179,13 @@ def audit() -> dict:
     if gate["other_fixed_rates"] != "NOT_RUN_HELD" or gate["phaseC"] != "NOT_PREPARED_HELD":
         raise ValueError("held scenarios misclassified")
     return {
-        "classification": "OFFLINE_RECORDED_PREFIX_AUDIT_ONLY",
+        "classification": "OFFLINE_COMMITTED_EVIDENCE_AUDIT_ONLY",
         "status": "PASS",
+        "public_evidence_only": not verify_local_raw,
+        "local_raw_verified": verify_local_raw,
+        "thin_phase_fields_reconciled_to_local_raw": verify_local_raw,
+        "phase_thin_sha256": sha256(PHASE_THIN),
+        "public_guardian_sha256": sha256(PUBLIC_RECEIPT),
         "snapshot_sha256": SNAPSHOT_SHA256,
         "gate_sha256": sha256(GATE),
         "service_csv_sha256": sha256(WINDOW_CSV),
@@ -161,4 +205,7 @@ def audit() -> dict:
 
 
 if __name__ == "__main__":
-    print(json.dumps(audit(), indent=2, sort_keys=True))
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument("--verify-local-raw", action="store_true", help="Add guardian/hash checks of ignored local raw files; unavailable in a clean checkout")
+    args = parser.parse_args()
+    print(json.dumps(audit(verify_local_raw=args.verify_local_raw), indent=2, sort_keys=True))
