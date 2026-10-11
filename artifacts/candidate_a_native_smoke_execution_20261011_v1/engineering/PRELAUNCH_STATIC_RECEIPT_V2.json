@@ -1,0 +1,87 @@
+{
+  "status": "PASS_FOR_EXACT_SINGLE_SMOKE_PRELAUNCH_STATIC_ONLY",
+  "time_utc": "2026-10-11T19:34:46.229050+00:00",
+  "HEAD": "e85b3c815ea6fef1bc054cd8249e3a138fc0cac0",
+  "card_sha256": "7f74fa8cecb94a81e0d86a2ac2422fd10fa0ffcb3d7cf39a16bfa7d7f53b89d0",
+  "authorization_sha256": "c16e16368884d04c4451accd8e54dbbd88c827651eb71968b7a8ef14f9d8c58b",
+  "release_sha256": "80ea3ab3a472dab5014d489bcbb3568cbd1ffee41c7a75f597708b979092da71",
+  "authorization": {
+    "created_utc": "2026-10-11T19:32:24.295120+00:00",
+    "SUMO_execution_authorized": true,
+    "run_id": "CA_NATIVE_PHASE_R300_S17_SMOKE01",
+    "card_sha256": "7f74fa8cecb94a81e0d86a2ac2422fd10fa0ffcb3d7cf39a16bfa7d7f53b89d0",
+    "human_authorization_reference": "artifacts/candidate_a_native_smoke_execution_20261011_v1/USER_AUTHORIZATION_RECORD.json",
+    "human_authorization_record_sha256": "23b5f8ff43b7f674cda928b7708d957d72dbc2603c28f5301023badca5d5b70b",
+    "approved_delivery_commit": "e85b3c815ea6fef1bc054cd8249e3a138fc0cac0",
+    "maximum_native_starts": 1,
+    "automatic_retry": false,
+    "automatic_continuation": false,
+    "mandatory_stop_s": 1207,
+    "stop_on_anomaly_or_unknown_log_coverage": true,
+    "not_safety_or_service_qualification": true
+  },
+  "release": {
+    "created_utc": "2026-10-11T19:32:24.295120+00:00",
+    "run_id": "CA_NATIVE_PHASE_R300_S17_SMOKE01",
+    "card_sha256": "7f74fa8cecb94a81e0d86a2ac2422fd10fa0ffcb3d7cf39a16bfa7d7f53b89d0",
+    "authorization_sha256": "c16e16368884d04c4451accd8e54dbbd88c827651eb71968b7a8ef14f9d8c58b",
+    "automatic_continuation": false,
+    "automatic_retry": false,
+    "maximum_native_starts": 1,
+    "mandatory_stop_s": 1207,
+    "review_sha256": {
+      "engineering": {
+        "path": "artifacts/candidate_a_native_smoke_bridge_20261011_v1/engineering/ENGINEERING_REVIEW.md",
+        "sha256": "03f300250790ee5e5d0e70bcffe18ea721f15a28cadae7ea727ed6fb9245dec5"
+      },
+      "data": {
+        "path": "data/processed/candidate_a_native_smoke_bridge_20261011_v1/FINAL_DATA_REVIEW.md",
+        "sha256": "5bc39d6482f8f4c9003f7fbbc1085ebb7dd7f585a41ccd6edca277b5d349d42b"
+      },
+      "science": {
+        "path": "artifacts/candidate_a_native_smoke_bridge_20261011_v1/FINAL_DELIVERY_SCIENTIFIC_READBACK.md",
+        "sha256": "c4dc9af90a84b93fd244427e34b7002ee6c5ae0b6cadf75847f35bbee1fb90db"
+      }
+    },
+    "release_scope": "One bounded native smoke under direct human authorization; prior reviews are offline implementation review, not prelaunch safety certification"
+  },
+  "spec": {
+    "run_id": "CA_NATIVE_PHASE_R300_S17_SMOKE01",
+    "seed": 17,
+    "qMain": 3600,
+    "qRamp": 900,
+    "qUrban": 360,
+    "qCross": 180,
+    "service_command_veh_h": 300,
+    "step_s": 1,
+    "activation_s": 1200,
+    "end_s": 1207,
+    "phase_durations_s": [
+      3,
+      3,
+      18
+    ],
+    "initial_hold_s": [
+      600,
+      1200
+    ],
+    "first_red_mandatory_pause": true,
+    "automatic_continuation": false
+  },
+  "free_disk_bytes": 6707851264,
+  "resource_limits": {
+    "wall_limit_s": 180,
+    "startup_limit_s": 60,
+    "run_limit_bytes": 300000000,
+    "minimum_free_bytes": 5000000000
+  },
+  "source_same_as87d905b": true,
+  "protected_unchanged": 536,
+  "R2_bound_unchanged": 7,
+  "raw_unconsumed": true,
+  "native_starts_so_far": 0,
+  "protocol_bytes": 0,
+  "native_version_invocations": 0,
+  "exact_command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/candidate_a_native_smoke_bridge_20261011_v1/cli.py --execute artifacts/candidate_a_native_smoke_bridge_20261011_v1/engineering/packages/CA_NATIVE_PHASE_R300_S17_SMOKE01/card.json --release artifacts/candidate_a_native_smoke_bridge_20261011_v1/engineering/EXECUTION_RELEASE.json",
+  "scope": "one technical smoke only; mandatory stop1207 or earlier abnormal/unknown; no retries/continuation/qualification"
+}

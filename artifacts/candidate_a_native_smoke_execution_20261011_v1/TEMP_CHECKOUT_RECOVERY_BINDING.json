@@ -1,0 +1,17 @@
+{
+  "created_utc": "2026-10-11T19:34:11.755882+00:00",
+  "cleanup_scope": "Only agent-created clean temporary checkout copy; original repository/source/raw and all recorded verification outputs unchanged",
+  "original_actual_checkout_receipt_sha256": "70b2a122187a177fe9f0d44a2accb70d56cb12a291b8209c02a61b940da69414",
+  "temporary_checkout": "/private/tmp/candidate-a-bridge-delivery-uoupr34n/checkout",
+  "checked_clean_status": true,
+  "checkout_commit": "87d905b0c6aa6852447e21dfb0eb0ee4f4cd8789",
+  "recovery_bundle": "/private/tmp/candidate-a-bridge-delivery-uoupr34n/checkout-recovery.bundle",
+  "recovery_bundle_bytes": 104113297,
+  "recovery_bundle_sha256": "bdadb2767166177bc7ec5b3e4e4a5a4fd6d9899fc1f2283c0e5fdf3f1c73a094",
+  "bundle_verify": "The bundle contains these 4 refs:\n87d905b0c6aa6852447e21dfb0eb0ee4f4cd8789 refs/heads/codex/candidate-a-native-smoke-proposal\n87d905b0c6aa6852447e21dfb0eb0ee4f4cd8789 refs/remotes/origin/HEAD\n87d905b0c6aa6852447e21dfb0eb0ee4f4cd8789 refs/remotes/origin/codex/candidate-a-native-smoke-proposal\n87d905b0c6aa6852447e21dfb0eb0ee4f4cd8789 HEAD\nThe bundle records a complete history.\nThe bundle uses this hash algorithm: sha1\n/private/tmp/candidate-a-bridge-delivery-uoupr34n/checkout-recovery.bundle is okay\n",
+  "bundle_heads": "87d905b0c6aa6852447e21dfb0eb0ee4f4cd8789 refs/heads/codex/candidate-a-native-smoke-proposal\n87d905b0c6aa6852447e21dfb0eb0ee4f4cd8789 refs/remotes/origin/HEAD\n87d905b0c6aa6852447e21dfb0eb0ee4f4cd8789 refs/remotes/origin/codex/candidate-a-native-smoke-proposal\n87d905b0c6aa6852447e21dfb0eb0ee4f4cd8789 HEAD\n",
+  "recovery_method": "git clone <recovery_bundle> <new_path>; git checkout 87d905b0c6aa6852447e21dfb0eb0ee4f4cd8789",
+  "copy_only_no_original_source_deletion": true,
+  "native_starts": 0,
+  "free_bytes_before_copy_cleanup": 4752961536
+}

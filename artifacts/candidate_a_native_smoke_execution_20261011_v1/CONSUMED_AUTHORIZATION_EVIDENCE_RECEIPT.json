@@ -1,0 +1,23 @@
+{
+  "created_utc": "2026-10-11T19:41:13.419988+00:00",
+  "scope": "Exact consumed run authorization/release preserved as evidence snapshots, not republished at executable canonical paths",
+  "native_starts_consumed": 1,
+  "raw_one_use_reservation": "data/raw/candidate_a_native_smoke_bridge_20261011_v1/CA_NATIVE_PHASE_R300_S17_SMOKE01/ONE_USE_RESERVATION.json",
+  "files": [
+    {
+      "original_canonical_path": "artifacts/candidate_a_native_smoke_bridge_20261011_v1/AUTHORIZATION_NATIVE_EXECUTION.json",
+      "consumed_evidence_snapshot": "artifacts/candidate_a_native_smoke_execution_20261011_v1/CONSUMED_AUTHORIZATION_SNAPSHOT.json",
+      "sha256": "c16e16368884d04c4451accd8e54dbbd88c827651eb71968b7a8ef14f9d8c58b",
+      "original_kept_local": true,
+      "canonical_file_not_to_be_staged": true
+    },
+    {
+      "original_canonical_path": "artifacts/candidate_a_native_smoke_bridge_20261011_v1/engineering/EXECUTION_RELEASE.json",
+      "consumed_evidence_snapshot": "artifacts/candidate_a_native_smoke_execution_20261011_v1/CONSUMED_EXECUTION_RELEASE_SNAPSHOT.json",
+      "sha256": "80ea3ab3a472dab5014d489bcbb3568cbd1ffee41c7a75f597708b979092da71",
+      "original_kept_local": true,
+      "canonical_file_not_to_be_staged": true
+    }
+  ],
+  "reason": "Raw one-use reservation stays local; avoid publishing a runnable canonical release without its consumed reservation. Historical no-authorization offline checkout fixtures remain their original applicable scope. No tests/guard/runtime source changed."
+}

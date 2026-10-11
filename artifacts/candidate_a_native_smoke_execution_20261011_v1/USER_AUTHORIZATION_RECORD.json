@@ -1,0 +1,27 @@
+{
+  "created_utc": "2026-10-11T19:32:24.295120+00:00",
+  "human_request_verbatim": "认可当前交付，授权按已审查版本和绑定卡片运行一次 CA_NATIVE_PHASE_R300_S17_SMOKE01。首次受控黄转红后于1207秒强制停止；出现异常或日志覆盖未知立即停止，保留全部证据，不自动重试或继续。完成工程、数据和科学审查后报告结果，不把 smoke 通过解释为安全或服务资格通过。",
+  "source": "Direct human user message in current Codex task; authorizes one native smoke only",
+  "approved_delivery_commit": "e85b3c815ea6fef1bc054cd8249e3a138fc0cac0",
+  "actual_code_commit": "87d905b0c6aa6852447e21dfb0eb0ee4f4cd8789",
+  "run_id": "CA_NATIVE_PHASE_R300_S17_SMOKE01",
+  "card_sha256": "7f74fa8cecb94a81e0d86a2ac2422fd10fa0ffcb3d7cf39a16bfa7d7f53b89d0",
+  "maximum_native_starts": 1,
+  "automatic_retry": false,
+  "automatic_continuation": false,
+  "mandatory_stop_s": 1207,
+  "stop_on_anomaly_or_unknown_log_coverage": true,
+  "resources": {
+    "wall_limit_s": 180,
+    "startup_limit_s": 60,
+    "run_limit_bytes": 300000000,
+    "minimum_free_bytes": 5000000000
+  },
+  "routing": [
+    "simulation_engineer",
+    "data_analyst",
+    "scientific_reviewer"
+  ],
+  "qualification_authorized": false,
+  "formal_experiment_authorized": false
+}

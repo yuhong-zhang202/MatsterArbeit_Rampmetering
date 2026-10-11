@@ -133,6 +133,8 @@ PR #5 [2026-10-11 missing-window correction](docs/development/PR5_MISSING_WINDOW
 
 ## Candidate A isolated native-phase diagnostic bridge (2026-10-11)
 
+The subsequently authorized single `CA_NATIVE_PHASE_R300_S17_SMOKE01` is consumed: native start1, stopped at0.00 before first motion on17 phase-selfloop warnings; no1207 checkpoint or retry. Read the [actual result and review](docs/development/CANDIDATE_A_NATIVE_PHASE_SMOKE01_RESULT_20261011.md). Further execution is not authorized. Canonical consumed authorization/release and raw reservation stay local; published consumed snapshots are evidence only. Default preparation rejects the consumed local output identity; card checking remains read-only. The following commands describe the original offline preparation interface, not a way to reuse this run.
+
 The [minimal bridge record](docs/development/CANDIDATE_A_NATIVE_PHASE_SMOKE_BRIDGE_20261011.md) documents reuse of Candidate A, source/card/environment/log binding and the mandatory close/pause after the first activated1206→1207 red interval. This delivery authorizes implementation and offline review only; **native execution is not authorized**. Historical STOP3 and NOT_QUALIFIED remain.
 
 ```sh

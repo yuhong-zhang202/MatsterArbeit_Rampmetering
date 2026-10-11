@@ -1,0 +1,16 @@
+{
+  "correction": "LOCAL_ONLY_PUBLIC_SCOPE_DISCLOSURE",
+  "historical_V1_binding_sha256_reported": "bd4ff2deeab2184acd07d4126b7b1c4332a31f1dbba008d8b4b0bd7a4dc31fa0",
+  "exact_V1_preimage_preserved": false,
+  "limitation": "V1 report/receipt/binding bytes were not saved before the scope clarification. No reconstructed bytes are claimed as an exact historical snapshot. Existing V1 reported SHA cannot now be independently reproduced from a preserved binder.",
+  "current_binding_sha256": "1c799fc5be373b6f2685479395bd7d44ab16fbd40b51aea2abc6b26d131f126f",
+  "changed_scope": "Only report public-checker text, receipt public_vs_local and derived binding hashes clarified; default checker requires unpublished canonical authorization/release; actual checks remain local-only. Consumed snapshots support manual remote hash review, not executed public checker PASS.",
+  "unchanged": "Original raw/actual result/checker/engineering bytes; no repeated run/check; current report/source not further edited.",
+  "current_exact_files": {
+    "data/processed/candidate_a_native_smoke_execution_20261011_v1/independent_failure_review.py": "3e5ef0add69a176ab3191006e624aac6e060dfcdba14c96391b9115acc1bf6ef",
+    "data/processed/candidate_a_native_smoke_execution_20261011_v1/FINAL_DATA_REVIEW.md": "4faec367d3f0f3c54e051d1b4530f8603858854d92cdb7420430db74ae7d89f4",
+    "data/processed/candidate_a_native_smoke_execution_20261011_v1/INDEPENDENT_REVIEW_RECEIPT.json": "4a75f3ef5ce44777453391478d34635eaa5e8ebc839f12b3724e8fbca69f1297",
+    "data/processed/candidate_a_native_smoke_execution_20261011_v1/INDEPENDENT_FAILURE_RESULT.json": "ceeaf7bf935927139f5919b921a63ede5dab6da5c50fe5e3a1a2aab15ea82629",
+    "data/processed/candidate_a_native_smoke_execution_20261011_v1/FINAL_DATA_BINDINGS.json": "1c799fc5be373b6f2685479395bd7d44ab16fbd40b51aea2abc6b26d131f126f"
+  }
+}

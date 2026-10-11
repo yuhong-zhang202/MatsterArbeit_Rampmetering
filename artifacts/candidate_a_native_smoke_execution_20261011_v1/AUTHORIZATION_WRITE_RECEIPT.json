@@ -1,0 +1,5 @@
+{
+  "first_attempt": "FileExistsError at mkdir because engineering created shared parent concurrently; no record/release/raw/native mutation",
+  "correction": "reuse existing parent only; every file uses exclusive create",
+  "native_starts": 0
+}

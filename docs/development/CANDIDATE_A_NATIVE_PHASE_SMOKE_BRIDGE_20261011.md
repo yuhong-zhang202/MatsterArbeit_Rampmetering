@@ -1,5 +1,7 @@
 # Candidate A native-phase smoke — minimal runtime bridge
 
+**Historical offline implementation checkpoint.** The user subsequently authorized one exact-card native run; it is now consumed and stopped before first motion. See the [separate actual result](CANDIDATE_A_NATIVE_PHASE_SMOKE01_RESULT_20261011.md) for current runtime status. This document's no-native/no-authorization statements below describe the earlier offline delivery; its bindings and reviews are not retroactively rewritten.
+
 **Implementation, three-role offline review and delivered-code clean checkout complete; awaiting user/Chat review. Native execution is NOT authorized.**
 
 Baseline: `833ac18db2c6b256f2782631830c9c849e090681`, local branch `codex/candidate-a-native-smoke-proposal`.

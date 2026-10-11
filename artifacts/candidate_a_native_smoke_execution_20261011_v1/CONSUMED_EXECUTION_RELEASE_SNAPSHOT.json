@@ -1,0 +1,25 @@
+{
+  "created_utc": "2026-10-11T19:32:24.295120+00:00",
+  "run_id": "CA_NATIVE_PHASE_R300_S17_SMOKE01",
+  "card_sha256": "7f74fa8cecb94a81e0d86a2ac2422fd10fa0ffcb3d7cf39a16bfa7d7f53b89d0",
+  "authorization_sha256": "c16e16368884d04c4451accd8e54dbbd88c827651eb71968b7a8ef14f9d8c58b",
+  "automatic_continuation": false,
+  "automatic_retry": false,
+  "maximum_native_starts": 1,
+  "mandatory_stop_s": 1207,
+  "review_sha256": {
+    "engineering": {
+      "path": "artifacts/candidate_a_native_smoke_bridge_20261011_v1/engineering/ENGINEERING_REVIEW.md",
+      "sha256": "03f300250790ee5e5d0e70bcffe18ea721f15a28cadae7ea727ed6fb9245dec5"
+    },
+    "data": {
+      "path": "data/processed/candidate_a_native_smoke_bridge_20261011_v1/FINAL_DATA_REVIEW.md",
+      "sha256": "5bc39d6482f8f4c9003f7fbbc1085ebb7dd7f585a41ccd6edca277b5d349d42b"
+    },
+    "science": {
+      "path": "artifacts/candidate_a_native_smoke_bridge_20261011_v1/FINAL_DELIVERY_SCIENTIFIC_READBACK.md",
+      "sha256": "c4dc9af90a84b93fd244427e34b7002ee6c5ae0b6cadf75847f35bbee1fb90db"
+    }
+  },
+  "release_scope": "One bounded native smoke under direct human authorization; prior reviews are offline implementation review, not prelaunch safety certification"
+}

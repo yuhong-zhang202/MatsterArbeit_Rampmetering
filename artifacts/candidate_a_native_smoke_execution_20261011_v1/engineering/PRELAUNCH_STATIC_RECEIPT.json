@@ -1,0 +1,56 @@
+{
+  "status": "BLOCKED_DISK_RESERVE",
+  "time_utc": "2026-10-11T19:32:25.743740+00:00",
+  "HEAD": "e85b3c815ea6fef1bc054cd8249e3a138fc0cac0",
+  "actual_code_commit": "87d905b0c6aa6852447e21dfb0eb0ee4f4cd8789",
+  "source_same_as_code": true,
+  "card_sha256": "7f74fa8cecb94a81e0d86a2ac2422fd10fa0ffcb3d7cf39a16bfa7d7f53b89d0",
+  "spec": {
+    "run_id": "CA_NATIVE_PHASE_R300_S17_SMOKE01",
+    "seed": 17,
+    "qMain": 3600,
+    "qRamp": 900,
+    "qUrban": 360,
+    "qCross": 180,
+    "service_command_veh_h": 300,
+    "step_s": 1,
+    "activation_s": 1200,
+    "end_s": 1207,
+    "phase_durations_s": [
+      3,
+      3,
+      18
+    ],
+    "initial_hold_s": [
+      600,
+      1200
+    ],
+    "first_red_mandatory_pause": true,
+    "automatic_continuation": false
+  },
+  "python": "3.13.0",
+  "packages": {
+    "traci": "1.26.0",
+    "sumolib": "1.26.0",
+    "sumoITScontrol": "0.1.0"
+  },
+  "sumo_binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+  "resource_limits": {
+    "wall_limit_s": 180,
+    "startup_limit_s": 60,
+    "run_limit_bytes": 300000000,
+    "minimum_free_bytes": 5000000000
+  },
+  "free_disk_bytes": 4861321216,
+  "disk_gate": "FAIL",
+  "first_failure_free_bytes": 4861722624,
+  "required_minimum_free_bytes": 5000000000,
+  "protected_files_unchanged": 536,
+  "R2_bound_files_unchanged": 7,
+  "output_unconsumed": true,
+  "native_starts": 0,
+  "raw_allocations": 0,
+  "command_attempted": "read-only Python validate(card,require_environment=True) + HEAD/codeSHA + disk reserve; AssertionError at disk gate. No execute called.",
+  "exact_future_command": ".venv/bin/python scripts/candidate_a_native_smoke_bridge_20261011_v1/cli.py --execute artifacts/candidate_a_native_smoke_bridge_20261011_v1/engineering/packages/CA_NATIVE_PHASE_R300_S17_SMOKE01/card.json --release artifacts/candidate_a_native_smoke_bridge_20261011_v1/engineering/EXECUTION_RELEASE.json",
+  "response": "No deletion, cap relaxation, code change or native retry. Await parent resolution; native authority remains unconsumed."
+}

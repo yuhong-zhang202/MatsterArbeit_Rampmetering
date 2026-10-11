@@ -1,0 +1,73 @@
+{
+  "classification": "SINGLE_NATIVE_TECHNICAL_SMOKE_ABORTED_BEFORE_MOTION_NOT_QUALIFICATION",
+  "HEAD": "e85b3c815ea6fef1bc054cd8249e3a138fc0cac0",
+  "card_sha256": "7f74fa8cecb94a81e0d86a2ac2422fd10fa0ffcb3d7cf39a16bfa7d7f53b89d0",
+  "run_id": "CA_NATIVE_PHASE_R300_S17_SMOKE01",
+  "supported_CLI_command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/candidate_a_native_smoke_bridge_20261011_v1/cli.py --execute artifacts/candidate_a_native_smoke_bridge_20261011_v1/engineering/packages/CA_NATIVE_PHASE_R300_S17_SMOKE01/card.json --release artifacts/candidate_a_native_smoke_bridge_20261011_v1/engineering/EXECUTION_RELEASE.json",
+  "actual_native_command": [
+    "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+    "-c",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/candidate_a_native_smoke_bridge_20261011_v1/engineering/packages/CA_NATIVE_PHASE_R300_S17_SMOKE01/scenario.sumocfg",
+    "--remote-port",
+    "55732"
+  ],
+  "exec_session_id": 92296,
+  "CLI_exit_code": 1,
+  "native_exit_code": 0,
+  "native_starts": 1,
+  "native_PID": null,
+  "PID_limitation": "Bridge startup/trace does not persist PID; owned child exit0 is recorded. No retrospective PID invention.",
+  "run_identity_consumed": true,
+  "automatic_retry": false,
+  "step_ACK_count": 0,
+  "last_verified_step_time_s": null,
+  "last_accounted_time_s": null,
+  "native_final_time_s": 0.0,
+  "native_final_time_evidence": "sumo.log explicitly started/ended0.00; no simulationStep ACK file; logs bounded at owned processEOF",
+  "initial_preparation_time_s": 0,
+  "bridge_status": "STOP_UNKNOWN_LOG_COVERAGE_OR_NATIVE_MESSAGE",
+  "error": "ValueError:native stderr before motion",
+  "native_warning_lines": 17,
+  "warning_type": "Phase2 self-loop warnings for CA_C8 through CA_C24; no movement outcome observed",
+  "stderr_sha256": "6ab8072a52bed5930fc04c47344ac10243705e76cf237aa25161bd55340df02f",
+  "first_warning_capture_stage": [
+    "PRE_MOTION_AFTER_CONTROL_AND_OBSERVATION"
+  ],
+  "warning_emission_time": "Unknown exact native wallclock; startup ACK read empty then pre-motion captures1443 bytes. Logs indicate initialization/configuration warning, not executed motion anomaly.",
+  "log_capture_stages": [
+    "STARTUP_CONNECT_ACK",
+    "PRE_MOTION_AFTER_CONTROL_AND_OBSERVATION",
+    "AFTER_NATIVE_CLOSE_PROCESS_EOF"
+  ],
+  "final_log_status": "UNKNOWN_OR_NATIVE_MESSAGE",
+  "source_interface_start_attempts": 248,
+  "successful_connects": 1,
+  "startup_connect_elapsed_s": 25.92440233399975,
+  "connection_retry_scope": "248 client connection attempts against one child; not248SUMOstarts",
+  "resource_watchdog": {
+    "reason": null,
+    "error": null,
+    "poll_s": 0.2
+  },
+  "raw_bytes": 1804472,
+  "disk_free_after_bytes": 6670778368,
+  "full_cycles": 0,
+  "first_controlled_red": "NOT_REACHED",
+  "initialization_red603": "NOT_REACHED",
+  "service_window_C_E_N": "NOT_OBSERVED; fail.ledger internal zeros are initial accumulator state, not measured service/rate or qualifiedzero",
+  "ledger_initial_accumulators": {
+    "C": 0.0,
+    "C_applied": 0.0,
+    "E": 0,
+    "N": 0,
+    "mapping_command_latency": 0.0,
+    "mapping_quantization": 0.0,
+    "physical_shortfall": 0,
+    "C_minus_E": 0.0,
+    "E_minus_N": 0
+  },
+  "raw_manifest_sha256": "0e0857bb444008531d9e98fdde57f54620185a5794932256fe0188a0c21d631c",
+  "source_card_protected_validation": "536protected/7R2 unchanged after execution",
+  "no_guard_source_input_model_changes": true,
+  "next_step": "Data/scientific review original failure; one authorization consumed, any repair or next identity/run requires separately explicit scope/approval."
+}

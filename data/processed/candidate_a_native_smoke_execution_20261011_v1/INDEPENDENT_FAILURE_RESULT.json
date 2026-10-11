@@ -1,0 +1,224 @@
+{
+  "scope": "READONLY_FAILURE_PREFIX_NOT_QUALIFICATION",
+  "checks": {
+    "engineering_files": 8,
+    "protected_files": 536,
+    "unchanged_V5_files": 26,
+    "raw_files": 53,
+    "raw_bytes": 1804472,
+    "raw_final_readback": 53
+  },
+  "native_calls_by_checker": 0,
+  "local_raw_verification": "PASS",
+  "status": "PASS_FAILURE_DATA_INTEGRITY_SMOKE_TARGET_NOT_REACHED",
+  "log_stages": [
+    {
+      "stage": "STARTUP_CONNECT_ACK",
+      "stderr_byte_end": 0
+    },
+    {
+      "stage": "PRE_MOTION_AFTER_CONTROL_AND_OBSERVATION",
+      "stderr_byte_end": 1443
+    },
+    {
+      "stage": "AFTER_NATIVE_CLOSE_PROCESS_EOF",
+      "stderr_byte_end": 1443
+    }
+  ],
+  "xml": [
+    {
+      "name": "fcd.xml.gz",
+      "root": "fcd-export",
+      "child_count": 0
+    },
+    {
+      "name": "lanechanges.xml",
+      "root": "lanechanges",
+      "child_count": 0
+    },
+    {
+      "name": "p1_main_down_200_l0.xml",
+      "root": "detector",
+      "child_count": 0
+    },
+    {
+      "name": "p1_main_down_200_l1.xml",
+      "root": "detector",
+      "child_count": 0
+    },
+    {
+      "name": "p1_main_down_20_l0.xml",
+      "root": "detector",
+      "child_count": 0
+    },
+    {
+      "name": "p1_main_down_20_l1.xml",
+      "root": "detector",
+      "child_count": 0
+    },
+    {
+      "name": "p1_main_up_1300_l0.xml",
+      "root": "detector",
+      "child_count": 0
+    },
+    {
+      "name": "p1_main_up_1300_l1.xml",
+      "root": "detector",
+      "child_count": 0
+    },
+    {
+      "name": "p1_merge_section_20_l0.xml",
+      "root": "detector",
+      "child_count": 0
+    },
+    {
+      "name": "p1_merge_section_20_l1.xml",
+      "root": "detector",
+      "child_count": 0
+    },
+    {
+      "name": "p1_merge_section_20_l2.xml",
+      "root": "detector",
+      "child_count": 0
+    },
+    {
+      "name": "queues.xml",
+      "root": "queue-export",
+      "child_count": 0
+    },
+    {
+      "name": "ramp_storage_e2.xml",
+      "root": "detector",
+      "child_count": 0
+    },
+    {
+      "name": "shared_boundary_e2.xml",
+      "root": "detector",
+      "child_count": 0
+    },
+    {
+      "name": "sumo_summary.xml",
+      "root": "summary",
+      "child_count": 0
+    },
+    {
+      "name": "tls_states.xml",
+      "status": "EMPTY_NON_XML_NOT_OBSERVED"
+    },
+    {
+      "name": "tripinfo.xml",
+      "root": "tripinfos",
+      "child_count": 3,
+      "records": [
+        {
+          "id": "M_flow.0",
+          "depart": "-1",
+          "departLane": "",
+          "departPos": "-1.00",
+          "departSpeed": "-1.00",
+          "departDelay": "0.00",
+          "arrival": "-1.00",
+          "arrivalLane": "",
+          "arrivalPos": "-1.00",
+          "arrivalSpeed": "-1.00",
+          "duration": "0.00",
+          "routeLength": "0.00",
+          "waitingTime": "0.00",
+          "waitingCount": "0",
+          "stopTime": "0.00",
+          "timeLoss": "0.00",
+          "rerouteNo": "0",
+          "devices": "vehroute_M_flow.0 tripinfo_M_flow.0 fcd_M_flow.0",
+          "vType": "technical_passenger",
+          "speedFactor": "0.93",
+          "vaporized": "end"
+        },
+        {
+          "id": "U_flow.0",
+          "depart": "-1",
+          "departLane": "",
+          "departPos": "-1.00",
+          "departSpeed": "-1.00",
+          "departDelay": "0.00",
+          "arrival": "-1.00",
+          "arrivalLane": "",
+          "arrivalPos": "-1.00",
+          "arrivalSpeed": "-1.00",
+          "duration": "0.00",
+          "routeLength": "0.00",
+          "waitingTime": "0.00",
+          "waitingCount": "0",
+          "stopTime": "0.00",
+          "timeLoss": "0.00",
+          "rerouteNo": "0",
+          "devices": "vehroute_U_flow.0 tripinfo_U_flow.0 fcd_U_flow.0",
+          "vType": "technical_passenger",
+          "speedFactor": "0.82",
+          "vaporized": "end"
+        },
+        {
+          "id": "X_flow.0",
+          "depart": "-1",
+          "departLane": "",
+          "departPos": "-1.00",
+          "departSpeed": "-1.00",
+          "departDelay": "0.00",
+          "arrival": "-1.00",
+          "arrivalLane": "",
+          "arrivalPos": "-1.00",
+          "arrivalSpeed": "-1.00",
+          "duration": "0.00",
+          "routeLength": "0.00",
+          "waitingTime": "0.00",
+          "waitingCount": "0",
+          "stopTime": "0.00",
+          "timeLoss": "0.00",
+          "rerouteNo": "0",
+          "devices": "vehroute_X_flow.0 tripinfo_X_flow.0 fcd_X_flow.0",
+          "vType": "technical_passenger",
+          "speedFactor": "1.01",
+          "vaporized": "end"
+        }
+      ],
+      "meaning": "UNDEPARTED_END_RECORDS_NOT_TRAVEL_OBSERVATIONS"
+    },
+    {
+      "name": "vehroute.xml",
+      "root": "routes",
+      "child_count": 0
+    }
+  ],
+  "connection_attempts": 248,
+  "successful_connections": 1,
+  "step_ACK_count": 0,
+  "pre_step_count": 1,
+  "native_warning_lines": 17,
+  "initial_ledger": {
+    "C": 0.0,
+    "C_applied": 0.0,
+    "E": 0,
+    "N": 0,
+    "mapping_command_latency": 0.0,
+    "mapping_quantization": 0.0,
+    "physical_shortfall": 0,
+    "C_minus_E": 0.0,
+    "E_minus_N": 0
+  },
+  "service_observations": {
+    "C": null,
+    "C_applied": null,
+    "E": null,
+    "N": null,
+    "mapping_command_latency": null,
+    "mapping_quantization": null,
+    "physical_shortfall": null,
+    "C_minus_E": null,
+    "E_minus_N": null
+  },
+  "full_cycles": 0,
+  "initialization603": "NOT_REACHED",
+  "controlled1200": "NOT_REACHED",
+  "first_red1207": "NOT_REACHED",
+  "native_PID": null,
+  "observation_qualification": "NOT_TESTED"
+}
