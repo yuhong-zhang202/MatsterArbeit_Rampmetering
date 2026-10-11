@@ -1,0 +1,55 @@
+{
+  "classification": "MINIMAL_INSTALLED_SCHEMA_ENVIRONMENT_REPAIR_NOT_RELEASED",
+  "unit_command": ".venv/bin/python -m unittest discover -s tests/candidate_a_qualification_20261008 -v",
+  "tests": 25,
+  "test_exit_code": 0,
+  "unit_log_sha256": "39535f4faba1a458934cf02becac14cce1ed2752f8e39957a40e1e81569f2386",
+  "syntax_command": ".venv/bin/python -m py_compile scripts/candidate_a_qualification_20261008_v1/runner.py scripts/candidate_a_qualification_20261008_v1/worker.py src/candidate_a_qualification_20261008/actor.py src/candidate_a_qualification_20261008/safety.py tests/candidate_a_qualification_20261008/test_contract.py",
+  "syntax_exit_code": 0,
+  "tested_sources_sha256": {
+    "config/candidate_a_qualification_20261008_v1/PHASE_RATE_CONTRACT.json": "f4af413e055e9f5d9404df0b3644c0538e7fb4cd6082b0e0722cff7740f9ec59",
+    "scripts/candidate_a_qualification_20261008_v1/runner.py": "d0f16717d80ba2dbbf5f93ea4878916caa570e8b75ae95f0c9c4d05dceedff4d",
+    "scripts/candidate_a_qualification_20261008_v1/worker.py": "b1e53915837bd87a1b0bcb91eba763248ca27630fe6f0d48d7080df846d0fa1e",
+    "src/candidate_a_qualification_20261008/actor.py": "bbfeaeb8168ed55f6001e4aec19d4e54c984aa45933a339d5c5b78479279be68",
+    "src/candidate_a_qualification_20261008/safety.py": "f11e1854821ba613045f15c7561e41c1baa6fee06e83ff87790e51d4fffe11b5",
+    "tests/candidate_a_qualification_20261008/test_contract.py": "2bd0ccad9ad19af04f7093d124ba9f2782b814213635adb2f538f16af0bbb7c9"
+  },
+  "protected_files_verified": 67,
+  "cards": [
+    {
+      "rate": 300,
+      "card_path": "config/candidate_a_qualification_20261008_v1/CA_FIXED_R300_S17_A06/card.json",
+      "card_sha256": "a218154f687135dae1620af4860c6df8ab26ffbb21a0fe45831130948cd8db0e",
+      "status": "OFFLINE_PASS_NOT_RELEASED"
+    },
+    {
+      "rate": 450,
+      "card_path": "config/candidate_a_qualification_20261008_v1/CA_FIXED_R450_S17_A06/card.json",
+      "card_sha256": "38e27cdcd09ec2d80efbfe493d69f2ceb7198d34051fbc28f6f3098a2bc09ee7",
+      "status": "OFFLINE_PASS_NOT_RELEASED"
+    },
+    {
+      "rate": 600,
+      "card_path": "config/candidate_a_qualification_20261008_v1/CA_FIXED_R600_S17_A06/card.json",
+      "card_sha256": "ad83e1fe93dab74ff418eaeeb75fa6329b4fcc2ceaf635425600a62cf83e5936",
+      "status": "OFFLINE_PASS_NOT_RELEASED"
+    },
+    {
+      "rate": 750,
+      "card_path": "config/candidate_a_qualification_20261008_v1/CA_FIXED_R750_S17_A06/card.json",
+      "card_sha256": "f8bca73c5c9582e6166d66df9c9050b32ed95700f765df98f00c9b2764b41822",
+      "status": "OFFLINE_PASS_NOT_RELEASED"
+    },
+    {
+      "rate": 900,
+      "card_path": "config/candidate_a_qualification_20261008_v1/CA_FIXED_R900_S17_A06/card.json",
+      "card_sha256": "a697993bc7c7e74dac11b1b675a8ff72bb3bd5f6af35f84353f0ff2c61261190",
+      "status": "OFFLINE_PASS_NOT_RELEASED"
+    }
+  ],
+  "replaces_run_id": "CA_FIXED_R300_S17_A05",
+  "failure_snapshot_sha256": "1ffebe091210c55a64955f5eb080569c155c7c68d8649cd053614b6c69ecdd54",
+  "actual_sumo_starts": 2,
+  "effective_qualification_runs": 0,
+  "phaseC_authorized": false
+}

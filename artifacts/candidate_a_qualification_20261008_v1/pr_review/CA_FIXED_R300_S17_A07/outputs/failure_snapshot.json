@@ -1,0 +1,959 @@
+{
+  "status": "ABORTED_SAFETY_BEFORE_RED",
+  "error": "RuntimeError: STOP unsafe prospective native yellow-to-red transition",
+  "decision_time_s": 1206,
+  "last_completed_step_s": 1206,
+  "snapshot": {
+    "time_s": 1206,
+    "phase_api_requests": [],
+    "segment": "QUALIFICATION",
+    "program": "CA_C24",
+    "phase_before": 1,
+    "state_before": "y",
+    "next_switch": 1206.0,
+    "predicted_motion": "r",
+    "cycle": {
+      "cycle_id": 0,
+      "begin_s": 1200,
+      "end_s": 1224,
+      "period_s": 24,
+      "nominal_n": 2,
+      "applied_command_veh_h": 300.0,
+      "command_requested_s": 1200,
+      "command_applied_s": 1200,
+      "application_delay_s": 0,
+      "executed": true,
+      "denial_reason": "",
+      "completed": false,
+      "N_G": 1,
+      "N_y": 0,
+      "N_r": 0,
+      "crossing_ids": [
+        "R_flow.0"
+      ]
+    },
+    "vehicle_states": [
+      {
+        "vehicle_id": "R_flow.27",
+        "population": "storage",
+        "position_m": 0.961108544055908,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.26",
+        "population": "storage",
+        "position_m": 8.462127661323134,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.25",
+        "population": "storage",
+        "position_m": 15.963188395047265,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.24",
+        "population": "storage",
+        "position_m": 23.464200501046005,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.23",
+        "population": "storage",
+        "position_m": 30.965203090993654,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.22",
+        "population": "storage",
+        "position_m": 38.46620919940754,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.21",
+        "population": "storage",
+        "position_m": 45.96722114100965,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.20",
+        "population": "storage",
+        "position_m": 53.46829451549476,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.19",
+        "population": "storage",
+        "position_m": 60.96931308125076,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.18",
+        "population": "storage",
+        "position_m": 68.47031351784776,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.17",
+        "population": "storage",
+        "position_m": 75.97138550709,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.16",
+        "population": "storage",
+        "position_m": 83.47245126824599,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.15",
+        "population": "storage",
+        "position_m": 90.97346089219262,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.14",
+        "population": "storage",
+        "position_m": 98.47454646820279,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.13",
+        "population": "storage",
+        "position_m": 105.97554649244879,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.12",
+        "population": "storage",
+        "position_m": 113.47659954037505,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.11",
+        "population": "storage",
+        "position_m": 120.97764614648695,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.10",
+        "population": "storage",
+        "position_m": 128.47874047552074,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.9",
+        "population": "storage",
+        "position_m": 135.9797577366971,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.8",
+        "population": "storage",
+        "position_m": 143.48080990986415,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.7",
+        "population": "storage",
+        "position_m": 150.9818197031091,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.6",
+        "population": "storage",
+        "position_m": 158.48290369676235,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.5",
+        "population": "storage",
+        "position_m": 166.12735800009224,
+        "speed_m_s": 0.14344958002819005,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.4",
+        "population": "storage",
+        "position_m": 175.00948846002683,
+        "speed_m_s": 1.2941405376048665,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.3",
+        "population": "storage",
+        "position_m": 186.37398657549787,
+        "speed_m_s": 3.6895633232594656,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.2",
+        "population": "storage",
+        "position_m": 195.80145879174611,
+        "speed_m_s": 1.092370352007706,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.1",
+        "population": "storage",
+        "position_m": 203.4880008102335,
+        "speed_m_s": 0.04573822948686786,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.42",
+        "population": "ingress",
+        "position_m": -111.5541161523147,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.41",
+        "population": "ingress",
+        "position_m": -104.05310242059494,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.40",
+        "population": "ingress",
+        "position_m": -96.55210238270575,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.39",
+        "population": "ingress",
+        "position_m": -89.05103367432532,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.38",
+        "population": "ingress",
+        "position_m": -81.55003170233442,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.37",
+        "population": "ingress",
+        "position_m": -74.04902977878983,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.36",
+        "population": "ingress",
+        "position_m": -66.54801161029823,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.35",
+        "population": "ingress",
+        "position_m": -59.046996191498415,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.34",
+        "population": "ingress",
+        "position_m": -51.54598734236277,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.33",
+        "population": "ingress",
+        "position_m": -44.04498391464196,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.32",
+        "population": "ingress",
+        "position_m": -36.5439726805442,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.31",
+        "population": "ingress",
+        "position_m": -29.042968507034814,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.30",
+        "population": "ingress",
+        "position_m": -21.541942437775546,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.29",
+        "population": "ingress",
+        "position_m": -14.04094011439038,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      {
+        "vehicle_id": "R_flow.28",
+        "population": "ingress",
+        "position_m": -6.539934005901344,
+        "speed_m_s": 0.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      }
+    ],
+    "receiver": {
+      "available": true,
+      "reason": "AVAILABLE",
+      "front_id": "R_flow.1",
+      "nearest_internal": "R_flow.0",
+      "leader": {
+        "vehicle_id": "R_flow.0",
+        "lane_id": ":ramp_mid_0_0",
+        "gap_excluding_minGap_m": 30.063050567261598,
+        "secure_gap_m": 0.6365211315041015
+      },
+      "nearest_internal_rear_clearance_m": 31.56105137749509,
+      "required_front_clearance_m": 7.5
+    },
+    "red_transition": {
+      "safe": false,
+      "unsafe_ids": [
+        "R_flow.1"
+      ],
+      "witnesses": [
+        {
+          "vehicle_id": "R_flow.27",
+          "population": "storage",
+          "gap_m": 203.5288914559441,
+          "required_normal_red_m": 0.0,
+          "margin_m": 203.5288914559441,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.26",
+          "population": "storage",
+          "gap_m": 196.02787233867687,
+          "required_normal_red_m": 0.0,
+          "margin_m": 196.02787233867687,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.25",
+          "population": "storage",
+          "gap_m": 188.52681160495274,
+          "required_normal_red_m": 0.0,
+          "margin_m": 188.52681160495274,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.24",
+          "population": "storage",
+          "gap_m": 181.025799498954,
+          "required_normal_red_m": 0.0,
+          "margin_m": 181.025799498954,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.23",
+          "population": "storage",
+          "gap_m": 173.52479690900634,
+          "required_normal_red_m": 0.0,
+          "margin_m": 173.52479690900634,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.22",
+          "population": "storage",
+          "gap_m": 166.02379080059248,
+          "required_normal_red_m": 0.0,
+          "margin_m": 166.02379080059248,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.21",
+          "population": "storage",
+          "gap_m": 158.52277885899036,
+          "required_normal_red_m": 0.0,
+          "margin_m": 158.52277885899036,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.20",
+          "population": "storage",
+          "gap_m": 151.02170548450525,
+          "required_normal_red_m": 0.0,
+          "margin_m": 151.02170548450525,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.19",
+          "population": "storage",
+          "gap_m": 143.52068691874925,
+          "required_normal_red_m": 0.0,
+          "margin_m": 143.52068691874925,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.18",
+          "population": "storage",
+          "gap_m": 136.01968648215225,
+          "required_normal_red_m": 0.0,
+          "margin_m": 136.01968648215225,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.17",
+          "population": "storage",
+          "gap_m": 128.51861449291,
+          "required_normal_red_m": 0.0,
+          "margin_m": 128.51861449291,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.16",
+          "population": "storage",
+          "gap_m": 121.01754873175402,
+          "required_normal_red_m": 0.0,
+          "margin_m": 121.01754873175402,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.15",
+          "population": "storage",
+          "gap_m": 113.51653910780739,
+          "required_normal_red_m": 0.0,
+          "margin_m": 113.51653910780739,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.14",
+          "population": "storage",
+          "gap_m": 106.01545353179722,
+          "required_normal_red_m": 0.0,
+          "margin_m": 106.01545353179722,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.13",
+          "population": "storage",
+          "gap_m": 98.51445350755122,
+          "required_normal_red_m": 0.0,
+          "margin_m": 98.51445350755122,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.12",
+          "population": "storage",
+          "gap_m": 91.01340045962496,
+          "required_normal_red_m": 0.0,
+          "margin_m": 91.01340045962496,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.11",
+          "population": "storage",
+          "gap_m": 83.51235385351306,
+          "required_normal_red_m": 0.0,
+          "margin_m": 83.51235385351306,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.10",
+          "population": "storage",
+          "gap_m": 76.01125952447927,
+          "required_normal_red_m": 0.0,
+          "margin_m": 76.01125952447927,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.9",
+          "population": "storage",
+          "gap_m": 68.5102422633029,
+          "required_normal_red_m": 0.0,
+          "margin_m": 68.5102422633029,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.8",
+          "population": "storage",
+          "gap_m": 61.00919009013586,
+          "required_normal_red_m": 0.0,
+          "margin_m": 61.00919009013586,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.7",
+          "population": "storage",
+          "gap_m": 53.50818029689091,
+          "required_normal_red_m": 0.0,
+          "margin_m": 53.50818029689091,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.6",
+          "population": "storage",
+          "gap_m": 46.00709630323766,
+          "required_normal_red_m": 0.0,
+          "margin_m": 46.00709630323766,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.5",
+          "population": "storage",
+          "gap_m": 38.362641999907765,
+          "required_normal_red_m": 1.245736000251553,
+          "margin_m": 37.11690599965621,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.4",
+          "population": "storage",
+          "gap_m": 29.48051153997318,
+          "required_normal_red_m": 2.58022939661289,
+          "margin_m": 26.90028214336029,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.3",
+          "population": "storage",
+          "gap_m": 18.116013424502142,
+          "required_normal_red_m": 6.3021052695196245,
+          "margin_m": 11.813908154982517,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.2",
+          "population": "storage",
+          "gap_m": 8.688541208253895,
+          "required_normal_red_m": 2.324956239334977,
+          "margin_m": 6.363584968918918,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.1",
+          "population": "storage",
+          "gap_m": 1.001999189766508,
+          "required_normal_red_m": 1.1459706723353782,
+          "margin_m": -0.14397148256887027,
+          "safe": false
+        },
+        {
+          "vehicle_id": "R_flow.42",
+          "population": "ingress",
+          "gap_m": 316.0441161523147,
+          "required_normal_red_m": 0.0,
+          "margin_m": 316.0441161523147,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.41",
+          "population": "ingress",
+          "gap_m": 308.54310242059495,
+          "required_normal_red_m": 0.0,
+          "margin_m": 308.54310242059495,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.40",
+          "population": "ingress",
+          "gap_m": 301.04210238270576,
+          "required_normal_red_m": 0.0,
+          "margin_m": 301.04210238270576,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.39",
+          "population": "ingress",
+          "gap_m": 293.5410336743253,
+          "required_normal_red_m": 0.0,
+          "margin_m": 293.5410336743253,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.38",
+          "population": "ingress",
+          "gap_m": 286.04003170233443,
+          "required_normal_red_m": 0.0,
+          "margin_m": 286.04003170233443,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.37",
+          "population": "ingress",
+          "gap_m": 278.5390297787898,
+          "required_normal_red_m": 0.0,
+          "margin_m": 278.5390297787898,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.36",
+          "population": "ingress",
+          "gap_m": 271.0380116102982,
+          "required_normal_red_m": 0.0,
+          "margin_m": 271.0380116102982,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.35",
+          "population": "ingress",
+          "gap_m": 263.5369961914984,
+          "required_normal_red_m": 0.0,
+          "margin_m": 263.5369961914984,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.34",
+          "population": "ingress",
+          "gap_m": 256.0359873423628,
+          "required_normal_red_m": 0.0,
+          "margin_m": 256.0359873423628,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.33",
+          "population": "ingress",
+          "gap_m": 248.53498391464197,
+          "required_normal_red_m": 0.0,
+          "margin_m": 248.53498391464197,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.32",
+          "population": "ingress",
+          "gap_m": 241.0339726805442,
+          "required_normal_red_m": 0.0,
+          "margin_m": 241.0339726805442,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.31",
+          "population": "ingress",
+          "gap_m": 233.5329685070348,
+          "required_normal_red_m": 0.0,
+          "margin_m": 233.5329685070348,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.30",
+          "population": "ingress",
+          "gap_m": 226.03194243777557,
+          "required_normal_red_m": 0.0,
+          "margin_m": 226.03194243777557,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.29",
+          "population": "ingress",
+          "gap_m": 218.53094011439038,
+          "required_normal_red_m": 0.0,
+          "margin_m": 218.53094011439038,
+          "safe": true
+        },
+        {
+          "vehicle_id": "R_flow.28",
+          "population": "ingress",
+          "gap_m": 211.02993400590134,
+          "required_normal_red_m": 0.0,
+          "margin_m": 211.02993400590134,
+          "safe": true
+        }
+      ],
+      "invariant": "one reaction step plus normal braking for EVERY positive speed; only exactly zero speed is exempt under unchanged native red compliance; all remaining storage/ingress"
+    }
+  },
+  "accounting": {
+    "C": 0.5,
+    "C_applied": 0.5,
+    "E": 0,
+    "N": 1,
+    "mapping_command_latency": 0.0,
+    "mapping_quantization": 0.5,
+    "physical_shortfall": -1,
+    "C_minus_E": 0.5,
+    "E_minus_N": -1
+  },
+  "last_accounted_s": 1206,
+  "accounting_complete": true,
+  "accounting_status": "RECONCILED_COMPLETED_PREFIX",
+  "unaccounted_completed_interval_s": null,
+  "qualification_accounting_supported": true
+}

@@ -1,0 +1,158 @@
+{
+  "classification": "READ_ONLY_PRIMARY_SOURCE_NATIVE_GUARD_DIAGNOSIS",
+  "ref": "v1_26_0",
+  "reading_scope": "source mechanism inspection; no installation compilation or SUMO execution",
+  "first_network_attempt": "sandbox DNS failed, no source receipt written; read-only network retry escalated",
+  "sources": [
+    {
+      "path": "src/microsim/MSVehicle.cpp",
+      "raw_url": "https://raw.githubusercontent.com/eclipse-sumo/sumo/v1_26_0/src/microsim/MSVehicle.cpp",
+      "source_url": "https://github.com/eclipse-sumo/sumo/blob/v1_26_0/src/microsim/MSVehicle.cpp",
+      "sha256": "8499ebe445906b19395d5c70945b012f320a439327e9cb3c20f0abd26d15a6a4",
+      "bytes": 381688,
+      "anchors": [
+        {
+          "line": 125,
+          "pattern": "DIST_TO_STOPLINE_EXPECT_PRIORITY 1.0"
+        },
+        {
+          "line": 2476,
+          "pattern": "double stopSpeed = cfModel.stopSpeed"
+        },
+        {
+          "line": 2500,
+          "pattern": "double stopSpeed = cfModel.stopSpeed"
+        },
+        {
+          "line": 2728,
+          "pattern": "const bool yellowOrRed"
+        },
+        {
+          "line": 2738,
+          "pattern": "const double majorStopOffset"
+        },
+        {
+          "line": 2740,
+          "pattern": "const double stopDecel"
+        },
+        {
+          "line": 2773,
+          "pattern": "laneStopOffset = MIN2(laneStopOffset"
+        },
+        {
+          "line": 2776,
+          "pattern": "double stopDist = MAX2"
+        },
+        {
+          "line": 2851,
+          "pattern": "double stopSpeed = cfModel.stopSpeed"
+        },
+        {
+          "line": 2871,
+          "pattern": "if (yellowOrRed && canBrakeBeforeStopLine"
+        }
+      ]
+    },
+    {
+      "path": "src/microsim/MSNet.cpp",
+      "raw_url": "https://raw.githubusercontent.com/eclipse-sumo/sumo/v1_26_0/src/microsim/MSNet.cpp",
+      "source_url": "https://github.com/eclipse-sumo/sumo/blob/v1_26_0/src/microsim/MSNet.cpp",
+      "sha256": "fdf62a7626e2d1b31edaf695198e27f4690c2a86a1925e0142852a80449cd6f8",
+      "bytes": 69686,
+      "anchors": [
+        {
+          "line": 795,
+          "pattern": "lastTraCICmd = t->processCommands"
+        },
+        {
+          "line": 832,
+          "pattern": "myBeginOfTimestepEvents->execute"
+        },
+        {
+          "line": 853,
+          "pattern": "myEdges->planMovements"
+        },
+        {
+          "line": 859,
+          "pattern": "myEdges->executeMovements"
+        }
+      ]
+    },
+    {
+      "path": "src/microsim/cfmodels/MSCFModel_Krauss.cpp",
+      "raw_url": "https://raw.githubusercontent.com/eclipse-sumo/sumo/v1_26_0/src/microsim/cfmodels/MSCFModel_Krauss.cpp",
+      "source_url": "https://github.com/eclipse-sumo/sumo/blob/v1_26_0/src/microsim/cfmodels/MSCFModel_Krauss.cpp",
+      "sha256": "0722e1a44c56e430e40c2b661d1ccfb74df1095cd9f6ffeb4e4ceb4da983af36",
+      "bytes": 7409,
+      "anchors": [
+        {
+          "line": 101,
+          "pattern": "MSCFModel_Krauss::stopSpeed"
+        },
+        {
+          "line": 107,
+          "pattern": "maximumSafeStopSpeed(gap"
+        }
+      ]
+    },
+    {
+      "path": "src/microsim/cfmodels/MSCFModel.cpp",
+      "raw_url": "https://raw.githubusercontent.com/eclipse-sumo/sumo/v1_26_0/src/microsim/cfmodels/MSCFModel.cpp",
+      "source_url": "https://github.com/eclipse-sumo/sumo/blob/v1_26_0/src/microsim/cfmodels/MSCFModel.cpp",
+      "sha256": "b4a2b50b679c7772dc81ec5585410cedfdea2110961cc445731627ef3cb1d769",
+      "bytes": 49766,
+      "anchors": [
+        {
+          "line": 92,
+          "pattern": "MSCFModel::brakeGapEuler"
+        },
+        {
+          "line": 369,
+          "pattern": "maximumSafeStopSpeed(gap"
+        },
+        {
+          "line": 849,
+          "pattern": "MSCFModel::maximumSafeStopSpeedEuler"
+        },
+        {
+          "line": 977,
+          "pattern": "maximumSafeStopSpeed(gap"
+        }
+      ]
+    },
+    {
+      "path": "src/microsim/MSFrame.cpp",
+      "raw_url": "https://raw.githubusercontent.com/eclipse-sumo/sumo/v1_26_0/src/microsim/MSFrame.cpp",
+      "source_url": "https://github.com/eclipse-sumo/sumo/blob/v1_26_0/src/microsim/MSFrame.cpp",
+      "sha256": "03d2a536a4bfd0103360ad095977528f64b4486ad82e4eb1747b14e1263c2d6b",
+      "bytes": 79353,
+      "anchors": [
+        {
+          "line": 367,
+          "pattern": "oc.doRegister(\"step-method.ballistic\""
+        },
+        {
+          "line": 506,
+          "pattern": "oc.doRegister(\"tls.yellow.min-decel\""
+        }
+      ]
+    },
+    {
+      "path": "src/microsim/MSLane.cpp",
+      "raw_url": "https://raw.githubusercontent.com/eclipse-sumo/sumo/v1_26_0/src/microsim/MSLane.cpp",
+      "source_url": "https://github.com/eclipse-sumo/sumo/blob/v1_26_0/src/microsim/MSLane.cpp",
+      "sha256": "f3594649417bc0e2e94ae0e9c8d16b1f5811c4df17cac0a18d078d97af9099bf",
+      "bytes": 209149,
+      "anchors": [
+        {
+          "line": 1350,
+          "pattern": "double stopSpeed = cfModel.stopSpeed"
+        },
+        {
+          "line": 3792,
+          "pattern": "MSLane::getVehicleStopOffset"
+        }
+      ]
+    }
+  ]
+}

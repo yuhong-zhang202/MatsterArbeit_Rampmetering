@@ -1,0 +1,32 @@
+{
+  "run_id": "CA_FIXED_R300_S17_A07",
+  "card_sha256": "69fa8d4584b8b52868efd68eb9fc4d5153dc92fd29811be9aaf3a4724b95412d",
+  "status": "ABORTED_SAFETY_BEFORE_RED",
+  "error": "RuntimeError: STOP unsafe prospective native yellow-to-red transition",
+  "sumo_started": true,
+  "last_completed_step_s": 1206,
+  "decision_time_s": 1206,
+  "prefix_total_crossings": 0,
+  "prefix_crossings_by_segment": {
+    "PRECONTROL": 0,
+    "EXTERNAL_HOLD": 0
+  },
+  "accounting": {
+    "C": 0.5,
+    "C_applied": 0.5,
+    "E": 0,
+    "N": 1,
+    "mapping_command_latency": 0.0,
+    "mapping_quantization": 0.5,
+    "physical_shortfall": -1,
+    "C_minus_E": 0.5,
+    "E_minus_N": -1
+  },
+  "cycle_count": 1,
+  "runtime_qualification": "PENDING_INDEPENDENT_DATA_AND_SCIENCE",
+  "last_accounted_s": 1206,
+  "accounting_complete": true,
+  "accounting_status": "RECONCILED_COMPLETED_PREFIX",
+  "unaccounted_completed_interval_s": null,
+  "qualification_accounting_supported": true
+}

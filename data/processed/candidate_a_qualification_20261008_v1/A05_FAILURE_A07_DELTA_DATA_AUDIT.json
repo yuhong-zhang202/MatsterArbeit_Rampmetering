@@ -1,0 +1,87 @@
+{
+  "classification": "INDEPENDENT_STARTUP_FAILURE_AND_INTERFACE_DELTA_NOT_TRAFFIC_RESULT",
+  "run_id": "CA_FIXED_R300_S17_A05",
+  "disposition": "FAILURE_PRESERVED_A07_INTERFACE_DELTA_REVIEWED",
+  "actual_attempts_total": 2,
+  "actual_SUMO_starts_total": 2,
+  "effective_runs_total": 0,
+  "prelaunch_metadata_rejection_starts": 0,
+  "completed_steps_this_run": 0,
+  "cycles_this_run": 0,
+  "csv_rows": {
+    "phase_steps.csv": 0,
+    "cycles.csv": 0,
+    "crossings.csv": 0,
+    "feedback_updates.csv": 0,
+    "detector_vehicle_events.csv": 0
+  },
+  "C": 0,
+  "C_applied": 0,
+  "E": 0,
+  "N": 0,
+  "service_windows": 0,
+  "tracking_error": null,
+  "safety_phase_service_range": "NOT_TESTED",
+  "accounting_note": "Empty completed prefix is reconciled; qualification_accounting_supported true is not overall qualification.",
+  "failure_error": "FatalTraCIError: Connection closed by SUMO.",
+  "native_failure": "Error: no declaration found for element 'routes'; missing local SUMO_HOME schema lookup",
+  "native_self_loop_warnings_count": 17,
+  "native_self_loop_warnings_interpretation": "Program initialization warnings only; not collisions, unsafe traffic transitions, or measured service failure.",
+  "startup_trace_callback": "A05 callable records212 failed attempts then213 CONNECTED; SUMO schema loading later closes connection before any step. Former PosixPath-callable error absent",
+  "A07_delta": "Production Popen receives explicit env through a tested launch wrapper; child SUMO_HOME restored to protected runner installed share/sumo path; local schema existence and hashes logged, xml-validation always unchanged; no installation/phase/mapping/safety/timing changes.",
+  "A07_sources": {
+    "config/candidate_a_qualification_20261008_v1/PHASE_RATE_CONTRACT.json": "f4af413e055e9f5d9404df0b3644c0538e7fb4cd6082b0e0722cff7740f9ec59",
+    "scripts/candidate_a_qualification_20261008_v1/runner.py": "d0f16717d80ba2dbbf5f93ea4878916caa570e8b75ae95f0c9c4d05dceedff4d",
+    "scripts/candidate_a_qualification_20261008_v1/worker.py": "5d776dfcef39163389564c0a6921a8873478fae76b13651795443d077d9ed243",
+    "src/candidate_a_qualification_20261008/actor.py": "bbfeaeb8168ed55f6001e4aec19d4e54c984aa45933a339d5c5b78479279be68",
+    "src/candidate_a_qualification_20261008/safety.py": "f11e1854821ba613045f15c7561e41c1baa6fee06e83ff87790e51d4fffe11b5",
+    "tests/candidate_a_qualification_20261008/test_contract.py": "8d94bb1c043e76a234bdf33a38e74f45b677493b92327708c4ab8ab53981b0d6"
+  },
+  "A07_cards": [
+    {
+      "rate": 300,
+      "card_path": "config/candidate_a_qualification_20261008_v1/CA_FIXED_R300_S17_A07/card.json",
+      "card_sha256": "69fa8d4584b8b52868efd68eb9fc4d5153dc92fd29811be9aaf3a4724b95412d",
+      "status": "OFFLINE_PASS_NOT_RELEASED"
+    },
+    {
+      "rate": 450,
+      "card_path": "config/candidate_a_qualification_20261008_v1/CA_FIXED_R450_S17_A07/card.json",
+      "card_sha256": "7be9d1ef90bec46316979a0f6ca0d1e7c5b5576e2e99b09242e3ac17f02297b8",
+      "status": "OFFLINE_PASS_NOT_RELEASED"
+    },
+    {
+      "rate": 600,
+      "card_path": "config/candidate_a_qualification_20261008_v1/CA_FIXED_R600_S17_A07/card.json",
+      "card_sha256": "eb718ccfd661da0689a4a72d7142401363d1366349e343230d0ba06c8f3223f7",
+      "status": "OFFLINE_PASS_NOT_RELEASED"
+    },
+    {
+      "rate": 750,
+      "card_path": "config/candidate_a_qualification_20261008_v1/CA_FIXED_R750_S17_A07/card.json",
+      "card_sha256": "78cff56f345ecbb5ae56eac6e1f1096cde423caf72cca3155523aaf2830e90c7",
+      "status": "OFFLINE_PASS_NOT_RELEASED"
+    },
+    {
+      "rate": 900,
+      "card_path": "config/candidate_a_qualification_20261008_v1/CA_FIXED_R900_S17_A07/card.json",
+      "card_sha256": "94e20d5f73fbb87d9a573f70c2d1db4ba9a697d001bd79be0554a93375892af4",
+      "status": "OFFLINE_PASS_NOT_RELEASED"
+    }
+  ],
+  "installed_schema_sha256": {
+    "routes_file.xsd": "2ce8e88b6644d87cc6d8acd49b2fc9da29f74e953e67ab4c6e475de5cfe0cb11",
+    "additional_file.xsd": "c755f45b68590c4313eb8123b2cd9c56e0097ade83c5f2176f35e14f25bec97e",
+    "sumoConfiguration.xsd": "3a17f38bb69fcfaa46ae6e8e1dad548133a4e173368eab524d0cbef9eecad69b"
+  },
+  "A07_actual_runtime_verification": "NOT_RUN_BY_THIS_AUDIT",
+  "bindings": {
+    "data/raw/candidate_a_qualification_20261008_v1/CA_FIXED_R300_S17_A05/guardian_receipt.json": "d808a08535c41a1e98d5c52c087c7cd6f34633fa5e3b5366d7b58206a09728a8",
+    "data/raw/candidate_a_qualification_20261008_v1/CA_FIXED_R300_S17_A05/outputs/failure_snapshot.json": "1ffebe091210c55a64955f5eb080569c155c7c68d8649cd053614b6c69ecdd54",
+    "data/raw/candidate_a_qualification_20261008_v1/CA_FIXED_R300_S17_A05/outputs/worker_receipt.json": "81750f858431e3451175db4a0be7f53c7a6d9ee3172879d807438c36b166a8ae",
+    "artifacts/candidate_a_qualification_20261008_v1/PRELAUNCH_REJECTIONS.jsonl": "a1bf6caef4d256d06123acc4c6300d645ef783a4272b701656057aebd2f7461b",
+    "artifacts/candidate_a_qualification_20261008_v1/engineering/R300_A07_REPAIR_OFFLINE_RECEIPT.json": "8a85c9b653afffe911d07527be4d0f6613a3444dddd5185afbb975f6c97256f2",
+    "manifest_files_verified": 43,
+    "script_sha256": "d862438d24687ffe0230c8f4a3236ec19b8b08d8d31dc8f158aefdb082bd2366"
+  }
+}

@@ -1,0 +1,32 @@
+{
+  "classification": "PR5_P3_PROSE_PRECISION_ONLY",
+  "date": "2026-10-11",
+  "review_finding": "https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/pull/5#discussion_r4239541754",
+  "baseline_commit": "afda54b8043bbd6488028fa222d64b2ef5aa5ac3",
+  "corrected_report_path": "data/processed/candidate_a_qualification_20261008_v1/R300_A07_ACTUAL_DATA_REVIEW_V3.md",
+  "report_before_sha256": "d75d0fac1bb0e79d1e9a9de945d9f27635f716c2c9dd6b3ac7c77c6e7bad8be1",
+  "report_after_sha256": "c767cb1e5d7a87a67af65f6d8eb9ff24d0794704a1d0dda05a870ab32bbfea87",
+  "historical_v3_binding_path": "data/processed/candidate_a_qualification_20261008_v1/R300_A07_FINAL_DERIVED_BINDINGS_V3.json",
+  "historical_v3_binding_sha256": "7e1aa4ff8f9f6823e7209194dfec1b669c23f17b8c42a91cd8275ea189a523dc",
+  "historical_binding_status": "valid for pre-correction report at baseline commit; one report hash intentionally differs after prose correction",
+  "unchanged_other_bound_files": 14,
+  "unchanged_gate_sha256": "d7cf23dce2f2639c0f972102938cca492bd7d6442c7b5d1c6eeac37b72c2a20f",
+  "unchanged_service_csv_v3_sha256": "bcfa2f49991ab5ea4eca58d9b6237a76952de940c7ca85030bb9a2f6264e9546",
+  "first_service_window_csv_values": {
+    "C_observed": "0.5",
+    "C_applied_observed": "0.5",
+    "quantization": "0.5"
+  },
+  "first_service_window_v2_values": {
+    "C_observed": "0.5",
+    "C_applied_observed": "0.5",
+    "quantization": "0.5"
+  },
+  "gate_top_level_prefix_values": {
+    "C": 0.49999999999999994,
+    "C_applied": 0.49999999999999994,
+    "quantization": 0.49999999999999994
+  },
+  "data_or_code_changes": 0,
+  "verification": "Exact one-sentence replacement; all other14 bound files and both CSVs/gate byte-identical to baseline commit. No SUMO executed."
+}

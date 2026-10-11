@@ -1,0 +1,100 @@
+{
+  "classification": "OFFLINE_STATIC_AUDIT_NO_SIMULATION",
+  "date": "2026-10-08",
+  "python": "3.13.0 (v3.13.0:60403a5409f, Oct  7 2024, 00:37:40) [Clang 15.0.0 (clang-1500.3.9.4)]",
+  "packages": {
+    "traci": "1.26.0",
+    "sumolib": "1.26.0",
+    "sumoITScontrol": "0.1.0"
+  },
+  "sumo_version": "1.26.0 unchanged pinned binary",
+  "sumo_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+  "network_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+  "lane_geometry": {
+    "ramp_storage_0": {
+      "id": "ramp_storage_0",
+      "index": "0",
+      "speed": "22.22",
+      "length": "204.49",
+      "width": "3.20",
+      "shape": "1061.13,738.87 1140.98,818.71 1220.78,863.61"
+    },
+    ":urban_diverge_1_0": {
+      "id": ":urban_diverge_1_0",
+      "index": "0",
+      "speed": "18.05",
+      "length": "113.08",
+      "width": "3.20",
+      "shape": "1001.60,642.80 1010.40,659.42 1030.04,691.38 1050.34,723.07 1061.13,738.87"
+    },
+    ":ramp_mid_0_0": {
+      "id": ":ramp_mid_0_0",
+      "index": "0",
+      "speed": "25.00",
+      "length": "81.98",
+      "width": "3.20",
+      "shape": "1220.78,863.61 1234.36,867.60 1260.34,874.07 1286.43,880.26 1300.31,883.43"
+    },
+    "ramp_accel_0": {
+      "id": "ramp_accel_0",
+      "index": "0",
+      "speed": "27.78",
+      "length": "99.07",
+      "width": "3.20",
+      "shape": "1300.31,883.43 1350.14,893.40 1398.38,892.04"
+    }
+  },
+  "public_version_source": [
+    {
+      "path": "src/microsim/MSNet.cpp",
+      "sha256": "fdf62a7626e2d1b31edaf695198e27f4690c2a86a1925e0142852a80449cd6f8",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/v1_26_0/src/microsim/MSNet.cpp",
+      "anchors": [
+        {
+          "line": 832,
+          "text": "myBeginOfTimestepEvents->execute(myStep);"
+        },
+        {
+          "line": 843,
+          "text": "myLogics->check2Switch(myStep);"
+        },
+        {
+          "line": 942,
+          "text": "myStep += DELTA_T;"
+        }
+      ]
+    },
+    {
+      "path": "src/microsim/cfmodels/MSCFModel_Krauss.cpp",
+      "sha256": "0722e1a44c56e430e40c2b661d1ccfb74df1095cd9f6ffeb4e4ceb4da983af36",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/v1_26_0/src/microsim/cfmodels/MSCFModel_Krauss.cpp",
+      "anchors": [
+        {
+          "line": 101,
+          "text": "MSCFModel_Krauss::stopSpeed(const MSVehicle* const veh, const double speed, double gap, double decel, const CalcReason usage) const {"
+        }
+      ]
+    },
+    {
+      "path": "src/microsim/traffic_lights/MSSimpleTrafficLightLogic.cpp",
+      "sha256": "05d04dc386f1d769bcd58bc07803e8b20055538ee9d13ab91f57a3c900b4660a",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/v1_26_0/src/microsim/traffic_lights/MSSimpleTrafficLightLogic.cpp",
+      "anchors": [
+        {
+          "line": 80,
+          "text": "MSSimpleTrafficLightLogic::trySwitch() {"
+        },
+        {
+          "line": 288,
+          "text": "MSSimpleTrafficLightLogic::changeStepAndDuration(MSTLLogicControl& tlcontrol,"
+        }
+      ]
+    }
+  ],
+  "installed_traci_sources": {
+    ".venv/lib/python3.13/site-packages/traci/_trafficlight.py": "4757c6336d7edf37a7d1473d050731e40a18e4a4d9220babb564af2abaaac4c9",
+    ".venv/lib/python3.13/site-packages/traci/_vehicle.py": "998b5579fc6df5380af5a315a2677d396460a9e8ecc58a8ba971d6f085b206eb"
+  },
+  "step_semantics": "native TLS event at current time is executed after TraCI commands and before motion; pending nextSwitch==t must be predicted before simulationStep",
+  "xsd_validation": "not performed offline: lxml unavailable; XML parse/exact native program structure verified; runtime xml-validation always inherited; no dependency installed"
+}

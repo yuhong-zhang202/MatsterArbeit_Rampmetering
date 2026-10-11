@@ -1,0 +1,7 @@
+# A07 final environment-transfer increment
+
+A06 already restored the exact protected runner SUMO_HOME child environment. Parent then requested a direct mock of actual Popen environment transfer. A07 adds only a launch seam calling `subprocess.Popen(command, stdout=stdout, stderr=stderr, env=env)` and a directed test that verifies the real Popen call receives the installed `share/sumo` value and unchanged command. The actual worker now invokes that seam with the already computed, recorded environment. No further launch behavior, timing, validation flag, XML or research parameter changes.
+
+Full26/26 offline tests, syntax and67 protected hashes pass. This includes direct inherited connection callback and actual Popen env-transfer tests without sockets/SUMO. A06 source and receipt are saved under reviewed_a06_sources; A06 cards remain unlaunched. Final5 A07 card/source bindings are PHASE_A_A07_FINAL_CARDS.json and R300_A07_REPAIR_OFFLINE_RECEIPT.json.
+
+A05 failure and minimal installed-schema diagnosis remain documented in R300_A05_FAILURE_AND_A06_REPAIR.md; that report's A06 card reference is historical and now superseded by A07. A04/A05 raw failures and snapshots remain immutable. Actual SUMO starts2, technical failures2, effective qualifications0. A07 not launched. Root may bind exact science/data review and A05 failed snapshot plus A07 repair receipt before a single R300 replacement release. Other rates and C remain HOLD. No validation downgrade, new environment dependency or neutral run.

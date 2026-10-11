@@ -1,0 +1,63 @@
+{
+  "classification": "OFFLINE_GATE_READY_FOR_INCREMENTAL_SCIENTIFIC_REVIEW",
+  "base_commit": "35651751a2e03d1906ff32a267a95077553c4404",
+  "unit_command": ".venv/bin/python -m unittest discover -s tests/candidate_a_qualification_20261008 -v",
+  "tests": 23,
+  "test_exit_code": 0,
+  "unit_log_sha256": "87d1865977b3ea3bb5396e078c7bd124ba5a828962b0f958413ac44282af7b35",
+  "syntax_command": ".venv/bin/python -m py_compile scripts/candidate_a_qualification_20261008_v1/runner.py scripts/candidate_a_qualification_20261008_v1/worker.py src/candidate_a_qualification_20261008/actor.py src/candidate_a_qualification_20261008/safety.py tests/candidate_a_qualification_20261008/test_contract.py",
+  "syntax_exit_code": 0,
+  "tested_sources_sha256": {
+    "config/candidate_a_qualification_20261008_v1/PHASE_RATE_CONTRACT.json": "f4af413e055e9f5d9404df0b3644c0538e7fb4cd6082b0e0722cff7740f9ec59",
+    "scripts/candidate_a_qualification_20261008_v1/runner.py": "d0f16717d80ba2dbbf5f93ea4878916caa570e8b75ae95f0c9c4d05dceedff4d",
+    "scripts/candidate_a_qualification_20261008_v1/worker.py": "27e7cbc4f8a55bd46434ea96f58e4455f0ea0a3b73ad4e7817903c330f3b6688",
+    "src/candidate_a_qualification_20261008/actor.py": "bbfeaeb8168ed55f6001e4aec19d4e54c984aa45933a339d5c5b78479279be68",
+    "src/candidate_a_qualification_20261008/safety.py": "f11e1854821ba613045f15c7561e41c1baa6fee06e83ff87790e51d4fffe11b5",
+    "tests/candidate_a_qualification_20261008/test_contract.py": "6d7bae063d80739526c9bed003b94abaac7002efc8b0fc2269112ee8d7225497"
+  },
+  "protected_files_verified": 67,
+  "cards": [
+    {
+      "rate": 300,
+      "card_path": "config/candidate_a_qualification_20261008_v1/CA_FIXED_R300_S17_A04/card.json",
+      "card_sha256": "f408beb100b21db08f19c40ad1e756272a842d277f8f04903fbad0b28c1de612",
+      "status": "OFFLINE_PASS_NOT_RELEASED"
+    },
+    {
+      "rate": 450,
+      "card_path": "config/candidate_a_qualification_20261008_v1/CA_FIXED_R450_S17_A04/card.json",
+      "card_sha256": "bd5a8d3187ed78c6a7e079e211778a804da9be19e88066c744bf506e58a48d55",
+      "status": "OFFLINE_PASS_NOT_RELEASED"
+    },
+    {
+      "rate": 600,
+      "card_path": "config/candidate_a_qualification_20261008_v1/CA_FIXED_R600_S17_A04/card.json",
+      "card_sha256": "74701c1736d81b1c3fda8a3f8527c00d6e2b9039a25b0bac56eddb5f46ab270b",
+      "status": "OFFLINE_PASS_NOT_RELEASED"
+    },
+    {
+      "rate": 750,
+      "card_path": "config/candidate_a_qualification_20261008_v1/CA_FIXED_R750_S17_A04/card.json",
+      "card_sha256": "7f86f44a98abcff01ab49f64be2f528c9d100f5dedd983c54e9559feccec65fb",
+      "status": "OFFLINE_PASS_NOT_RELEASED"
+    },
+    {
+      "rate": 900,
+      "card_path": "config/candidate_a_qualification_20261008_v1/CA_FIXED_R900_S17_A04/card.json",
+      "card_sha256": "66750cfc0c6491c2259803ad88eeae881ecce0b8e19a5cf475e4bd2055132998",
+      "status": "OFFLINE_PASS_NOT_RELEASED"
+    }
+  ],
+  "new_sumo_scenario_starts": 0,
+  "phaseC_authorized": false,
+  "reviewed_a02_sources_snapshot": "artifacts/candidate_a_qualification_20261008_v1/engineering/reviewed_a02_sources",
+  "reviewed_a03_sources_snapshot": "artifacts/candidate_a_qualification_20261008_v1/engineering/reviewed_a03_sources",
+  "resource_limits": {
+    "wall_limit_s": 180,
+    "startup_limit_s": 60,
+    "run_limit_bytes": 300000000,
+    "new_raw_limit_bytes": 4000000000,
+    "minimum_free_bytes": 5000000000,
+    "poll_s": 0.2
+  }
+}

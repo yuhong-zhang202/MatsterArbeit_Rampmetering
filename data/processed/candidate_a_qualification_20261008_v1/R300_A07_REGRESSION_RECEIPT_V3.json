@@ -1,0 +1,22 @@
+{
+  "date": "2026-10-11",
+  "classification": "OFFLINE_ANALYSIS_REGRESSION_NOT_SIMULATION",
+  "command": ".venv/bin/python -m unittest discover -s tests/candidate_a_analysis_20261011 -v",
+  "tests_run": 6,
+  "tests_passed": 6,
+  "tests_failed": 0,
+  "result": "PASS",
+  "python_version": "3.13.0",
+  "new_SUMO_starts": 0,
+  "source_sha256": "f6f8f4851d33a717cc738b0da3eba6d8130ff396b78fb93977c675904ee584aa",
+  "test_sha256": "e4f932d8a174531261aaf8e27a018639a143b722d4942e6c16fc25dda61f7adc",
+  "test_cases": [
+    "observed_numeric_zero",
+    "wholly_unobserved_null",
+    "six_second_partial_actual_sums",
+    "JSON_null_CSV_blank_roundtrip",
+    "inclusive_10pct_and_supply_screen",
+    "exclusive_artifact_creation_identical_readback_mismatch_rejection"
+  ],
+  "limitations": "Only expression repair and specified regression cases certified; no new controller/native safety or service-capacity qualification."
+}

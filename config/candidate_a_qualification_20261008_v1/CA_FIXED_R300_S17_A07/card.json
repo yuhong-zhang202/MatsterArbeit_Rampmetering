@@ -1,0 +1,153 @@
+{
+  "classification": "ENGINEERING_QUALIFICATION_ONLY",
+  "status": "PREPARED_NOT_RELEASED",
+  "base_commit": "35651751a2e03d1906ff32a267a95077553c4404",
+  "run_id": "CA_FIXED_R300_S17_A07",
+  "mode": "FIXED",
+  "fixed_command_veh_h": 300,
+  "qMain": 3600,
+  "qRamp": 900,
+  "seed": 17,
+  "treatment": "FIXED_RATE",
+  "horizon_s": 4200,
+  "step_s": 1,
+  "activation_s": 1200,
+  "external_hold_begin_s": 600,
+  "external_hold_end_s": 1200,
+  "initial_hold_yellow_s": 3,
+  "service_windows": [
+    [
+      1200,
+      1500
+    ],
+    [
+      1500,
+      1800
+    ],
+    [
+      1800,
+      2100
+    ],
+    [
+      2100,
+      2400
+    ],
+    [
+      2400,
+      2700
+    ],
+    [
+      2700,
+      3000
+    ]
+  ],
+  "tracking_tolerance": 0.1,
+  "feedback": {
+    "target_pct": 11.0,
+    "gain_veh_h_per_pct": 70.0,
+    "minimum_veh_h": 300.0,
+    "maximum_veh_h": 900.0,
+    "initial_veh_h": 900.0
+  },
+  "package": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/config/candidate_a_qualification_20261008_v1/CA_FIXED_R300_S17_A07",
+  "output": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/candidate_a_qualification_20261008_v1/CA_FIXED_R300_S17_A07/outputs",
+  "resources": {
+    "wall_limit_s": 180,
+    "startup_limit_s": 60,
+    "run_limit_bytes": 300000000,
+    "new_raw_limit_bytes": 4000000000,
+    "minimum_free_bytes": 5000000000,
+    "poll_s": 0.2
+  },
+  "sources_sha256": {
+    "config/candidate_a_qualification_20261008_v1/PHASE_RATE_CONTRACT.json": "f4af413e055e9f5d9404df0b3644c0538e7fb4cd6082b0e0722cff7740f9ec59",
+    "scripts/candidate_a_qualification_20261008_v1/runner.py": "d0f16717d80ba2dbbf5f93ea4878916caa570e8b75ae95f0c9c4d05dceedff4d",
+    "scripts/candidate_a_qualification_20261008_v1/worker.py": "5d776dfcef39163389564c0a6921a8873478fae76b13651795443d077d9ed243",
+    "src/candidate_a_qualification_20261008/actor.py": "bbfeaeb8168ed55f6001e4aec19d4e54c984aa45933a339d5c5b78479279be68",
+    "src/candidate_a_qualification_20261008/safety.py": "f11e1854821ba613045f15c7561e41c1baa6fee06e83ff87790e51d4fffe11b5",
+    "tests/candidate_a_qualification_20261008/test_contract.py": "8d94bb1c043e76a234bdf33a38e74f45b677493b92327708c4ab8ab53981b0d6"
+  },
+  "protected_baseline_sha256": {
+    "AGENTS.md": "4df6eb482d63f9d1e6d30dfea6d78c3645577cc08a9d944b818db53601ac281b",
+    "config/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "config/scenarios/minimal_uncontrolled/README.md": "d74b65f4e178ea381eb80bb8eea40af1cd415bfc4d2b9f4d1de396c199bb0021",
+    "config/scenarios/minimal_uncontrolled/scenario.add.xml": "8189e35c5d8224b91b6de57e3bcaf0a7a43139e73af0f50e2ea73d2224d80828",
+    "config/scenarios/minimal_uncontrolled/scenario.con.xml": "d154948200c9b4d9a3d54bf04647357daaff0e6a19293f19fcef457ee4ae4ea5",
+    "config/scenarios/minimal_uncontrolled/scenario.edg.xml": "d6c7d6df0b8a5afc60a8bfedd796b9d14baa56ec44cf322e3129f976396cff53",
+    "config/scenarios/minimal_uncontrolled/scenario.nod.xml": "b1577412ba28470abe3270913833a4053ca6be174f2eede55de77aa5b8a2c923",
+    "config/scenarios/minimal_uncontrolled/scenario.sumocfg": "0e0f99a7af694e7f448efdb66837143100478da2151ae83ba3e1c6772a811db0",
+    "config/scenarios/minimal_uncontrolled/scenario.tll.xml": "89f25ab5020e4f2df2fc035233b038c89cc80cf748f6dca19b5584e829df3ecc",
+    "config/scenarios/stage6_h2_entry_v1/entry_contract.json": "cd8ba4e981c8467fe7df9c66ab533479504e480813bf26f4e40f66288d47a46e",
+    "config/scenarios/stage6_h2_entry_v1/scenario.add.xml": "8189e35c5d8224b91b6de57e3bcaf0a7a43139e73af0f50e2ea73d2224d80828",
+    "config/scenarios/stage6_h2_entry_v1/scenario.con.xml": "d154948200c9b4d9a3d54bf04647357daaff0e6a19293f19fcef457ee4ae4ea5",
+    "config/scenarios/stage6_h2_entry_v1/scenario.edg.xml": "d6c7d6df0b8a5afc60a8bfedd796b9d14baa56ec44cf322e3129f976396cff53",
+    "config/scenarios/stage6_h2_entry_v1/scenario.nod.xml": "b1577412ba28470abe3270913833a4053ca6be174f2eede55de77aa5b8a2c923",
+    "config/scenarios/stage6_h2_entry_v1/scenario.sumocfg": "8bcf3632a68cda002a75aaed017f724faf435f3251ad67e0ccb795c4d661593e",
+    "config/scenarios/stage6_h2_entry_v1/scenario.tll.xml": "89f25ab5020e4f2df2fc035233b038c89cc80cf748f6dca19b5584e829df3ecc",
+    "config/scenarios/stage6_h2_entry_v1/source_manifest.json": "987b43bc6ee8335e124b05282513bfab2135262dd20b400d2e56e99397843292",
+    "config/smoke_tests/alinea/UPSTREAM.md": "dc458305426fc4d7f4f5caf52601cd80891f323a9100bd9933e7542213497814",
+    "config/smoke_tests/alinea/upstream/LICENSE": "c2e3e0bee457e94ee1aa1aeae5d1977a55d107bf5eb9b4221ef5b12e7fd56e51",
+    "config/smoke_tests/alinea/upstream/demo_ALINEA.py": "56a1f1fd30b5ddba9961c3e92674b10a2796b6243c167e731d7ed9da950320fe",
+    "config/smoke_tests/alinea/upstream/model/Configuration_1.sumocfg": "310b9190e07496ad7ee2e652047f0b0b930b3761f9ddc59cdd4771089803b8de",
+    "config/smoke_tests/alinea/upstream/model/Demand_1.rou.xml": "f562625377d07352b10a3f0d13802cb16657806030191a539d21b36d9cc17a39",
+    "config/smoke_tests/alinea/upstream/model/Network.net.xml": "1c61ca10ed8a0210ba5eb63af084ae88b9c5ae0fab5c63ca1892bec39f58e9e8",
+    "config/smoke_tests/alinea/upstream/model/Sensors.add.xml": "aa008c6137d28f9c924a59d9d3d0d6727113ec3e32ceea444ad81c74b653610c",
+    "docs/DECISIONS.md": "c4d1e315ac05c22600b6e005aa51b1ef1e984f31dbec9d58f8860fb296613b4f",
+    "docs/EXPERIMENT_PROTOCOL.md": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "scripts/formal_development_20261007_v1/control.py": "a282302ecc5fefd8d1810c07d1340f9bd1dbe0e3316b718ce991e5c5bea185ab",
+    "scripts/formal_development_20261007_v1/queue_protection.py": "3a4488d2b9e5802b61188bf9e45bef5af15f369ebce73b7df88647f0267203dc",
+    "scripts/formal_development_20261007_v1/runner.py": "4d166ea8c73e98474f37925f66feafc59d3a7e0b232d036102f166671f3370fa",
+    "scripts/formal_development_20261007_v1/safe_actuator_fix02.py": "636125577811cfbb266e4136cb7a2de08f7d010006c1d92457f321ba819b62a9",
+    "scripts/formal_development_20261007_v1/test_offline.py": "ef1e5badb726feab42696596f667be8685367b82f992fc78a1adc4a5ceaff9ae",
+    "scripts/formal_development_20261007_v1/v15_worker.py": "f90e181707b0be69f733988885ae093a47dbbf8fe0a4d916b623253d1b082a43",
+    "src/.gitkeep": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "src/actuator_investigation_20261007/offline_contracts.py": "930e5c70e4bb119232eccefb22160662ead8c093579d4d43a6e0c1668a0875d5",
+    "src/analysis/analyze_stage2_exploration.py": "7a3698bd5f8898f33ad84d485a6dff9c7f163a1ef6e92b7f43f68e9fe05832ac",
+    "src/analysis/analyze_stage3_baseline.py": "6558f971bc713397e26a41fd4b2b4a71255a38ff7b6122d77df6056b88b6b8f6",
+    "src/analysis/analyze_stage4_qmain.py": "899305e7dfba2222ea552c0b453d3078f39b1d254d2805fb71287625864dcb1b",
+    "src/analysis/archive_stage2_runtime.py": "df6d4620b9b65482df7224bf7db4bf12ceb04ccf0a7a30c92408c65f187f38eb",
+    "src/analysis/build_stage2_g1_diagnostic.py": "fa97b9cc685533cca54c76d4e00afc7bc9d123ca3650c419c79925ac472f21c2",
+    "src/analysis/build_stage2_replay.py": "42ec5370716a91ff53cb4a169652f75b6c6b87dff40828aead37fef1cd0578ca",
+    "src/analysis/build_stage3_t34_review.py": "73854a8d5fae131730b2f58444b792f64bbe37b33866b850f3a3ee700bc63b2b",
+    "src/analysis/finalize_stage3_review_revision.py": "e6b259d282688e39a45776595c4a91b307ec318100b93490c04c94bc1ad41e73",
+    "src/analysis/internal_lane_accounting.py": "a8bbc12d161d98c73ad5088baf8cc052c5231333bb87c36a576f77aac26715e4",
+    "src/analysis/render_stage2_geometry.py": "c432fb18be908fc4baf2dd242e556a6a6afa275c3b14bd2d68b087b32456a55a",
+    "src/analysis/revise_stage3_aggregate_units.py": "5997db23350c903a8d807db3e2c8022b73a50da8dca220c770e4b5d810e1e077",
+    "src/analysis/stage2_queue_diagnostic.py": "54174e1339fc5fa9f9bc50a17070b472315b6483e8d0db6f9319f643dc53fbfa",
+    "src/analysis/stage6_h2_measurement.py": "43cb28c7f1daba0b21c56590f8432c86a92aa0de136988eb6ccb9fe5894e85c5",
+    "src/analysis/stage6_h2_pipeline.py": "19e147df3b2fc6ddbb77556714180bd66b36e01417e981075c42dc7f13f183da",
+    "src/analysis/validate_internal_e1.py": "954b6a710b83960cbf72015bc117d28e5233e2102f64c26b1af9757d12b3db06",
+    "src/analysis/verify_stage3_baseline.py": "d8e8d41cfcf147b3344614c3810e6ee7850e0a49d5f93a53c7c2f7297bd153d2",
+    "src/analysis/verify_stage3_unit_revision.py": "f0a1c613dbddb783a4b448ba3824eaeb9215c23846361ca9ce032f443defbce7",
+    "src/scenarios/__init__.py": "83b31160ba6ae5e064467902edabbc0114d5522c2b70ae8f8f90b64f68fbaf11",
+    "src/scenarios/check_e2_coverage.py": "3a301523a26c0d225bac0952e9669e81b37eab59d31ee79a51306acbf22028f9",
+    "src/scenarios/fullnet_abc_rebuild.py": "cf8aed85e6ce03c01da98cc3e6b5918dac57fc198ab4af8f494e7e739565fc51",
+    "src/scenarios/fullnet_abc_single_start.py": "e73de910ef331adb174676d81717d44f498adb8e76082f773b8af52e256b8f8c",
+    "src/scenarios/fullnet_b22_sigma0_build.py": "c61171243912588f84b7bda702caa31d29ccee17f140094a0077f29e8a2b8148",
+    "src/scenarios/fullnet_b22_sigma0_single_start.py": "37c8520dfa5a13f80262139166dd3067197058cd99f4af8ae487879ac5b6e2a8",
+    "src/scenarios/fullnet_m_sigma0_diagnostic.py": "03d0f3f9c55c22f498ea984b377d8874746cab25ab4e3325e7b5887b031356a4",
+    "src/scenarios/fullnet_m_sigma0_single_start.py": "a290dd1d880dcc567e186e4ade2b3497db1c66959c4631282f19709c9a5d96fe",
+    "src/scenarios/fullnet_rebalanced28_build.py": "80078dd820e5f404f5c9f9b2183da39884502c1b452230e832034ead254230d5",
+    "src/scenarios/fullnet_rebalanced28_single_start.py": "6a1112f918a32f387302b498b340c729f687d9d8b586c251b72edda25eb07e03",
+    "src/scenarios/run_minimal_uncontrolled.py": "7cd29eeba5fff64c43cb71ba3b9f3477938f8d4e246ab158e4f20293dbd3f983",
+    "src/scenarios/stage6_h2_execution.py": "4c6dc65967cb655b132fe344587d5354979867c1ae26668cbf6ce920539ab402",
+    "src/scenarios/stage6_h2_offline.py": "4620f4636fc6abe96d3732e46097b3b2ee0ef9e928e288625421e9dc8bcad3d9",
+    "src/smoke_tests/run_alinea.py": "7a5747b7f5a76a66c5543b137bba0769e446772f7e60fd824d9f58110a0a08d9",
+    "src/stage6_safe_actuator_v10.py": "c48b743972e44cdac8d53b6276efeed75c8bcd45a36c13940735e9d3f317f2d7",
+    "tests/actuator_investigation_20261007/test_offline_contracts.py": "4426611a6874b687741e0a1148d6c7138546be81e6115197bffd059d89aa1d2e"
+  },
+  "inherited_input_sha256": {
+    "artifacts/stage6_boundary_search_20261002_v1/inputs/M3600_R900_S17/demand.rou.xml": "99151ed51419c8d490c0f0b1a91bea23f6be70c5486890a04e1e06b3de5d808e",
+    "artifacts/stage6_boundary_search_20261002_v1/inputs/M3600_R900_S17/scenario.add.xml": "de029a937d0d2713d2634f5b14e2f5ab39e7cbdf32f02fc33763aac7f17c3400",
+    "artifacts/stage6_boundary_search_20261002_v1/inputs/M3600_R900_S17/scenario.sumocfg": "8b7e9209244e8dfa6cc142bd579740884fa438ac5d622fd301e81e73d05f9bf5"
+  },
+  "runtime_input_sha256": {
+    "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca"
+  },
+  "sumo_binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179",
+  "prepared_input_sha256": {
+    "config/candidate_a_qualification_20261008_v1/CA_FIXED_R300_S17_A07/demand.rou.xml": "99151ed51419c8d490c0f0b1a91bea23f6be70c5486890a04e1e06b3de5d808e",
+    "config/candidate_a_qualification_20261008_v1/CA_FIXED_R300_S17_A07/scenario.add.xml": "34e5773c1d87884ecc9c741a1f268929074bc5793824533f13cdb34594fc85f9",
+    "config/candidate_a_qualification_20261008_v1/CA_FIXED_R300_S17_A07/scenario.sumocfg": "765f7258d16546cf75c86c58ccc37dd26c1be5bf54286828d0a1b3f5349355d6"
+  }
+}
