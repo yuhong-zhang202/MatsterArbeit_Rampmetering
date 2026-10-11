@@ -2297,3 +2297,7 @@ Final verification:handoff independent scientific PASS (slow<1.389m/s clarificat
 ### 2026-10-11 — PR #9 second P2 mode/dynamics red binding (V5)
 
 User-authorized original-PR repair from 618a626. Isolated diagnostic returns UNKNOWN/no OBSERVED_RED_ANOMALY for nonempty red plus mode/dynamics mismatch; empty-red policy denial retained. Engineering 41 methods/56 subcases, independent 53 new+19 prior schema+10 numeric probes and public audit PASS; required engineering/data/scientific checkpoint complete, actual delivered clean checkout pending. Exact old source/failures/bindings preserved in V5 and processed V4. 42 witnesses/six windows/536 protected files unchanged. Zero SUMO; native predicates/A1/A2 contract/production guard/design/upstream unchanged; A1 UNRESOLVED and STOP3/HOLD remain. Current report/state pointers updated, historical receipts retained.
+
+### 2026-10-11 — PR #9 V5 actual delivered-code verification
+
+Actual code commit af3f2e09c53973b8c41bd2f4761313a25d5b2b0c clean clone passed41tests/publicaudit/53new+19schema+10numericprobes; trackedstatus empty, ignoredA07raw absent. Parent raw-empty assertion failed by counting .gitkeep; original receipt retained and separate metadata readback recorded, no tests repeated. Read-only scientific reviewer independently verified52inputs/7data, actual output and cloneidentity and closed bounded delivery gate. Final changes are documentation/receipts only; do not claim final docshead separately executed. A1UNRESOLVED/STOP3/HOLD intact,0SUMO.
