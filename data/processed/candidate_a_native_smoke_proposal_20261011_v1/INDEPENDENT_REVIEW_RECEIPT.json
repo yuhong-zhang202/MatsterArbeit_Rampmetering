@@ -1,0 +1,44 @@
+{
+  "classification": "OFFLINE_DATA_INTERFACE_PREPARATION_NOT_NATIVE_SAFETY",
+  "baseline": "49d7c4a426e827342dd34be38d1f3ce2b397f8b0",
+  "commands": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python data/processed/candidate_a_native_smoke_proposal_20261011_v1/review_yellow.py",
+      "exit": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python data/processed/candidate_a_native_smoke_proposal_20261011_v1/review_yellow.py --verify-local-raw-hashes",
+      "exit": 0,
+      "result": "PASS",
+      "raw_hashes_checked": 4
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest discover -s tests/candidate_a_native_smoke_20261011 -v",
+      "exit": 0,
+      "result": "PASS",
+      "tests": 10,
+      "failures": 0,
+      "errors": 0,
+      "skips": 0
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python data/processed/candidate_a_native_smoke_proposal_20261011_v1/review_adapter.py",
+      "initial_exit": 1,
+      "initial_result": "CHECKER_EXCEPTION_TYPE_ASSUMPTION_FAIL_PRESERVED",
+      "final_exit": 0,
+      "final_result": "PASS",
+      "independent_probes": 4
+    }
+  ],
+  "engine_binding": "artifacts/candidate_a_native_smoke_proposal_20261011_v1/engineering/INPUT_BINDINGS_R2.json",
+  "engine_binding_sha256": "bff69f722ecf5aab5ae130b6953496f291e8dff43e860c38c2d8fe7b7d1baca2",
+  "protected_checked": 536,
+  "protected_drift": 0,
+  "old43": "SKIP_UNCHANGED_NOT_RERUN",
+  "SUMO_TraCI_nativebuild": 0,
+  "native_bridge": "NOT_IMPLEMENTED",
+  "authorization": "PREPARATION_ONLY_NO_NATIVE_START_AUTHORIZATION",
+  "parent_actual_clean_commit": "PENDING",
+  "public_limits": "Default selected-evidence calculations and fake seam only; optional local raw hashes separate."
+}

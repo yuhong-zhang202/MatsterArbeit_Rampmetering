@@ -1,0 +1,32 @@
+{
+  "date_utc": "2026-10-11T16:12:18.431683+00:00",
+  "baseline_commit": "49d7c4a426e827342dd34be38d1f3ce2b397f8b0",
+  "classification": "OFFLINE_FAKE_CONNECTION_PIPELINE_ONLY",
+  "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest discover -s tests/candidate_a_native_smoke_20261011 -v",
+  "result": "PASS",
+  "exit_code": 0,
+  "tests": 9,
+  "failures": 0,
+  "errors": 0,
+  "skips": 0,
+  "plan_command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/candidate_a_native_smoke_20261011_v1/plan.py",
+  "plan_exit_code": 0,
+  "launch_argument_test": "REJECTED_ARGUMENT_RETURN_CODE_2",
+  "binding_sha256": "6973e0ddbc4303b9625fc461925cb375892d442dd774e25e99ace9555b171e8f",
+  "protected_files_checked": 536,
+  "protected_drift": [],
+  "SUMO_TraCI_starts": 0,
+  "raw_allocations": 0,
+  "native_launch_bridge": "NOT_IMPLEMENTED",
+  "native_or_real_TraCI_getters_tested": false,
+  "warning_completeness": "ONLY_CALLER_DECLARED_SCHEMA; NATIVE_LOG_PROVENANCE_NOT_VERIFIED",
+  "clean_checkout": "NOT_TESTED_THIS_TASK",
+  "history": "initial8PASS and R1ninePASS logs preserved, final9PASS uses finalbytes; earlier draftsource snapshots not retained/no exactoldbyte reproducibility claim",
+  "limitations": [
+    "fake connection behavior is not native signal/safety evidence",
+    "prepare/reconcile functions never advance or setTLS",
+    "first1206->1207 gate yieldszero completecycles",
+    "whole native insertion/partiallane/RNG joint prospective proof remains unresolved",
+    "future launch/phasebridge/complete native logfile provenance/package/resourceauthorization absent"
+  ]
+}

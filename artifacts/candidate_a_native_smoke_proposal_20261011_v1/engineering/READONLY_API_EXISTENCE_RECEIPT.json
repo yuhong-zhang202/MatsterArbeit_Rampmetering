@@ -1,0 +1,432 @@
+{
+  "status": "PASS_BOUNDED_PYTHON_METHOD_EXISTENCE_ONLY",
+  "installed_version": "1.26.0",
+  "methods": [
+    {
+      "domain": "vehicle",
+      "method": "getIDList",
+      "exists_in_installed_Python_source": true,
+      "definitions": [
+        {
+          "installed_file": "domain.py",
+          "line_start": 171,
+          "line_end": 176,
+          "file_sha256": "69e28e03cc7844c63049a7f177f73f927ea2ebef7065c47fcfbd388d52b7b8bd"
+        }
+      ],
+      "live_query_executed": false
+    },
+    {
+      "domain": "vehicle",
+      "method": "getLoadedIDList",
+      "exists_in_installed_Python_source": true,
+      "definitions": [
+        {
+          "installed_file": "_vehicle.py",
+          "line_start": 981,
+          "line_end": 985,
+          "file_sha256": "998b5579fc6df5380af5a315a2677d396460a9e8ecc58a8ba971d6f085b206eb"
+        }
+      ],
+      "live_query_executed": false
+    },
+    {
+      "domain": "vehicle",
+      "method": "getTypeID",
+      "exists_in_installed_Python_source": true,
+      "definitions": [
+        {
+          "installed_file": "_vehicle.py",
+          "line_start": 375,
+          "line_end": 380,
+          "file_sha256": "998b5579fc6df5380af5a315a2677d396460a9e8ecc58a8ba971d6f085b206eb"
+        }
+      ],
+      "live_query_executed": false
+    },
+    {
+      "domain": "vehicle",
+      "method": "getRoute",
+      "exists_in_installed_Python_source": true,
+      "definitions": [
+        {
+          "installed_file": "_vehicle.py",
+          "line_start": 397,
+          "line_end": 402,
+          "file_sha256": "998b5579fc6df5380af5a315a2677d396460a9e8ecc58a8ba971d6f085b206eb"
+        }
+      ],
+      "live_query_executed": false
+    },
+    {
+      "domain": "vehicle",
+      "method": "getSpeedMode",
+      "exists_in_installed_Python_source": true,
+      "definitions": [
+        {
+          "installed_file": "_vehicle.py",
+          "line_start": 559,
+          "line_end": 563,
+          "file_sha256": "998b5579fc6df5380af5a315a2677d396460a9e8ecc58a8ba971d6f085b206eb"
+        }
+      ],
+      "live_query_executed": false
+    },
+    {
+      "domain": "vehicle",
+      "method": "getLaneChangeMode",
+      "exists_in_installed_Python_source": true,
+      "definitions": [
+        {
+          "installed_file": "_vehicle.py",
+          "line_start": 552,
+          "line_end": 557,
+          "file_sha256": "998b5579fc6df5380af5a315a2677d396460a9e8ecc58a8ba971d6f085b206eb"
+        }
+      ],
+      "live_query_executed": false
+    },
+    {
+      "domain": "vehicle",
+      "method": "getAccel",
+      "exists_in_installed_Python_source": true,
+      "definitions": [
+        {
+          "installed_file": "_vehicletype.py",
+          "line_start": 82,
+          "line_end": 89,
+          "file_sha256": "90ac3e869010662546f4639c55738c0a4c01f31cf7780b5cb8aad34230ee0dd6"
+        }
+      ],
+      "live_query_executed": false
+    },
+    {
+      "domain": "vehicle",
+      "method": "getDecel",
+      "exists_in_installed_Python_source": true,
+      "definitions": [
+        {
+          "installed_file": "_vehicletype.py",
+          "line_start": 91,
+          "line_end": 98,
+          "file_sha256": "90ac3e869010662546f4639c55738c0a4c01f31cf7780b5cb8aad34230ee0dd6"
+        }
+      ],
+      "live_query_executed": false
+    },
+    {
+      "domain": "vehicle",
+      "method": "getEmergencyDecel",
+      "exists_in_installed_Python_source": true,
+      "definitions": [
+        {
+          "installed_file": "_vehicletype.py",
+          "line_start": 100,
+          "line_end": 107,
+          "file_sha256": "90ac3e869010662546f4639c55738c0a4c01f31cf7780b5cb8aad34230ee0dd6"
+        }
+      ],
+      "live_query_executed": false
+    },
+    {
+      "domain": "vehicle",
+      "method": "getTau",
+      "exists_in_installed_Python_source": true,
+      "definitions": [
+        {
+          "installed_file": "_vehicletype.py",
+          "line_start": 127,
+          "line_end": 134,
+          "file_sha256": "90ac3e869010662546f4639c55738c0a4c01f31cf7780b5cb8aad34230ee0dd6"
+        }
+      ],
+      "live_query_executed": false
+    },
+    {
+      "domain": "vehicle",
+      "method": "getActionStepLength",
+      "exists_in_installed_Python_source": true,
+      "definitions": [
+        {
+          "installed_file": "_vehicletype.py",
+          "line_start": 55,
+          "line_end": 62,
+          "file_sha256": "90ac3e869010662546f4639c55738c0a4c01f31cf7780b5cb8aad34230ee0dd6"
+        }
+      ],
+      "live_query_executed": false
+    },
+    {
+      "domain": "vehicle",
+      "method": "getImperfection",
+      "exists_in_installed_Python_source": true,
+      "definitions": [
+        {
+          "installed_file": "_vehicletype.py",
+          "line_start": 118,
+          "line_end": 125,
+          "file_sha256": "90ac3e869010662546f4639c55738c0a4c01f31cf7780b5cb8aad34230ee0dd6"
+        }
+      ],
+      "live_query_executed": false
+    },
+    {
+      "domain": "vehicle",
+      "method": "getMaxSpeed",
+      "exists_in_installed_Python_source": true,
+      "definitions": [
+        {
+          "installed_file": "_vehicletype.py",
+          "line_start": 46,
+          "line_end": 53,
+          "file_sha256": "90ac3e869010662546f4639c55738c0a4c01f31cf7780b5cb8aad34230ee0dd6"
+        }
+      ],
+      "live_query_executed": false
+    },
+    {
+      "domain": "vehicle",
+      "method": "getSpeed",
+      "exists_in_installed_Python_source": true,
+      "definitions": [
+        {
+          "installed_file": "_vehicle.py",
+          "line_start": 277,
+          "line_end": 282,
+          "file_sha256": "998b5579fc6df5380af5a315a2677d396460a9e8ecc58a8ba971d6f085b206eb"
+        }
+      ],
+      "live_query_executed": false
+    },
+    {
+      "domain": "vehicle",
+      "method": "getLaneID",
+      "exists_in_installed_Python_source": true,
+      "definitions": [
+        {
+          "installed_file": "_vehicle.py",
+          "line_start": 347,
+          "line_end": 352,
+          "file_sha256": "998b5579fc6df5380af5a315a2677d396460a9e8ecc58a8ba971d6f085b206eb"
+        }
+      ],
+      "live_query_executed": false
+    },
+    {
+      "domain": "vehicle",
+      "method": "getAcceleration",
+      "exists_in_installed_Python_source": true,
+      "definitions": [
+        {
+          "installed_file": "_vehicle.py",
+          "line_start": 291,
+          "line_end": 296,
+          "file_sha256": "998b5579fc6df5380af5a315a2677d396460a9e8ecc58a8ba971d6f085b206eb"
+        }
+      ],
+      "live_query_executed": false
+    },
+    {
+      "domain": "simulation",
+      "method": "getTime",
+      "exists_in_installed_Python_source": true,
+      "definitions": [
+        {
+          "installed_file": "_simulation.py",
+          "line_start": 252,
+          "line_end": 257,
+          "file_sha256": "8b7f97ced4dd6774271e8e0da270d687aa9a5ff438c8090023a941beb4e8bbec"
+        }
+      ],
+      "live_query_executed": false
+    },
+    {
+      "domain": "simulation",
+      "method": "getPendingVehicles",
+      "exists_in_installed_Python_source": true,
+      "definitions": [
+        {
+          "installed_file": "_simulation.py",
+          "line_start": 515,
+          "line_end": 519,
+          "file_sha256": "8b7f97ced4dd6774271e8e0da270d687aa9a5ff438c8090023a941beb4e8bbec"
+        }
+      ],
+      "live_query_executed": false
+    },
+    {
+      "domain": "simulation",
+      "method": "getArrivedIDList",
+      "exists_in_installed_Python_source": true,
+      "definitions": [
+        {
+          "installed_file": "_simulation.py",
+          "line_start": 329,
+          "line_end": 335,
+          "file_sha256": "8b7f97ced4dd6774271e8e0da270d687aa9a5ff438c8090023a941beb4e8bbec"
+        }
+      ],
+      "live_query_executed": false
+    },
+    {
+      "domain": "simulation",
+      "method": "getDepartedIDList",
+      "exists_in_installed_Python_source": true,
+      "definitions": [
+        {
+          "installed_file": "_simulation.py",
+          "line_start": 314,
+          "line_end": 319,
+          "file_sha256": "8b7f97ced4dd6774271e8e0da270d687aa9a5ff438c8090023a941beb4e8bbec"
+        }
+      ],
+      "live_query_executed": false
+    },
+    {
+      "domain": "simulation",
+      "method": "getCollidingVehiclesNumber",
+      "exists_in_installed_Python_source": true,
+      "definitions": [
+        {
+          "installed_file": "_simulation.py",
+          "line_start": 423,
+          "line_end": 428,
+          "file_sha256": "8b7f97ced4dd6774271e8e0da270d687aa9a5ff438c8090023a941beb4e8bbec"
+        }
+      ],
+      "live_query_executed": false
+    },
+    {
+      "domain": "simulation",
+      "method": "getStartingTeleportNumber",
+      "exists_in_installed_Python_source": true,
+      "definitions": [
+        {
+          "installed_file": "_simulation.py",
+          "line_start": 481,
+          "line_end": 486,
+          "file_sha256": "8b7f97ced4dd6774271e8e0da270d687aa9a5ff438c8090023a941beb4e8bbec"
+        }
+      ],
+      "live_query_executed": false
+    },
+    {
+      "domain": "simulation",
+      "method": "getEndingTeleportNumber",
+      "exists_in_installed_Python_source": true,
+      "definitions": [
+        {
+          "installed_file": "_simulation.py",
+          "line_start": 495,
+          "line_end": 500,
+          "file_sha256": "8b7f97ced4dd6774271e8e0da270d687aa9a5ff438c8090023a941beb4e8bbec"
+        }
+      ],
+      "live_query_executed": false
+    },
+    {
+      "domain": "trafficlight",
+      "method": "getControlledLinks",
+      "exists_in_installed_Python_source": true,
+      "definitions": [
+        {
+          "installed_file": "_trafficlight.py",
+          "line_start": 207,
+          "line_end": 213,
+          "file_sha256": "4757c6336d7edf37a7d1473d050731e40a18e4a4d9220babb564af2abaaac4c9"
+        }
+      ],
+      "live_query_executed": false
+    },
+    {
+      "domain": "trafficlight",
+      "method": "getProgram",
+      "exists_in_installed_Python_source": true,
+      "definitions": [
+        {
+          "installed_file": "_trafficlight.py",
+          "line_start": 215,
+          "line_end": 220,
+          "file_sha256": "4757c6336d7edf37a7d1473d050731e40a18e4a4d9220babb564af2abaaac4c9"
+        }
+      ],
+      "live_query_executed": false
+    },
+    {
+      "domain": "trafficlight",
+      "method": "getPhase",
+      "exists_in_installed_Python_source": true,
+      "definitions": [
+        {
+          "installed_file": "_trafficlight.py",
+          "line_start": 222,
+          "line_end": 228,
+          "file_sha256": "4757c6336d7edf37a7d1473d050731e40a18e4a4d9220babb564af2abaaac4c9"
+        }
+      ],
+      "live_query_executed": false
+    },
+    {
+      "domain": "trafficlight",
+      "method": "getRedYellowGreenState",
+      "exists_in_installed_Python_source": true,
+      "definitions": [
+        {
+          "installed_file": "_trafficlight.py",
+          "line_start": 181,
+          "line_end": 188,
+          "file_sha256": "4757c6336d7edf37a7d1473d050731e40a18e4a4d9220babb564af2abaaac4c9"
+        }
+      ],
+      "live_query_executed": false
+    },
+    {
+      "domain": "trafficlight",
+      "method": "getNextSwitch",
+      "exists_in_installed_Python_source": true,
+      "definitions": [
+        {
+          "installed_file": "_trafficlight.py",
+          "line_start": 236,
+          "line_end": 242,
+          "file_sha256": "4757c6336d7edf37a7d1473d050731e40a18e4a4d9220babb564af2abaaac4c9"
+        }
+      ],
+      "live_query_executed": false
+    },
+    {
+      "domain": "lane",
+      "method": "getLength",
+      "exists_in_installed_Python_source": true,
+      "definitions": [
+        {
+          "installed_file": "_lane.py",
+          "line_start": 63,
+          "line_end": 68,
+          "file_sha256": "1b785163f695807cb8ea129cba9c42f243f3974a4a0d3d49ed442f362f043e6a"
+        }
+      ],
+      "live_query_executed": false
+    },
+    {
+      "domain": "lane",
+      "method": "getLastStepVehicleIDs",
+      "exists_in_installed_Python_source": true,
+      "definitions": [
+        {
+          "installed_file": "_lane.py",
+          "line_start": 272,
+          "line_end": 277,
+          "file_sha256": "1b785163f695807cb8ea129cba9c42f243f3974a4a0d3d49ed442f362f043e6a"
+        }
+      ],
+      "live_query_executed": false
+    }
+  ],
+  "prior_suspected_vehicle_loaded_domain_error": "NOT_REPRODUCED: correct vehicle-domain all-loaded getter exists; simulation-domain getter has different step-event semantics",
+  "official_vehicle_loaded_anchor": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/tools/traci/_vehicle.py#L981-L985",
+  "official_vehicle_loaded_excerpt": "    def getLoadedIDList(self):\n        \"\"\"getLoadedIDList() -> tuple(string)\n        returns all loaded vehicles that have not yet left the simulation\n        \"\"\"\n        return self._getUniversal(tc.VAR_LOADED_LIST, \"\")\n",
+  "official_wholefile_sha256": "998b5579fc6df5380af5a315a2677d396460a9e8ecc58a8ba971d6f085b206eb",
+  "SUMO_TraCI_starts": 0,
+  "limits": "AST existence/inheritance-file inspection is not native server runtime compatibility, response-schema completeness or full serialization proof. Installed methodbytes metadata only; exact core binarycompiler identity remains unknown."
+}

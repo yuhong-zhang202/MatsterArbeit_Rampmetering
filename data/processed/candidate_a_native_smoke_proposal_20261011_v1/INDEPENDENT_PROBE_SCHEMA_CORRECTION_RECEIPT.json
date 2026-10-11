@@ -1,0 +1,7 @@
+{
+  "initial_probe_command_exit": 1,
+  "error": "RuntimeError: offline missing getter",
+  "reason": "Terminal wrapper deliberately reraises original API error after preserving receipt+paused; independent probe incorrectly expected only DiagnosticStop. Correct checker expectation to RuntimeError, do not change adapter.",
+  "initial_output": "ADAPTER_INDEPENDENT_OUTPUT.json (empty)",
+  "original_checker_sha256": "884e11c71653db6c32fdd4e944e5b2b164755cda311608c12792c6226f89bc82"
+}

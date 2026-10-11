@@ -1,0 +1,66 @@
+{
+  "status": "SOURCE_READONLY_NO_EXECUTION",
+  "source_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+  "inherited_excerpt_file": "artifacts/candidate_a_a1_proof_gap_20261011_v1/engineering/SOURCE_EXCERPTS.json",
+  "inherited_excerpt_sha256": "7ee6d516cfb039f813d6cf6d304c0a4fa4719478e970dfc4a9ec384c9bdbf576",
+  "source_anchors": [
+    {
+      "id": "N_EVENT",
+      "path": "src/microsim/MSNet.cpp",
+      "line_start": 832,
+      "line_end": 859,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSNet.cpp#L832-L859",
+      "sha256": "cd1a74fe9b5d6747a5412ba93a18f5ce269645d36c9208f28cce5a765e5bbc4b"
+    },
+    {
+      "id": "N_POST",
+      "path": "src/microsim/MSNet.cpp",
+      "line_start": 861,
+      "line_end": 893,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSNet.cpp#L861-L893",
+      "sha256": "1ded2baf09a607415adb9ada2504e6c8fafe1bb2ad3d260b5a6d7d5974101771"
+    },
+    {
+      "id": "N_WAIT",
+      "path": "src/microsim/MSVehicle.cpp",
+      "line_start": 2869,
+      "line_end": 2883,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSVehicle.cpp#L2869-L2883",
+      "sha256": "bf868407c59660f4aa243cc87371c81de5fc495f239486c6cda3b3a5cfc73760"
+    },
+    {
+      "id": "LINK_RED",
+      "path": "src/microsim/MSLink.cpp",
+      "line_start": 836,
+      "line_end": 850,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSLink.cpp#L836-L850",
+      "sha256": "1b52b574f678f54af0669cf0df5ff4f2755013eccaaa5ace4a87c588069d667f"
+    },
+    {
+      "id": "V_TYPE_PROPERTIES",
+      "path": "src/libsumo/Vehicle.cpp",
+      "line_start": 1012,
+      "line_end": 1072,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L1012-L1072",
+      "sha256": "683403bf8dfa0942e73dfebaca9fb2a06a8dad0017bcfd8411bc46614f4f0898"
+    }
+  ],
+  "official_docs_reviewed_on": "2026-10-11T16:05:18.813793+00:00",
+  "official_docs": [
+    {
+      "url": "https://sumo.dlr.de/docs/Simulation/Traffic_Lights.html",
+      "support": "static tlLogic phase duration/next attributes; yellow decelerate-or-pass behavior; generated yellow duration depends on incoming-road maximum speed, optionalcustomization",
+      "limit": "current online docs, not build-specific certificate; do notjustify 3s fromthese descriptions"
+    },
+    {
+      "url": "https://sumo.dlr.de/docs/TraCI/Change_Traffic_Lights_State.html",
+      "support": "phase/program changing APIs; no immediate directred request proposed",
+      "limit": "native event order follows pinnedsource, not docs alone"
+    }
+  ],
+  "timing_reference": "config/candidate_a_qualification_20261008_v1/PHASE_RATE_CONTRACT.json",
+  "timing_reference_sha256": "f4af413e055e9f5d9404df0b3644c0538e7fb4cd6082b0e0722cff7740f9ec59",
+  "sumo_traci_starts": 0,
+  "yellow3s_status": "INHERITED_NOT_UNIVERSALLY_CERTIFIED",
+  "native_prospective_A1_status": "UNRESOLVED"
+}

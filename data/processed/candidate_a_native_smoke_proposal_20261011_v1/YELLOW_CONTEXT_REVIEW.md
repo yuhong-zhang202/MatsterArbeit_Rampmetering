@@ -1,0 +1,21 @@
+# Candidate A native diagnostic proposal: independent yellow-context review
+
+2026-10-11. This is a plan review and read-only historical-data extraction, not a new simulation or A1 proof. Preflight read AGENTS, PROJECT_STATE, DECISIONS, WORKLOG, empty/unfrozen EXPERIMENT_PROTOCOL and the new authorization record. Current branch codex/candidate-a-native-smoke-proposal starts at49d7c4a426e827342dd34be38d1f3ce2b397f8b0. Stage6 closure is retained; Candidate A remains NOT_QUALIFIED and old STOP3 remains historical/current-guard evidence. The user authorized preparation only; new native execution is false/unapproved.
+
+## Finding
+
+**Three seconds is a reasonable diagnostic starting candidate for the observed first queued yellow transition, but is not a verified clearance or safety duration over all admissible approach states.** Its rationale must use the start-of-yellow state, not the final creeping front speed. This review does not choose a new parameter or authorize launching.
+
+Old A07 time1203 pre-state still shows G; its next movement uses y. The executed yellow intervals are [1203,1204), [1204,1205), [1205,1206). At1203 the stored approach inventory is27storage+15ingress; exactly two move: R_flow.1 speed2.699775598613039m/s, projected gap5.008379646428438m, and R_flow.2 speed0.4641656270915519m/s, projected gap15.538885098977858m. All15 ingress vehicles are stopped. Exact values are retained in YELLOW_SELECTED_RAW_EXTRACT.json and recomputed review JSON; prose decimals should follow those files if rounded. The first yellow step accelerates the front: at1204 it reaches3.795129974108697m/s with gap1.2132496723197335m. Therefore the terminal1206 front0.04573822948686786m/s alone is unsuitable to assess the yellow onset.
+
+Using an illustrative1s reaction plus constant ordinary deceleration4.5m/s², the largest onset speed gives time1+v/b≈1.600s and distance v·1+v²/(2b)≈3.510m. These are basic continuous stopping estimates, not SUMO’s actual branch, reaction semantics or finalized-speed proof. Saved tau=actionStep=1s does not establish a literal one-second reaction delay. Position/offset, committed clearance, followers, perception, lane change and receiver conditions are not certified by this estimate. All three executed yellow steps record zero crossings; the earlier first green step recorded one crossing. The next red motion1206→1207 was refused and is unobserved.
+
+Nominal lane limits are22.22m/s on storage and18.05m/s on ingress, with the same crude stop-time estimates5.938s and5.011s, greater than3s. Actual per-vehicle effective speed/desiredspeed can differ; neither those estimates nor lane limits establish that native behavior is unsafe. Vehicles may clear instead of stop depending on position, and a general clearance assessment requires both outcomes. The queued first transition does not represent later cycles or unqueued approaches.
+
+## Evidence and reproducibility
+
+New selected extract contains only six qualification pre-state rows plus the terminal failed snapshot, relevant speed/dynamics fields and four nominal lane attributes. It binds four immutable local raw source files by SHA-256: phase_steps.csv, failure_snapshot.json, exact network snapshot and route snapshot. No full raw/private material is uploaded or modified. Full prefix has1206 completed phase rows; selected output preserves seven timestamp records and missing terminal motion/crossing as null rather than zero.
+
+review_yellow.py default reproduces calculations and selected-extract/schema checks without ignored raw or native APIs. Optional --verify-local-raw-hashes adds four local raw hash checks; it does not pretend to reconstruct those source bytes from public evidence. Both actual commands returned0/PASS. Initial extraction failed because predicted_motion is a scalar string; no output had been written, schema was inspected and corrected. EXTRACTION_SCHEMA_CORRECTION_RECEIPT preserves this factual failure and retry. No old43 regression rerun, SUMO/TraCI, native build or new synthetic suite.
+
+Adapter review and scientific assessment follow separately; this yellow review alone is not full proposal approval. Parent owns factual STATE/WORKLOG updates; no decision/protocol update is requested.
