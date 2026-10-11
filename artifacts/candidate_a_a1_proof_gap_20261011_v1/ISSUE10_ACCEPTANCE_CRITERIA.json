@@ -1,0 +1,38 @@
+{
+  "issue_url": "https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/issues/10",
+  "title": "A1 安全证明缺口调查：SUMO 原生状态可观测性、车辆覆盖与联合安全可行性",
+  "criteria": [
+    {
+      "id": 1,
+      "verbatim_issue_criterion": "现有核心证明义务是否逐项关联 SUMO v1_26_0 源码/官方接口、准确的状态时间点与可观测性级别？"
+    },
+    {
+      "id": 2,
+      "verbatim_issue_criterion": "是否明确列出 TraCI **直接可读**与仅**源码内部存在 / 推断 / 尚未知**的区别？"
+    },
+    {
+      "id": 3,
+      "verbatim_issue_criterion": "front、followers、ingress、receiver、foes 与其他可能进入车辆的覆盖证明和边界是否清楚？"
+    },
+    {
+      "id": 4,
+      "verbatim_issue_criterion": "是否检查了普通制动、后车、红灯转换与下游接收的联合条件，而非只检验一个离散停车不等式？"
+    },
+    {
+      "id": 5,
+      "verbatim_issue_criterion": "A07 42 witness / STOP3 / V3 缺失值保持，未把未执行红灯步写成真实观测或将合成数据当作安全证据？"
+    },
+    {
+      "id": 6,
+      "verbatim_issue_criterion": "是否有明确的 GO / bounded evidence / STOP 决策与一个**最小后续任务**，列时间/工程成本与风险（可给区间，不得虚构已测量值）？"
+    },
+    {
+      "id": 7,
+      "verbatim_issue_criterion": "是否如实保留 Candidate A `NOT_QUALIFIED`、当前 `STOP3`、900 `NOT_TESTED`、formal protocol 未冻结，以及 no-new-SUMO runs？"
+    },
+    {
+      "id": 8,
+      "verbatim_issue_criterion": "代码/证据/测试在干净 checkout 中可复现；若需本地 raw，分开注明公开复现能力和本地额外核验，报告真实 PASS/FAIL/SKIP 和 provenance。"
+    }
+  ]
+}

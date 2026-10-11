@@ -1,0 +1,34 @@
+# Issue #10 independent data and evidence-boundary review
+
+2026-10-11; data_analyst. **PASS_FOR_BOUNDED_STATIC_PROOF_GAP_INVESTIGATION**, not safety qualification. Recommended single disposition **STOP_A1_UNDER_CURRENT_INTERFACE**: stop this current-interface engineering proof attempt and hand the unresolved design choice to the user/Robert. This recommendation follows decisive prospective/joint proof gaps; it does not establish that every stronger conservative bound, alternate interface, or A1 design is mathematically impossible. That stronger assertion remains NOT_PROVED. No decision is promoted to approved.
+
+## Context and limits
+
+Read AGENTS, custom data-agent instructions, PROJECT_STATE, DECISIONS, WORKLOG, 0-byte EXPERIMENT_PROTOCOL, Issue10 source/user clarification, prior V6 final science, current A1 specification/proof obligations, source ledgers and public A07/V3 evidence. Branch is codex/issue-10-a1-proof-gap-feasibility from 7ce8f5e19d737117dc6f25165993fc436244c599. D-018 Stage6 closeout remains; historical D-019 is not new execution authorization. Candidate A NOT_QUALIFIED, current-contract STOP3/HOLD and 900 NOT_TESTED remain. Formal parameters are unknown/unfrozen. This is static exploratory engineering evidence only.
+
+Only the new processed directory was written. No production code, guard, normative contract, raw, upstream, protocol or research design was changed; SUMO/TraCI/native build starts are zero. No material conflicting project state found. Governance documentation impact is reported to the parent, which owns factual STATE/WORKLOG updates.
+
+## Independent checks and findings
+
+- Recomputed all42 unique old witnesses from saved vehicle state, without importing the engineering helper:27storage+15ingress; exact gap/required/margin/safe mapping; sole R_flow.1 refusal. Its gap1.001999189766508m, required1.1459706723353782m, margin−0.14397148256887027m remain unchanged. Refused next red motion was not executed. Actual complete native branches determined0/42; conditional scalar projection is not native execution.
+- Six service windows retain observed seconds [6,0,0,0,0,0]. First partial window measurement vector C/appliedC/E/N/latency/quantization/shortfall is [0.5,0.5,0,1,0,0.5,−1]. Five empty windows retain seven blank measurement/derived fields; all tracking errors blank. Zero completed cycles;1206 thin rows remain derived evidence, not independent raw reconstruction.
+- Independently checked536 protected hashes, zero drift.16 immutable pre-review relevant evidence/context files match, excluding parent-owned STATE/WORKLOG. Engineering9 current bindings match. Old upstream implementation is unchanged; the existing43-test delivered gate is reused, not claimed freshly executed.
+-69 unique source-state entries have nonempty API/method, observability, timing, saved-scope, bound and limit fields. P0–P10 all represented, with exact bidirectional field references.12 coverage populations address front/storagefollowers/ingress/unseenentrants/receiver/foes/M/R/U/X/unknownclasses/shadows.44 excerpt hashes, physical line spans and pinned-commit anchors match. Local independent source readback checked25 complete files (18 freshly fetched in engineering receipt,7 inherited cached) and all44 literal physical excerpts. No new network fetch was made by data review.
+- The source justifies meaningful getter distinctions: getLastActionTime exists; future DriveProcessItems and finalized-speed composition are computed after the external boundary; getNextLinks uses hypothetical arguments; getJunctionFoes corrects previous-step approach cache; getStopSpeed uses FUTURE reason. None is directly interchangeable with a prospective native joint movement certificate. Source-supported native braking mechanisms and emergency bounds do not themselves prove actor-required ordinary braking plus followers and receiving-lane safety.
+- Two analytical interval-insufficiency demonstrations independently recompute correctly. They reject the sufficiency of those coarse intervals, not all possible tighter intervals and not an observed native trajectory. Exact hidden-state recovery is not logically necessary if a rigorous conservative sufficient bound can be proved; no such complete bound is supplied here.
+
+**Resolved data finding:** initial68-row draft did not explicitly group friction/stops/startup/influencer/RNG continuation and length/minGap/class dependency-review boundaries. Engineering added S69 and clearly labels the69 rows non-exhaustive. No fetch or synthetic suite was added. A preliminary concern that lastActionTime lacked an anchor was incorrect: existing V_TYPE_PROPERTIES physical lines1039–1047 already contain the getter; no change needed for that concern.
+
+**Historical receipt limit:** the first68-row draft PASS output is retained, but its original input binding was not preserved. Only final69-row R1 binding/receipt is precisely reproducible; do not attach final binding to the initial pass. This is disclosed and does not affect final review.
+
+No unresolved delivery Major/requiredMinor identified. Core prospective/joint safety gaps remain advancement blockers, not delivery failures.
+
+## Actual verification and reproducibility
+
+Final independent commands in INDEPENDENT_REVIEW_RECEIPT.json returned0/PASS: the isolated independent_review.py and engineering verify_public.py. No new unit/synthetic suite; historical43 regressions SKIPPED because unchanged implementation has existing delivered evidence. Native runtime queries/builds, ignored raw reconstruction, and actual new delivered-commit clean checkout were NOT_RUN by this agent; the parent must perform the latter before submission.
+
+Public default checks need only submitted JSON/CSV/excerpts/bindings; no ignored raw, network, installed SUMO binary or temporary source cache. LOCAL_SOURCE_READBACK_RECEIPT records additional local full-source-byte/physical-line verification; reproducing that supplementary check requires official refetch or those temporary source bytes. Public receipt/excerpt validation does not certify remote whole-source bytes or compiled binary/source equivalence.
+
+## Handoff
+
+Stop this bounded source/API pass. The minimal next task is user/Robert review of a simpler sourced actuator/signal route or separate internal-observation design feasibility; both are Proposed, not authorized implementation. Estimated2–4engineeringhours for discussion/static review and1–3engineeringdays for separately requested instrumentation design are engineering estimates, not observed effort. Core-build/maintenance cost is unestimated; timing noninterference and future joint proof remain risks. Do not extend synthetic tests merely to force GO. Scientific review must assess these recommendation/claim boundaries; parent actual clean-checkout receipt remains pending.

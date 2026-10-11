@@ -1,0 +1,446 @@
+{
+  "commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+  "excerpts": [
+    {
+      "id": "V_IDS",
+      "path": "src/libsumo/Vehicle.cpp",
+      "line_start": 95,
+      "line_end": 115,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L95-L115",
+      "text": "Vehicle::getIDList() {\n    std::vector<std::string> ids;\n    MSVehicleControl& c = MSNet::getInstance()->getVehicleControl();\n    for (MSVehicleControl::constVehIt i = c.loadedVehBegin(); i != c.loadedVehEnd(); ++i) {\n        if (isVisible((*i).second)) {\n            ids.push_back((*i).first);\n        }\n    }\n    return ids;\n}\n\nint\nVehicle::getIDCount() {\n    return (int)getIDList().size();\n}\n\n\ndouble\nVehicle::getSpeed(const std::string& vehID) {\n    MSBaseVehicle* veh = Helper::getVehicle(vehID);\n    return isVisible(veh) ? veh->getSpeed() : INVALID_DOUBLE_VALUE;\n",
+      "sha256": "2b00027fd91e5acba309cca451c236bebb688907c9825321023fa74961a33f59",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "V_STATE",
+      "path": "src/libsumo/Vehicle.cpp",
+      "line_start": 212,
+      "line_end": 258,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L212-L258",
+      "text": "Vehicle::getTypeID(const std::string& vehID) {\n    return Helper::getVehicleType(vehID).getID();\n}\n\n\nstd::string\nVehicle::getRouteID(const std::string& vehID) {\n    return Helper::getVehicle(vehID)->getRoute().getID();\n}\n\n\ndouble\nVehicle::getDeparture(const std::string& vehID) {\n    MSBaseVehicle* veh = Helper::getVehicle(vehID);\n    return veh->hasDeparted() ? STEPS2TIME(veh->getDeparture()) : INVALID_DOUBLE_VALUE;\n}\n\n\ndouble\nVehicle::getDepartDelay(const std::string& vehID) {\n    return STEPS2TIME(Helper::getVehicle(vehID)->getDepartDelay());\n}\n\n\nint\nVehicle::getRouteIndex(const std::string& vehID) {\n    MSBaseVehicle* veh = Helper::getVehicle(vehID);\n    return veh->hasDeparted() ? veh->getRoutePosition() : INVALID_INT_VALUE;\n}\n\n\nTraCIColor\nVehicle::getColor(const std::string& vehID) {\n    return Helper::makeTraCIColor(Helper::getVehicle(vehID)->getParameter().color);\n}\n\ndouble\nVehicle::getLanePosition(const std::string& vehID) {\n    MSBaseVehicle* veh = Helper::getVehicle(vehID);\n    return (veh->isOnRoad() || veh->isParking()) ? veh->getPositionOnLane() : INVALID_DOUBLE_VALUE;\n}\n\ndouble\nVehicle::getLateralLanePosition(const std::string& vehID) {\n    MSBaseVehicle* veh = Helper::getVehicle(vehID);\n    return veh->isOnRoad() ? CALL_MICRO_FUN(veh, getLateralPositionOnLane(), 0) : INVALID_DOUBLE_VALUE;\n}\n",
+      "sha256": "c019f38dd0ff9a6c7f76ccf396c5641137c610ea75d02e6666782e97dddf7c91",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "V_ACCEL",
+      "path": "src/libsumo/Vehicle.cpp",
+      "line_start": 125,
+      "line_end": 136,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L125-L136",
+      "text": "double\nVehicle::getAcceleration(const std::string& vehID) {\n    MSBaseVehicle* veh = Helper::getVehicle(vehID);\n    return isVisible(veh) ? CALL_MICRO_FUN(veh, getAcceleration(), 0) : INVALID_DOUBLE_VALUE;\n}\n\n\ndouble\nVehicle::getSpeedWithoutTraCI(const std::string& vehID) {\n    MSBaseVehicle* veh = Helper::getVehicle(vehID);\n    return isVisible(veh) ? CALL_MICRO_FUN(veh, getSpeedWithoutTraciInfluence(), veh->getSpeed()) : INVALID_DOUBLE_VALUE;\n}\n",
+      "sha256": "25430421aea49127b90824992dbd60dfbc523c0dd9b68aa5102c40a896dd5e22",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "V_LEADER",
+      "path": "src/libsumo/Vehicle.cpp",
+      "line_start": 331,
+      "line_end": 364,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L331-L364",
+      "text": "Vehicle::getLeader(const std::string& vehID, double dist) {\n    MSBaseVehicle* veh = Helper::getVehicle(vehID);\n    if (veh->isOnRoad()) {\n        std::pair<const MSVehicle* const, double> leaderInfo = veh->getLeader(dist, false);\n        const std::string leaderID = leaderInfo.first != nullptr ? leaderInfo.first->getID() : \"\";\n        double gap = leaderInfo.second;\n        if (leaderInfo.first != nullptr\n                && leaderInfo.first->getLane() != nullptr\n                && leaderInfo.first->getLane()->isInternal()\n                && veh->getLane() != nullptr\n                && (!veh->getLane()->isInternal()\n                    || (veh->getLane()->getLinkCont().front()->getIndex() != leaderInfo.first->getLane()->getLinkCont().front()->getIndex()))) {\n            // leader is a linkLeader (see MSLink::getLeaderInfo)\n            // avoid internal gap values which may be negative (or -inf)\n            gap = MAX2(0.0, gap);\n        }\n        return std::make_pair(leaderID, gap);\n    } else {\n        return std::make_pair(\"\", -1);\n    }\n}\n\n\nstd::pair<std::string, double>\nVehicle::getFollower(const std::string& vehID, double dist) {\n    MSBaseVehicle* veh = Helper::getVehicle(vehID);\n    if (veh->isOnRoad()) {\n        std::pair<const MSVehicle* const, double> leaderInfo = veh->getFollower(dist);\n        return std::make_pair(\n                   leaderInfo.first != nullptr ? leaderInfo.first->getID() : \"\",\n                   leaderInfo.second);\n    } else {\n        return std::make_pair(\"\", -1);\n    }\n",
+      "sha256": "b094b190cd867758f1e2369aa9709961a69d7b8aebf3923950813a72f1907a9b",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "V_FOE",
+      "path": "src/libsumo/Vehicle.cpp",
+      "line_start": 369,
+      "line_end": 418,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L369-L418",
+      "text": "Vehicle::getJunctionFoes(const std::string& vehID, double dist) {\n    std::vector<TraCIJunctionFoe> result;\n    MSBaseVehicle* vehicle = Helper::getVehicle(vehID);\n    MSVehicle* veh = dynamic_cast<MSVehicle*>(vehicle);\n    if (veh == nullptr) {\n        WRITE_WARNING(\"getJunctionFoes not applicable for meso\");\n    } else if (veh->isOnRoad()) {\n        if (dist == 0) {\n            dist = veh->getCarFollowModel().brakeGap(veh->getSpeed()) + veh->getVehicleType().getMinGap();\n        }\n        const std::vector<const MSLane*> internalLanes;\n        // distance to the end of the lane\n        double curDist = -veh->getPositionOnLane();\n        for (const MSLane* lane : veh->getUpcomingLanesUntil(dist)) {\n            curDist += lane->getLength();\n            if (lane->isInternal()) {\n                const MSLink* exitLink = lane->getLinkCont().front();\n                int foeIndex = 0;\n                const std::vector<MSLink::ConflictInfo>& conflicts = exitLink->getConflicts();\n                const MSJunctionLogic* logic = exitLink->getJunction()->getLogic();\n                for (const MSLane* foeLane : exitLink->getFoeLanes()) {\n                    const MSLink::ConflictInfo& ci = conflicts[foeIndex];\n                    if (ci.flag == MSLink::CONFLICT_NO_INTERSECTION) {\n                        continue;\n                    }\n                    const double distBehindCrossing = ci.lengthBehindCrossing;\n                    const MSLink* foeExitLink = foeLane->getLinkCont().front();\n                    const double distToCrossing = curDist - distBehindCrossing;\n                    const double foeDistBehindCrossing = ci.getFoeLengthBehindCrossing(foeExitLink);\n                    for (auto item : foeExitLink->getApproaching()) {\n                        const SUMOVehicle* foe = item.first;\n                        TraCIJunctionFoe jf;\n                        jf.foeId = foe->getID();\n                        jf.egoDist = distToCrossing;\n                        // approach information is from the start of the previous step\n                        // but the foe vehicle then moved within that steop\n                        const double prevFoeDist = SPEED2DIST(MSGlobals::gSemiImplicitEulerUpdate\n                                                              ? foe->getSpeed()\n                                                              : (foe->getSpeed() + foe->getPreviousSpeed()) / 2);\n                        jf.foeDist = item.second.dist - foeDistBehindCrossing - prevFoeDist;\n                        jf.egoExitDist = jf.egoDist + ci.conflictSize;\n                        jf.foeExitDist = jf.foeDist + ci.getFoeConflictSize(foeExitLink);\n                        jf.egoLane = lane->getID();\n                        jf.foeLane = foeLane->getID();\n                        jf.egoResponse = logic->getResponseFor(exitLink->getIndex()).test(foeExitLink->getIndex());\n                        jf.foeResponse = logic->getResponseFor(foeExitLink->getIndex()).test(exitLink->getIndex());\n                        result.push_back(jf);\n                    }\n                    foeIndex++;\n                }\n",
+      "sha256": "b5998aeeb31643d003256ca38da11f598c1c37dfebe21bbf182bf2b75f8e5792",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "V_TLS",
+      "path": "src/libsumo/Vehicle.cpp",
+      "line_start": 508,
+      "line_end": 535,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L508-L535",
+      "text": "Vehicle::getNextTLS(const std::string& vehID) {\n    std::vector<TraCINextTLSData> result;\n    MSBaseVehicle* vehicle = Helper::getVehicle(vehID);\n    MSVehicle* veh = dynamic_cast<MSVehicle*>(vehicle);\n    if (veh != nullptr) {\n        int view = 1;\n        double seen = veh->getEdge()->getLength() - veh->getPositionOnLane();\n        if (vehicle->isOnRoad()) {\n            const MSLane* lane = veh->getLane();\n            const std::vector<MSLane*>& bestLaneConts = veh->getBestLanesContinuation(lane);\n            seen = lane->getLength() - veh->getPositionOnLane();\n            std::vector<MSLink*>::const_iterator linkIt = MSLane::succLinkSec(*veh, view, *lane, bestLaneConts);\n            while (!lane->isLinkEnd(linkIt)) {\n                if (!lane->getEdge().isInternal()) {\n                    if ((*linkIt)->isTLSControlled()) {\n                        TraCINextTLSData ntd;\n                        ntd.id = (*linkIt)->getTLLogic()->getID();\n                        ntd.tlIndex = (*linkIt)->getTLIndex();\n                        ntd.dist = seen;\n                        ntd.state = (char)(*linkIt)->getState();\n                        result.push_back(ntd);\n                    }\n                }\n                lane = (*linkIt)->getViaLaneOrLane();\n                if (!lane->getEdge().isInternal()) {\n                    view++;\n                }\n                seen += lane->getLength();\n",
+      "sha256": "4a2f46478992505696f33ae8f6111192e6c5d2b5410353d90e5475de5bc397da",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "V_LINKS",
+      "path": "src/libsumo/Vehicle.cpp",
+      "line_start": 579,
+      "line_end": 608,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L579-L608",
+      "text": "Vehicle::getNextLinks(const std::string& vehID) {\n    std::vector<libsumo::TraCIConnection> result;\n    MSBaseVehicle* vehicle = Helper::getVehicle(vehID);\n    MSVehicle* veh = dynamic_cast<MSVehicle*>(vehicle);\n    if (!vehicle->isOnRoad()) {\n        return result;\n    }\n    if (veh != nullptr) {\n        const MSLane* lane = veh->getLane();\n        const std::vector<MSLane*>& bestLaneConts = veh->getBestLanesContinuation(lane);\n        int view = 1;\n        const SUMOTime currTime = MSNet::getInstance()->getCurrentTimeStep();\n        std::vector<MSLink*>::const_iterator linkIt = MSLane::succLinkSec(*veh, view, *lane, bestLaneConts);\n        while (!lane->isLinkEnd(linkIt)) {\n            if (!lane->getEdge().isInternal()) {\n                const MSLink* link = (*linkIt);\n                const std::string approachedLane = link->getLane() != nullptr ? link->getLane()->getID() : \"\";\n                const bool hasPrio = link->havePriority();\n                const double speed = MIN2(lane->getSpeedLimit(), link->getLane()->getSpeedLimit());\n                const bool isOpen = link->opened(currTime, speed, speed, veh->getLength(),\n                                                 veh->getImpatience(), veh->getVehicleType().getCarFollowModel().getMaxDecel(),\n                                                 veh->getWaitingTime(), veh->getLateralPositionOnLane(), nullptr, false, veh);\n                const bool hasFoe = link->hasApproachingFoe(currTime, currTime, 0, SUMOVTypeParameter::getDefaultDecel());\n                const std::string approachedInternal = link->getViaLane() != nullptr ? link->getViaLane()->getID() : \"\";\n                const std::string state = SUMOXMLDefinitions::LinkStates.getString(link->getState());\n                const std::string direction = SUMOXMLDefinitions::LinkDirections.getString(link->getDirection());\n                const double length = link->getLength();\n                result.push_back(TraCIConnection(approachedLane, hasPrio, isOpen, hasFoe, approachedInternal, state, direction, length));\n            }\n            lane = (*linkIt)->getViaLaneOrLane();\n",
+      "sha256": "52fe909bfbb4d41a3d8b43fead6cc0d0d93885f56718e3affc8aee2484b0e040",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "V_MODES",
+      "path": "src/libsumo/Vehicle.cpp",
+      "line_start": 755,
+      "line_end": 766,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L755-L766",
+      "text": "\nint\nVehicle::getSpeedMode(const std::string& vehID) {\n    MSBaseVehicle* veh = Helper::getVehicle(vehID);\n    return CALL_MICRO_FUN(veh, getInfluencer().getSpeedMode(), INVALID_INT_VALUE);\n}\n\n\nint\nVehicle::getLaneChangeMode(const std::string& vehID) {\n    MSBaseVehicle* veh = Helper::getVehicle(vehID);\n    return CALL_MICRO_FUN(veh, getInfluencer().getLaneChangeMode(), INVALID_INT_VALUE);\n",
+      "sha256": "7e246b3cb9e5d42849bb91c753b26a2073c577b8e2276454f6646a30c9c3d44b",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "V_LC_SAVED",
+      "path": "src/libsumo/Vehicle.cpp",
+      "line_start": 788,
+      "line_end": 801,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L788-L801",
+      "text": "std::pair<int, int>\nVehicle::getLaneChangeState(const std::string& vehID, int direction) {\n    MSBaseVehicle* veh = Helper::getVehicle(vehID);\n    auto undefined = std::make_pair((int)LCA_UNKNOWN, (int)LCA_UNKNOWN);\n    return veh->isOnRoad() ? CALL_MICRO_FUN(veh, getLaneChangeModel().getSavedState(direction), undefined) : undefined;\n}\n\n\nstd::string\nVehicle::getParameter(const std::string& vehID, const std::string& key) {\n    MSBaseVehicle* veh = Helper::getVehicle(vehID);\n    std::string error;\n    std::string result = veh->getPrefixedParameter(key, error);\n    if (error != \"\") {\n",
+      "sha256": "bb9490c2e391ca6cc97de95c738bcda0e91ff468966b8002959cc5679f39e5ec",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "V_FORMULAS",
+      "path": "src/libsumo/Vehicle.cpp",
+      "line_start": 894,
+      "line_end": 929,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L894-L929",
+      "text": "Vehicle::getFollowSpeed(const std::string& vehID, double speed, double gap, double leaderSpeed, double leaderMaxDecel, const std::string& leaderID) {\n    MSBaseVehicle* vehicle = Helper::getVehicle(vehID);\n    MSVehicle* veh = dynamic_cast<MSVehicle*>(vehicle);\n    if (veh == nullptr) {\n        WRITE_ERROR(\"getFollowSpeed not applicable for meso\");\n        return INVALID_DOUBLE_VALUE;\n    }\n    MSVehicle* leader = dynamic_cast<MSVehicle*>(MSNet::getInstance()->getVehicleControl().getVehicle(leaderID));\n    return veh->getCarFollowModel().followSpeed(veh, speed, gap, leaderSpeed, leaderMaxDecel, leader, MSCFModel::CalcReason::FUTURE);\n}\n\n\ndouble\nVehicle::getSecureGap(const std::string& vehID, double speed, double leaderSpeed, double leaderMaxDecel, const std::string& leaderID) {\n    MSBaseVehicle* vehicle = Helper::getVehicle(vehID);\n    MSVehicle* veh = dynamic_cast<MSVehicle*>(vehicle);\n    if (veh == nullptr) {\n        WRITE_ERROR(\"getSecureGap not applicable for meso\");\n        return INVALID_DOUBLE_VALUE;\n    }\n    MSVehicle* leader = dynamic_cast<MSVehicle*>(MSNet::getInstance()->getVehicleControl().getVehicle(leaderID));\n    return veh->getCarFollowModel().getSecureGap(veh, leader, speed, leaderSpeed, leaderMaxDecel);\n}\n\n\ndouble\nVehicle::getStopSpeed(const std::string& vehID, const double speed, double gap) {\n    MSBaseVehicle* vehicle = Helper::getVehicle(vehID);\n    MSVehicle* veh = dynamic_cast<MSVehicle*>(vehicle);\n    if (veh == nullptr) {\n        WRITE_ERROR(\"getStopSpeed not applicable for meso\");\n        return INVALID_DOUBLE_VALUE;\n    }\n    return veh->getCarFollowModel().stopSpeed(veh, speed, gap, MSCFModel::CalcReason::FUTURE);\n}\n\n",
+      "sha256": "5a8622797e56f8b3f51a37af67e47c992dfbf3fdca588977fdff75f5be45b71f",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "V_LOADED",
+      "path": "src/libsumo/Vehicle.cpp",
+      "line_start": 973,
+      "line_end": 980,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L973-L980",
+      "text": "Vehicle::getLoadedIDList() {\n    std::vector<std::string> ids;\n    MSVehicleControl& c = MSNet::getInstance()->getVehicleControl();\n    for (MSVehicleControl::constVehIt i = c.loadedVehBegin(); i != c.loadedVehEnd(); ++i) {\n        ids.push_back(i->first);\n    }\n    return ids;\n}\n",
+      "sha256": "8c03143daebc0b515cf8718e174fdee787db22d57067cfe7a22cdf3a7015aea9",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "V_DYNAMICS",
+      "path": "src/libsumo/Vehicle.cpp",
+      "line_start": 1018,
+      "line_end": 1054,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L1018-L1054",
+      "text": "double\nVehicle::getDecel(const std::string& vehID) {\n    return Helper::getVehicleType(vehID).getCarFollowModel().getMaxDecel();\n}\n\n\ndouble Vehicle::getEmergencyDecel(const std::string& vehID) {\n    return Helper::getVehicleType(vehID).getCarFollowModel().getEmergencyDecel();\n}\n\n\ndouble Vehicle::getApparentDecel(const std::string& vehID) {\n    return Helper::getVehicleType(vehID).getCarFollowModel().getApparentDecel();\n}\n\n\ndouble Vehicle::getActionStepLength(const std::string& vehID) {\n    return Helper::getVehicleType(vehID).getActionStepLengthSecs();\n}\n\n\ndouble Vehicle::getLastActionTime(const std::string& vehID) {\n    MSBaseVehicle* veh = Helper::getVehicle(vehID);\n    MSVehicle* microVeh = dynamic_cast<MSVehicle*>(veh);\n    if (microVeh != nullptr) {\n        return STEPS2TIME(microVeh->getLastActionTime());\n    } else {\n        MEVehicle* mesoVeh = dynamic_cast<MEVehicle*>(veh);\n        return STEPS2TIME(mesoVeh->getEventTime());\n    }\n}\n\n\ndouble\nVehicle::getTau(const std::string& vehID) {\n    return Helper::getVehicleType(vehID).getCarFollowModel().getHeadwayTime();\n}\n",
+      "sha256": "30ec0fb10a54f3df0a91997a2877c0a1dbc3414bd95420475f08ea3ddfd2fdd8",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "V_DEVICES",
+      "path": "src/microsim/MSBaseVehicle.cpp",
+      "line_start": 2759,
+      "line_end": 2804,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSBaseVehicle.cpp#L2759-L2804",
+      "text": "MSBaseVehicle::getPrefixedParameter(const std::string& key, std::string& error) const {\n    const MSVehicle* microVeh = dynamic_cast<const MSVehicle*>(this);\n    if (StringUtils::startsWith(key, \"device.\")) {\n        StringTokenizer tok(key, \".\");\n        if (tok.size() < 3) {\n            error = TLF(\"Invalid device parameter '%' for vehicle '%'.\", key, getID());\n            return \"\";\n        }\n        try {\n            return getDeviceParameter(tok.get(1), key.substr(tok.get(0).size() + tok.get(1).size() + 2));\n        } catch (InvalidArgument& e) {\n            error = TLF(\"Vehicle '%' does not support device parameter '%' (%).\", getID(), key, e.what());\n            return \"\";\n        }\n    } else if (StringUtils::startsWith(key, \"laneChangeModel.\")) {\n        if (microVeh == nullptr) {\n            error = TLF(\"Mesoscopic vehicle '%' does not support laneChangeModel parameters.\", getID());\n            return \"\";\n        }\n        const std::string attrName = key.substr(16);\n        try {\n            return microVeh->getLaneChangeModel().getParameter(attrName);\n        } catch (InvalidArgument& e) {\n            error = TLF(\"Vehicle '%' does not support laneChangeModel parameter '%' (%).\", getID(), key, e.what());\n            return \"\";\n        }\n    } else if (StringUtils::startsWith(key, \"carFollowModel.\")) {\n        if (microVeh == nullptr) {\n            error = TLF(\"Mesoscopic vehicle '%' does not support carFollowModel parameters.\", getID());\n            return \"\";\n        }\n        const std::string attrName = key.substr(15);\n        try {\n            return microVeh->getCarFollowModel().getParameter(microVeh, attrName);\n        } catch (InvalidArgument& e) {\n            error = TLF(\"Vehicle '%' does not support carFollowModel parameter '%' (%).\", getID(), key, e.what());\n            return \"\";\n        }\n    } else if (StringUtils::startsWith(key, \"has.\") && StringUtils::endsWith(key, \".device\")) {\n        StringTokenizer tok(key, \".\");\n        if (tok.size() != 3) {\n            error = TL(\"Invalid check for device. Expected format is 'has.DEVICENAME.device'.\");\n            return \"\";\n        }\n        return hasDevice(tok.get(1)) ? \"true\" : \"false\";\n        // parking related parameters start here\n",
+      "sha256": "5222e98a7d94072745c7a09b9be1c24b3a7ccc4df34aa1ef943c810694f9b0ff",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "TYPE_JM",
+      "path": "src/libsumo/VehicleType.cpp",
+      "line_start": 194,
+      "line_end": 211,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/VehicleType.cpp#L194-L211",
+      "text": "VehicleType::getParameter(const std::string& typeID, const std::string& key) {\n    if (StringUtils::startsWith(key, \"junctionModel.\")) {\n        const std::string attrName = key.substr(14);\n        if (!SUMOXMLDefinitions::Attrs.hasString(attrName)) {\n            throw TraCIException(\"Invalid junctionModel parameter '\" + key + \"' for type '\" + typeID + \"'\");\n        }\n        SumoXMLAttr attr = (SumoXMLAttr)SUMOXMLDefinitions::Attrs.get(attrName);\n        if (SUMOVTypeParameter::AllowedJMAttrs.count(attr) == 0) {\n            throw TraCIException(\"Invalid junctionModel parameter '\" + key + \"' for type '\" + typeID + \"'\");\n        }\n        if (getVType(typeID)->getParameter().jmParameter.count(attr) != 0) {\n            return getVType(typeID)->getParameter().jmParameter.find(attr)->second;\n        } else {\n            return \"\";\n        }\n    } else {\n        return getVType(typeID)->getParameter().getParameter(key, \"\");\n    }\n",
+      "sha256": "6b4fa5486e37bf7278259964b3c3abbf02c34cd3b44a46b6a9bafdb362e3a513",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "L_LINKS",
+      "path": "src/libsumo/Lane.cpp",
+      "line_start": 95,
+      "line_end": 114,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Lane.cpp#L95-L114",
+      "text": "Lane::getLinks(const std::string& laneID) {\n    std::vector<TraCIConnection> v;\n    const MSLane* const lane = getLane(laneID);\n    const SUMOTime currTime = MSNet::getInstance()->getCurrentTimeStep();\n    for (const MSLink* const link : lane->getLinkCont()) {\n        const std::string approachedLane = link->getLane() != nullptr ? link->getLane()->getID() : \"\";\n        const bool hasPrio = link->havePriority();\n        const double speed = MIN2(lane->getSpeedLimit(), link->getLane()->getSpeedLimit());\n        const bool isOpen = link->opened(currTime, speed, speed, SUMOVTypeParameter::getDefault().length,\n                                         SUMOVTypeParameter::getDefault().impatience, SUMOVTypeParameter::getDefaultDecel(), 0);\n        const bool hasFoe = link->hasApproachingFoe(currTime, currTime, 0, SUMOVTypeParameter::getDefaultDecel());\n        const std::string approachedInternal = link->getViaLane() != nullptr ? link->getViaLane()->getID() : \"\";\n        const std::string state = SUMOXMLDefinitions::LinkStates.getString(link->getState());\n        const std::string direction = SUMOXMLDefinitions::LinkDirections.getString(link->getDirection());\n        const double length = link->getLength();\n        v.push_back(TraCIConnection(approachedLane, hasPrio, isOpen, hasFoe, approachedInternal, state, direction, length));\n    }\n    return v;\n}\n\n",
+      "sha256": "56deca3b9198666fa76040b99b7f040cc3d380b11c063fdcb6a4b2e813d94298",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "L_IDS",
+      "path": "src/libsumo/Lane.cpp",
+      "line_start": 280,
+      "line_end": 289,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Lane.cpp#L280-L289",
+      "text": "Lane::getLastStepVehicleIDs(const std::string& laneID) {\n    const MSLane* lane = getLane(laneID);\n    std::vector<std::string> vehIDs;\n    const MSLane::VehCont& vehs = lane->getVehiclesSecure();\n    for (MSLane::VehCont::const_iterator j = vehs.begin(); j != vehs.end(); ++j) {\n        vehIDs.push_back((*j)->getID());\n    }\n    lane->releaseVehicles();\n    return vehIDs;\n}\n",
+      "sha256": "8c1192ff5268b9c8965fcb8ab2a35d98fe6c3e8579600429a642816fb4344333",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "L_FOES",
+      "path": "src/libsumo/Lane.cpp",
+      "line_start": 293,
+      "line_end": 312,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Lane.cpp#L293-L312",
+      "text": "Lane::getFoes(const std::string& laneID, const std::string& toLaneID) {\n    if (toLaneID == \"\") {\n        return getInternalFoes(laneID);\n    }\n    std::vector<std::string> foeIDs;\n    const MSLink* const link = getLane(laneID)->getLinkTo(getLane(toLaneID));\n    if (link == nullptr) {\n        throw TraCIException(\"No connection from lane '\" + laneID + \"' to lane '\" + toLaneID + \"'\");\n    }\n    for (const MSLink* foe : link->getFoeLinks()) {\n        foeIDs.push_back(foe->getLaneBefore()->getID());\n    }\n    return foeIDs;\n}\n\n\nstd::vector<std::string>\nLane::getInternalFoes(const std::string& laneID) {\n    const MSLane* lane = getLane(laneID);\n    const std::vector<const MSLane*>* foeLanes;\n",
+      "sha256": "327eb96997dbe6587bcb3bf9e6f27b6eae3e6171134b92b968d494110e6ba64a",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "SIM_TIME",
+      "path": "src/libsumo/Simulation.cpp",
+      "line_start": 247,
+      "line_end": 267,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Simulation.cpp#L247-L267",
+      "text": "Simulation::getTime() {\n    return SIMTIME;\n}\n\ndouble\nSimulation::getEndTime() {\n    return STEPS2TIME(string2time(OptionsCont::getOptions().getString(\"end\")));\n}\n\n\nint\nSimulation::getLoadedNumber() {\n    return (int)Helper::getVehicleStateChanges(MSNet::VehicleState::BUILT).size();\n}\n\n\nstd::vector<std::string>\nSimulation::getLoadedIDList() {\n    return Helper::getVehicleStateChanges(MSNet::VehicleState::BUILT);\n}\n\n",
+      "sha256": "dcb60848d75e4494093a42206abe8c923ca233b3c6e4a07a94e1d655345db24e",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "SIM_PENDING",
+      "path": "src/libsumo/Simulation.cpp",
+      "line_start": 444,
+      "line_end": 449,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Simulation.cpp#L444-L449",
+      "text": "Simulation::getPendingVehicles() {\n    std::vector<std::string> result;\n    for (const SUMOVehicle* veh : MSNet::getInstance()->getInsertionControl().getPendingVehicles()) {\n        result.push_back(veh->getID());\n    }\n    return result;\n",
+      "sha256": "494d305e71ff3bed1d86d24252e298236e4f91a3003a2c1b4bbfab4aa8b5c32f",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "TLS_GET",
+      "path": "src/libsumo/TrafficLight.cpp",
+      "line_start": 122,
+      "line_end": 173,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/TrafficLight.cpp#L122-L173",
+      "text": "TrafficLight::getControlledLinks(const std::string& tlsID) {\n    std::vector<std::vector<TraCILink> > result;\n    const MSTrafficLightLogic::LaneVectorVector& lanes = Helper::getTLS(tlsID).getActive()->getLaneVectors();\n    const MSTrafficLightLogic::LinkVectorVector& links = Helper::getTLS(tlsID).getActive()->getLinks();\n    for (int i = 0; i < (int)lanes.size(); ++i) {\n        std::vector<TraCILink> subList;\n        const MSTrafficLightLogic::LaneVector& llanes = lanes[i];\n        const MSTrafficLightLogic::LinkVector& llinks = links[i];\n        // number of links controlled by this signal (signal i)\n        for (int j = 0; j < (int)llanes.size(); ++j) {\n            MSLink* link = llinks[j];\n            // approached non-internal lane (if any)\n            const std::string to = link->getLane() != nullptr ? link->getLane()->getID() : \"\";\n            // approached \"via\", internal lane (if any)\n            const std::string via = link->getViaLane() != nullptr ? link->getViaLane()->getID() : \"\";\n            subList.emplace_back(TraCILink(llanes[j]->getID(), via, to));\n        }\n        result.emplace_back(subList);\n    }\n    return result;\n}\n\n\nstd::string\nTrafficLight::getProgram(const std::string& tlsID) {\n    return Helper::getTLS(tlsID).getActive()->getProgramID();\n}\n\n\nint\nTrafficLight::getPhase(const std::string& tlsID) {\n    return Helper::getTLS(tlsID).getActive()->getCurrentPhaseIndex();\n}\n\n\nstd::string\nTrafficLight::getPhaseName(const std::string& tlsID) {\n    return Helper::getTLS(tlsID).getActive()->getCurrentPhaseDef().getName();\n}\n\n\ndouble\nTrafficLight::getPhaseDuration(const std::string& tlsID) {\n    return STEPS2TIME(Helper::getTLS(tlsID).getActive()->getCurrentPhaseDef().duration);\n}\n\n\ndouble\nTrafficLight::getNextSwitch(const std::string& tlsID) {\n    return STEPS2TIME(Helper::getTLS(tlsID).getActive()->getNextSwitchTime());\n}\n\n",
+      "sha256": "c4b604bdf6d765a14a313ec8a7591edf4f3200ad4a462aeb4e54610a825147d1",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "SIM_SAVE",
+      "path": "src/libsumo/Simulation.cpp",
+      "line_start": 958,
+      "line_end": 960,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Simulation.cpp#L958-L960",
+      "text": "Simulation::saveState(const std::string& fileName) {\n    MSStateHandler::saveState(fileName, MSNet::getInstance()->getCurrentTimeStep());\n}\n",
+      "sha256": "ea86dc50b9964f1650faaee00be0a5c9966c002b643b94b344291ef5436cdfe6",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "V_HEADER",
+      "path": "src/libsumo/Vehicle.h",
+      "line_start": 90,
+      "line_end": 114,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.h#L90-L114",
+      "text": "    static std::vector<libsumo::TraCIBestLanesData> getBestLanes(const std::string& vehID);\n    static std::vector<libsumo::TraCINextTLSData> getNextTLS(const std::string& vehID);\n    static std::vector<libsumo::TraCINextStopData> getNextStops(const std::string& vehID);\n    static std::vector<libsumo::TraCIConnection> getNextLinks(const std::string& vehID);\n    static std::vector<libsumo::TraCINextStopData> getStops(const std::string& vehID, int limit = 0);\n    static int getStopState(const std::string& vehID);\n    static std::string getStopParameter(const std::string& vehID, int nextStopIndex, const std::string& param, bool customParam = false);\n\n    static double getDistance(const std::string& vehID);\n    static double getDrivingDistance(const std::string& vehID, const std::string& edgeID, double pos, int laneIndex = 0);\n    static double getDrivingDistance2D(const std::string& vehID, double x, double y);\n    static double getAllowedSpeed(const std::string& vehID);\n    static int getSpeedMode(const std::string& vehID);\n    static int getLaneChangeMode(const std::string& vehID);\n    static int getRoutingMode(const std::string& vehID);\n    static std::string getLine(const std::string& vehID);\n    static std::vector<std::string> getVia(const std::string& vehID);\n    static std::pair<int, int> getLaneChangeState(const std::string& vehID, int direction);\n    static double getLastActionTime(const std::string& vehID);\n    static std::vector<std::pair<std::string, double> > getNeighbors(const std::string& vehID, const int mode);\n    static double getFollowSpeed(const std::string& vehID, double speed, double gap, double leaderSpeed, double leaderMaxDecel, const std::string& leaderID = \"\");\n    static double getSecureGap(const std::string& vehID, double speed, double leaderSpeed, double leaderMaxDecel, const std::string& leaderID = \"\");\n    static double getStopSpeed(const std::string& vehID, double speed, double gap);\n    static double getStopDelay(const std::string& vehID);\n    static double getStopArrivalDelay(const std::string& vehID);\n",
+      "sha256": "40624513ac8a65b8d025cd27ddad071beb691eceabb62454e2a3b6b1bbeca2c3",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "N_EVENT",
+      "path": "src/microsim/MSNet.cpp",
+      "line_start": 832,
+      "line_end": 859,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSNet.cpp#L832-L859",
+      "text": "    myBeginOfTimestepEvents->execute(myStep);\n    if (MSRailSignalControl::hasInstance()) {\n        MSRailSignalControl::getInstance().updateSignals(myStep);\n    }\n#ifdef HAVE_FOX\n    MSRoutingEngine::waitForAll();\n#endif\n    if (MSGlobals::gCheck4Accidents && !MSGlobals::gUseMesoSim) {\n        myEdges->detectCollisions(myStep, STAGE_EVENTS);\n    }\n    // check whether the tls programs need to be switched\n    myLogics->check2Switch(myStep);\n\n    if (MSGlobals::gUseMesoSim) {\n        MSGlobals::gMesoNet->simulate(myStep);\n    } else {\n        // assure all lanes with vehicles are 'active'\n        myEdges->patchActiveLanes();\n\n        // compute safe velocities for all vehicles for the next few lanes\n        // also register ApproachingVehicleInformation for all links\n        myEdges->planMovements(myStep);\n\n        // register junction approaches based on planned velocities as basis for right-of-way decision\n        myEdges->setJunctionApproaches();\n\n        // decide right-of-way and execute movements\n        myEdges->executeMovements(myStep);\n",
+      "sha256": "cd1a74fe9b5d6747a5412ba93a18f5ce269645d36c9208f28cce5a765e5bbc4b",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "N_POST",
+      "path": "src/microsim/MSNet.cpp",
+      "line_start": 861,
+      "line_end": 893,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSNet.cpp#L861-L893",
+      "text": "            myEdges->detectCollisions(myStep, STAGE_MOVEMENTS);\n        }\n\n        // vehicles may change lanes\n        myEdges->changeLanes(myStep);\n\n        if (MSGlobals::gCheck4Accidents) {\n            myEdges->detectCollisions(myStep, STAGE_LANECHANGE);\n        }\n    }\n    // flush arrived meso vehicles and micro vehicles that were removed due to collision\n    myVehicleControl->removePending();\n    loadRoutes();\n\n    // persons\n    if (myPersonControl != nullptr && myPersonControl->hasTransportables()) {\n        myPersonControl->checkWaiting(this, myStep);\n    }\n    // containers\n    if (myContainerControl != nullptr && myContainerControl->hasTransportables()) {\n        myContainerControl->checkWaiting(this, myStep);\n    }\n    if (MSRailSignalControl::hasInstance()) {\n        MSRailSignalControl::getInstance().resetWaitRelations();\n        // preserve waitRelation from insertion for the next step\n    }\n    // insert vehicles\n    myInserter->determineCandidates(myStep);\n    myInsertionEvents->execute(myStep);\n#ifdef HAVE_FOX\n    MSRoutingEngine::waitForAll();\n#endif\n    myInserter->emitVehicles(myStep);\n",
+      "sha256": "1ded2baf09a607415adb9ada2504e6c8fafe1bb2ad3d260b5a6d7d5974101771",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "N_SEEN",
+      "path": "src/microsim/MSVehicle.cpp",
+      "line_start": 2286,
+      "line_end": 2298,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSVehicle.cpp#L2286-L2298",
+      "text": "    }\n#endif\n    assert(bestLaneConts.size() > 0);\n    bool hadNonInternal = false;\n    // the distance already \"seen\"; in the following always up to the end of the current \"lane\"\n    double seen = opposite ? myState.myPos : myLane->getLength() - myState.myPos;\n    nextTurn.first = seen;\n    nextTurn.second = nullptr;\n    bool encounteredTurn = (MSGlobals::gLateralResolution <= 0); // next turn is only needed for sublane\n    double seenNonInternal = 0;\n    double seenInternal = myLane->isInternal() ? seen : 0;\n    double vLinkPass = MIN2(cfModel.estimateSpeedAfterDistance(seen, v, cfModel.getMaxAccel()), laneMaxV); // upper bound\n    int view = 0;\n",
+      "sha256": "b26096fc38646668b1a4fbd57275cc837e59593351405d2fe1fa7712d6b9fb3b",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "N_PLAN",
+      "path": "src/microsim/MSVehicle.cpp",
+      "line_start": 2738,
+      "line_end": 2784,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSVehicle.cpp#L2738-L2784",
+      "text": "        const double majorStopOffset = MAX2(getVehicleType().getParameter().getJMParam(SUMO_ATTR_JM_STOPLINE_GAP, DIST_TO_STOPLINE_EXPECT_PRIORITY), lane->getVehicleStopOffset(this));\n        // override low desired decel at yellow and red\n        const double stopDecel = yellowOrRed && !isRail() ? MAX2(MIN2(MSGlobals::gTLSYellowMinDecel, cfModel.getEmergencyDecel()), cfModel.getMaxDecel()) : cfModel.getMaxDecel();\n        const double brakeDist = cfModel.brakeGap(myState.mySpeed, stopDecel, 0);\n        const bool canBrakeBeforeLaneEnd = seen >= brakeDist;\n        const bool canBrakeBeforeStopLine = seen - lane->getVehicleStopOffset(this) >= brakeDist;\n        if (yellowOrRed) {\n            // Wait at red traffic light with full distance if possible\n            laneStopOffset = majorStopOffset;\n        } else if ((*link)->havePriority()) {\n            // On priority link, we should never stop below visibility distance\n            laneStopOffset = MIN2((*link)->getFoeVisibilityDistance() - POSITION_EPS, majorStopOffset);\n        } else {\n            double minorStopOffset = MAX2(lane->getVehicleStopOffset(this),\n                                          getVehicleType().getParameter().getJMParam(SUMO_ATTR_JM_STOPLINE_CROSSING_GAP, MSPModel::SAFETY_GAP) - (*link)->getDistToFoePedCrossing());\n#ifdef DEBUG_PLAN_MOVE\n            if (DEBUG_COND) {\n                std::cout << \"  minorStopOffset=\" << minorStopOffset << \" distToFoePedCrossing=\" << (*link)->getDistToFoePedCrossing() << \"\\n\";\n            }\n#endif\n            if ((*link)->getState() == LINKSTATE_ALLWAY_STOP) {\n                minorStopOffset = MAX2(minorStopOffset, getVehicleType().getParameter().getJMParam(SUMO_ATTR_JM_STOPLINE_GAP, 0));\n            } else {\n                minorStopOffset = MAX2(minorStopOffset, getVehicleType().getParameter().getJMParam(SUMO_ATTR_JM_STOPLINE_GAP_MINOR, 0));\n            }\n            // On minor link, we should likewise never stop below visibility distance\n            laneStopOffset = MIN2((*link)->getFoeVisibilityDistance() - POSITION_EPS, minorStopOffset);\n        }\n#ifdef DEBUG_PLAN_MOVE\n        if (DEBUG_COND) {\n            std::cout << SIMTIME << \" veh=\" << getID() << \" desired stopOffset on lane '\" << lane->getID() << \"' is \" << laneStopOffset << \"\\n\";\n        }\n#endif\n        if (canBrakeBeforeLaneEnd) {\n            // avoid emergency braking if possible\n            laneStopOffset = MIN2(laneStopOffset, seen - brakeDist);\n        }\n        laneStopOffset = MAX2(POSITION_EPS, laneStopOffset);\n        double stopDist = MAX2(0., seen - laneStopOffset);\n        if (yellowOrRed && getDevice(typeid(MSDevice_GLOSA)) != nullptr\n                && static_cast<MSDevice_GLOSA*>(getDevice(typeid(MSDevice_GLOSA)))->getOverrideSafety()\n                && static_cast<MSDevice_GLOSA*>(getDevice(typeid(MSDevice_GLOSA)))->isSpeedAdviceActive()) {\n            stopDist = std::numeric_limits<double>::max();\n        }\n        if (newStopDist != std::numeric_limits<double>::max()) {\n            stopDist = MAX2(stopDist, newStopDist);\n        }\n",
+      "sha256": "1bba81eb3267a895574e86c7bac14504fccb4e970d4609d49b206fde0d8e882e",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "N_WAIT",
+      "path": "src/microsim/MSVehicle.cpp",
+      "line_start": 2869,
+      "line_end": 2883,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSVehicle.cpp#L2869-L2883",
+      "text": "#endif\n\n        if (yellowOrRed && canBrakeBeforeStopLine && !ignoreRed(*link, canBrakeBeforeStopLine) && seen >= mustSeeBeforeReversal) {\n            if (lane->isInternal()) {\n                checkLinkLeaderCurrentAndParallel(*link, lane, seen, lastLink, v, vLinkPass, vLinkWait, setRequest);\n            }\n            // arrivalSpeed / arrivalTime when braking for red light is only relevent for rail signal switching\n            const SUMOTime arrivalTime = getArrivalTime(t, seen, v, vLinkPass);\n            // the vehicle is able to brake in front of a yellow/red traffic light\n            lfLinks.push_back(DriveProcessItem(*link, v, vLinkWait, false, arrivalTime, vLinkWait, 0, seen, -1));\n            //lfLinks.push_back(DriveProcessItem(0, vLinkWait, vLinkWait, false, 0, 0, stopDist));\n            break;\n        }\n\n        const MSLink* entryLink = (*link)->getCorrespondingEntryLink();\n",
+      "sha256": "bf868407c59660f4aa243cc87371c81de5fc495f239486c6cda3b3a5cfc73760",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "N_EXEC",
+      "path": "src/microsim/MSVehicle.cpp",
+      "line_start": 4580,
+      "line_end": 4609,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSVehicle.cpp#L4580-L4609",
+      "text": "\n    // Maximum safe velocity\n    double vSafe = std::numeric_limits<double>::max();\n    // Minimum safe velocity (lower bound).\n    double vSafeMin = -std::numeric_limits<double>::max();\n    // The distance to a link, which should either be crossed this step\n    // or in front of which we need to stop.\n    double vSafeMinDist = 0;\n\n    if (myActionStep) {\n        // Actuate control (i.e. choose bounds for safe speed in current simstep (euler), resp. after current sim step (ballistic))\n        processLinkApproaches(vSafe, vSafeMin, vSafeMinDist);\n#ifdef DEBUG_ACTIONSTEPS\n        if (DEBUG_COND) {\n            std::cout << SIMTIME << \" vehicle '\" << getID() << \"'\\n\"\n                      \"   vsafe from processLinkApproaches(): vsafe \" << vSafe << std::endl;\n        }\n#endif\n    } else {\n        // Continue with current acceleration\n        vSafe = getSpeed() + ACCEL2SPEED(myAcceleration);\n#ifdef DEBUG_ACTIONSTEPS\n        if (DEBUG_COND) {\n            std::cout << SIMTIME << \" vehicle '\" << getID() << \"' skips processLinkApproaches()\\n\"\n                      \"   continues with constant accel \" <<  myAcceleration << \"...\\n\"\n                      << \"speed: \"  << getSpeed() << \" -> \" << vSafe << std::endl;\n        }\n#endif\n    }\n\n",
+      "sha256": "6b819f3b63cb4ae2700b21b71534a64606d67c32cf1ab46dae6902f13c4e4968",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "N_FINAL",
+      "path": "src/microsim/MSVehicle.cpp",
+      "line_start": 4618,
+      "line_end": 4675,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSVehicle.cpp#L4618-L4675",
+      "text": "    // Call to finalizeSpeed applies speed reduction due to dawdling / lane changing but ensures minimum safe speed\n    double vNext = vSafe;\n    const double rawAccel = SPEED2ACCEL(MAX2(vNext, 0.) - myState.mySpeed);\n    if (vNext <= SUMO_const_haltingSpeed * TS && myWaitingTime > MSGlobals::gStartupWaitThreshold && rawAccel <= accelThresholdForWaiting() && myActionStep) {\n        myTimeSinceStartup = 0;\n    } else if (isStopped()) {\n        // do not apply startupDelay for waypoints\n        if (getCarFollowModel().startupDelayStopped() && getNextStop().pars.speed <= 0) {\n            myTimeSinceStartup = DELTA_T;\n        } else {\n            // do not apply startupDelay but signal that a stop has taken place\n            myTimeSinceStartup = getCarFollowModel().getStartupDelay() + DELTA_T;\n        }\n    } else {\n        // identify potential startup (before other effects reduce the speed again)\n        myTimeSinceStartup += DELTA_T;\n    }\n    if (myActionStep) {\n        vNext = getCarFollowModel().finalizeSpeed(this, vSafe);\n        if (vNext > 0) {\n            vNext = MAX2(vNext, vSafeMin);\n        }\n    }\n    // (Leo) to avoid tiny oscillations (< 1e-10) of vNext in a standing vehicle column (observed for ballistic update), we cap off vNext\n    //       (We assure to do this only for vNext<<NUMERICAL_EPS since otherwise this would nullify the workaround for #2995\n    // (Jakob) We also need to make sure to reach a stop at the start of the next edge\n    if (fabs(vNext) < NUMERICAL_EPS_SPEED && (myStopDist > POSITION_EPS || (hasStops() && myCurrEdge == getNextStop().edge))) {\n        vNext = 0.;\n    }\n#ifdef DEBUG_EXEC_MOVE\n    if (DEBUG_COND) {\n        std::cout << SIMTIME << \" finalizeSpeed vSafe=\" << vSafe << \" vSafeMin=\" << (vSafeMin == -std::numeric_limits<double>::max() ? \"-Inf\" : toString(vSafeMin))\n                  << \" vNext=\" << vNext << \" (i.e. accel=\" << SPEED2ACCEL(vNext - getSpeed()) << \")\" << std::endl;\n    }\n#endif\n\n    // vNext may be higher than vSafe without implying a bug:\n    //  - when approaching a green light that suddenly switches to yellow\n    //  - when using unregulated junctions\n    //  - when using tau < step-size\n    //  - when using unsafe car following models\n    //  - when using TraCI and some speedMode / laneChangeMode settings\n    //if (vNext > vSafe + NUMERICAL_EPS) {\n    //    WRITE_WARNING(\"vehicle '\" + getID() + \"' cannot brake hard enough to reach safe speed \"\n    //            + toString(vSafe, 4) + \", moving at \" + toString(vNext, 4) + \" instead. time=\"\n    //            + time2string(MSNet::getInstance()->getCurrentTimeStep()) + \".\");\n    //}\n\n    if (MSGlobals::gSemiImplicitEulerUpdate) {\n        vNext = MAX2(vNext, 0.);\n    } else {\n        // (Leo) Ballistic: negative vNext can be used to indicate a stop within next step.\n    }\n\n    // Check for speed advices from the traci client\n    vNext = processTraCISpeedControl(vSafe, vNext);\n\n    // the acceleration of a vehicle equipped with the elecHybrid device is restricted by the maximal power of the electric drive as well\n",
+      "sha256": "4d619e66d7da4b285820858a481442f7b09d1c6074144321d496486f71327f37",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "N_DPI",
+      "path": "src/microsim/MSVehicle.h",
+      "line_start": 1974,
+      "line_end": 2000,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSVehicle.h#L1974-L2000",
+      "text": "    struct DriveProcessItem {\n        MSLink* myLink;\n        double myVLinkPass;\n        double myVLinkWait;\n        bool mySetRequest;\n        SUMOTime myArrivalTime;\n        double myArrivalSpeed;\n        double myArrivalSpeedBraking;\n        double myDistance;\n        double accelV;\n        bool hadStoppedVehicle;\n        double availableSpace;\n\n        DriveProcessItem(MSLink* link, double vPass, double vWait, bool setRequest,\n                         SUMOTime arrivalTime, double arrivalSpeed,\n                         double arrivalSpeedBraking,\n                         double distance,\n                         double leaveSpeed) :\n            myLink(link), myVLinkPass(vPass), myVLinkWait(vWait), mySetRequest(setRequest),\n            myArrivalTime(arrivalTime), myArrivalSpeed(arrivalSpeed),\n            myArrivalSpeedBraking(arrivalSpeedBraking),\n            myDistance(distance),\n            accelV(leaveSpeed), hadStoppedVehicle(false), availableSpace(0) {\n            assert(vWait >= 0 || !MSGlobals::gSemiImplicitEulerUpdate);\n            assert(vPass >= 0 || !MSGlobals::gSemiImplicitEulerUpdate);\n        };\n\n",
+      "sha256": "c6d89f41d63a3e2b7b39a6db797f25976ab7f9f2f1bc9c3d7bce1bd7d13ce5a1",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "N_ACTION",
+      "path": "src/microsim/MSVehicle.h",
+      "line_start": 633,
+      "line_end": 637,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSVehicle.h#L633-L637",
+      "text": "     * @return Whether the vehicle has scheduled an action point for the next step.\n     */\n    inline bool isActionStep(SUMOTime t) const {\n        return (t - myLastActionTime) % getActionStepLength() == 0;\n//        return t%getActionStepLength() == 0; // synchronized actions for all vehicles with identical actionsteplengths\n",
+      "sha256": "19c56533250e808a45c7b68c6a2219f1274471eb3e6f356e22792c4fd20e6cef",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "N_SAVE",
+      "path": "src/microsim/MSVehicle.cpp",
+      "line_start": 7724,
+      "line_end": 7767,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSVehicle.cpp#L7724-L7767",
+      "text": "MSVehicle::saveState(OutputDevice& out) {\n    MSBaseVehicle::saveState(out);\n    // here starts the vehicle internal part (see loading)\n    std::vector<std::string> internals;\n    internals.push_back(toString(myParameter->parametersSet));\n    internals.push_back(toString(myDeparture));\n    internals.push_back(toString(distance(myRoute->begin(), myCurrEdge)));\n    internals.push_back(toString(myDepartPos));\n    internals.push_back(toString(myWaitingTime));\n    internals.push_back(toString(myTimeLoss));\n    internals.push_back(toString(myLastActionTime));\n    internals.push_back(toString(isStopped()));\n    internals.push_back(toString(myPastStops.size()));\n    out.writeAttr(SUMO_ATTR_STATE, internals);\n    out.writeAttr(SUMO_ATTR_POSITION, std::vector<double> { myState.myPos, myState.myBackPos, myState.myLastCoveredDist });\n    out.writeAttr(SUMO_ATTR_SPEED, std::vector<double> { myState.mySpeed, myState.myPreviousSpeed });\n    out.writeAttr(SUMO_ATTR_ANGLE, GeomHelper::naviDegree(myAngle));\n    out.writeAttr(SUMO_ATTR_POSITION_LAT, myState.myPosLat);\n    out.writeAttr(SUMO_ATTR_WAITINGTIME, myWaitingTimeCollector.getState());\n    myLaneChangeModel->saveState(out);\n    // save past stops\n    for (SUMOVehicleParameter::Stop stop : myPastStops) {\n        stop.write(out, false);\n        // do not write started and ended twice\n        if ((stop.parametersSet & STOP_STARTED_SET) == 0) {\n            out.writeAttr(SUMO_ATTR_STARTED, time2string(stop.started));\n        }\n        if ((stop.parametersSet & STOP_ENDED_SET) == 0) {\n            out.writeAttr(SUMO_ATTR_ENDED, time2string(stop.ended));\n        }\n        stop.writeParams(out);\n        out.closeTag();\n    }\n    // save upcoming stops\n    for (MSStop& stop : myStops) {\n        stop.write(out);\n    }\n    // save parameters and device states\n    myParameter->writeParams(out);\n    for (MSVehicleDevice* const dev : myDevices) {\n        dev->saveState(out);\n    }\n    out.closeTag();\n}\n",
+      "sha256": "313e2c22c548ee203a73f7433e005af37272310a34c5d0e8bf2e97c7a666f5b1",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "N_LANE_OFFSET",
+      "path": "src/microsim/MSLane.cpp",
+      "line_start": 3792,
+      "line_end": 3800,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSLane.cpp#L3792-L3800",
+      "text": "MSLane::getVehicleStopOffset(const MSVehicle* veh) const {\n    if (!myLaneStopOffset.isDefined()) {\n        return 0;\n    }\n    if ((myLaneStopOffset.getPermissions() & veh->getVClass()) != 0) {\n        return myLaneStopOffset.getOffset();\n    } else {\n        return 0;\n    }\n",
+      "sha256": "b3717ae16e2f87816e82a04808949bb46fed78ce7011c61b27c63d86f6aa7b7a",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "CF_FINAL",
+      "path": "src/microsim/cfmodels/MSCFModel.cpp",
+      "line_start": 189,
+      "line_end": 240,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/cfmodels/MSCFModel.cpp#L189-L240",
+      "text": "MSCFModel::finalizeSpeed(MSVehicle* const veh, double vPos) const {\n    // save old v for optional acceleration computation\n    const double oldV = veh->getSpeed();\n    // process stops (includes update of stopping state)\n    const double vStop = MIN2(vPos, veh->processNextStop(vPos));\n    // apply deceleration bounds\n    const double vMinEmergency = minNextSpeedEmergency(oldV, veh);\n    // vPos contains the uppper bound on safe speed. allow emergency braking here\n    const double vMin = MIN2(minNextSpeed(oldV, veh), MAX2(vPos, vMinEmergency));\n    const double fric = veh->getFriction();\n    // adapt speed limit of road to \"perceived\" friction\n    const double factor = fric == 1. ? 1. : -0.3491 * fric * fric + 0.8922 * fric + 0.4493; //2nd degree polyfit\n\n    // aMax: Maximal admissible acceleration until the next action step, such that the vehicle's maximal\n    // desired speed on the current lane will not be exceeded when the\n    // acceleration is maintained until the next action step.\n    double aMax = (MAX2(veh->getLane()->getVehicleMaxSpeed(veh), vPos) * factor - oldV) / veh->getActionStepLengthSecs();\n    // apply planned speed constraints and acceleration constraints\n    double vMax = MIN3(oldV + ACCEL2SPEED(aMax), maxNextSpeed(oldV, veh), vStop);\n    // do not exceed max decel even if it is unsafe\n#ifdef _DEBUG\n    //if (vMin > vMax) {\n    //    WRITE_WARNINGF(TL(\"Maximum speed of vehicle '%' is lower than the minimum speed (min: %, max: %).\"), veh->getID(), toString(vMin), toString(vMax));\n    //}\n#endif\n\n#ifdef DEBUG_FINALIZE_SPEED\n    if (DEBUG_COND) {\n        std::cout << \"\\n\" << SIMTIME << \" FINALIZE_SPEED\\n\";\n    }\n#endif\n\n    vMax = MAX2(vMin, vMax);\n    double vNext = patchSpeedBeforeLC(veh, vMin, vMax);\n#ifdef DEBUG_FINALIZE_SPEED\n    double vDawdle = vNext;\n#endif\n    assert(vNext >= vMin);\n    assert(vNext <= vMax);\n    // apply lane-changing related speed adaptations\n    vNext = veh->getLaneChangeModel().patchSpeed(vMin, vNext, vMax, *this);\n#ifdef DEBUG_FINALIZE_SPEED\n    double vPatchLC = vNext;\n#endif\n    // apply further speed adaptations\n    vNext = applyStartupDelay(veh, vMin, vNext);\n\n    assert(vNext >= vMinEmergency); // stronger braking is permitted in lane-changing related emergencies\n    assert(vNext <= vMax);\n\n#ifdef DEBUG_FINALIZE_SPEED\n    if (DEBUG_COND) {\n",
+      "sha256": "74847cde3ea9b39206a1f0723237fa762d4eaac92b91c06faba8eb99583b743b",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "CF_LIMITS",
+      "path": "src/microsim/cfmodels/MSCFModel.cpp",
+      "line_start": 314,
+      "line_end": 338,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/cfmodels/MSCFModel.cpp#L314-L338",
+      "text": "MSCFModel::maxNextSpeed(double speed, const MSVehicle* const /*veh*/) const {\n    return MIN2(speed + (double) ACCEL2SPEED(getCurrentAccel(speed)), myType->getMaxSpeed());\n}\n\n\ndouble\nMSCFModel::minNextSpeed(double speed, const MSVehicle* const /*veh*/) const {\n    if (MSGlobals::gSemiImplicitEulerUpdate) {\n        return MAX2(speed - ACCEL2SPEED(myDecel), 0.);\n    } else {\n        // NOTE: ballistic update allows for negative speeds to indicate a stop within the next timestep\n        return speed - ACCEL2SPEED(myDecel);\n    }\n}\n\n\ndouble\nMSCFModel::minNextSpeedEmergency(double speed, const MSVehicle* const /*veh*/) const {\n    if (MSGlobals::gSemiImplicitEulerUpdate) {\n        return MAX2(speed - ACCEL2SPEED(myEmergencyDecel), 0.);\n    } else {\n        // NOTE: ballistic update allows for negative speeds to indicate a stop within the next timestep\n        return speed - ACCEL2SPEED(myEmergencyDecel);\n    }\n}\n",
+      "sha256": "bef5eb05ff36ed5e24ba4ffad4b92040bbd29dc57eb99af833aede4a23e6ff02",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "CF_RELAX",
+      "path": "src/microsim/cfmodels/MSCFModel.cpp",
+      "line_start": 796,
+      "line_end": 835,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/cfmodels/MSCFModel.cpp#L796-L835",
+      "text": "MSCFModel::maximumSafeStopSpeed(double gap, double decel, double currentSpeed, bool onInsertion, double headway, bool relaxEmergency) const {\n    double vsafe;\n    if (MSGlobals::gSemiImplicitEulerUpdate) {\n        vsafe = maximumSafeStopSpeedEuler(gap, decel, onInsertion, headway);\n    } else {\n        vsafe = maximumSafeStopSpeedBallistic(gap, decel, currentSpeed, onInsertion, headway);\n    }\n\n    if (relaxEmergency && myDecel != myEmergencyDecel) {\n#ifdef DEBUG_EMERGENCYDECEL\n        if (true) {\n            std::cout << SIMTIME << \" maximumSafeStopSpeed()\"\n                      << \" g=\" << gap\n                      << \" v=\" << currentSpeed\n                      << \" initial vsafe=\" << vsafe << \"(decel=\" << SPEED2ACCEL(v - vsafe) << \")\" << std::endl;\n        }\n#endif\n\n        double origSafeDecel = SPEED2ACCEL(currentSpeed - vsafe);\n        if (origSafeDecel > myDecel + NUMERICAL_EPS) {\n            // emergency deceleration required\n\n#ifdef DEBUG_EMERGENCYDECEL\n            if (true) {\n                std::cout << SIMTIME << \" maximumSafeStopSpeed() results in emergency deceleration \"\n                          << \"initial vsafe=\" << vsafe  << \" egoSpeed=\" << v << \"(decel=\" << SPEED2ACCEL(v - vsafe) << \")\" << std::endl;\n            }\n#endif\n\n            double safeDecel = EMERGENCY_DECEL_AMPLIFIER * calculateEmergencyDeceleration(gap, currentSpeed, 0., 1);\n            // Don't be riskier than the usual method (myDecel <= safeDecel may occur, because a headway>0 is used above)\n            safeDecel = MAX2(safeDecel, myDecel);\n            // don't brake harder than originally planned (possible due to euler/ballistic mismatch)\n            safeDecel = MIN2(safeDecel, origSafeDecel);\n            vsafe = currentSpeed - ACCEL2SPEED(safeDecel);\n            if (MSGlobals::gSemiImplicitEulerUpdate) {\n                vsafe = MAX2(vsafe, 0.);\n            }\n\n#ifdef DEBUG_EMERGENCYDECEL\n",
+      "sha256": "96ef1dd3af1009aa7c8f0c345985eb3b560f7f755efea29c45bc651165968649",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "CF_DRIVER",
+      "path": "src/microsim/cfmodels/MSCFModel.cpp",
+      "line_start": 1124,
+      "line_end": 1136,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/cfmodels/MSCFModel.cpp#L1124-L1136",
+      "text": "MSCFModel::applyHeadwayPerceptionError(const MSVehicle* const veh, double speed, double& gap) const {\n    UNUSED_PARAMETER(speed);\n    if (!veh->hasDriverState()) {\n        return;\n    }\n    // @todo: Provide objectID (e.g. pointer address for the relevant object at the given distance(gap))\n    //        This is for item related management of known object and perception updates when the distance\n    //        changes significantly. (Should not be too important for stationary objects though.)\n\n    // Obtain perceived gap from driver state\n    const double perceivedGap = veh->getDriverState()->getPerceivedHeadway(gap);\n\n#ifdef DEBUG_DRIVER_ERRORS\n",
+      "sha256": "57910db702833afa423b1ad455dd89700416d455d943a67cc10acff01ccefe9c",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "KR_STOP",
+      "path": "src/microsim/cfmodels/MSCFModel_Krauss.cpp",
+      "line_start": 101,
+      "line_end": 108,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/cfmodels/MSCFModel_Krauss.cpp#L101-L108",
+      "text": "MSCFModel_Krauss::stopSpeed(const MSVehicle* const veh, const double speed, double gap, double decel, const CalcReason usage) const {\n    // NOTE: This allows return of smaller values than minNextSpeed().\n    // Only relevant for the ballistic update: We give the argument headway=veh->getActionStepLengthSecs(), to assure that\n    // the stopping position is approached with a uniform deceleration also for tau!=veh->getActionStepLengthSecs().\n    applyHeadwayPerceptionError(veh, speed, gap);\n    const bool relaxEmergency = usage != FUTURE; // do not relax insertionStopSpeed\n    return MIN2(maximumSafeStopSpeed(gap, decel, speed, false, veh->getActionStepLengthSecs(), relaxEmergency), maxNextSpeed(speed, veh));\n}\n",
+      "sha256": "a5f8ea5ea89cea4293ae18c18ffcfb22d5698bc25573fcf12d67fee972066352",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "KR_DAWDLE",
+      "path": "src/microsim/cfmodels/MSCFModel_Krauss.cpp",
+      "line_start": 68,
+      "line_end": 98,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/cfmodels/MSCFModel_Krauss.cpp#L68-L98",
+      "text": "MSCFModel_Krauss::patchSpeedBeforeLC(const MSVehicle* veh, double vMin, double vMax) const {\n    const double sigma = (veh->passingMinor()\n                          ? veh->getVehicleType().getParameter().getJMParam(SUMO_ATTR_JM_SIGMA_MINOR, myDawdle)\n                          : myDawdle);\n    double vDawdle;\n    if (myDawdleStep > DELTA_T) {\n        VehicleVariables* vars = (VehicleVariables*)veh->getCarFollowVariables();\n        if (SIMSTEP % myDawdleStep == vars->updateOffset) {\n            const double vD = MAX2(vMin, dawdle2(vMax, sigma, veh->getRNG()));\n            const double a1 = SPEED2ACCEL(vMax - veh->getSpeed());\n            const double a2 = SPEED2ACCEL(vD - vMax);\n            const double accelMax = (veh->getLane()->getVehicleMaxSpeed(veh) - veh->getSpeed()) / STEPS2TIME(myDawdleStep);\n            // avoid exceeding maxSpeed before the next sigmaStep\n            vars->accelDawdle = MIN2(a1, accelMax) + a2;\n            vDawdle = veh->getSpeed() + ACCEL2SPEED(vars->accelDawdle);\n            //std::cout << SIMTIME << \" v=\" << veh->getSpeed() << \" updated vD=\" << vD<< \" a1=\" << a1 << \" a2=\" << a2 << \" aM=\" << accelMax << \" accelDawdle=\" << vars->accelDawdle << \" vDawdle=\" << vDawdle << \"\\n\";\n        } else {\n            const double safeAccel = SPEED2ACCEL(vMax - veh->getSpeed());\n            const double accel = MIN2(safeAccel, vars->accelDawdle);\n            vDawdle = MAX2(vMin, MIN2(vMax, veh->getSpeed() + ACCEL2SPEED(accel)));\n            //std::cout << SIMTIME << \" v=\" << veh->getSpeed() << \" safeAccel=\" << safeAccel << \" accel=\" << accel << \" vDawdle=\" << vDawdle << \"\\n\";\n        }\n    } else {\n        vDawdle = MAX2(vMin, dawdle2(vMax, sigma, veh->getRNG()));\n        //const double accel1 = SPEED2ACCEL(vMax - veh->getSpeed());\n        //const double accel2 = SPEED2ACCEL(vDawdle - vMax);\n        //std::cout << SIMTIME << \" v=\" << veh->getSpeed() << \" updated vDawdle=\" << vDawdle << \" a1=\" << accel1 << \" a2=\" << accel2 << \" accelDawdle=\" << SPEED2ACCEL(vDawdle - veh->getSpeed()) << \"\\n\";\n    }\n    return vDawdle;\n}\n\n",
+      "sha256": "8e30748a8b8fddef50fe2e131058e0491627dffcbb2e4b0f7a032bf41c4a27e3",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "LC_PATCH",
+      "path": "src/microsim/lcmodels/MSLCM_LC2013.cpp",
+      "line_start": 197,
+      "line_end": 228,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/lcmodels/MSLCM_LC2013.cpp#L197-L228",
+      "text": "MSLCM_LC2013::patchSpeed(const double min, const double wanted, const double max, const MSCFModel& cfModel) {\n\n#ifdef DEBUG_PATCH_SPEED\n    if (DEBUG_COND) {\n        std::cout << \"\\nPATCH_SPEED\\n\"\n                  << SIMTIME\n                  << \" veh=\" << myVehicle.getID()\n                  << \" lane=\" << myVehicle.getLane()->getID()\n                  << \" pos=\" << myVehicle.getPositionOnLane()\n                  << \" v=\" << myVehicle.getSpeed()\n                  << \" min=\" << min\n                  << \" wanted=\" << wanted\n                  << \" max=\" << max\n                  << \"\\n\";\n    }\n#endif\n\n    // negative min speed may be passed when using ballistic updated\n    const double newSpeed = _patchSpeed(MAX2(min, 0.0), wanted, max, cfModel);\n\n#ifdef DEBUG_PATCH_SPEED\n    if (DEBUG_COND) {\n        const std::string patched = (wanted != newSpeed ? \" patched=\" + toString(newSpeed) : \"\");\n        std::cout << patched\n                  << \"\\n\";\n    }\n#endif\n\n    return newSpeed;\n}\n\n\n",
+      "sha256": "8a8c03e433a6e0ab8bd398176b4fb6ab9cf46eb1b4e94e13ab743a45ffae7cb9",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "LINK_RED",
+      "path": "src/microsim/MSLink.cpp",
+      "line_start": 836,
+      "line_end": 850,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSLink.cpp#L836-L850",
+      "text": "MSLink::opened(SUMOTime arrivalTime, double arrivalSpeed, double leaveSpeed, double vehicleLength,\n               double impatience, double decel, SUMOTime waitingTime, double posLat,\n               BlockingFoes* collectFoes, bool ignoreRed, const SUMOTrafficObject* ego, double dist) const {\n#ifdef MSLink_DEBUG_OPENED\n    if (gDebugFlag1) {\n        std::cout << SIMTIME << \"  opened? link=\" << getDescription() << \" red=\" << haveRed() << \" cont=\" << isCont() << \" numFoeLinks=\" << myFoeLinks.size() << \" havePrio=\" << havePriority() << \" lastWasContMajorGreen=\" << lastWasContState(LINKSTATE_TL_GREEN_MAJOR) << \"\\n\";\n    }\n#endif\n    if (haveRed() && !ignoreRed) {\n        return false;\n    }\n    if (isCont() && MSGlobals::gUsingInternalLanes) {\n        return true;\n    }\n    const SUMOTime leaveTime = getLeaveTime(arrivalTime, arrivalSpeed, leaveSpeed, vehicleLength);\n",
+      "sha256": "1b52b574f678f54af0669cf0df5ff4f2755013eccaaa5ace4a87c588069d667f",
+      "license": "SUMO source copyright respective authors; EPL-2.0/GPL-2.0-or-later as source file header; only short relevant code excerpt"
+    },
+    {
+      "id": "V_LANE",
+      "path": "src/libsumo/Vehicle.cpp",
+      "line_start": 177,
+      "line_end": 209,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L177-L209",
+      "text": "Vehicle::getLaneID(const std::string& vehID) {\n    MSBaseVehicle* veh = Helper::getVehicle(vehID);\n    return veh->isOnRoad() ? CALL_MICRO_FUN(veh, getLane()->getID(), \"\") : \"\";\n}\n\n\nint\nVehicle::getLaneIndex(const std::string& vehID) {\n    MSBaseVehicle* veh = Helper::getVehicle(vehID);\n    if (veh->isOnRoad()) {\n        MSVehicle* microVeh = dynamic_cast<MSVehicle*>(veh);\n        if (microVeh != nullptr) {\n            return microVeh->getLane()->getIndex();\n        } else {\n            MEVehicle* mesoVeh = dynamic_cast<MEVehicle*>(veh);\n            return mesoVeh->getQueIndex();\n        }\n    } else {\n        return INVALID_INT_VALUE;\n    }\n}\n\nstd::string\nVehicle::getSegmentID(const std::string& vehID) {\n    MSBaseVehicle* veh = Helper::getVehicle(vehID);\n    return veh->isOnRoad() ? CALL_MESO_FUN(veh, getSegment()->getID(), \"\") : \"\";\n}\n\nint\nVehicle::getSegmentIndex(const std::string& vehID) {\n    MSBaseVehicle* veh = Helper::getVehicle(vehID);\n    return veh->isOnRoad() ? CALL_MESO_FUN(veh, getSegment()->getIndex(), INVALID_INT_VALUE) : INVALID_INT_VALUE;\n}\n",
+      "sha256": "48db1813bb4ff6bd9fe9baf32355fefad8ebcaf9508c31d0cb085637c70a9162",
+      "license": "SUMO respective authors; EPL-2.0/GPL-2.0-or-later source header; short relevant code excerpt"
+    },
+    {
+      "id": "V_ROUTE",
+      "path": "src/libsumo/Vehicle.cpp",
+      "line_start": 465,
+      "line_end": 472,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L465-L472",
+      "text": "Vehicle::getRoute(const std::string& vehID) {\n    std::vector<std::string> result;\n    MSBaseVehicle* veh = Helper::getVehicle(vehID);\n    const MSRoute& r = veh->getRoute();\n    for (MSRouteIterator i = r.begin(); i != r.end(); ++i) {\n        result.push_back((*i)->getID());\n    }\n    return result;\n",
+      "sha256": "77062b4e3f56d947faf0a83a598baa646e2372ad80e07edd385d1b069e870ef0",
+      "license": "SUMO respective authors; EPL-2.0/GPL-2.0-or-later source header; short relevant code excerpt"
+    },
+    {
+      "id": "V_TYPE_PROPERTIES",
+      "path": "src/libsumo/Vehicle.cpp",
+      "line_start": 1012,
+      "line_end": 1072,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L1012-L1072",
+      "text": "double\nVehicle::getAccel(const std::string& vehID) {\n    return Helper::getVehicleType(vehID).getCarFollowModel().getMaxAccel();\n}\n\n\ndouble\nVehicle::getDecel(const std::string& vehID) {\n    return Helper::getVehicleType(vehID).getCarFollowModel().getMaxDecel();\n}\n\n\ndouble Vehicle::getEmergencyDecel(const std::string& vehID) {\n    return Helper::getVehicleType(vehID).getCarFollowModel().getEmergencyDecel();\n}\n\n\ndouble Vehicle::getApparentDecel(const std::string& vehID) {\n    return Helper::getVehicleType(vehID).getCarFollowModel().getApparentDecel();\n}\n\n\ndouble Vehicle::getActionStepLength(const std::string& vehID) {\n    return Helper::getVehicleType(vehID).getActionStepLengthSecs();\n}\n\n\ndouble Vehicle::getLastActionTime(const std::string& vehID) {\n    MSBaseVehicle* veh = Helper::getVehicle(vehID);\n    MSVehicle* microVeh = dynamic_cast<MSVehicle*>(veh);\n    if (microVeh != nullptr) {\n        return STEPS2TIME(microVeh->getLastActionTime());\n    } else {\n        MEVehicle* mesoVeh = dynamic_cast<MEVehicle*>(veh);\n        return STEPS2TIME(mesoVeh->getEventTime());\n    }\n}\n\n\ndouble\nVehicle::getTau(const std::string& vehID) {\n    return Helper::getVehicleType(vehID).getCarFollowModel().getHeadwayTime();\n}\n\n\ndouble\nVehicle::getImperfection(const std::string& vehID) {\n    return Helper::getVehicleType(vehID).getCarFollowModel().getImperfection();\n}\n\n\ndouble\nVehicle::getSpeedDeviation(const std::string& vehID) {\n    return Helper::getVehicleType(vehID).getSpeedFactor().getParameter(1);\n}\n\n\nstd::string\nVehicle::getVehicleClass(const std::string& vehID) {\n    return toString(Helper::getVehicleType(vehID).getVehicleClass());\n}\n",
+      "sha256": "683403bf8dfa0942e73dfebaca9fb2a06a8dad0017bcfd8411bc46614f4f0898",
+      "license": "SUMO respective authors; EPL-2.0/GPL-2.0-or-later source header; short relevant code excerpt"
+    }
+  ],
+  "full_source_files_not_uploaded": true
+}
