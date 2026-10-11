@@ -130,3 +130,14 @@ Read the [qualification/STOP report](docs/development/CANDIDATE_A_QUALIFICATION_
 
 
 PR #5 [2026-10-11 missing-window correction](docs/development/PR5_MISSING_WINDOW_CORRECTION_20261011.md) makes V3 audit outputs current while preserving older data/reviews. Unobserved window measurements are JSONnull/CSVblank;6sactual prefix unchanged. Six analysis regression tests pass; independent science confirms the existing current-contract STOP3. Qualification and900capability remain unverified. Analysis tests: `.venv/bin/python -m unittest discover -s tests/candidate_a_analysis_20261011 -v`; no SUMO rerun.
+
+## Candidate A isolated native-phase diagnostic bridge (2026-10-11)
+
+The [minimal bridge record](docs/development/CANDIDATE_A_NATIVE_PHASE_SMOKE_BRIDGE_20261011.md) documents reuse of Candidate A, source/card/environment/log binding and the mandatory close/pause after the first activated1206→1207 red interval. This delivery authorizes implementation and offline review only; **native execution is not authorized**. Historical STOP3 and NOT_QUALIFIED remain.
+
+```sh
+.venv/bin/python scripts/candidate_a_native_smoke_bridge_20261011_v1/cli.py --prepare
+.venv/bin/python scripts/candidate_a_native_smoke_bridge_20261011_v1/cli.py --check-card artifacts/candidate_a_native_smoke_bridge_20261011_v1/engineering/packages/CA_NATIVE_PHASE_R300_S17_SMOKE01/card.json
+```
+
+Default/prepare/check operations are offline. Existing unconsumed cards are checked without overwrite. Native execution has a separate exact-card user-authorization and engineering/data/scientific release gate; current authorization/release are absent. Host-absolute prepared paths require controlled rebinding and renewed approval for another checkout. Offline fake tests are `.venv/bin/python -m unittest discover -s tests/candidate_a_native_smoke_bridge_20261011 -v`; their PASS does not establish native safety, actual service capacity or formal readiness.

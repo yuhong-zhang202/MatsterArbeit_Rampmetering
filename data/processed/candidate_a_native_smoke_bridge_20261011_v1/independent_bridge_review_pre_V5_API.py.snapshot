@@ -1,0 +1,68 @@
+"""Bounded public/fake bridge verification; never launches SUMO or opens TraCI."""
+import ast,hashlib,importlib.util,json,math,sys,tempfile,time,xml.etree.ElementTree as ET
+from pathlib import Path
+from types import SimpleNamespace
+from unittest.mock import patch
+ROOT=Path(__file__).resolve().parents[3]
+OUT=Path(__file__).resolve().parent
+sys.path.insert(0,str(ROOT))
+from src.candidate_a_native_smoke_20261011.bridge_logs import LogCapture
+from src.candidate_a_native_smoke_20261011.bridge import execute,diagnostic_loop
+from src.candidate_a_native_smoke_20261011.bridge_card import validate,RUN,TASK
+
+def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+def review():
+    eng=ROOT/TASK/'engineering';binding=json.loads((eng/'INPUT_BINDINGS_V5.json').read_text())
+    for p,h in binding['files'].items():assert sha(ROOT/p)==h,p
+    context=json.loads((OUT/'PRE_DATA_CONTEXT_BINDINGS.json').read_text())
+    assert all(sha(ROOT/p)==h for p,h in context['files'].items())
+    assert all(sha(ROOT/p)==h for p,h in context['protected'].items())
+    source=json.loads((eng/'LOG_SOURCE_RECEIPT.json').read_text())
+    for e in source['excerpts']:
+        assert hashlib.sha256(e['text'].encode()).hexdigest()==e['sha256']
+        assert len(e['text'].splitlines())==e['line_end']-e['line_start']+1
+        assert source['source_commit'] in e['url']
+    xml=json.loads((OUT/'XML_IDENTITY_REVIEW.json').read_text())
+    assert all(sha(ROOT/p)==h for p,h in xml['hashes'].items())
+    package=eng/'packages'/RUN
+    groups={k:[] for k in ['M','R','U','X']}
+    for v in ET.parse(package/'demand.rou.xml').getroot().findall('vehicle'):
+        groups[v.get('id').split('_')[0]].append(float(v.get('depart')))
+    for g in xml['groups']:
+        vs=groups[g['role']];assert len(vs)==g['vehicles'] and vs[0]==g['first_depart_s'] and vs[-1]==g['last_depart_s']
+        assert all(math.isclose(b-a,g['spacing_s']) for a,b in zip(vs,vs[1:]))
+        assert g['scheduled_nominal_veh_h']==3600/g['spacing_s']
+    cardpath=eng/'packages'/RUN/'card.json';card=validate(cardpath)
+    assert card['spec']['end_s']==1207 and card['spec']['automatic_continuation'] is False
+    assert card['environment']['native_version_executed'] is False
+    assert not (ROOT/TASK/'AUTHORIZATION_NATIVE_EXECUTION.json').exists()
+    assert not (eng/'EXECUTION_RELEASE.json').exists()
+    before=(ROOT/card['output']).parent.exists()
+    with patch('subprocess.Popen',side_effect=AssertionError('native forbidden')) as spawn:
+        try:execute(cardpath,eng/'EXECUTION_RELEASE.json');raise AssertionError('unauthorized accepted')
+        except ValueError as e:assert 'authorization missing' in str(e)
+        assert spawn.call_count==0
+    assert before is False and not (ROOT/card['output']).parent.exists()
+    results=[{'probe':'missing_canonical_authorization_before_spawn_raw','status':'PASS'}]
+    for case,data,expected in [('info',b'Simulation ended.\n','BOUND_NO_OBSERVED_NATIVE_MESSAGE'),('zero_synthetic',b'Collisions: 0\nTeleports: 0\n','UNKNOWN_LOG_PARSING_UNVERIFIED'),('positive',b'Teleports: 1\n','UNKNOWN_OR_NATIVE_MESSAGE')]:
+        with tempfile.TemporaryDirectory() as tmp:
+            c=LogCapture(Path(tmp));r=c.snapshot(0,1,'AFTER_SIMULATION_STEP_ACK')
+            assert r['streams']['sumo_stdout.log']['coverage']=='PROVISIONAL_UNTIL_PROCESS_EOF'
+            c.paths['sumo_stdout.log'].write_bytes(data);final=c.finalize(SimpleNamespace(poll=lambda:0,returncode=0),1,True)
+            assert final['status']==expected
+            assert final['streams']['sumo_stdout.log']['prefix_sha256']==hashlib.sha256(data).hexdigest()
+            if case=='zero_synthetic':assert final['critical_message_observed_or_unrecognized'] is False and final['log_parsing_unverified'] is True
+            c.close_handles();results.append({'probe':'EOF_'+case,'status':'PASS','classification':expected,'late_bytes':len(data)})
+    with tempfile.TemporaryDirectory() as tmp:
+        c=LogCapture(Path(tmp));p=c.paths['sumo_stdout.log'];p.write_bytes(b'\xe4');r=c.snapshot(0,1,'AFTER_SIMULATION_STEP_ACK');assert not r['streams']['sumo_stdout.log']['whole_prefix_decoded']
+        p.write_bytes('完成\n'.encode());r=c.snapshot(1,2,'AFTER_SIMULATION_STEP_ACK');assert r['streams']['sumo_stdout.log']['whole_prefix_decoded'];final=c.finalize(SimpleNamespace(poll=lambda:0,returncode=0),2,True);assert final['status']=='BOUND_NO_OBSERVED_NATIVE_MESSAGE';c.close_handles();results.append({'probe':'split_utf8_provisional_fullprefix_reconstruction','status':'PASS'})
+    spec=importlib.util.spec_from_file_location('bridge_fake_only',ROOT/'tests/candidate_a_native_smoke_bridge_20261011/test_bridge.py');m=importlib.util.module_from_spec(spec);spec.loader.exec_module(m)
+    with tempfile.TemporaryDirectory() as tmp:
+        c=LogCapture(Path(tmp));conn=m.EmptyFakeConnection();a=diagnostic_loop(conn,SimpleNamespace(observe=conn.observe,request_phase=conn.request),c,Path(tmp),{'wall_limit_s':180,'minimum_free_bytes':0,'run_limit_bytes':300000000},m.FakeProcess(),time.monotonic())
+        rows=[json.loads(x) for x in (Path(tmp)/'post_steps.jsonl').read_text().splitlines()]
+        assert len(rows)==1207 and rows[603]['motion']=='r' and rows[-1]['time_end_s']==1207
+        accounting=a.ledger.accounting();assert accounting['E']==accounting['N']==0 and math.isclose(accounting['C'],7/12)
+        assert a.paused and rows[-1]['status']=='MANDATORY_REVIEW_PAUSE_NO_AUTOMATIC_CONTINUATION';c.close_handles()
+        results.append({'probe':'full_fake_prefix_independent_row_CEN_recompute','status':'PASS','steps':len(rows),'C':accounting['C'],'E':0,'N':0,'complete_cycles':0,'observed_native':False})
+    return {'status':'PASS','probe_count':len(results),'probes':results,'bound_engine_files':len(binding['files']),'protected_files':len(context['protected']),'protected_drift':0,'environment_metadata_complete':card['environment']['complete'],'native_compiler_source_equivalence':'NOT_VERIFIED','native_version_query_or_SUMO_TraCI_starts':0,'runtime_approval_release':'ABSENT_DENIED','XML_absolute_paths':'hostbound; offlinecheck portable but runtime on foreignroot mustdeny; not native crosshost verified','limits':'Conditionalstderr synchronous-source/ACK assumption not runtime-certified; finalEOF bytebinding not per-step stdout completeness; fake counting not qualification.'}
+if __name__=='__main__':print(json.dumps(review(),indent=2))

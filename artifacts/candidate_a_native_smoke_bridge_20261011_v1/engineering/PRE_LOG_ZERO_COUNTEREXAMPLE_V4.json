@@ -1,0 +1,74 @@
+{
+  "source_sha256": "fc3c8f941356b49d4077349cceee6f6d238fd3a39ebeb8b645acc435a984cfb1",
+  "actual": {
+    "coverage": "FINAL_FILES_AT_OWNED_PROCESS_EOF",
+    "process_returncode": 0,
+    "all_streams_bound": true,
+    "late_bytes": {
+      "sumo_stderr.log": 0,
+      "sumo_stdout.log": 27,
+      "sumo_error.log": 0,
+      "sumo.log": 0
+    },
+    "status": "UNKNOWN_OR_NATIVE_MESSAGE",
+    "per_step_complete_native_universal_claim": false,
+    "record_count": 1,
+    "streams": {
+      "sumo_stderr.log": {
+        "source": "/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/tmp8z1p0_up/sumo_stderr.log",
+        "byte_start": 0,
+        "byte_end": 0,
+        "device": 16777233,
+        "inode": 89643318,
+        "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fragment_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": "",
+        "raw_fragment_hex": "",
+        "whole_prefix_decoded": true,
+        "coverage": "CONDITIONAL_SYNC_CERR_BEFORE_ACK"
+      },
+      "sumo_stdout.log": {
+        "source": "/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/tmp8z1p0_up/sumo_stdout.log",
+        "byte_start": 0,
+        "byte_end": 27,
+        "device": 16777233,
+        "inode": 89643319,
+        "prefix_sha256": "9c8283aeb2f5ed64d4aa46ff1d536d9534e68d6fdec050e7e99f1c35079bacd2",
+        "fragment_sha256": "9c8283aeb2f5ed64d4aa46ff1d536d9534e68d6fdec050e7e99f1c35079bacd2",
+        "text": "Collisions: 0\nTeleports: 0\n",
+        "raw_fragment_hex": "436f6c6c6973696f6e733a20300a54656c65706f7274733a20300a",
+        "whole_prefix_decoded": true,
+        "coverage": "PROVISIONAL_UNTIL_PROCESS_EOF"
+      },
+      "sumo_error.log": {
+        "source": "/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/tmp8z1p0_up/sumo_error.log",
+        "byte_start": 0,
+        "byte_end": 0,
+        "device": 16777233,
+        "inode": 89643320,
+        "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fragment_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": "",
+        "raw_fragment_hex": "",
+        "whole_prefix_decoded": true,
+        "coverage": "PROVISIONAL_UNTIL_PROCESS_EOF"
+      },
+      "sumo.log": {
+        "source": "/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/tmp8z1p0_up/sumo.log",
+        "byte_start": 0,
+        "byte_end": 0,
+        "device": 16777233,
+        "inode": 89643321,
+        "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fragment_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": "",
+        "raw_fragment_hex": "",
+        "whole_prefix_decoded": true,
+        "coverage": "PROVISIONAL_UNTIL_PROCESS_EOF"
+      }
+    }
+  },
+  "native_starts": 0,
+  "initial_preservation_script": "module import failed before counterexample; source preserved; PYTHONPATH=. retry succeeded",
+  "limitation": "Synthetic zero summary conflated with critical native message by old substring classifier."
+}

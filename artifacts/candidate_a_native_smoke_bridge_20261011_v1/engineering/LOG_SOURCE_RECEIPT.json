@@ -1,0 +1,83 @@
+{
+  "source_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+  "read_at_utc": "2026-10-11T18:57:30.522158+00:00",
+  "sources": [
+    {
+      "name": "MsgHandler.cpp",
+      "bytes": 11058,
+      "sha256": "e7d7a00a85a8f18b5ede2458eed07087093ed8754d4251678f664fa48aaa2daf",
+      "url": "https://raw.githubusercontent.com/eclipse-sumo/sumo/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/utils/common/MsgHandler.cpp"
+    },
+    {
+      "name": "OutputDevice_CERR.cpp",
+      "bytes": 2383,
+      "sha256": "988be42b3146173964f24474dba5fea057f5d0459c4dbf5fd3b37b19401aae0e",
+      "url": "https://raw.githubusercontent.com/eclipse-sumo/sumo/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/utils/iodevices/OutputDevice_CERR.cpp"
+    },
+    {
+      "name": "TraCIServer.cpp",
+      "bytes": 91235,
+      "sha256": "be6a4ed81700bf917b9e7321ced8032d6e3752c84f7f4157875f8a37c35edd6b",
+      "url": "https://raw.githubusercontent.com/eclipse-sumo/sumo/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/traci-server/TraCIServer.cpp"
+    },
+    {
+      "name": "OutputDevice.cpp",
+      "bytes": 11968,
+      "sha256": "3f8451bef254b14d5444e188f8f9431ac78ac253fec99a659840da143d59328f",
+      "url": "https://raw.githubusercontent.com/eclipse-sumo/sumo/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/utils/iodevices/OutputDevice.cpp"
+    }
+  ],
+  "excerpts": [
+    {
+      "path": "src/utils/common/MsgHandler.cpp",
+      "line_start": 133,
+      "line_end": 147,
+      "text": "MsgHandler::inform(std::string msg, bool addType) {\n    if (addType && !myInitialMessages.empty() && myInitialMessages.size() < 5) {\n        myInitialMessages.push_back(msg);\n    }\n    // beautify progress output\n    if (myAmProcessingProcess) {\n        myAmProcessingProcess = false;\n        MsgHandler::getMessageInstance()->inform(\"\");\n    }\n    msg = build(msg, addType);\n    // inform all receivers\n    for (auto i : myRetrievers) {\n        i->inform(msg);\n    }\n    // set the information that something occurred\n",
+      "sha256": "31d82550fda65d7b857a7a02eb9e472e2bc68bba241e4f278b4309ca78e07f52",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/utils/common/MsgHandler.cpp#L133-L147"
+    },
+    {
+      "path": "src/utils/common/MsgHandler.cpp",
+      "line_start": 293,
+      "line_end": 326,
+      "text": "MsgHandler::initOutputOptions() {\n    // initialize console properly\n    OutputDevice::getDevice(\"stdout\");\n    OutputDevice::getDevice(\"stderr\");\n    OptionsCont& oc = OptionsCont::getOptions();\n    getWarningInstance()->setAggregationThreshold(oc.getInt(\"aggregate-warnings\"));\n    getErrorInstance()->setAggregationThreshold(oc.getInt(\"aggregate-warnings\"));\n    if (oc.getBool(\"no-warnings\")) {\n        getWarningInstance()->removeRetriever(&OutputDevice::getDevice(\"stderr\"));\n    }\n    // build the logger if possible\n    if (oc.isSet(\"log\", false)) {\n        OutputDevice* logFile = &OutputDevice::getDevice(oc.getString(\"log\"));\n        getErrorInstance()->addRetriever(logFile);\n        if (!oc.getBool(\"no-warnings\")) {\n            getWarningInstance()->addRetriever(logFile);\n        }\n        getMessageInstance()->addRetriever(logFile);\n        if (oc.getBool(\"log.timestamps\")) {\n            myWriteTimestamps = true;\n        }\n        if (oc.getBool(\"log.processid\")) {\n            myWriteProcessId = true;\n        }\n    }\n    if (oc.isSet(\"message-log\", false)) {\n        OutputDevice* logFile = &OutputDevice::getDevice(oc.getString(\"message-log\"));\n        getMessageInstance()->addRetriever(logFile);\n    }\n    if (oc.isSet(\"error-log\", false)) {\n        OutputDevice* logFile = &OutputDevice::getDevice(oc.getString(\"error-log\"));\n        getErrorInstance()->addRetriever(logFile);\n        getWarningInstance()->addRetriever(logFile);\n    }\n",
+      "sha256": "5e50531953b9ba3652d71e937b65f4f79800215d940286585bb4d242031c3cf2",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/utils/common/MsgHandler.cpp#L293-L326"
+    },
+    {
+      "path": "src/utils/common/MsgHandler.cpp",
+      "line_start": 360,
+      "line_end": 368,
+      "text": "MsgHandler::MsgHandler(MsgType type) :\n    myType(type), myWasInformed(false), myAggregationThreshold(-1) {\n    if (type == MsgType::MT_MESSAGE) {\n        addRetriever(&OutputDevice::getDevice(\"stdout\"));\n    } else {\n        addRetriever(&OutputDevice::getDevice(\"stderr\"));\n    }\n}\n\n",
+      "sha256": "1a5295ae49eaabb8bc7024babb8a1d48d705ab996d14c7503504f337bdbaa362",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/utils/common/MsgHandler.cpp#L360-L368"
+    },
+    {
+      "path": "src/utils/iodevices/OutputDevice.cpp",
+      "line_start": 295,
+      "line_end": 307,
+      "text": "void\nOutputDevice::postWriteHook() {}\n\n\nvoid\nOutputDevice::inform(const std::string& msg, const bool progress) {\n    if (progress) {\n        getOStream() << msg;\n    } else {\n        getOStream() << msg << '\\n';\n    }\n    postWriteHook();\n}\n",
+      "sha256": "90c9cccb9af5db2b4239265db42a21f0e97b30bb3374c2fe52397a6255b6f7e4",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/utils/iodevices/OutputDevice.cpp#L295-L307"
+    },
+    {
+      "path": "src/utils/iodevices/OutputDevice_CERR.cpp",
+      "line_start": 57,
+      "line_end": 67,
+      "text": "\nstd::ostream&\nOutputDevice_CERR::getOStream() {\n    return std::cerr;\n}\n\n\nvoid\nOutputDevice_CERR::postWriteHook() {\n    std::cerr.flush();\n}\n",
+      "sha256": "752cdae2f728f5a4bafabfe2565d7e5ec5dab7d5a1c8f94a71d50660be4174ab",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/utils/iodevices/OutputDevice_CERR.cpp#L57-L67"
+    },
+    {
+      "path": "src/traci-server/TraCIServer.cpp",
+      "line_start": 810,
+      "line_end": 820,
+      "text": "        // update client order if requested\n        processReorderingRequests();\n        if (!firstStep && !afterMove) {\n            // This is the entry point after performing a SUMO step (block is skipped before first SUMO step since then no simulation results have to be sent)\n            // update subscription results\n            postProcessSimulationStep();\n            // Send out subscription results to clients which will act in this SUMO step (i.e. with client target time <= current sumo timestep end)\n            sendOutputToAll();\n            myOutputStorage.reset();\n        }\n\n",
+      "sha256": "039a88e4d26ea29c5c9b04cdd98c6179c5a3d9f79951a5e238cb621d5129121b",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/traci-server/TraCIServer.cpp#L810-L820"
+    }
+  ],
+  "initial_fetch": "4 sandbox curl DNS failures preserved here; successful approved read-only curl retry, noSUMO",
+  "conditional_completeness": "native synchronous stderr flush before stepresponse; not build-source or native runtime validated; file log flush remains provisional",
+  "native_starts": 0
+}

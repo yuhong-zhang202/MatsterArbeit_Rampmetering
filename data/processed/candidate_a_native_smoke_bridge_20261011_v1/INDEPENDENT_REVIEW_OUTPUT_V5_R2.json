@@ -1,0 +1,51 @@
+{
+  "status": "PASS",
+  "probe_count": 6,
+  "probes": [
+    {
+      "probe": "missing_canonical_authorization_before_spawn_raw",
+      "status": "PASS"
+    },
+    {
+      "probe": "EOF_info",
+      "status": "PASS",
+      "classification": "BOUND_NO_OBSERVED_NATIVE_MESSAGE",
+      "late_bytes": 18
+    },
+    {
+      "probe": "EOF_zero_synthetic",
+      "status": "PASS",
+      "classification": "UNKNOWN_LOG_PARSING_UNVERIFIED",
+      "late_bytes": 27
+    },
+    {
+      "probe": "EOF_positive",
+      "status": "PASS",
+      "classification": "UNKNOWN_OR_NATIVE_MESSAGE",
+      "late_bytes": 13
+    },
+    {
+      "probe": "split_utf8_provisional_fullprefix_reconstruction",
+      "status": "PASS"
+    },
+    {
+      "probe": "full_fake_prefix_independent_row_CEN_recompute",
+      "status": "PASS",
+      "steps": 1207,
+      "C": 0.5833333333333334,
+      "E": 0,
+      "N": 0,
+      "complete_cycles": 0,
+      "observed_native": false
+    }
+  ],
+  "bound_engine_files": 26,
+  "protected_files": 536,
+  "protected_drift": 0,
+  "environment_metadata_complete": true,
+  "native_compiler_source_equivalence": "NOT_VERIFIED",
+  "native_version_query_or_SUMO_TraCI_starts": 0,
+  "runtime_approval_release": "ABSENT_DENIED",
+  "XML_absolute_paths": "hostbound; offlinecheck portable but runtime on foreignroot mustdeny; not native crosshost verified",
+  "limits": "Conditionalstderr synchronous-source/ACK assumption not runtime-certified; finalEOF bytebinding not per-step stdout completeness; fake counting not qualification."
+}

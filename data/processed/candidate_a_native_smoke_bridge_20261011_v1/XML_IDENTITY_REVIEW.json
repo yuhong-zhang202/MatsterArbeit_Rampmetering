@@ -1,0 +1,75 @@
+{
+  "status": "PASS",
+  "groups": [
+    {
+      "role": "M",
+      "vehicles": 3000,
+      "first_depart_s": 0.0,
+      "last_depart_s": 2999.0,
+      "spacing_s": 1.0,
+      "scheduled_nominal_veh_h": 3600
+    },
+    {
+      "role": "U",
+      "vehicles": 300,
+      "first_depart_s": 0.0,
+      "last_depart_s": 2990.0,
+      "spacing_s": 10.0,
+      "scheduled_nominal_veh_h": 360
+    },
+    {
+      "role": "X",
+      "vehicles": 150,
+      "first_depart_s": 0.0,
+      "last_depart_s": 2980.0,
+      "spacing_s": 20.0,
+      "scheduled_nominal_veh_h": 180
+    },
+    {
+      "role": "R",
+      "vehicles": 600,
+      "first_depart_s": 600.0,
+      "last_depart_s": 2996.0,
+      "spacing_s": 4.0,
+      "scheduled_nominal_veh_h": 900
+    }
+  ],
+  "total_scheduled": 4050,
+  "routes": [
+    {
+      "id": "M_route",
+      "edges": "main_up merge_section main_down"
+    },
+    {
+      "id": "R_route",
+      "edges": "urban_in shared_approach ramp_storage ramp_accel merge_section main_down"
+    },
+    {
+      "id": "U_route",
+      "edges": "urban_in shared_approach urban_out"
+    },
+    {
+      "id": "X_route",
+      "edges": "cross_in cross_out"
+    }
+  ],
+  "seed": 17,
+  "step_s": 1,
+  "native_end_s": 1207,
+  "cycle_s": 24,
+  "phases_s": [
+    3,
+    3,
+    18
+  ],
+  "activation_s_source": {
+    "path": "src/candidate_a_native_smoke_20261011/bridge.py",
+    "condition": "if t==1200: admission then setProgram CA_C24/setPhase0; source reviewed, no execution"
+  },
+  "hashes": {
+    "artifacts/candidate_a_native_smoke_bridge_20261011_v1/engineering/packages/CA_NATIVE_PHASE_R300_S17_SMOKE01/demand.rou.xml": "99151ed51419c8d490c0f0b1a91bea23f6be70c5486890a04e1e06b3de5d808e",
+    "artifacts/candidate_a_native_smoke_bridge_20261011_v1/engineering/packages/CA_NATIVE_PHASE_R300_S17_SMOKE01/scenario.add.xml": "34d2ced305a87aa5b6eb91ef42e7eb4ea4cece32b0392064a9bb3d40695ad668",
+    "artifacts/candidate_a_native_smoke_bridge_20261011_v1/engineering/packages/CA_NATIVE_PHASE_R300_S17_SMOKE01/scenario.sumocfg": "f581e572dc4bc44c43b0234d7a4a334337d0888f7449d45b47a607e10b97d6a5"
+  },
+  "interpretation": "Scheduled nominal demand from explicit departure intervals, not actual insertion/throughput. R begins600; future scheduled beyond1207 not measured. n2/service300 is command/accounting assumption only."
+}
