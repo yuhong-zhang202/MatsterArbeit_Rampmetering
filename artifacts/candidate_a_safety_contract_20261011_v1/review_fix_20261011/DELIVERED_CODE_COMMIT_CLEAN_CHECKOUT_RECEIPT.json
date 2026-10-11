@@ -1,0 +1,32 @@
+{
+  "checkout": "independent local git clone; ephemeral path withheld",
+  "head": "9861bcbfcef5e027f452b01a6702d3738d95faeb",
+  "ignored_A07_raw_absent": true,
+  "results": [
+    {
+      "command": [
+        "python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/candidate_a_safety_contract_20261011_v1",
+        "-v"
+      ],
+      "exit_code": 0,
+      "stdout": "",
+      "stderr": "test_bound_recorded_inputs (test_audit_a07.AuditA07Tests.test_bound_recorded_inputs) ... ok\ntest_fully_unobserved_measurements_must_be_null (test_audit_a07.AuditA07Tests.test_fully_unobserved_measurements_must_be_null) ... ok\ntest_measured_zero_is_not_missing (test_audit_a07.AuditA07Tests.test_measured_zero_is_not_missing) ... ok\ntest_partial_window_retains_values_without_qualification (test_audit_a07.AuditA07Tests.test_partial_window_retains_values_without_qualification) ... ok\ntest_public_audit_does_not_require_ignored_raw (test_audit_a07.AuditA07Tests.test_public_audit_does_not_require_ignored_raw) ... ok\ntest_public_phase_derivative_is_bound_but_not_raw_reconstruction (test_audit_a07.AuditA07Tests.test_public_phase_derivative_is_bound_but_not_raw_reconstruction) ... ok\ntest_recorded_gap_and_one_constant_sensitivity (test_audit_a07.AuditA07Tests.test_recorded_gap_and_one_constant_sensitivity) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.021s\n\nOK\n"
+    },
+    {
+      "command": [
+        "python3",
+        "scripts/candidate_a_safety_contract_20261011_v1/audit_a07.py"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"classification\": \"OFFLINE_COMMITTED_EVIDENCE_AUDIT_ONLY\",\n  \"complete_cycles\": 0,\n  \"constant_1m_only_margin_m\": -0.04397148256887018,\n  \"constant_1m_only_required_m\": 1.045970672335378,\n  \"current_margin_m\": -0.14397148256887027,\n  \"current_required_m\": 1.1459706723353782,\n  \"effective_qualifications\": 0,\n  \"front_gap_m\": 1.001999189766508,\n  \"gate_sha256\": \"d7cf23dce2f2639c0f972102938cca492bd7d6442c7b5d1c6eeac37b72c2a20f\",\n  \"guard_witnesses\": 42,\n  \"last_completed_s\": 1206,\n  \"local_raw_verified\": false,\n  \"phase_thin_sha256\": \"8a1e59af0e4924fd30ec18cf81782ad40d1b19e50b933d336edb27d863c98156\",\n  \"population_counts\": {\n    \"ingress\": 15,\n    \"storage\": 27\n  },\n  \"public_evidence_only\": true,\n  \"public_guardian_sha256\": \"95a263217ccefcddfdb3871080ded7a947111ab75dbc64430bc5323e106b4b04\",\n  \"service_csv_sha256\": \"bcfa2f49991ab5ea4eca58d9b6237a76952de940c7ca85030bb9a2f6264e9546\",\n  \"service_observed_steps\": [\n    6,\n    0,\n    0,\n    0,\n    0,\n    0\n  ],\n  \"snapshot_sha256\": \"0cb77aa1549d500628fa136742d5119d0cdbdd94c5e23f357090b44c6ccc984d\",\n  \"status\": \"PASS\",\n  \"thin_phase_fields_reconciled_to_local_raw\": false,\n  \"unsafe_ids\": [\n    \"R_flow.1\"\n  ]\n}\n",
+      "stderr": ""
+    }
+  ],
+  "method": "git clone --no-hardlinks --single-branch --branch codex/issue-6-safety-contract-reassessment <local-repository> <new-empty-temp-dir>",
+  "scope": "Committed code/input snapshot at head 9861bcbf; public audit only; ignored A07 raw absent. This is not a SUMO or safety qualification."
+}
