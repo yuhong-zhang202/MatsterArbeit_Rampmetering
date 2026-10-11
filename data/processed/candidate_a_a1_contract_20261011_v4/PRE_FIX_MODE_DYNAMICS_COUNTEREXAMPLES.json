@@ -1,0 +1,56 @@
+{
+  "classification": "PR9_P2_MODE_DYNAMICS_PRE_FIX_COUNTEREXAMPLES",
+  "contract_sha256": "b60a62fd92bbc514cb2a7dc248bf7ba311d1229f52c834123da3cb93177d84de",
+  "synthetic_cases": [
+    {
+      "field": "speed_mode",
+      "value": 0,
+      "decision": {
+        "decision": "INELIGIBLE",
+        "reasons": [
+          "MODE_OUTSIDE_PINNED_CONTRACT",
+          "OBSERVED_RED_ANOMALY"
+        ]
+      },
+      "expected": "UNKNOWN without OBSERVED_RED_ANOMALY"
+    },
+    {
+      "field": "lane_change_mode",
+      "value": 0,
+      "decision": {
+        "decision": "INELIGIBLE",
+        "reasons": [
+          "MODE_OUTSIDE_PINNED_CONTRACT",
+          "OBSERVED_RED_ANOMALY"
+        ]
+      },
+      "expected": "UNKNOWN without OBSERVED_RED_ANOMALY"
+    },
+    {
+      "field": "action_step_s",
+      "value": 2,
+      "decision": {
+        "decision": "INELIGIBLE",
+        "reasons": [
+          "DYNAMICS_OUTSIDE_PINNED_CONTRACT",
+          "OBSERVED_RED_ANOMALY"
+        ]
+      },
+      "expected": "UNKNOWN without OBSERVED_RED_ANOMALY"
+    },
+    {
+      "field": "tau_s",
+      "value": 0.5,
+      "decision": {
+        "decision": "INELIGIBLE",
+        "reasons": [
+          "DYNAMICS_OUTSIDE_PINNED_CONTRACT",
+          "OBSERVED_RED_ANOMALY"
+        ]
+      },
+      "expected": "UNKNOWN without OBSERVED_RED_ANOMALY"
+    }
+  ],
+  "sumo_traci_starts": 0,
+  "scope": "offline classification, not native movement"
+}

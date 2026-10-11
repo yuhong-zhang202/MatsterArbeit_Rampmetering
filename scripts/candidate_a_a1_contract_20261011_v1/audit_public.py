@@ -21,7 +21,7 @@ def checked(condition,message):
 
 
 def audit(root=ROOT):
-    bindings=json.loads((root/'artifacts/candidate_a_a1_contract_20261011_v1/review_fix_20261011/v4/INPUT_BINDINGS_V4.json').read_text())
+    bindings=json.loads((root/'artifacts/candidate_a_a1_contract_20261011_v1/review_fix_20261011/v5/INPUT_BINDINGS_V5.json').read_text())
     for path,expected in bindings['files'].items():
         checked(not path.startswith('data/raw/'),'raw dependency prohibited')
         checked(sha(root/path)==expected,'input/source hash drift: '+path)

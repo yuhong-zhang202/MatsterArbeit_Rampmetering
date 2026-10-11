@@ -242,6 +242,74 @@ class AdversarialContractTests(unittest.TestCase):
         self.assertIn('OBSERVED_RED_ANOMALY',result['reasons'])
         self.assertNotEqual(result['decision'],'ELIGIBLE')
 
+    def test_red_crossing_nonempty_vehicle_contract_mismatch_is_unknown(self):
+        # 16 combinations: four fields x all four existing vehicle roles.
+        for role in ['front','follower','ingress','receiver']:
+            for key,value in [('speed_mode',0),('lane_change_mode',0),
+                              ('action_step_s',2),('tau_s',.5)]:
+                s=fixture();s['vehicles'][0]['role']=role;s['vehicles'][0][key]=value
+                s['observed_red_crossing_ids']=['synthetic_front']
+                with self.subTest(role=role,key=key):
+                    result=diagnostic_decision(s)
+                    self.assertEqual(result['decision'],'UNKNOWN')
+                    self.assertIn('RED_CROSSING_EVIDENCE_UNBOUND_TO_STATE',result['reasons'])
+                    self.assertNotIn('OBSERVED_RED_ANOMALY',result['reasons'])
+
+    def test_red_crossing_empty_preserves_vehicle_contract_policy_denials(self):
+        # Matched 16 negative controls: change only the crossing list to empty.
+        for role in ['front','follower','ingress','receiver']:
+            for key,value in [('speed_mode',0),('lane_change_mode',0),
+                              ('action_step_s',2),('tau_s',.5)]:
+                s=fixture();s['vehicles'][0]['role']=role;s['vehicles'][0][key]=value
+                with self.subTest(role=role,key=key):
+                    result=diagnostic_decision(s)
+                    self.assertEqual(result['decision'],'INELIGIBLE')
+                    self.assertNotIn('OBSERVED_RED_ANOMALY',result['reasons'])
+                    self.assertNotIn('RED_CROSSING_EVIDENCE_UNBOUND_TO_STATE',result['reasons'])
+
+    def test_red_crossing_matched_pinned_and_other_policy_denial_controls(self):
+        # 12 controls: four roles x empty, valid positive, positive+receiver denial.
+        for role in ['front','follower','ingress','receiver']:
+            for condition in ['empty','positive','positive_receiver_blocked']:
+                s=fixture();s['vehicles'][0]['role']=role
+                if condition!='empty':s['observed_red_crossing_ids']=['synthetic_front']
+                if condition=='positive_receiver_blocked':s['receiver']['rear_clearance_m']=7
+                with self.subTest(role=role,condition=condition):
+                    result=diagnostic_decision(s)
+                    self.assertEqual(result['decision'],'UNKNOWN' if condition=='empty' else 'INELIGIBLE')
+                    self.assertEqual('OBSERVED_RED_ANOMALY' in result['reasons'],condition!='empty')
+                    self.assertNotIn('RED_CROSSING_EVIDENCE_UNBOUND_TO_STATE',result['reasons'])
+                    if condition=='positive_receiver_blocked':
+                        self.assertIn('RECEIVER_BLOCKED',result['reasons'])
+
+    def test_red_crossing_multiple_mismatches_and_preexisting_denials(self):
+        # 12 combinations: four roles x all mismatch+receiver denial,
+        # noncrossing-mode mismatch+committed front, noncrossing dynamics mismatch.
+        for role in ['front','follower','ingress','receiver']:
+            for condition in ['all_mismatches_receiver_blocked',
+                              'other_vehicle_modes_committed_front','other_vehicle_dynamics']:
+                s=fixture();s['observed_red_crossing_ids']=['synthetic_front']
+                if condition=='all_mismatches_receiver_blocked':
+                    s['vehicles'][0].update(role=role,speed_mode=0,lane_change_mode=0,
+                                            action_step_s=2,tau_s=.5)
+                    s['receiver']['rear_clearance_m']=7
+                else:
+                    v=copy.deepcopy(s['vehicles'][0]);v.update(vehicle_id='additional',role=role)
+                    if condition=='other_vehicle_modes_committed_front':
+                        v.update(speed_mode=0,lane_change_mode=0)
+                        s['vehicles'][0].update(speed_m_s=9,seen_m=4)
+                    else:v.update(action_step_s=2,tau_s=.5)
+                    s['vehicles'].append(v);s['affected_inventory_ids'].append('additional')
+                with self.subTest(role=role,condition=condition):
+                    result=diagnostic_decision(s)
+                    self.assertEqual(result['decision'],'UNKNOWN')
+                    self.assertIn('RED_CROSSING_EVIDENCE_UNBOUND_TO_STATE',result['reasons'])
+                    self.assertNotIn('OBSERVED_RED_ANOMALY',result['reasons'])
+                    if condition=='all_mismatches_receiver_blocked':
+                        self.assertIn('RECEIVER_BLOCKED',result['reasons'])
+                    elif condition=='other_vehicle_modes_committed_front':
+                        self.assertIn('COMMITTED_APPROACH_NOT_ADMITTED',result['reasons'])
+
     def test_missing_or_malformed_snapshot_fails_closed(self):
         for s in [None,{}, {'schema':'other'},dict(fixture(),affected_inventory_ids=[{}])]:
             self.assertEqual(diagnostic_decision(s)['decision'],'UNKNOWN')
@@ -268,7 +336,7 @@ class AdversarialContractTests(unittest.TestCase):
             self.assertEqual(audit()['status'],'PASS')
 
     def test_public_source_or_input_hash_drift_fails(self):
-        relative='artifacts/candidate_a_a1_contract_20261011_v1/review_fix_20261011/v4/INPUT_BINDINGS_V4.json'
+        relative='artifacts/candidate_a_a1_contract_20261011_v1/review_fix_20261011/v5/INPUT_BINDINGS_V5.json'
         binds=json.loads((ROOT/relative).read_text())
         with tempfile.TemporaryDirectory() as tmp:
             dest=Path(tmp);(dest/relative).parent.mkdir(parents=True)

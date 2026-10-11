@@ -260,8 +260,10 @@ def diagnostic_decision(state):
         unknown.append('RED_CROSSING_EVIDENCE_MISSING_OR_MALFORMED')
     elif not inventory_valid or not set(crossings).issubset(set(inventory)):
         unknown.append('RED_CROSSING_EVIDENCE_UNBOUND_TO_INVENTORY')
-    elif unknown:
-        # IDs alone cannot attach an observation to a stale/inconsistent state.
+    elif unknown or (crossings and any(reason in deny for reason in (
+            'MODE_OUTSIDE_PINNED_CONTRACT', 'DYNAMICS_OUTSIDE_PINNED_CONTRACT'))):
+        # A nonempty observation must also bind vehicle modes/action dynamics.
+        # Preserve existing policy denials when no red crossing is supplied.
         unknown.append('RED_CROSSING_EVIDENCE_UNBOUND_TO_STATE')
     elif crossings:
         # This is a schema-bound supplied observation, not native proof or safety.

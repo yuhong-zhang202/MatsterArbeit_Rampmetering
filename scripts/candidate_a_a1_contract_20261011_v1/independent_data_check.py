@@ -4,6 +4,7 @@ No SUMO, network, ignored raw or production imports. Outputs are exclusive
 versioned writes. PASS is evidence integrity, never transition qualification.
 """
 import argparse
+import copy
 import collections
 import csv
 import hashlib
@@ -38,7 +39,7 @@ def load(relative):
 
 
 def run():
-    binding_path = 'artifacts/candidate_a_a1_contract_20261011_v1/review_fix_20261011/v4/INPUT_BINDINGS_V4.json'
+    binding_path = 'artifacts/candidate_a_a1_contract_20261011_v1/review_fix_20261011/v5/INPUT_BINDINGS_V5.json'
     inputs = load(binding_path)['files']
     check(all(not p.startswith('data/raw/') for p in inputs), 'raw dependency')
     check(all(sha(ROOT/p) == h for p,h in inputs.items()), 'input hash mismatch')
@@ -196,10 +197,54 @@ def run():
         probe_red('unbound_or_stale_'+key,st,'UNKNOWN')
     st=module.fixture();st['observed_red_crossing_ids']=[];probe_red('valid_empty_red_list',st,'UNKNOWN')
     st=module.fixture();st['observed_red_crossing_ids']=[front];probe_red('valid_bound_red_id',st,'INELIGIBLE')
-    preservation=load('data/processed/candidate_a_a1_contract_20261011_v3/PRE_FIX_DATA_BINDINGS.json')
+    mode_red=[]
+    changes=[('speed_mode',0),('lane_change_mode',0),('action_step_s',2),('tau_s',.5)]
+    def probe_combo(label,st,expected,anomaly=False):
+        result=diagnostic_decision(st)
+        actual_anomaly='OBSERVED_RED_ANOMALY' in result.get('reasons',[])
+        mode_red.append(dict(case=label,decision=result,expected=expected,
+                             expected_observed_red_anomaly=anomaly,
+                             pass_=result['decision']==expected and actual_anomaly==anomaly,
+                             evidence_kind='SYNTHETIC_MODE_DYNAMICS_SCHEMA_COMBINATION'))
+    # One changed vehicle in each accepted role: nonempty observations UNKNOWN,
+    # while empty-red lists retain the earlier INELIGIBLE policy controls.
+    for role in ['front','follower','ingress','receiver']:
+        for key,value in changes:
+            for has_red in [False,True]:
+                st=module.fixture();st['vehicles'][0]['role']=role;st['vehicles'][0][key]=value
+                st['observed_red_crossing_ids']=[front] if has_red else []
+                probe_combo(role+'_'+key+('_red' if has_red else '_empty'),st,
+                            'UNKNOWN' if has_red else 'INELIGIBLE')
+    # Mismatch on another enumerated vehicle must invalidate the supplied
+    # positive observation's whole-state binding, even when red ID is front.
+    for role in ['follower','ingress','receiver']:
+        for key,value in changes:
+            st=module.fixture();extra=copy.deepcopy(st['vehicles'][0])
+            extra.update(vehicle_id=role+'_extra',role=role);extra[key]=value
+            st['vehicles'].append(extra);st['affected_inventory_ids'].append(extra['vehicle_id'])
+            st['observed_red_crossing_ids']=[front]
+            probe_combo('second_'+role+'_'+key,st,'UNKNOWN')
+    st=module.fixture();st['vehicles'][0].update(dict(changes));st['observed_red_crossing_ids']=[front]
+    probe_combo('all_four_mismatches_positive',st,'UNKNOWN')
+    st['observed_red_crossing_ids']=[];probe_combo('all_four_mismatches_empty',st,'INELIGIBLE')
+    st=module.fixture();st['vehicles'][0]['speed_mode']=0
+    extra=copy.deepcopy(st['vehicles'][0]);extra.update(vehicle_id='extra_ingress',role='ingress',speed_mode=31,tau_s=.5)
+    st['vehicles'].append(extra);st['affected_inventory_ids'].append('extra_ingress');st['observed_red_crossing_ids']=[front]
+    probe_combo('multiple_vehicles_multiple_mismatches',st,'UNKNOWN')
+    for label in ['receiver_missing','vehicle_number_missing','red_list_malformed','state_stale']:
+        st=module.fixture();st['vehicles'][0]['speed_mode']=0;st['observed_red_crossing_ids']=[front]
+        if label=='receiver_missing':st['receiver']=None
+        elif label=='vehicle_number_missing':st['vehicles'][0]['decel_m_s2']=None
+        elif label=='red_list_malformed':st['observed_red_crossing_ids']='bogus'
+        else:st['measurement_time_s']=1205
+        probe_combo('unknown_priority_'+label,st,'UNKNOWN')
+    st=module.fixture();st['observed_red_crossing_ids']=[front]
+    probe_combo('unchanged_valid_positive_control',st,'INELIGIBLE',True)
+    st['observed_red_crossing_ids']=[];probe_combo('unchanged_valid_empty_control',st,'UNKNOWN')
+    preservation=load('data/processed/candidate_a_a1_contract_20261011_v4/PRE_FIX_DATA_BINDINGS.json')
     check(all(sha(ROOT/p)==h for p,h in preservation['files'].items()),'historical data overwritten')
-    check(sha(ROOT/'data/processed/candidate_a_a1_contract_20261011_v3/PRE_FIX_INDEPENDENT_CHECK_SOURCE.py')==preservation['independent_check_sha256'],'old independent source overwritten')
-    return dict(status='PASS' if all(r['pass_'] for r in boundary+red_observation) else 'REQUIRES_OFFLINE_REPAIR',
+    check(sha(ROOT/'data/processed/candidate_a_a1_contract_20261011_v4/PRE_FIX_INDEPENDENT_CHECK_SOURCE.py')==preservation['independent_check_sha256'],'old independent source overwritten')
+    return dict(status='PASS' if all(r['pass_'] for r in boundary+red_observation+mode_red) else 'REQUIRES_OFFLINE_REPAIR',
                 classification='EXPLORATORY_OFFLINE_EVIDENCE_INTEGRITY_NOT_SAFETY_QUALIFICATION',
                 protected_checked=536,input_binding_path=binding_path,input_sha256=inputs,source_commit=excerpts['commit'],
                 source_excerpts_verified=len(excerpts['excerpts']),whole_remote_sources_reverified=False,
@@ -210,6 +255,7 @@ def run():
                 ignored_raw_reads=0,clean_checkout_gate='PENDING_PARENT_DELIVERED_COMMIT_CHECK',
                 commands=commands,independent_numeric_boundary=boundary,
                 independent_red_observation_probes=red_observation,historical_data_bindings_unchanged=True,
+                independent_mode_red_combination_probes=mode_red,
                 independent_script_sha256=sha(Path(__file__)),python=sys.version,
                 current_STOP3='PRESERVED',A1_A2='UNVERIFIED',rate_900='NOT_TESTED',execution='HOLD')
 
