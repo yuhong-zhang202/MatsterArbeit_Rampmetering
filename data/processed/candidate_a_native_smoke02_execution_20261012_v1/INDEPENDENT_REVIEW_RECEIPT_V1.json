@@ -1,0 +1,29 @@
+{
+  "disposition": "PASS_FOR_BOUNDED_TRUNCATED_PREFIX_DATA_INTEGRITY_ONLY",
+  "actual_command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python data/processed/candidate_a_native_smoke02_execution_20261012_v1/independent_prefix_review.py --local-raw",
+  "executions": 1,
+  "exit_code": 0,
+  "checker_sha256": "e54a2ca8b88d89beda6ea1580de100e41590ec3d290a8023866519159bbbfd0e",
+  "result_sha256": "f290e4df78b6ad56474331bfc5c494108a1ccdda40b21e7031da800d271c7f94",
+  "raw_manifest_sha256": "7ee3af11ab1070d6c98bc2648de73e84358e1cc982ca101b778dcfba7a012dec",
+  "engineering_binding_sha256": "6d446b12661cbfe16681715991240f451b8dd113c94f289534d92b805a17d5ad",
+  "context_preflight": "AGENTS/STATE/DECISIONS/WORKLOG/0Bprotocol read. InitialSTATE/WORKLOG top stilloffline11Oct history; authoritative12Oct humanauthorization/executionreceipt reviewed and parent informed of pending currentstatusupdate. Stage6closeout/NOTQUALIFIED/A1unresolved unchanged.",
+  "actual_test_scope": "OriginalSMOKE02run consumed; readonlyoriginal58raw/ACK/XML/log/source/card/publicconsumedauthbinding validation. NoSMOKE03/optimizationfacts included.",
+  "checks": {
+    "engineering_bound_files": 13,
+    "protected_files": 536,
+    "R2_files": 7,
+    "V5_files": 26,
+    "card_sources": 18,
+    "card_inputs": 3,
+    "raw_files": 58,
+    "raw_bytes": 15571432,
+    "final_raw_readback": 58
+  },
+  "public_default": "Public engine/source/card/nonexecutableconsumedauthority hashes only, no ignoredraw or canonicalruntimeauth path. Actual recorded execution usedlocalraw; public default not separately executed in this review. No cleancheckout/fullraw remoteproof claim.",
+  "old_offline_tests": "SKIP: consumedidentity invalidates absencefixtures; noold5/11/43 suites or oldpreauthorizationcheckers rerun",
+  "native_calls_by_review": 0,
+  "source_raw_changes_by_review": 0,
+  "historical_check_failure": "None: newchecker actual singleexecution exit0; noresult overwritten",
+  "required_data_fixes": []
+}

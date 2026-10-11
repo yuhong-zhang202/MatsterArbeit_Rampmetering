@@ -1,0 +1,51 @@
+{
+  "raw_prefix_local_only": true,
+  "native_starts_this_task": 0,
+  "existing_SMOKE02_completed_steps": 687,
+  "startup_elapsed_s": 22.003270457993494,
+  "wall_cap_s": 180,
+  "native_wall_component_shares": "UNKNOWN: no per-operation wall profiling in original raw",
+  "pre_world_visits": 56859,
+  "pre_loaded_visits": 145833,
+  "same_frame_world_loaded_overlap_visits": 56859,
+  "identity_getters_per_visit": 11,
+  "identity_duplicate_getter_opportunities_pre_only": 625449,
+  "definition": "identity uses type+route+2modes+7 dynamics. Conservative opportunities, not exact actual executed facade reduction or time saved. Post snapshots not enumerated here.",
+  "log_read_bound_from_recorded_prefix_bytes": {
+    "sumo_stderr.log": {
+      "records": 1376,
+      "sum_prefix_bytes_read_bound": 0,
+      "max_prefix_beforeEOF": 0,
+      "final_bytes": 0
+    },
+    "sumo_stdout.log": {
+      "records": 1376,
+      "sum_prefix_bytes_read_bound": 0,
+      "max_prefix_beforeEOF": 0,
+      "final_bytes": 0
+    },
+    "sumo_error.log": {
+      "records": 1376,
+      "sum_prefix_bytes_read_bound": 0,
+      "max_prefix_beforeEOF": 0,
+      "final_bytes": 0
+    },
+    "sumo.log": {
+      "records": 1376,
+      "sum_prefix_bytes_read_bound": 1009,
+      "max_prefix_beforeEOF": 0,
+      "final_bytes": 1009
+    }
+  },
+  "log_complexity": "wholefile rereads can be quadratic withgrowinglogs, but actual recordedprefixbytes shown separately; logger notmodified",
+  "resource_scan_complexity": "recursive fullscan twice(.2s watchdog plusperstep), no percallwall profile; unchanged",
+  "minor_readonly_lookup_errors": [
+    "old wrongFETCH_RECEIPT filename corrected",
+    "zsh unmatched tmpglob corrected",
+    "first attempted wrongissue8libsumo path corrected toexistingissue10cache"
+  ],
+  "source_hashes": {
+    "pre_steps.jsonl": "5490d1e361ba93c5657b42a8e28bf8dee5879cac3ea71172ff649e5981b57b95",
+    "log_intervals.jsonl": "53019f7e9c7a766cc3251203472e02a9ec4282926b54554f9974a9f010c83340"
+  }
+}

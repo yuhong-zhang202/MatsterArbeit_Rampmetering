@@ -1,0 +1,63 @@
+{
+  "exact_log_sha256": "eddcefe87289d2d85373fbbff505f287717631fb99a1c67bbf3b775d454733d9",
+  "actual": {
+    "0": {
+      "cache_stats": null,
+      "calls": {
+        "getAccel": 12080,
+        "getAcceleration": 2414,
+        "getActionStepLength": 12080,
+        "getDecel": 12080,
+        "getEmergencyDecel": 12080,
+        "getIDList": 2416,
+        "getImperfection": 12080,
+        "getLaneChangeMode": 12080,
+        "getLaneID": 4832,
+        "getLoadedIDList": 2416,
+        "getMaxSpeed": 12080,
+        "getRoute": 12080,
+        "getSpeed": 4832,
+        "getSpeedMode": 12080,
+        "getTau": 12080,
+        "getTypeID": 12080
+      },
+      "elapsed_fake_s": 1.9003254169947468,
+      "last": 1207
+    },
+    "1": {
+      "cache_stats": {
+        "hits": 97774,
+        "invalidations": 1213,
+        "misses": 47184,
+        "underlying_calls": 87039,
+        "verified_time_reads": 4829
+      },
+      "calls": {
+        "getAccel": 3630,
+        "getAcceleration": 2414,
+        "getActionStepLength": 3630,
+        "getDecel": 3630,
+        "getEmergencyDecel": 3630,
+        "getIDList": 2416,
+        "getImperfection": 3630,
+        "getLaneChangeMode": 3630,
+        "getLaneID": 2420,
+        "getLoadedIDList": 2416,
+        "getMaxSpeed": 3630,
+        "getRoute": 3630,
+        "getSpeed": 2420,
+        "getSpeedMode": 3630,
+        "getTau": 3630,
+        "getTypeID": 3630
+      },
+      "elapsed_fake_s": 1.8596599580196198,
+      "last": 1207
+    }
+  },
+  "vehicle_getter_calls_baseline": 149790,
+  "vehicle_getter_calls_optimized": 52016,
+  "calls_avoided": 97774,
+  "percent_reduction": 65.27405033713866,
+  "time_scope": "single fake zero-RPC-latency sample each, not native profile or speedup proof",
+  "output_comparison": "postrows equal after dropping only per-temp-file source/inode/device; all times/values/motion/status/accounting/receivers/logtext/hashes/offsets retained"
+}

@@ -1,0 +1,183 @@
+{
+  "pin": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+  "method": "readonly existing official pinned cache; wholebytes SHA independently matched previous genuine fetchreceipt",
+  "previous_fetch_receipt_sha256": "14446ca421bd8257346f503e9584be0371163e5fc904ebc1a022ecfffc29544d",
+  "files": [
+    {
+      "path": "src/libsumo/Vehicle.cpp",
+      "url": "https://raw.githubusercontent.com/eclipse-sumo/sumo/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp",
+      "sha256": "9ef12f97fe72aa3daed0740d37de1bbb702012e4a250b82abdc66e8138c37fc8",
+      "bytes": 121128,
+      "fetched_utc": "2026-10-11T15:27:53.963588+00:00"
+    },
+    {
+      "path": "src/libsumo/VehicleType.cpp",
+      "url": "https://raw.githubusercontent.com/eclipse-sumo/sumo/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/VehicleType.cpp",
+      "sha256": "dd59861b33eb4677217765d29d3ef98f254a4a532e9c7ed9d0682e1bfa3f154d",
+      "bytes": 17071,
+      "fetched_utc": "2026-10-11T15:27:54.540408+00:00"
+    }
+  ],
+  "getters": [
+    {
+      "name": "getAccel",
+      "line_start": 1013,
+      "line_end": 1015,
+      "excerpt": "Vehicle::getAccel(const std::string& vehID) {\n    return Helper::getVehicleType(vehID).getCarFollowModel().getMaxAccel();\n}\n",
+      "sha256": "ef12a53b971e29f470a04b537202e8ce594a792942684e2211a04062a7b98b56",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L1013-L1015",
+      "classification": "currentvehicle/type read; some callsdelegate toVehicleType/model/influencer; no native futureplan substituted"
+    },
+    {
+      "name": "getAcceleration",
+      "line_start": 126,
+      "line_end": 129,
+      "excerpt": "Vehicle::getAcceleration(const std::string& vehID) {\n    MSBaseVehicle* veh = Helper::getVehicle(vehID);\n    return isVisible(veh) ? CALL_MICRO_FUN(veh, getAcceleration(), 0) : INVALID_DOUBLE_VALUE;\n}\n",
+      "sha256": "00a7db10b16ab3998d63a2efe6f6be6c46c30b7e769a4b30e74cd72eba5113cb",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L126-L129",
+      "classification": "currentvehicle/type read; some callsdelegate toVehicleType/model/influencer; no native futureplan substituted"
+    },
+    {
+      "name": "getActionStepLength",
+      "line_start": 1034,
+      "line_end": 1036,
+      "excerpt": "double Vehicle::getActionStepLength(const std::string& vehID) {\n    return Helper::getVehicleType(vehID).getActionStepLengthSecs();\n}\n",
+      "sha256": "790276f1b3a6a6f89b942d3747561b2ab00e20b8ebed5cedb8a7518c9bdc8d08",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L1034-L1036",
+      "classification": "currentvehicle/type read; some callsdelegate toVehicleType/model/influencer; no native futureplan substituted"
+    },
+    {
+      "name": "getDecel",
+      "line_start": 1019,
+      "line_end": 1021,
+      "excerpt": "Vehicle::getDecel(const std::string& vehID) {\n    return Helper::getVehicleType(vehID).getCarFollowModel().getMaxDecel();\n}\n",
+      "sha256": "983812aa8c56c88aa2df9be6e7f5d5968215d7b62077219003577f7ae288ff7e",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L1019-L1021",
+      "classification": "currentvehicle/type read; some callsdelegate toVehicleType/model/influencer; no native futureplan substituted"
+    },
+    {
+      "name": "getEmergencyDecel",
+      "line_start": 1024,
+      "line_end": 1026,
+      "excerpt": "double Vehicle::getEmergencyDecel(const std::string& vehID) {\n    return Helper::getVehicleType(vehID).getCarFollowModel().getEmergencyDecel();\n}\n",
+      "sha256": "23a72efa02762811135d0e3d1f264efd4a5a3eaf207d066b8d146278daf7198d",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L1024-L1026",
+      "classification": "currentvehicle/type read; some callsdelegate toVehicleType/model/influencer; no native futureplan substituted"
+    },
+    {
+      "name": "getImperfection",
+      "line_start": 1058,
+      "line_end": 1060,
+      "excerpt": "Vehicle::getImperfection(const std::string& vehID) {\n    return Helper::getVehicleType(vehID).getCarFollowModel().getImperfection();\n}\n",
+      "sha256": "9b5d1abab3d541208208ac7c768683170dad687f36c8547c0c1a7e2351cff7d2",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L1058-L1060",
+      "classification": "currentvehicle/type read; some callsdelegate toVehicleType/model/influencer; no native futureplan substituted"
+    },
+    {
+      "name": "getLaneChangeMode",
+      "line_start": 764,
+      "line_end": 767,
+      "excerpt": "Vehicle::getLaneChangeMode(const std::string& vehID) {\n    MSBaseVehicle* veh = Helper::getVehicle(vehID);\n    return CALL_MICRO_FUN(veh, getInfluencer().getLaneChangeMode(), INVALID_INT_VALUE);\n}\n",
+      "sha256": "7e0724c4b18e09f34b7786eba76cf29722b8f11c650646692084143d9faad682",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L764-L767",
+      "classification": "currentvehicle/type read; some callsdelegate toVehicleType/model/influencer; no native futureplan substituted"
+    },
+    {
+      "name": "getLaneID",
+      "line_start": 177,
+      "line_end": 180,
+      "excerpt": "Vehicle::getLaneID(const std::string& vehID) {\n    MSBaseVehicle* veh = Helper::getVehicle(vehID);\n    return veh->isOnRoad() ? CALL_MICRO_FUN(veh, getLane()->getID(), \"\") : \"\";\n}\n",
+      "sha256": "04c4c95af01e764a24d2a409bcc4db4cbd8269b3d3c0d443b01a850ee25ee266",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L177-L180",
+      "classification": "currentvehicle/type read; some callsdelegate toVehicleType/model/influencer; no native futureplan substituted"
+    },
+    {
+      "name": "getLanePosition",
+      "line_start": 249,
+      "line_end": 252,
+      "excerpt": "Vehicle::getLanePosition(const std::string& vehID) {\n    MSBaseVehicle* veh = Helper::getVehicle(vehID);\n    return (veh->isOnRoad() || veh->isParking()) ? veh->getPositionOnLane() : INVALID_DOUBLE_VALUE;\n}\n",
+      "sha256": "7a4ffa7cdb706415a6d1a1328715d4d710fcef3ac809577b8f3934a7ec5c6375",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L249-L252",
+      "classification": "currentvehicle/type read; some callsdelegate toVehicleType/model/influencer; no native futureplan substituted"
+    },
+    {
+      "name": "getLength",
+      "line_start": 1007,
+      "line_end": 1009,
+      "excerpt": "Vehicle::getLength(const std::string& vehID) {\n    return Helper::getVehicleType(vehID).getLength();\n}\n",
+      "sha256": "370731d54049df868aeaff462168c038289b23246d4fa3de878125a211701501",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L1007-L1009",
+      "classification": "currentvehicle/type read; some callsdelegate toVehicleType/model/influencer; no native futureplan substituted"
+    },
+    {
+      "name": "getMaxSpeed",
+      "line_start": 1093,
+      "line_end": 1095,
+      "excerpt": "Vehicle::getMaxSpeed(const std::string& vehID) {\n    return Helper::getVehicleType(vehID).getMaxSpeed();\n}\n",
+      "sha256": "21aad0e3b757484093d44a393dbe1d9ea6f111048d12f1ee6b6a8d66494fedbb",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L1093-L1095",
+      "classification": "currentvehicle/type read; some callsdelegate toVehicleType/model/influencer; no native futureplan substituted"
+    },
+    {
+      "name": "getMinGap",
+      "line_start": 1076,
+      "line_end": 1078,
+      "excerpt": "Vehicle::getMinGap(const std::string& vehID) {\n    return Helper::getVehicleType(vehID).getMinGap();\n}\n",
+      "sha256": "87a77615620c896b9fb349521fcf96510481280822e7136dad8908a53d13441c",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L1076-L1078",
+      "classification": "currentvehicle/type read; some callsdelegate toVehicleType/model/influencer; no native futureplan substituted"
+    },
+    {
+      "name": "getRoute",
+      "line_start": 465,
+      "line_end": 471,
+      "excerpt": "Vehicle::getRoute(const std::string& vehID) {\n    std::vector<std::string> result;\n    MSBaseVehicle* veh = Helper::getVehicle(vehID);\n    const MSRoute& r = veh->getRoute();\n    for (MSRouteIterator i = r.begin(); i != r.end(); ++i) {\n        result.push_back((*i)->getID());\n    }\n",
+      "sha256": "aae53a35330655058e0abf0b218449d888edcf464ab2fd8a31e82d7554730745",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L465-L471",
+      "classification": "currentvehicle/type read; some callsdelegate toVehicleType/model/influencer; no native futureplan substituted"
+    },
+    {
+      "name": "getSpeed",
+      "line_start": 113,
+      "line_end": 116,
+      "excerpt": "Vehicle::getSpeed(const std::string& vehID) {\n    MSBaseVehicle* veh = Helper::getVehicle(vehID);\n    return isVisible(veh) ? veh->getSpeed() : INVALID_DOUBLE_VALUE;\n}\n",
+      "sha256": "11ba7578568073b1e63879d8b60bf8e980f09efc96196ddde8ff79096a41c499",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L113-L116",
+      "classification": "currentvehicle/type read; some callsdelegate toVehicleType/model/influencer; no native futureplan substituted"
+    },
+    {
+      "name": "getSpeedMode",
+      "line_start": 757,
+      "line_end": 760,
+      "excerpt": "Vehicle::getSpeedMode(const std::string& vehID) {\n    MSBaseVehicle* veh = Helper::getVehicle(vehID);\n    return CALL_MICRO_FUN(veh, getInfluencer().getSpeedMode(), INVALID_INT_VALUE);\n}\n",
+      "sha256": "dadf17066db13d81309f4248c323cf39949988b12580f4ed15854c1394c2c52c",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L757-L760",
+      "classification": "currentvehicle/type read; some callsdelegate toVehicleType/model/influencer; no native futureplan substituted"
+    },
+    {
+      "name": "getTau",
+      "line_start": 1052,
+      "line_end": 1054,
+      "excerpt": "Vehicle::getTau(const std::string& vehID) {\n    return Helper::getVehicleType(vehID).getCarFollowModel().getHeadwayTime();\n}\n",
+      "sha256": "73f9c6ffd0ee165908f7f41fd33c95ca86daa23e26dd8e2303f1ab961ab3b5a4",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L1052-L1054",
+      "classification": "currentvehicle/type read; some callsdelegate toVehicleType/model/influencer; no native futureplan substituted"
+    },
+    {
+      "name": "getTypeID",
+      "line_start": 212,
+      "line_end": 214,
+      "excerpt": "Vehicle::getTypeID(const std::string& vehID) {\n    return Helper::getVehicleType(vehID).getID();\n}\n",
+      "sha256": "e49809ba78eec5fa5d744bfb36400897ed49c8cc0d86d607ead5dc167e8df8f9",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L212-L214",
+      "classification": "currentvehicle/type read; some callsdelegate toVehicleType/model/influencer; no native futureplan substituted"
+    }
+  ],
+  "conditional_assumptions": [
+    "singleowned synchronous TraCI client",
+    "no external mutators or asynchronousnativeadvance",
+    "directvalues stable between step/state-mutatingcommands; frameinvalidated on exposedmutators/unknowncalls",
+    "no cache for population/enumeration/time/TLS/leader/securegap; allchecks remainexecuted"
+  ],
+  "native_runtime_equivalence": "NOT_TESTED"
+}

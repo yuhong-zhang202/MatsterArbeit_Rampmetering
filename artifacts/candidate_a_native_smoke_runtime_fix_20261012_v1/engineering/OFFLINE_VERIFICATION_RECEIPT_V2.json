@@ -1,0 +1,50 @@
+{
+  "classification": "OFFLINE_RUNTIME_OVERHEAD_FIX_NOT_NATIVE_QUALIFICATION",
+  "time_utc": "2026-10-11T23:13:57.450705+00:00",
+  "binding_sha256": "ec1b6aca00eaa55425ccde0edddf12764e4bfdbb66fb1dfd4a166e80ec27a881",
+  "card_sha256": "892b415603df776bb70698ad66939bbad28993e87a1bc225d5553ba58ac6bba4",
+  "tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest discover -s tests/candidate_a_native_smoke_runtime_fix_20261012 -v",
+    "PASS": 8,
+    "FAIL": 0,
+    "ERROR": 0,
+    "SKIP": 0,
+    "output": "OFFLINE_TEST_LOG_V2.txt"
+  },
+  "actual_static_checks": [
+    "new CLI --prepare PASS",
+    "new CLI --check-card <SMOKE03 card> PASS",
+    "validate(card,require_environment=True) static ownroot/env PASS"
+  ],
+  "outputs_sha256": {
+    "artifacts/candidate_a_native_smoke_runtime_fix_20261012_v1/engineering/OFFLINE_TEST_LOG_V2.txt": "eddcefe87289d2d85373fbbff505f287717631fb99a1c67bbf3b775d454733d9",
+    "artifacts/candidate_a_native_smoke_runtime_fix_20261012_v1/engineering/PREPARE_OUTPUT_V2.txt": "52941cc309671bd17d325d11ceeb7ec407894f2a3edfeaa798277b10bfad730c",
+    "artifacts/candidate_a_native_smoke_runtime_fix_20261012_v1/engineering/CARD_CHECK_OUTPUT_V2.json": "76f0abf4e82fd3ce418b6e6607a89a539588bb32ea5fd4bfb29aebfe28f279ee",
+    "artifacts/candidate_a_native_smoke_runtime_fix_20261012_v1/engineering/OLD_EVIDENCE_PRESERVATION_RECEIPT.json": "f9c390d779d42705223cfba1f149ef5e962942d13686ad5a1b724e49a48d3eb4",
+    "artifacts/candidate_a_native_smoke_runtime_fix_20261012_v1/engineering/RECORDED_COST_OPPORTUNITIES.json": "918a1c2f6782fba1bbaabb447624e8ca556656a627ebaf31c7468ef6ddff4357"
+  },
+  "environment": {
+    "python": "3.13.0",
+    "packages": {
+      "traci": "1.26.0",
+      "sumolib": "1.26.0",
+      "sumoITScontrol": "0.1.0"
+    },
+    "binary_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179"
+  },
+  "new_native_starts": 0,
+  "new_SUMO_version_commands": 0,
+  "new_TraCI_connections": 0,
+  "new_raw_allocations": 0,
+  "new_auth_absent": true,
+  "new_release_absent": true,
+  "new_raw_absent": true,
+  "not_run": [
+    "native perfprofiling or smoke03",
+    "old8/11/43/R2 tests",
+    "native physical/dynamics/transport equivalence",
+    "fullXSD/compiler-proof",
+    "newcleancheckout"
+  ],
+  "source_freeze": "V2 stable; oldcode/raw/card unchanged; performance only querycount fixture, no native timing or success promise"
+}

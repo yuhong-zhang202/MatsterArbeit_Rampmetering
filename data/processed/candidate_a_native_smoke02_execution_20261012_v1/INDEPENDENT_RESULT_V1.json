@@ -1,0 +1,273 @@
+{
+  "scope": "OBSERVED_TRUNCATED_PREFIX_NOT_QUALIFICATION",
+  "native_calls_by_audit": 0,
+  "checks": {
+    "engineering_bound_files": 13,
+    "protected_files": 536,
+    "R2_files": 7,
+    "V5_files": 26,
+    "card_sources": 18,
+    "card_inputs": 3,
+    "raw_files": 58,
+    "raw_bytes": 15571432,
+    "final_raw_readback": 58
+  },
+  "status": "PASS_TRUNCATED_PREFIX_DATA_INTEGRITY_TARGET_NOT_REACHED",
+  "raw_status": "PASS_LOCAL_ONLY",
+  "verified_steps": 687,
+  "ACK_records": 1374,
+  "reconciled_intervals": 687,
+  "observed_motion_intervals": {
+    "G": 600,
+    "y": 3,
+    "r": 84
+  },
+  "log_capture_records": 1376,
+  "final_logs_status": "BOUND_NO_OBSERVED_NATIVE_MESSAGE",
+  "log_stream_final_bytes": {
+    "sumo_stderr.log": 0,
+    "sumo_stdout.log": 0,
+    "sumo_error.log": 0,
+    "sumo.log": 1009
+  },
+  "controlled_service": {
+    "C": null,
+    "C_applied": null,
+    "E": null,
+    "N": null,
+    "mapping_command_latency": null,
+    "mapping_quantization": null,
+    "physical_shortfall": null,
+    "C_minus_E": null,
+    "E_minus_N": null
+  },
+  "internal_initial_accounting": {
+    "C": 0.0,
+    "C_applied": 0.0,
+    "E": 0,
+    "N": 0,
+    "mapping_command_latency": 0.0,
+    "mapping_quantization": 0.0,
+    "physical_shortfall": 0,
+    "C_minus_E": 0.0,
+    "E_minus_N": 0
+  },
+  "activation1200": "NOT_REACHED",
+  "controlled_red1207": "NOT_REACHED",
+  "full_control_cycles": 0,
+  "available_monitor_evidence": {
+    "actual_crossing_records_in_687_post_rows": 0,
+    "post_receiver_available_false_count": 0,
+    "scope": "Recorded checks in reconciled0..687 prefix only; not completeprospective safety proof or activatedmetering qualification",
+    "collision_teleport_measurement": "Native summary actualprefix counters, unlike unobservedcontrolledphase outcomes"
+  },
+  "xml": [
+    {
+      "name": "fcd.xml.gz",
+      "status": "WELL_FORMED_TRUNCATED_PREFIX",
+      "root": "fcd-export",
+      "child_count": 687,
+      "first_time_s": 0,
+      "last_time_s": 686
+    },
+    {
+      "name": "lanechanges.xml",
+      "status": "WELL_FORMED_TRUNCATED_PREFIX",
+      "root": "lanechanges",
+      "child_count": 113
+    },
+    {
+      "name": "p1_main_down_200_l0.xml",
+      "status": "WELL_FORMED_TRUNCATED_PREFIX",
+      "root": "detector",
+      "child_count": 23,
+      "last_interval": {
+        "begin_s": 660,
+        "end_s": 687,
+        "duration_s": 27,
+        "partial_nominal30s": true
+      }
+    },
+    {
+      "name": "p1_main_down_200_l1.xml",
+      "status": "WELL_FORMED_TRUNCATED_PREFIX",
+      "root": "detector",
+      "child_count": 23,
+      "last_interval": {
+        "begin_s": 660,
+        "end_s": 687,
+        "duration_s": 27,
+        "partial_nominal30s": true
+      }
+    },
+    {
+      "name": "p1_main_down_20_l0.xml",
+      "status": "WELL_FORMED_TRUNCATED_PREFIX",
+      "root": "detector",
+      "child_count": 23,
+      "last_interval": {
+        "begin_s": 660,
+        "end_s": 687,
+        "duration_s": 27,
+        "partial_nominal30s": true
+      }
+    },
+    {
+      "name": "p1_main_down_20_l1.xml",
+      "status": "WELL_FORMED_TRUNCATED_PREFIX",
+      "root": "detector",
+      "child_count": 23,
+      "last_interval": {
+        "begin_s": 660,
+        "end_s": 687,
+        "duration_s": 27,
+        "partial_nominal30s": true
+      }
+    },
+    {
+      "name": "p1_main_up_1300_l0.xml",
+      "status": "WELL_FORMED_TRUNCATED_PREFIX",
+      "root": "detector",
+      "child_count": 23,
+      "last_interval": {
+        "begin_s": 660,
+        "end_s": 687,
+        "duration_s": 27,
+        "partial_nominal30s": true
+      }
+    },
+    {
+      "name": "p1_main_up_1300_l1.xml",
+      "status": "WELL_FORMED_TRUNCATED_PREFIX",
+      "root": "detector",
+      "child_count": 23,
+      "last_interval": {
+        "begin_s": 660,
+        "end_s": 687,
+        "duration_s": 27,
+        "partial_nominal30s": true
+      }
+    },
+    {
+      "name": "p1_merge_section_20_l0.xml",
+      "status": "WELL_FORMED_TRUNCATED_PREFIX",
+      "root": "detector",
+      "child_count": 23,
+      "last_interval": {
+        "begin_s": 660,
+        "end_s": 687,
+        "duration_s": 27,
+        "partial_nominal30s": true
+      }
+    },
+    {
+      "name": "p1_merge_section_20_l1.xml",
+      "status": "WELL_FORMED_TRUNCATED_PREFIX",
+      "root": "detector",
+      "child_count": 23,
+      "last_interval": {
+        "begin_s": 660,
+        "end_s": 687,
+        "duration_s": 27,
+        "partial_nominal30s": true
+      }
+    },
+    {
+      "name": "p1_merge_section_20_l2.xml",
+      "status": "WELL_FORMED_TRUNCATED_PREFIX",
+      "root": "detector",
+      "child_count": 23,
+      "last_interval": {
+        "begin_s": 660,
+        "end_s": 687,
+        "duration_s": 27,
+        "partial_nominal30s": true
+      }
+    },
+    {
+      "name": "queues.xml",
+      "status": "WELL_FORMED_TRUNCATED_PREFIX",
+      "root": "queue-export",
+      "child_count": 687
+    },
+    {
+      "name": "ramp_storage_e2.xml",
+      "status": "WELL_FORMED_TRUNCATED_PREFIX",
+      "root": "detector",
+      "child_count": 23,
+      "last_interval": {
+        "begin_s": 660,
+        "end_s": 687,
+        "duration_s": 27,
+        "partial_nominal30s": true
+      }
+    },
+    {
+      "name": "shared_boundary_e2.xml",
+      "status": "WELL_FORMED_TRUNCATED_PREFIX",
+      "root": "detector",
+      "child_count": 23,
+      "last_interval": {
+        "begin_s": 660,
+        "end_s": 687,
+        "duration_s": 27,
+        "partial_nominal30s": true
+      }
+    },
+    {
+      "name": "sumo_summary.xml",
+      "status": "WELL_FORMED_TRUNCATED_PREFIX",
+      "root": "summary",
+      "child_count": 687,
+      "first_time_s": 0,
+      "last_time_s": 686,
+      "observed_collision_counter_max": 0,
+      "observed_teleport_counter_max": 0,
+      "last_summary": {
+        "time": "686.00",
+        "loaded": "980",
+        "inserted": "813",
+        "running": "105",
+        "waiting": "0",
+        "ended": "708",
+        "arrived": "708",
+        "collisions": "0",
+        "teleports": "0",
+        "halting": "14",
+        "stopped": "0",
+        "meanWaitingTime": "0.00",
+        "meanTravelTime": "74.76",
+        "meanSpeed": "21.32",
+        "meanSpeedRelative": "0.72",
+        "discarded": "0",
+        "duration": "1"
+      }
+    },
+    {
+      "name": "tls_states.xml",
+      "status": "WELL_FORMED_TRUNCATED_PREFIX",
+      "root": "tlsStates",
+      "child_count": 1374,
+      "ramp_records": 687
+    },
+    {
+      "name": "tripinfo.xml",
+      "status": "WELL_FORMED_TRUNCATED_PREFIX",
+      "root": "tripinfos",
+      "child_count": 814,
+      "record_classification": {
+        "ARRIVED": 708,
+        "IN_NETWORK_CENSORED_END": 105,
+        "UNDEPARTED_END": 1
+      }
+    },
+    {
+      "name": "vehroute.xml",
+      "status": "WELL_FORMED_TRUNCATED_PREFIX",
+      "root": "routes",
+      "child_count": 813
+    }
+  ],
+  "connection_attempts": 211,
+  "successful_connections": 1
+}

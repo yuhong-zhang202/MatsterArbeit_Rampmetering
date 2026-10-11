@@ -144,13 +144,24 @@ The [minimal bridge record](docs/development/CANDIDATE_A_NATIVE_PHASE_SMOKE_BRID
 
 Default/prepare/check operations are offline. Existing unconsumed cards are checked without overwrite. Native execution has a separate exact-card user-authorization and engineering/data/scientific release gate; authorization/release were absent at that original offline checkpoint and later consumed for SMOKE01 as described above. Host-absolute prepared paths require controlled rebinding and renewed approval for another checkout. Offline fake tests are `.venv/bin/python -m unittest discover -s tests/candidate_a_native_smoke_bridge_20261011 -v`; their PASS does not establish native safety, actual service capacity or formal readiness.
 
-### SMOKE02 isolated self-loop configuration correction
+### SMOKE02 isolated self-loop configuration correction — historical preparation
 
-The [source investigation and minimal correction](docs/development/CANDIDATE_A_NATIVE_PHASE_SELFLOOP_FIX_20261011.md) prepares a separate `CA_NATIVE_PHASE_R300_S17_SMOKE02`. It preserves SMOKE01 evidence, uses finite holding red and normal phase successors in the new package, and reuses the bridge with only its profile import changed. Warning handling, safety checks and the 1207 s mandatory stop remain. This round runs no SUMO; new authorization/release and raw outputs are absent.
+The [source investigation and minimal correction](docs/development/CANDIDATE_A_NATIVE_PHASE_SELFLOOP_FIX_20261011.md) prepared a separate `CA_NATIVE_PHASE_R300_S17_SMOKE02`. It preserves SMOKE01 evidence, uses finite holding red and normal phase successors in the new package, and reuses the bridge with only its profile import changed. Warning handling, safety checks and the 1207 s mandatory stop remain. The subsequent [single-run result](docs/development/CANDIDATE_A_NATIVE_PHASE_SMOKE02_RESULT_20261012.md) consumed this identity: one start, 180 s resource stop at687 s, controlled checkpoint not reached, no retry. Canonical consumed approval and raw remain local; public snapshots are evidence only.
 
 ```bash
 .venv/bin/python scripts/candidate_a_native_smoke_selfloop_fix_20261011_v1/cli.py --prepare
 .venv/bin/python scripts/candidate_a_native_smoke_selfloop_fix_20261011_v1/cli.py --check-card artifacts/candidate_a_native_smoke_selfloop_fix_20261011_v1/engineering/packages/CA_NATIVE_PHASE_R300_S17_SMOKE02/card.json
 ```
 
-These commands only prepare/check offline. `--execute` requires a separate new exact-card authorization/release before native startup or raw allocation; the consumed SMOKE01 approval does not apply. The new XML is bounded to the first-red diagnostic, not approved for full-cycle qualification. Offline regression: `.venv/bin/python -m unittest discover -s tests/candidate_a_native_smoke_selfloop_fix_20261011 -v`.
+These are historical offline commands: both preparation and card validation now reject the consumed local SMOKE02 output identity. Its preauthorization-absence tests describe the earlier unused-identity checkpoint and are not rerun after consumption. The XML is bounded to the first-red diagnostic, not approved for full-cycle qualification. A new technical repair/run identity is a separate reviewed preparation and cannot reuse either consumed approval.
+
+### SMOKE03 bounded runtime repair — offline preparation
+
+The [minimum query-reuse repair](docs/development/CANDIDATE_A_NATIVE_PHASE_RUNTIME_FIX_20261012.md) prepares `CA_NATIVE_PHASE_R300_S17_SMOKE03` using a conditional same-state vehicle getter facade. Safety/coverage/receiver/log checks, fresh time/population/TLS reads, original resource limits and the1207 s mandatory pause remain. Offline equivalence and query counts are distinct from native speed or safety qualification. No new runtime authorization/release or raw exists.
+
+```bash
+.venv/bin/python scripts/candidate_a_native_smoke_runtime_fix_20261012_v1/cli.py --prepare
+.venv/bin/python scripts/candidate_a_native_smoke_runtime_fix_20261012_v1/cli.py --check-card artifacts/candidate_a_native_smoke_runtime_fix_20261012_v1/engineering/packages/CA_NATIVE_PHASE_R300_S17_SMOKE03/card.json
+```
+
+Both commands are offline and check an existing card without overwrite. Any real launch needs separate exact-card authorization after review. The consumed SMOKE02 start is not retry permission. Regression: `.venv/bin/python -m unittest discover -s tests/candidate_a_native_smoke_runtime_fix_20261012 -v`. Relocated runtime paths require controlled rebinding and new approval.

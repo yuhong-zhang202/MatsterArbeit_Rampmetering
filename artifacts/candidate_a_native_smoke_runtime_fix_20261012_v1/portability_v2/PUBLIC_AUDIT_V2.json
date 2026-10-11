@@ -1,0 +1,23 @@
+{
+  "status": "PASS_BOUNDED_OFFLINE_CACHE_DATA_REVIEW_NOT_NATIVE_SPEEDUP",
+  "engineering_binding_count": 36,
+  "source_getter_count": 17,
+  "checks": {
+    "protected_files": 536,
+    "R2_files": 7,
+    "V5_files": 26
+  },
+  "fake_query_arithmetic": {
+    "old_vehicle_queries": 149790,
+    "new_vehicle_queries": 52016,
+    "avoided": 97774,
+    "percent": 65.27405033713866
+  },
+  "independent_cache_composition_probe": "PASS_REUSE_MUTATOR_CLOCK_TYPED_MUTABLE_ERROR",
+  "new_authorization_absent": true,
+  "native_calls": 0,
+  "new_raw_absent": true,
+  "raw_verification": "SKIP_PUBLIC_NO_RAW_REQUIRED",
+  "native_runtime_performance": "NOT_RUN",
+  "conditional_scope": "Single owned synchronousconnection; no externalmutations/concurrency; immutablewithinframe directread semantics; repeatedRPCfailuretiming not equivalent"
+}

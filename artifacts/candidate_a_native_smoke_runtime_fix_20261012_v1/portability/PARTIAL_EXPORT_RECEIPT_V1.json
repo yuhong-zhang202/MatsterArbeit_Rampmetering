@@ -1,0 +1,38 @@
+{
+  "user_facing_date": "2026-10-12",
+  "timezone": "Europe/Berlin",
+  "classification": "PARTIAL_TRACKED_INDEX_TREE_EXPORT_NOT_FULL_GIT_CLONE",
+  "tested_tree_sha": "8143f0b2355870ad66ab4fa2dfbe37801c026d66",
+  "tested_commit": "NOT_A_COMMIT_PRECOMMIT_INDEX_TREE",
+  "export_dir": "/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/candidate-a-smoke03-export-vf_qas6z/export",
+  "archive": "/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/candidate-a-smoke03-export-vf_qas6z/tracked-dependencies.tar",
+  "files": 611,
+  "bytes": 32591032,
+  "commands": [
+    {
+      "argv": [
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/candidate_a_native_smoke_runtime_fix_20261012",
+        "-v"
+      ],
+      "cwd": "/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/candidate-a-smoke03-export-vf_qas6z/export",
+      "exit_code": 1,
+      "output": "artifacts/candidate_a_native_smoke_runtime_fix_20261012_v1/portability/TESTS_V1.txt",
+      "output_sha256": "f74ff716595d1041d7ad9dfaa4bc0e16df57e2b2d357f0b239524052f853af53"
+    }
+  ],
+  "raw_files": [
+    "data/raw/.gitkeep"
+  ],
+  "authorization_files": [],
+  "release_files": [],
+  "new_native_starts": 0,
+  "SUMO_version_commands": 0,
+  "real_TraCI_connections": 0,
+  "all_expected_checks_passed": false,
+  "scope": "Public dependency independence/current8fake suite anddefault/check; foreignruntimeinputs explicitly rejected; not native compatibility/speedup orqualification; project interpreter reused outsideexport"
+}

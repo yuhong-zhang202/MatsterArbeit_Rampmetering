@@ -1,0 +1,39 @@
+--- src/candidate_a_native_smoke_selfloop_fix_20261011/bridge.py
++++ src/candidate_a_native_smoke_runtime_fix_20261012/bridge.py
+@@ -13,9 +13,10 @@
+ import time
+ 
+ from src.candidate_a_native_smoke_20261011.adapter import StepAdapter, inventory, TLS, STORAGE, INGRESS, INTERNAL
+-from src.candidate_a_native_smoke_selfloop_fix_20261011.profile import ROOT,TASK,RUN,NETWORK,SUMO,sha,write_new,validate_release,require
++from src.candidate_a_native_smoke_runtime_fix_20261012.profile import ROOT,TASK,RUN,NETWORK,SUMO,sha,write_new,validate_release,require
+ from src.candidate_a_native_smoke_20261011.bridge_logs import LogCapture
+ from src.candidate_a_native_smoke_20261011.bridge_resources import ResourceWatchdog
++from src.candidate_a_native_smoke_runtime_fix_20261012.frame_cache import FrameCache
+ 
+ 
+ def protected_worker():
+@@ -62,6 +63,8 @@
+ def _diagnostic_loop(conn, worker, capture, output, resources, process, start_time, adapter=None):
+     """Private post-release loop; fake tests inject here, not a public launch API."""
+     adapter=adapter or StepAdapter(worker.observe)
++    conn=FrameCache(conn)
++    adapter.query_cache_stats=conn.stats
+     phase_requests=[]
+     worker.request_phase(conn.trafficlight,phase_requests,0,'setProgram','A_OPEN')
+     worker.request_phase(conn.trafficlight,phase_requests,0,'setPhase',0)
+@@ -145,6 +148,7 @@
+         error=type(exc).__name__+':'+str(exc)
+         write_new(output/'failure_snapshot.json',json.loads(json.dumps({'error':error,'last_completed_s':adapter.last_completed if adapter else None,
+             'last_step_ack':getattr(adapter,'bridge_last_ack',None),
++            'same_state_query_cache':getattr(adapter,'query_cache_stats',None),
+             'last_accounted_s':adapter.last_end if adapter else None,'pending':adapter.pending if adapter else None,
+             'accounting':adapter.ledger.accounting() if adapter else None,
+             'retained_last_observation':adapter.receipts[-1:] if adapter else [],
+@@ -180,6 +184,7 @@
+         write_new(output/'bridge_receipt.json',{'run_id':RUN,'card_sha256':sha(card_path),'status':status,'error':error,
+             'native_started':process is not None,'last_completed_s':adapter.last_completed if adapter else None,
+             'last_step_ack':getattr(adapter,'bridge_last_ack',None),
++            'same_state_query_cache':getattr(adapter,'query_cache_stats',None),
+             'last_accounted_s':adapter.last_end if adapter else None,'final_logs':final_logs,
+             'resource_watchdog':{'reason':watchdog.reason,'error':watchdog.error,'poll_s':.2} if watchdog else None,
+             'actual_native_safety_proven':False,'rate_qualified':False,'automatic_continuation':False,

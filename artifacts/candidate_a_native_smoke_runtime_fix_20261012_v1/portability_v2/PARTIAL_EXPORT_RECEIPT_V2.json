@@ -1,0 +1,87 @@
+{
+  "user_facing_date": "2026-10-12",
+  "timezone": "Europe/Berlin",
+  "classification": "PARTIAL_TRACKED_INDEX_TREE_EXPORT_NOT_FULL_GIT_CLONE",
+  "tested_tree_sha": "8143f0b2355870ad66ab4fa2dfbe37801c026d66",
+  "tested_commit": "NOT_A_COMMIT_PRECOMMIT_INDEX_TREE",
+  "export_dir": "/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/candidate-a-smoke03-export-v2-1q1psrm0/export",
+  "archive": "/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/candidate-a-smoke03-export-v2-1q1psrm0/tracked-dependencies.tar",
+  "files": 612,
+  "bytes": 32592475,
+  "commands": [
+    {
+      "argv": [
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/candidate_a_native_smoke_runtime_fix_20261012",
+        "-v"
+      ],
+      "cwd": "/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/candidate-a-smoke03-export-v2-1q1psrm0/export",
+      "exit_code": 0,
+      "output": "artifacts/candidate_a_native_smoke_runtime_fix_20261012_v1/portability_v2/TESTS_V2.txt",
+      "output_sha256": "9515d5d7d76a439210e2f7b4f2b394f553010ce74882cb44ef4d68912c837ea2"
+    },
+    {
+      "argv": [
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+        "data/processed/candidate_a_native_smoke_runtime_fix_20261012_v1/independent_runtime_review.py"
+      ],
+      "cwd": "/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/candidate-a-smoke03-export-v2-1q1psrm0/export",
+      "exit_code": 0,
+      "output": "artifacts/candidate_a_native_smoke_runtime_fix_20261012_v1/portability_v2/PUBLIC_AUDIT_V2.json",
+      "output_sha256": "1bbb4cfcd5911795e4ce9c92d935ba25ba7036740d9832d26cb25b8bc1ac4adc"
+    },
+    {
+      "argv": [
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+        "scripts/candidate_a_native_smoke_runtime_fix_20261012_v1/cli.py"
+      ],
+      "cwd": "/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/candidate-a-smoke03-export-v2-1q1psrm0/export",
+      "exit_code": 0,
+      "output": "artifacts/candidate_a_native_smoke_runtime_fix_20261012_v1/portability_v2/DEFAULT_PREPARE_V2.txt",
+      "output_sha256": "e59f61bcd419580d0a13bd7a9373fedfaa6f3efdce14934e2c94296dd362de85"
+    },
+    {
+      "argv": [
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+        "scripts/candidate_a_native_smoke_runtime_fix_20261012_v1/cli.py",
+        "--check-card",
+        "artifacts/candidate_a_native_smoke_runtime_fix_20261012_v1/engineering/packages/CA_NATIVE_PHASE_R300_S17_SMOKE03/card.json"
+      ],
+      "cwd": "/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/candidate-a-smoke03-export-v2-1q1psrm0/export",
+      "exit_code": 0,
+      "output": "artifacts/candidate_a_native_smoke_runtime_fix_20261012_v1/portability_v2/CARD_CHECK_V2.json",
+      "output_sha256": "76f0abf4e82fd3ce418b6e6607a89a539588bb32ea5fd4bfb29aebfe28f279ee"
+    },
+    {
+      "argv": [
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+        "-c",
+        "from src.candidate_a_native_smoke_runtime_fix_20261012.profile import ROOT,TASK,RUN,validate\ntry:validate(ROOT/TASK/'engineering/packages'/RUN/'card.json',require_environment=True)\nexcept ValueError as e:\n assert 'foreign runtime input root' in str(e),str(e)\n print('EXPECTED_DENIAL:',e)\nelse:raise AssertionError('foreign runtime paths accepted')"
+      ],
+      "cwd": "/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/candidate-a-smoke03-export-v2-1q1psrm0/export",
+      "exit_code": 0,
+      "output": "artifacts/candidate_a_native_smoke_runtime_fix_20261012_v1/portability_v2/FOREIGN_RUNTIME_DENIAL_V2.txt",
+      "output_sha256": "73ce87ddf29a955943675adb9379b07c67d1454df8be8907d68af457eb7d2ca4"
+    }
+  ],
+  "raw_files": [
+    "data/raw/.gitkeep"
+  ],
+  "authorization_files": [],
+  "release_files": [],
+  "new_native_starts": 0,
+  "SUMO_version_commands": 0,
+  "real_TraCI_connections": 0,
+  "all_expected_checks_passed": true,
+  "scope": "Public dependency independence/current8fake suite anddefault/check; foreignruntimeinputs explicitly rejected; not native compatibility/speedup orqualification; project interpreter reused outsideexport",
+  "controlled_version": "V2_EXPORT_DEPENDENCY_CORRECTION",
+  "V1_preserved": true,
+  "V1_failure": "One warning-injection subcase ERROR because parent export selection omitted already-committed public warning fixture; original8suite/source/card unchanged. V1actuallogs/manifest/receipt retained.",
+  "added_public_dependency": "artifacts/candidate_a_native_smoke_execution_20261011_v1/engineering/RUNTIME_NATIVE_WARNING_EXTRACT.txt",
+  "source_or_card_change": false,
+  "reason_for_one_retest": "resolve concrete export fixture omission; no native/test scope expansion"
+}

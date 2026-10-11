@@ -1,0 +1,29 @@
+{
+  "disposition": "PASS_FOR_BOUNDED_OFFLINE_SAME_FRAME_CACHE_DATA_REVIEW",
+  "context_preflight": "AGENTS/STATE/DECISIONS/WORKLOG/emptyprotocol current12OctconsumedSMOKE02/authorizedtechnicalfix read; no SMOKE03nativepermission. Original687prefixaudit remains separate; Stage6/STOP3/A1/qualification unchanged.",
+  "actual_commands": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python data/processed/candidate_a_native_smoke_runtime_fix_20261012_v1/independent_runtime_review.py --local-raw",
+      "executions": 1,
+      "exit_code": 0,
+      "source_sha256": "53c5797fda22638463500a9d96bb4f7fb2c21c65f134229eb0beebdaccfa2d4d",
+      "output_sha256": "80bf027d8042468df98bb3f484e33f5b67d52c1c66f271690d6019fe795038a7"
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest discover -s tests/candidate_a_native_smoke_runtime_fix_20261012 -v",
+      "executions": 1,
+      "exit_code": 0,
+      "PASS": 8,
+      "FAIL": 0,
+      "ERROR": 0,
+      "SKIP": 0,
+      "log_sha256": "778beac01cb7e215745c51b30e272e21a32ed68bffc8c2cde4f3a29b161af998"
+    }
+  ],
+  "public_mode": "No raw orcanonicalauthrequired; onlylocaloptionalbranchexecutedthisreview, publicdefaultnotseparatelyrun; parentpartialexportgatepending",
+  "newnative_calls": 0,
+  "old_suites": "SKIP: prior5/11/43 andconsumedabsencecheckers not rerun",
+  "readonly_lookup_error": "Initialrequested cache_facade.py notactualfilename; actualframe_cache.py read; no test/artifactfailure",
+  "required_findings": [],
+  "preservation": "Runtimecard892b4156,36engineeringfiles,536protected7R2/26V5+58originalrawhashes match; source/card/raw/docs unchangedbyreview."
+}

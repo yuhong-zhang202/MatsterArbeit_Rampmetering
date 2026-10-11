@@ -1,0 +1,42 @@
+{
+  "checks": [
+    {
+      "check": "vehicle ID/type/route/modes and7 effective dynamics",
+      "old_code": "adapter.identity +inventory unchanged",
+      "queries": "17 directvalue whitelist; fresh ID+loaded+pending sets every call",
+      "why_preserved": "same field/vehicle/typedargs, fixedstateframe value reused; all literal/error checks still execute",
+      "limitation": "requires native state stable under singleowner/no externalmutator; omitted redundant RPC cannot reproduce every transient RPC failure timing"
+    },
+    {
+      "check": "lane/population/ingress/receiver coverage",
+      "old_code": "adapter.prepare/reconcile +worker.observe unchanged",
+      "queries": "ID/laneenumeration/leader/securegap/routeindex/type getters always fresh",
+      "why_preserved": "no cached enumeration; all coverage/route/receiver loops still run"
+    },
+    {
+      "check": "native step/time+ordinary braking/acceleration",
+      "old_code": "original ACK/readback and postchecks unchanged",
+      "queries": "step invalidates first; actual time always fresh; speed/acceleration only memoized within returned same time",
+      "why_preserved": "no values cross simulationStep; p[world] oldsnapshot versus actual poststate still compared"
+    },
+    {
+      "check": "TLS/program/link/nextSwitch/admission",
+      "old_code": "all native phase andadmission checks unchanged",
+      "queries": "TLS getters fresh; setter/unknown commands invalidate beforedelegation",
+      "why_preserved": "native schedules/command traces and1207 mandatorypause preserved"
+    },
+    {
+      "check": "logging+collision/teleport/native warning",
+      "old_code": "oldLogCapture and allposterror conditions unchanged",
+      "queries": "all counters and logfile/EOF observations fresh",
+      "why_preserved": "same byte0/offset/hash/EOF/warning STOP; no whitelist/filter"
+    },
+    {
+      "check": "resource and one-use authority",
+      "old_code": "oldwatchdog/scan/cleanup/code exactgates retained",
+      "queries": "notcached; resource caps180/60/300MB/5GB unchanged",
+      "why_preserved": "newSMOKE03 namespace/absenceauth beforePopen; no automatic retry/continuation"
+    }
+  ],
+  "native_validation": false
+}

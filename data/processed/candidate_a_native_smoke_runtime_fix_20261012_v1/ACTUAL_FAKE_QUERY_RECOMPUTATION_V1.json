@@ -1,0 +1,61 @@
+{
+  "actual_independent_suite_output": {
+    "0": {
+      "cache_stats": null,
+      "calls": {
+        "getAccel": 12080,
+        "getAcceleration": 2414,
+        "getActionStepLength": 12080,
+        "getDecel": 12080,
+        "getEmergencyDecel": 12080,
+        "getIDList": 2416,
+        "getImperfection": 12080,
+        "getLaneChangeMode": 12080,
+        "getLaneID": 4832,
+        "getLoadedIDList": 2416,
+        "getMaxSpeed": 12080,
+        "getRoute": 12080,
+        "getSpeed": 4832,
+        "getSpeedMode": 12080,
+        "getTau": 12080,
+        "getTypeID": 12080
+      },
+      "elapsed_fake_s": 1.3915799999958836,
+      "last": 1207
+    },
+    "1": {
+      "cache_stats": {
+        "hits": 97774,
+        "invalidations": 1213,
+        "misses": 47184,
+        "underlying_calls": 87039,
+        "verified_time_reads": 4829
+      },
+      "calls": {
+        "getAccel": 3630,
+        "getAcceleration": 2414,
+        "getActionStepLength": 3630,
+        "getDecel": 3630,
+        "getEmergencyDecel": 3630,
+        "getIDList": 2416,
+        "getImperfection": 3630,
+        "getLaneChangeMode": 3630,
+        "getLaneID": 2420,
+        "getLoadedIDList": 2416,
+        "getMaxSpeed": 3630,
+        "getRoute": 3630,
+        "getSpeed": 2420,
+        "getSpeedMode": 3630,
+        "getTau": 3630,
+        "getTypeID": 3630
+      },
+      "elapsed_fake_s": 1.7653110839892179,
+      "last": 1207
+    }
+  },
+  "old_vehicle_queries": 149790,
+  "new_vehicle_queries": 52016,
+  "difference": 97774,
+  "percent": 65.27405033713866,
+  "interpretation": "Single0RPCfake samples and deterministic query count, not nativeperformance/speed proof"
+}
