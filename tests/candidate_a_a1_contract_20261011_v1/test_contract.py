@@ -185,10 +185,62 @@ class AdversarialContractTests(unittest.TestCase):
             self.assertEqual(diagnostic_decision(s)['decision'],'UNKNOWN')
 
     def test_observed_red_anomaly_and_yellow_commitment_not_pass(self):
-        s=fixture();s['observed_red_crossing_ids']=['front']
+        s=fixture();s['observed_red_crossing_ids']=['synthetic_front']
         self.assertEqual(diagnostic_decision(s)['decision'],'INELIGIBLE')
         s=fixture();s['vehicles'][0].update(speed_m_s=9,seen_m=4)
         self.assertEqual(diagnostic_decision(s)['decision'],'INELIGIBLE')
+
+    def test_red_crossing_missing_and_malformed_evidence_is_unknown(self):
+        cases=[None,'unknown',True,False,{}, {'synthetic_front':True},
+               ['synthetic_front','synthetic_front'],[''],[' '],[None],[True],
+               [1],[{}],[['synthetic_front']],('synthetic_front',)]
+        for value in cases:
+            s=fixture();s['observed_red_crossing_ids']=value
+            with self.subTest(value=value):
+                result=diagnostic_decision(s)
+                self.assertEqual(result['decision'],'UNKNOWN')
+                self.assertNotIn('OBSERVED_RED_ANOMALY',result['reasons'])
+        s=fixture();del s['observed_red_crossing_ids']
+        result=diagnostic_decision(s)
+        self.assertEqual(result['decision'],'UNKNOWN')
+        self.assertNotIn('OBSERVED_RED_ANOMALY',result['reasons'])
+
+    def test_red_crossing_foreign_ids_and_invalid_inventory_are_unknown(self):
+        cases=[(['foreign'],['synthetic_front']),
+               (['synthetic_front','foreign'],['synthetic_front'])]
+        for inventory in [None,True,'synthetic_front',{},[{}],[''],[' '],
+                          ['synthetic_front','synthetic_front'],['foreign'],[]]:
+            cases.append((['synthetic_front'],inventory))
+        for red_ids,inventory in cases:
+            s=fixture();s['observed_red_crossing_ids']=red_ids
+            s['affected_inventory_ids']=inventory
+            with self.subTest(red_ids=red_ids,inventory=inventory):
+                result=diagnostic_decision(s)
+                self.assertEqual(result['decision'],'UNKNOWN')
+                self.assertNotIn('OBSERVED_RED_ANOMALY',result['reasons'])
+
+    def test_red_crossing_valid_ids_do_not_claim_observation_in_inconsistent_state(self):
+        changes=[('source_commit','other'),('measurement_time_s',1205),
+                 ('time_s',1205),('next_switch_s',1207),('step_s',.5),
+                 ('phase_before',2),('motion_state','G'),('program','other'),
+                 ('controlled_link',['foreign']),('vehicles',[{}]),
+                 ('receiver',None)]
+        for key,value in changes:
+            s=fixture();s['observed_red_crossing_ids']=['synthetic_front'];s[key]=value
+            with self.subTest(key=key):
+                result=diagnostic_decision(s)
+                self.assertEqual(result['decision'],'UNKNOWN')
+                self.assertNotIn('OBSERVED_RED_ANOMALY',result['reasons'])
+
+    def test_red_crossing_valid_empty_and_bound_positive_remain_distinct(self):
+        s=fixture();result=diagnostic_decision(s)
+        self.assertEqual(result['decision'],'UNKNOWN')
+        self.assertNotIn('OBSERVED_RED_ANOMALY',result['reasons'])
+        s['observed_red_crossing_ids']=['synthetic_front']
+        result=diagnostic_decision(s)
+        self.assertEqual(result['decision'],'INELIGIBLE')
+        self.assertIn('OBSERVED_RED_ANOMALY',result['reasons'])
+        self.assertNotEqual(result['decision'],'ELIGIBLE')
 
     def test_missing_or_malformed_snapshot_fails_closed(self):
         for s in [None,{}, {'schema':'other'},dict(fixture(),affected_inventory_ids=[{}])]:
@@ -216,7 +268,7 @@ class AdversarialContractTests(unittest.TestCase):
             self.assertEqual(audit()['status'],'PASS')
 
     def test_public_source_or_input_hash_drift_fails(self):
-        relative='artifacts/candidate_a_a1_contract_20261011_v1/engineering/v3/INPUT_BINDINGS_V3.json'
+        relative='artifacts/candidate_a_a1_contract_20261011_v1/review_fix_20261011/v4/INPUT_BINDINGS_V4.json'
         binds=json.loads((ROOT/relative).read_text())
         with tempfile.TemporaryDirectory() as tmp:
             dest=Path(tmp);(dest/relative).parent.mkdir(parents=True)

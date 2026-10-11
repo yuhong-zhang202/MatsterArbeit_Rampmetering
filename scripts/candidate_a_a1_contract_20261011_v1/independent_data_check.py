@@ -38,7 +38,7 @@ def load(relative):
 
 
 def run():
-    binding_path = ENG + 'v3/INPUT_BINDINGS_V3.json'
+    binding_path = 'artifacts/candidate_a_a1_contract_20261011_v1/review_fix_20261011/v4/INPUT_BINDINGS_V4.json'
     inputs = load(binding_path)['files']
     check(all(not p.startswith('data/raw/') for p in inputs), 'raw dependency')
     check(all(sha(ROOT/p) == h for p,h in inputs.items()), 'input hash mismatch')
@@ -174,7 +174,32 @@ def run():
         except ValueError:
             boundary.append(dict(case='portable_integer_boundary_'+str(count),exception='ValueError',
                                  expected='finite' if count==32766 else 'ValueError',pass_=count==32767))
-    return dict(status='PASS' if all(r['pass_'] for r in boundary) else 'REQUIRES_NUMERIC_REPAIR',
+    red_observation=[]
+    def probe_red(label, st, expected):
+        value=diagnostic_decision(st)
+        anomaly='OBSERVED_RED_ANOMALY' in value.get('reasons',[])
+        ok=value['decision']==expected and anomaly==(expected=='INELIGIBLE')
+        red_observation.append(dict(case=label,decision=value,expected=expected,
+                                   expected_observed_red_anomaly=expected=='INELIGIBLE',pass_=ok,
+                                   evidence_kind='SYNTHETIC_SCHEMA_CHALLENGE_NOT_NATIVE_OBSERVATION'))
+    front=module.fixture()['vehicles'][0]['vehicle_id']
+    for label,value in [('string','bogus'),('dict',{'id':front}),('nonstring_member',[7]),
+                        ('empty_id',['']),('whitespace_id',[' ']),('duplicate_id',[front,front]),
+                        ('unbound_id',['absent']),('none',None),('bool',True)]:
+        st=module.fixture();st['observed_red_crossing_ids']=value
+        probe_red(label,st,'UNKNOWN')
+    st=module.fixture();del st['observed_red_crossing_ids'];probe_red('missing_red_field',st,'UNKNOWN')
+    for key,value in [('measurement_time_s',1205),('next_switch_s',1207),('source_commit','other'),
+                      ('controlled_link',['wrong']),('program','wrong'),
+                      ('affected_inventory_ids',['unbound']),('time_s',math.nan)]:
+        st=module.fixture();st['observed_red_crossing_ids']=[front];st[key]=value
+        probe_red('unbound_or_stale_'+key,st,'UNKNOWN')
+    st=module.fixture();st['observed_red_crossing_ids']=[];probe_red('valid_empty_red_list',st,'UNKNOWN')
+    st=module.fixture();st['observed_red_crossing_ids']=[front];probe_red('valid_bound_red_id',st,'INELIGIBLE')
+    preservation=load('data/processed/candidate_a_a1_contract_20261011_v3/PRE_FIX_DATA_BINDINGS.json')
+    check(all(sha(ROOT/p)==h for p,h in preservation['files'].items()),'historical data overwritten')
+    check(sha(ROOT/'data/processed/candidate_a_a1_contract_20261011_v3/PRE_FIX_INDEPENDENT_CHECK_SOURCE.py')==preservation['independent_check_sha256'],'old independent source overwritten')
+    return dict(status='PASS' if all(r['pass_'] for r in boundary+red_observation) else 'REQUIRES_OFFLINE_REPAIR',
                 classification='EXPLORATORY_OFFLINE_EVIDENCE_INTEGRITY_NOT_SAFETY_QUALIFICATION',
                 protected_checked=536,input_binding_path=binding_path,input_sha256=inputs,source_commit=excerpts['commit'],
                 source_excerpts_verified=len(excerpts['excerpts']),whole_remote_sources_reverified=False,
@@ -184,6 +209,7 @@ def run():
                 service_observed_steps=observed,derived_phase_rows=1206,completed_cycles=0,
                 ignored_raw_reads=0,clean_checkout_gate='PENDING_PARENT_DELIVERED_COMMIT_CHECK',
                 commands=commands,independent_numeric_boundary=boundary,
+                independent_red_observation_probes=red_observation,historical_data_bindings_unchanged=True,
                 independent_script_sha256=sha(Path(__file__)),python=sys.version,
                 current_STOP3='PRESERVED',A1_A2='UNVERIFIED',rate_900='NOT_TESTED',execution='HOLD')
 

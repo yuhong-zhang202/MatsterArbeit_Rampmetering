@@ -1,0 +1,697 @@
+{
+  "classification": "REAL_PRE_REPAIR_V3_SYNTHETIC_COUNTEREXAMPLES_NOT_NATIVE_OBSERVATIONS",
+  "baseline_head": "efe870e74fd44922ab20fbc68255e3d0687195b9",
+  "source_files": {
+    "scripts/candidate_a_a1_contract_20261011_v1/contract.py": "0c26a985627d8640bedd245dfd3211aa36a71d35eda860f37413938cd8b7c45c",
+    "scripts/candidate_a_a1_contract_20261011_v1/audit_public.py": "fc0d7a26f32e9d61d25b6d0bfad820bb8d2845a8a09c1fc11b162717ba2663ca",
+    "tests/candidate_a_a1_contract_20261011_v1/test_contract.py": "fcda0720c1aebbfeff882fcdb8ad27c9e154a17ebc72ce88686f2a11aff17219",
+    "artifacts/candidate_a_a1_contract_20261011_v1/engineering/v3/INPUT_BINDINGS_V3.json": "f746b6455fd54af82e90d5819210b445af7cb69c72120e248c275dc794cadd18"
+  },
+  "snapshot": "artifacts/candidate_a_a1_contract_20261011_v1/review_fix_20261011/v4/v3_source_snapshot",
+  "sumo_traci_starts": 0,
+  "cases": [
+    {
+      "case": "none",
+      "input": {
+        "schema": "A1_LOCAL_DIAGNOSTIC_V1",
+        "source_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+        "time_s": 1206,
+        "measurement_time_s": 1206,
+        "next_switch_s": 1206,
+        "step_s": 1,
+        "phase_before": 1,
+        "state_before": "y",
+        "motion_state": "r",
+        "program": "CA_C24",
+        "controlled_link": [
+          "ramp_storage_0",
+          "ramp_accel_0",
+          ":ramp_mid_0_0"
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "synthetic_front",
+            "role": "front",
+            "type_id": "technical_passenger",
+            "model": "Krauss",
+            "speed_mode": 31,
+            "lane_change_mode": 1621,
+            "speed_m_s": 4.5,
+            "seen_m": 20.0,
+            "lane_offset_m": 0.0,
+            "decel_m_s2": 4.5,
+            "emergency_decel_m_s2": 9.0,
+            "yellow_min_decel_m_s2": 3.0,
+            "jm_stopline_gap_m": 1.0,
+            "action_step_s": 1.0,
+            "tau_s": 1.0
+          }
+        ],
+        "affected_inventory_ids": [
+          "synthetic_front"
+        ],
+        "receiver": {
+          "rear_clearance_m": 20,
+          "vehicle_length_m": 5,
+          "min_gap_m": 2.5
+        },
+        "observed_red_crossing_ids": null
+      },
+      "actual": {
+        "decision": "UNKNOWN",
+        "reasons": [
+          "UNPROVEN_NATIVE_SPEED_AND_GLOBAL_COVERAGE",
+          "RECEIVER_LEADER_FOLLOWER_FOE_AND_RANDOM_BOUNDS_UNRESOLVED"
+        ],
+        "eligible_path_implemented": false
+      },
+      "expected": "UNKNOWN"
+    },
+    {
+      "case": "string",
+      "input": {
+        "schema": "A1_LOCAL_DIAGNOSTIC_V1",
+        "source_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+        "time_s": 1206,
+        "measurement_time_s": 1206,
+        "next_switch_s": 1206,
+        "step_s": 1,
+        "phase_before": 1,
+        "state_before": "y",
+        "motion_state": "r",
+        "program": "CA_C24",
+        "controlled_link": [
+          "ramp_storage_0",
+          "ramp_accel_0",
+          ":ramp_mid_0_0"
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "synthetic_front",
+            "role": "front",
+            "type_id": "technical_passenger",
+            "model": "Krauss",
+            "speed_mode": 31,
+            "lane_change_mode": 1621,
+            "speed_m_s": 4.5,
+            "seen_m": 20.0,
+            "lane_offset_m": 0.0,
+            "decel_m_s2": 4.5,
+            "emergency_decel_m_s2": 9.0,
+            "yellow_min_decel_m_s2": 3.0,
+            "jm_stopline_gap_m": 1.0,
+            "action_step_s": 1.0,
+            "tau_s": 1.0
+          }
+        ],
+        "affected_inventory_ids": [
+          "synthetic_front"
+        ],
+        "receiver": {
+          "rear_clearance_m": 20,
+          "vehicle_length_m": 5,
+          "min_gap_m": 2.5
+        },
+        "observed_red_crossing_ids": "unknown"
+      },
+      "actual": {
+        "decision": "INELIGIBLE",
+        "reasons": [
+          "OBSERVED_RED_ANOMALY"
+        ]
+      },
+      "expected": "UNKNOWN"
+    },
+    {
+      "case": "true",
+      "input": {
+        "schema": "A1_LOCAL_DIAGNOSTIC_V1",
+        "source_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+        "time_s": 1206,
+        "measurement_time_s": 1206,
+        "next_switch_s": 1206,
+        "step_s": 1,
+        "phase_before": 1,
+        "state_before": "y",
+        "motion_state": "r",
+        "program": "CA_C24",
+        "controlled_link": [
+          "ramp_storage_0",
+          "ramp_accel_0",
+          ":ramp_mid_0_0"
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "synthetic_front",
+            "role": "front",
+            "type_id": "technical_passenger",
+            "model": "Krauss",
+            "speed_mode": 31,
+            "lane_change_mode": 1621,
+            "speed_m_s": 4.5,
+            "seen_m": 20.0,
+            "lane_offset_m": 0.0,
+            "decel_m_s2": 4.5,
+            "emergency_decel_m_s2": 9.0,
+            "yellow_min_decel_m_s2": 3.0,
+            "jm_stopline_gap_m": 1.0,
+            "action_step_s": 1.0,
+            "tau_s": 1.0
+          }
+        ],
+        "affected_inventory_ids": [
+          "synthetic_front"
+        ],
+        "receiver": {
+          "rear_clearance_m": 20,
+          "vehicle_length_m": 5,
+          "min_gap_m": 2.5
+        },
+        "observed_red_crossing_ids": true
+      },
+      "actual": {
+        "decision": "INELIGIBLE",
+        "reasons": [
+          "OBSERVED_RED_ANOMALY"
+        ]
+      },
+      "expected": "UNKNOWN"
+    },
+    {
+      "case": "dict",
+      "input": {
+        "schema": "A1_LOCAL_DIAGNOSTIC_V1",
+        "source_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+        "time_s": 1206,
+        "measurement_time_s": 1206,
+        "next_switch_s": 1206,
+        "step_s": 1,
+        "phase_before": 1,
+        "state_before": "y",
+        "motion_state": "r",
+        "program": "CA_C24",
+        "controlled_link": [
+          "ramp_storage_0",
+          "ramp_accel_0",
+          ":ramp_mid_0_0"
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "synthetic_front",
+            "role": "front",
+            "type_id": "technical_passenger",
+            "model": "Krauss",
+            "speed_mode": 31,
+            "lane_change_mode": 1621,
+            "speed_m_s": 4.5,
+            "seen_m": 20.0,
+            "lane_offset_m": 0.0,
+            "decel_m_s2": 4.5,
+            "emergency_decel_m_s2": 9.0,
+            "yellow_min_decel_m_s2": 3.0,
+            "jm_stopline_gap_m": 1.0,
+            "action_step_s": 1.0,
+            "tau_s": 1.0
+          }
+        ],
+        "affected_inventory_ids": [
+          "synthetic_front"
+        ],
+        "receiver": {
+          "rear_clearance_m": 20,
+          "vehicle_length_m": 5,
+          "min_gap_m": 2.5
+        },
+        "observed_red_crossing_ids": {
+          "bad": true
+        }
+      },
+      "actual": {
+        "decision": "INELIGIBLE",
+        "reasons": [
+          "OBSERVED_RED_ANOMALY"
+        ]
+      },
+      "expected": "UNKNOWN"
+    },
+    {
+      "case": "foreign",
+      "input": {
+        "schema": "A1_LOCAL_DIAGNOSTIC_V1",
+        "source_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+        "time_s": 1206,
+        "measurement_time_s": 1206,
+        "next_switch_s": 1206,
+        "step_s": 1,
+        "phase_before": 1,
+        "state_before": "y",
+        "motion_state": "r",
+        "program": "CA_C24",
+        "controlled_link": [
+          "ramp_storage_0",
+          "ramp_accel_0",
+          ":ramp_mid_0_0"
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "synthetic_front",
+            "role": "front",
+            "type_id": "technical_passenger",
+            "model": "Krauss",
+            "speed_mode": 31,
+            "lane_change_mode": 1621,
+            "speed_m_s": 4.5,
+            "seen_m": 20.0,
+            "lane_offset_m": 0.0,
+            "decel_m_s2": 4.5,
+            "emergency_decel_m_s2": 9.0,
+            "yellow_min_decel_m_s2": 3.0,
+            "jm_stopline_gap_m": 1.0,
+            "action_step_s": 1.0,
+            "tau_s": 1.0
+          }
+        ],
+        "affected_inventory_ids": [
+          "synthetic_front"
+        ],
+        "receiver": {
+          "rear_clearance_m": 20,
+          "vehicle_length_m": 5,
+          "min_gap_m": 2.5
+        },
+        "observed_red_crossing_ids": [
+          "foreign"
+        ]
+      },
+      "actual": {
+        "decision": "INELIGIBLE",
+        "reasons": [
+          "OBSERVED_RED_ANOMALY"
+        ]
+      },
+      "expected": "UNKNOWN"
+    },
+    {
+      "case": "duplicate",
+      "input": {
+        "schema": "A1_LOCAL_DIAGNOSTIC_V1",
+        "source_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+        "time_s": 1206,
+        "measurement_time_s": 1206,
+        "next_switch_s": 1206,
+        "step_s": 1,
+        "phase_before": 1,
+        "state_before": "y",
+        "motion_state": "r",
+        "program": "CA_C24",
+        "controlled_link": [
+          "ramp_storage_0",
+          "ramp_accel_0",
+          ":ramp_mid_0_0"
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "synthetic_front",
+            "role": "front",
+            "type_id": "technical_passenger",
+            "model": "Krauss",
+            "speed_mode": 31,
+            "lane_change_mode": 1621,
+            "speed_m_s": 4.5,
+            "seen_m": 20.0,
+            "lane_offset_m": 0.0,
+            "decel_m_s2": 4.5,
+            "emergency_decel_m_s2": 9.0,
+            "yellow_min_decel_m_s2": 3.0,
+            "jm_stopline_gap_m": 1.0,
+            "action_step_s": 1.0,
+            "tau_s": 1.0
+          }
+        ],
+        "affected_inventory_ids": [
+          "synthetic_front"
+        ],
+        "receiver": {
+          "rear_clearance_m": 20,
+          "vehicle_length_m": 5,
+          "min_gap_m": 2.5
+        },
+        "observed_red_crossing_ids": [
+          "synthetic_front",
+          "synthetic_front"
+        ]
+      },
+      "actual": {
+        "decision": "INELIGIBLE",
+        "reasons": [
+          "OBSERVED_RED_ANOMALY"
+        ]
+      },
+      "expected": "UNKNOWN"
+    },
+    {
+      "case": "empty_id",
+      "input": {
+        "schema": "A1_LOCAL_DIAGNOSTIC_V1",
+        "source_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+        "time_s": 1206,
+        "measurement_time_s": 1206,
+        "next_switch_s": 1206,
+        "step_s": 1,
+        "phase_before": 1,
+        "state_before": "y",
+        "motion_state": "r",
+        "program": "CA_C24",
+        "controlled_link": [
+          "ramp_storage_0",
+          "ramp_accel_0",
+          ":ramp_mid_0_0"
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "synthetic_front",
+            "role": "front",
+            "type_id": "technical_passenger",
+            "model": "Krauss",
+            "speed_mode": 31,
+            "lane_change_mode": 1621,
+            "speed_m_s": 4.5,
+            "seen_m": 20.0,
+            "lane_offset_m": 0.0,
+            "decel_m_s2": 4.5,
+            "emergency_decel_m_s2": 9.0,
+            "yellow_min_decel_m_s2": 3.0,
+            "jm_stopline_gap_m": 1.0,
+            "action_step_s": 1.0,
+            "tau_s": 1.0
+          }
+        ],
+        "affected_inventory_ids": [
+          "synthetic_front"
+        ],
+        "receiver": {
+          "rear_clearance_m": 20,
+          "vehicle_length_m": 5,
+          "min_gap_m": 2.5
+        },
+        "observed_red_crossing_ids": [
+          ""
+        ]
+      },
+      "actual": {
+        "decision": "INELIGIBLE",
+        "reasons": [
+          "OBSERVED_RED_ANOMALY"
+        ]
+      },
+      "expected": "UNKNOWN"
+    },
+    {
+      "case": "valid_empty",
+      "input": {
+        "schema": "A1_LOCAL_DIAGNOSTIC_V1",
+        "source_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+        "time_s": 1206,
+        "measurement_time_s": 1206,
+        "next_switch_s": 1206,
+        "step_s": 1,
+        "phase_before": 1,
+        "state_before": "y",
+        "motion_state": "r",
+        "program": "CA_C24",
+        "controlled_link": [
+          "ramp_storage_0",
+          "ramp_accel_0",
+          ":ramp_mid_0_0"
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "synthetic_front",
+            "role": "front",
+            "type_id": "technical_passenger",
+            "model": "Krauss",
+            "speed_mode": 31,
+            "lane_change_mode": 1621,
+            "speed_m_s": 4.5,
+            "seen_m": 20.0,
+            "lane_offset_m": 0.0,
+            "decel_m_s2": 4.5,
+            "emergency_decel_m_s2": 9.0,
+            "yellow_min_decel_m_s2": 3.0,
+            "jm_stopline_gap_m": 1.0,
+            "action_step_s": 1.0,
+            "tau_s": 1.0
+          }
+        ],
+        "affected_inventory_ids": [
+          "synthetic_front"
+        ],
+        "receiver": {
+          "rear_clearance_m": 20,
+          "vehicle_length_m": 5,
+          "min_gap_m": 2.5
+        },
+        "observed_red_crossing_ids": []
+      },
+      "actual": {
+        "decision": "UNKNOWN",
+        "reasons": [
+          "UNPROVEN_NATIVE_SPEED_AND_GLOBAL_COVERAGE",
+          "RECEIVER_LEADER_FOLLOWER_FOE_AND_RANDOM_BOUNDS_UNRESOLVED"
+        ],
+        "eligible_path_implemented": false
+      },
+      "expected": "UNKNOWN"
+    },
+    {
+      "case": "valid_known",
+      "input": {
+        "schema": "A1_LOCAL_DIAGNOSTIC_V1",
+        "source_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+        "time_s": 1206,
+        "measurement_time_s": 1206,
+        "next_switch_s": 1206,
+        "step_s": 1,
+        "phase_before": 1,
+        "state_before": "y",
+        "motion_state": "r",
+        "program": "CA_C24",
+        "controlled_link": [
+          "ramp_storage_0",
+          "ramp_accel_0",
+          ":ramp_mid_0_0"
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "synthetic_front",
+            "role": "front",
+            "type_id": "technical_passenger",
+            "model": "Krauss",
+            "speed_mode": 31,
+            "lane_change_mode": 1621,
+            "speed_m_s": 4.5,
+            "seen_m": 20.0,
+            "lane_offset_m": 0.0,
+            "decel_m_s2": 4.5,
+            "emergency_decel_m_s2": 9.0,
+            "yellow_min_decel_m_s2": 3.0,
+            "jm_stopline_gap_m": 1.0,
+            "action_step_s": 1.0,
+            "tau_s": 1.0
+          }
+        ],
+        "affected_inventory_ids": [
+          "synthetic_front"
+        ],
+        "receiver": {
+          "rear_clearance_m": 20,
+          "vehicle_length_m": 5,
+          "min_gap_m": 2.5
+        },
+        "observed_red_crossing_ids": [
+          "synthetic_front"
+        ]
+      },
+      "actual": {
+        "decision": "INELIGIBLE",
+        "reasons": [
+          "OBSERVED_RED_ANOMALY"
+        ]
+      },
+      "expected": "INELIGIBLE"
+    },
+    {
+      "case": "missing",
+      "input": {
+        "schema": "A1_LOCAL_DIAGNOSTIC_V1",
+        "source_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+        "time_s": 1206,
+        "measurement_time_s": 1206,
+        "next_switch_s": 1206,
+        "step_s": 1,
+        "phase_before": 1,
+        "state_before": "y",
+        "motion_state": "r",
+        "program": "CA_C24",
+        "controlled_link": [
+          "ramp_storage_0",
+          "ramp_accel_0",
+          ":ramp_mid_0_0"
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "synthetic_front",
+            "role": "front",
+            "type_id": "technical_passenger",
+            "model": "Krauss",
+            "speed_mode": 31,
+            "lane_change_mode": 1621,
+            "speed_m_s": 4.5,
+            "seen_m": 20.0,
+            "lane_offset_m": 0.0,
+            "decel_m_s2": 4.5,
+            "emergency_decel_m_s2": 9.0,
+            "yellow_min_decel_m_s2": 3.0,
+            "jm_stopline_gap_m": 1.0,
+            "action_step_s": 1.0,
+            "tau_s": 1.0
+          }
+        ],
+        "affected_inventory_ids": [
+          "synthetic_front"
+        ],
+        "receiver": {
+          "rear_clearance_m": 20,
+          "vehicle_length_m": 5,
+          "min_gap_m": 2.5
+        }
+      },
+      "actual": {
+        "decision": "UNKNOWN",
+        "reasons": [
+          "UNPROVEN_NATIVE_SPEED_AND_GLOBAL_COVERAGE",
+          "RECEIVER_LEADER_FOLLOWER_FOE_AND_RANDOM_BOUNDS_UNRESOLVED"
+        ],
+        "eligible_path_implemented": false
+      },
+      "expected": "UNKNOWN"
+    },
+    {
+      "case": "stale_time",
+      "input": {
+        "schema": "A1_LOCAL_DIAGNOSTIC_V1",
+        "source_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+        "time_s": 1206,
+        "measurement_time_s": 1205,
+        "next_switch_s": 1206,
+        "step_s": 1,
+        "phase_before": 1,
+        "state_before": "y",
+        "motion_state": "r",
+        "program": "CA_C24",
+        "controlled_link": [
+          "ramp_storage_0",
+          "ramp_accel_0",
+          ":ramp_mid_0_0"
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "synthetic_front",
+            "role": "front",
+            "type_id": "technical_passenger",
+            "model": "Krauss",
+            "speed_mode": 31,
+            "lane_change_mode": 1621,
+            "speed_m_s": 4.5,
+            "seen_m": 20.0,
+            "lane_offset_m": 0.0,
+            "decel_m_s2": 4.5,
+            "emergency_decel_m_s2": 9.0,
+            "yellow_min_decel_m_s2": 3.0,
+            "jm_stopline_gap_m": 1.0,
+            "action_step_s": 1.0,
+            "tau_s": 1.0
+          }
+        ],
+        "affected_inventory_ids": [
+          "synthetic_front"
+        ],
+        "receiver": {
+          "rear_clearance_m": 20,
+          "vehicle_length_m": 5,
+          "min_gap_m": 2.5
+        },
+        "observed_red_crossing_ids": [
+          "synthetic_front"
+        ]
+      },
+      "actual": {
+        "decision": "UNKNOWN",
+        "reasons": [
+          "OBSERVED_RED_ANOMALY",
+          "TIME_OR_EVENT_MISMATCH"
+        ]
+      },
+      "expected": "UNKNOWN_WITHOUT_OBSERVED_RED_ANOMALY"
+    },
+    {
+      "case": "unbound_source",
+      "input": {
+        "schema": "A1_LOCAL_DIAGNOSTIC_V1",
+        "source_commit": "other",
+        "time_s": 1206,
+        "measurement_time_s": 1206,
+        "next_switch_s": 1206,
+        "step_s": 1,
+        "phase_before": 1,
+        "state_before": "y",
+        "motion_state": "r",
+        "program": "CA_C24",
+        "controlled_link": [
+          "ramp_storage_0",
+          "ramp_accel_0",
+          ":ramp_mid_0_0"
+        ],
+        "vehicles": [
+          {
+            "vehicle_id": "synthetic_front",
+            "role": "front",
+            "type_id": "technical_passenger",
+            "model": "Krauss",
+            "speed_mode": 31,
+            "lane_change_mode": 1621,
+            "speed_m_s": 4.5,
+            "seen_m": 20.0,
+            "lane_offset_m": 0.0,
+            "decel_m_s2": 4.5,
+            "emergency_decel_m_s2": 9.0,
+            "yellow_min_decel_m_s2": 3.0,
+            "jm_stopline_gap_m": 1.0,
+            "action_step_s": 1.0,
+            "tau_s": 1.0
+          }
+        ],
+        "affected_inventory_ids": [
+          "synthetic_front"
+        ],
+        "receiver": {
+          "rear_clearance_m": 20,
+          "vehicle_length_m": 5,
+          "min_gap_m": 2.5
+        },
+        "observed_red_crossing_ids": [
+          "synthetic_front"
+        ]
+      },
+      "actual": {
+        "decision": "UNKNOWN",
+        "reasons": [
+          "OBSERVED_RED_ANOMALY",
+          "SOURCE_UNBOUND"
+        ]
+      },
+      "expected": "UNKNOWN_WITHOUT_OBSERVED_RED_ANOMALY"
+    }
+  ],
+  "scope": "actual saved V3 helper invoked with synthetic inputs; truthiness caused malformed/unbound evidence to claim observed anomaly"
+}

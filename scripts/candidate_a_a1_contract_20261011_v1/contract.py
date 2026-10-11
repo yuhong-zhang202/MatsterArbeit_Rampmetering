@@ -229,8 +229,11 @@ def diagnostic_decision(state):
     if len(set(ids))!=len(ids):
         unknown.append('DUPLICATE_VEHICLE_ID')
     inventory=state.get('affected_inventory_ids')
-    if (not isinstance(inventory,list) or any(not isinstance(v,str) for v in inventory)
-            or len(set(inventory))!=len(inventory) or set(ids)!=set(inventory)):
+    inventory_valid=(isinstance(inventory,list)
+                     and all(isinstance(v,str) and bool(v.strip()) for v in inventory)
+                     and len(set(inventory))==len(inventory)
+                     and set(ids)==set(inventory))
+    if not inventory_valid:
         unknown.append('UNENUMERATED_OR_INCONSISTENT_INVENTORY')
     receiver=state.get('receiver')
     if not isinstance(receiver,dict):
@@ -249,7 +252,19 @@ def diagnostic_decision(state):
                         deny.append('RECEIVER_BLOCKED')
                 except (ValueError,OverflowError):
                     unknown.append('RECEIVER_ARITHMETIC_UNREPRESENTABLE')
-    if state.get('observed_red_crossing_ids'):
+    crossings=state.get('observed_red_crossing_ids')
+    crossings_valid=(isinstance(crossings,list)
+                     and all(isinstance(v,str) and bool(v.strip()) for v in crossings)
+                     and len(set(crossings))==len(crossings))
+    if not crossings_valid:
+        unknown.append('RED_CROSSING_EVIDENCE_MISSING_OR_MALFORMED')
+    elif not inventory_valid or not set(crossings).issubset(set(inventory)):
+        unknown.append('RED_CROSSING_EVIDENCE_UNBOUND_TO_INVENTORY')
+    elif unknown:
+        # IDs alone cannot attach an observation to a stale/inconsistent state.
+        unknown.append('RED_CROSSING_EVIDENCE_UNBOUND_TO_STATE')
+    elif crossings:
+        # This is a schema-bound supplied observation, not native proof or safety.
         deny.append('OBSERVED_RED_ANOMALY')
     # An inconsistent diagnostic snapshot cannot be used even for a binding denial.
     if unknown:
