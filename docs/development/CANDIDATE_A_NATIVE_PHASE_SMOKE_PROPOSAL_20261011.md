@@ -85,4 +85,16 @@ After the user reviews this proposal, any bridge implementation must remain narr
 
 Required review sequence: simulation_engineer → data_analyst → scientific_reviewer. Versioned source/testing and independent review receipts are stored under `artifacts/candidate_a_native_smoke_proposal_20261011_v1/` and `data/processed/candidate_a_native_smoke_proposal_20261011_v1/`. Actual command outcomes and their source bindings, not this plan, determine verification coverage. Original failed checks remain preserved. No SUMO or TraCI launch occurred.
 
+All three reviews completed; [final read-only scientific review](../../artifacts/candidate_a_native_smoke_proposal_20261011_v1/FINAL_SCIENTIFIC_REVIEW.md) returned **PASS_FOR_BOUNDED_NATIVE_PHASE_SMOKE_PREPARATION_ONLY**, with no unresolved required finding. This gate covers preparation, not prelaunch readiness, native safety or rate qualification.
+
+Actual tested code commit: `c4a70b1582db4d9778d84ce555317de8f14e9fc0`. A fresh local no-hardlinks, single-branch checkout, containing only `.gitkeep` under raw, ran these commands once with Python 3.13.0 and bytecode writes disabled:
+
+| Offline check | Actual result | Scope |
+|---|---|---|
+| `python -m unittest discover -s tests/candidate_a_native_smoke_20261011 -v` | 10 PASS, 0 FAIL/ERROR/SKIP | Fake connection, binding/stop/accounting cases; includes plan-only CLI rejection |
+| `python data/processed/candidate_a_native_smoke_proposal_20261011_v1/review_yellow.py` | Exit 0 / PASS | Selected public extract and conditional calculations |
+| `python data/processed/candidate_a_native_smoke_proposal_20261011_v1/review_adapter.py` | Exit 0 / PASS, 4 probes | Current seven engineering bindings, 536 protected files, selected accounting/stop cases |
+
+See [actual clean-checkout receipt](../../artifacts/candidate_a_native_smoke_proposal_20261011_v1/DELIVERED_CODE_CLEAN_CHECKOUT_RECEIPT.json) and [archived exact outputs](../../artifacts/candidate_a_native_smoke_proposal_20261011_v1/CLEAN_OUTPUT_ARCHIVE_BINDING.json). Original-local optional raw-hash checking passed separately; it was intentionally not run in the raw-free checkout. Native signal/physics and launch integration were not tested; the unchanged historical 43-test suite was not rerun. Later documentation/receipt-only commits do not change these tested code bytes and are not described as separately tested execution versions.
+
 PROJECT_STATE receives only the factual preparation status; WORKLOG records this bounded work. DECISIONS, formal protocol, AGENTS and supervision records are unchanged. Unrelated MemoryCore/private-email work is excluded from this delivery. Next handler: user/Chat reviews this proposal and its explicit integration gap. Suggestions here do not constitute execution authorization.
