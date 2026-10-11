@@ -1,0 +1,1121 @@
+{
+  "classification": "ACTUAL_DELIVERED_P2_CODE_CLEAN_CHECKOUT_NOT_NATIVE_SAFETY",
+  "timestamp_utc": "2026-10-11T14:11:01.317073+00:00",
+  "code_commit": "a88f234541db7aa640048342e297efcc92888b63",
+  "checkout_path": "/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/pr9-p2-clean-7mtesxus/checkout",
+  "python_version": "3.13.0 (v3.13.0:60403a5409f, Oct  7 2024, 00:37:40) [Clang 15.0.0 (clang-1500.3.9.4)]",
+  "clone_argv": [
+    "git",
+    "clone",
+    "--no-hardlinks",
+    "--single-branch",
+    "--branch",
+    "codex/issue-8-a1-eligibility-contract",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering",
+    "/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/pr9-p2-clean-7mtesxus/checkout"
+  ],
+  "clone_returncode": 0,
+  "clone_stdout": "",
+  "clone_stderr": "Cloning into '/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/pr9-p2-clean-7mtesxus/checkout'...\ndone.\nUpdating files:   7% (581/7315)\nUpdating files:   8% (586/7315)\nUpdating files:   9% (659/7315)\nUpdating files:  10% (732/7315)\nUpdating files:  10% (755/7315)\nUpdating files:  11% (805/7315)\nUpdating files:  12% (878/7315)\nUpdating files:  13% (951/7315)\nUpdating files:  14% (1025/7315)\nUpdating files:  15% (1098/7315)\nUpdating files:  16% (1171/7315)\nUpdating files:  17% (1244/7315)\nUpdating files:  18% (1317/7315)\nUpdating files:  19% (1390/7315)\nUpdating files:  20% (1463/7315)\nUpdating files:  21% (1537/7315)\nUpdating files:  22% (1610/7315)\nUpdating files:  23% (1683/7315)\nUpdating files:  24% (1756/7315)\nUpdating files:  25% (1829/7315)\nUpdating files:  26% (1902/7315)\nUpdating files:  27% (1976/7315)\nUpdating files:  28% (2049/7315)\nUpdating files:  29% (2122/7315)\nUpdating files:  30% (2195/7315)\nUpdating files:  31% (2268/7315)\nUpdating files:  32% (2341/7315)\nUpdating files:  33% (2414/7315)\nUpdating files:  34% (2488/7315)\nUpdating files:  35% (2561/7315)\nUpdating files:  36% (2634/7315)\nUpdating files:  37% (2707/7315)\nUpdating files:  38% (2780/7315)\nUpdating files:  39% (2853/7315)\nUpdating files:  40% (2926/7315)\nUpdating files:  41% (3000/7315)\nUpdating files:  42% (3073/7315)\nUpdating files:  43% (3146/7315)\nUpdating files:  44% (3219/7315)\nUpdating files:  45% (3292/7315)\nUpdating files:  46% (3365/7315)\nUpdating files:  47% (3439/7315)\nUpdating files:  48% (3512/7315)\nUpdating files:  48% (3564/7315)\nUpdating files:  49% (3585/7315)\nUpdating files:  50% (3658/7315)\nUpdating files:  51% (3731/7315)\nUpdating files:  52% (3804/7315)\nUpdating files:  53% (3877/7315)\nUpdating files:  54% (3951/7315)\nUpdating files:  55% (4024/7315)\nUpdating files:  56% (4097/7315)\nUpdating files:  57% (4170/7315)\nUpdating files:  58% (4243/7315)\nUpdating files:  59% (4316/7315)\nUpdating files:  60% (4389/7315)\nUpdating files:  61% (4463/7315)\nUpdating files:  62% (4536/7315)\nUpdating files:  63% (4609/7315)\nUpdating files:  64% (4682/7315)\nUpdating files:  65% (4755/7315)\nUpdating files:  66% (4828/7315)\nUpdating files:  67% (4902/7315)\nUpdating files:  68% (4975/7315)\nUpdating files:  69% (5048/7315)\nUpdating files:  70% (5121/7315)\nUpdating files:  71% (5194/7315)\nUpdating files:  72% (5267/7315)\nUpdating files:  73% (5340/7315)\nUpdating files:  74% (5414/7315)\nUpdating files:  75% (5487/7315)\nUpdating files:  76% (5560/7315)\nUpdating files:  77% (5633/7315)\nUpdating files:  78% (5706/7315)\nUpdating files:  79% (5779/7315)\nUpdating files:  80% (5852/7315)\nUpdating files:  81% (5926/7315)\nUpdating files:  82% (5999/7315)\nUpdating files:  83% (6072/7315)\nUpdating files:  84% (6145/7315)\nUpdating files:  85% (6218/7315)\nUpdating files:  86% (6291/7315)\nUpdating files:  86% (6300/7315)\nUpdating files:  87% (6365/7315)\nUpdating files:  88% (6438/7315)\nUpdating files:  89% (6511/7315)\nUpdating files:  90% (6584/7315)\nUpdating files:  91% (6657/7315)\nUpdating files:  92% (6730/7315)\nUpdating files:  93% (6803/7315)\nUpdating files:  94% (6877/7315)\nUpdating files:  95% (6950/7315)\nUpdating files:  96% (7023/7315)\nUpdating files:  96% (7092/7315)\nUpdating files:  97% (7096/7315)\nUpdating files:  98% (7169/7315)\nUpdating files:  99% (7242/7315)\nUpdating files: 100% (7315/7315)\nUpdating files: 100% (7315/7315), done.\n",
+  "ignored_a07_raw_present": false,
+  "command": [
+    "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+    "scripts/candidate_a_a1_contract_20261011_v1/independent_data_check.py",
+    "--output",
+    "/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/pr9-p2-clean-7mtesxus/independent_receipt.json"
+  ],
+  "returncode": 0,
+  "stdout": "{\"status\": \"PASS\", \"protected_checked\": 536, \"witness_count\": 42, \"service_observed_steps\": [6, 0, 0, 0, 0, 0], \"actual_native_branches_determined\": 0}\n",
+  "stderr": "",
+  "SUMO_TraCI_starts": 0,
+  "native_Cpp_builds": 0,
+  "test_runtime_network_used": false,
+  "independent_receipt_sha256": "991f00ae75813400fbe4dc1457b083bad7f7b9875933fef52b871998db9b6012",
+  "independent_receipt": {
+    "status": "PASS",
+    "classification": "EXPLORATORY_OFFLINE_EVIDENCE_INTEGRITY_NOT_SAFETY_QUALIFICATION",
+    "protected_checked": 536,
+    "input_binding_path": "artifacts/candidate_a_a1_contract_20261011_v1/review_fix_20261011/v4/INPUT_BINDINGS_V4.json",
+    "input_sha256": {
+      "artifacts/candidate_a_qualification_20261008_v1/pr_review/CA_FIXED_R300_S17_A07/outputs/failure_snapshot.json": "0cb77aa1549d500628fa136742d5119d0cdbdd94c5e23f357090b44c6ccc984d",
+      "artifacts/candidate_a_qualification_20261008_v1/pr_review/CA_FIXED_R300_S17_A07/outputs/coverage.json": "7fbec3eb4c0149e35592f36f4353cb616f222377aec877f29bb5329543fc23f2",
+      "artifacts/candidate_a_qualification_20261008_v1/engineering/R300_A07_GUARD_NATIVE_DIAGNOSIS_RECEIPT.json": "4f39077eb6a62b761fb37e4efad38565a9f761342099ef2794b25e816c70cb3b",
+      "data/processed/candidate_a_qualification_20261008_v1/R300_A07_ACTUAL_DATA_GATE_V3.json": "d7cf23dce2f2639c0f972102938cca492bd7d6442c7b5d1c6eeac37b72c2a20f",
+      "results/tables/candidate_a_qualification_20261008_v1/R300_A07_SERVICE_WINDOWS_V3.csv": "bcfa2f49991ab5ea4eca58d9b6237a76952de940c7ca85030bb9a2f6264e9546",
+      "results/tables/candidate_a_qualification_20261008_v1/R300_A07_PHASE_LEDGER_THIN_V3.csv": "8a1e59af0e4924fd30ec18cf81782ad40d1b19e50b933d336edb27d863c98156",
+      "scripts/candidate_a_safety_contract_20261011_v1/audit_a07.py": "5a9bbcf610acaefa95291e102c3a3b99020d921f306e878861057441a2456aaa",
+      "config/candidate_a_qualification_20261008_v1/PHASE_RATE_CONTRACT.json": "f4af413e055e9f5d9404df0b3644c0538e7fb4cd6082b0e0722cff7740f9ec59",
+      "config/candidate_a_qualification_20261008_v1/CA_FIXED_R300_S17_A07/scenario.sumocfg": "765f7258d16546cf75c86c58ccc37dd26c1be5bf54286828d0a1b3f5349355d6",
+      "config/candidate_a_qualification_20261008_v1/CA_FIXED_R300_S17_A07/scenario.add.xml": "34e5773c1d87884ecc9c741a1f268929074bc5793824533f13cdb34594fc85f9",
+      "config/candidate_a_qualification_20261008_v1/CA_FIXED_R300_S17_A07/demand.rou.xml": "99151ed51419c8d490c0f0b1a91bea23f6be70c5486890a04e1e06b3de5d808e",
+      "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+      "src/candidate_a_qualification_20261008/safety.py": "f11e1854821ba613045f15c7561e41c1baa6fee06e83ff87790e51d4fffe11b5",
+      "src/candidate_a_qualification_20261008/actor.py": "bbfeaeb8168ed55f6001e4aec19d4e54c984aa45933a339d5c5b78479279be68",
+      "scripts/candidate_a_qualification_20261008_v1/worker.py": "5d776dfcef39163389564c0a6921a8873478fae76b13651795443d077d9ed243",
+      "scripts/candidate_a_a1_contract_20261011_v1/contract.py": "b60a62fd92bbc514cb2a7dc248bf7ba311d1229f52c834123da3cb93177d84de",
+      "scripts/candidate_a_a1_contract_20261011_v1/audit_public.py": "56d2f31f3a4631e4dcf372a511cafcf032298a710ec0b4f2d7a9f847c59da5d1",
+      "tests/candidate_a_a1_contract_20261011_v1/test_contract.py": "9fbac0171385dfdf8cbc607aa4b20c85eb8c069832c11a1f237fa39c75b04502",
+      "artifacts/candidate_a_a1_contract_20261011_v1/engineering/SOURCE_RECEIPT.json": "03da4b06a49c6a3f3a6e4e98bb0b126f149f65f1afee9e95106a336d5ef799dd",
+      "artifacts/candidate_a_a1_contract_20261011_v1/engineering/SOURCE_EXCERPTS.json": "1501a767c67ef8c0419e0b06f52490d56ccf95510737eacf4174a697249205bf",
+      "artifacts/candidate_a_a1_contract_20261011_v1/engineering/SOURCE_TO_BRANCH_LEDGER.json": "f036486a0c6865f03f7291b65a719164b5099c2a25544110343dd66766635e81",
+      "artifacts/candidate_a_a1_contract_20261011_v1/engineering/PROOF_OBLIGATIONS.json": "6d588655de9d14a7ba0dc318be2d5374a016c694f1635d2b625c3d46fb717568",
+      "artifacts/candidate_a_a1_contract_20261011_v1/engineering/STATIC_TOPOLOGY.json": "777947ef1c00747cd2f800219fde6f0308c310019e32f9bd49c10baa575fdf9c",
+      "artifacts/candidate_a_a1_contract_20261011_v1/engineering/v1_source_snapshot/ENGINEERING_REVIEW.md": "21d73bef412946c76c9e8b464c32ce1f0112cfe8a2e64bcdc667ca78b69a710b",
+      "artifacts/candidate_a_a1_contract_20261011_v1/engineering/v1_source_snapshot/test_contract.py": "e3376673048204c6b4348b724ad2e4615021f34c498bdbdc6f911de8f5dd6ca6",
+      "artifacts/candidate_a_a1_contract_20261011_v1/engineering/v1_source_snapshot/CANDIDATE_A_A1_ELIGIBILITY_CONTRACT.md": "f123f76e71cb6d5dfbf570f2159166566bbb4a90cef5e9070e9bb7d05143a171",
+      "artifacts/candidate_a_a1_contract_20261011_v1/engineering/v1_source_snapshot/contract.py": "d507300af57dd91bf92131f393fefe0524a5f3f15b5a88953e875cbf45ac3e91",
+      "artifacts/candidate_a_a1_contract_20261011_v1/engineering/v1_source_snapshot/audit_public.py": "b925c4451be8f3de8695e1dcf9bf17ecfff8f29360bcde73b25705fe60eac956",
+      "artifacts/candidate_a_a1_contract_20261011_v1/engineering/INPUT_BINDINGS.json": "288b3ca94bfc558bf9716cf1378b9270b83d7d5d8b5a9ff1df59ec93f0eeceef",
+      "artifacts/candidate_a_a1_contract_20261011_v1/engineering/OFFLINE_TEST_RECEIPT.json": "0363985f678db4a51b2cc9849456332cb59df000c71966587da6430b4a845010",
+      "artifacts/candidate_a_a1_contract_20261011_v1/engineering/UNIT_TEST_LOG.txt": "e1d4a77652bdee4f5e692755e67a1ca4b1d7fbe8de574df27c5938642c243fc1",
+      "artifacts/candidate_a_a1_contract_20261011_v1/engineering/PUBLIC_AUDIT_OUTPUT.json": "96936b9db18af4cc1f5ae29e25cbb2bd871036abe15b740850554482fa7a35af",
+      "artifacts/candidate_a_a1_contract_20261011_v1/engineering/v2_source_snapshot/ENGINEERING_REVIEW.md": "4fe03edf56a9abe567d652978978074b3418bbfbe2c97b8e33aba0484ddcbfbc",
+      "artifacts/candidate_a_a1_contract_20261011_v1/engineering/v2_source_snapshot/test_contract.py": "563138bd6ab677da3d7faea7c3d32cbf65243b04c4836ff076467dd77d841866",
+      "artifacts/candidate_a_a1_contract_20261011_v1/engineering/v2_source_snapshot/CANDIDATE_A_A1_ELIGIBILITY_CONTRACT.md": "0b25a60f6dd6bac512d8578778beabb8b709d1528fda508e5624e96a0ccb5c02",
+      "artifacts/candidate_a_a1_contract_20261011_v1/engineering/v2_source_snapshot/contract.py": "5cbaa36cacf2d0e409e507efb64f15f7416c0a73f765805bb78d3c3635c6dfb6",
+      "artifacts/candidate_a_a1_contract_20261011_v1/engineering/v2_source_snapshot/audit_public.py": "8ce8923043c98cc294ddfc290b79407a2d2ee203875e387877b01a545f523adb",
+      "artifacts/candidate_a_a1_contract_20261011_v1/engineering/v3/CPP_INTEGER_DOMAIN_SOURCE_RECEIPT.json": "9d4bf9c10344b92de812f852b7f33d1502bd721eb58509b9458127ed4f147a31",
+      "artifacts/candidate_a_a1_contract_20261011_v1/engineering/v2/INPUT_BINDINGS_V2_R1.json": "37b192e114b7555e24ac5b8d650160f32daa3477113c8dbe47fcb66598462c19",
+      "artifacts/candidate_a_a1_contract_20261011_v1/engineering/v2/OFFLINE_TEST_RECEIPT_V2.json": "1ca70362a8109df055e7342d4624b0c62a742da5c855dbd3e9fd62ced15f63d1",
+      "artifacts/candidate_a_a1_contract_20261011_v1/engineering/v2/PUBLIC_AUDIT_OUTPUT_V2.json": "bdad95cb2613ee1013a25c19c28e8fd735c9ec3ff5329efbea4a905119fc0992",
+      "artifacts/candidate_a_a1_contract_20261011_v1/engineering/v2/UNIT_TEST_LOG_V2.txt": "a7020626407560b3d55337abaf5d74dc4b534388b9c930e1805b316b8623030d",
+      "artifacts/candidate_a_a1_contract_20261011_v1/review_fix_20261011/v4/v3_source_snapshot/INPUT_BINDINGS_V3.json": "f746b6455fd54af82e90d5819210b445af7cb69c72120e248c275dc794cadd18",
+      "artifacts/candidate_a_a1_contract_20261011_v1/review_fix_20261011/v4/v3_source_snapshot/test_contract.py": "fcda0720c1aebbfeff882fcdb8ad27c9e154a17ebc72ce88686f2a11aff17219",
+      "artifacts/candidate_a_a1_contract_20261011_v1/review_fix_20261011/v4/v3_source_snapshot/contract.py": "0c26a985627d8640bedd245dfd3211aa36a71d35eda860f37413938cd8b7c45c",
+      "artifacts/candidate_a_a1_contract_20261011_v1/review_fix_20261011/v4/v3_source_snapshot/audit_public.py": "fc0d7a26f32e9d61d25b6d0bfad820bb8d2845a8a09c1fc11b162717ba2663ca",
+      "artifacts/candidate_a_a1_contract_20261011_v1/review_fix_20261011/v4/PRE_REPAIR_COUNTEREXAMPLES.json": "2724faf9625a0d15b3138ada82a60ccf5996cb289cd17cc904dba3cff94f721a"
+    },
+    "source_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+    "source_excerpts_verified": 36,
+    "whole_remote_sources_reverified": false,
+    "witness_count": 42,
+    "populations": {
+      "storage": 27,
+      "ingress": 15
+    },
+    "mapping": [
+      {
+        "vehicle_id": "R_flow.27",
+        "population": "storage",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 203.5288914559441,
+        "old_required_m": 0.0,
+        "old_margin_m": 203.5288914559441,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 40.502789145594406
+      },
+      {
+        "vehicle_id": "R_flow.26",
+        "population": "storage",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 196.02787233867687,
+        "old_required_m": 0.0,
+        "old_margin_m": 196.02787233867687,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 39.66965248207521
+      },
+      {
+        "vehicle_id": "R_flow.25",
+        "population": "storage",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 188.52681160495274,
+        "old_required_m": 0.0,
+        "old_margin_m": 188.52681160495274,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 38.83620128943919
+      },
+      {
+        "vehicle_id": "R_flow.24",
+        "population": "storage",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 181.025799498954,
+        "old_required_m": 0.0,
+        "old_margin_m": 181.025799498954,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 38.002755499883776
+      },
+      {
+        "vehicle_id": "R_flow.23",
+        "population": "storage",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 173.52479690900634,
+        "old_required_m": 0.0,
+        "old_margin_m": 173.52479690900634,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 37.16931076766737
+      },
+      {
+        "vehicle_id": "R_flow.22",
+        "population": "storage",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 166.02379080059248,
+        "old_required_m": 0.0,
+        "old_margin_m": 166.02379080059248,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 36.33586564451028
+      },
+      {
+        "vehicle_id": "R_flow.21",
+        "population": "storage",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 158.52277885899036,
+        "old_required_m": 0.0,
+        "old_margin_m": 158.52277885899036,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 35.4402223573738
+      },
+      {
+        "vehicle_id": "R_flow.20",
+        "population": "storage",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 151.02170548450525,
+        "old_required_m": 0.0,
+        "old_margin_m": 151.02170548450525,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 34.502588185563155
+      },
+      {
+        "vehicle_id": "R_flow.19",
+        "population": "storage",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 143.52068691874925,
+        "old_required_m": 0.0,
+        "old_margin_m": 143.52068691874925,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 33.564960864843655
+      },
+      {
+        "vehicle_id": "R_flow.18",
+        "population": "storage",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 136.01968648215225,
+        "old_required_m": 0.0,
+        "old_margin_m": 136.01968648215225,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 32.62733581026903
+      },
+      {
+        "vehicle_id": "R_flow.17",
+        "population": "storage",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 128.51861449291,
+        "old_required_m": 0.0,
+        "old_margin_m": 128.51861449291,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 31.68970181161375
+      },
+      {
+        "vehicle_id": "R_flow.16",
+        "population": "storage",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 121.01754873175402,
+        "old_required_m": 0.0,
+        "old_margin_m": 121.01754873175402,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 30.64522124739343
+      },
+      {
+        "vehicle_id": "R_flow.15",
+        "population": "storage",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 113.51653910780739,
+        "old_required_m": 0.0,
+        "old_margin_m": 113.51653910780739,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 29.573648443972488
+      },
+      {
+        "vehicle_id": "R_flow.14",
+        "population": "storage",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 106.01545353179722,
+        "old_required_m": 0.0,
+        "old_margin_m": 106.01545353179722,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 28.502064790256746
+      },
+      {
+        "vehicle_id": "R_flow.13",
+        "population": "storage",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 98.51445350755122,
+        "old_required_m": 0.0,
+        "old_margin_m": 98.51445350755122,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 27.430493358221604
+      },
+      {
+        "vehicle_id": "R_flow.12",
+        "population": "storage",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 91.01340045962496,
+        "old_required_m": 0.0,
+        "old_margin_m": 91.01340045962496,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 26.252066743270824
+      },
+      {
+        "vehicle_id": "R_flow.11",
+        "population": "storage",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 83.51235385351306,
+        "old_required_m": 0.0,
+        "old_margin_m": 83.51235385351306,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 25.001892308918848
+      },
+      {
+        "vehicle_id": "R_flow.10",
+        "population": "storage",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 76.01125952447927,
+        "old_required_m": 0.0,
+        "old_margin_m": 76.01125952447927,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 23.751709920746542
+      },
+      {
+        "vehicle_id": "R_flow.9",
+        "population": "storage",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 68.5102422633029,
+        "old_required_m": 0.0,
+        "old_margin_m": 68.5102422633029,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 22.501540377217147
+      },
+      {
+        "vehicle_id": "R_flow.8",
+        "population": "storage",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 61.00919009013586,
+        "old_required_m": 0.0,
+        "old_margin_m": 61.00919009013586,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 21.001638018027172
+      },
+      {
+        "vehicle_id": "R_flow.7",
+        "population": "storage",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 53.50818029689091,
+        "old_required_m": 0.0,
+        "old_margin_m": 53.50818029689091,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 19.501436059378186
+      },
+      {
+        "vehicle_id": "R_flow.6",
+        "population": "storage",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 46.00709630323766,
+        "old_required_m": 0.0,
+        "old_margin_m": 46.00709630323766,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 18.00121926064753
+      },
+      {
+        "vehicle_id": "R_flow.5",
+        "population": "storage",
+        "speed_m_s": 0.14344958002819005,
+        "gap_projected_m": 38.362641999907765,
+        "old_required_m": 1.245736000251553,
+        "old_margin_m": 37.11690599965621,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 16.09041049997694
+      },
+      {
+        "vehicle_id": "R_flow.4",
+        "population": "storage",
+        "speed_m_s": 1.2941405376048665,
+        "gap_projected_m": 29.48051153997318,
+        "old_required_m": 2.58022939661289,
+        "old_margin_m": 26.90028214336029,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 13.869877884993294
+      },
+      {
+        "vehicle_id": "R_flow.3",
+        "population": "storage",
+        "speed_m_s": 3.6895633232594656,
+        "gap_projected_m": 18.116013424502142,
+        "old_required_m": 6.3021052695196245,
+        "old_margin_m": 11.813908154982517,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 10.205004474834048
+      },
+      {
+        "vehicle_id": "R_flow.2",
+        "population": "storage",
+        "speed_m_s": 1.092370352007706,
+        "gap_projected_m": 8.688541208253895,
+        "old_required_m": 2.324956239334977,
+        "old_margin_m": 6.363584968918918,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 6.093770604126947
+      },
+      {
+        "vehicle_id": "R_flow.1",
+        "population": "storage",
+        "speed_m_s": 0.04573822948686786,
+        "gap_projected_m": 1.001999189766508,
+        "old_required_m": 1.1459706723353782,
+        "old_margin_m": -0.14397148256887027,
+        "old_safe": false,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 0.000999189766507925
+      },
+      {
+        "vehicle_id": "R_flow.42",
+        "population": "ingress",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 316.0441161523147,
+        "old_required_m": 0.0,
+        "old_margin_m": 316.0441161523147,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 51.0035930126929
+      },
+      {
+        "vehicle_id": "R_flow.41",
+        "population": "ingress",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 308.54310242059495,
+        "old_required_m": 0.0,
+        "old_margin_m": 308.54310242059495,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 50.378508535049576
+      },
+      {
+        "vehicle_id": "R_flow.40",
+        "population": "ingress",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 301.04210238270576,
+        "old_required_m": 0.0,
+        "old_margin_m": 301.04210238270576,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 49.753425198558816
+      },
+      {
+        "vehicle_id": "R_flow.39",
+        "population": "ingress",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 293.5410336743253,
+        "old_required_m": 0.0,
+        "old_margin_m": 293.5410336743253,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 49.09454851584776
+      },
+      {
+        "vehicle_id": "R_flow.38",
+        "population": "ingress",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 286.04003170233443,
+        "old_required_m": 0.0,
+        "old_margin_m": 286.04003170233443,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 48.41263924566677
+      },
+      {
+        "vehicle_id": "R_flow.37",
+        "population": "ingress",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 278.5390297787898,
+        "old_required_m": 0.0,
+        "old_margin_m": 278.5390297787898,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 47.730729979889986
+      },
+      {
+        "vehicle_id": "R_flow.36",
+        "population": "ingress",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 271.0380116102982,
+        "old_required_m": 0.0,
+        "old_margin_m": 271.0380116102982,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 47.04881923729984
+      },
+      {
+        "vehicle_id": "R_flow.35",
+        "population": "ingress",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 263.5369961914984,
+        "old_required_m": 0.0,
+        "old_margin_m": 263.5369961914984,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 46.36690874468168
+      },
+      {
+        "vehicle_id": "R_flow.34",
+        "population": "ingress",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 256.0359873423628,
+        "old_required_m": 0.0,
+        "old_margin_m": 256.0359873423628,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 45.6849988493057
+      },
+      {
+        "vehicle_id": "R_flow.33",
+        "population": "ingress",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 248.53498391464197,
+        "old_required_m": 0.0,
+        "old_margin_m": 248.53498391464197,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 45.00308944678564
+      },
+      {
+        "vehicle_id": "R_flow.32",
+        "population": "ingress",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 241.0339726805442,
+        "old_required_m": 0.0,
+        "old_margin_m": 241.0339726805442,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 44.253297268054425
+      },
+      {
+        "vehicle_id": "R_flow.31",
+        "population": "ingress",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 233.5329685070348,
+        "old_required_m": 0.0,
+        "old_margin_m": 233.5329685070348,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 43.503196850703475
+      },
+      {
+        "vehicle_id": "R_flow.30",
+        "population": "ingress",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 226.03194243777557,
+        "old_required_m": 0.0,
+        "old_margin_m": 226.03194243777557,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 42.753094243777554
+      },
+      {
+        "vehicle_id": "R_flow.29",
+        "population": "ingress",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 218.53094011439038,
+        "old_required_m": 0.0,
+        "old_margin_m": 218.53094011439038,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 42.00299401143904
+      },
+      {
+        "vehicle_id": "R_flow.28",
+        "population": "ingress",
+        "speed_m_s": 0.0,
+        "gap_projected_m": 211.02993400590134,
+        "old_required_m": 0.0,
+        "old_margin_m": 211.02993400590134,
+        "old_safe": true,
+        "conditional_brake_gap_m": 0,
+        "conditional_can_brake": true,
+        "conditional_stop_offset_m": 1.0,
+        "actual_native_branch": "UNKNOWN",
+        "red_outcome": "UNOBSERVED",
+        "conditional_stop_speed_independent_inverse_m_s": 41.25289340059014
+      }
+    ],
+    "conditional_can_brake": 42,
+    "actual_native_branches_determined": 0,
+    "actual_native_branches_basis": "Recorded state omits DriveProcessItem/action/device/receiver joint inputs; conditional algebra cannot select complete native branch. Conservative sufficient interval proof may substitute if independently derived later.",
+    "service_observed_steps": [
+      6,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "derived_phase_rows": 1206,
+    "completed_cycles": 0,
+    "ignored_raw_reads": 0,
+    "clean_checkout_gate": "PENDING_PARENT_DELIVERED_COMMIT_CHECK",
+    "commands": [
+      {
+        "argv": [
+          "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+          "-m",
+          "unittest",
+          "discover",
+          "-s",
+          "tests/candidate_a_a1_contract_20261011_v1",
+          "-v"
+        ],
+        "returncode": 0,
+        "stdout": "",
+        "stderr": "test_arbitrary_proof_flags_cannot_enable_eligible (test_contract.AdversarialContractTests.test_arbitrary_proof_flags_cannot_enable_eligible) ... ok\ntest_changed_modes_and_dynamics (test_contract.AdversarialContractTests.test_changed_modes_and_dynamics) ... ok\ntest_committed_vehicle_is_policy_ineligible_not_proven_collision (test_contract.AdversarialContractTests.test_committed_vehicle_is_policy_ineligible_not_proven_collision) ... ok\ntest_duplicate_or_invalid_identity_fails_closed (test_contract.AdversarialContractTests.test_duplicate_or_invalid_identity_fails_closed) ... ok\ntest_finite_subnormal_decel_and_huge_speed_return_unknown (test_contract.AdversarialContractTests.test_finite_subnormal_decel_and_huge_speed_return_unknown) ... ok\ntest_foe_and_randomness_are_unproved_even_with_local_pass (test_contract.AdversarialContractTests.test_foe_and_randomness_are_unproved_even_with_local_pass) ... ok\ntest_follower_and_ingress_cannot_be_ignored (test_contract.AdversarialContractTests.test_follower_and_ingress_cannot_be_ignored) ... ok\ntest_missing_or_malformed_snapshot_fails_closed (test_contract.AdversarialContractTests.test_missing_or_malformed_snapshot_fails_closed) ... ok\ntest_new_type_missing_fields_nonfinite_fail_closed (test_contract.AdversarialContractTests.test_new_type_missing_fields_nonfinite_fail_closed) ... ok\ntest_observed_red_anomaly_and_yellow_commitment_not_pass (test_contract.AdversarialContractTests.test_observed_red_anomaly_and_yellow_commitment_not_pass) ... ok\ntest_overflowing_finite_receiver_inputs_return_unknown (test_contract.AdversarialContractTests.test_overflowing_finite_receiver_inputs_return_unknown) ... ok\ntest_public_a07_42_mapping_and_missing_observations (test_contract.AdversarialContractTests.test_public_a07_42_mapping_and_missing_observations) ... ok\ntest_public_default_does_not_read_ignored_raw (test_contract.AdversarialContractTests.test_public_default_does_not_read_ignored_raw) ... ok\ntest_public_source_or_input_hash_drift_fails (test_contract.AdversarialContractTests.test_public_source_or_input_hash_drift_fails) ... ok\ntest_receiver_blocked_or_unknown (test_contract.AdversarialContractTests.test_receiver_blocked_or_unknown) ... ok\ntest_red_crossing_foreign_ids_and_invalid_inventory_are_unknown (test_contract.AdversarialContractTests.test_red_crossing_foreign_ids_and_invalid_inventory_are_unknown) ... ok\ntest_red_crossing_missing_and_malformed_evidence_is_unknown (test_contract.AdversarialContractTests.test_red_crossing_missing_and_malformed_evidence_is_unknown) ... ok\ntest_red_crossing_valid_empty_and_bound_positive_remain_distinct (test_contract.AdversarialContractTests.test_red_crossing_valid_empty_and_bound_positive_remain_distinct) ... ok\ntest_red_crossing_valid_ids_do_not_claim_observation_in_inconsistent_state (test_contract.AdversarialContractTests.test_red_crossing_valid_ids_do_not_claim_observation_in_inconsistent_state) ... ok\ntest_synthetic_best_case_remains_unknown (test_contract.AdversarialContractTests.test_synthetic_best_case_remains_unknown) ... ok\ntest_timestamp_phase_link_and_source_mismatches (test_contract.AdversarialContractTests.test_timestamp_phase_link_and_source_mismatches) ... ok\ntest_unenumerated_new_vehicle_fails_closed (test_contract.AdversarialContractTests.test_unenumerated_new_vehicle_fails_closed) ... ok\ntest_braking_formula_against_independent_finite_sum (test_contract.ScalarBoundaryTests.test_braking_formula_against_independent_finite_sum) ... ok\ntest_finite_extreme_brake_values_cannot_emit_nan (test_contract.ScalarBoundaryTests.test_finite_extreme_brake_values_cannot_emit_nan) ... ok\ntest_finite_extreme_stop_speed_inputs_fail_as_valueerror (test_contract.ScalarBoundaryTests.test_finite_extreme_stop_speed_inputs_fail_as_valueerror) ... ok\ntest_finite_native_int_domain_unbound_is_unknown (test_contract.ScalarBoundaryTests.test_finite_native_int_domain_unbound_is_unknown) ... ok\ntest_low_positive_a07_is_old_rejection_not_native_outcome (test_contract.ScalarBoundaryTests.test_low_positive_a07_is_old_rejection_not_native_outcome) ... ok\ntest_native_int_domain_maximum_and_adjacent_boundary (test_contract.ScalarBoundaryTests.test_native_int_domain_maximum_and_adjacent_boundary) ... ok\ntest_native_offset_is_adjusted_not_fixed_one_metre (test_contract.ScalarBoundaryTests.test_native_offset_is_adjusted_not_fixed_one_metre) ... ok\ntest_nonfinite_negative_or_boolean_source_inputs_rejected (test_contract.ScalarBoundaryTests.test_nonfinite_negative_or_boolean_source_inputs_rejected) ... ok\ntest_plan_equality_and_execution_strict_equality_differ (test_contract.ScalarBoundaryTests.test_plan_equality_and_execution_strict_equality_differ) ... ok\ntest_reachability_and_response_underflow_not_silent_zero (test_contract.ScalarBoundaryTests.test_reachability_and_response_underflow_not_silent_zero) ... ok\ntest_reachability_equality_is_not_exclusion (test_contract.ScalarBoundaryTests.test_reachability_equality_is_not_exclusion) ... ok\ntest_stop_offset_can_change_branch_even_when_speed_zero (test_contract.ScalarBoundaryTests.test_stop_offset_can_change_branch_even_when_speed_zero) ... ok\ntest_stop_speed_epsilon_boundary (test_contract.ScalarBoundaryTests.test_stop_speed_epsilon_boundary) ... ok\ntest_yellow_override_and_emergency_decel_are_explicit (test_contract.ScalarBoundaryTests.test_yellow_override_and_emergency_decel_are_explicit) ... ok\ntest_zero_speed_is_not_a_full_eligibility_exemption (test_contract.ScalarBoundaryTests.test_zero_speed_is_not_a_full_eligibility_exemption) ... ok\n\n----------------------------------------------------------------------\nRan 37 tests in 0.029s\n\nOK\n"
+      },
+      {
+        "argv": [
+          "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+          "scripts/candidate_a_a1_contract_20261011_v1/audit_public.py"
+        ],
+        "returncode": 0,
+        "stdout": "{\n  \"status\": \"PASS\",\n  \"classification\": \"UNRESOLVED_NEEDS_EVIDENCE\",\n  \"scope\": \"OFFLINE_PUBLIC_EVIDENCE_AND_CONDITIONAL_SOURCE_SUBPREDICATES\",\n  \"source_commit\": \"fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3\",\n  \"input_files_checked\": 47,\n  \"source_excerpt_count\": 36,\n  \"witness_count\": 42,\n  \"old_guard_unsafe_ids\": [\n    \"R_flow.1\"\n  ],\n  \"conditional_plan_can_brake_count\": 42,\n  \"actual_native_branches_determined\": 0,\n  \"refused_red_motion_steps_executed\": 0,\n  \"sumo_traci_starts\": 0,\n  \"public_evidence_only\": true,\n  \"independent_raw_phase_reconstruction\": false,\n  \"full_a1_eligibility_proven\": false,\n  \"a07_a1_decision\": \"UNKNOWN\",\n  \"runtime_eligible_path_implemented\": false,\n  \"a1_a2_qualified\": false,\n  \"current_contract_STOP3\": \"PRESERVED\",\n  \"rate_900\": \"NOT_TESTED\",\n  \"further_execution\": \"HOLD\",\n  \"upstream_public_audit\": {\n    \"classification\": \"OFFLINE_COMMITTED_EVIDENCE_AUDIT_ONLY\",\n    \"status\": \"PASS\",\n    \"public_evidence_only\": true,\n    \"local_raw_verified\": false,\n    \"thin_phase_fields_reconciled_to_local_raw\": false,\n    \"phase_thin_sha256\": \"8a1e59af0e4924fd30ec18cf81782ad40d1b19e50b933d336edb27d863c98156\",\n    \"public_guardian_sha256\": \"95a263217ccefcddfdb3871080ded7a947111ab75dbc64430bc5323e106b4b04\",\n    \"snapshot_sha256\": \"0cb77aa1549d500628fa136742d5119d0cdbdd94c5e23f357090b44c6ccc984d\",\n    \"gate_sha256\": \"d7cf23dce2f2639c0f972102938cca492bd7d6442c7b5d1c6eeac37b72c2a20f\",\n    \"service_csv_sha256\": \"bcfa2f49991ab5ea4eca58d9b6237a76952de940c7ca85030bb9a2f6264e9546\",\n    \"last_completed_s\": 1206,\n    \"guard_witnesses\": 42,\n    \"population_counts\": {\n      \"storage\": 27,\n      \"ingress\": 15\n    },\n    \"unsafe_ids\": [\n      \"R_flow.1\"\n    ],\n    \"front_gap_m\": 1.001999189766508,\n    \"current_required_m\": 1.1459706723353782,\n    \"current_margin_m\": -0.14397148256887027,\n    \"constant_1m_only_required_m\": 1.045970672335378,\n    \"constant_1m_only_margin_m\": -0.04397148256887018,\n    \"service_observed_steps\": [\n      6,\n      0,\n      0,\n      0,\n      0,\n      0\n    ],\n    \"complete_cycles\": 0,\n    \"effective_qualifications\": 0\n  },\n  \"a07_witness_mapping\": [\n    {\n      \"vehicle_id\": \"R_flow.27\",\n      \"population\": \"storage\",\n      \"front_distance_projected_to_controlled_link_m\": 203.5288914559441,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 203.5288914559441,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 202.5288914559441,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 40.502789145594406\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.26\",\n      \"population\": \"storage\",\n      \"front_distance_projected_to_controlled_link_m\": 196.02787233867687,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 196.02787233867687,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 195.02787233867687,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 39.66965248207521\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.25\",\n      \"population\": \"storage\",\n      \"front_distance_projected_to_controlled_link_m\": 188.52681160495274,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 188.52681160495274,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 187.52681160495274,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 38.836201289439195\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.24\",\n      \"population\": \"storage\",\n      \"front_distance_projected_to_controlled_link_m\": 181.025799498954,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 181.025799498954,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 180.025799498954,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 38.002755499883776\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.23\",\n      \"population\": \"storage\",\n      \"front_distance_projected_to_controlled_link_m\": 173.52479690900634,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 173.52479690900634,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 172.52479690900634,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 37.16931076766737\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.22\",\n      \"population\": \"storage\",\n      \"front_distance_projected_to_controlled_link_m\": 166.02379080059248,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 166.02379080059248,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 165.02379080059248,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 36.33586564451028\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.21\",\n      \"population\": \"storage\",\n      \"front_distance_projected_to_controlled_link_m\": 158.52277885899036,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 158.52277885899036,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 157.52277885899036,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 35.4402223573738\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.20\",\n      \"population\": \"storage\",\n      \"front_distance_projected_to_controlled_link_m\": 151.02170548450525,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 151.02170548450525,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 150.02170548450525,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 34.502588185563155\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.19\",\n      \"population\": \"storage\",\n      \"front_distance_projected_to_controlled_link_m\": 143.52068691874925,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 143.52068691874925,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 142.52068691874925,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 33.564960864843655\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.18\",\n      \"population\": \"storage\",\n      \"front_distance_projected_to_controlled_link_m\": 136.01968648215225,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 136.01968648215225,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 135.01968648215225,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 32.62733581026903\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.17\",\n      \"population\": \"storage\",\n      \"front_distance_projected_to_controlled_link_m\": 128.51861449291,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 128.51861449291,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 127.51861449290999,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 31.689701811613748\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.16\",\n      \"population\": \"storage\",\n      \"front_distance_projected_to_controlled_link_m\": 121.01754873175402,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 121.01754873175402,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 120.01754873175402,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 30.64522124739343\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.15\",\n      \"population\": \"storage\",\n      \"front_distance_projected_to_controlled_link_m\": 113.51653910780739,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 113.51653910780739,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 112.51653910780739,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 29.573648443972484\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.14\",\n      \"population\": \"storage\",\n      \"front_distance_projected_to_controlled_link_m\": 106.01545353179722,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 106.01545353179722,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 105.01545353179722,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 28.502064790256746\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.13\",\n      \"population\": \"storage\",\n      \"front_distance_projected_to_controlled_link_m\": 98.51445350755122,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 98.51445350755122,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 97.51445350755122,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 27.430493358221604\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.12\",\n      \"population\": \"storage\",\n      \"front_distance_projected_to_controlled_link_m\": 91.01340045962496,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 91.01340045962496,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 90.01340045962496,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 26.252066743270827\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.11\",\n      \"population\": \"storage\",\n      \"front_distance_projected_to_controlled_link_m\": 83.51235385351306,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 83.51235385351306,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 82.51235385351306,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 25.001892308918844\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.10\",\n      \"population\": \"storage\",\n      \"front_distance_projected_to_controlled_link_m\": 76.01125952447927,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 76.01125952447927,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 75.01125952447927,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 23.751709920746546\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.9\",\n      \"population\": \"storage\",\n      \"front_distance_projected_to_controlled_link_m\": 68.5102422633029,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 68.5102422633029,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 67.5102422633029,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 22.50154037721715\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.8\",\n      \"population\": \"storage\",\n      \"front_distance_projected_to_controlled_link_m\": 61.00919009013586,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 61.00919009013586,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 60.00919009013586,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 21.001638018027172\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.7\",\n      \"population\": \"storage\",\n      \"front_distance_projected_to_controlled_link_m\": 53.50818029689091,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 53.50818029689091,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 52.50818029689091,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 19.501436059378182\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.6\",\n      \"population\": \"storage\",\n      \"front_distance_projected_to_controlled_link_m\": 46.00709630323766,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 46.00709630323766,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 45.00709630323766,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 18.00121926064753\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.5\",\n      \"population\": \"storage\",\n      \"front_distance_projected_to_controlled_link_m\": 38.362641999907765,\n      \"speed_m_s\": 0.14344958002819005,\n      \"old_guard\": {\n        \"required_m\": 1.245736000251553,\n        \"margin_m\": 37.11690599965621,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 37.362641999907765,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 16.09041049997694\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.4\",\n      \"population\": \"storage\",\n      \"front_distance_projected_to_controlled_link_m\": 29.48051153997318,\n      \"speed_m_s\": 1.2941405376048665,\n      \"old_guard\": {\n        \"required_m\": 2.58022939661289,\n        \"margin_m\": 26.90028214336029,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 28.48051153997318,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 13.869877884993294\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.3\",\n      \"population\": \"storage\",\n      \"front_distance_projected_to_controlled_link_m\": 18.116013424502142,\n      \"speed_m_s\": 3.6895633232594656,\n      \"old_guard\": {\n        \"required_m\": 6.3021052695196245,\n        \"margin_m\": 11.813908154982517,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 17.116013424502142,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 10.205004474834046\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.2\",\n      \"population\": \"storage\",\n      \"front_distance_projected_to_controlled_link_m\": 8.688541208253895,\n      \"speed_m_s\": 1.092370352007706,\n      \"old_guard\": {\n        \"required_m\": 2.324956239334977,\n        \"margin_m\": 6.363584968918918,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 7.688541208253895,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 6.093770604126947\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.1\",\n      \"population\": \"storage\",\n      \"front_distance_projected_to_controlled_link_m\": 1.001999189766508,\n      \"speed_m_s\": 0.04573822948686786,\n      \"old_guard\": {\n        \"required_m\": 1.1459706723353782,\n        \"margin_m\": -0.14397148256887027,\n        \"safe\": false\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 0.001999189766507925,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 0.000999189766507925\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.42\",\n      \"population\": \"ingress\",\n      \"front_distance_projected_to_controlled_link_m\": 316.0441161523147,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 316.0441161523147,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 315.0441161523147,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 51.003593012692896\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.41\",\n      \"population\": \"ingress\",\n      \"front_distance_projected_to_controlled_link_m\": 308.54310242059495,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 308.54310242059495,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 307.54310242059495,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 50.37850853504958\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.40\",\n      \"population\": \"ingress\",\n      \"front_distance_projected_to_controlled_link_m\": 301.04210238270576,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 301.04210238270576,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 300.04210238270576,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 49.753425198558816\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.39\",\n      \"population\": \"ingress\",\n      \"front_distance_projected_to_controlled_link_m\": 293.5410336743253,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 293.5410336743253,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 292.5410336743253,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 49.09454851584776\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.38\",\n      \"population\": \"ingress\",\n      \"front_distance_projected_to_controlled_link_m\": 286.04003170233443,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 286.04003170233443,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 285.04003170233443,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 48.41263924566677\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.37\",\n      \"population\": \"ingress\",\n      \"front_distance_projected_to_controlled_link_m\": 278.5390297787898,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 278.5390297787898,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 277.5390297787898,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 47.730729979889986\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.36\",\n      \"population\": \"ingress\",\n      \"front_distance_projected_to_controlled_link_m\": 271.0380116102982,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 271.0380116102982,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 270.0380116102982,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 47.04881923729984\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.35\",\n      \"population\": \"ingress\",\n      \"front_distance_projected_to_controlled_link_m\": 263.5369961914984,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 263.5369961914984,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 262.5369961914984,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 46.36690874468167\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.34\",\n      \"population\": \"ingress\",\n      \"front_distance_projected_to_controlled_link_m\": 256.0359873423628,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 256.0359873423628,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 255.03598734236277,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 45.68499884930571\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.33\",\n      \"population\": \"ingress\",\n      \"front_distance_projected_to_controlled_link_m\": 248.53498391464197,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 248.53498391464197,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 247.53498391464197,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 45.00308944678563\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.32\",\n      \"population\": \"ingress\",\n      \"front_distance_projected_to_controlled_link_m\": 241.0339726805442,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 241.0339726805442,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 240.0339726805442,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 44.25329726805442\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.31\",\n      \"population\": \"ingress\",\n      \"front_distance_projected_to_controlled_link_m\": 233.5329685070348,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 233.5329685070348,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 232.5329685070348,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 43.50319685070348\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.30\",\n      \"population\": \"ingress\",\n      \"front_distance_projected_to_controlled_link_m\": 226.03194243777557,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 226.03194243777557,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 225.03194243777557,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 42.753094243777554\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.29\",\n      \"population\": \"ingress\",\n      \"front_distance_projected_to_controlled_link_m\": 218.53094011439038,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 218.53094011439038,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 217.53094011439038,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 42.002994011439036\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    },\n    {\n      \"vehicle_id\": \"R_flow.28\",\n      \"population\": \"ingress\",\n      \"front_distance_projected_to_controlled_link_m\": 211.02993400590134,\n      \"speed_m_s\": 0.0,\n      \"old_guard\": {\n        \"required_m\": 0.0,\n        \"margin_m\": 211.02993400590134,\n        \"safe\": true\n      },\n      \"conditional_native_local_arithmetic\": {\n        \"stop_decel_m_s2\": 4.5,\n        \"brake_gap_m\": 0.0,\n        \"can_brake_before_lane_end\": true,\n        \"can_brake_before_stopline\": true,\n        \"native_adjusted_stop_offset_m\": 1.0,\n        \"native_stop_dist_m\": 210.02993400590134,\n        \"full_branch_selected\": null,\n        \"next_speed_m_s\": null,\n        \"scalar_euler_stop_speed_before_caps_m_s\": 41.25289340059013\n      },\n      \"projection_assumptions\": [\n        \"native seen equals this route-projected gap\",\n        \"lane stopOffset=0\",\n        \"passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s\",\n        \"no rail/reversal/GLOSA/driver/newStopDist/device overrides\"\n      ],\n      \"actual_native_branch\": \"UNKNOWN\",\n      \"red_outcome\": \"UNOBSERVED\",\n      \"missing\": [\n        \"per-vehicle native seen/DriveProcessItem and action status\",\n        \"runtime effective offsets/devices/JM params/influencer trace\",\n        \"receiver/leader complete dynamic state and reservations\",\n        \"finalized speed interval for followers and RNG effects\"\n      ]\n    }\n  ]\n}\n",
+        "stderr": ""
+      }
+    ],
+    "independent_numeric_boundary": [
+      {
+        "case": "tiny_finite_deceleration",
+        "result": {
+          "decision": "UNKNOWN",
+          "reasons": [
+            "RED_CROSSING_EVIDENCE_UNBOUND_TO_STATE",
+            "VEHICLE_INPUT_OUTSIDE_DOMAIN"
+          ]
+        },
+        "expected": "UNKNOWN",
+        "pass_": true
+      },
+      {
+        "case": "huge_finite_speed",
+        "result": {
+          "decision": "UNKNOWN",
+          "reasons": [
+            "RED_CROSSING_EVIDENCE_UNBOUND_TO_STATE",
+            "VEHICLE_INPUT_OUTSIDE_DOMAIN"
+          ]
+        },
+        "expected": "UNKNOWN",
+        "pass_": true
+      },
+      {
+        "case": "largest_finite_speed",
+        "result": {
+          "decision": "UNKNOWN",
+          "reasons": [
+            "RED_CROSSING_EVIDENCE_UNBOUND_TO_STATE",
+            "VEHICLE_INPUT_OUTSIDE_DOMAIN"
+          ]
+        },
+        "expected": "UNKNOWN",
+        "pass_": true
+      },
+      {
+        "case": "native_integer_domain_unbound",
+        "result": {
+          "decision": "UNKNOWN",
+          "reasons": [
+            "RED_CROSSING_EVIDENCE_UNBOUND_TO_STATE",
+            "VEHICLE_INPUT_OUTSIDE_DOMAIN"
+          ]
+        },
+        "expected": "UNKNOWN",
+        "pass_": true
+      },
+      {
+        "case": "tiny_decel_brake",
+        "exception": "ValueError",
+        "expected": "finite_or_ValueError",
+        "pass_": true
+      },
+      {
+        "case": "huge_brake",
+        "exception": "ValueError",
+        "expected": "finite_or_ValueError",
+        "pass_": true
+      },
+      {
+        "case": "huge_stop_gap",
+        "exception": "ValueError",
+        "expected": "finite_or_ValueError",
+        "pass_": true
+      },
+      {
+        "case": "native_integer_conversion_domain",
+        "exception": "ValueError",
+        "expected": "ValueError",
+        "pass_": true
+      },
+      {
+        "case": "portable_integer_boundary_32766",
+        "result": 2415550477.5,
+        "expected": "finite",
+        "pass_": true
+      },
+      {
+        "case": "portable_integer_boundary_32767",
+        "exception": "ValueError",
+        "expected": "ValueError",
+        "pass_": true
+      }
+    ],
+    "independent_red_observation_probes": [
+      {
+        "case": "string",
+        "decision": {
+          "decision": "UNKNOWN",
+          "reasons": [
+            "RED_CROSSING_EVIDENCE_MISSING_OR_MALFORMED"
+          ]
+        },
+        "expected": "UNKNOWN",
+        "expected_observed_red_anomaly": false,
+        "pass_": true,
+        "evidence_kind": "SYNTHETIC_SCHEMA_CHALLENGE_NOT_NATIVE_OBSERVATION"
+      },
+      {
+        "case": "dict",
+        "decision": {
+          "decision": "UNKNOWN",
+          "reasons": [
+            "RED_CROSSING_EVIDENCE_MISSING_OR_MALFORMED"
+          ]
+        },
+        "expected": "UNKNOWN",
+        "expected_observed_red_anomaly": false,
+        "pass_": true,
+        "evidence_kind": "SYNTHETIC_SCHEMA_CHALLENGE_NOT_NATIVE_OBSERVATION"
+      },
+      {
+        "case": "nonstring_member",
+        "decision": {
+          "decision": "UNKNOWN",
+          "reasons": [
+            "RED_CROSSING_EVIDENCE_MISSING_OR_MALFORMED"
+          ]
+        },
+        "expected": "UNKNOWN",
+        "expected_observed_red_anomaly": false,
+        "pass_": true,
+        "evidence_kind": "SYNTHETIC_SCHEMA_CHALLENGE_NOT_NATIVE_OBSERVATION"
+      },
+      {
+        "case": "empty_id",
+        "decision": {
+          "decision": "UNKNOWN",
+          "reasons": [
+            "RED_CROSSING_EVIDENCE_MISSING_OR_MALFORMED"
+          ]
+        },
+        "expected": "UNKNOWN",
+        "expected_observed_red_anomaly": false,
+        "pass_": true,
+        "evidence_kind": "SYNTHETIC_SCHEMA_CHALLENGE_NOT_NATIVE_OBSERVATION"
+      },
+      {
+        "case": "whitespace_id",
+        "decision": {
+          "decision": "UNKNOWN",
+          "reasons": [
+            "RED_CROSSING_EVIDENCE_MISSING_OR_MALFORMED"
+          ]
+        },
+        "expected": "UNKNOWN",
+        "expected_observed_red_anomaly": false,
+        "pass_": true,
+        "evidence_kind": "SYNTHETIC_SCHEMA_CHALLENGE_NOT_NATIVE_OBSERVATION"
+      },
+      {
+        "case": "duplicate_id",
+        "decision": {
+          "decision": "UNKNOWN",
+          "reasons": [
+            "RED_CROSSING_EVIDENCE_MISSING_OR_MALFORMED"
+          ]
+        },
+        "expected": "UNKNOWN",
+        "expected_observed_red_anomaly": false,
+        "pass_": true,
+        "evidence_kind": "SYNTHETIC_SCHEMA_CHALLENGE_NOT_NATIVE_OBSERVATION"
+      },
+      {
+        "case": "unbound_id",
+        "decision": {
+          "decision": "UNKNOWN",
+          "reasons": [
+            "RED_CROSSING_EVIDENCE_UNBOUND_TO_INVENTORY"
+          ]
+        },
+        "expected": "UNKNOWN",
+        "expected_observed_red_anomaly": false,
+        "pass_": true,
+        "evidence_kind": "SYNTHETIC_SCHEMA_CHALLENGE_NOT_NATIVE_OBSERVATION"
+      },
+      {
+        "case": "none",
+        "decision": {
+          "decision": "UNKNOWN",
+          "reasons": [
+            "RED_CROSSING_EVIDENCE_MISSING_OR_MALFORMED"
+          ]
+        },
+        "expected": "UNKNOWN",
+        "expected_observed_red_anomaly": false,
+        "pass_": true,
+        "evidence_kind": "SYNTHETIC_SCHEMA_CHALLENGE_NOT_NATIVE_OBSERVATION"
+      },
+      {
+        "case": "bool",
+        "decision": {
+          "decision": "UNKNOWN",
+          "reasons": [
+            "RED_CROSSING_EVIDENCE_MISSING_OR_MALFORMED"
+          ]
+        },
+        "expected": "UNKNOWN",
+        "expected_observed_red_anomaly": false,
+        "pass_": true,
+        "evidence_kind": "SYNTHETIC_SCHEMA_CHALLENGE_NOT_NATIVE_OBSERVATION"
+      },
+      {
+        "case": "missing_red_field",
+        "decision": {
+          "decision": "UNKNOWN",
+          "reasons": [
+            "RED_CROSSING_EVIDENCE_MISSING_OR_MALFORMED"
+          ]
+        },
+        "expected": "UNKNOWN",
+        "expected_observed_red_anomaly": false,
+        "pass_": true,
+        "evidence_kind": "SYNTHETIC_SCHEMA_CHALLENGE_NOT_NATIVE_OBSERVATION"
+      },
+      {
+        "case": "unbound_or_stale_measurement_time_s",
+        "decision": {
+          "decision": "UNKNOWN",
+          "reasons": [
+            "RED_CROSSING_EVIDENCE_UNBOUND_TO_STATE",
+            "TIME_OR_EVENT_MISMATCH"
+          ]
+        },
+        "expected": "UNKNOWN",
+        "expected_observed_red_anomaly": false,
+        "pass_": true,
+        "evidence_kind": "SYNTHETIC_SCHEMA_CHALLENGE_NOT_NATIVE_OBSERVATION"
+      },
+      {
+        "case": "unbound_or_stale_next_switch_s",
+        "decision": {
+          "decision": "UNKNOWN",
+          "reasons": [
+            "RED_CROSSING_EVIDENCE_UNBOUND_TO_STATE",
+            "TIME_OR_EVENT_MISMATCH"
+          ]
+        },
+        "expected": "UNKNOWN",
+        "expected_observed_red_anomaly": false,
+        "pass_": true,
+        "evidence_kind": "SYNTHETIC_SCHEMA_CHALLENGE_NOT_NATIVE_OBSERVATION"
+      },
+      {
+        "case": "unbound_or_stale_source_commit",
+        "decision": {
+          "decision": "UNKNOWN",
+          "reasons": [
+            "RED_CROSSING_EVIDENCE_UNBOUND_TO_STATE",
+            "SOURCE_UNBOUND"
+          ]
+        },
+        "expected": "UNKNOWN",
+        "expected_observed_red_anomaly": false,
+        "pass_": true,
+        "evidence_kind": "SYNTHETIC_SCHEMA_CHALLENGE_NOT_NATIVE_OBSERVATION"
+      },
+      {
+        "case": "unbound_or_stale_controlled_link",
+        "decision": {
+          "decision": "UNKNOWN",
+          "reasons": [
+            "PROGRAM_OR_LINK_MISMATCH",
+            "RED_CROSSING_EVIDENCE_UNBOUND_TO_STATE"
+          ]
+        },
+        "expected": "UNKNOWN",
+        "expected_observed_red_anomaly": false,
+        "pass_": true,
+        "evidence_kind": "SYNTHETIC_SCHEMA_CHALLENGE_NOT_NATIVE_OBSERVATION"
+      },
+      {
+        "case": "unbound_or_stale_program",
+        "decision": {
+          "decision": "UNKNOWN",
+          "reasons": [
+            "PROGRAM_OR_LINK_MISMATCH",
+            "RED_CROSSING_EVIDENCE_UNBOUND_TO_STATE"
+          ]
+        },
+        "expected": "UNKNOWN",
+        "expected_observed_red_anomaly": false,
+        "pass_": true,
+        "evidence_kind": "SYNTHETIC_SCHEMA_CHALLENGE_NOT_NATIVE_OBSERVATION"
+      },
+      {
+        "case": "unbound_or_stale_affected_inventory_ids",
+        "decision": {
+          "decision": "UNKNOWN",
+          "reasons": [
+            "RED_CROSSING_EVIDENCE_UNBOUND_TO_INVENTORY",
+            "UNENUMERATED_OR_INCONSISTENT_INVENTORY"
+          ]
+        },
+        "expected": "UNKNOWN",
+        "expected_observed_red_anomaly": false,
+        "pass_": true,
+        "evidence_kind": "SYNTHETIC_SCHEMA_CHALLENGE_NOT_NATIVE_OBSERVATION"
+      },
+      {
+        "case": "unbound_or_stale_time_s",
+        "decision": {
+          "decision": "UNKNOWN",
+          "reasons": [
+            "RED_CROSSING_EVIDENCE_UNBOUND_TO_STATE",
+            "TIME_MISSING_OR_NONFINITE"
+          ]
+        },
+        "expected": "UNKNOWN",
+        "expected_observed_red_anomaly": false,
+        "pass_": true,
+        "evidence_kind": "SYNTHETIC_SCHEMA_CHALLENGE_NOT_NATIVE_OBSERVATION"
+      },
+      {
+        "case": "valid_empty_red_list",
+        "decision": {
+          "decision": "UNKNOWN",
+          "reasons": [
+            "UNPROVEN_NATIVE_SPEED_AND_GLOBAL_COVERAGE",
+            "RECEIVER_LEADER_FOLLOWER_FOE_AND_RANDOM_BOUNDS_UNRESOLVED"
+          ],
+          "eligible_path_implemented": false
+        },
+        "expected": "UNKNOWN",
+        "expected_observed_red_anomaly": false,
+        "pass_": true,
+        "evidence_kind": "SYNTHETIC_SCHEMA_CHALLENGE_NOT_NATIVE_OBSERVATION"
+      },
+      {
+        "case": "valid_bound_red_id",
+        "decision": {
+          "decision": "INELIGIBLE",
+          "reasons": [
+            "OBSERVED_RED_ANOMALY"
+          ]
+        },
+        "expected": "INELIGIBLE",
+        "expected_observed_red_anomaly": true,
+        "pass_": true,
+        "evidence_kind": "SYNTHETIC_SCHEMA_CHALLENGE_NOT_NATIVE_OBSERVATION"
+      }
+    ],
+    "historical_data_bindings_unchanged": true,
+    "independent_script_sha256": "450eae3747cea1677168a8c3d4f8d17fd49e4f28c98cea69a8b2a49987df1f0d",
+    "python": "3.13.0 (v3.13.0:60403a5409f, Oct  7 2024, 00:37:40) [Clang 15.0.0 (clang-1500.3.9.4)]",
+    "current_STOP3": "PRESERVED",
+    "A1_A2": "UNVERIFIED",
+    "rate_900": "NOT_TESTED",
+    "execution": "HOLD"
+  },
+  "checkout_tracked_status": ""
+}

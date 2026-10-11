@@ -1,0 +1,31 @@
+{
+  "classification": "LANGUAGE_GUARANTEED_OFFLINE_INTEGER_ARITHMETIC_DOMAIN_NOT_NATIVE_COMPILER_TEST",
+  "sources": [
+    {
+      "url": "https://eel.is/c++draft/basic.fundamental",
+      "anchors": [
+        "#1",
+        "#4",
+        "#tab:basic.fundamental.width"
+      ],
+      "sha256": "f3f5cb60ed96207c606afcfc060f5ea80ab7fa709dd4bbf2f30beabd02d40cd7",
+      "bytes": 77025,
+      "support": "signed range and int minimum width16; actual width implementation-defined"
+    },
+    {
+      "url": "https://eel.is/c++draft/conv.fpint",
+      "anchors": [
+        "#1"
+      ],
+      "sha256": "560265b0a0aad18f3221e880893abb188afe4f457bf33736a8b4b0b762db0424",
+      "bytes": 5449,
+      "support": "truncation; unrepresentable truncated destination value undefined"
+    }
+  ],
+  "native_source_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+  "native_source": "src/microsim/cfmodels/MSCFModel.cpp:92-98",
+  "derivation": "C++ guarantees signed int positive max >=32767. For nonnegative finite quotient, offline truncate and require steps<=32766, so both conversion and steps+1<=32767 are language-guaranteed representable. Actual native int width is not inferred. speedReduction * steps * (steps + 1) is already double multiplication, so no integer-square restriction.",
+  "limit_kind": "offline source-arithmetic portable representability, not physical speed/brake safety threshold",
+  "runtime_network_needed": false,
+  "native_cpp_build_or_execution": false
+}

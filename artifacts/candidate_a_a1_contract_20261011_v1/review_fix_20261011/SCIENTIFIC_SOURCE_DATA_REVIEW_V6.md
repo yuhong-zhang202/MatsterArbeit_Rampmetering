@@ -1,0 +1,7 @@
+# V6 phase-type P2 source/data scientific checkpoint
+
+2026-10-11. Read-only scientific_reviewer /root/issue8_science. Disposition PASS_FOR_BOUNDED_PR9_P2_PHASE_INDEX_TYPE_CORRECTION, pending actual delivered-code clean checkout. No new Blocker/Major/required Minor. Context preflight completed.
+
+Independently read 57 V6 input and seven data bindings, 536 protected files: all hashes match. 42 saved witness map equals V5. AST comparison confirms only diagnostic classification changed; native equations/constants unchanged. Read-only28phase probes satisfy invalidbool/float/missing→UNKNOWN/noanomaly, integer1empty/positive control behavior retained. Actual engineering/data receipts:43unitmethods/24newengineeringphase subcases/38independentphase probes; prior53mode/19schema/10numeric allPASS. Counts are synthetic offline checks, not independent traffic/native observations.
+
+Five checks (targetclassification, savedcoverage, omission/duplication, independentreconciliation, regression) support this diagnostic expression repair within public/saved domain. Fullfuturecoverage/nativebranch/eventauthentication/jointbraking-follower-receiver evidence remains NOT_VERIFIED. Actual refusedredstep not executed. A1UNRESOLVED/NOTIMPLEMENTABLE, A1/A2unverified, STOP3/NOTQUALIFIED/HOLD/900NOTTESTED retained.0SUMO/no normativecontract/guard/research/upstream changes. Old phase-type coverage claims superseded only in this composition, old evidence preserved. Parent must supply actual commit clone receipt; no actual finalcodecleanclone claimed here.

@@ -1,0 +1,23 @@
+{
+  "classification": "PRESERVED_TECHNICAL_BUILD_FAILURE",
+  "error": "IsADirectoryError while traversing v1_source_snapshot/__pycache__ for binding; INPUT_BINDINGS_V2.json was opened but remains0bytes",
+  "test_command": [
+    "python3",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/candidate_a_a1_contract_20261011_v1",
+    "-v"
+  ],
+  "actual_exit_code": 1,
+  "tests": 31,
+  "PASS": 28,
+  "FAIL": 0,
+  "ERROR": 3,
+  "SKIP": 0,
+  "error_summary": "3 public-binding tests JSONDecodeError on empty INPUT_BINDINGS_V2.json; all new arithmetic regression tests passed",
+  "repair": "filter only snapshot files; preserve empty failed manifest; create INPUT_BINDINGS_V2_R1.json and point defaults explicitly to it",
+  "empty_manifest_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+  "not_simulation": true
+}

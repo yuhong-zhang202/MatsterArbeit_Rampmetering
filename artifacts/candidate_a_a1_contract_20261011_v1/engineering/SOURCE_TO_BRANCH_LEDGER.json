@@ -1,0 +1,305 @@
+{
+  "tag": "v1_26_0",
+  "source_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+  "claims": [
+    {
+      "id": "N01",
+      "mechanism": "TraCI TLS setters",
+      "grade": "PRIMARY_SOURCE_SUPPORTED",
+      "path": "src/traci-server/TraCIServerAPI_TrafficLight.cpp",
+      "lines": [
+        52,
+        69
+      ],
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/traci-server/TraCIServerAPI_TrafficLight.cpp#L52-L69",
+      "source_mechanism": "dispatch program/phase/duration to libsumo; no implicit enforced yellow transition in API",
+      "limit": "none; actor must bind request history"
+    },
+    {
+      "id": "N02",
+      "mechanism": "Phase request applies now",
+      "grade": "PRIMARY_SOURCE_SUPPORTED",
+      "path": "src/libsumo/TrafficLight.cpp",
+      "lines": [
+        823,
+        855
+      ],
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/TrafficLight.cpp#L823-L855",
+      "source_mechanism": "setPhase reschedules changeStepAndDuration; setProgram switches variant",
+      "limit": "getters may show pre-native-event phase; setProgram itself updates signals"
+    },
+    {
+      "id": "N03",
+      "mechanism": "Program switch can update link state immediately",
+      "grade": "PRIMARY_SOURCE_SUPPORTED",
+      "path": "src/microsim/traffic_lights/MSTLLogicControl.cpp",
+      "lines": [
+        233,
+        241
+      ],
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/traffic_lights/MSTLLogicControl.cpp#L233-L241",
+      "source_mechanism": "activate program and setTrafficLightSignals at currentTime",
+      "limit": "cannot claim ALL phase changes wait for begin-step event"
+    },
+    {
+      "id": "N04",
+      "mechanism": "Native phase event",
+      "grade": "PRIMARY_SOURCE_SUPPORTED",
+      "path": "src/microsim/traffic_lights/MSTrafficLightLogic.cpp",
+      "lines": [
+        68,
+        93
+      ],
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/traffic_lights/MSTrafficLightLogic.cpp#L68-L93",
+      "source_mechanism": "trySwitch handles event; zero-duration phases may skip; changed index updates signals",
+      "limit": "actor pending-one-event predictor only inside positive duration static program"
+    },
+    {
+      "id": "N05",
+      "mechanism": "Static phase transition",
+      "grade": "PRIMARY_SOURCE_SUPPORTED",
+      "path": "src/microsim/traffic_lights/MSSimpleTrafficLightLogic.cpp",
+      "lines": [
+        80,
+        110
+      ],
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/traffic_lights/MSSimpleTrafficLightLogic.cpp#L80-L110",
+      "source_mechanism": "uses first configured next then duration; override queues/current increment can alter timing",
+      "limit": "A07 program positive durations; override/internal queues not snapshotted"
+    },
+    {
+      "id": "N06",
+      "mechanism": "Event then plan then movement",
+      "grade": "PRIMARY_SOURCE_SUPPORTED",
+      "path": "src/microsim/MSNet.cpp",
+      "lines": [
+        789,
+        859
+      ],
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSNet.cpp#L789-L859",
+      "source_mechanism": "processCommands -> begin-events -> check2Switch -> plan -> junction approaches -> execute",
+      "limit": "refused A07 next interval never runs; insertion later same step"
+    },
+    {
+      "id": "N07",
+      "mechanism": "Action-step check",
+      "grade": "PRIMARY_SOURCE_SUPPORTED",
+      "path": "src/microsim/MSVehicle.h",
+      "lines": [
+        631,
+        638
+      ],
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSVehicle.h#L631-L638",
+      "source_mechanism": "native action modulo elapsed lastActionTime",
+      "limit": "one-second settings consistent with every ordinary integer step, runtime last-action/offset not saved"
+    },
+    {
+      "id": "N08",
+      "mechanism": "Euler braking distance",
+      "grade": "PRIMARY_SOURCE_SUPPORTED",
+      "path": "src/microsim/cfmodels/MSCFModel.cpp",
+      "lines": [
+        76,
+        98
+      ],
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/cfmodels/MSCFModel.cpp#L76-L98",
+      "source_mechanism": "k=int(v/(b*dt)); D=dt*(k*v-b*dt*k*(k+1)/2)+v*headway",
+      "limit": "local brakeGap headway0; not custom full v*dt+continuous stopping"
+    },
+    {
+      "id": "N09",
+      "mechanism": "StopDecel / canBrake / stopOffset",
+      "grade": "PRIMARY_SOURCE_SUPPORTED",
+      "path": "src/microsim/MSVehicle.cpp",
+      "lines": [
+        2738,
+        2778
+      ],
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSVehicle.cpp#L2738-L2778",
+      "source_mechanism": "stopDecel=max(min(yellowMin,emergency),normal); canBrake=(seen-laneOffset>=D); offset clamped",
+      "limit": "actual seen/driving device/stop overrides not saved for42; code scalar projection conditional only"
+    },
+    {
+      "id": "N10",
+      "mechanism": "Normal signal stop branch",
+      "grade": "PRIMARY_SOURCE_SUPPORTED",
+      "path": "src/microsim/MSVehicle.cpp",
+      "lines": [
+        2851,
+        2887
+      ],
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSVehicle.cpp#L2851-L2887",
+      "source_mechanism": "yellow/red AND canBrake AND !ignoreRed AND seen>=mustSeeBeforeReversal creates request=false wait item",
+      "limit": "full branch selection needs hidden/native inputs, not inferred from distance subpredicate"
+    },
+    {
+      "id": "N11",
+      "mechanism": "Execution uses distinct yellow predicate",
+      "grade": "PRIMARY_SOURCE_SUPPORTED",
+      "path": "src/microsim/MSVehicle.cpp",
+      "lines": [
+        3680,
+        3741
+      ],
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSVehicle.cpp#L3680-L3741",
+      "source_mechanism": "strict dpi.distance>D or Euler v<b*dt; beyond stopline/ignoreRed and opened affect movement",
+      "limit": "planning equality is not execution equality; dpi distances not saved"
+    },
+    {
+      "id": "N12",
+      "mechanism": "Krauss stopSpeed",
+      "grade": "PRIMARY_SOURCE_SUPPORTED",
+      "path": "src/microsim/cfmodels/MSCFModel_Krauss.cpp",
+      "lines": [
+        101,
+        107
+      ],
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/cfmodels/MSCFModel_Krauss.cpp#L101-L107",
+      "source_mechanism": "perception then min(maximumSafeStopSpeed(...actionStep),maxNextSpeed)",
+      "limit": "stopSpeed return not final speed; wrapper permits emergency relaxation"
+    },
+    {
+      "id": "N13",
+      "mechanism": "Emergency stop-speed wrapper",
+      "grade": "PRIMARY_SOURCE_SUPPORTED",
+      "path": "src/microsim/cfmodels/MSCFModel.cpp",
+      "lines": [
+        796,
+        837
+      ],
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/cfmodels/MSCFModel.cpp#L796-L837",
+      "source_mechanism": "normal != emergency and origSafeDecel>normal+epsilon can adjust speed",
+      "limit": "scalar Euler formula not complete wrapper nor ordinary-decel safety proof"
+    },
+    {
+      "id": "N14",
+      "mechanism": "Native Euler safe-stop scalar",
+      "grade": "PRIMARY_SOURCE_SUPPORTED",
+      "path": "src/microsim/cfmodels/MSCFModel.cpp",
+      "lines": [
+        849,
+        871
+      ],
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/cfmodels/MSCFModel.cpp#L849-L871",
+      "source_mechanism": "gap minus NUMERICAL_EPS then discrete maximum safe stop speed",
+      "limit": "source epsilon0.001; exact conditional front subformula .000999189766508, no future speed prediction"
+    },
+    {
+      "id": "N15",
+      "mechanism": "Finalization and stochastic/LC effects",
+      "grade": "PRIMARY_SOURCE_SUPPORTED",
+      "path": "src/microsim/cfmodels/MSCFModel.cpp",
+      "lines": [
+        189,
+        244
+      ],
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/cfmodels/MSCFModel.cpp#L189-L244",
+      "source_mechanism": "vMin/vMax/emergency, friction, stop, LC patch, startup; assert bounds",
+      "limit": "need intervals that contain ALL outputs and normal lower bound, not arbitrary proof flag"
+    },
+    {
+      "id": "N16",
+      "mechanism": "Krauss dawdling",
+      "grade": "PRIMARY_SOURCE_SUPPORTED",
+      "path": "src/microsim/cfmodels/MSCFModel_Krauss.cpp",
+      "lines": [
+        66,
+        107
+      ],
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/cfmodels/MSCFModel_Krauss.cpp#L66-L107",
+      "source_mechanism": "patch uses dawdle/RNG, cached accel under sigmaStep and vMin",
+      "limit": "exact RNG unneeded IF admissible interval rigorously bounds outputs; that interval and downstream states not proved"
+    },
+    {
+      "id": "N17",
+      "mechanism": "Red traversal guard",
+      "grade": "PRIMARY_SOURCE_SUPPORTED",
+      "path": "src/microsim/MSVehicle.cpp",
+      "lines": [
+        4462,
+        4474
+      ],
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSVehicle.cpp#L4462-L4474",
+      "source_mechanism": "red+!ignoreRed+!beyondStopLine blocks link during lane advance",
+      "limit": "cannot-brake planning does NOT guarantee red traversal; blocking may emergency-stop"
+    },
+    {
+      "id": "N18",
+      "mechanism": "Emergency-stop outcome",
+      "grade": "PRIMARY_SOURCE_SUPPORTED",
+      "path": "src/microsim/MSVehicle.cpp",
+      "lines": [
+        4716,
+        4737
+      ],
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSVehicle.cpp#L4716-L4737",
+      "source_mechanism": "unaccepted advance beyond lane end logs emergency stop and clamps position/speed",
+      "limit": "native collision protection can still violate actor no-emergency contract"
+    },
+    {
+      "id": "N19",
+      "mechanism": "Native red override",
+      "grade": "PRIMARY_SOURCE_SUPPORTED",
+      "path": "src/microsim/MSVehicle.cpp",
+      "lines": [
+        7504,
+        7542
+      ],
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSVehicle.cpp#L7504-L7542",
+      "source_mechanism": "influencer/JM ignore red or yellow may disable compliance",
+      "limit": "speedMode31 alone does not prove all JM/device/persistence fields known"
+    },
+    {
+      "id": "N20",
+      "mechanism": "Native receiver/foe reservation",
+      "grade": "PRIMARY_SOURCE_SUPPORTED",
+      "path": "src/microsim/MSLink.cpp",
+      "lines": [
+        836,
+        854
+      ],
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSLink.cpp#L836-L854",
+      "source_mechanism": "red unopened unless ignoreRed; link opening uses approach/foes",
+      "limit": "foes/leader and reservations require full topology/state, not nearest car boolean"
+    },
+    {
+      "id": "N21",
+      "mechanism": "Lane stop offset",
+      "grade": "PRIMARY_SOURCE_SUPPORTED",
+      "path": "src/microsim/MSLane.cpp",
+      "lines": [
+        3792,
+        3801
+      ],
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSLane.cpp#L3792-L3801",
+      "source_mechanism": "undefined=>0, class-dependent permission else offset",
+      "limit": "XML offset absence supported; runtime effective class/overrides remain coverage requirement"
+    },
+    {
+      "id": "N22",
+      "mechanism": "Numerical constants",
+      "grade": "PRIMARY_SOURCE_SUPPORTED",
+      "path": "src/config.h.cmake",
+      "lines": [
+        227,
+        235
+      ],
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/config.h.cmake#L227-L235",
+      "source_mechanism": "NUMERICAL_EPS=.001, POSITION_EPS=.1",
+      "limit": "numerical safeguards not validated physical guard margins"
+    }
+  ],
+  "observed": [
+    "42 recorded guard vehicles;27storage+15ingress;1oldrefusal;1206 completed;no refusedred motion"
+  ],
+  "engineering_inference": [
+    "source-native local distances projected from guard coordinates under explicit assumptions; 42 scalar canBrake true does not prove branch selection",
+    "conservative A1 prohibits committed approaches pending proof and fully unknown states fail closed"
+  ],
+  "unverified": [
+    "native DriveProcessItem and full selected branch for all42",
+    "RNG/device/LC/leader intervals and successor receiver reservations",
+    "complete next-step population/crossing and first red outcome",
+    "A1/A2 implemented safety qualification"
+  ]
+}

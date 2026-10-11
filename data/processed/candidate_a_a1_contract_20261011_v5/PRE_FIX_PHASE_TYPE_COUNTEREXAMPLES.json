@@ -1,0 +1,29 @@
+{
+  "classification": "PR9_P2_PHASE_TYPE_INDEPENDENT_COUNTEREXAMPLES",
+  "helper_sha256": "8a0aa391471428305cb614f7c59391db9c427f099e98b4348b8d998b97a63ef6",
+  "synthetic_cases": [
+    {
+      "phase_before_value": true,
+      "python_type": "bool",
+      "decision": {
+        "decision": "INELIGIBLE",
+        "reasons": [
+          "OBSERVED_RED_ANOMALY"
+        ]
+      },
+      "expected": "UNKNOWN without OBSERVED_RED_ANOMALY"
+    },
+    {
+      "phase_before_value": 1.0,
+      "python_type": "float",
+      "decision": {
+        "decision": "INELIGIBLE",
+        "reasons": [
+          "OBSERVED_RED_ANOMALY"
+        ]
+      },
+      "expected": "UNKNOWN without OBSERVED_RED_ANOMALY"
+    }
+  ],
+  "sumo_traci_starts": 0
+}

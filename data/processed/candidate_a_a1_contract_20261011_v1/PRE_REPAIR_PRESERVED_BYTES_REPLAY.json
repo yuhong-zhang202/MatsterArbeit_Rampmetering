@@ -1,0 +1,25 @@
+{
+  "classification": "INDEPENDENT_REPLAY_PRESERVED_V1_BYTES",
+  "contract_sha256": "d507300af57dd91bf92131f393fefe0524a5f3f15b5a88953e875cbf45ac3e91",
+  "command": "python3 preserved v1 contract pure scalar probes; no native motion",
+  "boundary": [
+    {
+      "case": "tiny_decel",
+      "exception": "OverflowError",
+      "message": "cannot convert float infinity to integer",
+      "status": "FAIL"
+    },
+    {
+      "case": "large_speed",
+      "result": "nan",
+      "status": "FAIL"
+    },
+    {
+      "case": "large_gap",
+      "exception": "OverflowError",
+      "message": "cannot convert float infinity to integer",
+      "status": "FAIL"
+    }
+  ],
+  "sumo_traci_starts": 0
+}
