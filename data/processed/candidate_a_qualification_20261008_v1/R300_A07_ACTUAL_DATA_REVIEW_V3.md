@@ -31,7 +31,7 @@ Window selection remains `begin <= time_begin_s < end`, with unchanged duration,
 | [2400,2700) | 0/300 | null / null | null / null | null / null / null | null; incomplete |
 | [2700,3000) | 0/300 | null / null | null / null | null / null / null | null; incomplete |
 
-The first record remains exactly equal to V2, including floating representation `0.49999999999999994`. E−N=−1 still represents an unfinished nominal packet at the stop boundary, not completed-cycle overservice or physical service loss. It is not a six-second rate qualification.
+The first service-window record remains exactly equal to V2: `C_observed`, `C_applied_observed`, and `quantization` each serialize as `0.5` in both CSVs. The gate's top-level prefix aggregates `C`, `C_applied`, and `quantization` serialize as `0.49999999999999994`; they are a different representation from the window row. E−N=−1 still represents an unfinished nominal packet at the stop boundary, not completed-cycle overservice or physical service loss. It is not a six-second rate qualification.
 
 ## Independent checks and exact delta
 

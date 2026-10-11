@@ -2245,3 +2245,9 @@ Final verification:handoff independent scientific PASS (slow<1.389m/s clarificat
 - Independent scientific re-review PASS_FOR_PR5_P2_DATA_EXPRESSION_CORRECTION, findings0/0/0; currentcontractSTOP3 remains supported byunchangedrawguard witness/boundedengineeringdiagnosis, not realredunsafe/Ainfeasible/900physicalimpossible. Qualifiedrates0/highestunknown/900not tested; further rates/C remainheld.
 - UpdatedSTATE, correctionreport, oldreportcurrent-pointer andREADME; noDECISIONS/protocol/AGENTS/Stage6statuschanges. OriginalPR5 updated only, preservingPR1→PR3→PR5 and unrelatedMemoryCore/privateemail. NoautoGithubreview/resolve/merge/close. Next user/Chatreviews; noexecutionauthorization fromthiscorrection.
 - Subagent routing: simulation_engineer not required(analysis-only,noSUMO); data_analyst used forrepair/regression/reanalysis/preservation; scientific_reviewer used forindependentmeasurements/STOP3scope. Findings addressed, fullqualification stillunverified.
+
+### 2026-10-11 — PR #5 P3 report precision correction
+
+- GitHub Codex Reviewer found that the V3 data review attributed `0.49999999999999994` to the first service-window record. Direct readback confirms both V2/V3 service CSVs serialize the relevant first-window values as `0.5`; the V3 gate's top-level prefix aggregate serializes `0.49999999999999994`.
+- Corrected only the report sentence, added a receipt binding the pre/post report hashes and unchanged gate/CSV evidence, and clarified the historical V3 binding's scope in the handoff report and current state. No data, analysis code, simulation, guard, safety contract or research decision changed. STOP3/NOT_QUALIFIED remain as previously reviewed. Reply to the PR comment and remote update are pending at this entry.
+- Subagent routing: simulation_engineer, data_analyst and scientific_reviewer not required for this bounded factual prose correction; direct source readback is the verification.
