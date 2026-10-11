@@ -1,0 +1,37 @@
+{
+  "classification": "PRE_REPAIR_OFFLINE_NUMERIC_FAILURE",
+  "contract_sha256": "d507300af57dd91bf92131f393fefe0524a5f3f15b5a88953e875cbf45ac3e91",
+  "test_sha256": "e3376673048204c6b4348b724ad2e4615021f34c498bdbdc6f911de8f5dd6ca6",
+  "observations": [
+    {
+      "case": "diagnostic fixture with decel/emergency/yellow_min=5e-324",
+      "actual": "OverflowError cannot convert float infinity to integer",
+      "expected": "UNKNOWN"
+    },
+    {
+      "case": "brake_gap_euler(1,5e-324)",
+      "actual": "OverflowError cannot convert float infinity to integer",
+      "expected": "ValueError"
+    },
+    {
+      "case": "brake_gap_euler(1e200,4.5)",
+      "actual": "NaN",
+      "expected": "finite result or ValueError"
+    },
+    {
+      "case": "maximum_safe_stop_speed_euler(1e308,4.5)",
+      "actual": "OverflowError cannot convert float infinity to integer",
+      "expected": "finite result or ValueError"
+    },
+    {
+      "case": "diagnostic fixture speed1e200 or1e308",
+      "actual": "INELIGIBLE",
+      "expected": "UNKNOWN for unrepresentable arithmetic"
+    }
+  ],
+  "source": "independent direct Python probes before engineer repair; source hash from original input binding",
+  "initial_engineer_26_suite": "PASS (does not cover these finite extreme cases)",
+  "first_combined_run": "FAIL input hash mismatch during simultaneous engineer version update; no receipt fabricated",
+  "sumo_traci_starts": 0,
+  "production_changes": false
+}

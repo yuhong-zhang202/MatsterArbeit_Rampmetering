@@ -1,0 +1,85 @@
+{
+  "decision": "UNRESOLVED_NEEDS_EVIDENCE",
+  "runtime_implementation": "NOT_IMPLEMENTABLE_YET",
+  "ELIGIBLE_path_in_offline_diagnostic": false,
+  "proofs": [
+    {
+      "id": "P0",
+      "obligation": "Version/schema/config identity",
+      "status": "PARTIAL",
+      "evidence_limit": "fixed source20files/base and input SHA bound; runtime binary-to-source/compilation identity not newly demonstrated",
+      "minimum_needed": "source commit/build/binary/config identity in future authorized static interface task"
+    },
+    {
+      "id": "P1",
+      "obligation": "Phase/time/link event binding",
+      "status": "PARTIAL",
+      "evidence_limit": "A07 pending event known; setters can update immediately; override queue/new external commands not globally evidenced",
+      "minimum_needed": "exact request trace/full static logic+no external writes and event/time synchronization"
+    },
+    {
+      "id": "P2",
+      "obligation": "Entire affected vehicle and route universe",
+      "status": "PARTIAL",
+      "evidence_limit": "42 guard observations and static routes; one ingress bound and one controlledlink; not all inventory/device/type states",
+      "minimum_needed": "snapshot every relevant lane/successor/pred+world vehicles; route/class/mode assertions; exclusion ledger and query freshness"
+    },
+    {
+      "id": "P3",
+      "obligation": "Native stopping branch inputs",
+      "status": "PARTIAL",
+      "evidence_limit": "known v/geometric position/normal b; projected seen+offset; hidden dpi/override/perception fields not recorded",
+      "minimum_needed": "enumerate or source-exclude hidden inputs, prove native seen equals geometric mapping and action alignment"
+    },
+    {
+      "id": "P4",
+      "obligation": "Ordinary-decel and no red crossing speed envelope",
+      "status": "UNPROVEN",
+      "evidence_limit": "canBrake and stopSpeed scalar cannot encompass finalizeSpeed/vSafeMin/emergency/LC/TraCI",
+      "minimum_needed": "prove all admissible final speeds lie [max(0,v-b*dt), non-crossing upper] with native offset; any missing domain UNKNOWN"
+    },
+    {
+      "id": "P5",
+      "obligation": "Follower braking and rear-end coverage",
+      "status": "UNPROVEN",
+      "evidence_limit": "positions/length/minGap allow some static gap reconstruction; moving follower R_flow.2\u20135 native decision state not saved",
+      "minimum_needed": "joint follower/leader dynamic interval secure-gap proof through braking chain, not front-only bound"
+    },
+    {
+      "id": "P6",
+      "obligation": "Ingress/unseen entrants",
+      "status": "PARTIAL",
+      "evidence_limit": "compiled predecessor length113.08>58.15556m; excludes a car not yet on that lane reaching storage under fixed bounds this single step",
+      "minimum_needed": "prove ALL inbound/neighbor/insertion/remote paths; record observed ingress; repeat every future step, no one-time exemption"
+    },
+    {
+      "id": "P7",
+      "obligation": "Receiver/leader/conflict occupancy and reservations",
+      "status": "PARTIAL",
+      "evidence_limit": "ramp_mid static foes0; old receiver30.063 gap / secure .6365 and rear31.561; no independent native secureGap or complete current reservations",
+      "minimum_needed": "route-aware full receiver/leader/foe vehicle state/modes/devices plus secure gap numeric replay and all admissible motions"
+    },
+    {
+      "id": "P8",
+      "obligation": "Random/perception/LC/devices bounds",
+      "status": "UNPROVEN",
+      "evidence_limit": "dawdle upper bound conditional vmax; hidden perception/LC/vSafeMin/friction/etc not fully source-excluded",
+      "minimum_needed": "bounded interval proof for every allowed stochastic/device/LC output; seed alone inadequate"
+    },
+    {
+      "id": "P9",
+      "obligation": "Committed/yellow/red handling",
+      "status": "SPECIFIED_NOT_VALIDATED",
+      "evidence_limit": "uncommitted approaches required; yellow completed crossing retained; internal committed vehicles need receiver clearance; emergency not safetyPASS",
+      "minimum_needed": "policy deny cannot-brake/beyondline; require proof post-step no emergency/red abnormality/all-color ledger"
+    },
+    {
+      "id": "P10",
+      "obligation": "Post-step verification and qualification",
+      "status": "UNOBSERVED",
+      "evidence_limit": "refusedstep not executed; no A1 runtime or cycle qualifier",
+      "minimum_needed": "separate user-authorized new implementation/prelaunch gate, later explicit R300S17 newidentity smoke, then independent safety/data/science"
+    }
+  ],
+  "rule": "No self-attested proof flag is evidence; each proof must bind source/config/time/IDs/state and derivation/interval/exclusion. Missing/unproved => UNKNOWN failclosed. INELIGIBLE policy is not physical unsafe claim. ELIGIBLE requires every P0-P9 independently fulfilled and no hazards; no state in current A07 evidence meets that standard."
+}

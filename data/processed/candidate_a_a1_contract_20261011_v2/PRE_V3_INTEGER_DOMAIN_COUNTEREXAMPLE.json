@@ -1,0 +1,10 @@
+{
+  "classification": "V2_CPP_INTEGER_DOMAIN_REVIEW_COUNTEREXAMPLE",
+  "contract_sha256": "5cbaa36cacf2d0e409e507efb64f15f7416c0a73f765805bb78d3c3635c6dfb6",
+  "speed_m_s": 100000000000.0,
+  "decel_m_s2": 4.5,
+  "python_integer_steps": 22222222222,
+  "brake_gap_euler_actual": 1.111111111061111e+21,
+  "expected": "ValueError or UNKNOWN unless native int conversion and steps+1 domain is established",
+  "note": "Finite output is not native integer-domain binding. No SUMO executed."
+}

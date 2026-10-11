@@ -1,0 +1,34 @@
+{
+  "cause": "scientific review finite native int conversion domain gap in V2 helper",
+  "counterexample": {
+    "speed_m_s": 100000000000.0,
+    "decel_m_s2": 4.5,
+    "old_steps": 22222222222,
+    "old_finite_brake_gap_m": 1.111111111061111e+21
+  },
+  "restriction": "truncate nonnegative finite quotient safely in Python; require count<=32766 so native int count and count+1 fit portable minimum guarantee",
+  "not_claimed": [
+    "actual SUMO compiler integer width",
+    "physical safety speed/brake threshold",
+    "native C++ executed trajectory",
+    "full floating arithmetic equivalence",
+    "A1 eligibility"
+  ],
+  "source_cpp_product": "speedReduction * steps * (steps + 1) is double arithmetic; no integer square bound",
+  "tests_added": 2,
+  "tests_total": 33,
+  "before": {
+    "scripts/candidate_a_a1_contract_20261011_v1/contract.py": "5cbaa36cacf2d0e409e507efb64f15f7416c0a73f765805bb78d3c3635c6dfb6",
+    "scripts/candidate_a_a1_contract_20261011_v1/audit_public.py": "8ce8923043c98cc294ddfc290b79407a2d2ee203875e387877b01a545f523adb",
+    "tests/candidate_a_a1_contract_20261011_v1/test_contract.py": "563138bd6ab677da3d7faea7c3d32cbf65243b04c4836ff076467dd77d841866"
+  },
+  "after": {
+    "scripts/candidate_a_a1_contract_20261011_v1/contract.py": "0c26a985627d8640bedd245dfd3211aa36a71d35eda860f37413938cd8b7c45c",
+    "scripts/candidate_a_a1_contract_20261011_v1/audit_public.py": "fc0d7a26f32e9d61d25b6d0bfad820bb8d2845a8a09c1fc11b162717ba2663ca",
+    "tests/candidate_a_a1_contract_20261011_v1/test_contract.py": "fcda0720c1aebbfeff882fcdb8ad27c9e154a17ebc72ce88686f2a11aff17219"
+  },
+  "A07_mapping_unchanged": true,
+  "production_guard_changed": false,
+  "native_starts": 0,
+  "history": "all V1/V2 records and exact V2 bytes preserved"
+}
