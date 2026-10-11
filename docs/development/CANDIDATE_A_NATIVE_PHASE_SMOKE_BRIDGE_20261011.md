@@ -1,6 +1,6 @@
 # Candidate A native-phase smoke — minimal runtime bridge
 
-**Implementation and three-role offline review complete; delivered-code clean checkout pending. Native execution is NOT authorized.**
+**Implementation, three-role offline review and delivered-code clean checkout complete; awaiting user/Chat review. Native execution is NOT authorized.**
 
 Baseline: `833ac18db2c6b256f2782631830c9c849e090681`, local branch `codex/candidate-a-native-smoke-proposal`.
 
@@ -59,7 +59,9 @@ Engineering V5: **11/11 offline tests PASS**, fake connections/processes and act
 
 Independent [data review](../../data/processed/candidate_a_native_smoke_bridge_20261011_v1/FINAL_DATA_REVIEW.md) passes11 tests/6 representative probes and both offline CLI commands;26 engineering/48 data/536 protected/7 R2 bindings match. Two actual checker-assumption failures and fixes are preserved separately. Read-only [scientific review](../../artifacts/candidate_a_native_smoke_bridge_20261011_v1/FINAL_SCIENTIFIC_REVIEW.md): `PASS_FOR_BOUNDED_NATIVE_BRIDGE_OFFLINE_IMPLEMENTATION_DELIVERY`, subject to the delivered-code clean-checkout gate, unresolved Blocker/Major/required Minor0/0/0. ACK-time and log-wording findings were addressed.
 
-Delivered-code clean-checkout evidence will be linked after completion. Native warning timing, real child faults, first-red physical response and full actuator qualification remain NOT_RUN/NOT_VALIDATED. Old STOP3 remains bounded by its original guard and is not evidence that native red is unsafe.
+Actual tested code `87d905b0c6aa6852447e21dfb0eb0ee4f4cd8789` in a fresh local no-hardlinks/single-branch checkout passed the11-test suite,6-probe public checker, default prepare, card check and expected foreign-root native-path rejection, each command once. Tracked status empty; raw only`.gitkeep`, no ignored A07 raw or current native output/authorization/release. [Actual output/receipt](../../artifacts/candidate_a_native_smoke_bridge_20261011_v1/clean_checkout/RECEIPT.json), SHA-256`70b2a122187a177fe9f0d44a2accb70d56cb12a291b8209c02a61b940da69414`. [Independent scientific readback](../../artifacts/candidate_a_native_smoke_bridge_20261011_v1/FINAL_DELIVERY_SCIENTIFIC_READBACK.md) matched real checkout HEAD, five output SHAs and all bound source/data/protected files without rerunning tests; the offline delivery gate is closed. Later changes only documentation/receipts; this final document head is not a separately executed implementation version.
+
+Native warning timing, real child faults, first-red physical response and full actuator qualification remain NOT_RUN/NOT_VALIDATED. Old STOP3 remains bounded by its original guard and is not evidence that native red is unsafe.
 
 ## Documentation impact
 

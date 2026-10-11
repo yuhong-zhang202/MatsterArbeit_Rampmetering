@@ -1,0 +1,93 @@
+{
+  "created_utc": "2026-10-11T19:24:08.048363+00:00",
+  "actual_tested_commit": "87d905b0c6aa6852447e21dfb0eb0ee4f4cd8789",
+  "clone_path": "/private/tmp/candidate-a-bridge-delivery-uoupr34n/checkout",
+  "clone_HEAD": "87d905b0c6aa6852447e21dfb0eb0ee4f4cd8789",
+  "clone_method": "local no-hardlinks single-branch; no remote push",
+  "python_executable": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+  "python_version": "Python 3.13.0",
+  "checks": [
+    {
+      "check": "unit_tests",
+      "command": [
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/candidate_a_native_smoke_bridge_20261011",
+        "-v"
+      ],
+      "cwd": "/private/tmp/candidate-a-bridge-delivery-uoupr34n/checkout",
+      "exit_code": 0,
+      "result": "PASS",
+      "output": "artifacts/candidate_a_native_smoke_bridge_20261011_v1/clean_checkout/unit_tests.txt",
+      "output_sha256": "c79348fe50f06671503c0f50b1e38da5f16abd287d2eb319b4eac16561d6ed30"
+    },
+    {
+      "check": "independent_data",
+      "command": [
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+        "data/processed/candidate_a_native_smoke_bridge_20261011_v1/independent_bridge_review.py"
+      ],
+      "cwd": "/private/tmp/candidate-a-bridge-delivery-uoupr34n/checkout",
+      "exit_code": 0,
+      "result": "PASS",
+      "output": "artifacts/candidate_a_native_smoke_bridge_20261011_v1/clean_checkout/independent_data.txt",
+      "output_sha256": "93434f1ccf6289f9db768b72a13d571b4e9ff327726995f04b589f6a29cf2674"
+    },
+    {
+      "check": "offline_default_prepare",
+      "command": [
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+        "scripts/candidate_a_native_smoke_bridge_20261011_v1/cli.py"
+      ],
+      "cwd": "/private/tmp/candidate-a-bridge-delivery-uoupr34n/checkout",
+      "exit_code": 0,
+      "result": "PASS",
+      "output": "artifacts/candidate_a_native_smoke_bridge_20261011_v1/clean_checkout/offline_default_prepare.txt",
+      "output_sha256": "1c9d54c4818dc149ca3ecab068330b8b882f048c6f479fcef6eca5f0801a60a9"
+    },
+    {
+      "check": "offline_card_check",
+      "command": [
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+        "scripts/candidate_a_native_smoke_bridge_20261011_v1/cli.py",
+        "--check-card",
+        "artifacts/candidate_a_native_smoke_bridge_20261011_v1/engineering/packages/CA_NATIVE_PHASE_R300_S17_SMOKE01/card.json"
+      ],
+      "cwd": "/private/tmp/candidate-a-bridge-delivery-uoupr34n/checkout",
+      "exit_code": 0,
+      "result": "PASS",
+      "output": "artifacts/candidate_a_native_smoke_bridge_20261011_v1/clean_checkout/offline_card_check.txt",
+      "output_sha256": "62c921da19285fd1fe216fa59e59cf290dda17018618ba749f2ee55863095c86"
+    },
+    {
+      "check": "foreign_native_path_denial",
+      "command": [
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+        "-c",
+        "from pathlib import Path; from src.candidate_a_native_smoke_20261011.bridge_card import validate; p=Path('artifacts/candidate_a_native_smoke_bridge_20261011_v1/engineering/packages/CA_NATIVE_PHASE_R300_S17_SMOKE01/card.json');\ntry:\n validate(p,require_environment=True)\n raise AssertionError('foreign runtime accepted')\nexcept ValueError as e:\n assert 'foreign runtime input root' in str(e), str(e)\n print('PASS_EXPECTED_RUNTIME_FOREIGN_ROOT_DENIAL:',str(e))"
+      ],
+      "cwd": "/private/tmp/candidate-a-bridge-delivery-uoupr34n/checkout",
+      "exit_code": 0,
+      "result": "PASS",
+      "output": "artifacts/candidate_a_native_smoke_bridge_20261011_v1/clean_checkout/foreign_native_path_denial.txt",
+      "output_sha256": "9f1d06ff8b7d7d1351ad19f5c637d5dd07e0fea38fe258eddb90061616b72e5b"
+    }
+  ],
+  "expected_suite_methods": 11,
+  "expected_independent_probes": 6,
+  "all_pass": true,
+  "tracked_status_after": "",
+  "raw_files": [
+    "data/raw/.gitkeep"
+  ],
+  "ignored_A07_raw_present": false,
+  "new_raw_run_present": false,
+  "runtime_authorization_present": false,
+  "runtime_release_present": false,
+  "SUMO_native_version_TraCI_starts": 0,
+  "interpretation": "Actual-code public/fake reproducibility only; host-bound native paths deny; not native safety/compatibility/authorization/qualification",
+  "prior_suites": "old43/R2 not rerun; protected code unchanged"
+}
