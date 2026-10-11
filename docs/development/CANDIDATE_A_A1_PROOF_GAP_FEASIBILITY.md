@@ -10,7 +10,7 @@
 
 ## 2. 单一候选结论
 
-**Proposed NO-GO：`STOP_A1_UNDER_CURRENT_INTERFACE`，工程、独立数据和科学source/data复审支持；实际交付门与用户决定另行记录。** 在当前接口、固定模型和本轮已验证界限下，没有足够依据实现能够放行的 A1 联合安全规则。建议停止继续扩展当前 A1 的离线资格工具和运行时实现投入，先由用户决定下一条工程路线。
+**Proposed NO-GO：`STOP_A1_UNDER_CURRENT_INTERFACE`，工程、独立数据和科学最终复审支持，实际交付复现门已通过；仍待用户决定。** 在当前接口、固定模型和本轮已验证界限下，没有足够依据实现能够放行的 A1 联合安全规则。建议停止继续扩展当前 A1 的离线资格工具和运行时实现投入，先由用户决定下一条工程路线。
 
 此结论不是“A1 在物理上不可能”，也不是“SUMO 原生红灯不安全”；它是当前可实施证明的工程 NO-GO。没有证明任何未来严格保守方法都数学不可能。新增 core instrumentation 或新的完整联合区间证明属于另一个授权范围，本轮不借此继续调查。STOP3、Candidate A NOT_QUALIFIED、HOLD 和 900 NOT_TESTED 不解除。
 
@@ -60,7 +60,7 @@
 
 实际工程公开静态checker与独立数据checker均return0/PASS，Python3.13.0标准库；0新增unit/synthetic tests，旧43项SKIP（实现未改且旧精确版本已有验证）。18份官方源真实读取837752bytes；含继承缓存共25完整源、44物理行摘录由独立本地读回核对。公开复现只验证receipt/excerpt一致，完整源字节本地增强需官方refetch，不冒充公开runtime认证。[工程回执](../../artifacts/candidate_a_a1_proof_gap_20261011_v1/engineering/STATIC_VERIFICATION_RECEIPT.json)；[独立数据报告](../../data/processed/candidate_a_a1_proof_gap_20261011_v1/DATA_REVIEW.md)／[实际回执](../../data/processed/candidate_a_a1_proof_gap_20261011_v1/INDEPENDENT_REVIEW_RECEIPT.json)。
 
-首次68-row draft PASS输出保留，但初始binding未保存，不能用final69-row R1binding为旧PASS补签；只有当前R1具精确可复现绑定。父任务实际交付codecleancheckout与最终science门尚待独立回执，不声称已通过。
+首次68-row draft PASS输出保留，但初始binding未保存，不能用final69-row R1binding为旧PASS补签；只有当前R1具精确可复现绑定。实际执行codecommit `121285daa54a4b1b1d45c5319c5405479b913d80` 的freshcleanclone内两个公开脚本各一次return0/PASS；trackedstatus空，raw仅.gitkeep，没有ignoredA07／sourcecache／binary依赖。只读科学reviewer逐SHA及actualoutput读回关闭交付门。[真实代码checkout回执](../../artifacts/candidate_a_a1_proof_gap_20261011_v1/DELIVERED_CODE_CLEAN_CHECKOUT_RECEIPT.json)；[最终科学审查](../../artifacts/candidate_a_a1_proof_gap_20261011_v1/FINAL_SCIENTIFIC_REVIEW.md)。完整官方源在clone中未重新获取认证；继承本轮已绑定公开receipt/excerpt范围。
 
 ```sh
 python3 scripts/candidate_a_a1_proof_gap_20261011_v1/verify_public.py
@@ -78,10 +78,12 @@ python3 data/processed/candidate_a_a1_proof_gap_20261011_v1/independent_review.p
 | 5 | A07 42 witness / STOP3 / V3 缺失值保持，未把未执行红灯步写成真实观测或将合成数据当作安全证据？ | 已覆盖：独立42映射／六窗口／536保护重核；0完整nativebranch／red后继。 |
 | 6 | 是否有明确的 GO / bounded evidence / STOP 决策与一个**最小后续任务**，列时间/工程成本与风险（可给区间，不得虚构已测量值）？ | 已覆盖：单一ProposedNO-GO／最小用户决策任务／估计2–4h、1–3日设计与风险。 |
 | 7 | 是否如实保留 Candidate A `NOT_QUALIFIED`、当前 `STOP3`、900 `NOT_TESTED`、formal protocol 未冻结，以及 no-new-SUMO runs？ | 已覆盖：原native/guard/core/model/协议/旧数据不改，0starts；资格和冻结状态保留。 |
-| 8 | 代码/证据/测试在干净 checkout 中可复现；若需本地 raw，分开注明公开复现能力和本地额外核验，报告真实 PASS/FAIL/SKIP 和 provenance。 | 工程与独立数据公开静态检查PASS；实际交付commitcleancheckout及最终science门仍待记录。 |
+| 8 | 代码/证据/测试在干净 checkout 中可复现；若需本地 raw，分开注明公开复现能力和本地额外核验，报告真实 PASS/FAIL/SKIP 和 provenance。 | 已覆盖：工程／独立公开静态检查及实际 `121285daa54a4b1b1d45c5319c5405479b913d80` cleancheckout两脚本PASS，最终science读回通过；不认证runtime安全。 |
 
 ## 8. 当前状态与交接
 
 Stage6既有结项保持；formal protocol为空／未冻结。No new SUMO/TraCI runs。所有旧失败／raw／reviews保留。DECISIONS、协议和规范安全合同不改。工程与数据／科学结论均为advisory，自检不等于用户验收。下一位用户／Chat审查新DraftPR；任何下一步建议不构成执行授权。
 
 工程→数据→只读科学source/data门通过；无未解决交付Blocker/Major/requiredMinor。P3/P4/P5/P7/P8/P9仍为A1推进blocker，不是本轮调查交付失败。[科学checkpoint](../../artifacts/candidate_a_a1_proof_gap_20261011_v1/SCIENTIFIC_SOURCE_DATA_REVIEW.md)。
+
+最终交付门通过，八项验收满足本轮有界调查范围。后续仅doc／receipt提交继承同字节代码／输入验证；不得声称最后文档head另行执行。没有新增unit／synthetic，旧43suiteSKIP的理由仍保持。
