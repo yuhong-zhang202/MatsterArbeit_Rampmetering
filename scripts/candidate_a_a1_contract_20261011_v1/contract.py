@@ -184,7 +184,9 @@ def diagnostic_decision(state):
     elif (state['time_s']!=state['measurement_time_s'] or state['next_switch_s']!=state['time_s']
           or state['step_s']!=1.0):
         unknown.append('TIME_OR_EVENT_MISMATCH')
-    if state.get('phase_before')!=1 or state.get('state_before')!='y' or state.get('motion_state')!='r':
+    # Match the integer JSON phase schema; bool/float equality is not binding.
+    if (type(state.get('phase_before')) is not int or state['phase_before']!=1
+            or state.get('state_before')!='y' or state.get('motion_state')!='r'):
         unknown.append('PHASE_MISMATCH')
     if state.get('program')!='CA_C24' or state.get('controlled_link')!=['ramp_storage_0','ramp_accel_0',':ramp_mid_0_0']:
         unknown.append('PROGRAM_OR_LINK_MISMATCH')

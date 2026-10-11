@@ -310,6 +310,33 @@ class AdversarialContractTests(unittest.TestCase):
                     elif condition=='other_vehicle_modes_committed_front':
                         self.assertIn('COMMITTED_APPROACH_NOT_ADMITTED',result['reasons'])
 
+    def test_phase_type_rejects_invalid_values_with_empty_or_bound_red(self):
+        # 22 cases: ten malformed/wrong phase values plus missing x two red lists.
+        for phase in [True,False,1.0,0.0,None,'1',{},[],0,2]:
+            for red in [[],['synthetic_front']]:
+                s=fixture();s['phase_before']=phase;s['observed_red_crossing_ids']=red
+                with self.subTest(phase=phase,phase_type=type(phase).__name__,red=red):
+                    result=diagnostic_decision(s)
+                    self.assertEqual(result['decision'],'UNKNOWN')
+                    self.assertIn('PHASE_MISMATCH',result['reasons'])
+                    self.assertNotIn('OBSERVED_RED_ANOMALY',result['reasons'])
+        for red in [[],['synthetic_front']]:
+            s=fixture();del s['phase_before'];s['observed_red_crossing_ids']=red
+            result=diagnostic_decision(s)
+            self.assertEqual(result['decision'],'UNKNOWN')
+            self.assertIn('PHASE_MISMATCH',result['reasons'])
+            self.assertNotIn('OBSERVED_RED_ANOMALY',result['reasons'])
+
+    def test_integer_phase_one_preserves_matched_red_controls(self):
+        # Two controls: JSON integer1, with empty or valid known positive IDs.
+        for red in [[],['synthetic_front']]:
+            s=fixture();s['phase_before']=1;s['observed_red_crossing_ids']=red
+            result=diagnostic_decision(s)
+            self.assertEqual(result['decision'],'INELIGIBLE' if red else 'UNKNOWN')
+            self.assertEqual('OBSERVED_RED_ANOMALY' in result['reasons'],bool(red))
+            self.assertNotIn('PHASE_MISMATCH',result['reasons'])
+            self.assertNotEqual(result['decision'],'ELIGIBLE')
+
     def test_missing_or_malformed_snapshot_fails_closed(self):
         for s in [None,{}, {'schema':'other'},dict(fixture(),affected_inventory_ids=[{}])]:
             self.assertEqual(diagnostic_decision(s)['decision'],'UNKNOWN')
@@ -336,7 +363,7 @@ class AdversarialContractTests(unittest.TestCase):
             self.assertEqual(audit()['status'],'PASS')
 
     def test_public_source_or_input_hash_drift_fails(self):
-        relative='artifacts/candidate_a_a1_contract_20261011_v1/review_fix_20261011/v5/INPUT_BINDINGS_V5.json'
+        relative='artifacts/candidate_a_a1_contract_20261011_v1/review_fix_20261011/v6/INPUT_BINDINGS_V6.json'
         binds=json.loads((ROOT/relative).read_text())
         with tempfile.TemporaryDirectory() as tmp:
             dest=Path(tmp);(dest/relative).parent.mkdir(parents=True)

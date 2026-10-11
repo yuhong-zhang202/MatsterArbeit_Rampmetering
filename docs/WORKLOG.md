@@ -2301,3 +2301,7 @@ User-authorized original-PR repair from 618a626. Isolated diagnostic returns UNK
 ### 2026-10-11 — PR #9 V5 actual delivered-code verification
 
 Actual code commit af3f2e09c53973b8c41bd2f4761313a25d5b2b0c clean clone passed41tests/publicaudit/53new+19schema+10numericprobes; trackedstatus empty, ignoredA07raw absent. Parent raw-empty assertion failed by counting .gitkeep; original receipt retained and separate metadata readback recorded, no tests repeated. Read-only scientific reviewer independently verified52inputs/7data, actual output and cloneidentity and closed bounded delivery gate. Final changes are documentation/receipts only; do not claim final docshead separately executed. A1UNRESOLVED/STOP3/HOLD intact,0SUMO.
+
+### 2026-10-11 — PR #9 third P2 phase-index type repair V6
+
+User authorized directrepair froma41bf0f/comment4241992993, noIssue. Exact nonbooleaninteger phase validation; True/1.0+nonemptyred UNKNOWN/noanomaly, integer1 controls retained. Engineering43tests/24newsubcases/publicaudit and independent38newphase+53oldmode+19schema+10numeric PASS; engineering→data→scientificsource/data checkpoint complete, actualcodecleancheckout pending. Saved exactV5source/binder/checker and actualpreFAIL, priorrecords unchanged.42map/6windows/536protected unchanged;0SUMO/nativeequations/safetycontract/guard/研究设计/upstream unchanged. A1UNRESOLVED/STOP3HOLD preserved. Minimalcurrentdocs/report updated; unrelatedMemoryCore edits excluded.

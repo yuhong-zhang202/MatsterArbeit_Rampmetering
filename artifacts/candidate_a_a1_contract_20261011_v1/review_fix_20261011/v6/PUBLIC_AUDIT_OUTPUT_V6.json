@@ -1,0 +1,1575 @@
+{
+  "status": "PASS",
+  "classification": "UNRESOLVED_NEEDS_EVIDENCE",
+  "scope": "OFFLINE_PUBLIC_EVIDENCE_AND_CONDITIONAL_SOURCE_SUBPREDICATES",
+  "source_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+  "input_files_checked": 57,
+  "source_excerpt_count": 36,
+  "witness_count": 42,
+  "old_guard_unsafe_ids": [
+    "R_flow.1"
+  ],
+  "conditional_plan_can_brake_count": 42,
+  "actual_native_branches_determined": 0,
+  "refused_red_motion_steps_executed": 0,
+  "sumo_traci_starts": 0,
+  "public_evidence_only": true,
+  "independent_raw_phase_reconstruction": false,
+  "full_a1_eligibility_proven": false,
+  "a07_a1_decision": "UNKNOWN",
+  "runtime_eligible_path_implemented": false,
+  "a1_a2_qualified": false,
+  "current_contract_STOP3": "PRESERVED",
+  "rate_900": "NOT_TESTED",
+  "further_execution": "HOLD",
+  "upstream_public_audit": {
+    "classification": "OFFLINE_COMMITTED_EVIDENCE_AUDIT_ONLY",
+    "status": "PASS",
+    "public_evidence_only": true,
+    "local_raw_verified": false,
+    "thin_phase_fields_reconciled_to_local_raw": false,
+    "phase_thin_sha256": "8a1e59af0e4924fd30ec18cf81782ad40d1b19e50b933d336edb27d863c98156",
+    "public_guardian_sha256": "95a263217ccefcddfdb3871080ded7a947111ab75dbc64430bc5323e106b4b04",
+    "snapshot_sha256": "0cb77aa1549d500628fa136742d5119d0cdbdd94c5e23f357090b44c6ccc984d",
+    "gate_sha256": "d7cf23dce2f2639c0f972102938cca492bd7d6442c7b5d1c6eeac37b72c2a20f",
+    "service_csv_sha256": "bcfa2f49991ab5ea4eca58d9b6237a76952de940c7ca85030bb9a2f6264e9546",
+    "last_completed_s": 1206,
+    "guard_witnesses": 42,
+    "population_counts": {
+      "storage": 27,
+      "ingress": 15
+    },
+    "unsafe_ids": [
+      "R_flow.1"
+    ],
+    "front_gap_m": 1.001999189766508,
+    "current_required_m": 1.1459706723353782,
+    "current_margin_m": -0.14397148256887027,
+    "constant_1m_only_required_m": 1.045970672335378,
+    "constant_1m_only_margin_m": -0.04397148256887018,
+    "service_observed_steps": [
+      6,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "complete_cycles": 0,
+    "effective_qualifications": 0
+  },
+  "a07_witness_mapping": [
+    {
+      "vehicle_id": "R_flow.27",
+      "population": "storage",
+      "front_distance_projected_to_controlled_link_m": 203.5288914559441,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 203.5288914559441,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 202.5288914559441,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 40.502789145594406
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.26",
+      "population": "storage",
+      "front_distance_projected_to_controlled_link_m": 196.02787233867687,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 196.02787233867687,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 195.02787233867687,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 39.66965248207521
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.25",
+      "population": "storage",
+      "front_distance_projected_to_controlled_link_m": 188.52681160495274,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 188.52681160495274,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 187.52681160495274,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 38.836201289439195
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.24",
+      "population": "storage",
+      "front_distance_projected_to_controlled_link_m": 181.025799498954,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 181.025799498954,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 180.025799498954,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 38.002755499883776
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.23",
+      "population": "storage",
+      "front_distance_projected_to_controlled_link_m": 173.52479690900634,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 173.52479690900634,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 172.52479690900634,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 37.16931076766737
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.22",
+      "population": "storage",
+      "front_distance_projected_to_controlled_link_m": 166.02379080059248,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 166.02379080059248,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 165.02379080059248,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 36.33586564451028
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.21",
+      "population": "storage",
+      "front_distance_projected_to_controlled_link_m": 158.52277885899036,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 158.52277885899036,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 157.52277885899036,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 35.4402223573738
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.20",
+      "population": "storage",
+      "front_distance_projected_to_controlled_link_m": 151.02170548450525,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 151.02170548450525,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 150.02170548450525,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 34.502588185563155
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.19",
+      "population": "storage",
+      "front_distance_projected_to_controlled_link_m": 143.52068691874925,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 143.52068691874925,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 142.52068691874925,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 33.564960864843655
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.18",
+      "population": "storage",
+      "front_distance_projected_to_controlled_link_m": 136.01968648215225,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 136.01968648215225,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 135.01968648215225,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 32.62733581026903
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.17",
+      "population": "storage",
+      "front_distance_projected_to_controlled_link_m": 128.51861449291,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 128.51861449291,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 127.51861449290999,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 31.689701811613748
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.16",
+      "population": "storage",
+      "front_distance_projected_to_controlled_link_m": 121.01754873175402,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 121.01754873175402,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 120.01754873175402,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 30.64522124739343
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.15",
+      "population": "storage",
+      "front_distance_projected_to_controlled_link_m": 113.51653910780739,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 113.51653910780739,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 112.51653910780739,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 29.573648443972484
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.14",
+      "population": "storage",
+      "front_distance_projected_to_controlled_link_m": 106.01545353179722,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 106.01545353179722,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 105.01545353179722,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 28.502064790256746
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.13",
+      "population": "storage",
+      "front_distance_projected_to_controlled_link_m": 98.51445350755122,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 98.51445350755122,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 97.51445350755122,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 27.430493358221604
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.12",
+      "population": "storage",
+      "front_distance_projected_to_controlled_link_m": 91.01340045962496,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 91.01340045962496,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 90.01340045962496,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 26.252066743270827
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.11",
+      "population": "storage",
+      "front_distance_projected_to_controlled_link_m": 83.51235385351306,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 83.51235385351306,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 82.51235385351306,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 25.001892308918844
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.10",
+      "population": "storage",
+      "front_distance_projected_to_controlled_link_m": 76.01125952447927,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 76.01125952447927,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 75.01125952447927,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 23.751709920746546
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.9",
+      "population": "storage",
+      "front_distance_projected_to_controlled_link_m": 68.5102422633029,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 68.5102422633029,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 67.5102422633029,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 22.50154037721715
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.8",
+      "population": "storage",
+      "front_distance_projected_to_controlled_link_m": 61.00919009013586,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 61.00919009013586,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 60.00919009013586,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 21.001638018027172
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.7",
+      "population": "storage",
+      "front_distance_projected_to_controlled_link_m": 53.50818029689091,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 53.50818029689091,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 52.50818029689091,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 19.501436059378182
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.6",
+      "population": "storage",
+      "front_distance_projected_to_controlled_link_m": 46.00709630323766,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 46.00709630323766,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 45.00709630323766,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 18.00121926064753
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.5",
+      "population": "storage",
+      "front_distance_projected_to_controlled_link_m": 38.362641999907765,
+      "speed_m_s": 0.14344958002819005,
+      "old_guard": {
+        "required_m": 1.245736000251553,
+        "margin_m": 37.11690599965621,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 37.362641999907765,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 16.09041049997694
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.4",
+      "population": "storage",
+      "front_distance_projected_to_controlled_link_m": 29.48051153997318,
+      "speed_m_s": 1.2941405376048665,
+      "old_guard": {
+        "required_m": 2.58022939661289,
+        "margin_m": 26.90028214336029,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 28.48051153997318,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 13.869877884993294
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.3",
+      "population": "storage",
+      "front_distance_projected_to_controlled_link_m": 18.116013424502142,
+      "speed_m_s": 3.6895633232594656,
+      "old_guard": {
+        "required_m": 6.3021052695196245,
+        "margin_m": 11.813908154982517,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 17.116013424502142,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 10.205004474834046
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.2",
+      "population": "storage",
+      "front_distance_projected_to_controlled_link_m": 8.688541208253895,
+      "speed_m_s": 1.092370352007706,
+      "old_guard": {
+        "required_m": 2.324956239334977,
+        "margin_m": 6.363584968918918,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 7.688541208253895,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 6.093770604126947
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.1",
+      "population": "storage",
+      "front_distance_projected_to_controlled_link_m": 1.001999189766508,
+      "speed_m_s": 0.04573822948686786,
+      "old_guard": {
+        "required_m": 1.1459706723353782,
+        "margin_m": -0.14397148256887027,
+        "safe": false
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 0.001999189766507925,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 0.000999189766507925
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.42",
+      "population": "ingress",
+      "front_distance_projected_to_controlled_link_m": 316.0441161523147,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 316.0441161523147,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 315.0441161523147,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 51.003593012692896
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.41",
+      "population": "ingress",
+      "front_distance_projected_to_controlled_link_m": 308.54310242059495,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 308.54310242059495,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 307.54310242059495,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 50.37850853504958
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.40",
+      "population": "ingress",
+      "front_distance_projected_to_controlled_link_m": 301.04210238270576,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 301.04210238270576,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 300.04210238270576,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 49.753425198558816
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.39",
+      "population": "ingress",
+      "front_distance_projected_to_controlled_link_m": 293.5410336743253,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 293.5410336743253,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 292.5410336743253,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 49.09454851584776
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.38",
+      "population": "ingress",
+      "front_distance_projected_to_controlled_link_m": 286.04003170233443,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 286.04003170233443,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 285.04003170233443,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 48.41263924566677
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.37",
+      "population": "ingress",
+      "front_distance_projected_to_controlled_link_m": 278.5390297787898,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 278.5390297787898,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 277.5390297787898,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 47.730729979889986
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.36",
+      "population": "ingress",
+      "front_distance_projected_to_controlled_link_m": 271.0380116102982,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 271.0380116102982,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 270.0380116102982,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 47.04881923729984
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.35",
+      "population": "ingress",
+      "front_distance_projected_to_controlled_link_m": 263.5369961914984,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 263.5369961914984,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 262.5369961914984,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 46.36690874468167
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.34",
+      "population": "ingress",
+      "front_distance_projected_to_controlled_link_m": 256.0359873423628,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 256.0359873423628,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 255.03598734236277,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 45.68499884930571
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.33",
+      "population": "ingress",
+      "front_distance_projected_to_controlled_link_m": 248.53498391464197,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 248.53498391464197,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 247.53498391464197,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 45.00308944678563
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.32",
+      "population": "ingress",
+      "front_distance_projected_to_controlled_link_m": 241.0339726805442,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 241.0339726805442,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 240.0339726805442,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 44.25329726805442
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.31",
+      "population": "ingress",
+      "front_distance_projected_to_controlled_link_m": 233.5329685070348,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 233.5329685070348,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 232.5329685070348,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 43.50319685070348
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.30",
+      "population": "ingress",
+      "front_distance_projected_to_controlled_link_m": 226.03194243777557,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 226.03194243777557,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 225.03194243777557,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 42.753094243777554
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.29",
+      "population": "ingress",
+      "front_distance_projected_to_controlled_link_m": 218.53094011439038,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 218.53094011439038,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 217.53094011439038,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 42.002994011439036
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    },
+    {
+      "vehicle_id": "R_flow.28",
+      "population": "ingress",
+      "front_distance_projected_to_controlled_link_m": 211.02993400590134,
+      "speed_m_s": 0.0,
+      "old_guard": {
+        "required_m": 0.0,
+        "margin_m": 211.02993400590134,
+        "safe": true
+      },
+      "conditional_native_local_arithmetic": {
+        "stop_decel_m_s2": 4.5,
+        "brake_gap_m": 0.0,
+        "can_brake_before_lane_end": true,
+        "can_brake_before_stopline": true,
+        "native_adjusted_stop_offset_m": 1.0,
+        "native_stop_dist_m": 210.02993400590134,
+        "full_branch_selected": null,
+        "next_speed_m_s": null,
+        "scalar_euler_stop_speed_before_caps_m_s": 41.25289340059013
+      },
+      "projection_assumptions": [
+        "native seen equals this route-projected gap",
+        "lane stopOffset=0",
+        "passenger; decel4.5/emergency9/yellow-min3; jmStoplineGap1; Euler1s",
+        "no rail/reversal/GLOSA/driver/newStopDist/device overrides"
+      ],
+      "actual_native_branch": "UNKNOWN",
+      "red_outcome": "UNOBSERVED",
+      "missing": [
+        "per-vehicle native seen/DriveProcessItem and action status",
+        "runtime effective offsets/devices/JM params/influencer trace",
+        "receiver/leader complete dynamic state and reservations",
+        "finalized speed interval for followers and RNG effects"
+      ]
+    }
+  ]
+}

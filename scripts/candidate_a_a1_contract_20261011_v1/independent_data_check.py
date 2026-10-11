@@ -39,7 +39,7 @@ def load(relative):
 
 
 def run():
-    binding_path = 'artifacts/candidate_a_a1_contract_20261011_v1/review_fix_20261011/v5/INPUT_BINDINGS_V5.json'
+    binding_path = 'artifacts/candidate_a_a1_contract_20261011_v1/review_fix_20261011/v6/INPUT_BINDINGS_V6.json'
     inputs = load(binding_path)['files']
     check(all(not p.startswith('data/raw/') for p in inputs), 'raw dependency')
     check(all(sha(ROOT/p) == h for p,h in inputs.items()), 'input hash mismatch')
@@ -241,10 +241,42 @@ def run():
     st=module.fixture();st['observed_red_crossing_ids']=[front]
     probe_combo('unchanged_valid_positive_control',st,'INELIGIBLE',True)
     st['observed_red_crossing_ids']=[];probe_combo('unchanged_valid_empty_control',st,'UNKNOWN')
-    preservation=load('data/processed/candidate_a_a1_contract_20261011_v4/PRE_FIX_DATA_BINDINGS.json')
+    phase_red=[]
+    def probe_phase(label,st,expected,anomaly=False):
+        result=diagnostic_decision(st)
+        actual_anomaly='OBSERVED_RED_ANOMALY' in result.get('reasons',[])
+        phase_red.append(dict(case=label,phase_input=st['phase_before'],phase_python_type=type(st['phase_before']).__name__,
+                              decision=result,expected=expected,expected_observed_red_anomaly=anomaly,
+                              pass_=result['decision']==expected and actual_anomaly==anomaly,
+                              evidence_kind='SYNTHETIC_PHASE_TYPE_SCHEMA_CHALLENGE'))
+    for phase in [True,1.0,False,0.0,'1',None]:
+        for has_red in [False,True]:
+            st=module.fixture();st['phase_before']=phase;st['observed_red_crossing_ids']=[front] if has_red else []
+            probe_phase(type(phase).__name__+'_'+str(phase)+('_red' if has_red else '_empty'),st,'UNKNOWN')
+    for phase in [True,1.0]:
+        for key,value in changes:
+            for has_red in [False,True]:
+                st=module.fixture();st['phase_before']=phase;st['vehicles'][0][key]=value
+                st['observed_red_crossing_ids']=[front] if has_red else []
+                probe_phase(type(phase).__name__+'_'+key+('_red' if has_red else '_empty'),st,'UNKNOWN')
+    for has_red in [False,True]:
+        st=module.fixture();st['phase_before']=1;st['observed_red_crossing_ids']=[front] if has_red else []
+        probe_phase('integer_one'+('_red' if has_red else '_empty'),st,'INELIGIBLE' if has_red else 'UNKNOWN',has_red)
+    for phase in [0,2]:
+        for has_red in [False,True]:
+            st=module.fixture();st['phase_before']=phase;st['observed_red_crossing_ids']=[front] if has_red else []
+            probe_phase('wrong_integer_'+str(phase)+('_red' if has_red else '_empty'),st,'UNKNOWN')
+    for phase in [True,1.0]:
+        st=module.fixture();st['phase_before']=phase;st['receiver']=None;st['observed_red_crossing_ids']=[front]
+        probe_phase(type(phase).__name__+'_unknown_receiver_priority',st,'UNKNOWN')
+        st=module.fixture();st['phase_before']=phase;extra=copy.deepcopy(st['vehicles'][0])
+        extra.update(vehicle_id='extra_ingress',role='ingress',speed_mode=0)
+        st['vehicles'].append(extra);st['affected_inventory_ids'].append('extra_ingress');st['observed_red_crossing_ids']=[front]
+        probe_phase(type(phase).__name__+'_other_vehicle_mode_mismatch',st,'UNKNOWN')
+    preservation=load('data/processed/candidate_a_a1_contract_20261011_v5/PRE_FIX_DATA_BINDINGS.json')
     check(all(sha(ROOT/p)==h for p,h in preservation['files'].items()),'historical data overwritten')
-    check(sha(ROOT/'data/processed/candidate_a_a1_contract_20261011_v4/PRE_FIX_INDEPENDENT_CHECK_SOURCE.py')==preservation['independent_check_sha256'],'old independent source overwritten')
-    return dict(status='PASS' if all(r['pass_'] for r in boundary+red_observation+mode_red) else 'REQUIRES_OFFLINE_REPAIR',
+    check(sha(ROOT/'data/processed/candidate_a_a1_contract_20261011_v5/PRE_FIX_INDEPENDENT_CHECK_SOURCE.py')==preservation['independent_check_sha256'],'old independent source overwritten')
+    return dict(status='PASS' if all(r['pass_'] for r in boundary+red_observation+mode_red+phase_red) else 'REQUIRES_OFFLINE_REPAIR',
                 classification='EXPLORATORY_OFFLINE_EVIDENCE_INTEGRITY_NOT_SAFETY_QUALIFICATION',
                 protected_checked=536,input_binding_path=binding_path,input_sha256=inputs,source_commit=excerpts['commit'],
                 source_excerpts_verified=len(excerpts['excerpts']),whole_remote_sources_reverified=False,
@@ -256,6 +288,7 @@ def run():
                 commands=commands,independent_numeric_boundary=boundary,
                 independent_red_observation_probes=red_observation,historical_data_bindings_unchanged=True,
                 independent_mode_red_combination_probes=mode_red,
+                independent_phase_type_red_combination_probes=phase_red,
                 independent_script_sha256=sha(Path(__file__)),python=sys.version,
                 current_STOP3='PRESERVED',A1_A2='UNVERIFIED',rate_900='NOT_TESTED',execution='HOLD')
 
