@@ -1,0 +1,76 @@
+{
+  "classification": "KNOWN_INSTALLED_TRACI_API_COMPATIBILITY_WARNING_NOT_NATIVE_SUMO_WARNING",
+  "client_date": "2026-10-12",
+  "version": "1.26.0 fromexactapprovedcardenvironment",
+  "card_path": "artifacts/candidate_a_native_smoke_runtime_fix_20261012_v1/engineering/packages/CA_NATIVE_PHASE_R300_S17_SMOKE03/card.json",
+  "card_sha256": "892b415603df776bb70698ad66939bbad28993e87a1bc225d5553ba58ac6bba4",
+  "CLI_stderr_path": "artifacts/candidate_a_native_smoke03_execution_20261012_v1/engineering/EXECUTION_CLI_STDERR.log",
+  "CLI_stderr_sha256": "016a2623ad7a12b5dc6b9c1f6431f3f09d00a6f8e9ea10c3738b9a809d24a619",
+  "CLI_stderr_bytes": 226,
+  "CLI_stderr_text": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_native_smoke_runtime_fix_20261012/frame_cache.py:61: UserWarning: API change now handles step as floating point seconds\n  try:return method(*args,**kwargs)\n",
+  "actual_warning_record_count": 1,
+  "origin_predicate": "type(step) is int and step >=1000",
+  "warning_stacklevel": 2,
+  "display_location": "frame_cache.py61 directmethoddelegation; actualwarningorigininstalledtraci.connection.simulationStep",
+  "wire_semantics": "simulationStep uses _sendCmd(CMD_SIMSTEP, ..., D, step); _pack D serializes struct.pack(!d,float(step)); pinnedserver readsDouble and maps positive nextT viaTIME2STEPS. Warningdoesnotchangevalueorabortcall.",
+  "actual_target_semantics": "Actualverifiedrequestedinteger1..1157 matchesfloatsecondreadback1.0..1157.0; noobservedmillisecondscale/stepmismatch. Notproofoutsideobservedprefix.",
+  "first_warning_time": "NOT_TIMESTAMPED; sourcepredicatecompatiblewithfirstinteger1000request butnotindependentwarningtimestamp.",
+  "monitor_coverage": "Nativeonlinecapturemonitors4ownedSUMOfiles only. ParentPython/CLIstderr capturedseparatelybylaunchredirection, preservedandhashedatcompletion, notpartofnative4streamclassifier orperstepSTOPcoverage.",
+  "qualification_boundary": "ThisknownAPIwarning isnot evidenceofnativecollision/redcrossing/timeerror; no blanketbenignallsystemwarningclaim. NativefinalEOFstatus remainsboundednative4streamresult; mustnotcallentireCLIwarningfree.",
+  "native_source_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+  "native_source_receipt": "artifacts/candidate_a_native_smoke_bridge_20261011_v1/engineering/LOG_SOURCE_RECEIPT_R1.json",
+  "native_source_receipt_sha256": "6ec2b75413833f9ef89f4dba926dba180610a639972806c2fd3109a54daa3cc7",
+  "installed_source_bound_to_card": true,
+  "physical_excerpts": [
+    {
+      "source_label": "Installedcard-boundTraCI1.26connection.py",
+      "source_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/lib/python3.13/site-packages/traci/connection.py",
+      "source_sha256": "05820ab615a2ab18411e9722ebbc7056856f2de155383a8b58120d2b2feac572",
+      "begin_line": 154,
+      "end_line": 164,
+      "text": "    def _pack(self, format, *values):\n        packed = bytes()\n        for f, v in zip(format, values):\n            if f == \"i\":\n                packed += struct.pack(\"!Bi\", tc.TYPE_INTEGER, int(v))\n            elif f == \"I\":  # raw int for setOrder\n                packed += struct.pack(\"!i\", int(v))\n            elif f == \"d\":\n                packed += struct.pack(\"!Bd\", tc.TYPE_DOUBLE, float(v))\n            elif f == \"D\":  # raw double for some base commands like simstep\n                packed += struct.pack(\"!d\", float(v))"
+    },
+    {
+      "source_label": "Installedcard-boundTraCI1.26connection.py",
+      "source_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/lib/python3.13/site-packages/traci/connection.py",
+      "source_sha256": "05820ab615a2ab18411e9722ebbc7056856f2de155383a8b58120d2b2feac572",
+      "begin_line": 359,
+      "end_line": 378,
+      "text": "    def simulationStep(self, step=0.):\n        \"\"\"\n        Make a simulation step and simulate up to the given second in sim time.\n        If the given value is 0 or absent, exactly one step is performed.\n        Values smaller than or equal to the current sim time result in no action.\n        \"\"\"\n        if self._traceFile:\n            args = \"\" if step == 0 else str(step)\n            self._traceFile.write(\"traci.simulationStep(%s)\\n\" % args)\n        if type(step) is int and step >= 1000:\n            warnings.warn(\"API change now handles step as floating point seconds\", stacklevel=2)\n        result = self._sendCmd(tc.CMD_SIMSTEP, None, None, \"D\", step)\n        for subscriptionResults in self._subscriptionMapping.values():\n            subscriptionResults.reset()\n        numSubs = result.readInt()\n        responses = []\n        while numSubs > 0:\n            responses.append(self._readSubscription(result))\n            numSubs -= 1\n        self.manageStepListeners(step)"
+    },
+    {
+      "source_label": "PinnedofficialSUMO1.26TraCIServer.cpp",
+      "source_path": "/private/tmp/native_bridge_source/TraCIServer.cpp",
+      "source_sha256": "be6a4ed81700bf917b9e7321ced8032d6e3752c84f7f4157875f8a37c35edd6b",
+      "begin_line": 1168,
+      "end_line": 1186,
+      "text": "            case libsumo::CMD_SIMSTEP: {\n                const double nextT = myInputStorage.readDouble();\n                if (nextT == 0.) {\n                    myCurrentSocket->second->targetTime += DELTA_T;\n                } else {\n                    myCurrentSocket->second->targetTime = TIME2STEPS(nextT);\n                }\n                myCurrentSocket->second->executeMove = false;\n#ifdef DEBUG_MULTI_CLIENTS\n                std::cout << \"       commandId == libsumo::CMD_SIMSTEP\"\n                          << \", next target time for client is \" << myCurrentSocket->second->targetTime << std::endl;\n#endif\n                if (myCurrentSocket->second->targetTime <= MSNet::getInstance()->getCurrentTimeStep()) {\n                    // This is not the last TraCI simstep in the current SUMO simstep -> send single simstep response.\n                    // @note: In the other case the simstep results are sent to all after the SUMO step was performed, see entry point for processCommands()\n                    sendSingleSimStepResponse();\n                }\n                // Clear vehicleStateChanges and transportableStateChanges for this client\n                // -> For subsequent TraCI stepping"
+    },
+    {
+      "source_label": "Approvedruntimebridge",
+      "source_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_native_smoke_runtime_fix_20261012/bridge.py",
+      "source_sha256": "e1579447d04fba6f485f8511d8946177862045971a5bfcee3e5ccee16d3791c9",
+      "begin_line": 89,
+      "end_line": 103,
+      "text": "        pre=capture.snapshot(t,t,'PRE_MOTION_AFTER_CONTROL_AND_OBSERVATION')\n        append_new(output/'log_intervals.jsonl',pre)\n        require(not pre['streams']['sumo_stderr.log']['text'],'native stderr before motion')\n        conn.simulationStep(t+1)\n        adapter.bridge_last_ack={'requested_target_s':t+1,'ACK_received':True,'actual_readback_s':None,'actual_time_verified':False}\n        append_new(output/'step_ack.jsonl',adapter.bridge_last_ack)\n        actual=conn.simulation.getTime()\n        adapter.bridge_last_ack['actual_readback_s']=actual\n        require(type(actual) in (int,float) and actual==t+1,'ACK actual simulation time mismatch')\n        adapter.bridge_last_ack['actual_time_verified']=True\n        adapter.last_completed=actual\n        append_new(output/'step_ack.jsonl',adapter.bridge_last_ack)\n        after=capture.snapshot(t,t+1,'AFTER_SIMULATION_STEP_ACK')\n        append_new(output/'log_intervals.jsonl',after)\n        try:row=adapter.reconcile_step(conn,capture.adapter_warning(after))"
+    },
+    {
+      "source_label": "Approvedframefacade",
+      "source_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_native_smoke_runtime_fix_20261012/frame_cache.py",
+      "source_sha256": "669808ddd04e45327e6c16ef731fab1cb0fbe05923a9e6d1cdbcab665ef40fc1",
+      "begin_line": 59,
+      "end_line": 62,
+      "text": "    def direct(self,method,*args,**kwargs):\n        self.stats['underlying_calls']+=1\n        try:return method(*args,**kwargs)\n        except Exception:self.invalidate('NATIVE_CALL_FAILURE');raise"
+    },
+    {
+      "source_label": "Approvednative4streamcapture",
+      "source_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_native_smoke_20261011/bridge_logs.py",
+      "source_sha256": "e286277177a76369d0afd21a91886cf237b74ca700fa64a20eab2458e4869fde",
+      "begin_line": 13,
+      "end_line": 17,
+      "text": "\nclass LogCapture:\n    def __init__(self, output):\n        self.output=Path(output)\n        self.paths={n:self.output/n for n in ['sumo_stderr.log','sumo_stdout.log','sumo_error.log','sumo.log']}"
+    }
+  ],
+  "verified_ACK_count": 1157,
+  "new_native_tests_fetch_source_or_card_changes": 0
+}

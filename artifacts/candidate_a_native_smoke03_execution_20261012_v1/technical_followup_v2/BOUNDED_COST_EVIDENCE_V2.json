@@ -1,0 +1,38 @@
+{
+  "actual_native_start_count_total_this_authorization": 1,
+  "new_native_starts_in_followup": 0,
+  "new_tests_or_synthetic_runs": 0,
+  "raw_log_performance_duration_s": 154.78,
+  "raw_log_traci_duration_s": 153.24,
+  "source_supported_metric": "Accumulated native wallinterval from processCommands handling before simulationstep plus later timed tail leading into postMoveStep, including libsumo::Helper::postProcessRemoteControl and conditional remote-control collision checking before accumulation. Includes commandloop clientwait/communication/servergetterwork. Not exclusivelyprocessCommands, purePythonCPU/networkmeasure or individualoperationprofile. ConditionalCMD_EXECUTEMOVE processing exists in this source tail; this smoke uses simulationStep, not evidence that executeMovebranch was taken. Terminalclosecommand and initialstartup boundaries differ from entire180sresourcecap.",
+  "raw_query_stats": {
+    "hits": 6718670,
+    "misses": 3710361,
+    "underlying_calls": 3763936,
+    "invalidations": 1161,
+    "verified_time_reads": 4628
+  },
+  "append_jsonl_rows": {
+    "pre_steps.jsonl": 1157,
+    "step_ack.jsonl": 2314,
+    "post_steps.jsonl": 1157,
+    "log_intervals.jsonl": 2316
+  },
+  "append_flush_fsync_count_by_bound_source_and_rows": 6944,
+  "fsync_inference_boundary": "Eachsuccessfulappend_newrow executesflush/fsync; no timing/IOcostshare or syscalltrace available. Count issource+rows correspondence, notnativekernelprofiler.",
+  "untimed_costs": [
+    "millionsofunderlyingindividualdomaincalls",
+    "identity/dynamics validation and deepcopy acrossloaded/world",
+    "6944durableJSONLflush/fsync operations",
+    "resourcefulldirectoryrglob/stat loops + watchdog",
+    "native/clientIPC andserverdispatch"
+  ],
+  "unique_hotspot_identified": false,
+  "remaining_wall_issue": "UNRESOLVED: same180s exactrun stilldoesnotreach1207; sourcecheckswerepreserved",
+  "changes_to_code_card_caps_guard_or_research": false,
+  "proposed_next_step_not_authorization": "Small versioned profiler/instrumentationplan at existingread/control/step/serialization/durability/resource seams beforechoosingminimumoptimization. Preserveeverycheck/errorpropagation/fsyncdurability/logbinding; no subscription/cacheacrossstepsor180capchangeassumed.",
+  "version": "V2_TRA_CI_TIMER_SCOPE_PRECISION",
+  "data_counts_unchanged_from_V1": true,
+  "new_original_raw_reads": "NONE_REQUIRED: existingcountsandrawreceipt retained; correctiononlycachedsource/prose",
+  "native_remote_control_activity_or_cost_fraction": "NOT_MEASURED; sourceinclusion is not evidenceofactive remotecontrol vehicles or of timingdominance."
+}

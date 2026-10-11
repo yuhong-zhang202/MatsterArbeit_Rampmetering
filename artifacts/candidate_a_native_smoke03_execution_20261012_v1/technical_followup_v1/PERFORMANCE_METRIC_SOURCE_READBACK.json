@@ -1,0 +1,45 @@
+{
+  "source_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+  "prior_receipt": "artifacts/candidate_a_native_smoke_bridge_20261011_v1/engineering/LOG_SOURCE_RECEIPT_R1.json",
+  "prior_receipt_sha256": "6ec2b75413833f9ef89f4dba926dba180610a639972806c2fd3109a54daa3cc7",
+  "verification": "Fullcachedsources verifiedagainstgenuinepriorpinnedreceipt; nofreshfetch/build/native",
+  "excerpts": [
+    {
+      "path": "src/microsim/MSNet.cpp",
+      "source_sha256": "fdf62a7626e2d1b31edaf695198e27f4690c2a86a1925e0142852a80449cd6f8",
+      "source_bytes": 69686,
+      "begin_line": 490,
+      "end_line": 505,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSNet.cpp#L490-L505",
+      "text": "MSNet::generateStatistics(const SUMOTime start, const long now) {\n    std::ostringstream msg;\n    if (myLogExecutionTime) {\n        const long duration = now - mySimBeginMillis;\n        // print performance notice\n        msg << \"Performance:\\n\" << \" Duration: \" << elapsedMs2string(duration) << \"\\n\";\n        if (duration != 0) {\n            if (TraCIServer::getInstance() != nullptr) {\n                msg << \" TraCI-Duration: \" << elapsedMs2string(myTraCIMillis) << \"\\n\";\n            }\n            msg << \" Real time factor: \" << (STEPS2TIME(myStep - start) * 1000. / (double)duration) << \"\\n\";\n            msg.setf(std::ios::fixed, std::ios::floatfield);     // use decimal format\n            msg.setf(std::ios::showpoint);    // print decimal point\n            msg << \" UPS: \" << ((double)myVehiclesMoved / ((double)duration / 1000)) << \"\\n\";\n            if (myPersonsMoved > 0) {\n                msg << \" UPS-Persons: \" << ((double)myPersonsMoved / ((double)duration / 1000)) << \"\\n\";"
+    },
+    {
+      "path": "src/microsim/MSNet.cpp",
+      "source_sha256": "fdf62a7626e2d1b31edaf695198e27f4690c2a86a1925e0142852a80449cd6f8",
+      "source_bytes": 69686,
+      "begin_line": 782,
+      "end_line": 807,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSNet.cpp#L782-L807",
+      "text": "        return;\n    }\n#ifdef DEBUG_SIMSTEP\n    std::cout << SIMTIME << \": MSNet::simulationStep() called\"\n              << \", myStep = \" << myStep\n              << std::endl;\n#endif\n    TraCIServer* t = TraCIServer::getInstance();\n    int lastTraCICmd = 0;\n    if (t != nullptr) {\n        if (myLogExecutionTime) {\n            myTraCIStepDuration = SysUtils::getCurrentMillis();\n        }\n        lastTraCICmd = t->processCommands(myStep);\n#ifdef DEBUG_SIMSTEP\n        bool loadRequested = !TraCI::getLoadArgs().empty();\n        assert(t->getTargetTime() >= myStep || loadRequested || TraCIServer::wasClosed());\n#endif\n        if (myLogExecutionTime) {\n            myTraCIStepDuration = SysUtils::getCurrentMillis() - myTraCIStepDuration;\n        }\n        if (TraCIServer::wasClosed() || !t->getLoadArgs().empty()) {\n            return;\n        }\n    }\n#ifdef DEBUG_SIMSTEP"
+    },
+    {
+      "path": "src/microsim/MSNet.cpp",
+      "source_sha256": "fdf62a7626e2d1b31edaf695198e27f4690c2a86a1925e0142852a80449cd6f8",
+      "source_bytes": 69686,
+      "begin_line": 920,
+      "end_line": 934,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSNet.cpp#L920-L934",
+      "text": "    if (numControlled > 0 && MSGlobals::gCheck4Accidents) {\n        myEdges->detectCollisions(myStep, STAGE_REMOTECONTROL);\n    }\n    if (myLogExecutionTime) {\n        myTraCIStepDuration += SysUtils::getCurrentMillis();\n        myTraCIMillis += myTraCIStepDuration;\n    }\n    if (MSGlobals::gCheck4Accidents && !MSGlobals::gUseMesoSim) {\n        // collisions from the previous step were kept to avoid duplicate\n        // warnings. we must remove them now to ensure correct output.\n        removeOutdatedCollisions();\n    }\n    // update and write (if needed) detector values\n    mySimStepDuration = SysUtils::getCurrentMillis() - mySimStepDuration;\n    writeOutput();"
+    },
+    {
+      "path": "src/traci-server/TraCIServer.cpp",
+      "source_sha256": "be6a4ed81700bf917b9e7321ced8032d6e3752c84f7f4157875f8a37c35edd6b",
+      "source_bytes": 91235,
+      "begin_line": 835,
+      "end_line": 882,
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/traci-server/TraCIServer.cpp#L835-L882",
+      "text": "        // 4. Client closes socket connection\n        while (!myDoCloseConnection && myTargetTime <= (MSNet::getInstance()->getCurrentTimeStep()) && finalCmd != libsumo::CMD_EXECUTEMOVE) {\n#ifdef DEBUG_MULTI_CLIENTS\n            std::cout << \"  Next target time: \" << myTargetTime << std::endl;\n#endif\n            // Iterate over clients and process communication for the ones with target time == myTargetTime\n            myCurrentSocket = mySockets.begin();\n            while (myCurrentSocket != mySockets.end()) {\n#ifdef DEBUG_MULTI_CLIENTS\n                std::cout << \"  current socket: \" << myCurrentSocket->second->socket\n                          << \" with target time=\" << myCurrentSocket->second->targetTime\n                          << std::endl;\n#endif\n\n                if (myCurrentSocket->second->targetTime > myTargetTime || (afterMove && !myCurrentSocket->second->executeMove)) {\n                    // this client must wait\n#ifdef DEBUG_MULTI_CLIENTS\n                    std::cout <<  \"       skipping client \" << myCurrentSocket->second->socket\n                              << \" with target time=\" << myCurrentSocket->second->targetTime << std::endl;\n#endif\n                    myCurrentSocket++;\n                    continue;\n                }\n                finalCmd = 0;\n                while (finalCmd == 0) {\n                    if (!myInputStorage.valid_pos()) {\n                        // have read request completely, send response if adequate\n                        if (myOutputStorage.size() > 0) {\n                            // send response to previous query\n                            myCurrentSocket->second->socket->sendExact(myOutputStorage);\n                            myOutputStorage.reset();\n                        }\n#ifdef DEBUG_MULTI_CLIENTS\n                        std::cout << \"    resetting input storage and reading next command...\" << std::endl;\n#endif\n                        // Read next request\n                        myInputStorage.reset();\n                        myCurrentSocket->second->socket->receiveExact(myInputStorage);\n                    }\n\n                    while (myInputStorage.valid_pos() && !myDoCloseConnection) {\n                        const int cmd = dispatchCommand();\n                        if (cmd == libsumo::CMD_SIMSTEP || cmd == libsumo::CMD_LOAD || cmd == libsumo::CMD_EXECUTEMOVE || cmd == libsumo::CMD_CLOSE) {\n                            finalCmd = cmd;\n                        }\n                    }\n                }\n            }"
+    }
+  ],
+  "source_binary_equivalence": "NOT_VERIFIED"
+}

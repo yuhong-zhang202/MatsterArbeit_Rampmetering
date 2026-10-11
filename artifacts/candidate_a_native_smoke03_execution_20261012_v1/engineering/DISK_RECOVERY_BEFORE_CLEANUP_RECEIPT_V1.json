@@ -1,0 +1,21 @@
+{
+  "status": "RECOVERY_BUNDLE_VERIFIED_CHECKOUT_NOT_YET_REMOVED",
+  "checkout": "/private/tmp/issue10-clean-udc3yxht/checkout",
+  "actual_checkout_commit": "121285daa54a4b1b1d45c5319c5405479b913d80",
+  "ownership_receipt": "artifacts/candidate_a_a1_proof_gap_20261011_v1/DELIVERED_CODE_CLEAN_CHECKOUT_RECEIPT.json",
+  "clean_status": true,
+  "untracked_and_ignored_files_absent": true,
+  "complete_bundle": "/private/tmp/issue10-clean-udc3yxht/SMOKE03_DISK_RECOVERY_COMPLETE.bundle",
+  "bundle_bytes": 103966218,
+  "bundle_sha256": "db3dcb4ef91c19cfb01cbde0744bc330a82f0a8a9cc09fef41f598ac951689d0",
+  "verify": "The bundle contains these 4 refs:\n121285daa54a4b1b1d45c5319c5405479b913d80 refs/heads/codex/issue-10-a1-proof-gap-feasibility\n121285daa54a4b1b1d45c5319c5405479b913d80 refs/remotes/origin/HEAD\n121285daa54a4b1b1d45c5319c5405479b913d80 refs/remotes/origin/codex/issue-10-a1-proof-gap-feasibility\n121285daa54a4b1b1d45c5319c5405479b913d80 HEAD\nThe bundle records a complete history.\nThe bundle uses this hash algorithm: sha1\n/private/tmp/issue10-clean-udc3yxht/SMOKE03_DISK_RECOVERY_COMPLETE.bundle is okay\n",
+  "heads": "121285daa54a4b1b1d45c5319c5405479b913d80 refs/heads/codex/issue-10-a1-proof-gap-feasibility\n121285daa54a4b1b1d45c5319c5405479b913d80 refs/remotes/origin/HEAD\n121285daa54a4b1b1d45c5319c5405479b913d80 refs/remotes/origin/codex/issue-10-a1-proof-gap-feasibility\n121285daa54a4b1b1d45c5319c5405479b913d80 HEAD\n",
+  "preserved_sibling_logs_sha256": {
+    "/private/tmp/issue10-clean-udc3yxht/public.json": "e6a7a4a54264c7367ee708e4a2d8e93e5a84038888ca3ed04e377cef4a466d01",
+    "/private/tmp/issue10-clean-udc3yxht/independent.json": "0261ee1b9123f368e5aa7f1cc44aa90ff8b243f13f07bb66187f8742e3257c94"
+  },
+  "recovery_command": "git clone /private/tmp/issue10-clean-udc3yxht/SMOKE03_DISK_RECOVERY_COMPLETE.bundle <new-directory>; git checkout 121285daa54a4b1b1d45c5319c5405479b913d80",
+  "scope": "Only redundant agent-created temporary clean checkout copy eligible for cleanup. All parentdir verification outputs/logs, source caches, original repository, raw and historical records preserved.",
+  "free_disk_after_bundle_bytes": 4050661376,
+  "native_starts": 0
+}

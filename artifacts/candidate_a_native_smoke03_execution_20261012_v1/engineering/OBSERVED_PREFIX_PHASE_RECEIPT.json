@@ -1,0 +1,253 @@
+{
+  "scope": "Observed1157reconciledprefix only, noactivatedcontrolledinterval",
+  "rows": 1157,
+  "phase_intervals": {
+    "G": 600,
+    "y": 3,
+    "r": 554
+  },
+  "last_verified_ack": {
+    "requested_target_s": 1157,
+    "ACK_received": true,
+    "actual_readback_s": 1157.0,
+    "actual_time_verified": true
+  },
+  "first_post": {
+    "time_begin_s": 0,
+    "observed_time_s": 1.0,
+    "status": "RECONCILED_DIAGNOSTIC_ONLY",
+    "accounting_complete": true,
+    "shadow_envelope": null,
+    "time_end_s": 1,
+    "warning_observation": {
+      "time_begin_s": 0,
+      "time_end_s": 1,
+      "coverage": "CALLER_DECLARED_INTERVAL",
+      "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/candidate_a_native_smoke_runtime_fix_20261012_v1/CA_NATIVE_PHASE_R300_S17_SMOKE03/outputs/sumo_stderr.log",
+      "byte_start": 0,
+      "byte_end": 0,
+      "text": "",
+      "bridge_capture": {
+        "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/candidate_a_native_smoke_runtime_fix_20261012_v1/CA_NATIVE_PHASE_R300_S17_SMOKE03/outputs/sumo_stderr.log",
+        "byte_start": 0,
+        "byte_end": 0,
+        "device": 16777233,
+        "inode": 89700908,
+        "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fragment_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": "",
+        "raw_fragment_hex": "",
+        "whole_prefix_decoded": true,
+        "coverage": "CONDITIONAL_SYNC_CERR_BEFORE_ACK"
+      },
+      "bridge_record_stage": "AFTER_SIMULATION_STEP_ACK",
+      "condition": "reviewed synchronous CERR path + stepACK; not universal/native safety proof"
+    },
+    "motion": "G",
+    "actual_crossings": [],
+    "accounting": {
+      "C": 0.0,
+      "C_applied": 0.0,
+      "E": 0,
+      "N": 0,
+      "mapping_command_latency": 0.0,
+      "mapping_quantization": 0.0,
+      "physical_shortfall": 0,
+      "C_minus_E": 0.0,
+      "E_minus_N": 0
+    },
+    "post_receiver": {
+      "available": true,
+      "reason": "NO_FRONT",
+      "front_id": "",
+      "nearest_internal": null,
+      "leader": null
+    }
+  },
+  "last_post": {
+    "time_begin_s": 1156,
+    "observed_time_s": 1157.0,
+    "status": "RECONCILED_DIAGNOSTIC_ONLY",
+    "accounting_complete": true,
+    "shadow_envelope": null,
+    "time_end_s": 1157,
+    "warning_observation": {
+      "time_begin_s": 1156,
+      "time_end_s": 1157,
+      "coverage": "CALLER_DECLARED_INTERVAL",
+      "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/candidate_a_native_smoke_runtime_fix_20261012_v1/CA_NATIVE_PHASE_R300_S17_SMOKE03/outputs/sumo_stderr.log",
+      "byte_start": 0,
+      "byte_end": 0,
+      "text": "",
+      "bridge_capture": {
+        "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/candidate_a_native_smoke_runtime_fix_20261012_v1/CA_NATIVE_PHASE_R300_S17_SMOKE03/outputs/sumo_stderr.log",
+        "byte_start": 0,
+        "byte_end": 0,
+        "device": 16777233,
+        "inode": 89700908,
+        "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fragment_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": "",
+        "raw_fragment_hex": "",
+        "whole_prefix_decoded": true,
+        "coverage": "CONDITIONAL_SYNC_CERR_BEFORE_ACK"
+      },
+      "bridge_record_stage": "AFTER_SIMULATION_STEP_ACK",
+      "condition": "reviewed synchronous CERR path + stepACK; not universal/native safety proof"
+    },
+    "motion": "r",
+    "actual_crossings": [],
+    "accounting": {
+      "C": 0.0,
+      "C_applied": 0.0,
+      "E": 0,
+      "N": 0,
+      "mapping_command_latency": 0.0,
+      "mapping_quantization": 0.0,
+      "physical_shortfall": 0,
+      "C_minus_E": 0.0,
+      "E_minus_N": 0
+    },
+    "post_receiver": {
+      "available": true,
+      "reason": "AVAILABLE",
+      "front_id": "R_flow.0",
+      "nearest_internal": null,
+      "leader": null,
+      "nearest_internal_rear_clearance_m": null,
+      "required_front_clearance_m": 7.5
+    }
+  },
+  "first_holding_yellow_post": {
+    "time_begin_s": 600,
+    "observed_time_s": 601.0,
+    "status": "RECONCILED_DIAGNOSTIC_ONLY",
+    "accounting_complete": true,
+    "shadow_envelope": null,
+    "time_end_s": 601,
+    "warning_observation": {
+      "time_begin_s": 600,
+      "time_end_s": 601,
+      "coverage": "CALLER_DECLARED_INTERVAL",
+      "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/candidate_a_native_smoke_runtime_fix_20261012_v1/CA_NATIVE_PHASE_R300_S17_SMOKE03/outputs/sumo_stderr.log",
+      "byte_start": 0,
+      "byte_end": 0,
+      "text": "",
+      "bridge_capture": {
+        "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/candidate_a_native_smoke_runtime_fix_20261012_v1/CA_NATIVE_PHASE_R300_S17_SMOKE03/outputs/sumo_stderr.log",
+        "byte_start": 0,
+        "byte_end": 0,
+        "device": 16777233,
+        "inode": 89700908,
+        "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fragment_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": "",
+        "raw_fragment_hex": "",
+        "whole_prefix_decoded": true,
+        "coverage": "CONDITIONAL_SYNC_CERR_BEFORE_ACK"
+      },
+      "bridge_record_stage": "AFTER_SIMULATION_STEP_ACK",
+      "condition": "reviewed synchronous CERR path + stepACK; not universal/native safety proof"
+    },
+    "motion": "y",
+    "actual_crossings": [],
+    "accounting": {
+      "C": 0.0,
+      "C_applied": 0.0,
+      "E": 0,
+      "N": 0,
+      "mapping_command_latency": 0.0,
+      "mapping_quantization": 0.0,
+      "physical_shortfall": 0,
+      "C_minus_E": 0.0,
+      "E_minus_N": 0
+    },
+    "post_receiver": {
+      "available": true,
+      "reason": "NO_FRONT",
+      "front_id": "",
+      "nearest_internal": null,
+      "leader": null
+    }
+  },
+  "first_holding_red_post": {
+    "time_begin_s": 603,
+    "observed_time_s": 604.0,
+    "status": "RECONCILED_DIAGNOSTIC_ONLY",
+    "accounting_complete": true,
+    "shadow_envelope": {
+      "safe": true,
+      "unsafe_ids": [],
+      "witnesses": [],
+      "invariant": "one reaction step plus normal braking for EVERY positive speed; only exactly zero speed is exempt under unchanged native red compliance; all remaining storage/ingress"
+    },
+    "time_end_s": 604,
+    "warning_observation": {
+      "time_begin_s": 603,
+      "time_end_s": 604,
+      "coverage": "CALLER_DECLARED_INTERVAL",
+      "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/candidate_a_native_smoke_runtime_fix_20261012_v1/CA_NATIVE_PHASE_R300_S17_SMOKE03/outputs/sumo_stderr.log",
+      "byte_start": 0,
+      "byte_end": 0,
+      "text": "",
+      "bridge_capture": {
+        "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/candidate_a_native_smoke_runtime_fix_20261012_v1/CA_NATIVE_PHASE_R300_S17_SMOKE03/outputs/sumo_stderr.log",
+        "byte_start": 0,
+        "byte_end": 0,
+        "device": 16777233,
+        "inode": 89700908,
+        "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fragment_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": "",
+        "raw_fragment_hex": "",
+        "whole_prefix_decoded": true,
+        "coverage": "CONDITIONAL_SYNC_CERR_BEFORE_ACK"
+      },
+      "bridge_record_stage": "AFTER_SIMULATION_STEP_ACK",
+      "condition": "reviewed synchronous CERR path + stepACK; not universal/native safety proof"
+    },
+    "motion": "r",
+    "actual_crossings": [],
+    "accounting": {
+      "C": 0.0,
+      "C_applied": 0.0,
+      "E": 0,
+      "N": 0,
+      "mapping_command_latency": 0.0,
+      "mapping_quantization": 0.0,
+      "physical_shortfall": 0,
+      "C_minus_E": 0.0,
+      "E_minus_N": 0
+    },
+    "post_receiver": {
+      "available": true,
+      "reason": "NO_FRONT",
+      "front_id": "",
+      "nearest_internal": null,
+      "leader": null
+    }
+  },
+  "collision_red_anomaly_safety": "No complete prospective safety or controlledred evidence asserted",
+  "controlled_C_appliedC_E_N_and_all_deltas": {
+    "C": null,
+    "C_applied": null,
+    "E": null,
+    "N": null,
+    "mapping_command_latency": null,
+    "mapping_quantization": null,
+    "physical_shortfall": null,
+    "C_minus_E": null,
+    "E_minus_N": null
+  },
+  "raw_initialized_prefix_accounting_retained": {
+    "C": 0.0,
+    "C_applied": 0.0,
+    "E": 0,
+    "N": 0,
+    "mapping_command_latency": 0.0,
+    "mapping_quantization": 0.0,
+    "physical_shortfall": 0,
+    "C_minus_E": 0.0,
+    "E_minus_N": 0
+  }
+}

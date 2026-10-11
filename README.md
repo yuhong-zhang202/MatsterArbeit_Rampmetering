@@ -155,13 +155,13 @@ The [source investigation and minimal correction](docs/development/CANDIDATE_A_N
 
 These are historical offline commands: both preparation and card validation now reject the consumed local SMOKE02 output identity. Its preauthorization-absence tests describe the earlier unused-identity checkpoint and are not rerun after consumption. The XML is bounded to the first-red diagnostic, not approved for full-cycle qualification. A new technical repair/run identity is a separate reviewed preparation and cannot reuse either consumed approval.
 
-### SMOKE03 bounded runtime repair — offline preparation
+### SMOKE03 bounded runtime repair — historical preparation and consumed run
 
-The [minimum query-reuse repair](docs/development/CANDIDATE_A_NATIVE_PHASE_RUNTIME_FIX_20261012.md) prepares `CA_NATIVE_PHASE_R300_S17_SMOKE03` using a conditional same-state vehicle getter facade. Safety/coverage/receiver/log checks, fresh time/population/TLS reads, original resource limits and the1207 s mandatory pause remain. Offline equivalence and query counts are distinct from native speed or safety qualification. No new runtime authorization/release or raw exists.
+The [minimum query-reuse repair](docs/development/CANDIDATE_A_NATIVE_PHASE_RUNTIME_FIX_20261012.md) prepares `CA_NATIVE_PHASE_R300_S17_SMOKE03` using a conditional same-state vehicle getter facade. Safety/coverage/receiver/log checks, fresh time/population/TLS reads, original resource limits and the1207 s mandatory pause remain. Offline equivalence and query counts are distinct from native speed or safety qualification. The subsequent [single-run result](docs/development/CANDIDATE_A_NATIVE_PHASE_SMOKE03_RESULT_20261012.md) consumed exact commit c255263/card892b4156: one native start,180s wall stop at1157s, controlled1200/1207 checkpoint not reached. Disk preflight was resolved by preserving/recovering a redundant temporary checkout, without changing the5GB gate. Consumed canonical authorization/release and raw now exist locally; non-executable evidence snapshots are for review only.
 
 ```bash
 .venv/bin/python scripts/candidate_a_native_smoke_runtime_fix_20261012_v1/cli.py --prepare
 .venv/bin/python scripts/candidate_a_native_smoke_runtime_fix_20261012_v1/cli.py --check-card artifacts/candidate_a_native_smoke_runtime_fix_20261012_v1/engineering/packages/CA_NATIVE_PHASE_R300_S17_SMOKE03/card.json
 ```
 
-Both commands are offline and check an existing card without overwrite. Any real launch needs separate exact-card authorization after review. The consumed SMOKE02 start is not retry permission. Regression: `.venv/bin/python -m unittest discover -s tests/candidate_a_native_smoke_runtime_fix_20261012 -v`. Relocated runtime paths require controlled rebinding and new approval.
+These are historical offline commands; preparation/card checking now refuse the consumed local SMOKE03 identity. Original8-test evidence applies to the preauthorization preparation snapshot and was not rerun for this evidence delivery. No additional launch or automatically prepared new identity is authorized. Remaining wall-time overhead is unresolved; bounded follow-up proposes discriminating timing before further optimization, without relaxing checks or treating smoke as qualification. Relocated paths or any new source/card/resource binding require review and exact user authorization.

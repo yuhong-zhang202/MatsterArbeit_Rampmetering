@@ -1,0 +1,14 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "data/processed/candidate_a_native_smoke03_execution_20261012_v1/independent_prefix_review.py",
+    "--local-raw"
+  ],
+  "exit_code": 1,
+  "native_calls": 0,
+  "scope": "One explicitlocalraw read-only audit; publicdefault doesnotdependonraw or executableauth",
+  "output_sha256": {
+    "INDEPENDENT_RESULT_V1.json": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "INDEPENDENT_STDERR_V1.txt": "028703485cbc2c461f65ee060cef721c0662a1aecaf0c4ab629c70133c9e4487"
+  }
+}

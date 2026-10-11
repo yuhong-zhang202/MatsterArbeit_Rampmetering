@@ -1,0 +1,11 @@
+# SMOKE03 remaining wall budget — bounded technical follow-up
+
+**Remaining runtime problem unresolved; do not claim the previous cache fully solved it.** No extra native start, test, implementation/card/cap/guard or researchchange. Readonlyexisting1157prefix/source used; nofreshfetch/A1proof.
+
+Observed SUMO logDuration154.78s andTraCI-Duration153.24s aredistinctfrom180s launch-wallbudget. PinnedfullcachedMSNet/TraCIServer sources verified against the earliergenuine receipt; physicalexcerpts supplied. MSNet measures walltime around processCommands and accumulatesmyTraCIMillis; TraCIServer commandloop receivesrequests/respondsandwaitsfor targetstepcommands. It thereforeincludes clientwaiting/IPC/serverqueryprocessing, not isolatedPythonCPUtime. This supports broad interface/control overhead as a practicalinvestigationarea, but cannot uniquelyidentifygetter vs Python/deepcopy vs serialization/fsync vs filesystem or network costshares. Source/binary/compiler equivalence remainsunverified.
+
+Actualcachecounterunderlyingcalls3,763,936 arecountedcalls through facade (freshdomainsandmisses); hits6,718,670 areavoidedduplicatecalls under itsframeassumptions. Counts are not wallshares/nativepairedbenchmark. Existing source plus6944JSONLrows give6944successful append/flush/fsync operations; source confirms recursive resource scans and CPUvalidation/copypaths remain. These are concrete costs, not measured dominantbottlenecks. Logs didnotgrowuntilEOF, so noevidencegrowinglogprefixrereading dominated.
+
+Do not widenwallcap or skiploaded/currentvehicleidentitychecks/durability/logs toforce1207. Safestnextproposal is smallversioned instrumentationrecord at current pre/postobserver/control, simulationStep, serialization/flush/fsync andresource-read seams, including count/duration/error coverage, withunchanged behavior. A resultingminimumoptimization/newcard shouldbereviewed before anotherexplicitlyauthorizednativeattempt; noautomaticSMOKE04 prepared/run. No further offlinecomplexity without discriminatingpurpose.
+
+[Source readback](PERFORMANCE_METRIC_SOURCE_READBACK.json), [counts and unresolved boundary](BOUNDED_COST_EVIDENCE.json), [originalrun](../engineering/ENGINEERING_POSTREVIEW.md).
