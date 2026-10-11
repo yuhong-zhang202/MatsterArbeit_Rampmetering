@@ -1,0 +1,40 @@
+{
+  "classification": "INDEPENDENT_BOUNDED_STATIC_SOURCE_AND_PUBLIC_EVIDENCE_REVIEW_NOT_FORMAL",
+  "baseline_commit": "7ce8f5e19d737117dc6f25165993fc436244c599",
+  "commands": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python data/processed/candidate_a_a1_proof_gap_20261011_v1/independent_review.py",
+      "exit_code": 0,
+      "result": "PASS"
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/candidate_a_a1_proof_gap_20261011_v1/verify_public.py",
+      "exit_code": 0,
+      "result": "PASS"
+    }
+  ],
+  "counts": {
+    "status": "PASS",
+    "fields": 69,
+    "proof_obligations": 11,
+    "coverage_rows": 12,
+    "physical_excerpt_schema_hashes": 44,
+    "analytical_interval_recomputations": 2,
+    "old_baseline_preserved_files": 16,
+    "verdict": "STOP_A1_UNDER_CURRENT_INTERFACE",
+    "verdict_scope": "Engineering stop recommendation for this current-interface bounded proof attempt; not proven impossibility of every stronger sufficient bound or all A1 designs.",
+    "new_synthetic_cases": 0,
+    "existing_43_regressions": "SKIP_UNCHANGED_UPSTREAM_IMPLEMENTATION_BOUND_BY_SHA",
+    "native_runtime_queries": "NOT_RUN",
+    "delivered_clean_checkout": "PENDING_PARENT_GATE"
+  },
+  "source_readback": "25 complete source bytes and44 physical excerpts local cached/fresh receipt reconstruction PASS; not public automatic refetch",
+  "engineering_bound_files_rechecked": 9,
+  "new_unit_or_synthetic_suites": 0,
+  "old_43_regressions": "SKIP: unchanged implementation SHA and existing delivered gate sufficient; not re-executed at new documentation head",
+  "local_simulation_raw": "NOT_READ_NOT_REQUIRED",
+  "sumo_traci_starts": 0,
+  "native_cpp_builds": 0,
+  "parent_clean_delivered_commit": "PENDING",
+  "source_binary_equivalence": "NOT_VERIFIED"
+}

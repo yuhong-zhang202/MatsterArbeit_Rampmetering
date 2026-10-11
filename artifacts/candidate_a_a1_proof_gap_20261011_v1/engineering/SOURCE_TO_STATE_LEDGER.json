@@ -1,0 +1,1486 @@
+{
+  "baseline_commit": "7ce8f5e19d737117dc6f25165993fc436244c599",
+  "source_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+  "authorization": "Issue10 static/API only",
+  "classification": "SOURCE_TO_STATE_CURRENT_PUBLIC_INTERFACE_FEASIBILITY",
+  "verdict": "STOP_A1_UNDER_CURRENT_INTERFACE",
+  "verdict_kind": "engineering NO-GO recommendation under current public interface and no core/model changes; not project approval or universal impossibility theorem",
+  "levels": {
+    "a": "saved evidence or explicit bound localmetadata receipt",
+    "b": "official public query available at statedtime, not executed here",
+    "c": "source-supported conditional derivation/local bound with statedpremises; not completejointproof",
+    "d": "not directly exposed at requiredtime; exactstatewould require instrumentation (outofscope)",
+    "e": "no reliable completejoint bound established in this bounded investigation"
+  },
+  "fields": [
+    {
+      "id": "S01",
+      "variable": "runtime_binary_hash",
+      "proof_ids": [
+        "P0"
+      ],
+      "observability_level": "a",
+      "status": "CONDITIONAL",
+      "api_or_method": "file SHA and distribution metadata only",
+      "source_excerpt_ids": [
+        "V_HEADER"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "prior1.26.0 environment receipt",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "1.26.0 path/package and matching prior binary SHA; no compiled-source identity certification"
+    },
+    {
+      "id": "S02",
+      "variable": "installed_package_versions",
+      "proof_ids": [
+        "P0"
+      ],
+      "observability_level": "a",
+      "status": "CONDITIONAL",
+      "api_or_method": "file SHA and distribution metadata only",
+      "source_excerpt_ids": [
+        "V_HEADER"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "prior1.26.0 environment receipt",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "1.26.0 path/package and matching prior binary SHA; no compiled-source identity certification"
+    },
+    {
+      "id": "S03",
+      "variable": "simulation_time",
+      "proof_ids": [
+        "P1"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "simulation.getTime; trafficlight.getPhase/getRedYellowGreenState/getProgram/getNextSwitch/getControlledLinks/getAllProgramLogics",
+      "source_excerpt_ids": [
+        "SIM_TIME",
+        "TLS_GET",
+        "N_EVENT"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "A07 t1206/y/phase1/CA_C24/nextSwitch1206/control-link1",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "reads current active logic only, not all queued future override/external setter events"
+    },
+    {
+      "id": "S04",
+      "variable": "tls_phase_index",
+      "proof_ids": [
+        "P1"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "simulation.getTime; trafficlight.getPhase/getRedYellowGreenState/getProgram/getNextSwitch/getControlledLinks/getAllProgramLogics",
+      "source_excerpt_ids": [
+        "SIM_TIME",
+        "TLS_GET",
+        "N_EVENT"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "A07 t1206/y/phase1/CA_C24/nextSwitch1206/control-link1",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "reads current active logic only, not all queued future override/external setter events"
+    },
+    {
+      "id": "S05",
+      "variable": "tls_state",
+      "proof_ids": [
+        "P1"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "simulation.getTime; trafficlight.getPhase/getRedYellowGreenState/getProgram/getNextSwitch/getControlledLinks/getAllProgramLogics",
+      "source_excerpt_ids": [
+        "SIM_TIME",
+        "TLS_GET",
+        "N_EVENT"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "A07 t1206/y/phase1/CA_C24/nextSwitch1206/control-link1",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "reads current active logic only, not all queued future override/external setter events"
+    },
+    {
+      "id": "S06",
+      "variable": "tls_program",
+      "proof_ids": [
+        "P1"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "simulation.getTime; trafficlight.getPhase/getRedYellowGreenState/getProgram/getNextSwitch/getControlledLinks/getAllProgramLogics",
+      "source_excerpt_ids": [
+        "SIM_TIME",
+        "TLS_GET",
+        "N_EVENT"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "A07 t1206/y/phase1/CA_C24/nextSwitch1206/control-link1",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "reads current active logic only, not all queued future override/external setter events"
+    },
+    {
+      "id": "S07",
+      "variable": "tls_next_switch",
+      "proof_ids": [
+        "P1"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "simulation.getTime; trafficlight.getPhase/getRedYellowGreenState/getProgram/getNextSwitch/getControlledLinks/getAllProgramLogics",
+      "source_excerpt_ids": [
+        "SIM_TIME",
+        "TLS_GET",
+        "N_EVENT"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "A07 t1206/y/phase1/CA_C24/nextSwitch1206/control-link1",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "reads current active logic only, not all queued future override/external setter events"
+    },
+    {
+      "id": "S08",
+      "variable": "tls_controlled_links",
+      "proof_ids": [
+        "P1"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "simulation.getTime; trafficlight.getPhase/getRedYellowGreenState/getProgram/getNextSwitch/getControlledLinks/getAllProgramLogics",
+      "source_excerpt_ids": [
+        "SIM_TIME",
+        "TLS_GET",
+        "N_EVENT"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "A07 t1206/y/phase1/CA_C24/nextSwitch1206/control-link1",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "reads current active logic only, not all queued future override/external setter events"
+    },
+    {
+      "id": "S09",
+      "variable": "tls_full_program_logics",
+      "proof_ids": [
+        "P1"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "simulation.getTime; trafficlight.getPhase/getRedYellowGreenState/getProgram/getNextSwitch/getControlledLinks/getAllProgramLogics",
+      "source_excerpt_ids": [
+        "SIM_TIME",
+        "TLS_GET",
+        "N_EVENT"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "A07 t1206/y/phase1/CA_C24/nextSwitch1206/control-link1",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "reads current active logic only, not all queued future override/external setter events"
+    },
+    {
+      "id": "S10",
+      "variable": "scheduled_event_queue",
+      "proof_ids": [
+        "P1"
+      ],
+      "observability_level": "d",
+      "status": "NOT_OBSERVABLE",
+      "api_or_method": "no checked public getter enumerates pending native event queue/external future commands",
+      "source_excerpt_ids": [
+        "N_EVENT",
+        "TLS_GET"
+      ],
+      "measurement_time": "inside upcoming native step after begin-event/TLS switch and planMovements, before/following executeMovements; unavailable at external pre-step boundary",
+      "saved_A07_evidence": "not recorded in public A07 snapshot",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "program structure/request trace can conditionally exclude own writes; foreign/event override future requires ownership/provenance, not empty getter alone"
+    },
+    {
+      "id": "S11",
+      "variable": "future_external_phase_writes",
+      "proof_ids": [
+        "P1"
+      ],
+      "observability_level": "d",
+      "status": "NOT_OBSERVABLE",
+      "api_or_method": "no checked public getter enumerates pending native event queue/external future commands",
+      "source_excerpt_ids": [
+        "N_EVENT",
+        "TLS_GET"
+      ],
+      "measurement_time": "inside upcoming native step after begin-event/TLS switch and planMovements, before/following executeMovements; unavailable at external pre-step boundary",
+      "saved_A07_evidence": "not recorded in public A07 snapshot",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "program structure/request trace can conditionally exclude own writes; foreign/event override future requires ownership/provenance, not empty getter alone"
+    },
+    {
+      "id": "S12",
+      "variable": "current_visible_vehicle_ids",
+      "proof_ids": [
+        "P2",
+        "P6"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle.getIDList/getLoadedIDList; lane.getLastStepVehicleIDs; simulation.getPendingVehicles",
+      "source_excerpt_ids": [
+        "V_IDS",
+        "L_IDS",
+        "V_LOADED",
+        "SIM_PENDING",
+        "N_POST"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "A07 only27storage+15ingress plus sparse receiver",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "visible != loaded != pending; lane API iterates current container, not future/shadow/rear-part inventory; enumerate world and mapped neighbors"
+    },
+    {
+      "id": "S13",
+      "variable": "current_lane_vehicle_ids",
+      "proof_ids": [
+        "P2",
+        "P6"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle.getIDList/getLoadedIDList; lane.getLastStepVehicleIDs; simulation.getPendingVehicles",
+      "source_excerpt_ids": [
+        "V_IDS",
+        "L_IDS",
+        "V_LOADED",
+        "SIM_PENDING",
+        "N_POST"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "A07 only27storage+15ingress plus sparse receiver",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "visible != loaded != pending; lane API iterates current container, not future/shadow/rear-part inventory; enumerate world and mapped neighbors"
+    },
+    {
+      "id": "S14",
+      "variable": "loaded_vehicle_ids",
+      "proof_ids": [
+        "P2",
+        "P6"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle.getIDList/getLoadedIDList; lane.getLastStepVehicleIDs; simulation.getPendingVehicles",
+      "source_excerpt_ids": [
+        "V_IDS",
+        "L_IDS",
+        "V_LOADED",
+        "SIM_PENDING",
+        "N_POST"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "A07 only27storage+15ingress plus sparse receiver",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "visible != loaded != pending; lane API iterates current container, not future/shadow/rear-part inventory; enumerate world and mapped neighbors"
+    },
+    {
+      "id": "S15",
+      "variable": "pending_insertion_ids",
+      "proof_ids": [
+        "P2",
+        "P6"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle.getIDList/getLoadedIDList; lane.getLastStepVehicleIDs; simulation.getPendingVehicles",
+      "source_excerpt_ids": [
+        "V_IDS",
+        "L_IDS",
+        "V_LOADED",
+        "SIM_PENDING",
+        "N_POST"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "A07 only27storage+15ingress plus sparse receiver",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "visible != loaded != pending; lane API iterates current container, not future/shadow/rear-part inventory; enumerate world and mapped neighbors"
+    },
+    {
+      "id": "S16",
+      "variable": "vehicle_lane_position",
+      "proof_ids": [
+        "P2",
+        "P3",
+        "P6"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle.getLanePosition/getLaneID/getRouteIndex/getTypeID/getRoute",
+      "source_excerpt_ids": [
+        "V_LANE",
+        "V_STATE",
+        "V_ROUTE",
+        "V_TLS"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "position/type on42; only front receiver route assertion",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "current route/index/type may mutate later; internal-lane route index and full route topology need explicit mapping"
+    },
+    {
+      "id": "S17",
+      "variable": "vehicle_lane_id",
+      "proof_ids": [
+        "P2",
+        "P3",
+        "P6"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle.getLanePosition/getLaneID/getRouteIndex/getTypeID/getRoute",
+      "source_excerpt_ids": [
+        "V_LANE",
+        "V_STATE",
+        "V_ROUTE",
+        "V_TLS"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "position/type on42; only front receiver route assertion",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "current route/index/type may mutate later; internal-lane route index and full route topology need explicit mapping"
+    },
+    {
+      "id": "S18",
+      "variable": "vehicle_route_index",
+      "proof_ids": [
+        "P2",
+        "P3",
+        "P6"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle.getLanePosition/getLaneID/getRouteIndex/getTypeID/getRoute",
+      "source_excerpt_ids": [
+        "V_LANE",
+        "V_STATE",
+        "V_ROUTE",
+        "V_TLS"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "position/type on42; only front receiver route assertion",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "current route/index/type may mutate later; internal-lane route index and full route topology need explicit mapping"
+    },
+    {
+      "id": "S19",
+      "variable": "vehicle_type_id",
+      "proof_ids": [
+        "P2",
+        "P3",
+        "P6"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle.getLanePosition/getLaneID/getRouteIndex/getTypeID/getRoute",
+      "source_excerpt_ids": [
+        "V_LANE",
+        "V_STATE",
+        "V_ROUTE",
+        "V_TLS"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "position/type on42; only front receiver route assertion",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "current route/index/type may mutate later; internal-lane route index and full route topology need explicit mapping"
+    },
+    {
+      "id": "S20",
+      "variable": "vehicle_route",
+      "proof_ids": [
+        "P2",
+        "P3",
+        "P6"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle.getLanePosition/getLaneID/getRouteIndex/getTypeID/getRoute",
+      "source_excerpt_ids": [
+        "V_LANE",
+        "V_STATE",
+        "V_ROUTE",
+        "V_TLS"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "position/type on42; only front receiver route assertion",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "current route/index/type may mutate later; internal-lane route index and full route topology need explicit mapping"
+    },
+    {
+      "id": "S21",
+      "variable": "current_speed",
+      "proof_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle.getSpeed/getAcceleration/getSpeedWithoutTraCI",
+      "source_excerpt_ids": [
+        "V_IDS",
+        "V_ACCEL",
+        "N_FINAL"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "current speed42; acceleration/withoutTraCI not saved",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "getSpeedWithoutTraCI is saved last native speed, not future untreated/red-final speed"
+    },
+    {
+      "id": "S22",
+      "variable": "current_acceleration",
+      "proof_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle.getSpeed/getAcceleration/getSpeedWithoutTraCI",
+      "source_excerpt_ids": [
+        "V_IDS",
+        "V_ACCEL",
+        "N_FINAL"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "current speed42; acceleration/withoutTraCI not saved",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "getSpeedWithoutTraCI is saved last native speed, not future untreated/red-final speed"
+    },
+    {
+      "id": "S23",
+      "variable": "last_speed_without_traci",
+      "proof_ids": [
+        "P3",
+        "P4",
+        "P5"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle.getSpeed/getAcceleration/getSpeedWithoutTraCI",
+      "source_excerpt_ids": [
+        "V_IDS",
+        "V_ACCEL",
+        "N_FINAL"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "current speed42; acceleration/withoutTraCI not saved",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "getSpeedWithoutTraCI is saved last native speed, not future untreated/red-final speed"
+    },
+    {
+      "id": "S24",
+      "variable": "normal_decel",
+      "proof_ids": [
+        "P3",
+        "P4",
+        "P5",
+        "P8"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle/vehicletype getDecel/getEmergencyDecel/getAccel/getTau/getActionStepLength/getImperfection; vehicle.getSpeedMode/getLaneChangeMode",
+      "source_excerpt_ids": [
+        "V_TYPE_PROPERTIES",
+        "V_MODES",
+        "N_ACTION",
+        "KR_DAWDLE"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "normal4.5/accel2.6/tau1/action1 saved; sigma.5 andmode31/1621 checked in worker not42fields",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "effective per-vehicle type/clone must be queried, not assume nominal type; scalar getters do not reveal future policy outputs"
+    },
+    {
+      "id": "S25",
+      "variable": "emergency_decel",
+      "proof_ids": [
+        "P3",
+        "P4",
+        "P5",
+        "P8"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle/vehicletype getDecel/getEmergencyDecel/getAccel/getTau/getActionStepLength/getImperfection; vehicle.getSpeedMode/getLaneChangeMode",
+      "source_excerpt_ids": [
+        "V_TYPE_PROPERTIES",
+        "V_MODES",
+        "N_ACTION",
+        "KR_DAWDLE"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "normal4.5/accel2.6/tau1/action1 saved; sigma.5 andmode31/1621 checked in worker not42fields",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "effective per-vehicle type/clone must be queried, not assume nominal type; scalar getters do not reveal future policy outputs"
+    },
+    {
+      "id": "S26",
+      "variable": "max_accel",
+      "proof_ids": [
+        "P3",
+        "P4",
+        "P5",
+        "P8"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle/vehicletype getDecel/getEmergencyDecel/getAccel/getTau/getActionStepLength/getImperfection; vehicle.getSpeedMode/getLaneChangeMode",
+      "source_excerpt_ids": [
+        "V_TYPE_PROPERTIES",
+        "V_MODES",
+        "N_ACTION",
+        "KR_DAWDLE"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "normal4.5/accel2.6/tau1/action1 saved; sigma.5 andmode31/1621 checked in worker not42fields",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "effective per-vehicle type/clone must be queried, not assume nominal type; scalar getters do not reveal future policy outputs"
+    },
+    {
+      "id": "S27",
+      "variable": "tau",
+      "proof_ids": [
+        "P3",
+        "P4",
+        "P5",
+        "P8"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle/vehicletype getDecel/getEmergencyDecel/getAccel/getTau/getActionStepLength/getImperfection; vehicle.getSpeedMode/getLaneChangeMode",
+      "source_excerpt_ids": [
+        "V_TYPE_PROPERTIES",
+        "V_MODES",
+        "N_ACTION",
+        "KR_DAWDLE"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "normal4.5/accel2.6/tau1/action1 saved; sigma.5 andmode31/1621 checked in worker not42fields",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "effective per-vehicle type/clone must be queried, not assume nominal type; scalar getters do not reveal future policy outputs"
+    },
+    {
+      "id": "S28",
+      "variable": "action_step_length",
+      "proof_ids": [
+        "P3",
+        "P4",
+        "P5",
+        "P8"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle/vehicletype getDecel/getEmergencyDecel/getAccel/getTau/getActionStepLength/getImperfection; vehicle.getSpeedMode/getLaneChangeMode",
+      "source_excerpt_ids": [
+        "V_TYPE_PROPERTIES",
+        "V_MODES",
+        "N_ACTION",
+        "KR_DAWDLE"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "normal4.5/accel2.6/tau1/action1 saved; sigma.5 andmode31/1621 checked in worker not42fields",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "effective per-vehicle type/clone must be queried, not assume nominal type; scalar getters do not reveal future policy outputs"
+    },
+    {
+      "id": "S29",
+      "variable": "sigma",
+      "proof_ids": [
+        "P3",
+        "P4",
+        "P5",
+        "P8"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle/vehicletype getDecel/getEmergencyDecel/getAccel/getTau/getActionStepLength/getImperfection; vehicle.getSpeedMode/getLaneChangeMode",
+      "source_excerpt_ids": [
+        "V_TYPE_PROPERTIES",
+        "V_MODES",
+        "N_ACTION",
+        "KR_DAWDLE"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "normal4.5/accel2.6/tau1/action1 saved; sigma.5 andmode31/1621 checked in worker not42fields",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "effective per-vehicle type/clone must be queried, not assume nominal type; scalar getters do not reveal future policy outputs"
+    },
+    {
+      "id": "S30",
+      "variable": "speed_mode",
+      "proof_ids": [
+        "P3",
+        "P4",
+        "P5",
+        "P8"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle/vehicletype getDecel/getEmergencyDecel/getAccel/getTau/getActionStepLength/getImperfection; vehicle.getSpeedMode/getLaneChangeMode",
+      "source_excerpt_ids": [
+        "V_DYNAMICS",
+        "V_MODES",
+        "KR_DAWDLE"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "normal4.5/accel2.6/tau1/action1 saved; sigma.5 andmode31/1621 checked in worker not42fields",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "effective per-vehicle type/clone must be queried, not assume nominal type; scalar getters do not reveal future policy outputs"
+    },
+    {
+      "id": "S31",
+      "variable": "lane_change_mode",
+      "proof_ids": [
+        "P3",
+        "P4",
+        "P5",
+        "P8"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle/vehicletype getDecel/getEmergencyDecel/getAccel/getTau/getActionStepLength/getImperfection; vehicle.getSpeedMode/getLaneChangeMode",
+      "source_excerpt_ids": [
+        "V_DYNAMICS",
+        "V_MODES",
+        "KR_DAWDLE"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "normal4.5/accel2.6/tau1/action1 saved; sigma.5 andmode31/1621 checked in worker not42fields",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "effective per-vehicle type/clone must be queried, not assume nominal type; scalar getters do not reveal future policy outputs"
+    },
+    {
+      "id": "S32",
+      "variable": "last_action_time",
+      "proof_ids": [
+        "P3"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle.getLastActionTime",
+      "source_excerpt_ids": [
+        "V_TYPE_PROPERTIES",
+        "V_MODES",
+        "N_ACTION",
+        "KR_DAWDLE"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "not recorded in public A07 snapshot",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "direct official getter exists; missing from saved witness, not intrinsically unavailable"
+    },
+    {
+      "id": "S33",
+      "variable": "next_action_alignment",
+      "proof_ids": [
+        "P3"
+      ],
+      "observability_level": "c",
+      "status": "CONDITIONAL",
+      "api_or_method": "(native_t-lastActionTime)%actionStepLength==0 after validated integral SUMOTime conversion",
+      "source_excerpt_ids": [
+        "N_ACTION",
+        "N_EVENT"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "not saved",
+      "bound_or_derivation": "pinned exact modulo source predicate; 1s action with integer1s step makes every aligned native tick active",
+      "limit": "valid only unchangedactionstep/no external action-offset reset; scalar timing closes this subgap, not full plan"
+    },
+    {
+      "id": "S34",
+      "variable": "next_tls_geometric_distance",
+      "proof_ids": [
+        "P3"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle.getNextTLS",
+      "source_excerpt_ids": [
+        "V_TLS",
+        "N_SEEN"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "derived projected gap only",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "route/bestlane traversal geometry, not all future effective seen/stopDist/device updates"
+    },
+    {
+      "id": "S35",
+      "variable": "native_planning_seen",
+      "proof_ids": [
+        "P3"
+      ],
+      "observability_level": "c",
+      "status": "CONDITIONAL",
+      "api_or_method": "fixed current first storage link geometry: laneLength-position, absent opposite/device/route-changing branch",
+      "source_excerpt_ids": [
+        "N_SEEN",
+        "N_PLAN",
+        "V_TLS"
+      ],
+      "measurement_time": "inside upcoming native step after begin-event/TLS switch and planMovements, before/following executeMovements; unavailable at external pre-step boundary",
+      "saved_A07_evidence": "guard projected gap204.49-position",
+      "bound_or_derivation": "local current first-link equation only; no whole42 branch equivalence proof",
+      "limit": "front first-link geometry can be derived under explicit route/lane premises; ingress/later lookahead cannot simply substitute old guard projection"
+    },
+    {
+      "id": "S36",
+      "variable": "class_sensitive_lane_stop_offset",
+      "proof_ids": [
+        "P3"
+      ],
+      "observability_level": "c",
+      "status": "CONDITIONAL",
+      "api_or_method": "protected XML stopOffset + class + MSLane::getVehicleStopOffset",
+      "source_excerpt_ids": [
+        "N_LANE_OFFSET",
+        "N_PLAN"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "assumed0 in conditional replay",
+      "bound_or_derivation": "getVehicleStopOffset returns0 when lane offset undefined; otherwise permission-filtered offset",
+      "limit": "no named Vehicle getter for this internal result checked; static nooffset implies0 only if loadedlaneidentity/no runtime setter proven"
+    },
+    {
+      "id": "S37",
+      "variable": "explicit_junction_model_parameters",
+      "proof_ids": [
+        "P3",
+        "P8"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicletype.getParameter(junctionModel.*); vehicle.getParameter(has.NAME.device/device.NAME.*)",
+      "source_excerpt_ids": [
+        "TYPE_JM",
+        "V_DEVICES",
+        "CF_DRIVER"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "not recorded; protectedvType minimaldefaults",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "typeJM getter empty means absent explicitoverride, NOT zero effective default; device presence != full future perception/advice"
+    },
+    {
+      "id": "S38",
+      "variable": "device_presence",
+      "proof_ids": [
+        "P3",
+        "P8"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicletype.getParameter(junctionModel.*); vehicle.getParameter(has.NAME.device/device.NAME.*)",
+      "source_excerpt_ids": [
+        "TYPE_JM",
+        "V_DEVICES",
+        "CF_DRIVER"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "not recorded; protectedvType minimaldefaults",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "typeJM getter empty means absent explicitoverride, NOT zero effective default; device presence != full future perception/advice"
+    },
+    {
+      "id": "S39",
+      "variable": "effective_jm_stopline_gap",
+      "proof_ids": [
+        "P3",
+        "P8",
+        "P9"
+      ],
+      "observability_level": "d",
+      "status": "NOT_OBSERVABLE",
+      "api_or_method": "source defaults/explicit params may conditionally exclude branch; no checked atomic future getter",
+      "source_excerpt_ids": [
+        "N_PLAN",
+        "N_WAIT",
+        "CF_DRIVER",
+        "V_DEVICES",
+        "TYPE_JM"
+      ],
+      "measurement_time": "inside upcoming native step after begin-event/TLS switch and planMovements, before/following executeMovements; unavailable at external pre-step boundary",
+      "saved_A07_evidence": "not recorded in public A07 snapshot",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "would need exact hidden state logging or a complete exclusion/bound; source default is not runtime evidence"
+    },
+    {
+      "id": "S40",
+      "variable": "effective_ignore_red_state",
+      "proof_ids": [
+        "P3",
+        "P8",
+        "P9"
+      ],
+      "observability_level": "d",
+      "status": "NOT_OBSERVABLE",
+      "api_or_method": "source defaults/explicit params may conditionally exclude branch; no checked atomic future getter",
+      "source_excerpt_ids": [
+        "N_PLAN",
+        "N_WAIT",
+        "CF_DRIVER",
+        "V_DEVICES",
+        "TYPE_JM"
+      ],
+      "measurement_time": "inside upcoming native step after begin-event/TLS switch and planMovements, before/following executeMovements; unavailable at external pre-step boundary",
+      "saved_A07_evidence": "not recorded in public A07 snapshot",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "would need exact hidden state logging or a complete exclusion/bound; source default is not runtime evidence"
+    },
+    {
+      "id": "S41",
+      "variable": "glosa_override_or_new_stop_dist",
+      "proof_ids": [
+        "P3",
+        "P8",
+        "P9"
+      ],
+      "observability_level": "d",
+      "status": "NOT_OBSERVABLE",
+      "api_or_method": "source defaults/explicit params may conditionally exclude branch; no checked atomic future getter",
+      "source_excerpt_ids": [
+        "N_PLAN",
+        "N_WAIT",
+        "CF_DRIVER",
+        "V_DEVICES",
+        "TYPE_JM"
+      ],
+      "measurement_time": "inside upcoming native step after begin-event/TLS switch and planMovements, before/following executeMovements; unavailable at external pre-step boundary",
+      "saved_A07_evidence": "not recorded in public A07 snapshot",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "would need exact hidden state logging or a complete exclusion/bound; source default is not runtime evidence"
+    },
+    {
+      "id": "S42",
+      "variable": "driver_perceived_headway",
+      "proof_ids": [
+        "P3",
+        "P8",
+        "P9"
+      ],
+      "observability_level": "d",
+      "status": "NOT_OBSERVABLE",
+      "api_or_method": "source defaults/explicit params may conditionally exclude branch; no checked atomic future getter",
+      "source_excerpt_ids": [
+        "N_PLAN",
+        "N_WAIT",
+        "CF_DRIVER",
+        "V_DEVICES",
+        "TYPE_JM"
+      ],
+      "measurement_time": "inside upcoming native step after begin-event/TLS switch and planMovements, before/following executeMovements; unavailable at external pre-step boundary",
+      "saved_A07_evidence": "not recorded in public A07 snapshot",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "would need exact hidden state logging or a complete exclusion/bound; source default is not runtime evidence"
+    },
+    {
+      "id": "S43",
+      "variable": "future_can_brake_before_line",
+      "proof_ids": [
+        "P3",
+        "P4",
+        "P9"
+      ],
+      "observability_level": "d",
+      "status": "UNRESOLVED",
+      "api_or_method": "conditional source arithmetic possible after native seen/offset/config inputs closed",
+      "source_excerpt_ids": [
+        "N_PLAN",
+        "N_WAIT"
+      ],
+      "measurement_time": "inside upcoming native step after begin-event/TLS switch and planMovements, before/following executeMovements; unavailable at external pre-step boundary",
+      "saved_A07_evidence": "conditional42/42 oldprojection; actual0/42",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "raw guard gap vs1.1 continuous envelope is different; nativepredicatealone not complete branch or ordinaryfinal motion"
+    },
+    {
+      "id": "S44",
+      "variable": "future_effective_stop_offset",
+      "proof_ids": [
+        "P3",
+        "P4",
+        "P9"
+      ],
+      "observability_level": "d",
+      "status": "UNRESOLVED",
+      "api_or_method": "conditional source arithmetic possible after native seen/offset/config inputs closed",
+      "source_excerpt_ids": [
+        "N_PLAN",
+        "N_WAIT"
+      ],
+      "measurement_time": "inside upcoming native step after begin-event/TLS switch and planMovements, before/following executeMovements; unavailable at external pre-step boundary",
+      "saved_A07_evidence": "conditional42/42 oldprojection; actual0/42",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "raw guard gap vs1.1 continuous envelope is different; nativepredicatealone not complete branch or ordinaryfinal motion"
+    },
+    {
+      "id": "S45",
+      "variable": "future_drive_request",
+      "proof_ids": [
+        "P3",
+        "P4",
+        "P7",
+        "P9"
+      ],
+      "observability_level": "d",
+      "status": "NOT_OBSERVABLE",
+      "api_or_method": "native DriveProcessItem fields; no matching checked public getter",
+      "source_excerpt_ids": [
+        "N_DPI",
+        "N_EVENT",
+        "V_LINKS",
+        "V_HEADER"
+      ],
+      "measurement_time": "inside upcoming native step after begin-event/TLS switch and planMovements, before/following executeMovements; unavailable at external pre-step boundary",
+      "saved_A07_evidence": "not recorded in public A07 snapshot",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "getNextLinks reconstructs route links and tests opened using speedlimits/currentTime; does NOT expose actual DPI"
+    },
+    {
+      "id": "S46",
+      "variable": "future_drive_wait_speed",
+      "proof_ids": [
+        "P3",
+        "P4",
+        "P7",
+        "P9"
+      ],
+      "observability_level": "d",
+      "status": "NOT_OBSERVABLE",
+      "api_or_method": "native DriveProcessItem fields; no matching checked public getter",
+      "source_excerpt_ids": [
+        "N_DPI",
+        "N_EVENT",
+        "V_LINKS",
+        "V_HEADER"
+      ],
+      "measurement_time": "inside upcoming native step after begin-event/TLS switch and planMovements, before/following executeMovements; unavailable at external pre-step boundary",
+      "saved_A07_evidence": "not recorded in public A07 snapshot",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "getNextLinks reconstructs route links and tests opened using speedlimits/currentTime; does NOT expose actual DPI"
+    },
+    {
+      "id": "S47",
+      "variable": "future_drive_pass_speed",
+      "proof_ids": [
+        "P3",
+        "P4",
+        "P7",
+        "P9"
+      ],
+      "observability_level": "d",
+      "status": "NOT_OBSERVABLE",
+      "api_or_method": "native DriveProcessItem fields; no matching checked public getter",
+      "source_excerpt_ids": [
+        "N_DPI",
+        "N_EVENT",
+        "V_LINKS",
+        "V_HEADER"
+      ],
+      "measurement_time": "inside upcoming native step after begin-event/TLS switch and planMovements, before/following executeMovements; unavailable at external pre-step boundary",
+      "saved_A07_evidence": "not recorded in public A07 snapshot",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "getNextLinks reconstructs route links and tests opened using speedlimits/currentTime; does NOT expose actual DPI"
+    },
+    {
+      "id": "S48",
+      "variable": "future_drive_distance",
+      "proof_ids": [
+        "P3",
+        "P4",
+        "P7",
+        "P9"
+      ],
+      "observability_level": "d",
+      "status": "NOT_OBSERVABLE",
+      "api_or_method": "native DriveProcessItem fields; no matching checked public getter",
+      "source_excerpt_ids": [
+        "N_DPI",
+        "N_EVENT",
+        "V_LINKS",
+        "V_HEADER"
+      ],
+      "measurement_time": "inside upcoming native step after begin-event/TLS switch and planMovements, before/following executeMovements; unavailable at external pre-step boundary",
+      "saved_A07_evidence": "not recorded in public A07 snapshot",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "getNextLinks reconstructs route links and tests opened using speedlimits/currentTime; does NOT expose actual DPI"
+    },
+    {
+      "id": "S49",
+      "variable": "future_drive_arrival_and_available_space",
+      "proof_ids": [
+        "P3",
+        "P4",
+        "P7",
+        "P9"
+      ],
+      "observability_level": "d",
+      "status": "NOT_OBSERVABLE",
+      "api_or_method": "native DriveProcessItem fields; no matching checked public getter",
+      "source_excerpt_ids": [
+        "N_DPI",
+        "N_EVENT",
+        "V_LINKS",
+        "V_HEADER"
+      ],
+      "measurement_time": "inside upcoming native step after begin-event/TLS switch and planMovements, before/following executeMovements; unavailable at external pre-step boundary",
+      "saved_A07_evidence": "not recorded in public A07 snapshot",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "getNextLinks reconstructs route links and tests opened using speedlimits/currentTime; does NOT expose actual DPI"
+    },
+    {
+      "id": "S50",
+      "variable": "current_next_links_summary",
+      "proof_ids": [
+        "P7"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle.getNextLinks; lane.getLinks",
+      "source_excerpt_ids": [
+        "V_LINKS",
+        "L_LINKS"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "not recorded in public A07 snapshot",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "opened/foe booleans use query-specific hypothetical arguments; not actual future reservations/request/arrival speeds"
+    },
+    {
+      "id": "S51",
+      "variable": "current_lane_link_summary",
+      "proof_ids": [
+        "P7"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle.getNextLinks; lane.getLinks",
+      "source_excerpt_ids": [
+        "V_LINKS",
+        "L_LINKS"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "not recorded in public A07 snapshot",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "opened/foe booleans use query-specific hypothetical arguments; not actual future reservations/request/arrival speeds"
+    },
+    {
+      "id": "S52",
+      "variable": "queried_stop_speed",
+      "proof_ids": [
+        "P4",
+        "P5",
+        "P7"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle.getStopSpeed/getFollowSpeed/getSecureGap",
+      "source_excerpt_ids": [
+        "V_FORMULAS",
+        "KR_STOP",
+        "CF_RELAX"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "sparse old receiver secureGap.6365 not complete42joint",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "stopSpeed API uses FUTURE disabling relaxEmergency unlike CURRENT native; secureGap/currentleader is conditional query, not future motion certificate"
+    },
+    {
+      "id": "S53",
+      "variable": "queried_follow_speed",
+      "proof_ids": [
+        "P4",
+        "P5",
+        "P7"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle.getStopSpeed/getFollowSpeed/getSecureGap",
+      "source_excerpt_ids": [
+        "V_FORMULAS",
+        "KR_STOP",
+        "CF_RELAX"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "sparse old receiver secureGap.6365 not complete42joint",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "stopSpeed API uses FUTURE disabling relaxEmergency unlike CURRENT native; secureGap/currentleader is conditional query, not future motion certificate"
+    },
+    {
+      "id": "S54",
+      "variable": "queried_secure_gap",
+      "proof_ids": [
+        "P4",
+        "P5",
+        "P7"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle.getStopSpeed/getFollowSpeed/getSecureGap",
+      "source_excerpt_ids": [
+        "V_FORMULAS",
+        "KR_STOP",
+        "CF_RELAX"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "sparse old receiver secureGap.6365 not complete42joint",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "stopSpeed API uses FUTURE disabling relaxEmergency unlike CURRENT native; secureGap/currentleader is conditional query, not future motion certificate"
+    },
+    {
+      "id": "S55",
+      "variable": "future_v_safe",
+      "proof_ids": [
+        "P4",
+        "P5",
+        "P8",
+        "P9"
+      ],
+      "observability_level": "d",
+      "status": "NOT_OBSERVABLE",
+      "api_or_method": "native processLinkApproaches/finalizeSpeed/TraCI speed-control internal sequence",
+      "source_excerpt_ids": [
+        "N_EXEC",
+        "N_FINAL",
+        "CF_FINAL",
+        "V_HEADER"
+      ],
+      "measurement_time": "inside upcoming native step after begin-event/TLS switch and planMovements, before/following executeMovements; unavailable at external pre-step boundary",
+      "saved_A07_evidence": "not recorded in public A07 snapshot",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "no getter of not-yet-computed internal output; exact hidden state could be replaced by sufficient intervals, not proved here"
+    },
+    {
+      "id": "S56",
+      "variable": "future_v_safe_min",
+      "proof_ids": [
+        "P4",
+        "P5",
+        "P8",
+        "P9"
+      ],
+      "observability_level": "d",
+      "status": "NOT_OBSERVABLE",
+      "api_or_method": "native processLinkApproaches/finalizeSpeed/TraCI speed-control internal sequence",
+      "source_excerpt_ids": [
+        "N_EXEC",
+        "N_FINAL",
+        "CF_FINAL",
+        "V_HEADER"
+      ],
+      "measurement_time": "inside upcoming native step after begin-event/TLS switch and planMovements, before/following executeMovements; unavailable at external pre-step boundary",
+      "saved_A07_evidence": "not recorded in public A07 snapshot",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "no getter of not-yet-computed internal output; exact hidden state could be replaced by sufficient intervals, not proved here"
+    },
+    {
+      "id": "S57",
+      "variable": "future_finalized_speed",
+      "proof_ids": [
+        "P4",
+        "P5",
+        "P8",
+        "P9"
+      ],
+      "observability_level": "d",
+      "status": "NOT_OBSERVABLE",
+      "api_or_method": "native processLinkApproaches/finalizeSpeed/TraCI speed-control internal sequence",
+      "source_excerpt_ids": [
+        "N_EXEC",
+        "N_FINAL",
+        "CF_FINAL",
+        "V_HEADER"
+      ],
+      "measurement_time": "inside upcoming native step after begin-event/TLS switch and planMovements, before/following executeMovements; unavailable at external pre-step boundary",
+      "saved_A07_evidence": "not recorded in public A07 snapshot",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "no getter of not-yet-computed internal output; exact hidden state could be replaced by sufficient intervals, not proved here"
+    },
+    {
+      "id": "S58",
+      "variable": "local_dawdle_envelope",
+      "proof_ids": [
+        "P8"
+      ],
+      "observability_level": "c",
+      "status": "CONDITIONAL",
+      "api_or_method": "Krauss patchSpeedBeforeLC MAX(vMin,dawdle(vMax)) and source bounded random variable",
+      "source_excerpt_ids": [
+        "KR_DAWDLE",
+        "CF_FINAL"
+      ],
+      "measurement_time": "inside upcoming native step after begin-event/TLS switch and planMovements, before/following executeMovements; unavailable at external pre-step boundary",
+      "saved_A07_evidence": "not saved",
+      "bound_or_derivation": "conditional local [vMin,vMax] bound, no RNG realization needed for this substage",
+      "limit": "bounds require correct native vMin/vMax; LC may only preserve emergency lower, later vSafeMin/TraCI/devices alter final result"
+    },
+    {
+      "id": "S59",
+      "variable": "future_joint_ordinary_non_crossing_envelope",
+      "proof_ids": [
+        "P4",
+        "P5",
+        "P7",
+        "P8"
+      ],
+      "observability_level": "e",
+      "status": "UNRESOLVED",
+      "api_or_method": "no established sufficient interval over all allowed native branches/followers/receiver",
+      "source_excerpt_ids": [
+        "CF_FINAL",
+        "N_FINAL",
+        "N_PLAN",
+        "LC_PATCH",
+        "CF_RELAX"
+      ],
+      "measurement_time": "inside upcoming native step after begin-event/TLS switch and planMovements, before/following executeMovements; unavailable at external pre-step boundary",
+      "saved_A07_evidence": "not recorded in public A07 snapshot",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "coarse emergency/accel bound too weak; no proof every stronger conservative substitute impossible"
+    },
+    {
+      "id": "S60",
+      "variable": "current_leader",
+      "proof_ids": [
+        "P2",
+        "P5",
+        "P7"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle.getLeader/getFollower/getNeighbors plus whole world lane/route mapping",
+      "source_excerpt_ids": [
+        "V_LEADER",
+        "V_LC_SAVED",
+        "L_IDS"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "not recorded in public A07 snapshot",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "leader reports gap excludingego minGap and may clamp internallinkleader negativegap; followerselection not entire chain; enumerate all"
+    },
+    {
+      "id": "S61",
+      "variable": "current_follower",
+      "proof_ids": [
+        "P2",
+        "P5",
+        "P7"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle.getLeader/getFollower/getNeighbors plus whole world lane/route mapping",
+      "source_excerpt_ids": [
+        "V_LEADER",
+        "V_LC_SAVED",
+        "L_IDS"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "not recorded in public A07 snapshot",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "leader reports gap excludingego minGap and may clamp internallinkleader negativegap; followerselection not entire chain; enumerate all"
+    },
+    {
+      "id": "S62",
+      "variable": "current_neighbor_vehicles",
+      "proof_ids": [
+        "P2",
+        "P5",
+        "P7"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle.getLeader/getFollower/getNeighbors plus whole world lane/route mapping",
+      "source_excerpt_ids": [
+        "V_LEADER",
+        "V_LC_SAVED",
+        "L_IDS"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "not recorded in public A07 snapshot",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "leader reports gap excludingego minGap and may clamp internallinkleader negativegap; followerselection not entire chain; enumerate all"
+    },
+    {
+      "id": "S63",
+      "variable": "current_junction_foes",
+      "proof_ids": [
+        "P7"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "vehicle.getJunctionFoes; lane.getFoes/getInternalFoes",
+      "source_excerpt_ids": [
+        "V_FOE",
+        "L_FOES"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "not recorded in public A07 snapshot",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "junctionapproach cache is previous-step-start with displacement correction; empty/currentfoe not absence of all future merge conflicts"
+    },
+    {
+      "id": "S64",
+      "variable": "future_receiver_reservations",
+      "proof_ids": [
+        "P4",
+        "P5",
+        "P7",
+        "P8"
+      ],
+      "observability_level": "d",
+      "status": "NOT_OBSERVABLE",
+      "api_or_method": "no checked public getter of future joint receiver/LC decision",
+      "source_excerpt_ids": [
+        "V_FOE",
+        "N_EVENT",
+        "CF_FINAL",
+        "LC_PATCH",
+        "V_LC_SAVED"
+      ],
+      "measurement_time": "inside upcoming native step after begin-event/TLS switch and planMovements, before/following executeMovements; unavailable at external pre-step boundary",
+      "saved_A07_evidence": "not recorded in public A07 snapshot",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "getLaneChangeState returns saved state; current neighbors can enable conditional bounds, not future negotiation guarantees"
+    },
+    {
+      "id": "S65",
+      "variable": "future_follower_joint_motion",
+      "proof_ids": [
+        "P4",
+        "P5",
+        "P7",
+        "P8"
+      ],
+      "observability_level": "d",
+      "status": "NOT_OBSERVABLE",
+      "api_or_method": "no checked public getter of future joint receiver/LC decision",
+      "source_excerpt_ids": [
+        "V_FOE",
+        "N_EVENT",
+        "CF_FINAL",
+        "LC_PATCH",
+        "V_LC_SAVED"
+      ],
+      "measurement_time": "inside upcoming native step after begin-event/TLS switch and planMovements, before/following executeMovements; unavailable at external pre-step boundary",
+      "saved_A07_evidence": "not recorded in public A07 snapshot",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "getLaneChangeState returns saved state; current neighbors can enable conditional bounds, not future negotiation guarantees"
+    },
+    {
+      "id": "S66",
+      "variable": "future_lane_change_patch",
+      "proof_ids": [
+        "P4",
+        "P5",
+        "P7",
+        "P8"
+      ],
+      "observability_level": "d",
+      "status": "NOT_OBSERVABLE",
+      "api_or_method": "no checked public getter of future joint receiver/LC decision",
+      "source_excerpt_ids": [
+        "V_FOE",
+        "N_EVENT",
+        "CF_FINAL",
+        "LC_PATCH",
+        "V_LC_SAVED"
+      ],
+      "measurement_time": "inside upcoming native step after begin-event/TLS switch and planMovements, before/following executeMovements; unavailable at external pre-step boundary",
+      "saved_A07_evidence": "not recorded in public A07 snapshot",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "getLaneChangeState returns saved state; current neighbors can enable conditional bounds, not future negotiation guarantees"
+    },
+    {
+      "id": "S67",
+      "variable": "saved_state_export",
+      "proof_ids": [
+        "P0",
+        "P3",
+        "P8"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "simulation.saveState invokes MSStateHandler at currentstep",
+      "source_excerpt_ids": [
+        "SIM_SAVE",
+        "N_SAVE"
+      ],
+      "measurement_time": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+      "saved_A07_evidence": "not recorded in public A07 snapshot",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "would write currentstate only; NOT invoked; checkedMSVehicle serialization saves positions/speeds/action/stops/devices, not futureDPI/vSafeMin/finalspeed. Entire statehandler/RNG serializer not exhaustively audited"
+    },
+    {
+      "id": "S68",
+      "variable": "post_step_collision_teleport_braking_crossing",
+      "proof_ids": [
+        "P10"
+      ],
+      "observability_level": "b",
+      "status": "CONDITIONAL",
+      "api_or_method": "simulation collision/teleport getters and route/lane crossing bracket + speed differences/logs",
+      "source_excerpt_ids": [
+        "N_POST",
+        "N_FINAL"
+      ],
+      "measurement_time": "only after permitted native movement",
+      "saved_A07_evidence": "A07 completed1206prefix only;0refusedred observations",
+      "bound_or_derivation": "none established for future native decision",
+      "limit": "post-hoc cannot authorize prospective step; refused A07interval never executed"
+    },
+    {
+      "id": "S69",
+      "variable": "remaining_grouped_joint_dependency_review_boundary",
+      "proof_ids": [
+        "P2",
+        "P4",
+        "P5",
+        "P7",
+        "P8",
+        "P9"
+      ],
+      "observability_level": "d",
+      "status": "UNRESOLVED",
+      "api_or_method": "length/minGap/class have current scalar getters; friction, current stops/startup and pending influencer commands, RNG continuation and exact future composition require additional evidence or exclusions",
+      "source_excerpt_ids": [
+        "V_TYPE_PROPERTIES",
+        "CF_FINAL",
+        "N_FINAL",
+        "KR_DAWDLE",
+        "N_SAVE"
+      ],
+      "measurement_time": "current getters vs upcoming within-step finalized-speed dependencies",
+      "saved_A07_evidence": "length/minGap and one receiver present; whole population bound and remaining future state not recorded",
+      "bound_or_derivation": "NOT_PROVED as a joint sufficient interval",
+      "limit": "grouped non-exhaustiveness notice, not an observation certificate; this bounded investigation does not audit every possible device/serialization/model field. No claim 68 or69 rows are an exhaustive native state schema."
+    }
+  ],
+  "count": 69,
+  "no_ELIGIBLE_state_generated": true,
+  "all_stronger_conservative_proofs_impossible": "NOT_PROVED",
+  "scope_exclusions": [
+    "no server/API calls",
+    "no native steps/counterfactuals",
+    "no core/model/guard edit",
+    "no exhaustive auditing all device/extension/serializer plugins",
+    "no formal physics/security theorem"
+  ],
+  "timing": {
+    "external_pre_boundary": "TraCI command boundary t=1206 before simulationStep(t+1); last completed movement is earlier native step; pending begin event has not executed",
+    "future_internal": "inside upcoming native step after begin-event/TLS switch and planMovements, before/following executeMovements; unavailable at external pre-step boundary",
+    "source_order": "TraCIcommands -> begin/TLS -> planMovements -> setJunctionApproaches -> executeMovements -> collision -> lanechange -> load/insertion; no checked standardpublic pause betweenplanandexecute"
+  },
+  "field_inventory_exhaustiveness": "NOT_EXHAUSTIVE: decisive fields plus explicit remaining dependency boundary"
+}

@@ -1,0 +1,453 @@
+{
+  "classification": "PASS_FOR_ACTUAL_CODE_CLEAN_CHECKOUT",
+  "actual_tested_commit": "121285daa54a4b1b1d45c5319c5405479b913d80",
+  "clone_path": "/private/tmp/issue10-clean-udc3yxht/checkout",
+  "clone_method": "git clone --no-hardlinks --single-branch --branch codex/issue-10-a1-proof-gap-feasibility <localrepo> <newdir>",
+  "python": "3.13.0 (v3.13.0:60403a5409f, Oct  7 2024, 00:37:40) [Clang 15.0.0 (clang-1500.3.9.4)]",
+  "checks": [
+    {
+      "name": "public",
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+        "scripts/candidate_a_a1_proof_gap_20261011_v1/verify_public.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"status\": \"PASS\",\n  \"scope\": \"STATIC_SOURCE_RECEIPT_SCHEMA_HASH_AND_UNCHANGED_PUBLIC_HISTORY_ONLY\",\n  \"source_commit\": \"fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3\",\n  \"bound_files\": 9,\n  \"state_fields\": 69,\n  \"source_excerpts\": 44,\n  \"proof_ids\": 11,\n  \"coverage_rows\": 12,\n  \"protected_files_checked\": 536,\n  \"protected_drift\": [],\n  \"old_a07_mapping_equal\": true,\n  \"a07_witnesses\": 42,\n  \"service_observed_steps\": [\n    6,\n    0,\n    0,\n    0,\n    0,\n    0\n  ],\n  \"actual_native_branches_determined\": 0,\n  \"sumo_traci_starts\": 0,\n  \"native_cpp_builds\": 0,\n  \"synthetic_new_tests\": 0,\n  \"full_a1_eligibility_proven\": false,\n  \"clean_checkout_tested_here\": false,\n  \"source_native_to_binary_build_equivalence\": \"NOT_VERIFIED\",\n  \"all_stronger_conservative_proofs_impossible\": \"NOT_PROVED\"\n}\n",
+      "stderr": "",
+      "output_path": "/private/tmp/issue10-clean-udc3yxht/public.json",
+      "output_sha256": "e6a7a4a54264c7367ee708e4a2d8e93e5a84038888ca3ed04e377cef4a466d01",
+      "parsed_output": {
+        "status": "PASS",
+        "scope": "STATIC_SOURCE_RECEIPT_SCHEMA_HASH_AND_UNCHANGED_PUBLIC_HISTORY_ONLY",
+        "source_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+        "bound_files": 9,
+        "state_fields": 69,
+        "source_excerpts": 44,
+        "proof_ids": 11,
+        "coverage_rows": 12,
+        "protected_files_checked": 536,
+        "protected_drift": [],
+        "old_a07_mapping_equal": true,
+        "a07_witnesses": 42,
+        "service_observed_steps": [
+          6,
+          0,
+          0,
+          0,
+          0,
+          0
+        ],
+        "actual_native_branches_determined": 0,
+        "sumo_traci_starts": 0,
+        "native_cpp_builds": 0,
+        "synthetic_new_tests": 0,
+        "full_a1_eligibility_proven": false,
+        "clean_checkout_tested_here": false,
+        "source_native_to_binary_build_equivalence": "NOT_VERIFIED",
+        "all_stronger_conservative_proofs_impossible": "NOT_PROVED"
+      }
+    },
+    {
+      "name": "independent",
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+        "data/processed/candidate_a_a1_proof_gap_20261011_v1/independent_review.py"
+      ],
+      "returncode": 0,
+      "stdout": "{\n  \"old_evidence\": {\n    \"status\": \"PASS\",\n    \"protected_checked\": 536,\n    \"protected_mismatches\": [],\n    \"witnesses\": [\n      {\n        \"id\": \"R_flow.27\",\n        \"population\": \"storage\",\n        \"gap_m\": 203.5288914559441,\n        \"required_m\": 0,\n        \"margin_m\": 203.5288914559441,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.26\",\n        \"population\": \"storage\",\n        \"gap_m\": 196.02787233867687,\n        \"required_m\": 0,\n        \"margin_m\": 196.02787233867687,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.25\",\n        \"population\": \"storage\",\n        \"gap_m\": 188.52681160495274,\n        \"required_m\": 0,\n        \"margin_m\": 188.52681160495274,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.24\",\n        \"population\": \"storage\",\n        \"gap_m\": 181.025799498954,\n        \"required_m\": 0,\n        \"margin_m\": 181.025799498954,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.23\",\n        \"population\": \"storage\",\n        \"gap_m\": 173.52479690900634,\n        \"required_m\": 0,\n        \"margin_m\": 173.52479690900634,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.22\",\n        \"population\": \"storage\",\n        \"gap_m\": 166.02379080059248,\n        \"required_m\": 0,\n        \"margin_m\": 166.02379080059248,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.21\",\n        \"population\": \"storage\",\n        \"gap_m\": 158.52277885899036,\n        \"required_m\": 0,\n        \"margin_m\": 158.52277885899036,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.20\",\n        \"population\": \"storage\",\n        \"gap_m\": 151.02170548450525,\n        \"required_m\": 0,\n        \"margin_m\": 151.02170548450525,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.19\",\n        \"population\": \"storage\",\n        \"gap_m\": 143.52068691874925,\n        \"required_m\": 0,\n        \"margin_m\": 143.52068691874925,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.18\",\n        \"population\": \"storage\",\n        \"gap_m\": 136.01968648215225,\n        \"required_m\": 0,\n        \"margin_m\": 136.01968648215225,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.17\",\n        \"population\": \"storage\",\n        \"gap_m\": 128.51861449291,\n        \"required_m\": 0,\n        \"margin_m\": 128.51861449291,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.16\",\n        \"population\": \"storage\",\n        \"gap_m\": 121.01754873175402,\n        \"required_m\": 0,\n        \"margin_m\": 121.01754873175402,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.15\",\n        \"population\": \"storage\",\n        \"gap_m\": 113.51653910780739,\n        \"required_m\": 0,\n        \"margin_m\": 113.51653910780739,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.14\",\n        \"population\": \"storage\",\n        \"gap_m\": 106.01545353179722,\n        \"required_m\": 0,\n        \"margin_m\": 106.01545353179722,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.13\",\n        \"population\": \"storage\",\n        \"gap_m\": 98.51445350755122,\n        \"required_m\": 0,\n        \"margin_m\": 98.51445350755122,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.12\",\n        \"population\": \"storage\",\n        \"gap_m\": 91.01340045962496,\n        \"required_m\": 0,\n        \"margin_m\": 91.01340045962496,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.11\",\n        \"population\": \"storage\",\n        \"gap_m\": 83.51235385351306,\n        \"required_m\": 0,\n        \"margin_m\": 83.51235385351306,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.10\",\n        \"population\": \"storage\",\n        \"gap_m\": 76.01125952447927,\n        \"required_m\": 0,\n        \"margin_m\": 76.01125952447927,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.9\",\n        \"population\": \"storage\",\n        \"gap_m\": 68.5102422633029,\n        \"required_m\": 0,\n        \"margin_m\": 68.5102422633029,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.8\",\n        \"population\": \"storage\",\n        \"gap_m\": 61.00919009013586,\n        \"required_m\": 0,\n        \"margin_m\": 61.00919009013586,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.7\",\n        \"population\": \"storage\",\n        \"gap_m\": 53.50818029689091,\n        \"required_m\": 0,\n        \"margin_m\": 53.50818029689091,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.6\",\n        \"population\": \"storage\",\n        \"gap_m\": 46.00709630323766,\n        \"required_m\": 0,\n        \"margin_m\": 46.00709630323766,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.5\",\n        \"population\": \"storage\",\n        \"gap_m\": 38.362641999907765,\n        \"required_m\": 1.245736000251553,\n        \"margin_m\": 37.11690599965621,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.4\",\n        \"population\": \"storage\",\n        \"gap_m\": 29.48051153997318,\n        \"required_m\": 2.58022939661289,\n        \"margin_m\": 26.90028214336029,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.3\",\n        \"population\": \"storage\",\n        \"gap_m\": 18.116013424502142,\n        \"required_m\": 6.3021052695196245,\n        \"margin_m\": 11.813908154982517,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.2\",\n        \"population\": \"storage\",\n        \"gap_m\": 8.688541208253895,\n        \"required_m\": 2.324956239334977,\n        \"margin_m\": 6.363584968918918,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.1\",\n        \"population\": \"storage\",\n        \"gap_m\": 1.001999189766508,\n        \"required_m\": 1.1459706723353782,\n        \"margin_m\": -0.14397148256887027,\n        \"old_guard_safe\": false\n      },\n      {\n        \"id\": \"R_flow.42\",\n        \"population\": \"ingress\",\n        \"gap_m\": 316.0441161523147,\n        \"required_m\": 0,\n        \"margin_m\": 316.0441161523147,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.41\",\n        \"population\": \"ingress\",\n        \"gap_m\": 308.54310242059495,\n        \"required_m\": 0,\n        \"margin_m\": 308.54310242059495,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.40\",\n        \"population\": \"ingress\",\n        \"gap_m\": 301.04210238270576,\n        \"required_m\": 0,\n        \"margin_m\": 301.04210238270576,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.39\",\n        \"population\": \"ingress\",\n        \"gap_m\": 293.5410336743253,\n        \"required_m\": 0,\n        \"margin_m\": 293.5410336743253,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.38\",\n        \"population\": \"ingress\",\n        \"gap_m\": 286.04003170233443,\n        \"required_m\": 0,\n        \"margin_m\": 286.04003170233443,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.37\",\n        \"population\": \"ingress\",\n        \"gap_m\": 278.5390297787898,\n        \"required_m\": 0,\n        \"margin_m\": 278.5390297787898,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.36\",\n        \"population\": \"ingress\",\n        \"gap_m\": 271.0380116102982,\n        \"required_m\": 0,\n        \"margin_m\": 271.0380116102982,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.35\",\n        \"population\": \"ingress\",\n        \"gap_m\": 263.5369961914984,\n        \"required_m\": 0,\n        \"margin_m\": 263.5369961914984,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.34\",\n        \"population\": \"ingress\",\n        \"gap_m\": 256.0359873423628,\n        \"required_m\": 0,\n        \"margin_m\": 256.0359873423628,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.33\",\n        \"population\": \"ingress\",\n        \"gap_m\": 248.53498391464197,\n        \"required_m\": 0,\n        \"margin_m\": 248.53498391464197,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.32\",\n        \"population\": \"ingress\",\n        \"gap_m\": 241.0339726805442,\n        \"required_m\": 0,\n        \"margin_m\": 241.0339726805442,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.31\",\n        \"population\": \"ingress\",\n        \"gap_m\": 233.5329685070348,\n        \"required_m\": 0,\n        \"margin_m\": 233.5329685070348,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.30\",\n        \"population\": \"ingress\",\n        \"gap_m\": 226.03194243777557,\n        \"required_m\": 0,\n        \"margin_m\": 226.03194243777557,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.29\",\n        \"population\": \"ingress\",\n        \"gap_m\": 218.53094011439038,\n        \"required_m\": 0,\n        \"margin_m\": 218.53094011439038,\n        \"old_guard_safe\": true\n      },\n      {\n        \"id\": \"R_flow.28\",\n        \"population\": \"ingress\",\n        \"gap_m\": 211.02993400590134,\n        \"required_m\": 0,\n        \"margin_m\": 211.02993400590134,\n        \"old_guard_safe\": true\n      }\n    ],\n    \"counts\": {\n      \"storage\": 27,\n      \"ingress\": 15,\n      \"native_complete_branch_observed\": 0,\n      \"refused_red_motion_observed\": 0,\n      \"completed_cycles\": 0,\n      \"service_windows\": 6,\n      \"observed_seconds\": [\n        6,\n        0,\n        0,\n        0,\n        0,\n        0\n      ],\n      \"thin_derived_rows\": 1206\n    },\n    \"limits\": \"Public derived evidence only; no ignored raw reconstruction; no future coverage or counterfactual native red outcome.\"\n  },\n  \"ledger\": {\n    \"status\": \"PASS\",\n    \"fields\": 69,\n    \"proof_obligations\": 11,\n    \"coverage_rows\": 12,\n    \"physical_excerpt_schema_hashes\": 44,\n    \"analytical_interval_recomputations\": 2,\n    \"old_baseline_preserved_files\": 16,\n    \"verdict\": \"STOP_A1_UNDER_CURRENT_INTERFACE\",\n    \"verdict_scope\": \"Engineering stop recommendation for this current-interface bounded proof attempt; not proven impossibility of every stronger sufficient bound or all A1 designs.\",\n    \"new_synthetic_cases\": 0,\n    \"existing_43_regressions\": \"SKIP_UNCHANGED_UPSTREAM_IMPLEMENTATION_BOUND_BY_SHA\",\n    \"native_runtime_queries\": \"NOT_RUN\",\n    \"delivered_clean_checkout\": \"PENDING_PARENT_GATE\"\n  }\n}\n",
+      "stderr": "",
+      "output_path": "/private/tmp/issue10-clean-udc3yxht/independent.json",
+      "output_sha256": "0261ee1b9123f368e5aa7f1cc44aa90ff8b243f13f07bb66187f8742e3257c94",
+      "parsed_output": {
+        "old_evidence": {
+          "status": "PASS",
+          "protected_checked": 536,
+          "protected_mismatches": [],
+          "witnesses": [
+            {
+              "id": "R_flow.27",
+              "population": "storage",
+              "gap_m": 203.5288914559441,
+              "required_m": 0,
+              "margin_m": 203.5288914559441,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.26",
+              "population": "storage",
+              "gap_m": 196.02787233867687,
+              "required_m": 0,
+              "margin_m": 196.02787233867687,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.25",
+              "population": "storage",
+              "gap_m": 188.52681160495274,
+              "required_m": 0,
+              "margin_m": 188.52681160495274,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.24",
+              "population": "storage",
+              "gap_m": 181.025799498954,
+              "required_m": 0,
+              "margin_m": 181.025799498954,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.23",
+              "population": "storage",
+              "gap_m": 173.52479690900634,
+              "required_m": 0,
+              "margin_m": 173.52479690900634,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.22",
+              "population": "storage",
+              "gap_m": 166.02379080059248,
+              "required_m": 0,
+              "margin_m": 166.02379080059248,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.21",
+              "population": "storage",
+              "gap_m": 158.52277885899036,
+              "required_m": 0,
+              "margin_m": 158.52277885899036,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.20",
+              "population": "storage",
+              "gap_m": 151.02170548450525,
+              "required_m": 0,
+              "margin_m": 151.02170548450525,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.19",
+              "population": "storage",
+              "gap_m": 143.52068691874925,
+              "required_m": 0,
+              "margin_m": 143.52068691874925,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.18",
+              "population": "storage",
+              "gap_m": 136.01968648215225,
+              "required_m": 0,
+              "margin_m": 136.01968648215225,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.17",
+              "population": "storage",
+              "gap_m": 128.51861449291,
+              "required_m": 0,
+              "margin_m": 128.51861449291,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.16",
+              "population": "storage",
+              "gap_m": 121.01754873175402,
+              "required_m": 0,
+              "margin_m": 121.01754873175402,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.15",
+              "population": "storage",
+              "gap_m": 113.51653910780739,
+              "required_m": 0,
+              "margin_m": 113.51653910780739,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.14",
+              "population": "storage",
+              "gap_m": 106.01545353179722,
+              "required_m": 0,
+              "margin_m": 106.01545353179722,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.13",
+              "population": "storage",
+              "gap_m": 98.51445350755122,
+              "required_m": 0,
+              "margin_m": 98.51445350755122,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.12",
+              "population": "storage",
+              "gap_m": 91.01340045962496,
+              "required_m": 0,
+              "margin_m": 91.01340045962496,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.11",
+              "population": "storage",
+              "gap_m": 83.51235385351306,
+              "required_m": 0,
+              "margin_m": 83.51235385351306,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.10",
+              "population": "storage",
+              "gap_m": 76.01125952447927,
+              "required_m": 0,
+              "margin_m": 76.01125952447927,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.9",
+              "population": "storage",
+              "gap_m": 68.5102422633029,
+              "required_m": 0,
+              "margin_m": 68.5102422633029,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.8",
+              "population": "storage",
+              "gap_m": 61.00919009013586,
+              "required_m": 0,
+              "margin_m": 61.00919009013586,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.7",
+              "population": "storage",
+              "gap_m": 53.50818029689091,
+              "required_m": 0,
+              "margin_m": 53.50818029689091,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.6",
+              "population": "storage",
+              "gap_m": 46.00709630323766,
+              "required_m": 0,
+              "margin_m": 46.00709630323766,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.5",
+              "population": "storage",
+              "gap_m": 38.362641999907765,
+              "required_m": 1.245736000251553,
+              "margin_m": 37.11690599965621,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.4",
+              "population": "storage",
+              "gap_m": 29.48051153997318,
+              "required_m": 2.58022939661289,
+              "margin_m": 26.90028214336029,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.3",
+              "population": "storage",
+              "gap_m": 18.116013424502142,
+              "required_m": 6.3021052695196245,
+              "margin_m": 11.813908154982517,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.2",
+              "population": "storage",
+              "gap_m": 8.688541208253895,
+              "required_m": 2.324956239334977,
+              "margin_m": 6.363584968918918,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.1",
+              "population": "storage",
+              "gap_m": 1.001999189766508,
+              "required_m": 1.1459706723353782,
+              "margin_m": -0.14397148256887027,
+              "old_guard_safe": false
+            },
+            {
+              "id": "R_flow.42",
+              "population": "ingress",
+              "gap_m": 316.0441161523147,
+              "required_m": 0,
+              "margin_m": 316.0441161523147,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.41",
+              "population": "ingress",
+              "gap_m": 308.54310242059495,
+              "required_m": 0,
+              "margin_m": 308.54310242059495,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.40",
+              "population": "ingress",
+              "gap_m": 301.04210238270576,
+              "required_m": 0,
+              "margin_m": 301.04210238270576,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.39",
+              "population": "ingress",
+              "gap_m": 293.5410336743253,
+              "required_m": 0,
+              "margin_m": 293.5410336743253,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.38",
+              "population": "ingress",
+              "gap_m": 286.04003170233443,
+              "required_m": 0,
+              "margin_m": 286.04003170233443,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.37",
+              "population": "ingress",
+              "gap_m": 278.5390297787898,
+              "required_m": 0,
+              "margin_m": 278.5390297787898,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.36",
+              "population": "ingress",
+              "gap_m": 271.0380116102982,
+              "required_m": 0,
+              "margin_m": 271.0380116102982,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.35",
+              "population": "ingress",
+              "gap_m": 263.5369961914984,
+              "required_m": 0,
+              "margin_m": 263.5369961914984,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.34",
+              "population": "ingress",
+              "gap_m": 256.0359873423628,
+              "required_m": 0,
+              "margin_m": 256.0359873423628,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.33",
+              "population": "ingress",
+              "gap_m": 248.53498391464197,
+              "required_m": 0,
+              "margin_m": 248.53498391464197,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.32",
+              "population": "ingress",
+              "gap_m": 241.0339726805442,
+              "required_m": 0,
+              "margin_m": 241.0339726805442,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.31",
+              "population": "ingress",
+              "gap_m": 233.5329685070348,
+              "required_m": 0,
+              "margin_m": 233.5329685070348,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.30",
+              "population": "ingress",
+              "gap_m": 226.03194243777557,
+              "required_m": 0,
+              "margin_m": 226.03194243777557,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.29",
+              "population": "ingress",
+              "gap_m": 218.53094011439038,
+              "required_m": 0,
+              "margin_m": 218.53094011439038,
+              "old_guard_safe": true
+            },
+            {
+              "id": "R_flow.28",
+              "population": "ingress",
+              "gap_m": 211.02993400590134,
+              "required_m": 0,
+              "margin_m": 211.02993400590134,
+              "old_guard_safe": true
+            }
+          ],
+          "counts": {
+            "storage": 27,
+            "ingress": 15,
+            "native_complete_branch_observed": 0,
+            "refused_red_motion_observed": 0,
+            "completed_cycles": 0,
+            "service_windows": 6,
+            "observed_seconds": [
+              6,
+              0,
+              0,
+              0,
+              0,
+              0
+            ],
+            "thin_derived_rows": 1206
+          },
+          "limits": "Public derived evidence only; no ignored raw reconstruction; no future coverage or counterfactual native red outcome."
+        },
+        "ledger": {
+          "status": "PASS",
+          "fields": 69,
+          "proof_obligations": 11,
+          "coverage_rows": 12,
+          "physical_excerpt_schema_hashes": 44,
+          "analytical_interval_recomputations": 2,
+          "old_baseline_preserved_files": 16,
+          "verdict": "STOP_A1_UNDER_CURRENT_INTERFACE",
+          "verdict_scope": "Engineering stop recommendation for this current-interface bounded proof attempt; not proven impossibility of every stronger sufficient bound or all A1 designs.",
+          "new_synthetic_cases": 0,
+          "existing_43_regressions": "SKIP_UNCHANGED_UPSTREAM_IMPLEMENTATION_BOUND_BY_SHA",
+          "native_runtime_queries": "NOT_RUN",
+          "delivered_clean_checkout": "PENDING_PARENT_GATE"
+        }
+      }
+    }
+  ],
+  "tracked_status": "",
+  "raw_files": [
+    "data/raw/.gitkeep"
+  ],
+  "ignored_A07_raw_absent": true,
+  "source_cache_or_binary_required": false,
+  "source_bytes_locally_reverified_in_this_clone": false,
+  "SUMO_TraCI_starts": 0,
+  "new_unit_or_synthetic_suite": 0,
+  "old_43_suite": "SKIP_UNCHANGED_UPSTREAM",
+  "native_runtime_safety": "NOT_VERIFIED",
+  "decision_is_user_approved": false
+}
