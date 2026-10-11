@@ -1,0 +1,136 @@
+{
+  "classification": "PR7_P1_CONTROLLED_VERSIONED_REPAIR_RECEIPT",
+  "clean_archive_source": "git archive HEAD; copy only modified audit script and regression test to matching paths",
+  "coverage_limit": "Public audit binds public guardian, byte-identical snapshot/cycles/crossings, V3-bound thin phase derivative, V3 windows and guard algebra. Thin ledger is a derivative; only the separate local-raw audit verifies raw phase hash and reconciles every thin-field value. Neither mode runs rejected red motion or establishes native-red safety/qualification.",
+  "executions": [
+    {
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/candidate_a_safety_contract_20261011_v1",
+        "-v"
+      ],
+      "cwd_role": "clean archive of PR7 HEAD plus exact working script/test copies",
+      "exit_code": 0,
+      "label": "clean_archive_unittest",
+      "output_file": "data/processed/candidate_a_safety_contract_20261011_v2/CLEAN_ARCHIVE_TEST_LOG.txt"
+    },
+    {
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+        "scripts/candidate_a_safety_contract_20261011_v1/audit_a07.py"
+      ],
+      "cwd_role": "clean archive of PR7 HEAD plus exact working script/test copies",
+      "exit_code": 0,
+      "label": "clean_archive_public_audit",
+      "output_file": "data/processed/candidate_a_safety_contract_20261011_v2/CLEAN_ARCHIVE_PUBLIC_AUDIT.json"
+    },
+    {
+      "argv": [
+        "/Library/Frameworks/Python.framework/Versions/3.13/bin/python3",
+        "scripts/candidate_a_safety_contract_20261011_v1/audit_a07.py",
+        "--verify-local-raw"
+      ],
+      "cwd_role": "original checkout with ignored local raw",
+      "exit_code": 0,
+      "label": "local_raw_additional_audit",
+      "output_file": "data/processed/candidate_a_safety_contract_20261011_v2/LOCAL_RAW_ADDITIONAL_AUDIT.json"
+    }
+  ],
+  "ignored_A07_raw_absent_in_clean_archive": true,
+  "input_sha256": {
+    "artifacts/candidate_a_qualification_20261008_v1/pr_review/CA_FIXED_R300_S17_A07/guardian_receipt.json": "95a263217ccefcddfdb3871080ded7a947111ab75dbc64430bc5323e106b4b04",
+    "artifacts/candidate_a_qualification_20261008_v1/pr_review/CA_FIXED_R300_S17_A07/outputs/crossings.csv": "d1db2c291369cf7bfa1b62a2209624c55dd7e5cdb2dd8facdc0520f7726d5b68",
+    "artifacts/candidate_a_qualification_20261008_v1/pr_review/CA_FIXED_R300_S17_A07/outputs/cycles.csv": "f6ba66925513105047f5e5695196780e2f1c82361418a45a5a4cd65e38c3c5b3",
+    "artifacts/candidate_a_qualification_20261008_v1/pr_review/CA_FIXED_R300_S17_A07/outputs/failure_snapshot.json": "0cb77aa1549d500628fa136742d5119d0cdbdd94c5e23f357090b44c6ccc984d",
+    "data/processed/candidate_a_qualification_20261008_v1/R300_A07_ACTUAL_DATA_GATE_V3.json": "d7cf23dce2f2639c0f972102938cca492bd7d6442c7b5d1c6eeac37b72c2a20f",
+    "data/processed/candidate_a_qualification_20261008_v1/R300_A07_FINAL_DERIVED_BINDINGS_V3.json": "7e1aa4ff8f9f6823e7209194dfec1b669c23f17b8c42a91cd8275ea189a523dc",
+    "results/tables/candidate_a_qualification_20261008_v1/R300_A07_PHASE_LEDGER_THIN_V3.csv": "8a1e59af0e4924fd30ec18cf81782ad40d1b19e50b933d336edb27d863c98156",
+    "results/tables/candidate_a_qualification_20261008_v1/R300_A07_SERVICE_WINDOWS_V3.csv": "bcfa2f49991ab5ea4eca58d9b6237a76952de940c7ca85030bb9a2f6264e9546",
+    "scripts/candidate_a_safety_contract_20261011_v1/audit_a07.py": "5a9bbcf610acaefa95291e102c3a3b99020d921f306e878861057441a2456aaa",
+    "tests/candidate_a_safety_contract_20261011_v1/test_audit_a07.py": "e1b121c973c7f9808d7c9793a4749d96611896c6b9321d1cc5c3cfc7fd962f87"
+  },
+  "local_raw_audit_result": {
+    "classification": "OFFLINE_COMMITTED_EVIDENCE_AUDIT_ONLY",
+    "complete_cycles": 0,
+    "constant_1m_only_margin_m": -0.04397148256887018,
+    "constant_1m_only_required_m": 1.045970672335378,
+    "current_margin_m": -0.14397148256887027,
+    "current_required_m": 1.1459706723353782,
+    "effective_qualifications": 0,
+    "front_gap_m": 1.001999189766508,
+    "gate_sha256": "d7cf23dce2f2639c0f972102938cca492bd7d6442c7b5d1c6eeac37b72c2a20f",
+    "guard_witnesses": 42,
+    "last_completed_s": 1206,
+    "local_raw_verified": true,
+    "phase_thin_sha256": "8a1e59af0e4924fd30ec18cf81782ad40d1b19e50b933d336edb27d863c98156",
+    "population_counts": {
+      "ingress": 15,
+      "storage": 27
+    },
+    "public_evidence_only": false,
+    "public_guardian_sha256": "95a263217ccefcddfdb3871080ded7a947111ab75dbc64430bc5323e106b4b04",
+    "service_csv_sha256": "bcfa2f49991ab5ea4eca58d9b6237a76952de940c7ca85030bb9a2f6264e9546",
+    "service_observed_steps": [
+      6,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "snapshot_sha256": "0cb77aa1549d500628fa136742d5119d0cdbdd94c5e23f357090b44c6ccc984d",
+    "status": "PASS",
+    "thin_phase_fields_reconciled_to_local_raw": true,
+    "unsafe_ids": [
+      "R_flow.1"
+    ]
+  },
+  "output_sha256": {
+    "CLEAN_ARCHIVE_PUBLIC_AUDIT.json": "9f9c1cc072c0e92635198adc797b21e157de899cff7c6c683b9d1459bf5d9485",
+    "CLEAN_ARCHIVE_TEST_LOG.txt": "d1cf7f08d4d53de8d1d3039cef07c4bef3bebd62d1dddb576ced4dcf75592b3a",
+    "LOCAL_RAW_ADDITIONAL_AUDIT.json": "97add88b0f350b2816bf64126ce49040ad9c6f10fe08075d46bf7f787bb423cf"
+  },
+  "public_audit_result": {
+    "classification": "OFFLINE_COMMITTED_EVIDENCE_AUDIT_ONLY",
+    "complete_cycles": 0,
+    "constant_1m_only_margin_m": -0.04397148256887018,
+    "constant_1m_only_required_m": 1.045970672335378,
+    "current_margin_m": -0.14397148256887027,
+    "current_required_m": 1.1459706723353782,
+    "effective_qualifications": 0,
+    "front_gap_m": 1.001999189766508,
+    "gate_sha256": "d7cf23dce2f2639c0f972102938cca492bd7d6442c7b5d1c6eeac37b72c2a20f",
+    "guard_witnesses": 42,
+    "last_completed_s": 1206,
+    "local_raw_verified": false,
+    "phase_thin_sha256": "8a1e59af0e4924fd30ec18cf81782ad40d1b19e50b933d336edb27d863c98156",
+    "population_counts": {
+      "ingress": 15,
+      "storage": 27
+    },
+    "public_evidence_only": true,
+    "public_guardian_sha256": "95a263217ccefcddfdb3871080ded7a947111ab75dbc64430bc5323e106b4b04",
+    "service_csv_sha256": "bcfa2f49991ab5ea4eca58d9b6237a76952de940c7ca85030bb9a2f6264e9546",
+    "service_observed_steps": [
+      6,
+      0,
+      0,
+      0,
+      0,
+      0
+    ],
+    "snapshot_sha256": "0cb77aa1549d500628fa136742d5119d0cdbdd94c5e23f357090b44c6ccc984d",
+    "status": "PASS",
+    "thin_phase_fields_reconciled_to_local_raw": false,
+    "unsafe_ids": [
+      "R_flow.1"
+    ]
+  },
+  "python": "3.13.0",
+  "source_head": "f5959510a6f888dcb6bd6ae762fcf99f16d53d90",
+  "test_results": "7 tests PASS, 0 FAIL, 0 ERROR"
+}
