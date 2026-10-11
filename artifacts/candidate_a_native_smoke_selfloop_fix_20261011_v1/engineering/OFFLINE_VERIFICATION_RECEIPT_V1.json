@@ -1,0 +1,58 @@
+{
+  "classification": "OFFLINE_SELFLOOP_CORRECTION_NOT_NATIVE_VALIDATION",
+  "created_utc": "2026-10-11T20:14:15.094769+00:00",
+  "binding_sha256": "845e98bc29256282c65d3a5a921de60f25ea175d1aa63b9f2615e8609d0343ee",
+  "card_sha256": "a501e6005589de0d3ce6acd0fe7924ec84b589bec0849c4f3fcd3f51a4d552f3",
+  "tests": {
+    "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest discover -s tests/candidate_a_native_smoke_selfloop_fix_20261011 -v",
+    "PASS": 5,
+    "FAIL": 0,
+    "ERROR": 0,
+    "SKIP": 0,
+    "log": "OFFLINE_TEST_LOG_V1.txt"
+  },
+  "CLI_checks": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python scripts/candidate_a_native_smoke_selfloop_fix_20261011_v1/cli.py --prepare",
+      "result": "PASS"
+    },
+    {
+      "command": "same CLI --check-card <SMOKE02 canonical card>",
+      "result": "PASS"
+    },
+    {
+      "method": "new profile.validate(card,require_environment=True), static read only",
+      "result": "PASS_STATIC_ONLY"
+    }
+  ],
+  "outputs_sha256": {
+    "artifacts/candidate_a_native_smoke_selfloop_fix_20261011_v1/engineering/OFFLINE_TEST_LOG_V1.txt": "6dbeb566042bf23ab5f7841a9ba83e3130d41ffa33016e48fd8ae6fa7f5f849f",
+    "artifacts/candidate_a_native_smoke_selfloop_fix_20261011_v1/engineering/PREPARE_OUTPUT.txt": "faf62ffe967b726ca9931540a62bbdf8a876398d133741a46e729d081f74bcaa",
+    "artifacts/candidate_a_native_smoke_selfloop_fix_20261011_v1/engineering/CARD_CHECK_OUTPUT.json": "0629f25e410bcfccbb4849a3c540b03c1d2a0619964dd347cb6aaa1787d3561e",
+    "artifacts/candidate_a_native_smoke_selfloop_fix_20261011_v1/engineering/OLD_EVIDENCE_PRESERVATION_RECEIPT.json": "f2ea66e8d7c695561ca43a3dafebe88d9c1e10e718b3d03628d31de0d6e1c7d8"
+  },
+  "environment": {
+    "python": "3.13.0",
+    "packages": {
+      "traci": "1.26.0",
+      "sumolib": "1.26.0",
+      "sumoITScontrol": "0.1.0"
+    },
+    "SUMO_sha256": "3bd1eaa3b167fb527ac33b154dfb57b41b9a40d5bc3e26246489824dd7977179"
+  },
+  "new_native_starts": 0,
+  "SUMO_version_commands": 0,
+  "TraCI_connections": 0,
+  "raw_allocations": 0,
+  "not_run": [
+    "native startup/first-red smoke",
+    "old11/43 suites unchanged upstream",
+    "full XSD/native compiler-build equivalence",
+    "real vehicle dynamics equivalence",
+    "Git-archive materialized portability (parent pending)"
+  ],
+  "new_auth_absent": true,
+  "new_release_absent": true,
+  "new_raw_absent": true,
+  "scope": "source-predicate/phase-event replay only; original warnings remain STOP; no new safety qualification"
+}

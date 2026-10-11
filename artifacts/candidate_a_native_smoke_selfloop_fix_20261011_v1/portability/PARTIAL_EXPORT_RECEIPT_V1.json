@@ -1,0 +1,81 @@
+{
+  "created_at": "2026-10-11T22:19:57.486851+02:00",
+  "classification": "PARTIAL_TRACKED_TREE_EXPORT_NOT_FULL_GIT_CLONE",
+  "tested_tree_sha": "8914391c2452f85cf8bc48e4f9960b47cd3d268c",
+  "tested_commit": "NOT_A_COMMIT_PRECOMMIT_INDEX_TREE",
+  "scope": "explicit committed/staged dependency subset; old raw and canonical auth deliberately absent; no .git/native relocation/runtime validation",
+  "export_dir": "/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/candidate-a-smoke02-export-5dbdi3tt/export",
+  "archive": "/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/candidate-a-smoke02-export-5dbdi3tt/tracked-dependencies.tar",
+  "file_count": 587,
+  "file_bytes": 31737441,
+  "commands": [
+    {
+      "argv": [
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/candidate_a_native_smoke_selfloop_fix_20261011",
+        "-v"
+      ],
+      "cwd": "/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/candidate-a-smoke02-export-5dbdi3tt/export",
+      "exit_code": 0,
+      "output": "artifacts/candidate_a_native_smoke_selfloop_fix_20261011_v1/portability/TESTS_V1.log",
+      "output_sha256": "6ae48cae448577116be98156dfe0f759f8068820405e8a46af0226fbd65f7807"
+    },
+    {
+      "argv": [
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+        "data/processed/candidate_a_native_smoke_selfloop_fix_20261011_v1/independent_selfloop_review.py"
+      ],
+      "cwd": "/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/candidate-a-smoke02-export-5dbdi3tt/export",
+      "exit_code": 0,
+      "output": "artifacts/candidate_a_native_smoke_selfloop_fix_20261011_v1/portability/PUBLIC_AUDIT_V1.json",
+      "output_sha256": "8d759484556aa46a492efb11306672d4129b811a07ccfe3cd8dc4de2044d5a74"
+    },
+    {
+      "argv": [
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+        "scripts/candidate_a_native_smoke_selfloop_fix_20261011_v1/cli.py"
+      ],
+      "cwd": "/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/candidate-a-smoke02-export-5dbdi3tt/export",
+      "exit_code": 0,
+      "output": "artifacts/candidate_a_native_smoke_selfloop_fix_20261011_v1/portability/OFFLINE_DEFAULT_PREPARE_V1.log",
+      "output_sha256": "5908ae8c6155ed67c2ecfd3915223eb8646b7578e9d6bc1ef0073c7875b2def1"
+    },
+    {
+      "argv": [
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+        "scripts/candidate_a_native_smoke_selfloop_fix_20261011_v1/cli.py",
+        "--check-card",
+        "artifacts/candidate_a_native_smoke_selfloop_fix_20261011_v1/engineering/packages/CA_NATIVE_PHASE_R300_S17_SMOKE02/card.json"
+      ],
+      "cwd": "/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/candidate-a-smoke02-export-5dbdi3tt/export",
+      "exit_code": 0,
+      "output": "artifacts/candidate_a_native_smoke_selfloop_fix_20261011_v1/portability/OFFLINE_CARD_CHECK_V1.json",
+      "output_sha256": "0629f25e410bcfccbb4849a3c540b03c1d2a0619964dd347cb6aaa1787d3561e"
+    },
+    {
+      "argv": [
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+        "-c",
+        "from src.candidate_a_native_smoke_selfloop_fix_20261011.profile import ROOT,TASK,RUN,validate\ntry: validate(ROOT/TASK/'engineering/packages'/RUN/'card.json',require_environment=True)\nexcept ValueError as e:\n assert 'foreign runtime input root' in str(e),str(e)\n print('EXPECTED_DENIAL:',e)\nelse: raise AssertionError('foreign runtime paths accepted')"
+      ],
+      "cwd": "/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/candidate-a-smoke02-export-5dbdi3tt/export",
+      "exit_code": 0,
+      "output": "artifacts/candidate_a_native_smoke_selfloop_fix_20261011_v1/portability/FOREIGN_RUNTIME_DENIAL_V1.log",
+      "output_sha256": "73ce87ddf29a955943675adb9379b07c67d1454df8be8907d68af457eb7d2ca4"
+    }
+  ],
+  "raw_files": [
+    "data/raw/.gitkeep"
+  ],
+  "authorization_files": [],
+  "release_files": [],
+  "native_starts": 0,
+  "native_version_commands": 0,
+  "real_TraCI_connections": 0,
+  "all_expected_checks_passed": true,
+  "source_card_hashes": "exported manifest binds exact precommit bytes; final delivery must match these relevant bytes"
+}

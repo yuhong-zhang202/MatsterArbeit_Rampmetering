@@ -1,0 +1,34 @@
+{
+  "classification": "PASS_FOR_BOUNDED_OFFLINE_SELFLOOP_CORRECTION_DATA_REVIEW",
+  "baseline_commit": "09d77dab8d19f414277ade5b399675f0e4e13f01",
+  "context_preflight": "AGENTS,PROJECT_STATE,DECISIONS,WORKLOG read; EXPERIMENT_PROTOCOL0B/unfrozen; newUSER_REQUEST_RECORD permits isolatedofflinecorrection/newidentity but explicitly noSUMO. Current Stage6/STOP3/A1/qualification status preserved.",
+  "actual_commands": [
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python data/processed/candidate_a_native_smoke_selfloop_fix_20261011_v1/independent_selfloop_review.py",
+      "executions": 1,
+      "exit_code": 0,
+      "result_sha256": "8d759484556aa46a492efb11306672d4129b811a07ccfe3cd8dc4de2044d5a74"
+    },
+    {
+      "command": "PYTHONDONTWRITEBYTECODE=1 .venv/bin/python -m unittest discover -s tests/candidate_a_native_smoke_selfloop_fix_20261011 -v",
+      "executions": 1,
+      "exit_code": 0,
+      "PASS": 5,
+      "FAIL": 0,
+      "ERROR": 0,
+      "SKIP": 0,
+      "log_sha256": "d03a2f93f780321a018ccebe005d5b4676a390f80bcd099de41761b6cc3069e4"
+    }
+  ],
+  "review_lookup_errors": [
+    "Initial bounded read guessed AUTHORIZATION_SCOPE.json and test_selfloop_fix.py paths, which did not exist; actualUSER_REQUEST_RECORD.json and test_selfloop.py subsequently read. One further guessedtest_preparation.py read failed. No source/data modification or test outcome affected."
+  ],
+  "no_synthetic_failure": true,
+  "source_card_changes_by_analyst": 0,
+  "native_calls": 0,
+  "old_suites": "SKIP unchangedproduction/old11/43/R2; new5suite sufficient for specifieddelta",
+  "runtime_validation": "NOT_RUN_NOT_AUTHORIZED",
+  "data_findings_required": [],
+  "clean_checkout": "NOT_RUN_BY_DATA_AGENT; parent plans partial Git archive export, not fullclone",
+  "public_boundaries": "Publicchecker noignoredraw/no oldcanonicalauth; optionallocalraw hashcheck separate. Pin-sourceexcerpts audited, fullsource fetch not repeated. Runtimehostpaths/build/vehicle dynamics unverified."
+}

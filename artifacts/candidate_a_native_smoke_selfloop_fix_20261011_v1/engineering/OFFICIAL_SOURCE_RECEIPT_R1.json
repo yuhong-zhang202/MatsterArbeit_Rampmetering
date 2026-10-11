@@ -1,0 +1,70 @@
+{
+  "commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+  "tag": "v1_26_0",
+  "fetched_utc": "2026-10-11T20:09:41.739495+00:00",
+  "fetch_method": "approved read-only curl raw pinned commit, no native commands",
+  "files": [
+    {
+      "path": "src/microsim/traffic_lights/MSTrafficLightLogic.cpp",
+      "bytes": 28256,
+      "sha256": "95d91501973e886e8c6eb23bb220402d946a045d3f1ad6e6201b41ce3eaabbdb",
+      "url": "https://raw.githubusercontent.com/eclipse-sumo/sumo/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/traffic_lights/MSTrafficLightLogic.cpp"
+    },
+    {
+      "path": "src/microsim/traffic_lights/MSSimpleTrafficLightLogic.cpp",
+      "bytes": 13168,
+      "sha256": "05d04dc386f1d769bcd58bc07803e8b20055538ee9d13ab91f57a3c900b4660a",
+      "url": "https://raw.githubusercontent.com/eclipse-sumo/sumo/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/traffic_lights/MSSimpleTrafficLightLogic.cpp"
+    },
+    {
+      "path": "src/netload/NLJunctionControlBuilder.cpp",
+      "bytes": 22888,
+      "sha256": "16c3b1335e722024df6f1fa04fe74f6affe72deb9a4ca03c00488e1d28b1e69e",
+      "url": "https://raw.githubusercontent.com/eclipse-sumo/sumo/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/netload/NLJunctionControlBuilder.cpp"
+    }
+  ],
+  "excerpts": [
+    {
+      "path": "src/microsim/traffic_lights/MSTrafficLightLogic.cpp",
+      "line_start": 135,
+      "line_end": 159,
+      "text": "void\nMSTrafficLightLogic::init(NLDetectorBuilder&) {\n    const Phases& phases = getPhases();\n    if (phases.size() > 0 && (MSGlobals::gUseMesoSim || MSGlobals::gTLSPenalty > 0)) {\n        initMesoTLSPenalties();\n    }\n    if (phases.size() > 1) {\n        bool haveWarnedAboutUnusedStates = false;\n        for (int i = 0; i < (int)phases.size(); ++i) {\n            // warn about unused states\n            std::vector<int> nextPhases;\n            nextPhases.push_back((i + 1) % phases.size());\n            bool iNextDefault = true;\n            if (phases[i]->nextPhases.size() > 0) {\n                nextPhases = phases[i]->nextPhases;\n                iNextDefault = false;\n            }\n            for (int iNext : nextPhases) {\n                if (iNext < 0 || iNext >= (int)phases.size()) {\n                    throw ProcessError(\"Invalid nextPhase \" + toString(iNext) + \" in tlLogic '\" + getID()\n                                       + \"', program '\" + getProgramID() + \"' with \" + toString(phases.size()) + \" phases\");\n                }\n                if (iNext == i && (int)nextPhases.size() == 1 && (int)phases.size() > 1) {\n                    WRITE_WARNINGF(\"Phase % only loops backs to itself in tlLogic '%', program '%'.\", i, getID(), getProgramID());\n                }\n",
+      "sha256": "525a184bcc658356c8c9593b21488ab3a8bdf31b476b3eff3bab3911aa586540",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/traffic_lights/MSTrafficLightLogic.cpp#L135-L159"
+    },
+    {
+      "path": "src/microsim/traffic_lights/MSTrafficLightLogic.cpp",
+      "line_start": 69,
+      "line_end": 92,
+      "text": "    // check whether this command has been descheduled\n    if (!myAmValid) {\n        return 0;\n    }\n    int step1 = myTLLogic->getCurrentPhaseIndex();\n    SUMOTime next = myTLLogic->trySwitch();\n    while (next == 0) {\n        // skip phase and switch again\n        next = myTLLogic->trySwitch();\n    }\n    int step2 = myTLLogic->getCurrentPhaseIndex();\n    if (step1 != step2) {\n        if (myTLLogic->isActive()) {\n            // execute any action connected to this tls\n            const MSTLLogicControl::TLSLogicVariants& vars = myTLControl.get(myTLLogic->getID());\n            // set link priorities\n            myTLLogic->setTrafficLightSignals(t);\n            // execute switch actions\n            vars.executeOnSwitchActions();\n        }\n    }\n    myAssumedNextSwitch += next;\n    return next;\n}\n",
+      "sha256": "76518f4095ee0373baded48dd72671bce133b544c09962075d906a1d0687edf3",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/traffic_lights/MSTrafficLightLogic.cpp#L69-L92"
+    },
+    {
+      "path": "src/microsim/traffic_lights/MSSimpleTrafficLightLogic.cpp",
+      "line_start": 80,
+      "line_end": 109,
+      "text": "MSSimpleTrafficLightLogic::trySwitch() {\n    // check whether the current duration shall be increased\n    if (myCurrentDurationIncrement > 0) {\n        SUMOTime delay = myCurrentDurationIncrement;\n        myCurrentDurationIncrement = 0;\n        return delay;\n    }\n\n    // increment the index\n    if (myPhases[myStep]->nextPhases.size() > 0 && myPhases[myStep]->nextPhases.front() >= 0) {\n        myStep = myPhases[myStep]->nextPhases.front();\n    } else {\n        myStep++;\n    }\n    // if the last phase was reached ...\n    if (myStep >= (int)myPhases.size()) {\n        // ... set the index to the first phase\n        myStep = 0;\n    }\n    assert((int)myPhases.size() > myStep);\n    //stores the time the phase started\n    myPhases[myStep]->myLastSwitch = MSNet::getInstance()->getCurrentTimeStep();\n    // check whether the next duration was overridden\n    if (myOverridingTimes.size() > 0) {\n        SUMOTime nextDuration = myOverridingTimes[0];\n        myOverridingTimes.erase(myOverridingTimes.begin());\n        return nextDuration;\n    }\n    // return offset to the next switch\n    return myPhases[myStep]->duration;\n",
+      "sha256": "9ce16ecb58b4200bf3303d73cec8b5cea7797d50807fd4d227cc9018d925c4b9",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/traffic_lights/MSSimpleTrafficLightLogic.cpp#L80-L109"
+    },
+    {
+      "path": "src/microsim/traffic_lights/MSSimpleTrafficLightLogic.cpp",
+      "line_start": 288,
+      "line_end": 306,
+      "text": "MSSimpleTrafficLightLogic::changeStepAndDuration(MSTLLogicControl& tlcontrol,\n        SUMOTime simStep, int step, SUMOTime stepDuration) {\n    mySwitchCommand->deschedule(this);\n    mySwitchCommand = new SwitchCommand(tlcontrol, this, stepDuration + simStep);\n    if (step >= 0 && step != myStep) {\n        myStep = step;\n        myPhases[myStep]->myLastSwitch = MSNet::getInstance()->getCurrentTimeStep();\n        if (myAmActive) {\n            // when loading from state, the last loaded program isn't always the active one\n            setTrafficLightSignals(simStep);\n        }\n        tlcontrol.get(getID()).executeOnSwitchActions();\n    }\n    MSNet::getInstance()->getBeginOfTimestepEvents()->addEvent(\n        mySwitchCommand, stepDuration + simStep);\n}\n\n\nvoid\n",
+      "sha256": "6ed2621c9df2af9f758d8e4edbb6546036a6725471042a8eed697b06e11ba378",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/traffic_lights/MSSimpleTrafficLightLogic.cpp#L288-L306"
+    },
+    {
+      "path": "src/netload/NLJunctionControlBuilder.cpp",
+      "line_start": 518,
+      "line_end": 525,
+      "text": "void\nNLJunctionControlBuilder::postLoadInitialization() {\n    for (MSTrafficLightLogic* const logic : myNetworkLogics) {\n        logic->init(myDetectorBuilder);\n    }\n    for (MSTrafficLightLogic* const logic : myAdditionalLogics) {\n        logic->init(myDetectorBuilder);\n    }\n",
+      "sha256": "3896eebe07a0eff1e32c9670d42ee53c74dfed4766c9eb3046bf889450cb9594",
+      "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/netload/NLJunctionControlBuilder.cpp#L518-L525"
+    }
+  ],
+  "previous_receipt_sha256": "5f274aa4ae2dde3f13a1ab028a14a923fe3805ec0d1e5ed172a3d416faea0596",
+  "minor_lookup_error": "One rg invocation treated leading -> as option; corrected with rg --. No native command, artifact or test outcome affected."
+}

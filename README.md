@@ -142,4 +142,15 @@ The [minimal bridge record](docs/development/CANDIDATE_A_NATIVE_PHASE_SMOKE_BRID
 .venv/bin/python scripts/candidate_a_native_smoke_bridge_20261011_v1/cli.py --check-card artifacts/candidate_a_native_smoke_bridge_20261011_v1/engineering/packages/CA_NATIVE_PHASE_R300_S17_SMOKE01/card.json
 ```
 
-Default/prepare/check operations are offline. Existing unconsumed cards are checked without overwrite. Native execution has a separate exact-card user-authorization and engineering/data/scientific release gate; current authorization/release are absent. Host-absolute prepared paths require controlled rebinding and renewed approval for another checkout. Offline fake tests are `.venv/bin/python -m unittest discover -s tests/candidate_a_native_smoke_bridge_20261011 -v`; their PASS does not establish native safety, actual service capacity or formal readiness.
+Default/prepare/check operations are offline. Existing unconsumed cards are checked without overwrite. Native execution has a separate exact-card user-authorization and engineering/data/scientific release gate; authorization/release were absent at that original offline checkpoint and later consumed for SMOKE01 as described above. Host-absolute prepared paths require controlled rebinding and renewed approval for another checkout. Offline fake tests are `.venv/bin/python -m unittest discover -s tests/candidate_a_native_smoke_bridge_20261011 -v`; their PASS does not establish native safety, actual service capacity or formal readiness.
+
+### SMOKE02 isolated self-loop configuration correction
+
+The [source investigation and minimal correction](docs/development/CANDIDATE_A_NATIVE_PHASE_SELFLOOP_FIX_20261011.md) prepares a separate `CA_NATIVE_PHASE_R300_S17_SMOKE02`. It preserves SMOKE01 evidence, uses finite holding red and normal phase successors in the new package, and reuses the bridge with only its profile import changed. Warning handling, safety checks and the 1207 s mandatory stop remain. This round runs no SUMO; new authorization/release and raw outputs are absent.
+
+```bash
+.venv/bin/python scripts/candidate_a_native_smoke_selfloop_fix_20261011_v1/cli.py --prepare
+.venv/bin/python scripts/candidate_a_native_smoke_selfloop_fix_20261011_v1/cli.py --check-card artifacts/candidate_a_native_smoke_selfloop_fix_20261011_v1/engineering/packages/CA_NATIVE_PHASE_R300_S17_SMOKE02/card.json
+```
+
+These commands only prepare/check offline. `--execute` requires a separate new exact-card authorization/release before native startup or raw allocation; the consumed SMOKE01 approval does not apply. The new XML is bounded to the first-red diagnostic, not approved for full-cycle qualification. Offline regression: `.venv/bin/python -m unittest discover -s tests/candidate_a_native_smoke_selfloop_fix_20261011 -v`.
