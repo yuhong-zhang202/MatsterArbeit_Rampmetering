@@ -1,0 +1,9 @@
+# Final V6 phase-index correction scientific delivery readback
+
+2026-10-11. Read-only scientific_reviewer /root/issue8_science. Final PASS_FOR_BOUNDED_PR9_P2_PHASE_INDEX_TYPE_CORRECTION; no unresolved Blocker/Major/required Minor.
+
+Actual clone HEAD 3288068f83a75a9a830c78bd4237fdb5c6527c03 at /private/tmp/pr9-v6-clean-01n2kw89/checkout independently verified. Actual temporary independent JSON equals wrapper embedded JSON and SHA;57V6inputs/sevendata/activebinder/536protectedfiles all match. Trackedstatus empty; raw onlytracked.gitkeep,ignoredA07raw absent. Real commands43testmethods/publicaudit return0;38phase+53mode/red+19schema+10numeric probesPASS. wrapper SHA cbf52d69dcc36420b72e96fccff7222edac0b3ca9dfcfa6861306a9918c0d152. SUMO0. Inner PENDING_PARENT_DELIVERED_COMMIT_CHECK is generic retained field, closed by independent outer actualclone receipt; previous receipts not rewritten.
+
+Source/data checkpoint includes28independent read-onlyphase probes, AST nativehelper/constants equivalence and42V5mappingidentity. Five checks(targetclassification/savedcoverage/omissionduplication/independentreconciliation/regression) support only suppliedschema/publicsaved scope. Invalid bool/float/missingphase→UNKNOWN/noanomaly, integer1 controls unchanged; noELIGIBLE. Actual native red event provenance, complete futurevehiclecoverage, nativebranches/jointbraking/follower/receiver and A1/A2 safety remain unverified. A1UNRESOLVED/NOTIMPLEMENTABLE,STOP3/NOTQUALIFIED/HOLD/900NOTTESTED preserved. No normativecontract/guard/research/upstream change.
+
+Actual executed code is 3288068f83a75a9a830c78bd4237fdb5c6527c03; later docs-only delivery may inherit verification only while code/input/data hashes are unchanged. Do not claim final documentation head separately tested. Old failures/source/receipts preserved, previous phase-type coverage superseded. User/Chat/GitHub review next; no useracceptance or executionauthorization.

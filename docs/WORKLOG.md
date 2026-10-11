@@ -2305,3 +2305,7 @@ Actual code commit af3f2e09c53973b8c41bd2f4761313a25d5b2b0c clean clone passed41
 ### 2026-10-11 — PR #9 third P2 phase-index type repair V6
 
 User authorized directrepair froma41bf0f/comment4241992993, noIssue. Exact nonbooleaninteger phase validation; True/1.0+nonemptyred UNKNOWN/noanomaly, integer1 controls retained. Engineering43tests/24newsubcases/publicaudit and independent38newphase+53oldmode+19schema+10numeric PASS; engineering→data→scientificsource/data checkpoint complete, actualcodecleancheckout pending. Saved exactV5source/binder/checker and actualpreFAIL, priorrecords unchanged.42map/6windows/536protected unchanged;0SUMO/nativeequations/safetycontract/guard/研究设计/upstream unchanged. A1UNRESOLVED/STOP3HOLD preserved. Minimalcurrentdocs/report updated; unrelatedMemoryCore edits excluded.
+
+### 2026-10-11 — PR #9 V6 actual code delivery verification
+
+Actual codecommit 3288068f83a75a9a830c78bd4237fdb5c6527c03 freshcleanclone passed43tests/publicaudit/38phase+53mode+19schema+10numericprobes; trackedstatus empty andraw only.gitkeep, noignoredA07raw. Read-only scientificreviewer independentlyverified57inputs/7data/536protected, realoutputhash andcloneHEAD, closedboundedgate. Final changes onlydocs/receipt, not separatelyexecuted dochead. Previousrecords intact; A1UNRESOLVED/STOP3HOLD remain,0SUMO/no normativecontract/guard/upstreamchange.
