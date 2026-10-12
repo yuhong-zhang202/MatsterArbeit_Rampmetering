@@ -112,3 +112,5 @@ Documentation Impact Check：更新PROJECT_STATE当前节点/资格边界，WORK
 本轮0SUMO，配时/safety guard/原49源和精确卡/raw全部不变；没有改变正式协议或Candidate A NOT_QUALIFIED/A1 UNRESOLVED/旧STOP3。450/600/750、动态ALINEA、长窗口/全域资格仍未验证。公开新fixture/helper/回归与真实完整raw审核的边界分别说明；不修改上游PR、不新建Issue、不自动合并或resolve审查线程。
 
 独立[data revision02复审](../../data/processed/issue12_alinea_actuation_20261012_v1/CA_I12_PACKET_R900_S17_DIAG01/revision02/FINAL_DATA_REVIEW_V2.md)17文件绑定`ceb419041514dea7904870430446f048683cb5ad847f32f124c632d66f799827`通过；[科学复审](../../artifacts/issue12_phase_order_fix_20261013_v1/FINAL_SCIENTIFIC_REVIEW_V1.md)GO修复交付、无新增finding。原V1数值字段全部相同，1338terminal结果字节相同，95raw/原9文件保护通过。本复审没有把公开subset称为完整raw在线重算，也不提前声称未来commit已测试。
+
+真实干净checkout测试提交`2f24afa154fa74808f40f6087c54bf06cdde4d0b`：4/4新回归方法、19负例通过；工作目录Gitclean，raw仅.gitkeep，新helper/test/publicfixture逐字节等主目录。[独立回执](../../artifacts/issue12_phase_order_fix_20261013_v1/clean_checkout_v1/CLEAN_CHECKOUT_RECEIPT_V1.json)注明Git对象借用本地、复用现有Python环境、跳过无关LFS；测试工作文件来自完整已提交tree，不读取main的ignoredraw，没有重跑完整raw audit或SUMO。随后仅追加文档/回执，分析实现和测试不变。修复交付在原PR13，回复原P2而不自动resolve线程或宣称Reviewer已接受；下一步仍用户/Chat审查。
