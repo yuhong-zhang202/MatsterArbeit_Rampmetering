@@ -96,3 +96,19 @@ Documentation Impact Check：更新PROJECT_STATE当前节点/资格边界，WORK
 ## GitHub交付记录
 
 [Draft PR #13](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/pull/13)，关联Issue #12，base `codex/candidate-a-native-smoke-proposal`/20e5e83ac059768320cdaa4c815d164e1022de45。实现测试提交403094d6…，证据文档提交0fba4616…；初始remote正文/base/head/两提交/全部578分页路径已真实核对。随后仅补PR链接、Dashboard交接和这份回执，运行源码/测试仍与403094d及精确卡相同。Head SHA以PR最新远程元数据为准，避免在自身提交中制造自哈希循环。[初始远程checkpoint](../../artifacts/issue12_alinea_actuation_20261012_v1/GITHUB_DELIVERY_CHECKPOINT_V1.json)明确是链接回填前版本，不冒称当前Head测试。PR为Open/Draft，未合并、未关闭Issue、未用户验收。
+
+## 2026-10-13 — PR #13 P2相位顺序审计修订（revision02）
+
+[Reviewer P2](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/pull/13#discussion_r4253092187)指出原revision01只核对每周期G/y/r样本总数，不能单独证明连续G→y→r和真实转相时刻。保留原版本/审核记录，新增revision02；不把旧缺口事后写成原V1已有核查。
+
+新纯离线helper逐72条原XML控制样本、72个post区间与144条ACK，验证九周期严格连续`GGGGyyrr`、程序/phase映射、BEGIN/ACK连续性、native pending-switch步前/步后及nextSwitch。完整18条phase request和18条duration ATTEMPTED/READBACK与G末ACK之后setter、首red ACK之后duration读回对账；确认8次周期间r→G。每周期b=1200+8k：G开始b、Y开始b+4、r开始b+6、首red ACK b+7、周期结束b+8；末周期1264/1268/1270/1272，不虚构1272之后第十绿灯。
+
+原数据TLS时间是运动BEGIN，post是ACK END；原生转相到期时phase_before可能仍是上一相位（1206前y、1208前r），不能误判正常pending为异常。新核查证明的是当前1s步长下已记录运动区间的完整相位顺序和边界，不是普遍安全保证。
+
+本次4项回归方法通过（19种负例），覆盖同计数重排/中断、缺失/重复/未知或错时样本、ACK不绑定、nextSwitch及setter trace破坏。正例使用已提交的原run相位子集，五源SHA和逐字段核对；公开回归不依赖完整本地raw，fixture不取代本地95份raw完整审计。首V1测试文件遗漏冒号导致importERROR，源码/log/receipt保留，计划4方法不能写成该失败版本已执行4方法；V2仅修语法后实际4方法PASS。
+
+[revision02实际输出](../../data/processed/issue12_alinea_actuation_20261012_v1/CA_I12_PACKET_R900_S17_DIAG01/revision02/PACKET_DATA_RESULTS_V2.json)唯一真实离线重审通过，原V1全部raw/FCD/N/body/arrival/EOF核查保留，C=pending=applied=E=N18不变。独立数据/科学复审完成状态及最终提交由本轮新回执记录，不改原日期审核结论。
+
+本轮0SUMO，配时/safety guard/原49源和精确卡/raw全部不变；没有改变正式协议或Candidate A NOT_QUALIFIED/A1 UNRESOLVED/旧STOP3。450/600/750、动态ALINEA、长窗口/全域资格仍未验证。公开新fixture/helper/回归与真实完整raw审核的边界分别说明；不修改上游PR、不新建Issue、不自动合并或resolve审查线程。
+
+独立[data revision02复审](../../data/processed/issue12_alinea_actuation_20261012_v1/CA_I12_PACKET_R900_S17_DIAG01/revision02/FINAL_DATA_REVIEW_V2.md)17文件绑定`ceb419041514dea7904870430446f048683cb5ad847f32f124c632d66f799827`通过；[科学复审](../../artifacts/issue12_phase_order_fix_20261013_v1/FINAL_SCIENTIFIC_REVIEW_V1.md)GO修复交付、无新增finding。原V1数值字段全部相同，1338terminal结果字节相同，95raw/原9文件保护通过。本复审没有把公开subset称为完整raw在线重算，也不提前声称未来commit已测试。

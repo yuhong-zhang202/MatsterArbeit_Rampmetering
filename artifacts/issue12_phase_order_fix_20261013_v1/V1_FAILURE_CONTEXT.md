@@ -1,0 +1,1 @@
+V1 unittest discovered one failed import because the new test for-loop lacked a colon. No test method executed. The V1 receipt fields tests_count_methods=4 and negative_mutation_cases=19 are planned coverage, not executed/passed counts. Original log/receipt and failing test source are retained. V2 only fixes that colon; no runtime, raw, signal timing or guard changed.
