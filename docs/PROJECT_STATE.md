@@ -6,7 +6,7 @@
 ## Current Phase
 
 
-**2026-10-12 当前工作：Issue #12最小信号政策实现、独立数据/科学最终审核已完成，GO交付并停止本轮追加诊断，Draft PR待创建/远程核对。** 用户明确取消固定启动次数作为技术修复停止条件；总900s/900MB为工程沿用原三份最大额度的保守选择，不冒称逐字数字批准。单次300s/300MB/start60/free5GB、安全/UNKNOWN停止及1272终点保持。原fixed24的API技术失败、FIX300有限成功和900长G gap拒绝均保留；原9+1.1硬检查未降为shadow或改4.5。
+**2026-10-12 当前工作：Issue #12最小信号政策实现、独立数据/科学最终审核已完成，GO交付并停止本轮追加诊断，[Draft PR #13](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/pull/13)已创建并核对，待用户/Chat审查。** 用户明确取消固定启动次数作为技术修复停止条件；总900s/900MB为工程沿用原三份最大额度的保守选择，不冒称逐字数字批准。单次300s/300MB/start60/free5GB、安全/UNKNOWN停止及1272终点保持。原fixed24的API技术失败、FIX300有限成功和900长G gap拒绝均保留；原9+1.1硬检查未降为shadow或改4.5。
 
 新CA_I12_PACKET_R900_S17_DIAG01精确card5eba2e77…经工程→数据→科学预审与canonical门实际启动一次、未重试；完成1272和九周期，均G4/Y2/red2、2绿车、黄/红入口0，C=pending=applied=E=N18。Firstred1207，全部18ID有实际rear-clear，九个fresh新G准入；工程观察无collision/teleport/异常body未知，95raw/164333753B冻结manifest253c894c…。完整FCD/TLS/ACK/18入口/40body/1338terminal/EOF独立核账PASS；科学最终GO交付且不要求补中档，不将结果扩为长期资格。
 
@@ -14,7 +14,7 @@
 
 旧900拒绝的ID/单位/时刻/minGap未见绑定bug：gap9.6308776m，leaderEmergency9 secure9.6211925m，加原1.1需求10.7211925m。原生ordinary CF apparentDecel4.5只是配置/源码推断，非实际getter；该保守合同失败不是SUMO原生危险或900物理不可达。phase-only方案全Y2人口筛查/逐ACK全车尾/新G freshreceiver保留，没有黄末清尾任意deadline。全部技术FAIL/fixtureFAIL/self-hashV2修正与六帧派生覆盖追溯限制均披露、不删原raw。
 
-[完整交付报告](development/ISSUE12_EXECUTION_POLICY_DELIVERY_20261012.md)、[政策与文献](development/RAMP_METERING_SIGNAL_POLICY_DECISION.md)、[问题唯一索引](problem_records/README.md)。Stage6既有结项、A1 UNRESOLVED、Candidate A NOT_QUALIFIED、旧STOP3及空未冻结正式协议不变。拟Draft PR直接base远程codex/candidate-a-native-smoke-proposal/20e5e83…，保留上游依赖不改/不合并。下一位用户/Chat审查；建议不是正式授权。
+[完整交付报告](development/ISSUE12_EXECUTION_POLICY_DELIVERY_20261012.md)、[政策与文献](development/RAMP_METERING_SIGNAL_POLICY_DECISION.md)、[问题唯一索引](problem_records/README.md)。Stage6既有结项、A1 UNRESOLVED、Candidate A NOT_QUALIFIED、旧STOP3及空未冻结正式协议不变。Draft PR #13直接base远程codex/candidate-a-native-smoke-proposal/20e5e83…，保留上游依赖不改/不合并。下一位用户/Chat审查；建议不是正式授权。
 
 **2026-10-12 最新：现有两次原生周期诊断的最小放行原因分析已完成，三方限定复核PASS。** 两run六周期次车起始静止、距计量线约8.502m，首G秒不动，3s绿末还差5.008／4.351／2.993m；随后黄灯减速停车。事实支持排队起步／跟驰与短G的机制解释，不唯一识别native分支或证明持续下游堵塞。E2为contract明确UNQUALIFIED名义假设；WAIT无车辆setter、N无一辆硬上限。未新增SUMO或改G/y/r／模型／guard／历史E6/N3／资格状态。一次必要轨迹提取及hash／计数对账PASS（10文件绑定e8b06e66…），新提取独立回归未新增。现有结果解释不需新仿真；若用户／Chat仍要验证当前300点两车包，可另定义、审查并批准一次延长有效G的单点技术试验，不能据此声称300–900完整资格。下一位用户／Chat；建议Proposed。Stage6、A1 UNRESOLVED、Candidate A NOT_QUALIFIED、旧STOP3和正式未冻结保持。[原因分析与证据](development/CANDIDATE_A_NATIVE_DISCHARGE_CAUSE_20261012.md)。
 

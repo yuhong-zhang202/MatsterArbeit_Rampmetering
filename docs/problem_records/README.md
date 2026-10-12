@@ -14,3 +14,5 @@
 本次仅回填四个独立问题；预算按Issue要求并入接收恢复记录，覆盖五类必需历史事项。没有迁移开发报告、原始数据或历史日志；未发现现有独立问题记录需移动。本轮政策选择和有界实际诊断见Issue12交付报告；三方GO交付不代替用户验收。当前Candidate A NOT_QUALIFIED、A1 UNRESOLVED、Stage6既有结项和空／未冻结正式协议保持。
 
 旧WAIT完整raw仍在独立工作区；Issue12新raw在主目录data/raw/issue12_alinea_actuation_20261012_v1/。GitHub交付仅紧凑摘要、精确源/input/raw清单与哈希，完整raw仅本地，canonical权限不上传。Issue／PR用于任务和依赖身份。下一步建议不构成执行授权。
+
+Issue12本轮有界交付：[Draft PR #13](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/pull/13)，待用户/Chat审查；技术节点停止追加native不等于全域资格。

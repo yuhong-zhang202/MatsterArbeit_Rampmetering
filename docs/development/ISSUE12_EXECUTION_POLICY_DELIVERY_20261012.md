@@ -52,7 +52,7 @@ raw只读、本地保存；GitHub交付包括精确卡、源/input绑定、raw�
 
 短窗实际放行与全域qualification分开：300限定实测6/72s；旧900 STOP不是物理不可达。新900在72s、seed17供给下实际18辆，即900veh/h；原hardguard在观测范围均未拒绝。此事实支持当前短两车包高端的局部可行性，最终数据和科学复核已限定PASS/GO交付；450/600/750未新native，不写PASS。整数周期映射仅名义最大相对误差5.882%，实际N、连续rate更新延迟、长窗安全、多seed服务与正式ALINEA效果尚未验证。原Stage6结项、A1 UNRESOLVED、Candidate A NOT_QUALIFIED、旧STOP3与空未冻结协议保持。
 
-下一步建议不构成执行授权。新Draft PR待完整证据/三方postreview后提交，直接base codex/candidate-a-native-smoke-proposal /20e5，保留PR1→3→5→7→9→11，上游不修改/retarget/合并。用户/Chat负责审查接受及重大科研取舍，Codex不代替验收。
+下一步建议不构成执行授权。[Draft PR #13](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/pull/13)已提交，初始两提交与578条远程分页路径核对一致，直接base codex/candidate-a-native-smoke-proposal /20e5，保留PR1→3→5→7→9→11，上游不修改/retarget/合并。用户/Chat负责审查接受及重大科研取舍，Codex不代替验收。
 
 ## 原始数据版本身份
 
@@ -89,6 +89,10 @@ raw只读、本地保存；GitHub交付包括精确卡、源/input绑定、raw�
 
 ## 最终科学审查与交接
 
-[最终科学审查](../../artifacts/issue12_alinea_actuation_20261012_v1/runs/CA_I12_PACKET_R900_S17_DIAG01/FINAL_SCIENTIFIC_REVIEW_V1.md)支持GO交付并停止本轮追加native，无新增Blocker/Major、无必须补600信息缺口；历史追溯/来源标签限制披露，PRB-004历史状态Minor已修正。Issue验收1–3满足限定工程交付、4满足有界可行性判断而非全域资格，5在审查当时因PR尚未创建为部分满足，待远程交付核对后完成。自检不是用户验收。
+[最终科学审查](../../artifacts/issue12_alinea_actuation_20261012_v1/runs/CA_I12_PACKET_R900_S17_DIAG01/FINAL_SCIENTIFIC_REVIEW_V1.md)支持GO交付并停止本轮追加native，无新增Blocker/Major、无必须补600信息缺口；历史追溯/来源标签限制披露，PRB-004历史状态Minor已修正。Issue验收1–3满足限定工程交付、4满足有界可行性判断而非全域资格，5在审查当时因PR尚未创建为部分满足，远程Draft PR创建及完整分页文件核对已补齐此交付动作（不修改科学审查原时间快照）。自检不是用户验收。
 
 Documentation Impact Check：更新PROJECT_STATE当前节点/资格边界，WORKLOG真实实现/运行/审查记录，policy/index与PRB-004机制进展，README必要入口与CLI单次卡说明；Dashboard仅新增Issue12待审查条目/更新时间，不改变原阶段/章节/决策状态。本次DECISIONS、EXPERIMENT_PROTOCOL、AGENTS、SUPERVISOR_FEEDBACK、thesis outline没有新授权事项，未修改；MemoryCore和私人邮件无关改动保留不提交。无正式研究决定状态提升或新的阶段结项。完整raw本地限制不是未上传证据已提供在线的说法。
+
+## GitHub交付记录
+
+[Draft PR #13](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/pull/13)，关联Issue #12，base `codex/candidate-a-native-smoke-proposal`/20e5e83ac059768320cdaa4c815d164e1022de45。实现测试提交403094d6…，证据文档提交0fba4616…；初始remote正文/base/head/两提交/全部578分页路径已真实核对。随后仅补PR链接、Dashboard交接和这份回执，运行源码/测试仍与403094d及精确卡相同。Head SHA以PR最新远程元数据为准，避免在自身提交中制造自哈希循环。[初始远程checkpoint](../../artifacts/issue12_alinea_actuation_20261012_v1/GITHUB_DELIVERY_CHECKPOINT_V1.json)明确是链接回填前版本，不冒称当前Head测试。PR为Open/Draft，未合并、未关闭Issue、未用户验收。
