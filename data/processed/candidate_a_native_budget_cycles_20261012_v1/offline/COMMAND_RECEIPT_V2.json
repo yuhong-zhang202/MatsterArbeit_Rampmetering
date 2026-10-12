@@ -1,0 +1,20 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "data/processed/candidate_a_native_budget_cycles_20261012_v1/analysis_tools",
+    "-p",
+    "test_measurement.py",
+    "-v"
+  ],
+  "exit_code": 0,
+  "output": "data/processed/candidate_a_native_budget_cycles_20261012_v1/offline/MEASUREMENT_TESTS_V2.txt",
+  "output_sha256": "39481d4b64c8282bb56c0cc9ccde44e114f8caacc405d03a5c90310f7ffa2831",
+  "source_sha256": "03c8e50b97137856ee91962e8c149630b168da5e3323fb94592970d3bd29bbf5",
+  "test_sha256": "2f20b4accfdc0245cd8905ca33755ec61c6cf7a8f04a4e0c5562bc8f10ab4c0b",
+  "new_native_starts": 0,
+  "engineering_suite_rerun": false
+}

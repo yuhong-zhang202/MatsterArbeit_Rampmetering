@@ -1,0 +1,15 @@
+# Four-budget native three-cycle implementation — scientific prelaunch release review
+
+Parentfaithfulsummary of /root/budget_cycle_design_science (notverbatim/useracceptance).2026-10-12Europe/Berlin. Readonly/no tests/native/fetch/writes.
+
+PASS_FOR_BOUNDED_THREE_CYCLE_SERIES_PRELAUNCH_ONLY. No Blocker/Major/requiredMinor preventingfirstW300gatedtechnicalstart. Actualruntime/measurement/safety/servicequalificationNOTVERIFIED. Newusergoal coversfourbudgets/severalcompletecycles/technicalfixes, notformal design. Old1207cards/Stage6/STOP3/A1UNRESOLVED/NOT_QUALIFIED unchanged.
+
+59engineering/14data hashes currentmatch;536protected/25oldSMOKE04source/card unchanged.11engineeringV3/5dataV2 actualrecords/hashsource match, notrerun byreviewer. Newsuccessor0/nativepending1224,1248/freshadmission/noreset/checkpoint/1272scope correct.
+
+DesignMinor1closed: per-vehiclebrakecheckedIDs/unroundedvalues/arrived exclusions serialized; last-arrivedmovementcoverage limitation retained. Minor2closed:1207provisionalcapture, x-onlycheckpoint+flush/fsync beforecontinue, finalEOFafterclosingstillmandatory.
+
+Fivechecks:targetNuniqueRfrontcontrolledinternallaneentryperstep/cycle/Gyr passed;topology/source81.98/internal113.08/uniqueconnection verifiedconditionally on1s/model/speedgates butruntimecoveragepending; dedup/gap/route/signal/storage-loss/missing/partial constraints implemented+offlinepassed; FCDt→ACKt+1/TLS/N/E/C fixtures independentlypassed butactualrawpending; zero/unobserved/partial,N>E,pendingevents,checkpoint/receiver/unknown/abnormalSTOP regressioncovered. No fullmath/globalrealtrafficproof implied.
+
+Observation: generic REPORTED_POST_STOP/STOP_OBSERVED_ANOMALY auditlabel for UNKNOWN_POST_RECEIVER mustnotbe describedasprovenphysicalunsafety. Reportexactreasons anddistinguishunknownmonitorfindingfromobservedcollision/braking/redcrossing. Eitherhaltssimplebudgetupgradeuntilinvestigation/review.
+
+Nextbindactualsourcecommit+allthree reviews+human goal/currentcard, releaseonlyoneW300. Postrunengineering→independentactualrawdata→read-onlyscience beforeeachnextbudget. Purebudgetstopclassificationrequireserror/watchdog/EOF evidence, notABORTED_UNKNOWNalone. Allfouractualruns/threecycles/accurateN evidence requiredbeforegoalcomplete;noneexistsyet. Actualnativeyellow/red/fullcycles/discharge/receiver/wall/storage/EOF/binarycompiler-equivalence, formalprotocol/globalqualification remainunverified.

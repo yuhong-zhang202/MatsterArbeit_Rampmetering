@@ -1,0 +1,32 @@
+{
+  "commands": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "data/processed/candidate_a_native_budget_cycles_20261012_v1/offline/independent_prelaunch_review.py"
+      ],
+      "exit_code": 0,
+      "output": "data/processed/candidate_a_native_budget_cycles_20261012_v1/offline/PRELAUNCH_V1.txt",
+      "output_sha256": "c4d7a920ad272d8b69a20298f90c365f4260a9a3d77793a7dd2f491067464d7e"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "data/processed/candidate_a_native_budget_cycles_20261012_v1/analysis_tools",
+        "-p",
+        "test_measurement.py",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "data/processed/candidate_a_native_budget_cycles_20261012_v1/offline/MEASUREMENT_TESTS_V1.txt",
+      "output_sha256": "dbadde60ce7146b70f6348635ba822f1e842167124666be374f136dd9b713ebc"
+    }
+  ],
+  "native_starts": 0,
+  "engineering_suite_rerun": false,
+  "old_suite_rerun": false
+}

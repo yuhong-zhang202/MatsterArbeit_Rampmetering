@@ -1,0 +1,127 @@
+--- src/candidate_a_native_smoke_20261011/adapter.py
++++ src/candidate_a_native_budget_cycles_20261012/adapter.py
+@@ -5,7 +5,7 @@
+ """
+ from dataclasses import asdict
+ import math
+-from src.candidate_a_qualification_20261008.actor import CycleLedger, PhaseEnvelope, motion_phase, crossing_records
++from src.candidate_a_qualification_20261008.actor import CycleLedger, PhaseEnvelope as ProtectedPhaseEnvelope, motion_phase, crossing_records
+ from src.candidate_a_qualification_20261008.safety import red_transition_witness, assert_ingress_and_crossing_coverage
+ 
+ TLS = 'ramp_mid'
+@@ -18,7 +18,14 @@
+     'U': ('urban_in', 'shared_approach', 'urban_out'),
+     'X': ('cross_in', 'cross_out'),
+ }
+-PROFILE = 'NATIVE_PHASE_DIAGNOSTIC_SHADOW_ENVELOPE_PREPARATION_ONLY'
++PROFILE = 'NATIVE_PHASE_THREE_CYCLE_DIAGNOSTIC_NOT_QUALIFIED'
++
++
++class PhaseEnvelope(ProtectedPhaseEnvelope):
++    def phases(self, period_s):
++        phases = super().phases(period_s)
++        return phases[:2] + ((phases[2][0], phases[2][1], 0),)
++
+ 
+ 
+ class DiagnosticStop(ValueError):
+@@ -73,6 +80,8 @@
+         self.previous_motion = None
+         self.crossed = set()
+         self.paused = False
++        self.checkpoint_pending = False
++        self.checkpoint_verified = False
+         self.receipts = []
+ 
+     def _terminal_call(self, method, *args):
+@@ -97,6 +106,8 @@
+     def _prepare_step(self, conn, time_s):
+         require(type(time_s) is int and 0 <= time_s < 1272, 'TIME_OUTSIDE_PROPOSED_CAP')
+         require(not self.paused and self.pending is None, 'PAUSED_OR_UNRECONCILED_STEP')
++        require(not self.checkpoint_pending, 'MANDATORY_CHECKPOINT_NOT_RELEASED')
++        require(time_s < 1207 or self.checkpoint_verified, 'FIRST_RED_CHECKPOINT_MISSING')
+         require(self.last_end is None or time_s == self.last_end, 'NONSEQUENTIAL_STEP')
+         require(conn.simulation.getTime() == time_s, 'SOURCE_TIME_MISMATCH')
+         require(conn.trafficlight.getControlledLinks(TLS) == ((('ramp_storage_0', 'ramp_accel_0', INTERNAL),),), 'LINK_IDENTITY')
+@@ -127,10 +138,13 @@
+             # This adapter emits no green setter; a future bridge must prepare
+             # the declared official program before this observation boundary.
+             require(program == 'CA_C24', 'PROGRAM_IDENTITY')
++            idx, motion = motion_phase(phase, state, nxt, time_s, self.envelope.phases(24))
+             if new:
+-                require(phase == 0 and state == 'G' and receiver['available'], 'GREEN_START_NOT_PREPARED_OR_RECEIVER_DENIED')
++                require(idx == 0 and motion == 'G' and receiver['available'], 'GREEN_START_NOT_PREPARED_OR_RECEIVER_DENIED')
++                require((time_s == 1200 and phase == 0 and state == 'G' and nxt == 1203) or
++                        (time_s in (1224,1248) and phase == 2 and state == 'r' and nxt == time_s),
++                        'NATIVE_CYCLE_START_BOUNDARY_MISMATCH')
+                 self.ledger.mark_cycle_start(True)
+-            idx, motion = motion_phase(phase, state, nxt, time_s, self.envelope.phases(24))
+             require(motion == self.envelope.state_at(time_s-cycle['begin_s'], 24, True), 'PHASE_SCHEDULE_MISMATCH')
+         elif time_s >= 600:
+             require(program == 'CA_C8', 'HOLD_PROGRAM_IDENTITY')
+@@ -144,7 +158,7 @@
+         shadow = red_transition_witness(vehicles) if entering_red else None
+         self.pending = {'time_s': time_s, 'world': world, 'loaded': loaded, 'pending_ids': pending_ids,
+                         'storage': set(ids[STORAGE]), 'internal': set(internal), 'cycle_id': cycle['cycle_id'] if cycle else -1,
+-                        'program': program, 'motion_phase': idx if time_s >= 600 else 0,
++                        'program': program, 'phase_before': phase, 'state_before': state, 'next_switch_before_s': nxt, 'motion_phase': idx if time_s >= 600 else 0,
+                         'motion': motion, 'entering_red': entering_red, 'shadow_envelope': shadow,
+                         'vehicle_states': [asdict(v) for v in vehicles], 'receiver': receiver}
+         return {'status': 'OBSERVATIONS_BOUND_NOT_PROSPECTIVE_SAFETY', 'profile': PROFILE,
+@@ -171,8 +185,14 @@
+         row['warning_observation'] = warning_observation
+         world, _, _ = inventory(conn)
+         before, after = set(p['world']), set(world)
++        row['post_world'] = world
++        row['phase_observation'] = {'phase_before': p['phase_before'], 'state_before': p['state_before'],
++            'next_switch_before_s': p['next_switch_before_s'], 'phase_after': conn.trafficlight.getPhase(TLS),
++            'state_after': conn.trafficlight.getRedYellowGreenState(TLS), 'next_switch_after_s': conn.trafficlight.getNextSwitch(TLS)}
+         arrived = set(conn.simulation.getArrivedIDList())
+         departed = set(conn.simulation.getDepartedIDList())
++        row['identity_change'] = {'arrived_ids': sorted(arrived), 'departed_ids': sorted(departed),
++            'before_only_ids': sorted(before-after), 'after_only_ids': sorted(after-before)}
+         require(before-after <= arrived and after-before <= departed, 'UNRECONCILED_WORLD_ID_CHANGE')
+         recs = crossing_records(p['storage'], p['internal'], set(conn.lane.getLastStepVehicleIDs(INTERNAL)),
+                                 p['time_s'], p['cycle_id'], p['motion'])
+@@ -198,19 +218,35 @@
+             row['post_receiver'] = post_receiver
+         except Exception as exc:
+             errors.append('POST_OBSERVATION_UNKNOWN:'+type(exc).__name__)
+-        if conn.simulation.getCollidingVehiclesNumber() or conn.simulation.getStartingTeleportNumber() or conn.simulation.getEndingTeleportNumber(): errors.append('COLLISION_OR_TELEPORT')
++        counters = {'colliding_vehicles': conn.simulation.getCollidingVehiclesNumber(),
++            'starting_teleports': conn.simulation.getStartingTeleportNumber(), 'ending_teleports': conn.simulation.getEndingTeleportNumber()}
++        row['native_event_counters'] = counters
++        if any(counters.values()): errors.append('COLLISION_OR_TELEPORT')
+         if p['motion'] == 'r' and recs: errors.append('RED_CROSSING')
+-        for vid in before & after:
+-            if world[vid]['speed_m_s']-p['world'][vid]['speed_m_s'] < -4.5-1e-6: errors.append('ORDINARY_BRAKING_EXCEEDED:'+vid)
+-        for vid in after:
++        braking = {'speed_difference_ids': sorted(before & after), 'after_acceleration_ids': sorted(after),
++            'excluded_before_only_ids': sorted(before-after), 'arrived_ids': sorted(arrived),
++            'speed_difference_m_s2': {}, 'actual_acceleration_m_s2': {},
++            'coverage': 'BEFORE_INTERSECTION_AFTER_DIFFERENCE_AND_AFTER_POPULATION_GETTER_NOT_GLOBAL'}
++        row['braking_observation'] = braking
++        for vid in sorted(before & after):
++            difference = world[vid]['speed_m_s']-p['world'][vid]['speed_m_s']
++            braking['speed_difference_m_s2'][vid] = difference
++            if difference < -4.5-1e-6: errors.append('ORDINARY_BRAKING_EXCEEDED:'+vid)
++        for vid in sorted(after):
+             a = conn.vehicle.getAcceleration(vid)
++            braking['actual_acceleration_m_s2'][vid] = a if math.isfinite(a) else None
+             if not math.isfinite(a) or a < -4.5-1e-6: errors.append('UNKNOWN_OR_EXCESSIVE_ACCELERATION:'+vid)
+         if any(s in native_warning_text.lower() for s in ('emergency braking','emergency stop','collision','teleport')): errors.append('NATIVE_WARNING')
+         if errors:
+             self.paused = True
+             row.update(status='STOP_OBSERVED_AFTER_STEP', reasons=errors)
+             raise DiagnosticStop(';'.join(errors))
+-        if p['time_s'] == 1206 or self.last_end >= 1272:
++        if p['time_s'] == 1206:
++            self.checkpoint_pending = True
++            row['status'] = 'MANDATORY_FIRST_RED_CHECKPOINT_PENDING'
++        if self.last_end >= 1272:
++            require(self.checkpoint_verified, 'FIRST_RED_CHECKPOINT_MISSING')
++            require(len(self.ledger.rows) == 3 and all(c['completed'] for c in self.ledger.rows), 'THREE_CYCLES_INCOMPLETE')
+             self.paused = True
+-            row['status'] = 'MANDATORY_REVIEW_PAUSE_NO_AUTOMATIC_CONTINUATION'
++            row['status'] = 'THREE_CYCLES_COMPLETED_MANDATORY_STOP_NOT_QUALIFIED'
+         return row

@@ -1,0 +1,32 @@
+{
+  "actual_command": ".venv/bin/python -m unittest discover -s tests/candidate_a_native_budget_cycles_20261012 -v",
+  "V1": {
+    "methods": 9,
+    "exit": 1,
+    "failure": "expectedreceiverdenial but previous-redpostguard correctly raised UNKNOWN_POST_RECEIVER at1224",
+    "log": "OFFLINE_TESTS_V1.txt",
+    "source_preimage": "pre_test_expectation_fix_v1/test_cycles.py"
+  },
+  "V2": {
+    "methods": 9,
+    "exit": 0,
+    "log": "OFFLINE_TESTS_V2.txt",
+    "source_record": "RECONSTRUCTED_NINE_TEST_SOURCE_V2.py",
+    "source_record_method": "exact single-line correction of preserved V1 source, reconstructed after run; not contemporaneous hash capture"
+  },
+  "V3": {
+    "methods": 11,
+    "exit": 0,
+    "log": "OFFLINE_TESTS_V3.txt",
+    "test_source": "tests/candidate_a_native_budget_cycles_20261012/test_cycles.py",
+    "test_source_sha256": "8c6a633b4f88b4e7780e2b6100043ef35ba384340c03a2c7a6d0fd96e5b1562e",
+    "added_methods": "preparedcard/release denial and mutated strictresource validation"
+  },
+  "prepare_command": ".venv/bin/python scripts/candidate_a_native_budget_cycles_20261012_v1/cli.py --prepare",
+  "prepare_exit": 0,
+  "four_card_checks": "CARD_CHECK_ALL_V1.json",
+  "new_native_starts": 0,
+  "old_eight_tests": "NOT_RERUN_UNCHANGED_BYTE_BOUND_SOURCE; new changed cycle semantics covered by11newmethods",
+  "clean_checkout": "NOT_RUN_AT_THIS_STAGE",
+  "source_binary_compiler_equivalence": "NOT_VERIFIED"
+}

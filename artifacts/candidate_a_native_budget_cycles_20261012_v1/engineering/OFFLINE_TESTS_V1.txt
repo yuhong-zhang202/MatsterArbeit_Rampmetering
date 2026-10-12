@@ -1,0 +1,28 @@
+test_anomalies_keep_terminal_accounted_observed_prefix (test_cycles.CycleTests.test_anomalies_keep_terminal_accounted_observed_prefix) ... ok
+test_braking_coverage_serializes_arrived_exclusions_and_actual_values (test_cycles.CycleTests.test_braking_coverage_serializes_arrived_exclusions_and_actual_values) ... ok
+test_empty_observed_N_zero_is_not_missing_or_partial_completion (test_cycles.CycleTests.test_empty_observed_N_zero_is_not_missing_or_partial_completion) ... ok
+test_four_exact_budgets_and_preserved_other_caps (test_cycles.CycleTests.test_four_exact_budgets_and_preserved_other_caps) ... ok
+test_full_xml_cycles_checkpoint_exact_boundaries_and_actual_N_not_nominal (test_cycles.CycleTests.test_full_xml_cycles_checkpoint_exact_boundaries_and_actual_N_not_nominal) ... ok
+test_missing_card_denies_before_allocation_or_native (test_cycles.CycleTests.test_missing_card_denies_before_allocation_or_native) ... ok
+test_missing_or_failed_checkpoint_blocks_continuation (test_cycles.CycleTests.test_missing_or_failed_checkpoint_blocks_continuation) ... ok
+test_native_message_is_not_suppressed (test_cycles.CycleTests.test_native_message_is_not_suppressed) ... ok
+test_receiver_denied_or_unknown_before_second_native_green (test_cycles.CycleTests.test_receiver_denied_or_unknown_before_second_native_green) ... 
+  test_receiver_denied_or_unknown_before_second_native_green (test_cycles.CycleTests.test_receiver_denied_or_unknown_before_second_native_green) (failure='unknown_receiver') ... FAIL
+
+======================================================================
+FAIL: test_receiver_denied_or_unknown_before_second_native_green (test_cycles.CycleTests.test_receiver_denied_or_unknown_before_second_native_green) (failure='unknown_receiver')
+----------------------------------------------------------------------
+src.candidate_a_native_budget_cycles_20261012.adapter.DiagnosticStop: UNKNOWN_POST_RECEIVER
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_native_budget_cycles_20261012/test_cycles.py", line 78, in test_receiver_denied_or_unknown_before_second_native_green
+    with self.assertRaisesRegex(ValueError,'receiver denies'):self.loop(w,c,out,a)
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "receiver denies" does not match "UNKNOWN_POST_RECEIVER"
+
+----------------------------------------------------------------------
+Ran 9 tests in 11.284s
+
+FAILED (failures=1)

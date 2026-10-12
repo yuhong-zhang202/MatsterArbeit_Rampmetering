@@ -1,0 +1,54 @@
+{
+  "source_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+  "source_binary_compiler_equivalence": "NOT_VERIFIED",
+  "native_executions": 0,
+  "fresh_fetches": 0,
+  "sources": [
+    {
+      "official_path": "src/microsim/traffic_lights/MSSimpleTrafficLightLogic.cpp",
+      "cache_local_path": "/private/tmp/issue8_sumo_sources/src/microsim/traffic_lights/MSSimpleTrafficLightLogic.cpp",
+      "sha256": "05d04dc386f1d769bcd58bc07803e8b20055538ee9d13ab91f57a3c900b4660a",
+      "bytes": 13168,
+      "original_receipt": "artifacts/candidate_a_native_smoke_selfloop_fix_20261011_v1/engineering/OFFICIAL_SOURCE_RECEIPT_R1.json",
+      "receipt_sha256": "680747b618c9d282748727095036e1cc51701829d6d03ad1a51cb724f59edba8",
+      "full_cached_bytes_match_original_receipt": true,
+      "excerpts": [
+        {
+          "begin_line": 80,
+          "end_line": 109,
+          "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/traffic_lights/MSSimpleTrafficLightLogic.cpp#L80-L109",
+          "text": "MSSimpleTrafficLightLogic::trySwitch() {\n    // check whether the current duration shall be increased\n    if (myCurrentDurationIncrement > 0) {\n        SUMOTime delay = myCurrentDurationIncrement;\n        myCurrentDurationIncrement = 0;\n        return delay;\n    }\n\n    // increment the index\n    if (myPhases[myStep]->nextPhases.size() > 0 && myPhases[myStep]->nextPhases.front() >= 0) {\n        myStep = myPhases[myStep]->nextPhases.front();\n    } else {\n        myStep++;\n    }\n    // if the last phase was reached ...\n    if (myStep >= (int)myPhases.size()) {\n        // ... set the index to the first phase\n        myStep = 0;\n    }\n    assert((int)myPhases.size() > myStep);\n    //stores the time the phase started\n    myPhases[myStep]->myLastSwitch = MSNet::getInstance()->getCurrentTimeStep();\n    // check whether the next duration was overridden\n    if (myOverridingTimes.size() > 0) {\n        SUMOTime nextDuration = myOverridingTimes[0];\n        myOverridingTimes.erase(myOverridingTimes.begin());\n        return nextDuration;\n    }\n    // return offset to the next switch\n    return myPhases[myStep]->duration;"
+        }
+      ]
+    },
+    {
+      "official_path": "src/microsim/MSNet.cpp",
+      "cache_local_path": "/private/tmp/native_bridge_source/MSNet.cpp",
+      "sha256": "fdf62a7626e2d1b31edaf695198e27f4690c2a86a1925e0142852a80449cd6f8",
+      "bytes": 69686,
+      "original_receipt": "artifacts/candidate_a_native_smoke_bridge_20261011_v1/engineering/LOG_SOURCE_RECEIPT_R1.json",
+      "receipt_sha256": "6ec2b75413833f9ef89f4dba926dba180610a639972806c2fd3109a54daa3cc7",
+      "full_cached_bytes_match_original_receipt": true,
+      "excerpts": [
+        {
+          "begin_line": 832,
+          "end_line": 859,
+          "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSNet.cpp#L832-L859",
+          "text": "    myBeginOfTimestepEvents->execute(myStep);\n    if (MSRailSignalControl::hasInstance()) {\n        MSRailSignalControl::getInstance().updateSignals(myStep);\n    }\n#ifdef HAVE_FOX\n    MSRoutingEngine::waitForAll();\n#endif\n    if (MSGlobals::gCheck4Accidents && !MSGlobals::gUseMesoSim) {\n        myEdges->detectCollisions(myStep, STAGE_EVENTS);\n    }\n    // check whether the tls programs need to be switched\n    myLogics->check2Switch(myStep);\n\n    if (MSGlobals::gUseMesoSim) {\n        MSGlobals::gMesoNet->simulate(myStep);\n    } else {\n        // assure all lanes with vehicles are 'active'\n        myEdges->patchActiveLanes();\n\n        // compute safe velocities for all vehicles for the next few lanes\n        // also register ApproachingVehicleInformation for all links\n        myEdges->planMovements(myStep);\n\n        // register junction approaches based on planned velocities as basis for right-of-way decision\n        myEdges->setJunctionApproaches();\n\n        // decide right-of-way and execute movements\n        myEdges->executeMovements(myStep);"
+        },
+        {
+          "begin_line": 918,
+          "end_line": 942,
+          "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSNet.cpp#L918-L942",
+          "text": "MSNet::postMoveStep() {\n    const int numControlled = libsumo::Helper::postProcessRemoteControl();\n    if (numControlled > 0 && MSGlobals::gCheck4Accidents) {\n        myEdges->detectCollisions(myStep, STAGE_REMOTECONTROL);\n    }\n    if (myLogExecutionTime) {\n        myTraCIStepDuration += SysUtils::getCurrentMillis();\n        myTraCIMillis += myTraCIStepDuration;\n    }\n    if (MSGlobals::gCheck4Accidents && !MSGlobals::gUseMesoSim) {\n        // collisions from the previous step were kept to avoid duplicate\n        // warnings. we must remove them now to ensure correct output.\n        removeOutdatedCollisions();\n    }\n    // update and write (if needed) detector values\n    mySimStepDuration = SysUtils::getCurrentMillis() - mySimStepDuration;\n    writeOutput();\n\n    if (myLogExecutionTime) {\n        myVehiclesMoved += myVehicleControl->getRunningVehicleNo();\n        if (myPersonControl != nullptr) {\n            myPersonsMoved += myPersonControl->getRunningNumber();\n        }\n    }\n    myStep += DELTA_T;"
+        },
+        {
+          "begin_line": 1119,
+          "end_line": 1126,
+          "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSNet.cpp#L1119-L1126",
+          "text": "    // check fcd dumps\n    if (OptionsCont::getOptions().isSet(\"fcd-output\")) {\n        if (OptionsCont::getOptions().isSet(\"person-fcd-output\")) {\n            MSFCDExport::write(OutputDevice::getDeviceByOption(\"fcd-output\"), myStep, SUMO_TAG_VEHICLE);\n            MSFCDExport::write(OutputDevice::getDeviceByOption(\"person-fcd-output\"), myStep, SUMO_TAG_PERSON);\n        } else {\n            MSFCDExport::write(OutputDevice::getDeviceByOption(\"fcd-output\"), myStep);\n        }"
+        }
+      ]
+    }
+  ]
+}

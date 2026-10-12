@@ -177,3 +177,15 @@ The [budget basis and minimum plan](docs/development/CANDIDATE_A_NATIVE_PHASE_BU
 ```
 
 These default/check commands are offline and validate an existing unconsumed card without overwrite. New exact source/card/runtime approval is required before a single native start; consumed SMOKE03 permissions cannot release it. Five focused offline resource tests passed; old8suite evidence is reused by byte equivalence, not rerun. No full clean checkout/native test is claimed. Four native online logstreams still exclude parentCLI warning classification; that prior coverage boundary remains.
+
+
+### Four-budget native three-cycle technical series
+
+The current user goal supersedes first-red-only scope for four **new** identities, preserving old SMOKE04. [Execution plan](docs/development/CANDIDATE_A_NATIVE_BUDGET_CYCLES_PLAN_20261012.md):300/360/420/480s maximum wall allowances, same traffic/seed/version and1272s terminalstop afterthree24s cycles.1207is a mandatorydurable/provisionalcheckpoint;1224/1248automaticgreen hasfreshadmission withoutphase reset. All other guards/resources/old evidence remain. Engineering11offline anddata5measurementtests plusreadonlysciencepassed; physical/runtime/discharge verification requires the goal-authorized sequentialstarts andpostreviews.
+
+```bash
+.venv/bin/python scripts/candidate_a_native_budget_cycles_20261012_v1/cli.py --prepare
+.venv/bin/python scripts/candidate_a_native_budget_cycles_20261012_v1/cli.py --check-card artifacts/candidate_a_native_budget_cycles_20261012_v1/engineering/packages/CA_NATIVE_PHASE_R300_S17_CYCLES_W300_01/card.json
+```
+
+Defaultpreparation isoffline; afteranidentity isconsumed, select otherunconsumedcards with `--run`. Executeonlyper-run exactcard/human-goal/engineering-data-science release; revieweachactualrawresult before nextbudget. N isactualuniqueRfrontentry, independentlyFCD/TLS/ACK-audited; noforceN=nominal6, no freewayE1as meterproxy. Budget-onlystop needs expliciterror/watchdog/finalEOF classification; any safety/unknownhalts simplebudgetupgrade. New technical goal is not formalprotocol or universal safety/servicequalification.

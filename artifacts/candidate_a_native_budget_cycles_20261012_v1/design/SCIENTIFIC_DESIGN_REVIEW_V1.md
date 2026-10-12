@@ -1,0 +1,18 @@
+# Native multi-cycle technical design — scientific review V1
+
+Parentfaithfulsummary of /root/budget_cycle_design_science, notverbatim/useracceptance. Date2026-10-12 Europe/Berlin; readonly/no tests/fetch/native/writes.
+
+PASS_FOR_BOUNDED_TECHNICAL_DESIGN_ONLY. No Blocker/Major, two Minorimplementation/reporting requirements remain. Allowsminimalnewnamespaceimplementation, notactualrelease. ContextAGENTS/STATE/DECISIONS/0Bprotocol/WORKLOG/design/oldcode/compilednetwork/pinnedcachedsources reviewed; Stage6/STOP3/A1UNRESOLVED/NOT_QUALIFIED unchanged.
+
+Newusergoal permits1207durablecheckpoint thenthree24s intervalcycles1200→1272 innewidentities; old1207terminalcode/card/rawimmutable. XMLrednext0 vsoldPhaseEnvelope2 mustcorrectnativeprediction andfreshadmissionbefore1224/1248automaticgreen withoutsetPhase/reset.1272fourthgreen eventnotexecuted. Fourbudgets300/360/420/480 aremaximumallowances, notforcedwallwaitorindependentrandomseeds. Recommendonlysmallesttestedcompletedbudget, notuniversalreliability.
+
+RequiredMinor1: brakingcoveragebefore∩after speed-difference IDs andafteracceleration IDs/counts plusarrived exclusions mustbe recorded; lastmovementofexitedvehicles notsamecoverage. No changedthreshold, no claimglobalallvehiclelifelongbrakingproof.
+RequiredMinor2:1207checkpoint mustlabelcurrentcontiguous/provisionalcapturedlogs, notfinalEOF; laternormalclose/finalEOF remainsrequiredbeforefinalPASS.
+
+Measurementcheck1 targetdefinitionPASS: N uniqueRfrontenteringcontrolledinternallane in(t,t+1], classifiedcycle/Gyr, notarrivedtravels.
+Check2 topologyPASS/actualruntimeNOTVERIFIED: compiled887c2324... storage204.49→uniquecontrolledlink0→internal81.98→accel; ingress113.08. Checked1smaximumadvance58.16<81.98 supportsno fullskipcondition, notunconditionalsafetycertificate.
+Check3 coverage/dedupdesignadequate/runtimeNOTVERIFIED: storagebefore/internalbeforeafter/routeidentity/population/uniqueglobalIDs, no silentlydroppedunmatchedrows.
+Check4 independentN NOTVERIFIED: nativeFCDt aftermovement alignsACKt+1; actualrecords mustreconfirm; freewayE1 notstoplineN. ProtectedCycleLedger noN<=Econstraint, doNOTforceN=2or6 orderivequalification.
+Check5 regressionNOTVERIFIED untilimplementation: mandatory1207/pendingnative1224,1248/receiverdenial/1272no4thgreen/anomalyunknown/missingpartialobservedzero tests required.
+
+Any receiver/brake/identity/phase/log STOP cannotbe solvedmerelybylargerbudget; retain/investigate/review technicalcause insteadrelaxing. Nextengineeringimplementation→independentdata→scientificrelease, thensequentialfournewrunswithpostrunreviews beforeeachnextbudget. Sourcebridge/compiler equivalence/universalsafety/longtermservice/formalstatus remainunverified.

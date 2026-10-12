@@ -1,0 +1,43 @@
+{
+  "status": "PASS_BOUNDED_OFFLINE_PRELAUNCH_DATA_REVIEW_ONLY",
+  "engineering_files_verified": 59,
+  "protected_files_verified": 536,
+  "old_SMOKE04_sources_verified": 25,
+  "cards": [
+    {
+      "run_id": "CA_NATIVE_PHASE_R300_S17_CYCLES_W300_01",
+      "wall_budget_s": 300,
+      "card_sha256": "25dccfa39d3ff716823f6ce7ceee18eba1c0b8c6393ae464b6db1d2b61c70386"
+    },
+    {
+      "run_id": "CA_NATIVE_PHASE_R300_S17_CYCLES_W360_01",
+      "wall_budget_s": 360,
+      "card_sha256": "1289b33f53f54e2cdf4bcd504fc0774c4c4923c7ae1f9c31d5bf34c9ca848090"
+    },
+    {
+      "run_id": "CA_NATIVE_PHASE_R300_S17_CYCLES_W420_01",
+      "wall_budget_s": 420,
+      "card_sha256": "624f774f5308aa00ff69d42f4436e9ffcc41a462e4cce1b8d0462c051fc799c1"
+    },
+    {
+      "run_id": "CA_NATIVE_PHASE_R300_S17_CYCLES_W480_01",
+      "wall_budget_s": 480,
+      "card_sha256": "3ce1e92e7a21ea4b78aaccbcdaca19136cf67fb917d860a71f820b6de97799b3"
+    }
+  ],
+  "input_source_seed_horizon_equal_across_budgets": true,
+  "nominal_E_not_actual_N": true,
+  "native4thgreen_not_executed_at1272": true,
+  "engineering11tests_log_reviewed_not_rerun": true,
+  "old8tests_not_rerun": true,
+  "actual_native_runs": 0,
+  "clean_checkout": "NOT_RUN",
+  "environment_declared_binding_compared_not_fresh_version_process": true,
+  "limitations": [
+    "Offline/static tests not physical safety, native discharge, runtime or rate qualification",
+    "1207 checkpoint logs provisional until final EOF",
+    "Braking checks before-intersection-after and after population; exited final motion excluded",
+    "Parent CLI warnings outside four native streams online coverage",
+    "Formal protocol0B; only technical/exploratory analysis"
+  ]
+}
