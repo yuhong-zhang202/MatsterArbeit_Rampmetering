@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/candidate_a_native_smoke_budget_20261012_v1/independent_budget_review.py", line 166, in <module>
+    print(json.dumps(review(args.local_raw), indent=2, ensure_ascii=False))
+                     ~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/candidate_a_native_smoke_budget_20261012_v1/independent_budget_review.py", line 130, in review
+    assert (ROOT / 'artifacts/candidate_a_native_smoke_runtime_fix_20261012_v1/engineering/OFFLINE_TEST_LOG_V2.txt').read_text().rstrip().endswith('OK')
+           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^
+AssertionError

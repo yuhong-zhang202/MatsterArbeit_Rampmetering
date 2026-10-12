@@ -1,0 +1,41 @@
+{
+  "commands": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/candidate_a_native_smoke_budget_20261012",
+        "-v"
+      ],
+      "exit_code": 0,
+      "output": "artifacts/candidate_a_native_smoke_budget_20261012_v1/engineering/TESTS_V2.txt",
+      "output_sha256": "43bb593054d0f0b7db205b6ceaa9f176e23813da992e2260777cd365447482fa"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/candidate_a_native_smoke_budget_20261012_v1/cli.py",
+        "--prepare"
+      ],
+      "exit_code": 0,
+      "output": "artifacts/candidate_a_native_smoke_budget_20261012_v1/engineering/PREPARE_V1.txt",
+      "output_sha256": "1cf3f73971dea00b71e1b2270f4d917a29df7e3b2125f949507e12bb07e9ae78"
+    },
+    {
+      "command": [
+        ".venv/bin/python",
+        "scripts/candidate_a_native_smoke_budget_20261012_v1/cli.py",
+        "--check-card",
+        "artifacts/candidate_a_native_smoke_budget_20261012_v1/engineering/packages/CA_NATIVE_PHASE_R300_S17_SMOKE04/card.json"
+      ],
+      "exit_code": 0,
+      "output": "artifacts/candidate_a_native_smoke_budget_20261012_v1/engineering/CARD_CHECK_V1.json",
+      "output_sha256": "e912dda9cdebd1663b44241a36c56d69c1593f7fbaa3378d03f6e25508efa62d"
+    }
+  ],
+  "native_starts": 0,
+  "no_old_suite_rerun": true
+}

@@ -1,0 +1,8 @@
+{
+  "old_test_sha256": "2dbf55aea644ec073e85a6c88e8f651c72173b09cc457ed1601445f397ac7cac",
+  "failure": "fake worker omitted required observe attribute; resource-gate probe fails before entering loop",
+  "change": "add observe=lambda conn:None to fake worker only",
+  "implementation_changed": false,
+  "card_changed": false,
+  "native_starts": 0
+}

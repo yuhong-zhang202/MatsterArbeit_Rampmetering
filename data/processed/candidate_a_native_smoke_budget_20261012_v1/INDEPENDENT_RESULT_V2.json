@@ -1,0 +1,52 @@
+{
+  "status": "PASS_FOR_BOUNDED_OFFLINE_BUDGET_DATA_INTEGRITY_ONLY",
+  "engineering_files_verified": 55,
+  "protected_files_verified": 536,
+  "old_sources_verified": 22,
+  "new_card_sources_verified": 25,
+  "card_sha256": "1fe30783bb04fb79a3fc7e17b21e946be9cb0c58223258dd7a51dfda3898b086",
+  "package_normalized_equivalence": {
+    "demand.rou.xml": true,
+    "scenario.add.xml": true,
+    "scenario.sumocfg": true
+  },
+  "resource_delta": {
+    "wall_limit_s": [
+      180,
+      300
+    ]
+  },
+  "planning_illustration_s": {
+    "observed_startup": 186.42852847538114,
+    "maximum_startup": 221.46885047536733,
+    "headroom_300": 78.53114952463267
+  },
+  "engineering_five_tests_log_reviewed_not_rerun": true,
+  "old_eight_tests_reused_not_rerun": true,
+  "clean_checkout": "NOT_EXECUTED",
+  "new_native_starts_by_this_audit": 0,
+  "local_raw_readback": [
+    {
+      "manifest": "artifacts/candidate_a_native_smoke_execution_20261011_v1/engineering/RAW_FINAL_SHA256.json",
+      "files_verified": 53
+    },
+    {
+      "manifest": "artifacts/candidate_a_native_smoke02_execution_20261012_v1/engineering/RAW_FINAL_SHA256.json",
+      "files_verified": 58
+    },
+    {
+      "manifest": "artifacts/candidate_a_native_smoke03_execution_20261012_v1/engineering/RAW_FINAL_SHA256.json",
+      "files_verified": 62
+    }
+  ],
+  "public_default_does_not_require_local_raw": true,
+  "native_duration154_78_local_confirmation": true,
+  "limitations": [
+    "No 300 s native execution or completion guarantee",
+    "Clock excludes preparation and post-watchdog finalization; sampled stop is not strict whole CLI bound",
+    "No cross-version speed causal effect or hotspot estimate",
+    "No native safety, yellow adequacy or rate qualification",
+    "Native online logs exclude parent CLI warning output; unchanged final client capture",
+    "Protocol is empty; analysis is technical/exploratory only"
+  ]
+}

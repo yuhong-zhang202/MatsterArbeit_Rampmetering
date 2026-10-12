@@ -165,3 +165,15 @@ The [minimum query-reuse repair](docs/development/CANDIDATE_A_NATIVE_PHASE_RUNTI
 ```
 
 These are historical offline commands; preparation/card checking now refuse the consumed local SMOKE03 identity. Original8-test evidence applies to the preauthorization preparation snapshot and was not rerun for this evidence delivery. No additional launch or automatically prepared new identity is authorized. Remaining wall-time overhead is unresolved; bounded follow-up proposes discriminating timing before further optimization, without relaxing checks or treating smoke as qualification. Relocated paths or any new source/card/resource binding require review and exact user authorization.
+
+
+### SMOKE04 proposed technical wall-budget card — offline preparation
+
+The [budget basis and minimum plan](docs/development/CANDIDATE_A_NATIVE_PHASE_BUDGET_PLAN_20261012.md) prepares `CA_NATIVE_PHASE_R300_S17_SMOKE04`, changing only inherited wall-clock180→300s in a new isolated profile/card. The same bridge body, all existing safety/log/resource checks, startup60s,300MB output,5GB reserve and1207s mandatory simulation stop remain.300s is a Proposed finite technical allowance, not an empirically validated completion/safety bound. Existing histories/cards/raw are preserved; no native execution is authorized by preparation.
+
+```bash
+.venv/bin/python scripts/candidate_a_native_smoke_budget_20261012_v1/cli.py --prepare
+.venv/bin/python scripts/candidate_a_native_smoke_budget_20261012_v1/cli.py --check-card artifacts/candidate_a_native_smoke_budget_20261012_v1/engineering/packages/CA_NATIVE_PHASE_R300_S17_SMOKE04/card.json
+```
+
+These default/check commands are offline and validate an existing unconsumed card without overwrite. New exact source/card/runtime approval is required before a single native start; consumed SMOKE03 permissions cannot release it. Five focused offline resource tests passed; old8suite evidence is reused by byte equivalence, not rerun. No full clean checkout/native test is claimed. Four native online logstreams still exclude parentCLI warning classification; that prior coverage boundary remains.

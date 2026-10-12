@@ -1,0 +1,62 @@
+{
+  "baseline_commit": "22ec93c7b54d4ea15f55284026ded6c414de605b",
+  "protected_manifest": "artifacts/candidate_a_a1_contract_20261011_v1/engineering/PROTECTED_BASELINE_SHA256.json",
+  "protected_manifest_sha256": "2d79d2c1a6305ec482cc94c06b217938ef780e879b447042b18a3c3d3efdce84",
+  "protected_files_verified": 536,
+  "old_source_files_verified": 22,
+  "old_card_sha256": "892b415603df776bb70698ad66939bbad28993e87a1bc225d5553ba58ac6bba4",
+  "new_card_sha256": "1fe30783bb04fb79a3fc7e17b21e946be9cb0c58223258dd7a51dfda3898b086",
+  "immutable_raw": [
+    {
+      "manifest": "artifacts/candidate_a_native_smoke_execution_20261011_v1/engineering/RAW_FINAL_SHA256.json",
+      "sha256": "0e0857bb444008531d9e98fdde57f54620185a5794932256fe0188a0c21d631c",
+      "files_verified": 53,
+      "mismatches": [],
+      "scope": "local immutable raw only; no public recreation claim"
+    },
+    {
+      "manifest": "artifacts/candidate_a_native_smoke02_execution_20261012_v1/engineering/RAW_FINAL_SHA256.json",
+      "sha256": "7ee3af11ab1070d6c98bc2648de73e84358e1cc982ca101b778dcfba7a012dec",
+      "files_verified": 58,
+      "mismatches": [],
+      "scope": "local immutable raw only; no public recreation claim"
+    },
+    {
+      "manifest": "artifacts/candidate_a_native_smoke03_execution_20261012_v1/engineering/RAW_FINAL_SHA256.json",
+      "sha256": "de18c27615cf1e6b5627d7f8b53ce593317e5eb8ec9e1fe3200ac4745a43fa77",
+      "files_verified": 62,
+      "mismatches": [],
+      "scope": "local immutable raw only; no public recreation claim"
+    }
+  ],
+  "package_equivalence": {
+    "demand.rou.xml": {
+      "old_sha256": "99151ed51419c8d490c0f0b1a91bea23f6be70c5486890a04e1e06b3de5d808e",
+      "new_sha256": "99151ed51419c8d490c0f0b1a91bea23f6be70c5486890a04e1e06b3de5d808e",
+      "equivalent_after_only_identity_path_substitution": true
+    },
+    "scenario.add.xml": {
+      "old_sha256": "090ee8527224297a30942dbc304ecbb7d7f547d8c95a57c469c3848794006e1b",
+      "new_sha256": "f0a2863a1e3246cb4c5e6af49b2538d0757c70770e6784fa530d4b619fb8838f",
+      "equivalent_after_only_identity_path_substitution": true
+    },
+    "scenario.sumocfg": {
+      "old_sha256": "9447b2ceaac633732898a9f1efc65da43dbd3820d11a39d4554aec3cf1aa7fb5",
+      "new_sha256": "258df0b1b84d837e323d5fb4dd7fa7d366322bfbd17311f85e538aaa12cfeaa2",
+      "equivalent_after_only_identity_path_substitution": true
+    }
+  },
+  "spec_delta_only": "run_id",
+  "resource_delta_only": {
+    "wall_limit_s": [
+      180,
+      300
+    ]
+  },
+  "environment_unchanged": true,
+  "native_starts": 0,
+  "new_auth_absent": true,
+  "new_release_absent": true,
+  "new_raw_absent": true,
+  "known_CLI_warning_scope": "native four-stream online classification unchanged; parent CLI warning capture only after run; no suppression or float-step change"
+}

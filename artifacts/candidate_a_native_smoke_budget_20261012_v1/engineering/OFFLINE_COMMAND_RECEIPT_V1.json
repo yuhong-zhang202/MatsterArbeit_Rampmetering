@@ -1,0 +1,20 @@
+{
+  "commands": [
+    {
+      "command": [
+        ".venv/bin/python",
+        "-m",
+        "unittest",
+        "discover",
+        "-s",
+        "tests/candidate_a_native_smoke_budget_20261012",
+        "-v"
+      ],
+      "exit_code": 1,
+      "output": "artifacts/candidate_a_native_smoke_budget_20261012_v1/engineering/TESTS_V1.txt",
+      "output_sha256": "aa9a202320f8ccaac718aebeb1f51017cd95956da08b098162c2ed9fbb80d258"
+    }
+  ],
+  "native_starts": 0,
+  "no_old_suite_rerun": true
+}

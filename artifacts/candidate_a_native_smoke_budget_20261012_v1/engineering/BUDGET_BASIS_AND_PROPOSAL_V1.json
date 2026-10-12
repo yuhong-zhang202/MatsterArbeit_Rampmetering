@@ -1,0 +1,63 @@
+{
+  "status": "PROPOSED_TECHNICAL_RESOURCE_CHANGE_NOT_RELEASED",
+  "baseline_commit": "22ec93c7b54d4ea15f55284026ded6c414de605b",
+  "origin": {
+    "path": "scripts/candidate_a_qualification_20261008_v1/runner.py",
+    "sha256": "d0f16717d80ba2dbbf5f93ea4878916caa570e8b75ae95f0c9c4d05dceedff4d",
+    "line": 23,
+    "first_repository_commit": "30e547c",
+    "category": "hardcoded engineering resource limit, not native traffic safety predicate",
+    "native_bridge_card_provenance": "artifacts/candidate_a_native_smoke_bridge_20261011_v1/engineering/packages/CA_NATIVE_PHASE_R300_S17_SMOKE01/card.json",
+    "empirical_calibration_for_current_bridge_found": false,
+    "supervisor_basis_found_in_resource_provenance": false,
+    "absence_scope": "targeted runner/card/technical review sources; no claim exhaustive private communications search"
+  },
+  "historical_limits_s": 180,
+  "proposed_limits_s": 300,
+  "unchanged": {
+    "startup_limit_s": 60,
+    "run_limit_bytes": 300000000,
+    "minimum_free_bytes": 5000000000,
+    "watchdog_poll_s": 0.2,
+    "simulation_end_s": 1207,
+    "all_safety_checks": true
+  },
+  "observed_runs": {
+    "SMOKE02": {
+      "completed_s": 687,
+      "startup_connect_elapsed_s": 22.003270457993494,
+      "stop": "wall resource STOP",
+      "same_implementation_as_SMOKE03": false
+    },
+    "SMOKE03": {
+      "completed_s": 1157,
+      "startup_connect_elapsed_s": 24.95967800001381,
+      "native_duration_s": 154.78,
+      "stop": "wall resource STOP",
+      "timings_not_unique_hotspot_shares": true
+    }
+  },
+  "planning_arithmetic": {
+    "formula": "startup + observed native duration * target simulation steps / observed completed steps",
+    "observed_native_duration_s": 154.78,
+    "observed_steps": 1157,
+    "target_steps": 1207,
+    "remaining_steps": 50,
+    "using_observed_startup_s": 24.95967800001381,
+    "using_observed_startup_estimate_s": 186.42852847538114,
+    "using_maximum_startup_s": 60,
+    "using_maximum_startup_estimate_s": 221.46885047536733,
+    "headroom_240_s": 18.531149524632667,
+    "headroom_300_s": 78.53114952463267,
+    "classification": "whole-prefix linear planning illustration, not prediction/upper bound/confidence interval",
+    "limits": "last 50 steps include new admission/control phases and increasing population; startup/native timers differ from bridge wall; no measured marginal cost; native dynamics may alter errors/safety outcomes; no guarantee300 reaches1207"
+  },
+  "recommendation": "one finite300s proposed limit instead of further complex optimization; leave full monitored semantics/1207 stop unchanged, stop again on any safety/log/resource uncertainty; no retry or expansion beyond authorized new identity",
+  "wall_clock_scope": {
+    "starts": "started=time.monotonic() after static gates, output allocation/source snapshots; before LogCapture/worker import/native spawn/connect",
+    "includes": "startup, connection, phase/observer/log/resource/ACK/reconciliation work to target; watchdog may remain active through cleanup",
+    "excludes": "earlier offline prepare/static environment review, initial source snapshotting before started, post watchdog-close final log capture and receipt writing",
+    "enforcement": "synchronous between-step <= limit, independent .2s sampledwatchdog > limit; not hard-real-time max entire CLI duration",
+    "cleanup": "existing wait/terminate/kill/close deadlines unchanged"
+  }
+}
