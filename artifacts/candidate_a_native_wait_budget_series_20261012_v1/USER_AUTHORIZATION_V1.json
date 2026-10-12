@@ -1,0 +1,37 @@
+{
+  "classification": "EXISTING_DIRECT_USER_GOAL_AND_AUTONOMY_EVIDENCE_NOT_PER_RUN_RELEASE",
+  "four_budget_goal": {
+    "path": "artifacts/candidate_a_native_budget_cycles_20261012_v1/USER_GOAL_AND_STEERING_V1.json",
+    "sha256": "04ea5823e55dfa65dbf5e5672ef7a79ab9401d3736175638236f5484643efd17",
+    "literal_record": {
+      "date": "2026-10-12 Europe/Berlin",
+      "user_provided_goal": "分别运行5分钟，6分钟，7分钟，8分钟，看看哪个运行时间能完整检测到关键的受控黄转红，让 Candidate A 利用 SUMO 官方信号灯机制，安全地完成几个完整红绿灯周期，并确认实际车辆放行情况可以准确测量，看看哪个运行时长最合适。目标是让 Candidate A 利用 SUMO 官方信号灯机制，安全地完成几个完整红绿灯周期，并确认实际车辆放行情况可以准确测量。",
+      "latest_user_steering": "技术问题自行解决然后推进",
+      "scope": "Gated sequential technical comparison of wall allowances300/360/420/480s using common reviewed source/inputs/seed/horizon; several completecycles with measured actual discharge. Threefull24s cyclesproposed, designreviewallowsminimumimplementation onlyuntilengineering/data/sciencerelease.",
+      "old1207_scope": "New multiple-cycle goal requiresnewversion1207durablecheckpoint+1272terminalstop; old1207cards/source/evidence unchanged.",
+      "run_authorization_condition": "Actualnewruns permitted onlyafternewboundimplementation/cards independently reviewed/released; stop for anomalies/unknown and audit aftereach before next. Technical repairs retained/reviewed undernewidentities, no blindretry or safetycriteriarelaxation.",
+      "not_authorized": "formalprotocol/researchdesign/vehiclemodels/demand/timestep/phase-duration changes, oldsource/rawoverwrite, unboundedphysicalproof, automaticbudgetescalation,qualificationclaims,PRmerge"
+    }
+  },
+  "independent_autonomy": {
+    "path": "artifacts/candidate_a_native_receiver_wait_20261012_v1/USER_AUTHORIZATION_V1.json",
+    "sha256": "db9168b6a5e97c254af33af8bbff5f4a00d1ae4d473cdf48bc43e51492f15e8d",
+    "literal_record": {
+      "date": "2026-10-12 Europe/Berlin",
+      "literal_user_request": "请在独立工作区自主设计并实现最小解决方案，完成必要的离线测试和有界 SUMO 诊断，不再逐步请求授权。保留原实现和全部旧证据，保持必要安全检查、异常／未知停止条件及既定仿真结束时刻。  \n验证必须证明：正常的暂时等待能够正确处理，真正危险或未知的状态仍会停止，日志和车辆核账完整。不能仅以“不再报错”判断解决。完成工程、数据和科学审查后，将通过验证的最小改动移回主工作区，并核对移植一致性。不得改变正式研究设计；若无法在这些边界内解决，提交具体证据和原因。",
+      "literal_text_utf8_sha256": "ee4310037af19ac3f33471cf8c4460b80126cdfc7d2d47dc56432b696204bfd5",
+      "source": "direct latest human user request relayed verbatim by parent, not an engineering paraphrase",
+      "scope": "independent minimal offline/technical native diagnostics, no formal design or old evidence mutation",
+      "bounded_proposal": "one technical native diagnose, at most one diagnosed/reviewed technical repair start, same1272end/1207checkpoint; no blindretry"
+    }
+  },
+  "allowed_remaining_starts": 3,
+  "remaining_wall_budgets_s": [
+    360,
+    420,
+    480
+  ],
+  "completed300_reused_without_new_start": true,
+  "requires_three_role_prelaunch_and_per_run_postreview": true,
+  "automatic_retry": false
+}

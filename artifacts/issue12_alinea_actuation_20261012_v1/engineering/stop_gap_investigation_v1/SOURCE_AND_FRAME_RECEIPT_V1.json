@@ -1,0 +1,380 @@
+{
+  "classification": "READ_ONLY_BOUNDED_ENGINEERING_INVESTIGATION_NO_RUNTIME_CHANGE",
+  "raw_source_sha256": {
+    "data/raw/issue12_alinea_actuation_20261012_v1/CA_I12_QUOTA_R900_S17_BOUNDARY01/outputs/failure_snapshot.json": "3ee0e26557bb19c75d414f4b41fc9005caa8438195f51425de8e3a1af9e5f6fc",
+    "data/raw/issue12_alinea_actuation_20261012_v1/CA_I12_QUOTA_R900_S17_BOUNDARY01/outputs/pre_steps.jsonl": "3486e35131418e3038801d72429f6c8c391840af55bd4c026c039a5aae41536b",
+    "data/raw/issue12_alinea_actuation_20261012_v1/CA_I12_QUOTA_R900_S17_BOUNDARY01/outputs/post_steps.jsonl": "0e804c1c4b8a3e992c0b11cbfc1fed5651330197a0906c94d6aa1978bccfb8f9"
+  },
+  "pre_frames": [
+    {
+      "time_s": 1204,
+      "phase": 0,
+      "state": "G",
+      "motion": "G",
+      "next_switch": 1217.0,
+      "R1_R2_world": {
+        "R_flow.1": {
+          "role": "R",
+          "speed_m_s": 5.087525926293298,
+          "lane_id": ":ramp_mid_0_0"
+        },
+        "R_flow.2": {
+          "role": "R",
+          "speed_m_s": 2.5092803045766052,
+          "lane_id": "ramp_storage_0"
+        }
+      },
+      "vehicle_states": [
+        {
+          "vehicle_id": "R_flow.2",
+          "population": "storage",
+          "position_m": 191.46039520559876,
+          "speed_m_s": 2.5092803045766052,
+          "length_m": 5.0,
+          "min_gap_m": 2.5,
+          "accel_m_s2": 2.6,
+          "normal_decel_m_s2": 4.5,
+          "tau_s": 1.0,
+          "action_step_s": 1.0,
+          "type_id": "technical_passenger"
+        }
+      ],
+      "internal_IDs": [
+        "R_flow.0",
+        "R_flow.1"
+      ],
+      "receiver": {
+        "available": false,
+        "reason": "LEADER_SECURE_GAP",
+        "front_id": "R_flow.2",
+        "nearest_internal": "R_flow.1",
+        "leader": {
+          "vehicle_id": "R_flow.1",
+          "lane_id": ":ramp_mid_0_0",
+          "gap_excluding_minGap_m": 5.6087510742661095,
+          "secure_gap_m": 5.7185606091532115
+        },
+        "nearest_internal_rear_clearance_m": -4.920853720135142,
+        "required_front_clearance_m": 7.5
+      },
+      "native_receiver_decision": {
+        "decision": "WAIT_NATIVE_FOLLOWING",
+        "prospective_available": false,
+        "original_prospective_receiver": {
+          "available": false,
+          "reason": "LEADER_SECURE_GAP",
+          "front_id": "R_flow.2",
+          "nearest_internal": "R_flow.1",
+          "leader": {
+            "vehicle_id": "R_flow.1",
+            "lane_id": ":ramp_mid_0_0",
+            "gap_excluding_minGap_m": 5.6087510742661095,
+            "secure_gap_m": 5.7185606091532115
+          },
+          "nearest_internal_rear_clearance_m": -4.920853720135142,
+          "required_front_clearance_m": 7.5
+        },
+        "current_following": {
+          "vehicle_id": "R_flow.2",
+          "lane_id": "ramp_storage_0",
+          "time_s": 1204,
+          "route": [
+            "urban_in",
+            "shared_approach",
+            "ramp_storage",
+            "ramp_accel",
+            "merge_section",
+            "main_down"
+          ],
+          "lookahead_m": 478.67,
+          "receiver_path_lanes": [
+            ":ramp_mid_0_0",
+            "ramp_accel_0",
+            ":freeway_merge_2_0",
+            "merge_section_0",
+            "merge_section_1",
+            "merge_section_2"
+          ],
+          "path_geometry_m": {
+            "ramp_storage_0": 204.49,
+            ":ramp_mid_0_0": 81.98,
+            "ramp_accel_0": 99.07,
+            ":freeway_merge_2_0": 3.11,
+            "merge_section_0": 294.51,
+            "merge_section_1": 294.51,
+            "merge_section_2": 294.51
+          },
+          "actual_speed_m_s": 2.5092803045766052,
+          "lane_position_m": 191.46039520559876,
+          "vehicle_length_m": 5.0,
+          "min_gap_m": 2.5,
+          "speed_mode": 31,
+          "lane_change_mode": 1621,
+          "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+          "margin_m": 1.1,
+          "future_safety_proven": false,
+          "fresh_getLeader_result": [
+            "R_flow.1",
+            5.6087510742661095
+          ],
+          "leader_id": "R_flow.1",
+          "leader_lane_id": ":ramp_mid_0_0",
+          "leader_speed_m_s": 5.087525926293298,
+          "leader_speed_mode": 31,
+          "leader_lane_change_mode": 1621,
+          "getSecureGap_args": {
+            "vehID": "R_flow.2",
+            "speed": 2.5092803045766052,
+            "leaderSpeed": 5.087525926293298,
+            "leaderMaxDecel": 9.0,
+            "leaderID": "R_flow.1"
+          },
+          "actual_secure_gap_m": 2.5092803045766052,
+          "gap_excluding_minGap_m": 5.6087510742661095,
+          "physical_bumper_gap_m": 8.10875107426611,
+          "required_with_margin_m": 3.6092803045766053,
+          "status": "CURRENT_GAP_OBSERVED_WITHIN_BOUND"
+        },
+        "time_s": 1204,
+        "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+        "future_safety_proven": false
+      }
+    },
+    {
+      "time_s": 1205,
+      "phase": 0,
+      "state": "G",
+      "motion": "G",
+      "next_switch": 1217.0,
+      "R1_R2_world": {
+        "R_flow.1": {
+          "role": "R",
+          "speed_m_s": 7.140826485348359,
+          "lane_id": ":ramp_mid_0_0"
+        },
+        "R_flow.2": {
+          "role": "R",
+          "speed_m_s": 4.5367597973331435,
+          "lane_id": "ramp_storage_0"
+        }
+      },
+      "vehicle_states": [
+        {
+          "vehicle_id": "R_flow.2",
+          "population": "storage",
+          "position_m": 195.9971550029319,
+          "speed_m_s": 4.5367597973331435,
+          "length_m": 5.0,
+          "min_gap_m": 2.5,
+          "accel_m_s2": 2.6,
+          "normal_decel_m_s2": 4.5,
+          "tau_s": 1.0,
+          "action_step_s": 1.0,
+          "type_id": "technical_passenger"
+        }
+      ],
+      "internal_IDs": [
+        "R_flow.0",
+        "R_flow.1"
+      ],
+      "receiver": {
+        "available": false,
+        "reason": "LEADER_SECURE_GAP",
+        "front_id": "R_flow.2",
+        "nearest_internal": "R_flow.1",
+        "leader": {
+          "vehicle_id": "R_flow.1",
+          "lane_id": ":ramp_mid_0_0",
+          "gap_excluding_minGap_m": 8.212817762281336,
+          "secure_gap_m": 9.773519594666286
+        },
+        "nearest_internal_rear_clearance_m": 2.2199727652132175,
+        "required_front_clearance_m": 7.5
+      },
+      "native_receiver_decision": {
+        "decision": "WAIT_NATIVE_FOLLOWING",
+        "prospective_available": false,
+        "original_prospective_receiver": {
+          "available": false,
+          "reason": "LEADER_SECURE_GAP",
+          "front_id": "R_flow.2",
+          "nearest_internal": "R_flow.1",
+          "leader": {
+            "vehicle_id": "R_flow.1",
+            "lane_id": ":ramp_mid_0_0",
+            "gap_excluding_minGap_m": 8.212817762281336,
+            "secure_gap_m": 9.773519594666286
+          },
+          "nearest_internal_rear_clearance_m": 2.2199727652132175,
+          "required_front_clearance_m": 7.5
+        },
+        "current_following": {
+          "vehicle_id": "R_flow.2",
+          "lane_id": "ramp_storage_0",
+          "time_s": 1205,
+          "route": [
+            "urban_in",
+            "shared_approach",
+            "ramp_storage",
+            "ramp_accel",
+            "merge_section",
+            "main_down"
+          ],
+          "lookahead_m": 478.67,
+          "receiver_path_lanes": [
+            ":ramp_mid_0_0",
+            "ramp_accel_0",
+            ":freeway_merge_2_0",
+            "merge_section_0",
+            "merge_section_1",
+            "merge_section_2"
+          ],
+          "path_geometry_m": {
+            "ramp_storage_0": 204.49,
+            ":ramp_mid_0_0": 81.98,
+            "ramp_accel_0": 99.07,
+            ":freeway_merge_2_0": 3.11,
+            "merge_section_0": 294.51,
+            "merge_section_1": 294.51,
+            "merge_section_2": 294.51
+          },
+          "actual_speed_m_s": 4.5367597973331435,
+          "lane_position_m": 195.9971550029319,
+          "vehicle_length_m": 5.0,
+          "min_gap_m": 2.5,
+          "speed_mode": 31,
+          "lane_change_mode": 1621,
+          "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+          "margin_m": 1.1,
+          "future_safety_proven": false,
+          "fresh_getLeader_result": [
+            "R_flow.1",
+            8.212817762281336
+          ],
+          "leader_id": "R_flow.1",
+          "leader_lane_id": ":ramp_mid_0_0",
+          "leader_speed_m_s": 7.140826485348359,
+          "leader_speed_mode": 31,
+          "leader_lane_change_mode": 1621,
+          "getSecureGap_args": {
+            "vehID": "R_flow.2",
+            "speed": 4.5367597973331435,
+            "leaderSpeed": 7.140826485348359,
+            "leaderMaxDecel": 9.0,
+            "leaderID": "R_flow.1"
+          },
+          "actual_secure_gap_m": 4.573519594666287,
+          "gap_excluding_minGap_m": 8.212817762281336,
+          "physical_bumper_gap_m": 10.712817762281336,
+          "required_with_margin_m": 5.673519594666287,
+          "status": "CURRENT_GAP_OBSERVED_WITHIN_BOUND"
+        },
+        "time_s": 1205,
+        "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+        "future_safety_proven": false
+      }
+    }
+  ],
+  "post_query_verbatim": {
+    "vehicle_id": "R_flow.2",
+    "lane_id": "ramp_storage_0",
+    "time_s": 1206,
+    "route": [
+      "urban_in",
+      "shared_approach",
+      "ramp_storage",
+      "ramp_accel",
+      "merge_section",
+      "main_down"
+    ],
+    "lookahead_m": 478.67,
+    "receiver_path_lanes": [
+      ":ramp_mid_0_0",
+      "ramp_accel_0",
+      ":freeway_merge_2_0",
+      "merge_section_0",
+      "merge_section_1",
+      "merge_section_2"
+    ],
+    "path_geometry_m": {
+      "ramp_storage_0": 204.49,
+      ":ramp_mid_0_0": 81.98,
+      "ramp_accel_0": 99.07,
+      ":freeway_merge_2_0": 3.11,
+      "merge_section_0": 294.51,
+      "merge_section_1": 294.51,
+      "merge_section_2": 294.51
+    },
+    "actual_speed_m_s": 7.060596259649246,
+    "lane_position_m": 203.05775126258115,
+    "vehicle_length_m": 5.0,
+    "min_gap_m": 2.5,
+    "speed_mode": 31,
+    "lane_change_mode": 1621,
+    "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+    "margin_m": 1.1,
+    "future_safety_proven": false,
+    "fresh_getLeader_result": [
+      "R_flow.1",
+      9.630877589859532
+    ],
+    "leader_id": "R_flow.1",
+    "leader_lane_id": ":ramp_mid_0_0",
+    "leader_speed_m_s": 8.478656087227455,
+    "leader_speed_mode": 31,
+    "leader_lane_change_mode": 1621,
+    "getSecureGap_args": {
+      "vehID": "R_flow.2",
+      "speed": 7.060596259649246,
+      "leaderSpeed": 8.478656087227455,
+      "leaderMaxDecel": 9.0,
+      "leaderID": "R_flow.1"
+    },
+    "actual_secure_gap_m": 9.621192519298493,
+    "gap_excluding_minGap_m": 9.630877589859532,
+    "physical_bumper_gap_m": 12.130877589859532,
+    "required_with_margin_m": 10.721192519298492,
+    "status": "STOP_CURRENT_GAP_BOUND_DENIED"
+  },
+  "geometry_gap_reconstruction_m": 9.630877589859532,
+  "geometry_formula": "storage_length - follower_position + internal_leader_rear - ego_minGap",
+  "native_query_reproduction_m": 9.621192519298493,
+  "native_query_reproduction_error_m": 0.0,
+  "gap_above_emergency_query_without_margin_m": 0.009685070561038955,
+  "hypothetical_apparent4_5_query_m": 5.642536432071038,
+  "hypothetical_apparent_plus_retained1_1_m": 6.742536432071038,
+  "apparent4_5_status": "SOURCE_DEFAULT_INFERENCE_NOT_SERIALIZED_NATIVE_GETTER",
+  "official_cached_source_verified": {
+    "src/microsim/cfmodels/MSCFModel.cpp": {
+      "path": "/tmp/issue8_sumo_sources/src/microsim/cfmodels/MSCFModel.cpp",
+      "sha256": "b4a2b50b679c7772dc81ec5585410cedfdea2110961cc445731627ef3cb1d769",
+      "official_receipt": "artifacts/candidate_a_a1_contract_20261011_v1/engineering/SOURCE_RECEIPT.json",
+      "official_pin": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3"
+    },
+    "src/microsim/cfmodels/MSCFModel_Krauss.cpp": {
+      "path": "/tmp/issue8_sumo_sources/src/microsim/cfmodels/MSCFModel_Krauss.cpp",
+      "sha256": "0722e1a44c56e430e40c2b661d1ccfb74df1095cd9f6ffeb4e4ceb4da983af36",
+      "official_receipt": "artifacts/candidate_a_a1_contract_20261011_v1/engineering/SOURCE_RECEIPT.json",
+      "official_pin": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3"
+    },
+    "src/microsim/MSVehicle.cpp": {
+      "path": "/tmp/issue8_sumo_sources/src/microsim/MSVehicle.cpp",
+      "sha256": "8499ebe445906b19395d5c70945b012f320a439327e9cb3c20f0abd26d15a6a4",
+      "official_receipt": "artifacts/candidate_a_a1_contract_20261011_v1/engineering/SOURCE_RECEIPT.json",
+      "official_pin": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3"
+    }
+  },
+  "installed_API_source": {
+    "getLeader": "    def getLeader(self, vehID, dist=100.):\n        \"\"\"getLeader(string, double) -> (string, double)\n\n        Return the leading vehicle id together with the distance. The distance\n        is measured from the front + minGap to the back of the leader, so it does not include the\n        minGap of the vehicle.\n        The dist parameter defines the minimum lookahead, 0 calculates a lookahead from the brake gap.\n        Note that the returned leader may be further away than the given dist and that the vehicle\n        will only look on its current best lanes and not look beyond the end of its final route edge.\n\n        In the case where no leader is found, the function returns 'None'.\n        This special case is deprecated. The future behavior is to return the\n        pair (\"\", -1) when no leader is found.\n        The function 'traci.setLegacyGetLeader(bool) can be used to switch\n        between both behaviors.\n        \"\"\"\n        return self._getUniversal(tc.VAR_LEADER, vehID, \"d\", dist)\n",
+    "getSecureGap": "    def getSecureGap(self, vehID, speed, leaderSpeed, leaderMaxDecel, leaderID=\"\"):\n        \"\"\"getSecureGap(string, double, double, double, string) -> double\n        Return the secure gap computed by the carFollowModel of vehID\n        \"\"\"\n        return self._getUniversal(tc.VAR_SECURE_GAP, vehID, \"tddds\", 4,\n                                  speed, leaderSpeed, leaderMaxDecel, leaderID)\n",
+    "getApparentDecel": "    def getApparentDecel(self, typeID):\n        \"\"\"getApparentDecel(string) -> double\n\n        Returns the apparent deceleration in m/s^2 of this type.\n        If called in the context of a person or vehicle, it will return the value for their current type.\n        Use the respective object ID as typeID value in said context.\n        \"\"\"\n        return self._getUniversal(tc.VAR_APPARENT_DECEL, typeID)\n"
+  },
+  "runtime_source_no_change": true,
+  "native_invocations_this_investigation": 0,
+  "issue_starts_already_consumed": 3,
+  "prior_bounded_search_read_errors": [
+    "nonexistent guessed candidate_a_a1_feasibility directory",
+    "zsh unmatched v9 doc globs; no mutations"
+  ],
+  "original_margin_status": "local inherited contract; not official SUMO invariant or calibrated physical threshold"
+}

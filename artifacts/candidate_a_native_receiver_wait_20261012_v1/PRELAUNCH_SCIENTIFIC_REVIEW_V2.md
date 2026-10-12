@@ -1,0 +1,13 @@
+# Independent WAIT DIAG01_V2 scientific prelaunch review
+
+2026-10-12. Parent-recorded faithful summary of the completed read-only scientific_reviewer response, not a verbatim reviewer-authored document.
+
+Verdict: PASS_FOR_BOUNDED_INDEPENDENT_WAIT_DIAG01_V2_PRELAUNCH_ONLY. No unresolved Blocker/Major/requiredMinor. The latest direct user request authorizes one independently reviewed bounded native diagnostic without another permission request, subject to fresh environment/disk/one-use gates. No runtime or transplant PASS claimed.
+
+Matched current77 engineering files binder dd917c8b15fffe39d779cb02ae155f99f8855eb4195e0f76c2f9f59a73f44435,40 data files binder91315f762d2e84066036251604e9d1cc37adb4df643986b4268e4e5a8b1196c2 and DIAG01_V2card c6f8574a57396939b1b4be4c119041e78ce1f652050d5a621c6d121d8def10ac. New implementation is an exact bound uncommitted snapshot onbaseline20e5e83, not historicalcommit tested with newcode.
+
+Major closed: actualentry before/after both require explicitcurrent-gap PASS or finite-range CLEAR; denial/unknown retains both observations, actualN/accounting then STOP. Old precise-source combination genuinelyFAIL; current11testsPASS. Independentreader requires sameinterval/side/ID terminalreason for refusal, and actual combination fixtures pass. Data checkerV2/V3 technicalFAIL and V4 corrections retained. Design1.1m and W300consumed/SMOKE04unconsumed Minor corrections retained by versions.
+
+Oldobserver/availableFalse/hypotheticalv+a/two thresholds preserved. Actual-speed query+boundidentity/modes/leader/gap+same1.1m margin permits conditionalWAIT only in activatedgreen. This is an explicitly authorized isolated diagnostic semantics revision, not what the old productionguard already allowed. CLEAR only fresh validempty leader within478.67m boundpath, not unknown. Actualentry uses independentbefore/post state. Newcycle strictadmission, collision/braking/redentry/phase/identity/logunknownSTOP,1207provisional durablecheckpoint and1272end/no4thgreen stay. Officialmechanism/currentquery/postmonitoring are not a future safetycertificate.
+
+True success needs actualWAIT, controlledyellow/red/1207checkpoint, threecompletecycles, exactID FCD/TLS/ACK/N/C/E audit and intactmonitor/finalEOF. Exit0 alone insufficient. Currentgap/newcycle refusal mustSTOP without threshold relaxation. Atmost one further start only for a concretely diagnosed versioned technicalrepair. Postrun engineering→data→scientific review is mandatory before transplant andhash equivalence. Arrival braking/parentCLI logging limits remain. No formalprotocol/Stage6/oldSTOP3/A1UNRESOLVED/NOT_QUALIFIED change, no automaticGitHubpush/merge. Originalfour-budget objective still outstanding.

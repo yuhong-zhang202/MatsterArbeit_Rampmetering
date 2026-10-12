@@ -1,0 +1,91 @@
+{
+  "status": "BOUND_OBSERVED_ANOMALY",
+  "observed_post_steps": 1201,
+  "controlled_seconds_observed": 1,
+  "control_metrics": {
+    "C": 0.08333333333333333,
+    "C_applied": 0.08333333333333333,
+    "E": 0,
+    "N": 1,
+    "C_minus_E": 0.08333333333333333,
+    "E_minus_N": -1
+  },
+  "cycles": [
+    {
+      "cycle_id": 0,
+      "begin_s": 1200,
+      "end_s": 1224,
+      "observed_seconds": 1,
+      "observation": "PARTIAL",
+      "completed": false,
+      "N": 1,
+      "N_G": 1,
+      "N_y": 0,
+      "N_r": 0,
+      "crossing_ids": [
+        "R_flow.0"
+      ]
+    },
+    {
+      "cycle_id": 1,
+      "begin_s": 1224,
+      "end_s": 1248,
+      "observed_seconds": 0,
+      "observation": "NOT_OBSERVED",
+      "completed": false,
+      "N": null,
+      "N_G": null,
+      "N_y": null,
+      "N_r": null,
+      "crossing_ids": []
+    },
+    {
+      "cycle_id": 2,
+      "begin_s": 1248,
+      "end_s": 1272,
+      "observed_seconds": 0,
+      "observation": "NOT_OBSERVED",
+      "completed": false,
+      "N": null,
+      "N_G": null,
+      "N_y": null,
+      "N_r": null,
+      "crossing_ids": []
+    }
+  ],
+  "crossings": [
+    {
+      "vehicle_id": "R_flow.0",
+      "crossing_time_lower_s": 1200,
+      "crossing_time_upper_s": 1201,
+      "time_interval": "(lower,upper]",
+      "cycle_id": 0,
+      "motion_signal_state": "G"
+    }
+  ],
+  "unique_all_prefix_crossings": 1,
+  "braking_difference_vehicle_intervals": 143720,
+  "excluded_before_only_vehicle_intervals": 1263,
+  "alarms": [
+    "REPORTED_POST_STOP"
+  ],
+  "first_red_observed": false,
+  "three_cycles_observed": false,
+  "safety_qualified": false,
+  "service_qualified": false,
+  "run_classification": "STOP_OBSERVED_ANOMALY_NOT_BUDGET_REMEDIABLE",
+  "run_id": "CA_NATIVE_PHASE_R300_S17_CYCLES_W300_01",
+  "card_sha256": "25dccfa39d3ff716823f6ce7ceee18eba1c0b8c6393ae464b6db1d2b61c70386",
+  "raw_files_verified": 67,
+  "source_manifest_sha256": "9d87bca24c48b8536a2e5307fa8c957b4581eaa149a2eb876d2b07ccb05298df",
+  "loop_terminal_elapsed_s": null,
+  "monitored_elapsed_through_cleanup_s": 126.1785716250015,
+  "limitations": [
+    "Technical smoke only; no universal safety or service qualification",
+    "FCD lane/speed snapshots validate crossing count, not subsecond timestamps",
+    "Front entry into unique internal lane, not downstream E1 or rear clearance",
+    "Braking excludes last motion of arrived/before-only vehicles",
+    "Native logger excludes parent CLI warning output from online STOP",
+    "Source/binary compilation equivalence not verified"
+  ]
+}

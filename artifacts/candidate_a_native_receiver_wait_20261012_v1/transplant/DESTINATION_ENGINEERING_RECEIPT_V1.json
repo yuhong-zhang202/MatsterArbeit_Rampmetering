@@ -1,0 +1,41 @@
+{
+  "status": "PASS_EXACT_SOURCE_TRANSPLANT_AND_THREE_DESTINATION_FIXTURES_ONLY",
+  "context": "currentstate indicatestransplantedwaitimplementation, protocol0B/unfrozen remainsknownformalblocker; noformalrun",
+  "copied115_hashes_match": true,
+  "new77_bound_files_match": true,
+  "old_dependency_hashes_match": {
+    "artifacts/candidate_a_native_budget_cycles_20261012_v1/engineering/INPUT_BINDINGS_V1.json": 59,
+    "artifacts/candidate_a_a1_contract_20261011_v1/engineering/PROTECTED_BASELINE_SHA256.json": 536
+  },
+  "test_class": "WaitTests",
+  "actual_command": ".venv/bin/python -B artifacts/candidate_a_native_receiver_wait_20261012_v1/transplant/verify_destination_engineering_v1.py",
+  "selected_methods": [
+    "test_frozen_denial_pattern_current_query_is_separate_and_bound",
+    "test_current_gap_denied_is_not_wait",
+    "test_before_denied_after_pass_entry_still_stops_with_both_observations"
+  ],
+  "actual_test_exit": 0,
+  "native_starts": 0,
+  "source_test_bytes_not_modified": true,
+  "source_snapshot77binder_sha256": "dd917c8b15fffe39d779cb02ae155f99f8855eb4195e0f76c2f9f59a73f44435",
+  "test_source_sha256": "93b06376a8f423ddeaeba9bae57c7d2de85331a2b36a839422d5023015086dff",
+  "driver_sha256": "6a8c96b03aa2ef9bd6ab4c8a8b9de8c24485c47c95624d44475eff0e16f6132b",
+  "log_sha256": "50602f8649a3d620768ee1e6fe3fce3acd71c7a4bc35a761041cbe38d6eefa4e",
+  "copied_card_sha256": "c6f8574a57396939b1b4be4c119041e78ce1f652050d5a621c6d121d8def10ac",
+  "copied_card_scope": "FOREIGN_CONSUMED_WORKTREE_HISTORICAL_EVIDENCE_ONLY_NOT_NEW_PRIMARY_RUN_IDENTITY",
+  "strict_native_environment_validation_denies_foreign_input": "foreign runtime input net-file",
+  "primary_new_native_raw_identity_allocations": 0,
+  "primary_canonical_executable_auth_releases_absent": true,
+  "primary_six_historical_results_remain_ordinary_files": [
+    "results/tables/stage3_baseline_diagnostic_20260912_v2/aggregate/revision_01/lane_class_timeline.csv",
+    "results/tables/stage3_baseline_diagnostic_20260912_v2/aggregate/revision_01/stopping_episodes.csv",
+    "results/tables/stage3_baseline_diagnostic_20260912_v2/aggregate/revision_02/lane_class_timeline.csv",
+    "results/tables/stage3_baseline_diagnostic_20260912_v2/aggregate/revision_02/stopping_episodes.csv",
+    "results/tables/stage3_baseline_diagnostic_20260912_v2/aggregate/revision_03/lane_class_timeline.csv",
+    "results/tables/stage3_baseline_diagnostic_20260912_v2/aggregate/revision_03/stopping_episodes.csv"
+  ],
+  "raw_and_archive_gzip_and_six_type_changes_not_transplanted": true,
+  "full11suite_not_repeated": true,
+  "new_primary_card_not_prepared": true,
+  "remaining": "no primarynativeexecution or furtherbudget runs, no safety/ratequalification promoted"
+}

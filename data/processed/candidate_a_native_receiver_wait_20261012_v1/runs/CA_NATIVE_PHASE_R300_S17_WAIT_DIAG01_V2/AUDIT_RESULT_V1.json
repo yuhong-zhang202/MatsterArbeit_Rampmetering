@@ -1,0 +1,115 @@
+{
+  "status": "BOUND_PREFIX_MEASUREMENTS_ONLY",
+  "observed_post_steps": 1272,
+  "controlled_seconds_observed": 72,
+  "control_metrics": {
+    "C": 6.0,
+    "C_applied": 6.0,
+    "E": 6,
+    "N": 3,
+    "C_minus_E": 0.0,
+    "E_minus_N": 3
+  },
+  "cycles": [
+    {
+      "cycle_id": 0,
+      "begin_s": 1200,
+      "end_s": 1224,
+      "observed_seconds": 24,
+      "observation": "COMPLETE",
+      "completed": true,
+      "N": 1,
+      "N_G": 1,
+      "N_y": 0,
+      "N_r": 0,
+      "crossing_ids": [
+        "R_flow.0"
+      ]
+    },
+    {
+      "cycle_id": 1,
+      "begin_s": 1224,
+      "end_s": 1248,
+      "observed_seconds": 24,
+      "observation": "COMPLETE",
+      "completed": true,
+      "N": 1,
+      "N_G": 1,
+      "N_y": 0,
+      "N_r": 0,
+      "crossing_ids": [
+        "R_flow.1"
+      ]
+    },
+    {
+      "cycle_id": 2,
+      "begin_s": 1248,
+      "end_s": 1272,
+      "observed_seconds": 24,
+      "observation": "COMPLETE",
+      "completed": true,
+      "N": 1,
+      "N_G": 1,
+      "N_y": 0,
+      "N_r": 0,
+      "crossing_ids": [
+        "R_flow.2"
+      ]
+    }
+  ],
+  "crossings": [
+    {
+      "vehicle_id": "R_flow.0",
+      "crossing_time_lower_s": 1200,
+      "crossing_time_upper_s": 1201,
+      "time_interval": "(lower,upper]",
+      "cycle_id": 0,
+      "motion_signal_state": "G"
+    },
+    {
+      "vehicle_id": "R_flow.1",
+      "crossing_time_lower_s": 1224,
+      "crossing_time_upper_s": 1225,
+      "time_interval": "(lower,upper]",
+      "cycle_id": 1,
+      "motion_signal_state": "G"
+    },
+    {
+      "vehicle_id": "R_flow.2",
+      "crossing_time_lower_s": 1248,
+      "crossing_time_upper_s": 1249,
+      "time_interval": "(lower,upper]",
+      "cycle_id": 2,
+      "motion_signal_state": "G"
+    }
+  ],
+  "unique_all_prefix_crossings": 3,
+  "braking_difference_vehicle_intervals": 157828,
+  "excluded_before_only_vehicle_intervals": 1334,
+  "alarms": [],
+  "first_red_observed": true,
+  "three_cycles_observed": true,
+  "safety_qualified": false,
+  "service_qualified": false,
+  "following_record_counts_not_unique_timestamps": {
+    "READY": 1203,
+    "WAIT_NATIVE_FOLLOWING": 15,
+    "CLEAR": 6
+  },
+  "actual_entry_following_count": 3,
+  "run_classification": "THREE_CYCLES_OBSERVED_NOT_QUALIFIED",
+  "run_id": "CA_NATIVE_PHASE_R300_S17_WAIT_DIAG01_V2",
+  "card_sha256": "c6f8574a57396939b1b4be4c119041e78ce1f652050d5a621c6d121d8def10ac",
+  "raw_files_verified": 72,
+  "source_manifest_sha256": "990386cf6d40d70b5f59d6754cde56555e7e7021f0910a8918373b19afb94199",
+  "loop_terminal_elapsed_s": 144.7964810419944,
+  "monitored_elapsed_through_cleanup_s": 144.84869999997318,
+  "limitations": [
+    "Technical smoke only; no universal safety or service qualification",
+    "FCD lane/speed snapshots validate crossing count, not subsecond timestamps",
+    "Front entry into unique internal lane, not downstream E1 or rear clearance",
+    "Braking excludes last motion of arrived/before-only vehicles",
+    "Native logger excludes parent CLI warning output from online STOP",
+    "Source/binary compilation equivalence not verified"
+  ]
+}

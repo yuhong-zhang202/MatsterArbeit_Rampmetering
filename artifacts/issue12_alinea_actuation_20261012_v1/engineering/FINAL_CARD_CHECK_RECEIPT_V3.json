@@ -1,0 +1,195 @@
+{
+  "status": "PASS_ALL_THREE_PREPARED_NOT_RELEASED",
+  "cards": {
+    "CA_I12_QUOTA_R900_S17_DIAG02": {
+      "card_sha256": "a3fc722eb5dbb4e74461de08f123b415bc10600ba833a6ee588d4582954c44d4",
+      "environment_complete_and_exact": true,
+      "spec": {
+        "run_id": "CA_I12_QUOTA_R900_S17_DIAG02",
+        "seed": 17,
+        "qMain": 3600,
+        "qRamp": 900,
+        "qUrban": 360,
+        "qCross": 180,
+        "service_command_veh_h": 900,
+        "step_s": 1,
+        "activation_s": 1200,
+        "end_s": 1272,
+        "phase_durations_s": [
+          17,
+          5,
+          2
+        ],
+        "initial_hold_s": [
+          600,
+          1200
+        ],
+        "first_red_mandatory_pause": false,
+        "automatic_continuation": false,
+        "first_red_mandatory_checkpoint_s": null,
+        "first_red_checkpoint_kind": "FIRST_CONTROLLED_RED_ACK",
+        "fixed_command_veh_h": 900,
+        "period_s": 24,
+        "input_origin": "FIXED_POLICY_DIAGNOSTIC",
+        "r_ALINEA": null,
+        "discrete_rates_veh_h": [
+          300,
+          450,
+          600,
+          750,
+          900
+        ],
+        "quotas": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yellow_scope": "BOUND_ACTUAL_LOCAL_STOP_OR_BODY_CLEAR_SCREEN_NOT_A1",
+        "terminal_arrival_audit": "MANDATORY_POST_RUN_PRECISION8_NO_NEXT_RUN_IF_UNKNOWN",
+        "within_run_checkpoint_continuation": true,
+        "complete_cycles_target": 3,
+        "automatic_retry": false,
+        "sequential_postreview_gate": true,
+        "receiver_diagnostic_policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1"
+      },
+      "resources": {
+        "wall_limit_s": 300,
+        "startup_limit_s": 60,
+        "run_limit_bytes": 300000000,
+        "minimum_free_bytes": 5000000000
+      },
+      "raw_allocated": false,
+      "canonical_authorization_or_release": false
+    },
+    "CA_I12_QUOTA_R600_S17_DIAG03": {
+      "card_sha256": "aade5bdbd5140935badc74fdc867fedf87188e09ad5c363e56dc7fd249069577",
+      "environment_complete_and_exact": true,
+      "spec": {
+        "run_id": "CA_I12_QUOTA_R600_S17_DIAG03",
+        "seed": 17,
+        "qMain": 3600,
+        "qRamp": 900,
+        "qUrban": 360,
+        "qCross": 180,
+        "service_command_veh_h": 600,
+        "step_s": 1,
+        "activation_s": 1200,
+        "end_s": 1272,
+        "phase_durations_s": [
+          17,
+          5,
+          2
+        ],
+        "initial_hold_s": [
+          600,
+          1200
+        ],
+        "first_red_mandatory_pause": false,
+        "automatic_continuation": false,
+        "first_red_mandatory_checkpoint_s": null,
+        "first_red_checkpoint_kind": "FIRST_CONTROLLED_RED_ACK",
+        "fixed_command_veh_h": 600,
+        "period_s": 24,
+        "input_origin": "FIXED_POLICY_DIAGNOSTIC",
+        "r_ALINEA": null,
+        "discrete_rates_veh_h": [
+          300,
+          450,
+          600,
+          750,
+          900
+        ],
+        "quotas": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yellow_scope": "BOUND_ACTUAL_LOCAL_STOP_OR_BODY_CLEAR_SCREEN_NOT_A1",
+        "terminal_arrival_audit": "MANDATORY_POST_RUN_PRECISION8_NO_NEXT_RUN_IF_UNKNOWN",
+        "within_run_checkpoint_continuation": true,
+        "complete_cycles_target": 3,
+        "automatic_retry": false,
+        "sequential_postreview_gate": true,
+        "receiver_diagnostic_policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1"
+      },
+      "resources": {
+        "wall_limit_s": 300,
+        "startup_limit_s": 60,
+        "run_limit_bytes": 300000000,
+        "minimum_free_bytes": 5000000000
+      },
+      "raw_allocated": false,
+      "canonical_authorization_or_release": false
+    },
+    "CA_I12_QUOTA_R300_S17_DIAG01": {
+      "card_sha256": "794f4257c80decc35787fb5243ae23c23aa9c607d754f72dd2e4fa18189d90ec",
+      "environment_complete_and_exact": true,
+      "spec": {
+        "run_id": "CA_I12_QUOTA_R300_S17_DIAG01",
+        "seed": 17,
+        "qMain": 3600,
+        "qRamp": 900,
+        "qUrban": 360,
+        "qCross": 180,
+        "service_command_veh_h": 300,
+        "step_s": 1,
+        "activation_s": 1200,
+        "end_s": 1272,
+        "phase_durations_s": [
+          17,
+          5,
+          2
+        ],
+        "initial_hold_s": [
+          600,
+          1200
+        ],
+        "first_red_mandatory_pause": false,
+        "automatic_continuation": false,
+        "first_red_mandatory_checkpoint_s": null,
+        "first_red_checkpoint_kind": "FIRST_CONTROLLED_RED_ACK",
+        "fixed_command_veh_h": 300,
+        "period_s": 24,
+        "input_origin": "FIXED_POLICY_DIAGNOSTIC",
+        "r_ALINEA": null,
+        "discrete_rates_veh_h": [
+          300,
+          450,
+          600,
+          750,
+          900
+        ],
+        "quotas": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yellow_scope": "BOUND_ACTUAL_LOCAL_STOP_OR_BODY_CLEAR_SCREEN_NOT_A1",
+        "terminal_arrival_audit": "MANDATORY_POST_RUN_PRECISION8_NO_NEXT_RUN_IF_UNKNOWN",
+        "within_run_checkpoint_continuation": true,
+        "complete_cycles_target": 3,
+        "automatic_retry": false,
+        "sequential_postreview_gate": true,
+        "receiver_diagnostic_policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1"
+      },
+      "resources": {
+        "wall_limit_s": 300,
+        "startup_limit_s": 60,
+        "run_limit_bytes": 300000000,
+        "minimum_free_bytes": 5000000000
+      },
+      "raw_allocated": false,
+      "canonical_authorization_or_release": false
+    }
+  },
+  "native_starts": 0,
+  "controlled_source_update_preimage": "pre_yellow_binding_precision_V2",
+  "source_code_unchanged_by_this_card_binding": "exact current minimal implementations",
+  "environment_correction": "actual project .venv interpreter, no gate relax or environment mutation"
+}

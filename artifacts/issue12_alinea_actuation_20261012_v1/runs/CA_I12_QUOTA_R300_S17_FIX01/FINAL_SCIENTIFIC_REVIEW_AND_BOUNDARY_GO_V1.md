@@ -1,0 +1,11 @@
+# FIX300 postreview and final900 bounded gate
+
+2026-10-12. Read-only scientific_reviewer /root/budget_cycle_design_science; faithful primary record. PASS_FOR_COMPLETE_FIX300_TECHNICAL_EVIDENCE_DELIVERY and CONDITIONAL_GO_FOR_LAST900_ONLY; no new blocking findings. Context refreshed;2/3 starts used. Engineering10 bindinge422e54d74f431bb2abfec0a000d87b55bfda7c4348bff18dd9f0856b8c68265 and data12 binding44643918abb90c27120805fa0f4684374b9b181502f483a3431b28a120458521 matched.
+
+Confirmed1200–1272: three24s cycles eachG4/Y5/red15, six unique green entries, C=pending=applied=E=N6. Actual duration setters1210/1234/1258 read back1224/1248/1272. Firstred checkpoint1210 and finalEOF separately bound.1335 normal arrivals laststep audit PASS; observed min braking−4.5 and collision/teleport maximum0.21WAIT rows are repeated frames, not independent events. Original dispatch Major closed only in this actual diagnostic scope. DataV1 checkpoint schema error/V2 correction and all failures retained, no raw changes.
+
+Five measurement checks PASS within72s fixed-command meter/actual lane/threeyellow/normalarrival/EOF/uniqueID scope. Actual FCD/TLS/ACK/rate/duration independent reconciliation and previous truehelper negative regression support this gate. Not a new demand condition, ALINEA effect, future-safety certificate or long-term rate qualification. Arrival/current inventory/arrived, endpoint residual, due-not-inserted and future plans separated.
+
+Exact final900 identity CA_I12_QUOTA_R900_S17_BOUNDARY01/card SHA60750bf6b5fe390807062eeec1125d901f967b2e0aaf90c362b55618c9546e0d checked: same source/env/resources/network, spec differs only identity and requested300->900 (quota6). After canonical release and fresh gates, one third/last start may test whether actual6/cycle can be supplied withG<=17/Y5/red>=2 and unchanged local monitors. Allgreen/yellowextra entries counted. Danger/UNKNOWN STOP; no fourth start, further repair or variant;600 skipped.
+
+Neither endpoint establishes intermediate commands/dynamic ALINEA/continuous300–900/long-term service.75veh/h is nominal quantization only;375->30020% cannot be claimed within original10% service criterion across all rates. Stage6 closure, A1 UNRESOLVED, Candidate A NOT_QUALIFIED, oldSTOP3 and formal protocol0B/unfrozen remain. No reviewer tests/writes/native performed.

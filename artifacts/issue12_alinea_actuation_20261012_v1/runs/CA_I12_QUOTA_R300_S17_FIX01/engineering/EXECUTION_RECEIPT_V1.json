@@ -1,0 +1,490 @@
+{
+  "run_id": "CA_I12_QUOTA_R300_S17_FIX01",
+  "status": "THREE_CYCLES_OBSERVED_NO_MONITORED_ANOMALY_NOT_QUALIFIED",
+  "error": "",
+  "this_run_native_starts": 1,
+  "total_Issue12_allocations": 2,
+  "native_PID": 81108,
+  "cli_start": {
+    "run_id": "CA_I12_QUOTA_R300_S17_FIX01",
+    "command": [
+      "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+      "-B",
+      "scripts/candidate_a_issue12_signal_policy_20261012_v1/cli.py",
+      "--execute",
+      "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/issue12_alinea_actuation_20261012_v1/engineering/packages/CA_I12_QUOTA_R300_S17_FIX01/card.json",
+      "--release",
+      "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/issue12_alinea_actuation_20261012_v1/engineering/releases/CA_I12_QUOTA_R300_S17_FIX01/EXECUTION_RELEASE.json"
+    ],
+    "cwd": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering",
+    "launcher_pid": 81086,
+    "cli_pid": 81105,
+    "actual_HEAD": "20e5e83ac059768320cdaa4c815d164e1022de45",
+    "source_binding_sha256": "6520b77d6e7915eaa72434b58b211a06f150aa86bd45572217e18b4f5f3d50aa",
+    "card_sha256": "9f914d8b307df524d47b56999280b8a58fc76da13d4d57f4f743cdf2fe0478ee",
+    "native_start_count_before": 1,
+    "this_allocation_maximum": 1,
+    "automatic_retry": false
+  },
+  "CLI_exit": {
+    "returncode": 0,
+    "whole_cli_elapsed_s": 127.0209319999849,
+    "automatic_retry": false,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "016a2623ad7a12b5dc6b9c1f6431f3f09d00a6f8e9ea10c3738b9a809d24a619"
+  },
+  "last_completed_s": 1272,
+  "last_accounted_s": 1272,
+  "bridge_monitored_elapsed_s": 126.59917641701759,
+  "loop_terminal_elapsed_s": 126.55005329201231,
+  "watchdog": {
+    "reason": null,
+    "error": null,
+    "poll_s": 0.2
+  },
+  "final_logs": {
+    "coverage": "FINAL_FILES_AT_OWNED_PROCESS_EOF",
+    "process_returncode": 0,
+    "all_streams_bound": true,
+    "late_bytes": {
+      "sumo_stderr.log": 0,
+      "sumo_stdout.log": 0,
+      "sumo_error.log": 0,
+      "sumo.log": 983
+    },
+    "status": "BOUND_NO_OBSERVED_NATIVE_MESSAGE",
+    "reasons": [],
+    "critical_message_observed_or_unrecognized": false,
+    "log_parsing_unverified": false,
+    "per_step_complete_native_universal_claim": false,
+    "record_count": 2547
+  },
+  "cycles": [
+    {
+      "cycle_id": 0,
+      "begin_s": 1200,
+      "end_s": 1224,
+      "period_s": 24,
+      "requested_quota": 2,
+      "quota_status": "REQUESTED_NOT_EMPIRICALLY_QUALIFIED",
+      "applied_command_veh_h": 300,
+      "command_requested_s": 1200,
+      "command_applied_s": 1200,
+      "application_delay_s": 0,
+      "green_end_s": 1204,
+      "green_end_reason": "ACTUAL_QUOTA_ACK",
+      "executed": true,
+      "completed": true,
+      "N_G": 2,
+      "N_y": 0,
+      "N_r": 0,
+      "crossing_ids": [
+        "R_flow.0",
+        "R_flow.1"
+      ],
+      "phase_exposure_s": {
+        "G": 4,
+        "y": 5,
+        "r": 15
+      },
+      "denial_reason": "",
+      "red_clock_bound": true,
+      "remaining_red_set_at_s": 1210,
+      "remaining_red_duration_s": 14
+    },
+    {
+      "cycle_id": 1,
+      "begin_s": 1224,
+      "end_s": 1248,
+      "period_s": 24,
+      "requested_quota": 2,
+      "quota_status": "REQUESTED_NOT_EMPIRICALLY_QUALIFIED",
+      "applied_command_veh_h": 300,
+      "command_requested_s": 1200,
+      "command_applied_s": 1224,
+      "application_delay_s": 24,
+      "green_end_s": 1228,
+      "green_end_reason": "ACTUAL_QUOTA_ACK",
+      "executed": true,
+      "completed": true,
+      "N_G": 2,
+      "N_y": 0,
+      "N_r": 0,
+      "crossing_ids": [
+        "R_flow.2",
+        "R_flow.3"
+      ],
+      "phase_exposure_s": {
+        "G": 4,
+        "y": 5,
+        "r": 15
+      },
+      "denial_reason": "",
+      "red_clock_bound": true,
+      "remaining_red_set_at_s": 1234,
+      "remaining_red_duration_s": 14
+    },
+    {
+      "cycle_id": 2,
+      "begin_s": 1248,
+      "end_s": 1272,
+      "period_s": 24,
+      "requested_quota": 2,
+      "quota_status": "REQUESTED_NOT_EMPIRICALLY_QUALIFIED",
+      "applied_command_veh_h": 300,
+      "command_requested_s": 1200,
+      "command_applied_s": 1248,
+      "application_delay_s": 48,
+      "green_end_s": 1252,
+      "green_end_reason": "ACTUAL_QUOTA_ACK",
+      "executed": true,
+      "completed": true,
+      "N_G": 2,
+      "N_y": 0,
+      "N_r": 0,
+      "crossing_ids": [
+        "R_flow.4",
+        "R_flow.5"
+      ],
+      "phase_exposure_s": {
+        "G": 4,
+        "y": 5,
+        "r": 15
+      },
+      "denial_reason": "",
+      "red_clock_bound": true,
+      "remaining_red_set_at_s": 1258,
+      "remaining_red_duration_s": 14
+    }
+  ],
+  "control_accounting": {
+    "C": 6.0,
+    "C_mapped_pending": 6.0,
+    "C_applied": 6.0,
+    "E": 6,
+    "N": 6,
+    "policy_quantization": 0.0,
+    "application_latency": 0.0,
+    "C_applied_minus_E": 0.0,
+    "E_minus_N": 0
+  },
+  "first_red_checkpoint_verified": true,
+  "first_red_checkpoint": {
+    "time_s": 1210,
+    "first_controlled_red_begin_s": 1209,
+    "status": "CHECKPOINT_PASSED_CONTINUE_SAME_AUTHORIZED_RUN",
+    "accounting": {
+      "C": 0.8333333333333334,
+      "C_mapped_pending": 0.8333333333333334,
+      "C_applied": 0.8333333333333334,
+      "E": 0,
+      "N": 2,
+      "policy_quantization": 0.0,
+      "application_latency": 0.0,
+      "C_applied_minus_E": 0.8333333333333334,
+      "E_minus_N": -2
+    },
+    "log_capture": {
+      "time_begin_s": 1210,
+      "time_end_s": 1210,
+      "stage": "FIRST_RED_CHECKPOINT_PROVISIONAL_UNTIL_EOF",
+      "streams": {
+        "sumo_stderr.log": {
+          "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/issue12_alinea_actuation_20261012_v1/CA_I12_QUOTA_R300_S17_FIX01/outputs/sumo_stderr.log",
+          "byte_start": 0,
+          "byte_end": 0,
+          "device": 16777233,
+          "inode": 90064338,
+          "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "fragment_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "text": "",
+          "raw_fragment_hex": "",
+          "whole_prefix_decoded": true,
+          "coverage": "CONDITIONAL_SYNC_CERR_BEFORE_ACK"
+        },
+        "sumo_stdout.log": {
+          "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/issue12_alinea_actuation_20261012_v1/CA_I12_QUOTA_R300_S17_FIX01/outputs/sumo_stdout.log",
+          "byte_start": 0,
+          "byte_end": 0,
+          "device": 16777233,
+          "inode": 90064339,
+          "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "fragment_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "text": "",
+          "raw_fragment_hex": "",
+          "whole_prefix_decoded": true,
+          "coverage": "PROVISIONAL_UNTIL_PROCESS_EOF"
+        },
+        "sumo_error.log": {
+          "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/issue12_alinea_actuation_20261012_v1/CA_I12_QUOTA_R300_S17_FIX01/outputs/sumo_error.log",
+          "byte_start": 0,
+          "byte_end": 0,
+          "device": 16777233,
+          "inode": 90064340,
+          "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "fragment_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "text": "",
+          "raw_fragment_hex": "",
+          "whole_prefix_decoded": true,
+          "coverage": "PROVISIONAL_UNTIL_PROCESS_EOF"
+        },
+        "sumo.log": {
+          "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/issue12_alinea_actuation_20261012_v1/CA_I12_QUOTA_R300_S17_FIX01/outputs/sumo.log",
+          "byte_start": 0,
+          "byte_end": 0,
+          "device": 16777233,
+          "inode": 90064341,
+          "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "fragment_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "text": "",
+          "raw_fragment_hex": "",
+          "whole_prefix_decoded": true,
+          "coverage": "PROVISIONAL_UNTIL_PROCESS_EOF"
+        }
+      }
+    },
+    "log_scope": "PROVISIONAL_NATIVE_CAPTURE_FINAL_EOF_REQUIRED",
+    "elapsed_monitored_wall_s": 114.66892950001056,
+    "native_safety_proven": false,
+    "rate_qualified": false
+  },
+  "journal_row_counts": {
+    "pre_steps": 1272,
+    "post_steps": 1272,
+    "step_ack": 2544,
+    "log_intervals": 2547,
+    "startup_trace": 3,
+    "policy_phase_requests": 6,
+    "policy_duration_requests": 6,
+    "yellow_scope": 3
+  },
+  "actual_phase_requests": [
+    {
+      "time_s": 1204,
+      "requests": [
+        {
+          "time_s": 1204,
+          "method": "setPhase",
+          "value": 1,
+          "call_completed": true
+        }
+      ],
+      "cycle_id": 0,
+      "cycle_end_s": 1224,
+      "actual_quota_N_G": 2,
+      "requested_quota": 2,
+      "actual_readback": {
+        "time_s": 1204.0,
+        "phase": 1,
+        "state": "y",
+        "nextSwitch_s": 1209.0
+      }
+    },
+    {
+      "time_s": 1210,
+      "requests": [
+        {
+          "time_s": 1210,
+          "method": "setPhaseDuration",
+          "value": 14,
+          "call_completed": true,
+          "actual_readback": {
+            "time_s": 1210.0,
+            "program": "I12_QUOTA24",
+            "phase": 2,
+            "state": "r",
+            "nextSwitch_s": 1224.0
+          }
+        }
+      ],
+      "cycle_id": 0,
+      "cycle_end_s": 1224,
+      "actual_quota_N_G": 2,
+      "requested_quota": 2,
+      "actual_readback": {
+        "time_s": 1210.0,
+        "phase": 2,
+        "state": "r",
+        "nextSwitch_s": 1224.0
+      }
+    },
+    {
+      "time_s": 1228,
+      "requests": [
+        {
+          "time_s": 1228,
+          "method": "setPhase",
+          "value": 1,
+          "call_completed": true
+        }
+      ],
+      "cycle_id": 1,
+      "cycle_end_s": 1248,
+      "actual_quota_N_G": 2,
+      "requested_quota": 2,
+      "actual_readback": {
+        "time_s": 1228.0,
+        "phase": 1,
+        "state": "y",
+        "nextSwitch_s": 1233.0
+      }
+    },
+    {
+      "time_s": 1234,
+      "requests": [
+        {
+          "time_s": 1234,
+          "method": "setPhaseDuration",
+          "value": 14,
+          "call_completed": true,
+          "actual_readback": {
+            "time_s": 1234.0,
+            "program": "I12_QUOTA24",
+            "phase": 2,
+            "state": "r",
+            "nextSwitch_s": 1248.0
+          }
+        }
+      ],
+      "cycle_id": 1,
+      "cycle_end_s": 1248,
+      "actual_quota_N_G": 2,
+      "requested_quota": 2,
+      "actual_readback": {
+        "time_s": 1234.0,
+        "phase": 2,
+        "state": "r",
+        "nextSwitch_s": 1248.0
+      }
+    },
+    {
+      "time_s": 1252,
+      "requests": [
+        {
+          "time_s": 1252,
+          "method": "setPhase",
+          "value": 1,
+          "call_completed": true
+        }
+      ],
+      "cycle_id": 2,
+      "cycle_end_s": 1272,
+      "actual_quota_N_G": 2,
+      "requested_quota": 2,
+      "actual_readback": {
+        "time_s": 1252.0,
+        "phase": 1,
+        "state": "y",
+        "nextSwitch_s": 1257.0
+      }
+    },
+    {
+      "time_s": 1258,
+      "requests": [
+        {
+          "time_s": 1258,
+          "method": "setPhaseDuration",
+          "value": 14,
+          "call_completed": true,
+          "actual_readback": {
+            "time_s": 1258.0,
+            "program": "I12_QUOTA24",
+            "phase": 2,
+            "state": "r",
+            "nextSwitch_s": 1272.0
+          }
+        }
+      ],
+      "cycle_id": 2,
+      "cycle_end_s": 1272,
+      "actual_quota_N_G": 2,
+      "requested_quota": 2,
+      "actual_readback": {
+        "time_s": 1258.0,
+        "phase": 2,
+        "state": "r",
+        "nextSwitch_s": 1272.0
+      }
+    }
+  ],
+  "duration_request_events": [
+    {
+      "time_s": 1210,
+      "method": "setPhaseDuration",
+      "value": 14,
+      "call_completed": false,
+      "status": "ATTEMPTED",
+      "cycle_end_s": 1224
+    },
+    {
+      "time_s": 1210,
+      "method": "setPhaseDuration",
+      "value": 14,
+      "call_completed": true,
+      "actual_readback": {
+        "time_s": 1210.0,
+        "program": "I12_QUOTA24",
+        "phase": 2,
+        "state": "r",
+        "nextSwitch_s": 1224.0
+      },
+      "status": "READBACK_VERIFIED",
+      "cycle_end_s": 1224
+    },
+    {
+      "time_s": 1234,
+      "method": "setPhaseDuration",
+      "value": 14,
+      "call_completed": false,
+      "status": "ATTEMPTED",
+      "cycle_end_s": 1248
+    },
+    {
+      "time_s": 1234,
+      "method": "setPhaseDuration",
+      "value": 14,
+      "call_completed": true,
+      "actual_readback": {
+        "time_s": 1234.0,
+        "program": "I12_QUOTA24",
+        "phase": 2,
+        "state": "r",
+        "nextSwitch_s": 1248.0
+      },
+      "status": "READBACK_VERIFIED",
+      "cycle_end_s": 1248
+    },
+    {
+      "time_s": 1258,
+      "method": "setPhaseDuration",
+      "value": 14,
+      "call_completed": false,
+      "status": "ATTEMPTED",
+      "cycle_end_s": 1272
+    },
+    {
+      "time_s": 1258,
+      "method": "setPhaseDuration",
+      "value": 14,
+      "call_completed": true,
+      "actual_readback": {
+        "time_s": 1258.0,
+        "program": "I12_QUOTA24",
+        "phase": 2,
+        "state": "r",
+        "nextSwitch_s": 1272.0
+      },
+      "status": "READBACK_VERIFIED",
+      "cycle_end_s": 1272
+    }
+  ],
+  "terminal_pending_rows": 1335,
+  "engineering44_hashes_unchanged": true,
+  "protected536_hashes_unchanged": true,
+  "source_snapshot_matches_runtime_card": true,
+  "free_bytes_after": 46436200448,
+  "arrival_audit": "PENDING_DATA_REVIEW",
+  "no_retry": true,
+  "formal_or_rate_qualified": false,
+  "raw_manifest_sha256": "c63436ebcaf75efc969c8778c3cde11de6181b41c7ce9a13a2536d9e4e268ea6"
+}

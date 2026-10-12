@@ -1,0 +1,65 @@
+{
+  "status": "PASS_RECEIVER_CONTRACT_VALUE_BINDING_ONLY_NOT_PHYSICAL_SAFETY",
+  "pre_front": "R_flow.0",
+  "post_front": "R_flow.1",
+  "internal_leader": "R_flow.0",
+  "rear_clearance_m": -4.685730412295754,
+  "required_clearance_m": 7.5,
+  "internal_front_position_m": 0.3142695877042456,
+  "leader_gap_excluding_minGap_m": 1.3163151997241584,
+  "ego_minGap_m": 2.5,
+  "bumper_gap_m": 3.8163151997241584,
+  "secure_gap_recorded_m": 2.6,
+  "required_secure_plus_margin_m": 3.7,
+  "secure_gap_query_speed_reconstructed_m_s": 2.6,
+  "actual_post_front_speed_m_s": 0,
+  "secure_gap_query_scope": "hypothetical one-step acceleration release check, not current stationary queue danger; no actual getSecureGap rerun; exact query not separately serialized",
+  "both_receiver_predicates_reject": true,
+  "leader_reason_overwrites_clearance_reason": true,
+  "native_alarm_observed": false,
+  "current_guard_STOP_observed": true,
+  "physical_unsafe_proven": false,
+  "direct_sampling_or_identity_bug_proven": false,
+  "monitored_elapsed_through_cleanup_s": 126.1785716250015,
+  "native_final_logs_status": "BOUND_NO_OBSERVED_NATIVE_MESSAGE",
+  "native_log_records": 2404,
+  "last_post_acceleration_ids": 199,
+  "raw_manifest_entries": 67,
+  "engineering_files_verified": 12,
+  "client_stderr_online_coverage": "EXCLUDED_UNCHANGED; final separate client capture only",
+  "bound_client_files": [
+    "artifacts/candidate_a_native_budget_cycles_20261012_v1/runs/CA_NATIVE_PHASE_R300_S17_CYCLES_W300_01/engineering/CLI_STDERR.log"
+  ],
+  "future_cycle1_cycle2_metrics": {
+    "C": null,
+    "C_applied": null,
+    "E": null,
+    "N": null,
+    "C_minus_E": null,
+    "E_minus_N": null
+  },
+  "cycle0_phase_exposure": [
+    {
+      "phase": "G",
+      "observed_seconds": 1,
+      "scheduled_seconds": 3,
+      "N": 1,
+      "observation": "PARTIAL"
+    },
+    {
+      "phase": "y",
+      "observed_seconds": 0,
+      "scheduled_seconds": 3,
+      "N": null,
+      "observation": "NOT_OBSERVED"
+    },
+    {
+      "phase": "r",
+      "observed_seconds": 0,
+      "scheduled_seconds": 18,
+      "N": null,
+      "observation": "NOT_OBSERVED"
+    }
+  ],
+  "interpretation": "Actual values satisfy current contract refusal. Post-monitor asks about nextfront after legal R0 entry, not initial admission R0. Changing whether this terminates current green is contract responsibility change; largerwall budget does not repair this."
+}

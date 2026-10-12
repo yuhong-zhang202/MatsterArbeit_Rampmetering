@@ -1,0 +1,16 @@
+{
+  "literal_latest_human_instruction": "本轮不再用固定启动次数作为技术修复的停止条件。请在明确的任务范围和总资源预算内自主排查、修复、审查及诊断运行。每次运行说明必要性，保留全部记录；避免重复无效运行。证据足够或已明确无法在现有边界内解决时停止。安全检查、科研设计和异常停止规则保持不变。",
+  "authority": "direct human instruction forwarded by primary agent",
+  "selected_total_resource_envelope": {
+    "monitored_s": 900,
+    "raw_bytes": 900000000
+  },
+  "numerical_budget_provenance": "engineering selected without enlarging original3x300s/3x300MB; not a verbatim human numerical approval",
+  "single_caps_unchanged": {
+    "wall_s": 300,
+    "output_bytes": 300000000,
+    "startup_s": 60,
+    "free_bytes": 5000000000
+  },
+  "scope": "one phase-only two-car packet policy, oldhard9+1.1 and every other safety/unknown STOP unchanged, no formal design change"
+}

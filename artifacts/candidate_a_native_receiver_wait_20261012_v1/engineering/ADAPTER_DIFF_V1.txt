@@ -1,0 +1,63 @@
+--- src/candidate_a_native_budget_cycles_20261012/adapter.py
++++ src/candidate_a_native_receiver_wait_20261012/adapter.py
+@@ -18,7 +18,8 @@
+     'U': ('urban_in', 'shared_approach', 'urban_out'),
+     'X': ('cross_in', 'cross_out'),
+ }
+-PROFILE = 'NATIVE_PHASE_THREE_CYCLE_DIAGNOSTIC_NOT_QUALIFIED'
++PROFILE = 'NATIVE_PHASE_CURRENT_FOLLOWING_WAIT_DIAGNOSTIC_NOT_QUALIFIED'
++from src.candidate_a_native_receiver_wait_20261012.receiver_wait import classify_receiver, current_following
+ 
+ 
+ class PhaseEnvelope(ProtectedPhaseEnvelope):
+@@ -153,14 +154,17 @@
+         else:
+             require(program == 'A_OPEN' and type(phase) is int and phase == 0 and state == 'G', 'OPEN_PHASE_MISMATCH')
+             motion = 'G'
+-        require(receiver['available'] or motion != 'G', 'GREEN_RECEIVER_DENIED')
++        native_decision = classify_receiver(conn, receiver, time_s) if motion == 'G' else None
++        require(receiver['available'] or motion != 'G' or native_decision['decision'] == 'WAIT_NATIVE_FOLLOWING', 'CURRENT_GAP_BOUND_DENIED')
++        entry_before = {vid: current_following(conn, vid, time_s, allow_clear=True) for vid in sorted(ids[STORAGE])} if motion in ('G','y') else {}
+         entering_red = motion == 'r' and (self.previous_motion != 'r' or state == 'y')
+         shadow = red_transition_witness(vehicles) if entering_red else None
+         self.pending = {'time_s': time_s, 'world': world, 'loaded': loaded, 'pending_ids': pending_ids,
+                         'storage': set(ids[STORAGE]), 'internal': set(internal), 'cycle_id': cycle['cycle_id'] if cycle else -1,
+                         'program': program, 'phase_before': phase, 'state_before': state, 'next_switch_before_s': nxt, 'motion_phase': idx if time_s >= 600 else 0,
+                         'motion': motion, 'entering_red': entering_red, 'shadow_envelope': shadow,
+-                        'vehicle_states': [asdict(v) for v in vehicles], 'receiver': receiver}
++                        'vehicle_states': [asdict(v) for v in vehicles], 'receiver': receiver,
++                        'native_receiver_decision': native_decision, 'entry_following_before': entry_before}
+         return {'status': 'OBSERVATIONS_BOUND_NOT_PROSPECTIVE_SAFETY', 'profile': PROFILE,
+                 'motion': motion, 'shadow_envelope': shadow, 'step_advance_performed': False}
+ 
+@@ -213,11 +217,28 @@
+         try:
+             _, _, post_internal, post_receiver = self.observe(conn)
+             if type(post_receiver.get('available')) is not bool: errors.append('UNKNOWN_POST_RECEIVER')
+-            if post_receiver.get('available') is False and p['motion'] == 'G': errors.append('POST_GREEN_RECEIVER_DENIED')
++            if p['motion'] == 'G':
++                row['post_native_receiver_decision'] = classify_receiver(conn, post_receiver, self.last_completed)
++                if row['post_native_receiver_decision']['decision'] not in ('READY','WAIT_NATIVE_FOLLOWING'):
++                    errors.append('POST_CURRENT_GAP_BOUND_DENIED')
+             if set(post_internal) != set(conn.lane.getLastStepVehicleIDs(INTERNAL)): errors.append('POST_INTERNAL_COVERAGE_MISMATCH')
+             row['post_receiver'] = post_receiver
+         except Exception as exc:
+-            errors.append('POST_OBSERVATION_UNKNOWN:'+type(exc).__name__)
++            row['post_observation_error'] = {'type':type(exc).__name__, 'reason':str(exc)}
++            errors.append('POST_OBSERVATION_UNKNOWN:'+type(exc).__name__+':'+str(exc))
++        row['actual_entry_following'] = []
++        for record in recs:
++            vid = record['vehicle_id']
++            bound = {'vehicle_id':vid, 'time_begin_s':p['time_s'], 'time_end_s':self.last_completed,
++                'before':p['entry_following_before'].get(vid), 'after':None, 'motion':p['motion']}
++            row['actual_entry_following'].append(bound)
++            try:
++                require(bound['before'] is not None and bound['before']['vehicle_id']==vid, 'UNKNOWN_ENTRY_BEFORE_BINDING')
++                bound['after'] = current_following(conn, vid, self.last_completed, allow_clear=True)
++                if bound['after']['status']=='STOP_CURRENT_GAP_BOUND_DENIED':errors.append('ACTUAL_ENTRY_CURRENT_GAP_BOUND_DENIED:'+vid)
++            except Exception as exc:
++                bound['error'] = type(exc).__name__+':'+str(exc)
++                errors.append('ACTUAL_ENTRY_FOLLOWING_UNKNOWN:'+vid+':'+str(exc))
+         counters = {'colliding_vehicles': conn.simulation.getCollidingVehiclesNumber(),
+             'starting_teleports': conn.simulation.getStartingTeleportNumber(), 'ending_teleports': conn.simulation.getEndingTeleportNumber()}
+         row['native_event_counters'] = counters

@@ -1,0 +1,11 @@
+# Scientific review of bounded existing-data discharge cause V1
+
+2026-10-12. Read-only reviewer /root/budget_cycle_design_science; faithful parent record.
+
+Verdict PASS_FOR_BOUNDED_EXISTING_DISCHARGE_SHORTFALL_EXPLANATION; no required findings. Context preflight, engineering report, ten-file data binding and six-cycle results checked. Green-interval speed sums independently reconcile with position advances.
+
+Observation: second queued vehicle starts stopped about8.502m before the measured storage-to-internal line, does not move in first green second, and remains5.008/4.351/2.993m upstream after3s G. It then approaches/decelerates on yellow and stops about1m upstream; second vehicles of firsttwo cycles cross in nextcycle. This establishes why secondvehicle was absent from these green intervals, but does not uniquely identify native following/signal/random branches. WAIT issues no vehicle-stop command. Old prospective refusal and current-gap pass are different predicates, not proof of permanent physical receiving congestion. Same-seed paired snapshots are not independent stochastic repetitions.
+
+Measurement checks: target/space-time coverage/omission-duplication pass within firsttwo cars percycle at original meter line; independent necessary FCD/TLS/ACK/N and speed-position reconciliation pass. New extraction-code independent regression NOT_VERIFIED: no new tests; existing count/time protections and extraction assertions reused. Not a blocker to the limited directly checked numerical conclusion.
+
+No new simulation needed to explain the existing result. Preserve nominal_n2 UNQUALIFIED and historical E6/N3. If a subsequent task requires testing two-car packets, one separately authorized single-point longer-effective-green technical test is reasonable, without a guaranteed seconds value or successfulN2 assertion. Do not relax yellow/model/safety. Existing n2/y3/minimumr2 for900veh/h requires period<=8s and G<=3s; longerG at one point cannot establish complete300–900 service qualification or be claimed compliant with unchanged PhaseEnvelope. Clarify future objective/card authorization before running. All suggestions Proposed; Stage6/oldSTOP3/A1UNRESOLVED/NOT_QUALIFIED/formal unfrozen preserved.

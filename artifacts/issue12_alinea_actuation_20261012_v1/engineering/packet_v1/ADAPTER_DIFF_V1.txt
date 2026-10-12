@@ -1,0 +1,59 @@
+--- old/adapter.py
++++ packet/adapter.py
+@@ -20,7 +20,8 @@
+ }
+ PROFILE = 'NATIVE_PHASE_CURRENT_FOLLOWING_WAIT_DIAGNOSTIC_NOT_QUALIFIED'
+ from src.candidate_a_native_receiver_wait_20261012.receiver_wait import classify_receiver, current_following
+-from src.candidate_a_issue12_signal_policy_20261012.policy import Ledger, PROGRAM, MAX_GREEN, YELLOW, yellow_scope
++from src.candidate_a_issue12_packet_policy_20261012.policy import Ledger, PROGRAM, PERIOD, MAX_GREEN, YELLOW, yellow_scope
++from src.candidate_a_issue12_packet_policy_20261012.body import BodyTracker
+ 
+ 
+ class PhaseEnvelope(ProtectedPhaseEnvelope):
+@@ -88,6 +89,7 @@
+         self.checkpoint_pending = False
+         self.checkpoint_verified = False
+         self.receipts = []
++        self.body = BodyTracker()
+ 
+     def _terminal_call(self, method, *args):
+         require(not self.paused, 'TERMINAL_PAUSE_NO_RETRY')
+@@ -149,7 +151,7 @@
+             if new:
+                 require(idx == 0 and motion == 'G' and receiver['available'], 'GREEN_START_NOT_PREPARED_OR_RECEIVER_DENIED')
+                 require((time_s == 1200 and phase == 0 and state == 'G' and nxt == time_s+MAX_GREEN) or
+-                        (time_s in (1224,1248) and phase == 2 and state == 'r' and nxt == time_s),
++                        (time_s in range(1200+PERIOD,1272,PERIOD) and phase == 2 and state == 'r' and nxt == time_s),
+                         'NATIVE_CYCLE_START_BOUNDARY_MISMATCH')
+                 self.ledger.mark_cycle_start(True)
+             if motion == 'y' and cycle['green_end_s'] is None:
+@@ -181,7 +183,7 @@
+                             r_policy_pending_veh_h=self.ledger.step_mapped if cycle else None,
+                             r_policy_applied_veh_h=cycle['applied_command_veh_h'] if cycle else None,
+                             requested_quota=cycle['requested_quota'] if cycle else None,
+-                            period_s=24 if cycle else None,
++                            period_s=PERIOD if cycle else None,
+                             cycle_application_delay_s=cycle['application_delay_s'] if cycle else None),
+                         'terminal_before':{vid:dict(vehicle_id=vid, time_s=time_s,
+                             speed_m_s=w['speed_m_s'], lane_id=w['lane_id'],
+@@ -303,6 +305,10 @@
+             braking['actual_acceleration_m_s2'][vid] = a if math.isfinite(a) else None
+             if not math.isfinite(a) or a < -4.5-1e-6: errors.append('UNKNOWN_OR_EXCESSIVE_ACCELERATION:'+vid)
+         if any(s in native_warning_text.lower() for s in ('emergency braking','emergency stop','collision','teleport')): errors.append('NATIVE_WARNING')
++        try:row['body_observation']=self.body.observe(conn,self.last_completed,world,recs,p['motion'])
++        except Exception as exc:
++            row['body_observation_error']={'type':type(exc).__name__,'reason':str(exc)}
++            errors.append('BODY_COVERAGE_UNKNOWN:'+type(exc).__name__+':'+str(exc))
+         if errors:
+             self.paused = True
+             row.update(status='STOP_OBSERVED_AFTER_STEP', reasons=errors)
+@@ -313,7 +319,7 @@
+             row['status'] = 'MANDATORY_FIRST_RED_CHECKPOINT_PENDING'
+         if self.last_end >= 1272:
+             require(self.checkpoint_verified, 'FIRST_RED_CHECKPOINT_MISSING')
+-            require(len(self.ledger.rows) == 3 and all(c['completed'] for c in self.ledger.rows), 'THREE_CYCLES_INCOMPLETE')
++            require(len(self.ledger.rows) == (1272-1200)//PERIOD and all(c['completed'] for c in self.ledger.rows), 'PACKET_CYCLES_INCOMPLETE')
+             self.paused = True
+-            row['status'] = 'THREE_CYCLES_COMPLETED_MANDATORY_STOP_NOT_QUALIFIED'
++            row['status'] = 'PACKET_CYCLES_COMPLETED_MANDATORY_STOP_NOT_QUALIFIED'
+         return row

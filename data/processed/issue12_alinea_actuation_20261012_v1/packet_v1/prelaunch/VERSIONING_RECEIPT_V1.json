@@ -1,0 +1,11 @@
+{
+  "classification": "DERIVED_OUTPUT_PATH_REUSE_DISCLOSED_AND_VERSIONED",
+  "V1_actual_execution": "PASS six-frame extraction",
+  "V2_actual_execution": "PASS added TLS bindings, reused V1 derived output path",
+  "pre_V2_output_hash": "NOT_RECORDED",
+  "source_diff_changes_output_computation": false,
+  "limitation": "Do not claim an independently saved pre-V2 result hash; source and both run logs retained. Raw immutable inputs unchanged.",
+  "correction": "Current V2 result captured as separate SIX_FRAME_RESULTS_V2.json; future affected check uses new output path, no silent same-file generation.",
+  "current_V1_and_V2_result_sha256": "37b992745317d68166bd2e8258150dc0c08056b196ae386b5ede1dcd1ecb540a",
+  "SUMO_starts": 0
+}

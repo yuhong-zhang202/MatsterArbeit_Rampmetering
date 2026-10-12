@@ -1,0 +1,9 @@
+# Last R900 diagnostic: exact current-gap STOP
+
+**Bounded engineering outcome: NO-GO for continuing this exact policy under the retained current-gap contract; complete300–900 qualification remains unsupported.**
+
+At actual ACK1206, front `R_flow.2` was on ramp_storage_0 at203.0577513 m, actual speed7.0605963 m/s. Bound leader `R_flow.1` was on :ramp_mid_0_0, speed8.4786561 m/s. Fresh getLeader gap excluding minGap=9.6308776 m; minGap2.5 m, physical bumper gap12.1308776 m. Actual getSecureGap call used leaderMaxDecel9.0 m/s² and returned9.6211925 m. Retained custom margin1.1 m made the required bound10.7211925 m: deficit1.090314929 m. Thus this was an explicitly observed contract denial, not absent query coverage, a wall-budget failure or the earlier unsupported-method bug. Exact inputs/outputs/time/ID/routes/modes are bound in STOP_INPUT_DETAIL_V1.json to immutable failure_snapshot.json.
+
+Native counters at the stopped ACK were collision0/startteleport0/endteleport0. No actual red oryellow exposure/entries occurred in the sixgreen-second prefix; no firstred checkpoint or duration API call was reached. Absence of these observed events does not prove future safety or ability to finish quota6. Importantly, violating secureGap plus the custom1.1m margin is not equivalent to a proven SUMO collision or proof CandidateA/native phase control impossible. The margin's necessity/universal safety meaning is not established by this diagnostic. It is retained, not relaxed.
+
+Allthree Issue12 allocations have now been consumed (one dispatch failure, one complete FIX300, one current-gap-denied900). No fourth run, another repair,600, parameter variant or guard relaxation follows. Source44 and536protected remain exact; raw frozen. Independent data must still reconcile all1206 steps, two actualgreen crossings, partialC1.5/E0/N2, lastmovement arrival andEOF coverage. Science owns final scope-level interpretation.

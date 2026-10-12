@@ -1,0 +1,47 @@
+{
+  "classification": "SKIPPED_BY_USER_SUFFICIENT_MINIMUM_BUDGET",
+  "latest_direct_user_steering_as_relayed_by_parent": "如果已经测试到最佳运行时长，剩余档可不测",
+  "authority_note": "direct human steering relayed by parent; no new scientific decision or per-run permission",
+  "remaining_identities": {
+    "CA_NATIVE_PHASE_R300_S17_WAIT_BUDGET_W420_01": {
+      "wall_limit_s": 420,
+      "card_sha256": "832c0de1a521a44f2fd58f01169bcb3872502ed23732b8abc4d8484ba476b8f6",
+      "prepared_card_status": "PREPARED_NOT_RELEASED",
+      "canonical_authorization_exists": false,
+      "canonical_release_exists": false,
+      "raw_identity_exists": false,
+      "runtime_artifact_exists": false,
+      "native_starts": 0,
+      "disposition": "SKIPPED_BY_USER_SUFFICIENT_MINIMUM_BUDGET"
+    },
+    "CA_NATIVE_PHASE_R300_S17_WAIT_BUDGET_W480_01": {
+      "wall_limit_s": 480,
+      "card_sha256": "a4a2d3387127943dd6f862d03a8b2d7f366981d45d42583b13d5d90faa137c3f",
+      "prepared_card_status": "PREPARED_NOT_RELEASED",
+      "canonical_authorization_exists": false,
+      "canonical_release_exists": false,
+      "raw_identity_exists": false,
+      "runtime_artifact_exists": false,
+      "native_starts": 0,
+      "disposition": "SKIPPED_BY_USER_SUFFICIENT_MINIMUM_BUDGET"
+    }
+  },
+  "completed_comparison": {
+    "300": {
+      "evidence_path": "artifacts/candidate_a_native_receiver_wait_20261012_v1/runs/CA_NATIVE_PHASE_R300_S17_WAIT_DIAG01_V2/engineering/EXECUTION_RECEIPT_V1.json",
+      "sha256": "085531febef6afd3b533904552ff72c20c9915a4c65b2ffa5931cff979143c49",
+      "monitored_elapsed_through_cleanup_s": 144.84869999997318
+    },
+    "360": {
+      "evidence_path": "artifacts/candidate_a_native_wait_budget_series_20261012_v1/runs/CA_NATIVE_PHASE_R300_S17_WAIT_BUDGET_W360_01/engineering/EXECUTION_RECEIPT_V1.json",
+      "sha256": "911b87e21bb2d956eb7f1a18322aa4151036168e88ca8e70eeb139b4ea6599d7",
+      "monitored_elapsed_through_cleanup_s": 135.12410162499873
+    }
+  },
+  "recommended_wall_allowance_s": 300,
+  "interpretation": "smallest tested sufficient allowance for current three-cycle technical objective; not absolute optimum or universal runtime guarantee",
+  "new_SUMO_or_retry": false,
+  "source_tests_old_evidence_or_governance_changed": false,
+  "cards_preserved_without_status_rewrite": true,
+  "service_safety_qualification_claim": false
+}

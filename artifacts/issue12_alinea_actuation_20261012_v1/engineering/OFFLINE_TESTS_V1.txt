@@ -1,0 +1,37 @@
+test_local_yellow_position_speed_body_and_unknown_scope (test_policy.PolicyTests.test_local_yellow_position_speed_body_and_unknown_scope) ... ok
+test_missing_card_rejects_before_any_native_or_raw_allocation (test_policy.PolicyTests.test_missing_card_rejects_before_any_native_or_raw_allocation) ... ok
+test_quantization_invalid_boundaries_and_independent_integrals (test_policy.PolicyTests.test_quantization_invalid_boundaries_and_independent_integrals) ... ok
+test_same_ack_and_yellow_excess_are_counted_and_partial_E_not_filled (test_policy.PolicyTests.test_same_ack_and_yellow_excess_are_counted_and_partial_E_not_filled) ... ok
+test_xml_deadline_dynamic_first_red_and_normal_arrival_pending_schema (test_policy.PolicyTests.test_xml_deadline_dynamic_first_red_and_normal_arrival_pending_schema) ... ERROR
+test_xml_driven_early_green_actual_red_remaining_clock_and_yellow_excess (test_policy.PolicyTests.test_xml_driven_early_green_actual_red_remaining_clock_and_yellow_excess) ... ok
+
+======================================================================
+ERROR: test_xml_deadline_dynamic_first_red_and_normal_arrival_pending_schema (test_policy.PolicyTests.test_xml_deadline_dynamic_first_red_and_normal_arrival_pending_schema)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_issue12_signal_policy_20261012/test_policy.py", line 83, in test_xml_deadline_dynamic_first_red_and_normal_arrival_pending_schema
+    w,out,a=self.loop(tmp,early=False,arrive=True)
+            ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_issue12_signal_policy_20261012/test_policy.py", line 67, in loop
+    _diagnostic_loop(w,SimpleNamespace(observe=w.observe,request_phase=w.phase_request),cap,out,
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        {'wall_limit_s':300,'minimum_free_bytes':0,'run_limit_bytes':300000000},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        fixture.old.fixture.fixture.FakeProcess(),time.monotonic(),a)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_issue12_signal_policy_20261012/bridge.py", line 169, in _diagnostic_loop
+    try:row=adapter.reconcile_step(conn,capture.adapter_warning(after))
+            ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_issue12_signal_policy_20261012/adapter.py", line 109, in reconcile_step
+    return self._terminal_call(self._reconcile_step, conn, warning_observation)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_issue12_signal_policy_20261012/adapter.py", line 95, in _terminal_call
+    return method(*args)
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_issue12_signal_policy_20261012/adapter.py", line 298, in _reconcile_step
+    raise DiagnosticStop(';'.join(errors))
+src.candidate_a_issue12_signal_policy_20261012.adapter.DiagnosticStop: POST_OBSERVATION_UNKNOWN:TypeError:cannot unpack non-iterable NoneType object
+
+----------------------------------------------------------------------
+Ran 6 tests in 5.263s
+
+FAILED (errors=1)

@@ -1,0 +1,22 @@
+test_all_spanning_body_ids_and_unknown_or_lost_stop (tests.candidate_a_issue12_packet_policy_20261012.test_packet.PacketTests.test_all_spanning_body_ids_and_unknown_or_lost_stop) ... FAIL
+test_preserved_emergency_margin_and_actual_yellow_unknown_stop (tests.candidate_a_issue12_packet_policy_20261012.test_packet.PacketTests.test_preserved_emergency_margin_and_actual_yellow_unknown_stop) ... ok
+test_rate_partial_zero_unobserved_and_cumulative_unknown_budget (tests.candidate_a_issue12_packet_policy_20261012.test_packet.PacketTests.test_rate_partial_zero_unobserved_and_cumulative_unknown_budget) ... ok
+test_real_xml_helper_nine_cycles_and_tail_under_red (tests.candidate_a_issue12_packet_policy_20261012.test_packet.PacketTests.test_real_xml_helper_nine_cycles_and_tail_under_red) ... ok
+
+======================================================================
+FAIL: test_all_spanning_body_ids_and_unknown_or_lost_stop (tests.candidate_a_issue12_packet_policy_20261012.test_packet.PacketTests.test_all_spanning_body_ids_and_unknown_or_lost_stop)
+----------------------------------------------------------------------
+ValueError: BODY_WORLD_UNKNOWN
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_issue12_packet_policy_20261012/test_packet.py", line 64, in test_all_spanning_body_ids_and_unknown_or_lost_stop
+    with self.assertRaisesRegex(ValueError,'BODY_SPANNING_ENTRY_UNBOUND'):tracker.observe(conn,13,{'R_flow.1':{'role':'R','speed_m_s':1.,'lane_id':INTERNAL}},[],'r')
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "BODY_SPANNING_ENTRY_UNBOUND" does not match "BODY_WORLD_UNKNOWN"
+
+----------------------------------------------------------------------
+Ran 4 tests in 5.094s
+
+FAILED (failures=1)

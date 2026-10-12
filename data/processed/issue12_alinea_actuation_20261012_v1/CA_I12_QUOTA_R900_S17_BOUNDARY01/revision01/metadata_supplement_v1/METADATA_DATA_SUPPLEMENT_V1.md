@@ -1,0 +1,7 @@
+# 900 STOP 工程清单修正补核
+
+2026-10-12。PASS仅metadata补核。旧FINAL_DATA_BINDINGS_V1.json与14个记录逐SHA仍一致，无覆盖。ENGINEERING_DELIVERY_BINDING_V3.json排除自身，15文件全部SHA一致；其SHA eee0a98473078473fd8fda46ee90611b30067cd14a1a6058065d2b837be2c843。原V2自身空文件hash缺陷、核查FAIL与新V2_SELF_HASH_CORRECTION_RECEIPT_V1保留；此补核不改变实际900 STOP或原始数据。
+
+原实际数据仍1206s前缀、6G秒、C1.5/E0/N2、1267正常终点PASS；Y/red未观察。工程stop_gap_investigation_v1仅只读调查：实际query的leaderMaxDecel是9；native apparentDecel默认normal4.5来自源／配置推断，未实测序列化，不能把4.5离线推值称实际native queried secureGap或唯一实际分支。未做任何新native查询、计算矩阵、profile或政策实现；原gap／额外1.1拒绝事实保持。
+
+收到父代理转达的新用户取消固定启动次数、保持原安全／研究／异常STOP的指示；这不使原3次失败／预算账消失，也不授权本数据子任务运行或变更guard。当前STATE仍保留900运行中的过时条目，已向父代理报告由其同步；本补核不自行修改治理。待有具体科学审核任务再评估新phase-only proposal，不能把proposal／source inference当已实施或通过。

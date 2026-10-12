@@ -1,0 +1,48 @@
+--- reviewed_wait/profile.py
++++ budget_series/profile.py
+@@ -1,4 +1,4 @@
+-"""Four one-use, reviewed-series technical cards. No native activity at import."""
++"""Three remaining wall-allowance cards. No native activity at import."""
+ from pathlib import Path
+ import json
+ import xml.etree.ElementTree as ET
+@@ -6,12 +6,12 @@
+ from src.candidate_a_native_budget_cycles_20261012 import profile as previous
+ from src.candidate_a_native_receiver_wait_20261012.receiver_wait import POLICY
+ ROOT=base.ROOT
+-TASK=Path('artifacts/candidate_a_native_receiver_wait_20261012_v1')
++TASK=Path('artifacts/candidate_a_native_wait_budget_series_20261012_v1')
+ NETWORK=base.NETWORK
+ SUMO=base.SUMO
+ BASE='20e5e83ac059768320cdaa4c815d164e1022de45'
+-BUDGETS=(300,)
+-RUNS={'CA_NATIVE_PHASE_R300_S17_WAIT_DIAG01':300,'CA_NATIVE_PHASE_R300_S17_WAIT_DIAG01_V2':300,'CA_NATIVE_PHASE_R300_S17_WAIT_DIAG02':300}
++BUDGETS=(360,420,480)
++RUNS={'CA_NATIVE_PHASE_R300_S17_WAIT_BUDGET_W360_01':360,'CA_NATIVE_PHASE_R300_S17_WAIT_BUDGET_W420_01':420,'CA_NATIVE_PHASE_R300_S17_WAIT_BUDGET_W480_01':480}
+ sha=base.sha
+ write_new=base.write_new
+ require=base.require
+@@ -29,12 +29,12 @@
+     return {'wall_limit_s':RUNS[run],'startup_limit_s':60,'run_limit_bytes':300_000_000,'minimum_free_bytes':5_000_000_000}
+ 
+ 
+-def output(run):return Path('data/raw/candidate_a_native_receiver_wait_20261012_v1')/run/'outputs'
++def output(run):return Path('data/raw/candidate_a_native_wait_budget_series_20261012_v1')/run/'outputs'
+ 
+ 
+ def sources(root):
+     files=previous.sources(root)
+-    for folder in ['src/candidate_a_native_receiver_wait_20261012','scripts/candidate_a_native_receiver_wait_20261012_v1']:
++    for folder in ['src/candidate_a_native_receiver_wait_20261012','scripts/candidate_a_native_receiver_wait_20261012_v1','src/candidate_a_native_wait_budget_series_20261012','scripts/candidate_a_native_wait_budget_series_20261012_v1']:
+         for p in (root/folder).glob('*.py'):files[str(p.relative_to(root))]=sha(p)
+     return dict(sorted(files.items()))
+ 
+@@ -57,7 +57,7 @@
+         'sources_sha256':sources(root),'inherited_inputs_sha256':inherited,'network_sha256':sha(root/NETWORK),
+         'prepared_input_sha256':{str(p.relative_to(root)):sha(p) for p in package.iterdir() if p.is_file()},
+         'environment':base.environment(),'resources':resources(run),'runtime_authorization_generated':False,
+-        'resources_provenance':{'technical_series_wall_s':list(BUDGETS),'other_caps_unchanged':True,'basis':'explicit direct independent-worktree minimal repair authorization; one diagnostic plus at most one evidenced reviewed repair; three-role gated release required'},
++        'resources_provenance':{'technical_series_wall_s':list(BUDGETS),'other_caps_unchanged':True,'basis':'existing explicit four-budget user goal plus autonomous independent minimum-repair scope; remaining three one-use starts only; prelaunch and sequential three-role review gates'},
+         'source_binary_compiler_equivalence':'NOT_VERIFIED','binary_reference_provenance':old['binary_reference_provenance'],
+         'configuration_delta':{'controlled_G_y_r_s':[3,3,18],'controlled_red_next':0,'holding_red_s':600,
+             'simulation_end_s':1272,'mandatory_first_red_checkpoint_s':1207,'native_cycle_starts_s':[1200,1224,1248],

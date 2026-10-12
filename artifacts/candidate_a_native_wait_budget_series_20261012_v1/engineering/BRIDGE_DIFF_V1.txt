@@ -1,0 +1,11 @@
+--- reviewed_wait/bridge.py
++++ budget_series/bridge.py
+@@ -13,7 +13,7 @@
+ import time
+ 
+ from src.candidate_a_native_receiver_wait_20261012.adapter import StepAdapter, inventory, TLS, STORAGE, INGRESS, INTERNAL
+-from src.candidate_a_native_receiver_wait_20261012.profile import ROOT,TASK,NETWORK,SUMO,sha,write_new,validate_release,require
++from src.candidate_a_native_wait_budget_series_20261012.profile import ROOT,TASK,NETWORK,SUMO,sha,write_new,validate_release,require
+ from src.candidate_a_native_smoke_20261011.bridge_logs import LogCapture
+ from src.candidate_a_native_smoke_20261011.bridge_resources import ResourceWatchdog
+ from src.candidate_a_native_smoke_runtime_fix_20261012.frame_cache import FrameCache

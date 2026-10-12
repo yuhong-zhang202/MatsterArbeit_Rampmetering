@@ -1,0 +1,146 @@
+{
+  "status": "ENGINEERING_PASS_FOR_ACTUAL_BOUNDED_W360_TECHNICAL_EVIDENCE_PENDING_DATA_SCIENCE",
+  "run_id": "CA_NATIVE_PHASE_R300_S17_WAIT_BUDGET_W360_01",
+  "card_sha256": "c924a9f91e3c146515aebae7b8d6fd60d24936e7af01addf27e453eb3fc06bec",
+  "source_engineering58binding_sha256": "4466f5223a35fc97ad00c10f73f1561abbf2c2b2b8c0c5e803e950b75fe53e40",
+  "source_snapshot_is_uncommitted": true,
+  "baseline_HEAD": "20e5e83ac059768320cdaa4c815d164e1022de45",
+  "native_starts": 1,
+  "owned_native_pid": 58179,
+  "owned_cli_pid": 58178,
+  "owned_launcher_pid": 58158,
+  "port": 55480,
+  "startup_attempts_same_child": 229,
+  "successful_startup_elapsed_s": 24.53934579199995,
+  "cli_exit": 0,
+  "native_exit": 0,
+  "actual_ACK_end_s": 1272,
+  "last_accounted_s": 1272,
+  "ACK_rows": 2544,
+  "pre_rows": 1272,
+  "post_rows": 1272,
+  "native_log_capture_rows": 2547,
+  "global_motion_counts": {
+    "G": 609,
+    "y": 12,
+    "r": 651
+  },
+  "controlled_motion_counts": {
+    "G": 9,
+    "y": 9,
+    "r": 54
+  },
+  "full_cycle_count": 3,
+  "cycles": [
+    {
+      "cycle_id": 0,
+      "begin_s": 1200,
+      "end_s": 1224,
+      "period_s": 24,
+      "nominal_n": 2,
+      "applied_command_veh_h": 300.0,
+      "command_requested_s": 1200,
+      "command_applied_s": 1200,
+      "application_delay_s": 0,
+      "executed": true,
+      "denial_reason": "",
+      "completed": true,
+      "N_G": 1,
+      "N_y": 0,
+      "N_r": 0,
+      "crossing_ids": [
+        "R_flow.0"
+      ]
+    },
+    {
+      "cycle_id": 1,
+      "begin_s": 1224,
+      "end_s": 1248,
+      "period_s": 24,
+      "nominal_n": 2,
+      "applied_command_veh_h": 300.0,
+      "command_requested_s": 1200,
+      "command_applied_s": 1224,
+      "application_delay_s": 24,
+      "executed": true,
+      "denial_reason": "",
+      "completed": true,
+      "N_G": 1,
+      "N_y": 0,
+      "N_r": 0,
+      "crossing_ids": [
+        "R_flow.1"
+      ]
+    },
+    {
+      "cycle_id": 2,
+      "begin_s": 1248,
+      "end_s": 1272,
+      "period_s": 24,
+      "nominal_n": 2,
+      "applied_command_veh_h": 300.0,
+      "command_requested_s": 1200,
+      "command_applied_s": 1248,
+      "application_delay_s": 48,
+      "executed": true,
+      "denial_reason": "",
+      "completed": true,
+      "N_G": 1,
+      "N_y": 0,
+      "N_r": 0,
+      "crossing_ids": [
+        "R_flow.2"
+      ]
+    }
+  ],
+  "nominal_and_actual_accounting": {
+    "C": 6.0,
+    "C_applied": 6.0,
+    "E": 6,
+    "N": 3,
+    "mapping_command_latency": 0.0,
+    "mapping_quantization": 0.0,
+    "physical_shortfall": 3,
+    "C_minus_E": 0.0,
+    "E_minus_N": 3
+  },
+  "C_E_N_is_not_rate_qualification": true,
+  "actual_controlled_entry_ids": [
+    "R_flow.0",
+    "R_flow.1",
+    "R_flow.2"
+  ],
+  "actual_controlled_crossings_by_motion": {
+    "G": 3
+  },
+  "post_WAIT_count": 9,
+  "checkpoint_actual_s": 1207,
+  "checkpoint_monitored_elapsed_s": 124.1691595420125,
+  "checkpoint_scope": "PROVISIONAL_CAPTURE_FINAL_EOF_SUBSEQUENTLY_BOUND",
+  "loop_terminal_elapsed_s": 135.10232829200686,
+  "monitored_elapsed_through_cleanup_s": 135.12410162499873,
+  "whole_CLI_elapsed_s": 135.39271966699744,
+  "native_final_log_status": "BOUND_NO_OBSERVED_NATIVE_MESSAGE",
+  "all_four_native_streams_bound_at_EOF": true,
+  "resource_watchdog": {
+    "reason": null,
+    "error": null,
+    "poll_s": 0.2
+  },
+  "free_bytes_after": 48473686016,
+  "raw_file_count": 75,
+  "raw_bytes": 69157056,
+  "raw_manifest_sha256": "61aae130fa1d8dffaad693290d700da39eea7937641716a800aef7ab10a0d9b0",
+  "native_safety_proven": false,
+  "rate_qualified": false,
+  "automatic_retry_or_more_budget_start": false,
+  "error": "",
+  "CLI_stderr_separate_from_native_streams": {
+    "bytes": 256,
+    "sha256": "1a0a450441748f234bcf78a9c611ba59e2447b8167fe9bc640b0cc4e89d9bcab",
+    "text": "/Users/yuhongzhang/.codex/worktrees/native-receiver-wait/Masterarbeit-Ramp-Metering/src/candidate_a_native_smoke_runtime_fix_20261012/frame_cache.py:61: UserWarning: API change now handles step as floating point seconds\n  try:return method(*args,**kwargs)\n"
+  },
+  "full_native_runtime_source_equals_donor300": true,
+  "whole_source_snapshot_equals_donor300": false,
+  "former_binders77_and_protected536_unchanged": true
+}

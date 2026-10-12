@@ -1,0 +1,11 @@
+# Engineering review — remaining budget wrappers V1
+
+PASS for bounded offline packaging only, not native release. Context: Stage6 closed, Candidate A NOT_QUALIFIED, A1 UNRESOLVED, formal protocol empty. The user’s four wall-allowance objective and isolated autonomy are recorded literally in USER_AUTHORIZATION_V1.json; exact per-run three-role releases remain absent.
+
+Only four new implementation/test files: profile.py, bridge.py (only profile import differs), CLI, two-method configuration test. Original31 runtime source bindings, full77 engineering binder and536 protected hashes match. Profile source metadata adds the three wrapper files; the whole-source snapshot consequently differs from completed300. Exact uncommitted bytes, not a newly tested baseline commit, are bound below. All three cards use the same environment, exact route bytes and physical XML structure; only identified paths are normalized. Normalization preserves phase/model/speed/dynamic/control attributes.
+
+Actual command: primary .venv/bin/python -B -m unittest discover -s tests/candidate_a_native_wait_budget_series_20261012 -p test_configuration.py -v, independent worktree cwd. Exactly2 methods PASS, exit0;0.441s unittest /0.524863s whole command. Existing11 WAIT / old suites not rerun because common code did not change. No SUMO/version invocation, no raw allocation, no canonical authorization/release, no retries. Cards are PREPARED_NOT_RELEASED. Fresh runtime environment/disk checks still required after independent data and scientific prelaunch review.
+
+Reuse300 is bounded technical same-core, same-input comparison with different metadata wrappers, not controller-effect or independent-seed evidence. Prior failed old W300 remains separate. Actual completed300 C=appliedC=E=6,N=3 and the CLI compatibility warning remain limits. Larger allowances do not lengthen the1272 horizon. Safety/service qualification and compiled-binary/source equivalence remain unverified. At most3 future starts; sequential engineering/data/scientific postreview required before next. No blindretry, parameter optimization or additional runs.
+
+Documentation impact: parent owns state/worklog and will record preparation and outstanding prelaunch gates. No governance/protocol/research decision files changed by engineering.

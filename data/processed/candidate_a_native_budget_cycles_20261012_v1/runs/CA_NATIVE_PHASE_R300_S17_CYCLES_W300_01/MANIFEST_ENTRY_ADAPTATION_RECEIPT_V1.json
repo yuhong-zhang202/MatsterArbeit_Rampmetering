@@ -1,0 +1,8 @@
+{
+  "cause": "Exact frozen manifest entries are objects {sha256,bytes}, not string hashes. V2 compared hash string to whole object and returned UNKNOWN without changing data.",
+  "old_source_sha256": "38297f26fbc84b47dc75a18deabe59489b8c7b2d2a0d2ffbef575d631b59d0a6",
+  "new_source_sha256": "71fbe16fd83c9903f36b82f88b306f68a307e9be9ad7e23880b1f93ff09ec479",
+  "fix": "Require exact dict keys/bytes integer; compare SHA and byte length separately. V2 real failure retained.",
+  "raw_change": false,
+  "guard_change": false
+}

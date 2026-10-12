@@ -1,0 +1,34 @@
+{
+  "status": "SOURCE_ENV_REVIEW_HASHES_VERIFIED_NATIVE_NOT_STARTED",
+  "card_sha256": "c6f8574a57396939b1b4be4c119041e78ce1f652050d5a621c6d121d8def10ac",
+  "engineering_binder_sha256": "dd917c8b15fffe39d779cb02ae155f99f8855eb4195e0f76c2f9f59a73f44435",
+  "free_bytes": 5010186240,
+  "fresh_fixed5GB_gate_pass": true,
+  "planning_headroom_bytes": 10186240,
+  "old_W300_actual_raw_bytes": 61712498,
+  "technical_reason_for_not_starting_yet": "Availableheadroomonly~28MB less thanoldsamehorizonprefixraw~62MB; proposedownworktreebackupandsymlinkresourceactionblockedbyautomaticapproval. Avoidwastingdiagnostic onpredictablediskresourceSTOP; guardcapsunchanged.",
+  "automatic_approval_rejection": {
+    "action": "sixhistoricalCSVredundantownworktreecopiesarchiveandreplacewithprimary-originalsymlinks",
+    "execution_started": false,
+    "mutation_count": 0,
+    "reason": "changeshistoricalordinaryCSVfiletypes/exceedsexplicitminimalimplementationdiagnosticscope/canbreakordinaryfiletoolassumptions",
+    "no_workaround_retry": true
+  },
+  "canonical_auth_release_created": false,
+  "native_starts": 0,
+  "reviews": {
+    "engineering": {
+      "path": "artifacts/candidate_a_native_receiver_wait_20261012_v1/engineering/ENGINEERING_REVIEW_V2.md",
+      "sha256": "ed6247b2b6b84c63088ce89869eebd229b84b7aa807044557df3a997f81280a5"
+    },
+    "data": {
+      "path": "data/processed/candidate_a_native_receiver_wait_20261012_v1/FINAL_DATA_PRELAUNCH_REVIEW_V2.md",
+      "sha256": "776c4f7f052e5a231ff89a5aecd46a9ff3e0868137990d190e730edd5efeb298"
+    },
+    "science": {
+      "path": "artifacts/candidate_a_native_receiver_wait_20261012_v1/PRELAUNCH_SCIENTIFIC_REVIEW_V2.md",
+      "sha256": "71b76a47bc42b21aed58bea3a11f07aaa3b51e4f9cd1dc3af7fc046bf93986ca"
+    }
+  },
+  "required_next_step": "parentreportactualautoreviewblock/requestexplicitresourceactionapprovalorprovidesafefreespace; do not relax5GBgate"
+}

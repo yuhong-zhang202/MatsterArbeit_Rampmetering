@@ -1,0 +1,132 @@
+{
+  "runs": [
+    {
+      "label": "300",
+      "run_id": "CA_NATIVE_PHASE_R300_S17_WAIT_DIAG01_V2",
+      "manifest_path": "/Users/yuhongzhang/.codex/worktrees/native-receiver-wait/Masterarbeit-Ramp-Metering/artifacts/candidate_a_native_receiver_wait_20261012_v1/runs/CA_NATIVE_PHASE_R300_S17_WAIT_DIAG01_V2/engineering/RAW_FINAL_SHA256_V1.json",
+      "manifest_sha256": "990386cf6d40d70b5f59d6754cde56555e7e7021f0910a8918373b19afb94199",
+      "relevant_inputs": [
+        {
+          "path": "/Users/yuhongzhang/.codex/worktrees/native-receiver-wait/Masterarbeit-Ramp-Metering/data/raw/candidate_a_native_receiver_wait_20261012_v1/CA_NATIVE_PHASE_R300_S17_WAIT_DIAG01_V2/outputs/pre_steps.jsonl",
+          "sha256": "db8412aa3e2c6ee015ba9b581cd8a156dabdb4f89ce6dd8a06683a5aa3898297"
+        },
+        {
+          "path": "/Users/yuhongzhang/.codex/worktrees/native-receiver-wait/Masterarbeit-Ramp-Metering/data/raw/candidate_a_native_receiver_wait_20261012_v1/CA_NATIVE_PHASE_R300_S17_WAIT_DIAG01_V2/outputs/post_steps.jsonl",
+          "sha256": "c148064fa9d21fecec0528dda07831af453ab150f2442f97096ad243bcd2261b"
+        },
+        {
+          "path": "/Users/yuhongzhang/.codex/worktrees/native-receiver-wait/Masterarbeit-Ramp-Metering/data/raw/candidate_a_native_receiver_wait_20261012_v1/CA_NATIVE_PHASE_R300_S17_WAIT_DIAG01_V2/outputs/fcd.xml.gz",
+          "sha256": "fa0d4700752af58011830e8d75645bbb43a4fcbfc9b11e7a4c263ced827f9cbe"
+        },
+        {
+          "path": "/Users/yuhongzhang/.codex/worktrees/native-receiver-wait/Masterarbeit-Ramp-Metering/data/raw/candidate_a_native_receiver_wait_20261012_v1/CA_NATIVE_PHASE_R300_S17_WAIT_DIAG01_V2/outputs/tls_states.xml",
+          "sha256": "44b282d77faaa1d6c62c7e562be13b02cae3feeba97faad3f7eacc2bb10d3526"
+        },
+        {
+          "path": "/Users/yuhongzhang/.codex/worktrees/native-receiver-wait/Masterarbeit-Ramp-Metering/data/raw/candidate_a_native_receiver_wait_20261012_v1/CA_NATIVE_PHASE_R300_S17_WAIT_DIAG01_V2/outputs/step_ack.jsonl",
+          "sha256": "2aec55ffdd2aba303779f8444a7040158382eabc305f13cd1f9b1f416f837354"
+        }
+      ],
+      "crossings": [
+        {
+          "vehicle_id": "R_flow.0",
+          "crossing_time_lower_s": 1200,
+          "crossing_time_upper_s": 1201,
+          "time_interval": "(lower,upper]",
+          "cycle_id": 0,
+          "motion_signal_state": "G"
+        },
+        {
+          "vehicle_id": "R_flow.1",
+          "crossing_time_lower_s": 1224,
+          "crossing_time_upper_s": 1225,
+          "time_interval": "(lower,upper]",
+          "cycle_id": 1,
+          "motion_signal_state": "G"
+        },
+        {
+          "vehicle_id": "R_flow.2",
+          "crossing_time_lower_s": 1248,
+          "crossing_time_upper_s": 1249,
+          "time_interval": "(lower,upper]",
+          "cycle_id": 2,
+          "motion_signal_state": "G"
+        }
+      ],
+      "C": 6.0,
+      "C_applied": 6.0,
+      "E": 6,
+      "N": 3,
+      "selected_trajectory_times": "1200..1272 snapshots; FCD label=actual_time\u22121; G/y/r intervals1200..1271"
+    },
+    {
+      "label": "360",
+      "run_id": "CA_NATIVE_PHASE_R300_S17_WAIT_BUDGET_W360_01",
+      "manifest_path": "/Users/yuhongzhang/.codex/worktrees/native-receiver-wait/Masterarbeit-Ramp-Metering/artifacts/candidate_a_native_wait_budget_series_20261012_v1/runs/CA_NATIVE_PHASE_R300_S17_WAIT_BUDGET_W360_01/engineering/RAW_FINAL_SHA256_V1.json",
+      "manifest_sha256": "61aae130fa1d8dffaad693290d700da39eea7937641716a800aef7ab10a0d9b0",
+      "relevant_inputs": [
+        {
+          "path": "/Users/yuhongzhang/.codex/worktrees/native-receiver-wait/Masterarbeit-Ramp-Metering/data/raw/candidate_a_native_wait_budget_series_20261012_v1/CA_NATIVE_PHASE_R300_S17_WAIT_BUDGET_W360_01/outputs/pre_steps.jsonl",
+          "sha256": "db8412aa3e2c6ee015ba9b581cd8a156dabdb4f89ce6dd8a06683a5aa3898297"
+        },
+        {
+          "path": "/Users/yuhongzhang/.codex/worktrees/native-receiver-wait/Masterarbeit-Ramp-Metering/data/raw/candidate_a_native_wait_budget_series_20261012_v1/CA_NATIVE_PHASE_R300_S17_WAIT_BUDGET_W360_01/outputs/post_steps.jsonl",
+          "sha256": "c309b52f15b7e559ff8e30415f9a629a8cd5d3b9575237f068df53346f1f9bb6"
+        },
+        {
+          "path": "/Users/yuhongzhang/.codex/worktrees/native-receiver-wait/Masterarbeit-Ramp-Metering/data/raw/candidate_a_native_wait_budget_series_20261012_v1/CA_NATIVE_PHASE_R300_S17_WAIT_BUDGET_W360_01/outputs/fcd.xml.gz",
+          "sha256": "86bb644b2e3d45c2e84ddd81e97d191d1e074643635b4002ce12c4ae2a9a458b"
+        },
+        {
+          "path": "/Users/yuhongzhang/.codex/worktrees/native-receiver-wait/Masterarbeit-Ramp-Metering/data/raw/candidate_a_native_wait_budget_series_20261012_v1/CA_NATIVE_PHASE_R300_S17_WAIT_BUDGET_W360_01/outputs/tls_states.xml",
+          "sha256": "24faa01f1c5f3dcefd9c7eee15b261a5ae801aa4225793db43cce52d00bb06e8"
+        },
+        {
+          "path": "/Users/yuhongzhang/.codex/worktrees/native-receiver-wait/Masterarbeit-Ramp-Metering/data/raw/candidate_a_native_wait_budget_series_20261012_v1/CA_NATIVE_PHASE_R300_S17_WAIT_BUDGET_W360_01/outputs/step_ack.jsonl",
+          "sha256": "2aec55ffdd2aba303779f8444a7040158382eabc305f13cd1f9b1f416f837354"
+        }
+      ],
+      "crossings": [
+        {
+          "vehicle_id": "R_flow.0",
+          "crossing_time_lower_s": 1200,
+          "crossing_time_upper_s": 1201,
+          "time_interval": "(lower,upper]",
+          "cycle_id": 0,
+          "motion_signal_state": "G"
+        },
+        {
+          "vehicle_id": "R_flow.1",
+          "crossing_time_lower_s": 1224,
+          "crossing_time_upper_s": 1225,
+          "time_interval": "(lower,upper]",
+          "cycle_id": 1,
+          "motion_signal_state": "G"
+        },
+        {
+          "vehicle_id": "R_flow.2",
+          "crossing_time_lower_s": 1248,
+          "crossing_time_upper_s": 1249,
+          "time_interval": "(lower,upper]",
+          "cycle_id": 2,
+          "motion_signal_state": "G"
+        }
+      ],
+      "C": 6.0,
+      "C_applied": 6.0,
+      "E": 6,
+      "N": 3,
+      "selected_trajectory_times": "1200..1272 snapshots; FCD label=actual_time\u22121; G/y/r intervals1200..1271"
+    }
+  ],
+  "selected_exact_trajectory_equal_between_runs": true,
+  "observations_not_independent_stochastic_replicates": true,
+  "no_new_simulation": true,
+  "native_unlogged_decision_fields": [
+    "getStopSpeed",
+    "native final following/planned-speed constraints",
+    "effective carFollowModel ID",
+    "unique yellow branch cause"
+  ],
+  "input_filter": "two latest manifests; only five related output files perrun; no oldfullaudit"
+}

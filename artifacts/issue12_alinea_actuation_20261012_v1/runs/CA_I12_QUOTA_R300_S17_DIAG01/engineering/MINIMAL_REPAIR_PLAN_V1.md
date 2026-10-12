@@ -1,0 +1,11 @@
+# DIAG01 dispatch repair plan V1
+
+**Proposed technical repair only; no implementation or further native run in this plan.**
+
+The consumed DIAG01 raw/card/source snapshot and first engineering105 binder remain immutable. Exact dispatch failure is at new bridge `policy_after_ack` requesting `setPhaseDuration`; protected `worker.request_phase` rejects any method other than `setProgram` or `setPhase` before issuing a native call. Before/after monitoring reached and accounted ACK1210, but checkpoint and first24s cycle were unfinished. Independent data/science must first confirm there is no additional traffic or coverage STOP hidden by this pure dispatch exception.
+
+Smallest repair: implement one new-namespace helper solely for the official `trafficlight.setPhaseDuration(TLS, remaining)` call. Keep the old worker unchanged. Append the same attempted request fields (`time_s`, `method`, `value`, `call_completed=false`) before the API; mark true only after completion; retain phase/state/nextSwitch/simulation-time readback and existing exactcycle/minimum-red checks. Preserve attempted records when API or readback fails. Do not generalize dispatch or bypass frame-cache invalidation. Existing fresh native phase and receiver checks stay intact.
+
+One meaningful regression should compose the real protected worker allowlist with the new bridge seam: old snapshot reproduces unsupported-method failure, repaired snapshot routes only duration through the dedicated helper; native API failure and readback mismatch remain STOP with retained attempt. Synthetic fixtures must not accept arbitrary methods silently. Do not rerun old suites or add A1 proof.
+
+After independent first-run evidence review and repair/offline three-role gate, prepare new `CA_I12_QUOTA_R300_S17_FIX01` card and exact uncommitted source hashes; new authorization/release only after fresh gates. Never reuse DIAG01 identity, raw, consumed card or canonical authorization. This initial failed native start counts as1 of Issue12's maximum3. Remaining allowed scope is one repaired R300 and conditionally one R900, each gated independently. R600 is skipped because of the bounded budget. No automatic retry or formal qualification claim.

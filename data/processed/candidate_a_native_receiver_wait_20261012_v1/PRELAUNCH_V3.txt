@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/.codex/worktrees/native-receiver-wait/Masterarbeit-Ramp-Metering/data/processed/candidate_a_native_receiver_wait_20261012_v1/independent_prelaunch_V3.py", line 48, in <module>
+    if __name__=='__main__':print(json.dumps(audit(),indent=2))
+                                             ~~~~~^^
+  File "/Users/yuhongzhang/.codex/worktrees/native-receiver-wait/Masterarbeit-Ramp-Metering/data/processed/candidate_a_native_receiver_wait_20261012_v1/independent_prelaunch_V3.py", line 37, in audit
+    for text in ["receiver['available']","'GREEN_START_NOT_PREPARED_OR_RECEIVER_DENIED'","'actual_entry_following'","'entry_following_before'","current_following(conn, vid, self.last_completed, allow_clear=True)","'ACTUAL_ENTRY_CURRENT_GAP_BOUND_DENIED:'"]:assert text in adapter,text
+                                                                                                                                                                                                                                                                        ^^^^^^^^^^^^^^^
+AssertionError: 'ACTUAL_ENTRY_CURRENT_GAP_BOUND_DENIED:'

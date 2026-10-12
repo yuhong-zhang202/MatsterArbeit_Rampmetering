@@ -1,0 +1,122 @@
+{
+  "run_id": "CA_NATIVE_PHASE_R300_S17_CYCLES_W300_01",
+  "execution_source_commit": "20e5e83ac059768320cdaa4c815d164e1022de45",
+  "card_sha256": "25dccfa39d3ff716823f6ce7ceee18eba1c0b8c6393ae464b6db1d2b61c70386",
+  "classification": "RECEIVING_SPACE_MONITOR_STOP_NOT_WALL_BUDGET_FAILURE",
+  "native_starts": 1,
+  "owned_cli_pid": 83048,
+  "owned_native_pid": 83053,
+  "owned_launcher_pid": 83031,
+  "process_binding_method": "live escalated pgrep -P83048 returned only83053, targeted ps -p83048,83053 confirmed child command andport49604",
+  "native_command": [
+    "/Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo",
+    "-c",
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/candidate_a_native_budget_cycles_20261012_v1/engineering/packages/CA_NATIVE_PHASE_R300_S17_CYCLES_W300_01/scenario.sumocfg",
+    "--remote-port",
+    "49604"
+  ],
+  "startup_attempts_same_child": 240,
+  "startup_connect_s": 25.054558540985454,
+  "cli_exit": 1,
+  "native_exit": 0,
+  "native_last_actual_ack_s": 1201,
+  "last_accounted_s": 1201,
+  "ack_rows": 2402,
+  "post_rows_including_last_failure": 1201,
+  "controlled_observed_seconds": 1,
+  "control_accounting": {
+    "C": 0.08333333333333333,
+    "C_applied": 0.08333333333333333,
+    "E": 0,
+    "N": 1,
+    "mapping_command_latency": 0.0,
+    "mapping_quantization": 0.08333333333333333,
+    "physical_shortfall": -1,
+    "C_minus_E": 0.08333333333333333,
+    "E_minus_N": -1
+  },
+  "cycle_rows": [
+    {
+      "cycle_id": 0,
+      "begin_s": 1200,
+      "end_s": 1224,
+      "period_s": 24,
+      "nominal_n": 2,
+      "applied_command_veh_h": 300.0,
+      "command_requested_s": 1200,
+      "command_applied_s": 1200,
+      "application_delay_s": 0,
+      "executed": true,
+      "denial_reason": "",
+      "completed": false,
+      "N_G": 1,
+      "N_y": 0,
+      "N_r": 0,
+      "crossing_ids": [
+        "R_flow.0"
+      ]
+    }
+  ],
+  "first_red_checkpoint": "NOT_REACHED",
+  "controlled_yellow_red": "NOT_REACHED",
+  "three_completed_cycles": 0,
+  "exact_error": "DiagnosticStop:POST_GREEN_RECEIVER_DENIED",
+  "exact_reasons": [
+    "POST_GREEN_RECEIVER_DENIED"
+  ],
+  "pre_receiver": {
+    "available": true,
+    "reason": "AVAILABLE",
+    "front_id": "R_flow.0",
+    "nearest_internal": null,
+    "leader": null,
+    "nearest_internal_rear_clearance_m": null,
+    "required_front_clearance_m": 7.5
+  },
+  "post_receiver": {
+    "available": false,
+    "reason": "LEADER_SECURE_GAP",
+    "front_id": "R_flow.1",
+    "nearest_internal": "R_flow.0",
+    "leader": {
+      "vehicle_id": "R_flow.0",
+      "lane_id": ":ramp_mid_0_0",
+      "gap_excluding_minGap_m": 1.3163151997241584,
+      "secure_gap_m": 2.6
+    },
+    "nearest_internal_rear_clearance_m": -4.685730412295754,
+    "required_front_clearance_m": 7.5
+  },
+  "actual_crossings_last_interval": [
+    {
+      "vehicle_id": "R_flow.0",
+      "crossing_time_lower_s": 1200,
+      "crossing_time_upper_s": 1201,
+      "time_interval": "(lower,upper]",
+      "cycle_id": 0,
+      "motion_signal_state": "G"
+    }
+  ],
+  "log_record_count": 2404,
+  "native_final_log_status": "BOUND_NO_OBSERVED_NATIVE_MESSAGE",
+  "native_event_counters_last_interval": {
+    "colliding_vehicles": 0,
+    "starting_teleports": 0,
+    "ending_teleports": 0
+  },
+  "brake_checked_last_after_ids": 199,
+  "resource_watchdog": {
+    "reason": null,
+    "error": null,
+    "poll_s": 0.2
+  },
+  "monitored_elapsed_through_cleanup_s": 126.1785716250015,
+  "free_bytes_after": 6507597824,
+  "raw_file_count": 67,
+  "raw_total_bytes": 61712498,
+  "original_bridge_file_hashes_match": true,
+  "automatic_retry": false,
+  "higher_budget_start_allowed_without_diagnosis": false,
+  "native_safety_proven": false,
+  "rate_qualified": false
+}

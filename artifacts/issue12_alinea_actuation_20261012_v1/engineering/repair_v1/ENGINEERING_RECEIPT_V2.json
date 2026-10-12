@@ -1,0 +1,57 @@
+{
+  "status": "PASS_MINIMAL_DISPATCH_REPAIR_OFFLINE_NOT_NATIVE_RELEASE",
+  "actual_baseline_HEAD": "20e5e83ac059768320cdaa4c815d164e1022de45",
+  "new_code_uncommitted_exact_snapshot": true,
+  "native_starts_already_consumed": 1,
+  "maximum_Issue12_allocations": 3,
+  "new_active_identities": {
+    "CA_I12_QUOTA_R300_S17_FIX01": {
+      "card_sha256": "9f914d8b307df524d47b56999280b8a58fc76da13d4d57f4f743cdf2fe0478ee",
+      "status": "PREPARED_NOT_RELEASED",
+      "source_files_count": 38,
+      "resources": {
+        "wall_limit_s": 300,
+        "startup_limit_s": 60,
+        "run_limit_bytes": 300000000,
+        "minimum_free_bytes": 5000000000
+      },
+      "canonical_authorization_exists": false,
+      "canonical_release_exists": false,
+      "raw_parent_exists": false
+    },
+    "CA_I12_QUOTA_R900_S17_BOUNDARY01": {
+      "card_sha256": "60750bf6b5fe390807062eeec1125d901f967b2e0aaf90c362b55618c9546e0d",
+      "status": "PREPARED_NOT_RELEASED",
+      "source_files_count": 38,
+      "resources": {
+        "wall_limit_s": 300,
+        "startup_limit_s": 60,
+        "run_limit_bytes": 300000000,
+        "minimum_free_bytes": 5000000000
+      },
+      "canonical_authorization_exists": false,
+      "canonical_release_exists": false,
+      "raw_parent_exists": false
+    }
+  },
+  "old_three_packages_byte_unchanged": true,
+  "V1_preimage_hash_verified": true,
+  "original105_binder_unchanged": "077b8313ea0c380422b3650288f66fe2271f03e1dc3153b6c0550cbd1de1755a",
+  "changed_current_runtime_entries_vs_original105": [
+    "scripts/candidate_a_issue12_signal_policy_20261012_v1/cli.py",
+    "src/candidate_a_issue12_signal_policy_20261012/bridge.py",
+    "src/candidate_a_issue12_signal_policy_20261012/profile.py",
+    "tests/candidate_a_issue12_signal_policy_20261012/test_policy.py"
+  ],
+  "protected536_unchanged": true,
+  "old_worker_allowlist_unchanged": true,
+  "adapter_policy_model_demand_guards_unchanged": true,
+  "regression_method": "tests.candidate_a_issue12_signal_policy_20261012.test_policy.PolicyTests.test_real_worker_duration_dispatch_and_actual_red_clock",
+  "old_source_actual_result": "FAILED errors=1 unsupported phase request",
+  "repaired_source_actual_result": "PASS one method with full3cycle fixture and API-failure/readback subcases",
+  "other_old_suites": "NOT_RERUN",
+  "first_raw_manifest_sha256": "358e427bef1ba58d291376d6fed36e767a223603f6e0a29ea3a6a127353f6486",
+  "R600": "SKIPPED_BY_TOTAL_START_BUDGET",
+  "whole_domain_qualified": false,
+  "automatic_retry": false
+}
