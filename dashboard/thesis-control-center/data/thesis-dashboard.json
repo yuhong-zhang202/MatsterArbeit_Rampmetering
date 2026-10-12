@@ -3,7 +3,7 @@
     "title": "高速公路匝道调节的 Sweet Spot 研究",
     "degree": "TU Berlin · Planung und Betrieb im Verkehrswesen (M.Sc.)",
     "currentPhase": "探索验证已结项；进入正式实验方案设计",
-    "updatedAt": "2026年10月3日",
+    "updatedAt": "2026年10月12日",
     "nextMilestone": "设计并审查正式实验协议；批准冻结后再运行",
     "researchQuestion": "暂定研究 ramp-metering sweet spot：在不同需求条件下平衡高速保护与城市回溢风险；正式定义与范围仍待 Robert 确认。",
     "supervisors": [
@@ -367,6 +367,23 @@
         "三种子均观察到主线改善、R/U成本上升和共享区R/U暴露",
         "严格连续30秒慢行链均为0；测试策略总系统时间上升，未发现sweet spot",
         "原始V8/V9与失败技术卡保留，正式实验协议仍未冻结"
+      ]
+    },
+    {
+      "id": "issue12-signal-policy-review",
+      "chapterId": "",
+      "title": "Issue #12 技术诊断完成，Draft PR 待审查",
+      "status": "doing",
+      "priority": "high",
+      "type": "engineering",
+      "due": "",
+      "subtasks": [
+        "新packet900：seed17、72秒九周期，各2辆，C=appliedC=E=N18；工程/独立数据/科学GO技术交付",
+        "保留原9+1.1检查；停止追加机制诊断，不把余预算作为补矩阵理由",
+        "新runner仅fixed900/T8；旧FIX300不同版本、450/600/750及长期/连续ALINEA未资格",
+        "Candidate A NOT_QUALIFIED、A1 UNRESOLVED、Stage6既有结项和正式协议未冻结保持",
+        "证据与问题索引：docs/development/ISSUE12_EXECUTION_POLICY_DELIVERY_20261012.md；docs/problem_records/README.md",
+        "待用户/Chat审查，建议不构成执行授权；Issue https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/issues/12"
       ]
     }
   ],

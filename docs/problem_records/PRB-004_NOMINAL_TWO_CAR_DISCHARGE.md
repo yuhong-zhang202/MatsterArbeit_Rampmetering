@@ -1,5 +1,7 @@
 # PRB-004 — 名义双车映射未获实际放行支持
 
+**以下为原问题归档快照；当前状态与后续实测见末尾Issue12进展。原OPEN和未选择政策描述保留其历史适用范围。**
+
 - **日期／阶段：**2026-10-12；两个已完成单seed原生三周期诊断的只读原因分析。
 - **现象：**WAIT_DIAG01_V2和WAIT_BUDGET_W360_01各72s内C=applied C=E6、N3；三个唯一入口R0／R1／R2都在G，每周期1辆，真实y／r过线0。两run相关轨迹相同，不是六个独立重复。
 - **证据与版本：**[最小原因报告](../development/CANDIDATE_A_NATIVE_DISCHARGE_CAUSE_20261012.md)、[六周期小表](../../data/processed/candidate_a_native_discharge_cause_20261012_v1/SIX_CYCLE_SUMMARY_V1.csv)、[输入映射](../../data/processed/candidate_a_native_discharge_cause_20261012_v1/SOURCE_MAPPING_V1.json)、[科学限定复核](../../artifacts/candidate_a_native_discharge_cause_20261012_v1/FINAL_SCIENTIFIC_REVIEW_V1.md)。名义300veh/h不是R需求：本run需求M3600/R900/U360/X180、seed17、dt1、G3/y3/r18。
@@ -13,4 +15,4 @@
 
 ## 2026-10-12 Issue12 有界后续证据
 
-旧G3/E6/N3结果保持。新fixed24/FIX300实测每周期G4/Y5/red15两辆、三个周期C=E=N6；旧helper duration FAIL及修复保留。900长G6前缀被原9+1.1 current-gap合同拒绝（N2/C1.5/E0），没有证据证明900物理不可达。后续只改phase的两车包T8/Gmax4/Y2/red2单次1272诊断，九周期实际各2辆，C=appliedC=E=N18；原硬检查不放宽，未重试。数据/科学postreview尚待完成，当前状态限定MITIGATED而非全域资格CLOSED。450/600/750、长窗/多seed/连续ALINEA仍未验证。参见[完整交付](../development/ISSUE12_EXECUTION_POLICY_DELIVERY_20261012.md)。
+旧G3/E6/N3结果保持。新fixed24/FIX300实测每周期G4/Y5/red15两辆、三个周期C=E=N6；旧helper duration FAIL及修复保留。900长G6前缀被原9+1.1 current-gap合同拒绝（N2/C1.5/E0），没有证据证明900物理不可达。后续只改phase的两车包T8/Gmax4/Y2/red2单次1272诊断，九周期实际各2辆，C=appliedC=E=N18；原硬检查不放宽，未重试。工程/独立数据/只读科学postreview已完成，GO技术交付并停止追加native，当前状态限定MITIGATED而非全域资格CLOSED。450/600/750、长窗/多seed/连续ALINEA仍未验证。参见[完整交付](../development/ISSUE12_EXECUTION_POLICY_DELIVERY_20261012.md)。

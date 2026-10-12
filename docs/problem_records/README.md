@@ -11,6 +11,6 @@
 | [PRB-003：receiver WAIT／预算](PRB-003_RECEIVER_WAIT_AND_BUDGET.md) | 10-12独立诊断 | 中 | MITIGATED；预算子问题CLOSED | 假设推进与实际等待分清；300/360完成、420/480跳过 | 原W300／WAIT／预算原报告；Issue12 | 本局部问题缓解，安全覆盖和服务限制仍在 |
 | [PRB-004：名义双车放行](PRB-004_NOMINAL_TWO_CAR_DISCHARGE.md) | 10-12原因分析/Issue12诊断 | 高 | MITIGATED，限定技术点 | G4/FIX300及短packet900实测双车；全域/长期未资格 | 六周期数据／原因报告；Issue12 | 是：旧E6/N3保留；300/900局部改善不等于300–900资格 |
 
-本次仅回填四个独立问题；预算按Issue要求并入接收恢复记录，覆盖五类必需历史事项。没有迁移开发报告、原始数据或历史日志；未发现现有独立问题记录需移动。后续政策选择及实现由Issue12另行交付，本索引不预先接受方案。当前Candidate A NOT_QUALIFIED、A1 UNRESOLVED、Stage6既有结项和空／未冻结正式协议保持。
+本次仅回填四个独立问题；预算按Issue要求并入接收恢复记录，覆盖五类必需历史事项。没有迁移开发报告、原始数据或历史日志；未发现现有独立问题记录需移动。本轮政策选择和有界实际诊断见Issue12交付报告；三方GO交付不代替用户验收。当前Candidate A NOT_QUALIFIED、A1 UNRESOLVED、Stage6既有结项和空／未冻结正式协议保持。
 
-完整10/12 raw仍在独立工作区；主目录仅部分可审查摘要、原始清单／哈希。GitHub Issue／PR链接用于任务和依赖身份，不宣称所有本地新证据已经上传。下一步建议不构成执行授权。
+旧WAIT完整raw仍在独立工作区；Issue12新raw在主目录data/raw/issue12_alinea_actuation_20261012_v1/。GitHub交付仅紧凑摘要、精确源/input/raw清单与哈希，完整raw仅本地，canonical权限不上传。Issue／PR用于任务和依赖身份。下一步建议不构成执行授权。

@@ -1,0 +1,29 @@
+{
+  "global_command": [
+    "git",
+    "diff",
+    "HEAD^",
+    "HEAD",
+    "--check"
+  ],
+  "global_exit": 2,
+  "global_log_sha256": "fb8b866977b76521b99684ac3692dd01c120d82e5014511658e3fbe5e1617341",
+  "preserved_archived_patch_text_and_csv_CRLF_not_silently_normalized": true,
+  "scoped_command": [
+    "git",
+    "-c",
+    "core.whitespace=blank-at-eol,blank-at-eof,cr-at-eol",
+    "diff",
+    "HEAD^",
+    "HEAD",
+    "--check",
+    "--",
+    "src",
+    "scripts",
+    "tests",
+    "README.md",
+    "docs"
+  ],
+  "scoped_exit": 0,
+  "does_not_change_any_frozen_sources_or_results": true
+}

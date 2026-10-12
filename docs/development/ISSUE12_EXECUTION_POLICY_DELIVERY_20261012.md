@@ -1,6 +1,6 @@
 # Issue #12 执行政策工程交付与资格边界
 
-2026-10-12｜基线20e5e83ac059768320cdaa4c815d164e1022de45；新900诊断已完成；独立数据与科学最终复核进行中，尚非用户验收。
+2026-10-12｜基线20e5e83ac059768320cdaa4c815d164e1022de45；新900诊断和独立数据复核已完成；工程→独立数据→只读科学终审已完成，GO交付并停止追加native；交付待用户/Chat审查。
 
 ## 任务和方法
 
@@ -16,7 +16,7 @@
 | CA_I12_QUOTA_R300_S17_DIAG01 |1210s|helper不支持duration，native setter前停止；N2,C=appliedC5/6,E0，0完整周期|真实技术FAIL，不资格；末步/1271arrival审计PASS |
 | CA_I12_QUOTA_R300_S17_FIX01 |1272s|官方duration最小修复；3×24s，G4/Y5/red15，每周期2辆；C=appliedC=E=N6|72s技术限定PASS；不是长期300资格；1335arrival审计PASS |
 | CA_I12_QUOTA_R900_S17_BOUNDARY01 |1206s|G6时原post-gap拒绝；N2,C=appliedC1.5,E0，0完整周期，无受控Y/red|仅guard合同拒绝，非900物理NO-GO；1267arrival审计PASS |
-| CA_I12_PACKET_R900_S17_DIAG01 |1272s|9×8s，实际每周期G4/Y2/red2、2绿车、黄/红入口0；C=pending=applied=E=N18|一次实际诊断，firstred1207；18ID均rear-clear；数据独立复核待完成 |
+| CA_I12_PACKET_R900_S17_DIAG01 |1272s|9×8s，实际每周期G4/Y2/red2、2绿车、黄/红入口0；C=pending=applied=E=N18|一次实际诊断，firstred1207；18ID均rear-clear；独立FCD/TLS/ACK/body/1338arrival复核PASS |
 
 首helper故障仅修新namespace官方setPhaseDuration桥接，ATTEMPTED/readback/failedSTOP持久化；旧worker/guard未改。原fixed24源、卡、raw、技术FAIL及API修复前后真实测试记录均保留。后续shortpacket独立namespace复用Candidate A、WAIT/cache/log/watchdog，新增全部车尾清空观测和总预算门。新checks只追加缺测STOP，不替代原硬检查。
 
@@ -50,7 +50,7 @@ Python3.13.0，traci/sumolib1.26.0，sumoITScontrol0.1.0；SUMO1.26二进制SHA3
 
 raw只读、本地保存；GitHub交付包括精确卡、源/input绑定、raw清单/每文件SHA、紧凑derived表、review和失败记录，不上传完整raw、私人邮件、MemoryCore无关改动、canonical执行权限或Python cache。旧WAIT fullraw在独立工作区；Issue12新raw在主工作区data/raw/issue12_alinea_actuation_20261012_v1/。公开摘要可审查不等于公开完整raw重算能力；本地原数据核查单独标记。
 
-短窗实际放行与全域qualification分开：300限定实测6/72s；旧900 STOP不是物理不可达。新900在72s、seed17供给下实际18辆，即900veh/h；原hardguard在观测范围均未拒绝。此事实支持当前短两车包高端的局部可行性，最终数据/科学GO仍待复核；450/600/750未新native，不写PASS。整数周期映射仅名义最大相对误差5.882%，实际N、连续rate更新延迟、长窗安全、多seed服务与正式ALINEA效果尚未验证。原Stage6结项、A1 UNRESOLVED、Candidate A NOT_QUALIFIED、旧STOP3与空未冻结协议保持。
+短窗实际放行与全域qualification分开：300限定实测6/72s；旧900 STOP不是物理不可达。新900在72s、seed17供给下实际18辆，即900veh/h；原hardguard在观测范围均未拒绝。此事实支持当前短两车包高端的局部可行性，最终数据和科学复核已限定PASS/GO交付；450/600/750未新native，不写PASS。整数周期映射仅名义最大相对误差5.882%，实际N、连续rate更新延迟、长窗安全、多seed服务与正式ALINEA效果尚未验证。原Stage6结项、A1 UNRESOLVED、Candidate A NOT_QUALIFIED、旧STOP3与空未冻结协议保持。
 
 下一步建议不构成执行授权。新Draft PR待完整证据/三方postreview后提交，直接base codex/candidate-a-native-smoke-proposal /20e5，保留PR1→3→5→7→9→11，上游不修改/retarget/合并。用户/Chat负责审查接受及重大科研取舍，Codex不代替验收。
 
@@ -64,3 +64,31 @@ raw只读、本地保存；GitHub交付包括精确卡、源/input绑定、raw�
 | PACKET_R900_DIAG01 |95/164333753|253c894c52c21a009094dbb7ee80586473f21a0e194abce4d86ccdfb54efde40|完整raw仅主目录；公开精确卡/工程/数据与科学复核 |
 
 工程41binder `cfef72429d1f4dc454dc0632237e82297dfe59d6cff6e4a0472525857d1ad415`，实际新run工程binder `b1c324b9442bb0a28ab279247cb02b62513e8e00f305c2005ffb79c91cede4f8`；所有旧38依赖/536保护、新49源均核对一致。完整单次启动命令/PID/两种时间口径见[真实工程receipt](../../artifacts/issue12_alinea_actuation_20261012_v1/runs/CA_I12_PACKET_R900_S17_DIAG01/engineering/EXECUTION_RECEIPT_V1.json)。所有实际运行均各自消费精确卡；不能照抄命令重跑。
+
+## 新packet900独立数据结论和全域判断
+
+[实际数据报告](../../data/processed/issue12_alinea_actuation_20261012_v1/CA_I12_PACKET_R900_S17_DIAG01/revision01/FINAL_DATA_REVIEW_V1.md)9文件绑定 `8a660303b570b275cf108e27a98dd93d52cd2fe4373733ebef1e4a430db0c856`：1272FCD/TLS帧、2544ACK、18uniqueG、九周期、40body观察行/18真实清尾、九新G准入、1338正常terminal、61WAIT记录及九Y2人口全量独立核对PASS；2547日志记录到EOF。等待记录不是61独立episode。实际正常制动下界−4.5m/s²、collision/teleport0，仅限观测与退出补核。Firstred BEGIN1206/ACK1207；每周期red2是实测总曝光，duration剩余1是在首red ACK之后，不能误写红灯只有1秒。全部18车在下一G前实际清尾，无原9+1.1放宽。
+
+新run截止ACK1272，到期未插入M0/R68/U28/X0；unfinished M78/R93/U23/X4。shared R18（4零速）/U7（2零速）只是末帧描述，不是控制效益或物理回溢唯一因果。原FIX300的different终点值另列，不混合。
+
+| 目标服务率veh/h | 新库名义T/Y/red（Gmax4） | 已观测支持 | 正式/全域状态 |
+|---|---|---|---|
+|300|24/5/≥15|旧FIX300不同namespace实测3周期2辆；不是新packet300的验证|新namespace NOT_TESTED；长期NOT_QUALIFIED|
+|450|16/5/≥7|只有映射/时长算术，无原生运行|NOT_TESTED|
+|600|12/5/≥3|只有映射/时长算术，无原生运行|NOT_TESTED|
+|750（映射720）|10/4/≥2|名义量化−4%，不是实际放行误差|NOT_TESTED|
+|900|8/2/≥2|本新namespace9×2辆，72s实际900|限本次技术观察；长期NOT_QUALIFIED|
+
+**有界可行性判断：** 不能再以原G3单车或长G6 STOP宣称900物理不可达；新短双车包在该供给/seed17下实际能实现高端请求，300另有有限旧版本支持。整数周期消除了先前统一G增加却不核算高端时长的矛盾；这提供工程候选依据，未证明任意rate/queue/state的完整安全或服务资格。当前可执行的新桥接只有fixed900/T8，映射库≠全域runner或liveALINEA。
+
+**停止本次机制诊断：** 旧欠放行原因已观测、原硬门保留、新低端有限支持与新高端精确观测/独立核账已回答Issue要求的有界问题；不靠未测试档填PASS。补600或再改参数不能替代长窗口/连续控制的资格定义，因此不继续机械补矩阵。最终科学审查已确认GO交付、停止追加诊断；随后提交Draft PR。下一重大取舍仅建议用户/Chat决定是否将该候选政策纳入后续正式方法/资格计划，并明确rate窗口、控制更新和验收要求；这不是批准记录或运行授权。
+
+非阻塞来源标签差：卡片FIXED_PACKET_POLICY_DIAGNOSTIC，继承telemetry FIXED_POLICY_DIAGNOSTIC。独立审核显式记录/映射，二者均fixed900/period8/quota2/r_ALINEA=null且精确源已绑定；不改已冻raw，不宣称文本相同或动态反馈。
+
+真实公共clean checkout `403094d6e82c65cf578e562bf4cf97ba3821eecf`一次4/4离线测试PASS，raw仅.gitkeep、Git状态空；49卡片源与主目录和clone逐哈希一致。此后只追加文档/derived/review/receipt，不称后续doc-only head单独测试或raw审计能在公开checkout运行。[测试和范围receipt](../../artifacts/issue12_alinea_actuation_20261012_v1/portability_v1/CLEAN_CHECKOUT_RECEIPT_V1.json)、[源码一致性](../../artifacts/issue12_alinea_actuation_20261012_v1/portability_v1/CLONE_SCOPE_SOURCE_MATCH_V1.json)。全tree `git diff --check`真实FAIL（冻结CSV CRLF/原patch文本），保留日志；源码/脚本/测试/当前docs的scoped检查实际PASS，不静默修改绑定数据或宣称全treePASS。
+
+## 最终科学审查与交接
+
+[最终科学审查](../../artifacts/issue12_alinea_actuation_20261012_v1/runs/CA_I12_PACKET_R900_S17_DIAG01/FINAL_SCIENTIFIC_REVIEW_V1.md)支持GO交付并停止本轮追加native，无新增Blocker/Major、无必须补600信息缺口；历史追溯/来源标签限制披露，PRB-004历史状态Minor已修正。Issue验收1–3满足限定工程交付、4满足有界可行性判断而非全域资格，5在审查当时因PR尚未创建为部分满足，待远程交付核对后完成。自检不是用户验收。
+
+Documentation Impact Check：更新PROJECT_STATE当前节点/资格边界，WORKLOG真实实现/运行/审查记录，policy/index与PRB-004机制进展，README必要入口与CLI单次卡说明；Dashboard仅新增Issue12待审查条目/更新时间，不改变原阶段/章节/决策状态。本次DECISIONS、EXPERIMENT_PROTOCOL、AGENTS、SUPERVISOR_FEEDBACK、thesis outline没有新授权事项，未修改；MemoryCore和私人邮件无关改动保留不提交。无正式研究决定状态提升或新的阶段结项。完整raw本地限制不是未上传证据已提供在线的说法。
