@@ -1,0 +1,23 @@
+{
+  "classification": "OFFLINE_SOURCE_REVIEW_NOT_NATIVE",
+  "status": "PENDING_REQUIRED_AFFECTED_REPAIR",
+  "findings": [
+    {
+      "id": "DATA-F01",
+      "scope": "scripts/t10_g5_y3_audit_20261013_v1/actual.py yellow record coverage",
+      "severity": "Major data integrity",
+      "confirmed_source_fact": "Each present yellow row is validated; no check binds the full record multiset to independently observed green_end_s/first-yellow boundaries. Empty journal skips all row validation.",
+      "minimal_remedy": "Require exactly one fresh yellow record per observed closure/first-Y transition, no duplicates/extras/missing; preserve aborted pre-yellow screening records with explicit prefix status. Add affected tiny coverage regression."
+    },
+    {
+      "id": "DATA-F02",
+      "severity": "Coverage gap pending check",
+      "scope": "final extra BEFORE_MOTION identity journal join",
+      "confirmed_source_fact": "Engineering discloses final extra PRE join added after six-method suite, only CLI-import tested.",
+      "minimal_remedy": "One focused helper or synthetic orchestration test of valid extra PRE and time/population/missing/duplicate negative cases; no native run or broad test matrix."
+    }
+  ],
+  "original_engineering_binder_sha256": "29df09f2834a5787e77591f810be2b96e6bc1729203b898c90c17cb0c5128ed2",
+  "original_card_sha256": "32199c6bc68e4b8ba14bacea336a937d9d0e784ef114f628268daa95bb120633",
+  "native_runs": 0
+}

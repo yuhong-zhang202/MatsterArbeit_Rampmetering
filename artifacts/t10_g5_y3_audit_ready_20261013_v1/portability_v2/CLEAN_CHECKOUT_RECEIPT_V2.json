@@ -1,0 +1,34 @@
+{
+  "tested_commit": "8b3a879aeb2a9e6f4acf5c8cdb317d3e1572ea84",
+  "checkout": "/private/tmp/unified-actuator-clean-voi30_ie/checkout",
+  "command": [
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/t10_g5_y3_audit_20261013",
+    "-v"
+  ],
+  "exit_code": 0,
+  "elapsed_wall_s": 17.44315795804141,
+  "result": "PASS",
+  "test_source_path": "tests/t10_g5_y3_audit_20261013/test_audit.py",
+  "test_source_sha256": "dc56b2daefecd9ccef8a63d0bdd443737f505fc5da6f8841580967f1224f87eb",
+  "raw_files_before": [
+    "data/raw/.gitkeep"
+  ],
+  "raw_files_after": [
+    "data/raw/.gitkeep"
+  ],
+  "checkout_status_after": "",
+  "native_starts": 0,
+  "card_path": "artifacts/t10_g5_y3_audit_ready_20261013_v1/engineering/packages_v4/UA_T10_G5Y3_FIXED750_S17_02/card.json",
+  "card_sha256": "18774ee7aba5319b9947cf6c817c29db00339e7b5f52bb2abef509cf4313755e",
+  "runtime_source_digest": "4deb99f4a6c0b053d810d3b61123a5fff8a15df09cd9cd659e2b4f39bff9fd40",
+  "source_count": 87,
+  "scope": "Nine focused current offline methods. Fake bridge and recorded reader/negative fixtures; no native physics or safety/service qualification. Terminal AFTER nonactive pools without next PRE have single-journal scope.",
+  "environment": "Existing primary .venv; no install or native version invocation; original prepared local runtime path binding is deliberately retained.",
+  "previous_receipt_preserved": "artifacts/t10_g5_y3_audit_ready_20261013_v1/portability_v1/CLEAN_CHECKOUT_RECEIPT_V1.json",
+  "frozen_diff_artifacts": "Literal historical context-marker whitespace retained; exclude frozen .diff from whitespace lint."
+}

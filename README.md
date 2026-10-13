@@ -234,11 +234,11 @@ Preparation and card checks are offline. The card is PREPARED_NOT_RELEASED; its 
 
 ## G5/Y3 audit and run-review package
 
-The versioned reader `scripts/t10_g5_y3_audit_20261013_v1/actual.py` adapts the existing FCD/TLS/ACK/accounting/body/EOF audit to T10/Gmax5/Y3. The isolated02 bridge adds identity/dynamics journals and unique first-yellow preparation records while preserving motion and guard rules. Check the [complete audit delivery](docs/development/T10_G5_Y3_AUDIT_READY_DELIVERY_20261013.md) and PROJECT_STATE for current review status. Only `engineering/packages_v3/UA_T10_G5Y3_FIXED750_S17_02/card.json` is current; earlier02 cards and01 remain historical evidence.
+The versioned reader `scripts/t10_g5_y3_audit_20261013_v1/actual.py` adapts the existing FCD/TLS/ACK/accounting/body/EOF audit to T10/Gmax5/Y3. The isolated02 bridge adds identity/dynamics journals and unique first-yellow preparation records while preserving motion and guard rules. Check the [complete audit delivery](docs/development/T10_G5_Y3_AUDIT_READY_DELIVERY_20261013.md) and PROJECT_STATE for current review status. Only `engineering/packages_v4/UA_T10_G5Y3_FIXED750_S17_02/card.json` is current; earlier02 cards and01 remain historical evidence.
 
 ```bash
 .venv/bin/python -m unittest discover -s tests/t10_g5_y3_audit_20261013 -v
-.venv/bin/python scripts/candidate_a_t10_g5_y3_audit_ready_20261013_v1/cli.py --check-card artifacts/t10_g5_y3_audit_ready_20261013_v1/engineering/packages_v3/UA_T10_G5Y3_FIXED750_S17_02/card.json
+.venv/bin/python scripts/candidate_a_t10_g5_y3_audit_ready_20261013_v1/cli.py --check-card artifacts/t10_g5_y3_audit_ready_20261013_v1/engineering/packages_v4/UA_T10_G5Y3_FIXED750_S17_02/card.json
 ```
 
 The actual reader requires an engineering-frozen manifest, exact card and a new `--output` directory under `data/processed/t10_g5_y3_audit_ready_20261013_v1/`. It returns nonzero for UNKNOWN/STOP and refuses output reuse. No native output exists for02 yet. Offline preparation, passing fixtures and a review package do not authorize a native run or qualify safety/service; separate exact human approval and canonical release remain required.
