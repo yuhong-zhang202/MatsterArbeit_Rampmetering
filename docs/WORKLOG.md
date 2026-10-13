@@ -2584,3 +2584,11 @@ Direct user requests continued bounded investigation/repair/retry750 and then ap
 ### 2026-10-13 — Fixed750 negative-data three-role gate and known-cost settlement
 
 Science GO for evidence/settlement only, runtimeFAIL remains. Five measurement checks observed-prefix scope, source EPS only hypothesis; no repair/retry release. Two-run actual budget charged322.5027397919912s/325646309B; remaining877.4972602080088s/874353691B, no unknown reservation. User-directed technical cause investigation remains active.
+
+### 2026-10-13 — Source-bound numerical recovery proposal, unimplemented
+
+Frozen engineeringproposal0a33dd49… and source replay869183e0…: conditional yellow stop-offset cap plus Euler1mm distance term exactly matches observedR13 speed/alpha; reference withoutdistance term−4.5. Private attribution unknown. Data→science must distinguish valid formula match from causal/safety proof and whether intended normal-braking semantics allow classification. No globaltol/limit change or native retry; literalphysical4.5/unknown requiredbranch conditions would require decision beyond technical repair.
+
+### 2026-10-13 — Numerical recovery scientific Major and precise decision boundary
+
+Data conditional replay/10-file binder1504a1c0… accepted. Science NO-GO enable: actual−4.501 is real; exception changes literal−4.500001 STOP, unobserved source conditions not proven bound. Requires explicit human acceptance of restricted source-compatible exception/remaining attribution boundary before implementation/retry. No globaltol/model/guard/seed changes or new native, no goal closure; originalFAIL and874353691B/877.497s remaining-budget boundary retained.

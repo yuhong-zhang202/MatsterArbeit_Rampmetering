@@ -5,6 +5,12 @@
 
 ## Current Phase
 
+**2026-10-13 恢复方案科学门NO-GO启用，需一项具体标准决定；目标未关闭。** [科学复审](../artifacts/unified_alinea_actuator_20261013_v1/science/TECHNICAL_RECOVERY_PROPOSAL_REVIEW_V1.md)确认公式无误，但实测−4.501不是测量错误；将其由原STOP改继续属于停止谓词改变。privateoffset/actualbranch未唯一确认，未知source条件不能伪装已绑定。需用户明确是否接受限定技术诊断的source-compatible数值事件例外及该因果限制；明确后才实施classifier/负控/三方门/新750，当前不改代码/guard、不重试。剩余877.497260208s/874353691B保持，dynamic/ALINEA HOLD，原FAIL不覆盖。
+
+**2026-10-13 恢复proposal独立数据/公式核对GO，尚非enable或run GO。** [数据复审](../data/processed/unified_alinea_actuator_20261013_v1/technical_recovery_v1/DATA_RECOVERY_PROPOSAL_REVIEW_V1.md)一次复算确认1mm项在声明条件下精确产生−4.501，reference−4.5；10file binder1504a1c0…。5源哈希/输入默认/FCD绑定成立，但privatebranch/offset未实测，数值一致不等于唯一因果或安全通过。科学接着核实原要求的意图及受限分类是否属技术兼容修复；若literalphysical上限或条件必须实测，不能自行enable。未代码修改/新prepare/native。
+
+**2026-10-13 已有具体source式数值重现，恢复proposal待数据→科学合法性门。** [工程proposal](../artifacts/unified_alinea_actuator_20261013_v1/engineering/technical_recovery_v1/TECHNICAL_RECOVERY_PROPOSAL_V1.md)：黄stopOffset cap→Euler gap−1mm条件式精确复现原生post速度/α−4.501，无该数值项reference−4.5；private offset/actualbranch未直接观测。提出保留raw/legacy严格FAIL、default STOP的受限事件分类，不增global上限或tol；若原要求literalphysical4.5或条件必须观测，此修复不在授权且不能enable。独立公式/数据复审进行中，科学须判断“正常制动数值兼容”是否可被现有要求接受。仍无代码/新卡/新运行；旧失败和750缺额风险均不预填通过。
+
 **2026-10-13 750失败前缀三方证据门GO/运行FAIL保留，按已知资源结算；技术调查继续。** [科学post](../artifacts/unified_alinea_actuator_20261013_v1/science/UA_FIXED750_S17_01_POSTREVIEW_V1.md)认可数据质量，不批准修复或重试：6完整+GGGGy partial，N13/E12、325/24 requested；7周期未完成，未观测red/null。原阈值FAIL不是parser误报；源码.001仍候选，不能称技术假阳性/native不安全。两运行累计监控322.5027397919912s/raw325646309B，余877.4972602080088s/874353691B，无未知预留。已按用户新指令开展有界工程原因/具体修复合法性调查，尚未改实现、松guard或释放新运行；后续dynamic/ALINEA仍HOLD。
 
 **2026-10-13 用户要求继续技术排查和有条件最小修复，不以失败报告收口。** [新指令](../artifacts/unified_alinea_actuator_20261013_v1/USER_TECHNICAL_RECOVERY_REQUEST_V1.json)明确在原预算内确认技术性检查不匹配后修复/回归/三方门、新身份750重试、通过后继续既有dynamic/ALINEA；禁止任意提高制动上限/挑seed/忽略报警或实质安全/模型/科研变化。独立750数据完整性PASS（19file binder156612b8…），真实dv/nativeα−4.501、未过线、1333离网/13车尾/EOF完整；不是parser误报，source数值margin仍候选。先核数值实现与检查语义，未修复或释放新运行；旧失败与未运行记录保留。

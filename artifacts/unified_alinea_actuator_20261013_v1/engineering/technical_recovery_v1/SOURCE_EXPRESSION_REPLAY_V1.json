@@ -1,0 +1,76 @@
+{
+  "classification": "BOUNDED_SOURCE_EXPRESSION_REPLAY_NOT_NATIVE_BRANCH_TRACE",
+  "actual_inputs": {
+    "vehicle_id": "R_flow.13",
+    "BEGIN": 1264,
+    "ACK": 1265,
+    "before_speed_m_s": 4.69222772465427,
+    "after_speed_m_s": 0.19122772465426985,
+    "storage_position_m": 203.97137014006898,
+    "distance_to_line_m": 0.5186298599310248,
+    "normal_decel_m_s2": 4.5,
+    "action_step_s": 1.0
+  },
+  "declared_reference_inputs": {
+    "NUMERICAL_EPS": 0.001,
+    "POSITION_EPS": 0.1,
+    "semi_implicit_Euler": true,
+    "headway_s": 1,
+    "carFollowModel": "Krauss inferred from pinned default and no input override",
+    "tls_yellow_min_decel_default": 3.0,
+    "private_major_stop_offset": "NOT_OBSERVED; replay requires >= seen-brakeGap",
+    "no_nextstop_or_GLOSA_override": "from declared inputs, not traced private branch"
+  },
+  "replay": {
+    "Euler_braking_steps": 1,
+    "brakeGap_zero_headway_m": 0.19222772465426985,
+    "seen_minus_brakeGap_m": 0.326402135276755,
+    "necessary_offset_condition": "majorStopOffset >= .32640213527675477 and normal bound chosen, so capped offset yields stopDist=brakeGap; POSITION_EPS does not bind",
+    "g_stop_gap_minus_epsilon_m": 0.19122772465426985,
+    "safeStopEuler_n": 0,
+    "safeStopEuler_h": 0.0,
+    "predicted_safe_speed_m_s": 0.19122772465426985,
+    "speed_residual_vs_actual_m_s": 0.0,
+    "predicted_acceleration_m_s2": -4.501,
+    "observed_native_acceleration_m_s2": -4.501,
+    "counterfactual_same_expression_without_distance_epsilon_speed": 0.19222772465426985,
+    "counterfactual_alpha_without_distance_epsilon": -4.5,
+    "finite_actual_excess_is_not_parser_or_FCD_rounding": true
+  },
+  "native_branch_binding": "CONFIG/SOURCE_COMPATIBLE_AND_NUMERICALLY_EXACT_BUT_PRIVATE_STATE_NOT_OBSERVED",
+  "guard_changed": false,
+  "SUMO_runs": 0,
+  "source_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+  "pinned_sources": {
+    "src/config.h.cmake": {
+      "cache_path": "/private/tmp/issue8_sumo_sources/src/config.h.cmake",
+      "sha256": "e849e676b62539154d42497ffd117a471e30d03c5899532f9e2230048652ab95",
+      "official_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+      "official_url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/config.h.cmake"
+    },
+    "src/microsim/MSVehicle.cpp": {
+      "cache_path": "/private/tmp/issue8_sumo_sources/src/microsim/MSVehicle.cpp",
+      "sha256": "8499ebe445906b19395d5c70945b012f320a439327e9cb3c20f0abd26d15a6a4",
+      "official_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+      "official_url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSVehicle.cpp"
+    },
+    "src/microsim/MSFrame.cpp": {
+      "cache_path": "/private/tmp/issue8_sumo_sources/src/microsim/MSFrame.cpp",
+      "sha256": "03d2a536a4bfd0103360ad095977528f64b4486ad82e4eb1747b14e1263c2d6b",
+      "official_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+      "official_url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSFrame.cpp"
+    },
+    "src/microsim/cfmodels/MSCFModel.cpp": {
+      "cache_path": "/private/tmp/issue8_sumo_sources/src/microsim/cfmodels/MSCFModel.cpp",
+      "sha256": "b4a2b50b679c7772dc81ec5585410cedfdea2110961cc445731627ef3cb1d769",
+      "official_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+      "official_url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/cfmodels/MSCFModel.cpp"
+    },
+    "src/microsim/cfmodels/MSCFModel_Krauss.cpp": {
+      "cache_path": "/private/tmp/issue8_sumo_sources/src/microsim/cfmodels/MSCFModel_Krauss.cpp",
+      "sha256": "0722e1a44c56e430e40c2b661d1ccfb74df1095cd9f6ffeb4e4ceb4da983af36",
+      "official_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+      "official_url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/cfmodels/MSCFModel_Krauss.cpp"
+    }
+  }
+}

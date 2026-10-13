@@ -1,0 +1,42 @@
+{
+  "verdict": "PASS_CONDITIONAL_MATH_MATCH_NOT_BRANCH_OR_ACCEPTANCE",
+  "before_speed_m_s": 4.69222772465427,
+  "dt_s": 1.0,
+  "normal_decel_m_s2": 4.5,
+  "seen_m": 0.5186298599310248,
+  "Euler_positive_braking_steps": 1,
+  "brakeGap_zero_headway_m": 0.19222772465426985,
+  "unobserved_majorStopOffset_required_ge_m": 0.326402135276755,
+  "conditional_lane_stop_offset_m": 0.326402135276755,
+  "conditional_stopDist_m": 0.19222772465426985,
+  "inverse_n": 0,
+  "inverse_h_m": 0.0,
+  "predicted_post_speed_m_s": 0.19122772465426985,
+  "actual_post_speed_m_s": 0.19122772465426985,
+  "speed_residual": 0.0,
+  "predicted_alpha_m_s2": -4.501,
+  "without_distance_epsilon_reference_speed": 0.19222772465426985,
+  "without_distance_epsilon_reference_alpha": -4.5,
+  "actual_private_condition_observed": false,
+  "actual_branch_traced": false,
+  "compiler_binary_equivalence": false,
+  "literal_strict_guard_pass": false,
+  "numerical_exception_enabled": false,
+  "pinned_sources_checked": {
+    "src/config.h.cmake": "e849e676b62539154d42497ffd117a471e30d03c5899532f9e2230048652ab95",
+    "src/microsim/MSVehicle.cpp": "8499ebe445906b19395d5c70945b012f320a439327e9cb3c20f0abd26d15a6a4",
+    "src/microsim/MSFrame.cpp": "03d2a536a4bfd0103360ad095977528f64b4486ad82e4eb1747b14e1263c2d6b",
+    "src/microsim/cfmodels/MSCFModel.cpp": "b4a2b50b679c7772dc81ec5585410cedfdea2110961cc445731627ef3cb1d769",
+    "src/microsim/cfmodels/MSCFModel_Krauss.cpp": "0722e1a44c56e430e40c2b661d1ccfb74df1095cd9f6ffeb4e4ceb4da983af36"
+  },
+  "declared_vTypes": [
+    {
+      "id": "technical_passenger",
+      "vClass": "passenger"
+    }
+  ],
+  "default_model_evidence": "No override; pinned defaultKrauss. Effective native model branch not serialized.",
+  "source_formula_units": "gap/epsilon in m; velocity in m/s; acceleration in m/s2; dt1 makes numerical values coincide.",
+  "native_runs": 0,
+  "raw_reaudits": 0
+}
