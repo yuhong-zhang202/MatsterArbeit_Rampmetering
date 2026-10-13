@@ -36,3 +36,9 @@ SUMO 原生支持 G/y/r 相位与转相控制；官方说明没有给出本场�
 实际验证：三个最初方法通过18.843 s；四方法版本通过18.885 s；之后只变动 startup 假接口，已改变的同一 clock 方法单独复测通过9.354 s。CLI card-check及历史环境回执对应的当前 Python/包 metadata/文件 SHA 静态核查通过，没有新 SUMO version 进程。全部日志、旧测试快照和当前源码快照保留，未声称在旧 commit 上测试新源码。[工程绑定与快照](../../artifacts/t10_g5_y3_candidate_20261013_v1/engineering/implementation_v1/SOURCE_AND_CARD_BINDING_V1.json)。
 
 覆盖两条关绿/读回时钟、动态红灯点、Y3 拒绝于首黄运动前停止、部分与未观测核账、黄灯额外入口、模式/相位/接收/红灯/碰撞/制动/警告拒绝和无授权拒绝。原身份/inventory/yellow_scope及完整 post error block 比较相同。并非每个组合穷举测试，也没有真实七周期、正常离网或 native EOF 结果。假接口刻意从新 program 起步时，桥接仍在首次运动前选择 A_OPEN；实际原生加载默认选择未测。
+
+## 干净 checkout 核查：V1 未通过，修复中
+
+精确本地检查点 `03949494d02c94802e5bc2461ca9daf2a82b341a` 的四个当前方法实测3通过、1ERROR（19.387 s）：提交卡片绑定主工作区的绝对输入路径，另一目录的checkout正确得到 `FOREIGN_RUNTIME_INPUT`。这是测试fixture跨目录适用性缺陷；不放宽路径门、不重绑原卡或修改运行实现。仅制作独立公共依赖离线包供回归，最终门尚未完成。[原失败与回执](../../artifacts/t10_g5_y3_candidate_20261013_v1/portability_v1/CLEAN_CHECKOUT_RECEIPT_V1.json)。checkout raw仅`.gitkeep`、Git保持干净，无SUMO。
+
+工程 revision02 仅修改测试，未修改真实卡片、73项源或任何校验门。两个独立公共依赖临时目录分别验证 foreign 卡拒绝与新离线 fixture 的真实 prepare/validate/缺许可拒绝；没有 mock 掉 validator。路径别名首次FAIL（0.125 s）及源码前像保留，fixture.resolve()最小修复后受影响方法PASS（0.133 s）；还待新检查点干净四方法与data/science最终门。[修订记录](../../artifacts/t10_g5_y3_candidate_20261013_v1/engineering/implementation_revision02/ENGINEERING_PORTABILITY_REVIEW_V2.md)。

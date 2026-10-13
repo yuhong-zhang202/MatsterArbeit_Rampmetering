@@ -2688,3 +2688,11 @@ Read-onlyscientific reviewer GO_FOR_CONDITIONAL_OFFLINE_PREPARATION/no newBlocke
 ### 2026-10-13 — T10 isolated engineering delivery frozen
 
 32binderf623f114/reportbdc6632c; sevennewruntime files/73bindings digest013a7da7 and exactcard6dc90946 frozen. 4focused methodsPASS18.885s; startupfixture change covered byoneexistingclock methodPASS9.354s, no runtimechange. Earlyquota anddeadline clocks/dynamicfirstred, Y3UNKNOWN beforemotionSTOP, strictNUM andsourcehardgates preserved; noN14prediction. Proposednewsingle300s/300MB/end1270/resources requirefutureuserapproval. Original64/T8 andoldprogrammes unchanged; newID/source/input/staticenvironment bound, no native/version/auth/raw. Independentdatafinalstarted; selectedlocalcheckpoint/cleancheckout focusedverification next, notqualification.
+
+### 2026-10-13 — T10 clean-checkout V1 real failure retained
+
+Exactlocalcheckpoint03949494d02c94802e5bc2461ca9daf2a82b341a: four currentmethods3PASS/1ERROR19.387s; host-bound committedcard/cfg iscorrectly rejectedinforeignclone byFOREIGN_RUNTIME_INPUT. Rawonly.gitkeep/checkoutclean/no native. Engineerowns minimalportableofflinefixture testrepair only, noinputguard/card/runtime change; datafinalfreezeheld. portability_v1 log/receipt/binderpreserved. MechanicalfirstshortSHAfetchfailure andfrozendiff-contextwhitespacecheck warning also preserved; fullSHAfetch/scopedsource-doccheckPASS. No claimallclean4PASS.
+
+### 2026-10-13 — T10 portable fixture engineering revision02
+
+Onlytest changedSHA5a17a8fd;11binderd81bf352/report710e90bc. Two independentpublicinput roots retainforeignreal-card rejection andprepare freshhost-bound offlinefixture usingrealvalidators/no mocks; test-onlybridgeROOT injection, missingcanonical authfails beforeworker/raw. FirsttempaliasFAIL0.125s+preimage preserved, resolve-onlyfixturefix thenaffectedmethodPASS0.133s. Historical0394949testblob/preimage matchesold32binder; other31files/73source/card unchanged. Engineerfix turnexplicitly restartedafter completedagentmessage didnottrigger; no extraSUMO. Fullnewcleancheck/data/sciencepending.

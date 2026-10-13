@@ -1,0 +1,19 @@
+test_offline_card_no_authorization_rejects_before_allocation_import_and_900_preserved (tests.candidate_a_t10_g5_y3_20261013.test_candidate.CandidateTests.test_offline_card_no_authorization_rejects_before_allocation_import_and_900_preserved) ... FAIL
+
+======================================================================
+FAIL: test_offline_card_no_authorization_rejects_before_allocation_import_and_900_preserved (tests.candidate_a_t10_g5_y3_20261013.test_candidate.CandidateTests.test_offline_card_no_authorization_rejects_before_allocation_import_and_900_preserved)
+----------------------------------------------------------------------
+ValueError: execute root injection prohibited
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_t10_g5_y3_20261013/test_candidate.py", line 139, in test_offline_card_no_authorization_rejects_before_allocation_import_and_900_preserved
+    with self.assertRaisesRegex(ValueError,'FUTURE_EXACT_NATIVE_AUTHORIZATION_MISSING'):
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: "FUTURE_EXACT_NATIVE_AUTHORIZATION_MISSING" does not match "execute root injection prohibited"
+
+----------------------------------------------------------------------
+Ran 1 test in 0.125s
+
+FAILED (failures=1)
