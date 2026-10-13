@@ -1,0 +1,70 @@
+{
+  "classification": "BOUNDED_TECHNICAL_HANDOFF_NO_FORMAL_EFFECT",
+  "tasks": [
+    {
+      "mode": "fixed300",
+      "run_id": "UA_FIXED300_S17_02",
+      "execution": "COMPLETED_SHORT_DIAGNOSTIC",
+      "data_integrity": "PASS_OBSERVED_DATA_INTEGRITY_ONLY",
+      "last_ACK": 1272,
+      "complete_cycles": 3,
+      "partial_cycles": 0,
+      "accounting": {
+        "C": 6.0,
+        "C_mapped_pending": 6.0,
+        "C_applied": 6.0,
+        "E": 6,
+        "N": 6,
+        "policy_quantization": 0.0,
+        "application_latency": 0.0,
+        "C_applied_minus_E": 0.0,
+        "E_minus_N": 0
+      },
+      "observed_monitor_alarm": false,
+      "rate_qualified": false
+    },
+    {
+      "mode": "fixed750",
+      "run_id": "UA_FIXED750_S17_01",
+      "execution": "STOP_KNOWN_BRAKING_CONTRACT_FAIL",
+      "data_integrity": "PASS_OBSERVED_DATA_INTEGRITY_ONLY",
+      "last_ACK": 1265,
+      "complete_cycles": 6,
+      "partial_cycles": 1,
+      "accounting": {
+        "C": 13.541666666666666,
+        "C_mapped_pending": 13.0,
+        "C_applied": 13.0,
+        "E": 12,
+        "N": 13,
+        "policy_quantization": 0.5416666666666666,
+        "application_latency": 0.0,
+        "C_applied_minus_E": 1.0,
+        "E_minus_N": -1
+      },
+      "observed_monitor_alarm": true,
+      "rate_qualified": false
+    },
+    {
+      "mode": "dynamic_commands",
+      "run_id": null,
+      "execution": "NOT_RUN_DUE_PRIOR_STOP",
+      "last_ACK": null,
+      "complete_cycles": null,
+      "accounting": null,
+      "rate_qualified": false
+    },
+    {
+      "mode": "real_alinea",
+      "run_id": null,
+      "execution": "NOT_RUN_DUE_PRIOR_STOP",
+      "last_ACK": null,
+      "complete_cycles": null,
+      "accounting": null,
+      "rate_qualified": false
+    }
+  ],
+  "old900": "HISTORICAL_DIFFERENT_NATIVE_SOURCE; OFFLINE_COMPATIBILITY_ONLY; NOT_UNIFIED_NATIVE900",
+  "continued_native_authorized": false,
+  "budget_settled_by_data": false
+}

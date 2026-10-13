@@ -2560,3 +2560,27 @@ Actualcode 121285daa54a4b1b1d45c5319c5405479b913d80 freshcleanclone publicverify
 ### 2026-10-13 — Unified first300 three-role postreview and settlement
 
 Scientific reviewer GO for bounded data delivery; five measurement checks and source/runtime limitations retained. No new required finding. Immutable settlement after engineering/data/science review charges152.051050667 s and163251073 B; remaining1047.948949333 s/1036748927 B, no unknown allocation. Prepare approved750 only after this gate; no new native run or qualification claim in this step.
+
+### 2026-10-13 — Unified fixed750 precise card engineering gate
+
+Prepared UA_FIXED750_S17_01 only: card9f8dab32…, same61-source a2b25659…, request750→mapped720/T10, end1270/seven planned slots. Engineering delta GO,7-file binder e47c831c…; unchanged tests/evidence reused, no native/source changes. ActualN unknown; independent data/science release gates pending.
+
+### 2026-10-13 — Fixed750 exact three-role prelaunch GO
+
+Independentdata and science exact-card gates GO with no new required finding. Canonical one-case permissions bound to existing explicit user scope approval and report hashes; .venv fresh validation PASS. Requested175/12 and mapped14 remain predicted, E/N not observed. Execute once to1270, no automatic retry; full postreview before dynamic task.
+
+### 2026-10-13 — Unified fixed750 native STOP retained
+
+One actual run stopped atACK1265/exit1 on R_flow.13 ordinary-braking/excessive-acceleration checks; no retry or subsequent launch. Six complete10s cycles and one partial prefix retained, no interpolation to nominal14. Engineering freeze/post and independentdata→science pending; unchanged safety thresholds, timings, model and formal scope. Negative outcome is not a resource failure or7-cycle qualification.
+
+### 2026-10-13 — Fixed750 engineering STOP freeze and bounded source explanation
+
+Engineering finalized negative-prefix evidence:109raw/162395236B,8-file binder e613a791…. R13 finite dv/nativealpha−4.501 in firstyellow/storage versusnormal4.5/tol1e−6, no entry. One existing pinned-source query finds NUMERICAL_EPS.001 and native normal/warning expressions; actual branch/binary equivalence unproved, not a false-positive or native safety finding. No guard/model/source changes or retry. Data begins after frozen actual inputs, engineering report now final;1333 normal-arrival and all prefix audit pending.
+
+### 2026-10-13 — User-directed conditional technical recovery after750 STOP
+
+Direct user requests continued bounded investigation/repair/retry750 and then approved dynamic/ALINEA, within existing resources and exact three-role gates. Arbitrary braking-limit increase, seed selection, alarm omission and material safety/model/research changes prohibited. Original750 independent audit PASS_DATA_INTEGRITY with real−4.501 criterion failure retained; no parser fix/new test needed,19-file binder156612b8…. Recovery cause and permitted technical fix remain unresolved, no new runtime release.
+
+### 2026-10-13 — Fixed750 negative-data three-role gate and known-cost settlement
+
+Science GO for evidence/settlement only, runtimeFAIL remains. Five measurement checks observed-prefix scope, source EPS only hypothesis; no repair/retry release. Two-run actual budget charged322.5027397919912s/325646309B; remaining877.4972602080088s/874353691B, no unknown reservation. User-directed technical cause investigation remains active.

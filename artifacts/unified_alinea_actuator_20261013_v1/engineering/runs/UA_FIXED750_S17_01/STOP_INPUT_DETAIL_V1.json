@@ -1,0 +1,147 @@
+{
+  "run_id": "UA_FIXED750_S17_01",
+  "time_begin_s": 1264,
+  "time_end_s": 1265,
+  "vehicle_id": "R_flow.13",
+  "status": "STOP_OBSERVED_AFTER_STEP",
+  "reasons": [
+    "ORDINARY_BRAKING_EXCEEDED:R_flow.13",
+    "UNKNOWN_OR_EXCESSIVE_ACCELERATION:R_flow.13"
+  ],
+  "pre_world": {
+    "role": "R",
+    "speed_m_s": 4.69222772465427,
+    "lane_id": "ramp_storage_0"
+  },
+  "post_world": {
+    "role": "R",
+    "speed_m_s": 0.19122772465426985,
+    "lane_id": "ramp_storage_0"
+  },
+  "terminal_before": {
+    "vehicle_id": "R_flow.13",
+    "time_s": 1264,
+    "speed_m_s": 4.69222772465427,
+    "lane_id": "ramp_storage_0",
+    "position_m": 203.97137014006898,
+    "length_m": 5.0,
+    "type_id": "technical_passenger",
+    "route": [
+      "urban_in",
+      "shared_approach",
+      "ramp_storage",
+      "ramp_accel",
+      "merge_section",
+      "main_down"
+    ],
+    "terminal_edge": "main_down",
+    "normal_decel_m_s2": 4.5,
+    "terminal_lane_binding_scope": "any actual network lane on bound terminal route edge; legal final lane changes allowed",
+    "acceleration_m_s2": 2.366063850396313,
+    "acceleration_scope": "same-before-time last-post reading or initial getter"
+  },
+  "phase": {
+    "phase_before": 0,
+    "state_before": "G",
+    "next_switch_before_s": 1264.0,
+    "phase_after": 1,
+    "state_after": "y",
+    "next_switch_after_s": 1268.0
+  },
+  "phase_clock_binding": {
+    "cycle_id": 6,
+    "program": "I12_PACKET10",
+    "motion": "y",
+    "expected_post_nextSwitch_s": 1268,
+    "actual_post_nextSwitch_s": 1268.0,
+    "status": "ACK_OBSERVED_NOT_FUTURE_SAFETY"
+  },
+  "signal_binding": {
+    "ACK_s": 1265,
+    "actual_phase": 1,
+    "actual_state": "y",
+    "actual_program": "I12_PACKET10",
+    "actual_controlled_links": [
+      [
+        [
+          "ramp_storage_0",
+          "ramp_accel_0",
+          ":ramp_mid_0_0"
+        ]
+      ]
+    ],
+    "expected_phase": 1,
+    "expected_state": "y",
+    "expected_program": "I12_PACKET10",
+    "status": "BOUND_BEFORE_LEDGER"
+  },
+  "observed_delta_v_m_s2": -4.501,
+  "observed_native_acceleration_m_s2": -4.501,
+  "hard_normal_threshold_m_s2": -4.5,
+  "numeric_tolerance": 1e-06,
+  "crossings_last": [],
+  "body_last": {
+    "ACK_s": 1265,
+    "signal": "y",
+    "spanning_ids": [],
+    "rows": [],
+    "claim": "actual per-ACK rear observation; no yellow-end clearance deadline or future guarantee"
+  },
+  "yellow_scope_for_vid": [
+    {
+      "vehicle_id": "R_flow.13",
+      "population": "storage",
+      "time_s": 1264,
+      "position_m": 203.97137014006898,
+      "speed_m_s": 4.69222772465427,
+      "length_m": 5.0,
+      "normal_decel_m_s2": 4.5,
+      "action_step_s": 1.0,
+      "distance_to_meter_m": 0.5186298599310248,
+      "one_step_Euler_stop_possible": false,
+      "stop_distance_screen_m": 7.138561171322513,
+      "stop_possible": false,
+      "body_clear_time_screen_s": 2.5869505666877877,
+      "clear_possible": true,
+      "status": "WITHIN_LOCAL_yellow_s_SCREEN",
+      "native_future_safety_proven": false
+    }
+  ],
+  "receiver_pre": {
+    "available": false,
+    "reason": "LEADER_SECURE_GAP",
+    "front_id": "R_flow.13",
+    "nearest_internal": "R_flow.12",
+    "leader": {
+      "vehicle_id": "R_flow.12",
+      "lane_id": ":ramp_mid_0_0",
+      "gap_excluding_minGap_m": 8.177602547028266,
+      "secure_gap_m": 10.084455449308539
+    },
+    "nearest_internal_rear_clearance_m": 10.158972687097242,
+    "required_front_clearance_m": 7.5
+  },
+  "post_receiver": {
+    "available": true,
+    "reason": "AVAILABLE",
+    "front_id": "R_flow.13",
+    "nearest_internal": "R_flow.12",
+    "leader": {
+      "vehicle_id": "R_flow.12",
+      "lane_id": ":ramp_mid_0_0",
+      "gap_excluding_minGap_m": 16.974436866706164,
+      "secure_gap_m": 2.79122772465427
+    },
+    "nearest_internal_rear_clearance_m": 19.14703473142942,
+    "required_front_clearance_m": 7.5
+  },
+  "input_paths": {
+    "pre_steps": "data/raw/unified_alinea_actuator_20261013_v1/UA_FIXED750_S17_01/outputs/pre_steps.jsonl",
+    "post_steps": "data/raw/unified_alinea_actuator_20261013_v1/UA_FIXED750_S17_01/outputs/post_steps.jsonl"
+  },
+  "input_sha256": {
+    "pre_steps": "1c25cffa770efaff2b6075f02e64fc9451602ccc711b38ce1869c45875968770",
+    "post_steps": "b755a551d084c75f5fb9c8f5c20ef70171321bc9ef449c5b2cb7c96e0745f4c3"
+  },
+  "scope": "EXACT_RECORDED_INPUTS_NOT_CAUSAL_ATTRIBUTION_OR_SAFETY_RELAXATION"
+}

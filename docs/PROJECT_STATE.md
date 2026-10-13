@@ -5,6 +5,22 @@
 
 ## Current Phase
 
+**2026-10-13 750失败前缀三方证据门GO/运行FAIL保留，按已知资源结算；技术调查继续。** [科学post](../artifacts/unified_alinea_actuator_20261013_v1/science/UA_FIXED750_S17_01_POSTREVIEW_V1.md)认可数据质量，不批准修复或重试：6完整+GGGGy partial，N13/E12、325/24 requested；7周期未完成，未观测red/null。原阈值FAIL不是parser误报；源码.001仍候选，不能称技术假阳性/native不安全。两运行累计监控322.5027397919912s/raw325646309B，余877.4972602080088s/874353691B，无未知预留。已按用户新指令开展有界工程原因/具体修复合法性调查，尚未改实现、松guard或释放新运行；后续dynamic/ALINEA仍HOLD。
+
+**2026-10-13 用户要求继续技术排查和有条件最小修复，不以失败报告收口。** [新指令](../artifacts/unified_alinea_actuator_20261013_v1/USER_TECHNICAL_RECOVERY_REQUEST_V1.json)明确在原预算内确认技术性检查不匹配后修复/回归/三方门、新身份750重试、通过后继续既有dynamic/ALINEA；禁止任意提高制动上限/挑seed/忽略报警或实质安全/模型/科研变化。独立750数据完整性PASS（19file binder156612b8…），真实dv/nativeα−4.501、未过线、1333离网/13车尾/EOF完整；不是parser误报，source数值margin仍候选。先核数值实现与检查语义，未修复或释放新运行；旧失败与未运行记录保留。
+
+**2026-10-13 固定750工程STOP证据收口，独立数据审计进行中。** [工程post](../artifacts/unified_alinea_actuator_20261013_v1/engineering/runs/UA_FIXED750_S17_01/POST_ENGINEERING_REVIEW_V1.md)冻结109raw/162395236B、8file binder e613a791…；R13在storage首y区间1264→1265实际dv/nativeα均−4.501，normal4.5/tol1e−6，未过线。官方pinned源码存在NUMERICAL_EPS.001/相关normal+EPS及warning扣EPS，只是候选解释，实际分支/二进制等价未验证；不称假阳性/原生不安全，不松guard。1333正常离网及全前缀C/E/N/EOF/车尾待独立核账；后续任务HOLD，预算未结算。
+
+**2026-10-13 固定750在1265s原生STOP；后续两任务停止扩展。** 工程观察R_flow.13触发ORDINARY_BRAKING_EXCEEDED及UNKNOWN_OR_EXCESSIVE_ACCELERATION；同进程exit1/ACK1265。六完整T10各G4Y4R2/2入口，末周期G4+y1仅1入口，C13.5416667/pending=applied13/E12/N13为待独立核账的前缀，非7周期资格。监控170.451689125s；EOF完整，非watchdog预算故障。完整freeze及工程→数据→科学post进行中，阈值/配时/车辆模型不改，不重试或启动dynamic/ALINEA；不能用前6周期成功忽略末周期STOP。
+
+**2026-10-13 固定750唯一进程运行中。** CLI11672/SUMO11694/session34093，25.0147s连接（≤60s），同进程最新已核ACK982；尚未到1270或完成post核账。不重启、不新测试；该raw身份暂保守预留300s/300MB，三方post完成前不按预计耗时释放。
+
+**2026-10-13 固定750三方精确预启动GO，canonical通过，准备唯一原生诊断。** [科学预审](../artifacts/unified_alinea_actuator_20261013_v1/science/UA_FIXED750_S17_01_PRELAUNCH_GO_V1.md)核实请求175/12辆与mapped14仅规划，实际E/N未测；同源a2b25659…，卡9f8dab32…。用户已批范围内到1270，危险/UNKNOWN即停，不自动重试；完整三方post门先于变指令任务，非ALINEA或完整资格。
+
+**2026-10-13 固定750精确卡独立数据预审GO，待科学门。** [数据预审](../data/processed/unified_alinea_actuator_20261013_v1/UA_FIXED750_S17_01/prelaunch_v1/DATA_PRELAUNCH_REVIEW_V1.md)独立复算T10/G4Y4r2、750→720/−4%、7计划周期；68去重输入/源/卡绑定路径一致，7文件binder deced1f2…。C/E/N实际未测，未该卡权限/raw/native；科学精确差异门通过后才canonical运行。
+
+**2026-10-13 固定750新卡工程预审GO，仅准备未运行。** 卡9f8dab32…绑定同一V2源a2b25659…/commit6706d4a；请求750映射720/T10（−4%），终点1270、7slot/E14仅名义计划，N未观测。输入/环境/安全门不变；剩余1047.948949333s/1036748927B。进入独立数据→科学精确卡门，尚无该卡canonical/native/raw。
+
 **2026-10-13 首300/02三方post审查完成，有限技术数据GO，预算按实耗结算。** [科学post](../artifacts/unified_alinea_actuator_20261013_v1/science/UA_FIXED300_S17_02_POSTREVIEW_V1.md)未发现新增必修问题；3完整周期/6绿入口、C=pending=applied=E=N6及完整离网/EOF核账可用于本次短时技术验收。监控152.051050667s/raw163251073B已三方结算，剩余1047.948949333s/1036748927B；无未知预留。仅允许准备已批准750精确卡，独立逐卡门仍先于运行。A1/服务资格/正式协议状态不变；下方pending为历史阶段。
 
 **2026-10-13 首300/02独立实际数据审计首次PASS，待科学post门。** [数据post](../data/processed/unified_alinea_actuator_20261013_v1/UA_FIXED300_S17_02/revision01/DATA_POSTREVIEW_V1.md)：108raw全SHA/inventory、1272FCD/TLS/post/2544ACK、3连续G4Y5R15周期、6独立入口全G、C/pending/applied/E/N6、72真实信号绑定、6rear-clear/3fresh准入、1335离网最后precision8 BEGIN及正常制动、四nativeEOF通过；21WAIT，最低dv/原生α−4.5，unknown/alarm/censor为空。15文件数据绑定5aba70c1…；首次真实审计无schema修复/重审，完整reader已在此真实数据范围验证。仍仅一个高供给seed17短时技术点，不代表长期/全域/ALINEA资格；尚未预算结算或准备750，科学post审查进行中。
