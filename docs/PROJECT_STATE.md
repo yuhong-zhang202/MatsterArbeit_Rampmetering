@@ -5,6 +5,20 @@
 
 ## Current Phase
 
+**2026-10-13 750/02三方技术/获批监测门GO，服务门未达；可准备已批dynamic精确卡。** [科学post](../artifacts/unified_alinea_actuator_20261013_v1/science/UA_FIXED750_S17_02_POSTREVIEW_V1.md)保留E14/N13、实际668.57veh/h与映射−7.14%/请求−10.86%。批准范围允许缺额作为失败/能力边界，并未要求E=N先于接口诊断，因此继续仅指技术观测门通过，不称服务资格；不改timing/seed/quota抹缺额。实耗已结算，三运行累计474.9866048749536s/489416845B，余725.0133951250464s/710583155B；无unknown预留。下一卡仍须三方精确预启动，不自动运行；原FAIL/真实−4.501保留。
+
+**2026-10-13 750/02首次独立actual_numeric审计PASS，服务目标未达，待科学post。** [数据post](../data/processed/unified_alinea_actuator_20261013_v1/UA_FIXED750_S17_02/revision01/DATA_POSTREVIEW_V1.md)17file binder7bd7ef63…：111raw/1270FCD_TLS_posts/2540ACK、13全G入口/13车尾/1337正常离网/EOF完整；1数值事件完整freshbefore→world/meta/FCDafter→相位/模式动力学/gap/公式独立绑定，真实−4.501/两legacyFAIL保留，actualbranch未唯一识别。无未豁免报警/coverageUNKNOWN/censor；WAIT47含pre20+post27。7完整E14/N13；量化−4%、执行−7.14%、实际668.57veh/h相对请求−10.86%，不称750率资格。预算尚未post三方结算，后续技术卡是否可按既定缺额披露条款继续待科学门，不重定资格标准。
+
+**2026-10-13 新750/02工程freeze完成，独立numeric/全前缀post核账待审。** [工程post](../artifacts/unified_alinea_actuator_20261013_v1/engineering/runs/UA_FIXED750_S17_02/POST_ENGINEERING_REVIEW_V1.md)111raw/163770536B、监控152.483865083s；1个R13 firsty数值分类保留真实−4.501/2 legacyFAIL，actualbranch未识别，原fresh9+1.1前后均PASS。7完整周期E14/N13、13G入口/车尾、无censor；1337正常离网及完整分类/日志待独立核对。代码ea180197…不改；后续未放行、预算三方post前仍预留300s/300MB。
+
+**2026-10-13 新750/02到1270完成，实际E14/N13，待完整独立post门。** 唯一CLI exit0、7完整T10，前6各2入口、第7仅1/MAX_GREEN_DEADLINE；未改配时/配额，不称750服务率资格。工程正在冻结numeric实测/真实legacy−4.501、EOF及whole raw；尚未预算结算/后续卡放行。完整数据→科学post将区分技术执行可交付与服务缺额，按已批scope判断是否继续dynamic/ALINEA。
+
+**2026-10-13 750/02科学精确门GO，受限例外Major在明确授权边界内关闭，canonical通过。** [科学预审](../artifacts/unified_alinea_actuator_20261013_v1/science/UA_FIXED750_S17_02_PRELAUNCH_GO_V1.md)不改判原750FAIL、不宣称actualbranch已观察；defaultSTOP/仅同veh两制动原因例外/其他danger与UNKNOWN保留。卡fb4beb8a/64源ea180197…/NUM批准额外hash齐备，准备唯一新750原生运行至1270，N14未预填；post完整数值/末步/车尾/EOF/核账决定后续，两后续卡未放行。
+
+**2026-10-13 750/02受限数值例外独立数据精确预审GO，待科学门。** [数据预审](../data/processed/unified_alinea_actuator_20261013_v1/numerical_exception_prelaunch_v1/DATA_NUMERICAL_PRELAUNCH_REVIEW_V1.md)104绑定路径/64源/卡fb4beb8a/批准SHA/输入/预算一致；12file binder33ccf1ed…。新独立numeric事件审计＋actual_numeric_v2补充层保留原actual.py/所有legacy报警，在完整freshbefore/world/FCDafter/实际firsty/signal/gap/公式join下单列approved分类；1项必要回归5反例PASS，尚未newraw实测。无新canonical/native，实际N未填；科学精确门进行中。
+
+**2026-10-13 数值分类实现本地提交1749e04，干净checkout三项目标回归PASS。** [公开依赖验证](../artifacts/unified_alinea_actuator_20261013_v1/clean_checkout_v4/RECEIPT_V2.json)实测commit1749e040ac8b738e8530dd690236d6ef4da800fd，64源与75002卡一致、raw仅.gitkeep/gitclean。首次parent元数据键名错误在测试已PASS后发生，失败JSON保留、仅修receipt读取未重测；不属于运行实现故障。工程报告生成时未提交快照已映射该commit，不覆写历史。数据precise/新事件独立decoder门进行中，未新SUMO；未push/改上游PR。
+
 **2026-10-13 获批受限数值分类最小实现/工程门完成，750/02待数据→科学精确门。** [工程预审](../artifacts/unified_alinea_actuator_20261013_v1/engineering/numerical_exception_v1/ENGINEERING_PRELAUNCH_REVIEW_V1.md)3针对性方法最终PASS，初fixture NONSEQUENTIAL_TIME四ERROR/前像保留；旧严格块/其它stop理由/真实−4.501/legacyFAIL均保留。40file binder af246f2a…；卡fb4beb8a…绑定新64源ea180197…，模型/输入/seed17/配时/终点1270/预算不变，N14不保证。源快照基于bb91a8b上的未提交delta，不能称该旧commit测试新实现；旧300/900仅受影响回放相容，非新SHA native证据。无新canonical/raw/运行；新权限额外须绑定数值批准SHA。
 
 **2026-10-13 用户明确批准受限数值例外，恢复最小实现/回归/三方门后新750重试。** [批准绑定](../artifacts/unified_alinea_actuator_20261013_v1/USER_NUMERICAL_EXCEPTION_APPROVAL_V1.json)允许仅原技术模式、完整身份/相位/模型/位置/beforeafter绑定且精确匹配官方1mm公式的事件分类；接受actualbranch未唯一识别的限制，不能伪称已验证。真实数值/原FAIL/其它危险或UNKNOWN STOP保留，不改globaltol/模型/配时/seed/科研或预算。工程现在最小实现，尚未新750卡放行/运行，dynamic/ALINEA仍须新750 post门。
