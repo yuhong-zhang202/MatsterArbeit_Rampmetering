@@ -5,7 +5,17 @@
 
 ## Current Phase
 
-**2026-10-13 信号ACK绑定V2离线修复已冻结，新的首300/02卡待数据→科学复审。** [工程V2](../artifacts/unified_alinea_actuator_20261013_v1/engineering/signal_ack_fix_v2/ENGINEERING_REVIEW_V2.md)：旧源码四个same-nextSwitch错误信号组合负例真实FAIL；将实际post信号/程序/连接/ACK时间核查提前后，3项受影响方法PASS，错误不登记应用且保留入口观察。旧900受改条件72步/20setter回放相容，536原文件/旧01卡不变；02卡SHA49bcb286…，共同源摘要a2b25659…。V1卡未运行并保留，不再作为当前可放行卡；当前无native/raw/canonical/预算消费，不改参数/guard/研究设计。
+**2026-10-13 首300/02三方post审查完成，有限技术数据GO，预算按实耗结算。** [科学post](../artifacts/unified_alinea_actuator_20261013_v1/science/UA_FIXED300_S17_02_POSTREVIEW_V1.md)未发现新增必修问题；3完整周期/6绿入口、C=pending=applied=E=N6及完整离网/EOF核账可用于本次短时技术验收。监控152.051050667s/raw163251073B已三方结算，剩余1047.948949333s/1036748927B；无未知预留。仅允许准备已批准750精确卡，独立逐卡门仍先于运行。A1/服务资格/正式协议状态不变；下方pending为历史阶段。
+
+**2026-10-13 首300/02独立实际数据审计首次PASS，待科学post门。** [数据post](../data/processed/unified_alinea_actuator_20261013_v1/UA_FIXED300_S17_02/revision01/DATA_POSTREVIEW_V1.md)：108raw全SHA/inventory、1272FCD/TLS/post/2544ACK、3连续G4Y5R15周期、6独立入口全G、C/pending/applied/E/N6、72真实信号绑定、6rear-clear/3fresh准入、1335离网最后precision8 BEGIN及正常制动、四nativeEOF通过；21WAIT，最低dv/原生α−4.5，unknown/alarm/censor为空。15文件数据绑定5aba70c1…；首次真实审计无schema修复/重审，完整reader已在此真实数据范围验证。仍仅一个高供给seed17短时技术点，不代表长期/全域/ALINEA资格；尚未预算结算或准备750，科学post审查进行中。
+
+**2026-10-13 首300/02原生运行已完成并冻结，进入独立实际数据审计。** [工程post](../artifacts/unified_alinea_actuator_20261013_v1/engineering/runs/UA_FIXED300_S17_02/POST_ENGINEERING_REVIEW_V1.md)：同一进程到1272/exit0，监控152.051050667s；3个T24各G4/Y5/R15、2绿入口、黄红0，C=pending=applied=E=N6，first-red1210、6真实rear-clear、3fresh新G准入、日志EOF完整。全raw父108文件/163251073B冻结manifest186dc2dd…；61源/536保护无改。上述仍为工程自检，1335正常离网末步与完整FCD/TLS/ACK/账/安全待独立核对。预算尚未三方结算，保守计300s/300MB预留；未750/后续prepare，旧“运行中”记录为更早前缀，不构成当前状态或服务资格。
+
+**2026-10-13 首300/02唯一原生诊断已启动，尚未完成或判定。** 工程报告同一CLI PID6651/SUMO PID6680、exec session30160，25.38s CONNECTED（≤60s），最新核验ACK931s仍在控制前准备段。源码/卡/预算不变，无重启；终点1272及所有异常/UNKNOWN停止保持。完整实际reader已在独立分析namespace接线并作1项schema测试，尚未读新raw/未验证whole-run；工程EOF冻结后才独立核账，随后科学post门先于下一卡。未确认真实放行或安全/服务PASS。
+
+**2026-10-13 科学V2精确首300/02卡GO，canonical门通过，批准执行一次技术诊断。** [科学GO](../artifacts/unified_alinea_actuator_20261013_v1/science/PRELAUNCH_GO_V2.md)仅对应卡49bcb286…/共同源a2b25659…；原Major在离线范围关闭，无新增必修问题。canonical release91a38e3f…绑定工程/data/science报告与用户范围批准；首次root系统python环境检查失败在分配前，改用既有项目.venv后环境完全匹配，未改环境/源码/卡。当前准备唯一原生300运行，到1272、3周期，出异常/UNKNOWN立即停止；实际raw/放行/安全与末步离网尚未验证，post三方门先于750。旧01卡与失败记录不覆盖，正式与资格状态不变。
+
+**2026-10-13 信号ACK绑定V2离线修复已冻结，新的首300/02卡待数据→科学复审。** [工程V2](../artifacts/unified_alinea_actuator_20261013_v1/engineering/signal_ack_fix_v2/ENGINEERING_REVIEW_V2.md)：旧源码四个same-nextSwitch错误信号组合负例真实FAIL；将实际post信号/程序/连接/ACK时间核查提前后，3项受影响方法PASS，错误不登记应用且保留入口观察。旧900受改条件72步/20setter回放相容，536原文件/旧01卡不变；02卡SHA49bcb286…，共同源摘要a2b25659…。V1卡未运行并保留，不再作为当前可放行卡。V2修复现已本地提交1b332fd，独立数据02卡复审GO（16文件bf0c91ea…、91绑定路径核对、1必要方法PASS），后续本地提交保存数据V2；检查器metadata KeyError及schema修复前像保留，旧V1证据不覆盖。当前本地HEAD89434dcc815d93d956466373197461cdea5ca4e5，61runtime源与02卡一致；该head完整干净checkout的3受影响工程方法+1数据方法PASS（10.918881s），raw仅.gitkeep/gitclean。不受影响测试复用原精确版本。科学精确02卡复审进行中，独立完整actual reader接线进行中、尚无真实验证；当前无native/raw/canonical/预算消费，不改参数/guard/研究设计。
 
 **2026-10-13 首卡科学预审STOP，离线修复应用信号绑定。** [具体发现](../artifacts/unified_alinea_actuator_20261013_v1/science/PRELAUNCH_STOP_V1.md)：预期G ACK先登记应用，实际post phase/state/program/link检查后置；可在错误信号下STOP却留下错误“已应用”元数据。UA_FIXED300_S17_01未放行/未运行，V1源码与卡保留。仅将原真实信号核查提前并补组合负例，准备V2及新的02卡后依序数据→科学复审；不改配时/guard/算法或正式设计。当前新预算消耗0，无新RAW/canonical权限；这是技术绑定缺口，不是旧STOP3改判或SUMO不安全结论。
 

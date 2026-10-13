@@ -2529,3 +2529,34 @@ Actualcode 121285daa54a4b1b1d45c5319c5405479b913d80 freshcleanclone publicverify
 - ScientificV1STOP had oneMajor/nootherrequiredfinding. Newnegativecontrol on preservedoldruntime genuinelyFAILS1method/fourcases (same nextSwitch with badstate/phase/program/link falsely first_application1200). Originalsource/test/card preimage andFAILreceipt retained.
 - Newadapter validates realpostsignal/program/links/ACKclock beforeledger confirmation; rawentrybracket remains in incomplete receipt. Physicalguardblock unchanged, no signal/mapping/Feedback/model/input/threshold change. ThreeaffectedmethodsPASS10.038s; unaffectedtests reused, notrerun. Historical900 affectedreplay72/20PASS/notnewnative900. Old536protected andold01card unchanged.
 - EngineeringV2binder37files5fd5ef54be4cec34d82f7e66fb6caf7536618ace16af0858486155aee278fc9c, reportSHA287b10bc8081dda45f4be550754feb2cdb337f758c00fc4fa344767bc67719b6. New02cardSHA49bcb2863acf9c0334cbcd9e398521978f4436514ee8d2350390233db90fc4b6/runtimecommon a2b25659131bae5d9628ff5ab2f35e0c89987705daa5ef84a67ce426967b4b2b. Data→science exactre-reviewpending; sourcecurrentlyuncommittedabove1b6bd30. NoSUMO/newraw/canonicalpermission/budgetcharge. UpdatedSTATE/README/log only fornewcurrentcard/version; oldreports/scopeapproval/guard/officialprotocol preserved.
+
+### 2026-10-13 — Independent V2 signal-binding prelaunch review
+
+- Newruntimefix localcommit1b332fd retainsoldV1 andfournegativeFAIL; fullcached whitespaceFAIL only originalunittestFAILlog trailingblank, currentcode/docsPASS andfrozenlog notrewritten. DataV2one requiredmethodPASS positive+fiveactualbindingfields; 91exactpaths/card49bcb/runtimea2b256 verified. CheckerfirstmetadataKeyError/sourcepreimage/log retained, narrow schema adaptationPASS; old13binder originals unchanged andpriorV1GO insufficiency disclosed.
+- Data16binderbf0c91ea38ed146690e23edef92b888d78e8c52f45927583f0930c4808878b42; reportSHA56a85c3b17823d30e49942967040884153790978a46cbc8184e65d32a045416f. Local followupcommit preservesdataV2, runtimeunchanged. Scientificexact02reviewpending, completeactualreaderpending; noSUMO/raw/canonical/resourcecharge/push/formalchange.
+- Repaircleancheckout actual89434dcc815d93d956466373197461cdea5ca4e5:3affectedengineeringmethods+1requireddatamethodPASS10.918881s/rawonly.gitkeep/gitclean/61runtimehashesmatch02card. Currentruntimecommit1b332fd,dataV2commit89434dc; unchangedunaffectedsuites reused with priorreceipts. Independentactualreaderimplementation nowdelegated todata namespace; noactualverification/nativepermission yet.
+
+### 2026-10-13 — Scientific V2 GO and exact first-run release
+
+- Read-onlyscienceGO onlyUA_FIXED300_S17_02/card49bcb/runtimea2b256; oldMajor closedoffline/no newrequired finding. Parentfaithfulrecord PRELAUNCH_GO_V2.md SHAa565586de403b872304839012717d9a8bd40744865641971b5d685e94273aed7. Source/data/card/input bindingsmatch; actualnativecoverage andfullrawaudit notyetverified.
+- Firstparent release-preparation usedsystemPython andfailedENVIRONMENT_DRIFT beforepermission/rawallocation; project.venv validationcomplete/exactmatchPASS withoutsource/environment/cardchange, record release_preparation/ENV_CONTEXT_V1.json. Createdone canonicalauth/release onlyfor02, releaseSHA91a38e3f52a19455087a717f1af5c1d15f1d0d150a42cf14cbceb40b3671ea31; source/env/card/review/user-scopefreshgatePASS. Noauto retry/nextcard andno newnative/raw yet atrelease. Assignedsimulation_engineer onefixed300 run andfrozenpostengineeringreceipt/manifest, thenactualdata/science gates.
+
+### 2026-10-13 — First fixed300 native execution in progress
+
+- Oneexact02native started CLI6651/SUMO6680/session30160; realstartupCONNECTED25.38s≤60s andsameownedprocess verifiedACK931s, no restart/native stderr observed atthatpoint. This is provisionalliveprefix, target/notqualificationpending.
+- Dataactualreaderpreparation frozen: reader_preparation_v1/READER_PREPARATION_REVIEW_V1.md SHA047a8ffd858ef50cb6ef42fa0ca3bf1a4668138508bbee6d971e579de2257695 and16binder4dcacd01486813a338fb605f824bbceaa88c65031b5fda2e524b02577d340138. Oneadded schema methodfinalPASS; preparationfailure/sourcepreimages/lightreceipts retained. Noactualnewraw read/whole-runbranchPASS claimed; waitengineeringEOF+manifest foroneactualaudit. Source/runtime/card/release andsafetyboundaries unchanged.
+
+### 2026-10-13 — Fixed300 native EOF and engineering post freeze
+
+- UniqueUA_FIXED300_S17_02 completed1272/exec0, monitored152.051050667s, sourceunchanged. Three24scyclesG4Y5R15 each2G/0Y/0R; requestedpendingappliedEN6, firstredbegin1209/checkpoint1210, sixrearclear/threefreshG/72signalclockbound. Four nativeEOF streams complete/no observedalarm;1335normalarrival finalmovementspendingindependent review.
+- Raw108files/163251073B immutablemanifest186dc2ddfe3ecc16be21ce8b067df68a79d4377b58bd9b64e4832a461b3efe8e; EXECUTION_RECEIPT SHA26b866aba6f91a96d50ddb32eb05c9f04e99aa0d5465a857008375ec3f8f1530; engineeringpost SHAafadef52b477dbc4b30e41d55e94d1a642aa43d53065265b4b6be9c8ea427def/6binder7b8eebecb10c2c7a5836ab8ebd6779f2682f9613ec745d982856770389927827. No retry/source/card/timing/model/guardchange. Raw/source/env/old536protected frozen, noSSservicequalification.
+- Data assignedonceactual reader/FCD/TLS/ACK/Cmath/terminal/body/EOF independentaudit withany demonstratedschemafailure preserved/versioned. Budgetstillunknownreserve300s/300MB untilthreepostreviews; no nextcard/preparation/native orformalchange.
+
+### 2026-10-13 — First actual fixed300 independent data PASS
+
+- Actualreader first/onlyrun PASS withoutschemafix/re-audit; oldraw/runtime/card untouched.108rawinventory/SHA/163251073B,1272FCD/TLS/posts/2544ACK, threecompleteT24 orderedphases, sixFCDindependentGentries andCpendingappliedEN6,72actualpostbinding,sixrearclear/threefreshadmission,1335allnormalarrival lastmovementprecision8-BEGIN/braking/4nativeEOF PASS.21WAIT/minspeed-deltaandnativeα−4.5, alarms/unknowns/censoredempty. No trafficbenefit/whole-routecausality claim from queue/supply diagnostics.
+- DATA_POSTREVIEW SHA8996af71018e3d6062cbaf70fc56c5aae5bf94d406ada44faa15985d947bcfdc; 15DATA_POST_BINDINGS SHA5aba70c1cdb122f637a5ccf1c677a7646fcb1db8c7b4267fecd1a40d61a57262. Actualcoverage onlythisrun andmode; no futurebranches/preapproval. Scientificpost pending; totalcost notsettled/unknownreserve300s300MB/no nextcard ornative.
+
+### 2026-10-13 — Unified first300 three-role postreview and settlement
+
+Scientific reviewer GO for bounded data delivery; five measurement checks and source/runtime limitations retained. No new required finding. Immutable settlement after engineering/data/science review charges152.051050667 s and163251073 B; remaining1047.948949333 s/1036748927 B, no unknown allocation. Prepare approved750 only after this gate; no new native run or qualification claim in this step.
