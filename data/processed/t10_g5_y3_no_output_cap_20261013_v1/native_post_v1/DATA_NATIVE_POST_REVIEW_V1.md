@@ -1,0 +1,35 @@
+# Independent actual03 post review — G5/Y3 fixed750
+
+**PASS_OBSERVED_DATA_INTEGRITY_ONLY.** The single diagnostic reached1270 with seven complete T10 cycles and independent E=N14. No observed monitor alarm or missing required audit field was found within the declared scope. This does not establish native safety, exact750 tracking, service qualification or formal effect.
+
+## Actual method, version and provenance
+Context Preflight refreshed AGENTS/STATE/DECISIONS/WORKLOG/empty-unfrozen protocol and the completed03 prelaunch. STATE's normal running-to-post update delay was reported and parent synchronized frozen1270/manifest as current authority before the audit. This is technical/exploratory, not a formal experiment.
+
+Exactly one command ran: `.venv/bin/python -B scripts/t10_g5_y3_no_output_cap_audit_20261013_v1/actual.py --manifest artifacts/t10_g5_y3_no_output_cap_20261013_v1/engineering/native_execution_v1/RAW_FINAL_SHA256_V1.json --card artifacts/t10_g5_y3_no_output_cap_20261013_v1/engineering/packages/UA_T10_G5Y3_FIXED750_S17_03/card.json --output data/processed/t10_g5_y3_no_output_cap_20261013_v1/native_post_v1`.
+
+Real session6821 exit0; ACTUAL_RESULTS_V1.json and ACTUAL_AUDIT_COMMAND_RECEIPT_V1.json retain exact reader SHA/result SHA/version. The audit's elapsed wall time was not separately instrumented and is not invented. Execution source checkpointec2e13f7df62dc36833fd6dfe87555b74f95d053/source96 digestaaa47f98…/card9daacfd2… match the run binding. Full145-file frozen manifest SHA029045ebc588b2a040714484c8850b15acaf0402cc796994bb1b4eaff08d9c7b, all raw hashes/inventory/bytes, source/input/environment bytes were checked. Engineering binder ae888929f58d67d71ecc04f946bfe9d3fedd9821fda4f953525c08df4001dcbf is independently verified.
+
+A subsequent metadata readback helper initially used the wrong binder key `files_sha256`; actual engineering schema is `files` with sha256/bytes values. The KeyError receipt is preserved; separate exact-schema readback passed. The actual reader had already passed and was neither changed nor rerun. No SUMO, new test suite, old02 raw rehash or runtime/card/guard mutation occurred.
+
+## Independent quantities and phases
+Across1200–1270, requested C=175/12=14.583333333333334, mapped pending C=applied C=14, completed nominal E=14 and independently reconstructed N=14. Quantization loss is7/12 vehicle-equivalent; application latency and E−N are0. The applied real command ID is fixed750:1200 at1200/delay0; the earlier initial bookkeeping request remains without observed application and is not counted as successful actuation. Feedback audit is NOT_APPLICABLE_FIXED_OR_SCHEDULED: this run did not execute closed-loop ALINEA.
+
+All seven complete cycles have N_G2/N_y0/N_r0, independently joined by FCD storage→internal movement, actual TLS and two-stage ACK. First six actual phase strings are `GGGGyyyrrr` (G4/Y3/R3); last1260–1270 is `GGGGGyyyrr` (G5/Y3/R2). Total observed exposure is G29s/Y21s/R20s, so yellow/red counts are **observed zero**, not absent observation. Ordered program/phase/switch/transition and red-duration attempt/readback checks passed; six intercycle r→G transitions observed. No next unexecuted cycle is invented. First red BEGIN1207/checkpoint ACK1208 was subsequently covered by final EOF.
+
+N14/70s gives **720veh/h**, matching this mapped schedule. It is **30veh/h (4%) below requested750**. The observed execution deficit E−N is gone in this sampled diagnostic; mapping error remains. Single seed17/seven cycles and no approved qualification tolerance cannot establish general service capacity or exact actuator-versus-ALINEA tracking.
+
+## New last-cycle trajectory, not historical substitution
+LAST_CYCLE_LOCAL_TRACE_V1.json/CSV extracts only this run's1260–1265 frames for R12/R13. FCD label BEGINi represents motion result at ACKi+1. At1260 R13 is8.561278664m from the line; after the fourth G interval, ACK1264, its front is203.971370140m on storage, still **0.518629860m** short, speed4.692227725m/s. During the **fifth G interval1264→1265**, independent FCD moves it into`:ramp_mid_0_0`, front5.91020849m, speed6.42883835m/s. Its5m body is also rear-clear at ACK1265 (rear0.91020849m). The following interval is yellow, with no new R13 front entry. R12 crossed at ACK1261 and cleared its rear by1263.
+
+Thus the fifth actual green second supplied the second front crossing in this cycle. This is an observed event/near-term mechanism in new03, not a guarantee for all demands/seeds or a formal causal comparison with an older implementation. No old750 trajectory was assumed or copied.
+
+## Coverage and limitations
+Independent checker verified all1270 movement intervals/2540 ACK records, before/after active and nonactive identity/modes/dynamics journals, complete seven fresh first-Y records, original emergency9+1.1 current-gap and strict NUM gates, FCD populations, all31 body-observation rows/14 rear-clearances, no censored bodies, and **1337 normal-arrival last movements PASS** under precision8 BEGIN/route/lane bindings. Speed-difference/native-acceleration minima are−4.5m/s²; native event maximum0; observed alarm/missing lists empty. WAIT_records49 is a record count, not49 distinct waiting seconds.
+
+Four native streams have complete hash intervals and owned-process EOF; the bound engineering receipt records native returncode0 and CLI0. Client float-step UserWarning remains separately retained and is not silently suppressed. Last AFTER at1270 has no next independent PRE: nonactive pool completeness is explicitly SINGLE_JOURNAL_NOT_INDEPENDENT_POOL_CHECK/false verification flag. Active/serialized getter values remain checked, but this limitation is not promoted to independent full-pool coverage.
+
+Source supply remains separate from in-network service: R has168 due before1270,100 inserted,68 due-not-inserted,432 future-planned and94 unfinished in-network; U127 due/100 inserted/27 due-not-inserted/173 future/23 unfinished. These censored/source quantities and shared-road diagnostics are retained in actual results; they are not zeroed or used for a freeway/urban causal-benefit claim.
+
+Monitored startup+loop+cleanup176.628029167s<300; whole CLI elapsed is not independently known. Frozen parent145files/424,961,934B (outputs424,960,903B) is honestly recorded. Fixed byte cap is disabled for03; no obsolete300MB exceedance is called a03 violation. Actual disk/wall and safety/UNKNOWN gates stayed active. No budget settlement or retry authority is given by data review.
+
+Private native following/RNG decisions and source-binary/compiler equivalence remain unverified. No universal safety, transferable parameter, sweet spot, precise750 qualification, general300–900 library or new same-version closed-loop ALINEA result follows. Original02 cap STOP/null/EOFUNKNOWN and all old failures remain unchanged. Safest next step: scientific actual03 review, then parent reports this bounded result and seeks any needed scope/decision for integration; no extra native run is justified merely because the fixed sample passed. Parent owns STATE/WORKLOG/report updates; data writes only new derived evidence.

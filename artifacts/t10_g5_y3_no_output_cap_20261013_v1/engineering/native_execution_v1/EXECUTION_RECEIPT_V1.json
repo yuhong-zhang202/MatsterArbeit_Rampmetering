@@ -1,0 +1,425 @@
+{
+  "run_id": "UA_T10_G5Y3_FIXED750_S17_03",
+  "classification": "BOUNDED_TECHNICAL_DIAGNOSTIC_NOT_FORMAL_NOT_QUALIFIED",
+  "command": ".venv/bin/python scripts/candidate_a_t10_g5_y3_no_output_cap_20261013_v1/cli.py --execute artifacts/t10_g5_y3_no_output_cap_20261013_v1/engineering/packages/UA_T10_G5Y3_FIXED750_S17_03/card.json --release artifacts/t10_g5_y3_no_output_cap_20261013_v1/engineering/releases/UA_T10_G5Y3_FIXED750_S17_03/EXECUTION_RELEASE.json",
+  "execution_head": "ec2e13f7df62dc36833fd6dfe87555b74f95d053",
+  "current_runtime_source_digest": "aaa47f9890cb9f30018b0344989e6f13cd0ecc993759263a8a4e05fbe9942d46",
+  "runtime_source_count": 96,
+  "source_binding_recheck": "PASS",
+  "input_binding_recheck": "PASS",
+  "card_sha256": "9daacfd217e17388ec8057a82677756e95036e0fcb9756b6a0cdef1f7669f9da",
+  "release_sha256": "8a3859a76bf037a3fb8a704f122793b57e4e537431f5c79733407f049aff86bf",
+  "session_id": 24607,
+  "CLI_PID": 42935,
+  "owned_native_PID": 42954,
+  "owned_native_port": 63236,
+  "native_start_count": 1,
+  "automatic_retry": false,
+  "CLI_exit_code": 0,
+  "owned_process_exit_check": {
+    "method": "ps -p 42935,42954 -o pid,ppid,etime,command",
+    "command_exit_code": 1,
+    "output": "header only; neither owned PID remains"
+  },
+  "native_returncode_at_EOF": 0,
+  "native_EOF_scope": "FINAL_FILES_AT_OWNED_PROCESS_EOF",
+  "runtime_status": "PACKET_CYCLES_OBSERVED_NO_MONITORED_ANOMALY_NOT_QUALIFIED",
+  "runtime_error": "",
+  "last_completed_s": 1270,
+  "last_accounted_s": 1270,
+  "startup_connection_poll_attempt": 234,
+  "startup_connected_elapsed_s": 24.649965916993096,
+  "connection_polls_are_not_multiple_native_starts": true,
+  "environment": {
+    "python": "3.13.0",
+    "packages": {
+      "traci": "1.26.0",
+      "sumolib": "1.26.0",
+      "sumoITScontrol": "0.1.0"
+    },
+    "environment_hash_binding": "unchanged card plus prelaunch/release validation; no repeated version process"
+  },
+  "monitored_timer_scope": "monitored startup plus loop and owned-child cleanup; whole CLI separate",
+  "loop_terminal_elapsed_s": 176.5796432920033,
+  "monitored_elapsed_through_cleanup_s": 176.62802916701185,
+  "whole_CLI_elapsed_s": null,
+  "whole_CLI_elapsed_note": "not independently timed; do not replace with monitored or native duration",
+  "effective_resources": {
+    "wall_limit_s": 300,
+    "startup_limit_s": 60,
+    "run_limit_bytes": null,
+    "minimum_free_bytes": 5000000000
+  },
+  "resource_watchdog": {
+    "reason": null,
+    "error": null,
+    "poll_s": 0.2
+  },
+  "final_raw_manifest": {
+    "path": "artifacts/t10_g5_y3_no_output_cap_20261013_v1/engineering/native_execution_v1/RAW_FINAL_SHA256_V1.json",
+    "sha256": "029045ebc588b2a040714484c8850b15acaf0402cc796994bb1b4eaff08d9c7b",
+    "bytes": 38043
+  },
+  "final_raw_bytes": 424961934,
+  "outputs_subtree_bytes": 424960903,
+  "major_files": {
+    "data/raw/t10_g5_y3_no_output_cap_20261013_v1/UA_T10_G5Y3_FIXED750_S17_03/outputs/identity_journal.jsonl": {
+      "sha256": "ac211374e43dbadfb139639d368b84276a7dafbe3c2c18ac85c358275adb88c8",
+      "bytes": 260811562
+    },
+    "data/raw/t10_g5_y3_no_output_cap_20261013_v1/UA_T10_G5Y3_FIXED750_S17_03/outputs/pre_steps.jsonl": {
+      "sha256": "7e01da3673adfc5fcf502d6da52ae980323cb963c9acd23bf16d4ebc792fe4f0",
+      "bytes": 116648260
+    },
+    "data/raw/t10_g5_y3_no_output_cap_20261013_v1/UA_T10_G5Y3_FIXED750_S17_03/outputs/post_steps.jsonl": {
+      "sha256": "690242165168edbb99a1de9cb5d06caa7910339fc315515b7fd0a4938b75436e",
+      "bytes": 32546043
+    },
+    "data/raw/t10_g5_y3_no_output_cap_20261013_v1/UA_T10_G5Y3_FIXED750_S17_03/outputs/log_intervals.jsonl": {
+      "sha256": "c60ccc5915ccb23b65aca4ee06887f175e5f8fe067bc173e3ceafd7dd932ba23",
+      "bytes": 5706276
+    },
+    "data/raw/t10_g5_y3_no_output_cap_20261013_v1/UA_T10_G5Y3_FIXED750_S17_03/outputs/fcd.xml.gz": {
+      "sha256": "cf964d4ba2d5e5532a94d56ed7c51824fdbf5daf83c9d1186d19acef8a5e393b",
+      "bytes": 3423485
+    },
+    "data/raw/t10_g5_y3_no_output_cap_20261013_v1/UA_T10_G5Y3_FIXED750_S17_03/outputs/tripinfo.xml": {
+      "sha256": "44320fbee18e1e248356e33ba9c1b405321aeff09d04d08a4ef11cae07c28245",
+      "bytes": 818592
+    },
+    "data/raw/t10_g5_y3_no_output_cap_20261013_v1/UA_T10_G5Y3_FIXED750_S17_03/outputs/snapshots/artifacts/t10_g5_y3_no_output_cap_20261013_v1/engineering/packages/UA_T10_G5Y3_FIXED750_S17_03/demand.rou.xml": {
+      "sha256": "99151ed51419c8d490c0f0b1a91bea23f6be70c5486890a04e1e06b3de5d808e",
+      "bytes": 690137
+    },
+    "data/raw/t10_g5_y3_no_output_cap_20261013_v1/UA_T10_G5Y3_FIXED750_S17_03/outputs/snapshots/artifacts/unified_alinea_actuator_20261013_v1/engineering/packages/UA_FIXED750_S17_02/demand.rou.xml": {
+      "sha256": "99151ed51419c8d490c0f0b1a91bea23f6be70c5486890a04e1e06b3de5d808e",
+      "bytes": 690137
+    }
+  },
+  "first_red_checkpoint": {
+    "time_s": 1208,
+    "first_controlled_red_begin_s": 1207,
+    "status": "CHECKPOINT_PASSED_CONTINUE_SAME_AUTHORIZED_RUN",
+    "elapsed_monitored_wall_s": 160.42236970801605,
+    "initial_capture_provisional": true,
+    "final_native_EOF_verified": true
+  },
+  "complete_cycles": [
+    {
+      "cycle_id": 0,
+      "begin_s": 1200,
+      "end_s": 1210,
+      "period_s": 10,
+      "yellow_s": 3,
+      "minimum_red_s": 2,
+      "program": "T10_G5Y3_NATIVE",
+      "requested_quota": 2,
+      "quota_status": "REQUESTED_NOT_EMPIRICALLY_QUALIFIED",
+      "applied_command_veh_h": 720.0,
+      "applied_request_id": "fixed750:1200",
+      "command_requested_s": 1200,
+      "command_applied_s": 1200,
+      "planned_application_s": 1200,
+      "application_status": "ACK_OBSERVED",
+      "application_delay_s": 0,
+      "command_age_at_cycle_start_s": 0,
+      "green_end_s": 1204,
+      "green_end_reason": "ACTUAL_QUOTA_ACK",
+      "executed": true,
+      "completed": true,
+      "N_G": 2,
+      "N_y": 0,
+      "N_r": 0,
+      "crossing_ids": [
+        "R_flow.0",
+        "R_flow.1"
+      ],
+      "phase_exposure_s": {
+        "G": 4,
+        "y": 3,
+        "r": 3
+      },
+      "denial_reason": "",
+      "red_clock_bound": true,
+      "remaining_red_set_at_s": 1208,
+      "remaining_red_duration_s": 2
+    },
+    {
+      "cycle_id": 1,
+      "begin_s": 1210,
+      "end_s": 1220,
+      "period_s": 10,
+      "yellow_s": 3,
+      "minimum_red_s": 2,
+      "program": "T10_G5Y3_NATIVE",
+      "requested_quota": 2,
+      "quota_status": "REQUESTED_NOT_EMPIRICALLY_QUALIFIED",
+      "applied_command_veh_h": 720.0,
+      "applied_request_id": "fixed750:1200",
+      "command_requested_s": 1200,
+      "command_applied_s": 1200,
+      "planned_application_s": 1210,
+      "application_status": "ACK_OBSERVED",
+      "application_delay_s": 0,
+      "command_age_at_cycle_start_s": 10,
+      "green_end_s": 1214,
+      "green_end_reason": "ACTUAL_QUOTA_ACK",
+      "executed": true,
+      "completed": true,
+      "N_G": 2,
+      "N_y": 0,
+      "N_r": 0,
+      "crossing_ids": [
+        "R_flow.2",
+        "R_flow.3"
+      ],
+      "phase_exposure_s": {
+        "G": 4,
+        "y": 3,
+        "r": 3
+      },
+      "denial_reason": "",
+      "red_clock_bound": true,
+      "remaining_red_set_at_s": 1218,
+      "remaining_red_duration_s": 2
+    },
+    {
+      "cycle_id": 2,
+      "begin_s": 1220,
+      "end_s": 1230,
+      "period_s": 10,
+      "yellow_s": 3,
+      "minimum_red_s": 2,
+      "program": "T10_G5Y3_NATIVE",
+      "requested_quota": 2,
+      "quota_status": "REQUESTED_NOT_EMPIRICALLY_QUALIFIED",
+      "applied_command_veh_h": 720.0,
+      "applied_request_id": "fixed750:1200",
+      "command_requested_s": 1200,
+      "command_applied_s": 1200,
+      "planned_application_s": 1220,
+      "application_status": "ACK_OBSERVED",
+      "application_delay_s": 0,
+      "command_age_at_cycle_start_s": 20,
+      "green_end_s": 1224,
+      "green_end_reason": "ACTUAL_QUOTA_ACK",
+      "executed": true,
+      "completed": true,
+      "N_G": 2,
+      "N_y": 0,
+      "N_r": 0,
+      "crossing_ids": [
+        "R_flow.4",
+        "R_flow.5"
+      ],
+      "phase_exposure_s": {
+        "G": 4,
+        "y": 3,
+        "r": 3
+      },
+      "denial_reason": "",
+      "red_clock_bound": true,
+      "remaining_red_set_at_s": 1228,
+      "remaining_red_duration_s": 2
+    },
+    {
+      "cycle_id": 3,
+      "begin_s": 1230,
+      "end_s": 1240,
+      "period_s": 10,
+      "yellow_s": 3,
+      "minimum_red_s": 2,
+      "program": "T10_G5Y3_NATIVE",
+      "requested_quota": 2,
+      "quota_status": "REQUESTED_NOT_EMPIRICALLY_QUALIFIED",
+      "applied_command_veh_h": 720.0,
+      "applied_request_id": "fixed750:1200",
+      "command_requested_s": 1200,
+      "command_applied_s": 1200,
+      "planned_application_s": 1230,
+      "application_status": "ACK_OBSERVED",
+      "application_delay_s": 0,
+      "command_age_at_cycle_start_s": 30,
+      "green_end_s": 1234,
+      "green_end_reason": "ACTUAL_QUOTA_ACK",
+      "executed": true,
+      "completed": true,
+      "N_G": 2,
+      "N_y": 0,
+      "N_r": 0,
+      "crossing_ids": [
+        "R_flow.6",
+        "R_flow.7"
+      ],
+      "phase_exposure_s": {
+        "G": 4,
+        "y": 3,
+        "r": 3
+      },
+      "denial_reason": "",
+      "red_clock_bound": true,
+      "remaining_red_set_at_s": 1238,
+      "remaining_red_duration_s": 2
+    },
+    {
+      "cycle_id": 4,
+      "begin_s": 1240,
+      "end_s": 1250,
+      "period_s": 10,
+      "yellow_s": 3,
+      "minimum_red_s": 2,
+      "program": "T10_G5Y3_NATIVE",
+      "requested_quota": 2,
+      "quota_status": "REQUESTED_NOT_EMPIRICALLY_QUALIFIED",
+      "applied_command_veh_h": 720.0,
+      "applied_request_id": "fixed750:1200",
+      "command_requested_s": 1200,
+      "command_applied_s": 1200,
+      "planned_application_s": 1240,
+      "application_status": "ACK_OBSERVED",
+      "application_delay_s": 0,
+      "command_age_at_cycle_start_s": 40,
+      "green_end_s": 1244,
+      "green_end_reason": "ACTUAL_QUOTA_ACK",
+      "executed": true,
+      "completed": true,
+      "N_G": 2,
+      "N_y": 0,
+      "N_r": 0,
+      "crossing_ids": [
+        "R_flow.8",
+        "R_flow.9"
+      ],
+      "phase_exposure_s": {
+        "G": 4,
+        "y": 3,
+        "r": 3
+      },
+      "denial_reason": "",
+      "red_clock_bound": true,
+      "remaining_red_set_at_s": 1248,
+      "remaining_red_duration_s": 2
+    },
+    {
+      "cycle_id": 5,
+      "begin_s": 1250,
+      "end_s": 1260,
+      "period_s": 10,
+      "yellow_s": 3,
+      "minimum_red_s": 2,
+      "program": "T10_G5Y3_NATIVE",
+      "requested_quota": 2,
+      "quota_status": "REQUESTED_NOT_EMPIRICALLY_QUALIFIED",
+      "applied_command_veh_h": 720.0,
+      "applied_request_id": "fixed750:1200",
+      "command_requested_s": 1200,
+      "command_applied_s": 1200,
+      "planned_application_s": 1250,
+      "application_status": "ACK_OBSERVED",
+      "application_delay_s": 0,
+      "command_age_at_cycle_start_s": 50,
+      "green_end_s": 1254,
+      "green_end_reason": "ACTUAL_QUOTA_ACK",
+      "executed": true,
+      "completed": true,
+      "N_G": 2,
+      "N_y": 0,
+      "N_r": 0,
+      "crossing_ids": [
+        "R_flow.10",
+        "R_flow.11"
+      ],
+      "phase_exposure_s": {
+        "G": 4,
+        "y": 3,
+        "r": 3
+      },
+      "denial_reason": "",
+      "red_clock_bound": true,
+      "remaining_red_set_at_s": 1258,
+      "remaining_red_duration_s": 2
+    },
+    {
+      "cycle_id": 6,
+      "begin_s": 1260,
+      "end_s": 1270,
+      "period_s": 10,
+      "yellow_s": 3,
+      "minimum_red_s": 2,
+      "program": "T10_G5Y3_NATIVE",
+      "requested_quota": 2,
+      "quota_status": "REQUESTED_NOT_EMPIRICALLY_QUALIFIED",
+      "applied_command_veh_h": 720.0,
+      "applied_request_id": "fixed750:1200",
+      "command_requested_s": 1200,
+      "command_applied_s": 1200,
+      "planned_application_s": 1260,
+      "application_status": "ACK_OBSERVED",
+      "application_delay_s": 0,
+      "command_age_at_cycle_start_s": 60,
+      "green_end_s": 1265,
+      "green_end_reason": "ACTUAL_QUOTA_ACK",
+      "executed": true,
+      "completed": true,
+      "N_G": 2,
+      "N_y": 0,
+      "N_r": 0,
+      "crossing_ids": [
+        "R_flow.12",
+        "R_flow.13"
+      ],
+      "phase_exposure_s": {
+        "G": 5,
+        "y": 3,
+        "r": 2
+      },
+      "denial_reason": "",
+      "red_clock_bound": true,
+      "remaining_red_set_at_s": 1269,
+      "remaining_red_duration_s": 1
+    }
+  ],
+  "runtime_accounting_initial_check": {
+    "C": 14.583333333333334,
+    "C_mapped_pending": 14.0,
+    "C_applied": 14.0,
+    "E": 14,
+    "N": 14,
+    "policy_quantization": 0.5833333333333334,
+    "application_latency": 0.0,
+    "C_applied_minus_E": 0.0,
+    "E_minus_N": 0
+  },
+  "requested_veh_h": 750,
+  "mapped_veh_h": 720,
+  "runtime_actual_veh_h_over_controlled_70s": 720.0,
+  "requested_minus_mapped_veh_h": 30,
+  "relative_requested_rate_mapping_shortfall_percent": 4,
+  "qualification_tolerance_approved": false,
+  "partial_final_cycle": false,
+  "body_censored_ids": [],
+  "terminal_arrival_audit": "PENDING_INDEPENDENT_FINAL_TRIPINFO_AUDIT_NOT_ONLINE_FULL_COVERAGE",
+  "final_native_log_classification": {
+    "coverage": "FINAL_FILES_AT_OWNED_PROCESS_EOF",
+    "process_returncode": 0,
+    "all_streams_bound": true,
+    "late_bytes": {
+      "sumo_stderr.log": 0,
+      "sumo_stdout.log": 0,
+      "sumo_error.log": 0,
+      "sumo.log": 981
+    },
+    "status": "BOUND_NO_OBSERVED_NATIVE_MESSAGE",
+    "reasons": [],
+    "critical_message_observed_or_unrecognized": false,
+    "log_parsing_unverified": false,
+    "per_step_complete_native_universal_claim": false,
+    "record_count": 2543
+  },
+  "client_warning_retained": "CLI_TOOL_OUTPUT_V1.txt; client scope separate from native four streams",
+  "native_safety_proven": false,
+  "rate_qualified": false,
+  "actual_population_trajectory_and_arrival_audit": "PENDING_INDEPENDENT_DATA_AND_SCIENCE",
+  "no_raw_mutation_after_bridge_exit": true,
+  "documentation_impact": "parent owns PROJECT_STATE/WORKLOG; no governance modifications by engineering"
+}

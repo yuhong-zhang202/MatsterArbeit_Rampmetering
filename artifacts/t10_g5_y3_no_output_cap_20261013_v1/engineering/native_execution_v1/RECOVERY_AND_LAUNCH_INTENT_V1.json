@@ -1,0 +1,35 @@
+{
+  "timestamp_utc": "2026-10-13T21:47:49.749191+00:00",
+  "previous_interrupted_turn_spawned_native": false,
+  "raw_parent_absent": true,
+  "read_only_process_search_exit_code": 1,
+  "read_only_process_search_output": "empty; no matching03 CLI/SUMO",
+  "exact_head": "ec2e13f7df62dc36833fd6dfe87555b74f95d053",
+  "card_sha256": "9daacfd217e17388ec8057a82677756e95036e0fcb9756b6a0cdef1f7669f9da",
+  "release_sha256": "8a3859a76bf037a3fb8a704f122793b57e4e537431f5c79733407f049aff86bf",
+  "source_digest": "aaa47f9890cb9f30018b0344989e6f13cd0ecc993759263a8a4e05fbe9942d46",
+  "fresh_exact_release_validation": "PASS",
+  "resources": {
+    "wall_limit_s": 300,
+    "startup_limit_s": 60,
+    "run_limit_bytes": null,
+    "minimum_free_bytes": 5000000000
+  },
+  "budget": {
+    "charged_monitored_s": 0,
+    "charged_raw_bytes": 0,
+    "unknown_reserved": [],
+    "remaining_s": 300,
+    "remaining_bytes": null,
+    "selected_total_limits": {
+      "wall_s": 300,
+      "bytes": null
+    },
+    "scope": "NEW_SINGLE_CARD_ENVELOPE_REQUIRES_FUTURE_EXPLICIT_RESOURCE_APPROVAL_NO_OLD_REMAINDER"
+  },
+  "fresh_free_bytes": 34388488192,
+  "planned_native_start_count": 1,
+  "actual_native_started_at_intent": false,
+  "automatic_retry": false,
+  "command": ".venv/bin/python scripts/candidate_a_t10_g5_y3_no_output_cap_20261013_v1/cli.py --execute artifacts/t10_g5_y3_no_output_cap_20261013_v1/engineering/packages/UA_T10_G5Y3_FIXED750_S17_03/card.json --release artifacts/t10_g5_y3_no_output_cap_20261013_v1/engineering/releases/UA_T10_G5Y3_FIXED750_S17_03/EXECUTION_RELEASE.json"
+}

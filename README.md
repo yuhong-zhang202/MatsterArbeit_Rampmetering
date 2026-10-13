@@ -234,11 +234,23 @@ Preparation and card checks are offline. The card is PREPARED_NOT_RELEASED; its 
 
 ## G5/Y3 audit and run-review package
 
-The versioned reader `scripts/t10_g5_y3_audit_20261013_v1/actual.py` adapts the existing FCD/TLS/ACK/accounting/body/EOF audit to T10/Gmax5/Y3. The isolated02 bridge adds identity/dynamics journals and unique first-yellow preparation records while preserving motion and guard rules. Check the [complete audit delivery](docs/development/T10_G5_Y3_AUDIT_READY_DELIVERY_20261013.md) and PROJECT_STATE for current review status. Only `engineering/packages_v4/UA_T10_G5Y3_FIXED750_S17_02/card.json` is current; earlier02 cards and01 remain historical evidence.
+The versioned reader `scripts/t10_g5_y3_audit_20261013_v1/actual.py` adapts the existing FCD/TLS/ACK/accounting/body/EOF audit to T10/Gmax5/Y3. The isolated02 bridge adds identity/dynamics journals and unique first-yellow preparation records while preserving motion and guard rules. Check the [complete audit delivery](docs/development/T10_G5_Y3_AUDIT_READY_DELIVERY_20261013.md) and PROJECT_STATE for current review status. The V4 `engineering/packages_v4/UA_T10_G5Y3_FIXED750_S17_02/card.json` is the consumed historical02 card; earlier02 cards and01 remain historical evidence. Current continuation status is recorded below.
 
 ```bash
 .venv/bin/python -m unittest discover -s tests/t10_g5_y3_audit_20261013 -v
 .venv/bin/python scripts/candidate_a_t10_g5_y3_audit_ready_20261013_v1/cli.py --check-card artifacts/t10_g5_y3_audit_ready_20261013_v1/engineering/packages_v4/UA_T10_G5Y3_FIXED750_S17_02/card.json
 ```
 
-The actual reader requires an engineering-frozen manifest, exact card and a new `--output` directory under `data/processed/t10_g5_y3_audit_ready_20261013_v1/`. It returns nonzero for UNKNOWN/STOP and refuses output reuse. No native output exists for02 yet. Offline preparation, passing fixtures and a review package do not authorize a native run or qualify safety/service; separate exact human approval and canonical release remain required.
+The actual reader requires an engineering-frozen manifest, exact card and a new `--output` directory under `data/processed/t10_g5_y3_audit_ready_20261013_v1/`. It returns nonzero for UNKNOWN/STOP and refuses output reuse. The authorized02 native run stopped at ACK1038 before control because its300MB output limit was reached; its frozen control measures are null. See the continuation report below. Offline preparation and passing fixtures do not authorize execution or qualify safety/service.
+
+## G5/Y3 resource-only continuation
+
+The user cancelled the300MB output stop after02 ended. The isolated `src/candidate_a_t10_g5_y3_no_output_cap_20261013/` version uses `None` for the fixed byte cap while retaining actual byte inventories,300s monitored time,60s startup,5GB free-space checks,1270s endpoint and strict safety/UNKNOWN stops. The exact03 card/release binds one new start; it is not reusable permission. Read [actual resource and discharge results](docs/development/T10_G5_Y3_NATIVE_CONTINUATION_REPORT_20261013.md) and PROJECT_STATE before any further action.
+
+```bash
+.venv/bin/python scripts/candidate_a_t10_g5_y3_no_output_cap_20261013_v1/cli.py --help
+```
+
+The corresponding actual reader is `scripts/t10_g5_y3_no_output_cap_audit_20261013_v1/actual.py`; it requires the frozen engineering manifest, exact03 card, and a fresh output directory under `data/processed/t10_g5_y3_no_output_cap_20261013_v1/`. Full raw remains local and read-only. Completion or E=N at mapped720 does not establish exact tracking of requested750, general actuator qualification or formal experiment authorization.
+
+The user selected tracking the original ALINEA request over time. See the [reviewed cumulative-discharge design V2](docs/development/CUMULATIVE_DISCHARGE_TRACKING_DESIGN_20261014_V2.md): proposed boundary selection by actual cumulative error, currently a720–900 candidate set. Design review passed; it is not implemented, does not qualify full300–900 service and does not authorize a new run.

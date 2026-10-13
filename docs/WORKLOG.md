@@ -2744,3 +2744,47 @@ V4 checkpoint8b3a879aeb2a9e6f4acf5c8cdb317d3e1572ea84 reused owned clean checkou
 ### 2026-10-13 — V4 final scientific GO and bounded audit delivery closeout
 
 Readonlyscience GO_FOR_RUN_REVIEW_PACKAGE_ONLY_NOT_EXECUTION_AUTHORIZED closesnonactiveMajor; F01F02closed/no unresolveddeliveryBlockerMajor. Faithfulparent SCIENTIFIC_FINAL_REVIEW_V4.md preservesfivechecks/terminalsingle-source/native-unverified limits. All87source/test/card bytes match actualclean8b3a879a; laterchanges onlyreviewrecords/docs. Completeauditreport/STATE/README currentpackages_v4/WORKLOG synchronized. Proposed1270/300s/300MB notnativeauthority, strictNUMNone/oldFAIL/73/900 unchanged; noauth/release/raw/SUMO/remote operation. Stop additionaloffline tests/native, user/Chatnext reviews exactpackage; noqualification/formal-stageclaim. DECISIONS/protocol/AGENTS/thesis/supervision notchanged; unrelatedMemoryCore edits retained unstaged.
+
+### 2026-10-13 — Exact one-use G5/Y3 native authorization
+
+Directhuman accepts c82333d77de1367f0d6fce4b8ceb2742bfd8ed80 andV4card18774ee7/source874deb99f4; authorizesexactlyone UA_T10_G5Y3_FIXED750_S17_02 to1270/monitored300s/raw300000000B. New USER_NATIVE_EXECUTION_APPROVAL_V1.json bindsverbatimrequest, strictNUMNone/STOPanomalyUNKNOWN/noretry andinheritedstartup60/free5GB. Offlinecard/authrecords notoverwritten. Engineeringprelaunch nextthen data/science/canonical beforeanynative; actualpostthree-role review required. No code/config/900/formalchange.
+
+### 2026-10-13 — Exact prelaunch/canonical gates passed; one execution dispatched
+
+Engineering exactprelaunchf528cc68/6bindera8ab40b0 anddata0fe3653d/9binder5e98623a match87sources/card/approvedcommit/input/env/newhuman/auth; disk34.58GB/zeroreservation. ReadonlyscienceGO_FOR_ONE_AUTHORIZED_NATIVE_DIAGNOSTIC_AFTER_CANONICAL_ONLY savedNATIVE_PRELAUNCH_GO_V1.md. Newcanonicalrelease6bbed02a802ac4156a7c57cc78e575dae625e9dce23b3b2e2a0c4d168b35008b validatesfresh with.venv oncePASS. Exactlyone nativeassignment toengineering, no otherstarter, strictNUMNone/1270/300s300000000B/noautoretry; no sourcechange. Actualstart/result notyetverified, independentactualpostgates pending.
+
+### 2026-10-13 — One native start: preactivation output-budget STOP
+
+Engineeringreports唯一CLI/session65557/ownedSUMOPID38762 endedexit1, lastACK/accounted1038<activation1200. OUTPUT_BYTES watcherSTOP afterabout137.066217s includingstartup24.580045s; STOP_UNKNOWN_LOG_FINALIZATION/final_logsnull/normalEOFnotestablished. Controlcycles/firstred/C/mapped/applied/E/Nnotobserved/null, notN0/nottimingfailure/ratequalification. OriginalTraCIfloatingstepAPIUserWarningretained. No retry/source/guard/timing/resourcechange. Freezeallrawparent andpostengineeringnext; independentdata/scienceactualgatespending, finalbyte/receipt/coverage claimsawaitfrozen evidence.
+
+### 2026-10-13 — User removes300MB stop gate and requests completion
+
+Directuser“别管300MB的限制，继续跑完” supersedes oldbytecap fornextidentity only. Frozen02manifest9f0a55ef/130files300852929B preserved; stoppedprocess cannotresume, so new03 freshstart required. New USER_CONTINUATION_SCOPE_V1.json recordsdirectscope andnecessaryisolatedresource-only adaptation/one freshstart; fixedbytecapnull,300s/start60/free5GB/1270/strictNUM/allhardSTOP retained. No arbitrary400/500MBreplacement/noautomretry/oldcode/rawrewrite orformal/900change. New03engineeringimplementation next; independent02actualpost review continues, new03data/science/canonical beforestart. Storage368–450MB areunverifiedplanning scenarios notnewapprovedlimits.
+
+### 2026-10-13 —02 frozen limited actual three-role review complete
+
+Engineering10binder3a750b15 anddata10binder54e3f673 independentlyconfirm130raw/manifest9f0a55ef/300852929B,parent-outputbothoverold300MB/1038ACK2076tuples andallcontrolvaluesnull. Fulltrafficreadernotrun; nofalsePASSFAIL. ReadonlyscienceGO_LIMITED_FROZEN_RESOURCE_STOP_EVIDENCE_ONLY/NATIVE_POST_RESOURCE_STOP_V1.md closesfailureevidence, notgoal/qualification. NormalEOF/nativeexitunknown, OSendeddistinct. Threemainlogs96.097% supportlogvolumebudgetreason only. Stop02analysis, latestusercancel300MBappliesonlynew03minimalversionpending. NewT10_G5_Y3_NATIVE_CONTINUATION_REPORT_20261013.md preservehistory/authority/limits.
+
+### 2026-10-13 —03 no-byte-cap resource-only implementation frozen
+
+Newcard9daacfd217e17388ec8057a82677756e95036e0fcb9756b6a0cdef1f7669f9da/source96aaa47f9890cb9f30018b0344989e6f13cd0ecc993759263a8a4e05fbe9942d46/32engineeringbinder5290ec6d. Old02/87/guard unchanged; newwatchdog/budget/bridge/reader onlyidentity/resource gate deltas.3focusedPASS0.143s thenresourceUNKNOWN negative methodPASS; testbeforecommit knownsourcebytes, codecheckpoint ec2e13f7df62dc36833fd6dfe87555b74f95d053. bytecap/rawenvelopenull, wall300/start60/disk5GB/1270/strictNUM unchanged. Exact03human f9a0112e/auth9c76bfb7 transparentlyderived fromlatestdirectuserrequest (user didnotname03SHA), independentdata->science->canonicalpending; nonewraw/native yet. No newarbbytecap/parameter/protocolchange.
+
+### 2026-10-13 — User clarifies discharge-tracking goal; resume approved03 once
+
+Directuser reiterates actualactuator-versus-ALINEA tracking asgoal, requiring assessment/repair oftechnical resourcebarriers andcontinuedwork.03 engineering/data/scienceprelaunch andfreshcanonical PASS completed(card9daacfd2/source96aaa47f98/ec2e13f7); interruption occurredafterdispatch, soengineering firstchecksprocess/reservation beforeanylaunch. No duplicatedstart, nohiddenrateclaim: old750E14/N13executiondeficit and750→720mappingerror are distinct. NewUSER_GOAL_CLARIFICATION_V1 preserveslatestinstruction; nativeoutcome/postreviews pending.
+
+### 2026-10-13 —03 completed once; engineering freeze and independent data started
+
+Afterresume verifiedno prior03start, session24607/CLI42935/SUMO42954 executedonce. CLI0/nativeEOF0/ACK1270, monitored176.628029167s inclstartup24.649966s,145raw424961934B/manifest029045eb. Initial7completecyclesE=N14, firstsixG4Y3R3/lastG5Y3R2, requested750→mapped720 discrepancy4% preserved. No automaticretry/sourcechange; strictNUM/safetyUNKNOWN kept. Engineeringbinder ae888929 frozen; actualdatareader assignedonceonnewprocessedoutput. Goalnotdeclaredcomplete: fixed750physicalshortfall evidence pendingindependentaudit, nearestquantization andsameversionALINEAintegration remainseparate.
+
+### 2026-10-13 — User selects original-request cumulative tracking objective
+
+Directanswer chooses actual long-run discharge tracking originalALINEA requests, andasks continued cumulative-error-compensation design; nearest750→720 alone isnotfinalgoal. NewUSER_TRACKING_OBJECTIVE_V1 recordsanswer.03actualreader exit0data-integrityPASS; actualsciencepending. Engineeringassignedboundeddesignonly: exactrequested/actual ledgers, safecomplete-cycle choice, no infinitecatch-up orfakedE/N, explicitdynamic/starvation/receiver limits. No newnative/policyimplementation/guard/formalchangeauthorizedorperformed bythisdesignrequest.
+
+### 2026-10-14 —03 actual data/science complete; cumulative design continues
+
+Datareader onceexit0 verifies1270/2540ACK/sevenfirstY/14entry-tail/1337normal-arrival/EOF;18binder3847b481/reported0a97d0. LocalnewR13trace fourthG0.51862986m short/fifthGactualcrossandtailclear. MetadatahelperKeyErrorpreserved, readerunchanged/notrerun. ReadonlyscienceGO_FOR_OBSERVED_FIXED_T10_DIAGNOSTIC_DELIVERY/no newBlockerMajor: sampleE−N0, actual720 vsrequested750 remains−4%, terminalAFTERpoolssingle-source andprivatebranch limits retained. Parentfaithfulreview saved. Usernewobjective drives separatecumulativeDESIGN draft20261014; engineeringproposal complete, independentFraction/datareview thenreadonlysciencepending. No newnative/implementation/guard/formalchange.
+
+### 2026-10-14 — Cumulative compensation design reviewed; controlled V2 handoff
+
+Useroriginal-request objective retained. EngineeringdesignGO/firstt0case addressed; oneFractiondata script exit0/table/48s10/96s20/boundary1/6 underexplicitassumptions andpartial/dynamictoy distinctions pass,7binderb7bb17de. ReadonlyscienceGO_FOR_BOUNDED_CUMULATIVE_TRACKING_DESIGN/no BlockerMajor. V1SHA3888ff5d kept unchanged; V2updatesonlystatus/reviewlinks, method/bounds unchanged. Goalstillopen: no implementation/mixednative/full300–900/longrunqualification. Nextconcretework minimalunified scheduler plusfouraffectedofflinecategories; proposed1296futurecardnotcurrentpermission. STATE/README/native-report synchronized, DECISIONS/protocol/AGENTS/900/guards unchanged.
