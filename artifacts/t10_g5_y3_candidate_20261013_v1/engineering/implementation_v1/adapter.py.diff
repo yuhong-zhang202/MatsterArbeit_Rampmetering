@@ -1,0 +1,40 @@
+--- protected_base/adapter.py
++++ isolated_candidate/adapter.py
+@@ -20,7 +20,7 @@
+ }
+ PROFILE = 'NATIVE_PHASE_CURRENT_FOLLOWING_WAIT_DIAGNOSTIC_NOT_QUALIFIED'
+ from src.candidate_a_native_receiver_wait_20261012.receiver_wait import classify_receiver, current_following
+-from src.candidate_a_unified_alinea_20261013.policy import Ledger, MAX_GREEN, parameters, yellow_scope
++from src.candidate_a_t10_g5_y3_20261013.policy import Ledger, MAX_GREEN, parameters, yellow_scope
+ from src.candidate_a_issue12_packet_policy_20261012.body import BodyTracker
+ from src.candidate_a_unified_alinea_20261013 import numeric_stop
+ 
+@@ -74,12 +74,13 @@
+ 
+ class StepAdapter:
+     """Preparation seam only: callers observe/advance externally; we never do."""
+-    def __init__(self, observe, command=300, end_s=1272, numerical_authority=None):
++    def __init__(self, observe, command=750, end_s=1270, numerical_authority=None):
+         self.observe = observe  # Future bridge binds exact protected worker.observe.
+         self.envelope = PhaseEnvelope()  # Pre-control holding program only.
+         self.ledger = Ledger(command, end_s)
+         self.end_s = end_s
+         self.selected_new_program_at = None
++        require(numerical_authority is None,'NEW_SCOPE_NUMERICAL_EXCEPTION_NOT_ENABLED')
+         self.numerical_authority = numerical_authority  # Default strict, never implicit approval.
+         self.command = command
+         self.first_controlled_red_begin = None
+@@ -232,10 +233,10 @@
+             'state_after': conn.trafficlight.getRedYellowGreenState(TLS), 'next_switch_after_s': conn.trafficlight.getNextSwitch(TLS)}
+         if p['cycle_id'] >= 0:
+             c=self.ledger.cycle
+-            green_end=c['green_end_s'] if c['green_end_s'] is not None else c['begin_s']+4
+-            expected_switch = (c['begin_s']+4 if p['motion']=='G' else
++            green_end=c['green_end_s'] if c['green_end_s'] is not None else c['begin_s']+MAX_GREEN
++            expected_switch = (c['begin_s']+MAX_GREEN if p['motion']=='G' else
+                 green_end+c['yellow_s'] if p['motion']=='y' else
+-                c['end_s'] if c.get('red_clock_bound') else green_end+c['period_s']-4)
++                c['end_s'] if c.get('red_clock_bound') else green_end+c['period_s']-MAX_GREEN)
+             row['phase_clock_binding']={'cycle_id':c['cycle_id'],'program':c['program'],
+                 'motion':p['motion'],'expected_post_nextSwitch_s':expected_switch,
+                 'actual_post_nextSwitch_s':row['phase_observation']['next_switch_after_s'],

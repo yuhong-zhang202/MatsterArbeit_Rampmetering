@@ -219,3 +219,15 @@ The restricted [native numerical-event exception](artifacts/unified_alinea_actua
 Default CLI preparation targets fixed750/02, which is now consumed and cannot be prepared or executed again. Fresh approved cards are prepared explicitly with `profile.prepare(run_id)` and checked with `--check-card <prepared-unconsumed-card-path>`; execution uses `--execute <exact-card-path> --release <canonical-release-path>` only after sequential engineering/data/scientific review. Native identities are single-use; a consumed card is historical evidence. The new-stage total1200monitored seconds/raw1.2GB and all safety/UNKNOWN gates remain; old900 is historical evidence plus offline compatibility, not a native900 run of this new source. No new environment dependencies or formal protocol are introduced.
 
 The approved four-task technical node is now closed for handoff: Dynamic verifies boundary period changes and real ALINEA verifies measured-feedback request/application, while its mapped period stayedT8. Fixed750 service remains E14/N13 NOT_MET; final64-record code was not natively retested at fixed300/fixed900. All consumed cards are historical; no next execution is released. See the [complete bounded validation report](docs/development/UNIFIED_ALINEA_ACTUATOR_VALIDATION_REPORT_20261013.md). Candidate A remains NOT_QUALIFIED and formal experiments remain unauthorized.
+
+## T10 G5/Y3 candidate — offline preparation only
+
+The isolated `src/candidate_a_t10_g5_y3_20261013/` candidate supports only fixed750/T10. It preserves the original implementation and 900/T8. Its maximum green5/yellow3/minimum red2 proposal retains fresh yellow screening and all original safety/UNKNOWN checks; earlier quota closure extends red to the same cycle boundary. The candidate uses strict numerical stopping by default. Read the [yellow applicability and offline delivery report](docs/development/T10_G5_Y3_CANDIDATE_OFFLINE_DELIVERY_20261013.md) and PROJECT_STATE for review status and evidence limits.
+
+```bash
+.venv/bin/python scripts/candidate_a_t10_g5_y3_20261013_v1/cli.py --prepare
+.venv/bin/python scripts/candidate_a_t10_g5_y3_20261013_v1/cli.py --check-card artifacts/t10_g5_y3_candidate_20261013_v1/engineering/packages/UA_T10_G5Y3_FIXED750_S17_01/card.json
+.venv/bin/python -m unittest discover -s tests/candidate_a_t10_g5_y3_20261013 -v
+```
+
+Preparation and card checks are offline. The card is PREPARED_NOT_RELEASED; its resources are proposed, actual observations are null and the offline user scope does not authorize SUMO. A future native run needs new exact-card human authorization and engineering/data/scientific release; this section provides no execution authorization. Neither historical G4 snapshots nor offline fixtures establish future G5/Y3 safety or service qualification.

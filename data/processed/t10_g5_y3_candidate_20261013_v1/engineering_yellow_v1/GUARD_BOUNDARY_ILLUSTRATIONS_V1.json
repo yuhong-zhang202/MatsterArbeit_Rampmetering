@@ -1,0 +1,231 @@
+{
+  "examples": [
+    {
+      "name": "fast_near_line",
+      "classification": "SYNTHETIC_LOGIC_ILLUSTRATION_NOT_NATIVE_EVIDENCE",
+      "input": {
+        "vehicle_id": "R_BOUNDARY_SYNTHETIC",
+        "population": "storage",
+        "position_m": 203.49,
+        "speed_m_s": 16.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      "Y4": {
+        "status": "PASS",
+        "time_s": 1200,
+        "yellow_s": 4,
+        "covered_ids": [
+          "R_BOUNDARY_SYNTHETIC"
+        ],
+        "rows": [
+          {
+            "vehicle_id": "R_BOUNDARY_SYNTHETIC",
+            "population": "storage",
+            "time_s": 1200,
+            "position_m": 203.49,
+            "speed_m_s": 16.0,
+            "length_m": 5.0,
+            "normal_decel_m_s2": 4.5,
+            "action_step_s": 1.0,
+            "distance_to_meter_m": 1.0,
+            "one_step_Euler_stop_possible": false,
+            "stop_distance_screen_m": 44.44444444444444,
+            "stop_possible": false,
+            "body_clear_time_screen_s": 3.0902777777777777,
+            "clear_possible": true,
+            "status": "WITHIN_LOCAL_yellow_s_SCREEN",
+            "native_future_safety_proven": false
+          }
+        ],
+        "classification": "BOUND_LOCAL_FEASIBILITY_NOT_GLOBAL_SAFETY"
+      },
+      "Y3": {
+        "status": "UNKNOWN",
+        "time_s": 1200,
+        "yellow_s": 3,
+        "covered_ids": [
+          "R_BOUNDARY_SYNTHETIC"
+        ],
+        "rows": [
+          {
+            "vehicle_id": "R_BOUNDARY_SYNTHETIC",
+            "population": "storage",
+            "time_s": 1200,
+            "position_m": 203.49,
+            "speed_m_s": 16.0,
+            "length_m": 5.0,
+            "normal_decel_m_s2": 4.5,
+            "action_step_s": 1.0,
+            "distance_to_meter_m": 1.0,
+            "one_step_Euler_stop_possible": false,
+            "stop_distance_screen_m": 44.44444444444444,
+            "stop_possible": false,
+            "body_clear_time_screen_s": 3.0902777777777777,
+            "clear_possible": false,
+            "status": "UNKNOWN_LOCAL_yellow_s_SCOPE",
+            "native_future_safety_proven": false
+          }
+        ],
+        "classification": "BOUND_LOCAL_FEASIBILITY_NOT_GLOBAL_SAFETY"
+      }
+    },
+    {
+      "name": "current_low_speed",
+      "classification": "SYNTHETIC_LOGIC_ILLUSTRATION_NOT_NATIVE_EVIDENCE",
+      "input": {
+        "vehicle_id": "R_BOUNDARY_SYNTHETIC",
+        "population": "storage",
+        "position_m": 204.39000000000001,
+        "speed_m_s": 4.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      "Y4": {
+        "status": "PASS",
+        "time_s": 1200,
+        "yellow_s": 4,
+        "covered_ids": [
+          "R_BOUNDARY_SYNTHETIC"
+        ],
+        "rows": [
+          {
+            "vehicle_id": "R_BOUNDARY_SYNTHETIC",
+            "population": "storage",
+            "time_s": 1200,
+            "position_m": 204.39000000000001,
+            "speed_m_s": 4.0,
+            "length_m": 5.0,
+            "normal_decel_m_s2": 4.5,
+            "action_step_s": 1.0,
+            "distance_to_meter_m": 0.09999999999999432,
+            "one_step_Euler_stop_possible": true,
+            "stop_distance_screen_m": 5.777777777777778,
+            "stop_possible": true,
+            "body_clear_time_screen_s": 2.6944444444444446,
+            "clear_possible": true,
+            "status": "WITHIN_LOCAL_yellow_s_SCREEN",
+            "native_future_safety_proven": false
+          }
+        ],
+        "classification": "BOUND_LOCAL_FEASIBILITY_NOT_GLOBAL_SAFETY"
+      },
+      "Y3": {
+        "status": "PASS",
+        "time_s": 1200,
+        "yellow_s": 3,
+        "covered_ids": [
+          "R_BOUNDARY_SYNTHETIC"
+        ],
+        "rows": [
+          {
+            "vehicle_id": "R_BOUNDARY_SYNTHETIC",
+            "population": "storage",
+            "time_s": 1200,
+            "position_m": 204.39000000000001,
+            "speed_m_s": 4.0,
+            "length_m": 5.0,
+            "normal_decel_m_s2": 4.5,
+            "action_step_s": 1.0,
+            "distance_to_meter_m": 0.09999999999999432,
+            "one_step_Euler_stop_possible": true,
+            "stop_distance_screen_m": 5.777777777777778,
+            "stop_possible": true,
+            "body_clear_time_screen_s": 2.6944444444444446,
+            "clear_possible": true,
+            "status": "WITHIN_LOCAL_yellow_s_SCREEN",
+            "native_future_safety_proven": false
+          }
+        ],
+        "classification": "BOUND_LOCAL_FEASIBILITY_NOT_GLOBAL_SAFETY"
+      }
+    },
+    {
+      "name": "moderate_near_line",
+      "classification": "SYNTHETIC_LOGIC_ILLUSTRATION_NOT_NATIVE_EVIDENCE",
+      "input": {
+        "vehicle_id": "R_BOUNDARY_SYNTHETIC",
+        "population": "storage",
+        "position_m": 201.49,
+        "speed_m_s": 10.0,
+        "length_m": 5.0,
+        "min_gap_m": 2.5,
+        "accel_m_s2": 2.6,
+        "normal_decel_m_s2": 4.5,
+        "tau_s": 1.0,
+        "action_step_s": 1.0,
+        "type_id": "technical_passenger"
+      },
+      "Y4": {
+        "status": "PASS",
+        "time_s": 1200,
+        "yellow_s": 4,
+        "covered_ids": [
+          "R_BOUNDARY_SYNTHETIC"
+        ],
+        "rows": [
+          {
+            "vehicle_id": "R_BOUNDARY_SYNTHETIC",
+            "population": "storage",
+            "time_s": 1200,
+            "position_m": 201.49,
+            "speed_m_s": 10.0,
+            "length_m": 5.0,
+            "normal_decel_m_s2": 4.5,
+            "action_step_s": 1.0,
+            "distance_to_meter_m": 3.0,
+            "one_step_Euler_stop_possible": false,
+            "stop_distance_screen_m": 21.11111111111111,
+            "stop_possible": false,
+            "body_clear_time_screen_s": 2.611111111111111,
+            "clear_possible": true,
+            "status": "WITHIN_LOCAL_yellow_s_SCREEN",
+            "native_future_safety_proven": false
+          }
+        ],
+        "classification": "BOUND_LOCAL_FEASIBILITY_NOT_GLOBAL_SAFETY"
+      },
+      "Y3": {
+        "status": "PASS",
+        "time_s": 1200,
+        "yellow_s": 3,
+        "covered_ids": [
+          "R_BOUNDARY_SYNTHETIC"
+        ],
+        "rows": [
+          {
+            "vehicle_id": "R_BOUNDARY_SYNTHETIC",
+            "population": "storage",
+            "time_s": 1200,
+            "position_m": 201.49,
+            "speed_m_s": 10.0,
+            "length_m": 5.0,
+            "normal_decel_m_s2": 4.5,
+            "action_step_s": 1.0,
+            "distance_to_meter_m": 3.0,
+            "one_step_Euler_stop_possible": false,
+            "stop_distance_screen_m": 21.11111111111111,
+            "stop_possible": false,
+            "body_clear_time_screen_s": 2.611111111111111,
+            "clear_possible": true,
+            "status": "WITHIN_LOCAL_yellow_s_SCREEN",
+            "native_future_safety_proven": false
+          }
+        ],
+        "classification": "BOUND_LOCAL_FEASIBILITY_NOT_GLOBAL_SAFETY"
+      }
+    }
+  ],
+  "screen_margin_not_changed": true,
+  "rule": "Same original yellow_scope; duration changes4→3 for computation only; any UNKNOWN must STOP before yellow motion"
+}

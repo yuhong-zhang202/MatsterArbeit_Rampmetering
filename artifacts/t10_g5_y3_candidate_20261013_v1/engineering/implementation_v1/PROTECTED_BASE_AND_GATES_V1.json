@@ -1,0 +1,72 @@
+{
+  "protected_base64_count": 64,
+  "protected_base64_all_hashes_equal": true,
+  "protected_source_digest": "ea180197848843bd3cca7d326a7016454fe8bd0db406302a64ad11f03347b29b",
+  "byte_equality": {
+    "yellow_scope_byte_equal": true,
+    "identity_byte_equal": true,
+    "inventory_byte_equal": true,
+    "require_byte_equal": true,
+    "post_error_block_byte_equal": true
+  },
+  "all_original_programs_semantically_unchanged": true,
+  "new_program_only": [
+    "T10_G5Y3_NATIVE"
+  ],
+  "old_T8": {
+    "attrs": {
+      "id": "ramp_mid",
+      "type": "static",
+      "programID": "I12_PACKET8",
+      "offset": "0"
+    },
+    "phases": [
+      {
+        "duration": "4",
+        "state": "G",
+        "next": "1"
+      },
+      {
+        "duration": "2",
+        "state": "y",
+        "next": "2"
+      },
+      {
+        "duration": "2",
+        "state": "r",
+        "next": "0"
+      }
+    ]
+  },
+  "new_T10": {
+    "attrs": {
+      "id": "ramp_mid",
+      "type": "static",
+      "programID": "T10_G5Y3_NATIVE",
+      "offset": "0"
+    },
+    "phases": [
+      {
+        "duration": "5",
+        "state": "G",
+        "next": "1"
+      },
+      {
+        "duration": "3",
+        "state": "y",
+        "next": "2"
+      },
+      {
+        "duration": "2",
+        "state": "r",
+        "next": "0"
+      }
+    ]
+  },
+  "SUMO_default_program_initialization_native_observed": false,
+  "startup_fake_default_new_program": "PASS_EXPLICIT_A_OPEN_BEFORE_FIRST_STEP",
+  "normal_numeric_exception": "STRICT_NONE_NO_INHERITED_NUM_AUTHORITY",
+  "future_auth_created": false,
+  "future_release_created": false,
+  "new_raw_parent_exists": false
+}

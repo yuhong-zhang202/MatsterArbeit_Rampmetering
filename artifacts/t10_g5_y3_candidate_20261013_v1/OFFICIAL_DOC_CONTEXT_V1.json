@@ -1,0 +1,18 @@
+{
+  "checked_client_date": "2026-10-13",
+  "url": "https://sumo.dlr.de/docs/Simulation/Traffic_Lights.html",
+  "reading_scope": "Current official documentation; pinned SUMO1.26 source must separately establish implementation",
+  "paraphrase": [
+    "Automatically generated yellow duration depends on incoming road maximum speed and is configurable.",
+    "A yellow signal makes approaching vehicles decelerate if sufficiently far from the junction; otherwise they may pass.",
+    "setPhase may select transition phases while native logic handles yellow/red progression.",
+    "setPhaseDuration changes remaining duration of the current occurrence, not future occurrences."
+  ],
+  "does_not_establish": [
+    "Y3 universal applicability or safety",
+    "Actual G5 future vehicle state",
+    "Successful two-car discharge",
+    "SUMO1.26 binary-source compiler equivalence"
+  ],
+  "SUMO_started": false
+}

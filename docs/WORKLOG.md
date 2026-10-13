@@ -2668,3 +2668,23 @@ Independent seven-cycle/41selectedACK/FCD/TLS/Euler/crossing plus7relatedraw SHA
 ### 2026-10-13 —750 shortfall final science and bounded handoff
 
 Read-onlyscience GO/no newBlockerMajor: directG4trajectory deficit confirmed, firstYnumeric event follows it, no softwarebug/fixneeded. SpecificT10Gmax5/Y3/redmin2 allowedonlyProposed, requiresY3applicabilityreview, earlyG4→y3/r3 changesfuturestate, no900T8/fullrangequalification orN14prediction. No newnative/runtime/guard/model/timing/seed/metricschange/tests/card. ExistingE14N13NOT_MET/oldFAIL preserved. Chinesecause/minimalsolution/conditionalretryproposal report+STATE updated; offlineextract/independentverification requirelocalraw/cache, notpubliccleancheckoutproof. Nextuser/Chat decidespolicyassessment; suggestion notexecutionauthority.
+
+### 2026-10-13 — User-authorized T10 G5/Y3 yellow review and conditional offline preparation
+
+Direct user requests yellow applicability/safety boundaries first, then implementation/offline checks/three-role review/new bound card only if justified. Explicit zeroSUMO/no guardrelaxation/no900orformalchange; all oldevidence retained. Baseline48dafb3; newartifactnamespace t10_g5_y3_candidate_20261013_v1/USER_OFFLINE_SCOPE_V1.json preserves request, no native permission. Engineeringinvestigation then data/scientific conditional gate beforeimplementation.
+
+### 2026-10-13 — T10 yellow engineering conditional preparation gate
+
+Pinned1.26 threecachedsources match; yellowmin-decel3 unitm/s², not3sapproval.7oldG4yellow populations248snapshots originalscreen reproduced;Y3allPASS and3boundarycasesshowstricterY3UNKNOWN whereY4PASS. Actualoldbodies underhypotheticalY3 atsameGclosehistoricalcompatible only;futureG5states notobserved/screennotbehaviorprediction.8binder9858c3dd/report66ea665b; analyzerV1importFAIL+preimage preserved,V2onlysys.path fix. Original64/T8 unchanged,no runtime/card/auth/native. Defaultstrict/NUMscopepending. EngineeringGOonlyforconditionalofflineprep pendingdata/science.
+
+### 2026-10-13 — T10 yellow independent data conditional gate
+
+First targetedindependent math/preworld/storage-ingress/7Y4-Y3/248snapshot/3boundary/13oldtailchecksPASS,12binder2cae6ed0/report8d5ef925. Monotonicstrictness forsameinput notfutureG5 proof; oldclear-only R13actually stoppednumerically, privatebehavior unknown. 64/T8 preserved/defaultstrictNUMpending/dynamicfirstred/fullbody/arrivalEOF retained. No runtime/native/newtests/fullrawreaudit, dataGOfor conditionalofflineprep only, sciencegatepending.
+
+### 2026-10-13 — T10 yellow scientific pre-implementation gate
+
+Read-onlyscientific reviewer GO_FOR_CONDITIONAL_OFFLINE_PREPARATION/no newBlockerMajor basedon engineering8/data12 matchingbinders. IsolatedT10-only implementation/card allowed with freshboth-closeY3screen, dynamicactualfirstred, unchangedallhardgates/strictNUM/noauthorityinheritance/nominalvsactual accounting. OldG4sameinputPASS notG5nativeproof; futurestatesNOT_OBSERVED. Startminimalofflineimplementation; noSUMO/auth/raw/900orformalchange.
+
+### 2026-10-13 — T10 isolated engineering delivery frozen
+
+32binderf623f114/reportbdc6632c; sevennewruntime files/73bindings digest013a7da7 and exactcard6dc90946 frozen. 4focused methodsPASS18.885s; startupfixture change covered byoneexistingclock methodPASS9.354s, no runtimechange. Earlyquota anddeadline clocks/dynamicfirstred, Y3UNKNOWN beforemotionSTOP, strictNUM andsourcehardgates preserved; noN14prediction. Proposednewsingle300s/300MB/end1270/resources requirefutureuserapproval. Original64/T8 andoldprogrammes unchanged; newID/source/input/staticenvironment bound, no native/version/auth/raw. Independentdatafinalstarted; selectedlocalcheckpoint/cleancheckout focusedverification next, notqualification.

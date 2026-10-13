@@ -1,0 +1,50 @@
+--- protected_base/bridge.py
++++ isolated_candidate/bridge.py
+@@ -12,14 +12,14 @@
+ import sys
+ import time
+ 
+-from src.candidate_a_unified_alinea_20261013.adapter import StepAdapter, inventory, TLS, STORAGE, INGRESS, INTERNAL
+-from src.candidate_a_unified_alinea_20261013.profile import ROOT,TASK,NETWORK,SUMO,sha,write_new,validate_release,require
++from src.candidate_a_t10_g5_y3_20261013.adapter import StepAdapter, inventory, TLS, STORAGE, INGRESS, INTERNAL
++from src.candidate_a_t10_g5_y3_20261013.profile import ROOT,TASK,NETWORK,SUMO,sha,write_new,validate_release,require
+ from src.candidate_a_native_smoke_20261011.bridge_logs import LogCapture
+ from src.candidate_a_native_smoke_20261011.bridge_resources import ResourceWatchdog
+ from src.candidate_a_unified_alinea_20261013.frame_cache import FrameCache
+-from src.candidate_a_unified_alinea_20261013.policy import MAX_GREEN, yellow_scope
+-from src.candidate_a_unified_alinea_20261013.producer import Producer
+-from src.candidate_a_unified_alinea_20261013 import budget
++from src.candidate_a_t10_g5_y3_20261013.policy import MAX_GREEN, yellow_scope
++from src.candidate_a_t10_g5_y3_20261013.producer import Producer
++from src.candidate_a_t10_g5_y3_20261013 import budget
+ 
+ 
+ def protected_worker():
+@@ -168,7 +168,7 @@
+ def _diagnostic_loop(conn, worker, capture, output, resources, process, start_time, adapter=None, producer=None):
+     """Private post-release loop; fake tests inject here, not a public launch API."""
+     adapter=adapter or StepAdapter(worker.observe)
+-    producer=producer or Producer('fixed300',300)
++    producer=producer or Producer('fixed750',750)
+     command_cursor=feedback_cursor=0
+     def flush_events():
+         nonlocal command_cursor,feedback_cursor
+@@ -211,7 +211,7 @@
+                     worker.request_phase(conn.trafficlight,phase_requests,t,'setPhase',0)
+                     require(conn.trafficlight.getProgram(TLS)==cycle['program'] and
+                         conn.trafficlight.getPhase(TLS)==0 and conn.trafficlight.getRedYellowGreenState(TLS)=='G' and
+-                        conn.trafficlight.getNextSwitch(TLS)==t+4,'new program green readback unknown')
++                        conn.trafficlight.getNextSwitch(TLS)==t+MAX_GREEN,'new program green readback unknown')
+                     adapter.selected_new_program_at=t
+                 else:
+                     adapter.selected_new_program_at=None
+@@ -290,7 +290,8 @@
+         conn=worker.connect_traci(traci,port,process,worker.startup_trace_callback(output/'startup_trace.jsonl'),deadline_s=card['resources']['startup_limit_s'])
+         startup=capture.snapshot(0,0,'STARTUP_CONNECT_ACK');append_new(output/'log_intervals.jsonl',startup)
+         require(not startup['streams']['sumo_stderr.log']['text'],'startup stderr nonempty')
+-        authority={**card['numerical_exception_authority'],'execution_card_sha256':sha(card_path)}
++        require(card['numerical_exception_authority']['enabled'] is False,'NEW_SCOPE_NUMERICAL_EXCEPTION_NOT_ENABLED')
++        authority=None
+         adapter=StepAdapter(worker.observe,card['spec']['fixed_command_veh_h'],card['spec']['end_s'],authority)
+         producer=Producer(card['spec']['mode'],card['spec']['fixed_command_veh_h'])
+         _diagnostic_loop(conn,worker,capture,output,{**effective,'total_budget_baseline':total_budget},process,started,adapter,producer)
