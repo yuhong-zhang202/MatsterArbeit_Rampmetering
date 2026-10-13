@@ -1,0 +1,47 @@
+--- historical_v3/scripts/t10_g5_y3_audit_20261013_v1/evidence.py
++++ pool_v4/scripts/t10_g5_y3_audit_20261013_v1/evidence.py
+@@ -79,29 +79,38 @@
+ 
+ 
+ EXPECTED_DYNAMICS={'accel_m_s2':2.6,'normal_decel_m_s2':4.5,'emergency_decel_m_s2':9.,'tau_s':1.,'action_step_s':1.,'sigma':.5,'max_speed_m_s':55.55555555555556}
+-def identity_journal(record,t,stage,world):
++def identity_journal(record,t,stage,world,source_snapshot=None):
+     need(type(record.get('time_s')) is int and record['time_s']==t and record.get('stage')==stage and record.get('setter_calls')==0,'IDENTITY_JOURNAL_CLOCK_OR_STAGE')
+     pools=[]
+     for key in ('active_ids','loaded_ids','pending_ids'):
+         x=record.get(key);need(isinstance(x,list) and len(x)==len(set(x)) and all(isinstance(v,str) for v in x),'IDENTITY_JOURNAL_ID_LIST');pools.append(set(x))
+     need(pools[0]==set(world) and set(record.get('vehicle_states',{}))==set.union(*pools),'IDENTITY_JOURNAL_POPULATION')
++    if source_snapshot is not None:
++        need(type(source_snapshot.get('time_s')) is int and source_snapshot['time_s']==t and set(source_snapshot.get('world',{}))==set(world),'INDEPENDENT_IDENTITY_POOL_SOURCE_TIME')
++        for journal_key,source_key in [('loaded_ids','loaded'),('pending_ids','pending_ids')]:
++            pool=source_snapshot.get(source_key)
++            need(isinstance(pool,(list,tuple)) and len(pool)==len(set(pool)) and all(isinstance(v,str) for v in pool),'INDEPENDENT_IDENTITY_POOL_SOURCE_MISSING_OR_DUPLICATE')
++            need(set(record[journal_key])==set(pool),'INDEPENDENT_IDENTITY_POOL_MISMATCH')
+     for vid,v in record['vehicle_states'].items():
+         role=vid.split('_',1)[0];need(role in ROUTES and v.get('vehicle_id')==vid and type(v.get('time_s')) is int and v['time_s']==t and v.get('type_id')=='technical_passenger' and v.get('route')==ROUTES[role],'IDENTITY_JOURNAL_ID_TYPE_ROUTE')
+         need(type(v.get('speed_mode')) is int and v['speed_mode']==31 and type(v.get('lane_change_mode')) is int and v['lane_change_mode']==1621,'IDENTITY_JOURNAL_MODES')
+         need(all(near(v.get(k),x) for k,x in EXPECTED_DYNAMICS.items()),'IDENTITY_JOURNAL_DYNAMICS')
+-    return True
++    return {'pool_scope':'INDEPENDENT_SAME_TIME_PRE_POOL_CHECK' if source_snapshot is not None else 'SINGLE_JOURNAL_NOT_INDEPENDENT_POOL_CHECK'}
+ 
+ 
+ def identity_prefix(journal,pre,post,last):
+     need(type(last) is int and last>=0 and len(post)==last and last<=len(pre)<=last+1,'IDENTITY_PREFIX_FRAME_COVERAGE')
+     need(len(journal)==2*last+(len(pre)-last),'IDENTITY_JOURNAL_ACK_COVERAGE')
++    after_sources=[]
+     for i in range(last):
+-        identity_journal(journal[2*i],i,'BEFORE_MOTION',pre[i]['bound_snapshot']['world'])
+-        identity_journal(journal[2*i+1],i+1,'AFTER_ACK',post[i]['post_world'])
++        identity_journal(journal[2*i],i,'BEFORE_MOTION',pre[i]['bound_snapshot']['world'],pre[i]['bound_snapshot'])
++        independent_after=pre[i+1]['bound_snapshot'] if i+1<len(pre) else None
++        identity_journal(journal[2*i+1],i+1,'AFTER_ACK',post[i]['post_world'],independent_after)
++        after_sources.append('NEXT_SAME_TIME_PRE_INDEPENDENT_POOL_CHECK' if independent_after is not None else 'SINGLE_JOURNAL_NOT_INDEPENDENT_POOL_CHECK')
+     if len(pre)>last:
+         need(pre[last]['time_s']==last,'EXTRA_PRE_SOURCE_TIME')
+-        identity_journal(journal[-1],last,'BEFORE_MOTION',pre[last]['bound_snapshot']['world'])
+-    return {'complete_motion_intervals':last,'prepared_not_observed_last_PRE':len(pre)>last}
++        identity_journal(journal[-1],last,'BEFORE_MOTION',pre[last]['bound_snapshot']['world'],pre[last]['bound_snapshot'])
++    return {'complete_motion_intervals':last,'prepared_not_observed_last_PRE':len(pre)>last,'after_pool_sources':after_sources,'terminal_AFTER_pools_independently_verified':bool(after_sources and after_sources[-1]=='NEXT_SAME_TIME_PRE_INDEPENDENT_POOL_CHECK')}
+ 
+ def yellow_coverage(records,phase,cycles,post,pre,last,runtime_stop):
+     need(phase.get('status')=='PASS_CONTINUOUS_PHASES','UNKNOWN_PHASE_FOR_YELLOW_COVERAGE')

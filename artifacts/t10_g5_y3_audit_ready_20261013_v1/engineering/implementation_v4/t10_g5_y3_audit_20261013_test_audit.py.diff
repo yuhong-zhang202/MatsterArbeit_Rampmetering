@@ -1,0 +1,49 @@
+--- historical_v3/tests/t10_g5_y3_audit_20261013/test_audit.py
++++ pool_v4/tests/t10_g5_y3_audit_20261013/test_audit.py
+@@ -181,7 +181,7 @@
+  def test_extra_PRE_identity_prefix_valid_and_unknown_cases(self):
+     x=dict(time_s=0,stage='BEFORE_MOTION',setter_calls=0,active_ids=[],loaded_ids=[],pending_ids=[],vehicle_states={})
+     y=dict(x,time_s=1,stage='AFTER_ACK');z=dict(x,time_s=1)
+-    pre=[dict(time_s=0,bound_snapshot=dict(world={})),dict(time_s=1,bound_snapshot=dict(world={}))];post=[dict(post_world={})]
++    pre=[dict(time_s=0,bound_snapshot=dict(time_s=0,world={},loaded=[],pending_ids=[])),dict(time_s=1,bound_snapshot=dict(time_s=1,world={},loaded=[],pending_ids=[]))];post=[dict(post_world={})]
+     self.assertTrue(evidence.identity_prefix([x,y,z],pre,post,1)['prepared_not_observed_last_PRE'])
+     self.assertFalse(evidence.identity_prefix([x,y],pre[:1],post,1)['prepared_not_observed_last_PRE'])
+     for journal,p in [([x,y],pre),([x,y,z,z],pre),([x,y,z],pre[:1]),([x,y,dict(z,time_s=0)],pre),([x,y,dict(z,active_ids=['R_flow.1'])],pre),([x,y,z],[pre[0],dict(pre[1],time_s=0)])]:
+@@ -190,6 +190,29 @@
+     tree=ast.parse((profile.ROOT/'scripts/t10_g5_y3_audit_20261013_v1/actual.py').read_text())
+     self.assertTrue(any(isinstance(q,ast.Call) and isinstance(q.func,ast.Name) and q.func.id=='identity_prefix' for q in ast.walk(tree)))
+     self.assertTrue(any(isinstance(q,ast.Call) and isinstance(q.func,ast.Name) and q.func.id=='yellow_coverage' for q in ast.walk(tree)))
++
++ def test_nonactive_pool_independent_binding_and_terminal_scope(self):
++    def journal(t,stage):
++        ids=['R_flow.0','R_flow.9','R_flow.10']
++        rows={v:dict(vehicle_id=v,time_s=t,type_id='technical_passenger',route=evidence.ROUTES['R'],speed_mode=31,lane_change_mode=1621,**evidence.EXPECTED_DYNAMICS)for v in ids}
++        return dict(time_s=t,stage=stage,setter_calls=0,active_ids=['R_flow.0'],loaded_ids=['R_flow.0','R_flow.9'],pending_ids=['R_flow.10'],vehicle_states=rows)
++    world={'R_flow.0':{}}
++    pre=[dict(time_s=t,bound_snapshot=dict(time_s=t,world=world,loaded=['R_flow.0','R_flow.9'],pending_ids=['R_flow.10']))for t in (0,1)]
++    post=[dict(post_world=world)];j=[journal(0,'BEFORE_MOTION'),journal(1,'AFTER_ACK'),journal(1,'BEFORE_MOTION')]
++    # Execute the historical omission counterexample against the new contract.
++    bad=copy.deepcopy(j);bad[0]['loaded_ids'].remove('R_flow.9');bad[0]['vehicle_states'].pop('R_flow.9')
++    with self.assertRaisesRegex(ValueError,'INDEPENDENT_IDENTITY_POOL'):evidence.identity_prefix(bad,pre,post,1)
++    q=evidence.identity_prefix(j,pre,post,1);self.assertEqual(q['after_pool_sources'],['NEXT_SAME_TIME_PRE_INDEPENDENT_POOL_CHECK'])
++    terminal=evidence.identity_prefix(j[:2],pre[:1],post,1);self.assertEqual(terminal['after_pool_sources'],['SINGLE_JOURNAL_NOT_INDEPENDENT_POOL_CHECK'])
++    for which,fault in [(0,'pending_omit'),(2,'loaded_omit'),(1,'wrong_pool'),(0,'duplicate'),(0,'missing_field'),(2,'source_duplicate')]:
++        bad=copy.deepcopy(j);bp=copy.deepcopy(pre)
++        if fault=='pending_omit':bad[which]['pending_ids']=[];bad[which]['vehicle_states'].pop('R_flow.10')
++        if fault=='loaded_omit':bad[which]['loaded_ids'].remove('R_flow.9');bad[which]['vehicle_states'].pop('R_flow.9')
++        if fault=='wrong_pool':bad[which]['loaded_ids']=['R_flow.0','R_flow.10'];bad[which]['pending_ids']=['R_flow.9']
++        if fault=='duplicate':bad[which]['pending_ids'].append('R_flow.10')
++        if fault=='missing_field':bp[0]['bound_snapshot'].pop('loaded')
++        if fault=='source_duplicate':bp[1]['bound_snapshot']['pending_ids'].append('R_flow.10')
++        with self.subTest(which=which,fault=fault),self.assertRaises(ValueError):evidence.identity_prefix(bad,bp,post,1)
+ 
+  def test_public_fixture_real_card_gates_and_unchanged_motion_bridge(self):
+     root=profile.ROOT;old=root/'artifacts/t10_g5_y3_candidate_20261013_v1/engineering/packages/UA_T10_G5Y3_FIXED750_S17_01/card.json';c=json.loads(old.read_text())
+@@ -215,6 +238,6 @@
+             worker.assert_not_called()
+         self.assertFalse((fixture_root/profile.output(profile.RUN)).parent.exists())
+         foreign=(Path(tmp)/'foreign').resolve();shutil.copytree(fixture_root,foreign)
+-        with self.assertRaisesRegex(ValueError,'FOREIGN_RUNTIME_INPUT'):profile.validate(foreign/profile.TASK/'packages_v3'/profile.RUN/'card.json',root=foreign)
++        with self.assertRaisesRegex(ValueError,'FOREIGN_RUNTIME_INPUT'):profile.validate(foreign/profile.TASK/'packages_v4'/profile.RUN/'card.json',root=foreign)
+ 
+ if __name__=='__main__':unittest.main()

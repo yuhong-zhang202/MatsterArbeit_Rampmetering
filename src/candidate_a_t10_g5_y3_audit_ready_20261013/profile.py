@@ -67,7 +67,7 @@ def static_environment(root,reference):
     return {'status':'PASS_STATIC_RECEIPT_AND_FILE_HASH_ONLY','native_version_call':False,'native_module_import':False}
 
 def prepare(run=RUN,root=ROOT):
-    root=Path(root).resolve();sp=spec(run);package=root/TASK/'packages_v3'/run;out=root/output(run)
+    root=Path(root).resolve();sp=spec(run);package=root/TASK/'packages_v4'/run;out=root/output(run)
     require(not out.parent.exists(),'ONE_USE_IDENTITY_CONSUMED')
     card=package/'card.json'
     if card.exists():validate(card,root);return card
@@ -88,7 +88,7 @@ def prepare(run=RUN,root=ROOT):
     write_new(card,data);return card
 
 def validate(card_path,root=ROOT,require_environment=False):
-    root=Path(root).resolve();p=Path(card_path).resolve();expected=root/TASK/'packages_v3'/RUN/'card.json'
+    root=Path(root).resolve();p=Path(card_path).resolve();expected=root/TASK/'packages_v4'/RUN/'card.json'
     require(p==expected,'FOREIGN_CANDIDATE_CARD')
     c=json.loads(p.read_text());require(c['status']=='PREPARED_NOT_RELEASED' and c['classification']=='OFFLINE_REVIEW_T10_G5Y3_NOT_NATIVE_AUTHORIZED' and c['baseline_commit']==BASE and c['spec']==spec(RUN),'CANDIDATE_SPEC_DRIFT')
     require(c['package']==str(expected.parent.relative_to(root)) and c['output']==str(output(RUN)),'CANDIDATE_PACKAGE_OUTPUT_DRIFT')

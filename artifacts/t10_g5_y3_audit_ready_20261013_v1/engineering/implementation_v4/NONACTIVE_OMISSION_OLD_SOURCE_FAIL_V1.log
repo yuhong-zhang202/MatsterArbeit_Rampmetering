@@ -1,0 +1,15 @@
+test_nonactive_pool_independent_binding_and_terminal_scope (tests.t10_g5_y3_audit_20261013.test_audit.AuditTests.test_nonactive_pool_independent_binding_and_terminal_scope) ... FAIL
+
+======================================================================
+FAIL: test_nonactive_pool_independent_binding_and_terminal_scope (tests.t10_g5_y3_audit_20261013.test_audit.AuditTests.test_nonactive_pool_independent_binding_and_terminal_scope)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/t10_g5_y3_audit_20261013/test_audit.py", line 204, in test_nonactive_pool_independent_binding_and_terminal_scope
+    with self.assertRaisesRegex(ValueError,'INDEPENDENT_IDENTITY_POOL'):evidence.identity_prefix(bad,pre,post,1)
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 0.000s
+
+FAILED (failures=1)
