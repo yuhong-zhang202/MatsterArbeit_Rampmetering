@@ -5,7 +5,11 @@
 
 ## Current Phase
 
-**2026-10-13 统一执行器最小实现已冻结，首300卡片待独立数据→科学预启动门。** [工程交付](../artifacts/unified_alinea_actuator_20261013_v1/engineering/ENGINEERING_REVIEW_V1.md)：最终5项离线回归PASS（17周期XML/实际helper、动态切换、真实Feedback接口与全局E1窗口、安全/未知与预算负例）；V1 E1接口ERROR及源码前像保留，新模块仅补fresh只读接口，旧cache未改。旧900离线回放72步/20setter相容，非新源码native900。首卡UA_FIXED300_S17_01/sha2c2330d4…；共同runtime源摘要900dcebb…绑定基线9eb95e29上的未提交新源码，不能称基线commit含新实现。536旧保护文件不变。尚无新SUMO/raw/canonical权限，独立审计与clean-checkout验证待完成；正式协议与资格状态不变。
+**2026-10-13 信号ACK绑定V2离线修复已冻结，新的首300/02卡待数据→科学复审。** [工程V2](../artifacts/unified_alinea_actuator_20261013_v1/engineering/signal_ack_fix_v2/ENGINEERING_REVIEW_V2.md)：旧源码四个same-nextSwitch错误信号组合负例真实FAIL；将实际post信号/程序/连接/ACK时间核查提前后，3项受影响方法PASS，错误不登记应用且保留入口观察。旧900受改条件72步/20setter回放相容，536原文件/旧01卡不变；02卡SHA49bcb286…，共同源摘要a2b25659…。V1卡未运行并保留，不再作为当前可放行卡；当前无native/raw/canonical/预算消费，不改参数/guard/研究设计。
+
+**2026-10-13 首卡科学预审STOP，离线修复应用信号绑定。** [具体发现](../artifacts/unified_alinea_actuator_20261013_v1/science/PRELAUNCH_STOP_V1.md)：预期G ACK先登记应用，实际post phase/state/program/link检查后置；可在错误信号下STOP却留下错误“已应用”元数据。UA_FIXED300_S17_01未放行/未运行，V1源码与卡保留。仅将原真实信号核查提前并补组合负例，准备V2及新的02卡后依序数据→科学复审；不改配时/guard/算法或正式设计。当前新预算消耗0，无新RAW/canonical权限；这是技术绑定缺口，不是旧STOP3改判或SUMO不安全结论。
+
+**2026-10-13 统一执行器最小实现已冻结，首300卡片待独立数据→科学预启动门。** [工程交付](../artifacts/unified_alinea_actuator_20261013_v1/engineering/ENGINEERING_REVIEW_V1.md)：最终5项离线回归PASS（17周期XML/实际helper、动态切换、真实Feedback接口与全局E1窗口、安全/未知与预算负例）；V1 E1接口ERROR及源码前像保留，新模块仅补fresh只读接口，旧cache未改。旧900离线回放72步/20setter相容，非新源码native900。首卡UA_FIXED300_S17_01/sha2c2330d4…；共同runtime源摘要900dcebb…原先绑定基线9eb95e29上的未提交快照，现已纳入本地实现commit fd17250c88a3e4c41989b49c7631986c599eff84；独立数据/公共审计已纳入后续本地commit 1b6bd30。基线9eb95e29不含新实现。536旧保护文件不变。独立数据首卡预审GO（13文件55bfc215…，91去重路径核对，4方法PASS）；完整新raw审计编排仍待实际schema接线。干净checkout fd17250工程5方法PASS、61runtime源一致、raw仅.gitkeep；后续1b6bd30干净checkout的4数据方法亦PASS（0.055618s含解释器），raw仅.gitkeep/gitclean，61runtime源一致。当前等科学精确首卡门，尚无新SUMO/raw/canonical权限，未push或改上游PR；正式协议与资格状态不变。
 
 **2026-10-13 用户已批准统一ALINEA执行器范围及预算，现进入最小实现与离线验证。** [批准原文与绑定](../artifacts/unified_alinea_actuator_20261013_v1/USER_SCOPE_APPROVAL.json)绑定此前Proposed全文；独立分支 `codex/unified-alinea-actuator` 从PR13/head9eb95e29创建，不改上游PR。批准覆盖四个有界技术任务、周期/时钟适配、1272/1270/1266/1272终点和新总监控1200s/raw1.2GB；离线及逐卡工程→数据→科学门先于任何新SUMO。危险/UNKNOWN停止、原9+1.1及旧FAIL/STOP3保留。尚无新实现测试或原生运行结果；Stage6结项、A1 UNRESOLVED、Candidate A NOT_QUALIFIED及空未冻结正式协议保持。下方“待批准”记录为批准前历史。
 

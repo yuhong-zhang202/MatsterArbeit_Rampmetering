@@ -1,0 +1,15 @@
+{
+  "command": ".venv/bin/python -m unittest tests.candidate_a_unified_alinea_20261013.test_unified.UnifiedTests.test_same_clock_wrong_post_signal_program_or_link_never_applies_command -v",
+  "exit_code": 1,
+  "actual_method_count": 1,
+  "actual_subcases_failed": [
+    "state",
+    "phase",
+    "program",
+    "link"
+  ],
+  "failure": "first_application_s == 1200 despite wrong actual post signal binding; expected null",
+  "test_sha256": "98d97f000c46f4897a2bb5736c52b62bce79bd9ae86b29794cb8f5f46e215f9a",
+  "old_runtime_preimage_binding": "PREIMAGE_BINDING_V1.json",
+  "native_starts": 0
+}

@@ -12,7 +12,7 @@ BASE='9eb95e29ccc85423084bc6945668cd36c3298b06'
 TASK=Path('artifacts/unified_alinea_actuator_20261013_v1/engineering')
 USER=TASK.parent/'USER_SCOPE_APPROVAL.json'
 SCOPE=TASK.parent/'SCOPE_AS_APPROVED.md'
-RUN='UA_FIXED300_S17_01'
+RUN='UA_FIXED300_S17_02'
 sha=old.sha;write_new=old.write_new;require=old.require
 MODES={'FIXED300':('fixed300',300,1272),'FIXED750':('fixed750',750,1270),
        'DYNAMIC':('dynamic_commands',300,1266),'ALINEA':('real_alinea',900,1272)}

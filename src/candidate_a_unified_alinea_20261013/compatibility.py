@@ -37,6 +37,11 @@ def replay_historical900(root):
         motion=ledger.motion_at(t)
         if motion=='y' and c['green_end_s'] is None:ledger.close_green(t,'MAX_GREEN_DEADLINE')
         require(motion==row['motion'] and row['accounting_complete'], 'HISTORICAL_MOTION_OR_ACCOUNTING_CHANGED')
+        signal=row['phase_observation']
+        require(type(signal['phase_after']) is int and
+            signal['phase_after']=={'G':0,'y':1,'r':2}[motion] and
+            signal['state_after']==motion and row.get('reasons') is None,
+            'NEW_EARLY_SIGNAL_BINDING_WOULD_REJECT_HISTORICAL900')
         ids=[x['vehicle_id'] for x in row['actual_crossings']]
         ledger.end_step(t+1,ids,motion)
         actual_switch=row['phase_observation']['next_switch_after_s']

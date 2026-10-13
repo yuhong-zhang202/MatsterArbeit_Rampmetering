@@ -32,6 +32,29 @@ class UnifiedWorld(fixture.PacketWorld):
 
 
 class UnifiedTests(unittest.TestCase):
+    def test_same_clock_wrong_post_signal_program_or_link_never_applies_command(self):
+        for mutation in ('state','phase','program','link'):
+            with self.subTest(mutation=mutation), tempfile.TemporaryDirectory() as tmp:
+                pkg=Path(tmp)/'pkg';out=Path(tmp)/'out'
+                profile.stage_package(profile.ROOT,pkg,out,1272)
+                w=UnifiedWorld(pkg/'scenario.add.xml');w.time=1200
+                w.program='I12_PACKET24';w.phase=0;w.state='G';w.switch=1204
+                a=StepAdapter(w.observe,300);a.selected_new_program_at=1200
+                a.ledger.begin_step(1200,Command('bound-test',1200,300,'FIXED'))
+                a.prepare_step(w,1200);w.simulationStep(1201)
+                if mutation=='state':w.state='r'
+                if mutation=='phase':w.phase=1
+                if mutation=='program':w.program='UNBOUND_PROGRAM'
+                if mutation=='link':w.trafficlight.getControlledLinks=lambda tls:()
+                self.assertEqual(w.switch,1204)
+                warning={'time_begin_s':1200,'time_end_s':1201,'coverage':'CALLER_DECLARED_INTERVAL',
+                    'source':'offline-negative-control','byte_start':0,'byte_end':0,'text':''}
+                with self.assertRaises(ValueError):a.reconcile_step(w,warning)
+                self.assertTrue(a.paused)
+                self.assertIsNone(a.ledger.requests['bound-test']['first_application_s'])
+                self.assertFalse(any(x['event']=='ACK_OBSERVED' for x in a.ledger.events))
+                self.assertFalse(a.receipts[-1]['accounting_complete'])
+
     def test_all_seventeen_periods_xml_and_real_helper_clock(self):
         with tempfile.TemporaryDirectory() as tmp:
             pkg=Path(tmp)/'pkg';out=Path(tmp)/'out';profile.stage_package(profile.ROOT,pkg,out,1272);out.mkdir()

@@ -211,7 +211,7 @@ The user-approved [scope](docs/development/UNIFIED_ALINEA_ACTUATOR_SCOPE_2026101
 
 ```bash
 .venv/bin/python -m unittest discover -s tests/candidate_a_unified_alinea_20261013 -v
-.venv/bin/python scripts/candidate_a_unified_alinea_20261013_v1/cli.py --check-card artifacts/unified_alinea_actuator_20261013_v1/engineering/packages/UA_FIXED300_S17_01/card.json
+.venv/bin/python scripts/candidate_a_unified_alinea_20261013_v1/cli.py --check-card artifacts/unified_alinea_actuator_20261013_v1/engineering/packages/UA_FIXED300_S17_02/card.json
 ```
 
 Default CLI preparation is offline for the unconsumed fixed300 identity. Other approved cards are prepared explicitly with `profile.prepare(run_id)`; execution uses `--execute <exact-card-path> --release <canonical-release-path>` only after sequential engineering/data/scientific review. Native identities are single-use; a consumed card is historical evidence. The new-stage total1200monitored seconds/raw1.2GB and all safety/UNKNOWN gates remain; old900 is historical evidence plus offline compatibility, not a native900 run of this new source. No new environment dependencies or formal protocol are introduced.

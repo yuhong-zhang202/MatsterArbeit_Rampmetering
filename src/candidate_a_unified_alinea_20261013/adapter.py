@@ -250,6 +250,26 @@ class StepAdapter:
         recs = crossing_records(p['storage'], p['internal'], set(conn.lane.getLastStepVehicleIDs(INTERNAL)),
                                 p['time_s'], p['cycle_id'], p['motion'])
         require(not self.crossed.intersection(r['vehicle_id'] for r in recs), 'DUPLICATE_CROSSING')
+        # Retain the observed entry bracket even if signal binding fails. It
+        # must not become expected-motion accounting or an applied command.
+        row['actual_crossings'] = recs
+        if p['cycle_id'] >= 0:
+            signal = row['phase_observation']
+            actual_program = conn.trafficlight.getProgram(TLS)
+            actual_links = conn.trafficlight.getControlledLinks(TLS)
+            signal_bound = (type(signal['phase_after']) is int and
+                signal['phase_after'] == p['motion_phase'] and
+                signal['state_after'] == p['motion'] and actual_program == p['program'] and
+                actual_links == ((('ramp_storage_0','ramp_accel_0',INTERNAL),),) and
+                conn.simulation.getTime() == self.last_completed)
+            row['post_signal_application_binding'] = {
+                'ACK_s': self.last_completed, 'actual_phase': signal['phase_after'],
+                'actual_state': signal['state_after'], 'actual_program': actual_program,
+                'actual_controlled_links': actual_links,
+                'expected_phase': p['motion_phase'], 'expected_state': p['motion'],
+                'expected_program': p['program'],
+                'status': 'BOUND_BEFORE_LEDGER' if signal_bound else 'STOP_UNBOUND_BEFORE_LEDGER'}
+            require(signal_bound, 'POST_SIGNAL_APPLICATION_BINDING_MISMATCH')
         self.crossed.update(r['vehicle_id'] for r in recs)
         if p['cycle_id'] >= 0:
             self.ledger.end_step(p['time_s']+1, [r['vehicle_id'] for r in recs], p['motion'])
