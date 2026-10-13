@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/t10_g5_y3_candidate_20261013_v1/data_offline_v1/static_check_v2.py", line 44, in <module>
+    if __name__=='__main__':print(json.dumps(main(),indent=2))
+                                             ~~~~^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/t10_g5_y3_candidate_20261013_v1/data_offline_v1/static_check_v2.py", line 33, in main
+    need("require(numerical_authority is None, 'NEW_SCOPE_NUMERICAL_EXCEPTION_NOT_ENABLED')" in a,'NUM_AUTHORITY_NOT_REJECTED')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/t10_g5_y3_candidate_20261013_v1/data_offline_v1/static_check_v2.py", line 8, in need
+    if not v:raise ValueError(msg)
+             ^^^^^^^^^^^^^^^^^^^^^
+ValueError: NUM_AUTHORITY_NOT_REJECTED

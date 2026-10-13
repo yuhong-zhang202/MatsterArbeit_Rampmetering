@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/t10_g5_y3_candidate_20261013_v1/data_offline_v1/static_check_v1.py", line 44, in <module>
+    if __name__=='__main__':print(json.dumps(main(),indent=2))
+                                             ~~~~^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/t10_g5_y3_candidate_20261013_v1/data_offline_v1/static_check_v1.py", line 18, in main
+    for name,h in b['files'].items():need(sha(ROOT/name)==(h['sha256'] if isinstance(h,dict) else h),'ENGINEERING_FILE_DRIFT');checked[name]=sha(ROOT/name)
+                  ~^^^^^^^^^
+KeyError: 'files'

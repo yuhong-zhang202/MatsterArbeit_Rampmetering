@@ -2,6 +2,8 @@
 
 2026-10-13。基线：`48dafb3605687b4738a6c8c45581032a79f8c8ec`。本文件记录用户授权的黄灯核查及条件式离线准备；不是正式实验、原生安全认证或新的运行许可。
 
+**最终状态：离线候选、最小实现、针对性回归及工程→独立数据→只读科学审查完成；GO仅限交付用户审查。** 本轮零SUMO，不再追加离线扩展。Y3未来原生安全和750服务能力尚未验证。
+
 ## 黄灯核查结论与适用范围
 
 工程、独立数据与只读科学预审同意 **GO_FOR_CONDITIONAL_OFFLINE_PREPARATION**：依据足以准备隔离的 T10 候选，前提是保留原安全检查、实际转黄前重新检查车辆、UNKNOWN 停止。Y3 对新 G5 状态的原生适用性尚未实测。
@@ -22,7 +24,7 @@ SUMO 原生支持 G/y/r 相位与转相控制；官方说明没有给出本场�
 
 ## 实施与最终审查状态
 
-工程实现及卡片已冻结；独立数据、科学最终门尚待完成。新增源码仅在 `src/candidate_a_t10_g5_y3_20261013/` 与对应 CLI/tests；原缓存、接收、车尾、worker、日志/EOF helpers 只读复用，无全局 patch。[工程实施报告](../../artifacts/t10_g5_y3_candidate_20261013_v1/engineering/implementation_v1/ENGINEERING_REVIEW_V1.md)。
+工程实现及卡片已冻结；独立数据与科学最终门均已完成，仅限离线交付。新增源码仅在 `src/candidate_a_t10_g5_y3_20261013/` 与对应 CLI/tests；原缓存、接收、车尾、worker、日志/EOF helpers 只读复用，无全局 patch。[工程实施报告](../../artifacts/t10_g5_y3_candidate_20261013_v1/engineering/implementation_v1/ENGINEERING_REVIEW_V1.md)。
 
 **新卡：** [UA_T10_G5Y3_FIXED750_S17_01](../../artifacts/t10_g5_y3_candidate_20261013_v1/engineering/packages/UA_T10_G5Y3_FIXED750_S17_01/card.json)。
 
@@ -37,8 +39,26 @@ SUMO 原生支持 G/y/r 相位与转相控制；官方说明没有给出本场�
 
 覆盖两条关绿/读回时钟、动态红灯点、Y3 拒绝于首黄运动前停止、部分与未观测核账、黄灯额外入口、模式/相位/接收/红灯/碰撞/制动/警告拒绝和无授权拒绝。原身份/inventory/yellow_scope及完整 post error block 比较相同。并非每个组合穷举测试，也没有真实七周期、正常离网或 native EOF 结果。假接口刻意从新 program 起步时，桥接仍在首次运动前选择 A_OPEN；实际原生加载默认选择未测。
 
-## 干净 checkout 核查：V1 未通过，修复中
+## 干净 checkout 核查：V1 失败保留，V2 已通过
 
-精确本地检查点 `03949494d02c94802e5bc2461ca9daf2a82b341a` 的四个当前方法实测3通过、1ERROR（19.387 s）：提交卡片绑定主工作区的绝对输入路径，另一目录的checkout正确得到 `FOREIGN_RUNTIME_INPUT`。这是测试fixture跨目录适用性缺陷；不放宽路径门、不重绑原卡或修改运行实现。仅制作独立公共依赖离线包供回归，最终门尚未完成。[原失败与回执](../../artifacts/t10_g5_y3_candidate_20261013_v1/portability_v1/CLEAN_CHECKOUT_RECEIPT_V1.json)。checkout raw仅`.gitkeep`、Git保持干净，无SUMO。
+精确本地检查点 `03949494d02c94802e5bc2461ca9daf2a82b341a` 的四个当前方法实测3通过、1ERROR（19.387 s）：提交卡片绑定主工作区的绝对输入路径，另一目录的checkout正确得到 `FOREIGN_RUNTIME_INPUT`。这是测试fixture跨目录适用性缺陷；不放宽路径门、不重绑原卡或修改运行实现。当时最终门暂停，随后仅修复独立公共依赖离线包；V2通过及最终审查见下文。[原失败与回执](../../artifacts/t10_g5_y3_candidate_20261013_v1/portability_v1/CLEAN_CHECKOUT_RECEIPT_V1.json)。checkout raw仅`.gitkeep`、Git保持干净，无SUMO。
 
-工程 revision02 仅修改测试，未修改真实卡片、73项源或任何校验门。两个独立公共依赖临时目录分别验证 foreign 卡拒绝与新离线 fixture 的真实 prepare/validate/缺许可拒绝；没有 mock 掉 validator。路径别名首次FAIL（0.125 s）及源码前像保留，fixture.resolve()最小修复后受影响方法PASS（0.133 s）；还待新检查点干净四方法与data/science最终门。[修订记录](../../artifacts/t10_g5_y3_candidate_20261013_v1/engineering/implementation_revision02/ENGINEERING_PORTABILITY_REVIEW_V2.md)。
+工程 revision02 仅修改测试，未修改真实卡片、73项源或任何校验门。两个独立公共依赖临时目录分别验证 foreign 卡拒绝与新离线 fixture 的真实 prepare/validate/缺许可拒绝；没有 mock 掉 validator。路径别名首次FAIL（0.125 s）及源码前像保留，fixture.resolve()最小修复后受影响方法PASS（0.133 s）；其后的新检查点干净四方法及data/science最终门均已完成，详见下文。[修订记录](../../artifacts/t10_g5_y3_candidate_20261013_v1/engineering/implementation_revision02/ENGINEERING_PORTABILITY_REVIEW_V2.md)。
+
+最终可移植测试检查点 `fb8397678650c327769589044fa454b55bb4189b` 的四个当前方法在干净 checkout 全部PASS（19.986 s，外层20.169899 s）；raw只含`.gitkeep`、Git仍干净。它使用本机已有主工作区venv及安装文件哈希，未安装依赖，不是另一台机器的环境验证。公开回归不依赖完整raw；旧248快照/车尾原始复算仍需要本地raw/cache，不能把两种覆盖混称为公开完整审计。[V2真实回执](../../artifacts/t10_g5_y3_candidate_20261013_v1/portability_v2/CLEAN_CHECKOUT_RECEIPT_V2.json)。卡和73项源码在测试修复期间保持不变；最终data/science门已完成，仅限离线交付。
+
+## 独立数据最终审查与后续门
+
+独立静态 V4 实际exit0，最终结论 **GO_FOR_OFFLINE_DELIVERY_REVIEW_ONLY**、无未解决实质数据问题。22文件binder：`840b23d49b3481ba0a95bb04985b2c3216adfa2dbddd21c964d39b459133a3f0`。原32工程binder中被替换的测试按0394949 Gitblob/前像核实，其他31项当前不变；当前测试后三个方法AST未改变。V1/V2独立checker表达错误、V3原静态PASS、V4新版本PASS均保留，没有隐藏失败或重写历史。[最终数据审查](../../data/processed/t10_g5_y3_candidate_20261013_v1/data_offline_v1/DATA_OFFLINE_FINAL_REVIEW_V1.md)。
+
+**运行前缺口：** 原G4实际数据审计器尚未完成G5/Y3版本适配；当前交付不声明native-ready。后续若计划运行，应先完成有界、版本化的实际phase/clock/body/EOF审计适配和三方精确运行门，再取得新卡/源码/资源的明确用户授权与canonical release。当前离线GO不能代替运行预审GO，旧剩余预算与NUM批准也不能代替新许可。
+
+## 科学终审、结项范围与交接
+
+只读科学终审 **GO_FOR_OFFLINE_DELIVERY_ONLY**、无新增Blocker/Major，确认本轮预审条件落实。可停止继续离线扩展，交用户审查精确候选。旧G4 actualreader适配不阻塞当前离线交付，但属于未来release前门；本意见不是native预启动GO。[完整科学记录](../../artifacts/t10_g5_y3_candidate_20261013_v1/science/SCIENTIFIC_FINAL_OFFLINE_REVIEW_V1.md)。
+
+已确认：版本化相位/时钟实现与公开回归通过；旧source64/900T8/guard阈值/真实卡不变；E/N/null边界、未知和无许可拒绝通过限定离线核查。有限推断：旧低速G4同输入相容与更严格Y3筛查支持准备有界诊断候选。仍未确认：未来G5人口/真实接收、制动、尾部/EOF、实际N、服务改善、源码二进制等价及NUM新scope适用性。加1秒绿灯不保证N14。
+
+更新 PROJECT_STATE、WORKLOG 和 README，是为了同步本轮离线结果、CLI/回归接口与下一门；DECISIONS、空未冻结的EXPERIMENT_PROTOCOL、AGENTS、thesis和监督材料未改。所有旧原始数据、失败和资格状态保留。新源码/卡实际测试快照对应上列源SHA和fb839767；之后仅文档与审查产物更新，不声称在未来交付commit上重新跑了SUMO或回归。
+
+下一位：用户/Chat审查本方案及卡片。若之后希望运行，先完成版本化G5/Y3 actualreader准备和三方精确运行评议，再明确批准本卡/源码/拟议资源；这份建议本身不构成执行授权。本轮不创建新Issue/PR、不push或merge；本地提交与证据可以审查，尚未发布GitHub。

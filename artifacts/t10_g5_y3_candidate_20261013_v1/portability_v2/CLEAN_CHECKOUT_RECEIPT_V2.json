@@ -1,0 +1,33 @@
+{
+  "tested_commit": "fb8397678650c327769589044fa454b55bb4189b",
+  "checkout": "/private/tmp/unified-actuator-clean-voi30_ie/checkout",
+  "command": [
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/candidate_a_t10_g5_y3_20261013",
+    "-v"
+  ],
+  "exit_code": 0,
+  "elapsed_wall_s": 20.169899417029228,
+  "test_source_path": "tests/candidate_a_t10_g5_y3_20261013/test_candidate.py",
+  "test_source_sha256": "5a17a8fdfb6ee8d02b3d03abcf3b9a093689ac941fa5aebf2ca6356efe8c5c40",
+  "result": "PASS",
+  "raw_files_before": [
+    "data/raw/.gitkeep"
+  ],
+  "raw_files_after": [
+    "data/raw/.gitkeep"
+  ],
+  "checkout_status_after": "",
+  "native_starts": 0,
+  "card_sha256": "6dc909466ddf8387db7a132c2609cb09564fb05c5d917ba9d67de7ba633b7476",
+  "previous_failure_preserved": "artifacts/t10_g5_y3_candidate_20261013_v1/portability_v1/CLEAN_CHECKOUT_RECEIPT_V1.json",
+  "runtime_changed_for_test_fix": false,
+  "source_binding_unchanged": "013a7da7518bdf822e049ab833fd06854a2b1f294f8f2120e4796f878a0e71f2",
+  "scope": "Four current offline methods with public-only independent fixture roots; correct foreign real-card rejection retained; no native physics/safety/service/full raw audit",
+  "environment": "Existing primary workspace .venv interpreter and unchanged installed-file hash checks; no install or fresh native version call",
+  "frozen_diff_whitespace_check": "Full stage lint flags literal blank context markers in frozen .diff artifacts, including revision02; scoped source/documentation/other evidence check passes. All frozen bytes retained."
+}
