@@ -1,0 +1,42 @@
+--- protected_V2/src/candidate_a_t10_g5_y3_audit_ready_20261013/bridge.py
++++ repair_V3/src/candidate_a_t10_g5_y3_audit_ready_20261013/bridge.py
+@@ -145,7 +145,7 @@
+                 abs(v.normal_decel_m_s2-conn.vehicle.getDecel(v.vehicle_id))<=1e-8,'yellow position/speed/body unbound')
+         require(conn.simulation.getTime()==t,'yellow final source time drift')
+         scope=yellow_scope(vehicles,t,cycle['yellow_s']);scope['source_post_frame_time_s']=t;adapter.last_yellow_scope=scope
+-        append_new(output/'yellow_scope.jsonl',scope)
++        append_new(output/'yellow_scope_attempts.jsonl',dict(scope,attempt_stage='QUOTA_CLOSE_SCREEN_BEFORE_SETTER',observed_first_Y=False))
+         require(scope['status']=='PASS','UNKNOWN_LOCAL_YELLOW_SCOPE')
+         require(phase==0 and t<=cycle['begin_s']+MAX_GREEN,'green close wrong phase/budget')
+         worker.request_phase(conn.trafficlight,requests,t,'setPhase',1)
+@@ -164,6 +164,15 @@
+         append_new(output/'policy_phase_requests.jsonl',{'time_s':t,'requests':requests,'cycle_id':cycle['cycle_id'],'cycle_end_s':cycle['end_s'],'actual_quota_N_G':cycle['N_G'],'requested_quota':cycle['requested_quota'],
+             'actual_readback':{'time_s':conn.simulation.getTime(),'phase':conn.trafficlight.getPhase(TLS),
+                 'state':conn.trafficlight.getRedYellowGreenState(TLS),'nextSwitch_s':conn.trafficlight.getNextSwitch(TLS)}})
++
++
++def write_first_yellow_screen(adapter,t,output):
++    p=adapter.pending
++    if t>=1200 and p['motion']=='y' and adapter.previous_motion!='y':
++        q=adapter.last_yellow_scope
++        require(isinstance(q,dict) and q['time_s']==t and q['status']=='PASS','FIRST_Y_SCREEN_NOT_FRESH')
++        record=dict(q,source_post_frame_time_s=t,screen_stage='PREPARED_BEFORE_FIRST_Y_MOTION',source_program=p['program'],source_motion='y',observed_first_Y=False)
++        append_new(output/'yellow_scope.jsonl',record)
+ 
+ 
+ def _diagnostic_loop(conn, worker, capture, output, resources, process, start_time, adapter=None, producer=None):
+@@ -216,7 +225,13 @@
+                     adapter.selected_new_program_at=t
+                 else:
+                     adapter.selected_new_program_at=None
+-        before=adapter.prepare_step(conn,t)
++        try:before=adapter.prepare_step(conn,t)
++        except Exception:
++            q=adapter.last_yellow_scope
++            if isinstance(q,dict) and q.get('time_s')==t:
++                append_new(output/'yellow_scope_attempts.jsonl',dict(q,attempt_stage='PREPARE_REJECTED_BEFORE_FIRST_Y_MOTION',observed_first_Y=False))
++            raise
++        write_first_yellow_screen(adapter,t,output)
+         append_new(output/'identity_journal.jsonl',identity_snapshot(conn,t,'BEFORE_MOTION'))
+         append_new(output/'pre_steps.jsonl',{'time_s':t,'bound_snapshot':adapter.pending,'preparation':before,'phase_requests':phase_requests})
+         # All log cursors began at byte0 including startup/control queries. Check

@@ -1,0 +1,74 @@
+--- protected_V2/tests/t10_g5_y3_audit_20261013/test_audit.py
++++ repair_V3/tests/t10_g5_y3_audit_20261013/test_audit.py
+@@ -143,12 +143,63 @@
+             with self.subTest(fault=fault),self.assertRaises(ValueError):evidence.identity_journal(bad,1201,'AFTER_ACK',{v:{}for v in q1['active_ids']})
+         with self.assertRaises(ValueError):telemetry.snapshot(w,1200,'BEFORE_MOTION')
+ 
++ def test_yellow_journal_complete_set_and_real_bridge_two_paths(self):
++    from tests.candidate_a_t10_g5_y3_20261013.test_candidate import World
++    from src.candidate_a_t10_g5_y3_20261013.adapter import StepAdapter
++    from src.candidate_a_native_smoke_20261011.bridge_logs import LogCapture
++    from types import SimpleNamespace
++    import time
++    import tests.candidate_a_t10_g5_y3_20261013.test_candidate as inherited
++    for early in (True,False):
++        with self.subTest(early=early),tempfile.TemporaryDirectory()as tmp:
++            pkg=Path(tmp)/'pkg';out=Path(tmp)/'out';profile.stage_package(profile.ROOT,pkg,out,1210);out.mkdir()
++            w=World(pkg/'scenario.add.xml',early)
++            if not early:
++                original_step=w.simulationStep
++                def without_second_entry(end):
++                    original_step(end)
++                    if end==1205:w.enter.pop('R_flow.1',None)
++                w.simulationStep=without_second_entry
++            a=StepAdapter(w.observe,750,1210);cap=LogCapture(out);worker=bridge.protected_worker()
++            try:bridge._diagnostic_loop(w,SimpleNamespace(observe=w.observe,request_phase=worker.request_phase),cap,out,dict(wall_limit_s=300,minimum_free_bytes=0,run_limit_bytes=300000000),inherited.f.fixture.old.fixture.old.fixture.fixture.FakeProcess(),time.monotonic(),a)
++            finally:cap.close_handles()
++            self.assertEqual(a.ledger.rows[0]['green_end_reason'],'ACTUAL_QUOTA_ACK'if early else'MAX_GREEN_DEADLINE')
++            yy=actual.lines(out/'yellow_scope.jsonl');self.assertEqual([q['time_s']for q in yy],[1204 if early else 1205])
++            f=fixture(4 if early else 5,entries_at=(1200,1203)if early else(1200,));account,phase=self.phase(f)
++            post=actual.flatten(actual.lines(out/'post_steps.jsonl'));pre=actual.lines(out/'pre_steps.jsonl')
++            self.assertEqual(evidence.yellow_coverage(yy,phase,account['cycles'],post,pre,1210,False)['observed_first_Y_count'],1)
++            for bad in ([],yy+yy,[dict(yy[0],time_s=1203)],[dict(yy[0],time_s=1209)]):
++                with self.assertRaises(ValueError):evidence.yellow_coverage(bad,phase,account['cycles'],post,pre,1210,False)
++            # A successful prepare immediately before an aborted first-Y motion
++            # is not an observed Y interval and must not be invented as one.
++            t=yy[0]['time_s'];partial=fixture(4 if early else 5,t,entries_at=(1200,1203)if early else(1200,));pa,pp=self.phase(partial)
++            q=evidence.yellow_coverage(yy,pp,pa['cycles'],post[:t],pre[:t+1],t,True)
++            self.assertEqual(q['observed_first_Y_count'],0);self.assertEqual(q['prepared_not_observed_times'],[t])
++            self.assertEqual(evidence.yellow_coverage([],pp,pa['cycles'],post[:t],pre[:t],t,True)['observed_first_Y_count'],0)
++            with self.assertRaises(ValueError):evidence.yellow_coverage(yy,pp,pa['cycles'],post[:t],pre[:t+1],t,False)
++
++ def test_extra_PRE_identity_prefix_valid_and_unknown_cases(self):
++    x=dict(time_s=0,stage='BEFORE_MOTION',setter_calls=0,active_ids=[],loaded_ids=[],pending_ids=[],vehicle_states={})
++    y=dict(x,time_s=1,stage='AFTER_ACK');z=dict(x,time_s=1)
++    pre=[dict(time_s=0,bound_snapshot=dict(world={})),dict(time_s=1,bound_snapshot=dict(world={}))];post=[dict(post_world={})]
++    self.assertTrue(evidence.identity_prefix([x,y,z],pre,post,1)['prepared_not_observed_last_PRE'])
++    self.assertFalse(evidence.identity_prefix([x,y],pre[:1],post,1)['prepared_not_observed_last_PRE'])
++    for journal,p in [([x,y],pre),([x,y,z,z],pre),([x,y,z],pre[:1]),([x,y,dict(z,time_s=0)],pre),([x,y,dict(z,active_ids=['R_flow.1'])],pre),([x,y,z],[pre[0],dict(pre[1],time_s=0)])]:
++        with self.assertRaises(ValueError):evidence.identity_prefix(journal,p,post,1)
++    import ast
++    tree=ast.parse((profile.ROOT/'scripts/t10_g5_y3_audit_20261013_v1/actual.py').read_text())
++    self.assertTrue(any(isinstance(q,ast.Call) and isinstance(q.func,ast.Name) and q.func.id=='identity_prefix' for q in ast.walk(tree)))
++    self.assertTrue(any(isinstance(q,ast.Call) and isinstance(q.func,ast.Name) and q.func.id=='yellow_coverage' for q in ast.walk(tree)))
++
+  def test_public_fixture_real_card_gates_and_unchanged_motion_bridge(self):
+     root=profile.ROOT;old=root/'artifacts/t10_g5_y3_candidate_20261013_v1/engineering/packages/UA_T10_G5Y3_FIXED750_S17_01/card.json';c=json.loads(old.read_text())
+     self.assertTrue(all(profile.sha(root/p)==h for p,h in c['sources_sha256'].items()))
+     oldbridge=(root/'src/candidate_a_t10_g5_y3_20261013/bridge.py').read_text();newbridge=(root/'src/candidate_a_t10_g5_y3_audit_ready_20261013/bridge.py').read_text()
+     expected=oldbridge.replace('from src.candidate_a_t10_g5_y3_20261013.profile import','from src.candidate_a_t10_g5_y3_audit_ready_20261013.profile import').replace('from src.candidate_a_t10_g5_y3_20261013 import budget','from src.candidate_a_t10_g5_y3_audit_ready_20261013 import budget\nfrom src.candidate_a_t10_g5_y3_audit_ready_20261013.telemetry import snapshot as identity_snapshot')
+     expected=expected.replace("        append_new(output/'pre_steps.jsonl'","        append_new(output/'identity_journal.jsonl',identity_snapshot(conn,t,'BEFORE_MOTION'))\n        append_new(output/'pre_steps.jsonl'",1).replace("        after=capture.snapshot(t,t+1,'AFTER_SIMULATION_STEP_ACK')","        append_new(output/'identity_journal.jsonl',identity_snapshot(conn,t+1,'AFTER_ACK'))\n        after=capture.snapshot(t,t+1,'AFTER_SIMULATION_STEP_ACK')",1)
++    expected=expected.replace("append_new(output/'yellow_scope.jsonl',scope)","append_new(output/'yellow_scope_attempts.jsonl',dict(scope,attempt_stage='QUOTA_CLOSE_SCREEN_BEFORE_SETTER',observed_first_Y=False))",1)
++    newbridge=newbridge[:newbridge.index('\ndef write_first_yellow_screen(')]+newbridge[newbridge.index('\ndef _diagnostic_loop('):]
++    newbridge=newbridge.replace("        try:before=adapter.prepare_step(conn,t)\n        except Exception:\n            q=adapter.last_yellow_scope\n            if isinstance(q,dict) and q.get('time_s')==t:\n                append_new(output/'yellow_scope_attempts.jsonl',dict(q,attempt_stage='PREPARE_REJECTED_BEFORE_FIRST_Y_MOTION',observed_first_Y=False))\n            raise\n        write_first_yellow_screen(adapter,t,output)","        before=adapter.prepare_step(conn,t)",1)
+     self.assertEqual(newbridge,expected)
+     donor=json.loads((root/profile.DONOR/'card.json').read_text());paths=set(c['sources_sha256'])|set(donor['prepared_input_sha256'])|{str(profile.NETWORK),str(profile.DONOR/'card.json'),str(old.relative_to(root))}
+     for folder in ('src/candidate_a_t10_g5_y3_audit_ready_20261013','scripts/candidate_a_t10_g5_y3_audit_ready_20261013_v1','scripts/t10_g5_y3_audit_20261013_v1','tests/t10_g5_y3_audit_20261013'):
+@@ -164,6 +215,6 @@
+             worker.assert_not_called()
+         self.assertFalse((fixture_root/profile.output(profile.RUN)).parent.exists())
+         foreign=(Path(tmp)/'foreign').resolve();shutil.copytree(fixture_root,foreign)
+-        with self.assertRaisesRegex(ValueError,'FOREIGN_RUNTIME_INPUT'):profile.validate(foreign/profile.TASK/'packages_v2'/profile.RUN/'card.json',root=foreign)
++        with self.assertRaisesRegex(ValueError,'FOREIGN_RUNTIME_INPUT'):profile.validate(foreign/profile.TASK/'packages_v3'/profile.RUN/'card.json',root=foreign)
+ 
+ if __name__=='__main__':unittest.main()

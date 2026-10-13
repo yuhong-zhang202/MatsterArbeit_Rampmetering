@@ -1,0 +1,132 @@
+--- protected_G4_audit/actual.py
++++ isolated_G5Y3_audit/actual.py
+@@ -6,10 +6,11 @@
+ from pathlib import Path
+ import argparse,collections,gzip,hashlib,importlib.util,json,math,sys,traceback,xml.etree.ElementTree as ET
+ ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT))
+-from scripts.unified_alinea_audit_20261013_v1.core import audit_accounting,audit_phases,audit_feedback,need,near,number
++from scripts.t10_g5_y3_audit_20261013_v1.core import audit_accounting,audit_phases,audit_feedback,need,near,number,MAX_GREEN
+ from scripts.unified_alinea_audit_20261013_v1.signal_binding_v2 import validate as signal_validate
+ spec=importlib.util.spec_from_file_location('protected_terminal_audit',ROOT/'data/processed/issue12_alinea_actuation_20261012_v1/audit_data_V3.py')
+ terminal=importlib.util.module_from_spec(spec);spec.loader.exec_module(terminal)
++from scripts.t10_g5_y3_audit_20261013_v1.evidence import body_frame,log_eof,serialized_population,strict_numeric,checkpoint,yellow_record
+ STORAGE='ramp_storage_0';INGRESS=':urban_diverge_1_0';INTERNAL=':ramp_mid_0_0'
+ STREAMS={'sumo_stdout.log','sumo_stderr.log','sumo_error.log','sumo.log'}
+ def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+@@ -48,8 +49,9 @@
+ 
+ def audit(manifest_path,card_path):
+     manifest_path=Path(manifest_path);card_path=Path(card_path);m=read(manifest_path);card=read(card_path);raw=ROOT/card['output'];approved_end=card['spec']['end_s'];run=card['spec']['run_id']
+-    need(card['classification']=='BOUNDED_UNIFIED_NATIVE_TECHNICAL_DIAGNOSTIC_NOT_FORMAL' and card['spec']['step_s']==1 and card['spec']['activation_s']==1200,'APPROVED_DIAGNOSTIC_SCOPE')
++    need(card['classification']=='OFFLINE_REVIEW_T10_G5Y3_NOT_NATIVE_AUTHORIZED' and card['spec']['run_id']=='UA_T10_G5Y3_FIXED750_S17_02' and card['spec']['mode']=='fixed750' and card['spec']['end_s']==1270 and card['spec']['phase_durations_s']==[5,3,2] and card['numerical_exception_authority']['enabled'] is False and card['spec']['step_s']==1 and card['spec']['activation_s']==1200,'APPROVED_DIAGNOSTIC_SCOPE')
+     need(raw.is_dir(),'NO_ACTUAL_RAW_RUN')
++    need(card['observations']==dict.fromkeys(('N','E','actual_phase_exposure','native_safety','body_clearance','future_G5_population')),'PREPARED_CARD_OBSERVATIONS_NOT_NULL')
+     for name,value in m['files'].items():need(sha(ROOT/name)==(value['sha256'] if isinstance(value,dict) else value),'RAW_SHA_DRIFT:'+name)
+     parent=raw.parent;actual={str(p.relative_to(ROOT)) for p in parent.rglob('*') if p.is_file()};need(actual==set(m['files']),'RAW_MANIFEST_INVENTORY')
+     need(sum((ROOT/f).stat().st_size for f in actual)==m['bytes'],'RAW_BYTES')
+@@ -58,8 +60,9 @@
+     for name,h in card['environment']['files_sha256'].items():need(sha(Path(name))==h,'ENVIRONMENT_BOUND_BYTES_DRIFT:'+name)
+     for key in ('sources_sha256','prepared_input_sha256','inherited_inputs_sha256'):
+         for name,h in card[key].items():need(sha(ROOT/name)==h,'CARD_BOUND_SOURCE_INPUT_DRIFT:'+name)
+-    need(card['resources']=={'wall_limit_s':300,'startup_limit_s':60,'run_limit_bytes':300000000,'minimum_free_bytes':5000000000} and card['spec']['total_resource_envelope']=={'monitored_s':1200,'raw_bytes':1200000000},'RESOURCE_BOUNDARY')
++    need(card['resources']=={'wall_limit_s':300,'startup_limit_s':60,'run_limit_bytes':300000000,'minimum_free_bytes':5000000000} and card['spec']['total_resource_envelope']=={'monitored_s':300,'raw_bytes':300000000},'RESOURCE_BOUNDARY')
+     receipt=read(raw/'bridge_receipt.json');need(receipt['run_id']==run and receipt['card_sha256']==sha(card_path),'EXECUTED_CARD_RECEIPT')
++    need(receipt.get('native_started') is True,'NO_NATIVE_STARTED_EVIDENCE')
+     last=receipt.get('last_completed_s');need(type(last) in (int,float) and last==int(last) and 0<=last<=approved_end,'LAST_ACK');last=int(last)
+     pre=lines(raw/'pre_steps.jsonl');post=flatten(lines(raw/'post_steps.jsonl'));acks=lines(raw/'step_ack.jsonl');logs=lines(raw/'log_intervals.jsonl')
+     need(len(post)==last and last<=len(pre)<=last+1 and len(acks)==2*last,'PREFIX_COVERAGE')
+@@ -74,6 +77,8 @@
+     for i,r in enumerate(post):
+         b=pre[i];need(b['time_s']==i and r['time_begin_s']==i and r['time_end_s']==i+1,'INTERVAL_TIME')
+         a0,a1=acks[2*i:2*i+2];need(a0['requested_target_s']==i+1 and a0['ACK_received'] is True and a0['actual_time_verified'] is False and a0['actual_readback_s'] is None and a1['requested_target_s']==i+1 and a1['ACK_received'] is True and a1['actual_time_verified'] is True and a1['actual_readback_s']==i+1,'ACK_PAIR')
++        strict_numeric(r)
++        serialized_population(b['bound_snapshot'],i)
+         w=b['bound_snapshot']['world'];z=r.get('post_world');need(isinstance(z,dict),'MISSING_ADVANCED_WORLD')
+         ic=r.get('identity_change');need(isinstance(ic,dict),'MISSING_IDENTITY_CHANGE')
+         need(set(w)-set(z)==set(ic['arrived_ids'])==set(ic['before_only_ids']) and set(z)-set(w)==set(ic['after_only_ids']) and set(ic['after_only_ids'])<=set(ic['departed_ids']),'WORLD_IDENTITIES')
+@@ -114,27 +119,10 @@
+             t=float(elem.get('time'));need(t==frame_count and frame_count<last,'FCD_ORDERED_TIME');i=frame_count;r=post[i];w=pre[i]['bound_snapshot']['world'];z=r['post_world'];frame={v.get('id'):v.attrib for v in elem}
+             need(len(frame)==len(elem) and set(frame)==set(z),'FCD_POPULATION')
+             for vid,v in frame.items():need(v['lane']==z[vid]['lane_id'] and abs(float(v['speed'])-z[vid]['speed_m_s'])<=.5e-8+1e-10,'FCD_SPEED_LANE')
+-            ids=sorted(v for v,x in frame.items() if v.startswith('R_flow.') and x['lane']==INTERNAL and v in w and w[v]['lane_id']==STORAGE)
+-            for vid in ids:
+-                need(vid not in binding,'INDEPENDENT_DUPLICATE_ENTRY');x={'vehicle_id':vid,'time_begin_s':i,'time_end_s':i+1,'motion':tls[i]['state']};entries.append(x);binding[vid]=x;active.add(vid)
++            xs,checked=body_frame(i,r,w,frame,tls[i]['state'],pre[i]['bound_snapshot']['terminal_before'],active,binding,cleared)
++            entries.extend(xs);body_rows+=checked
++            for x in xs:
+                 if x['motion']=='r':alarms.append({'kind':'INDEPENDENT_RED_FRONT_ENTRY','entry':x})
+-            need(ids==sorted(q['vehicle_id'] for q in r.get('actual_crossings',[])),'INDEPENDENT_FCD_CROSSINGS')
+-            obs=r.get('body_observation')
+-            if obs is None:missing.append({'kind':'MISSING_BODY_OBSERVATION','ACK_s':i+1})
+-            else:
+-                need(obs['ACK_s']==i+1 and obs['signal']==tls[i]['state'],'BODY_ACK_SIGNAL');internal={v for v,x in frame.items() if x['lane']==INTERNAL};need(active<=internal,'BODY_MISSING_BEFORE_CLEAR')
+-                rows={q['vehicle_id']:q for q in obs['rows']};need(len(rows)==len(obs['rows']) and set(rows)==active,'BODY_ACTIVE_IDS');spanning=set()
+-                for vid in internal:
+-                    length=pre[i]['bound_snapshot']['terminal_before'][vid]['length_m']
+-                    if float(frame[vid]['pos'])-length<=0:spanning.add(vid)
+-                need(set(obs['spanning_ids'])==spanning,'ALL_SPANNING_POPULATION')
+-                for vid,q in rows.items():
+-                    x=binding[vid];length=pre[i]['bound_snapshot']['terminal_before'][vid]['length_m']
+-                    need(q['entry_time_begin_s']==x['time_begin_s'] and q['entry_time_end_s']==x['time_end_s'] and q['entry_signal']==x['motion'] and q['observed_ACK_s']==i+1 and q['observed_signal']==tls[i]['state'],'BODY_ENTRY_TIME_ID_SIGNAL')
+-                    need(abs(q['head_position_m']-float(frame[vid]['pos']))<.51e-8 and q['length_m']==length==5 and abs(q['speed_m_s']-float(frame[vid]['speed']))<.51e-8 and near(q['rear_position_m'],q['head_position_m']-length),'BODY_DYNAMICS')
+-                    if vid in spanning:need(q['status']=='REAR_SPANS_LINE','BODY_SPAN_STATUS')
+-                    else:need(q['status']=='REAR_CLEAR_OBSERVED' and q['first_actual_rear_clear_ACK_s']==i+1 and vid not in cleared,'BODY_CLEAR_STATUS');cleared[vid]=i+1;active.remove(vid)
+-                    body_rows+=1
+             if i>=1200:shared.append({'interval_begin_s':i,'rows':[{'vehicle_id':vid,'speed_m_s':float(v['speed']),'position_m':float(v['pos'])} for vid,v in frame.items() if v['lane']=='shared_approach_0' and vid.startswith(('R_flow.','U_flow.'))]})
+             frame_count+=1;elem.clear()
+     need(frame_count==last,'FCD_FRAME_COVERAGE');need(sorted(active)==receipt.get('body_censored_ids',[]),'BODY_CENSOR_RECEIPT')
+@@ -154,28 +142,13 @@
+         local={v for v,w in pre[t]['bound_snapshot']['world'].items() if w['lane_id'] in (STORAGE,INGRESS)};need(len(q['vehicle_states'])==len(local) and {v['vehicle_id'] for v in q['vehicle_states']}==local,'ADMISSION_LOCAL_COVERAGE')
+     yellow=lines(raw/'yellow_scope.jsonl')
+     for yy in yellow:
+-        t=yy['time_s'];need(t==yy['source_post_frame_time_s'] and 1200<t<=last,'YELLOW_SOURCE_CLOCK');cycle=next(c for c in account['cycles'] if c['begin_s']<t<=c['begin_s']+4);Y=cycle['yellow_s'];need(yy['yellow_s']==Y,'YELLOW_PERIOD')
+-        world=post[t-1]['post_world'];meta=pre[t]['bound_snapshot']['terminal_before'] if t<len(pre) else None
+-        need({q['vehicle_id'] for q in yy['rows']}==set(yy['covered_ids'])=={v for v,w in world.items() if w['lane_id'] in (STORAGE,INGRESS)},'YELLOW_LOCAL_COMPLETE')
+-        for q in yy['rows']:
+-            vid=q['vehicle_id'];v=meta[vid] if meta else None;offset=113.08 if q['population']=='ingress' else 0
+-            need(q['time_s']==t and near(q['speed_m_s'],world[vid]['speed_m_s']) and q['native_future_safety_proven'] is False,'YELLOW_REAL_SPEED_ID')
+-            if v:need(near(q['position_m'],v['position_m']-offset) and near(q['length_m'],v['length_m']) and near(q['normal_decel_m_s2'],v['normal_decel_m_s2']),'YELLOW_REAL_FIELDS')
+-            else:missing.append({'kind':'NO_NEXT_PRE_YELLOW_METADATA','ACK_s':t})
+-            d=204.49-q['position_m'];speed=q['speed_m_s'];b=q['normal_decel_m_s2'];length=q['length_m'];dt=q['action_step_s'];one=d>0 and speed<=b*dt;stop=d>0 and (one or d>=speed*dt+speed*speed/(2*b));timing=None if speed==0 else dt+speed/(2*b)+length/speed;clear=speed>0 and timing<=Y and d+length<=speed*(Y-dt)
+-            need(q['one_step_Euler_stop_possible']==one and near(q['distance_to_meter_m'],d) and q['stop_possible']==stop and q['clear_possible']==clear,'YELLOW_INDEPENDENT_SCREEN')
+-            if not(stop or clear):missing.append({'kind':'UNKNOWN_LOCAL_YELLOW_SCOPE','vehicle_id':vid,'ACK_s':t})
+-    need(bool(logs),'MISSING_LOG_JOURNAL')
+-    for rec in logs:
+-        need(set(rec['streams'])==STREAMS,'FOUR_NATIVE_STREAMS')
+-        for name,v in rec['streams'].items():
+-            content=(raw/name).read_bytes();lo,hi=v['byte_start'],v['byte_end'];need(type(lo) is int and type(hi) is int and 0<=lo<=hi<=len(content) and hashlib.sha256(content[:hi]).hexdigest()==v['prefix_sha256'] and hashlib.sha256(content[lo:hi]).hexdigest()==v['fragment_sha256'],'LOG_INTERVAL_HASH')
+-    eof=logs[-1];need(eof['stage']=='AFTER_NATIVE_CLOSE_PROCESS_EOF' and all(v['byte_end']==(raw/n).stat().st_size for n,v in eof['streams'].items()),'FINAL_NATIVE_EOF')
+-    need(receipt['final_logs']['coverage']=='FINAL_FILES_AT_OWNED_PROCESS_EOF','RECEIPT_EOF')
++        t=yy['time_s'];meta=pre[t]['bound_snapshot']['terminal_before'] if t<len(pre) else None
++        yellow_record(yy,account['cycles'],post[t-1]['post_world'],meta,last)
++    log_eof(logs,raw,receipt)
+     if receipt['final_logs']['status']!='BOUND_NO_OBSERVED_NATIVE_MESSAGE':alarms.append({'kind':'NATIVE_FINAL_LOG_MESSAGE','reasons':receipt['final_logs'].get('reasons')})
+     elapsed=receipt['monitored_elapsed_through_cleanup_s'];need(number(elapsed) and elapsed>=0,'MONITORED_COST_MISSING')
+     before=receipt['total_budget_before_run'];need(number(before['charged_monitored_s']) and type(before['charged_raw_bytes']) is int,'NEW_BUDGET_BASELINE')
+-    if elapsed>300 or m['bytes']>300000000 or before['charged_monitored_s']+elapsed>1200 or before['charged_raw_bytes']+m['bytes']>1200000000:alarms.append({'kind':'RESOURCE_CAP_OBSERVED_EXCEEDED','monitored_s':elapsed,'raw_bytes':m['bytes']})
++    if elapsed>300 or m['bytes']>300000000 or before['charged_monitored_s']+elapsed>300 or before['charged_raw_bytes']+m['bytes']>300000000:alarms.append({'kind':'RESOURCE_CAP_OBSERVED_EXCEEDED','monitored_s':elapsed,'raw_bytes':m['bytes']})
+     feedback_events=lines(raw/'feedback_events.jsonl') if (raw/'feedback_events.jsonl').exists() else []
+     if card['spec']['mode']=='real_alinea':
+         for event in feedback_events:
+@@ -193,7 +166,7 @@
+     else:need(not feedback_events,'UNREQUESTED_FEEDBACK_EVENTS');feedback={'status':'NOT_APPLICABLE_FIXED_OR_SCHEDULED'}
+     reds=[q for q in control if q['motion']=='r'];cp=None
+     if (raw/'first_red_checkpoint.json').exists():
+-        cp=read(raw/'first_red_checkpoint.json');need(reds and cp['time_s']==reds[0]['time_end_s'] and cp['first_controlled_red_begin_s']==reds[0]['time_begin_s'] and cp['accounting']==reds[0]['accounting'] and cp['log_scope']=='PROVISIONAL_NATIVE_CAPTURE_FINAL_EOF_REQUIRED','ACTUAL_FIRST_RED_CP')
++        cp=read(raw/'first_red_checkpoint.json');checkpoint(cp,reds)
+     elif reds:missing.append({'kind':'FIRST_RED_CHECKPOINT_NOT_VERIFIED'})
+     demand=ET.parse(ROOT/card['package']/'demand.rou.xml').getroot();planned={v.get('id'):float(v.get('depart')) for v in demand.findall('vehicle')};need(len(planned)==len(demand.findall('vehicle')),'DUPLICATE_PLANNED_ID')
+     inserted={v['id'] for v in trips if float(v['depart'])>=0};due={v for v,t in planned.items() if t<last};future=set(planned)-due;unfinished={v['id'] for v in trips if float(v['depart'])>=0 and float(v['arrival'])<0};groups={}
+@@ -203,10 +176,10 @@
+     queue=ET.parse(raw/'queues.xml').getroot();last_queue=list(queue)[-1] if len(queue) else None
+     queue_summary=None if last_queue is None else {'export_BEGIN':last_queue.get('timestep'),'lanes':{q.get('id'):q.attrib for q in last_queue.findall('./lanes/lane') if q.get('id') in (STORAGE,'shared_approach_0')}}
+     runtime_stop=receipt['status'] not in ('PACKET_CYCLES_OBSERVED_NO_MONITORED_ANOMALY_NOT_QUALIFIED','APPROVED_END_PARTIAL_OR_BODY_CENSORED_NOT_QUALIFIED')
+-    return {'status':'UNKNOWN_INCOMPLETE_COVERAGE' if missing else 'PASS_OBSERVED_DATA_INTEGRITY_ONLY','classification':'BOUNDED_DIAGNOSTIC_NOT_FORMAL','run_id':run,'card_sha256':sha(card_path),'manifest_sha256':sha(manifest_path),'raw_files':len(m['files']),'raw_bytes':m['bytes'],'last_ACK':last,'last_accounted':len(complete),'accounting':account,'phase_audit':phase,'feedback_audit':feedback,'independent_actual_entries':entries,'entries_without_complete_accounting':[x for x in entries if x['time_begin_s']>=len(complete)],'body_censored_ids':sorted(active),'body_first_clear_ACK':cleared,'body_rows_checked':body_rows,'terminal_results':arrivals,'missing_or_unknown':missing,'observed_alarms':alarms,'runtime_stop':runtime_stop,'runtime_status':receipt['status'],'runtime_error':receipt['error'],'first_red_checkpoint':cp,'WAIT_records':wait,'min_speed_difference':min(brakes) if brakes else None,'min_native_acceleration':min(accelerations) if accelerations else None,'counter_max':max(counter_values) if counter_values else None,'log_EOF_verified':True,'demand_groups':groups,'shared_approach_diagnostic_frames':shared,'queue_export_final':queue_summary,'source_snapshot':'CARD_BOUND_EXACT_BYTES_NOT_BASELINE_NATIVE','native_safety_proven':False,'rate_qualified':False,'formal_effect_proven':False,'monitored_elapsed_s':elapsed,'current_source_and_environment_hashes_checked':True,'final_client_stderr_scope':'SEPARATE_FROM_FOUR_NATIVE_STREAMS_NOT_UNIVERSAL_LOG_COVERAGE'}
++    return {'status':'UNKNOWN_INCOMPLETE_COVERAGE' if missing else 'STOP_OBSERVED_ALARM' if alarms or runtime_stop else 'PASS_OBSERVED_DATA_INTEGRITY_ONLY','classification':'BOUNDED_DIAGNOSTIC_NOT_FORMAL','run_id':run,'card_sha256':sha(card_path),'manifest_sha256':sha(manifest_path),'raw_files':len(m['files']),'raw_bytes':m['bytes'],'last_ACK':last,'last_accounted':len(complete),'accounting':account,'phase_audit':phase,'feedback_audit':feedback,'independent_actual_entries':entries,'entries_without_complete_accounting':[x for x in entries if x['time_begin_s']>=len(complete)],'body_censored_ids':sorted(active),'body_first_clear_ACK':cleared,'body_rows_checked':body_rows,'terminal_results':arrivals,'missing_or_unknown':missing,'observed_alarms':alarms,'runtime_stop':runtime_stop,'runtime_status':receipt['status'],'runtime_error':receipt['error'],'first_red_checkpoint':cp,'WAIT_records':wait,'min_speed_difference':min(brakes) if brakes else None,'min_native_acceleration':min(accelerations) if accelerations else None,'counter_max':max(counter_values) if counter_values else None,'log_EOF_verified':True,'demand_groups':groups,'shared_approach_diagnostic_frames':shared,'queue_export_final':queue_summary,'source_snapshot':'CARD_BOUND_EXACT_BYTES_NOT_BASELINE_NATIVE','identity_dynamics_scope':'Runtime inventory enforces all effective modes/dynamics; independently bound serialized terminal/type/route/decel and following modes only; unlogged getter values cannot be reconstructed' ,'native_safety_proven':False,'rate_qualified':False,'formal_effect_proven':False,'monitored_elapsed_s':elapsed,'current_source_and_environment_hashes_checked':True,'final_client_stderr_scope':'SEPARATE_FROM_FOUR_NATIVE_STREAMS_NOT_UNIVERSAL_LOG_COVERAGE'}
+ 
+ def main():
+-    p=argparse.ArgumentParser();p.add_argument('--manifest',required=True);p.add_argument('--card',required=True);p.add_argument('--output',required=True);args=p.parse_args();out=Path(args.output).resolve();need(out.is_relative_to(ROOT/'data/processed/unified_alinea_actuator_20261013_v1'),'ONLY_NEW_PROCESSED_OUTPUT')
++    p=argparse.ArgumentParser();p.add_argument('--manifest',required=True);p.add_argument('--card',required=True);p.add_argument('--output',required=True);args=p.parse_args();out=Path(args.output).resolve();need(out.is_relative_to(ROOT/'data/processed/t10_g5_y3_audit_ready_20261013_v1'),'ONLY_NEW_PROCESSED_OUTPUT')
+     need(not out.exists(),'VERSIONED_OUTPUT_EXISTS');out.mkdir(parents=True)
+     try:result=audit(args.manifest,args.card)
+     except Exception as exc:result={'status':'UNKNOWN_AUDIT_EXCEPTION','exception_type':type(exc).__name__,'reason':str(exc),'traceback':traceback.format_exc(),'native_safety_proven':False,'rate_qualified':False}

@@ -1,0 +1,46 @@
+--- protected_T10_01/profile.py
++++ identity02/profile.py
+@@ -4,12 +4,12 @@
+ import xml.etree.ElementTree as ET
+ from src.candidate_a_unified_alinea_20261013 import profile as base
+ ROOT=base.ROOT;NETWORK=base.NETWORK;SUMO=base.SUMO
+-TASK=Path('artifacts/t10_g5_y3_candidate_20261013_v1/engineering')
+-USER=TASK.parent/'USER_OFFLINE_SCOPE_V1.json'
+-SCIENCE=TASK.parent/'science/SCIENTIFIC_PREIMPLEMENTATION_GATE_V1.md'
+-BASE='48dafb3605687b4738a6c8c45581032a79f8c8ec'
+-RUN='UA_T10_G5Y3_FIXED750_S17_01'
+-RAW=Path('data/raw/t10_g5_y3_candidate_20261013_v1')
++TASK=Path('artifacts/t10_g5_y3_audit_ready_20261013_v1/engineering')
++USER=TASK.parent/'USER_OFFLINE_AUDIT_SCOPE_V1.json'
++SCIENCE=Path('artifacts/t10_g5_y3_candidate_20261013_v1/science/SCIENTIFIC_PREIMPLEMENTATION_GATE_V1.md')
++BASE='63af3b4166b2582cb916877630706d1ff933be7a'
++RUN='UA_T10_G5Y3_FIXED750_S17_02'
++RAW=Path('data/raw/t10_g5_y3_audit_ready_20261013_v1')
+ DONOR=base.TASK/'packages/UA_FIXED750_S17_02'
+ sha=base.sha;write_new=base.write_new;require=base.require
+ 
+@@ -28,12 +28,12 @@
+ def resources(run):
+     spec(run);return dict(wall_limit_s=300,startup_limit_s=60,run_limit_bytes=300000000,minimum_free_bytes=5000000000)
+ def sources(root):
+-    old=json.loads((root/DONOR/'card.json').read_text())['sources_sha256']
+-    require(all(sha(root/p)==h for p,h in old.items()),'PROTECTED_BASE64_DRIFT')
++    old=json.loads((root/'artifacts/t10_g5_y3_candidate_20261013_v1/engineering/packages/UA_T10_G5Y3_FIXED750_S17_01/card.json').read_text())['sources_sha256']
++    require(all(sha(root/p)==h for p,h in old.items()),'PROTECTED_T10_SOURCE73_DRIFT')
+     d=dict(old)
+-    for folder in ('src/candidate_a_t10_g5_y3_20261013','scripts/candidate_a_t10_g5_y3_20261013_v1'):
++    for folder in ('src/candidate_a_t10_g5_y3_audit_ready_20261013','scripts/candidate_a_t10_g5_y3_audit_ready_20261013_v1','scripts/t10_g5_y3_audit_20261013_v1','tests/t10_g5_y3_audit_20261013'):
+         for p in (root/folder).glob('*.py'):d[str(p.relative_to(root))]=sha(p)
+-    for p in (USER,SCIENCE):d[str(p)]=sha(root/p)
++    for p in (Path('scripts/unified_alinea_audit_20261013_v1/core.py'),Path('scripts/unified_alinea_audit_20261013_v1/signal_binding_v2.py'),Path('data/processed/issue12_alinea_actuation_20261012_v1/audit_data_V3.py'),Path('artifacts/t10_g5_y3_candidate_20261013_v1/engineering/packages/UA_T10_G5Y3_FIXED750_S17_01/card.json'),USER,SCIENCE):d[str(p)]=sha(root/p)
+     return dict(sorted(d.items()))
+ def common_source_digest(root):
+     return hashlib.sha256(json.dumps(sources(root),sort_keys=True,separators=(',',':')).encode()).hexdigest()
+@@ -83,6 +83,7 @@
+         proposed_new_single_run_envelope={'monitored_s':300,'raw_bytes':300000000},old_budget_remainder_not_execution_authorization=True,
+         numerical_exception_authority={'enabled':False,'status':'PENDING_NEW_SCOPE_APPLICABILITY_AND_EXECUTION_APPROVAL','old_approval_reference':str(base.NUM_USER),'old_approval_sha256':sha(root/base.NUM_USER)},
+         observations={'N':None,'E':None,'actual_phase_exposure':None,'native_safety':None,'body_clearance':None,'future_G5_population':None},
++        audit_contract={'schema':'T10_G5_Y3_STRICT_ACTUAL_AUDIT_V1','reader':'scripts/t10_g5_y3_audit_20261013_v1/actual.py','NUM':'STRICT_NO_CONTINUE_CLASSIFICATION','EOF_and_terminal_arrival_audit':'MANDATORY_NO_SKIP'},
+         binary_reference_provenance=donor['binary_reference_provenance'],source_binary_compiler_equivalence='NOT_VERIFIED',runtime_authorization_generated=False)
+     write_new(card,data);return card
+ 

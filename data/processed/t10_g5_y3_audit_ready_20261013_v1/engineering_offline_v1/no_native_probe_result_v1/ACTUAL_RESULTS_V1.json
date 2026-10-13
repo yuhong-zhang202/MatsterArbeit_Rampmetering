@@ -1,0 +1,8 @@
+{
+  "status": "UNKNOWN_AUDIT_EXCEPTION",
+  "exception_type": "ValueError",
+  "reason": "NO_ACTUAL_RAW_RUN",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/t10_g5_y3_audit_20261013_v1/actual.py\", line 184, in main\n    try:result=audit(args.manifest,args.card)\n               ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/t10_g5_y3_audit_20261013_v1/actual.py\", line 53, in audit\n    need(raw.is_dir(),'NO_ACTUAL_RAW_RUN')\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/t10_g5_y3_audit_20261013_v1/core.py\", line 13, in need\n    if not ok:raise ValueError(why)\n              ^^^^^^^^^^^^^^^^^^^^^\nValueError: NO_ACTUAL_RAW_RUN\n",
+  "native_safety_proven": false,
+  "rate_qualified": false
+}
