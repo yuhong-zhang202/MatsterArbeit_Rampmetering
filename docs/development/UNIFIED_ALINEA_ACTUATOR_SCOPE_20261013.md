@@ -42,7 +42,7 @@
 
 每卡绑定源/输入/参数/环境/终点，保留canonical门和UNKNOWN保守资源预留。本plan已获用户批准，仍需实际实现/离线门及每卡三方GO；范围批准本身不替代精确card的canonical release。运行流程共用开发参数仅为技术测试，不写入或冻结EXPERIMENT_PROTOCOL，不改变Stage6/A1/Candidate A既有状态，不安装新环境，不购买资源。
 
-当前独立分支codex/unified-alinea-actuator已取得V2首300短时结果及750/01停止前缀；后者真实−4.501超出旧严格规则，旧FAIL保留。用户随后明确批准[受限数值事件例外](../../artifacts/unified_alinea_actuator_20261013_v1/USER_NUMERICAL_EXCEPTION_APPROVAL_V1.json)，仅完整公开绑定及1mm公式匹配可分类、actual生成分支仍未唯一识别，不改模型/配时/seed或原总预算。新750/02不同source SHA的实现/离线工程门已完成，独立数据/科学精确门待完成，尚未新native；不能把旧300/900改称新源码原生结果。后续GitHub任务关联按用户/Chat工作流确定，不自行编造Issue或新建PR。目标整体尚未完成，执行严格依序通过离线与精确card三方门；技术资源/覆盖扩展仍需另批。
+当前独立分支 `codex/unified-alinea-actuator` 已完成本批准范围的四任务/五原生身份观测及工程→数据→科学post，限定技术节点收口，待用户/Chat审查。原750严格FAIL及新版750服务E14/N13缺额均保留；真实ALINEA两非初值反馈已应用但映射仍T8。最终64源未原生重测固定300/900，不能把旧结果升级为最终同版本资格。完整源版本/测量/限制/预算与下一方任务见[最终交接报告](UNIFIED_ALINEA_ACTUATOR_VALIDATION_REPORT_20261013.md)；Candidate A NOT_QUALIFIED/A1 UNRESOLVED/正式未授权不变。后续GitHub任务关联和新资格范围由用户/Chat确定，不自行新建Issue/PR、增加运行或调参。原批准快照与授权SHA不变；本段仅更新实际状态。
 
 ## 6. 本次只读范围评议
 

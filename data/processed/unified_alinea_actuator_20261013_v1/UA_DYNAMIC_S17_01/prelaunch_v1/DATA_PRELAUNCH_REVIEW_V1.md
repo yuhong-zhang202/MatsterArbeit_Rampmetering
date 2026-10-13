@@ -1,0 +1,13 @@
+# UA_DYNAMIC_S17_01 — independent minimal delta review
+
+2026-10-13. **GO_FOR_SCIENTIFIC_EXACT_CARD_PRELAUNCH_ONLY.** No substantive finding, native run, new test, old-raw re-audit, runtime/card change or permission. Current mandatory context refreshed;750 serviceNOT_MET stays public and formal/A1/qualification states unchanged.
+
+Exactcard75971443ed912eb54b2a0ee7ee0b6c4a1be339ebabefa94addb4ad6c206a9618;6-file engineering binderdc1c1a3dfe97060e6440f614217765515848fba9fb47e9269b8c94e9431969bd/report460bd90d… verified.70 distinct source/input/binder paths hash-checked, same64-sourceea180197… as new75002. Demand/network/model/seed17/dt1/environment/resource metadata and explicit numericalapproval/source-reference bytes match. XML differs only literal run paths and approvedend1270→1266. No raw/canonical exists for this card. Available725.0133951250464s/710583155B with no unknown reservation; single300s/300MB/start60/free5GB remains, freshness still required at launch.
+
+Independent Fraction-per-second planning recomputation uses requests1200:300,1201:750,1226:900,1237:300, mapping immediately for pending integral but applying only at cycle boundaries. Expected applications1200/1224/1234/1242, delays0/23/8/5, periods24/10/8/24, Y5/4/2/5, end1266. Conditional requestedC251/24, mappedpending41/4=10.25, applied8 and completed-requestE8. N and all actual C/E/application evidence remain null/unobserved. These are midcycle-request calculations, not the obsolete boundary-issued97/12 illustration. Actualquota/deadline closes, deficits, phases, signal/time ACK applications and partial/UNKNOWN must be independently observed; bootstrap preparation and command age are not application proof.
+
+Reused exact unchanged implementation/decoder/offline dynamic checks and75002 actual limited-interface/approved-classification evidence; no rerun and no native dynamic claim. Old300/900 are historical/affected compatibility only for this new SHA. Existing source-compatible exception keeps raw/legacyFAIL and otherSTOP/UNKNOWN; itsprivate branch remains unobserved. No runtime edit to erase750 E14/N13.
+
+Initial read-only lookup used prior-card filename ENGINEERING_PRELAUNCH_BINDING_V1.json; FileNotFoundError preserved in PATH_SCHEMA_FAILURE_V1.json. Correct actual filename ENGINEERING_DELIVERY_BINDING_V1.json was read and verified, no evidence/source alteration. The failure precedes checks and does not indicate runtime failure.
+
+DATA_DELTA_RESULTS_V1.json retains exact checked hashes/planning fractions/null/budget. Next scientific exact-card gate, then parent canonical decision. No next-mode/native/settlement authorization or service qualification follows from this data GO. Parent owns factual STATE/WORKLOG updates.

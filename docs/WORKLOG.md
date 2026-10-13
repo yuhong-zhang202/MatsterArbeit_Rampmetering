@@ -2620,3 +2620,35 @@ One authorized native run reached1270/exit0: seven fullT10 slots, firstsixN2/fin
 ### 2026-10-13 — 750/02 three-role technical GO, service NOT_MET, actual settlement
 
 Scientific boundedGO: observedtechnical/approvedmonitoring completenesspassed, serviceE14/N13 failed; scope34 permits deficit disclosure before approvedinterface diagnostics. No ratequalification or retiming. Known total474.9866048749536s/489416845B; remaining725.0133951250464s/710583155B, nounknown reservation. Prepare dynamic precise card only, originalFAIL retained.
+
+### 2026-10-13 — Dynamic exact-card prelaunch gates and single-use release
+
+Engineering/data/scienceGO exact75971443…, sourceea180197…unchanged. CanonicalNUMapproval/freshvalidationPASS. Execute once to1266; delays/threeintegrals/Nremainplanningonly until independentactualaudit. NoG restart/continuousphase/wholeEOF safeguards,750deficit retained, ALINEA not released.
+
+### 2026-10-13 — Dynamic native observed completion
+
+One process reached1266/exit0. Engineering initialobservations apps1200/1224/1234/1242 delays0/23/8/5 withT24/10/8/24; C251/24,pending41/4,applied/E/N8. All8G entries/bodyclear,150.4739825s. Freeze then independentdata/science post pending; no nextcard/settlement orservicequalification claim.
+
+### 2026-10-13 — Dynamic three-role post GO and actual resource settlement
+
+Actualnative boundaryapplications/delays andC/pending/applied/E/N independentlyconfirmed; no midcycleG restart. ScienceboundedGO,750deficit retained, numericaleventnottriggered/Feedbacknotyettested. Totalspent625.4605873749824s/651555827B, remaining574.5394126250176s/548444173B. Prepare finalALINEA exactcard only afterthis settledgate.
+
+### 2026-10-13 — Current-state snapshot consolidation
+
+Replaced repeated superseded unified-task operational paragraphs inPROJECT_STATE with one source/version/outcome/budget/nextgate snapshot. All originalFAIL/raw/versionedreports/approvalrecords and materialworklog history retained. No research/decision/protocol/acceptance change; lastALINEA card preparation still pending exactgates.
+
+### 2026-10-13 — ALINEA exact three-role gates and canonical release
+
+Same64-source/card56da7b96 engineering and independentdata prelaunch GO; science preciseGO, no newBlocker/Major. Canonical includes explicit numericalapproval SHA, fresh .venv source/input/env/budget/release gates PASS. One native diagnostic permitted to1272, no autoretry/extension/tuning. Actual E1 feedback/noninitialapplication/partial/tails/EOF remain unobserved until postreview;750serviceNOT_MET and oldFAIL retained.
+
+### 2026-10-13 — Real ALINEA native observed completion and EOF freeze
+
+One exact process reached1272/exit0. Engineeringobserved two trueFeedback decisions/apps1232/1264 delays2/4; secondrequest882.092367 mapped900/T8 unchanged,9fullE=N18/no partial/bodycensor.112raw/164060455B manifest05ee359c…, monitored151.660477167s. Complete detector/window/formula/application/normalarrival/EOF independentdata and sciencePOST pending; no extraSUMO, budgetsettlement orqualification claim.
+
+### 2026-10-13 — Final real ALINEA audit, bounded node closeout and handoff
+
+Independentactualreader firstPASS without repair/retest,112raw/72E1/98tuple observations with17ongoing/18entries+tails/1338normalarrivals/EOF complete. Two noninitialFeedback applications1232/1264 delays2/4; secondrequested882.092367 stillmappedT8,9fullE=N18; last12s partialmeasurement notcyclepartial.16data binder d75f77dc and25summary binder2c0a9405 preserve5identities/4tasks/source61vs64/strictFAIL/750NOT_MET. Finalscience boundedGO/no newBlockerMajor supports stopping authorizedtechnicalnode, notqualification/useracceptance. Actual777.1210645419778s/815616282B settled includingFAIL; remaining422.87893545802217s/384383718B/noUNKNOWN is not newauthority. STATE/README/mutableSCOPE/newcompletehandoffreport synchronized. Decisions/protocol/AGENTS/thesis/supervision/raw and upstreamPRs unchanged. Local selected-file delivery next; no extraSUMO/tests orremote operation.
+
+### 2026-10-13 — Selected local delivery readback
+
+Final64runtime SHA matches allnative currentcards;13report source links resolve, nochanges toAGENTS/DECISIONS/EXPERIMENT_PROTOCOL/thesisoutline. Explicit63new evidence/document files (3.45MB) selected plusonly taskWORKLOG hunks; raw/canonicalpermissions/MemoryCore changes/privateemail excluded. No furthernative/testsuite rerun orGitHub push. These static readbackchecks are not a newnative qualification.

@@ -1,0 +1,17 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "scripts/unified_alinea_audit_20261013_v1/actual_numeric_v2.py",
+    "--manifest",
+    "artifacts/unified_alinea_actuator_20261013_v1/engineering/runs/UA_ALINEA_S17_01/RAW_FINAL_SHA256_V1.json",
+    "--card",
+    "artifacts/unified_alinea_actuator_20261013_v1/engineering/packages/UA_ALINEA_S17_01/card.json",
+    "--output",
+    "data/processed/unified_alinea_actuator_20261013_v1/UA_ALINEA_S17_01/revision01"
+  ],
+  "exit_code": 0,
+  "elapsed_s": 2.5647354999673553,
+  "source_sha256": "bceb8f045d1380e911d199816e69c5120a182b8ed4cc9cef25901d5bf700e974",
+  "native_runs": 0
+}

@@ -1,0 +1,41 @@
+{
+  "task_coverage": {
+    "fixed300": {
+      "coverage": "NATIVE_61_SOURCE_3CYCLES_ONLY_FINAL64_NOT_NATIVE300",
+      "run_ids": [
+        "UA_FIXED300_S17_02"
+      ],
+      "final64_direct_native": false
+    },
+    "fixed750": {
+      "coverage": "ORIGINAL61_FAILED_AND_APPROVED64_COMPLETED_SERVICE_NOT_MET",
+      "run_ids": [
+        "UA_FIXED750_S17_01",
+        "UA_FIXED750_S17_02"
+      ],
+      "final64_direct_native": true
+    },
+    "dynamic_commands": {
+      "coverage": "FINAL64_OBSERVED_ID_APPLICATION_DELAY_AND_CONTINUOUS_PHASE",
+      "run_ids": [
+        "UA_DYNAMIC_S17_01"
+      ],
+      "final64_direct_native": true
+    },
+    "real_alinea": {
+      "coverage": "FINAL64_REAL_E1_FEEDBACK_REQUEST_APPLIED_ACK; NO_MAPPED_PERIOD_CHANGE",
+      "run_ids": [
+        "UA_ALINEA_S17_01"
+      ],
+      "final64_direct_native": true
+    }
+  },
+  "final64_native_fixed900": false,
+  "old900_scope": "HISTORICAL_DIFFERENT_SOURCE_AND_GUARD_REPLAY_ONLY_NOT_UNIFIED_NATIVE_QUALIFICATION",
+  "completed_data_observation_node": true,
+  "final_scientific_post_pending": true,
+  "actuator_rate_qualified": false,
+  "formal_protocol_frozen": false,
+  "research_stage_closure_change": false,
+  "further_native_authorized_by_data": false
+}
