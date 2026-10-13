@@ -5,6 +5,8 @@
 
 ## Current Phase
 
+**2026-10-13｜现有750日志缺额调查：工程→独立数据→只读科学复审完成，限定GO交付，待用户/Chat审查。** 新用户任务仍禁止新SUMO；工程7周期/41选定ACK初核PASS，末次第二车G4仅进8.0426488m、始距8.5612787m，绿末差0.51862986m；首Y的−4.501发生其后，不解释此前缺额。接收head准入PASS、21车storage队列，三方未见需要修复的相位/计数/WAIT软件缺陷，7周期/41ACK目标核证PASS。sigma.5有实际getter，但私有跟驰/RNG贡献未唯一识别；不改配时/模型/guard、不原条件复跑。[新原因报告](development/UA_FIXED750_SHORTFALL_CAUSE_ANALYSIS_20261013.md)仅提出T10/Gmax5/Y3/redmin2待审候选，Y3未安全认可、后续状态会改变、全300–900库未解决；科学仅允许保留Proposed，未实施或制卡。原技术节点4aa5b01结项及资格阴性不变，后续仅提出有依据方案，不授权新运行。
+
 **2026-10-13｜统一ALINEA有界技术任务：四任务/五实际身份有限技术节点完成，三方post及实际资源结算完成，交用户/Chat审查。** [完整交接报告](development/UNIFIED_ALINEA_ACTUATOR_VALIDATION_REPORT_20261013.md)、[独立数据汇总](../data/processed/unified_alinea_actuator_20261013_v1/final_summary_v1/DATA_NODE_SUMMARY_V1.md)。最后ALINEA已到1272/exit0，112raw/164060455B，完整检测器/公式/两非初值应用/18车尾/1338正常离网/EOF独立PASS，无reader修复或额外仿真。两反馈实际apps1232/1264、delay2/4s；第二requested882.092367仍mapped900/T8，9完整E=N18。最后12s仅E1测量partial，非cyclepartial；无bodycensor。NUM事件0不等于再验证例外或全域安全。
 
 **已确认结果与版本：** 初始61源a2b25659的300/02三完整E=N6；750/01于1265真实−4.501严格STOP，原FAIL保留。明确批准后64源ea180197的750/02七完整E14/N13，技术监测完整但服务NOT_MET（668.57veh/h）；Dynamic/01四完整T24/10/8/24，真实apps1200/1224/1234/1242延迟0/23/8/5，C251/24,pending41/4,applied=E=N8且无中周期重启。最后ALINEA同64源以真实E1而非预录指令形成反馈，requested有变化但native周期未变。最终64版本未native重测固定300或固定900；旧900仅历史相容见证，不能拼作同版本资格。

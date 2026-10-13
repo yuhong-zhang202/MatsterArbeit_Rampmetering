@@ -2652,3 +2652,19 @@ Independentactualreader firstPASS without repair/retest,112raw/72E1/98tuple obse
 ### 2026-10-13 — Selected local delivery readback
 
 Final64runtime SHA matches allnative currentcards;13report source links resolve, nochanges toAGENTS/DECISIONS/EXPERIMENT_PROTOCOL/thesisoutline. Explicit63new evidence/document files (3.45MB) selected plusonly taskWORKLOG hunks; raw/canonicalpermissions/MemoryCore changes/privateemail excluded. No furthernative/testsuite rerun orGitHub push. These static readbackchecks are not a newnative qualification.
+
+### 2026-10-13 — Additional user-authorized750 shortfall investigation
+
+After boundednode closed at4aa5b01, userrequests existinglog causeanalysis only, no newSUMO. Comparelastcycle withfirstsix, ruleoutclock/accounting/application/receiver softwarefaults vsphysicalstartup andnominalquota assumption. Only demonstratedtechnicalbug mayreceive minimalfix/offlineregression; anyretry remainsproposal, notlaunch. Preserve750 E14/N13 andalllegacy/evidence/scientificbounds. Engineeringinvestigation thenindependentdata/science gates.
+
+### 2026-10-13 —750 shortfall engineering evidence frozen
+
+Seven-cycle/41targetedACK trace confirms lastR13 G4advance8.0426488m from8.5612787m beforeline, remains0.51862986m; finitefirstY numericbraking follows missingGcrossing, not its prior cause. HeadreceiverPASS/storagequeue21; no observedphase/count/WAITsetter defect, E2explicitnominal. Engineering5binder78cca6f1/report52509dab; true derivedtrace routednewprocessed shortfall_engineering_v1. No code/timing/model/guard/native/newtests/retrycard, pending independentdata/science.
+
+### 2026-10-13 —750 shortfall independent data PASS and limited proposal
+
+Independent seven-cycle/41selectedACK/FCD/TLS/Euler/crossing plus7relatedraw SHA firstPASS .94s.12binderb987b99c/reportcc0df622; actualR13 sigma.5 boundat1264, privateRNG/vsafe notobserved. HeadreceiverPASS notcomplete exclusionofsecondaryfollowing. No bug/fix/newtests/native. Parentnewcause report proposes onlyT10 Gmax5/Y3/redmin2 asunvalidatedservicebudgetdiscussion; engineeringreadonlyreadback acceptsProposed withY3possibleNO_GO, earlyG4 becomesY3/R3/changedfuturestates, noG1guarantee/no900T8coverage. Exactnumbers notapplied, awaiting finalscientificreview; serviceNOT_MET unchanged.
+
+### 2026-10-13 —750 shortfall final science and bounded handoff
+
+Read-onlyscience GO/no newBlockerMajor: directG4trajectory deficit confirmed, firstYnumeric event follows it, no softwarebug/fixneeded. SpecificT10Gmax5/Y3/redmin2 allowedonlyProposed, requiresY3applicabilityreview, earlyG4→y3/r3 changesfuturestate, no900T8/fullrangequalification orN14prediction. No newnative/runtime/guard/model/timing/seed/metricschange/tests/card. ExistingE14N13NOT_MET/oldFAIL preserved. Chinesecause/minimalsolution/conditionalretryproposal report+STATE updated; offlineextract/independentverification requirelocalraw/cache, notpubliccleancheckoutproof. Nextuser/Chat decidespolicyassessment; suggestion notexecutionauthority.
