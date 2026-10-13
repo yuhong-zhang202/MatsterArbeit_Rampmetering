@@ -1,0 +1,28 @@
+test_missing_bad_boundary_application_phase_and_counts (test_audit.Tests.test_missing_bad_boundary_application_phase_and_counts) ... ok
+test_real_feedback_raw_events_recomputed_no_nearest_label (test_audit.Tests.test_real_feedback_raw_events_recomputed_no_nearest_label) ... ok
+test_real_helper_synthetic_two_blocks_dynamic_and_Y_catalogue (test_audit.Tests.test_real_helper_synthetic_two_blocks_dynamic_and_Y_catalogue) ... ok
+test_zero_partial_null_extra_and_no_catchup (test_audit.Tests.test_zero_partial_null_extra_and_no_catchup) ... ERROR
+
+======================================================================
+ERROR: test_zero_partial_null_extra_and_no_catchup (test_audit.Tests.test_zero_partial_null_extra_and_no_catchup)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/cumulative_tracking_audit_20261014/test_audit.py", line 53, in test_zero_partial_null_extra_and_no_catchup
+    a,ph=run(f,1210);self.assertEqual(a['accounting']['N'],0);self.assertEqual(a['accounting']['E'],2)
+         ~~~^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/cumulative_tracking_audit_20261014/test_audit.py", line 20, in run
+    ph=core.audit_phases(f['tls'],f['post'],f['ack'],a['cycles'],f['phase_requests'],f['duration_requests'],f['pre'])
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/cumulative_tracking_audit_20261014_v1/core.py", line 78, in audit_phases
+    return check(*args,**kwargs)
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/cumulative_tracking_audit_20261014_v1/_phase.py", line 27, in audit_phases
+    need(sum(q['N_G'] for q in [cycle])>=2,'QUOTA_CLOSE_WITHOUT_ACTUAL_N')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/t10_g5_y3_audit_20261013_v1/core.py", line 13, in need
+    if not ok:raise ValueError(why)
+              ^^^^^^^^^^^^^^^^^^^^^
+ValueError: QUOTA_CLOSE_WITHOUT_ACTUAL_N
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.516s
+
+FAILED (errors=1)

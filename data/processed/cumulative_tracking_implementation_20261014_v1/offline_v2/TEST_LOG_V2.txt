@@ -1,0 +1,18 @@
+test_missing_bad_boundary_application_phase_and_counts (test_audit.Tests.test_missing_bad_boundary_application_phase_and_counts) ... ok
+test_real_feedback_raw_events_recomputed_no_nearest_label (test_audit.Tests.test_real_feedback_raw_events_recomputed_no_nearest_label) ... ok
+test_real_helper_synthetic_two_blocks_dynamic_and_Y_catalogue (test_audit.Tests.test_real_helper_synthetic_two_blocks_dynamic_and_Y_catalogue) ... ok
+test_zero_partial_null_extra_and_no_catchup (test_audit.Tests.test_zero_partial_null_extra_and_no_catchup) ... FAIL
+
+======================================================================
+FAIL: test_zero_partial_null_extra_and_no_catchup (test_audit.Tests.test_zero_partial_null_extra_and_no_catchup)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/cumulative_tracking_audit_20261014/test_audit.py", line 47, in test_zero_partial_null_extra_and_no_catchup
+    f=load('fixed750_1210_False_False');a,ph=run(f,1210);self.assertEqual(a['accounting']['N'],0);self.assertEqual(a['accounting']['E'],2)
+                                                         ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 2 != 0
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.521s
+
+FAILED (failures=1)

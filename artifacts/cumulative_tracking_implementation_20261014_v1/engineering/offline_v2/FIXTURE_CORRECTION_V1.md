@@ -1,0 +1,1 @@
+The V1 fixture scheduled the T8 second entry at G4 while keeping a synthetic six-second internal residence. The unchanged receiver rejected the next G. V2 restores the original UnifiedWorld two first-G-ACK synthetic entries for T8 only; T10 continues to exercise G4/G5. No safety gate, physics model or runtime source was changed. V1 error/source preimages preserved.

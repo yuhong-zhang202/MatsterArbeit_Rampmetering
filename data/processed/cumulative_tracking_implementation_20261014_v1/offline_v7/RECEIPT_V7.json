@@ -1,0 +1,21 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "tests.cumulative_tracking_audit_20261014.test_audit.Tests.test_missing_bad_boundary_application_phase_and_counts",
+    "-v"
+  ],
+  "exit_code": 0,
+  "elapsed_s": 0.81934824999189,
+  "scope": "One explicit missing nullable cycle_application_delay_s negative; fixed complete nullable schema scan, no further optional expansion",
+  "source_sha256": {
+    "scripts/cumulative_tracking_audit_20261014_v1/_phase.py": "1b6669c79ea66ae54d03a4849cc837441ecdc16d8b780a8516f2132c81ae7471",
+    "scripts/cumulative_tracking_audit_20261014_v1/core.py": "241260d29a0d350d7fea1d1e7a2e391c06d9fa182aa0200a1131e82eb10458ad",
+    "scripts/cumulative_tracking_audit_20261014_v1/evidence.py": "6514247082fa82b733684a54180bdd3242997f6103b6b7eb4ca7facd33fbb004",
+    "scripts/cumulative_tracking_audit_20261014_v1/actual.py": "9adb9e625663cc4a548bf15d3c815a4e5b524865e37b756aae03137eaef99de2"
+  },
+  "test_source_sha256": "ae4dff5f888af207985679c44a3140ca9b69cfaa990c32ee4123a1bf9bfba94f",
+  "native_runs": 0
+}

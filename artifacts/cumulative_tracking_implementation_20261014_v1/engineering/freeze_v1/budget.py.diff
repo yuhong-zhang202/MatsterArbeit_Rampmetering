@@ -1,0 +1,10 @@
+--- src/candidate_a_t10_g5_y3_no_output_cap_20261013/budget.py
++++ src/candidate_a_cumulative_tracking_20261014/budget.py
+@@ -1,6 +1,6 @@
+ """New single-identity proposed envelope; no old budget carry or silent retry."""
+ from pathlib import Path
+-from src.candidate_a_t10_g5_y3_no_output_cap_20261013.profile import RAW,require
++from src.candidate_a_cumulative_tracking_20261014.profile import RAW,require
+ TOTAL_WALL=300;TOTAL_BYTES=None
+ 
+ def accounting(root):

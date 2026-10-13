@@ -1,0 +1,24 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/cumulative_tracking_audit_20261014",
+    "-v"
+  ],
+  "exit_code": 1,
+  "elapsed_s": 0.5819409590330906,
+  "minimal_change": "Test fixture ACK excludes preceding warmup target1200 pair; parser coverage unchanged",
+  "test_source_sha256": "e1f2c3b227f339fc3a997f61fc6bed1339404ba9c15c69ec69e2655b5b3880de",
+  "source_sha256": {
+    "scripts/cumulative_tracking_audit_20261014_v1/_phase.py": "1b6669c79ea66ae54d03a4849cc837441ecdc16d8b780a8516f2132c81ae7471",
+    "scripts/cumulative_tracking_audit_20261014_v1/core.py": "9e6a8e6387d807aea0733b8ef824115df404d85af98cec489e2f896c9637d9d9",
+    "scripts/cumulative_tracking_audit_20261014_v1/evidence.py": "6514247082fa82b733684a54180bdd3242997f6103b6b7eb4ca7facd33fbb004",
+    "scripts/cumulative_tracking_audit_20261014_v1/actual.py": "9adb9e625663cc4a548bf15d3c815a4e5b524865e37b756aae03137eaef99de2"
+  },
+  "native_runs": 0,
+  "classification": "SYNTHETIC_OFFLINE_NOT_ACTUAL_SUMO"
+}

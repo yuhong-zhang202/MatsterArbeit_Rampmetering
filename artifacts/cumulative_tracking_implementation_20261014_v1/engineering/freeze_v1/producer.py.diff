@@ -1,0 +1,19 @@
+--- src/candidate_a_unified_alinea_20261013/producer.py
++++ src/candidate_a_cumulative_tracking_20261014/producer.py
+@@ -1,6 +1,6 @@
+ """Real project Feedback and complete E1 events; no native launch on import."""
+ from scripts.formal_development_20261007_v1.control import Feedback, FeedbackParameters
+-from src.candidate_a_unified_alinea_20261013.policy import Command, require
++from src.candidate_a_cumulative_tracking_20261014.policy import Command, require
+ from src.candidate_a_unified_alinea_20261013.event_ledger import DetectorEventLedger, DETECTORS
+ import math
+ 
+@@ -67,7 +67,7 @@
+                 rate if self.feedback else None)
+         if self.mode=='dynamic_commands' and t in SCHEDULE:
+             return Command(f'scheduled:{t}',t,SCHEDULE[t],'SCHEDULED')
+-        if self.feedback and t in (1230,1260):
++        if self.feedback and t > 1200 and (t-1200)%30 == 0:
+             begin=self.e1.begin_s;occ=self.e1.finish_window(t)
+             result=self.feedback.update(t-600,begin-600,t-600,occ[0][0],occ[1][0])
+             request_id=f'feedback:{t}'

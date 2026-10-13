@@ -1,0 +1,30 @@
+test_dynamic_latest_request_repeated_ids_boundary_and_no_nearest_execution (test_tracking.TrackingTests.test_dynamic_latest_request_repeated_ids_boundary_and_no_nearest_execution) ... ok
+test_exact_long_blocks_actual_debt_and_unobserved_partial (test_tracking.TrackingTests.test_exact_long_blocks_actual_debt_and_unobserved_partial) ... ok
+test_real_feedback_producer_and_offline_no_authorization_gate (test_tracking.TrackingTests.test_real_feedback_producer_and_offline_no_authorization_gate) ... ERROR
+
+======================================================================
+ERROR: test_real_feedback_producer_and_offline_no_authorization_gate (test_tracking.TrackingTests.test_real_feedback_producer_and_offline_no_authorization_gate)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_cumulative_tracking_20261014/test_tracking.py", line 110, in test_real_feedback_producer_and_offline_no_authorization_gate
+    w,a,out=self.loop(tmp,1272,producer=Producer('real_alinea',900),command=900)
+            ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_cumulative_tracking_20261014/test_tracking.py", line 83, in loop
+    try:bridge._diagnostic_loop(w,SimpleNamespace(observe=w.observe,request_phase=worker.request_phase),cap,out,
+        ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+     dict(wall_limit_s=300,minimum_free_bytes=0,run_limit_bytes=None),f.fixture.old.fixture.old.fixture.fixture.FakeProcess(),time.monotonic(),a,producer or Producer('fixed750',750))
+     ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_cumulative_tracking_20261014/bridge.py", line 213, in _diagnostic_loop
+    bound=admission(conn,t,worker.observe,old_program)
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_cumulative_tracking_20261014/bridge.py", line 52, in admission
+    require(type(receiver.get('available')) is bool and receiver['available'],'receiver denies green')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_native_smoke_20261011/bridge_card.py", line 32, in require
+    if not condition:raise ValueError(why)
+                     ^^^^^^^^^^^^^^^^^^^^^
+ValueError: receiver denies green
+
+----------------------------------------------------------------------
+Ran 3 tests in 7.937s
+
+FAILED (errors=1)

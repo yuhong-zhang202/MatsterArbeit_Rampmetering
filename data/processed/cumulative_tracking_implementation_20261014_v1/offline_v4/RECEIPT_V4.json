@@ -1,0 +1,24 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/cumulative_tracking_audit_20261014",
+    "-v"
+  ],
+  "exit_code": 0,
+  "elapsed_s": 0.6043757500010543,
+  "minimal_change": "Synthetic observed-zero arithmetic uses existing natural deadline shortfall fixture instead of quota-triggered fixture; all phase predicates preserved",
+  "test_source_sha256": "d29e16c76f22e6b329b794fc4e79dbf62e446fe52a5fb5eb83ca93d6c1dbba32",
+  "source_sha256": {
+    "scripts/cumulative_tracking_audit_20261014_v1/_phase.py": "1b6669c79ea66ae54d03a4849cc837441ecdc16d8b780a8516f2132c81ae7471",
+    "scripts/cumulative_tracking_audit_20261014_v1/core.py": "02edfd71502656cb9a473f0c8bd1c4fee83818dde9e00a8f4b589c2935b6ed8f",
+    "scripts/cumulative_tracking_audit_20261014_v1/evidence.py": "6514247082fa82b733684a54180bdd3242997f6103b6b7eb4ca7facd33fbb004",
+    "scripts/cumulative_tracking_audit_20261014_v1/actual.py": "9adb9e625663cc4a548bf15d3c815a4e5b524865e37b756aae03137eaef99de2"
+  },
+  "native_runs": 0,
+  "classification": "SYNTHETIC_OFFLINE_NOT_ACTUAL_SUMO"
+}
