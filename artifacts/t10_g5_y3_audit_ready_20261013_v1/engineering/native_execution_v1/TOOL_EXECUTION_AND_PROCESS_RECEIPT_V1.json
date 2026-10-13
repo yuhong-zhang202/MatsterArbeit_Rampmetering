@@ -1,0 +1,14 @@
+{
+  "actual_command": ".venv/bin/python scripts/candidate_a_t10_g5_y3_audit_ready_20261013_v1/cli.py --execute artifacts/t10_g5_y3_audit_ready_20261013_v1/engineering/packages_v4/UA_T10_G5Y3_FIXED750_S17_02/card.json --release artifacts/t10_g5_y3_audit_ready_20261013_v1/engineering/releases/UA_T10_G5Y3_FIXED750_S17_02/EXECUTION_RELEASE.json",
+  "execution_permissions": "require_escalated exact user-approved local SUMO/TraCI one run",
+  "tool_session_id": 65557,
+  "actual_CLI_exit_code": 1,
+  "native_start_count": 1,
+  "automatic_retry": false,
+  "process_query_initial_permission_failure": "zsh operation not permitted: ps; no process action occurred",
+  "process_query_escalated_result": "38733 CLI,38762 owned SUMO,parent38733,port61813",
+  "process_exit_query": "ps -p38733,38762: header only,exit1,neither process remains",
+  "guard_or_reader_or_old_data_changed": false,
+  "all87_current_source_hashes_match_card": true,
+  "actual_monitor_time_s": 137.06621708296007
+}

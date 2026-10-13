@@ -1,0 +1,59 @@
+{
+  "run_id": "UA_T10_G5Y3_FIXED750_S17_03",
+  "seed": 17,
+  "qMain": 3600,
+  "qRamp": 900,
+  "qUrban": 360,
+  "qCross": 180,
+  "service_command_veh_h": 750,
+  "step_s": 1,
+  "activation_s": 1200,
+  "end_s": 1270,
+  "phase_durations_s": [
+    5,
+    3,
+    2
+  ],
+  "initial_hold_s": [
+    600,
+    1200
+  ],
+  "first_red_mandatory_pause": false,
+  "automatic_continuation": false,
+  "first_red_mandatory_checkpoint_s": null,
+  "first_red_checkpoint_kind": "FIRST_CONTROLLED_RED_ACK",
+  "fixed_command_veh_h": 750,
+  "period_s": 10,
+  "input_origin": "fixed750",
+  "r_ALINEA": null,
+  "discrete_rates_veh_h": [
+    720.0
+  ],
+  "quotas": [
+    2
+  ],
+  "yellow_scope": "BOUND_ACTUAL_LOCAL_STOP_OR_BODY_CLEAR_SCREEN_NOT_A1",
+  "terminal_arrival_audit": "MANDATORY_POST_RUN_PRECISION8_NO_NEXT_RUN_IF_UNKNOWN",
+  "within_run_checkpoint_continuation": true,
+  "complete_cycles_target": 7,
+  "automatic_retry": false,
+  "sequential_postreview_gate": true,
+  "receiver_diagnostic_policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+  "all_spanning_bodies": "ENTRY_ID_TIME_SIGNAL_TO_REAL_REAR_CLEAR_EACH_ACK_NO_YELLOW_DEADLINE",
+  "total_resource_envelope": {
+    "monitored_s": 300,
+    "raw_bytes": null
+  },
+  "fixed_start_count_limit": null,
+  "mode": "fixed750",
+  "feedback_reference": null,
+  "requested_schedule": null,
+  "partial_final_cycle_allowed": false,
+  "restricted_numerical_exception_enabled": false,
+  "interpretation": "CONDITIONAL_OFFLINE_CANDIDATE_NOT_NATIVE_OR_SERVICE_QUALIFIED",
+  "resources_provenance": "DIRECT_USER_REMOVED_OUTPUT_BYTE_STOP_LIMIT_WITH_OTHER_GATES_UNCHANGED",
+  "eligible_requested_rates_veh_h": [
+    750.0
+  ],
+  "native_permission_granted": false
+}

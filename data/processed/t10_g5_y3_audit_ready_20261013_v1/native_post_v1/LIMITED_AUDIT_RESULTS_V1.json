@@ -1,0 +1,61 @@
+{
+  "status": "GO_LIMITED_FROZEN_RESOURCE_STOP_EVIDENCE_ONLY",
+  "run_id": "UA_T10_G5Y3_FIXED750_S17_02",
+  "manifest_sha256": "9f0a55efb1c0279782635f5556c9fe4101b50fb9a85328e779405b26b00a38dd",
+  "raw_file_count": 130,
+  "parent_bytes": 300852929,
+  "outputs_bytes": 300851878,
+  "reservation_bytes": 1051,
+  "parent_excess_over_old_cap": 852929,
+  "outputs_excess_over_old_cap": 851878,
+  "trigger_instant_bytes": null,
+  "major_file_bytes": {
+    "identity_journal.jsonl": 186529915,
+    "pre_steps.jsonl": 79626464,
+    "post_steps.jsonl": 22953192,
+    "log_intervals.jsonl": 4640918,
+    "fcd.xml.gz": 2321924
+  },
+  "major_three_fraction_of_outputs": 0.9609698065438036,
+  "last_actual_ACK_s": 1038,
+  "last_accounted_s": 1038,
+  "ACK_records": 2076,
+  "post_container_records": 1038,
+  "failure_wrapper_records": 0,
+  "requested_command_NOT_applied": [
+    {
+      "event": "REQUESTED",
+      "request_id": "initial",
+      "global_request_s": 1200,
+      "rate_veh_h": 750,
+      "origin": "FIXED",
+      "r_ALINEA": null,
+      "mapped_period_s": 10,
+      "mapped_rate_veh_h": 720.0
+    }
+  ],
+  "control_accounting": {
+    "C": null,
+    "C_mapped_pending": null,
+    "C_applied": null,
+    "E": null,
+    "N": null,
+    "policy_quantization": null,
+    "application_latency": null,
+    "C_applied_minus_E": null,
+    "E_minus_N": null
+  },
+  "controlled_cycles_observed": false,
+  "final_logs": null,
+  "log_capture_records": 2077,
+  "last_capture_stage": "AFTER_SIMULATION_STEP_ACK",
+  "full_native_EOF_status": "UNKNOWN_NOT_ESTABLISHED",
+  "native_exit_code": null,
+  "CLI_exit_code": 1,
+  "monitored_s": 137.06621708296007,
+  "full_reader_run": "NOT_RUN_BOUNDED_PREACTIVATION_SCOPE_NO_FULL_WARMUP_SAFETY_AUDIT",
+  "native_safety_proven": false,
+  "rate_qualified": false,
+  "new_native_runs_by_data": 0,
+  "old_failure_preserved": true
+}

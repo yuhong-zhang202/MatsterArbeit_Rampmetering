@@ -1,0 +1,117 @@
+{
+  "run_id": "UA_T10_G5Y3_FIXED750_S17_02",
+  "status": "STOP_UNKNOWN_LOG_FINALIZATION",
+  "error": "ValueError:output bytes STOP;watchdog:OUTPUT_BYTES:None;logfinal:ValueError:normal process EOF not established",
+  "source_commit": "c82333d77de1367f0d6fce4b8ceb2742bfd8ed80",
+  "source_digest": "4deb99f4a6c0b053d810d3b61123a5fff8a15df09cd9cd659e2b4f39bff9fd40",
+  "card_sha256": "18774ee7aba5319b9947cf6c817c29db00339e7b5f52bb2abef509cf4313755e",
+  "release_sha256": "6bbed02a802ac4156a7c57cc78e575dae625e9dce23b3b2e2a0c4d168b35008b",
+  "CLI_exit_code": 1,
+  "tool_session_id": 65557,
+  "owned_CLI_PID": 38733,
+  "owned_SUMO_PID": 38762,
+  "native_start_count": 1,
+  "auto_retry_count": 0,
+  "TraCI_connection_attempts_same_child": 235,
+  "startup_connected_elapsed_s": 24.58004458301002,
+  "last_actual_ACK_s": 1038,
+  "last_accounted_s": 1038,
+  "before_activation": true,
+  "activation_s": 1200,
+  "intended_end_s": 1270,
+  "observed_controlled_cycles": [],
+  "control_accounting": null,
+  "explicit_unobserved_accounting": {
+    "C": null,
+    "C_mapped_pending": null,
+    "C_applied": null,
+    "E": null,
+    "N": null,
+    "policy_quantization": null,
+    "application_latency": null,
+    "C_applied_minus_E": null,
+    "E_minus_N": null
+  },
+  "first_red_verified": false,
+  "monitored_elapsed_through_cleanup_s": 137.06621708296007,
+  "wall_limit_s": 300,
+  "run_limit_bytes": 300000000,
+  "watchdog": {
+    "reason": "OUTPUT_BYTES",
+    "error": null,
+    "poll_s": 0.2
+  },
+  "trigger_instant_byte_total": null,
+  "trigger_bytes_scope": "existing main loop and .2s watchdog count outputs subtree recursively; exact sampled total was not persisted",
+  "final_outputs_subtree_bytes": 300851878,
+  "final_parent_all_files_bytes": 300852929,
+  "final_parent_bytes_over_cap": 852929,
+  "final_output_bytes_over_cap": 851878,
+  "post_STOP_cleanup_and_metadata_included": true,
+  "final_EOF_coverage": null,
+  "normal_native_EOF_established": false,
+  "native_exit_code": null,
+  "native_exit_code_scope": "not persisted because LogCapture.finalize rejected normal EOF; do not reconstruct 0 or signal code",
+  "owned_PIDs_exit_check": {
+    "command": "ps -p 38733,38762 -o pid,ppid,etime,command",
+    "exit_code": 1,
+    "output": "PID PPID ELAPSED COMMAND header only; neither PID present",
+    "escalated_readonly": true
+  },
+  "CLI_warning_scope": "captured tool client stderr, separate from four native streams; API float-step UserWarning retained",
+  "top_files": [
+    {
+      "path": "data/raw/t10_g5_y3_audit_ready_20261013_v1/UA_T10_G5Y3_FIXED750_S17_02/outputs/identity_journal.jsonl",
+      "sha256": "dd19b5487ca03d5217dd452fba150bd05b5cedd790ec93074d55107d1a1b81e0",
+      "bytes": 186529915
+    },
+    {
+      "path": "data/raw/t10_g5_y3_audit_ready_20261013_v1/UA_T10_G5Y3_FIXED750_S17_02/outputs/pre_steps.jsonl",
+      "sha256": "d2e7ba80b2dcaf87038b6787001c0931358c0a5b4494808541389548854f8ef6",
+      "bytes": 79626464
+    },
+    {
+      "path": "data/raw/t10_g5_y3_audit_ready_20261013_v1/UA_T10_G5Y3_FIXED750_S17_02/outputs/post_steps.jsonl",
+      "sha256": "a19ca1a8b60ac508856f8a4a0e30edc48504c50a4ed3624be088927371bf8de3",
+      "bytes": 22953192
+    },
+    {
+      "path": "data/raw/t10_g5_y3_audit_ready_20261013_v1/UA_T10_G5Y3_FIXED750_S17_02/outputs/log_intervals.jsonl",
+      "sha256": "5daafcd9891ccecc96c86f5255ee3c0520c7dc5b871b92c45952eb82abda1f46",
+      "bytes": 4640918
+    },
+    {
+      "path": "data/raw/t10_g5_y3_audit_ready_20261013_v1/UA_T10_G5Y3_FIXED750_S17_02/outputs/fcd.xml.gz",
+      "sha256": "36dfb463ab157ff253d2304d2a2b00a164715cc3931d34f067a4ca1db58f0910",
+      "bytes": 2321924
+    },
+    {
+      "path": "data/raw/t10_g5_y3_audit_ready_20261013_v1/UA_T10_G5Y3_FIXED750_S17_02/outputs/snapshots/artifacts/t10_g5_y3_audit_ready_20261013_v1/engineering/packages_v4/UA_T10_G5Y3_FIXED750_S17_02/demand.rou.xml",
+      "sha256": "99151ed51419c8d490c0f0b1a91bea23f6be70c5486890a04e1e06b3de5d808e",
+      "bytes": 690137
+    },
+    {
+      "path": "data/raw/t10_g5_y3_audit_ready_20261013_v1/UA_T10_G5Y3_FIXED750_S17_02/outputs/snapshots/artifacts/unified_alinea_actuator_20261013_v1/engineering/packages/UA_FIXED750_S17_02/demand.rou.xml",
+      "sha256": "99151ed51419c8d490c0f0b1a91bea23f6be70c5486890a04e1e06b3de5d808e",
+      "bytes": 690137
+    },
+    {
+      "path": "data/raw/t10_g5_y3_audit_ready_20261013_v1/UA_T10_G5Y3_FIXED750_S17_02/outputs/tripinfo.xml",
+      "sha256": "86cdcb8528a26ff94d37bf0fb3195baa744503a8db6fe94df084ece434c647e7",
+      "bytes": 655528
+    },
+    {
+      "path": "data/raw/t10_g5_y3_audit_ready_20261013_v1/UA_T10_G5Y3_FIXED750_S17_02/outputs/queues.xml",
+      "sha256": "dae14fcb84b9f761cdd8958a3961668f961a685e76db6ff478645329aeaa3477",
+      "bytes": 363492
+    },
+    {
+      "path": "data/raw/t10_g5_y3_audit_ready_20261013_v1/UA_T10_G5Y3_FIXED750_S17_02/outputs/vehroute.xml",
+      "sha256": "27a13245450cbfc03c9197b00cd67e386c18fc8186eda12bf73d2bc64bb8f30c",
+      "bytes": 332865
+    }
+  ],
+  "manifest_path": "artifacts/t10_g5_y3_audit_ready_20261013_v1/engineering/native_execution_v1/RAW_FINAL_SHA256_V1.json",
+  "manifest_sha256": "9f0a55efb1c0279782635f5556c9fe4101b50fb9a85328e779405b26b00a38dd",
+  "no_new_run_authorized": true
+}
