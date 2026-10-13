@@ -1,0 +1,26 @@
+{
+  "run_id": "UA_CUMULATIVE_FULL750_S17_01",
+  "card_sha256": "da64599b03875f92bb99a6d45691f5d918b9cc77420c0a0b755d3ef0acc5db8c",
+  "release_sha256": "eade38c9bb0d78d82eaef396a4aadd6a478843dd44b1251f42ea27ad7abcae0b",
+  "common_runtime_source_sha256": "c47879667efe4e92ae867353233b96ade1fb48d0cf879fdeed6b6921e86bab21",
+  "execution_git_HEAD": "3e95c545fd63765d1c15489c943bd80a78f6fdd5",
+  "native_start_assigned": 1,
+  "native_started": false,
+  "necessity": "Changed full-catalogue choice includesT9; observe whether two48s blocks complete under unchanged guards; not blind reroll of8/10 failure",
+  "resources": {
+    "wall_limit_s": 300,
+    "startup_limit_s": 60,
+    "run_limit_bytes": null,
+    "minimum_free_bytes": 5000000000
+  },
+  "end_s": 1296,
+  "fresh_disk_bytes": 32286801920,
+  "command": [
+    ".venv/bin/python",
+    "scripts/candidate_a_cumulative_full_catalogue_20261014_v1/cli.py",
+    "--execute",
+    "artifacts/cumulative_full_catalogue_implementation_20261014_v1/engineering/packages_v1/UA_CUMULATIVE_FULL750_S17_01/card.json",
+    "--release",
+    "artifacts/cumulative_full_catalogue_implementation_20261014_v1/engineering/releases/UA_CUMULATIVE_FULL750_S17_01/EXECUTION_RELEASE.json"
+  ]
+}

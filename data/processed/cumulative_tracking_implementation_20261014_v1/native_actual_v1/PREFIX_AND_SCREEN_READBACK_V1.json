@@ -1,0 +1,174 @@
+{
+  "status": "GO_FOR_OBSERVED_PREFIX_EVIDENCE_DELIVERY_ONLY",
+  "reader_exit": 1,
+  "reader_status": "STOP_OBSERVED_ALARM",
+  "runtime_stop": "DiagnosticStop:UNKNOWN_LOCAL_YELLOW_SCOPE",
+  "first_48s": {
+    "C_exact": "10",
+    "E": 10,
+    "N": 10,
+    "complete_packets": 5,
+    "periods": [
+      10,
+      10,
+      8,
+      10,
+      10
+    ]
+  },
+  "whole_72s": {
+    "C": 15.0,
+    "C_nearest_reference": 14.4,
+    "C_applied": 15.0,
+    "E": 14,
+    "N": 15,
+    "requested_minus_nominal": 1.0,
+    "nominal_minus_actual": -1,
+    "requested_minus_actual": 0.0
+  },
+  "complete_packets": 7,
+  "partial_packets": 1,
+  "end1296_observed": false,
+  "first_successful_T8": {
+    "begin_s": 1220,
+    "end_s": 1228,
+    "period_s": 8,
+    "max_green_s": 4,
+    "yellow_s": 2,
+    "minimum_red_s": 2,
+    "program": "I12_PACKET8",
+    "applied_request_id": "fixed750:1200",
+    "packet_selection": {
+      "event": "BOUNDARY_PACKET_SELECTED_NOT_APPLIED",
+      "time_s": 1220,
+      "actual_C_fraction": "25/6",
+      "actual_N": 4,
+      "actual_error_fraction": "1/6",
+      "forecast_request_veh_h": 750,
+      "forecast_assumption": "CURRENT_REQUEST_HELD_NOT_OBSERVED_FUTURE",
+      "candidate_errors_fraction": {
+        "8": "-1/6",
+        "10": "1/4"
+      },
+      "chosen_period_s": 8,
+      "catalogue_status": "DIAGNOSTIC_T8_T10_ONLY_NOT_FULL_300_900"
+    },
+    "N": 2,
+    "N_G": 2,
+    "N_y": 0,
+    "N_r": 0,
+    "E": 2,
+    "completed": true,
+    "phase_exposure_s": {
+      "G": 4,
+      "y": 2,
+      "r": 2
+    }
+  },
+  "last_partial_T8": {
+    "begin_s": 1268,
+    "end_s": 1276,
+    "period_s": 8,
+    "max_green_s": 4,
+    "yellow_s": 2,
+    "minimum_red_s": 2,
+    "program": "I12_PACKET8",
+    "applied_request_id": "fixed750:1200",
+    "packet_selection": {
+      "event": "BOUNDARY_PACKET_SELECTED_NOT_APPLIED",
+      "time_s": 1268,
+      "actual_C_fraction": "85/6",
+      "actual_N": 14,
+      "actual_error_fraction": "1/6",
+      "forecast_request_veh_h": 750,
+      "forecast_assumption": "CURRENT_REQUEST_HELD_NOT_OBSERVED_FUTURE",
+      "candidate_errors_fraction": {
+        "8": "-1/6",
+        "10": "1/4"
+      },
+      "chosen_period_s": 8,
+      "catalogue_status": "DIAGNOSTIC_T8_T10_ONLY_NOT_FULL_300_900"
+    },
+    "N": 1,
+    "N_G": 1,
+    "N_y": 0,
+    "N_r": 0,
+    "E": 0,
+    "completed": false,
+    "phase_exposure_s": {
+      "G": 4,
+      "y": 0,
+      "r": 0
+    }
+  },
+  "R15": {
+    "raw_scope": {
+      "vehicle_id": "R_flow.15",
+      "population": "storage",
+      "time_s": 1272,
+      "position_m": 204.32186848969542,
+      "speed_m_s": 4.98795857460537,
+      "length_m": 5.0,
+      "normal_decel_m_s2": 4.5,
+      "action_step_s": 1.0,
+      "distance_to_meter_m": 0.1681315103045904,
+      "one_step_Euler_stop_possible": false,
+      "stop_distance_screen_m": 7.752373101491952,
+      "stop_possible": false,
+      "body_clear_time_screen_s": 2.556631718317924,
+      "clear_possible": false,
+      "status": "UNKNOWN_LOCAL_yellow_s_SCOPE",
+      "native_future_safety_proven": false
+    },
+    "FCD_BEGIN1271": {
+      "id": "R_flow.15",
+      "x": "1220.63347599",
+      "y": "863.52755729",
+      "angle": "60.63542918",
+      "type": "technical_passenger",
+      "speed": "4.98795857",
+      "pos": "204.32186849",
+      "lane": "ramp_storage_0",
+      "slope": "0.00000000"
+    },
+    "ACK": 1272,
+    "yellow_s": 2,
+    "independent_stop_screen_m": 7.752373101491952,
+    "independent_clear_time_s": 2.556631718317924,
+    "stop_possible": false,
+    "clear_possible": false,
+    "last_TLS": {
+      "time": "1271.000",
+      "id": "ramp_mid",
+      "programID": "I12_PACKET8",
+      "phase": "0",
+      "state": "G"
+    },
+    "last_post_phase": {
+      "phase_before": 0,
+      "state_before": "G",
+      "next_switch_before_s": 1272.0,
+      "phase_after": 0,
+      "state_after": "G",
+      "next_switch_after_s": 1272.0
+    },
+    "first_Y_motion_executed": false
+  },
+  "coverage": {
+    "independent_entries": 15,
+    "body_censored_ids": [],
+    "normal_arrivals": 1339,
+    "all_normal_arrivals_PASS": true,
+    "missing_or_unknown": [],
+    "observed_post_motion_alarms": [],
+    "log_EOF_verified": true,
+    "terminal_AFTER_pools_independent": false
+  },
+  "unobserved_after1272": {
+    "N": null,
+    "E": null,
+    "C_observed": null
+  },
+  "native_safety_proven": false,
+  "rate_qualified": false
+}

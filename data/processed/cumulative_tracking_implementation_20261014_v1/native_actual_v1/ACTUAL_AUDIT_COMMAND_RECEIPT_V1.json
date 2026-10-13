@@ -1,0 +1,63 @@
+{
+  "command": ".venv/bin/python -B scripts/cumulative_tracking_audit_20261014_v1/actual.py --manifest artifacts/cumulative_tracking_implementation_20261014_v1/engineering/native_execution_v1/RAW_FINAL_SHA256_V1.json --card artifacts/cumulative_tracking_implementation_20261014_v1/engineering/packages_v5/UA_CUMULATIVE750_S17_01/card.json --output data/processed/cumulative_tracking_implementation_20261014_v1/native_actual_v1",
+  "session_id": 30763,
+  "actual_exit_code": 1,
+  "attempt_count": 1,
+  "elapsed_s": null,
+  "reader_sha256": "9adb9e625663cc4a548bf15d3c815a4e5b524865e37b756aae03137eaef99de2",
+  "result_sha256": "d35fb044bb79a3110bc41bd1daf9e2fe6b301f3d2ef3630977c2f4b13b06d368",
+  "engineering_binder_checks": {
+    "artifacts/cumulative_tracking_implementation_20261014_v1/engineering/native_execution_v1/ACTUAL_START_AND_FIRST_PROGRESS_V1.json": {
+      "sha256": "c593a6cd3f09a873f59b3b7281b84a46d2e3499dcc807a09176ea328096c43f6",
+      "bytes": 710,
+      "match": true
+    },
+    "artifacts/cumulative_tracking_implementation_20261014_v1/engineering/native_execution_v1/CLI_TOOL_OUTPUT_V1.txt": {
+      "sha256": "b779263fafe751f10411b74ab1d22935d9e8293266ce7c3d78994fb68a11f136",
+      "bytes": 329,
+      "match": true
+    },
+    "artifacts/cumulative_tracking_implementation_20261014_v1/engineering/native_execution_v1/EXECUTION_RECEIPT_V1.json": {
+      "sha256": "0e5ac422f67aa81c8a708dd3f11b3a312bee933956f2e0d0ec23af7053ccecb4",
+      "bytes": 6548,
+      "match": true
+    },
+    "artifacts/cumulative_tracking_implementation_20261014_v1/engineering/native_execution_v1/POST_ENGINEERING_REVIEW_V1.md": {
+      "sha256": "a0abb93db340cb10d4d539462fd23cd1e428deaf51a358cd6f632ce182178cb0",
+      "bytes": 3455,
+      "match": true
+    },
+    "artifacts/cumulative_tracking_implementation_20261014_v1/engineering/native_execution_v1/RAW_FINAL_SHA256_V1.json": {
+      "sha256": "cf38cadb8d17991c43ebcc40db784afc5227a9ff0f07e02bf33b3a9d6fbc15fe",
+      "bytes": 43517,
+      "match": true
+    },
+    "artifacts/cumulative_tracking_implementation_20261014_v1/engineering/native_execution_v1/RELEASE_VALIDATION_AND_LAUNCH_INTENT_V1.json": {
+      "sha256": "e7e52c08abab547765ff4ee43c7ab08576ac00877dc199e1115bf33715d5bfd9",
+      "bytes": 1900,
+      "match": true
+    },
+    "artifacts/cumulative_tracking_implementation_20261014_v1/engineering/native_execution_v1/STOP_INPUT_DETAIL_V1.json": {
+      "sha256": "ededa6eeadbe8b8da04e872a64b95e128a2390f65124695dd09204d60bfb9559",
+      "bytes": 3484,
+      "match": true
+    },
+    "data/raw/cumulative_tracking_implementation_20261014_v1/UA_CUMULATIVE750_S17_01/outputs/bridge_receipt.json": {
+      "sha256": "8564afec27b16a7a6cd56db82e84aa525ce8b72a5e6e4ccdab9106ac621a3e67",
+      "bytes": 42420,
+      "match": true
+    },
+    "data/raw/cumulative_tracking_implementation_20261014_v1/UA_CUMULATIVE750_S17_01/outputs/failure_snapshot.json": {
+      "sha256": "7ff0a0e48b5f2d998b3691b2c6a64628f8c8995317ea527ef3421fde13e30073",
+      "bytes": 104433,
+      "match": true
+    },
+    "data/raw/cumulative_tracking_implementation_20261014_v1/UA_CUMULATIVE750_S17_01/outputs/first_red_checkpoint.json": {
+      "sha256": "e6ec2741ae73e7392ebcc02d2ef667ea5e875421d62aaa82b1615410c24d5388",
+      "bytes": 3004,
+      "match": true
+    }
+  },
+  "raw_sha_verification": "161 files verified by single actual reader; not repeated by this extraction",
+  "no_SUMO_or_source_changes": true
+}

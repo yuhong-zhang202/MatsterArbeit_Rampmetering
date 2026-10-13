@@ -1,0 +1,39 @@
+{
+  "timestamp_utc": "2026-10-13T22:56:42.268408+00:00",
+  "context_phase": "ONE_USER_AUTHORIZED_TECHNICAL_DIAGNOSTIC_NOT_FORMAL",
+  "approved_HEAD": "3e95c545fd63765d1c15489c943bd80a78f6fdd5",
+  "run_id": "UA_CUMULATIVE750_S17_01",
+  "card_sha256": "c4464cd13b64a2eed0e9ea6143b16cac308562608426d6adc3023fa6b4b3fc3b",
+  "source_digest": "b351723aac24e5938ebd608be8b567a1d5d6e3527d22fc564049b4d8b306067b",
+  "release_path": "artifacts/cumulative_tracking_implementation_20261014_v1/engineering/releases/UA_CUMULATIVE750_S17_01/EXECUTION_RELEASE.json",
+  "release_sha256": "014a91416739323153d334326f06c5ba32787a682eb4e9a3288b51ca4b676b2e",
+  "auth_sha256": "3282bd2611af4f0548c6e5e11d207258c80b3d79a154253011370ecd7f08c962",
+  "fresh_validate_release": "PASS",
+  "fresh_free_bytes": 33862377472,
+  "raw_identity_absent": true,
+  "fresh_exact_process_check": "NONE",
+  "native_started_at_intent": false,
+  "native_start_ceiling": 1,
+  "automatic_retry": false,
+  "resources": {
+    "wall_limit_s": 300,
+    "startup_limit_s": 60,
+    "run_limit_bytes": null,
+    "minimum_free_bytes": 5000000000
+  },
+  "budget": {
+    "charged_monitored_s": 0,
+    "charged_raw_bytes": 0,
+    "unknown_reserved": [],
+    "remaining_s": 300,
+    "remaining_bytes": null,
+    "selected_total_limits": {
+      "wall_s": 300,
+      "bytes": null
+    },
+    "scope": "NEW_SINGLE_CARD_ENVELOPE_REQUIRES_FUTURE_EXPLICIT_RESOURCE_APPROVAL_NO_OLD_REMAINDER"
+  },
+  "command": ".venv/bin/python scripts/candidate_a_cumulative_tracking_20261014_v1/cli.py --execute artifacts/cumulative_tracking_implementation_20261014_v1/engineering/packages_v5/UA_CUMULATIVE750_S17_01/card.json --release artifacts/cumulative_tracking_implementation_20261014_v1/engineering/releases/UA_CUMULATIVE750_S17_01/EXECUTION_RELEASE.json",
+  "no_worker_import_or_version_process": "intent/prelaunch only",
+  "old_card_raw_and_guards_immutable": true
+}

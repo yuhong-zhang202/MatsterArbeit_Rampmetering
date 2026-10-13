@@ -1,0 +1,19 @@
+{
+  "session_id": 31100,
+  "actual_processes": [
+    "57558 /Library/Frameworks/Python.framework/Versions/3.13/Resources/Python.app/Contents/MacOS/Python scripts/candidate_a_cumulative_full_catalogue_20261014_v1/cli.py --execute artifacts/cumulative_full_catalogue_implementation_20261014_v1/engineering/packages_v1/UA_CUMULATIVE_FULL750_S17_01/card.json --release artifacts/cumulative_full_catalogue_implementation_20261014_v1/engineering/releases/UA_CUMULATIVE_FULL750_S17_01/EXECUTION_RELEASE.json",
+    "57577 /Library/Frameworks/EclipseSUMO.framework/Versions/1.26.0/EclipseSUMO/bin/sumo -c /Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/cumulative_full_catalogue_implementation_20261014_v1/engineering/packages_v1/UA_CUMULATIVE_FULL750_S17_01/scenario.sumocfg --remote-port 51553"
+  ],
+  "startup_last": {
+    "attempt": 125,
+    "at_utc": "2026-10-13T23:33:44.478811+00:00",
+    "elapsed_since_start_s": 13.369461124995723,
+    "startup_deadline_monotonic_s": 306712.559472916,
+    "duration_s": 0.0006847499753348529,
+    "poll_before": null,
+    "poll_after": null,
+    "outcome": "FAILED",
+    "error_type": "FatalTraCIError",
+    "error": "Could not connect in 1 tries"
+  }
+}

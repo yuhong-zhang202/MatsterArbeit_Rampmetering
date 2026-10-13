@@ -1,0 +1,33 @@
+{
+  "source": "direct human explicit execution approval",
+  "date_local": "2026-10-14",
+  "user_answer_verbatim": "批准该次有界诊断",
+  "approved_question": "按本地提交3e95c54、卡c4464cd1运行一次UA_CUMULATIVE750_S17_01，终点1296秒、监控300秒、启动60秒、无固定输出字节上限、保留5GB磁盘余量；严格安全检查，异常或UNKNOWN停止，保留全部证据，不自动重试。",
+  "SUMO_execution_authorized": true,
+  "run_id": "UA_CUMULATIVE750_S17_01",
+  "approved_commit": "3e95c545fd63765d1c15489c943bd80a78f6fdd5",
+  "card_path": "artifacts/cumulative_tracking_implementation_20261014_v1/engineering/packages_v5/UA_CUMULATIVE750_S17_01/card.json",
+  "card_sha256": "c4464cd13b64a2eed0e9ea6143b16cac308562608426d6adc3023fa6b4b3fc3b",
+  "common_runtime_source_sha256": "b351723aac24e5938ebd608be8b567a1d5d6e3527d22fc564049b4d8b306067b",
+  "end_s": 1296,
+  "catalogue_periods_s": [
+    8,
+    10
+  ],
+  "numerical_exception_enabled": false,
+  "resources": {
+    "wall_limit_s": 300,
+    "startup_limit_s": 60,
+    "run_limit_bytes": null,
+    "minimum_free_bytes": 5000000000
+  },
+  "resource_envelope": {
+    "monitored_s": 300,
+    "raw_bytes": null
+  },
+  "maximum_native_starts": 1,
+  "automatic_retry_authorized": false,
+  "all_safety_and_unknown_stops_preserved": true,
+  "formal_experiment_authorized": false,
+  "old_raw_and_failure_records_immutable": true
+}

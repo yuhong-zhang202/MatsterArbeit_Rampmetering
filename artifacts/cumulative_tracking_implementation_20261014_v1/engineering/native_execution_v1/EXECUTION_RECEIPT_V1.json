@@ -1,0 +1,189 @@
+{
+  "timestamp_utc": "2026-10-13T23:04:25.937311+00:00",
+  "classification": "BOUNDED_USER_AUTHORIZED_TECHNICAL_RUN_STOP_NOT_QUALIFIED",
+  "run_id": "UA_CUMULATIVE750_S17_01",
+  "command": ".venv/bin/python scripts/candidate_a_cumulative_tracking_20261014_v1/cli.py --execute artifacts/cumulative_tracking_implementation_20261014_v1/engineering/packages_v5/UA_CUMULATIVE750_S17_01/card.json --release artifacts/cumulative_tracking_implementation_20261014_v1/engineering/releases/UA_CUMULATIVE750_S17_01/EXECUTION_RELEASE.json",
+  "approved_HEAD": "3e95c545fd63765d1c15489c943bd80a78f6fdd5",
+  "card_sha256": "c4464cd13b64a2eed0e9ea6143b16cac308562608426d6adc3023fa6b4b3fc3b",
+  "source_digest": "b351723aac24e5938ebd608be8b567a1d5d6e3527d22fc564049b4d8b306067b",
+  "bound_sources": 111,
+  "final_live_source_hash_check": "PASS_UNCHANGED",
+  "release_sha256": "014a91416739323153d334326f06c5ba32787a682eb4e9a3288b51ca4b676b2e",
+  "authorization_sha256": "3282bd2611af4f0548c6e5e11d207258c80b3d79a154253011370ecd7f08c962",
+  "session_id": 58169,
+  "CLI_PID": 53177,
+  "owned_native_PID": 53194,
+  "port": 49998,
+  "native_start_count": 1,
+  "automatic_retry": false,
+  "CLI_exit_code": 1,
+  "native_EOF_returncode": 0,
+  "OS_process_exit_check": {
+    "command": "ps -p53177,53194 -o pid,ppid,etime,command",
+    "exit_code": 1,
+    "result": "header only; both owned PIDs gone"
+  },
+  "runtime_status": "ABORTED_UNKNOWN",
+  "error": "DiagnosticStop:UNKNOWN_LOCAL_YELLOW_SCOPE",
+  "last_completed_s": 1272,
+  "last_accounted_s": 1272,
+  "approved_end_s": 1296,
+  "end_reached": false,
+  "startup_connected_elapsed_s": 18.32996204198571,
+  "startup_connection_polls": 170,
+  "connection_polls_not_native_starts": true,
+  "monitored_startup_loop_cleanup_s": 173.9491367500159,
+  "monitor_scope": "monitored startup plus loop and owned-child cleanup; whole CLI separate",
+  "native_duration_from_native_log_s": 155.338,
+  "whole_CLI_duration_s": null,
+  "whole_CLI_separate_not_measured": true,
+  "resources": {
+    "wall_limit_s": 300,
+    "startup_limit_s": 60,
+    "run_limit_bytes": null,
+    "minimum_free_bytes": 5000000000
+  },
+  "resource_watchdog": {
+    "reason": null,
+    "error": null,
+    "poll_s": 0.2
+  },
+  "final_parent_raw_files": 161,
+  "final_parent_bytes": 426650300,
+  "final_outputs_bytes": 426649277,
+  "raw_manifest_sha256": "cf38cadb8d17991c43ebcc40db784afc5227a9ff0f07e02bf33b3a9d6fbc15fe",
+  "first_red_checkpoint": {
+    "observed_red_begin_s": 1207,
+    "checkpoint_ACK_s": 1208,
+    "verified": true,
+    "provisional_until_final_EOF": true
+  },
+  "first_complete_48s_initial": {
+    "time_begin_s": 1200,
+    "time_end_s": 1248,
+    "complete_packets": 5,
+    "periods": [
+      10,
+      10,
+      8,
+      10,
+      10
+    ],
+    "C_requested": 10.0,
+    "E": 10,
+    "runtime_N": 10,
+    "runtime_average_veh_h": 750,
+    "status": "INITIAL_RUNTIME_CHECK_PENDING_INDEPENDENT_FCD_TLS_ENTRY_AUDIT"
+  },
+  "subsequent_complete_and_partial_initial": {
+    "time_begin_s": 1248,
+    "time_end_s": 1272,
+    "complete_packets": 2,
+    "periods": [
+      10,
+      10
+    ],
+    "partial": [
+      {
+        "cycle_id": 7,
+        "begin_s": 1268,
+        "end_s": 1276,
+        "period_s": 8,
+        "max_green_s": 4,
+        "yellow_s": 2,
+        "minimum_red_s": 2,
+        "program": "I12_PACKET8",
+        "requested_quota": 2,
+        "quota_status": "REQUESTED_NOT_EMPIRICALLY_QUALIFIED",
+        "applied_command_veh_h": 900.0,
+        "packet_selection": {
+          "actual_C_fraction": "85/6",
+          "actual_N": 14,
+          "actual_error_fraction": "1/6",
+          "forecast_request_veh_h": 750,
+          "forecast_assumption": "CURRENT_REQUEST_HELD_NOT_OBSERVED_FUTURE",
+          "candidate_errors_fraction": {
+            "8": "-1/6",
+            "10": "1/4"
+          },
+          "chosen_period_s": 8,
+          "catalogue_status": "DIAGNOSTIC_T8_T10_ONLY_NOT_FULL_300_900"
+        },
+        "applied_request_id": "fixed750:1200",
+        "command_requested_s": 1200,
+        "command_applied_s": 1200,
+        "planned_application_s": 1268,
+        "application_status": "ACK_OBSERVED",
+        "application_delay_s": 0,
+        "command_age_at_cycle_start_s": 68,
+        "green_end_s": 1272,
+        "green_end_reason": "MAX_GREEN_DEADLINE",
+        "executed": true,
+        "completed": false,
+        "N_G": 1,
+        "N_y": 0,
+        "N_r": 0,
+        "crossing_ids": [
+          "R_flow.14"
+        ],
+        "phase_exposure_s": {
+          "G": 4,
+          "y": 0,
+          "r": 0
+        },
+        "denial_reason": ""
+      }
+    ],
+    "C_requested": 5.0,
+    "E_complete_only": 4,
+    "runtime_N_complete_and_partial": 5,
+    "partial_E_N_differences_not_service_classification": true
+  },
+  "runtime_prefix_accounting": {
+    "C": 15.0,
+    "C_nearest_reference": 14.4,
+    "C_applied": 15.0,
+    "E": 14,
+    "N": 15,
+    "requested_minus_nominal": 1.0,
+    "nominal_minus_actual": -1,
+    "requested_minus_actual": 0.0,
+    "C_exact_fraction": "15",
+    "E_support": "COMPLETE_PACKETS_ONLY",
+    "N_support": "ALL_OBSERVED_ENTRY_BEGIN_INTERVALS",
+    "partial_cycle": true,
+    "nearest_reference_is_not_cumulative_scheduler_output": true
+  },
+  "complete_cycle_count": 7,
+  "partial_cycle_count": 1,
+  "body_censored_ids": [],
+  "normal_terminal_arrival_audit": "PENDING_INDEPENDENT_FINAL_TRIPINFO_AUDIT_NOT_ONLINE_FULL_COVERAGE",
+  "final_native_logs": {
+    "coverage": "FINAL_FILES_AT_OWNED_PROCESS_EOF",
+    "process_returncode": 0,
+    "all_streams_bound": true,
+    "late_bytes": {
+      "sumo_stderr.log": 0,
+      "sumo_stdout.log": 0,
+      "sumo_error.log": 0,
+      "sumo.log": 1000
+    },
+    "status": "BOUND_NO_OBSERVED_NATIVE_MESSAGE",
+    "reasons": [],
+    "critical_message_observed_or_unrecognized": false,
+    "log_parsing_unverified": false,
+    "per_step_complete_native_universal_claim": false,
+    "record_count": 2547
+  },
+  "client_warning_separate_from_native_streams": "CLI_TOOL_OUTPUT_V1.txt",
+  "stop_detail": {
+    "path": "artifacts/cumulative_tracking_implementation_20261014_v1/engineering/native_execution_v1/STOP_INPUT_DETAIL_V1.json",
+    "sha256": "ededa6eeadbe8b8da04e872a64b95e128a2390f65124695dd09204d60bfb9559"
+  },
+  "native_safety_proven": false,
+  "service_qualified": false,
+  "independent_data_science_postreview": "PENDING",
+  "all_original_failures_raw_source_guard_unchanged": true,
+  "no_new_tests_or_retries": true,
+  "documentation_impact": "root owns STATE/WORKLOG; records in new engineering execution namespace only"
+}

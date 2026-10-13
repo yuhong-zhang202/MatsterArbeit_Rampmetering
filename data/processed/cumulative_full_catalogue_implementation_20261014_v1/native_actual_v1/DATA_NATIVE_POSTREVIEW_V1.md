@@ -1,0 +1,33 @@
+# Independent actual-data postreview — UA_CUMULATIVE_FULL750_S17_01
+
+**GO_FOR_OBSERVED_FIXED750_MECHANISM_EVIDENCE_DELIVERY_ONLY.** One bound actual-reader invocation returnedexit0 / PASS_OBSERVED_DATA_INTEGRITY_ONLY. ActualACK/accounted1296 equals the approved horizon. This finite fixed750 technical run completed; no long-run, full300–900 service, closed-loop efficacy or general safety qualification follows.
+
+## Context / actual inputs
+
+Mandatory AGENTS/PROJECT_STATE/DECISIONS/empty EXPERIMENT_PROTOCOL/relevant WORKLOG were refreshed. Parent’s current engineering handoff supplies the frozen new evidence; STATE’s launch snapshot is temporal history, and WORKLOG records completion. Stage6 closure, D018/D019 and formal/protocol boundaries remain unchanged. Explicit autonomous user authority and precise three-role/canonical gates authorized engineering’s one start; the data agent neither launched nor authorized SUMO.
+
+Exact card engineering/packages_v1/UA_CUMULATIVE_FULL750_S17_01/card.json SHA da64599b03875f92bb99a6d45691f5d918b9cc77420c0a0b755d3ef0acc5db8c binds125-source digest c47879667efe4e92ae867353233b96ade1fb48d0cf879fdeed6b6921e86bab21. Manifest engineering/native_execution_v1/RAW_FINAL_SHA256_V1.json SHA ba93f78efcc74d95506f61fc4114c67e806f01e6433545370842c5b019f8f769 covers174immutable files/441858515bytes. Fixedservice750 is distinct from unchanged demandM3600/R900/U360/X180; seed17, step1, activation1200, end1296. No new source or raw edits occurred.
+
+## Actually executed audit / method
+
+Command, reader SHA ba09f70e6fc096fb5efee745d604a2da56e9cd589a5b8a46f60fa3fb4fb49f38, session85264, exit0 and exact result hash are in ACTUAL_AUDIT_COMMAND_RECEIPT_V1.json. Only one invocation occurred, with no patch/retry/test-suite rerun. Audit elapsedwall was not separately measured. The bound reader independently checked174manifest file hashes and inventory/bytes; exact source/input/network/environment bindings; warmup/control actual state and pairedACK coverage; ordered nativeTLS; command IDs/boundary scores/first-GACK applications; identity/dynamics and pools; independent FCD storage→internal entry IDs/counts; fresh following and yellow predicates; spanning-body clearance; precision8 terminal final movements; and final four-native-stream EOF. Reported N/quota was checked against independent entries, not used as truth. The small deterministic extraction then verified only common-support block arithmetic and ten frozen engineering bindings, avoiding a repeated raw scan.
+
+## Observed cycles / original-request accounting
+
+Ten complete packets are [10,9,10,9,10] twice. AllT10 packets actually exposeG4/Y3/R3 through quota closure, while T9 packets exposeG4/Y3/R2. Each has2green entries; actual yellow/red entries are measured0 because those phases were observed completely. Each first-green application is ACK-bound; nine intercycle r→G transitions and all96motion intervals remain ordered and continuous. Ten first-Y scopes are validated, none prepared-but-unobserved. The T10Gmax5 fallback was available but not used in this run; this is not a universal assertion G4 is enough.
+
+For1200–1248 s, periods10/9/10/9/10 and independently reconstructed entriesR_flow.0…9 yield originalrequestedC10, nominalapplied integral10, completequotaE10 and actualN10: finite measured750veh/h. For1248–1296 s, the same five periods and entriesR_flow.10…19 independently yield allfour values10. Whole96s: originalC20, applied20, E20, N20; C−E/E−N/C−N all0. Nearest-reference19.2 is only a diagnostic comparison and was never substituted for C or applied policy. These are two complete common-support blocks, unlike the prior1272 partial-prefix coincidence. ACTUAL_CYCLES_V1.csv retains exact endpoint C−N fractions; TWO_COMPLETE_BLOCKS_V1.json records identities/supports. Observations after1296 remain null, not fabricatedzero.
+
+## Safety-monitor / coverage evidence and limitations
+
+Twenty distinct actual entries are all green; all20tails reach observed clear, no bodycensor. All1374normal terminal arrivals PASS the precision8 last-movement check; this is a postrun join, not online universal vehicle coverage. No required missing/unknown observational records, post-motion alarm or runtimeSTOP is reported. Minimum observed speed difference/native acceleration−4.5m/s²; maximum native event counter0.70WAIT records are retained; observational getters do not constitute vehicle speed setters. StrictNUM remains active with no exception. Firstred begins1207/checkpointACK1208; the provisional checkpoint is now backed by final owned-nativeEOF returncode0 and four bound streams. CLI also returned0. Clientwarnings remain a separate scope and are not hidden by native log parsing.
+
+BEFORE/extraPRE active and nonactive pools independently join originalPRE; AFTER joins next same-time PRE where available. FinalAFTER lacks a next independent pool source and retains SINGLE_JOURNAL_NOT_INDEPENDENT_POOL_CHECK. SUMO privatebranch/source-versus-binary equivalence and future microscopic safety remain unverified. This is conditional monitored data integrity and finite mechanism evidence, not proof of all native unsafe events’ absence or future safe states.
+
+Monitored startup/loop/cleanup188.24337291700067s is below300; wholeCLI elapsed is not established here. No fixed outputcap applies; frozen441858515bytes are preserved. Resource settlement belongs to parent and is not performed by data. No new futurecard/canonical authority was created.
+
+## Conclusion / handoff
+
+Confirmed: the restored catalogue selectedT9/T10 and completed two finite750 blocks with actualN tracking originalC under this one run’s conditions. The earlier8/10 run’s1272 UNKNOWN and immutable failed evidence remain; changing candidates changes later states, so this is not a paired causal effect or a prediction that the same failed snapshot was physically unsafe. Actual mixed-policy applicability is supported for this96-second sample; persistence beyondit and other rates/seed/feedback trajectories is not established. OnlyT9/T10 were physically exercised; configurable17periods do not equal actual17rate qualification.
+
+Fixed750 has no new realALINEA feedback or dynamic request test. Full300–900 actual coverage and long-run original-request goal remain open. Parent/scientific reviewer decide the next bounded evidence gap under existing authority; passing this run alone grants neither qualification nor formal readiness. Parent owns STATE/WORKLOG/README impact updates; no governance files were edited by this agent. Safest next step is read-only scientific postreview using the exact result/receipt/derived blocks and preserved limitations, not automatic additional runs.

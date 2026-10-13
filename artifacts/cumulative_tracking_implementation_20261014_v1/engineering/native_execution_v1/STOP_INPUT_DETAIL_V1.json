@@ -1,0 +1,116 @@
+{
+  "scope": "EXISTING_LOG_AND_FROZEN_PROJECT_PREDICATE_ONLY_NOT_NATIVE_FUTURE_PROOF",
+  "time_s": 1272,
+  "program": "I12_PACKET8",
+  "cycle_begin_s": 1268,
+  "planned_cycle_end_s": 1276,
+  "previous_observed_motion": "G",
+  "first_Y_motion_observed": false,
+  "green_deadline_recorded_before_rejected_preparation": 1272,
+  "unknown_rows": [
+    {
+      "vehicle_id": "R_flow.15",
+      "population": "storage",
+      "time_s": 1272,
+      "position_m": 204.32186848969542,
+      "speed_m_s": 4.98795857460537,
+      "length_m": 5.0,
+      "normal_decel_m_s2": 4.5,
+      "action_step_s": 1.0,
+      "distance_to_meter_m": 0.1681315103045904,
+      "one_step_Euler_stop_possible": false,
+      "stop_distance_screen_m": 7.752373101491952,
+      "stop_possible": false,
+      "body_clear_time_screen_s": 2.556631718317924,
+      "clear_possible": false,
+      "status": "UNKNOWN_LOCAL_yellow_s_SCOPE",
+      "native_future_safety_proven": false
+    }
+  ],
+  "covered_ids": [
+    "R_flow.15",
+    "R_flow.16",
+    "R_flow.17",
+    "R_flow.18",
+    "R_flow.19",
+    "R_flow.20",
+    "R_flow.21",
+    "R_flow.22",
+    "R_flow.23",
+    "R_flow.24",
+    "R_flow.25",
+    "R_flow.26",
+    "R_flow.27",
+    "R_flow.28",
+    "R_flow.29",
+    "R_flow.30",
+    "R_flow.31",
+    "R_flow.32",
+    "R_flow.33",
+    "R_flow.34",
+    "R_flow.35",
+    "R_flow.36",
+    "R_flow.37",
+    "R_flow.38",
+    "R_flow.39",
+    "R_flow.40",
+    "R_flow.41",
+    "R_flow.42",
+    "R_flow.43",
+    "R_flow.44",
+    "R_flow.45"
+  ],
+  "fields_missing": [],
+  "trigger_math": {
+    "one_step_stop": {
+      "condition": "distance>0 AND speed<=normal_decel*action_step",
+      "lhs_speed": 4.98795857460537,
+      "rhs": 4.5,
+      "result": false
+    },
+    "stop_distance": {
+      "computed_m": 7.752373101491952,
+      "available_m": 0.1681315103045904,
+      "result": false
+    },
+    "body_clear": {
+      "time_screen_s": 2.556631718317924,
+      "yellow_s": 2,
+      "distance_and_length_m": 5.16813151030459,
+      "possible_travel_after_action_m": 4.98795857460537,
+      "result": false
+    }
+  },
+  "source": {
+    "policy_path": "src/candidate_a_cumulative_tracking_20261014/policy.py",
+    "policy_sha256": "9a75a8f7480a951bef275740dc962e2902952f1fb4c0781bae9f3690e4062bcc",
+    "formula_lines": [
+      204,
+      211
+    ],
+    "adapter_path": "src/candidate_a_cumulative_tracking_20261014/adapter.py",
+    "adapter_sha256": "dd7c171b6ba9b728ef5fb94727ca78f2d437fc8fc9bebbe06fc5e228e5ce46d3",
+    "stop_lines": [
+      164,
+      169
+    ],
+    "baseline_commit": "3e95c545fd63765d1c15489c943bd80a78f6fdd5"
+  },
+  "classification": "COMPLETE_FINITE_INPUTS_BUT_CURRENT_LOCAL_STOP_OR_BODY_CLEAR_PREDICATE_DENIED",
+  "not_established": [
+    "native vehicle would be unsafe under actual future yellow",
+    "native private CF/JM branch",
+    "coding/identity/unit/timestamp bug",
+    "universally insufficientT8/Y2",
+    "ability to cure by relaxing predicate"
+  ],
+  "existing_snapshot_candidate_only": {
+    "candidate": "T9/Gmax4/Y3/redmin2 plus T10",
+    "same_snapshot_Y3_time_screen_within": true,
+    "same_snapshot_Y3_distance_screen_within": true,
+    "timing_budget_s": 9,
+    "nominal_T9_veh_h": 800,
+    "nominal_750_mixture": "2*T9+3*T10=48s/10nominalcars=750veh/h",
+    "limitations": "Changed periods change later populations; nativeT9 service/safety notverified; needs new design/implementation/card/reviews/explicitrun approval; oldT8/900 untouched; no run or test performed"
+  }
+}

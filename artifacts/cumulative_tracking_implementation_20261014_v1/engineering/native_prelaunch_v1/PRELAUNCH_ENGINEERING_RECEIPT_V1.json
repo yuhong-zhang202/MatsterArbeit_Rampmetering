@@ -1,0 +1,104 @@
+{
+  "timestamp_utc": "2026-10-13T22:52:24.435205+00:00",
+  "status": "GO_FOR_EXACT_DATA_SCIENCE_PRELAUNCH_ONLY_NOT_DISPATCHED",
+  "approved_HEAD": "3e95c545fd63765d1c15489c943bd80a78f6fdd5",
+  "card_sha256": "c4464cd13b64a2eed0e9ea6143b16cac308562608426d6adc3023fa6b4b3fc3b",
+  "source_digest": "b351723aac24e5938ebd608be8b567a1d5d6e3527d22fc564049b4d8b306067b",
+  "sources_checked": 111,
+  "source_HEAD_blob_checks": [
+    {
+      "path": "scripts/candidate_a_cumulative_tracking_20261014_v1/cli.py",
+      "commit_blob_sha256": "b80a780a5d32a09789afb55dd0312b0ce6ef92d49c01cf7aa83063f3da3eae40",
+      "live_matches_approved_HEAD": true
+    },
+    {
+      "path": "scripts/cumulative_tracking_audit_20261014_v1/_phase.py",
+      "commit_blob_sha256": "1b6669c79ea66ae54d03a4849cc837441ecdc16d8b780a8516f2132c81ae7471",
+      "live_matches_approved_HEAD": true
+    },
+    {
+      "path": "scripts/cumulative_tracking_audit_20261014_v1/actual.py",
+      "commit_blob_sha256": "9adb9e625663cc4a548bf15d3c815a4e5b524865e37b756aae03137eaef99de2",
+      "live_matches_approved_HEAD": true
+    },
+    {
+      "path": "scripts/cumulative_tracking_audit_20261014_v1/core.py",
+      "commit_blob_sha256": "241260d29a0d350d7fea1d1e7a2e391c06d9fa182aa0200a1131e82eb10458ad",
+      "live_matches_approved_HEAD": true
+    },
+    {
+      "path": "scripts/cumulative_tracking_audit_20261014_v1/evidence.py",
+      "commit_blob_sha256": "6514247082fa82b733684a54180bdd3242997f6103b6b7eb4ca7facd33fbb004",
+      "live_matches_approved_HEAD": true
+    },
+    {
+      "path": "src/candidate_a_cumulative_tracking_20261014/adapter.py",
+      "commit_blob_sha256": "dd7c171b6ba9b728ef5fb94727ca78f2d437fc8fc9bebbe06fc5e228e5ce46d3",
+      "live_matches_approved_HEAD": true
+    },
+    {
+      "path": "src/candidate_a_cumulative_tracking_20261014/bridge.py",
+      "commit_blob_sha256": "875e7d16b5148b7b04565454491e7d780a40283da211f0deebf14876d5a72ec5",
+      "live_matches_approved_HEAD": true
+    },
+    {
+      "path": "src/candidate_a_cumulative_tracking_20261014/budget.py",
+      "commit_blob_sha256": "d3730e1b8c63f60ade7ebb0a357f818e6dc27d990b342a15fab5f72e0f0f880a",
+      "live_matches_approved_HEAD": true
+    },
+    {
+      "path": "src/candidate_a_cumulative_tracking_20261014/policy.py",
+      "commit_blob_sha256": "9a75a8f7480a951bef275740dc962e2902952f1fb4c0781bae9f3690e4062bcc",
+      "live_matches_approved_HEAD": true
+    },
+    {
+      "path": "src/candidate_a_cumulative_tracking_20261014/producer.py",
+      "commit_blob_sha256": "0c4831d34213942003fbdb3492d31f75e7fecaa989bb03ee64dc5d1d677df41f",
+      "live_matches_approved_HEAD": true
+    },
+    {
+      "path": "src/candidate_a_cumulative_tracking_20261014/profile.py",
+      "commit_blob_sha256": "53ce6ef02ae800f09e9db1106b3e91c76edceaa05574b487cf7cfc41d04e31cf",
+      "live_matches_approved_HEAD": true
+    },
+    {
+      "path": "tests/candidate_a_cumulative_tracking_20261014/test_tracking.py",
+      "commit_blob_sha256": "92312eadf9e7f49a2860014b6cfbfa58bf9bf30ecde1ed0ee2322342497e1349",
+      "live_matches_approved_HEAD": true
+    }
+  ],
+  "input_network_env_static_gate": "PASS_REAL_PROFILE_VALIDATE",
+  "native_version_process": false,
+  "worker_imported": false,
+  "existing_process_probe": "ps exact cumulative CLI/native match: none",
+  "raw_parent_absent": true,
+  "existing_reservation_absent": true,
+  "raw_base_accounting": {
+    "charged_monitored_s": 0,
+    "charged_raw_bytes": 0,
+    "unknown_reserved": [],
+    "remaining_s": 300,
+    "remaining_bytes": null,
+    "selected_total_limits": {
+      "wall_s": 300,
+      "bytes": null
+    },
+    "scope": "NEW_SINGLE_CARD_ENVELOPE_REQUIRES_FUTURE_EXPLICIT_RESOURCE_APPROVAL_NO_OLD_REMAINDER"
+  },
+  "fresh_free_bytes": 33857359872,
+  "minimum_free_bytes": 5000000000,
+  "human_sha256": "7858543784ce243f70dcf644f374310fedbb14686f6932bcc880d48c596cb047",
+  "auth_path": "artifacts/cumulative_tracking_implementation_20261014_v1/engineering/authorizations/UA_CUMULATIVE750_S17_01/AUTHORIZATION_NATIVE_EXECUTION.json",
+  "auth_sha256": "3282bd2611af4f0548c6e5e11d207258c80b3d79a154253011370ecd7f08c962",
+  "missing_release_gate": "FUTURE_CANONICAL_RELEASE_MISSING",
+  "release_created": false,
+  "new_native_started": false,
+  "canonical_auth_prepared_from_explicit_user": true,
+  "required_future_data_binding_path": "data/processed/cumulative_tracking_implementation_20261014_v1/final_review_v1/FUTURE_RELEASE_DATA_BINDING_V1.json",
+  "required_future_data_binding_sha256": "4fb91f5d34db403dff636fb4e01829c0668b3af1585d223a7831cf35fa7c06c5",
+  "actual_reader_sha256": "9adb9e625663cc4a548bf15d3c815a4e5b524865e37b756aae03137eaef99de2",
+  "metadata_reader_null_disclosed_actual_gate_binds_new_reader": true,
+  "repeated_offline_tests": false,
+  "safety_rules": "strict NUM; emergency9+1.1m margin; braking/red-entry/body/identity/receiver/yellow/nativewarning/UNKNOWN original gates unchanged",
+  "no_source_or_card_changes": true
+}

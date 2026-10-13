@@ -1,0 +1,27 @@
+test_dynamic_latest_request_repeated_ids_boundary_and_no_nearest_execution (test_tracking.TrackingTests.test_dynamic_latest_request_repeated_ids_boundary_and_no_nearest_execution) ... ok
+test_exact_long_blocks_actual_debt_and_unobserved_partial (test_tracking.TrackingTests.test_exact_long_blocks_actual_debt_and_unobserved_partial) ... FAIL
+test_real_feedback_producer_and_offline_no_authorization_gate (test_tracking.TrackingTests.test_real_feedback_producer_and_offline_no_authorization_gate) ... ok
+test_real_xml_helper_mixed_clocks_log_routes_and_ack_unknown_stop (test_tracking.TrackingTests.test_real_xml_helper_mixed_clocks_log_routes_and_ack_unknown_stop) ... ok
+
+======================================================================
+FAIL: test_exact_long_blocks_actual_debt_and_unobserved_partial (test_tracking.TrackingTests.test_exact_long_blocks_actual_debt_and_unobserved_partial)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_cumulative_full_catalogue_20261014/test_tracking.py", line 68, in test_exact_long_blocks_actual_debt_and_unobserved_partial
+    else:self.assertEqual(got['phases'],(('G',5,1),('y',3,2)))
+         ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Tuples differ: (('G', 5, 1), ('y', 3, 2), ('r', 2, 0)) != (('G', 5, 1), ('y', 3, 2))
+
+First tuple contains 1 additional elements.
+First extra element 2:
+('r', 2, 0)
+
+- (('G', 5, 1), ('y', 3, 2), ('r', 2, 0))
+?                          ------------ -
+
++ (('G', 5, 1), ('y', 3, 2))
+
+----------------------------------------------------------------------
+Ran 4 tests in 43.122s
+
+FAILED (failures=1)
