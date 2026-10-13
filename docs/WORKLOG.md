@@ -2592,3 +2592,11 @@ Frozen engineeringproposal0a33dd49… and source replay869183e0…: conditional 
 ### 2026-10-13 — Numerical recovery scientific Major and precise decision boundary
 
 Data conditional replay/10-file binder1504a1c0… accepted. Science NO-GO enable: actual−4.501 is real; exception changes literal−4.500001 STOP, unobserved source conditions not proven bound. Requires explicit human acceptance of restricted source-compatible exception/remaining attribution boundary before implementation/retry. No globaltol/model/guard/seed changes or new native, no goal closure; originalFAIL and874353691B/877.497s remaining-budget boundary retained.
+
+### 2026-10-13 — Explicit approval for restricted native numerical-event exception
+
+Human answer approves restrictedexception and continuation, including disclosed unobserved actualbranch. Only fullybound source-compatible1mm event may be classified; all raw/legacyFAIL and otherdanger/UNKNOWN STOP retained. No model/timing/seed/research/globaltol or budget change. Implement targetedregressions and3role exactcardgate before new750identity; no native release yet. Prior scientificNO-GO remains history before this explicit standarddecision, not silently overwritten.
+
+### 2026-10-13 — Restricted numerical classifier engineering gate and750/02 preparation
+
+Minimal64-source ea180197… runtime/classifier frozen with40-file binder af246f2a…;3targetedmethods finalPASS, initialfour fixtureERROR preserved. LegacystrictFAIL/raw/otherSTOP checks retained; explicit approved authority enables only fullybound source-compatible case. New750/02 cardfb4beb8a… prepared1270 unchanged input/timing/seed, N14notguaranteed. Data→science exact prelaunch pending; no native/auth/release/raw.

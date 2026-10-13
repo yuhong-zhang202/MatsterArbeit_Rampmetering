@@ -13,7 +13,11 @@ def source_compatibility(root):
         node=next(x for x in ast.parse(source).body if isinstance(x,ast.FunctionDef) and x.name==name)
         return ast.dump(node,include_attributes=False)
     require(all(function(old,x)==function(new,x) for x in ('identity','inventory')), 'PHYSICAL_IDENTITY_CODE_CHANGED')
-    def safety_block(s):return s[s.index('        errors = []'):s.index('        if errors:')]
+    def safety_block(s):
+        value=s[s.index('        errors = []'):s.index('        if errors:')]
+        if '        # BEGIN_APPROVED_NUMERICAL_EVENT_SEAM' in value:
+            value=value[:value.index('        # BEGIN_APPROVED_NUMERICAL_EVENT_SEAM')]
+        return value
     require(safety_block(old)==safety_block(new), 'POST_PHYSICAL_GUARD_BLOCK_CHANGED')
     require(parameters(8)['phases']==(('G',4,1),('y',2,2),('r',2,0)), '900_PHASES_CHANGED')
     return {'identity_inventory_AST_identical':True,'post_physical_guard_block_byte_identical':True,

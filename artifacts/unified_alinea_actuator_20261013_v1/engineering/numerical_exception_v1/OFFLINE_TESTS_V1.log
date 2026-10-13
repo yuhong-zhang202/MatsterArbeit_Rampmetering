@@ -1,0 +1,80 @@
+test_adapter_default_strict_and_explicit_numerical_exception (tests.candidate_a_unified_alinea_20261013.test_numeric_stop.NumericStopTests.test_adapter_default_strict_and_explicit_numerical_exception) ... 
+  test_adapter_default_strict_and_explicit_numerical_exception (tests.candidate_a_unified_alinea_20261013.test_numeric_stop.NumericStopTests.test_adapter_default_strict_and_explicit_numerical_exception) (enabled=False) ... ERROR
+  test_adapter_default_strict_and_explicit_numerical_exception (tests.candidate_a_unified_alinea_20261013.test_numeric_stop.NumericStopTests.test_adapter_default_strict_and_explicit_numerical_exception) (enabled=True) ... ERROR
+test_coexisting_other_vehicle_or_native_alarm_still_stops (tests.candidate_a_unified_alinea_20261013.test_numeric_stop.NumericStopTests.test_coexisting_other_vehicle_or_native_alarm_still_stops) ... 
+  test_coexisting_other_vehicle_or_native_alarm_still_stops (tests.candidate_a_unified_alinea_20261013.test_numeric_stop.NumericStopTests.test_coexisting_other_vehicle_or_native_alarm_still_stops) (warning=True, main_brake=False) ... ERROR
+  test_coexisting_other_vehicle_or_native_alarm_still_stops (tests.candidate_a_unified_alinea_20261013.test_numeric_stop.NumericStopTests.test_coexisting_other_vehicle_or_native_alarm_still_stops) (warning=False, main_brake=True) ... ERROR
+test_real_value_formula_and_joint_negative_bindings (tests.candidate_a_unified_alinea_20261013.test_numeric_stop.NumericStopTests.test_real_value_formula_and_joint_negative_bindings) ... ok
+
+======================================================================
+ERROR: test_adapter_default_strict_and_explicit_numerical_exception (tests.candidate_a_unified_alinea_20261013.test_numeric_stop.NumericStopTests.test_adapter_default_strict_and_explicit_numerical_exception) (enabled=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_unified_alinea_20261013/test_numeric_stop.py", line 102, in test_adapter_default_strict_and_explicit_numerical_exception
+    a,w,obs=self.adapter_case(tmp,enabled)
+            ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_unified_alinea_20261013/test_numeric_stop.py", line 87, in adapter_case
+    a.ledger.begin_step(1260,Command('fixed750',1260,750,'FIXED'));a.ledger.mark_cycle_start(True)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_unified_alinea_20261013/policy.py", line 73, in begin_step
+    require(t == self.next_time_s and t < self.end_s, 'NONSEQUENTIAL_POLICY_TIME')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_issue12_packet_policy_20261012/policy.py", line 15, in require
+    raise ValueError(reason)
+ValueError: NONSEQUENTIAL_POLICY_TIME
+
+======================================================================
+ERROR: test_adapter_default_strict_and_explicit_numerical_exception (tests.candidate_a_unified_alinea_20261013.test_numeric_stop.NumericStopTests.test_adapter_default_strict_and_explicit_numerical_exception) (enabled=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_unified_alinea_20261013/test_numeric_stop.py", line 102, in test_adapter_default_strict_and_explicit_numerical_exception
+    a,w,obs=self.adapter_case(tmp,enabled)
+            ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_unified_alinea_20261013/test_numeric_stop.py", line 87, in adapter_case
+    a.ledger.begin_step(1260,Command('fixed750',1260,750,'FIXED'));a.ledger.mark_cycle_start(True)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_unified_alinea_20261013/policy.py", line 73, in begin_step
+    require(t == self.next_time_s and t < self.end_s, 'NONSEQUENTIAL_POLICY_TIME')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_issue12_packet_policy_20261012/policy.py", line 15, in require
+    raise ValueError(reason)
+ValueError: NONSEQUENTIAL_POLICY_TIME
+
+======================================================================
+ERROR: test_coexisting_other_vehicle_or_native_alarm_still_stops (tests.candidate_a_unified_alinea_20261013.test_numeric_stop.NumericStopTests.test_coexisting_other_vehicle_or_native_alarm_still_stops) (warning=True, main_brake=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_unified_alinea_20261013/test_numeric_stop.py", line 115, in test_coexisting_other_vehicle_or_native_alarm_still_stops
+    a,w,obs=self.adapter_case(tmp,True,warning,main_brake)
+            ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_unified_alinea_20261013/test_numeric_stop.py", line 87, in adapter_case
+    a.ledger.begin_step(1260,Command('fixed750',1260,750,'FIXED'));a.ledger.mark_cycle_start(True)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_unified_alinea_20261013/policy.py", line 73, in begin_step
+    require(t == self.next_time_s and t < self.end_s, 'NONSEQUENTIAL_POLICY_TIME')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_issue12_packet_policy_20261012/policy.py", line 15, in require
+    raise ValueError(reason)
+ValueError: NONSEQUENTIAL_POLICY_TIME
+
+======================================================================
+ERROR: test_coexisting_other_vehicle_or_native_alarm_still_stops (tests.candidate_a_unified_alinea_20261013.test_numeric_stop.NumericStopTests.test_coexisting_other_vehicle_or_native_alarm_still_stops) (warning=False, main_brake=True)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_unified_alinea_20261013/test_numeric_stop.py", line 115, in test_coexisting_other_vehicle_or_native_alarm_still_stops
+    a,w,obs=self.adapter_case(tmp,True,warning,main_brake)
+            ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_unified_alinea_20261013/test_numeric_stop.py", line 87, in adapter_case
+    a.ledger.begin_step(1260,Command('fixed750',1260,750,'FIXED'));a.ledger.mark_cycle_start(True)
+    ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_unified_alinea_20261013/policy.py", line 73, in begin_step
+    require(t == self.next_time_s and t < self.end_s, 'NONSEQUENTIAL_POLICY_TIME')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_issue12_packet_policy_20261012/policy.py", line 15, in require
+    raise ValueError(reason)
+ValueError: NONSEQUENTIAL_POLICY_TIME
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.023s
+
+FAILED (errors=4)

@@ -22,6 +22,7 @@ PROFILE = 'NATIVE_PHASE_CURRENT_FOLLOWING_WAIT_DIAGNOSTIC_NOT_QUALIFIED'
 from src.candidate_a_native_receiver_wait_20261012.receiver_wait import classify_receiver, current_following
 from src.candidate_a_unified_alinea_20261013.policy import Ledger, MAX_GREEN, parameters, yellow_scope
 from src.candidate_a_issue12_packet_policy_20261012.body import BodyTracker
+from src.candidate_a_unified_alinea_20261013 import numeric_stop
 
 
 class PhaseEnvelope(ProtectedPhaseEnvelope):
@@ -73,12 +74,13 @@ def inventory(conn):
 
 class StepAdapter:
     """Preparation seam only: callers observe/advance externally; we never do."""
-    def __init__(self, observe, command=300, end_s=1272):
+    def __init__(self, observe, command=300, end_s=1272, numerical_authority=None):
         self.observe = observe  # Future bridge binds exact protected worker.observe.
         self.envelope = PhaseEnvelope()  # Pre-control holding program only.
         self.ledger = Ledger(command, end_s)
         self.end_s = end_s
         self.selected_new_program_at = None
+        self.numerical_authority = numerical_authority  # Default strict, never implicit approval.
         self.command = command
         self.first_controlled_red_begin = None
         self.last_yellow_scope = None
@@ -176,6 +178,9 @@ class StepAdapter:
         entry_before = {vid: current_following(conn, vid, time_s, allow_clear=True) for vid in sorted(ids[STORAGE])} if motion in ('G','y') else {}
         entering_red = motion == 'r' and (self.previous_motion != 'r' or state == 'y')
         shadow = red_transition_witness(vehicles) if entering_red else None
+        numeric_before = ({vid:numeric_stop.read_vehicle_state(conn,vid,time_s) for vid in sorted(ids[STORAGE])}
+            if self.numerical_authority is not None and cycle is not None and motion=='y' and
+            cycle['green_end_s']==time_s else {})
         self.pending = {'time_s': time_s, 'world': world, 'loaded': loaded, 'pending_ids': pending_ids,
                         'storage': set(ids[STORAGE]), 'internal': set(internal), 'cycle_id': cycle['cycle_id'] if cycle else -1,
                         'program': program, 'phase_before': phase, 'state_before': state, 'next_switch_before_s': nxt, 'motion_phase': idx if time_s >= 600 else 0,
@@ -195,7 +200,8 @@ class StepAdapter:
                                 else conn.vehicle.getAcceleration(vid)),
                             acceleration_scope='same-before-time last-post reading or initial getter')
                             for vid,w in world.items()},
-                        'native_receiver_decision': native_decision, 'entry_following_before': entry_before}
+                        'native_receiver_decision': native_decision, 'entry_following_before': entry_before,
+                        'numeric_stop_before': numeric_before}
         return {'status': 'OBSERVATIONS_BOUND_NOT_PROSPECTIVE_SAFETY', 'profile': PROFILE,
                 'motion': motion, 'shadow_envelope': shadow, 'step_advance_performed': False}
 
@@ -339,6 +345,45 @@ class StepAdapter:
         except Exception as exc:
             row['body_observation_error']={'type':type(exc).__name__,'reason':str(exc)}
             errors.append('BODY_COVERAGE_UNKNOWN:'+type(exc).__name__+':'+str(exc))
+        # BEGIN_APPROVED_NUMERICAL_EVENT_SEAM
+        row['legacy_braking_reasons']=[x for x in errors if x.startswith(
+            ('ORDINARY_BRAKING_EXCEEDED:','UNKNOWN_OR_EXCESSIVE_ACCELERATION:'))]
+        row['numeric_stop_classifications']=[]
+        if self.numerical_authority is not None:
+            for vid in sorted(before & after):
+                allowed_reasons={'ORDINARY_BRAKING_EXCEEDED:'+vid,
+                    'UNKNOWN_OR_EXCESSIVE_ACCELERATION:'+vid}
+                if not allowed_reasons.intersection(errors):continue
+                try:
+                    before_state=p.get('numeric_stop_before',{}).get(vid)
+                    after_state=numeric_stop.read_vehicle_state(conn,vid,self.last_completed)
+                    following=current_following(conn,vid,self.last_completed,allow_clear=True)
+                    binding=row['post_signal_application_binding']
+                    evidence=dict(run_id=self.numerical_authority['run_id'],mode=self.numerical_authority['mode'],
+                        execution_card_sha256=self.numerical_authority['execution_card_sha256'],
+                        vehicle_id=vid,time_begin_s=p['time_s'],time_end_s=self.last_completed,dt_s=1,
+                        before=before_state,after=after_state,motion=p['motion'],
+                        first_yellow_begin_s=self.ledger.cycle['green_end_s'],
+                        post_signal_binding_status=binding['status'],actual_phase=binding['actual_phase'],
+                        actual_state=binding['actual_state'],actual_program=binding['actual_program'],
+                        expected_program=p['program'],controlled_links=[[list(x) for x in group] for group in binding['actual_controlled_links']],
+                        full_before_after_world_binding=vid in before & after,entered_link=vid in {x['vehicle_id'] for x in recs},
+                        body_coverage_complete='body_observation' in row and 'body_observation_error' not in row,
+                        before_current_gap_status=p['entry_following_before'].get(vid,{}).get('status'),
+                        after_current_gap_status=following['status'],native_event_counters=counters,
+                        native_warning_observed=any(x in native_warning_text.lower() for x in
+                            ('emergency braking','emergency stop','collision','teleport')),
+                        recorded_delta_v_m_s2=braking['speed_difference_m_s2'][vid],
+                        actual_native_acceleration_m_s2=braking['actual_acceleration_m_s2'][vid],
+                        following_after=following)
+                    decision=numeric_stop.classify(evidence,self.numerical_authority)
+                except (KeyError,ValueError,TypeError,OverflowError) as exc:
+                    decision={'decision':'STOP','classification':'NUMERICAL_EVENT_EVIDENCE_UNKNOWN',
+                        'vehicle_id':vid,'reason':type(exc).__name__+':'+str(exc),'legacy_strict_FAIL_retained':True}
+                row['numeric_stop_classifications'].append(decision)
+                if decision['decision']=='CONTINUE_RESTRICTED_NUMERICAL_EVENT':
+                    errors=[x for x in errors if x not in allowed_reasons]
+        # END_APPROVED_NUMERICAL_EVENT_SEAM
         if errors:
             self.paused = True
             row.update(status='STOP_OBSERVED_AFTER_STEP', reasons=errors)

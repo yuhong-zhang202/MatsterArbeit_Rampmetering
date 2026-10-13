@@ -42,7 +42,7 @@
 
 每卡绑定源/输入/参数/环境/终点，保留canonical门和UNKNOWN保守资源预留。本plan已获用户批准，仍需实际实现/离线门及每卡三方GO；范围批准本身不替代精确card的canonical release。运行流程共用开发参数仅为技术测试，不写入或冻结EXPERIMENT_PROTOCOL，不改变Stage6/A1/Candidate A既有状态，不安装新环境，不购买资源。
 
-当前进入独立分支codex/unified-alinea-actuator的实现与离线验证；尚无新的原生诊断结果。后续GitHub任务关联按用户/Chat工作流确定，不自行编造Issue或新建PR。目标整体尚未完成，执行严格依序通过离线与精确card三方门；技术资源/覆盖扩展仍需另批。
+当前独立分支codex/unified-alinea-actuator已取得V2首300短时结果及750/01停止前缀；后者真实−4.501超出旧严格规则，旧FAIL保留。用户随后明确批准[受限数值事件例外](../../artifacts/unified_alinea_actuator_20261013_v1/USER_NUMERICAL_EXCEPTION_APPROVAL_V1.json)，仅完整公开绑定及1mm公式匹配可分类、actual生成分支仍未唯一识别，不改模型/配时/seed或原总预算。新750/02不同source SHA的实现/离线工程门已完成，独立数据/科学精确门待完成，尚未新native；不能把旧300/900改称新源码原生结果。后续GitHub任务关联按用户/Chat工作流确定，不自行编造Issue或新建PR。目标整体尚未完成，执行严格依序通过离线与精确card三方门；技术资源/覆盖扩展仍需另批。
 
 ## 6. 本次只读范围评议
 

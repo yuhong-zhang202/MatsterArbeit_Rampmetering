@@ -5,6 +5,10 @@
 
 ## Current Phase
 
+**2026-10-13 获批受限数值分类最小实现/工程门完成，750/02待数据→科学精确门。** [工程预审](../artifacts/unified_alinea_actuator_20261013_v1/engineering/numerical_exception_v1/ENGINEERING_PRELAUNCH_REVIEW_V1.md)3针对性方法最终PASS，初fixture NONSEQUENTIAL_TIME四ERROR/前像保留；旧严格块/其它stop理由/真实−4.501/legacyFAIL均保留。40file binder af246f2a…；卡fb4beb8a…绑定新64源ea180197…，模型/输入/seed17/配时/终点1270/预算不变，N14不保证。源快照基于bb91a8b上的未提交delta，不能称该旧commit测试新实现；旧300/900仅受影响回放相容，非新SHA native证据。无新canonical/raw/运行；新权限额外须绑定数值批准SHA。
+
+**2026-10-13 用户明确批准受限数值例外，恢复最小实现/回归/三方门后新750重试。** [批准绑定](../artifacts/unified_alinea_actuator_20261013_v1/USER_NUMERICAL_EXCEPTION_APPROVAL_V1.json)允许仅原技术模式、完整身份/相位/模型/位置/beforeafter绑定且精确匹配官方1mm公式的事件分类；接受actualbranch未唯一识别的限制，不能伪称已验证。真实数值/原FAIL/其它危险或UNKNOWN STOP保留，不改globaltol/模型/配时/seed/科研或预算。工程现在最小实现，尚未新750卡放行/运行，dynamic/ALINEA仍须新750 post门。
+
 **2026-10-13 恢复方案科学门NO-GO启用，需一项具体标准决定；目标未关闭。** [科学复审](../artifacts/unified_alinea_actuator_20261013_v1/science/TECHNICAL_RECOVERY_PROPOSAL_REVIEW_V1.md)确认公式无误，但实测−4.501不是测量错误；将其由原STOP改继续属于停止谓词改变。privateoffset/actualbranch未唯一确认，未知source条件不能伪装已绑定。需用户明确是否接受限定技术诊断的source-compatible数值事件例外及该因果限制；明确后才实施classifier/负控/三方门/新750，当前不改代码/guard、不重试。剩余877.497260208s/874353691B保持，dynamic/ALINEA HOLD，原FAIL不覆盖。
 
 **2026-10-13 恢复proposal独立数据/公式核对GO，尚非enable或run GO。** [数据复审](../data/processed/unified_alinea_actuator_20261013_v1/technical_recovery_v1/DATA_RECOVERY_PROPOSAL_REVIEW_V1.md)一次复算确认1mm项在声明条件下精确产生−4.501，reference−4.5；10file binder1504a1c0…。5源哈希/输入默认/FCD绑定成立，但privatebranch/offset未实测，数值一致不等于唯一因果或安全通过。科学接着核实原要求的意图及受限分类是否属技术兼容修复；若literalphysical上限或条件必须实测，不能自行enable。未代码修改/新prepare/native。

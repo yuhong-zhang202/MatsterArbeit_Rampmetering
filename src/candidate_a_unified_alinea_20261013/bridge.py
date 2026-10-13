@@ -290,7 +290,8 @@ def execute(card_path, release_path, root=ROOT):
         conn=worker.connect_traci(traci,port,process,worker.startup_trace_callback(output/'startup_trace.jsonl'),deadline_s=card['resources']['startup_limit_s'])
         startup=capture.snapshot(0,0,'STARTUP_CONNECT_ACK');append_new(output/'log_intervals.jsonl',startup)
         require(not startup['streams']['sumo_stderr.log']['text'],'startup stderr nonempty')
-        adapter=StepAdapter(worker.observe,card['spec']['fixed_command_veh_h'],card['spec']['end_s'])
+        authority={**card['numerical_exception_authority'],'execution_card_sha256':sha(card_path)}
+        adapter=StepAdapter(worker.observe,card['spec']['fixed_command_veh_h'],card['spec']['end_s'],authority)
         producer=Producer(card['spec']['mode'],card['spec']['fixed_command_veh_h'])
         _diagnostic_loop(conn,worker,capture,output,{**effective,'total_budget_baseline':total_budget},process,started,adapter,producer)
         status='PACKET_CYCLES_PENDING_LOG_FINALIZATION'

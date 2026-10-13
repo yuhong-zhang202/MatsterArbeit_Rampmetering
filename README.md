@@ -209,9 +209,11 @@ The new isolated packet CLI is `scripts/candidate_a_issue12_packet_policy_202610
 
 The user-approved [scope](docs/development/UNIFIED_ALINEA_ACTUATOR_SCOPE_20261013.md) reuses the packet policy in `src/candidate_a_unified_alinea_20261013/` for integer periods8–24, boundary-applied requests and true projectFeedback/E1 input. It is a technical diagnostic, not production ALINEA or formal experimental qualification. Check PROJECT_STATE and exact-card reviews before execution.
 
+The restricted [native numerical-event exception](artifacts/unified_alinea_actuator_20261013_v1/USER_NUMERICAL_EXCEPTION_APPROVAL_V1.json) is explicit technical diagnostic authority. Its default is strict STOP; enabled cases retain actual acceleration and legacy failures. The current prepared750/02 card has not run, and execution still requires exact engineering/data/scientific review plus a one-use release. Historical consumed cards retain their original source binding and are not current executable cards.
+
 ```bash
 .venv/bin/python -m unittest discover -s tests/candidate_a_unified_alinea_20261013 -v
-.venv/bin/python scripts/candidate_a_unified_alinea_20261013_v1/cli.py --check-card artifacts/unified_alinea_actuator_20261013_v1/engineering/packages/UA_FIXED300_S17_02/card.json
+.venv/bin/python scripts/candidate_a_unified_alinea_20261013_v1/cli.py --check-card artifacts/unified_alinea_actuator_20261013_v1/engineering/packages/UA_FIXED750_S17_02/card.json
 ```
 
 Default CLI preparation is offline for the unconsumed fixed300 identity. Other approved cards are prepared explicitly with `profile.prepare(run_id)`; execution uses `--execute <exact-card-path> --release <canonical-release-path>` only after sequential engineering/data/scientific review. Native identities are single-use; a consumed card is historical evidence. The new-stage total1200monitored seconds/raw1.2GB and all safety/UNKNOWN gates remain; old900 is historical evidence plus offline compatibility, not a native900 run of this new source. No new environment dependencies or formal protocol are introduced.

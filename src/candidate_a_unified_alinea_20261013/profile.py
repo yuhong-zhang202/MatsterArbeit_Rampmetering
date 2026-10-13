@@ -12,7 +12,9 @@ BASE='9eb95e29ccc85423084bc6945668cd36c3298b06'
 TASK=Path('artifacts/unified_alinea_actuator_20261013_v1/engineering')
 USER=TASK.parent/'USER_SCOPE_APPROVAL.json'
 SCOPE=TASK.parent/'SCOPE_AS_APPROVED.md'
-RUN='UA_FIXED300_S17_02'
+NUM_USER=TASK.parent/'USER_NUMERICAL_EXCEPTION_APPROVAL_V1.json'
+NUM_REFERENCE=TASK/'technical_recovery_v1/SOURCE_EXPRESSION_REPLAY_V1.json'
+RUN='UA_FIXED750_S17_02'
 sha=old.sha;write_new=old.write_new;require=old.require
 MODES={'FIXED300':('fixed300',300,1272),'FIXED750':('fixed750',750,1270),
        'DYNAMIC':('dynamic_commands',300,1266),'ALINEA':('real_alinea',900,1272)}
@@ -33,6 +35,7 @@ def spec(run):
             'detector_ids':['p1_main_down_20_l0','p1_main_down_20_l1']} if mode=='real_alinea' else None,
         'requested_schedule':{'1200':300,'1201':750,'1226':900,'1237':300} if mode=='dynamic_commands' else None,
         'partial_final_cycle_allowed':mode=='real_alinea',
+        'restricted_numerical_exception_enabled':True,
         'interpretation':'BOUNDED_TECHNICAL_NOT_FORMAL_OR_LONG_TERM_QUALIFICATION'}
 
 
@@ -44,7 +47,7 @@ def sources(root):
     files=old.sources(root)
     for folder in ('src/candidate_a_unified_alinea_20261013','scripts/candidate_a_unified_alinea_20261013_v1'):
         for p in (root/folder).glob('*.py'):files[str(p.relative_to(root))]=sha(p)
-    for p in (USER,SCOPE,Path('scripts/formal_development_20261007_v1/control.py'),
+    for p in (USER,SCOPE,NUM_USER,NUM_REFERENCE,Path('scripts/formal_development_20261007_v1/control.py'),
               Path('scripts/formal_development_20261007_v1/v15_worker.py')):
         files[str(p)]=sha(root/p)
     return dict(sorted(files.items()))
@@ -52,6 +55,19 @@ def sources(root):
 
 def common_source_digest(root):
     return hashlib.sha256(json.dumps(sources(root),sort_keys=True,separators=(',',':')).encode()).hexdigest()
+
+
+def numerical_authority(root,run):
+    approval=json.loads((root/NUM_USER).read_text())
+    require(approval['answer']=='批准受限数值例外并继续','NUMERICAL_EXCEPTION_APPROVAL_MISSING')
+    reference=json.loads((root/NUM_REFERENCE).read_text())
+    require(reference['source_commit']=='fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3','NUMERICAL_SOURCE_REFERENCE_DRIFT')
+    return dict(enabled=True,run_id=run,mode=spec(run)['mode'],approval_path=str(NUM_USER),
+        approval_sha256=sha(root/NUM_USER),source_reference_path=str(NUM_REFERENCE),
+        source_reference_sha256=sha(root/NUM_REFERENCE),source_commit=reference['source_commit'],
+        configured_model='Krauss',configured_Euler_dt_s=1,no_model_or_JM_override=True,
+        actual_branch_identified=False,private_stop_offset_observed=False,
+        interpretation='APPROVED_SOURCE_COMPATIBLE_EVENT_NOT_UNIQUE_CAUSAL_OR_SAFETY_PROOF')
 
 
 def stage_package(root,package,out,end):
@@ -82,6 +98,7 @@ def prepare(run=RUN,root=ROOT):
         inherited_inputs_sha256=inherited,network_sha256=sha(root/NETWORK),
         prepared_input_sha256={str(p.relative_to(root)):sha(p) for p in package.iterdir() if p.is_file()},
         resources=resources(run),total_budget_preparation_snapshot=budget.accounting(root),environment=old.old.base.environment(),
+        numerical_exception_authority=numerical_authority(root,run),
         runtime_authorization_generated=False,source_binary_compiler_equivalence='NOT_VERIFIED',
         binary_reference_provenance=previous['binary_reference_provenance'],
         interpretation={'native_safety_proven':False,'rate_qualified':False,'new_source_native_900_tested':False})
@@ -96,6 +113,7 @@ def validate(card_path,root=ROOT,require_environment=False):
     require(c['package']==str(expected.parent.relative_to(root)) and c['output']==str(output(run)),'CARD_PATH_DRIFT')
     require(c['resources']==resources(run) and c['sources_sha256']==sources(root),'SOURCE_RESOURCE_DRIFT')
     require(c['common_runtime_source_sha256']==common_source_digest(root),'COMMON_RUNTIME_DRIFT')
+    require(c['numerical_exception_authority']==numerical_authority(root,run),'NUMERICAL_AUTHORITY_DRIFT')
     require(c['user_authorization']=={'path':str(USER),'sha256':sha(root/USER)},'APPROVAL_DRIFT')
     approval=json.loads((root/USER).read_text());require(approval['scope_sha256']==sha(root/SCOPE),'APPROVED_SCOPE_DRIFT')
     for key in ('inherited_inputs_sha256','prepared_input_sha256'):
@@ -105,6 +123,13 @@ def validate(card_path,root=ROOT,require_environment=False):
     require(cfg.find('./time/end').get('value')==str(sp['end_s']) and cfg.find('./time/step-length').get('value')=='1','HORIZON_STEP_DRIFT')
     require(cfg.find('./output/precision').get('value')=='8','PRECISION_DRIFT')
     add=ET.parse(expected.parent/'scenario.add.xml').getroot()
+    route=ET.parse(expected.parent/'demand.rou.xml').getroot()
+    vtype=route.find("vType[@id='technical_passenger']")
+    require(vtype is not None and vtype.attrib=={'id':'technical_passenger','vClass':'passenger'} and
+        all(not x.tag.startswith('carFollowing') and not any(k.startswith('jm') or k=='carFollowModel' for k in x.attrib)
+            for x in route.iter()),'NUMERICAL_DECLARED_MODEL_OVERRIDE')
+    require(cfg.find('./processing/default.carfollowmodel') is None and cfg.find('./processing/tls.yellow.min-decel') is None and
+        cfg.find('./processing/step-method.ballistic') is None,'NUMERICAL_REFERENCE_OPTIONS_OVERRIDE')
     for period in PERIODS:
         par=parameters(period);logic=add.find(f"tlLogic[@programID='{par['program']}']")
         require(logic is not None and [(x.get('state'),int(x.get('duration')),int(x.get('next'))) for x in logic]==list(par['phases']),'PHASE_LIBRARY_DRIFT')
@@ -132,6 +157,7 @@ def validate_release(card_path,release_path,root=ROOT):
     a=json.loads(ap.read_text());v=json.loads(rp.read_text())
     require(a.get('SUMO_execution_authorized') is True and a.get('run_id')==run and a.get('card_sha256')==sha(card_path),'AUTHORIZATION_DRIFT')
     require(a.get('human_authorization_reference')==str(USER) and a.get('human_authorization_sha256')==sha(root/USER),'HUMAN_SCOPE_BINDING_DRIFT')
+    require(a.get('numerical_exception_approval_sha256')==sha(root/NUM_USER),'LATEST_NUMERICAL_APPROVAL_BINDING_MISSING')
     require(v.get('run_id')==run and v.get('card_sha256')==sha(card_path) and v.get('authorization_sha256')==sha(ap) and v.get('automatic_continuation') is False,'RELEASE_DRIFT')
     reviews=v.get('review_sha256');require(isinstance(reviews,dict) and set(reviews)=={'engineering','data','science'},'THREE_ROLE_RELEASE_MISSING')
     for item in reviews.values():require(sha(root/item['path'])==item['sha256'],'REVIEW_DRIFT')
