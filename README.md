@@ -203,3 +203,15 @@ One reviewed independent-worktree run completed1207checkpoint and three cycles t
 Use [the problem index](docs/problem_records/README.md) to find historical FIX02 rate shortfalls, STOP3/A1 proof limits, receiver WAIT recovery/budget convergence, and the nominal two-car mismatch. Original evidence stays at its original paths. [Issue #12 policy decision](docs/development/RAMP_METERING_SIGNAL_POLICY_DECISION.md) separates ALINEA's commanded rate from native signal implementation and actual crossing counts. The [Issue #12 delivery report](docs/development/ISSUE12_EXECUTION_POLICY_DELIVERY_20261012.md) records bounded diagnostics, exact source/input hashes, actual counts and remaining qualification limits; check PROJECT_STATE before execution.
 
 The new isolated packet CLI is `scripts/candidate_a_issue12_packet_policy_20261012_v1/cli.py`; it uses the existing project Python environment. `--check-card <exact-card-path>` validates a card, while `--execute <exact-card-path> --release <canonical-release-path>` requires fresh exact-card authorization, three reviews and cumulative resource gates. Preparation is offline and identities are single-use: the consumed diagnostic card is historical evidence and must not be rerun. No general ALINEA production execution or formal experiment is authorized by these examples.
+
+
+## Unified ALINEA actuator — bounded technical validation
+
+The user-approved [scope](docs/development/UNIFIED_ALINEA_ACTUATOR_SCOPE_20261013.md) reuses the packet policy in `src/candidate_a_unified_alinea_20261013/` for integer periods8–24, boundary-applied requests and true projectFeedback/E1 input. It is a technical diagnostic, not production ALINEA or formal experimental qualification. Check PROJECT_STATE and exact-card reviews before execution.
+
+```bash
+.venv/bin/python -m unittest discover -s tests/candidate_a_unified_alinea_20261013 -v
+.venv/bin/python scripts/candidate_a_unified_alinea_20261013_v1/cli.py --check-card artifacts/unified_alinea_actuator_20261013_v1/engineering/packages/UA_FIXED300_S17_01/card.json
+```
+
+Default CLI preparation is offline for the unconsumed fixed300 identity. Other approved cards are prepared explicitly with `profile.prepare(run_id)`; execution uses `--execute <exact-card-path> --release <canonical-release-path>` only after sequential engineering/data/scientific review. Native identities are single-use; a consumed card is historical evidence. The new-stage total1200monitored seconds/raw1.2GB and all safety/UNKNOWN gates remain; old900 is historical evidence plus offline compatibility, not a native900 run of this new source. No new environment dependencies or formal protocol are introduced.

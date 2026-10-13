@@ -1,0 +1,39 @@
+test_actual_feedback_class_global_seed_ongoing_windows_and_own_clipped_state (test_unified.UnifiedTests.test_actual_feedback_class_global_seed_ongoing_windows_and_own_clipped_state) ... ERROR
+test_all_seventeen_periods_xml_and_real_helper_clock (test_unified.UnifiedTests.test_all_seventeen_periods_xml_and_real_helper_clock) ... ok
+test_dynamic_request_ids_delays_partial_and_real_zero (test_unified.UnifiedTests.test_dynamic_request_ids_delays_partial_and_real_zero) ... ok
+test_preserved_gap_yellow_unknown_and_new_stage_budget_reservations (test_unified.UnifiedTests.test_preserved_gap_yellow_unknown_and_new_stage_budget_reservations) ... ok
+test_real_helper_dynamic_bridge_continuous_phases_and_boundary_switches (test_unified.UnifiedTests.test_real_helper_dynamic_bridge_continuous_phases_and_boundary_switches) ... ok
+
+======================================================================
+ERROR: test_actual_feedback_class_global_seed_ongoing_windows_and_own_clipped_state (test_unified.UnifiedTests.test_actual_feedback_class_global_seed_ongoing_windows_and_own_clipped_state)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_unified_alinea_20261013/test_unified.py", line 106, in test_actual_feedback_class_global_seed_ongoing_windows_and_own_clipped_state
+    a,calls,events,feedback=self.run_loop('real_alinea',900,1272)
+                            ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_unified_alinea_20261013/test_unified.py", line 90, in run_loop
+    try:bridge._diagnostic_loop(w,SimpleNamespace(observe=w.observe,request_phase=worker.request_phase),cap,out,
+        ~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        {'wall_limit_s':300,'minimum_free_bytes':0,'run_limit_bytes':300000000},
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+        fixture.old.fixture.old.fixture.fixture.FakeProcess(),time.monotonic(),a,producer)
+        ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_unified_alinea_20261013/bridge.py", line 198, in _diagnostic_loop
+    command=producer.command_at(conn,t)
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_unified_alinea_20261013/producer.py", line 63, in command_at
+    if self.feedback:self.seed(conn)
+                     ~~~~~~~~~^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_unified_alinea_20261013/producer.py", line 33, in seed
+    raw=self._query(conn,1200);ongoing={};discarded={}
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_unified_alinea_20261013/producer.py", line 22, in _query
+    require(set(DETECTORS) <= set(conn.inductionloop.getIDList()), 'E1_ID_UNKNOWN')
+                                  ^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_native_smoke_runtime_fix_20261012/frame_cache.py", line 82, in __getattr__
+    self.invalidate('UNKNOWN_CONNECTION_ATTRIBUTE');raise ValueError('unsupported noncallable connection attribute/domain')
+                                                    ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: unsupported noncallable connection attribute/domain
+
+----------------------------------------------------------------------
+Ran 5 tests in 9.509s
+
+FAILED (errors=1)

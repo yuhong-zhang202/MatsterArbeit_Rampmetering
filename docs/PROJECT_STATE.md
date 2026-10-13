@@ -5,7 +5,13 @@
 
 ## Current Phase
 
-**2026-10-13 当前工作：在原Draft PR #13修复Reviewer P2相位顺序审计缺口。** 用户授权仅基于既有TLS/ACK离线补连续G→y→r及转相时刻、回归和数据/科学复审，不新Issue、不SUMO、不改配时/guard/上游PR。新revision02唯一实际离线审计已PASS：九周期连续GGGGyyrr、72控制区间/ACK、完整phase/duration traces、8次r→G，C=pending=applied=E=N18不变；原95raw/旧revision01和49 native源/card均保留。4新回归方法/19负例PASS，首测试语法import失败版本保留。独立数据复审V2已冻结（17文件ceb41904…）；只读科学终审GO修复交付，无新增finding；干净checkout实测4项回归通过、raw仅.gitkeep；原Draft PR #13修复交付待后续审查，内部GO不等于GitHub Reviewer或用户验收，未用户验收。完整raw审核仅本地，公开相位子集回归不等于完整raw审计或资格。阶段6既有结项、A1 UNRESOLVED、Candidate A NOT_QUALIFIED及空未冻结正式协议不变。[P2修订报告](development/ISSUE12_EXECUTION_POLICY_DELIVERY_20261012.md)。
+**2026-10-13 统一执行器最小实现已冻结，首300卡片待独立数据→科学预启动门。** [工程交付](../artifacts/unified_alinea_actuator_20261013_v1/engineering/ENGINEERING_REVIEW_V1.md)：最终5项离线回归PASS（17周期XML/实际helper、动态切换、真实Feedback接口与全局E1窗口、安全/未知与预算负例）；V1 E1接口ERROR及源码前像保留，新模块仅补fresh只读接口，旧cache未改。旧900离线回放72步/20setter相容，非新源码native900。首卡UA_FIXED300_S17_01/sha2c2330d4…；共同runtime源摘要900dcebb…绑定基线9eb95e29上的未提交新源码，不能称基线commit含新实现。536旧保护文件不变。尚无新SUMO/raw/canonical权限，独立审计与clean-checkout验证待完成；正式协议与资格状态不变。
+
+**2026-10-13 用户已批准统一ALINEA执行器范围及预算，现进入最小实现与离线验证。** [批准原文与绑定](../artifacts/unified_alinea_actuator_20261013_v1/USER_SCOPE_APPROVAL.json)绑定此前Proposed全文；独立分支 `codex/unified-alinea-actuator` 从PR13/head9eb95e29创建，不改上游PR。批准覆盖四个有界技术任务、周期/时钟适配、1272/1270/1266/1272终点和新总监控1200s/raw1.2GB；离线及逐卡工程→数据→科学门先于任何新SUMO。危险/UNKNOWN停止、原9+1.1及旧FAIL/STOP3保留。尚无新实现测试或原生运行结果；Stage6结项、A1 UNRESOLVED、Candidate A NOT_QUALIFIED及空未冻结正式协议保持。下方“待批准”记录为批准前历史。
+
+**2026-10-13 新目标：统一300–900执行器的实施/验收范围提案，待用户批准。** 只读核实PR13当前head `9eb95e29ccc85423084bc6945668cd36c3298b06`（Open/Draft），已整理[最小范围提案](development/UNIFIED_ALINEA_ACTUATOR_SCOPE_20261013.md)：不同整数周期、周期边界command应用/延迟核账与真实ALINEA闭环。此轮尚未实现/prepare/启动任何新仿真，未批准新运行数量/资源/控制参数或改变正式协议。工程、数据和科学意见仅用于Proposed方案；Stage6既有结项、A1 UNRESOLVED、Candidate A NOT_QUALIFIED保持。[该head的GitHub复审](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/pull/13#issuecomment-6134649519)已完成、无新增实质性finding，不代表统一执行器已实现或已资格。下一门为用户批准范围、技术终点、时钟适配和新资源预算。
+
+**2026-10-13 前序交付：原Draft PR #13的Reviewer P2相位顺序审计修复。** 用户授权仅基于既有TLS/ACK离线补连续G→y→r及转相时刻、回归和数据/科学复审，不新Issue、不SUMO、不改配时/guard/上游PR。新revision02唯一实际离线审计已PASS：九周期连续GGGGyyrr、72控制区间/ACK、完整phase/duration traces、8次r→G，C=pending=applied=E=N18不变；原95raw/旧revision01和49 native源/card均保留。4新回归方法/19负例PASS，首测试语法import失败版本保留。独立数据复审V2已冻结（17文件ceb41904…）；只读科学终审GO修复交付，无新增finding；干净checkout实测4项回归通过、raw仅.gitkeep；该修复在head9eb95e29的GitHub复审已完成，无新增实质性finding；内部GO和GitHub审查均不等于用户验收，未用户验收。完整raw审核仅本地，公开相位子集回归不等于完整raw审计或资格。阶段6既有结项、A1 UNRESOLVED、Candidate A NOT_QUALIFIED及空未冻结正式协议不变。[P2修订报告](development/ISSUE12_EXECUTION_POLICY_DELIVERY_20261012.md)。
 
 以下10/12交付摘要仅对应前序版本；本轮当前范围以上方10/13记录为准。
 
