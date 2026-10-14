@@ -1,0 +1,13 @@
+{
+  "command": ".venv/bin/python -B data/processed/cumulative_full_catalogue_followup_20261014_v1/native_dynamic_v2/audit_actual_V3.py --manifest artifacts/cumulative_full_catalogue_followup_20261014_v1/engineering/native_execution_v2/UA_CUMULATIVE_FULL_DYNAMIC_S17_01/RAW_FINAL_SHA256_V2.json --card artifacts/cumulative_full_catalogue_followup_20261014_v1/engineering/packages_v2/UA_CUMULATIVE_FULL_DYNAMIC_S17_01/card.json --output data/processed/cumulative_full_catalogue_followup_20261014_v1/native_dynamic_v2/audit_results_v3",
+  "session_id": 94214,
+  "exit_code": 1,
+  "status": "UNKNOWN_AUDIT_EXCEPTION",
+  "reason": "PACKET_SELECTION_NOT_OBSERVED_FIRST_G_ACK",
+  "analysis_sha256": "174ac700b073505ef1034ccb1be91be94d3c42060c9f988ead1c8a87afd89dd3",
+  "result_sha256": "c0a05b217c76578bb626d108ad089231a00af110469116de8f1609e01417fbc6",
+  "first_G_raw_PACKET_ACK_and_request_ACK_at1232": "MISSING_AFTER_RECONCILIATION_STOP_SKIPPED_EVENT_FLUSH",
+  "raw_original_bound_source_unchanged": true,
+  "native_runs_by_data_agent": 0,
+  "full_event_chain_PASS": false
+}

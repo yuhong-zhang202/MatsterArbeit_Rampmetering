@@ -1,0 +1,232 @@
+--- unchanged_reference/receiver_wait.py
++++ new_minqual/receiver_wait.py
+@@ -5,7 +5,7 @@
+ LOOKAHEAD_M = 478.67
+ MARGIN_M = 1.1
+ PATH_LANES = (INTERNAL, 'ramp_accel_0', ':freeway_merge_2_0', 'merge_section_0', 'merge_section_1', 'merge_section_2')
+-POLICY = 'ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1'
++POLICY = 'ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1'
+ 
+ 
+ def require(ok, reason):
+@@ -34,13 +34,15 @@
+     query={'vehicle_id':vid,'lane_id':lane,'time_s':time_s,'route':list(route),'lookahead_m':LOOKAHEAD_M,
+         'receiver_path_lanes':list(PATH_LANES),'path_geometry_m':geometry,'actual_speed_m_s':speed,
+         'lane_position_m':position,'vehicle_length_m':length,'min_gap_m':min_gap,'speed_mode':conn.vehicle.getSpeedMode(vid),'lane_change_mode':conn.vehicle.getLaneChangeMode(vid),
+-        'policy':POLICY,'margin_m':MARGIN_M,'future_safety_proven':False}
++        'policy':POLICY,'margin_m':MARGIN_M,'hard_margin_m':0.0,'margin_role':'ADVISORY_ONLY','future_safety_proven':False}
+     raw=conn.vehicle.getLeader(vid,LOOKAHEAD_M)  # This getter is deliberately not cached.
+     query['fresh_getLeader_result']=raw
+     empty=raw is None or (isinstance(raw,(tuple,list)) and len(raw)==2 and raw[0]=='' and type(raw[1]) in (int,float) and raw[1]==-1)
+     if empty:
+         require(allow_clear and expected_leader is None, 'UNKNOWN_MISSING_BOUND_LEADER')
+         query.update(status='CLEAR_WITHIN_OBSERVED_LOOKAHEAD', actual_secure_gap_m=None, gap_excluding_minGap_m=None,
++                     required_with_margin_m=None, required_hard_floor_m=None, hard_screen_pass=None, legacy_margin_pass=None,
++                     legacy_contract_status='CLEAR_WITHIN_OBSERVED_LOOKAHEAD', margin_classification='CLEAR_WITHIN_OBSERVED_LOOKAHEAD',
+                      claim_scope='fresh valid native empty result within fixed lookahead and bound route/path, not globally clear')
+         return query
+     require(isinstance(raw,(tuple,list)) and len(raw)==2 and isinstance(raw[0],str) and raw[0] and raw[0]!=vid, 'UNKNOWN_LEADER_SCHEMA')
+@@ -56,11 +58,16 @@
+     args={'vehID':vid,'speed':speed,'leaderSpeed':leader_speed,'leaderMaxDecel':emergency,'leaderID':leader}
+     secure=number(conn.vehicle.getSecureGap(**args),'CURRENT_SECURE_GAP')
+     bumper_gap=gap+min_gap
+-    passed=bumper_gap>0 and gap+1e-9>=secure+MARGIN_M
++    passed=bumper_gap>0 and gap+1e-9>=secure
++    legacy_passed=bumper_gap>0 and gap+1e-9>=secure+MARGIN_M
+     query.update(leader_id=leader,leader_lane_id=leader_lane,leader_speed_m_s=leader_speed,
+         leader_speed_mode=conn.vehicle.getSpeedMode(leader),leader_lane_change_mode=conn.vehicle.getLaneChangeMode(leader),
+         getSecureGap_args=args,actual_secure_gap_m=secure,gap_excluding_minGap_m=gap,physical_bumper_gap_m=bumper_gap,
+-        required_with_margin_m=secure+MARGIN_M,status='CURRENT_GAP_OBSERVED_WITHIN_BOUND' if passed else 'STOP_CURRENT_GAP_BOUND_DENIED')
++        required_with_margin_m=secure+MARGIN_M,required_hard_floor_m=secure,
++        hard_screen_pass=passed,legacy_margin_pass=legacy_passed,
++        legacy_contract_status='CURRENT_GAP_OBSERVED_WITHIN_BOUND' if legacy_passed else 'STOP_CURRENT_GAP_BOUND_DENIED',
++        margin_classification='WITHIN_LEGACY_MARGIN' if legacy_passed else 'EXTRA_MARGIN_ADVISORY' if passed else 'BELOW_NATIVE_QUERY_FLOOR',
++        status='CURRENT_GAP_OBSERVED_WITHIN_BOUND' if passed else 'STOP_CURRENT_GAP_BOUND_DENIED')
+     return query
+ 
+ 
+--- unchanged_reference/adapter.py
++++ new_minqual/adapter.py
+@@ -19,7 +19,7 @@
+     'X': ('cross_in', 'cross_out'),
+ }
+ PROFILE = 'NATIVE_PHASE_CURRENT_FOLLOWING_WAIT_DIAGNOSTIC_NOT_QUALIFIED'
+-from src.candidate_a_native_receiver_wait_20261012.receiver_wait import classify_receiver, current_following
++from src.candidate_a_dynamic_minqual_20261015.receiver_wait import classify_receiver, current_following
+ from src.candidate_a_cumulative_full_catalogue_20261014.policy import Ledger, parameters, yellow_scope
+ from src.candidate_a_issue12_packet_policy_20261012.body import BodyTracker
+ from src.candidate_a_unified_alinea_20261013 import numeric_stop
+--- unchanged_reference/bridge.py
++++ new_minqual/bridge.py
+@@ -12,14 +12,14 @@
+ import sys
+ import time
+ 
+-from src.candidate_a_cumulative_full_catalogue_20261014.adapter import StepAdapter, inventory, TLS, STORAGE, INGRESS, INTERNAL
+-from src.candidate_a_cumulative_full_followup_20261014.profile import ROOT,TASK,NETWORK,SUMO,sha,write_new,validate_release,require,APPROVED_BOUND_END
++from src.candidate_a_dynamic_minqual_20261015.adapter import StepAdapter, inventory, TLS, STORAGE, INGRESS, INTERNAL
++from src.candidate_a_dynamic_minqual_20261015.profile import ROOT,TASK,NETWORK,SUMO,sha,write_new,validate_release,require,APPROVED_BOUND_END
+ from src.candidate_a_native_smoke_20261011.bridge_logs import LogCapture
+ from src.candidate_a_t10_g5_y3_no_output_cap_20261013.resources import ResourceWatchdog
+ from src.candidate_a_unified_alinea_20261013.frame_cache import FrameCache
+ from src.candidate_a_cumulative_full_catalogue_20261014.policy import yellow_scope
+ from src.candidate_a_cumulative_full_catalogue_20261014.producer import Producer
+-from src.candidate_a_cumulative_full_followup_20261014 import budget
++from src.candidate_a_dynamic_minqual_20261015 import budget
+ from src.candidate_a_t10_g5_y3_audit_ready_20261013.telemetry import snapshot as identity_snapshot
+ 
+ 
+--- unchanged_reference/profile.py
++++ new_minqual/profile.py
+@@ -4,16 +4,16 @@
+ import xml.etree.ElementTree as ET
+ from src.candidate_a_unified_alinea_20261013 import profile as base
+ ROOT=base.ROOT;NETWORK=base.NETWORK;SUMO=base.SUMO
+-TASK=Path('artifacts/cumulative_full_catalogue_followup_20261014_v1/engineering')
+-USER=Path('artifacts/cumulative_full_catalogue_implementation_20261014_v1/USER_AUTONOMOUS_CONTINUATION_AUTHORITY_V1.json')
+-ROOT_SCOPE=Path('artifacts/cumulative_full_catalogue_followup_20261014_v1/ROOT_TECHNICAL_SCOPE_V1.json')
+-DESIGN=Path('artifacts/cumulative_full_catalogue_followup_20261014_v1/engineering/PLAN_V2.md')
+-SCIENCE=Path('artifacts/cumulative_full_catalogue_followup_20261014_v1/SCIENCE_PLAN_REVIEW_V1.md')
+-BASE='3e95c545fd63765d1c15489c943bd80a78f6fdd5'
++TASK=Path('artifacts/dynamic_minimum_qualification_20261015_v1/engineering')
++USER=Path('artifacts/dynamic_minimum_qualification_20261015_v1/USER_APPROVAL_V1.json')
++ROOT_SCOPE=USER
++DESIGN=Path('artifacts/dynamic_minimum_qualification_20261015_v1/REVIEWED_PROPOSAL_HANDOFF_V1.md')
++SCIENCE=Path('artifacts/dynamic_minimum_qualification_20261015_v1/SCIENCE_PROPOSED_CONTRACT_REVIEW_V1.md')
++BASE='ee5984024987e6cf7c6b2e571c083e06a9773a8b'
+ APPROVED_BOUND_END=1296
+-RUN='UA_CUMULATIVE_FULL_DYNAMIC_S17_01'
+-RUNS={RUN:('dynamic_commands',300),'UA_CUMULATIVE_FULL_ALINEA_S17_01':('real_alinea',900)}
+-RAW=Path('data/raw/cumulative_full_catalogue_followup_20261014_v1')
++RUN='UA_NATIVEGAP_DYNAMIC_S17_01'
++RUNS={RUN:('dynamic_commands',300),'UA_NATIVEGAP_ALINEA_S17_01':('real_alinea',900)}
++RAW=Path('data/raw/dynamic_minimum_qualification_20261015_v1')
+ DONOR=base.TASK/'packages/UA_FIXED750_S17_02'
+ sha=base.sha;write_new=base.write_new;require=base.require
+ 
+@@ -35,7 +35,9 @@
+         'requested_schedule':{'1200':300,'1201':750,'1226':900,'1237':300} if mode=='dynamic_commands' else None,
+         'feedback_reference':{'target_pct':11,'gain_veh_h_per_pct':70,'minimum_veh_h':300,'maximum_veh_h':900,'initial_veh_h':900,'sample_s':30,'global_activation_s':1200,'logical_activation_s':600,
+             'update_global_s':[1230,1260,1290],'detector_ids':['p1_main_down_20_l0','p1_main_down_20_l1']} if mode=='real_alinea' else None,
+-        'terminal_partial_allowed':True,'partial_final_cycle_allowed':True,'resources_provenance':'NEW_TWO_RUN_600S_ENVELOPE_REQUIRES_EXACT_RELEASE_NO_OLD_REMAINDER'}
++        'terminal_partial_allowed':True,'partial_final_cycle_allowed':True,'resources_provenance':'DIRECT_APPROVED_NEW600_SINGLE300_EXACT_RELEASE_REQUIRED_OLD_COST_SEPARATE',
++        'receiver_diagnostic_policy':'ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1',
++        'current_following_contract':{'policy':'ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1','hard_extra_margin_m':0.0,'legacy_advisory_margin_m':1.1,'leader_deceleration':'UNCHANGED_BOUND_EMERGENCY_QUERY','new_green_prospective':'UNCHANGED_STRICT','native_safety_proven':False}}
+ def output(run):spec(run);return RAW/run/'outputs'
+ def resources(run):
+     spec(run);return dict(wall_limit_s=300,startup_limit_s=60,run_limit_bytes=None,minimum_free_bytes=5000000000)
+@@ -43,10 +45,11 @@
+     old=json.loads((root/'artifacts/cumulative_full_catalogue_implementation_20261014_v1/engineering/packages_v1/UA_CUMULATIVE_FULL750_S17_01/card.json').read_text())['sources_sha256']
+     require(all(sha(root/p)==h for p,h in old.items()),'PROTECTED_PREVIOUS125_SOURCE_DRIFT')
+     d=dict(old)
+-    for folder in ('src/candidate_a_cumulative_full_followup_20261014','scripts/candidate_a_cumulative_full_followup_20261014_v1','tests/candidate_a_cumulative_full_followup_20261014'):
++    reference=Path('src/candidate_a_cumulative_full_followup_20261014/bridge.py');d[str(reference)]=sha(root/reference)
++    for folder in ('src/candidate_a_dynamic_minqual_20261015','scripts/candidate_a_dynamic_minqual_20261015_v1','tests/candidate_a_dynamic_minqual_20261015'):
+         for p in (root/folder).glob('*.py'):d[str(p.relative_to(root))]=sha(p)
+     for p in (Path('scripts/unified_alinea_audit_20261013_v1/core.py'),Path('scripts/unified_alinea_audit_20261013_v1/signal_binding_v2.py'),Path('data/processed/issue12_alinea_actuation_20261012_v1/audit_data_V3.py'),Path('artifacts/t10_g5_y3_candidate_20261013_v1/engineering/packages/UA_T10_G5Y3_FIXED750_S17_01/card.json'),Path('artifacts/t10_g5_y3_audit_ready_20261013_v1/engineering/packages_v4/UA_T10_G5Y3_FIXED750_S17_02/card.json'),USER,SCIENCE,DESIGN,ROOT_SCOPE):d[str(p)]=sha(root/p)
+-    audit=root/'scripts/cumulative_full_catalogue_followup_audit_20261014_v1'
++    audit=root/'scripts/dynamic_minimum_qualification_audit_20261015_v1'
+     require((audit/'actual.py').is_file() and (audit/'scope.py').is_file(), 'AUDIT_SOURCE_NOT_READY')
+     for p in audit.glob('*.py'):d[str(p.relative_to(root))]=sha(p)
+     return dict(sorted(d.items()))
+@@ -82,37 +85,37 @@
+     return {'status':'PASS_STATIC_RECEIPT_AND_FILE_HASH_ONLY','native_version_call':False,'native_module_import':False}
+ 
+ def prepare(run=RUN,root=ROOT):
+-    root=Path(root).resolve();sp=spec(run);package=root/TASK/'packages_v2'/run;out=root/output(run)
++    root=Path(root).resolve();sp=spec(run);package=root/TASK/'packages_v1'/run;out=root/output(run)
+     require(not out.parent.exists(),'ONE_USE_IDENTITY_CONSUMED')
+     card=package/'card.json'
+     if card.exists():validate(card,root);return card
+     donor=json.loads((root/DONOR/'card.json').read_text());check=static_environment(root,donor['environment'])
+     inherited=stage_package(root,package,out)
+-    data=dict(status='PREPARED_NOT_RELEASED',classification='OFFLINE_CUMULATIVE_TRACKING_NOT_NATIVE_AUTHORIZED',baseline_commit=BASE,
++    data=dict(status='PREPARED_NOT_RELEASED',classification='OFFLINE_PREPARED_APPROVED_SCOPE_NOT_RELEASED',baseline_commit=BASE,
+         spec=sp,package=str(package.relative_to(root)),output=str(output(run)),SUMO_execution_authorized=False,
+-        user_authorization={'path':str(USER),'sha256':sha(root/USER),'scope':'CONTINUING_AUTHORITY_REQUIRES_EXACT_CARD_CANONICAL_BINDING'},
++        user_authorization={'path':str(USER),'sha256':sha(root/USER),'scope':'DIRECT_APPROVED_CONTRACT_REQUIRES_EXACT_CARD_BINDING'},
+         sources_sha256=sources(root),common_runtime_source_sha256=common_source_digest(root),
+         inherited_inputs_sha256=inherited,prepared_input_sha256={str(p.relative_to(root)):sha(p) for p in package.iterdir() if p.is_file()},network_sha256=sha(root/NETWORK),
+         environment=donor['environment'],environment_provenance={'receipt':str(DONOR/'card.json'),'sha256':sha(root/DONOR/'card.json'),'fresh_static_check':check,'fresh_native_version_executed':False},
+-        resources=resources(run),resources_status='PROPOSED_NEW_SCOPE_NOT_APPROVED_FOR_NATIVE',
++        resources=resources(run),resources_status='APPROVED_SCOPE_PENDING_EXACT_RELEASE',
+         proposed_new_single_run_envelope={'monitored_s':300,'raw_bytes':None},new_two_run_envelope={'monitored_s':600,'raw_bytes':None},old_budget_remainder_not_execution_authorization=True,
+-        numerical_exception_authority={'enabled':False,'status':'PENDING_NEW_SCOPE_APPLICABILITY_AND_EXECUTION_APPROVAL','old_approval_reference':str(base.NUM_USER),'old_approval_sha256':sha(root/base.NUM_USER)},
++        numerical_exception_authority={'enabled':False,'status':'STRICT_NO_EXCEPTION','old_approval_reference':str(base.NUM_USER),'old_approval_sha256':sha(root/base.NUM_USER)},
+         observations={'N':None,'E':None,'actual_phase_exposure':None,'native_safety':None,'body_clearance':None,'future_mixed_population':None},
+-        audit_contract={'schema':'CUMULATIVE_FULL_C_N_V1','reader':'scripts/cumulative_full_catalogue_followup_audit_20261014_v1/actual.py','status':'FROZEN_NEW_READER_REVIEW_REQUIRED_BEFORE_RELEASE','NUM':'STRICT_NO_CONTINUE_CLASSIFICATION','EOF_and_terminal_arrival_audit':'MANDATORY_NO_SKIP'},
++        audit_contract={'schema':'CUMULATIVE_FULL_C_N_V1','reader':'scripts/dynamic_minimum_qualification_audit_20261015_v1/actual.py','status':'FROZEN_NEW_READER_REVIEW_REQUIRED_BEFORE_RELEASE','NUM':'STRICT_NO_CONTINUE_CLASSIFICATION','EOF_and_terminal_arrival_audit':'MANDATORY_NO_SKIP'},
+         binary_reference_provenance=donor['binary_reference_provenance'],source_binary_compiler_equivalence='NOT_VERIFIED',runtime_authorization_generated=False)
+     write_new(card,data);return card
+ 
+ def validate(card_path,root=ROOT,require_environment=False):
+-    root=Path(root).resolve();p=Path(card_path).resolve();c=json.loads(p.read_text());run=c['spec']['run_id'];spec(run);expected=root/TASK/'packages_v2'/run/'card.json'
++    root=Path(root).resolve();p=Path(card_path).resolve();c=json.loads(p.read_text());run=c['spec']['run_id'];spec(run);expected=root/TASK/'packages_v1'/run/'card.json'
+     require(p==expected,'FOREIGN_CANDIDATE_CARD')
+-    c=json.loads(p.read_text());require(c['status']=='PREPARED_NOT_RELEASED' and c['classification']=='OFFLINE_CUMULATIVE_TRACKING_NOT_NATIVE_AUTHORIZED' and c['baseline_commit']==BASE and c['spec']==spec(run),'CANDIDATE_SPEC_DRIFT')
++    c=json.loads(p.read_text());require(c['status']=='PREPARED_NOT_RELEASED' and c['classification']=='OFFLINE_PREPARED_APPROVED_SCOPE_NOT_RELEASED' and c['baseline_commit']==BASE and c['spec']==spec(run),'CANDIDATE_SPEC_DRIFT')
+     require(c['package']==str(expected.parent.relative_to(root)) and c['output']==str(output(run)),'CANDIDATE_PACKAGE_OUTPUT_DRIFT')
+     require(c['SUMO_execution_authorized'] is False and c['numerical_exception_authority']['enabled'] is False,'OFFLINE_OR_NUM_SCOPE_DRIFT')
+-    require(c['user_authorization']=={'path':str(USER),'sha256':sha(root/USER),'scope':'CONTINUING_AUTHORITY_REQUIRES_EXACT_CARD_CANONICAL_BINDING'},'OFFLINE_USER_BINDING_DRIFT')
++    require(c['user_authorization']=={'path':str(USER),'sha256':sha(root/USER),'scope':'DIRECT_APPROVED_CONTRACT_REQUIRES_EXACT_CARD_BINDING'},'OFFLINE_USER_BINDING_DRIFT')
+     require(c['spec']['scheduler']=='ACTUAL_C_MINUS_N_BOUNDARY_ONLY' and c['spec']['catalogue_periods_s']==list(range(8,25)),'OFFLINE_DESIGN_DRIFT')
+ 
+     require(c['sources_sha256']==sources(root) and c['common_runtime_source_sha256']==common_source_digest(root),'CANDIDATE_SOURCE_DRIFT')
+-    require(c['resources']==resources(run) and c['resources_status']=='PROPOSED_NEW_SCOPE_NOT_APPROVED_FOR_NATIVE','PROPOSED_RESOURCE_DRIFT')
++    require(c['resources']==resources(run) and c['resources_status']=='APPROVED_SCOPE_PENDING_EXACT_RELEASE','PROPOSED_RESOURCE_DRIFT')
+     require(c['new_two_run_envelope']=={'monitored_s':600,'raw_bytes':None} and c['proposed_new_single_run_envelope']=={'monitored_s':300,'raw_bytes':None},'SINGLE_COMBINED_ENVELOPE_DRIFT')
+     for key in ('inherited_inputs_sha256','prepared_input_sha256'):
+         for n,h in c[key].items():require(sha(root/n)==h,'CANDIDATE_INPUT_DRIFT '+n)
+@@ -143,13 +146,13 @@
+ 
+ def validate_release(card_path,release_path,root=ROOT):
+     root=Path(root).resolve();c=validate(card_path,root,require_environment=True);run=c['spec']['run_id']
+-    auth_path=root/TASK/'authorizations_v2'/run/'AUTHORIZATION_NATIVE_EXECUTION.json'
++    auth_path=root/TASK/'authorizations_v1'/run/'AUTHORIZATION_NATIVE_EXECUTION.json'
+     require(auth_path.is_file(),'FUTURE_EXACT_NATIVE_AUTHORIZATION_MISSING')
+     auth=json.loads(auth_path.read_text());expected=root/TASK/'releases'/run/'EXECUTION_RELEASE.json'
+     require(auth.get('SUMO_execution_authorized') is True and auth.get('run_id')==run and auth.get('card_sha256')==sha(Path(card_path)),'FUTURE_NATIVE_AUTHORIZATION_UNBOUND')
+     ref=Path(auth['human_authorization_reference']);require(not ref.is_absolute() and '..' not in ref.parts and ref!=USER,'CANNOT_INHERIT_OFFLINE_AUTHORITY')
+     human=json.loads((root/ref).read_text());require(sha(root/ref)==auth['human_authorization_sha256'],'FUTURE_HUMAN_APPROVAL_DRIFT')
+-    require(human.get('source')=='direct human explicit execution approval' and human.get('SUMO_execution_authorized') is True and
++    require(human.get('source')=='root exact-card binding under direct human approved scope' and human.get('approval_source_reference')==str(USER) and human.get('approval_source_sha256')==sha(root/USER) and human.get('SUMO_execution_authorized') is True and
+         human.get('run_id')==run and human.get('card_sha256')==sha(Path(card_path)) and human.get('common_runtime_source_sha256')==c['common_runtime_source_sha256'] and
+         human.get('end_s')==c['spec']['end_s'] and human.get('catalogue_periods_s')==list(range(8,25)) and human.get('mode')==c['spec']['mode'] and human.get('numerical_exception_enabled') is False and human.get('resources')==c['resources'] and human.get('resource_envelope')==c['proposed_new_single_run_envelope'] and human.get('combined_resource_envelope')==c['new_two_run_envelope'],
+         'FUTURE_HUMAN_RUN_SOURCE_STRICT_NUM_RESOURCE_APPROVAL_UNBOUND')
+@@ -161,7 +164,7 @@
+     for item in release['reviews'].values():require(sha(root/item['path'])==item['sha256'] and item.get('card_sha256')==sha(Path(card_path)),'FUTURE_REVIEW_HASH_OR_CARD_UNBOUND')
+     audit=release['reviews']['data']
+     require(audit.get('audit_contract')=='CUMULATIVE_FULL_C_N_V1' and
+-        audit.get('actual_reader_path')=='scripts/cumulative_full_catalogue_followup_audit_20261014_v1/actual.py' and
++        audit.get('actual_reader_path')=='scripts/dynamic_minimum_qualification_audit_20261015_v1/actual.py' and
+         sha(root/audit['actual_reader_path'])==audit.get('actual_reader_sha256'),
+         'CUMULATIVE_ACTUAL_READER_NOT_REVIEWED_AND_BOUND')
+     return c
+--- unchanged_reference/budget.py
++++ new_minqual/budget.py
+@@ -2,13 +2,13 @@
+ from pathlib import Path
+ import json, math
+ from src.candidate_a_issue12_packet_policy_20261012.budget import sha, require
+-from src.candidate_a_cumulative_full_followup_20261014.profile import RUNS
++from src.candidate_a_dynamic_minqual_20261015.profile import RUNS
+ TOTAL_WALL=600
+ TOTAL_BYTES=None
+ SINGLE_WALL=300
+ SINGLE_BYTES=None
+-RAW=Path('data/raw/cumulative_full_catalogue_followup_20261014_v1')
+-SETTLEMENTS=Path('artifacts/cumulative_full_catalogue_followup_20261014_v1/engineering/settlements')
++RAW=Path('data/raw/dynamic_minimum_qualification_20261015_v1')
++SETTLEMENTS=Path('artifacts/dynamic_minimum_qualification_20261015_v1/engineering/settlements')
+ 
+ 
+ def accounting(root):
+@@ -38,7 +38,7 @@
+     return dict(known_settled=known,unknown_reserved=unknown,charged_monitored_s=wall,
+         charged_raw_bytes=size,remaining_s=TOTAL_WALL-wall,remaining_bytes=None,
+         selected_total_limits={'wall_s':TOTAL_WALL,'bytes':TOTAL_BYTES},fixed_start_count_limit=None,
+-        scope='ONLY_NEW_TWO_FOLLOWUP_IDENTITIES; ALL_OLD_STAGES_EXCLUDED')
++        scope='ONLY_NEW_TWO_MINQUAL_IDENTITIES; ALL_OLD_STAGES_EXCLUDED')
+ 
+ 
+ def effective_limits(resources,bound):

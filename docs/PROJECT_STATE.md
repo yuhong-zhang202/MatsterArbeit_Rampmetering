@@ -1,11 +1,19 @@
 # Project State
 
-**Last updated:** 2026-10-14
+**Last updated:** 2026-10-15
 **Document role:** Current project snapshot. Replace stale operational information instead of using this file as a decision history.
 
 ## Current Phase
 
-**当前下一步：动态V2精确运行。** 后续reader的累计预算Major已由最小修复、旧规则真实FAIL／新受影响方法PASS及工程/data/science关闭。新卡dynamic68e9b2c、Feedbackf26cdd8，共同136源5d069519；旧V1卡/权限/源前像保留且拒绝误用。仅Dynamic获科学运行门GO，待canonical后唯一启动至1296（单300s、两run合计新600s）；Feedback需等Dynamic实际三方复审与结算。尚无这两项native结果。[当前交付](development/CUMULATIVE_DYNAMIC_FEEDBACK_DELIVERY_20261014.md)。
+**10/15最新：用户已明确批准已审方案，恢复最小动态资格工作。** 直接回复“批准，请继续”覆盖隔离实现中的current-following模型查询硬底线+额外1.1m告警，以及离线工程/数据/科学门后的1次新动态、仅动态实际技术通过后1次同版本短真实ALINEA；各300s/start60/free5GB/无固定字节上限/end1296，新增合计600s。旧147.815s和全部失败另账保留，不自动重试或扩矩阵。严格新G准入、原prospective结果与其它安全/UNKNOWN门不改；精确源码/卡和实际后审仍必要。当前实现/独立reader/新卡准备中，尚无新SUMO。该批准不冻结正式协议、不改变Stage6/A1或总体资格。[用户批准原文及范围](../artifacts/dynamic_minimum_qualification_20261015_v1/USER_APPROVAL_V1.json)。以下“待批准”文字为批准前历史快照。
+
+**10/15技术准备补项已完成：** followup审计器局部变量遮蔽与合法周期黄灯兼容两项必要修复已通过数据实现/验证→工程独立复核→科学终审。三项针对性方法一次PASS0.009s；旧125源、guard、运行配置、卡片与raw保持，旧动态STOP/缺ACK UNKNOWN不改判。完整新reader流水线未重跑，未来卡须重新绑定。合同变更与新仿真仍待明确批准；不追加无效检查或运行。[数据修复报告](../data/processed/dynamic_minimum_qualification_20261015_v1/reader_fix_v1/DATA_READER_FIX_REVIEW_V1.md)、[科学终审](../artifacts/dynamic_minimum_qualification_20261015_v1/SCIENCE_READER_FIX_REVIEW_V1.md)。
+
+**10/15当前交付：最小提案三方审查完成，待用户批准；新动态资格仍未通过。** 工程确认1.1m为V9停车线工程裕量，V10/WAIT有意沿用，当前实现一致，未查到官方/标定必要性。仅建议current-following保留同参数native-query硬筛查、额外1.1作告警，严格新G准入及其它真实安全/UNKNOWN门保留；这是未批准、未实现的停止合同变更。独立数据完成旧动态有限物理前缀后审（C169/24,N5,error49/24，缺两rawACK仍UNKNOWN）及必要日志修复审查。科学GO仅允许提案送审，无新SUMO/guard/card/release；模型查询不是未来安全证明。拟议一次动态通过后才一次同版本短ALINEA，需直接核C/N、应用延迟和正欠额恢复；最多新增2×300s仍为待批准资源，不以宽松数学界或程序结束替代服务证据。[已审交接包](../artifacts/dynamic_minimum_qualification_20261015_v1/REVIEWED_PROPOSAL_HANDOFF_V1.md)。正式协议/DECISIONS/Stage6/A1/总体NOT_QUALIFIED保持。
+
+**2026-10-15｜当前优先任务：动态执行器最小资格方案，尚无新仿真授权。** 按用户最新要求先核实额外1.1m裕量的来源、原用途及实现一致性，形成有SUMO官方机制支持的最小处理方案并完成离线工程/数据/科学审查。后续仅计划同一执行器的300→750→900→300切换、应用延迟和独立实际放行核账；技术成功后才考虑一次短真实ALINEA。新安全合同和具体新运行均未由该要求自动批准，不沿用10/14自主推进文字绕过本次“未经授权不启动”。核心验收为原始累计请求C与真实N及残差、延迟和partial/pending支持，不能以程序退出或E=N替代。无新矩阵、瞬时零误差要求或正式协议变更；如规则/服务限制不能在合理范围解决则报告并停止无效调试。[直接任务范围](../artifacts/dynamic_minimum_qualification_20261015_v1/USER_SCOPE_V1.json)。以下为已发生运行及历史交付状态。
+
+**当前调查：Dynamic V2在1233秒跟车间距检查STOP。** 唯一native CLI61749/SUMO61776，监控147.815s<300、CLI1/nativeEOF0；未到1296，非预算故障。工程初核两完整T24/T8 E4/N4，第三T8仅1G/N1，整体C169/24、E4/N5、R_flow.4车尾截断；部分观察不能当完整dynamic验证。原300请求切换1237尚未到达。正在冻结原始证据并按工程→data→science核对具体前后车／间距／公式及机制，不盲目重试或改guard；ALINEA未启动。预算分层Major已关闭，旧V1证据保持；本次为新的实际间距停止，需要独立调查。[已审实施](development/CUMULATIVE_DYNAMIC_FEEDBACK_DELIVERY_20261014.md)。
 
 **2026-10-14｜完整目录750实际节点完成，工程→data→science限定GO。** 新`UA_CUMULATIVE_FULL750_S17_01`一次到1296、CLI/nativeEOF0、监控188.243s；精确卡da64599b/125源c4787966。独立reader一次exit0，十完整包[10,9,10,9,10]×2，两48秒各C=applied=E=N10，合96秒20辆，实际750veh/h。20车尾/1374正常离网末步/TLSACK/黄灯/EOF限定核查通过；末AFTER单来源保留。原8/10版本1272UNKNOWN与全部失败不改。当前750有限机制已证实，长期／其他请求历史／真实Feedback的适用性Major仍开放；不是全范围或安全／服务资格。两张同政策动态和真实Feedback卡的方案已获工程/data/science限定GO，现实施隔离的最小接线及独立reader，尚无第二次native启动；各固定1296、300s，合计新600s，保留partial/null/安全STOP，不增加17档矩阵。用户已持续授权负责人推进必要技术工作与SUMO，不等待重复逐卡回复，仍保留三方／精确版本／资源／唯一身份及安全UNKNOWN门。[完整报告](development/CUMULATIVE_FULL_CATALOGUE_NATIVE_REPORT_20261014.md)、[直接授权](../artifacts/cumulative_full_catalogue_implementation_20261014_v1/USER_AUTONOMOUS_CONTINUATION_AUTHORITY_V1.json)。以下旧运行记录为历史证据。
 

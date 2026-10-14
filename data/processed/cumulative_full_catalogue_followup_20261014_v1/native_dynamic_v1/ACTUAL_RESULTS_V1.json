@@ -1,0 +1,8 @@
+{
+  "status": "UNKNOWN_AUDIT_EXCEPTION",
+  "exception_type": "UnboundLocalError",
+  "reason": "cannot access local variable 'terminal' where it is not associated with a value",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/cumulative_full_catalogue_followup_audit_20261014_v1/actual.py\", line 196, in main\n    try:result=audit(args.manifest,args.card)\n               ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/cumulative_full_catalogue_followup_audit_20261014_v1/actual.py\", line 91, in audit\n    result=terminal.audit_terminal(q,trip_by[q['vehicle_id']],lanes);arrivals.append(result)\n           ^^^^^^^^\nUnboundLocalError: cannot access local variable 'terminal' where it is not associated with a value\n",
+  "native_safety_proven": false,
+  "rate_qualified": false
+}

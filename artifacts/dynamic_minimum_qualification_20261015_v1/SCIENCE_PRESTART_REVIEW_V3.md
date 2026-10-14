@@ -1,0 +1,13 @@
+# Read-only scientific prestart review V3
+
+2026-10-15. Root-saved faithful receipt from simulation-project scientific_reviewer /root/budget_cycle_design_science. No tests, native simulation or file writes were performed by the reviewer.
+
+Disposition: **GO_FOR_ONE_AUTHORIZED_DYNAMIC_DIAGNOSTIC_AFTER_CANONICAL_ONLY**. No unresolved Blocker, Major or substantive Minor. Only one UA_NATIVEGAP_DYNAMIC_S17_01 may proceed after exact canonical/live gates; this does not release ALINEA or establish safety/service qualification.
+
+Reviewer refreshed AGENTS, current STATE, DECISIONS D018/D019, WORKLOG and empty/unfrozen protocol. Stage6 closure, A1 UNRESOLVED, Candidate A NOT_QUALIFIED and no formal authorization remain. Exact V3 Dynamic card4afd7e4fb7b39b87ec7d4033840293eef15b45e732c0a2285aca17dcc4283d13; conditional ALINEA287ba1cfcc4fc3fd7909d6c7af21fec5463d81030fe16ae4a7645cbf7a46aa21; shared141dfdddab74a862903ba75b3c8a4a9a7953e827cee6f049dc086f2bcb5fccb3cc7. All12 final data bindings matched. Imported yellow555614050be6cf497903d8ff541d1139b4ea57d27a0296efaabebfd85dbe4f98 is explicitly bound. V1/V2 evidence remains historical, never release eligible.
+
+Approved delta is only current-following: same-argument native query hard floor, full legacy+1.1 advisory and old strict result retained. Strict newG/prospective and all other identity, vehicle, receiving-space, phase, yellow, red, braking, collision, body, NUM and UNKNOWN stops remain. Query PASS is not a future safety proof.
+
+Independent tracking separates originalC, actualN, completeE, selector residual, intra-packet request changes and physical service shortfall. Four actual applications/delays and positive-debt recovery after final300 require native evidence. Reader exit0, E=N or an explainable discrepancy alone do not establish tracking. Five measurement checks: target and independent accounting adequate offline; static coverage/identity/omission and regression safeguards sufficient for prestart only; actual native coverage/behavior still unverified. Single300 and combinednew600 remain distinct.
+
+Root may bind exact approved V3 Dynamic under direct human approval, confirm unused identity/disk/source and launch once to1296 with wall300/start60/free5GB/no bytecap. Anomaly/UNKNOWN stops; no automaticretry. ALINEA remains locked until actual Dynamic technical success plus engineering→data→science postreview and settlement. Old1233 STOP/missing2ACK UNKNOWN/raw failures preserved. Private branch/source-binary equivalence, terminalAFTER single-journal pool limit, long-run/full-range service and general safety remain unresolved. No new A1 proof or matrix is required.

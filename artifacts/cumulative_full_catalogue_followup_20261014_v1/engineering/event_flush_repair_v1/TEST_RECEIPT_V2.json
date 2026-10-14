@@ -1,0 +1,16 @@
+{
+  "full_new_logging_suite_command": ".venv/bin/python -m unittest tests.candidate_a_cumulative_full_followup_20261014.test_stop_journal -v",
+  "V1_result": "2PASS_1ERROR",
+  "V1_seconds": 0.004,
+  "V1_ERROR": "Tiny test FrameCache facade missing stats; not production fault",
+  "V1_preimages_preserved": true,
+  "affected_recheck_command": ".venv/bin/python -m unittest tests.candidate_a_cumulative_full_followup_20261014.test_stop_journal.StopJournalTests.test_real_loop_stop_persists_created_ACK_without_another_step -v",
+  "V2_result": "PASS_ONE_AFFECTED_METHOD",
+  "V2_seconds": 0.002,
+  "other_two_methods_reused_by_unchanged_function_body": true,
+  "runtime_bridge_hash_tested": "ae40d38a4f46c5a9de4ec64083563339363338599f9afcf7b5e52bc350bffddd",
+  "current_test_hash": "f4f307a6ddaaab271c62f2c9ebcb6640918b2fda4ad660ee487dd7d541cec68d",
+  "scope": "Logging-only synthetic facade, realLedger-created events; actual vehicle predicates not exercised by this small suite",
+  "native_runs": 0,
+  "policy_guard_phase_tolerance_change": false
+}

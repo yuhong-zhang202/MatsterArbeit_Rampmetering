@@ -1,0 +1,9 @@
+# Exact prepared-card classification compatibility repair V2
+
+2026-10-15. Initial exact packages_v1 card readback rejected both cards with EXACT_FOLLOWUP_CLOCK: the new runtime intentionally labels the approved prepared scope OFFLINE_PREPARED_APPROVED_SCOPE_NOT_RELEASED while the new analysis scope still inherited an older offline classification literal. The V1 FAIL is preserved at implementation_v1/FINAL_CARD_READBACK_V1.json. This was an analysis schema defect, not a native or safety failure.
+
+Only one classification string in new scope.py changed. No other predicate, actual reader, query comparison, tracking rule, old source, raw, card or runtime changed. Old scope bytes are SCOPE_PREIMAGE_V1.py and the exact one-line diff is retained. Both current packages_v1 card schemas now pass this affected scope check; unrelated classification remains rejected. Because the card source binding includes the former scope bytes, the packages_v1 cards are historical and require new packages_v2 binding before use. This report is not final-card or execution approval.
+
+Actual command: python3 -m unittest discover -s tests/dynamic_minimum_qualification_audit_20261015 -p test_exact_cards.py -v. One method PASS,0.002 s, exit0. No broad suite/native rerun. The same method read both actual prepared card JSON files and rejected an unrelated classification. ReceiptV2 initially hand-transcribed0.001 s; receiptV3 corrects that metadata to the exact0.002 s log without overwriting V2 or rerunning the test.
+
+Prior three-method offline checks remain applicable to unchanged accounting/current-gap/tracking code. No complete native actual pipeline has run. Pending: final packages_v2 exact source/card readback and required scientific review. Original historical Dynamic STOP/ACK UNKNOWN remain unchanged; ALINEA remains conditional on actual new dynamic success and review.

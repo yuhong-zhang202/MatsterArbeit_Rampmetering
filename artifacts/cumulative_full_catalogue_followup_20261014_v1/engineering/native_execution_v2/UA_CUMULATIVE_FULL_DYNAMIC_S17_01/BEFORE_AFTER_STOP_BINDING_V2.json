@@ -1,0 +1,106 @@
+{
+  "run_id": "UA_CUMULATIVE_FULL_DYNAMIC_S17_01",
+  "source_PRE_path": "data/raw/cumulative_full_catalogue_followup_20261014_v1/UA_CUMULATIVE_FULL_DYNAMIC_S17_01/outputs/pre_steps.jsonl",
+  "source_PRE_sha256": "96cb9366871b121bd617d3828ac575f87c202028b268590094425c0ab61e4c44",
+  "PRE_time_s": 1232,
+  "before_world": {
+    "R_flow.4": {
+      "role": "R",
+      "speed_m_s": 0.12910476292727474,
+      "lane_id": "ramp_storage_0"
+    },
+    "R_flow.5": {
+      "role": "R",
+      "speed_m_s": 4.3065782885861825,
+      "lane_id": "ramp_storage_0"
+    }
+  },
+  "before_signal": {
+    "program": "I12_PACKET8",
+    "phase_before": 2,
+    "state_before": "r",
+    "next_switch_before_s": 1232.0,
+    "motion": "G"
+  },
+  "after_world": {
+    "R_flow.4": {
+      "role": "R",
+      "speed_m_s": 1.7651507424261603,
+      "lane_id": ":ramp_mid_0_0"
+    },
+    "R_flow.5": {
+      "role": "R",
+      "speed_m_s": 1.022884125080513,
+      "lane_id": "ramp_storage_0"
+    }
+  },
+  "actual_post_ACK_s": 1233,
+  "post_query": {
+    "vehicle_id": "R_flow.5",
+    "lane_id": "ramp_storage_0",
+    "time_s": 1233,
+    "route": [
+      "urban_in",
+      "shared_approach",
+      "ramp_storage",
+      "ramp_accel",
+      "merge_section",
+      "main_down"
+    ],
+    "lookahead_m": 478.67,
+    "receiver_path_lanes": [
+      ":ramp_mid_0_0",
+      "ramp_accel_0",
+      ":freeway_merge_2_0",
+      "merge_section_0",
+      "merge_section_1",
+      "merge_section_2"
+    ],
+    "path_geometry_m": {
+      "ramp_storage_0": 204.49,
+      ":ramp_mid_0_0": 81.98,
+      "ramp_accel_0": 99.07,
+      ":freeway_merge_2_0": 3.11,
+      "merge_section_0": 294.51,
+      "merge_section_1": 294.51,
+      "merge_section_2": 294.51
+    },
+    "actual_speed_m_s": 1.022884125080513,
+    "lane_position_m": 195.61547754834876,
+    "vehicle_length_m": 5.0,
+    "min_gap_m": 2.5,
+    "speed_mode": 31,
+    "lane_change_mode": 1621,
+    "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+    "margin_m": 1.1,
+    "future_safety_proven": false,
+    "fresh_getLeader_result": [
+      "R_flow.4",
+      2.0951522156549345
+    ],
+    "leader_id": "R_flow.4",
+    "leader_lane_id": ":ramp_mid_0_0",
+    "leader_speed_m_s": 1.7651507424261603,
+    "leader_speed_mode": 31,
+    "leader_lane_change_mode": 1621,
+    "getSecureGap_args": {
+      "vehID": "R_flow.5",
+      "speed": 1.022884125080513,
+      "leaderSpeed": 1.7651507424261603,
+      "leaderMaxDecel": 9.0,
+      "leaderID": "R_flow.4"
+    },
+    "actual_secure_gap_m": 1.022884125080513,
+    "gap_excluding_minGap_m": 2.0951522156549345,
+    "physical_bumper_gap_m": 4.5951522156549345,
+    "required_with_margin_m": 2.122884125080513,
+    "status": "STOP_CURRENT_GAP_BOUND_DENIED"
+  },
+  "native_counters": {
+    "colliding_vehicles": 0,
+    "starting_teleports": 0,
+    "ending_teleports": 0
+  },
+  "legacy_braking_reasons": [],
+  "source_snapshot_field_scope": "Selected raw fields only; post after alpha/query values unmodified, private next motion unknown"
+}

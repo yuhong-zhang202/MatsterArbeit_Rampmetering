@@ -1,0 +1,41 @@
+{
+  "run_id": "UA_CUMULATIVE_FULL_DYNAMIC_S17_01",
+  "card_sha256": "68e9b2c73d7164a1bd10199e77ca43bcb42332e680a240b0828091ec45a3ed34",
+  "source_digest": "5d0695195a2062f4708f455b227901b9084a76acca86dc81b34cc59e93d6d85e",
+  "source_count": 136,
+  "release_sha256": "8082adc87d27902e7643bc8db4c98cb6a1d49fcff27c1af2b948a4488905f1a7",
+  "actual_git_HEAD": "ee5984024987e6cf7c6b2e571c083e06a9773a8b",
+  "necessity": "Actual original dynamic300-750-900-300 commands and boundary application under same cumulative policy; no fixed750 rerun",
+  "native_started": false,
+  "sole_starter_assigned_start": 1,
+  "end_s": 1296,
+  "single_resources": {
+    "wall_limit_s": 300,
+    "startup_limit_s": 60,
+    "run_limit_bytes": null,
+    "minimum_free_bytes": 5000000000
+  },
+  "new_combined_budget_before": {
+    "known_settled": {},
+    "unknown_reserved": [],
+    "charged_monitored_s": 0.0,
+    "charged_raw_bytes": 0,
+    "remaining_s": 600.0,
+    "remaining_bytes": null,
+    "selected_total_limits": {
+      "wall_s": 600,
+      "bytes": null
+    },
+    "fixed_start_count_limit": null,
+    "scope": "ONLY_NEW_TWO_FOLLOWUP_IDENTITIES; ALL_OLD_STAGES_EXCLUDED"
+  },
+  "fresh_disk_bytes": 32877416448,
+  "command": [
+    ".venv/bin/python",
+    "scripts/candidate_a_cumulative_full_followup_20261014_v1/cli.py",
+    "--execute",
+    "artifacts/cumulative_full_catalogue_followup_20261014_v1/engineering/packages_v2/UA_CUMULATIVE_FULL_DYNAMIC_S17_01/card.json",
+    "--release",
+    "artifacts/cumulative_full_catalogue_followup_20261014_v1/engineering/releases/UA_CUMULATIVE_FULL_DYNAMIC_S17_01/EXECUTION_RELEASE.json"
+  ]
+}

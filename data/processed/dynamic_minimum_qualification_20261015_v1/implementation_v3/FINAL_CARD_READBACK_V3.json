@@ -1,0 +1,61 @@
+{
+  "status": "GO_FOR_EXACT_SCIENTIFIC_AND_EXECUTION_RELEASE_REVIEW_ONLY",
+  "cards": [
+    {
+      "run_id": "UA_NATIVEGAP_DYNAMIC_S17_01",
+      "card": "artifacts/dynamic_minimum_qualification_20261015_v1/engineering/packages_v3/UA_NATIVEGAP_DYNAMIC_S17_01/card.json",
+      "card_sha256": "4afd7e4fb7b39b87ec7d4033840293eef15b45e732c0a2285aca17dcc4283d13",
+      "mode": "dynamic_commands",
+      "source_count": 141,
+      "common_source_sha256": "dfdddab74a862903ba75b3c8a4a9a7953e827cee6f049dc086f2bcb5fccb3cc7",
+      "five_reader_dependencies_sha256": {
+        "scripts/dynamic_minimum_qualification_audit_20261015_v1/current_gap.py": "6d4fe7be2094def0a9a689188d43b79d683bcb0ff76d574f7d203efdb221e093",
+        "scripts/dynamic_minimum_qualification_audit_20261015_v1/tracking.py": "e589e99dafc37ca609a5de689e7c4ea4133db561c1771174ffa9ff0ef5f72c23",
+        "scripts/dynamic_minimum_qualification_audit_20261015_v1/scope.py": "d3e1b07a111ba955769fb9c3a35f1c886d1b370ac67973f1ba4978f5cb6366ff",
+        "scripts/dynamic_minimum_qualification_audit_20261015_v1/actual.py": "d5d3b7257905dbf02bb1340c330bc06753fe1ac624d2b11c39f6e77bdde7d81f",
+        "scripts/cumulative_full_catalogue_followup_audit_20261014_v1/yellow.py": "555614050be6cf497903d8ff541d1139b4ea57d27a0296efaabebfd85dbe4f98"
+      },
+      "sources_inputs_approval_checked": true,
+      "observations": {
+        "N": null,
+        "E": null,
+        "actual_phase_exposure": null,
+        "native_safety": null,
+        "body_clearance": null,
+        "future_mixed_population": null
+      },
+      "no_native_raw": true,
+      "status": "PASS_EXACT_PREPARED_CARD_WITH_YELLOW_DEPENDENCY"
+    },
+    {
+      "run_id": "UA_NATIVEGAP_ALINEA_S17_01",
+      "card": "artifacts/dynamic_minimum_qualification_20261015_v1/engineering/packages_v3/UA_NATIVEGAP_ALINEA_S17_01/card.json",
+      "card_sha256": "287ba1cfcc4fc3fd7909d6c7af21fec5463d81030fe16ae4a7645cbf7a46aa21",
+      "mode": "real_alinea",
+      "source_count": 141,
+      "common_source_sha256": "dfdddab74a862903ba75b3c8a4a9a7953e827cee6f049dc086f2bcb5fccb3cc7",
+      "five_reader_dependencies_sha256": {
+        "scripts/dynamic_minimum_qualification_audit_20261015_v1/current_gap.py": "6d4fe7be2094def0a9a689188d43b79d683bcb0ff76d574f7d203efdb221e093",
+        "scripts/dynamic_minimum_qualification_audit_20261015_v1/tracking.py": "e589e99dafc37ca609a5de689e7c4ea4133db561c1771174ffa9ff0ef5f72c23",
+        "scripts/dynamic_minimum_qualification_audit_20261015_v1/scope.py": "d3e1b07a111ba955769fb9c3a35f1c886d1b370ac67973f1ba4978f5cb6366ff",
+        "scripts/dynamic_minimum_qualification_audit_20261015_v1/actual.py": "d5d3b7257905dbf02bb1340c330bc06753fe1ac624d2b11c39f6e77bdde7d81f",
+        "scripts/cumulative_full_catalogue_followup_audit_20261014_v1/yellow.py": "555614050be6cf497903d8ff541d1139b4ea57d27a0296efaabebfd85dbe4f98"
+      },
+      "sources_inputs_approval_checked": true,
+      "observations": {
+        "N": null,
+        "E": null,
+        "actual_phase_exposure": null,
+        "native_safety": null,
+        "body_clearance": null,
+        "future_mixed_population": null
+      },
+      "no_native_raw": true,
+      "status": "PASS_EXACT_PREPARED_CARD_WITH_YELLOW_DEPENDENCY"
+    }
+  ],
+  "native_runs": 0,
+  "tests_rerun": false,
+  "superseded_v2_limit": "V2 lacked direct imported followup yellow in source binding; V2 report preserved but not release eligible.",
+  "actual_pipeline_executed": false
+}

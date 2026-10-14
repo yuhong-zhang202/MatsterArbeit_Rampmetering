@@ -1,0 +1,38 @@
+{
+  "original_bound_reader": {
+    "path": "scripts/cumulative_full_catalogue_followup_audit_20261014_v1/actual.py",
+    "executed_sha256": "079ed69575bff44454ed361862f38d4b40cb6df48f3f897d4e107711ec9ba5c4",
+    "session_id": 12458,
+    "exit_code": 1,
+    "result": "native_dynamic_v1/ACTUAL_RESULTS_V1.json",
+    "failure": "UnboundLocalError terminal variable shadowing; no original reader PASS"
+  },
+  "corrected_analysis": {
+    "session_id": 94214,
+    "exit_code": 1,
+    "result": "native_dynamic_v2/audit_results_v3/ACTUAL_RESULTS_V1.json",
+    "failure": "PACKET_SELECTION_NOT_OBSERVED_FIRST_G_ACK; missing two raw command application ACKs"
+  },
+  "bounded_V4": {
+    "session_id": 31898,
+    "exit_code": 1,
+    "failure": "YELLOW_PERIOD; valid observed Y5 omitted by old audit schema"
+  },
+  "bounded_V5": {
+    "session_id": 97427,
+    "exit_code": 1,
+    "failure": "CARD_BOUND_SOURCE_INPUT_DRIFT; approved new logging repair changed live bridge before historical audit finished"
+  },
+  "bounded_V6": {
+    "command": ".venv/bin/python -B data/processed/cumulative_full_catalogue_followup_20261014_v1/native_dynamic_v3/audit_physical_prefix_V6.py",
+    "session_id": 74443,
+    "exit_code": 1,
+    "status": "UNKNOWN_RAW_COMMAND_ACK_COVERAGE_WITH_OBSERVED_PHYSICAL_PREFIX_AND_STOP",
+    "historical_source_inputs": "all136source+6input immutable snapshot hashes AND rawmanifest verified, live future bridge drift disclosed",
+    "Y5": "separate same-state formulas, exactT24/Y5 only; protected whitelist retained",
+    "application900": "derived physical TLS/dualACK/program/link/switch binding, not a raw ACK event"
+  },
+  "preaudit_output_failure": "native_dynamic_v2/OUTPUT_PREFLIGHT_FAILURE_V1.json retained; failed before raw audit, corrected only output child directory",
+  "native_runs_by_data_agent": 0,
+  "no_global_PASS_claim": true
+}

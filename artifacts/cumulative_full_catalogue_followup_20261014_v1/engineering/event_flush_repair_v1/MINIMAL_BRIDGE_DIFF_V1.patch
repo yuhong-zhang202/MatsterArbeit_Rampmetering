@@ -1,0 +1,71 @@
+--- executed V2 bridge
++++ event-journal repaired bridge
+@@ -175,17 +175,47 @@
+         append_new(output/'yellow_scope.jsonl',record)
+ 
+ 
++def _flush_observed_events(adapter, producer, output, cursors):
++    """Persist only existing events; retain each successful row's cursor."""
++    for key, events, filename in (
++        ('command', adapter.ledger.events, 'command_events.jsonl'),
++        ('feedback', producer.events, 'feedback_events.jsonl')):
++        while cursors[key] < len(events):
++            append_new(output/filename, events[cursors[key]])
++            cursors[key] += 1
++
++
++def _retain_reconcile_stop(adapter, producer, output, cursors, stop_row, original):
++    """Durable observed events on STOP, without masking the original failure."""
++    try:
++        _flush_observed_events(adapter, producer, output, cursors)
++        append_new(output/'post_steps.jsonl', stop_row)
++    except Exception as logging_error:
++        detail = {'status':'UNKNOWN_STOP_EVENT_LOGGING',
++            'original_stop':type(original).__name__+':'+str(original),
++            'logging_error':type(logging_error).__name__+':'+str(logging_error),
++            'successful_row_cursors':dict(cursors),
++            'command_events_created':len(adapter.ledger.events),
++            'feedback_events_created':len(producer.events),
++            'uncertain_write_not_retried':True,'no_additional_motion':True}
++        detail_error = ''
++        try:
++            with (output/'stop_event_logging_failure.json').open('x') as file:
++                file.write(json.dumps(detail,allow_nan=False)+'\n')
++                file.flush();os.fsync(file.fileno())
++        except Exception as record_error:
++            detail_error = ';error_record_unknown:'+type(record_error).__name__+':'+str(record_error)
++        raise RuntimeError('UNKNOWN_STOP_EVENT_LOGGING;original='+detail['original_stop']+
++            ';logging='+detail['logging_error']+detail_error) from original
++
++
+ def _diagnostic_loop(conn, worker, capture, output, resources, process, start_time, adapter=None, producer=None):
+     """Private post-release loop; fake tests inject here, not a public launch API."""
+     adapter=adapter or StepAdapter(worker.observe)
+     producer=producer or Producer('fixed750',750)
+-    command_cursor=feedback_cursor=0
++    event_cursors={'command':0,'feedback':0}
+     def flush_events():
+-        nonlocal command_cursor,feedback_cursor
+-        for row in adapter.ledger.events[command_cursor:]:append_new(output/'command_events.jsonl',row)
+-        command_cursor=len(adapter.ledger.events)
+-        for row in producer.events[feedback_cursor:]:append_new(output/'feedback_events.jsonl',row)
+-        feedback_cursor=len(producer.events)
++        _flush_observed_events(adapter,producer,output,event_cursors)
+     conn=FrameCache(conn)
+     adapter.query_cache_stats=conn.stats
+     phase_requests=[]
+@@ -252,9 +282,12 @@
+         after=capture.snapshot(t,t+1,'AFTER_SIMULATION_STEP_ACK')
+         append_new(output/'log_intervals.jsonl',after)
+         try:row=adapter.reconcile_step(conn,capture.adapter_warning(after))
+-        except Exception:
+-            append_new(output/'post_steps.jsonl',{'time_s':t,'retained_receipts':[r for r in adapter.receipts if r.get('time_begin_s')==t] ,'pending':adapter.pending,'last_completed_s':adapter.last_completed,'last_accounted_s':adapter.last_end})
++        except Exception as original_stop:
++            stop_row={'time_s':t,'retained_receipts':[r for r in adapter.receipts if r.get('time_begin_s')==t] ,'pending':adapter.pending,'last_completed_s':adapter.last_completed,'last_accounted_s':adapter.last_end}
++            _retain_reconcile_stop(adapter,producer,output,event_cursors,stop_row,original_stop)
+             raise
++        # Preserve the actual command ACK before later telemetry can fail.
++        flush_events()
+         append_new(output/'post_steps.jsonl',row)
+         producer.after_ack(conn,t+1)
+         flush_events()

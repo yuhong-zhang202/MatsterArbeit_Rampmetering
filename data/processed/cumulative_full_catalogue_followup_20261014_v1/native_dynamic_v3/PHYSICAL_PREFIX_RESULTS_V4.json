@@ -1,0 +1,82 @@
+{
+  "status": "UNKNOWN_PREFIX_COLLECTOR_EXCEPTION",
+  "reason": "YELLOW_PERIOD",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/cumulative_full_catalogue_followup_20261014_v1/native_dynamic_v3/audit_physical_prefix_V4.py\", line 35, in <module>\n    result=m.audit(ENG/'RAW_FINAL_SHA256_V2.json',CARD)\n  File \"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/cumulative_full_catalogue_followup_20261014_v1/native_dynamic_v2/audit_actual_V3.py\", line 148, in audit\n    yellow_summary=yellow_coverage(yellow,phase,account['cycles'],post,pre,last,prefix_stop)\n  File \"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/cumulative_full_catalogue_audit_20261014_v1/evidence.py\", line 131, in yellow_coverage\n    yellow_record(q,cycles,post[t-1]['post_world'],pre[t]['bound_snapshot']['terminal_before'],last)\n    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/cumulative_full_catalogue_audit_20261014_v1/evidence.py\", line 65, in yellow_record\n    Y=selected[0]['yellow_s'];need(yy['yellow_s']==Y and Y in (2,3),'YELLOW_PERIOD')\n                              ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/t10_g5_y3_audit_20261013_v1/core.py\", line 13, in need\n    if not ok:raise ValueError(why)\n              ^^^^^^^^^^^^^^^^^^^^^\nValueError: YELLOW_PERIOD\n",
+  "derived_physical_bindings": [
+    {
+      "request_id": "scheduled:1226",
+      "cycle_begin_s": 1232,
+      "first_G_ACK_s": 1233,
+      "raw_PACKET_ACK_present": false,
+      "raw_request_ACK_present": false,
+      "classification": "DERIVED_PHYSICAL_BINDING_ONLY_RAW_COMMAND_ACK_UNKNOWN",
+      "actual_TLS": {
+        "time": "1232.000",
+        "id": "ramp_mid",
+        "programID": "I12_PACKET8",
+        "phase": "0",
+        "state": "G"
+      },
+      "two_actual_ACKs": [
+        {
+          "requested_target_s": 1233,
+          "ACK_received": true,
+          "actual_readback_s": null,
+          "actual_time_verified": false
+        },
+        {
+          "requested_target_s": 1233,
+          "ACK_received": true,
+          "actual_readback_s": 1233.0,
+          "actual_time_verified": true
+        }
+      ],
+      "post_signal_binding": {
+        "ACK_s": 1233,
+        "actual_phase": 0,
+        "actual_state": "G",
+        "actual_program": "I12_PACKET8",
+        "actual_controlled_links": [
+          [
+            [
+              "ramp_storage_0",
+              "ramp_accel_0",
+              ":ramp_mid_0_0"
+            ]
+          ]
+        ],
+        "expected_phase": 0,
+        "expected_state": "G",
+        "expected_program": "I12_PACKET8",
+        "status": "BOUND_BEFORE_LEDGER"
+      },
+      "post_clock": {
+        "phase_before": 2,
+        "state_before": "r",
+        "next_switch_before_s": 1232.0,
+        "phase_after": 0,
+        "state_after": "G",
+        "next_switch_after_s": 1236.0
+      },
+      "request": {
+        "event": "REQUESTED",
+        "request_id": "scheduled:1226",
+        "global_request_s": 1226,
+        "rate_veh_h": 900,
+        "origin": "SCHEDULED",
+        "r_ALINEA": null,
+        "nearest_reference_period_s": 8,
+        "nearest_reference_rate_veh_h": 900.0
+      },
+      "physical_packet": {
+        "period_s": 8,
+        "max_green_s": 4,
+        "yellow_s": 2,
+        "minimum_red_s": 2,
+        "program": "I12_PACKET8"
+      }
+    }
+  ],
+  "native_safety_proven": false,
+  "rate_qualified": false
+}
