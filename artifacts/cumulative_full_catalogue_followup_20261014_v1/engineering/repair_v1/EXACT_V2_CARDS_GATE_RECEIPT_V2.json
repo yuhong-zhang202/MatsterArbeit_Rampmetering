@@ -1,0 +1,33 @@
+{
+  "status": "PASS_TWO_V2_CARDS_SOURCE_ENV_INPUT_AND_NO_PERMISSION_OLD_V1_REJECTED",
+  "cards": [
+    {
+      "run_id": "UA_CUMULATIVE_FULL_DYNAMIC_S17_01",
+      "current_card_path": "artifacts/cumulative_full_catalogue_followup_20261014_v1/engineering/packages_v2/UA_CUMULATIVE_FULL_DYNAMIC_S17_01/card.json",
+      "card_sha256": "68e9b2c73d7164a1bd10199e77ca43bcb42332e680a240b0828091ec45a3ed34",
+      "source_count": 136,
+      "source_digest": "5d0695195a2062f4708f455b227901b9084a76acca86dc81b34cc59e93d6d85e",
+      "old_card_rejected": true,
+      "noauth_gate": "FUTURE_EXACT_NATIVE_AUTHORIZATION_MISSING"
+    },
+    {
+      "run_id": "UA_CUMULATIVE_FULL_ALINEA_S17_01",
+      "current_card_path": "artifacts/cumulative_full_catalogue_followup_20261014_v1/engineering/packages_v2/UA_CUMULATIVE_FULL_ALINEA_S17_01/card.json",
+      "card_sha256": "f26cdd8e72a66d4efc782628a4107734af18c3539fc1a0073bd16f2e717786db",
+      "source_count": 136,
+      "source_digest": "5d0695195a2062f4708f455b227901b9084a76acca86dc81b34cc59e93d6d85e",
+      "old_card_rejected": true,
+      "noauth_gate": "FUTURE_EXACT_NATIVE_AUTHORIZATION_MISSING"
+    }
+  ],
+  "newreader_hashes": {
+    "actual.py": "079ed69575bff44454ed361862f38d4b40cb6df48f3f897d4e107711ec9ba5c4",
+    "scope.py": "7474fc058373c89cf4dc92cb68948f452452f2a10c8c32183ff614cd09d3f468"
+  },
+  "elapsed_s": 0.08309383399318904,
+  "native_starts": 0,
+  "old_dynamic_auth_bytes_preserved": true,
+  "new_AUTH_namespace": "authorizations_v2",
+  "no_new_auth_or_canonical_or_raw": true,
+  "production_policy_bridge_budget_guard_changed": false
+}

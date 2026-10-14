@@ -1,0 +1,72 @@
+{
+  "UA_CUMULATIVE_FULL_DYNAMIC_S17_01": {
+    "status": "PASS_EXACT_OFFLINE_CARD_BINDING_ONLY",
+    "card_sha256": "68e9b2c73d7164a1bd10199e77ca43bcb42332e680a240b0828091ec45a3ed34",
+    "mode": "dynamic_commands",
+    "source_count": 136,
+    "source_digest": "5d0695195a2062f4708f455b227901b9084a76acca86dc81b34cc59e93d6d85e",
+    "reader_contract": {
+      "schema": "CUMULATIVE_FULL_C_N_V1",
+      "reader": "scripts/cumulative_full_catalogue_followup_audit_20261014_v1/actual.py",
+      "status": "FROZEN_NEW_READER_REVIEW_REQUIRED_BEFORE_RELEASE",
+      "NUM": "STRICT_NO_CONTINUE_CLASSIFICATION",
+      "EOF_and_terminal_arrival_audit": "MANDATORY_NO_SKIP"
+    },
+    "resources": {
+      "wall_limit_s": 300,
+      "startup_limit_s": 60,
+      "run_limit_bytes": null,
+      "minimum_free_bytes": 5000000000
+    },
+    "combined_resource_envelope": {
+      "monitored_s": 600,
+      "raw_bytes": null
+    },
+    "actual_observations": {
+      "N": null,
+      "E": null,
+      "actual_phase_exposure": null,
+      "native_safety": null,
+      "body_clearance": null,
+      "future_mixed_population": null
+    },
+    "new_raw_exists": false,
+    "native_pipeline_executed": false,
+    "execution_authority_generated_by_data_agent": false
+  },
+  "UA_CUMULATIVE_FULL_ALINEA_S17_01": {
+    "status": "PASS_EXACT_OFFLINE_CARD_BINDING_ONLY",
+    "card_sha256": "f26cdd8e72a66d4efc782628a4107734af18c3539fc1a0073bd16f2e717786db",
+    "mode": "real_alinea",
+    "source_count": 136,
+    "source_digest": "5d0695195a2062f4708f455b227901b9084a76acca86dc81b34cc59e93d6d85e",
+    "reader_contract": {
+      "schema": "CUMULATIVE_FULL_C_N_V1",
+      "reader": "scripts/cumulative_full_catalogue_followup_audit_20261014_v1/actual.py",
+      "status": "FROZEN_NEW_READER_REVIEW_REQUIRED_BEFORE_RELEASE",
+      "NUM": "STRICT_NO_CONTINUE_CLASSIFICATION",
+      "EOF_and_terminal_arrival_audit": "MANDATORY_NO_SKIP"
+    },
+    "resources": {
+      "wall_limit_s": 300,
+      "startup_limit_s": 60,
+      "run_limit_bytes": null,
+      "minimum_free_bytes": 5000000000
+    },
+    "combined_resource_envelope": {
+      "monitored_s": 600,
+      "raw_bytes": null
+    },
+    "actual_observations": {
+      "N": null,
+      "E": null,
+      "actual_phase_exposure": null,
+      "native_safety": null,
+      "body_clearance": null,
+      "future_mixed_population": null
+    },
+    "new_raw_exists": false,
+    "native_pipeline_executed": false,
+    "execution_authority_generated_by_data_agent": false
+  }
+}

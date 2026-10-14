@@ -5,6 +5,8 @@
 
 ## Current Phase
 
+**当前下一步：动态V2精确运行。** 后续reader的累计预算Major已由最小修复、旧规则真实FAIL／新受影响方法PASS及工程/data/science关闭。新卡dynamic68e9b2c、Feedbackf26cdd8，共同136源5d069519；旧V1卡/权限/源前像保留且拒绝误用。仅Dynamic获科学运行门GO，待canonical后唯一启动至1296（单300s、两run合计新600s）；Feedback需等Dynamic实际三方复审与结算。尚无这两项native结果。[当前交付](development/CUMULATIVE_DYNAMIC_FEEDBACK_DELIVERY_20261014.md)。
+
 **2026-10-14｜完整目录750实际节点完成，工程→data→science限定GO。** 新`UA_CUMULATIVE_FULL750_S17_01`一次到1296、CLI/nativeEOF0、监控188.243s；精确卡da64599b/125源c4787966。独立reader一次exit0，十完整包[10,9,10,9,10]×2，两48秒各C=applied=E=N10，合96秒20辆，实际750veh/h。20车尾/1374正常离网末步/TLSACK/黄灯/EOF限定核查通过；末AFTER单来源保留。原8/10版本1272UNKNOWN与全部失败不改。当前750有限机制已证实，长期／其他请求历史／真实Feedback的适用性Major仍开放；不是全范围或安全／服务资格。两张同政策动态和真实Feedback卡的方案已获工程/data/science限定GO，现实施隔离的最小接线及独立reader，尚无第二次native启动；各固定1296、300s，合计新600s，保留partial/null/安全STOP，不增加17档矩阵。用户已持续授权负责人推进必要技术工作与SUMO，不等待重复逐卡回复，仍保留三方／精确版本／资源／唯一身份及安全UNKNOWN门。[完整报告](development/CUMULATIVE_FULL_CATALOGUE_NATIVE_REPORT_20261014.md)、[直接授权](../artifacts/cumulative_full_catalogue_implementation_20261014_v1/USER_AUTONOMOUS_CONTINUATION_AUTHORITY_V1.json)。以下旧运行记录为历史证据。
 
 **2026-10-14｜累计750原生诊断及三方实际复审完成：一次运行1272秒STOP，整体目标仍未完成。** UA_CUMULATIVE750_S17_01使用获批3e95c545/cardc4464cd1/111源b351723a，目标1296；实际173.949秒内在准备第二个T8首次黄灯前触发UNKNOWN_LOCAL_YELLOW_SCOPE，CLI1/nativeEOF0，非预算故障，无自动重试。独立核账首48秒五完整包C=E=N10（实际750veh/h）；全72秒七完整加一部分包C15/E14/N15不能代替两组完成。R15距线0.168m/v4.988m/s，绑定输入完整；停车/2秒清尾筛查均不满足，未执行的黄灯行为仍未知。15入口及车尾/1339离网/TLSACK/EOF限定核查通过，末AFTER单来源限制保留。工程→data→science允许交付已观测前缀，保留Major：混合政策持续适用性未成立。161raw/426650300B、manifestcf38cadb及旧失败保留。T9/G4/Y3/R2+T10仅待审建议，未实现或授权新运行；900/guard/正式研究和既有资格状态不变。[本次完整报告](development/CUMULATIVE_TRACKING_NATIVE_REPORT_20261014.md)。以下离线交付文字为执行前历史快照，以本段为当前状态。

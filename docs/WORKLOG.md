@@ -2844,3 +2844,15 @@ Frozen174raw441858515B/manifestba93f78e; engineeringa268ee71. Exact reader oncee
 ### 2026-10-14 — Dynamic and realFeedback minimal offline implementation dispatch
 
 Engineering plane508e6f6/data plana2c0c382/science boundedGO support two missing samepolicy interfaces. Minor E1 IDs in PLANV1 require retainedV1 plus V2 clarification; Producer already correct. Root dispatches engineer newthinruntime/CLI/tests/artifacts and independentdata newreader/tests/processed, no overlap; old125/full750 evidence immutable. Fixed1296 both, each300s/start60/no bytes/free5GB, newcombined600s to bind separately under continuing userauthority. Only normal fixed-end dynamicpartial classification may reuse existing real_alinea reporting; earlyanomaly/UNKNOWN stillSTOP, no extra step/fullE/uncensor. Corepolicy/adapter/Producer/phase/model/formaldesign unchanged. Native not yetreleased; minimal offline gate+data+science required before sole dynamicstart, actualreview beforeFeedback.
+
+### 2026-10-14 — Full750 local checkpoint readback
+
+Selected completed work committed locally as0ae1f23a13e6e91540e64e4a02c65a2e9755f374 (192files). All125 executed-card source Git blobs match hashes; no raw added, no GitHub push. Five unrelated historical MemoryCore WORKLOG lines remain unstaged, along with unrelated private/memory files. Native occurred on exact source snapshot beforecommit; no postcommit test rerun claimed. LOCAL_CHECKPOINT_READBACK_V1 records verification. Followup thinimplementation remains separate workinprogress, not part of executed750 claim.
+
+### 2026-10-14 — Scientific Major blocks followup card release; minimal reader repair
+
+Readonlyscience finds newactual cumulativecharged+elapsed incorrectly compared tosingle300 rather thancombined600. Valid180+180 wouldfalsefail secondidentity. Productionwatchdog/budget correct; noSUMO yet. Root dispatches data minimalnewreader fix plusonefocused nonzerohistory/singleexceed/combinedexceed regression; engine preservesV1cards/unusedauth and preparesversionedV2 exactbindingsafterfreeze. Original136review/cards/preimages retained, noguard/model/phase/formalchange. Oldnew750actualevidence unaffected. This realMajor preventsrelease; do not hide behind earlierofflineGO.
+
+### 2026-10-14 — Reader budget Major closed; V2 Dynamic exact launch gate
+
+OldexactAST180+180 FAIL saved; onenewaffectedmethodPASS.004s andsingle301/aggregate601 refuse. Reader079ed695/scope7474fc splitsperrun300/combined600; no productionbudget/guardchange. Versionedpackages_v2 cardsdynamic68e9b2c/Feedbackf26cdd8/shared1365d069519; oldV1source/cards/auth/report preserved, two oldcards explicitlyrejected. Engineering353ad283/data4d5e773c/21binder00a2b737 andreadonlyscience closeMajor/no newblockingfinding. Onlydynamic mayproceed throughcanonical/livegate underrootauthority; Feedback stillneedsdynamicactualthree-role+settlement. STATE/newdeliveryreport updated; no extra native/suite orformalchange.

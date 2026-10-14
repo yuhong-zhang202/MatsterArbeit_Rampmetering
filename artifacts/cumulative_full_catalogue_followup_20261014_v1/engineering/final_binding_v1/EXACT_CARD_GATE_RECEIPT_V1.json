@@ -1,0 +1,64 @@
+{
+  "status": "PASS_TWO_EXACT_CARDS_STATIC_AND_MISSING_AUTH_BEFORE_NATIVE_ALLOCATION",
+  "cards": [
+    {
+      "run_id": "UA_CUMULATIVE_FULL_DYNAMIC_S17_01",
+      "mode": "dynamic_commands",
+      "card_sha256": "4a6eb1a9f464f9aac4e51fd0a42db9b51c0214c7c58b8a32921e7ac6eb507421",
+      "source_count": 136,
+      "source_digest": "c6483a48a653978aa7d7b701f738ed2f882c213de37111949cc7c8a02b43e716",
+      "no_permission_gate": "FUTURE_EXACT_NATIVE_AUTHORIZATION_MISSING",
+      "observations_null": true,
+      "source_and_env_input_XML_check": "PASS",
+      "single_envelope": {
+        "monitored_s": 300,
+        "raw_bytes": null
+      },
+      "combined_envelope": {
+        "monitored_s": 600,
+        "raw_bytes": null
+      }
+    },
+    {
+      "run_id": "UA_CUMULATIVE_FULL_ALINEA_S17_01",
+      "mode": "real_alinea",
+      "card_sha256": "564c83d332ddf03ffd429d2501f10ff119f79991ece2cf990785004a3f64b6ba",
+      "source_count": 136,
+      "source_digest": "c6483a48a653978aa7d7b701f738ed2f882c213de37111949cc7c8a02b43e716",
+      "no_permission_gate": "FUTURE_EXACT_NATIVE_AUTHORIZATION_MISSING",
+      "observations_null": true,
+      "source_and_env_input_XML_check": "PASS",
+      "single_envelope": {
+        "monitored_s": 300,
+        "raw_bytes": null
+      },
+      "combined_envelope": {
+        "monitored_s": 600,
+        "raw_bytes": null
+      }
+    }
+  ],
+  "reader_hashes": {
+    "actual.py": "a327558e2f7b9965aec01a23fb7f79387d6bb09a90704b159d17253c9a5fe55c",
+    "scope.py": "1284ed5f101a97affa38589c93844421d9635c5e855865d79c1656799cffe7ce"
+  },
+  "foreign_original_card_refused": "FOREIGN_CANDIDATE_CARD",
+  "new_budget_empty": {
+    "known_settled": {},
+    "unknown_reserved": [],
+    "charged_monitored_s": 0.0,
+    "charged_raw_bytes": 0,
+    "remaining_s": 600.0,
+    "remaining_bytes": null,
+    "selected_total_limits": {
+      "wall_s": 600,
+      "bytes": null
+    },
+    "fixed_start_count_limit": null,
+    "scope": "ONLY_NEW_TWO_FOLLOWUP_IDENTITIES; ALL_OLD_STAGES_EXCLUDED"
+  },
+  "elapsed_s": 0.0821566249942407,
+  "native_starts": 0,
+  "native_version_process": false,
+  "source_metadata_V2_actual_gate_covered": true
+}
