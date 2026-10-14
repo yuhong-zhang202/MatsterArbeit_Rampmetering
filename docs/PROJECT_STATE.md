@@ -5,7 +5,7 @@
 
 ## Current Phase
 
-**10/15最新：用户已明确批准已审方案，恢复最小动态资格工作。** 直接回复“批准，请继续”覆盖隔离实现中的current-following模型查询硬底线+额外1.1m告警，以及离线工程/数据/科学门后的1次新动态、仅动态实际技术通过后1次同版本短真实ALINEA；各300s/start60/free5GB/无固定字节上限/end1296，新增合计600s。旧147.815s和全部失败另账保留，不自动重试或扩矩阵。严格新G准入、原prospective结果与其它安全/UNKNOWN门不改；精确源码/卡和实际后审仍必要。当前实现/独立reader/新卡准备中，尚无新SUMO。该批准不冻结正式协议、不改变Stage6/A1或总体资格。[用户批准原文及范围](../artifacts/dynamic_minimum_qualification_20261015_v1/USER_APPROVAL_V1.json)。以下“待批准”文字为批准前历史快照。
+**10/15最新：本次有界技术节点已完成三方后审；动态资格未建立，ALINEA未启动。** 唯一UA_NATIVEGAP_DYNAMIC_S17_01在1236秒首次黄灯执行前返回UNKNOWN_LOCAL_YELLOW_SCOPE，未到1296。工程→独立数据→科学确认：观测前缀完整核账，原始C187/24≈7.792辆、实际N5、完整E4、差67/24；三应用延迟0/23/6秒，最终1237的300请求尚未发生，欠额恢复未观察。获批current-following新query底线/旧1.1告警在同一1233帧生效，旧缺ACK不在本前缀重现。新阻碍是未改的局部黄灯充分筛查，完整输入R5距线0.146m/v4.973m/s对应项目表达式2.558s>Y2；实际首Y未执行，不能据此声称SUMO危险、T8普遍不行或CandidateA不可行。保留原STOP，不盲目改公式/黄灯或重试。原始191文件403265825B，163.072s仅资源结算已核；余预算不放行新Dynamic/条件ALINEA。下一步仅待另行审定黄灯责任与停止合同，现批准只覆盖间距分类；不追加A1证明/矩阵。Stage6/A1UNRESOLVED/总体NOT_QUALIFIED/空正式协议不变。[完整本轮报告](development/DYNAMIC_MINIMUM_QUALIFICATION_NATIVE_REPORT_20261015.md)、[科学后审](../artifacts/dynamic_minimum_qualification_20261015_v1/SCIENCE_NATIVE_POSTREVIEW_V1.md)。以下为历史快照。
 
 **10/15技术准备补项已完成：** followup审计器局部变量遮蔽与合法周期黄灯兼容两项必要修复已通过数据实现/验证→工程独立复核→科学终审。三项针对性方法一次PASS0.009s；旧125源、guard、运行配置、卡片与raw保持，旧动态STOP/缺ACK UNKNOWN不改判。完整新reader流水线未重跑，未来卡须重新绑定。合同变更与新仿真仍待明确批准；不追加无效检查或运行。[数据修复报告](../data/processed/dynamic_minimum_qualification_20261015_v1/reader_fix_v1/DATA_READER_FIX_REVIEW_V1.md)、[科学终审](../artifacts/dynamic_minimum_qualification_20261015_v1/SCIENCE_READER_FIX_REVIEW_V1.md)。
 

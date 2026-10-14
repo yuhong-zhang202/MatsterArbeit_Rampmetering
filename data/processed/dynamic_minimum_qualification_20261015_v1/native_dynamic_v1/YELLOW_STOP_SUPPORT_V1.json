@@ -1,0 +1,34 @@
+{
+  "status": "PASS_BOUND_ABORTED_ATTEMPT_SUPPORT_NOT_NATIVE_YELLOW_SAFETY",
+  "attempt_s": 1236,
+  "population_count": 38,
+  "full_ID_speed_model_formula_coverage": true,
+  "failed_rows": [
+    {
+      "vehicle_id": "R_flow.5",
+      "population": "storage",
+      "time_s": 1236,
+      "position_m": 204.3438399856509,
+      "speed_m_s": 4.973246721802868,
+      "length_m": 5.0,
+      "normal_decel_m_s2": 4.5,
+      "action_step_s": 1.0,
+      "distance_to_meter_m": 0.14616001434910686,
+      "one_step_Euler_stop_possible": false,
+      "stop_distance_screen_m": 7.721378161349865,
+      "stop_possible": false,
+      "body_clear_time_screen_s": 2.557962408255144,
+      "clear_possible": false,
+      "status": "UNKNOWN_LOCAL_yellow_s_SCOPE",
+      "native_future_safety_proven": false,
+      "recomputed_stop_distance_m": 7.721378161349865,
+      "recomputed_body_clear_time_s": 2.557962408255144
+    }
+  ],
+  "R5_position_independently_bound_to_prior_position_plus_observed_Euler_step": true,
+  "other_attempt_positions_scope": "serialized attempt position; no second full FCD pass performed",
+  "phase_in_last_completed_interval": "G",
+  "failed_attempt_observed_first_Y": false,
+  "first_Y_native_executed": false,
+  "native_unsafe_proven": false
+}

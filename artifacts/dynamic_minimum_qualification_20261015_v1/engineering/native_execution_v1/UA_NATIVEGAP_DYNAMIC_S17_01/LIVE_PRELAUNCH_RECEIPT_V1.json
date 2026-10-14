@@ -1,0 +1,32 @@
+{
+  "run_id": "UA_NATIVEGAP_DYNAMIC_S17_01",
+  "card_sha256": "4afd7e4fb7b39b87ec7d4033840293eef15b45e732c0a2285aca17dcc4283d13",
+  "release_sha256": "5a3072cd1946c61339207cb96edf97c0b663e5abdc549ec3464ae58a39372695",
+  "source_count": 141,
+  "common_source_digest": "dfdddab74a862903ba75b3c8a4a9a7953e827cee6f049dc086f2bcb5fccb3cc7",
+  "validate_release": "PASS",
+  "resources": {
+    "wall_limit_s": 300,
+    "startup_limit_s": 60,
+    "run_limit_bytes": null,
+    "minimum_free_bytes": 5000000000
+  },
+  "live_free_bytes": 38556860416,
+  "raw_parent_absent": true,
+  "new_budget": {
+    "known_settled": {},
+    "unknown_reserved": [],
+    "charged_monitored_s": 0.0,
+    "charged_raw_bytes": 0,
+    "remaining_s": 600.0,
+    "remaining_bytes": null,
+    "selected_total_limits": {
+      "wall_s": 600,
+      "bytes": null
+    },
+    "fixed_start_count_limit": null,
+    "scope": "ONLY_NEW_TWO_MINQUAL_IDENTITIES; ALL_OLD_STAGES_EXCLUDED"
+  },
+  "native_started_by_this_preflight": false,
+  "command": ".venv/bin/python scripts/candidate_a_dynamic_minqual_20261015_v1/cli.py --execute artifacts/dynamic_minimum_qualification_20261015_v1/engineering/packages_v3/UA_NATIVEGAP_DYNAMIC_S17_01/card.json --release artifacts/dynamic_minimum_qualification_20261015_v1/engineering/releases/UA_NATIVEGAP_DYNAMIC_S17_01/EXECUTION_RELEASE.json"
+}
