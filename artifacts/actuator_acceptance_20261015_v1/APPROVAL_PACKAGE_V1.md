@@ -1,6 +1,6 @@
 # Issue16 / Draft PR17 — consolidated approval package
 
-Status: PROPOSED; precise prepared-card identity and final review receipts are completed below before requesting approval. This document grants no execution authority. Existing run02 remains STOP_RETAINED / NOT_QUALIFIED; its numerical precision remains NOT_ASSESSED. No retrospective waiver or new native result is created.
+Status: PROPOSED; exact card prepared nonexecutingly; all three exact-card reviews support delivery and hold at the human approval gate. This document grants no execution authority. Existing run02 remains STOP_RETAINED / NOT_QUALIFIED; its numerical precision remains NOT_ASSESSED. No retrospective waiver or new native result is created.
 
 ## One recommendation
 
@@ -23,4 +23,15 @@ After explicit approval, exact card/source/config/environment/three reviews, new
 
 The patch is isolated/default-off: safety event classifier and necessary observations, independent episode audit and actual-schema precision projection, exact03 preparation/permission/guardian identity wiring. ALINEA policy, producer, approved current_gap_scope and scientific inputs remain unchanged. No new predictor, SSAM deployment, smoothing or replacement vehicle model. Future acceptance needs complete evidence, not just the implementation's own labels.
 
-Prepared card, source checkpoint, final review, test summary and exact publication manifest will be linked here once their actual files exist. Approval must refer to that completed identity; this placeholder cannot be used as a run request.
+## Exact prepared identity
+
+- Source checkpoint: `624573abafac043a777901ce251a2358e3758384` (report/publication commits may advance without changing execution sources).
+- Card: [card.json](engineering/packages_v1/QUAL_NATURAL_ALINEA_R900_S17_03/card.json), SHA256 `5120292702f93458cdfaae7211467948f4e559671e62af8ff74d82c9ee6ba3a2`.
+- 188-source closure: `402d4ab207381afbddef2a95ed8120e94fa2367f1eb0dd859fde34ab66f5eb87`.
+- Bound method SHA256: `c417d079aa21c2fb490e51a7f2f95ba757bd79a05d626cadba8eabb1ead09f6e`.
+- Fourth prepared input: [accuracy_registration.json](engineering/packages_v1/QUAL_NATURAL_ALINEA_R900_S17_03/accuracy_registration.json), SHA256 `80190e06f3dc7b438acc403a33553d88dcf8b31bca75203974e077b9fb1a7d0c`. No self hash or future raw identity is manufactured.
+- Actual one prepare exit0/2.397363959s; one validate-prepared exit0/2.251239875s. No retry, source edit or native launch. Card execution_authorized=false, all eight observation fields null, qualification NOT_TESTED_NOT_QUALIFIED. These fields are preparation facts, not a runtime permission.
+
+[Design and implementation science review](SCIENCE_DESIGN_REVIEW.md) records substantive fixes, preserved failed fixture attempts and scope limits. The independent final data report records tested schema/arithmetic plus NOT_IMPLEMENTED delayed-original-request integral/per-window historical pending; these are not silently claimed complete.
+
+Exact-card evidence: [engineering preparation](engineering/preparation_v1/ENGINEERING_PREPARATION_REPORT_V1.md), [independent data review](../../data/processed/actuator_acceptance_20261015_v1/DATA_PREPARED_CARD_REVIEW_V1.json), [read-only scientific review](SCIENCE_PREPARED_CARD_REVIEW_V1.md). All permit preparation delivery only; no unhandled material finding remains in that scope. [Exact public-file manifest](PUBLICATION_MANIFEST_V1.json) defines the separate disclosure request; [GitHub update text](GITHUB_UPDATE_DRAFT.md) is prepared for the existing Issue/PR. New safety responsibility, numerical acceptance scale and one exact start must be approved explicitly together. Public disclosure is a separate exact-file approval; the former27-file approval does not cover this batch.
