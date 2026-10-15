@@ -1,0 +1,8 @@
+{
+  "cause": "Additional checker reused donor selected-evidence keys; current engineer selection uses actual_post_WAIT_records/time_begin_s/post_decision and frame-wrapped actual_entry_bound_before_after_records. V1 actualKeyError preserved.",
+  "old_source_sha256": "47fc3bee0de249c381243b7db21ebfc887854b020a6f08a6395e6f3ac72e65eb",
+  "new_source_sha256": "4d1110ea18697cc6eeffd76cbd306df27ffb3666eaa131a8ad8d91b3902a352f",
+  "fix": "Explicit field/entry-wrapper mapping only; native raw fullquery/ID/time/record equality still mandatory.",
+  "auxiliary_read_command_error": "One Python diagnostic field-list command had typo elseNone and failed SyntaxError before reading/writing; corrected read command succeeded; tool-transcript retains error.",
+  "raw_or_guard_changes": false
+}

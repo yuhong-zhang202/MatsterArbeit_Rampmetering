@@ -1,0 +1,19 @@
+--- scripts/dynamic_minimum_qualification_audit_20261015_v1/scope.py
++++ scripts/dynamic_native_yellow_minqual_audit_20261015_v1/scope.py
+@@ -1,6 +1,6 @@
+ """Exact follow-up scope and terminal supports; never a runtime authorization."""
+ from scripts.cumulative_full_catalogue_audit_20261014_v1.core import need
+-MODES={'UA_NATIVEGAP_DYNAMIC_S17_01':'dynamic_commands','UA_NATIVEGAP_ALINEA_S17_01':'real_alinea'}
++MODES={'UA_NATIVEYELLOW_DYNAMIC_S17_01':'dynamic_commands','UA_NATIVEYELLOW_ALINEA_S17_01':'real_alinea'}
+ COMPLETE='PACKET_CYCLES_OBSERVED_NO_MONITORED_ANOMALY_NOT_QUALIFIED'
+ PARTIAL='APPROVED_END_PARTIAL_OR_BODY_CENSORED_NOT_QUALIFIED'
+ def check_card_scope(card):
+@@ -17,6 +17,8 @@
+     need(s.get('input_origin')==('PROJECT_FEEDBACK' if mode=='real_alinea' else mode) and s.get('requested_schedule')==s['request_schedule'] and s.get('partial_final_cycle_allowed') is True,'MODE_METADATA_ALIASES')
+     need(card['output']=='data/raw/dynamic_minimum_qualification_20261015_v1/'+run+'/outputs','EXACT_NEW_RAW_NAMESPACE')
+     need(s.get('current_following_contract')=={'policy':'ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1','hard_extra_margin_m':0.0,'legacy_advisory_margin_m':1.1,'leader_deceleration':'UNCHANGED_BOUND_EMERGENCY_QUERY','new_green_prospective':'UNCHANGED_STRICT','native_safety_proven':False},'EXACT_APPROVED_CURRENT_CONTRACT')
++    from scripts.dynamic_native_yellow_minqual_audit_20261015_v1.yellow import enabled_contract
++    need(enabled_contract(s.get('yellow_responsibility_contract')),'EXACT_NEW_APPROVED_YELLOW_CONTRACT')
+     return mode
+ 
+ def terminal_scope(receipt,last,end,account,censored):

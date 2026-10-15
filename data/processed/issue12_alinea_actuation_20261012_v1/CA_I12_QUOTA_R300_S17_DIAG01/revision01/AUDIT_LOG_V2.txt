@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/issue12_alinea_actuation_20261012_v1/CA_I12_QUOTA_R300_S17_DIAG01/revision01/audit_prefix_V2.py", line 86, in <module>
+    yids=set(y[0]['covered_ids']);need(yids=={v for v,w in post[1203]['post_world'].items() if w['lane_id'] in ('ramp_storage_0','shared_approach_0')},'yellow local identities')
+                                  ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/issue12_alinea_actuation_20261012_v1/CA_I12_QUOTA_R300_S17_DIAG01/revision01/audit_prefix_V2.py", line 14, in need
+    if not v:raise ValueError(msg)
+             ^^^^^^^^^^^^^^^^^^^^^
+ValueError: yellow local identities

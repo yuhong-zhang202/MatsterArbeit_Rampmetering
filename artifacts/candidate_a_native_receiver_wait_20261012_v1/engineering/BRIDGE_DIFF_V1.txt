@@ -1,0 +1,13 @@
+--- src/candidate_a_native_budget_cycles_20261012/bridge.py
++++ src/candidate_a_native_receiver_wait_20261012/bridge.py
+@@ -12,8 +12,8 @@
+ import sys
+ import time
+ 
+-from src.candidate_a_native_budget_cycles_20261012.adapter import StepAdapter, inventory, TLS, STORAGE, INGRESS, INTERNAL
+-from src.candidate_a_native_budget_cycles_20261012.profile import ROOT,TASK,NETWORK,SUMO,sha,write_new,validate_release,require
++from src.candidate_a_native_receiver_wait_20261012.adapter import StepAdapter, inventory, TLS, STORAGE, INGRESS, INTERNAL
++from src.candidate_a_native_receiver_wait_20261012.profile import ROOT,TASK,NETWORK,SUMO,sha,write_new,validate_release,require
+ from src.candidate_a_native_smoke_20261011.bridge_logs import LogCapture
+ from src.candidate_a_native_smoke_20261011.bridge_resources import ResourceWatchdog
+ from src.candidate_a_native_smoke_runtime_fix_20261012.frame_cache import FrameCache

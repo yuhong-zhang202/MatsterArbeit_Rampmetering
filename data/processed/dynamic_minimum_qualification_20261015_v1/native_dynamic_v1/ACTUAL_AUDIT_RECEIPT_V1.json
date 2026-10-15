@@ -1,0 +1,25 @@
+{
+  "command": "python3 scripts/dynamic_minimum_qualification_audit_20261015_v1/actual.py --manifest artifacts/dynamic_minimum_qualification_20261015_v1/engineering/native_execution_v1/UA_NATIVEGAP_DYNAMIC_S17_01/RAW_FINAL_SHA256_V1.json --card artifacts/dynamic_minimum_qualification_20261015_v1/engineering/packages_v3/UA_NATIVEGAP_DYNAMIC_S17_01/card.json --output data/processed/dynamic_minimum_qualification_20261015_v1/native_dynamic_v1",
+  "session_id": 36364,
+  "actual_exit_code": 1,
+  "result_status": "STOP_OBSERVED_ALARM",
+  "actual_reader_sha256": "d5d3b7257905dbf02bb1340c330bc06753fe1ac624d2b11c39f6e77bdde7d81f",
+  "source_commit": "f14aa49cb4a4dbb4168999e0bb543e7442d9c3f8",
+  "card_sha256": "4afd7e4fb7b39b87ec7d4033840293eef15b45e732c0a2285aca17dcc4283d13",
+  "manifest_sha256": "f64eca9ba38189361b79d3b8f91b9c81cd258bac11babbbe6cf2a8f9ae7d37ed",
+  "raw_inventory_verified_by_actual_reader": {
+    "files": 191,
+    "bytes": 403265825
+  },
+  "reader_executed_to_final_return": true,
+  "missing_or_unknown": [],
+  "observed_alarms": [],
+  "runtime_stop_preserved": true,
+  "native_safety_proven": false,
+  "rate_qualified": false,
+  "single_actual_audit_attempt": true,
+  "support_command": "python3 data/processed/dynamic_minimum_qualification_20261015_v1/native_dynamic_v1/yellow_stop_support_V1.py",
+  "support_exit_code": 0,
+  "budget_not_settled": true,
+  "new_native_runs_by_data_agent": 0
+}

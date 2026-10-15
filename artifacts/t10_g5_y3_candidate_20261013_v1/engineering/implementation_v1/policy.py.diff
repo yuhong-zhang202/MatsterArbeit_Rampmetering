@@ -1,0 +1,62 @@
+--- protected_base/policy.py
++++ isolated_candidate/policy.py
+@@ -4,17 +4,15 @@
+ import math
+ from src.candidate_a_issue12_packet_policy_20261012.policy import period_for, quantize, require
+ 
+-MAX_GREEN = 4
++MAX_GREEN = 5
+ MIN_RED = 2
+-PERIODS = tuple(range(8, 25))
++PERIODS = (10,)
+ 
+ 
+ def parameters(period):
+     require(type(period) is int and period in PERIODS, 'INVALID_PERIOD')
+-    yellow = min(5, period - MAX_GREEN - MIN_RED)
+-    return {'period_s': period, 'yellow_s': yellow, 'minimum_red_s': MIN_RED,
+-            'program': f'I12_PACKET{period}', 'phases': (('G', 4, 1), ('y', yellow, 2),
+-                                                        ('r', period-4-yellow, 0))}
++    return {'period_s':10,'yellow_s':3,'minimum_red_s':2,
++            'program':'T10_G5Y3_NATIVE','phases':(('G',5,1),('y',3,2),('r',2,0))}
+ 
+ 
+ @dataclass(frozen=True)
+@@ -28,7 +26,7 @@
+     def validate(self):
+         require(isinstance(self.request_id, str) and self.request_id and
+                 type(self.global_request_s) is int and self.global_request_s >= 1200 and
+-                self.origin in ('FIXED', 'SCHEDULED', 'PROJECT_FEEDBACK'), 'INVALID_COMMAND_BINDING')
++                self.origin=='FIXED' and type(self.rate_veh_h) in (int,float) and self.rate_veh_h==750, 'INVALID_COMMAND_BINDING')
+         period_for(self.rate_veh_h)
+         require(self.r_ALINEA is None or (type(self.r_ALINEA) in (int, float) and
+                 math.isfinite(self.r_ALINEA) and self.r_ALINEA == self.rate_veh_h),
+@@ -37,8 +35,9 @@
+ 
+ 
+ class Ledger:
+-    def __init__(self, command=300, end_s=1272):
++    def __init__(self, command=750, end_s=1270):
+         require(type(end_s) is int and 1200 < end_s <= 1272, 'INVALID_APPROVED_HORIZON')
++        require(type(command) in (int,float) and command==750,'FIXED750_ONLY')
+         self.end_s = end_s
+         self.next_time_s = 1200
+         self.C = self.C_mapped = self.C_applied = Fraction(0)
+@@ -109,7 +108,7 @@
+     def close_green(self, time_s, reason):
+         c = self.cycle
+         require(c is not None and c['green_end_s'] is None, 'DUPLICATE_GREEN_CLOSE')
+-        require(type(time_s) is int and c['begin_s'] < time_s <= c['begin_s']+4,
++        require(type(time_s) is int and c['begin_s'] < time_s <= c['begin_s']+MAX_GREEN,
+                 'GREEN_CLOSE_OUTSIDE_BUDGET')
+         require(reason in ('ACTUAL_QUOTA_ACK','MAX_GREEN_DEADLINE'), 'UNKNOWN_GREEN_CLOSE_REASON')
+         require(reason != 'ACTUAL_QUOTA_ACK' or c['N_G'] >= 2, 'QUOTA_NOT_OBSERVED')
+@@ -118,7 +117,7 @@
+     def motion_at(self, t):
+         c = self.cycle
+         require(c is not None and c['begin_s'] <= t < c['end_s'], 'OUTSIDE_CYCLE')
+-        end = c['green_end_s'] if c['green_end_s'] is not None else c['begin_s']+4
++        end = c['green_end_s'] if c['green_end_s'] is not None else c['begin_s']+MAX_GREEN
+         return 'G' if t < end else 'y' if t < end+c['yellow_s'] else 'r'
+ 
+     def end_step(self, end, crossing_ids, motion):

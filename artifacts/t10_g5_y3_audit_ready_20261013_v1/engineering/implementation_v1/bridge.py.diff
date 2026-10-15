@@ -1,0 +1,18 @@
+--- protected_T10_01/bridge.py
++++ identity02/bridge.py
+@@ -13,13 +13,13 @@
+ import time
+ 
+ from src.candidate_a_t10_g5_y3_20261013.adapter import StepAdapter, inventory, TLS, STORAGE, INGRESS, INTERNAL
+-from src.candidate_a_t10_g5_y3_20261013.profile import ROOT,TASK,NETWORK,SUMO,sha,write_new,validate_release,require
++from src.candidate_a_t10_g5_y3_audit_ready_20261013.profile import ROOT,TASK,NETWORK,SUMO,sha,write_new,validate_release,require
+ from src.candidate_a_native_smoke_20261011.bridge_logs import LogCapture
+ from src.candidate_a_native_smoke_20261011.bridge_resources import ResourceWatchdog
+ from src.candidate_a_unified_alinea_20261013.frame_cache import FrameCache
+ from src.candidate_a_t10_g5_y3_20261013.policy import MAX_GREEN, yellow_scope
+ from src.candidate_a_t10_g5_y3_20261013.producer import Producer
+-from src.candidate_a_t10_g5_y3_20261013 import budget
++from src.candidate_a_t10_g5_y3_audit_ready_20261013 import budget
+ 
+ 
+ def protected_worker():

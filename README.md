@@ -189,3 +189,71 @@ The current user goal supersedes first-red-only scope for four **new** identitie
 ```
 
 Defaultpreparation isoffline; afteranidentity isconsumed, select otherunconsumedcards with `--run`. Executeonlyper-run exactcard/human-goal/engineering-data-science release; revieweachactualrawresult before nextbudget. N isactualuniqueRfrontentry, independentlyFCD/TLS/ACK-audited; noforceN=nominal6, no freewayE1as meterproxy. Budget-onlystop needs expliciterror/watchdog/finalEOF classification; any safety/unknownhalts simplebudgetupgrade. New technical goal is not formalprotocol or universal safety/servicequalification.
+
+
+### Independent receiver WAIT diagnostic — bounded run and transplant
+
+The [technical result and handoff](docs/development/CANDIDATE_A_NATIVE_WAIT_DIAGNOSTIC_20261012.md) records the new isolated `src/candidate_a_native_receiver_wait_20261012/` and CLI `scripts/candidate_a_native_receiver_wait_20261012_v1/cli.py`. Original production guards and evidence remain unchanged. The new diagnostic retains prospective refusal and adds bound actual-speed following observations; unknown/current-gap denial remains terminal and fresh-cycle admission is strict.
+
+One reviewed independent-worktree run completed1207checkpoint and three cycles to1272 under300s budget. Actual C=appliedC=E6 versus N3 is preserved; this is not300veh/h qualification or universal safety. Eleven offline tests, independent data and scientific postreview support only this bounded technical task. Selected new files are transferred with hash checks; 115-file hashes, protected dependencies and three focused destination tests passed; destination verification is recorded separately. The copied consumed card and source snapshots are historical worktree evidence, not reusable primary-workspace launch authority. Canonical releases/raw and the six temporary historical-table type changes were not transferred. A subsequent360s run also completed all targets with engineering/data/scientific review. Under the user's explicit convergence instruction,420/480s are SKIPPED, not PASS/FAIL.300s is the lowest tested sufficient wall cap, not a universal optimum. See the [budget closeout and handoff](docs/development/CANDIDATE_A_NATIVE_BUDGET_SUFFICIENCY_CLOSEOUT_20261012.md); no further native runs are scheduled.
+
+
+## Project problem records and ALINEA actuation preparation
+
+Use [the problem index](docs/problem_records/README.md) for the Stage2–6 blockers (observation domains, analysis validity, input pairability, demand localization, control measurement and trade-off evidence), FIX02 service shortfalls, STOP3/A1 proof limits, receiver WAIT/budget history, and the full actuator discharge/cumulative ALINEA tracking investigation through 2026-10-15. Original evidence stays at its original paths. [Issue #12 policy decision](docs/development/RAMP_METERING_SIGNAL_POLICY_DECISION.md) separates ALINEA's commanded rate from native signal implementation and actual crossing counts. The [Issue #12 delivery report](docs/development/ISSUE12_EXECUTION_POLICY_DELIVERY_20261012.md) records bounded diagnostics, exact source/input hashes, actual counts and remaining qualification limits; check PROJECT_STATE before execution.
+
+The new isolated packet CLI is `scripts/candidate_a_issue12_packet_policy_20261012_v1/cli.py`; it uses the existing project Python environment. `--check-card <exact-card-path>` validates a card, while `--execute <exact-card-path> --release <canonical-release-path>` requires fresh exact-card authorization, three reviews and cumulative resource gates. Preparation is offline and identities are single-use: the consumed diagnostic card is historical evidence and must not be rerun. No general ALINEA production execution or formal experiment is authorized by these examples.
+
+
+## Unified ALINEA actuator — bounded technical validation
+
+The user-approved [scope](docs/development/UNIFIED_ALINEA_ACTUATOR_SCOPE_20261013.md) reuses the packet policy in `src/candidate_a_unified_alinea_20261013/` for integer periods8–24, boundary-applied requests and true projectFeedback/E1 input. It is a technical diagnostic, not production ALINEA or formal experimental qualification. Check PROJECT_STATE and exact-card reviews before execution.
+
+The restricted [native numerical-event exception](artifacts/unified_alinea_actuator_20261013_v1/USER_NUMERICAL_EXCEPTION_APPROVAL_V1.json) is explicit technical diagnostic authority. Its default is strict STOP; enabled cases retain actual acceleration and legacy failures. Fixed750/02 completed seven cycles with E14/N13: its technical observation/approved monitoring gate passed, but its service target was not met. Each subsequent execution requires exact engineering/data/scientific review plus a one-use release. Historical consumed cards retain their original source binding and are not current executable cards.
+
+```bash
+.venv/bin/python -m unittest discover -s tests/candidate_a_unified_alinea_20261013 -v
+.venv/bin/python scripts/candidate_a_unified_alinea_20261013_v1/cli.py --help
+```
+
+Default CLI preparation targets fixed750/02, which is now consumed and cannot be prepared or executed again. Fresh approved cards are prepared explicitly with `profile.prepare(run_id)` and checked with `--check-card <prepared-unconsumed-card-path>`; execution uses `--execute <exact-card-path> --release <canonical-release-path>` only after sequential engineering/data/scientific review. Native identities are single-use; a consumed card is historical evidence. The new-stage total1200monitored seconds/raw1.2GB and all safety/UNKNOWN gates remain; old900 is historical evidence plus offline compatibility, not a native900 run of this new source. No new environment dependencies or formal protocol are introduced.
+
+The approved four-task technical node is now closed for handoff: Dynamic verifies boundary period changes and real ALINEA verifies measured-feedback request/application, while its mapped period stayedT8. Fixed750 service remains E14/N13 NOT_MET; final64-record code was not natively retested at fixed300/fixed900. All consumed cards are historical; no next execution is released. See the [complete bounded validation report](docs/development/UNIFIED_ALINEA_ACTUATOR_VALIDATION_REPORT_20261013.md). Candidate A remains NOT_QUALIFIED and formal experiments remain unauthorized.
+
+## T10 G5/Y3 candidate — offline preparation only
+
+The isolated `src/candidate_a_t10_g5_y3_20261013/` candidate supports only fixed750/T10. It preserves the original implementation and 900/T8. Its maximum green5/yellow3/minimum red2 proposal retains fresh yellow screening and all original safety/UNKNOWN checks; earlier quota closure extends red to the same cycle boundary. The candidate uses strict numerical stopping by default. Read the [yellow applicability and offline delivery report](docs/development/T10_G5_Y3_CANDIDATE_OFFLINE_DELIVERY_20261013.md) and PROJECT_STATE for review status and evidence limits.
+
+```bash
+.venv/bin/python scripts/candidate_a_t10_g5_y3_20261013_v1/cli.py --prepare
+.venv/bin/python scripts/candidate_a_t10_g5_y3_20261013_v1/cli.py --check-card artifacts/t10_g5_y3_candidate_20261013_v1/engineering/packages/UA_T10_G5Y3_FIXED750_S17_01/card.json
+.venv/bin/python -m unittest discover -s tests/candidate_a_t10_g5_y3_20261013 -v
+```
+
+Preparation and card checks are offline. The card is PREPARED_NOT_RELEASED; its resources are proposed, actual observations are null and the offline user scope does not authorize SUMO. A future native run needs new exact-card human authorization and engineering/data/scientific release; this section provides no execution authorization. Neither historical G4 snapshots nor offline fixtures establish future G5/Y3 safety or service qualification.
+
+## G5/Y3 audit and run-review package
+
+The versioned reader `scripts/t10_g5_y3_audit_20261013_v1/actual.py` adapts the existing FCD/TLS/ACK/accounting/body/EOF audit to T10/Gmax5/Y3. The isolated02 bridge adds identity/dynamics journals and unique first-yellow preparation records while preserving motion and guard rules. Check the [complete audit delivery](docs/development/T10_G5_Y3_AUDIT_READY_DELIVERY_20261013.md) and PROJECT_STATE for current review status. The V4 `engineering/packages_v4/UA_T10_G5Y3_FIXED750_S17_02/card.json` is the consumed historical02 card; earlier02 cards and01 remain historical evidence. Current continuation status is recorded below.
+
+```bash
+.venv/bin/python -m unittest discover -s tests/t10_g5_y3_audit_20261013 -v
+.venv/bin/python scripts/candidate_a_t10_g5_y3_audit_ready_20261013_v1/cli.py --check-card artifacts/t10_g5_y3_audit_ready_20261013_v1/engineering/packages_v4/UA_T10_G5Y3_FIXED750_S17_02/card.json
+```
+
+The actual reader requires an engineering-frozen manifest, exact card and a new `--output` directory under `data/processed/t10_g5_y3_audit_ready_20261013_v1/`. It returns nonzero for UNKNOWN/STOP and refuses output reuse. The authorized02 native run stopped at ACK1038 before control because its300MB output limit was reached; its frozen control measures are null. See the continuation report below. Offline preparation and passing fixtures do not authorize execution or qualify safety/service.
+
+## G5/Y3 resource-only continuation
+
+The user cancelled the300MB output stop after02 ended. The isolated `src/candidate_a_t10_g5_y3_no_output_cap_20261013/` version uses `None` for the fixed byte cap while retaining actual byte inventories,300s monitored time,60s startup,5GB free-space checks,1270s endpoint and strict safety/UNKNOWN stops. The exact03 card/release binds one new start; it is not reusable permission. Read [actual resource and discharge results](docs/development/T10_G5_Y3_NATIVE_CONTINUATION_REPORT_20261013.md) and PROJECT_STATE before any further action.
+
+```bash
+.venv/bin/python scripts/candidate_a_t10_g5_y3_no_output_cap_20261013_v1/cli.py --help
+```
+
+The corresponding actual reader is `scripts/t10_g5_y3_no_output_cap_audit_20261013_v1/actual.py`; it requires the frozen engineering manifest, exact03 card, and a fresh output directory under `data/processed/t10_g5_y3_no_output_cap_20261013_v1/`. Full raw remains local and read-only. Completion or E=N at mapped720 does not establish exact tracking of requested750, general actuator qualification or formal experiment authorization.
+
+The user selected tracking the original ALINEA request over time. The [reviewed cumulative-discharge design V2](docs/development/CUMULATIVE_DISCHARGE_TRACKING_DESIGN_20261014_V2.md) now has an isolated offline implementation in `src/candidate_a_cumulative_tracking_20261014/` and an independent reader in `scripts/cumulative_tracking_audit_20261014_v1/`. See the [implementation delivery and current review status](docs/development/CUMULATIVE_TRACKING_IMPLEMENTATION_20261014.md) before preparing or checking a card. The initial T8/T10 catalogue supports720–900 only; lower requests are explicitly unsupported. Offline tests are not native service evidence, full300–900 qualification, or permission for a new SUMO run. The [complete goal requirements](docs/development/ALINEA_TRACKING_GOAL_REQUIREMENTS_20261014_V3.md) remain open. The subsequently authorized [first native cumulative750 diagnostic](docs/development/CUMULATIVE_TRACKING_NATIVE_REPORT_20261014.md) stopped at1272 before its1296 target: the first48s achieved actualC=E=N10, but the second short packet failed the unchanged prospective yellow check. Independent actual review preserves STOP; this is not sustained tracking or qualification. No automatic retry is authorized.
+
+The isolated [full-catalogue continuation](docs/development/CUMULATIVE_FULL_CATALOGUE_PLAN_20261014.md) restores the existing T8…T24 catalogue with the T10 G5/Y3 exception in `src/candidate_a_cumulative_full_catalogue_20261014/`; it keeps the original C−actual-N objective. Use only an exact reviewed card and its canonical release through `scripts/candidate_a_cumulative_full_catalogue_20261014_v1/cli.py`. The [final offline scientific review](artifacts/cumulative_full_catalogue_implementation_20261014_v1/SCIENCE_FINAL_OFFLINE_REVIEW_V1.md) and separate user continuing authority permit the bounded new750 diagnostic after live prelaunch checks. The [new fixed750 native report](docs/development/CUMULATIVE_FULL_CATALOGUE_NATIVE_REPORT_20261014.md) records two48-second blocks with actualC=E=N10 each. Actual results and next actions are in [PROJECT_STATE](docs/PROJECT_STATE.md); full-range physical service and sustained closed-loop tracking remain unverified. Old consumed identities are evidence, not runnable examples.
+

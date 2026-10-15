@@ -1,0 +1,22 @@
+{
+  "source": "direct human continuation instruction",
+  "date": "2026-10-13",
+  "request": "别管300MB的限制，继续跑完",
+  "prior_run": "UA_T10_G5Y3_FIXED750_S17_02",
+  "prior_run_stopped": true,
+  "prior_frozen_manifest_sha256": "9f0a55efb1c0279782635f5556c9fe4101b50fb9a85328e779405b26b00a38dd",
+  "continuation_requires_new_identity_and_fresh_start": true,
+  "new_run_id": "UA_T10_G5Y3_FIXED750_S17_03",
+  "interpretation": "User explicitly removes 300MB stop limit and requests completing same diagnostic; necessary isolated resource-only adaptation and one new start after engineering/data/science review. No resume state exists for stopped02.",
+  "native_starts_authorized": 1,
+  "automatic_retry": false,
+  "end_s": 1270,
+  "monitored_s": 300,
+  "startup_s": 60,
+  "minimum_free_bytes": 5000000000,
+  "fixed_output_byte_stop_limit": null,
+  "strict_NUM": true,
+  "STOP_on_safety_anomaly_or_UNKNOWN": true,
+  "old_evidence_readonly": true,
+  "no_formal_or_900_or_timing_or_model_change": true
+}

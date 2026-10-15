@@ -1,0 +1,2 @@
+Command: .venv/bin/python -m unittest discover -s tests/pr13_service_scope_audit_review_20261015 -p test_reader.py -v
+Exit1; one test group8.191s. Both new regression bundles generated/saved, old-reader rejections and new-reader acceptance plus4historical saved audits and first4mutations completed. Test harness then AttributeError: scope.UNDER (correct exported name UNDER_TARGET); reader/runtime not implicated. Corrected harness and reused persisted two regression bundles without repeating fake loop.

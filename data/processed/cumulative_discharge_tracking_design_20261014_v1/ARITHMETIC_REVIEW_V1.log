@@ -1,0 +1,241 @@
+{
+  "classification": "DESIGN_MATHEMATICS_NOT_ACTUAL_SUMO_NOT_IMPLEMENTATION_VALIDATION",
+  "verdict": "PASS_EXACT_DESIGN_ARITHMETIC_ONLY",
+  "assumptions": [
+    "D0=0",
+    "constant request750",
+    "exactly2 actual entries per completed packet",
+    "no boundary admission delay",
+    "no safety UNKNOWN/STOP",
+    "observed counts assumed solely for arithmetic"
+  ],
+  "constant750_two_blocks": [
+    {
+      "cycle": 1,
+      "T_s": 10,
+      "cumulative_s": 10,
+      "candidate_predicted_errors": {
+        "8": "-1/3",
+        "10": "1/12"
+      },
+      "C": "25/12",
+      "E": 2,
+      "N_assumed": 2,
+      "D": "1/12",
+      "Dq": "1/12",
+      "Ds": 0
+    },
+    {
+      "cycle": 2,
+      "T_s": 10,
+      "cumulative_s": 20,
+      "candidate_predicted_errors": {
+        "8": "-1/4",
+        "10": "1/6"
+      },
+      "C": "25/6",
+      "E": 4,
+      "N_assumed": 4,
+      "D": "1/6",
+      "Dq": "1/6",
+      "Ds": 0
+    },
+    {
+      "cycle": 3,
+      "T_s": 8,
+      "cumulative_s": 28,
+      "candidate_predicted_errors": {
+        "8": "-1/6",
+        "10": "1/4"
+      },
+      "C": "35/6",
+      "E": 6,
+      "N_assumed": 6,
+      "D": "-1/6",
+      "Dq": "-1/6",
+      "Ds": 0
+    },
+    {
+      "cycle": 4,
+      "T_s": 10,
+      "cumulative_s": 38,
+      "candidate_predicted_errors": {
+        "8": "-1/2",
+        "10": "-1/12"
+      },
+      "C": "95/12",
+      "E": 8,
+      "N_assumed": 8,
+      "D": "-1/12",
+      "Dq": "-1/12",
+      "Ds": 0
+    },
+    {
+      "cycle": 5,
+      "T_s": 10,
+      "cumulative_s": 48,
+      "candidate_predicted_errors": {
+        "8": "-5/12",
+        "10": "0"
+      },
+      "C": "10",
+      "E": 10,
+      "N_assumed": 10,
+      "D": "0",
+      "Dq": "0",
+      "Ds": 0
+    },
+    {
+      "cycle": 6,
+      "T_s": 10,
+      "cumulative_s": 58,
+      "candidate_predicted_errors": {
+        "8": "-1/3",
+        "10": "1/12"
+      },
+      "C": "145/12",
+      "E": 12,
+      "N_assumed": 12,
+      "D": "1/12",
+      "Dq": "1/12",
+      "Ds": 0
+    },
+    {
+      "cycle": 7,
+      "T_s": 10,
+      "cumulative_s": 68,
+      "candidate_predicted_errors": {
+        "8": "-1/4",
+        "10": "1/6"
+      },
+      "C": "85/6",
+      "E": 14,
+      "N_assumed": 14,
+      "D": "1/6",
+      "Dq": "1/6",
+      "Ds": 0
+    },
+    {
+      "cycle": 8,
+      "T_s": 8,
+      "cumulative_s": 76,
+      "candidate_predicted_errors": {
+        "8": "-1/6",
+        "10": "1/4"
+      },
+      "C": "95/6",
+      "E": 16,
+      "N_assumed": 16,
+      "D": "-1/6",
+      "Dq": "-1/6",
+      "Ds": 0
+    },
+    {
+      "cycle": 9,
+      "T_s": 10,
+      "cumulative_s": 86,
+      "candidate_predicted_errors": {
+        "8": "-1/2",
+        "10": "-1/12"
+      },
+      "C": "215/12",
+      "E": 18,
+      "N_assumed": 18,
+      "D": "-1/12",
+      "Dq": "-1/12",
+      "Ds": 0
+    },
+    {
+      "cycle": 10,
+      "T_s": 10,
+      "cumulative_s": 96,
+      "candidate_predicted_errors": {
+        "8": "-5/12",
+        "10": "0"
+      },
+      "C": "20",
+      "E": 20,
+      "N_assumed": 20,
+      "D": "0",
+      "Dq": "0",
+      "Ds": 0
+    }
+  ],
+  "repeat_block_period_s": 48,
+  "nominal_block_vehicles": 10,
+  "nominal_block_average_veh_h": "750",
+  "observed_N": null,
+  "complete_boundary_error_bound_for_this_example": "1/6",
+  "within_cycle_bound_claimed": false,
+  "tie_case": {
+    "D": "1/8",
+    "predicted_errors": {
+      "8": "-5/24",
+      "10": "5/24"
+    },
+    "selected_T_s": 10
+  },
+  "midcycle_request_change_example": {
+    "requests_relative_s": [
+      {
+        "t": 0,
+        "r": 750
+      },
+      {
+        "t": 7,
+        "r": 900
+      }
+    ],
+    "first_T_s": 10,
+    "predicted_C_if_constant": "25/12",
+    "actual_C_integral_under_toy_changes": "53/24",
+    "assumed_N_at_boundary": 2,
+    "actual_D_under_toy": "5/24",
+    "next_candidate_scores": {
+      "8": "5/24",
+      "10": "17/24"
+    },
+    "selected_next_T_s": 8,
+    "second_boundary_C": "101/24",
+    "second_assumed_N": 4,
+    "second_D": "5/24",
+    "previous_request_feedback_state_modified": false
+  },
+  "partial_at_t4": {
+    "C": "5/6",
+    "E": 0,
+    "N_assumed": 2,
+    "D": "-7/6",
+    "Dq": "5/6",
+    "Ds": -2,
+    "meaning": "Observed partial hypothetical, not completed deficiency or violation of boundary-only bound"
+  },
+  "unobserved_ledgers": {
+    "C": null,
+    "E": null,
+    "N": null,
+    "D": null,
+    "Dq": null,
+    "Ds": null
+  },
+  "count_condition_examples": {
+    "0": "STOP_DIAGNOSE_NO_AUTOMATIC_COMPENSATION",
+    "1": "STOP_DIAGNOSE_NO_AUTOMATIC_COMPENSATION",
+    "2": "NORMAL_COMPLETED_TWO_VEHICLE_ASSUMPTION",
+    "3": "STOP_DIAGNOSE_NO_AUTOMATIC_COMPENSATION",
+    "None": "UNKNOWN_NO_OBSERVED_COUNT"
+  },
+  "supported_rate_range": [
+    720,
+    900
+  ],
+  "unsupported_examples": [
+    300,
+    600,
+    719,
+    901
+  ],
+  "native_runs": 0,
+  "production_scheduler_created": false,
+  "formal_acceptance_tolerance_created": false
+}

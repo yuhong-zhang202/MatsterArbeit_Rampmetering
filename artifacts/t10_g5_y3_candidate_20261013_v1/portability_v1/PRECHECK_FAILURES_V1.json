@@ -1,0 +1,8 @@
+{
+  "scope": "mechanical delivery checks only",
+  "preserved_frozen_diff_artifacts": true,
+  "full_git_diff_check": "exit2: literal blank context markers in three frozen .diff files flagged as trailing whitespace; no source/documentation warning",
+  "scoped_git_diff_check": "PASS excluding those three immutable diff artifacts",
+  "first_local_fetch": "FAIL: abbreviated 0394949 is not a remote ref; subsequent checkout did not run successfully; no test/source/native output",
+  "correction": "fetch full 03949494d02c94802e5bc2461ca9daf2a82b341a then checkout exact SHA; no source change"
+}

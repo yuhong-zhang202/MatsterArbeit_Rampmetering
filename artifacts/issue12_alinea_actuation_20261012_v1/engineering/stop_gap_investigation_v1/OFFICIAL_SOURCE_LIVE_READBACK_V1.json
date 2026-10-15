@@ -1,0 +1,37 @@
+{
+  "classification": "READ_ONLY_OFFICIAL_PINNED_SOURCE_REFRESH",
+  "native_invocations": 0,
+  "pin": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+  "secure_gap": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "content": "\n\ndouble\nMSCFModel::getSecureGap(const MSVehicle* const veh, const MSVehicle* const /*pred*/, const double speed, const double leaderSpeed, const double leaderMaxDecel) const {\n    // The solution approach leaderBrakeGap >= followerBrakeGap is not\n    // secure when the follower can brake harder than the leader because the paths may still cross.\n    // As a workaround we use a value of leaderDecel which errs on the side of caution\n    const double maxDecel = MAX2(myDecel, leaderMaxDecel);\n    const double bgLeader = brakeGap(leaderSpeed, maxDecel, 0);\n    double secureGap = MAX2(0.0, brakeGap(speed, myDecel, myHeadwayTime) - bgLeader);\n    if (MSGlobals::gComputeLC && veh->getAcceleration() < -NUMERICAL_EPS) {\n        // vehicle can react instantly in the next step\n        // we only apply 'myHeadWayTime' to avoid sudden braking after lane change\n        // thus we can reduce the required brakeGap if the vehicle is braking anyway\n        // (but we shouldn't assume continued emergency deceleration)\n        const double secureGapDecel = MAX2(0.0, brakeGap(speed, MIN2(-veh->getAcceleration(), myDecel), 0) - bgLeader);\n        // the secureGapDecel doesn't leave room for lcAssertive behavior\n        secureGap = MIN2(secureGap, secureGapDecel / veh->getLaneChangeModel().getSafetyFactor());",
+      "encoding": "utf-8",
+      "sha": "5a189ab4702ecfdb8029c0e8639ab3518cc4d60a",
+      "display_url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/cfmodels/MSCFModel.cpp",
+      "display_title": "MSCFModel.cpp"
+    },
+    "isError": false
+  },
+  "vehicle_apparent_getter": {
+    "content": [
+      {
+        "type": "text",
+        "text": "Action completed."
+      }
+    ],
+    "structuredContent": {
+      "content": "double Vehicle::getEmergencyDecel(const std::string& vehID) {\n    return Helper::getVehicleType(vehID).getCarFollowModel().getEmergencyDecel();\n}\n\n\ndouble Vehicle::getApparentDecel(const std::string& vehID) {\n    return Helper::getVehicleType(vehID).getCarFollowModel().getApparentDecel();\n}\n",
+      "encoding": "utf-8",
+      "sha": "defd14a0160e2debf5f446c3c400266b6470267a",
+      "display_url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp",
+      "display_title": "Vehicle.cpp"
+    },
+    "isError": false
+  }
+}

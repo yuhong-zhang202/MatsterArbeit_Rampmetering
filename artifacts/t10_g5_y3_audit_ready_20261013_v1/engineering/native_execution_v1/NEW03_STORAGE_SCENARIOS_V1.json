@@ -1,0 +1,38 @@
+{
+  "classification": "COARSE_TECHNICAL_STORAGE_PLANNING_NOT_ACTUAL_RUN_OR_BOUND",
+  "source_run": "UA_T10_G5Y3_FIXED750_S17_02",
+  "observed_last_ACK_s": 1038,
+  "target_s": 1270,
+  "observed_frozen_parent_bytes": 300852929,
+  "observed_controlled_phase": false,
+  "latest_user_steering_parent_relay": "别管300MB的限制，继续跑完",
+  "existing02_immutable_not_resumable": true,
+  "future_new_identity_required": true,
+  "assumptions": [
+    {
+      "name": "uniform bytes per simulated second",
+      "not_empirically_verified": true,
+      "estimated_new03_total_bytes": 368095588
+    },
+    {
+      "name": "per-step payload grows proportional to simulated time, cumulative quadratic",
+      "not_empirically_verified": true,
+      "estimated_new03_total_bytes": 450367434
+    }
+  ],
+  "increment_beyond_observed_prefix_if_hypothetically_continued_bytes": [
+    67242659,
+    149514505
+  ],
+  "fresh03_plus_retained02_storage_bytes": [
+    668948517,
+    751220363
+  ],
+  "unit": "decimal bytes; MB=1000000",
+  "interpretation": "rough planning scenarios, not a confidence interval or upper guarantee;03 starts from zero and cannot continue02 process",
+  "new_output_budget_selected": false,
+  "new_output_cap": null,
+  "original300MB_exclusion_not_rewritten": true,
+  "wall300s_and_free5GB_and_all_other_safety_unknown_gates_still_required": true,
+  "native_started_for03": false
+}

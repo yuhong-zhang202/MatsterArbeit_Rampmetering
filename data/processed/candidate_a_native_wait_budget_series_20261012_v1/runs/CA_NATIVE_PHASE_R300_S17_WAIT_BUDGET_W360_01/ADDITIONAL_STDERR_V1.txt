@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/.codex/worktrees/native-receiver-wait/Masterarbeit-Ramp-Metering/data/processed/candidate_a_native_wait_budget_series_20261012_v1/runs/CA_NATIVE_PHASE_R300_S17_WAIT_BUDGET_W360_01/additional_readback_V1.py", line 38, in <module>
+    if __name__=='__main__':print(json.dumps(inspect(),indent=2,allow_nan=False))
+                                             ~~~~~~~^^
+  File "/Users/yuhongzhang/.codex/worktrees/native-receiver-wait/Masterarbeit-Ramp-Metering/data/processed/candidate_a_native_wait_budget_series_20261012_v1/runs/CA_NATIVE_PHASE_R300_S17_WAIT_BUDGET_W360_01/additional_readback_V1.py", line 19, in inspect
+    assert len(postwait)==9 and len(prewait)==6 and observations['WAIT_post_records']==postwait
+                                                    ~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'WAIT_post_records'

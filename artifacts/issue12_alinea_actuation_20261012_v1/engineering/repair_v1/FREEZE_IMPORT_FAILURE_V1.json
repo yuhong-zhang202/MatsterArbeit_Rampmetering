@@ -1,0 +1,8 @@
+{
+  "command": ".venv/bin/python -B /tmp/freeze_issue12_repair_v1.py",
+  "exitcode": 1,
+  "error": "ModuleNotFoundError: No module named 'src'",
+  "cause": "temporary helper in /tmp omitted repository sys.path",
+  "native_started": false,
+  "repair": "PYTHONPATH=. for same helper, no runtime source change"
+}

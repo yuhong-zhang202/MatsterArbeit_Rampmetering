@@ -1,0 +1,140 @@
+{
+  "requests_including_unused_initial": [
+    {
+      "event": "REQUESTED",
+      "request_id": "initial",
+      "global_request_s": 1200,
+      "rate_veh_h": 300,
+      "origin": "FIXED",
+      "r_ALINEA": null,
+      "mapped_period_s": 24,
+      "mapped_rate_veh_h": 300.0
+    },
+    {
+      "event": "REQUESTED",
+      "request_id": "dynamic_commands:1200",
+      "global_request_s": 1200,
+      "rate_veh_h": 300,
+      "origin": "SCHEDULED",
+      "r_ALINEA": null,
+      "mapped_period_s": 24,
+      "mapped_rate_veh_h": 300.0
+    },
+    {
+      "event": "REQUESTED",
+      "request_id": "scheduled:1201",
+      "global_request_s": 1201,
+      "rate_veh_h": 750,
+      "origin": "SCHEDULED",
+      "r_ALINEA": null,
+      "mapped_period_s": 10,
+      "mapped_rate_veh_h": 720.0
+    },
+    {
+      "event": "REQUESTED",
+      "request_id": "scheduled:1226",
+      "global_request_s": 1226,
+      "rate_veh_h": 900,
+      "origin": "SCHEDULED",
+      "r_ALINEA": null,
+      "mapped_period_s": 8,
+      "mapped_rate_veh_h": 900.0
+    },
+    {
+      "event": "REQUESTED",
+      "request_id": "scheduled:1237",
+      "global_request_s": 1237,
+      "rate_veh_h": 300,
+      "origin": "SCHEDULED",
+      "r_ALINEA": null,
+      "mapped_period_s": 24,
+      "mapped_rate_veh_h": 300.0
+    }
+  ],
+  "actual_applications": [
+    {
+      "event": "ACK_OBSERVED",
+      "request_id": "dynamic_commands:1200",
+      "application_global_s": 1200,
+      "first_green_ACK_s": 1201,
+      "application_delay_s": 0
+    },
+    {
+      "event": "ACK_OBSERVED",
+      "request_id": "scheduled:1201",
+      "application_global_s": 1224,
+      "first_green_ACK_s": 1225,
+      "application_delay_s": 23
+    },
+    {
+      "event": "ACK_OBSERVED",
+      "request_id": "scheduled:1226",
+      "application_global_s": 1234,
+      "first_green_ACK_s": 1235,
+      "application_delay_s": 8
+    },
+    {
+      "event": "ACK_OBSERVED",
+      "request_id": "scheduled:1237",
+      "application_global_s": 1242,
+      "first_green_ACK_s": 1243,
+      "application_delay_s": 5
+    }
+  ],
+  "actual_program_and_phase_requests_control_segment": [
+    {
+      "time_s": 1200,
+      "method": "setProgram",
+      "value": "I12_PACKET24",
+      "call_completed": true
+    },
+    {
+      "time_s": 1200,
+      "method": "setPhase",
+      "value": 0,
+      "call_completed": true
+    },
+    {
+      "time_s": 1224,
+      "method": "setProgram",
+      "value": "I12_PACKET10",
+      "call_completed": true
+    },
+    {
+      "time_s": 1224,
+      "method": "setPhase",
+      "value": 0,
+      "call_completed": true
+    },
+    {
+      "time_s": 1234,
+      "method": "setProgram",
+      "value": "I12_PACKET8",
+      "call_completed": true
+    },
+    {
+      "time_s": 1234,
+      "method": "setPhase",
+      "value": 0,
+      "call_completed": true
+    },
+    {
+      "time_s": 1242,
+      "method": "setProgram",
+      "value": "I12_PACKET24",
+      "call_completed": true
+    },
+    {
+      "time_s": 1242,
+      "method": "setPhase",
+      "value": 0,
+      "call_completed": true
+    }
+  ],
+  "remaining_stop_reasons": [],
+  "control_phase_clock_rows": 66,
+  "numeric_classifications": [],
+  "raw_command_journal_sha256": "56288be077c94ffe4c7a37255da714ec5e28b723029da334b9e9fa413762fd14",
+  "raw_pre_journal_sha256": "2f8f6212610dfd1ba595aa5c9db55006b1737c72df4ac8bfd067f5af649cdd99",
+  "interpretation": "Actual observed journals; independent continuous TLS/FCD/ACK/no-midcycle-restart audit still required"
+}

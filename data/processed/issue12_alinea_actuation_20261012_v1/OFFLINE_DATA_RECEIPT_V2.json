@@ -1,0 +1,20 @@
+{
+  "classification": "OFFLINE_DATA_PRELAUNCH_NOT_ACTUAL_NATIVE_RESULT",
+  "engineering_binding_sha256": "077b8313ea0c380422b3650288f66fe2271f03e1dc3153b6c0550cbd1de1755a",
+  "engineering_files_checked": 105,
+  "mismatches": [],
+  "cards_sha256": {
+    "CA_I12_QUOTA_R900_S17_DIAG02": "afbe76e1181f5173031973b5fe6bfa8ceb5614accfa4a76e3e5b02a67f041fea",
+    "CA_I12_QUOTA_R600_S17_DIAG03": "37d8e820dc5d2cd760e4bcff4aaf7d6f45199a3a643f3ff300f0a999ea7a3948",
+    "CA_I12_QUOTA_R300_S17_DIAG01": "4ddbe480758fb8b0212912a36c07359eae34675b961cf1e1e49c434a031762a5"
+  },
+  "prepared_no_raw": true,
+  "fixture_commands": [
+    "python3 data/processed/issue12_alinea_actuation_20261012_v1/test_data_V1.py",
+    "python3 data/processed/issue12_alinea_actuation_20261012_v1/test_data_V2.py"
+  ],
+  "fixture_result": "V1 2 PASS but schema limitation retained; V2 2 PASS",
+  "actual_native_runs_this_task": 0,
+  "native_safety_verified": false,
+  "actual_rate_qualified": false
+}

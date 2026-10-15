@@ -1,0 +1,347 @@
+{
+  "classification": "INDEPENDENT_ACTUAL_PREFIX_AUDIT_NOT_QUALIFICATION",
+  "run_id": "CA_I12_PACKET_R900_S17_DIAG01",
+  "raw_manifest_sha256": "253c894c52c21a009094dbb7ee80586473f21a0e194abce4d86ccdfb54efde40",
+  "raw_files_checked": 95,
+  "last_actual_ACK": 1272,
+  "observed_control_seconds": 72,
+  "independent_entries": [
+    {
+      "vehicle_id": "R_flow.0",
+      "time_begin_s": 1200,
+      "time_end_s": 1201,
+      "motion": "G"
+    },
+    {
+      "vehicle_id": "R_flow.1",
+      "time_begin_s": 1203,
+      "time_end_s": 1204,
+      "motion": "G"
+    },
+    {
+      "vehicle_id": "R_flow.2",
+      "time_begin_s": 1208,
+      "time_end_s": 1209,
+      "motion": "G"
+    },
+    {
+      "vehicle_id": "R_flow.3",
+      "time_begin_s": 1211,
+      "time_end_s": 1212,
+      "motion": "G"
+    },
+    {
+      "vehicle_id": "R_flow.4",
+      "time_begin_s": 1216,
+      "time_end_s": 1217,
+      "motion": "G"
+    },
+    {
+      "vehicle_id": "R_flow.5",
+      "time_begin_s": 1219,
+      "time_end_s": 1220,
+      "motion": "G"
+    },
+    {
+      "vehicle_id": "R_flow.6",
+      "time_begin_s": 1224,
+      "time_end_s": 1225,
+      "motion": "G"
+    },
+    {
+      "vehicle_id": "R_flow.7",
+      "time_begin_s": 1227,
+      "time_end_s": 1228,
+      "motion": "G"
+    },
+    {
+      "vehicle_id": "R_flow.8",
+      "time_begin_s": 1232,
+      "time_end_s": 1233,
+      "motion": "G"
+    },
+    {
+      "vehicle_id": "R_flow.9",
+      "time_begin_s": 1235,
+      "time_end_s": 1236,
+      "motion": "G"
+    },
+    {
+      "vehicle_id": "R_flow.10",
+      "time_begin_s": 1240,
+      "time_end_s": 1241,
+      "motion": "G"
+    },
+    {
+      "vehicle_id": "R_flow.11",
+      "time_begin_s": 1243,
+      "time_end_s": 1244,
+      "motion": "G"
+    },
+    {
+      "vehicle_id": "R_flow.12",
+      "time_begin_s": 1248,
+      "time_end_s": 1249,
+      "motion": "G"
+    },
+    {
+      "vehicle_id": "R_flow.13",
+      "time_begin_s": 1251,
+      "time_end_s": 1252,
+      "motion": "G"
+    },
+    {
+      "vehicle_id": "R_flow.14",
+      "time_begin_s": 1256,
+      "time_end_s": 1257,
+      "motion": "G"
+    },
+    {
+      "vehicle_id": "R_flow.15",
+      "time_begin_s": 1259,
+      "time_end_s": 1260,
+      "motion": "G"
+    },
+    {
+      "vehicle_id": "R_flow.16",
+      "time_begin_s": 1264,
+      "time_end_s": 1265,
+      "motion": "G"
+    },
+    {
+      "vehicle_id": "R_flow.17",
+      "time_begin_s": 1267,
+      "time_end_s": 1268,
+      "motion": "G"
+    }
+  ],
+  "terminal_arrivals": 1338,
+  "terminal_status_counts": {
+    "PASS": 1338
+  },
+  "braking_min_speed_difference_m_s2": -4.5,
+  "native_min_acceleration_m_s2": -4.5,
+  "native_event_counter_max": 0,
+  "conditional_WAIT_records": 61,
+  "supplied_control_steps": 72,
+  "FCD_TLS_ACK_frames": 1272,
+  "native_log_final_EOF": "BOUND",
+  "log_records": 2547,
+  "yellow_screen_events": [
+    1204,
+    1212,
+    1220,
+    1228,
+    1236,
+    1244,
+    1252,
+    1260,
+    1268
+  ],
+  "demand_group_counts": {
+    "M": {
+      "due_before1272": 1272,
+      "future_at_or_after1272": 1728,
+      "inserted": 1272,
+      "due_not_inserted": 0,
+      "unfinished_in_network": 78
+    },
+    "R": {
+      "due_before1272": 168,
+      "future_at_or_after1272": 432,
+      "inserted": 100,
+      "due_not_inserted": 68,
+      "unfinished_in_network": 93
+    },
+    "U": {
+      "due_before1272": 128,
+      "future_at_or_after1272": 172,
+      "inserted": 100,
+      "due_not_inserted": 28,
+      "unfinished_in_network": 23
+    },
+    "X": {
+      "due_before1272": 64,
+      "future_at_or_after1272": 86,
+      "inserted": 64,
+      "due_not_inserted": 0,
+      "unfinished_in_network": 4
+    }
+  },
+  "queue_export_final_BEGIN": "1271.000",
+  "service_command": 900,
+  "qRamp": 900,
+  "r_ALINEA": null,
+  "complete_cycles": 9,
+  "first_red_checkpoint_completed": true,
+  "remaining_cycles": [],
+  "native_safety_proven": false,
+  "rate_qualified": false,
+  "technical_cause": null,
+  "phase_sequence_audit": {
+    "status": "PASS_ORDERED_TLS_ACK_SWITCH_AUDIT",
+    "observed_motion_BEGIN_s": [
+      1200,
+      1271
+    ],
+    "last_observed_ACK_s": 1272,
+    "cycles": [
+      {
+        "begin_s": 1200,
+        "end_s": 1208,
+        "motion_sequence": "GGGGyyrr",
+        "green_begin_s": 1200,
+        "yellow_begin_s": 1204,
+        "red_begin_s": 1206,
+        "first_red_ACK_s": 1207,
+        "phase_durations_s": {
+          "G": 4,
+          "y": 2,
+          "r": 2
+        }
+      },
+      {
+        "begin_s": 1208,
+        "end_s": 1216,
+        "motion_sequence": "GGGGyyrr",
+        "green_begin_s": 1208,
+        "yellow_begin_s": 1212,
+        "red_begin_s": 1214,
+        "first_red_ACK_s": 1215,
+        "phase_durations_s": {
+          "G": 4,
+          "y": 2,
+          "r": 2
+        }
+      },
+      {
+        "begin_s": 1216,
+        "end_s": 1224,
+        "motion_sequence": "GGGGyyrr",
+        "green_begin_s": 1216,
+        "yellow_begin_s": 1220,
+        "red_begin_s": 1222,
+        "first_red_ACK_s": 1223,
+        "phase_durations_s": {
+          "G": 4,
+          "y": 2,
+          "r": 2
+        }
+      },
+      {
+        "begin_s": 1224,
+        "end_s": 1232,
+        "motion_sequence": "GGGGyyrr",
+        "green_begin_s": 1224,
+        "yellow_begin_s": 1228,
+        "red_begin_s": 1230,
+        "first_red_ACK_s": 1231,
+        "phase_durations_s": {
+          "G": 4,
+          "y": 2,
+          "r": 2
+        }
+      },
+      {
+        "begin_s": 1232,
+        "end_s": 1240,
+        "motion_sequence": "GGGGyyrr",
+        "green_begin_s": 1232,
+        "yellow_begin_s": 1236,
+        "red_begin_s": 1238,
+        "first_red_ACK_s": 1239,
+        "phase_durations_s": {
+          "G": 4,
+          "y": 2,
+          "r": 2
+        }
+      },
+      {
+        "begin_s": 1240,
+        "end_s": 1248,
+        "motion_sequence": "GGGGyyrr",
+        "green_begin_s": 1240,
+        "yellow_begin_s": 1244,
+        "red_begin_s": 1246,
+        "first_red_ACK_s": 1247,
+        "phase_durations_s": {
+          "G": 4,
+          "y": 2,
+          "r": 2
+        }
+      },
+      {
+        "begin_s": 1248,
+        "end_s": 1256,
+        "motion_sequence": "GGGGyyrr",
+        "green_begin_s": 1248,
+        "yellow_begin_s": 1252,
+        "red_begin_s": 1254,
+        "first_red_ACK_s": 1255,
+        "phase_durations_s": {
+          "G": 4,
+          "y": 2,
+          "r": 2
+        }
+      },
+      {
+        "begin_s": 1256,
+        "end_s": 1264,
+        "motion_sequence": "GGGGyyrr",
+        "green_begin_s": 1256,
+        "yellow_begin_s": 1260,
+        "red_begin_s": 1262,
+        "first_red_ACK_s": 1263,
+        "phase_durations_s": {
+          "G": 4,
+          "y": 2,
+          "r": 2
+        }
+      },
+      {
+        "begin_s": 1264,
+        "end_s": 1272,
+        "motion_sequence": "GGGGyyrr",
+        "green_begin_s": 1264,
+        "yellow_begin_s": 1268,
+        "red_begin_s": 1270,
+        "first_red_ACK_s": 1271,
+        "phase_durations_s": {
+          "G": 4,
+          "y": 2,
+          "r": 2
+        }
+      }
+    ],
+    "observed_intercycle_r_to_G": 8,
+    "no_tenth_green_observation": true,
+    "native_safety_proven": false,
+    "rate_qualified": false
+  },
+  "public_phase_fixture_exact_raw_subset": true,
+  "body_independent_first_clear_ACK": {
+    "R_flow.0": 1203,
+    "R_flow.1": 1205,
+    "R_flow.2": 1211,
+    "R_flow.3": 1213,
+    "R_flow.4": 1218,
+    "R_flow.5": 1221,
+    "R_flow.6": 1226,
+    "R_flow.7": 1229,
+    "R_flow.8": 1235,
+    "R_flow.9": 1237,
+    "R_flow.10": 1242,
+    "R_flow.11": 1245,
+    "R_flow.12": 1251,
+    "R_flow.13": 1253,
+    "R_flow.14": 1258,
+    "R_flow.15": 1261,
+    "R_flow.16": 1266,
+    "R_flow.17": 1269
+  },
+  "body_observation_rows_checked": 40,
+  "body_admission_records": 9,
+  "card_origin": "FIXED_PACKET_POLICY_DIAGNOSTIC",
+  "telemetry_origin": "FIXED_POLICY_DIAGNOSTIC"
+}
+accounting {'C': 18.0, 'C_mapped_pending': 18.0, 'C_applied': 18.0, 'E': 18, 'N': 18, 'policy_quantization': 0.0, 'application_latency': 0.0, 'C_applied_minus_E': 0.0, 'E_minus_N': 0}

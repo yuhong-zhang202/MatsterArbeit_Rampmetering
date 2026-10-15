@@ -1,0 +1,25 @@
+{
+  "status": "STOP_EXACT_CARD_READER_MISMATCH",
+  "cards": [
+    {
+      "run_id": "UA_NATIVEGAP_DYNAMIC_S17_01",
+      "card_sha256": "a4bd4914591c3870eaf98c05d677c478f188ade6d85401e9a17fc7c00cd2ecfc",
+      "classification": "OFFLINE_PREPARED_APPROVED_SCOPE_NOT_RELEASED",
+      "status": "FAIL_READER_CARD_SCHEMA",
+      "exception_type": "ValueError",
+      "reason": "EXACT_FOLLOWUP_CLOCK",
+      "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 8, in <module>\n  File \"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/dynamic_minimum_qualification_audit_20261015_v1/scope.py\", line 9, in check_card_scope\n    need(card['classification']=='OFFLINE_CUMULATIVE_TRACKING_NOT_NATIVE_AUTHORIZED' and s['end_s']==1296 and s['activation_s']==1200 and s['step_s']==1 and s['seed']==17,'EXACT_FOLLOWUP_CLOCK')\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/t10_g5_y3_audit_20261013_v1/core.py\", line 13, in need\n    if not ok:raise ValueError(why)\n              ^^^^^^^^^^^^^^^^^^^^^\nValueError: EXACT_FOLLOWUP_CLOCK\n"
+    },
+    {
+      "run_id": "UA_NATIVEGAP_ALINEA_S17_01",
+      "card_sha256": "bdb2e72929cf981d53e4d59777c24438865e75ad845c302f133fc11bb2a5114c",
+      "classification": "OFFLINE_PREPARED_APPROVED_SCOPE_NOT_RELEASED",
+      "status": "FAIL_READER_CARD_SCHEMA",
+      "exception_type": "ValueError",
+      "reason": "EXACT_FOLLOWUP_CLOCK",
+      "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 8, in <module>\n  File \"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/dynamic_minimum_qualification_audit_20261015_v1/scope.py\", line 9, in check_card_scope\n    need(card['classification']=='OFFLINE_CUMULATIVE_TRACKING_NOT_NATIVE_AUTHORIZED' and s['end_s']==1296 and s['activation_s']==1200 and s['step_s']==1 and s['seed']==17,'EXACT_FOLLOWUP_CLOCK')\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/t10_g5_y3_audit_20261013_v1/core.py\", line 13, in need\n    if not ok:raise ValueError(why)\n              ^^^^^^^^^^^^^^^^^^^^^\nValueError: EXACT_FOLLOWUP_CLOCK\n"
+    }
+  ],
+  "native_runs": 0,
+  "frozen_sources_changed": false
+}

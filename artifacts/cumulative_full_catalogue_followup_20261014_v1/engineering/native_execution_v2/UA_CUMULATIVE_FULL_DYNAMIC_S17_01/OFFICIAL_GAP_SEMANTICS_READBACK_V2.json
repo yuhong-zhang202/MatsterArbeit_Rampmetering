@@ -1,0 +1,41 @@
+{
+  "classification": "BOUNDED_READONLY_OFFICIAL_SOURCE_SEMANTICS_NO_GUARD_CHANGE_OR_NATIVE_PROOF",
+  "official_pin": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+  "cached_source_sha_verified": {
+    "src/microsim/MSVehicle.cpp": {
+      "path": "/tmp/issue8_sumo_sources/src/microsim/MSVehicle.cpp",
+      "sha256": "8499ebe445906b19395d5c70945b012f320a439327e9cb3c20f0abd26d15a6a4",
+      "official_receipt": "artifacts/candidate_a_a1_contract_20261011_v1/engineering/SOURCE_RECEIPT.json",
+      "official_pin": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3"
+    },
+    "src/microsim/cfmodels/MSCFModel.cpp": {
+      "path": "/tmp/issue8_sumo_sources/src/microsim/cfmodels/MSCFModel.cpp",
+      "sha256": "b4a2b50b679c7772dc81ec5585410cedfdea2110961cc445731627ef3cb1d769",
+      "official_receipt": "artifacts/candidate_a_a1_contract_20261011_v1/engineering/SOURCE_RECEIPT.json",
+      "official_pin": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3"
+    }
+  },
+  "installed_traci_bound_source": {
+    "path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/lib/python3.13/site-packages/traci/_vehicle.py",
+    "sha256": "998b5579fc6df5380af5a315a2677d396460a9e8ecc58a8ba971d6f085b206eb",
+    "getLeader_lines_610_626": "Distance front+minGap to leaderrear, excludes follower minGap",
+    "getSecureGap_lines_709_714": "Vehicle model utility with caller supplied values"
+  },
+  "pinned_MSVehicle_getLeader_lines_6690_6720": "same-lane return explicitly subtracts follower minGap; cross-lane delegates consecutive lane helper; installedAPI states general net-gap contract",
+  "observed_cross_lane_net_gap_geometry_reconstruction_m": 2.0951522156549345,
+  "observed_net_gap_m": 2.0951522156549345,
+  "observed_bumper_gap_m": 4.5951522156549345,
+  "observed_native_utility_secure_gap_m": 1.022884125080513,
+  "margin_is_additional_project_1_1_m": true,
+  "observed_headroom_above_native_utility_m": 1.0722680905744215,
+  "project_margin_deficit_m": 0.02773190942557857,
+  "conditional_Euler_base_query_emergency_vs_normal": {
+    "9.0": 1.022884125080513,
+    "4.5": 1.022884125080513
+  },
+  "conditional_calculation_limit": "Base pinned Euler expression, dt1/tau1 and normal4.5/leader supplied9vs4.5; not actual apparentDecel getter or private branch observation. Leader/follower speeds below4.5 yield zero braking-distance steps so both base results coincide; no permission to alter scenario ormargin.",
+  "old900_evidence_reference": "artifacts/issue12_alinea_actuation_20261012_v1/engineering/stop_gap_investigation_v1/ENGINEERING_ROOT_CAUSE_V1.md",
+  "old900_difference": "Old higher-speed emergency-vs-apparent base query may differ; current low-speed base substitution cannot remove this extra-margin deficit. Current failure firstG, notold longG6.",
+  "no_source_guard_margin_or_threshold_change": true,
+  "native_runs_in_this_investigation": 0
+}

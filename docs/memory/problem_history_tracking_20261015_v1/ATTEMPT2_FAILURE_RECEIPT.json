@@ -1,0 +1,12 @@
+{
+  "status": "failed",
+  "date": "2026-10-15",
+  "network": "none",
+  "model_calls": 0,
+  "paid_requests": 0,
+  "ledger_sha256_before": "9e335f040971c7222081ea0196dfe84bc4a913d37e8a294f64e3d27b105fdf70",
+  "ledger_sha256_after": "9e335f040971c7222081ea0196dfe84bc4a913d37e8a294f64e3d27b105fdf70",
+  "immediate": null,
+  "fresh_readback": false,
+  "error": "Command failed: /opt/homebrew/bin/docker --context colima-memory-pilot create --name tdai-ramp-reviewed-state-20261015-v2 --pull=never --network none --cap-drop ALL --security-opt no-new-privileges --tmpfs /tmp:rw,size=32m --mount type=volume,source=tdai-ramp-metering-memory-v1,target=/data --mount type=bind,source=/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/memory_problem_history_tracking_20261015_v2,target=/receipts --entrypoint node sha256:9798254a8cc06276b7c5b3c19df49f136fae25d579564e1f01f9c4b9b8cd2d11 /update.mjs\nError response from daemon: invalid mount config for type \"bind\": bind source path does not exist: /Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/memory_problem_history_tracking_20261015_v2\n"
+}

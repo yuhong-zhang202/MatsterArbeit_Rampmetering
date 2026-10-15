@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/issue12_alinea_actuation_20261012_v1/CA_I12_QUOTA_R900_S17_BOUNDARY01/revision01/audit_stop_V1.py", line 21, in <module>
+    retained=row['retained_receipts'];need(retained[:len(post)]==post and len(retained)==1206,'retained prefix exact equality')
+                                      ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/issue12_alinea_actuation_20261012_v1/CA_I12_QUOTA_R900_S17_BOUNDARY01/revision01/audit_stop_V1.py", line 14, in need
+    if not v:raise ValueError(msg)
+             ^^^^^^^^^^^^^^^^^^^^^
+ValueError: retained prefix exact equality

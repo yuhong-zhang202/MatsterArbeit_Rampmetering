@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/issue12_alinea_actuation_20261012_v1/CA_I12_QUOTA_R300_S17_DIAG01/revision01/audit_prefix_V1.py", line 59, in <module>
+    following(q['before'],q['vehicle_id'],i,w);following(q['after'],q['vehicle_id'],i+1,z)
+    ~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/issue12_alinea_actuation_20261012_v1/CA_I12_QUOTA_R300_S17_DIAG01/revision01/audit_prefix_V1.py", line 32, in following
+    need(q.get('status') in ('CURRENT_GAP_OBSERVED_WITHIN_BOUND','CLEAR_NO_LEADER_WITHIN_BOUND_PATH'),'entry current-gap denied or unknown')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/issue12_alinea_actuation_20261012_v1/CA_I12_QUOTA_R300_S17_DIAG01/revision01/audit_prefix_V1.py", line 14, in need
+    if not v:raise ValueError(msg)
+             ^^^^^^^^^^^^^^^^^^^^^
+ValueError: entry current-gap denied or unknown

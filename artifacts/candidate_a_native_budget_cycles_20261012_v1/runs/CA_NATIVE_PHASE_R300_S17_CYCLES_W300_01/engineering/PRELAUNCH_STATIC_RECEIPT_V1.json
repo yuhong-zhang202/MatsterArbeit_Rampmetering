@@ -1,0 +1,32 @@
+{
+  "status": "PASS_FOR_ONE_W300_START",
+  "execution_source_commit": "20e5e83ac059768320cdaa4c815d164e1022de45",
+  "run_id": "CA_NATIVE_PHASE_R300_S17_CYCLES_W300_01",
+  "card_sha256": "25dccfa39d3ff716823f6ce7ceee18eba1c0b8c6393ae464b6db1d2b61c70386",
+  "environment_source_input_hash_check": "PASS_NO_NATIVE_COMMAND",
+  "free_bytes": 6577152000,
+  "resources": {
+    "wall_limit_s": 300,
+    "startup_limit_s": 60,
+    "run_limit_bytes": 300000000,
+    "minimum_free_bytes": 5000000000
+  },
+  "raw_identity_absent": true,
+  "exact_scope": "1207mandatorydurable/provisionalcheckpoint and1272threecyclesSTOP, earlieranomaly/unknown/resourceSTOP, noautoblindretry",
+  "human_goal_reference": "artifacts/candidate_a_native_budget_cycles_20261012_v1/USER_GOAL_AND_STEERING_V1.json",
+  "human_goal_sha256": "04ea5823e55dfa65dbf5e5672ef7a79ab9401d3736175638236f5484643efd17",
+  "reviews": {
+    "engineering": {
+      "path": "artifacts/candidate_a_native_budget_cycles_20261012_v1/engineering/ENGINEERING_REVIEW_V1.md",
+      "sha256": "919297f8f24cd668618d0c9031b3486559faf69a71bf3076848a002033022eac"
+    },
+    "data": {
+      "path": "data/processed/candidate_a_native_budget_cycles_20261012_v1/offline/FINAL_DATA_REVIEW_V1.md",
+      "sha256": "db6651648caa8cfa612ff1d001a1c76cfffcdb1cc47df2a43c12e2a334885fcb"
+    },
+    "science": {
+      "path": "artifacts/candidate_a_native_budget_cycles_20261012_v1/PRELAUNCH_SCIENTIFIC_REVIEW_V1.md",
+      "sha256": "6eb1fd1692dd3d956a70a47a69084f8d87bdca970ea84d585f3551bdce3f4953"
+    }
+  }
+}

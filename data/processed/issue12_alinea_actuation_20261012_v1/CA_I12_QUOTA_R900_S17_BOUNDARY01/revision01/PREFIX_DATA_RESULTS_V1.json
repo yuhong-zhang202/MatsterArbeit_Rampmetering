@@ -1,0 +1,205 @@
+{
+  "classification": "INDEPENDENT_ACTUAL_PREFIX_AUDIT_NOT_QUALIFICATION",
+  "run_id": "CA_I12_QUOTA_R900_S17_BOUNDARY01",
+  "raw_manifest_sha256": "f2ed45d66b2087a88cf8b7ce4af4d0d38131e6302ef43ded251a908cd655fa7f",
+  "raw_files_checked": 79,
+  "last_actual_ACK": 1206,
+  "observed_control_seconds": 6,
+  "accounting": {
+    "status": "PASS_ACCOUNTING_ONLY",
+    "observed_steps": 6,
+    "accounting": {
+      "C": 1.5,
+      "C_mapped_pending": 1.5,
+      "C_applied": 1.5,
+      "E": 0,
+      "N": 2,
+      "policy_quantization": 0.0,
+      "application_latency": 0.0,
+      "C_applied_minus_E": 1.5,
+      "E_minus_N": -2
+    },
+    "cycles": [
+      {
+        "begin_s": 1200,
+        "end_s": 1224,
+        "quota": 6,
+        "applied": 900,
+        "observed_steps": 6,
+        "completed": false,
+        "E": 0,
+        "N": 2,
+        "phase_exposure_s": {
+          "G": 6,
+          "y": 0,
+          "r": 0
+        }
+      }
+    ],
+    "complete_observation": false,
+    "rate_qualified": false,
+    "native_safety_proven": false
+  },
+  "independent_entries": [
+    {
+      "vehicle_id": "R_flow.0",
+      "time_begin_s": 1200,
+      "time_end_s": 1201,
+      "motion": "G"
+    },
+    {
+      "vehicle_id": "R_flow.1",
+      "time_begin_s": 1203,
+      "time_end_s": 1204,
+      "motion": "G"
+    }
+  ],
+  "terminal_arrivals": 1267,
+  "terminal_status_counts": {
+    "PASS": 1267
+  },
+  "braking_min_speed_difference_m_s2": -4.5,
+  "native_min_acceleration_m_s2": -4.5,
+  "native_event_counter_max": 0,
+  "conditional_WAIT_records": 10,
+  "supplied_control_steps": 6,
+  "FCD_TLS_ACK_frames": 1206,
+  "native_log_final_EOF": "BOUND",
+  "log_records": 2414,
+  "yellow_screen_event": null,
+  "N_y_observed": null,
+  "N_r_observed": null,
+  "rejected_current_gap": {
+    "vehicle_id": "R_flow.2",
+    "lane_id": "ramp_storage_0",
+    "time_s": 1206,
+    "route": [
+      "urban_in",
+      "shared_approach",
+      "ramp_storage",
+      "ramp_accel",
+      "merge_section",
+      "main_down"
+    ],
+    "lookahead_m": 478.67,
+    "receiver_path_lanes": [
+      ":ramp_mid_0_0",
+      "ramp_accel_0",
+      ":freeway_merge_2_0",
+      "merge_section_0",
+      "merge_section_1",
+      "merge_section_2"
+    ],
+    "path_geometry_m": {
+      "ramp_storage_0": 204.49,
+      ":ramp_mid_0_0": 81.98,
+      "ramp_accel_0": 99.07,
+      ":freeway_merge_2_0": 3.11,
+      "merge_section_0": 294.51,
+      "merge_section_1": 294.51,
+      "merge_section_2": 294.51
+    },
+    "actual_speed_m_s": 7.060596259649246,
+    "lane_position_m": 203.05775126258115,
+    "vehicle_length_m": 5.0,
+    "min_gap_m": 2.5,
+    "speed_mode": 31,
+    "lane_change_mode": 1621,
+    "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+    "margin_m": 1.1,
+    "future_safety_proven": false,
+    "fresh_getLeader_result": [
+      "R_flow.1",
+      9.630877589859532
+    ],
+    "leader_id": "R_flow.1",
+    "leader_lane_id": ":ramp_mid_0_0",
+    "leader_speed_m_s": 8.478656087227455,
+    "leader_speed_mode": 31,
+    "leader_lane_change_mode": 1621,
+    "getSecureGap_args": {
+      "vehID": "R_flow.2",
+      "speed": 7.060596259649246,
+      "leaderSpeed": 8.478656087227455,
+      "leaderMaxDecel": 9.0,
+      "leaderID": "R_flow.1"
+    },
+    "actual_secure_gap_m": 9.621192519298493,
+    "gap_excluding_minGap_m": 9.630877589859532,
+    "physical_bumper_gap_m": 12.130877589859532,
+    "required_with_margin_m": 10.721192519298492,
+    "status": "STOP_CURRENT_GAP_BOUND_DENIED",
+    "post_time_s": 1206,
+    "excess_over_secure_without_project_margin_m": 0.009685070561038955,
+    "project_margin_deficit_m": 1.0903149294389607
+  },
+  "demand_group_counts": {
+    "M": {
+      "due_before1206": 1206,
+      "future_at_or_after1206": 1794,
+      "inserted": 1206,
+      "due_not_inserted": 0,
+      "unfinished_in_network": 73
+    },
+    "R": {
+      "due_before1206": 152,
+      "future_at_or_after1206": 448,
+      "inserted": 100,
+      "due_not_inserted": 52,
+      "unfinished_in_network": 100
+    },
+    "U": {
+      "due_before1206": 121,
+      "future_at_or_after1206": 179,
+      "inserted": 100,
+      "due_not_inserted": 21,
+      "unfinished_in_network": 23
+    },
+    "X": {
+      "due_before1206": 61,
+      "future_at_or_after1206": 89,
+      "inserted": 61,
+      "due_not_inserted": 0,
+      "unfinished_in_network": 4
+    }
+  },
+  "queue_export_final_BEGIN": "1205.000",
+  "last_queue_rows": {
+    "ramp_storage_0": {
+      "id": "ramp_storage_0",
+      "queueing_time": "535.00000000",
+      "queueing_length": "208.52889146",
+      "queueing_length_experimental": "156.02170548"
+    },
+    "shared_approach_0": {
+      "id": "shared_approach_0",
+      "queueing_time": "402.00000000",
+      "queueing_length": "236.00620823",
+      "queueing_length_experimental": "183.49903390"
+    }
+  },
+  "service_command": 900,
+  "qRamp": 900,
+  "r_ALINEA": null,
+  "complete_cycles": 0,
+  "first_red_checkpoint_completed": false,
+  "remaining_cycles": [
+    {
+      "begin_s": 1224,
+      "C": null,
+      "C_applied": null,
+      "E": null,
+      "N": null
+    },
+    {
+      "begin_s": 1248,
+      "C": null,
+      "C_applied": null,
+      "E": null,
+      "N": null
+    }
+  ],
+  "native_safety_proven": false,
+  "rate_qualified": false,
+  "technical_cause": "OBSERVED_POST_CURRENT_GAP_WITH_PROJECT_MARGIN_DENIED"
+}

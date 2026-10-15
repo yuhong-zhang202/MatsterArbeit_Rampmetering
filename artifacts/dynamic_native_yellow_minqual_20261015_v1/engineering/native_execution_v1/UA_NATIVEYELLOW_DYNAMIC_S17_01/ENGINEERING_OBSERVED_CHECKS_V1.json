@@ -1,0 +1,516 @@
+{
+  "post_rows": 1296,
+  "control_post_rows": 96,
+  "counter_sums": {
+    "colliding_vehicles": 0,
+    "starting_teleports": 0,
+    "ending_teleports": 0
+  },
+  "actual_crossings": [
+    {
+      "vehicle_id": "R_flow.0",
+      "crossing_time_lower_s": 1200,
+      "crossing_time_upper_s": 1201,
+      "time_interval": "(lower,upper]",
+      "cycle_id": 0,
+      "motion_signal_state": "G"
+    },
+    {
+      "vehicle_id": "R_flow.1",
+      "crossing_time_lower_s": 1203,
+      "crossing_time_upper_s": 1204,
+      "time_interval": "(lower,upper]",
+      "cycle_id": 0,
+      "motion_signal_state": "G"
+    },
+    {
+      "vehicle_id": "R_flow.2",
+      "crossing_time_lower_s": 1224,
+      "crossing_time_upper_s": 1225,
+      "time_interval": "(lower,upper]",
+      "cycle_id": 1,
+      "motion_signal_state": "G"
+    },
+    {
+      "vehicle_id": "R_flow.3",
+      "crossing_time_lower_s": 1227,
+      "crossing_time_upper_s": 1228,
+      "time_interval": "(lower,upper]",
+      "cycle_id": 1,
+      "motion_signal_state": "G"
+    },
+    {
+      "vehicle_id": "R_flow.4",
+      "crossing_time_lower_s": 1232,
+      "crossing_time_upper_s": 1233,
+      "time_interval": "(lower,upper]",
+      "cycle_id": 2,
+      "motion_signal_state": "G"
+    },
+    {
+      "vehicle_id": "R_flow.5",
+      "crossing_time_lower_s": 1236,
+      "crossing_time_upper_s": 1237,
+      "time_interval": "(lower,upper]",
+      "cycle_id": 2,
+      "motion_signal_state": "y"
+    },
+    {
+      "vehicle_id": "R_flow.6",
+      "crossing_time_lower_s": 1240,
+      "crossing_time_upper_s": 1241,
+      "time_interval": "(lower,upper]",
+      "cycle_id": 3,
+      "motion_signal_state": "G"
+    },
+    {
+      "vehicle_id": "R_flow.7",
+      "crossing_time_lower_s": 1243,
+      "crossing_time_upper_s": 1244,
+      "time_interval": "(lower,upper]",
+      "cycle_id": 3,
+      "motion_signal_state": "G"
+    },
+    {
+      "vehicle_id": "R_flow.8",
+      "crossing_time_lower_s": 1248,
+      "crossing_time_upper_s": 1249,
+      "time_interval": "(lower,upper]",
+      "cycle_id": 4,
+      "motion_signal_state": "G"
+    },
+    {
+      "vehicle_id": "R_flow.9",
+      "crossing_time_lower_s": 1251,
+      "crossing_time_upper_s": 1252,
+      "time_interval": "(lower,upper]",
+      "cycle_id": 4,
+      "motion_signal_state": "G"
+    },
+    {
+      "vehicle_id": "R_flow.10",
+      "crossing_time_lower_s": 1261,
+      "crossing_time_upper_s": 1262,
+      "time_interval": "(lower,upper]",
+      "cycle_id": 5,
+      "motion_signal_state": "G"
+    },
+    {
+      "vehicle_id": "R_flow.11",
+      "crossing_time_lower_s": 1264,
+      "crossing_time_upper_s": 1265,
+      "time_interval": "(lower,upper]",
+      "cycle_id": 5,
+      "motion_signal_state": "G"
+    },
+    {
+      "vehicle_id": "R_flow.12",
+      "crossing_time_lower_s": 1285,
+      "crossing_time_upper_s": 1286,
+      "time_interval": "(lower,upper]",
+      "cycle_id": 6,
+      "motion_signal_state": "G"
+    },
+    {
+      "vehicle_id": "R_flow.13",
+      "crossing_time_lower_s": 1288,
+      "crossing_time_upper_s": 1289,
+      "time_interval": "(lower,upper]",
+      "cycle_id": 6,
+      "motion_signal_state": "G"
+    }
+  ],
+  "minimum_observed_speed_difference_m_s2": -4.5,
+  "minimum_observed_after_acceleration_m_s2": -4.5,
+  "numeric_classifications": [],
+  "body_clear_rows": [
+    {
+      "vehicle_id": "R_flow.0",
+      "entry_time_begin_s": 1200,
+      "entry_time_end_s": 1201,
+      "entry_signal": "G",
+      "observed_ACK_s": 1203,
+      "observed_signal": "G",
+      "head_position_m": 9.290342564908121,
+      "length_m": 5.0,
+      "speed_m_s": 5.3317605525255205,
+      "rear_position_m": 4.290342564908121,
+      "status": "REAR_CLEAR_OBSERVED",
+      "red_rear_is_not_new_front_entry": true,
+      "first_actual_rear_clear_ACK_s": 1203
+    },
+    {
+      "vehicle_id": "R_flow.1",
+      "entry_time_begin_s": 1203,
+      "entry_time_end_s": 1204,
+      "entry_signal": "G",
+      "observed_ACK_s": 1205,
+      "observed_signal": "y",
+      "head_position_m": 7.2199727652132175,
+      "length_m": 5.0,
+      "speed_m_s": 7.140826485348359,
+      "rear_position_m": 2.2199727652132175,
+      "status": "REAR_CLEAR_OBSERVED",
+      "red_rear_is_not_new_front_entry": true,
+      "first_actual_rear_clear_ACK_s": 1205
+    },
+    {
+      "vehicle_id": "R_flow.2",
+      "entry_time_begin_s": 1224,
+      "entry_time_end_s": 1225,
+      "entry_signal": "G",
+      "observed_ACK_s": 1227,
+      "observed_signal": "G",
+      "head_position_m": 9.904506685469595,
+      "length_m": 5.0,
+      "speed_m_s": 5.737490328820423,
+      "rear_position_m": 4.904506685469595,
+      "status": "REAR_CLEAR_OBSERVED",
+      "red_rear_is_not_new_front_entry": true,
+      "first_actual_rear_clear_ACK_s": 1227
+    },
+    {
+      "vehicle_id": "R_flow.3",
+      "entry_time_begin_s": 1227,
+      "entry_time_end_s": 1228,
+      "entry_signal": "G",
+      "observed_ACK_s": 1229,
+      "observed_signal": "y",
+      "head_position_m": 7.74182064793661,
+      "length_m": 5.0,
+      "speed_m_s": 7.407288445483349,
+      "rear_position_m": 2.74182064793661,
+      "status": "REAR_CLEAR_OBSERVED",
+      "red_rear_is_not_new_front_entry": true,
+      "first_actual_rear_clear_ACK_s": 1229
+    },
+    {
+      "vehicle_id": "R_flow.4",
+      "entry_time_begin_s": 1232,
+      "entry_time_end_s": 1233,
+      "entry_signal": "G",
+      "observed_ACK_s": 1234,
+      "observed_signal": "G",
+      "head_position_m": 5.077797380823298,
+      "length_m": 5.0,
+      "speed_m_s": 4.357167616819608,
+      "rear_position_m": 0.07779738082329768,
+      "status": "REAR_CLEAR_OBSERVED",
+      "red_rear_is_not_new_front_entry": true,
+      "first_actual_rear_clear_ACK_s": 1234
+    },
+    {
+      "vehicle_id": "R_flow.5",
+      "entry_time_begin_s": 1236,
+      "entry_time_end_s": 1237,
+      "entry_signal": "y",
+      "observed_ACK_s": 1237,
+      "observed_signal": "y",
+      "head_position_m": 6.632972682376902,
+      "length_m": 5.0,
+      "speed_m_s": 6.779132696726016,
+      "rear_position_m": 1.6329726823769022,
+      "status": "REAR_CLEAR_OBSERVED",
+      "red_rear_is_not_new_front_entry": true,
+      "first_actual_rear_clear_ACK_s": 1237
+    },
+    {
+      "vehicle_id": "R_flow.6",
+      "entry_time_begin_s": 1240,
+      "entry_time_end_s": 1241,
+      "entry_signal": "G",
+      "observed_ACK_s": 1243,
+      "observed_signal": "G",
+      "head_position_m": 10.186878070910078,
+      "length_m": 5.0,
+      "speed_m_s": 5.641692522567782,
+      "rear_position_m": 5.186878070910078,
+      "status": "REAR_CLEAR_OBSERVED",
+      "red_rear_is_not_new_front_entry": true,
+      "first_actual_rear_clear_ACK_s": 1243
+    },
+    {
+      "vehicle_id": "R_flow.7",
+      "entry_time_begin_s": 1243,
+      "entry_time_end_s": 1244,
+      "entry_signal": "G",
+      "observed_ACK_s": 1245,
+      "observed_signal": "y",
+      "head_position_m": 8.978288295799567,
+      "length_m": 5.0,
+      "speed_m_s": 6.824067657491279,
+      "rear_position_m": 3.978288295799567,
+      "status": "REAR_CLEAR_OBSERVED",
+      "red_rear_is_not_new_front_entry": true,
+      "first_actual_rear_clear_ACK_s": 1245
+    },
+    {
+      "vehicle_id": "R_flow.8",
+      "entry_time_begin_s": 1248,
+      "entry_time_end_s": 1249,
+      "entry_signal": "G",
+      "observed_ACK_s": 1250,
+      "observed_signal": "G",
+      "head_position_m": 5.848009416262888,
+      "length_m": 5.0,
+      "speed_m_s": 4.128299945055508,
+      "rear_position_m": 0.8480094162628884,
+      "status": "REAR_CLEAR_OBSERVED",
+      "red_rear_is_not_new_front_entry": true,
+      "first_actual_rear_clear_ACK_s": 1250
+    },
+    {
+      "vehicle_id": "R_flow.9",
+      "entry_time_begin_s": 1251,
+      "entry_time_end_s": 1252,
+      "entry_signal": "G",
+      "observed_ACK_s": 1253,
+      "observed_signal": "y",
+      "head_position_m": 9.631113241761264,
+      "length_m": 5.0,
+      "speed_m_s": 7.173454698506825,
+      "rear_position_m": 4.631113241761264,
+      "status": "REAR_CLEAR_OBSERVED",
+      "red_rear_is_not_new_front_entry": true,
+      "first_actual_rear_clear_ACK_s": 1253
+    },
+    {
+      "vehicle_id": "R_flow.10",
+      "entry_time_begin_s": 1261,
+      "entry_time_end_s": 1262,
+      "entry_signal": "G",
+      "observed_ACK_s": 1263,
+      "observed_signal": "G",
+      "head_position_m": 5.756759231980253,
+      "length_m": 5.0,
+      "speed_m_s": 4.20556654813356,
+      "rear_position_m": 0.7567592319802534,
+      "status": "REAR_CLEAR_OBSERVED",
+      "red_rear_is_not_new_front_entry": true,
+      "first_actual_rear_clear_ACK_s": 1263
+    },
+    {
+      "vehicle_id": "R_flow.11",
+      "entry_time_begin_s": 1264,
+      "entry_time_end_s": 1265,
+      "entry_signal": "G",
+      "observed_ACK_s": 1266,
+      "observed_signal": "y",
+      "head_position_m": 11.084743968135992,
+      "length_m": 5.0,
+      "speed_m_s": 7.726916894481941,
+      "rear_position_m": 6.084743968135992,
+      "status": "REAR_CLEAR_OBSERVED",
+      "red_rear_is_not_new_front_entry": true,
+      "first_actual_rear_clear_ACK_s": 1266
+    },
+    {
+      "vehicle_id": "R_flow.12",
+      "entry_time_begin_s": 1285,
+      "entry_time_end_s": 1286,
+      "entry_signal": "G",
+      "observed_ACK_s": 1288,
+      "observed_signal": "G",
+      "head_position_m": 8.710169299339265,
+      "length_m": 5.0,
+      "speed_m_s": 4.943484464869835,
+      "rear_position_m": 3.710169299339265,
+      "status": "REAR_CLEAR_OBSERVED",
+      "red_rear_is_not_new_front_entry": true,
+      "first_actual_rear_clear_ACK_s": 1288
+    },
+    {
+      "vehicle_id": "R_flow.13",
+      "entry_time_begin_s": 1288,
+      "entry_time_end_s": 1289,
+      "entry_signal": "G",
+      "observed_ACK_s": 1290,
+      "observed_signal": "y",
+      "head_position_m": 7.118426368592054,
+      "length_m": 5.0,
+      "speed_m_s": 6.644277247111887,
+      "rear_position_m": 2.118426368592054,
+      "status": "REAR_CLEAR_OBSERVED",
+      "red_rear_is_not_new_front_entry": true,
+      "first_actual_rear_clear_ACK_s": 1290
+    }
+  ],
+  "scope": "ENGINEERING_INITIAL_CHECK_ONLY_INDEPENDENT_RAW_REPLAY_PENDING",
+  "yellow_screens": [
+    {
+      "time_s": 1204,
+      "yellow_s": 5,
+      "legacy_status": "PASS",
+      "diagnostic_contract": {
+        "policy": "NATIVE_YELLOW_RESPONSIBILITY_COMPLETE_INPUT_DIAGNOSTIC_V1",
+        "enabled": true,
+        "original_witness_status": "PASS",
+        "witness_established": true,
+        "failed_witness_ids": [],
+        "interpretation": "LEGACY_WITNESS_ESTABLISHED",
+        "input_scope": "ORIGINAL_HARD_FRESH_FRAME_AND_POPULATION_JOINS_REQUIRED",
+        "allow_prepared_step": true,
+        "future_native_safety_proven": false,
+        "safety_certified": null
+      }
+    },
+    {
+      "time_s": 1228,
+      "yellow_s": 2,
+      "legacy_status": "PASS",
+      "diagnostic_contract": {
+        "policy": "NATIVE_YELLOW_RESPONSIBILITY_COMPLETE_INPUT_DIAGNOSTIC_V1",
+        "enabled": true,
+        "original_witness_status": "PASS",
+        "witness_established": true,
+        "failed_witness_ids": [],
+        "interpretation": "LEGACY_WITNESS_ESTABLISHED",
+        "input_scope": "ORIGINAL_HARD_FRESH_FRAME_AND_POPULATION_JOINS_REQUIRED",
+        "allow_prepared_step": true,
+        "future_native_safety_proven": false,
+        "safety_certified": null
+      }
+    },
+    {
+      "time_s": 1236,
+      "yellow_s": 2,
+      "legacy_status": "UNKNOWN",
+      "diagnostic_contract": {
+        "policy": "NATIVE_YELLOW_RESPONSIBILITY_COMPLETE_INPUT_DIAGNOSTIC_V1",
+        "enabled": true,
+        "original_witness_status": "UNKNOWN",
+        "witness_established": false,
+        "failed_witness_ids": [
+          "R_flow.5"
+        ],
+        "interpretation": "DIAGNOSTIC_WITNESS_NOT_ESTABLISHED",
+        "input_scope": "ORIGINAL_HARD_FRESH_FRAME_AND_POPULATION_JOINS_REQUIRED",
+        "allow_prepared_step": true,
+        "future_native_safety_proven": false,
+        "safety_certified": null
+      }
+    },
+    {
+      "time_s": 1244,
+      "yellow_s": 2,
+      "legacy_status": "PASS",
+      "diagnostic_contract": {
+        "policy": "NATIVE_YELLOW_RESPONSIBILITY_COMPLETE_INPUT_DIAGNOSTIC_V1",
+        "enabled": true,
+        "original_witness_status": "PASS",
+        "witness_established": true,
+        "failed_witness_ids": [],
+        "interpretation": "LEGACY_WITNESS_ESTABLISHED",
+        "input_scope": "ORIGINAL_HARD_FRESH_FRAME_AND_POPULATION_JOINS_REQUIRED",
+        "allow_prepared_step": true,
+        "future_native_safety_proven": false,
+        "safety_certified": null
+      }
+    },
+    {
+      "time_s": 1252,
+      "yellow_s": 5,
+      "legacy_status": "PASS",
+      "diagnostic_contract": {
+        "policy": "NATIVE_YELLOW_RESPONSIBILITY_COMPLETE_INPUT_DIAGNOSTIC_V1",
+        "enabled": true,
+        "original_witness_status": "PASS",
+        "witness_established": true,
+        "failed_witness_ids": [],
+        "interpretation": "LEGACY_WITNESS_ESTABLISHED",
+        "input_scope": "ORIGINAL_HARD_FRESH_FRAME_AND_POPULATION_JOINS_REQUIRED",
+        "allow_prepared_step": true,
+        "future_native_safety_proven": false,
+        "safety_certified": null
+      }
+    },
+    {
+      "time_s": 1265,
+      "yellow_s": 5,
+      "legacy_status": "PASS",
+      "diagnostic_contract": {
+        "policy": "NATIVE_YELLOW_RESPONSIBILITY_COMPLETE_INPUT_DIAGNOSTIC_V1",
+        "enabled": true,
+        "original_witness_status": "PASS",
+        "witness_established": true,
+        "failed_witness_ids": [],
+        "interpretation": "LEGACY_WITNESS_ESTABLISHED",
+        "input_scope": "ORIGINAL_HARD_FRESH_FRAME_AND_POPULATION_JOINS_REQUIRED",
+        "allow_prepared_step": true,
+        "future_native_safety_proven": false,
+        "safety_certified": null
+      }
+    },
+    {
+      "time_s": 1289,
+      "yellow_s": 5,
+      "legacy_status": "PASS",
+      "diagnostic_contract": {
+        "policy": "NATIVE_YELLOW_RESPONSIBILITY_COMPLETE_INPUT_DIAGNOSTIC_V1",
+        "enabled": true,
+        "original_witness_status": "PASS",
+        "witness_established": true,
+        "failed_witness_ids": [],
+        "interpretation": "LEGACY_WITNESS_ESTABLISHED",
+        "input_scope": "ORIGINAL_HARD_FRESH_FRAME_AND_POPULATION_JOINS_REQUIRED",
+        "allow_prepared_step": true,
+        "future_native_safety_proven": false,
+        "safety_certified": null
+      }
+    }
+  ],
+  "request_application": [
+    {
+      "id": "initial",
+      "request_s": 1200,
+      "requested_veh_h": 300,
+      "application_s": null,
+      "delay_s": null,
+      "status": "SUPERSEDED_WITHOUT_APPLICATION"
+    },
+    {
+      "id": "dynamic_commands:1200",
+      "request_s": 1200,
+      "requested_veh_h": 300,
+      "application_s": 1200,
+      "delay_s": 0,
+      "status": "ACK_OBSERVED"
+    },
+    {
+      "id": "scheduled:1201",
+      "request_s": 1201,
+      "requested_veh_h": 750,
+      "application_s": 1224,
+      "delay_s": 23,
+      "status": "ACK_OBSERVED"
+    },
+    {
+      "id": "scheduled:1226",
+      "request_s": 1226,
+      "requested_veh_h": 900,
+      "application_s": 1232,
+      "delay_s": 6,
+      "status": "ACK_OBSERVED"
+    },
+    {
+      "id": "scheduled:1237",
+      "request_s": 1237,
+      "requested_veh_h": 300,
+      "application_s": 1240,
+      "delay_s": 3,
+      "status": "ACK_OBSERVED"
+    }
+  ],
+  "source_recheck": {
+    "source_count": 154,
+    "all_exact": true,
+    "mismatches": []
+  },
+  "budget_not_settled": {
+    "prior_settled_s": 163.07205774995964,
+    "this_run_actual_s": 155.48080320795998,
+    "sum_known_actual_if_postreviews_accept": 318.5528609579196,
+    "remaining_if_settled_after_reviews": 281.4471390420804,
+    "not_execution_authorization": true
+  }
+}

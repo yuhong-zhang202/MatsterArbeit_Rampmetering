@@ -1,0 +1,151 @@
+--- protected_G4_audit/core.py
++++ isolated_G5Y3_audit/core.py
+@@ -3,6 +3,9 @@
+ from decimal import Decimal
+ import math
+ 
++MAX_GREEN=5
++YELLOW=3
++PROGRAM='T10_G5Y3_NATIVE'
+ DETECTORS=('p1_main_down_20_l0','p1_main_down_20_l1')
+ ACCOUNT_KEYS=('C','C_mapped_pending','C_applied','E','N','policy_quantization','application_latency','C_applied_minus_E','E_minus_N')
+ 
+@@ -14,9 +17,8 @@
+ def moment(x,t):return number(x) and x==t
+ 
+ def mapping(rate):
+-    need(number(rate) and 300<=rate<=900,'INVALID_REQUEST_RATE')
+-    t=min(range(8,25),key=lambda p:(abs(7200/p-rate),-p))
+-    return t,Fraction(7200,t)
++    need(number(rate) and rate==750,'T10_FIXED750_ONLY_RATE')
++    return 10,Fraction(720)
+ 
+ 
+ def audit_accounting(rows,events,entries,end_s):
+@@ -32,10 +34,10 @@
+         if kind=='REQUESTED':
+             rid=e.get('request_id');t=e.get('global_request_s');rate=e.get('rate_veh_h')
+             need(isinstance(rid,str) and rid and rid not in requests and type(t) is int and last<=t<=end_s,'REQUEST_ID_OR_TIME')
+-            need(e.get('origin') in ('FIXED','SCHEDULED','PROJECT_FEEDBACK'),'REQUEST_ORIGIN')
++            need(e.get('origin')=='FIXED','REQUEST_ORIGIN')
+             period,nominal=mapping(rate)
+             need(e.get('mapped_period_s')==period and near(e.get('mapped_rate_veh_h'),float(nominal)),'REQUEST_MAPPING')
+-            need(e.get('r_ALINEA') is None or near(e['r_ALINEA'],rate),'REQUEST_FEEDBACK_STATE')
++            need(e.get('r_ALINEA') is None,'REQUEST_FEEDBACK_STATE')
+             requests[rid]=e;ordered.append(e);last=t
+         elif kind=='ACK_OBSERVED':
+             rid=e.get('request_id');need(rid in requests and rid not in observed_events,'OBSERVED_APPLICATION_ID')
+@@ -56,7 +58,7 @@
+         new=not cycles or t==cycles[-1]['end_s']
+         if new:
+             need(rc.get('applied_request_id')==rid,'BOUNDARY_LATEST_COMMAND_NOT_APPLIED')
+-            cycles.append(dict(begin_s=t,end_s=t+pt,period_s=pt,yellow_s=min(5,pt-6),applied_request_id=rid,N=0,N_G=0,N_y=0,N_r=0,E=0,completed=False,phase_exposure_s={'G':0,'y':0,'r':0}))
++            cycles.append(dict(begin_s=t,end_s=t+pt,period_s=pt,yellow_s=YELLOW,applied_request_id=rid,N=0,N_G=0,N_y=0,N_r=0,E=0,completed=False,phase_exposure_s={'G':0,'y':0,'r':0}))
+             if rid not in first_apply:
+                 first_apply[rid]=t
+                 need(rid in observed_events and observed_events[rid]['application_global_s']==t and row.get('motion')=='G','PREPARED_APPLICATION_NOT_ACK_BOUND')
+@@ -95,30 +97,30 @@
+     for event in phase_requests:
+         for call in event.get('requests',[]):phase_calls.append((event,call))
+     for cycle in cycles:
+-        b=cycle['begin_s'];end=cycle['end_s'];T=cycle['period_s'];Y=min(5,T-6)
++        b=cycle['begin_s'];end=cycle['end_s'];T=cycle['period_s'];Y=YELLOW
+         rows=[q for q in posts if b<=q['time_begin_s']<end];states=''.join(q['motion'] for q in rows)
+-        g=len(states)-len(states.lstrip('G'));need(1<=g<=4,'GREEN_CONTINUITY')
++        g=len(states)-len(states.lstrip('G'));need(1<=g<=MAX_GREEN,'GREEN_CONTINUITY')
+         ge=b+g if g<len(states) else None
+         # The final prefix may stop during G. A recorded post-ACK green-close
+         # request is usable without pretending yellow was observed.
+-        yc=[(e,c) for e,c in phase_calls if c.get('method')=='setPhase' and c.get('value')==1 and b<c.get('time_s',-1)<=b+4]
++        yc=[(e,c) for e,c in phase_calls if c.get('method')=='setPhase' and c.get('value')==1 and b<c.get('time_s',-1)<=b+MAX_GREEN]
+         need(len(yc)<=1,'DUPLICATE_GREEN_CLOSE')
+         if yc:
+             e,c=yc[0];used_calls.add(id(c));need(c.get('call_completed') is True and moment(c['time_s'],b+g),'GREEN_CLOSE_ACK_TIME')
+             need(sum(q['N_G'] for q in [cycle])>=2,'QUOTA_CLOSE_WITHOUT_ACTUAL_N')
+             ge=c['time_s']
+             rb=e.get('actual_readback',{});need(rb.get('phase')==1 and rb.get('state')=='y' and moment(rb.get('time_s'),ge) and moment(rb.get('nextSwitch_s'),ge+Y),'YELLOW_SETTER_READBACK')
+-        elif ge is not None:need(g==4,'EARLY_GREEN_WITHOUT_QUOTA_REQUEST')
++        elif ge is not None:need(g==MAX_GREEN,'EARLY_GREEN_WITHOUT_QUOTA_REQUEST')
+         predicted='G'*g if ge is None else ('G'*g+'y'*Y+'r'*(T-g-Y))[:len(states)]
+         need(states==predicted,'CONTINUOUS_G_Y_R_ORDER')
+         if cycle['completed']:need(len(states)==T and cycle['phase_exposure_s']['y']==Y and cycle['phase_exposure_s']['r']>=2,'COMPLETED_CLEARANCE')
+         result.append(dict(begin_s=b,end_s=end,period_s=T,observed_motion_sequence=states,green_end_s=ge,yellow_s=Y,completed=cycle['completed']))
+         for row in rows:
+             t=row['time_begin_s'];i=t-1200;state=row['motion'];phase={'G':0,'y':1,'r':2}[state];x=tls[i]
+-            need(Decimal(x.get('time','NaN')).is_finite() and Decimal(x['time'])==t and x.get('id')=='ramp_mid' and x.get('programID')==f'I12_PACKET{T}' and x.get('phase')==str(phase) and x.get('state')==state,'TLS_TIME_IDENTITY_OR_ORDER')
++            need(Decimal(x.get('time','NaN')).is_finite() and Decimal(x['time'])==t and x.get('id')=='ramp_mid' and x.get('programID')==PROGRAM and x.get('phase')==str(phase) and x.get('state')==state,'TLS_TIME_IDENTITY_OR_ORDER')
+             a0,a1=acks[2*i:2*i+2];need(moment(a0.get('requested_target_s'),t+1) and a0.get('ACK_received') is True and a0.get('actual_time_verified') is False and a0.get('actual_readback_s') is None and moment(a1.get('requested_target_s'),t+1) and a1.get('ACK_received') is True and a1.get('actual_time_verified') is True and moment(a1.get('actual_readback_s'),t+1),'CONTINUOUS_TWO_STAGE_ACK')
+             po=row['phase_observation'];need(type(po.get('phase_after')) is int and po['phase_after']==phase and po.get('state_after')==state,'POST_PHASE_IDENTITY')
+-            switch=b+4 if state=='G' else ge+Y if state=='y' else (ge+T-4 if t==ge+Y else end)
++            switch=b+MAX_GREEN if state=='G' else ge+Y if state=='y' else (ge+T-MAX_GREEN if t==ge+Y else end)
+             need(moment(po.get('next_switch_after_s'),switch),'POST_SWITCH_CLOCK')
+             before=po.get('state_before');bp=po.get('phase_before');bs=po.get('next_switch_before_s')
+             need(type(bp) is int and bp=={'G':0,'y':1,'r':2}.get(before),'PRE_PHASE_IDENTITY')
+@@ -126,12 +128,12 @@
+             due=(state=='r' and t==ge+Y and before=='y' and moment(bs,t)) or (state=='y' and t==ge and before=='G' and moment(bs,t)) or (state=='G' and t==b and b>1200 and before=='r' and moment(bs,t))
+             need(same or due,'PRE_PENDING_SWITCH_BOUNDARY')
+             if pre_rows is not None:
+-                pr=pre_rows[i]['bound_snapshot'];need(pr['phase_before']==bp and pr['state_before']==before and pr['next_switch_before_s']==bs and pr['program']==f'I12_PACKET{T}','PRE_SNAPSHOT_PHASE_BINDING')
++                pr=pre_rows[i]['bound_snapshot'];need(pr['phase_before']==bp and pr['state_before']==before and pr['next_switch_before_s']==bs and pr['program']==PROGRAM,'PRE_SNAPSHOT_PHASE_BINDING')
+         if ge is not None and ge+Y+1<=posts[-1]['time_end_s']:
+             at=ge+Y+1;records=[q for q in durations if q.get('time_s')==at];need(len(records)==2,'RED_DURATION_TRACE_COVERAGE')
+             attempted,verified=records;need(attempted.get('status')=='ATTEMPTED' and attempted.get('call_completed') is False and verified.get('status')=='READBACK_VERIFIED' and verified.get('call_completed') is True,'RED_DURATION_PAIR')
+             for q in records:used_duration.add(id(q));need(q.get('method')=='setPhaseDuration' and type(q.get('value')) is int and q['value']==end-at and moment(q.get('cycle_end_s'),end),'RED_DURATION_VALUE_BINDING')
+-            rb=verified.get('actual_readback',{});need(moment(rb.get('time_s'),at) and rb.get('program')==f'I12_PACKET{T}' and type(rb.get('phase')) is int and rb['phase']==2 and rb.get('state')=='r' and moment(rb.get('nextSwitch_s'),end),'RED_DURATION_READBACK')
++            rb=verified.get('actual_readback',{});need(moment(rb.get('time_s'),at) and rb.get('program')==PROGRAM and type(rb.get('phase')) is int and rb['phase']==2 and rb.get('state')=='r' and moment(rb.get('nextSwitch_s'),end),'RED_DURATION_READBACK')
+             rc=[(e,c) for e,c in phase_calls if c.get('method')=='setPhaseDuration' and c.get('time_s')==at]
+             need(len(rc)==1,'RED_PHASE_TRACE_COVERAGE');event,call=rc[0];used_calls.add(id(call))
+             need(verified==dict(call,status='READBACK_VERIFIED',cycle_end_s=end) and event.get('actual_readback',{}).get('state')=='r' and moment(event['actual_readback'].get('nextSwitch_s'),end),'RED_PHASE_DURATION_TRACE_JOIN')
+@@ -140,51 +142,4 @@
+     return {'status':'PASS_CONTINUOUS_PHASES','cycles':result,'observed_intercycle_r_to_G':max(0,len(result)-1),'rate_qualified':False,'native_safety_proven':False}
+ 
+ 
+-def audit_feedback(events,command_events,application_summary,end_s):
+-    """Rebuild global-time E1 residences and the original clipped Feedback state."""
+-    if not events:return {'status':'NOT_OBSERVED','decisions':[],'feedback_command_applied':False}
+-    seed=events[0];need(seed.get('event')=='E1_ACTIVATION_SEED' and seed.get('global_s')==1200 and seed.get('logical_s')==600,'E1_INITIAL_SEED')
+-    store={d:{} for d in DETECTORS};next_ack=1201;begin=1200;previous=900.;decisions=[]
+-    def ingest(raw,at,seed_only=False):
+-        need(isinstance(raw,dict) and set(raw)==set(DETECTORS),'E1_DETECTOR_COVERAGE')
+-        for d,items in raw.items():
+-            seen=set();prior_active={k for k,v in store[d].items() if v[3]==-1}
+-            for item in items:
+-                need(isinstance(item,(list,tuple)) and len(item)==5,'E1_EVENT_TUPLE')
+-                vid,length,entry,leave,typ=item
+-                need(isinstance(vid,str) and vid and isinstance(typ,str) and typ and all(number(v) for v in (length,entry,leave)) and length>0 and entry<=at+1e-6 and (leave==-1 or entry<=leave<=at+1e-6),'E1_EVENT_VALUES')
+-                key=(vid,entry);need(key not in seen,'E1_DUPLICATE_EVENT_IN_STEP');seen.add(key)
+-                old=store[d].get(key)
+-                if old:need(old[1]==length and old[4]==typ and (old[3]==-1 or abs(old[3]-leave)<=1e-6),'E1_EVENT_METADATA_OR_COMPLETION_CONFLICT')
+-                if not seed_only or leave==-1:store[d][key]=tuple(item)
+-            if not seed_only:need(prior_active<=seen,'E1_ONGOING_DISAPPEARED')
+-    ingest(seed.get('raw_events'),1200,True)
+-    for d in DETECTORS:
+-        need(seed.get('ongoing_events',{}).get(d)==[list(v) for v in store[d].values()],'E1_SEED_ONGOING_EXACT')
+-    feedback_request={e['request_id']:e for e in command_events if e.get('event')=='REQUESTED'}
+-    for e in events[1:]:
+-        kind=e.get('event');t=e.get('global_s')
+-        need(type(t) is int and e.get('logical_s')==t-600 and 1200<t<=end_s,'E1_GLOBAL_LOGICAL_CLOCK')
+-        if kind=='E1_POST_ACK_EVENTS':
+-            need(t==next_ack,'E1_ACK_GAP_OR_DUPLICATE');ingest(e.get('raw_events'),t);next_ack+=1
+-            if 'normalized_events' in e:need(e['normalized_events']==e['raw_events'],'E1_NORMALIZATION_CHANGED_TIMES')
+-        elif kind=='PROJECT_FEEDBACK_DECISION':
+-            need(t==begin+30 and next_ack==t+1 and e.get('global_window_begin_s')==begin and e.get('global_window_end_s')==t and e.get('update_time_s')==t-600 and e.get('interval_begin_s')==begin-600 and e.get('interval_end_s')==t-600 and e.get('detector_ids')==list(DETECTORS),'FEEDBACK_COMPLETE_WINDOW_CLOCK')
+-            occ=[];contributors=[]
+-            for d in DETECTORS:
+-                occupied=0.;count=0;retained={}
+-                for key,item in store[d].items():
+-                    entry,leave=item[2:4];segment=max(0.,min(t,t if leave==-1 else leave)-max(begin,entry))
+-                    if segment:occupied+=segment;count+=1
+-                    if leave==-1 or leave>t:retained[key]=item
+-                occ.append(occupied/30*100);contributors.append(count);store[d]=retained
+-            mean=sum(occ)/2;raw=previous+70*(11-mean);clipped=min(900,max(300,raw))
+-            expected={'occ_l0_pct':occ[0],'occ_l1_pct':occ[1],'occ_mean_pct':mean,'rate_previous_veh_h':previous,'rate_raw_veh_h':raw,'rate_clipped_veh_h':clipped}
+-            need(all(near(e.get(k),v) for k,v in expected.items()) and e.get('contributors')==contributors,'INDEPENDENT_FEEDBACK_STATE')
+-            rid=e.get('request_id');need(rid in feedback_request and feedback_request[rid]['origin']=='PROJECT_FEEDBACK' and feedback_request[rid]['global_request_s']==t and near(feedback_request[rid]['rate_veh_h'],clipped),'FEEDBACK_TO_REQUEST_BINDING')
+-            decisions.append(dict(global_s=t,request_id=rid,**expected));previous=clipped;begin=t
+-        else:raise ValueError('UNKNOWN_FEEDBACK_EVENT')
+-    observed={a['request_id'] for a in application_summary['applications']}
+-    applied=[q['request_id'] for q in decisions if q['request_id'] in observed]
+-    need(next_ack==end_s+1,'FEEDBACK_POST_ACK_COVERAGE')
+-    return {'status':'PASS_REAL_FEEDBACK_RECOMPUTATION','decisions':decisions,'feedback_command_applied':bool(applied),'applied_feedback_request_ids':applied,'partial_next_window_s':[begin,end_s] if begin<end_s else None,'different_period_observed':len({mapping(e['rate_clipped_veh_h'])[0] for e in decisions if e['request_id'] in observed}|{8})>1,'native_or_formal_effect_proven':False}
++from scripts.unified_alinea_audit_20261013_v1.core import audit_feedback

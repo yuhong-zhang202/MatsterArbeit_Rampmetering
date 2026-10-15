@@ -1,0 +1,35 @@
+{
+  "run_id": "UA_CUMULATIVE750_S17_01",
+  "card_sha256": "c4464cd13b64a2eed0e9ea6143b16cac308562608426d6adc3023fa6b4b3fc3b",
+  "SUMO_execution_authorized": true,
+  "authorization_sha256": "3282bd2611af4f0548c6e5e11d207258c80b3d79a154253011370ecd7f08c962",
+  "human_authorization_reference": "artifacts/cumulative_tracking_implementation_20261014_v1/USER_NATIVE_EXECUTION_APPROVAL_V1.json",
+  "human_authorization_sha256": "7858543784ce243f70dcf644f374310fedbb14686f6932bcc880d48c596cb047",
+  "maximum_native_starts": 1,
+  "automatic_retry_authorized": false,
+  "scope": "DIRECT_HUMAN_ONCE_AUTHORITY_UNCHANGED_CARD_REVIEW_REUSE_NOT_NATIVE_QUALIFICATION",
+  "reviews": {
+    "engineering": {
+      "path": "artifacts/cumulative_tracking_implementation_20261014_v1/engineering/native_prelaunch_v1/PRELAUNCH_ENGINEERING_REVIEW_V1.md",
+      "sha256": "897d8ec5794840d71d0b43e31011ceaffe125bdc6c2eba941c38252799f8df97",
+      "card_sha256": "c4464cd13b64a2eed0e9ea6143b16cac308562608426d6adc3023fa6b4b3fc3b"
+    },
+    "data": {
+      "classification": "OFFLINE_ADVISORY_BINDING_NOT_EXECUTION_RELEASE",
+      "path": "data/processed/cumulative_tracking_implementation_20261014_v1/final_review_v1/FINAL_DATA_REVIEW_V1.md",
+      "sha256": "1968552ae2153f7c5fd03f6848b0ec17f676ae52cb1773a3ec1740740373fea3",
+      "card_sha256": "c4464cd13b64a2eed0e9ea6143b16cac308562608426d6adc3023fa6b4b3fc3b",
+      "audit_contract": "CUMULATIVE_C_N_V1",
+      "actual_reader_path": "scripts/cumulative_tracking_audit_20261014_v1/actual.py",
+      "actual_reader_sha256": "9adb9e625663cc4a548bf15d3c815a4e5b524865e37b756aae03137eaef99de2",
+      "SUMO_execution_authorized": false
+    },
+    "science": {
+      "path": "artifacts/cumulative_tracking_implementation_20261014_v1/science/SCIENTIFIC_FINAL_REVIEW_V1.md",
+      "sha256": "b2c7ebd43e509eb8cc564acda3a73190de51225416c26297f976a09cdeb02d61",
+      "card_sha256": "c4464cd13b64a2eed0e9ea6143b16cac308562608426d6adc3023fa6b4b3fc3b"
+    }
+  },
+  "future_data_binding_metadata_path": "data/processed/cumulative_tracking_implementation_20261014_v1/final_review_v1/FUTURE_RELEASE_DATA_BINDING_V1.json",
+  "future_data_binding_metadata_sha256": "4fb91f5d34db403dff636fb4e01829c0668b3af1585d223a7831cf35fa7c06c5"
+}

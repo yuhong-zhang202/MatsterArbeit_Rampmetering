@@ -1,0 +1,19 @@
+{
+  "nonexecutable_historical_copy": true,
+  "canonical_path": "artifacts/issue12_alinea_actuation_20261012_v1/authorization/CA_I12_QUOTA_R300_S17_FIX01/AUTHORIZATION_NATIVE_EXECUTION.json",
+  "sha256": "421d6e9c03570028aeb5a337c6b0ccf2010007b9141ce8dd9b66c00f6871b252",
+  "content": {
+    "SUMO_execution_authorized": true,
+    "run_id": "CA_I12_QUOTA_R300_S17_FIX01",
+    "card_sha256": "9f914d8b307df524d47b56999280b8a58fc76da13d4d57f4f743cdf2fe0478ee",
+    "human_authorization_reference": "artifacts/issue12_alinea_actuation_20261012_v1/ISSUE_12.json",
+    "human_authorization_sha256": "65ee0f44378b763e52ce334f2063786c0a835f68da02419777e59a58653a7e5b",
+    "baseline_HEAD": "20e5e83ac059768320cdaa4c815d164e1022de45",
+    "source_snapshot_binding_sha256": "6520b77d6e7915eaa72434b58b211a06f150aa86bd45572217e18b4f5f3d50aa",
+    "new_code_is_hash_bound_uncommitted_snapshot": true,
+    "scope": "Issue12 user delegated at most3 starts; current three-role GO releases only second FIX300 once; no retry/no next run",
+    "end_s": 1272,
+    "wall_limit_s": 300,
+    "first_red_checkpoint_event": "FIRST_ACTUAL_CONTROLLED_RED_ACK"
+  }
+}

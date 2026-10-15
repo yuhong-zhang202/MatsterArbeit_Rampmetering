@@ -1,0 +1,27 @@
+{
+  "commands": [
+    {
+      "command": [
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+        "data/processed/candidate_a_native_receiver_wait_20261012_v1/independent_prelaunch_V2.py"
+      ],
+      "exit": 1,
+      "output": "data/processed/candidate_a_native_receiver_wait_20261012_v1/PRELAUNCH_V2.txt",
+      "output_sha256": "9232a8655cb0f96700ff4a7afc15b0b0d80dc941f869e0d8c318643373e47199"
+    },
+    {
+      "command": [
+        "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+        "data/processed/candidate_a_native_receiver_wait_20261012_v1/test_entry_denied_binding_V2.py",
+        "-v"
+      ],
+      "exit": 0,
+      "output": "data/processed/candidate_a_native_receiver_wait_20261012_v1/ENTRY_DENIED_BINDING_V2.txt",
+      "output_sha256": "73337abaf787f1ab4e5531484b9bb6de6871d7bf29f6f857fc640b4b961e45bc"
+    }
+  ],
+  "native_starts": 0,
+  "engineering11suite_rerun": false,
+  "old_suites_rerun": false,
+  "V1_checks_historical_not_release": true
+}

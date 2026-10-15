@@ -1,0 +1,37 @@
+--- protected_V2/scripts/t10_g5_y3_audit_20261013_v1/evidence.py
++++ repair_V3/scripts/t10_g5_y3_audit_20261013_v1/evidence.py
+@@ -90,3 +90,34 @@
+         need(type(v.get('speed_mode')) is int and v['speed_mode']==31 and type(v.get('lane_change_mode')) is int and v['lane_change_mode']==1621,'IDENTITY_JOURNAL_MODES')
+         need(all(near(v.get(k),x) for k,x in EXPECTED_DYNAMICS.items()),'IDENTITY_JOURNAL_DYNAMICS')
+     return True
++
++
++def identity_prefix(journal,pre,post,last):
++    need(type(last) is int and last>=0 and len(post)==last and last<=len(pre)<=last+1,'IDENTITY_PREFIX_FRAME_COVERAGE')
++    need(len(journal)==2*last+(len(pre)-last),'IDENTITY_JOURNAL_ACK_COVERAGE')
++    for i in range(last):
++        identity_journal(journal[2*i],i,'BEFORE_MOTION',pre[i]['bound_snapshot']['world'])
++        identity_journal(journal[2*i+1],i+1,'AFTER_ACK',post[i]['post_world'])
++    if len(pre)>last:
++        need(pre[last]['time_s']==last,'EXTRA_PRE_SOURCE_TIME')
++        identity_journal(journal[-1],last,'BEFORE_MOTION',pre[last]['bound_snapshot']['world'])
++    return {'complete_motion_intervals':last,'prepared_not_observed_last_PRE':len(pre)>last}
++
++def yellow_coverage(records,phase,cycles,post,pre,last,runtime_stop):
++    need(phase.get('status')=='PASS_CONTINUOUS_PHASES','UNKNOWN_PHASE_FOR_YELLOW_COVERAGE')
++    expected={}
++    for c in phase['cycles']:
++        seq=c['observed_motion_sequence']
++        if 'y' in seq:
++            t=c['begin_s']+seq.index('y');need(c['green_end_s']==t and t not in expected,'YELLOW_OBSERVED_PHASE_BOUNDARY');expected[t]=c
++    times=[q.get('time_s') for q in records]
++    need(all(type(t) is int for t in times) and len(times)==len(set(times)),'DUPLICATE_OR_INVALID_YELLOW_RECORD')
++    need(set(expected)<=set(times),'MISSING_OBSERVED_YELLOW_SCREEN')
++    extras=set(times)-set(expected);need(len(extras)<=1,'EXTRA_UNBOUND_YELLOW_SCREEN')
++    for q in records:
++        t=q['time_s'];need(q.get('screen_stage')=='PREPARED_BEFORE_FIRST_Y_MOTION' and q.get('source_program')=='T10_G5Y3_NATIVE' and q.get('source_motion')=='y','YELLOW_SCREEN_SOURCE_PHASE')
++        need(t<len(pre) and pre[t]['bound_snapshot']['time_s']==t and pre[t]['bound_snapshot']['motion']=='y' and pre[t]['bound_snapshot']['program']=='T10_G5Y3_NATIVE','YELLOW_PREPARATION_PHASE_JOIN')
++        if t in extras:
++            need(runtime_stop is True and t==last and len(pre)==last+1,'EXTRA_YELLOW_NOT_BOUND_TO_ABORTED_PREPARED_PREFIX')
++        yellow_record(q,cycles,post[t-1]['post_world'],pre[t]['bound_snapshot']['terminal_before'],last)
++    return {'observed_first_Y_count':len(expected),'validated_records':len(records),'prepared_not_observed_times':sorted(extras),'future_native_safety_proven':False}

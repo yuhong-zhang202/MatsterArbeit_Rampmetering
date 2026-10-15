@@ -1,0 +1,1166 @@
+{
+  "case": "one_exact",
+  "fixture": {
+    "kind": "one",
+    "end": 1210,
+    "fault": null
+  },
+  "world_time": 1210,
+  "setters": [
+    [
+      0,
+      "setProgram",
+      "A_OPEN"
+    ],
+    [
+      0,
+      "setPhase",
+      0
+    ],
+    [
+      600,
+      "setProgram",
+      "CA_C8"
+    ],
+    [
+      600,
+      "setPhase",
+      1
+    ],
+    [
+      1200,
+      "setProgram",
+      "T10_G5Y3_NATIVE"
+    ],
+    [
+      1200,
+      "setPhase",
+      0
+    ]
+  ],
+  "receipt": {
+    "purpose": "FINITE_PACKET_DIAGNOSTIC_ONLY",
+    "implementation_status": "OFFLINE_REVIEW_NO_NATIVE_RELEASE",
+    "status": "HARD_OR_UNKNOWN_GATE_STOP",
+    "error": "ValueError:SERVICE_PACKET_QUOTA_EXCEEDED",
+    "accounting": {
+      "C": 2.0833333333333335,
+      "C_nearest_reference": 2.0,
+      "C_applied": 2.0,
+      "E": 2,
+      "N": 3,
+      "requested_minus_nominal": 0.08333333333333333,
+      "nominal_minus_actual": -1,
+      "requested_minus_actual": -0.9166666666666666,
+      "C_exact_fraction": "25/12",
+      "E_support": "COMPLETE_PACKETS_ONLY",
+      "N_support": "ALL_OBSERVED_ENTRY_BEGIN_INTERVALS",
+      "partial_cycle": false,
+      "nearest_reference_is_not_cumulative_scheduler_output": true,
+      "purpose": "FINITE_PACKET_DIAGNOSTIC_ONLY",
+      "general_service_qualified": false,
+      "diagnostic_target_status": "SERVICE_PACKET_QUOTA_EXCEEDED",
+      "debt_recovery_policy": "HISTORICAL_ALGORITHM_UNCHANGED_STOP_ON_COMPLETE_UNDER_TARGET"
+    },
+    "service_diagnostic": {
+      "event": "FINITE_PACKET_DIAGNOSTIC_ASSESSED",
+      "purpose": "FINITE_PACKET_DIAGNOSTIC_ONLY",
+      "cycle_id": 0,
+      "begin_s": 1200,
+      "end_s": 1210,
+      "completed": true,
+      "requested_quota": 2,
+      "actual_packet_N": 3,
+      "status": "SERVICE_PACKET_QUOTA_EXCEEDED",
+      "actuator_fault_established": false,
+      "cause": "UNESTABLISHED",
+      "general_service_qualified": false,
+      "C_exact_fraction": "25/12",
+      "E": 2,
+      "N": 3,
+      "requested_minus_actual_exact_fraction": "-11/12",
+      "service_context": [
+        {
+          "time_s": 1200,
+          "motion": "G",
+          "storage_ids": [
+            "R_flow.0"
+          ],
+          "vehicle_states": [
+            {
+              "vehicle_id": "R_flow.0",
+              "population": "storage",
+              "position_m": 203.0,
+              "speed_m_s": 0.0,
+              "length_m": 5.0,
+              "min_gap_m": 2.5,
+              "accel_m_s2": 2.6,
+              "normal_decel_m_s2": 4.5,
+              "tau_s": 1.0,
+              "action_step_s": 1.0,
+              "type_id": "technical_passenger"
+            }
+          ],
+          "receiver": {
+            "available": true,
+            "front_id": "R_flow.0",
+            "nearest_internal": null,
+            "leader": null,
+            "reason": "AVAILABLE"
+          },
+          "native_receiver_decision": {
+            "decision": "READY",
+            "prospective_available": true,
+            "time_s": 1200,
+            "policy": "ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1",
+            "future_safety_proven": false
+          },
+          "readiness_interpretation": "BOUND_STATES_ONLY_NO_READY_OR_SATURATION_CLAIM"
+        },
+        {
+          "time_s": 1201,
+          "motion": "G",
+          "storage_ids": [],
+          "vehicle_states": [],
+          "receiver": {
+            "available": true,
+            "front_id": "",
+            "nearest_internal": "R_flow.0",
+            "leader": null,
+            "reason": "AVAILABLE"
+          },
+          "native_receiver_decision": {
+            "decision": "READY",
+            "prospective_available": true,
+            "time_s": 1201,
+            "policy": "ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1",
+            "future_safety_proven": false
+          },
+          "readiness_interpretation": "BOUND_STATES_ONLY_NO_READY_OR_SATURATION_CLAIM"
+        },
+        {
+          "time_s": 1202,
+          "motion": "G",
+          "storage_ids": [],
+          "vehicle_states": [],
+          "receiver": {
+            "available": true,
+            "front_id": "",
+            "nearest_internal": "R_flow.0",
+            "leader": null,
+            "reason": "AVAILABLE"
+          },
+          "native_receiver_decision": {
+            "decision": "READY",
+            "prospective_available": true,
+            "time_s": 1202,
+            "policy": "ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1",
+            "future_safety_proven": false
+          },
+          "readiness_interpretation": "BOUND_STATES_ONLY_NO_READY_OR_SATURATION_CLAIM"
+        },
+        {
+          "time_s": 1203,
+          "motion": "G",
+          "storage_ids": [],
+          "vehicle_states": [],
+          "receiver": {
+            "available": true,
+            "front_id": "",
+            "nearest_internal": "R_flow.0",
+            "leader": null,
+            "reason": "AVAILABLE"
+          },
+          "native_receiver_decision": {
+            "decision": "READY",
+            "prospective_available": true,
+            "time_s": 1203,
+            "policy": "ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1",
+            "future_safety_proven": false
+          },
+          "readiness_interpretation": "BOUND_STATES_ONLY_NO_READY_OR_SATURATION_CLAIM"
+        },
+        {
+          "time_s": 1204,
+          "motion": "G",
+          "storage_ids": [],
+          "vehicle_states": [],
+          "receiver": {
+            "available": true,
+            "front_id": "",
+            "nearest_internal": "R_flow.0",
+            "leader": null,
+            "reason": "AVAILABLE"
+          },
+          "native_receiver_decision": {
+            "decision": "READY",
+            "prospective_available": true,
+            "time_s": 1204,
+            "policy": "ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1",
+            "future_safety_proven": false
+          },
+          "readiness_interpretation": "BOUND_STATES_ONLY_NO_READY_OR_SATURATION_CLAIM"
+        },
+        {
+          "time_s": 1205,
+          "motion": "y",
+          "storage_ids": [],
+          "vehicle_states": [],
+          "receiver": {
+            "available": true,
+            "front_id": "",
+            "nearest_internal": "R_flow.0",
+            "leader": null,
+            "reason": "AVAILABLE"
+          },
+          "native_receiver_decision": null,
+          "readiness_interpretation": "BOUND_STATES_ONLY_NO_READY_OR_SATURATION_CLAIM"
+        },
+        {
+          "time_s": 1206,
+          "motion": "y",
+          "storage_ids": [],
+          "vehicle_states": [],
+          "receiver": {
+            "available": true,
+            "front_id": "",
+            "nearest_internal": "R_flow.0",
+            "leader": null,
+            "reason": "AVAILABLE"
+          },
+          "native_receiver_decision": null,
+          "readiness_interpretation": "BOUND_STATES_ONLY_NO_READY_OR_SATURATION_CLAIM"
+        },
+        {
+          "time_s": 1207,
+          "motion": "y",
+          "storage_ids": [],
+          "vehicle_states": [],
+          "receiver": {
+            "available": true,
+            "front_id": "",
+            "nearest_internal": null,
+            "leader": null,
+            "reason": "AVAILABLE"
+          },
+          "native_receiver_decision": null,
+          "readiness_interpretation": "BOUND_STATES_ONLY_NO_READY_OR_SATURATION_CLAIM"
+        },
+        {
+          "time_s": 1208,
+          "motion": "r",
+          "storage_ids": [],
+          "vehicle_states": [],
+          "receiver": {
+            "available": true,
+            "front_id": "",
+            "nearest_internal": null,
+            "leader": null,
+            "reason": "AVAILABLE"
+          },
+          "native_receiver_decision": null,
+          "readiness_interpretation": "BOUND_STATES_ONLY_NO_READY_OR_SATURATION_CLAIM"
+        },
+        {
+          "time_s": 1209,
+          "motion": "r",
+          "storage_ids": [],
+          "vehicle_states": [],
+          "receiver": {
+            "available": true,
+            "front_id": "",
+            "nearest_internal": null,
+            "leader": null,
+            "reason": "AVAILABLE"
+          },
+          "native_receiver_decision": null,
+          "readiness_interpretation": "BOUND_STATES_ONLY_NO_READY_OR_SATURATION_CLAIM"
+        }
+      ],
+      "under_target_service_recovery": "NOT_APPLICABLE",
+      "continuation_authorized": false
+    },
+    "partial_cycle": false,
+    "general_service_qualified": false,
+    "actuator_fault_established": false,
+    "new_packet_after_under_target": false,
+    "automatic_retry": false,
+    "formal_use_authorized": false
+  },
+  "events": [
+    {
+      "event": "REQUESTED",
+      "request_id": "initial",
+      "global_request_s": 1200,
+      "rate_veh_h": 750,
+      "origin": "FIXED",
+      "r_ALINEA": null,
+      "nearest_reference_period_s": 10,
+      "nearest_reference_rate_veh_h": 720.0
+    },
+    {
+      "event": "SUPERSEDED",
+      "command": {
+        "request_id": "initial",
+        "global_request_s": 1200,
+        "rate_veh_h": 750,
+        "origin": "FIXED",
+        "r_ALINEA": null
+      },
+      "first_application_s": null,
+      "first_preparation_s": null,
+      "status": "SUPERSEDED_WITHOUT_APPLICATION"
+    },
+    {
+      "event": "REQUESTED",
+      "request_id": "feedback:synthetic750",
+      "global_request_s": 1200,
+      "rate_veh_h": 750,
+      "origin": "SCHEDULED",
+      "r_ALINEA": null,
+      "nearest_reference_period_s": 10,
+      "nearest_reference_rate_veh_h": 720.0
+    },
+    {
+      "event": "BOUNDARY_PACKET_SELECTED_NOT_APPLIED",
+      "time_s": 1200,
+      "actual_C_fraction": "0",
+      "actual_N": 0,
+      "actual_error_fraction": "0",
+      "forecast_request_veh_h": 750,
+      "forecast_assumption": "CURRENT_REQUEST_HELD_NOT_OBSERVED_FUTURE",
+      "candidate_errors_fraction": {
+        "8": "-1/3",
+        "9": "-1/8",
+        "10": "1/12",
+        "11": "7/24",
+        "12": "1/2",
+        "13": "17/24",
+        "14": "11/12",
+        "15": "9/8",
+        "16": "4/3",
+        "17": "37/24",
+        "18": "7/4",
+        "19": "47/24",
+        "20": "13/6",
+        "21": "19/8",
+        "22": "31/12",
+        "23": "67/24",
+        "24": "3"
+      },
+      "chosen_period_s": 10,
+      "catalogue_status": "FULL_300_900_CONFIGURED_ACTUAL_SERVICE_UNQUALIFIED"
+    },
+    {
+      "event": "PREPARED_NOT_OBSERVED",
+      "request_id": "feedback:synthetic750",
+      "application_global_s": 1200,
+      "global_request_s": 1200,
+      "application_delay_s": 0
+    },
+    {
+      "event": "PACKET_ACK_OBSERVED",
+      "cycle_id": 0,
+      "request_id": "feedback:synthetic750",
+      "application_global_s": 1200,
+      "first_green_ACK_s": 1201,
+      "period_s": 10,
+      "max_green_s": 5,
+      "yellow_s": 3,
+      "applied_command_veh_h": 720.0
+    },
+    {
+      "event": "ACK_OBSERVED",
+      "request_id": "feedback:synthetic750",
+      "application_global_s": 1200,
+      "first_green_ACK_s": 1201,
+      "application_delay_s": 0
+    },
+    {
+      "event": "FINITE_PACKET_DIAGNOSTIC_ASSESSED",
+      "purpose": "FINITE_PACKET_DIAGNOSTIC_ONLY",
+      "cycle_id": 0,
+      "begin_s": 1200,
+      "end_s": 1210,
+      "completed": true,
+      "requested_quota": 2,
+      "actual_packet_N": 3,
+      "status": "SERVICE_PACKET_QUOTA_EXCEEDED",
+      "actuator_fault_established": false,
+      "cause": "UNESTABLISHED",
+      "general_service_qualified": false,
+      "C_exact_fraction": "25/12",
+      "E": 2,
+      "N": 3,
+      "requested_minus_actual_exact_fraction": "-11/12",
+      "service_context": [
+        {
+          "time_s": 1200,
+          "motion": "G",
+          "storage_ids": [
+            "R_flow.0"
+          ],
+          "vehicle_states": [
+            {
+              "vehicle_id": "R_flow.0",
+              "population": "storage",
+              "position_m": 203.0,
+              "speed_m_s": 0.0,
+              "length_m": 5.0,
+              "min_gap_m": 2.5,
+              "accel_m_s2": 2.6,
+              "normal_decel_m_s2": 4.5,
+              "tau_s": 1.0,
+              "action_step_s": 1.0,
+              "type_id": "technical_passenger"
+            }
+          ],
+          "receiver": {
+            "available": true,
+            "front_id": "R_flow.0",
+            "nearest_internal": null,
+            "leader": null,
+            "reason": "AVAILABLE"
+          },
+          "native_receiver_decision": {
+            "decision": "READY",
+            "prospective_available": true,
+            "time_s": 1200,
+            "policy": "ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1",
+            "future_safety_proven": false
+          },
+          "readiness_interpretation": "BOUND_STATES_ONLY_NO_READY_OR_SATURATION_CLAIM"
+        },
+        {
+          "time_s": 1201,
+          "motion": "G",
+          "storage_ids": [],
+          "vehicle_states": [],
+          "receiver": {
+            "available": true,
+            "front_id": "",
+            "nearest_internal": "R_flow.0",
+            "leader": null,
+            "reason": "AVAILABLE"
+          },
+          "native_receiver_decision": {
+            "decision": "READY",
+            "prospective_available": true,
+            "time_s": 1201,
+            "policy": "ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1",
+            "future_safety_proven": false
+          },
+          "readiness_interpretation": "BOUND_STATES_ONLY_NO_READY_OR_SATURATION_CLAIM"
+        },
+        {
+          "time_s": 1202,
+          "motion": "G",
+          "storage_ids": [],
+          "vehicle_states": [],
+          "receiver": {
+            "available": true,
+            "front_id": "",
+            "nearest_internal": "R_flow.0",
+            "leader": null,
+            "reason": "AVAILABLE"
+          },
+          "native_receiver_decision": {
+            "decision": "READY",
+            "prospective_available": true,
+            "time_s": 1202,
+            "policy": "ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1",
+            "future_safety_proven": false
+          },
+          "readiness_interpretation": "BOUND_STATES_ONLY_NO_READY_OR_SATURATION_CLAIM"
+        },
+        {
+          "time_s": 1203,
+          "motion": "G",
+          "storage_ids": [],
+          "vehicle_states": [],
+          "receiver": {
+            "available": true,
+            "front_id": "",
+            "nearest_internal": "R_flow.0",
+            "leader": null,
+            "reason": "AVAILABLE"
+          },
+          "native_receiver_decision": {
+            "decision": "READY",
+            "prospective_available": true,
+            "time_s": 1203,
+            "policy": "ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1",
+            "future_safety_proven": false
+          },
+          "readiness_interpretation": "BOUND_STATES_ONLY_NO_READY_OR_SATURATION_CLAIM"
+        },
+        {
+          "time_s": 1204,
+          "motion": "G",
+          "storage_ids": [],
+          "vehicle_states": [],
+          "receiver": {
+            "available": true,
+            "front_id": "",
+            "nearest_internal": "R_flow.0",
+            "leader": null,
+            "reason": "AVAILABLE"
+          },
+          "native_receiver_decision": {
+            "decision": "READY",
+            "prospective_available": true,
+            "time_s": 1204,
+            "policy": "ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1",
+            "future_safety_proven": false
+          },
+          "readiness_interpretation": "BOUND_STATES_ONLY_NO_READY_OR_SATURATION_CLAIM"
+        },
+        {
+          "time_s": 1205,
+          "motion": "y",
+          "storage_ids": [],
+          "vehicle_states": [],
+          "receiver": {
+            "available": true,
+            "front_id": "",
+            "nearest_internal": "R_flow.0",
+            "leader": null,
+            "reason": "AVAILABLE"
+          },
+          "native_receiver_decision": null,
+          "readiness_interpretation": "BOUND_STATES_ONLY_NO_READY_OR_SATURATION_CLAIM"
+        },
+        {
+          "time_s": 1206,
+          "motion": "y",
+          "storage_ids": [],
+          "vehicle_states": [],
+          "receiver": {
+            "available": true,
+            "front_id": "",
+            "nearest_internal": "R_flow.0",
+            "leader": null,
+            "reason": "AVAILABLE"
+          },
+          "native_receiver_decision": null,
+          "readiness_interpretation": "BOUND_STATES_ONLY_NO_READY_OR_SATURATION_CLAIM"
+        },
+        {
+          "time_s": 1207,
+          "motion": "y",
+          "storage_ids": [],
+          "vehicle_states": [],
+          "receiver": {
+            "available": true,
+            "front_id": "",
+            "nearest_internal": null,
+            "leader": null,
+            "reason": "AVAILABLE"
+          },
+          "native_receiver_decision": null,
+          "readiness_interpretation": "BOUND_STATES_ONLY_NO_READY_OR_SATURATION_CLAIM"
+        },
+        {
+          "time_s": 1208,
+          "motion": "r",
+          "storage_ids": [],
+          "vehicle_states": [],
+          "receiver": {
+            "available": true,
+            "front_id": "",
+            "nearest_internal": null,
+            "leader": null,
+            "reason": "AVAILABLE"
+          },
+          "native_receiver_decision": null,
+          "readiness_interpretation": "BOUND_STATES_ONLY_NO_READY_OR_SATURATION_CLAIM"
+        },
+        {
+          "time_s": 1209,
+          "motion": "r",
+          "storage_ids": [],
+          "vehicle_states": [],
+          "receiver": {
+            "available": true,
+            "front_id": "",
+            "nearest_internal": null,
+            "leader": null,
+            "reason": "AVAILABLE"
+          },
+          "native_receiver_decision": null,
+          "readiness_interpretation": "BOUND_STATES_ONLY_NO_READY_OR_SATURATION_CLAIM"
+        }
+      ],
+      "under_target_service_recovery": "NOT_APPLICABLE",
+      "continuation_authorized": false
+    }
+  ],
+  "acks": [
+    {
+      "time_begin_s": 1200,
+      "observed_time_s": 1201,
+      "status": "RECONCILED_DIAGNOSTIC_ONLY",
+      "accounting_complete": true,
+      "time_end_s": 1201,
+      "post_world": {
+        "M_flow.0": {
+          "role": "M",
+          "speed_m_s": 5.0,
+          "lane_id": "main_up_0"
+        },
+        "R_flow.0": {
+          "role": "R",
+          "speed_m_s": 0.0,
+          "lane_id": ":ramp_mid_0_0"
+        },
+        "synthetic.quota.0": {
+          "role": "R",
+          "speed_m_s": 0,
+          "lane_id": ":ramp_mid_0_0"
+        },
+        "synthetic.quota.1": {
+          "role": "R",
+          "speed_m_s": 0,
+          "lane_id": ":ramp_mid_0_0"
+        },
+        "synthetic.quota.2": {
+          "role": "R",
+          "speed_m_s": 0,
+          "lane_id": ":ramp_mid_0_0"
+        }
+      },
+      "actual_crossings": [
+        {
+          "vehicle_id": "synthetic.quota.0",
+          "crossing_time_lower_s": 1200,
+          "crossing_time_upper_s": 1201,
+          "time_interval": "(lower,upper]",
+          "cycle_id": 0,
+          "motion_signal_state": "G"
+        },
+        {
+          "vehicle_id": "synthetic.quota.1",
+          "crossing_time_lower_s": 1200,
+          "crossing_time_upper_s": 1201,
+          "time_interval": "(lower,upper]",
+          "cycle_id": 0,
+          "motion_signal_state": "G"
+        },
+        {
+          "vehicle_id": "synthetic.quota.2",
+          "crossing_time_lower_s": 1200,
+          "crossing_time_upper_s": 1201,
+          "time_interval": "(lower,upper]",
+          "cycle_id": 0,
+          "motion_signal_state": "G"
+        }
+      ],
+      "accounting": {
+        "C": 0.20833333333333334,
+        "C_nearest_reference": 0.2,
+        "C_applied": 0.2,
+        "E": 0,
+        "N": 3,
+        "requested_minus_nominal": 0.20833333333333334,
+        "nominal_minus_actual": -3,
+        "requested_minus_actual": -2.7916666666666665,
+        "C_exact_fraction": "5/24",
+        "E_support": "COMPLETE_PACKETS_ONLY",
+        "N_support": "ALL_OBSERVED_ENTRY_BEGIN_INTERVALS",
+        "partial_cycle": true,
+        "nearest_reference_is_not_cumulative_scheduler_output": true,
+        "purpose": "FINITE_PACKET_DIAGNOSTIC_ONLY",
+        "general_service_qualified": false,
+        "diagnostic_target_status": null,
+        "debt_recovery_policy": "HISTORICAL_ALGORITHM_UNCHANGED_STOP_ON_COMPLETE_UNDER_TARGET"
+      }
+    },
+    {
+      "time_begin_s": 1201,
+      "observed_time_s": 1202,
+      "status": "RECONCILED_DIAGNOSTIC_ONLY",
+      "accounting_complete": true,
+      "time_end_s": 1202,
+      "post_world": {
+        "M_flow.0": {
+          "role": "M",
+          "speed_m_s": 5.0,
+          "lane_id": "main_up_0"
+        },
+        "R_flow.0": {
+          "role": "R",
+          "speed_m_s": 0.0,
+          "lane_id": ":ramp_mid_0_0"
+        },
+        "synthetic.quota.0": {
+          "role": "R",
+          "speed_m_s": 0,
+          "lane_id": ":ramp_mid_0_0"
+        },
+        "synthetic.quota.1": {
+          "role": "R",
+          "speed_m_s": 0,
+          "lane_id": ":ramp_mid_0_0"
+        },
+        "synthetic.quota.2": {
+          "role": "R",
+          "speed_m_s": 0,
+          "lane_id": ":ramp_mid_0_0"
+        }
+      },
+      "actual_crossings": [],
+      "accounting": {
+        "C": 0.4166666666666667,
+        "C_nearest_reference": 0.4,
+        "C_applied": 0.4,
+        "E": 0,
+        "N": 3,
+        "requested_minus_nominal": 0.4166666666666667,
+        "nominal_minus_actual": -3,
+        "requested_minus_actual": -2.5833333333333335,
+        "C_exact_fraction": "5/12",
+        "E_support": "COMPLETE_PACKETS_ONLY",
+        "N_support": "ALL_OBSERVED_ENTRY_BEGIN_INTERVALS",
+        "partial_cycle": true,
+        "nearest_reference_is_not_cumulative_scheduler_output": true,
+        "purpose": "FINITE_PACKET_DIAGNOSTIC_ONLY",
+        "general_service_qualified": false,
+        "diagnostic_target_status": null,
+        "debt_recovery_policy": "HISTORICAL_ALGORITHM_UNCHANGED_STOP_ON_COMPLETE_UNDER_TARGET"
+      }
+    },
+    {
+      "time_begin_s": 1202,
+      "observed_time_s": 1203,
+      "status": "RECONCILED_DIAGNOSTIC_ONLY",
+      "accounting_complete": true,
+      "time_end_s": 1203,
+      "post_world": {
+        "M_flow.0": {
+          "role": "M",
+          "speed_m_s": 5.0,
+          "lane_id": "main_up_0"
+        },
+        "R_flow.0": {
+          "role": "R",
+          "speed_m_s": 0.0,
+          "lane_id": ":ramp_mid_0_0"
+        },
+        "synthetic.quota.0": {
+          "role": "R",
+          "speed_m_s": 0,
+          "lane_id": ":ramp_mid_0_0"
+        },
+        "synthetic.quota.1": {
+          "role": "R",
+          "speed_m_s": 0,
+          "lane_id": ":ramp_mid_0_0"
+        },
+        "synthetic.quota.2": {
+          "role": "R",
+          "speed_m_s": 0,
+          "lane_id": ":ramp_mid_0_0"
+        }
+      },
+      "actual_crossings": [],
+      "accounting": {
+        "C": 0.625,
+        "C_nearest_reference": 0.6,
+        "C_applied": 0.6,
+        "E": 0,
+        "N": 3,
+        "requested_minus_nominal": 0.625,
+        "nominal_minus_actual": -3,
+        "requested_minus_actual": -2.375,
+        "C_exact_fraction": "5/8",
+        "E_support": "COMPLETE_PACKETS_ONLY",
+        "N_support": "ALL_OBSERVED_ENTRY_BEGIN_INTERVALS",
+        "partial_cycle": true,
+        "nearest_reference_is_not_cumulative_scheduler_output": true,
+        "purpose": "FINITE_PACKET_DIAGNOSTIC_ONLY",
+        "general_service_qualified": false,
+        "diagnostic_target_status": null,
+        "debt_recovery_policy": "HISTORICAL_ALGORITHM_UNCHANGED_STOP_ON_COMPLETE_UNDER_TARGET"
+      }
+    },
+    {
+      "time_begin_s": 1203,
+      "observed_time_s": 1204,
+      "status": "RECONCILED_DIAGNOSTIC_ONLY",
+      "accounting_complete": true,
+      "time_end_s": 1204,
+      "post_world": {
+        "M_flow.0": {
+          "role": "M",
+          "speed_m_s": 5.0,
+          "lane_id": "main_up_0"
+        },
+        "R_flow.0": {
+          "role": "R",
+          "speed_m_s": 0.0,
+          "lane_id": ":ramp_mid_0_0"
+        },
+        "synthetic.quota.0": {
+          "role": "R",
+          "speed_m_s": 0,
+          "lane_id": ":ramp_mid_0_0"
+        },
+        "synthetic.quota.1": {
+          "role": "R",
+          "speed_m_s": 0,
+          "lane_id": ":ramp_mid_0_0"
+        },
+        "synthetic.quota.2": {
+          "role": "R",
+          "speed_m_s": 0,
+          "lane_id": ":ramp_mid_0_0"
+        }
+      },
+      "actual_crossings": [],
+      "accounting": {
+        "C": 0.8333333333333334,
+        "C_nearest_reference": 0.8,
+        "C_applied": 0.8,
+        "E": 0,
+        "N": 3,
+        "requested_minus_nominal": 0.8333333333333334,
+        "nominal_minus_actual": -3,
+        "requested_minus_actual": -2.1666666666666665,
+        "C_exact_fraction": "5/6",
+        "E_support": "COMPLETE_PACKETS_ONLY",
+        "N_support": "ALL_OBSERVED_ENTRY_BEGIN_INTERVALS",
+        "partial_cycle": true,
+        "nearest_reference_is_not_cumulative_scheduler_output": true,
+        "purpose": "FINITE_PACKET_DIAGNOSTIC_ONLY",
+        "general_service_qualified": false,
+        "diagnostic_target_status": null,
+        "debt_recovery_policy": "HISTORICAL_ALGORITHM_UNCHANGED_STOP_ON_COMPLETE_UNDER_TARGET"
+      }
+    },
+    {
+      "time_begin_s": 1204,
+      "observed_time_s": 1205,
+      "status": "RECONCILED_DIAGNOSTIC_ONLY",
+      "accounting_complete": true,
+      "time_end_s": 1205,
+      "post_world": {
+        "M_flow.0": {
+          "role": "M",
+          "speed_m_s": 5.0,
+          "lane_id": "main_up_0"
+        },
+        "R_flow.0": {
+          "role": "R",
+          "speed_m_s": 0.0,
+          "lane_id": ":ramp_mid_0_0"
+        },
+        "synthetic.quota.0": {
+          "role": "R",
+          "speed_m_s": 0,
+          "lane_id": ":ramp_mid_0_0"
+        },
+        "synthetic.quota.1": {
+          "role": "R",
+          "speed_m_s": 0,
+          "lane_id": ":ramp_mid_0_0"
+        },
+        "synthetic.quota.2": {
+          "role": "R",
+          "speed_m_s": 0,
+          "lane_id": ":ramp_mid_0_0"
+        }
+      },
+      "actual_crossings": [],
+      "accounting": {
+        "C": 1.0416666666666667,
+        "C_nearest_reference": 1.0,
+        "C_applied": 1.0,
+        "E": 0,
+        "N": 3,
+        "requested_minus_nominal": 1.0416666666666667,
+        "nominal_minus_actual": -3,
+        "requested_minus_actual": -1.9583333333333333,
+        "C_exact_fraction": "25/24",
+        "E_support": "COMPLETE_PACKETS_ONLY",
+        "N_support": "ALL_OBSERVED_ENTRY_BEGIN_INTERVALS",
+        "partial_cycle": true,
+        "nearest_reference_is_not_cumulative_scheduler_output": true,
+        "purpose": "FINITE_PACKET_DIAGNOSTIC_ONLY",
+        "general_service_qualified": false,
+        "diagnostic_target_status": null,
+        "debt_recovery_policy": "HISTORICAL_ALGORITHM_UNCHANGED_STOP_ON_COMPLETE_UNDER_TARGET"
+      }
+    },
+    {
+      "time_begin_s": 1205,
+      "observed_time_s": 1206,
+      "status": "RECONCILED_DIAGNOSTIC_ONLY",
+      "accounting_complete": true,
+      "time_end_s": 1206,
+      "post_world": {
+        "M_flow.0": {
+          "role": "M",
+          "speed_m_s": 5.0,
+          "lane_id": "main_up_0"
+        },
+        "R_flow.0": {
+          "role": "R",
+          "speed_m_s": 0.0,
+          "lane_id": ":ramp_mid_0_0"
+        },
+        "synthetic.quota.0": {
+          "role": "R",
+          "speed_m_s": 0,
+          "lane_id": ":ramp_mid_0_0"
+        },
+        "synthetic.quota.1": {
+          "role": "R",
+          "speed_m_s": 0,
+          "lane_id": ":ramp_mid_0_0"
+        },
+        "synthetic.quota.2": {
+          "role": "R",
+          "speed_m_s": 0,
+          "lane_id": ":ramp_mid_0_0"
+        }
+      },
+      "actual_crossings": [],
+      "accounting": {
+        "C": 1.25,
+        "C_nearest_reference": 1.2,
+        "C_applied": 1.2,
+        "E": 0,
+        "N": 3,
+        "requested_minus_nominal": 1.25,
+        "nominal_minus_actual": -3,
+        "requested_minus_actual": -1.75,
+        "C_exact_fraction": "5/4",
+        "E_support": "COMPLETE_PACKETS_ONLY",
+        "N_support": "ALL_OBSERVED_ENTRY_BEGIN_INTERVALS",
+        "partial_cycle": true,
+        "nearest_reference_is_not_cumulative_scheduler_output": true,
+        "purpose": "FINITE_PACKET_DIAGNOSTIC_ONLY",
+        "general_service_qualified": false,
+        "diagnostic_target_status": null,
+        "debt_recovery_policy": "HISTORICAL_ALGORITHM_UNCHANGED_STOP_ON_COMPLETE_UNDER_TARGET"
+      }
+    },
+    {
+      "time_begin_s": 1206,
+      "observed_time_s": 1207,
+      "status": "RECONCILED_DIAGNOSTIC_ONLY",
+      "accounting_complete": true,
+      "time_end_s": 1207,
+      "post_world": {
+        "M_flow.0": {
+          "role": "M",
+          "speed_m_s": 5.0,
+          "lane_id": "main_up_0"
+        },
+        "R_flow.0": {
+          "role": "R",
+          "speed_m_s": 0.0,
+          "lane_id": "ramp_accel_0"
+        },
+        "synthetic.quota.0": {
+          "role": "R",
+          "speed_m_s": 0,
+          "lane_id": ":ramp_mid_0_0"
+        },
+        "synthetic.quota.1": {
+          "role": "R",
+          "speed_m_s": 0,
+          "lane_id": ":ramp_mid_0_0"
+        },
+        "synthetic.quota.2": {
+          "role": "R",
+          "speed_m_s": 0,
+          "lane_id": ":ramp_mid_0_0"
+        }
+      },
+      "actual_crossings": [],
+      "accounting": {
+        "C": 1.4583333333333333,
+        "C_nearest_reference": 1.4,
+        "C_applied": 1.4,
+        "E": 0,
+        "N": 3,
+        "requested_minus_nominal": 1.4583333333333333,
+        "nominal_minus_actual": -3,
+        "requested_minus_actual": -1.5416666666666667,
+        "C_exact_fraction": "35/24",
+        "E_support": "COMPLETE_PACKETS_ONLY",
+        "N_support": "ALL_OBSERVED_ENTRY_BEGIN_INTERVALS",
+        "partial_cycle": true,
+        "nearest_reference_is_not_cumulative_scheduler_output": true,
+        "purpose": "FINITE_PACKET_DIAGNOSTIC_ONLY",
+        "general_service_qualified": false,
+        "diagnostic_target_status": null,
+        "debt_recovery_policy": "HISTORICAL_ALGORITHM_UNCHANGED_STOP_ON_COMPLETE_UNDER_TARGET"
+      }
+    },
+    {
+      "time_begin_s": 1207,
+      "observed_time_s": 1208,
+      "status": "RECONCILED_DIAGNOSTIC_ONLY",
+      "accounting_complete": true,
+      "time_end_s": 1208,
+      "post_world": {
+        "M_flow.0": {
+          "role": "M",
+          "speed_m_s": 5.0,
+          "lane_id": "main_up_0"
+        },
+        "R_flow.0": {
+          "role": "R",
+          "speed_m_s": 0.0,
+          "lane_id": "ramp_accel_0"
+        },
+        "synthetic.quota.0": {
+          "role": "R",
+          "speed_m_s": 0,
+          "lane_id": ":ramp_mid_0_0"
+        },
+        "synthetic.quota.1": {
+          "role": "R",
+          "speed_m_s": 0,
+          "lane_id": ":ramp_mid_0_0"
+        },
+        "synthetic.quota.2": {
+          "role": "R",
+          "speed_m_s": 0,
+          "lane_id": ":ramp_mid_0_0"
+        }
+      },
+      "actual_crossings": [],
+      "accounting": {
+        "C": 1.6666666666666667,
+        "C_nearest_reference": 1.6,
+        "C_applied": 1.6,
+        "E": 0,
+        "N": 3,
+        "requested_minus_nominal": 1.6666666666666667,
+        "nominal_minus_actual": -3,
+        "requested_minus_actual": -1.3333333333333333,
+        "C_exact_fraction": "5/3",
+        "E_support": "COMPLETE_PACKETS_ONLY",
+        "N_support": "ALL_OBSERVED_ENTRY_BEGIN_INTERVALS",
+        "partial_cycle": true,
+        "nearest_reference_is_not_cumulative_scheduler_output": true,
+        "purpose": "FINITE_PACKET_DIAGNOSTIC_ONLY",
+        "general_service_qualified": false,
+        "diagnostic_target_status": null,
+        "debt_recovery_policy": "HISTORICAL_ALGORITHM_UNCHANGED_STOP_ON_COMPLETE_UNDER_TARGET"
+      }
+    },
+    {
+      "time_begin_s": 1208,
+      "observed_time_s": 1209,
+      "status": "MANDATORY_FIRST_RED_CHECKPOINT_PENDING",
+      "accounting_complete": true,
+      "time_end_s": 1209,
+      "post_world": {
+        "M_flow.0": {
+          "role": "M",
+          "speed_m_s": 5.0,
+          "lane_id": "main_up_0"
+        },
+        "R_flow.0": {
+          "role": "R",
+          "speed_m_s": 0.0,
+          "lane_id": "ramp_accel_0"
+        },
+        "synthetic.quota.0": {
+          "role": "R",
+          "speed_m_s": 0,
+          "lane_id": ":ramp_mid_0_0"
+        },
+        "synthetic.quota.1": {
+          "role": "R",
+          "speed_m_s": 0,
+          "lane_id": ":ramp_mid_0_0"
+        },
+        "synthetic.quota.2": {
+          "role": "R",
+          "speed_m_s": 0,
+          "lane_id": ":ramp_mid_0_0"
+        }
+      },
+      "actual_crossings": [],
+      "accounting": {
+        "C": 1.875,
+        "C_nearest_reference": 1.8,
+        "C_applied": 1.8,
+        "E": 0,
+        "N": 3,
+        "requested_minus_nominal": 1.875,
+        "nominal_minus_actual": -3,
+        "requested_minus_actual": -1.125,
+        "C_exact_fraction": "15/8",
+        "E_support": "COMPLETE_PACKETS_ONLY",
+        "N_support": "ALL_OBSERVED_ENTRY_BEGIN_INTERVALS",
+        "partial_cycle": true,
+        "nearest_reference_is_not_cumulative_scheduler_output": true,
+        "purpose": "FINITE_PACKET_DIAGNOSTIC_ONLY",
+        "general_service_qualified": false,
+        "diagnostic_target_status": null,
+        "debt_recovery_policy": "HISTORICAL_ALGORITHM_UNCHANGED_STOP_ON_COMPLETE_UNDER_TARGET"
+      }
+    },
+    {
+      "time_begin_s": 1209,
+      "observed_time_s": 1210,
+      "status": "STOP_OBSERVED_AFTER_STEP",
+      "accounting_complete": true,
+      "time_end_s": 1210,
+      "post_world": {
+        "M_flow.0": {
+          "role": "M",
+          "speed_m_s": 5.0,
+          "lane_id": "main_up_0"
+        },
+        "R_flow.0": {
+          "role": "R",
+          "speed_m_s": 0.0,
+          "lane_id": "ramp_accel_0"
+        },
+        "synthetic.quota.0": {
+          "role": "R",
+          "speed_m_s": 0,
+          "lane_id": ":ramp_mid_0_0"
+        },
+        "synthetic.quota.1": {
+          "role": "R",
+          "speed_m_s": 0,
+          "lane_id": ":ramp_mid_0_0"
+        },
+        "synthetic.quota.2": {
+          "role": "R",
+          "speed_m_s": 0,
+          "lane_id": ":ramp_mid_0_0"
+        }
+      },
+      "actual_crossings": [],
+      "accounting": {
+        "C": 2.0833333333333335,
+        "C_nearest_reference": 2.0,
+        "C_applied": 2.0,
+        "E": 2,
+        "N": 3,
+        "requested_minus_nominal": 0.08333333333333333,
+        "nominal_minus_actual": -1,
+        "requested_minus_actual": -0.9166666666666666,
+        "C_exact_fraction": "25/12",
+        "E_support": "COMPLETE_PACKETS_ONLY",
+        "N_support": "ALL_OBSERVED_ENTRY_BEGIN_INTERVALS",
+        "partial_cycle": false,
+        "nearest_reference_is_not_cumulative_scheduler_output": true,
+        "purpose": "FINITE_PACKET_DIAGNOSTIC_ONLY",
+        "general_service_qualified": false,
+        "diagnostic_target_status": null,
+        "debt_recovery_policy": "HISTORICAL_ALGORITHM_UNCHANGED_STOP_ON_COMPLETE_UNDER_TARGET"
+      }
+    }
+  ],
+  "provenance": "PURE_LEDGER_OVERQUOTA_EXCEPTION_PLUS_EXPLICIT_SYNTHETIC_ACK_REBINDING_NOT_NATIVE_OR_ADAPTER_MOVEMENT"
+}

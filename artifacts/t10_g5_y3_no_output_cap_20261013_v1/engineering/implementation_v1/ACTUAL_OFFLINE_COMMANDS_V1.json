@@ -1,0 +1,31 @@
+{
+  "commands": [
+    {
+      "command": ".venv/bin/python -m unittest tests.t10_g5_y3_no_output_cap_20261013.test_resource_scope -v",
+      "methods": 3,
+      "result": "PASS",
+      "exit_code": 0,
+      "seconds": 0.143,
+      "log": "RESOURCE_ONLY_OFFLINE_V1.log"
+    },
+    {
+      "command": ".venv/bin/python -m unittest tests.t10_g5_y3_no_output_cap_20261013.test_resource_scope.ResourceTests.test_removed_bytes_with_wall_disk_and_unknown_STOPS -v",
+      "methods": 1,
+      "result": "PASS",
+      "exit_code": 0,
+      "log": "RESOURCE_UNKNOWN_AFFECTED_V2.log"
+    },
+    {
+      "command": "current new03 CLI --prepare and --check-card",
+      "result": "PASS",
+      "exit_code": 0,
+      "logs": [
+        "PREPARE_CARD_V1.log",
+        "CARD_CHECK_V1.log"
+      ]
+    }
+  ],
+  "native_starts": 0,
+  "fixed_byte_cap": null,
+  "full_old_suites_repeated": false
+}

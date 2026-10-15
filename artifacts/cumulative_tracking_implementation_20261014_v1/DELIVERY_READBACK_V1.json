@@ -1,0 +1,22 @@
+{
+  "status": "SOURCE_FROZEN_NONFUNCTIONAL_WHITESPACE_DISCLOSED",
+  "check_command": [
+    "git",
+    "-c",
+    "core.whitespace=blank-at-eol,blank-at-eof,space-before-tab,cr-at-eol",
+    "diff",
+    "--cached",
+    "--check",
+    "--",
+    ".",
+    ":(exclude)*.diff"
+  ],
+  "check_exit_code": 2,
+  "check_stdout": "artifacts/cumulative_tracking_implementation_20261014_v1/engineering/freeze_v1/final_source_snapshot/scripts/cumulative_tracking_audit_20261014_v1/_phase.py:67: new blank line at EOF.\nartifacts/cumulative_tracking_implementation_20261014_v1/engineering/freeze_v2/final_source_snapshot/scripts/cumulative_tracking_audit_20261014_v1/_phase.py:67: new blank line at EOF.\nartifacts/cumulative_tracking_implementation_20261014_v1/engineering/offline_v2/ACTUAL_TEST_LOG.txt:4: trailing whitespace.\n+test_real_xml_helper_mixed_clocks_log_routes_and_ack_unknown_stop (test_tracking.TrackingTests.test_real_xml_helper_mixed_clocks_log_routes_and_ack_unknown_stop) ... \ndata/processed/cumulative_tracking_implementation_20261014_v1/offline_v1/_phase.py.preimage:67: new blank line at EOF.\ndata/processed/cumulative_tracking_implementation_20261014_v1/offline_v2/_phase.py.preimage:67: new blank line at EOF.\ndata/processed/cumulative_tracking_implementation_20261014_v1/offline_v3/_phase.py.preimage:67: new blank line at EOF.\nscripts/cumulative_tracking_audit_20261014_v1/_phase.py:67: new blank line at EOF.\n",
+  "check_stderr": "",
+  "interpretation": "Whitespace warnings in hash-bound source snapshots/preimages/log and one trailing empty line in _phase.py are retained; no code or evidence is rewritten for formatting. Not a behavioral test failure.",
+  "staged_file_count_at_check": 222,
+  "raw_memory_private_staged": false,
+  "new_native_runs": 0,
+  "git_push_or_merge": false
+}

@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/issue12_alinea_actuation_20261012_v1/CA_I12_QUOTA_R300_S17_FIX01/revision01/audit_actual_V1.py", line 101, in <module>
+    cp=load('first_red_checkpoint.json');need(cp['time_s']==1210 and cp['status']=='CHECKPOINT_VERIFIED_PROVISIONAL_UNTIL_PROCESS_EOF','first actual-red checkpoint')
+                                         ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/issue12_alinea_actuation_20261012_v1/CA_I12_QUOTA_R300_S17_FIX01/revision01/audit_actual_V1.py", line 14, in need
+    if not v:raise ValueError(msg)
+             ^^^^^^^^^^^^^^^^^^^^^
+ValueError: first actual-red checkpoint

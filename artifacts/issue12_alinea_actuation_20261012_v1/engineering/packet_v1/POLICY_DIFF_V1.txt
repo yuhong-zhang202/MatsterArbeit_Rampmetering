@@ -1,0 +1,72 @@
+--- old/policy.py
++++ packet/policy.py
+@@ -2,12 +2,12 @@
+ from fractions import Fraction
+ import math
+ 
+-LEVELS = (300, 450, 600, 750, 900)
+-PERIOD = 24
+-YELLOW = 5
++PERIODS = tuple(range(8,25))
++PERIOD = 8
++YELLOW = 2
+ MIN_RED = 2
+ MAX_GREEN = PERIOD - YELLOW - MIN_RED
+-PROGRAM = 'I12_QUOTA24'
++PROGRAM = 'I12_PACKET8'
+ 
+ 
+ def require(ok, reason):
+@@ -18,13 +18,17 @@
+ def quantize(rate):
+     require(type(rate) in (int, float) and math.isfinite(rate) and 300 <= rate <= 900,
+             'INVALID_FINAL_COMMAND')
+-    # Ties select the lower level; actual service error is not bounded by75.
+-    return min(LEVELS, key=lambda value: (abs(value-rate), value))
++    return 7200 / period_for(rate)
++
++
++def period_for(rate):
++    require(type(rate) in (int,float) and math.isfinite(rate) and 300<=rate<=900, "INVALID_FINAL_COMMAND")
++    return min(PERIODS, key=lambda t:(abs(7200/t-rate),-t))
+ 
+ 
+ class Ledger:
+     def __init__(self, command):
+-        quantize(command)
++        require(period_for(command)==PERIOD, "THIS_DIAGNOSTIC_ONLY_SUPPORTS_PREPARED_PERIOD8")
+         self.command = command
+         self.next_time_s = 1200
+         self.C = self.C_mapped = self.C_applied = Fraction(0)
+@@ -37,16 +41,17 @@
+ 
+     def begin_step(self, t, final_command):
+         require(t == self.next_time_s, 'NONSEQUENTIAL_POLICY_TIME')
++        require(period_for(final_command)==PERIOD, "UNPREPARED_PERIOD_CHANGE")
+         mapped = quantize(final_command)
+         if mapped != self.pending_rate:
+             self.pending_rate = mapped
+             self.pending_requested_s = t
+         new = self.cycle is None or t == self.cycle['end_s']
+         if new:
+-            require(t in (1200,1224,1248), 'UNDECLARED_CYCLE_START')
++            require(t in range(1200,1272,PERIOD), 'UNDECLARED_CYCLE_START')
+             applied = self.pending_rate
+-            self.cycle = dict(cycle_id=len(self.rows), begin_s=t, end_s=t+24,
+-                period_s=24, requested_quota=applied//150,
++            self.cycle = dict(cycle_id=len(self.rows), begin_s=t, end_s=t+PERIOD,
++                period_s=PERIOD, requested_quota=2,
+                 quota_status='REQUESTED_NOT_EMPIRICALLY_QUALIFIED',
+                 applied_command_veh_h=applied, command_requested_s=self.pending_requested_s,
+                 command_applied_s=t, application_delay_s=t-self.pending_requested_s,
+@@ -86,8 +91,8 @@
+         require(len(set(ids)) == len(ids) and not self.crossed_ids.intersection(ids), 'DUPLICATE_ACTUAL_ENTRY')
+         self.crossed_ids.update(ids)
+         self.C += self.step_command/3600
+-        self.C_mapped += Fraction(self.step_mapped,3600)
+-        self.C_applied += Fraction(self.cycle['applied_command_veh_h'],3600)
++        self.C_mapped += Fraction(str(self.step_mapped))/3600
++        self.C_applied += Fraction(str(self.cycle['applied_command_veh_h']))/3600
+         self.N += len(ids)
+         self.cycle['N_'+motion] += len(ids)
+         self.cycle['crossing_ids'].extend(ids)

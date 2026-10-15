@@ -1,0 +1,1107 @@
+{
+  "post_WAIT_count": 9,
+  "actual_post_WAIT_records": [
+    {
+      "time_begin_s": 1200,
+      "post_decision": {
+        "decision": "WAIT_NATIVE_FOLLOWING",
+        "prospective_available": false,
+        "original_prospective_receiver": {
+          "available": false,
+          "reason": "LEADER_SECURE_GAP",
+          "front_id": "R_flow.1",
+          "nearest_internal": "R_flow.0",
+          "leader": {
+            "vehicle_id": "R_flow.0",
+            "lane_id": ":ramp_mid_0_0",
+            "gap_excluding_minGap_m": 1.3163151997241584,
+            "secure_gap_m": 2.6
+          },
+          "nearest_internal_rear_clearance_m": -4.685730412295754,
+          "required_front_clearance_m": 7.5
+        },
+        "current_following": {
+          "vehicle_id": "R_flow.1",
+          "lane_id": "ramp_storage_0",
+          "time_s": 1201,
+          "route": [
+            "urban_in",
+            "shared_approach",
+            "ramp_storage",
+            "ramp_accel",
+            "merge_section",
+            "main_down"
+          ],
+          "lookahead_m": 478.67,
+          "receiver_path_lanes": [
+            ":ramp_mid_0_0",
+            "ramp_accel_0",
+            ":freeway_merge_2_0",
+            "merge_section_0",
+            "merge_section_1",
+            "merge_section_2"
+          ],
+          "path_geometry_m": {
+            "ramp_storage_0": 204.49,
+            ":ramp_mid_0_0": 81.98,
+            "ramp_accel_0": 99.07,
+            ":freeway_merge_2_0": 3.11,
+            "merge_section_0": 294.51,
+            "merge_section_1": 294.51,
+            "merge_section_2": 294.51
+          },
+          "actual_speed_m_s": 0.0,
+          "lane_position_m": 195.9879543879801,
+          "vehicle_length_m": 5.0,
+          "min_gap_m": 2.5,
+          "speed_mode": 31,
+          "lane_change_mode": 1621,
+          "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+          "margin_m": 1.1,
+          "future_safety_proven": false,
+          "fresh_getLeader_result": [
+            "R_flow.0",
+            1.3163151997241584
+          ],
+          "leader_id": "R_flow.0",
+          "leader_lane_id": ":ramp_mid_0_0",
+          "leader_speed_m_s": 1.3153111228020862,
+          "leader_speed_mode": 31,
+          "leader_lane_change_mode": 1621,
+          "getSecureGap_args": {
+            "vehID": "R_flow.1",
+            "speed": 0.0,
+            "leaderSpeed": 1.3153111228020862,
+            "leaderMaxDecel": 9.0,
+            "leaderID": "R_flow.0"
+          },
+          "actual_secure_gap_m": 0.0,
+          "gap_excluding_minGap_m": 1.3163151997241584,
+          "physical_bumper_gap_m": 3.8163151997241584,
+          "required_with_margin_m": 1.1,
+          "status": "CURRENT_GAP_OBSERVED_WITHIN_BOUND"
+        },
+        "time_s": 1201,
+        "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+        "future_safety_proven": false
+      }
+    },
+    {
+      "time_begin_s": 1201,
+      "post_decision": {
+        "decision": "WAIT_NATIVE_FOLLOWING",
+        "prospective_available": false,
+        "original_prospective_receiver": {
+          "available": false,
+          "reason": "LEADER_SECURE_GAP",
+          "front_id": "R_flow.1",
+          "nearest_internal": "R_flow.0",
+          "leader": {
+            "vehicle_id": "R_flow.0",
+            "lane_id": ":ramp_mid_0_0",
+            "gap_excluding_minGap_m": 4.166737257424074,
+            "secure_gap_m": 3.393890366978437
+          },
+          "nearest_internal_rear_clearance_m": -1.041417987617399,
+          "required_front_clearance_m": 7.5
+        },
+        "current_following": {
+          "vehicle_id": "R_flow.1",
+          "lane_id": "ramp_storage_0",
+          "time_s": 1202,
+          "route": [
+            "urban_in",
+            "shared_approach",
+            "ramp_storage",
+            "ramp_accel",
+            "merge_section",
+            "main_down"
+          ],
+          "lookahead_m": 478.67,
+          "receiver_path_lanes": [
+            ":ramp_mid_0_0",
+            "ramp_accel_0",
+            ":freeway_merge_2_0",
+            "merge_section_0",
+            "merge_section_1",
+            "merge_section_2"
+          ],
+          "path_geometry_m": {
+            "ramp_storage_0": 204.49,
+            ":ramp_mid_0_0": 81.98,
+            "ramp_accel_0": 99.07,
+            ":freeway_merge_2_0": 3.11,
+            "merge_section_0": 294.51,
+            "merge_section_1": 294.51,
+            "merge_section_2": 294.51
+          },
+          "actual_speed_m_s": 0.7938903669784366,
+          "lane_position_m": 196.78184475495854,
+          "vehicle_length_m": 5.0,
+          "min_gap_m": 2.5,
+          "speed_mode": 31,
+          "lane_change_mode": 1621,
+          "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+          "margin_m": 1.1,
+          "future_safety_proven": false,
+          "fresh_getLeader_result": [
+            "R_flow.0",
+            4.166737257424074
+          ],
+          "leader_id": "R_flow.0",
+          "leader_lane_id": ":ramp_mid_0_0",
+          "leader_speed_m_s": 3.6443124246783554,
+          "leader_speed_mode": 31,
+          "leader_lane_change_mode": 1621,
+          "getSecureGap_args": {
+            "vehID": "R_flow.1",
+            "speed": 0.7938903669784366,
+            "leaderSpeed": 3.6443124246783554,
+            "leaderMaxDecel": 9.0,
+            "leaderID": "R_flow.0"
+          },
+          "actual_secure_gap_m": 0.7938903669784366,
+          "gap_excluding_minGap_m": 4.166737257424074,
+          "physical_bumper_gap_m": 6.666737257424074,
+          "required_with_margin_m": 1.8938903669784368,
+          "status": "CURRENT_GAP_OBSERVED_WITHIN_BOUND"
+        },
+        "time_s": 1202,
+        "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+        "future_safety_proven": false
+      }
+    },
+    {
+      "time_begin_s": 1202,
+      "post_decision": {
+        "decision": "WAIT_NATIVE_FOLLOWING",
+        "prospective_available": false,
+        "original_prospective_receiver": {
+          "available": false,
+          "reason": "LEADER_SECURE_GAP",
+          "front_id": "R_flow.1",
+          "nearest_internal": "R_flow.0",
+          "leader": {
+            "vehicle_id": "R_flow.0",
+            "lane_id": ":ramp_mid_0_0",
+            "gap_excluding_minGap_m": 6.798722211336559,
+            "secure_gap_m": 6.099551197226077
+          },
+          "nearest_internal_rear_clearance_m": 4.290342564908121,
+          "required_front_clearance_m": 7.5
+        },
+        "current_following": {
+          "vehicle_id": "R_flow.1",
+          "lane_id": "ramp_storage_0",
+          "time_s": 1203,
+          "route": [
+            "urban_in",
+            "shared_approach",
+            "ramp_storage",
+            "ramp_accel",
+            "merge_section",
+            "main_down"
+          ],
+          "lookahead_m": 478.67,
+          "receiver_path_lanes": [
+            ":ramp_mid_0_0",
+            "ramp_accel_0",
+            ":freeway_merge_2_0",
+            "merge_section_0",
+            "merge_section_1",
+            "merge_section_2"
+          ],
+          "path_geometry_m": {
+            "ramp_storage_0": 204.49,
+            ":ramp_mid_0_0": 81.98,
+            "ramp_accel_0": 99.07,
+            ":freeway_merge_2_0": 3.11,
+            "merge_section_0": 294.51,
+            "merge_section_1": 294.51,
+            "merge_section_2": 294.51
+          },
+          "actual_speed_m_s": 2.699775598613039,
+          "lane_position_m": 199.48162035357157,
+          "vehicle_length_m": 5.0,
+          "min_gap_m": 2.5,
+          "speed_mode": 31,
+          "lane_change_mode": 1621,
+          "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+          "margin_m": 1.1,
+          "future_safety_proven": false,
+          "fresh_getLeader_result": [
+            "R_flow.0",
+            6.798722211336559
+          ],
+          "leader_id": "R_flow.0",
+          "leader_lane_id": ":ramp_mid_0_0",
+          "leader_speed_m_s": 5.3317605525255205,
+          "leader_speed_mode": 31,
+          "leader_lane_change_mode": 1621,
+          "getSecureGap_args": {
+            "vehID": "R_flow.1",
+            "speed": 2.699775598613039,
+            "leaderSpeed": 5.3317605525255205,
+            "leaderMaxDecel": 9.0,
+            "leaderID": "R_flow.0"
+          },
+          "actual_secure_gap_m": 2.699775598613039,
+          "gap_excluding_minGap_m": 6.798722211336559,
+          "physical_bumper_gap_m": 9.298722211336559,
+          "required_with_margin_m": 3.799775598613039,
+          "status": "CURRENT_GAP_OBSERVED_WITHIN_BOUND"
+        },
+        "time_s": 1203,
+        "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+        "future_safety_proven": false
+      }
+    },
+    {
+      "time_begin_s": 1224,
+      "post_decision": {
+        "decision": "WAIT_NATIVE_FOLLOWING",
+        "prospective_available": false,
+        "original_prospective_receiver": {
+          "available": false,
+          "reason": "LEADER_SECURE_GAP",
+          "front_id": "R_flow.2",
+          "nearest_internal": "R_flow.1",
+          "leader": {
+            "vehicle_id": "R_flow.1",
+            "lane_id": ":ramp_mid_0_0",
+            "gap_excluding_minGap_m": 1.5520438293923746,
+            "secure_gap_m": 2.6
+          },
+          "nearest_internal_rear_clearance_m": -4.450062232092478,
+          "required_front_clearance_m": 7.5
+        },
+        "current_following": {
+          "vehicle_id": "R_flow.2",
+          "lane_id": "ramp_storage_0",
+          "time_s": 1225,
+          "route": [
+            "urban_in",
+            "shared_approach",
+            "ramp_storage",
+            "ramp_accel",
+            "merge_section",
+            "main_down"
+          ],
+          "lookahead_m": 478.67,
+          "receiver_path_lanes": [
+            ":ramp_mid_0_0",
+            "ramp_accel_0",
+            ":freeway_merge_2_0",
+            "merge_section_0",
+            "merge_section_1",
+            "merge_section_2"
+          ],
+          "path_geometry_m": {
+            "ramp_storage_0": 204.49,
+            ":ramp_mid_0_0": 81.98,
+            "ramp_accel_0": 99.07,
+            ":freeway_merge_2_0": 3.11,
+            "merge_section_0": 294.51,
+            "merge_section_1": 294.51,
+            "merge_section_2": 294.51
+          },
+          "actual_speed_m_s": 0.0,
+          "lane_position_m": 195.98789393851516,
+          "vehicle_length_m": 5.0,
+          "min_gap_m": 2.5,
+          "speed_mode": 31,
+          "lane_change_mode": 1621,
+          "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+          "margin_m": 1.1,
+          "future_safety_proven": false,
+          "fresh_getLeader_result": [
+            "R_flow.1",
+            1.5520438293923746
+          ],
+          "leader_id": "R_flow.1",
+          "leader_lane_id": ":ramp_mid_0_0",
+          "leader_speed_m_s": 1.5510307679418476,
+          "leader_speed_mode": 31,
+          "leader_lane_change_mode": 1621,
+          "getSecureGap_args": {
+            "vehID": "R_flow.2",
+            "speed": 0.0,
+            "leaderSpeed": 1.5510307679418476,
+            "leaderMaxDecel": 9.0,
+            "leaderID": "R_flow.1"
+          },
+          "actual_secure_gap_m": 0.0,
+          "gap_excluding_minGap_m": 1.5520438293923746,
+          "physical_bumper_gap_m": 4.052043829392375,
+          "required_with_margin_m": 1.1,
+          "status": "CURRENT_GAP_OBSERVED_WITHIN_BOUND"
+        },
+        "time_s": 1225,
+        "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+        "future_safety_proven": false
+      }
+    },
+    {
+      "time_begin_s": 1225,
+      "post_decision": {
+        "decision": "WAIT_NATIVE_FOLLOWING",
+        "prospective_available": false,
+        "original_prospective_receiver": {
+          "available": false,
+          "reason": "LEADER_SECURE_GAP",
+          "front_id": "R_flow.2",
+          "nearest_internal": "R_flow.1",
+          "leader": {
+            "vehicle_id": "R_flow.1",
+            "lane_id": ":ramp_mid_0_0",
+            "gap_excluding_minGap_m": 3.070102945263244,
+            "secure_gap_m": 4.132249971511757
+          },
+          "nearest_internal_rear_clearance_m": -1.3997531447098481,
+          "required_front_clearance_m": 7.5
+        },
+        "current_following": {
+          "vehicle_id": "R_flow.2",
+          "lane_id": "ramp_storage_0",
+          "time_s": 1226,
+          "route": [
+            "urban_in",
+            "shared_approach",
+            "ramp_storage",
+            "ramp_accel",
+            "merge_section",
+            "main_down"
+          ],
+          "lookahead_m": 478.67,
+          "receiver_path_lanes": [
+            ":ramp_mid_0_0",
+            "ramp_accel_0",
+            ":freeway_merge_2_0",
+            "merge_section_0",
+            "merge_section_1",
+            "merge_section_2"
+          ],
+          "path_geometry_m": {
+            "ramp_storage_0": 204.49,
+            ":ramp_mid_0_0": 81.98,
+            "ramp_accel_0": 99.07,
+            ":freeway_merge_2_0": 3.11,
+            "merge_section_0": 294.51,
+            "merge_section_1": 294.51,
+            "merge_section_2": 294.51
+          },
+          "actual_speed_m_s": 1.5322499715117568,
+          "lane_position_m": 197.52014391002692,
+          "vehicle_length_m": 5.0,
+          "min_gap_m": 2.5,
+          "speed_mode": 31,
+          "lane_change_mode": 1621,
+          "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+          "margin_m": 1.1,
+          "future_safety_proven": false,
+          "fresh_getLeader_result": [
+            "R_flow.1",
+            3.070102945263244
+          ],
+          "leader_id": "R_flow.1",
+          "leader_lane_id": ":ramp_mid_0_0",
+          "leader_speed_m_s": 3.0503090873826295,
+          "leader_speed_mode": 31,
+          "leader_lane_change_mode": 1621,
+          "getSecureGap_args": {
+            "vehID": "R_flow.2",
+            "speed": 1.5322499715117568,
+            "leaderSpeed": 3.0503090873826295,
+            "leaderMaxDecel": 9.0,
+            "leaderID": "R_flow.1"
+          },
+          "actual_secure_gap_m": 1.5322499715117568,
+          "gap_excluding_minGap_m": 3.070102945263244,
+          "physical_bumper_gap_m": 5.570102945263244,
+          "required_with_margin_m": 2.632249971511757,
+          "status": "CURRENT_GAP_OBSERVED_WITHIN_BOUND"
+        },
+        "time_s": 1226,
+        "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+        "future_safety_proven": false
+      }
+    },
+    {
+      "time_begin_s": 1226,
+      "post_decision": {
+        "decision": "WAIT_NATIVE_FOLLOWING",
+        "prospective_available": false,
+        "original_prospective_receiver": {
+          "available": false,
+          "reason": "LEADER_SECURE_GAP",
+          "front_id": "R_flow.2",
+          "nearest_internal": "R_flow.1",
+          "leader": {
+            "vehicle_id": "R_flow.1",
+            "lane_id": ":ramp_mid_0_0",
+            "gap_excluding_minGap_m": 5.661462600551534,
+            "secure_gap_m": 5.936852565157652
+          },
+          "nearest_internal_rear_clearance_m": 3.81003279315728,
+          "required_front_clearance_m": 7.5
+        },
+        "current_following": {
+          "vehicle_id": "R_flow.2",
+          "lane_id": "ramp_storage_0",
+          "time_s": 1227,
+          "route": [
+            "urban_in",
+            "shared_approach",
+            "ramp_storage",
+            "ramp_accel",
+            "merge_section",
+            "main_down"
+          ],
+          "lookahead_m": 478.67,
+          "receiver_path_lanes": [
+            ":ramp_mid_0_0",
+            "ramp_accel_0",
+            ":freeway_merge_2_0",
+            "merge_section_0",
+            "merge_section_1",
+            "merge_section_2"
+          ],
+          "path_geometry_m": {
+            "ramp_storage_0": 204.49,
+            ":ramp_mid_0_0": 81.98,
+            "ramp_accel_0": 99.07,
+            ":freeway_merge_2_0": 3.11,
+            "merge_section_0": 294.51,
+            "merge_section_1": 294.51,
+            "merge_section_2": 294.51
+          },
+          "actual_speed_m_s": 2.618426282578826,
+          "lane_position_m": 200.13857019260575,
+          "vehicle_length_m": 5.0,
+          "min_gap_m": 2.5,
+          "speed_mode": 31,
+          "lane_change_mode": 1621,
+          "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+          "margin_m": 1.1,
+          "future_safety_proven": false,
+          "fresh_getLeader_result": [
+            "R_flow.1",
+            5.661462600551534
+          ],
+          "leader_id": "R_flow.1",
+          "leader_lane_id": ":ramp_mid_0_0",
+          "leader_speed_m_s": 5.209785937867127,
+          "leader_speed_mode": 31,
+          "leader_lane_change_mode": 1621,
+          "getSecureGap_args": {
+            "vehID": "R_flow.2",
+            "speed": 2.618426282578826,
+            "leaderSpeed": 5.209785937867127,
+            "leaderMaxDecel": 9.0,
+            "leaderID": "R_flow.1"
+          },
+          "actual_secure_gap_m": 2.618426282578826,
+          "gap_excluding_minGap_m": 5.661462600551534,
+          "physical_bumper_gap_m": 8.161462600551534,
+          "required_with_margin_m": 3.718426282578826,
+          "status": "CURRENT_GAP_OBSERVED_WITHIN_BOUND"
+        },
+        "time_s": 1227,
+        "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+        "future_safety_proven": false
+      }
+    },
+    {
+      "time_begin_s": 1248,
+      "post_decision": {
+        "decision": "WAIT_NATIVE_FOLLOWING",
+        "prospective_available": false,
+        "original_prospective_receiver": {
+          "available": false,
+          "reason": "LEADER_SECURE_GAP",
+          "front_id": "R_flow.3",
+          "nearest_internal": "R_flow.2",
+          "leader": {
+            "vehicle_id": "R_flow.2",
+            "lane_id": ":ramp_mid_0_0",
+            "gap_excluding_minGap_m": 2.5721220438504417,
+            "secure_gap_m": 2.6
+          },
+          "nearest_internal_rear_clearance_m": -3.4299848967968387,
+          "required_front_clearance_m": 7.5
+        },
+        "current_following": {
+          "vehicle_id": "R_flow.3",
+          "lane_id": "ramp_storage_0",
+          "time_s": 1249,
+          "route": [
+            "urban_in",
+            "shared_approach",
+            "ramp_storage",
+            "ramp_accel",
+            "merge_section",
+            "main_down"
+          ],
+          "lookahead_m": 478.67,
+          "receiver_path_lanes": [
+            ":ramp_mid_0_0",
+            "ramp_accel_0",
+            ":freeway_merge_2_0",
+            "merge_section_0",
+            "merge_section_1",
+            "merge_section_2"
+          ],
+          "path_geometry_m": {
+            "ramp_storage_0": 204.49,
+            ":ramp_mid_0_0": 81.98,
+            "ramp_accel_0": 99.07,
+            ":freeway_merge_2_0": 3.11,
+            "merge_section_0": 294.51,
+            "merge_section_1": 294.51,
+            "merge_section_2": 294.51
+          },
+          "actual_speed_m_s": 0.0,
+          "lane_position_m": 195.98789305935273,
+          "vehicle_length_m": 5.0,
+          "min_gap_m": 2.5,
+          "speed_mode": 31,
+          "lane_change_mode": 1621,
+          "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+          "margin_m": 1.1,
+          "future_safety_proven": false,
+          "fresh_getLeader_result": [
+            "R_flow.2",
+            2.5721220438504417
+          ],
+          "leader_id": "R_flow.2",
+          "leader_lane_id": ":ramp_mid_0_0",
+          "leader_speed_m_s": 2.571026217797771,
+          "leader_speed_mode": 31,
+          "leader_lane_change_mode": 1621,
+          "getSecureGap_args": {
+            "vehID": "R_flow.3",
+            "speed": 0.0,
+            "leaderSpeed": 2.571026217797771,
+            "leaderMaxDecel": 9.0,
+            "leaderID": "R_flow.2"
+          },
+          "actual_secure_gap_m": 0.0,
+          "gap_excluding_minGap_m": 2.5721220438504417,
+          "physical_bumper_gap_m": 5.072122043850442,
+          "required_with_margin_m": 1.1,
+          "status": "CURRENT_GAP_OBSERVED_WITHIN_BOUND"
+        },
+        "time_s": 1249,
+        "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+        "future_safety_proven": false
+      }
+    },
+    {
+      "time_begin_s": 1249,
+      "post_decision": {
+        "decision": "WAIT_NATIVE_FOLLOWING",
+        "prospective_available": false,
+        "original_prospective_receiver": {
+          "available": false,
+          "reason": "LEADER_SECURE_GAP",
+          "front_id": "R_flow.3",
+          "nearest_internal": "R_flow.2",
+          "leader": {
+            "vehicle_id": "R_flow.2",
+            "lane_id": ":ramp_mid_0_0",
+            "gap_excluding_minGap_m": 5.071892923928471,
+            "secure_gap_m": 4.2157191409197985
+          },
+          "nearest_internal_rear_clearance_m": 0.6855051242009838,
+          "required_front_clearance_m": 7.5
+        },
+        "current_following": {
+          "vehicle_id": "R_flow.3",
+          "lane_id": "ramp_storage_0",
+          "time_s": 1250,
+          "route": [
+            "urban_in",
+            "shared_approach",
+            "ramp_storage",
+            "ramp_accel",
+            "merge_section",
+            "main_down"
+          ],
+          "lookahead_m": 478.67,
+          "receiver_path_lanes": [
+            ":ramp_mid_0_0",
+            "ramp_accel_0",
+            ":freeway_merge_2_0",
+            "merge_section_0",
+            "merge_section_1",
+            "merge_section_2"
+          ],
+          "path_geometry_m": {
+            "ramp_storage_0": 204.49,
+            ":ramp_mid_0_0": 81.98,
+            "ramp_accel_0": 99.07,
+            ":freeway_merge_2_0": 3.11,
+            "merge_section_0": 294.51,
+            "merge_section_1": 294.51,
+            "merge_section_2": 294.51
+          },
+          "actual_speed_m_s": 1.6157191409197982,
+          "lane_position_m": 197.60361220027252,
+          "vehicle_length_m": 5.0,
+          "min_gap_m": 2.5,
+          "speed_mode": 31,
+          "lane_change_mode": 1621,
+          "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+          "margin_m": 1.1,
+          "future_safety_proven": false,
+          "fresh_getLeader_result": [
+            "R_flow.2",
+            5.071892923928471
+          ],
+          "leader_id": "R_flow.2",
+          "leader_lane_id": ":ramp_mid_0_0",
+          "leader_speed_m_s": 4.1154900209978225,
+          "leader_speed_mode": 31,
+          "leader_lane_change_mode": 1621,
+          "getSecureGap_args": {
+            "vehID": "R_flow.3",
+            "speed": 1.6157191409197982,
+            "leaderSpeed": 4.1154900209978225,
+            "leaderMaxDecel": 9.0,
+            "leaderID": "R_flow.2"
+          },
+          "actual_secure_gap_m": 1.6157191409197982,
+          "gap_excluding_minGap_m": 5.071892923928471,
+          "physical_bumper_gap_m": 7.571892923928471,
+          "required_with_margin_m": 2.7157191409197985,
+          "status": "CURRENT_GAP_OBSERVED_WITHIN_BOUND"
+        },
+        "time_s": 1250,
+        "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+        "future_safety_proven": false
+      }
+    },
+    {
+      "time_begin_s": 1250,
+      "post_decision": {
+        "decision": "WAIT_NATIVE_FOLLOWING",
+        "prospective_available": false,
+        "original_prospective_receiver": {
+          "available": false,
+          "reason": "LEADER_SECURE_GAP",
+          "front_id": "R_flow.3",
+          "nearest_internal": "R_flow.2",
+          "leader": {
+            "vehicle_id": "R_flow.2",
+            "lane_id": ":ramp_mid_0_0",
+            "gap_excluding_minGap_m": 6.851326678836456,
+            "secure_gap_m": 8.48636375571217
+          },
+          "nearest_internal_rear_clearance_m": 6.358120756965048,
+          "required_front_clearance_m": 7.5
+        },
+        "current_following": {
+          "vehicle_id": "R_flow.3",
+          "lane_id": "ramp_storage_0",
+          "time_s": 1251,
+          "route": [
+            "urban_in",
+            "shared_approach",
+            "ramp_storage",
+            "ramp_accel",
+            "merge_section",
+            "main_down"
+          ],
+          "lookahead_m": 478.67,
+          "receiver_path_lanes": [
+            ":ramp_mid_0_0",
+            "ramp_accel_0",
+            ":freeway_merge_2_0",
+            "merge_section_0",
+            "merge_section_1",
+            "merge_section_2"
+          ],
+          "path_geometry_m": {
+            "ramp_storage_0": 204.49,
+            ":ramp_mid_0_0": 81.98,
+            "ramp_accel_0": 99.07,
+            ":freeway_merge_2_0": 3.11,
+            "merge_section_0": 294.51,
+            "merge_section_1": 294.51,
+            "merge_section_2": 294.51
+          },
+          "actual_speed_m_s": 3.8931818778560845,
+          "lane_position_m": 201.4967940781286,
+          "vehicle_length_m": 5.0,
+          "min_gap_m": 2.5,
+          "speed_mode": 31,
+          "lane_change_mode": 1621,
+          "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+          "margin_m": 1.1,
+          "future_safety_proven": false,
+          "fresh_getLeader_result": [
+            "R_flow.2",
+            6.851326678836456
+          ],
+          "leader_id": "R_flow.2",
+          "leader_lane_id": ":ramp_mid_0_0",
+          "leader_speed_m_s": 5.672615632764065,
+          "leader_speed_mode": 31,
+          "leader_lane_change_mode": 1621,
+          "getSecureGap_args": {
+            "vehID": "R_flow.3",
+            "speed": 3.8931818778560845,
+            "leaderSpeed": 5.672615632764065,
+            "leaderMaxDecel": 9.0,
+            "leaderID": "R_flow.2"
+          },
+          "actual_secure_gap_m": 3.8931818778560845,
+          "gap_excluding_minGap_m": 6.851326678836456,
+          "physical_bumper_gap_m": 9.351326678836456,
+          "required_with_margin_m": 4.993181877856085,
+          "status": "CURRENT_GAP_OBSERVED_WITHIN_BOUND"
+        },
+        "time_s": 1251,
+        "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+        "future_safety_proven": false
+      }
+    }
+  ],
+  "actual_entry_bound_before_after_records": [
+    {
+      "time_begin_s": 1200,
+      "crossings": [
+        {
+          "vehicle_id": "R_flow.0",
+          "crossing_time_lower_s": 1200,
+          "crossing_time_upper_s": 1201,
+          "time_interval": "(lower,upper]",
+          "cycle_id": 0,
+          "motion_signal_state": "G"
+        }
+      ],
+      "actual_entry_following": [
+        {
+          "vehicle_id": "R_flow.0",
+          "time_begin_s": 1200,
+          "time_end_s": 1201,
+          "before": {
+            "vehicle_id": "R_flow.0",
+            "lane_id": "ramp_storage_0",
+            "time_s": 1200,
+            "route": [
+              "urban_in",
+              "shared_approach",
+              "ramp_storage",
+              "ramp_accel",
+              "merge_section",
+              "main_down"
+            ],
+            "lookahead_m": 478.67,
+            "receiver_path_lanes": [
+              ":ramp_mid_0_0",
+              "ramp_accel_0",
+              ":freeway_merge_2_0",
+              "merge_section_0",
+              "merge_section_1",
+              "merge_section_2"
+            ],
+            "path_geometry_m": {
+              "ramp_storage_0": 204.49,
+              ":ramp_mid_0_0": 81.98,
+              "ramp_accel_0": 99.07,
+              ":freeway_merge_2_0": 3.11,
+              "merge_section_0": 294.51,
+              "merge_section_1": 294.51,
+              "merge_section_2": 294.51
+            },
+            "actual_speed_m_s": 0.0,
+            "lane_position_m": 203.48895846490217,
+            "vehicle_length_m": 5.0,
+            "min_gap_m": 2.5,
+            "speed_mode": 31,
+            "lane_change_mode": 1621,
+            "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+            "margin_m": 1.1,
+            "future_safety_proven": false,
+            "fresh_getLeader_result": null,
+            "status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+            "actual_secure_gap_m": null,
+            "gap_excluding_minGap_m": null,
+            "claim_scope": "fresh valid native empty result within fixed lookahead and bound route/path, not globally clear"
+          },
+          "after": {
+            "vehicle_id": "R_flow.0",
+            "lane_id": ":ramp_mid_0_0",
+            "time_s": 1201,
+            "route": [
+              "urban_in",
+              "shared_approach",
+              "ramp_storage",
+              "ramp_accel",
+              "merge_section",
+              "main_down"
+            ],
+            "lookahead_m": 478.67,
+            "receiver_path_lanes": [
+              ":ramp_mid_0_0",
+              "ramp_accel_0",
+              ":freeway_merge_2_0",
+              "merge_section_0",
+              "merge_section_1",
+              "merge_section_2"
+            ],
+            "path_geometry_m": {
+              "ramp_storage_0": 204.49,
+              ":ramp_mid_0_0": 81.98,
+              "ramp_accel_0": 99.07,
+              ":freeway_merge_2_0": 3.11,
+              "merge_section_0": 294.51,
+              "merge_section_1": 294.51,
+              "merge_section_2": 294.51
+            },
+            "actual_speed_m_s": 1.3153111228020862,
+            "lane_position_m": 0.3142695877042456,
+            "vehicle_length_m": 5.0,
+            "min_gap_m": 2.5,
+            "speed_mode": 31,
+            "lane_change_mode": 1621,
+            "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+            "margin_m": 1.1,
+            "future_safety_proven": false,
+            "fresh_getLeader_result": null,
+            "status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+            "actual_secure_gap_m": null,
+            "gap_excluding_minGap_m": null,
+            "claim_scope": "fresh valid native empty result within fixed lookahead and bound route/path, not globally clear"
+          },
+          "motion": "G"
+        }
+      ]
+    },
+    {
+      "time_begin_s": 1224,
+      "crossings": [
+        {
+          "vehicle_id": "R_flow.1",
+          "crossing_time_lower_s": 1224,
+          "crossing_time_upper_s": 1225,
+          "time_interval": "(lower,upper]",
+          "cycle_id": 1,
+          "motion_signal_state": "G"
+        }
+      ],
+      "actual_entry_following": [
+        {
+          "vehicle_id": "R_flow.1",
+          "time_begin_s": 1224,
+          "time_end_s": 1225,
+          "before": {
+            "vehicle_id": "R_flow.1",
+            "lane_id": "ramp_storage_0",
+            "time_s": 1224,
+            "route": [
+              "urban_in",
+              "shared_approach",
+              "ramp_storage",
+              "ramp_accel",
+              "merge_section",
+              "main_down"
+            ],
+            "lookahead_m": 478.67,
+            "receiver_path_lanes": [
+              ":ramp_mid_0_0",
+              "ramp_accel_0",
+              ":freeway_merge_2_0",
+              "merge_section_0",
+              "merge_section_1",
+              "merge_section_2"
+            ],
+            "path_geometry_m": {
+              "ramp_storage_0": 204.49,
+              ":ramp_mid_0_0": 81.98,
+              "ramp_accel_0": 99.07,
+              ":freeway_merge_2_0": 3.11,
+              "merge_section_0": 294.51,
+              "merge_section_1": 294.51,
+              "merge_section_2": 294.51
+            },
+            "actual_speed_m_s": 0.0,
+            "lane_position_m": 203.48890699996568,
+            "vehicle_length_m": 5.0,
+            "min_gap_m": 2.5,
+            "speed_mode": 31,
+            "lane_change_mode": 1621,
+            "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+            "margin_m": 1.1,
+            "future_safety_proven": false,
+            "fresh_getLeader_result": null,
+            "status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+            "actual_secure_gap_m": null,
+            "gap_excluding_minGap_m": null,
+            "claim_scope": "fresh valid native empty result within fixed lookahead and bound route/path, not globally clear"
+          },
+          "after": {
+            "vehicle_id": "R_flow.1",
+            "lane_id": ":ramp_mid_0_0",
+            "time_s": 1225,
+            "route": [
+              "urban_in",
+              "shared_approach",
+              "ramp_storage",
+              "ramp_accel",
+              "merge_section",
+              "main_down"
+            ],
+            "lookahead_m": 478.67,
+            "receiver_path_lanes": [
+              ":ramp_mid_0_0",
+              "ramp_accel_0",
+              ":freeway_merge_2_0",
+              "merge_section_0",
+              "merge_section_1",
+              "merge_section_2"
+            ],
+            "path_geometry_m": {
+              "ramp_storage_0": 204.49,
+              ":ramp_mid_0_0": 81.98,
+              "ramp_accel_0": 99.07,
+              ":freeway_merge_2_0": 3.11,
+              "merge_section_0": 294.51,
+              "merge_section_1": 294.51,
+              "merge_section_2": 294.51
+            },
+            "actual_speed_m_s": 1.5510307679418476,
+            "lane_position_m": 0.5499377679075224,
+            "vehicle_length_m": 5.0,
+            "min_gap_m": 2.5,
+            "speed_mode": 31,
+            "lane_change_mode": 1621,
+            "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+            "margin_m": 1.1,
+            "future_safety_proven": false,
+            "fresh_getLeader_result": null,
+            "status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+            "actual_secure_gap_m": null,
+            "gap_excluding_minGap_m": null,
+            "claim_scope": "fresh valid native empty result within fixed lookahead and bound route/path, not globally clear"
+          },
+          "motion": "G"
+        }
+      ]
+    },
+    {
+      "time_begin_s": 1248,
+      "crossings": [
+        {
+          "vehicle_id": "R_flow.2",
+          "crossing_time_lower_s": 1248,
+          "crossing_time_upper_s": 1249,
+          "time_interval": "(lower,upper]",
+          "cycle_id": 2,
+          "motion_signal_state": "G"
+        }
+      ],
+      "actual_entry_following": [
+        {
+          "vehicle_id": "R_flow.2",
+          "time_begin_s": 1248,
+          "time_end_s": 1249,
+          "before": {
+            "vehicle_id": "R_flow.2",
+            "lane_id": "ramp_storage_0",
+            "time_s": 1248,
+            "route": [
+              "urban_in",
+              "shared_approach",
+              "ramp_storage",
+              "ramp_accel",
+              "merge_section",
+              "main_down"
+            ],
+            "lookahead_m": 478.67,
+            "receiver_path_lanes": [
+              ":ramp_mid_0_0",
+              "ramp_accel_0",
+              ":freeway_merge_2_0",
+              "merge_section_0",
+              "merge_section_1",
+              "merge_section_2"
+            ],
+            "path_geometry_m": {
+              "ramp_storage_0": 204.49,
+              ":ramp_mid_0_0": 81.98,
+              "ramp_accel_0": 99.07,
+              ":freeway_merge_2_0": 3.11,
+              "merge_section_0": 294.51,
+              "merge_section_1": 294.51,
+              "merge_section_2": 294.51
+            },
+            "actual_speed_m_s": 0.0,
+            "lane_position_m": 203.4889888854054,
+            "vehicle_length_m": 5.0,
+            "min_gap_m": 2.5,
+            "speed_mode": 31,
+            "lane_change_mode": 1621,
+            "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+            "margin_m": 1.1,
+            "future_safety_proven": false,
+            "fresh_getLeader_result": null,
+            "status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+            "actual_secure_gap_m": null,
+            "gap_excluding_minGap_m": null,
+            "claim_scope": "fresh valid native empty result within fixed lookahead and bound route/path, not globally clear"
+          },
+          "after": {
+            "vehicle_id": "R_flow.2",
+            "lane_id": ":ramp_mid_0_0",
+            "time_s": 1249,
+            "route": [
+              "urban_in",
+              "shared_approach",
+              "ramp_storage",
+              "ramp_accel",
+              "merge_section",
+              "main_down"
+            ],
+            "lookahead_m": 478.67,
+            "receiver_path_lanes": [
+              ":ramp_mid_0_0",
+              "ramp_accel_0",
+              ":freeway_merge_2_0",
+              "merge_section_0",
+              "merge_section_1",
+              "merge_section_2"
+            ],
+            "path_geometry_m": {
+              "ramp_storage_0": 204.49,
+              ":ramp_mid_0_0": 81.98,
+              "ramp_accel_0": 99.07,
+              ":freeway_merge_2_0": 3.11,
+              "merge_section_0": 294.51,
+              "merge_section_1": 294.51,
+              "merge_section_2": 294.51
+            },
+            "actual_speed_m_s": 2.571026217797771,
+            "lane_position_m": 1.5700151032031613,
+            "vehicle_length_m": 5.0,
+            "min_gap_m": 2.5,
+            "speed_mode": 31,
+            "lane_change_mode": 1621,
+            "policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1",
+            "margin_m": 1.1,
+            "future_safety_proven": false,
+            "fresh_getLeader_result": null,
+            "status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+            "actual_secure_gap_m": null,
+            "gap_excluding_minGap_m": null,
+            "claim_scope": "fresh valid native empty result within fixed lookahead and bound route/path, not globally clear"
+          },
+          "motion": "G"
+        }
+      ]
+    }
+  ],
+  "fourth_green_executed": false,
+  "same_core_protection_after_PASS": true
+}

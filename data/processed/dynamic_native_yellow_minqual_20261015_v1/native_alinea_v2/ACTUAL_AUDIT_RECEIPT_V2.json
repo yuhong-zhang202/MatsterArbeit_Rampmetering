@@ -1,0 +1,30 @@
+{
+  "classification": "POSTANALYSIS_MEASUREMENT_BOUNDARY_REPAIR_NOT_NATIVE_SOURCE",
+  "original_bound_reader_attempt": {
+    "source": "scripts/dynamic_native_yellow_minqual_audit_20261015_v1/actual.py",
+    "sha256": "3fdb0ee9e9a2c5ab989d36da8118797057d0c185e192e6a90662aa230fff310a",
+    "session": 66686,
+    "actual_exit_code": 1,
+    "status": "UNKNOWN_AUDIT_EXCEPTION",
+    "reason": "UNKNOWN_PHASE_FOR_YELLOW_COVERAGE masking RED_DURATION_TRACE_COVERAGE",
+    "preserved_output": "data/processed/dynamic_native_yellow_minqual_20261015_v1/native_alinea_v1/ACTUAL_RESULTS_V1.json"
+  },
+  "corrected_measurement_attempt": {
+    "command": "python3 data/processed/dynamic_native_yellow_minqual_20261015_v1/native_alinea_v2/actual_postanalysis_V2.py --manifest artifacts/dynamic_native_yellow_minqual_20261015_v1/engineering/native_execution_v1/UA_NATIVEYELLOW_ALINEA_S17_01/RAW_FINAL_SHA256_V1.json --card artifacts/dynamic_native_yellow_minqual_20261015_v1/engineering/packages_v1/UA_NATIVEYELLOW_ALINEA_S17_01/card.json --output data/processed/dynamic_native_yellow_minqual_20261015_v1/native_alinea_v2/results",
+    "session": 87297,
+    "actual_exit_code": 0,
+    "status": "PASS_OBSERVED_DATA_INTEGRITY_ONLY",
+    "full_actual_reader_executed_to_final_return": true,
+    "analysis_sources_sha256": {
+      "data/processed/dynamic_native_yellow_minqual_20261015_v1/native_alinea_v2/actual_postanalysis_V2.py": "57aee0b9bf7b1498d3d2f7530bb449225ceb691e3d073dfac3bfe03862ee896a",
+      "data/processed/dynamic_native_yellow_minqual_20261015_v1/native_alinea_v2/phase_boundary_V2.py": "ff1aacdf25b4bcb13247003aef0b6fef651143af17e68d6514b36f73aac2f9e7"
+    }
+  },
+  "native_execution_commit": "3d82ed578e4e5e028ed3db14e596bd44e845956b",
+  "native_source154_digest": "089a2fefb9fb4d68aced499b532636c3a551b672f9130a1fd2e6acb468ff4ae2",
+  "native_source_unchanged_and_original_hashes_verified": true,
+  "raw_manifest_sha256": "879ec71f1bad2e6aebbb637a98c7fddb014306efd246d0f1ad4377804944cb04",
+  "card_sha256": "36d30fff68d1e52e0b699bcf87186b9388f39302181367929532b9d409b0e560",
+  "new_SUMO_runs": 0,
+  "budget_settled_here": false
+}

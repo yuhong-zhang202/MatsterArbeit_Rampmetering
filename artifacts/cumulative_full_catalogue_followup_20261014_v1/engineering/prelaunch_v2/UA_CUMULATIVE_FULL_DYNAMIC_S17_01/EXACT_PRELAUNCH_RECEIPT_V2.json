@@ -1,0 +1,42 @@
+{
+  "status": "PASS_EXACT_DYNAMIC_V2_LIVE_GATE_PENDING_CANONICAL_AND_SCIENCE_CLOSURE",
+  "current_HEAD": "0ae1f23a13e6e91540e64e4a02c65a2e9755f374",
+  "card_sha256": "68e9b2c73d7164a1bd10199e77ca43bcb42332e680a240b0828091ec45a3ed34",
+  "source_digest": "5d0695195a2062f4708f455b227901b9084a76acca86dc81b34cc59e93d6d85e",
+  "source_count": 136,
+  "auth_sha256": "bbbb722abd282cd3cc54306d99de408036f8d27773500c40eecd8bacdbacd791",
+  "human_sha256": "1dc58f5712a57e986f3d485faaeecf1487276b695af0ce769cbd464b1e306760",
+  "resources": {
+    "wall_limit_s": 300,
+    "startup_limit_s": 60,
+    "run_limit_bytes": null,
+    "minimum_free_bytes": 5000000000
+  },
+  "combined_envelope": {
+    "monitored_s": 600,
+    "raw_bytes": null
+  },
+  "new_budget": {
+    "known_settled": {},
+    "unknown_reserved": [],
+    "charged_monitored_s": 0.0,
+    "charged_raw_bytes": 0,
+    "remaining_s": 600.0,
+    "remaining_bytes": null,
+    "selected_total_limits": {
+      "wall_s": 600,
+      "bytes": null
+    },
+    "fixed_start_count_limit": null,
+    "scope": "ONLY_NEW_TWO_FOLLOWUP_IDENTITIES; ALL_OLD_STAGES_EXCLUDED"
+  },
+  "free_bytes": 32885424128,
+  "matching_execution_processes": [],
+  "native_starts": 0,
+  "validator_result": "FUTURE_CANONICAL_RELEASE_MISSING",
+  "V1_auth_and_prelaunch_preserved": true,
+  "ALINEA_authority_absent": true,
+  "raw_and_canonical_absent": true,
+  "source_card_guard_timing_unchanged": true,
+  "new_tests_or_native_version": false
+}

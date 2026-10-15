@@ -1,0 +1,529 @@
+{
+  "run_id": "UA_DYNAMIC_S17_01",
+  "classification": "BOUNDED_DYNAMIC_INTERFACE_COMPLETED_NOT_QUALIFIED",
+  "mode": "dynamic_commands",
+  "card_sha256": "75971443ed912eb54b2a0ee7ee0b6c4a1be339ebabefa94addb4ad6c206a9618",
+  "release_sha256": "e10f07ab5159bbb2066da8e8663f8f85e04605fadb3cb63fc5d9b55041c4a0cd",
+  "common_runtime_source_sha256": "ea180197848843bd3cca7d326a7016454fe8bd0db406302a64ad11f03347b29b",
+  "source_checkpoint": "ff309c8ec43601cee606cde94307943859de3f00",
+  "command": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python scripts/candidate_a_unified_alinea_20261013_v1/cli.py --execute artifacts/unified_alinea_actuator_20261013_v1/engineering/packages/UA_DYNAMIC_S17_01/card.json --release artifacts/unified_alinea_actuator_20261013_v1/engineering/releases/UA_DYNAMIC_S17_01/EXECUTION_RELEASE.json",
+  "exec_session_id": 57385,
+  "CLI_pid_observed": 21904,
+  "owned_SUMO_pid_observed": 21921,
+  "port_observed": 55271,
+  "native_start_count": 1,
+  "native_retries": 0,
+  "CLI_exit_code": 0,
+  "actual_end_ACK_s": 1266,
+  "last_accounted_s": 1266,
+  "native_status": "PACKET_CYCLES_OBSERVED_NO_MONITORED_ANOMALY_NOT_QUALIFIED",
+  "error": "",
+  "actual_control_accounting": {
+    "C": 10.458333333333334,
+    "C_mapped_pending": 10.25,
+    "C_applied": 8.0,
+    "E": 8,
+    "N": 8,
+    "policy_quantization": 0.20833333333333334,
+    "application_latency": 2.25,
+    "C_applied_minus_E": 0.0,
+    "E_minus_N": 0
+  },
+  "cycles": [
+    {
+      "cycle_id": 0,
+      "begin_s": 1200,
+      "end_s": 1224,
+      "period_s": 24,
+      "yellow_s": 5,
+      "minimum_red_s": 2,
+      "program": "I12_PACKET24",
+      "requested_quota": 2,
+      "quota_status": "REQUESTED_NOT_EMPIRICALLY_QUALIFIED",
+      "applied_command_veh_h": 300.0,
+      "applied_request_id": "dynamic_commands:1200",
+      "command_requested_s": 1200,
+      "command_applied_s": 1200,
+      "planned_application_s": 1200,
+      "application_status": "ACK_OBSERVED",
+      "application_delay_s": 0,
+      "command_age_at_cycle_start_s": 0,
+      "green_end_s": 1204,
+      "green_end_reason": "ACTUAL_QUOTA_ACK",
+      "executed": true,
+      "completed": true,
+      "N_G": 2,
+      "N_y": 0,
+      "N_r": 0,
+      "crossing_ids": [
+        "R_flow.0",
+        "R_flow.1"
+      ],
+      "phase_exposure_s": {
+        "G": 4,
+        "y": 5,
+        "r": 15
+      },
+      "denial_reason": "",
+      "red_clock_bound": true,
+      "remaining_red_set_at_s": 1210,
+      "remaining_red_duration_s": 14
+    },
+    {
+      "cycle_id": 1,
+      "begin_s": 1224,
+      "end_s": 1234,
+      "period_s": 10,
+      "yellow_s": 4,
+      "minimum_red_s": 2,
+      "program": "I12_PACKET10",
+      "requested_quota": 2,
+      "quota_status": "REQUESTED_NOT_EMPIRICALLY_QUALIFIED",
+      "applied_command_veh_h": 720.0,
+      "applied_request_id": "scheduled:1201",
+      "command_requested_s": 1201,
+      "command_applied_s": 1224,
+      "planned_application_s": 1224,
+      "application_status": "ACK_OBSERVED",
+      "application_delay_s": 23,
+      "command_age_at_cycle_start_s": 23,
+      "green_end_s": 1228,
+      "green_end_reason": "ACTUAL_QUOTA_ACK",
+      "executed": true,
+      "completed": true,
+      "N_G": 2,
+      "N_y": 0,
+      "N_r": 0,
+      "crossing_ids": [
+        "R_flow.2",
+        "R_flow.3"
+      ],
+      "phase_exposure_s": {
+        "G": 4,
+        "y": 4,
+        "r": 2
+      },
+      "denial_reason": "",
+      "red_clock_bound": true,
+      "remaining_red_set_at_s": 1233,
+      "remaining_red_duration_s": 1
+    },
+    {
+      "cycle_id": 2,
+      "begin_s": 1234,
+      "end_s": 1242,
+      "period_s": 8,
+      "yellow_s": 2,
+      "minimum_red_s": 2,
+      "program": "I12_PACKET8",
+      "requested_quota": 2,
+      "quota_status": "REQUESTED_NOT_EMPIRICALLY_QUALIFIED",
+      "applied_command_veh_h": 900.0,
+      "applied_request_id": "scheduled:1226",
+      "command_requested_s": 1226,
+      "command_applied_s": 1234,
+      "planned_application_s": 1234,
+      "application_status": "ACK_OBSERVED",
+      "application_delay_s": 8,
+      "command_age_at_cycle_start_s": 8,
+      "green_end_s": 1238,
+      "green_end_reason": "ACTUAL_QUOTA_ACK",
+      "executed": true,
+      "completed": true,
+      "N_G": 2,
+      "N_y": 0,
+      "N_r": 0,
+      "crossing_ids": [
+        "R_flow.4",
+        "R_flow.5"
+      ],
+      "phase_exposure_s": {
+        "G": 4,
+        "y": 2,
+        "r": 2
+      },
+      "denial_reason": "",
+      "red_clock_bound": true,
+      "remaining_red_set_at_s": 1241,
+      "remaining_red_duration_s": 1
+    },
+    {
+      "cycle_id": 3,
+      "begin_s": 1242,
+      "end_s": 1266,
+      "period_s": 24,
+      "yellow_s": 5,
+      "minimum_red_s": 2,
+      "program": "I12_PACKET24",
+      "requested_quota": 2,
+      "quota_status": "REQUESTED_NOT_EMPIRICALLY_QUALIFIED",
+      "applied_command_veh_h": 300.0,
+      "applied_request_id": "scheduled:1237",
+      "command_requested_s": 1237,
+      "command_applied_s": 1242,
+      "planned_application_s": 1242,
+      "application_status": "ACK_OBSERVED",
+      "application_delay_s": 5,
+      "command_age_at_cycle_start_s": 5,
+      "green_end_s": 1246,
+      "green_end_reason": "ACTUAL_QUOTA_ACK",
+      "executed": true,
+      "completed": true,
+      "N_G": 2,
+      "N_y": 0,
+      "N_r": 0,
+      "crossing_ids": [
+        "R_flow.6",
+        "R_flow.7"
+      ],
+      "phase_exposure_s": {
+        "G": 4,
+        "y": 5,
+        "r": 15
+      },
+      "denial_reason": "",
+      "red_clock_bound": true,
+      "remaining_red_set_at_s": 1252,
+      "remaining_red_duration_s": 14
+    }
+  ],
+  "actual_requests": [
+    {
+      "event": "REQUESTED",
+      "request_id": "initial",
+      "global_request_s": 1200,
+      "rate_veh_h": 300,
+      "origin": "FIXED",
+      "r_ALINEA": null,
+      "mapped_period_s": 24,
+      "mapped_rate_veh_h": 300.0
+    },
+    {
+      "event": "REQUESTED",
+      "request_id": "dynamic_commands:1200",
+      "global_request_s": 1200,
+      "rate_veh_h": 300,
+      "origin": "SCHEDULED",
+      "r_ALINEA": null,
+      "mapped_period_s": 24,
+      "mapped_rate_veh_h": 300.0
+    },
+    {
+      "event": "REQUESTED",
+      "request_id": "scheduled:1201",
+      "global_request_s": 1201,
+      "rate_veh_h": 750,
+      "origin": "SCHEDULED",
+      "r_ALINEA": null,
+      "mapped_period_s": 10,
+      "mapped_rate_veh_h": 720.0
+    },
+    {
+      "event": "REQUESTED",
+      "request_id": "scheduled:1226",
+      "global_request_s": 1226,
+      "rate_veh_h": 900,
+      "origin": "SCHEDULED",
+      "r_ALINEA": null,
+      "mapped_period_s": 8,
+      "mapped_rate_veh_h": 900.0
+    },
+    {
+      "event": "REQUESTED",
+      "request_id": "scheduled:1237",
+      "global_request_s": 1237,
+      "rate_veh_h": 300,
+      "origin": "SCHEDULED",
+      "r_ALINEA": null,
+      "mapped_period_s": 24,
+      "mapped_rate_veh_h": 300.0
+    }
+  ],
+  "actual_applications": [
+    {
+      "event": "ACK_OBSERVED",
+      "request_id": "dynamic_commands:1200",
+      "application_global_s": 1200,
+      "first_green_ACK_s": 1201,
+      "application_delay_s": 0
+    },
+    {
+      "event": "ACK_OBSERVED",
+      "request_id": "scheduled:1201",
+      "application_global_s": 1224,
+      "first_green_ACK_s": 1225,
+      "application_delay_s": 23
+    },
+    {
+      "event": "ACK_OBSERVED",
+      "request_id": "scheduled:1226",
+      "application_global_s": 1234,
+      "first_green_ACK_s": 1235,
+      "application_delay_s": 8
+    },
+    {
+      "event": "ACK_OBSERVED",
+      "request_id": "scheduled:1237",
+      "application_global_s": 1242,
+      "first_green_ACK_s": 1243,
+      "application_delay_s": 5
+    }
+  ],
+  "monitored_elapsed_through_cleanup_s": 150.4739825000288,
+  "loop_terminal_elapsed_s": 150.45279737497913,
+  "budget_timer_scope": "monitored startup plus loop and owned-child cleanup; whole CLI separate",
+  "raw_bytes": 162138982,
+  "raw_files": 111,
+  "startup_connected_s": 24.249621958006173,
+  "first_red_checkpoint": {
+    "time_s": 1210,
+    "first_controlled_red_begin_s": 1209,
+    "status": "CHECKPOINT_PASSED_CONTINUE_SAME_AUTHORIZED_RUN",
+    "accounting": {
+      "C": 1.9583333333333333,
+      "C_mapped_pending": 1.8833333333333333,
+      "C_applied": 0.8333333333333334,
+      "E": 0,
+      "N": 2,
+      "policy_quantization": 0.075,
+      "application_latency": 1.05,
+      "C_applied_minus_E": 0.8333333333333334,
+      "E_minus_N": -2
+    },
+    "log_capture": {
+      "time_begin_s": 1210,
+      "time_end_s": 1210,
+      "stage": "FIRST_RED_CHECKPOINT_PROVISIONAL_UNTIL_EOF",
+      "streams": {
+        "sumo_stderr.log": {
+          "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/unified_alinea_actuator_20261013_v1/UA_DYNAMIC_S17_01/outputs/sumo_stderr.log",
+          "byte_start": 0,
+          "byte_end": 0,
+          "device": 16777233,
+          "inode": 90173187,
+          "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "fragment_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "text": "",
+          "raw_fragment_hex": "",
+          "whole_prefix_decoded": true,
+          "coverage": "CONDITIONAL_SYNC_CERR_BEFORE_ACK"
+        },
+        "sumo_stdout.log": {
+          "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/unified_alinea_actuator_20261013_v1/UA_DYNAMIC_S17_01/outputs/sumo_stdout.log",
+          "byte_start": 0,
+          "byte_end": 0,
+          "device": 16777233,
+          "inode": 90173188,
+          "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "fragment_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "text": "",
+          "raw_fragment_hex": "",
+          "whole_prefix_decoded": true,
+          "coverage": "PROVISIONAL_UNTIL_PROCESS_EOF"
+        },
+        "sumo_error.log": {
+          "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/unified_alinea_actuator_20261013_v1/UA_DYNAMIC_S17_01/outputs/sumo_error.log",
+          "byte_start": 0,
+          "byte_end": 0,
+          "device": 16777233,
+          "inode": 90173189,
+          "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "fragment_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "text": "",
+          "raw_fragment_hex": "",
+          "whole_prefix_decoded": true,
+          "coverage": "PROVISIONAL_UNTIL_PROCESS_EOF"
+        },
+        "sumo.log": {
+          "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/unified_alinea_actuator_20261013_v1/UA_DYNAMIC_S17_01/outputs/sumo.log",
+          "byte_start": 0,
+          "byte_end": 0,
+          "device": 16777233,
+          "inode": 90173190,
+          "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "fragment_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+          "text": "",
+          "raw_fragment_hex": "",
+          "whole_prefix_decoded": true,
+          "coverage": "PROVISIONAL_UNTIL_PROCESS_EOF"
+        }
+      }
+    },
+    "log_scope": "PROVISIONAL_NATIVE_CAPTURE_FINAL_EOF_REQUIRED",
+    "elapsed_monitored_wall_s": 138.3636955419788,
+    "native_safety_proven": false,
+    "rate_qualified": false
+  },
+  "final_logs": {
+    "coverage": "FINAL_FILES_AT_OWNED_PROCESS_EOF",
+    "process_returncode": 0,
+    "all_streams_bound": true,
+    "late_bytes": {
+      "sumo_stderr.log": 0,
+      "sumo_stdout.log": 0,
+      "sumo_error.log": 0,
+      "sumo.log": 961
+    },
+    "status": "BOUND_NO_OBSERVED_NATIVE_MESSAGE",
+    "reasons": [],
+    "critical_message_observed_or_unrecognized": false,
+    "log_parsing_unverified": false,
+    "per_step_complete_native_universal_claim": false,
+    "record_count": 2535,
+    "streams": {
+      "sumo_stderr.log": {
+        "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/unified_alinea_actuator_20261013_v1/UA_DYNAMIC_S17_01/outputs/sumo_stderr.log",
+        "byte_start": 0,
+        "byte_end": 0,
+        "device": 16777233,
+        "inode": 90173187,
+        "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fragment_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": "",
+        "raw_fragment_hex": "",
+        "whole_prefix_decoded": true,
+        "coverage": "CONDITIONAL_SYNC_CERR_BEFORE_ACK"
+      },
+      "sumo_stdout.log": {
+        "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/unified_alinea_actuator_20261013_v1/UA_DYNAMIC_S17_01/outputs/sumo_stdout.log",
+        "byte_start": 0,
+        "byte_end": 0,
+        "device": 16777233,
+        "inode": 90173188,
+        "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fragment_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": "",
+        "raw_fragment_hex": "",
+        "whole_prefix_decoded": true,
+        "coverage": "PROVISIONAL_UNTIL_PROCESS_EOF"
+      },
+      "sumo_error.log": {
+        "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/unified_alinea_actuator_20261013_v1/UA_DYNAMIC_S17_01/outputs/sumo_error.log",
+        "byte_start": 0,
+        "byte_end": 0,
+        "device": 16777233,
+        "inode": 90173189,
+        "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "fragment_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "text": "",
+        "raw_fragment_hex": "",
+        "whole_prefix_decoded": true,
+        "coverage": "PROVISIONAL_UNTIL_PROCESS_EOF"
+      },
+      "sumo.log": {
+        "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/unified_alinea_actuator_20261013_v1/UA_DYNAMIC_S17_01/outputs/sumo.log",
+        "byte_start": 0,
+        "byte_end": 961,
+        "device": 16777233,
+        "inode": 90173190,
+        "prefix_sha256": "3c8463ee6fa9a99127da96fd1c1d0ee1772cbbfa05d09f3cfae9da8c66edb064",
+        "fragment_sha256": "3c8463ee6fa9a99127da96fd1c1d0ee1772cbbfa05d09f3cfae9da8c66edb064",
+        "text": "***Starting server on port 55271 ***\nLoading net-file from '/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml' ... done (1ms).\nLoading additional-files from '/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/unified_alinea_actuator_20261013_v1/engineering/packages/UA_DYNAMIC_S17_01/scenario.add.xml' ... done (21ms).\nLoading route-files incrementally from '/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/unified_alinea_actuator_20261013_v1/engineering/packages/UA_DYNAMIC_S17_01/demand.rou.xml'\nLoading done.\nSimulation version 1.26.0 started with time: 0.000.\nSimulation ended at time: 1266.000.\nReason: TraCI requested termination.\nPerformance:\n Duration: 125.965s\n TraCI-Duration: 124.767s\n Real time factor: 10.0504\n UPS: 1255.372524\nVehicles:\n Inserted: 1530 (Loaded: 1823)\n Running: 199\n Waiting: 94\n",
+        "raw_fragment_hex": "2a2a2a5374617274696e6720736572766572206f6e20706f7274203535323731202a2a2a0a4c6f6164696e67206e65742d66696c652066726f6d20272f55736572732f7975686f6e677a68616e672f4465736b746f702f4d61737465726172626569742d52616d702d4d65746572696e672f6172746966616374732f7374616765365f626173656c696e655f6c6f63616c697a6174696f6e5f32303236303932315f76312f4c4f435f4d333335305f5331372f656e67696e656572696e672f6275696c645f617474656d7074732f54565f4255494c4430312f6e6574776f726b2e6e65742e786d6c27202e2e2e20646f6e652028316d73292e0a4c6f6164696e67206164646974696f6e616c2d66696c65732066726f6d20272f55736572732f7975686f6e677a68616e672f4465736b746f702f4d61737465726172626569742d52616d702d4d65746572696e672f6172746966616374732f756e69666965645f616c696e65615f6163747561746f725f32303236313031335f76312f656e67696e656572696e672f7061636b616765732f55415f44594e414d49435f5331375f30312f7363656e6172696f2e6164642e786d6c27202e2e2e20646f6e65202832316d73292e0a4c6f6164696e6720726f7574652d66696c657320696e6372656d656e74616c6c792066726f6d20272f55736572732f7975686f6e677a68616e672f4465736b746f702f4d61737465726172626569742d52616d702d4d65746572696e672f6172746966616374732f756e69666965645f616c696e65615f6163747561746f725f32303236313031335f76312f656e67696e656572696e672f7061636b616765732f55415f44594e414d49435f5331375f30312f64656d616e642e726f752e786d6c270a4c6f6164696e6720646f6e652e0a53696d756c6174696f6e2076657273696f6e20312e32362e30207374617274656420776974682074696d653a20302e3030302e0a53696d756c6174696f6e20656e6465642061742074696d653a20313236362e3030302e0a526561736f6e3a20547261434920726571756573746564207465726d696e6174696f6e2e0a506572666f726d616e63653a0a204475726174696f6e3a203132352e393635730a2054726143492d4475726174696f6e3a203132342e373637730a205265616c2074696d6520666163746f723a2031302e303530340a205550533a20313235352e3337323532340a56656869636c65733a0a20496e7365727465643a203135333020284c6f616465643a2031383233290a2052756e6e696e673a203139390a2057616974696e673a2039340a",
+        "whole_prefix_decoded": true,
+        "coverage": "PROVISIONAL_UNTIL_PROCESS_EOF"
+      }
+    }
+  },
+  "resource_watchdog": {
+    "reason": null,
+    "error": null,
+    "poll_s": 0.2
+  },
+  "restricted_numeric_event_count": 0,
+  "legacy_raw_braking_minimum_m_s2": -4.5,
+  "observed_post_WAIT_count": 15,
+  "actual_crossings": [
+    {
+      "vehicle_id": "R_flow.0",
+      "crossing_time_lower_s": 1200,
+      "crossing_time_upper_s": 1201,
+      "time_interval": "(lower,upper]",
+      "cycle_id": 0,
+      "motion_signal_state": "G"
+    },
+    {
+      "vehicle_id": "R_flow.1",
+      "crossing_time_lower_s": 1203,
+      "crossing_time_upper_s": 1204,
+      "time_interval": "(lower,upper]",
+      "cycle_id": 0,
+      "motion_signal_state": "G"
+    },
+    {
+      "vehicle_id": "R_flow.2",
+      "crossing_time_lower_s": 1224,
+      "crossing_time_upper_s": 1225,
+      "time_interval": "(lower,upper]",
+      "cycle_id": 1,
+      "motion_signal_state": "G"
+    },
+    {
+      "vehicle_id": "R_flow.3",
+      "crossing_time_lower_s": 1227,
+      "crossing_time_upper_s": 1228,
+      "time_interval": "(lower,upper]",
+      "cycle_id": 1,
+      "motion_signal_state": "G"
+    },
+    {
+      "vehicle_id": "R_flow.4",
+      "crossing_time_lower_s": 1234,
+      "crossing_time_upper_s": 1235,
+      "time_interval": "(lower,upper]",
+      "cycle_id": 2,
+      "motion_signal_state": "G"
+    },
+    {
+      "vehicle_id": "R_flow.5",
+      "crossing_time_lower_s": 1237,
+      "crossing_time_upper_s": 1238,
+      "time_interval": "(lower,upper]",
+      "cycle_id": 2,
+      "motion_signal_state": "G"
+    },
+    {
+      "vehicle_id": "R_flow.6",
+      "crossing_time_lower_s": 1242,
+      "crossing_time_upper_s": 1243,
+      "time_interval": "(lower,upper]",
+      "cycle_id": 3,
+      "motion_signal_state": "G"
+    },
+    {
+      "vehicle_id": "R_flow.7",
+      "crossing_time_lower_s": 1245,
+      "crossing_time_upper_s": 1246,
+      "time_interval": "(lower,upper]",
+      "cycle_id": 3,
+      "motion_signal_state": "G"
+    }
+  ],
+  "actual_rear_clear_IDs": [
+    "R_flow.0",
+    "R_flow.1",
+    "R_flow.2",
+    "R_flow.3",
+    "R_flow.4",
+    "R_flow.5",
+    "R_flow.6",
+    "R_flow.7"
+  ],
+  "body_censored_ids": [],
+  "normal_arrived_ID_count_pending_independent_audit": 1331,
+  "native_counter_values": [
+    [
+      0,
+      0,
+      0
+    ]
+  ],
+  "source64_and_snapshot64_hashes_match": true,
+  "raw_manifest_sha256": "9661b627f0e79ca3d98a1bf62c0efed71e0594838be656ad75bebacb653a4c35",
+  "terminal_arrival_audit": "PENDING_INDEPENDENT_FINAL_TRIPINFO_AUDIT_NOT_ONLINE_FULL_COVERAGE",
+  "known_Python_warning": "Original FrameCache floating-point step API UserWarning preserved on tool output; not native warning",
+  "remaining_budget_not_settled_yet": true,
+  "rate_qualified": false,
+  "native_safety_proven": false,
+  "automatic_continuation": false
+}

@@ -1,0 +1,62 @@
+{
+  "timestamp_utc": "2026-10-13T22:34:27.784047+00:00",
+  "status": "PASS_OFFLINE_CARD_SOURCE_ENVIRONMENT_AND_NO_AUTH_GATE",
+  "card_path": "artifacts/cumulative_tracking_implementation_20261014_v1/engineering/packages_v5/UA_CUMULATIVE750_S17_01/card.json",
+  "card_sha256": "c4464cd13b64a2eed0e9ea6143b16cac308562608426d6adc3023fa6b4b3fc3b",
+  "source_digest": "b351723aac24e5938ebd608be8b567a1d5d6e3527d22fc564049b4d8b306067b",
+  "source_count": 111,
+  "reader_sha256": {
+    "actual.py": "9adb9e625663cc4a548bf15d3c815a4e5b524865e37b756aae03137eaef99de2",
+    "core.py": "241260d29a0d350d7fea1d1e7a2e391c06d9fa182aa0200a1131e82eb10458ad",
+    "evidence.py": "6514247082fa82b733684a54180bdd3242997f6103b6b7eb4ca7facd33fbb004",
+    "_phase.py": "1b6669c79ea66ae54d03a4849cc837441ecdc16d8b780a8516f2132c81ae7471"
+  },
+  "historical_cards_rejected": [
+    {
+      "path": "artifacts/cumulative_tracking_implementation_20261014_v1/engineering/packages/UA_CUMULATIVE750_S17_01/card.json",
+      "sha256": "8ec08611dd6f6f3838f7e7469e8647ff61665264448cf9e43fb648994f5b9235",
+      "current_gate": "FOREIGN_CANDIDATE_CARD"
+    },
+    {
+      "path": "artifacts/cumulative_tracking_implementation_20261014_v1/engineering/packages_v2/UA_CUMULATIVE750_S17_01/card.json",
+      "sha256": "7d62c6e9a2051d32a4167f262a6be6e87fc6ba770a8f9b1fe9a1b3e4e21e015d",
+      "current_gate": "FOREIGN_CANDIDATE_CARD"
+    },
+    {
+      "path": "artifacts/cumulative_tracking_implementation_20261014_v1/engineering/packages_v3/UA_CUMULATIVE750_S17_01/card.json",
+      "sha256": "8aba53de00da9939dd2709b1f0c19b126a24d08fcc5aa4c2da61e43946267d49",
+      "current_gate": "FOREIGN_CANDIDATE_CARD"
+    },
+    {
+      "path": "artifacts/cumulative_tracking_implementation_20261014_v1/engineering/packages_v4/UA_CUMULATIVE750_S17_01/card.json",
+      "sha256": "add00ae80cf7d70272bfc8beac785165c7a281c76fa156c1cffb9a68f4b38774",
+      "current_gate": "FOREIGN_CANDIDATE_CARD"
+    }
+  ],
+  "only_changes_since_v4": {
+    "scripts/cumulative_tracking_audit_20261014_v1/core.py": {
+      "previous": "02edfd71502656cb9a473f0c8bd1c4fee83818dde9e00a8f4b589c2935b6ed8f",
+      "current": "241260d29a0d350d7fea1d1e7a2e391c06d9fa182aa0200a1131e82eb10458ad"
+    },
+    "src/candidate_a_cumulative_tracking_20261014/profile.py": {
+      "previous": "6e5bdbc736ce15247d58748c32e2f05a5cb479b7ae9bd5def7991e497907eb60",
+      "current": "53ce6ef02ae800f09e9db1106b3e91c76edceaa05574b487cf7cfc41d04e31cf"
+    }
+  },
+  "motion_ledger_adapter_bridge_producer_budget_cli_test_bytes_since_V4_4method_PASS": "UNCHANGED",
+  "new_native_count": 0,
+  "new_raw_allocated": false,
+  "canonical_authorizations_created": false,
+  "missing_permission_rejection": "FUTURE_EXACT_NATIVE_AUTHORIZATION_MISSING",
+  "worker_imported": false,
+  "large_tests_repeated": false,
+  "source_execution_relationship": "V4 actual4methods PASS51.608s on exact runtime/test bytes; profile changed only audit binding+package version and has actual fresh final check; reader independently data-tested",
+  "resources_status": "PROPOSED_NEW_SCOPE_NOT_APPROVED_FOR_NATIVE",
+  "resources": {
+    "wall_limit_s": 300,
+    "startup_limit_s": 60,
+    "run_limit_bytes": null,
+    "minimum_free_bytes": 5000000000
+  },
+  "proposed_end_s": 1296
+}

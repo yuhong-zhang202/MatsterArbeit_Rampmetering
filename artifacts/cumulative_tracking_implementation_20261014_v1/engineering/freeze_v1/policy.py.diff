@@ -1,0 +1,173 @@
+--- src/candidate_a_unified_alinea_20261013/policy.py
++++ src/candidate_a_cumulative_tracking_20261014/policy.py
+@@ -4,41 +4,39 @@
+ import math
+ from src.candidate_a_issue12_packet_policy_20261012.policy import period_for, quantize, require
+ 
+-MAX_GREEN = 4
+ MIN_RED = 2
+-PERIODS = tuple(range(8, 25))
++PERIODS = (8, 10)
++CATALOGUE_STATUS = "DIAGNOSTIC_T8_T10_ONLY_NOT_FULL_300_900"
++
++
++# The original generic Command remains the request/Feedback interface.
++from src.candidate_a_unified_alinea_20261013.policy import Command
+ 
+ 
+ def parameters(period):
+-    require(type(period) is int and period in PERIODS, 'INVALID_PERIOD')
+-    yellow = min(5, period - MAX_GREEN - MIN_RED)
+-    return {'period_s': period, 'yellow_s': yellow, 'minimum_red_s': MIN_RED,
+-            'program': f'I12_PACKET{period}', 'phases': (('G', 4, 1), ('y', yellow, 2),
+-                                                        ('r', period-4-yellow, 0))}
+-
+-
+-@dataclass(frozen=True)
+-class Command:
+-    request_id: str
+-    global_request_s: int
+-    rate_veh_h: float
+-    origin: str
+-    r_ALINEA: float | None = None
+-
+-    def validate(self):
+-        require(isinstance(self.request_id, str) and self.request_id and
+-                type(self.global_request_s) is int and self.global_request_s >= 1200 and
+-                self.origin in ('FIXED', 'SCHEDULED', 'PROJECT_FEEDBACK'), 'INVALID_COMMAND_BINDING')
+-        period_for(self.rate_veh_h)
+-        require(self.r_ALINEA is None or (type(self.r_ALINEA) in (int, float) and
+-                math.isfinite(self.r_ALINEA) and self.r_ALINEA == self.rate_veh_h),
+-                'FEEDBACK_REQUEST_STATE_MISMATCH')
+-        return self
++    require(type(period) is int and period in PERIODS, 'UNREVIEWED_PACKET_PERIOD')
++    green, yellow, program = (4, 2, 'I12_PACKET8') if period == 8 else (5, 3, 'T10_G5Y3_NATIVE')
++    return dict(period_s=period, max_green_s=green, yellow_s=yellow, minimum_red_s=2,
++                program=program, phases=(('G',green,1),('y',yellow,2),('r',2,0)))
++
++
++def select_packet(C, N, requested_rate):
++    require(type(N) is int and N >= 0, 'UNKNOWN_ACTUAL_CUMULATIVE_N')
++    require(type(requested_rate) in (int,float) and math.isfinite(requested_rate) and
++            720 <= requested_rate <= 900, 'UNSUPPORTED_RATE_T8_T10')
++    error = Fraction(C)-N
++    candidates = {p: error+Fraction(str(requested_rate))*p/3600-2 for p in PERIODS}
++    chosen = min(PERIODS, key=lambda p:(abs(candidates[p]), -p))
++    return chosen, dict(actual_C_fraction=str(Fraction(C)),actual_N=N,
++        actual_error_fraction=str(error),forecast_request_veh_h=requested_rate,
++        forecast_assumption='CURRENT_REQUEST_HELD_NOT_OBSERVED_FUTURE',
++        candidate_errors_fraction={str(p):str(v) for p,v in candidates.items()},
++        chosen_period_s=chosen,catalogue_status=CATALOGUE_STATUS)
+ 
+ 
+ class Ledger:
+-    def __init__(self, command=300, end_s=1272):
+-        require(type(end_s) is int and 1200 < end_s <= 1272, 'INVALID_APPROVED_HORIZON')
++    def __init__(self, command=750, end_s=1296):
++        require(type(end_s) is int and 1200 < end_s, 'INVALID_APPROVED_HORIZON')
+         self.end_s = end_s
+         self.next_time_s = 1200
+         self.C = self.C_mapped = self.C_applied = Fraction(0)
+@@ -66,8 +64,8 @@
+                                             'status': 'PENDING'}
+         self.pending_command = command
+         self.events.append({'event': 'REQUESTED', **asdict(command),
+-                            'mapped_period_s': period_for(command.rate_veh_h),
+-                            'mapped_rate_veh_h': quantize(command.rate_veh_h)})
++                            'nearest_reference_period_s': period_for(command.rate_veh_h),
++                            'nearest_reference_rate_veh_h': quantize(command.rate_veh_h)})
+ 
+     def begin_step(self, t, command=None):
+         require(t == self.next_time_s and t < self.end_s, 'NONSEQUENTIAL_POLICY_TIME')
+@@ -76,6 +74,13 @@
+         new = self.cycle is None or t == self.cycle['end_s']
+         pending = self.pending_command
+         if new:
++            # First t0 has no previous packet. Never invent previous N=2.
++            if self.cycle is not None:
++                require(self.cycle['completed'] is True, 'UNKNOWN_PREVIOUS_PACKET_COMPLETENESS')
++                actual = sum(self.cycle['N_'+m] for m in ('G','y','r'))
++                require(actual == 2, 'SERVICE_PACKET_MISMATCH_HOLD_NO_CATCHUP')
++            chosen, selection = select_packet(self.C, self.N, pending.rate_veh_h)
++            self.events.append(dict(event='BOUNDARY_PACKET_SELECTED_NOT_APPLIED',time_s=t,**selection))
+             record = self.requests[pending.request_id]
+             if record['first_preparation_s'] is None:
+                 record['first_preparation_s'] = t
+@@ -83,11 +88,12 @@
+                 self.events.append({'event': 'PREPARED_NOT_OBSERVED', 'request_id': pending.request_id,
+                     'application_global_s': t, 'global_request_s': pending.global_request_s,
+                     'application_delay_s': t-pending.global_request_s})
+-            p = parameters(period_for(pending.rate_veh_h))
++            p = parameters(chosen)
+             self.cycle = dict(cycle_id=len(self.rows), begin_s=t, end_s=t+p['period_s'],
+                 **{k:v for k,v in p.items() if k != 'phases'}, requested_quota=2,
+                 quota_status='REQUESTED_NOT_EMPIRICALLY_QUALIFIED',
+-                applied_command_veh_h=quantize(pending.rate_veh_h),
++                applied_command_veh_h=7200/p['period_s'],
++                packet_selection=selection,
+                 applied_request_id=pending.request_id, command_requested_s=pending.global_request_s,
+                 command_applied_s=record['first_application_s'],
+                 planned_application_s=t, application_status='PREPARED_NOT_OBSERVED',
+@@ -109,7 +115,7 @@
+     def close_green(self, time_s, reason):
+         c = self.cycle
+         require(c is not None and c['green_end_s'] is None, 'DUPLICATE_GREEN_CLOSE')
+-        require(type(time_s) is int and c['begin_s'] < time_s <= c['begin_s']+4,
++        require(type(time_s) is int and c['begin_s'] < time_s <= c['begin_s']+c['max_green_s'],
+                 'GREEN_CLOSE_OUTSIDE_BUDGET')
+         require(reason in ('ACTUAL_QUOTA_ACK','MAX_GREEN_DEADLINE'), 'UNKNOWN_GREEN_CLOSE_REASON')
+         require(reason != 'ACTUAL_QUOTA_ACK' or c['N_G'] >= 2, 'QUOTA_NOT_OBSERVED')
+@@ -118,7 +124,7 @@
+     def motion_at(self, t):
+         c = self.cycle
+         require(c is not None and c['begin_s'] <= t < c['end_s'], 'OUTSIDE_CYCLE')
+-        end = c['green_end_s'] if c['green_end_s'] is not None else c['begin_s']+4
++        end = c['green_end_s'] if c['green_end_s'] is not None else c['begin_s']+c['max_green_s']
+         return 'G' if t < end else 'y' if t < end+c['yellow_s'] else 'r'
+ 
+     def end_step(self, end, crossing_ids, motion):
+@@ -128,6 +134,11 @@
+         self.crossed_ids.update(ids)
+         if end == self.cycle['begin_s']+1:
+             require(self.cycle['executed'] is True and motion == 'G', 'CYCLE_FIRST_ACK_NOT_GREEN')
++            self.events.append(dict(event='PACKET_ACK_OBSERVED',cycle_id=self.cycle['cycle_id'],
++                request_id=self.cycle['applied_request_id'],application_global_s=end-1,
++                first_green_ACK_s=end,period_s=self.cycle['period_s'],
++                max_green_s=self.cycle['max_green_s'],yellow_s=self.cycle['yellow_s'],
++                applied_command_veh_h=self.cycle['applied_command_veh_h']))
+             record = self.requests[self.cycle['applied_request_id']]
+             if record['first_application_s'] is None:
+                 record.update(first_application_s=end-1, status='ACK_OBSERVED')
+@@ -156,20 +167,24 @@
+         pending = self.pending_command; c = self.cycle
+         return dict(input_origin=pending.origin, r_ALINEA=pending.r_ALINEA,
+             r_final_veh_h=pending.rate_veh_h, pending_request_id=pending.request_id,
+-            r_policy_pending_veh_h=self.step_mapped, applied_request_id=c['applied_request_id'],
++            r_policy_pending_veh_h=None,
++            nearest_reference_veh_h=self.step_mapped,
++            pending_packet_status='SELECTED_ONLY_AT_COMPLETE_BOUNDARY', applied_request_id=c['applied_request_id'],
+             r_policy_applied_veh_h=c['applied_command_veh_h'], requested_quota=2,
+             period_s=c['period_s'], cycle_application_delay_s=c['application_delay_s'],
+             command_requested_s=pending.global_request_s)
+ 
+     def accounting(self):
+-        keys=('C','C_mapped_pending','C_applied','E','N','policy_quantization',
+-              'application_latency','C_applied_minus_E','E_minus_N')
++        keys=('C','C_nearest_reference','C_applied','E','N','requested_minus_nominal',
++              'nominal_minus_actual','requested_minus_actual')
+         if not self.observed_steps: return dict.fromkeys(keys)
+-        return dict(C=float(self.C), C_mapped_pending=float(self.C_mapped),
+-            C_applied=float(self.C_applied), E=self.E, N=self.N,
+-            policy_quantization=float(self.C-self.C_mapped),
+-            application_latency=float(self.C_mapped-self.C_applied),
+-            C_applied_minus_E=float(self.C_applied-self.E), E_minus_N=self.E-self.N)
++        return dict(C=float(self.C),C_nearest_reference=float(self.C_mapped),
++            C_applied=float(self.C_applied),E=self.E,N=self.N,
++            requested_minus_nominal=float(self.C-self.E),nominal_minus_actual=self.E-self.N,
++            requested_minus_actual=float(self.C-self.N),C_exact_fraction=str(self.C),
++            E_support='COMPLETE_PACKETS_ONLY',N_support='ALL_OBSERVED_ENTRY_BEGIN_INTERVALS',
++            partial_cycle=not self.cycle['completed'],
++            nearest_reference_is_not_cumulative_scheduler_output=True)
+ 
+ 
+ def yellow_scope(vehicles, time_s, yellow_s):

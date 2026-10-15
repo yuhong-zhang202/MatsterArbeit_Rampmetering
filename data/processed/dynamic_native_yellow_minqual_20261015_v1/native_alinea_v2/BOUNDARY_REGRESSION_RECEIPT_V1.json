@@ -1,0 +1,21 @@
+{
+  "classification": "POSTANALYSIS_BOUNDARY_COMPATIBILITY_ONLY_NOT_NATIVE_SOURCE",
+  "affected_regression_command": "python3 data/processed/dynamic_native_yellow_minqual_20261015_v1/native_alinea_v2/test_phase_boundary_V3.py -v",
+  "exit_code": 0,
+  "methods": 1,
+  "seconds": 0.012,
+  "earlier_fixture_import_failure": {
+    "test": "data/processed/dynamic_native_yellow_minqual_20261015_v1/native_alinea_v2/test_phase_boundary_V2.py",
+    "log": "data/processed/dynamic_native_yellow_minqual_20261015_v1/native_alinea_v2/BOUNDARY_REGRESSION_V2.log",
+    "actual_exit_code": 1,
+    "reason": "project root absent from sys.path; no tests ran; only newV3 test prepends root, previous bytes preserved"
+  },
+  "original_phase_counterexample": "RED_DURATION_TRACE_COVERAGE expected failure on original exact actual phase subset, asserted by passing regression",
+  "new_sources_sha256": {
+    "data/processed/dynamic_native_yellow_minqual_20261015_v1/native_alinea_v2/actual_postanalysis_V2.py": "57aee0b9bf7b1498d3d2f7530bb449225ceb691e3d073dfac3bfe03862ee896a",
+    "data/processed/dynamic_native_yellow_minqual_20261015_v1/native_alinea_v2/phase_boundary_V2.py": "ff1aacdf25b4bcb13247003aef0b6fef651143af17e68d6514b36f73aac2f9e7",
+    "data/processed/dynamic_native_yellow_minqual_20261015_v1/native_alinea_v2/test_phase_boundary_V3.py": "de563206310b7e153353eb0e23ba271cd940d40af80905c1d666f99f3427b5a6"
+  },
+  "old154_runtime_unchanged": true,
+  "full_corrected_actual_audit_not_yet_executed": true
+}

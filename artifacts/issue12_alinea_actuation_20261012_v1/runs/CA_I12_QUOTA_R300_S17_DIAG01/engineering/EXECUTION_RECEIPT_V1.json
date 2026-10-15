@@ -1,0 +1,108 @@
+{
+  "run_id": "CA_I12_QUOTA_R300_S17_DIAG01",
+  "status": "ABORTED_UNKNOWN",
+  "technical_failure": "ValueError:unsupported phase request",
+  "actual_native_starts": 1,
+  "native_PID": 78567,
+  "cli_PID": 78565,
+  "launcher_PID": 78542,
+  "port": 59723,
+  "last_completed_s": 1210,
+  "last_accounted_s": 1210,
+  "CLI_exit": {
+    "returncode": 1,
+    "whole_cli_elapsed_s": 137.67053116601892,
+    "automatic_retry": false,
+    "stdout_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+    "stderr_sha256": "016a2623ad7a12b5dc6b9c1f6431f3f09d00a6f8e9ea10c3738b9a809d24a619"
+  },
+  "bridge_monitored_elapsed_s": 137.2967030419968,
+  "watchdog": {
+    "reason": null,
+    "error": null,
+    "poll_s": 0.2
+  },
+  "final_logs": {
+    "coverage": "FINAL_FILES_AT_OWNED_PROCESS_EOF",
+    "process_returncode": 0,
+    "all_streams_bound": true,
+    "late_bytes": {
+      "sumo_stderr.log": 0,
+      "sumo_stdout.log": 0,
+      "sumo_error.log": 0,
+      "sumo.log": 985
+    },
+    "status": "BOUND_NO_OBSERVED_NATIVE_MESSAGE",
+    "reasons": [],
+    "critical_message_observed_or_unrecognized": false,
+    "log_parsing_unverified": false,
+    "per_step_complete_native_universal_claim": false,
+    "record_count": 2422
+  },
+  "cycles": [
+    {
+      "cycle_id": 0,
+      "begin_s": 1200,
+      "end_s": 1224,
+      "period_s": 24,
+      "requested_quota": 2,
+      "quota_status": "REQUESTED_NOT_EMPIRICALLY_QUALIFIED",
+      "applied_command_veh_h": 300,
+      "command_requested_s": 1200,
+      "command_applied_s": 1200,
+      "application_delay_s": 0,
+      "green_end_s": 1204,
+      "green_end_reason": "ACTUAL_QUOTA_ACK",
+      "executed": true,
+      "completed": false,
+      "N_G": 2,
+      "N_y": 0,
+      "N_r": 0,
+      "crossing_ids": [
+        "R_flow.0",
+        "R_flow.1"
+      ],
+      "phase_exposure_s": {
+        "G": 4,
+        "y": 5,
+        "r": 1
+      },
+      "denial_reason": ""
+    }
+  ],
+  "control_accounting": {
+    "C": 0.8333333333333334,
+    "C_mapped_pending": 0.8333333333333334,
+    "C_applied": 0.8333333333333334,
+    "E": 0,
+    "N": 2,
+    "policy_quantization": 0.0,
+    "application_latency": 0.0,
+    "C_applied_minus_E": 0.8333333333333334,
+    "E_minus_N": -2
+  },
+  "first_red_checkpoint_verified": false,
+  "journal_row_counts": {
+    "pre_steps": 1210,
+    "post_steps": 1210,
+    "step_ack": 2420,
+    "log_intervals": 2422,
+    "startup_trace": 234,
+    "policy_phase_requests": 1,
+    "yellow_scope": 1
+  },
+  "first_red_checkpoint_exists": false,
+  "engineering105_hashes_unchanged": true,
+  "protected536_hashes_unchanged": true,
+  "source_snapshot_matches_runtime_card": true,
+  "free_bytes_after": 47693123584,
+  "arrival_audit": "PENDING_DATA_REVIEW",
+  "no_retry": true,
+  "formal_or_rate_qualified": false,
+  "cause": "New bridge requested setPhaseDuration from old request_phase helper whose allowlist is only setProgram/setPhase; denied before native API call",
+  "source_evidence": {
+    "caller": "src/candidate_a_issue12_signal_policy_20261012/bridge.py:policy_after_ack",
+    "old_helper": "scripts/candidate_a_qualification_20261008_v1/worker.py:98-105"
+  },
+  "raw_manifest_sha256": "358e427bef1ba58d291376d6fed36e767a223603f6e0a29ea3a6a127353f6486"
+}

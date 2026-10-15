@@ -1,0 +1,88 @@
+{
+  "status": "PASS_OFFLINE_IMPLEMENTATION_DELIVERY_ONLY_NOT_NATIVE_RELEASE",
+  "baseline_commit": "20e5e83ac059768320cdaa4c815d164e1022de45",
+  "source_status": "uncommitted exact new source snapshot; not a claim baseline20e5 tested new implementation",
+  "Issue12_sha256": "65ee0f44378b763e52ce334f2063786c0a835f68da02419777e59a58653a7e5b",
+  "new_source_files_count": 4,
+  "guard_block_byte_identical": true,
+  "guard_block_sha256": "39320e96866bc9c34b6f85b1c8fae7887b0815777a0ddc48d65fdb45fa743053",
+  "old77_and_protected536_preserved": true,
+  "final_source_snapshot": "artifacts/issue12_alinea_actuation_20261012_v1/engineering/FINAL_SOURCE_SNAPSHOT_V1",
+  "cards": {
+    "CA_I12_QUOTA_R300_S17_DIAG01": {
+      "card_sha256": "4ddbe480758fb8b0212912a36c07359eae34675b961cf1e1e49c434a031762a5",
+      "command_veh_h": 300,
+      "status": "PREPARED_NOT_RELEASED",
+      "env_complete": true,
+      "resources": {
+        "wall_limit_s": 300,
+        "startup_limit_s": 60,
+        "run_limit_bytes": 300000000,
+        "minimum_free_bytes": 5000000000
+      },
+      "raw_parent_exists": false,
+      "canonical_authorization_or_release_exists": false
+    },
+    "CA_I12_QUOTA_R900_S17_DIAG02": {
+      "card_sha256": "afbe76e1181f5173031973b5fe6bfa8ceb5614accfa4a76e3e5b02a67f041fea",
+      "command_veh_h": 900,
+      "status": "PREPARED_NOT_RELEASED",
+      "env_complete": true,
+      "resources": {
+        "wall_limit_s": 300,
+        "startup_limit_s": 60,
+        "run_limit_bytes": 300000000,
+        "minimum_free_bytes": 5000000000
+      },
+      "raw_parent_exists": false,
+      "canonical_authorization_or_release_exists": false
+    },
+    "CA_I12_QUOTA_R600_S17_DIAG03": {
+      "card_sha256": "37d8e820dc5d2cd760e4bcff4aaf7d6f45199a3a643f3ff300f0a999ea7a3948",
+      "command_veh_h": 600,
+      "status": "PREPARED_NOT_RELEASED",
+      "env_complete": true,
+      "resources": {
+        "wall_limit_s": 300,
+        "startup_limit_s": 60,
+        "run_limit_bytes": 300000000,
+        "minimum_free_bytes": 5000000000
+      },
+      "raw_parent_exists": false,
+      "canonical_authorization_or_release_exists": false
+    }
+  },
+  "effective_policy": {
+    "period_s": 24,
+    "Gmax_s": 17,
+    "yellow_s": 5,
+    "red_min_s": 2,
+    "early_G_clock": "first actual red ACK setPhaseDuration(cycle_end-current_time) with readback",
+    "Y5_status": "BOUND_LOCAL_FEASIBILITY_HYPOTHESIS_NOT_UNIVERSAL_CERTIFICATE"
+  },
+  "verification": {
+    "V1": "6 methods:5PASS/1ERROR synthetic skipped-front fixture, exact preimage preserved",
+    "V2": "same6 methods PASS after fixture-only sequential IDs fix,5.110s",
+    "V3": "1 additional actual unknown-yellow bridge-stop composition PASS0.007s",
+    "V4": "1 affected terminal-edge/arrival-schema deadline integration PASS2.526s",
+    "V5": "only2 affected early-close/fresh-local-binding and unknown composition PASS2.680s+0.005s",
+    "V6": "1 affected final explicit-rate-chain/arrival-schema integration PASS2.676s",
+    "unique_current_methods": 7,
+    "not_claimed": "7 tests in one fresh full-suite invocation, SUMO physics, native safety or rate qualification"
+  },
+  "other_failures_preserved": [
+    "duplicate inherited precision2 plus appended8, corrected only new unconsumed package with full source/card preimage",
+    "system python3 strict environment-check failure during card metadata update, corrected via actual project .venv; no environment/gate changes"
+  ],
+  "output_precision_schema": "installed1.26 sumoConfigurationType.xsd output precision intOptionType; exact newcfg singleprecision8 checked; no SUMO schema parser invoked",
+  "native_starts_this_task": 0,
+  "tests_not_run": [
+    "old11 WAIT suite",
+    "A1 test matrix",
+    "nativeSUMO/version",
+    "formalT1 integration"
+  ],
+  "exit_coverage": "before-only normal arrival metadata and precision8 collected; actual independent final tripinfo delta audit still required, not online complete acceleration coverage",
+  "ALINEA_math_unchanged": true,
+  "formal_design_protocol_decisions_unchanged": true
+}

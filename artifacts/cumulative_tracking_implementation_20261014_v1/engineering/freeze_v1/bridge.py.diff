@@ -1,0 +1,49 @@
+--- src/candidate_a_t10_g5_y3_no_output_cap_20261013/bridge.py
++++ src/candidate_a_cumulative_tracking_20261014/bridge.py
+@@ -12,14 +12,14 @@
+ import sys
+ import time
+ 
+-from src.candidate_a_t10_g5_y3_20261013.adapter import StepAdapter, inventory, TLS, STORAGE, INGRESS, INTERNAL
+-from src.candidate_a_t10_g5_y3_no_output_cap_20261013.profile import ROOT,TASK,NETWORK,SUMO,sha,write_new,validate_release,require
++from src.candidate_a_cumulative_tracking_20261014.adapter import StepAdapter, inventory, TLS, STORAGE, INGRESS, INTERNAL
++from src.candidate_a_cumulative_tracking_20261014.profile import ROOT,TASK,NETWORK,SUMO,sha,write_new,validate_release,require,APPROVED_BOUND_END
+ from src.candidate_a_native_smoke_20261011.bridge_logs import LogCapture
+ from src.candidate_a_t10_g5_y3_no_output_cap_20261013.resources import ResourceWatchdog
+ from src.candidate_a_unified_alinea_20261013.frame_cache import FrameCache
+-from src.candidate_a_t10_g5_y3_20261013.policy import MAX_GREEN, yellow_scope
+-from src.candidate_a_t10_g5_y3_20261013.producer import Producer
+-from src.candidate_a_t10_g5_y3_no_output_cap_20261013 import budget
++from src.candidate_a_cumulative_tracking_20261014.policy import yellow_scope
++from src.candidate_a_cumulative_tracking_20261014.producer import Producer
++from src.candidate_a_cumulative_tracking_20261014 import budget
+ from src.candidate_a_t10_g5_y3_audit_ready_20261013.telemetry import snapshot as identity_snapshot
+ 
+ 
+@@ -50,7 +50,7 @@
+     for lane,length in [(STORAGE,204.49),(INGRESS,113.08),(INTERNAL,81.98)]:
+         require(abs(conn.lane.getLength(lane)-length)<=1e-8,'admission geometry drift')
+     require(type(receiver.get('available')) is bool and receiver['available'],'receiver denies green')
+-    require(type(time_s) is int and 1200 <= time_s < 1272, 'admission outside declared horizon')
++    require(type(time_s) is int and 1200 <= time_s < APPROVED_BOUND_END, 'admission outside declared horizon')
+     program = previous_program
+     require(conn.trafficlight.getProgram(TLS)==program and conn.trafficlight.getRedYellowGreenState(TLS)=='r' and conn.trafficlight.getPhase(TLS)==2,'not native cycle-red boundary')
+     switch=conn.trafficlight.getNextSwitch(TLS)
+@@ -147,7 +147,7 @@
+         scope=yellow_scope(vehicles,t,cycle['yellow_s']);scope['source_post_frame_time_s']=t;adapter.last_yellow_scope=scope
+         append_new(output/'yellow_scope_attempts.jsonl',dict(scope,attempt_stage='QUOTA_CLOSE_SCREEN_BEFORE_SETTER',observed_first_Y=False))
+         require(scope['status']=='PASS','UNKNOWN_LOCAL_YELLOW_SCOPE')
+-        require(phase==0 and t<=cycle['begin_s']+MAX_GREEN,'green close wrong phase/budget')
++        require(phase==0 and t<=cycle['begin_s']+cycle['max_green_s'],'green close wrong phase/budget')
+         worker.request_phase(conn.trafficlight,requests,t,'setPhase',1)
+         require(conn.trafficlight.getPhase(TLS)==1 and conn.trafficlight.getRedYellowGreenState(TLS)=='y' and conn.trafficlight.getNextSwitch(TLS)==t+cycle['yellow_s'],'yellow command readback mismatch')
+         adapter.ledger.close_green(t,'ACTUAL_QUOTA_ACK')
+@@ -221,7 +221,7 @@
+                     worker.request_phase(conn.trafficlight,phase_requests,t,'setPhase',0)
+                     require(conn.trafficlight.getProgram(TLS)==cycle['program'] and
+                         conn.trafficlight.getPhase(TLS)==0 and conn.trafficlight.getRedYellowGreenState(TLS)=='G' and
+-                        conn.trafficlight.getNextSwitch(TLS)==t+MAX_GREEN,'new program green readback unknown')
++                        conn.trafficlight.getNextSwitch(TLS)==t+cycle['max_green_s'],'new program green readback unknown')
+                     adapter.selected_new_program_at=t
+                 else:
+                     adapter.selected_new_program_at=None

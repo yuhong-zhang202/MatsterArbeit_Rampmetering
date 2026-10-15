@@ -1,0 +1,19 @@
+--- protected two yellow functions (unchanged)
++++ new followup exactcatalogue yellow functions
+@@ -1,7 +1,15 @@
++"""Independent audit compatibility for exact full-catalogue yellow durations.
++
++No runtime safety predicate, model or phase configuration is changed.
++"""
++from scripts.cumulative_full_catalogue_audit_20261014_v1.core import need,near,number,catalogue
++
+ def yellow_record(yy,cycles,world,meta,last):
+     t=yy['time_s'];need(type(t) is int and t==yy['source_post_frame_time_s'] and 1200<t<=last,'YELLOW_SOURCE_CLOCK')
+     selected=[c for c in cycles if c['begin_s']<t<=c['begin_s']+c['max_green_s']];need(len(selected)==1,'YELLOW_CYCLE_BINDING')
+-    Y=selected[0]['yellow_s'];need(yy['yellow_s']==Y and Y in (2,3),'YELLOW_PERIOD')
++    c=selected[0];P=catalogue(c['period_s']);Y=P['yellow_s']
++    need(type(c['yellow_s']) is int and c['yellow_s']==Y and c['max_green_s']==P['max_green_s'],'YELLOW_CATALOGUE_PARAMETERS')
++    need(type(yy['yellow_s']) is int and yy['yellow_s']==Y,'YELLOW_PERIOD')
+     need(meta is not None,'MISSING_YELLOW_METADATA')
+     need(len({q['vehicle_id'] for q in yy['rows']})==len(yy['rows']) and {q['vehicle_id'] for q in yy['rows']}==set(yy['covered_ids'])=={v for v,w in world.items() if w['lane_id'] in ('ramp_storage_0',':urban_diverge_1_0')},'YELLOW_LOCAL_COMPLETE')
+     need(yy['status']=='PASS','UNKNOWN_LOCAL_YELLOW_SCOPE')

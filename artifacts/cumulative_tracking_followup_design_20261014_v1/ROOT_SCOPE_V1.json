@@ -1,0 +1,26 @@
+{
+  "scope": "BOUNDED_EXISTING_EVIDENCE_DESIGN_REVIEW_ONLY",
+  "previous_goal_turn": "PROGRESS_NATIVE_RUN_AND_INDEPENDENT_EVIDENCE_CHANGED_NEXT_ACTION",
+  "objective": "Actual discharge tracks original ALINEA request long-run average within supported supply, receiving and safety conditions; full existing 300-900 goal remains open",
+  "current_source_commit": "3e95c545fd63765d1c15489c943bd80a78f6fdd5",
+  "known_stop": "UA_CUMULATIVE750_S17_01 UNKNOWN_LOCAL_YELLOW_SCOPE at1272; first48s C=E=N10 only",
+  "routing": {
+    "simulation_engineer": "policy feasibility and minimal implementation boundaries, no production edits",
+    "data_analyst": "one bounded frozen-snapshot extraction plus exact arithmetic",
+    "scientific_reviewer": "read-only independent interpretation and proposal review after data"
+  },
+  "allowed": [
+    "read current frozen evidence/source",
+    "new versioned derived extraction",
+    "bounded candidate comparison",
+    "current documentation updates"
+  ],
+  "prohibited": [
+    "SUMO launch or automatic retry",
+    "production/controller/guard/model/timing edits",
+    "raw or old evidence changes",
+    "formal design or decision status changes",
+    "treating T9/T10 subset as completion of full goal"
+  ],
+  "approval_boundary": "Any concrete new policy implementation or native run remains proposed pending explicit approval; existing one-use native identity is consumed"
+}

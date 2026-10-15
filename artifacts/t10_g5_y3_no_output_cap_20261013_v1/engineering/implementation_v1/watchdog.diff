@@ -1,0 +1,11 @@
+--- src/candidate_a_native_smoke_20261011/bridge_resources.py
++++ src/candidate_a_t10_g5_y3_no_output_cap_20261013/resources.py
+@@ -13,7 +13,7 @@
+         try:
+             if time.monotonic()-self.started>self.limits['wall_limit_s']:self.reason='WALL_LIMIT'
+             elif shutil.disk_usage(self.output).free<self.limits['minimum_free_bytes']:self.reason='DISK_RESERVE'
+-            elif sum(p.stat().st_size for p in self.output.rglob('*') if p.is_file())>self.limits['run_limit_bytes']:self.reason='OUTPUT_BYTES'
++            elif self.limits['run_limit_bytes'] is not None and sum(p.stat().st_size for p in self.output.rglob('*') if p.is_file())>self.limits['run_limit_bytes']:self.reason='OUTPUT_BYTES'
+             if self.reason:
+                 self.process.terminate()
+                 try:self.process.wait(timeout=5)

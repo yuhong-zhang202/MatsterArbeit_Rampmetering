@@ -1,0 +1,72 @@
+{
+  "classification": "FAKE_API_FAILURE_NO_NATIVE",
+  "error": "RuntimeError:INJECTED_SET_PHASE_FAILURE",
+  "actual_clock": 600,
+  "last_completed_s": 600,
+  "last_accounted_s": 600,
+  "last_control_setter": {
+    "setter_id": "600:setPhase:1",
+    "time_s": 600,
+    "method": "setPhase",
+    "value": 0,
+    "expected_readback": {
+      "time_s": 600,
+      "program": "I12_PACKET8",
+      "phase": 0,
+      "state": "G",
+      "next_switch_s": 604
+    },
+    "status": "CALL_FAILED_STOP",
+    "call_completed": false,
+    "error": "RuntimeError:INJECTED_SET_PHASE_FAILURE",
+    "effect_of_failed_call": "UNKNOWN_POSSIBLE_PARTIAL_APPLICATION",
+    "actual_signal": {
+      "fields": {
+        "time_s": {
+          "status": "OBSERVED",
+          "value": 600,
+          "error": null
+        },
+        "program": {
+          "status": "OBSERVED",
+          "value": "I12_PACKET8",
+          "error": null
+        },
+        "phase": {
+          "status": "OBSERVED",
+          "value": 0,
+          "error": null
+        },
+        "state": {
+          "status": "OBSERVED",
+          "value": "G",
+          "error": null
+        },
+        "next_switch_s": {
+          "status": "OBSERVED",
+          "value": 604,
+          "error": null
+        }
+      },
+      "complete": true,
+      "scope": "CURRENT_GETTERS_AFTER_CONTROL_NOT_MOVEMENT_ACK"
+    }
+  },
+  "memory_requests": [
+    [
+      0,
+      "setProgram",
+      "A_OPEN"
+    ],
+    [
+      0,
+      "setPhase",
+      0
+    ],
+    [
+      600,
+      "setProgram",
+      "I12_PACKET8"
+    ]
+  ]
+}

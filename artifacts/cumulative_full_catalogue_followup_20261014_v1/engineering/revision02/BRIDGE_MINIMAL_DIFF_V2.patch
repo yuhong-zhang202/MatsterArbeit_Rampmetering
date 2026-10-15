@@ -1,0 +1,27 @@
+--- protected full bridge
++++ new followup bridge
+@@ -13,13 +13,13 @@
+ import time
+ 
+ from src.candidate_a_cumulative_full_catalogue_20261014.adapter import StepAdapter, inventory, TLS, STORAGE, INGRESS, INTERNAL
+-from src.candidate_a_cumulative_full_catalogue_20261014.profile import ROOT,TASK,NETWORK,SUMO,sha,write_new,validate_release,require,APPROVED_BOUND_END
++from src.candidate_a_cumulative_full_followup_20261014.profile import ROOT,TASK,NETWORK,SUMO,sha,write_new,validate_release,require,APPROVED_BOUND_END
+ from src.candidate_a_native_smoke_20261011.bridge_logs import LogCapture
+ from src.candidate_a_t10_g5_y3_no_output_cap_20261013.resources import ResourceWatchdog
+ from src.candidate_a_unified_alinea_20261013.frame_cache import FrameCache
+ from src.candidate_a_cumulative_full_catalogue_20261014.policy import yellow_scope
+ from src.candidate_a_cumulative_full_catalogue_20261014.producer import Producer
+-from src.candidate_a_cumulative_full_catalogue_20261014 import budget
++from src.candidate_a_cumulative_full_followup_20261014 import budget
+ from src.candidate_a_t10_g5_y3_audit_ready_20261013.telemetry import snapshot as identity_snapshot
+ 
+ 
+@@ -266,7 +266,7 @@
+             if adapter.ledger.cycle['completed']:
+                 require(conn.trafficlight.getPhase(TLS)==2 and conn.trafficlight.getRedYellowGreenState(TLS)=='r' and conn.trafficlight.getNextSwitch(TLS)==adapter.end_s,'final native cycle boundary drift')
+             else:
+-                require(producer.mode=='real_alinea','unapproved partial final cycle')
++                require(producer.mode in ('dynamic_commands','real_alinea'),'unapproved partial final cycle')
+             if producer.mode=='real_alinea':
+                 require(any(x.startswith('feedback:') and r['first_application_s'] is not None for x,r in adapter.ledger.requests.items()),'REAL_FEEDBACK_COMMAND_NOT_OBSERVED_APPLIED')
+             adapter.loop_terminal_elapsed_s=time.monotonic()-start_time

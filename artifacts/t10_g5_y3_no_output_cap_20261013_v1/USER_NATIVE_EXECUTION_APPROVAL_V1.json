@@ -1,0 +1,32 @@
+{
+  "source": "direct human explicit execution approval",
+  "date": "2026-10-13",
+  "request": "别管300MB的限制，继续跑完",
+  "human_instruction_reference": "artifacts/t10_g5_y3_no_output_cap_20261013_v1/USER_CONTINUATION_SCOPE_V1.json",
+  "human_instruction_sha256": "03a3703ba82cd1bced0d96c0cad94b0d2c27b88bb25713da04c22d6709d07724",
+  "baseline_user_approved_commit": "c82333d77de1367f0d6fce4b8ceb2742bfd8ed80",
+  "exact_card_binding_derived_after_resource_only_preparation": true,
+  "user_named_new_card_hash": false,
+  "interpretation": "Latest direct instruction authorizes removing fixed output-byte stop and necessary one fresh03 start to complete the same diagnostic; prior02 cannot resume. Parameters other than identity/output-byte cap are inherited unchanged and reviewed before execution.",
+  "run_id": "UA_T10_G5Y3_FIXED750_S17_03",
+  "card_sha256": "9daacfd217e17388ec8057a82677756e95036e0fcb9756b6a0cdef1f7669f9da",
+  "common_runtime_source_sha256": "aaa47f9890cb9f30018b0344989e6f13cd0ecc993759263a8a4e05fbe9942d46",
+  "SUMO_execution_authorized": true,
+  "native_start_limit": 1,
+  "end_s": 1270,
+  "numerical_exception_enabled": false,
+  "resources": {
+    "wall_limit_s": 300,
+    "startup_limit_s": 60,
+    "run_limit_bytes": null,
+    "minimum_free_bytes": 5000000000
+  },
+  "resource_envelope": {
+    "monitored_s": 300,
+    "raw_bytes": null
+  },
+  "automatic_retry": false,
+  "STOP_on_anomaly_or_UNKNOWN": true,
+  "only_fixed_output_byte_stop_disabled": true,
+  "canonical_three_role_gate_required": true
+}

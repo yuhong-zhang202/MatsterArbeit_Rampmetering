@@ -1,0 +1,68 @@
+{
+  "timestamp_utc": "2026-10-13T22:31:13.745078+00:00",
+  "classification": "OFFLINE_CARD_BINDING_AND_NO_PERMISSION_GATE_ONLY",
+  "actual_operations": [
+    "fresh exact four reader SHA match",
+    "profile.prepare()",
+    "profile.validate(card, require_environment=True)",
+    "bridge.execute(card, missing_release) with only protected_worker sentinel; real validators intact",
+    "old packages/packages_v2/packages_v3 rejected"
+  ],
+  "status": "PASS",
+  "card_path": "artifacts/cumulative_tracking_implementation_20261014_v1/engineering/packages_v4/UA_CUMULATIVE750_S17_01/card.json",
+  "card_sha256": "add00ae80cf7d70272bfc8beac785165c7a281c76fa156c1cffb9a68f4b38774",
+  "runtime_source_digest": "cb34b116223fffc5d91c2179987bbbfa70bdf1b5dce2a5840cab4029e5fcca99",
+  "bound_source_count": 111,
+  "reader_sha256": {
+    "actual.py": "9adb9e625663cc4a548bf15d3c815a4e5b524865e37b756aae03137eaef99de2",
+    "core.py": "02edfd71502656cb9a473f0c8bd1c4fee83818dde9e00a8f4b589c2935b6ed8f",
+    "evidence.py": "6514247082fa82b733684a54180bdd3242997f6103b6b7eb4ca7facd33fbb004",
+    "_phase.py": "1b6669c79ea66ae54d03a4849cc837441ecdc16d8b780a8516f2132c81ae7471"
+  },
+  "resources": {
+    "wall_limit_s": 300,
+    "startup_limit_s": 60,
+    "run_limit_bytes": null,
+    "minimum_free_bytes": 5000000000
+  },
+  "resource_authorization_status": "PROPOSED_NEW_SCOPE_NOT_APPROVED_FOR_NATIVE",
+  "end_s": 1296,
+  "catalogue": [
+    8,
+    10
+  ],
+  "SUMO_execution_authorized": false,
+  "observations": {
+    "N": null,
+    "E": null,
+    "actual_phase_exposure": null,
+    "native_safety": null,
+    "body_clearance": null,
+    "future_mixed_population": null
+  },
+  "missing_authority_rejection": "FUTURE_EXACT_NATIVE_AUTHORIZATION_MISSING",
+  "worker_imported": false,
+  "new_native_count": 0,
+  "new_raw_allocated": false,
+  "canonical_created": false,
+  "historical_cards": [
+    {
+      "path": "artifacts/cumulative_tracking_implementation_20261014_v1/engineering/packages/UA_CUMULATIVE750_S17_01/card.json",
+      "sha256": "8ec08611dd6f6f3838f7e7469e8647ff61665264448cf9e43fb648994f5b9235",
+      "current_gate": "FOREIGN_CANDIDATE_CARD"
+    },
+    {
+      "path": "artifacts/cumulative_tracking_implementation_20261014_v1/engineering/packages_v2/UA_CUMULATIVE750_S17_01/card.json",
+      "sha256": "7d62c6e9a2051d32a4167f262a6be6e87fc6ba770a8f9b1fe9a1b3e4e21e015d",
+      "current_gate": "FOREIGN_CANDIDATE_CARD"
+    },
+    {
+      "path": "artifacts/cumulative_tracking_implementation_20261014_v1/engineering/packages_v3/UA_CUMULATIVE750_S17_01/card.json",
+      "sha256": "8aba53de00da9939dd2709b1f0c19b126a24d08fcc5aa4c2da61e43946267d49",
+      "current_gate": "FOREIGN_CANDIDATE_CARD"
+    }
+  ],
+  "tests_repeated": false,
+  "code_test_scope": "V4 four methods + final profile/source/card delta gate only; audit code independent data tests",
+  "native_version_process": false
+}

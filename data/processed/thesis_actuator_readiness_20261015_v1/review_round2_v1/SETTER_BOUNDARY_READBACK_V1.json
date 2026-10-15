@@ -1,0 +1,48 @@
+{
+  "0_setter": {
+    "status": "PASS_SAVED_FAULT_BOUNDARY_ONLY",
+    "clock": 0,
+    "last_verified_ACK": null,
+    "last_accounted": null,
+    "setter_status": "CALL_FAILED_STOP",
+    "call_completed": false,
+    "unknown_fields": [],
+    "native_safety": "NOT_TESTED",
+    "full_reader": "NOT_TESTED"
+  },
+  "600_setter": {
+    "status": "PASS_SAVED_FAULT_BOUNDARY_ONLY",
+    "clock": 600,
+    "last_verified_ACK": 600,
+    "last_accounted": 600,
+    "setter_status": "CALL_FAILED_STOP",
+    "call_completed": false,
+    "unknown_fields": [],
+    "native_safety": "NOT_TESTED",
+    "full_reader": "NOT_TESTED"
+  },
+  "600_readback": {
+    "status": "PASS_SAVED_FAULT_BOUNDARY_ONLY",
+    "clock": 600,
+    "last_verified_ACK": 600,
+    "last_accounted": 600,
+    "setter_status": "READBACK_UNKNOWN_STOP",
+    "call_completed": true,
+    "unknown_fields": [
+      "phase"
+    ],
+    "native_safety": "NOT_TESTED",
+    "full_reader": "NOT_TESTED"
+  },
+  "603_yellow": {
+    "status": "PASS_SAVED_FAULT_BOUNDARY_ONLY",
+    "clock": 603,
+    "last_verified_ACK": 603,
+    "last_accounted": 603,
+    "setter_status": "CALL_FAILED_STOP",
+    "call_completed": false,
+    "unknown_fields": [],
+    "native_safety": "NOT_TESTED",
+    "full_reader": "NOT_TESTED"
+  }
+}

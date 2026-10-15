@@ -1,0 +1,39 @@
+# G5/Y3 actual-log auditor and review card — engineering V2
+
+**GO_FOR_OFFLINE_AUDITOR_AND_REVIEW_CARD_REVIEW_ONLY.** Independent data/science review is pending. No SUMO/version process, canonical permission or native raw allocation occurred. All observations remain unobserved/null, not measured zero.
+
+## Context and user scope
+
+Read AGENTS, refreshed PROJECT_STATE, D018/D019, WORKLOG tail, the empty/unfrozen EXPERIMENT_PROTOCOL and prior T10 delivery report. User accepted63af3b4 and explicitly requested minimum auditor adaptation/offline verification/three-role review and a complete review card; native execution remains prohibited. The new USER_OFFLINE_AUDIT_SCOPE_V1.json is bound. Stage6/A1/formal-design/Candidate A qualification states are unchanged.
+
+## Minimal implementation and preserved behavior
+
+New `scripts/t10_g5_y3_audit_20261013_v1` contains isolated core/actual/evidence modules. Original G4 auditor and NUM supplement are untouched. Independent accounting permits only requested750→mapped720/T10/quota2; Y3/Gmax5 and program T10_G5Y3_NATIVE replace only G4-specific phase assumptions. Every contiguous G/y/r interval, actual TLS, two-stage ACK, pre/post switch, quota setter and red-duration attempt/readback is checked. Fresh yellow population and stop-or-clear math are independently recomputed; UNKNOWN fails. The first red checkpoint follows actual closing time. E counts complete quota slots, N comes from independent FCD storage→internal entries, including extra y/r entries without a cap; actual red-front entry raises an alarm, while legitimate rear clearance under red is not relabelled as a front entry.
+
+Full body rows join each actual entry ID/time/color to every spanning ACK until actual rear clearance; no invented yellow-end deadline. Original FCD/population, current-following emergency9+1.1 m, braking−4.5−1e−6, collision/teleport/warnings, normal-arrival precision8 BEGIN join and all-file EOF checks remain. The new log checker also requires contiguous byte ranges, hash fragments and final file exhaustion. NUM is strict: missing records or any numerical continuation classification fails. Parser exceptions/missing coverage yield UNKNOWN and nonzero exit; observed alarms/runtime STOP yield STOP and nonzero exit, while retaining all facts. No exception is silently skipped or converted to qualification.
+
+New `src/candidate_a_t10_g5_y3_audit_ready_20261013` reuses the protected T10 adapter/policy/producer/body/FrameCache. The bridge differs only by profile/budget imports and two pure identity-journal writes; the setter/phase/movement/guard logic is unchanged. A small telemetry module records existing inventory getter values at BEFORE_MOTION and AFTER_ACK: type, route, speedMode31, laneChangeMode1621, accel2.6, normalDecel4.5, emergencyDecel9, tau1, actionStep1, sigma.5 and maxSpeed55.5555555556. Active/loaded/pending ID sets and per-vehicle timestamp are recorded. Actual reader independently joins all populations/IDs/time and refuses missing/mismatching values. No vehicle setters or added safety tolerances exist. Length/positions are already serialized for active vehicles in terminal metadata; minGap in actual following queries and input vType are bound. Effective car-following class is input-vType bound; native private vsafe/RNG branch remains unobserved.
+
+This journal closes the material independent-observation gap in the original runtime logs; source-level inventory PASS alone is no longer presented as independent observed mode/dynamics values. It adds readonly calls and output volume; actual runtime overhead/bytes remain unknown and must obey the proposed original single-run caps. Existing FrameCache memoizes same-frame getter reads, invalidates on motion/setters and verifies actual time; it is reused unchanged, without global monkeypatch.
+
+## Current card and historical boundary
+
+Only `engineering/packages_v2/UA_T10_G5Y3_FIXED750_S17_02/card.json` is current. SHA32199c6bc68e4b8ba14bacea336a937d9d0e784ef114f628268daa95bb120633;87-source digestce5ec15a8a18ec46844ce4cf20d0f48c2a7382ff38aab6772ed4eda44e899ddf. It binds auditor, journal, test and old shared parsing/terminal dependencies, source/input/environment/approval bytes. Original01 SHA6dc90946…/73-source digest013a7da7… and old900/T8 are unchanged.
+
+Initial source86/pre-journal02 card under packages/02, its snapshots and offline receipts are retained. Current profile rejects that old path; two execution-eligible cards for one ID are not created. The new current card is PREPARED_NOT_RELEASED/SUMO_execution_authorized=false, strictNUM/pending exception scope, proposed activation1200/end1270/sevenT10/new single300s300MB/startup60s/free5GB. No old budget remainder is inherited. Actual N/E/phases/body/future population are null; N14 is not prefilled. Future exact human/source/card/resource approval and three-role canonical release remain mandatory before imports/allocation/spawn; none exists.
+
+## Focused actual offline verification
+
+- Initial pre-journal five methods PASS0.166s; its source and card snapshot are preserved.
+- After the journal addition, six focused methods PASS0.184s (OFFLINE_TESTS_V3.log). Pure synthetic fixtures include G4/y3/r3 early quota and G5/y3/r2 deadline, deadline service shortfall, y extra entries, partial measured zero/unobserved null; malformed TLS/ACK/program/clock/transition/red-duration/phase type; body whole-population/clearance/missing record; hash/EOF gaps; strictNUM; serial identity/dynamics; normal-arrival missing→UNKNOWN; fresh Y3 same-frame binding/UNKNOWN; journal fresh before/after IDs/modes/dynamics negative cases; host-bound public card rejection; real prepare/validate/absence-of-permission rejection before worker import or raw allocation. Tests assert the entire thin bridge delta, rather than accepting arbitrary fake setters.
+- Current card prepare and CLI --check-card PASS. Python/package metadata and installed file hashes match the historical environment receipt; no native version process/import/spawn.
+- Actual-reader CLI with a clearly labelled empty synthetic manifest rejects NO_ACTUAL_RAW_RUN, exit1, UNKNOWN_AUDIT_EXCEPTION. This is expected negative behavior, not a SUMO failure; both versioned probe outputs retained.
+- Final actual.py extra-last-PRE identity join was added after six methods; CLI probe imports that final source. It is a bounded parser check, not a claim that the full final native pipeline has executed. Data should review this affected seam.
+
+Synthetic fixtures under data/processed/.../engineering_offline_v1 are explicitly SYNTHETIC_OFFLINE_NOT_ACTUAL_SUMO. Numerical pass examples, fake XML clocks and getter journals cannot certify future Y3 safety or N14. The inherited fake class chain uses public committed tests, whose exact hashes are separately bound; old suites were not rerun. No complete native logfile integration dataset exists for this new configuration.
+
+## Remaining limits and handoff
+
+Future fresh G5/yellow populations, real receiving/braking/body dynamics, complete native EOF/normal arrivals, journal performance and true service remain unobserved. Car-following private branch/source-binary equivalence is not established. Current default strict NUM can still stop on the old−4.501 numerical event; no extension was authorized. Actual startup default selection remains unmeasured; the original time0 A_OPEN and600 hold code is unchanged. Audit integrity PASS, operational completion and service qualification remain separate.
+
+Safest next step is independent data→read-only science exact review of current87 sources/card, fixtures, journal coverage and preserved history. Then deliver this complete review package to the user. Future native approval/resources/canonical authority are a separate gate; this offline review does not supply them. Parent owns STATE/WORKLOG/documentation changes; no production guard, old source/card/raw,900 or formal protocol is modified.

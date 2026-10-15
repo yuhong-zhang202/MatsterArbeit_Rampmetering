@@ -1,0 +1,22 @@
+{
+  "status": "3_METHODS_PASS_1_ASSERTION_FAIL",
+  "methods": 4,
+  "seconds": 43.122,
+  "exit_code": 1,
+  "failure": "Test expected tuple accidentally omitted red phase; actual T10 correct G5/Y3/R2; no runtime change",
+  "commands": ".venv/bin/python -m unittest discover -s tests/candidate_a_cumulative_full_catalogue_20261014 -v",
+  "native_starts": 0,
+  "process_inspection": {
+    "command": "ps -Ao pid,etime,command",
+    "status": "SANDBOX_PERMISSION_DENIED_NOT_NATIVE_ERROR"
+  },
+  "source": {
+    "artifacts/cumulative_full_catalogue_implementation_20261014_v1/engineering/revision01/source_preimage/adapter.py": "1e2a5fa28fe9571c28729e9f2a63989a609c1a21ad4dba126beb7d376cef45cc",
+    "artifacts/cumulative_full_catalogue_implementation_20261014_v1/engineering/revision01/source_preimage/budget.py": "792b83dd2f6f8d52dc1042adf37f32bf14cba0c8159807c3256c7a3ccfc21330",
+    "artifacts/cumulative_full_catalogue_implementation_20261014_v1/engineering/revision01/source_preimage/profile.py": "336e235361873df3906d52588a4fe2148823f039747e826be8bb381904d6d939",
+    "artifacts/cumulative_full_catalogue_implementation_20261014_v1/engineering/revision01/source_preimage/bridge.py": "828097953c97330c20c80c0bd46bce1b69e3753cd2b3f0bacbb548ea9f1f11d5",
+    "artifacts/cumulative_full_catalogue_implementation_20261014_v1/engineering/revision01/source_preimage/policy.py": "534bdb3e0ca5c9f4c8d32dd340df12fa4f356d46d4a2c2b1eeacecc1ece39ec3",
+    "artifacts/cumulative_full_catalogue_implementation_20261014_v1/engineering/revision01/source_preimage/producer.py": "535f2a093f4ec1f061a2d13d1b9b27a8329ec1437a8aa9f9e57b303276eac4e9",
+    "artifacts/cumulative_full_catalogue_implementation_20261014_v1/engineering/revision01/source_preimage/test_tracking.py": "10dcbcd0c4cb46d61da0c60270e3da1c3fbe447ce2b062712ccfa92cfc7fee9f"
+  }
+}

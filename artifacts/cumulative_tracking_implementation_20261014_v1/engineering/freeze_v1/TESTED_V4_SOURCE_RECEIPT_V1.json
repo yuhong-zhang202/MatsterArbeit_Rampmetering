@@ -1,0 +1,47 @@
+{
+  "command": "CA_CUMULATIVE_FIXTURE_EXPORT=artifacts/cumulative_tracking_implementation_20261014_v1/engineering/offline_v4/fixtures .venv/bin/python -m unittest discover -s tests/candidate_a_cumulative_tracking_20261014 -p test_tracking.py -v -f",
+  "actual_exit_code": 0,
+  "actual_methods": 4,
+  "unittest_elapsed_s": 51.608,
+  "tested_baseline_commit": "a143cab6c21f1cb2f8c1b2be3e4d05598a1fc45e",
+  "new_code_was_uncommitted": true,
+  "tested_v4_card_was_offline_packages_v3": "artifacts/cumulative_tracking_implementation_20261014_v1/engineering/packages_v3/UA_CUMULATIVE750_S17_01/card.json",
+  "exact_card_source_checks_all_pass": true,
+  "checked_source_count": 107,
+  "affected_test_source": {
+    "scripts/candidate_a_cumulative_tracking_20261014_v1/cli.py": {
+      "sha256": "b80a780a5d32a09789afb55dd0312b0ce6ef92d49c01cf7aa83063f3da3eae40",
+      "tested_source_path": "scripts/candidate_a_cumulative_tracking_20261014_v1/cli.py"
+    },
+    "src/candidate_a_cumulative_tracking_20261014/adapter.py": {
+      "sha256": "dd7c171b6ba9b728ef5fb94727ca78f2d437fc8fc9bebbe06fc5e228e5ce46d3",
+      "tested_source_path": "src/candidate_a_cumulative_tracking_20261014/adapter.py"
+    },
+    "src/candidate_a_cumulative_tracking_20261014/bridge.py": {
+      "sha256": "875e7d16b5148b7b04565454491e7d780a40283da211f0deebf14876d5a72ec5",
+      "tested_source_path": "src/candidate_a_cumulative_tracking_20261014/bridge.py"
+    },
+    "src/candidate_a_cumulative_tracking_20261014/budget.py": {
+      "sha256": "d3730e1b8c63f60ade7ebb0a357f818e6dc27d990b342a15fab5f72e0f0f880a",
+      "tested_source_path": "src/candidate_a_cumulative_tracking_20261014/budget.py"
+    },
+    "src/candidate_a_cumulative_tracking_20261014/policy.py": {
+      "sha256": "9a75a8f7480a951bef275740dc962e2902952f1fb4c0781bae9f3690e4062bcc",
+      "tested_source_path": "src/candidate_a_cumulative_tracking_20261014/policy.py"
+    },
+    "src/candidate_a_cumulative_tracking_20261014/producer.py": {
+      "sha256": "0c4831d34213942003fbdb3492d31f75e7fecaa989bb03ee64dc5d1d677df41f",
+      "tested_source_path": "src/candidate_a_cumulative_tracking_20261014/producer.py"
+    },
+    "src/candidate_a_cumulative_tracking_20261014/profile.py": {
+      "sha256": "a7128f343f123da37f69b6222aeeb38a67fa3776c16fa8d1aad8e7f3e460a741",
+      "tested_source_path": "artifacts/cumulative_tracking_implementation_20261014_v1/engineering/freeze_v1/pre_audit_binding/src/candidate_a_cumulative_tracking_20261014/profile.py"
+    },
+    "tests/candidate_a_cumulative_tracking_20261014/test_tracking.py": {
+      "sha256": "92312eadf9e7f49a2860014b6cfbfa58bf9bf30ecde1ed0ee2322342497e1349",
+      "tested_source_path": "tests/candidate_a_cumulative_tracking_20261014/test_tracking.py"
+    }
+  },
+  "posttest_changes": "profile only packageversion4/audit source binding; no motion/ledger/adapter/Feedback/guard edits after test",
+  "native_starts": 0
+}

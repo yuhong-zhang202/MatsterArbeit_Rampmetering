@@ -1,0 +1,66 @@
+test_missing_bad_boundary_application_phase_and_counts (test_audit.Tests.test_missing_bad_boundary_application_phase_and_counts) ... ok
+test_real_feedback_raw_events_recomputed_no_nearest_label (test_audit.Tests.test_real_feedback_raw_events_recomputed_no_nearest_label) ... ERROR
+test_real_helper_synthetic_two_blocks_dynamic_and_Y_catalogue (test_audit.Tests.test_real_helper_synthetic_two_blocks_dynamic_and_Y_catalogue) ... ERROR
+test_zero_partial_null_extra_and_no_catchup (test_audit.Tests.test_zero_partial_null_extra_and_no_catchup) ... ERROR
+
+======================================================================
+ERROR: test_real_feedback_raw_events_recomputed_no_nearest_label (test_audit.Tests.test_real_feedback_raw_events_recomputed_no_nearest_label)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/cumulative_tracking_audit_20261014/test_audit.py", line 62, in test_real_feedback_raw_events_recomputed_no_nearest_label
+    f=load('real_alinea_1296_True_False');a,ph=run(f,1296);result=core.audit_feedback(f['feedback'],f['events'],a,1296)
+                                               ~~~^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/cumulative_tracking_audit_20261014/test_audit.py", line 20, in run
+    ph=core.audit_phases(f['tls'],f['post'],f['ack'],a['cycles'],f['phase_requests'],f['duration_requests'],f['pre'])
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/cumulative_tracking_audit_20261014_v1/core.py", line 78, in audit_phases
+    return check(*args,**kwargs)
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/cumulative_tracking_audit_20261014_v1/_phase.py", line 11, in audit_phases
+    need(len(tls)==len(posts) and len(acks)==2*len(posts),'PHASE_ACK_COVERAGE')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/t10_g5_y3_audit_20261013_v1/core.py", line 13, in need
+    if not ok:raise ValueError(why)
+              ^^^^^^^^^^^^^^^^^^^^^
+ValueError: PHASE_ACK_COVERAGE
+
+======================================================================
+ERROR: test_real_helper_synthetic_two_blocks_dynamic_and_Y_catalogue (test_audit.Tests.test_real_helper_synthetic_two_blocks_dynamic_and_Y_catalogue)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/cumulative_tracking_audit_20261014/test_audit.py", line 24, in test_real_helper_synthetic_two_blocks_dynamic_and_Y_catalogue
+    f=load('fixed750_1296_True_False');a,ph=run(f,1296)
+                                            ~~~^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/cumulative_tracking_audit_20261014/test_audit.py", line 20, in run
+    ph=core.audit_phases(f['tls'],f['post'],f['ack'],a['cycles'],f['phase_requests'],f['duration_requests'],f['pre'])
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/cumulative_tracking_audit_20261014_v1/core.py", line 78, in audit_phases
+    return check(*args,**kwargs)
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/cumulative_tracking_audit_20261014_v1/_phase.py", line 11, in audit_phases
+    need(len(tls)==len(posts) and len(acks)==2*len(posts),'PHASE_ACK_COVERAGE')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/t10_g5_y3_audit_20261013_v1/core.py", line 13, in need
+    if not ok:raise ValueError(why)
+              ^^^^^^^^^^^^^^^^^^^^^
+ValueError: PHASE_ACK_COVERAGE
+
+======================================================================
+ERROR: test_zero_partial_null_extra_and_no_catchup (test_audit.Tests.test_zero_partial_null_extra_and_no_catchup)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/cumulative_tracking_audit_20261014/test_audit.py", line 47, in test_zero_partial_null_extra_and_no_catchup
+    f=load('fixed750_1210_False_False');a,ph=run(f,1210);self.assertEqual(a['accounting']['N'],0);self.assertEqual(a['accounting']['E'],2)
+                                             ~~~^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/cumulative_tracking_audit_20261014/test_audit.py", line 20, in run
+    ph=core.audit_phases(f['tls'],f['post'],f['ack'],a['cycles'],f['phase_requests'],f['duration_requests'],f['pre'])
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/cumulative_tracking_audit_20261014_v1/core.py", line 78, in audit_phases
+    return check(*args,**kwargs)
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/cumulative_tracking_audit_20261014_v1/_phase.py", line 11, in audit_phases
+    need(len(tls)==len(posts) and len(acks)==2*len(posts),'PHASE_ACK_COVERAGE')
+    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/t10_g5_y3_audit_20261013_v1/core.py", line 13, in need
+    if not ok:raise ValueError(why)
+              ^^^^^^^^^^^^^^^^^^^^^
+ValueError: PHASE_ACK_COVERAGE
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.509s
+
+FAILED (errors=3)

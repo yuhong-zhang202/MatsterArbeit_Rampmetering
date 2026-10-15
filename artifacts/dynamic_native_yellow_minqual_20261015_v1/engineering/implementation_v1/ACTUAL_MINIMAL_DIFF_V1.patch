@@ -1,0 +1,233 @@
+--- protected_nativegap/adapter.py
++++ isolated_nativeyellow/adapter.py
+@@ -21,6 +21,7 @@
+ PROFILE = 'NATIVE_PHASE_CURRENT_FOLLOWING_WAIT_DIAGNOSTIC_NOT_QUALIFIED'
+ from src.candidate_a_dynamic_minqual_20261015.receiver_wait import classify_receiver, current_following
+ from src.candidate_a_cumulative_full_catalogue_20261014.policy import Ledger, parameters, yellow_scope
++from src.candidate_a_native_yellow_minqual_20261015.yellow_contract import annotate_yellow_scope
+ from src.candidate_a_issue12_packet_policy_20261012.body import BodyTracker
+ from src.candidate_a_unified_alinea_20261013 import numeric_stop
+ 
+@@ -74,8 +75,10 @@
+ 
+ class StepAdapter:
+     """Preparation seam only: callers observe/advance externally; we never do."""
+-    def __init__(self, observe, command=750, end_s=1296, numerical_authority=None):
+-        self.observe = observe  # Future bridge binds exact protected worker.observe.
++    def __init__(self, observe, command=750, end_s=1296, numerical_authority=None, yellow_diagnostic_mode=False):
++        self.observe = observe  # Original binding unchanged.
++        require(type(yellow_diagnostic_mode) is bool, 'UNKNOWN_YELLOW_MODE')
++        self.yellow_diagnostic_mode = yellow_diagnostic_mode  # Default strict.
+         self.envelope = PhaseEnvelope()  # Pre-control holding program only.
+         self.ledger = Ledger(command, end_s)
+         self.end_s = end_s
+@@ -166,7 +169,8 @@
+             require(motion == self.ledger.motion_at(time_s), 'PHASE_SCHEDULE_MISMATCH')
+             if motion == 'y' and self.previous_motion != 'y':
+                 self.last_yellow_scope = yellow_scope(vehicles, time_s, cycle['yellow_s'])
+-                require(self.last_yellow_scope['status']=='PASS', 'UNKNOWN_LOCAL_YELLOW_SCOPE')
++                self.last_yellow_scope = annotate_yellow_scope(self.last_yellow_scope, vehicles, time_s, cycle['yellow_s'], self.yellow_diagnostic_mode)
++                require(self.last_yellow_scope['diagnostic_yellow_contract']['allow_prepared_step'] is True, 'UNKNOWN_LOCAL_YELLOW_SCOPE')
+         elif time_s >= 600:
+             require(program == 'CA_C8', 'HOLD_PROGRAM_IDENTITY')
+             idx, motion = motion_phase(phase, state, nxt, time_s, self.envelope.phases(8))
+--- protected_nativegap/bridge.py
++++ isolated_nativeyellow/bridge.py
+@@ -12,14 +12,15 @@
+ import sys
+ import time
+ 
+-from src.candidate_a_dynamic_minqual_20261015.adapter import StepAdapter, inventory, TLS, STORAGE, INGRESS, INTERNAL
+-from src.candidate_a_dynamic_minqual_20261015.profile import ROOT,TASK,NETWORK,SUMO,sha,write_new,validate_release,require,APPROVED_BOUND_END
++from src.candidate_a_native_yellow_minqual_20261015.adapter import StepAdapter, inventory, TLS, STORAGE, INGRESS, INTERNAL
++from src.candidate_a_native_yellow_minqual_20261015.profile import ROOT,TASK,NETWORK,SUMO,sha,write_new,validate_release,require,APPROVED_BOUND_END
+ from src.candidate_a_native_smoke_20261011.bridge_logs import LogCapture
+ from src.candidate_a_t10_g5_y3_no_output_cap_20261013.resources import ResourceWatchdog
+ from src.candidate_a_unified_alinea_20261013.frame_cache import FrameCache
+ from src.candidate_a_cumulative_full_catalogue_20261014.policy import yellow_scope
++from src.candidate_a_native_yellow_minqual_20261015.yellow_contract import annotate_yellow_scope
+ from src.candidate_a_cumulative_full_catalogue_20261014.producer import Producer
+-from src.candidate_a_dynamic_minqual_20261015 import budget
++from src.candidate_a_native_yellow_minqual_20261015 import budget
+ from src.candidate_a_t10_g5_y3_audit_ready_20261013.telemetry import snapshot as identity_snapshot
+ 
+ 
+@@ -144,9 +145,11 @@
+                 abs(v.position_m-pos)<=1e-8 and abs(v.length_m-conn.vehicle.getLength(v.vehicle_id))<=1e-8 and
+                 abs(v.normal_decel_m_s2-conn.vehicle.getDecel(v.vehicle_id))<=1e-8,'yellow position/speed/body unbound')
+         require(conn.simulation.getTime()==t,'yellow final source time drift')
+-        scope=yellow_scope(vehicles,t,cycle['yellow_s']);scope['source_post_frame_time_s']=t;adapter.last_yellow_scope=scope
++        scope=yellow_scope(vehicles,t,cycle['yellow_s']);adapter.last_yellow_scope=scope
++        scope=annotate_yellow_scope(scope,vehicles,t,cycle['yellow_s'],adapter.yellow_diagnostic_mode)
++        scope['source_post_frame_time_s']=t;adapter.last_yellow_scope=scope
+         append_new(output/'yellow_scope_attempts.jsonl',dict(scope,attempt_stage='QUOTA_CLOSE_SCREEN_BEFORE_SETTER',observed_first_Y=False))
+-        require(scope['status']=='PASS','UNKNOWN_LOCAL_YELLOW_SCOPE')
++        require(scope['diagnostic_yellow_contract']['allow_prepared_step'] is True,'UNKNOWN_LOCAL_YELLOW_SCOPE')
+         require(phase==0 and t<=cycle['begin_s']+cycle['max_green_s'],'green close wrong phase/budget')
+         worker.request_phase(conn.trafficlight,requests,t,'setPhase',1)
+         require(conn.trafficlight.getPhase(TLS)==1 and conn.trafficlight.getRedYellowGreenState(TLS)=='y' and conn.trafficlight.getNextSwitch(TLS)==t+cycle['yellow_s'],'yellow command readback mismatch')
+@@ -170,7 +173,8 @@
+     p=adapter.pending
+     if t>=1200 and p['motion']=='y' and adapter.previous_motion!='y':
+         q=adapter.last_yellow_scope
+-        require(isinstance(q,dict) and q['time_s']==t and q['status']=='PASS','FIRST_Y_SCREEN_NOT_FRESH')
++        require(isinstance(q,dict) and q['time_s']==t and
++            q['diagnostic_yellow_contract']['allow_prepared_step'] is True,'FIRST_Y_SCREEN_NOT_FRESH')
+         record=dict(q,source_post_frame_time_s=t,screen_stage='PREPARED_BEFORE_FIRST_Y_MOTION',source_program=p['program'],source_motion='y',observed_first_Y=False)
+         append_new(output/'yellow_scope.jsonl',record)
+ 
+@@ -343,7 +347,8 @@
+         require(not startup['streams']['sumo_stderr.log']['text'],'startup stderr nonempty')
+         require(card['numerical_exception_authority']['enabled'] is False,'NEW_SCOPE_NUMERICAL_EXCEPTION_NOT_ENABLED')
+         authority=None
+-        adapter=StepAdapter(worker.observe,card['spec']['fixed_command_veh_h'],card['spec']['end_s'],authority)
++        adapter=StepAdapter(worker.observe,card['spec']['fixed_command_veh_h'],card['spec']['end_s'],authority,
++            yellow_diagnostic_mode=card['spec']['yellow_responsibility_contract']['enabled'])
+         producer=Producer(card['spec']['mode'],card['spec']['fixed_command_veh_h'])
+         _diagnostic_loop(conn,worker,capture,output,{**effective,'total_budget_baseline':total_budget},process,started,adapter,producer)
+         status='PACKET_CYCLES_PENDING_LOG_FINALIZATION'
+--- protected_nativegap/profile.py
++++ isolated_nativeyellow/profile.py
+@@ -4,15 +4,16 @@
+ import xml.etree.ElementTree as ET
+ from src.candidate_a_unified_alinea_20261013 import profile as base
+ ROOT=base.ROOT;NETWORK=base.NETWORK;SUMO=base.SUMO
+-TASK=Path('artifacts/dynamic_minimum_qualification_20261015_v1/engineering')
+-USER=Path('artifacts/dynamic_minimum_qualification_20261015_v1/USER_APPROVAL_V1.json')
++from src.candidate_a_native_yellow_minqual_20261015.yellow_contract import require_contract
++TASK=Path('artifacts/dynamic_native_yellow_minqual_20261015_v1/engineering')
++USER=Path('artifacts/dynamic_yellow_contract_proposal_20261015_v1/USER_APPROVAL_V1.json')
+ ROOT_SCOPE=USER
+-DESIGN=Path('artifacts/dynamic_minimum_qualification_20261015_v1/REVIEWED_PROPOSAL_HANDOFF_V1.md')
+-SCIENCE=Path('artifacts/dynamic_minimum_qualification_20261015_v1/SCIENCE_PROPOSED_CONTRACT_REVIEW_V1.md')
+-BASE='ee5984024987e6cf7c6b2e571c083e06a9773a8b'
++DESIGN=Path('artifacts/dynamic_yellow_contract_proposal_20261015_v1/REVIEWED_HANDOFF_V1.md')
++SCIENCE=Path('artifacts/dynamic_yellow_contract_proposal_20261015_v1/SCIENCE_PROPOSAL_REVIEW_V1.md')
++BASE='b52b6138a99d0ac90cb59642221d6b0b87da1f64'
+ APPROVED_BOUND_END=1296
+-RUN='UA_NATIVEGAP_DYNAMIC_S17_01'
+-RUNS={RUN:('dynamic_commands',300),'UA_NATIVEGAP_ALINEA_S17_01':('real_alinea',900)}
++RUN='UA_NATIVEYELLOW_DYNAMIC_S17_01'
++RUNS={RUN:('dynamic_commands',300),'UA_NATIVEYELLOW_ALINEA_S17_01':('real_alinea',900)}
+ RAW=Path('data/raw/dynamic_minimum_qualification_20261015_v1')
+ DONOR=base.TASK/'packages/UA_FIXED750_S17_02'
+ sha=base.sha;write_new=base.write_new;require=base.require
+@@ -35,22 +36,23 @@
+         'requested_schedule':{'1200':300,'1201':750,'1226':900,'1237':300} if mode=='dynamic_commands' else None,
+         'feedback_reference':{'target_pct':11,'gain_veh_h_per_pct':70,'minimum_veh_h':300,'maximum_veh_h':900,'initial_veh_h':900,'sample_s':30,'global_activation_s':1200,'logical_activation_s':600,
+             'update_global_s':[1230,1260,1290],'detector_ids':['p1_main_down_20_l0','p1_main_down_20_l1']} if mode=='real_alinea' else None,
+-        'terminal_partial_allowed':True,'partial_final_cycle_allowed':True,'resources_provenance':'DIRECT_APPROVED_NEW600_SINGLE300_EXACT_RELEASE_REQUIRED_OLD_COST_SEPARATE',
++        'terminal_partial_allowed':True,'partial_final_cycle_allowed':True,'resources_provenance':'DIRECT_APPROVED_SAME600_TOTAL_163_ALREADY_SETTLED_NO_RESET',
+         'receiver_diagnostic_policy':'ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1',
++        'yellow_responsibility_contract':{'policy':'NATIVE_YELLOW_RESPONSIBILITY_COMPLETE_INPUT_DIAGNOSTIC_V1','enabled':True},
+         'current_following_contract':{'policy':'ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1','hard_extra_margin_m':0.0,'legacy_advisory_margin_m':1.1,'leader_deceleration':'UNCHANGED_BOUND_EMERGENCY_QUERY','new_green_prospective':'UNCHANGED_STRICT','native_safety_proven':False}}
+ def output(run):spec(run);return RAW/run/'outputs'
+ def resources(run):
+     spec(run);return dict(wall_limit_s=300,startup_limit_s=60,run_limit_bytes=None,minimum_free_bytes=5000000000)
+ def sources(root):
+-    old=json.loads((root/'artifacts/cumulative_full_catalogue_implementation_20261014_v1/engineering/packages_v1/UA_CUMULATIVE_FULL750_S17_01/card.json').read_text())['sources_sha256']
+-    require(all(sha(root/p)==h for p,h in old.items()),'PROTECTED_PREVIOUS125_SOURCE_DRIFT')
++    old=json.loads((root/'artifacts/dynamic_minimum_qualification_20261015_v1/engineering/packages_v3/UA_NATIVEGAP_DYNAMIC_S17_01/card.json').read_text())['sources_sha256']
++    require(all(sha(root/p)==h for p,h in old.items()),'PROTECTED_PREVIOUS141_SOURCE_DRIFT')
+     d=dict(old)
+     reference=Path('src/candidate_a_cumulative_full_followup_20261014/bridge.py');d[str(reference)]=sha(root/reference)
+     yellow_dependency=Path('scripts/cumulative_full_catalogue_followup_audit_20261014_v1/yellow.py');d[str(yellow_dependency)]=sha(root/yellow_dependency)
+-    for folder in ('src/candidate_a_dynamic_minqual_20261015','scripts/candidate_a_dynamic_minqual_20261015_v1','tests/candidate_a_dynamic_minqual_20261015'):
++    for folder in ('src/candidate_a_native_yellow_minqual_20261015','scripts/candidate_a_native_yellow_minqual_20261015_v1','tests/candidate_a_native_yellow_minqual_20261015'):
+         for p in (root/folder).glob('*.py'):d[str(p.relative_to(root))]=sha(p)
+     for p in (Path('scripts/unified_alinea_audit_20261013_v1/core.py'),Path('scripts/unified_alinea_audit_20261013_v1/signal_binding_v2.py'),Path('data/processed/issue12_alinea_actuation_20261012_v1/audit_data_V3.py'),Path('artifacts/t10_g5_y3_candidate_20261013_v1/engineering/packages/UA_T10_G5Y3_FIXED750_S17_01/card.json'),Path('artifacts/t10_g5_y3_audit_ready_20261013_v1/engineering/packages_v4/UA_T10_G5Y3_FIXED750_S17_02/card.json'),USER,SCIENCE,DESIGN,ROOT_SCOPE):d[str(p)]=sha(root/p)
+-    audit=root/'scripts/dynamic_minimum_qualification_audit_20261015_v1'
++    audit=root/'scripts/dynamic_native_yellow_minqual_audit_20261015_v1'
+     require((audit/'actual.py').is_file() and (audit/'scope.py').is_file(), 'AUDIT_SOURCE_NOT_READY')
+     for p in audit.glob('*.py'):d[str(p.relative_to(root))]=sha(p)
+     return dict(sorted(d.items()))
+@@ -86,7 +88,7 @@
+     return {'status':'PASS_STATIC_RECEIPT_AND_FILE_HASH_ONLY','native_version_call':False,'native_module_import':False}
+ 
+ def prepare(run=RUN,root=ROOT):
+-    root=Path(root).resolve();sp=spec(run);package=root/TASK/'packages_v3'/run;out=root/output(run)
++    root=Path(root).resolve();sp=spec(run);package=root/TASK/'packages_v1'/run;out=root/output(run)
+     require(not out.parent.exists(),'ONE_USE_IDENTITY_CONSUMED')
+     card=package/'card.json'
+     if card.exists():validate(card,root);return card
+@@ -102,14 +104,15 @@
+         proposed_new_single_run_envelope={'monitored_s':300,'raw_bytes':None},new_two_run_envelope={'monitored_s':600,'raw_bytes':None},old_budget_remainder_not_execution_authorization=True,
+         numerical_exception_authority={'enabled':False,'status':'STRICT_NO_EXCEPTION','old_approval_reference':str(base.NUM_USER),'old_approval_sha256':sha(root/base.NUM_USER)},
+         observations={'N':None,'E':None,'actual_phase_exposure':None,'native_safety':None,'body_clearance':None,'future_mixed_population':None},
+-        audit_contract={'schema':'CUMULATIVE_FULL_C_N_V1','reader':'scripts/dynamic_minimum_qualification_audit_20261015_v1/actual.py','status':'FROZEN_NEW_READER_REVIEW_REQUIRED_BEFORE_RELEASE','NUM':'STRICT_NO_CONTINUE_CLASSIFICATION','EOF_and_terminal_arrival_audit':'MANDATORY_NO_SKIP'},
+-        binary_reference_provenance=donor['binary_reference_provenance'],source_binary_compiler_equivalence='NOT_VERIFIED',runtime_authorization_generated=False)
++        audit_contract={'schema':'CUMULATIVE_FULL_C_N_V1','reader':'scripts/dynamic_native_yellow_minqual_audit_20261015_v1/actual.py','status':'FROZEN_NEW_READER_REVIEW_REQUIRED_BEFORE_RELEASE','NUM':'STRICT_NO_CONTINUE_CLASSIFICATION','EOF_and_terminal_arrival_audit':'MANDATORY_NO_SKIP'},
++        binary_reference_provenance=donor['binary_reference_provenance'],source_binary_compiler_equivalence='NOT_VERIFIED',runtime_authorization_generated=False,
++        resource_accounting_contract={'total_monitored_s':600,'same_existing_stage':True,'old_settled_identity':'UA_NATIVEGAP_DYNAMIC_S17_01','already_settled_at_approval_s':163.07205774995964,'effective_single':'min(300,actual_remaining)','settlement_root':'artifacts/dynamic_minimum_qualification_20261015_v1/engineering/settlements'})
+     write_new(card,data);return card
+ 
+ def validate(card_path,root=ROOT,require_environment=False):
+-    root=Path(root).resolve();p=Path(card_path).resolve();c=json.loads(p.read_text());run=c['spec']['run_id'];spec(run);expected=root/TASK/'packages_v3'/run/'card.json'
++    root=Path(root).resolve();p=Path(card_path).resolve();c=json.loads(p.read_text());run=c['spec']['run_id'];spec(run);expected=root/TASK/'packages_v1'/run/'card.json'
+     require(p==expected,'FOREIGN_CANDIDATE_CARD')
+-    c=json.loads(p.read_text());require(c['status']=='PREPARED_NOT_RELEASED' and c['classification']=='OFFLINE_PREPARED_APPROVED_SCOPE_NOT_RELEASED' and c['baseline_commit']==BASE and c['spec']==spec(run),'CANDIDATE_SPEC_DRIFT')
++    c=json.loads(p.read_text());require_contract(c['spec'].get('yellow_responsibility_contract'));require(c['status']=='PREPARED_NOT_RELEASED' and c['classification']=='OFFLINE_PREPARED_APPROVED_SCOPE_NOT_RELEASED' and c['baseline_commit']==BASE and c['spec']==spec(run),'CANDIDATE_SPEC_DRIFT')
+     require(c['package']==str(expected.parent.relative_to(root)) and c['output']==str(output(run)),'CANDIDATE_PACKAGE_OUTPUT_DRIFT')
+     require(c['SUMO_execution_authorized'] is False and c['numerical_exception_authority']['enabled'] is False,'OFFLINE_OR_NUM_SCOPE_DRIFT')
+     require(c['user_authorization']=={'path':str(USER),'sha256':sha(root/USER),'scope':'DIRECT_APPROVED_CONTRACT_REQUIRES_EXACT_CARD_BINDING'},'OFFLINE_USER_BINDING_DRIFT')
+@@ -149,23 +152,23 @@
+     root=Path(root).resolve();c=validate(card_path,root,require_environment=True);run=c['spec']['run_id']
+     auth_path=root/TASK/'authorizations_v1'/run/'AUTHORIZATION_NATIVE_EXECUTION.json'
+     require(auth_path.is_file(),'FUTURE_EXACT_NATIVE_AUTHORIZATION_MISSING')
+-    auth=json.loads(auth_path.read_text());expected=root/TASK/'releases'/run/'EXECUTION_RELEASE.json'
++    auth=json.loads(auth_path.read_text());require_contract(auth.get('yellow_responsibility_contract'));expected=root/TASK/'releases'/run/'EXECUTION_RELEASE.json'
+     require(auth.get('SUMO_execution_authorized') is True and auth.get('run_id')==run and auth.get('card_sha256')==sha(Path(card_path)),'FUTURE_NATIVE_AUTHORIZATION_UNBOUND')
+     ref=Path(auth['human_authorization_reference']);require(not ref.is_absolute() and '..' not in ref.parts and ref!=USER,'CANNOT_INHERIT_OFFLINE_AUTHORITY')
+-    human=json.loads((root/ref).read_text());require(sha(root/ref)==auth['human_authorization_sha256'],'FUTURE_HUMAN_APPROVAL_DRIFT')
++    human=json.loads((root/ref).read_text());require_contract(human.get('yellow_responsibility_contract'));require(sha(root/ref)==auth['human_authorization_sha256'],'FUTURE_HUMAN_APPROVAL_DRIFT')
+     require(human.get('source')=='root exact-card binding under direct human approved scope' and human.get('approval_source_reference')==str(USER) and human.get('approval_source_sha256')==sha(root/USER) and human.get('SUMO_execution_authorized') is True and
+         human.get('run_id')==run and human.get('card_sha256')==sha(Path(card_path)) and human.get('common_runtime_source_sha256')==c['common_runtime_source_sha256'] and
+         human.get('end_s')==c['spec']['end_s'] and human.get('catalogue_periods_s')==list(range(8,25)) and human.get('mode')==c['spec']['mode'] and human.get('numerical_exception_enabled') is False and human.get('resources')==c['resources'] and human.get('resource_envelope')==c['proposed_new_single_run_envelope'] and human.get('combined_resource_envelope')==c['new_two_run_envelope'],
+         'FUTURE_HUMAN_RUN_SOURCE_STRICT_NUM_RESOURCE_APPROVAL_UNBOUND')
+     require(auth.get('numerical_exception_enabled') is False and auth.get('resources')==c['resources'] and auth.get('resource_envelope')==c['proposed_new_single_run_envelope'] and auth.get('combined_resource_envelope')==c['new_two_run_envelope'],'FUTURE_NATIVE_CAPS_OR_NUM_UNBOUND')
+     require(Path(release_path).resolve()==expected and expected.is_file(),'FUTURE_CANONICAL_RELEASE_MISSING')
+-    release=json.loads(expected.read_text());require(release.get('run_id')==run and release.get('card_sha256')==sha(Path(card_path)) and release.get('SUMO_execution_authorized') is True and
++    release=json.loads(expected.read_text());require_contract(release.get('yellow_responsibility_contract'));require(release.get('run_id')==run and release.get('card_sha256')==sha(Path(card_path)) and release.get('SUMO_execution_authorized') is True and
+         release.get('authorization_sha256')==sha(auth_path),'FUTURE_RELEASE_UNBOUND')
+     require(set(release.get('reviews',{}))=={'engineering','data','science'},'FUTURE_THREE_ROLE_RELEASE_MISSING')
+     for item in release['reviews'].values():require(sha(root/item['path'])==item['sha256'] and item.get('card_sha256')==sha(Path(card_path)),'FUTURE_REVIEW_HASH_OR_CARD_UNBOUND')
+     audit=release['reviews']['data']
+     require(audit.get('audit_contract')=='CUMULATIVE_FULL_C_N_V1' and
+-        audit.get('actual_reader_path')=='scripts/dynamic_minimum_qualification_audit_20261015_v1/actual.py' and
++        audit.get('actual_reader_path')=='scripts/dynamic_native_yellow_minqual_audit_20261015_v1/actual.py' and
+         sha(root/audit['actual_reader_path'])==audit.get('actual_reader_sha256'),
+         'CUMULATIVE_ACTUAL_READER_NOT_REVIEWED_AND_BOUND')
+     return c
+--- protected_nativegap/budget.py
++++ isolated_nativeyellow/budget.py
+@@ -1,8 +1,10 @@
+-"""Approved NEW-stage envelope. Unsettled reservations charge their full ceilings."""
++"""Same approved600s stage. Settled prior cost and unknown reservations remain charged."""
+ from pathlib import Path
+ import json, math
+ from src.candidate_a_issue12_packet_policy_20261012.budget import sha, require
+-from src.candidate_a_dynamic_minqual_20261015.profile import RUNS
++from src.candidate_a_native_yellow_minqual_20261015.profile import RUNS
++from src.candidate_a_dynamic_minqual_20261015.profile import RUNS as PREVIOUS_RUNS
++ACCOUNTING_RUNS = set(PREVIOUS_RUNS) | set(RUNS)
+ TOTAL_WALL=600
+ TOTAL_BYTES=None
+ SINGLE_WALL=300
+@@ -14,7 +16,7 @@
+ def accounting(root):
+     root=Path(root);known={};unknown=[];wall=0.;size=0
+     for parent in (root/RAW).iterdir() if (root/RAW).exists() else ():
+-        require(parent.is_dir() and parent.name in RUNS, 'UNKNOWN_NEW_RAW_ALLOCATION')
++        require(parent.is_dir() and parent.name in ACCOUNTING_RUNS, 'UNKNOWN_NEW_RAW_ALLOCATION')
+         settlement=root/SETTLEMENTS/parent.name/'SETTLEMENT.json'
+         if not settlement.exists():
+             unknown.append(parent.name);wall+=300;size+=sum(p.stat().st_size for p in parent.rglob("*") if p.is_file());continue
+@@ -38,7 +40,7 @@
+     return dict(known_settled=known,unknown_reserved=unknown,charged_monitored_s=wall,
+         charged_raw_bytes=size,remaining_s=TOTAL_WALL-wall,remaining_bytes=None,
+         selected_total_limits={'wall_s':TOTAL_WALL,'bytes':TOTAL_BYTES},fixed_start_count_limit=None,
+-        scope='ONLY_NEW_TWO_MINQUAL_IDENTITIES; ALL_OLD_STAGES_EXCLUDED')
++        scope='SAME600_STAGE_INCLUDING_SETTLED_NATIVEGAP_AND_NEW_YELLOW_IDENTITIES_NO_RESET')
+ 
+ 
+ def effective_limits(resources,bound):

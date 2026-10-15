@@ -1,0 +1,26 @@
+test_Y3_unknown_stops_both_paths_before_first_yellow_motion (test_candidate.CandidateTests.test_Y3_unknown_stops_both_paths_before_first_yellow_motion) ... ok
+test_offline_card_no_authorization_rejects_before_allocation_import_and_900_preserved (test_candidate.CandidateTests.test_offline_card_no_authorization_rejects_before_allocation_import_and_900_preserved) ... ERROR
+test_original_gates_and_strict_NUM_remain (test_candidate.CandidateTests.test_original_gates_and_strict_NUM_remain) ... ok
+test_real_helper_both_clock_paths_dynamic_red_and_uncapped_accounting (test_candidate.CandidateTests.test_real_helper_both_clock_paths_dynamic_red_and_uncapped_accounting) ... ok
+
+======================================================================
+ERROR: test_offline_card_no_authorization_rejects_before_allocation_import_and_900_preserved (test_candidate.CandidateTests.test_offline_card_no_authorization_rejects_before_allocation_import_and_900_preserved)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/private/tmp/unified-actuator-clean-voi30_ie/checkout/tests/candidate_a_t10_g5_y3_20261013/test_candidate.py", line 116, in test_offline_card_no_authorization_rejects_before_allocation_import_and_900_preserved
+    p=profile.prepare();c=profile.validate(p,require_environment=True)
+  File "/private/tmp/unified-actuator-clean-voi30_ie/checkout/src/candidate_a_t10_g5_y3_20261013/profile.py", line 73, in prepare
+    if card.exists():validate(card,root);return card
+                     ~~~~~~~~^^^^^^^^^^^
+  File "/private/tmp/unified-actuator-clean-voi30_ie/checkout/src/candidate_a_t10_g5_y3_20261013/profile.py", line 105, in validate
+    require(Path(cfg.find('./input/'+tag).get('value')).resolve()==path.resolve(),'FOREIGN_RUNTIME_INPUT')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/private/tmp/unified-actuator-clean-voi30_ie/checkout/src/candidate_a_native_smoke_20261011/bridge_card.py", line 32, in require
+    if not condition:raise ValueError(why)
+                     ^^^^^^^^^^^^^^^^^^^^^
+ValueError: FOREIGN_RUNTIME_INPUT
+
+----------------------------------------------------------------------
+Ran 4 tests in 19.387s
+
+FAILED (errors=1)

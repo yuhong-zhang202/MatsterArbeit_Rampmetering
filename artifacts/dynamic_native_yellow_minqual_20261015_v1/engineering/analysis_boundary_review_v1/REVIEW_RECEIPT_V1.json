@@ -1,0 +1,79 @@
+{
+  "classification": "READ_ONLY_ENGINEERING_REVIEW_POSTANALYSIS_COMPATIBILITY_NOT_NEW_NATIVE_QUALIFICATION",
+  "utc": "2026-10-15T00:28:17.525046+00:00",
+  "required_context_reviewed": [
+    "AGENTS.md",
+    "docs/PROJECT_STATE.md",
+    "docs/DECISIONS.md",
+    "docs/EXPERIMENT_PROTOCOL.md",
+    "docs/WORKLOG.md"
+  ],
+  "formal_protocol_bytes": 0,
+  "new_SUMO_or_test_commands": 0,
+  "protected154_all_exact": true,
+  "card_source_digest": "089a2fefb9fb4d68aced499b532636c3a551b672f9130a1fd2e6acb468ff4ae2",
+  "postanalysis_not_execution_card_source": true,
+  "terminal_observed": {
+    "last_ACK": {
+      "requested_target_s": 1296,
+      "ACK_received": true,
+      "actual_readback_s": 1296.0,
+      "actual_time_verified": true
+    },
+    "cycle": {
+      "begin_s": 1289,
+      "end_s": 1297,
+      "completed": false,
+      "green_end_s": 1293,
+      "yellow_s": 2,
+      "phase_exposure_s": {
+        "G": 4,
+        "y": 2,
+        "r": 1
+      }
+    },
+    "post_time_begin_s": 1295,
+    "post_time_end_s": 1296,
+    "post_motion": "r",
+    "post_phase_observation": {
+      "phase_before": 1,
+      "state_before": "y",
+      "next_switch_before_s": 1295.0,
+      "phase_after": 2,
+      "state_after": "r",
+      "next_switch_after_s": 1297.0
+    },
+    "post_phase_clock_binding": {
+      "cycle_id": 11,
+      "program": "I12_PACKET8",
+      "motion": "r",
+      "expected_post_nextSwitch_s": 1297,
+      "actual_post_nextSwitch_s": 1297.0,
+      "status": "ACK_OBSERVED_NOT_FUTURE_SAFETY"
+    },
+    "duration_records_at1296": []
+  },
+  "reviewed_test_receipt": {
+    "classification": "POSTANALYSIS_BOUNDARY_COMPATIBILITY_ONLY_NOT_NATIVE_SOURCE",
+    "affected_regression_command": "python3 data/processed/dynamic_native_yellow_minqual_20261015_v1/native_alinea_v2/test_phase_boundary_V3.py -v",
+    "exit_code": 0,
+    "methods": 1,
+    "seconds": 0.012,
+    "earlier_fixture_import_failure": {
+      "test": "data/processed/dynamic_native_yellow_minqual_20261015_v1/native_alinea_v2/test_phase_boundary_V2.py",
+      "log": "data/processed/dynamic_native_yellow_minqual_20261015_v1/native_alinea_v2/BOUNDARY_REGRESSION_V2.log",
+      "actual_exit_code": 1,
+      "reason": "project root absent from sys.path; no tests ran; only newV3 test prepends root, previous bytes preserved"
+    },
+    "original_phase_counterexample": "RED_DURATION_TRACE_COVERAGE expected failure on original exact actual phase subset, asserted by passing regression",
+    "new_sources_sha256": {
+      "data/processed/dynamic_native_yellow_minqual_20261015_v1/native_alinea_v2/actual_postanalysis_V2.py": "57aee0b9bf7b1498d3d2f7530bb449225ceb691e3d073dfac3bfe03862ee896a",
+      "data/processed/dynamic_native_yellow_minqual_20261015_v1/native_alinea_v2/phase_boundary_V2.py": "ff1aacdf25b4bcb13247003aef0b6fef651143af17e68d6514b36f73aac2f9e7",
+      "data/processed/dynamic_native_yellow_minqual_20261015_v1/native_alinea_v2/test_phase_boundary_V3.py": "de563206310b7e153353eb0e23ba271cd940d40af80905c1d666f99f3427b5a6"
+    },
+    "old154_runtime_unchanged": true,
+    "full_corrected_actual_audit_not_yet_executed": true
+  },
+  "raw_manifest_reused": "artifacts/dynamic_native_yellow_minqual_20261015_v1/engineering/native_execution_v1/UA_NATIVEYELLOW_ALINEA_S17_01/RAW_FINAL_SHA256_V1.json",
+  "raw_manifest_sha256": "879ec71f1bad2e6aebbb637a98c7fddb014306efd246d0f1ad4377804944cb04"
+}

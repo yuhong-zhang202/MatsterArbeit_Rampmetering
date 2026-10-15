@@ -1,0 +1,50 @@
+{
+  "status": "CONFIRMED_PROJECT_BRAKING_CONTRACT_FAIL_KNOWN_VALUES",
+  "vehicle_id": "R_flow.13",
+  "interval_BEGIN": 1264,
+  "actual_ACK": 1265,
+  "actual_phase": "y",
+  "actual_program": "I12_PACKET10",
+  "FCD_motion_frame_labels": {
+    "1263": {
+      "id": "R_flow.13",
+      "x": "1220.32802209",
+      "y": "863.35569163",
+      "angle": "60.63542918",
+      "type": "technical_passenger",
+      "speed": "4.69222772",
+      "pos": "203.97137014",
+      "lane": "ramp_storage_0",
+      "slope": "0.00000000"
+    },
+    "1264": {
+      "id": "R_flow.13",
+      "x": "1220.49467410",
+      "y": "863.44945949",
+      "angle": "60.63542918",
+      "type": "technical_passenger",
+      "speed": "0.19122772",
+      "pos": "204.16259786",
+      "lane": "ramp_storage_0",
+      "slope": "0.00000000"
+    }
+  },
+  "before_speed_m_s": 4.69222772465427,
+  "after_speed_m_s": 0.19122772465426985,
+  "actual_delta_speed_m_s2": -4.501,
+  "actual_native_acceleration_m_s2": -4.501,
+  "normal_bound_m_s2": -4.5,
+  "preserved_tolerance": 1e-06,
+  "excess_deceleration_beyond_normal_m_s2": 0.001000000000000334,
+  "excess_beyond_tolerant_limit_m_s2": 0.0009990000000001942,
+  "actual_after_distance_to_stopline_m": 0.3274021400000038,
+  "front_crossed": false,
+  "body_spanning_line": false,
+  "local_before_screen_clear_possible": true,
+  "actual_native_branch_proven": false,
+  "native_universal_unsafety_proven": false,
+  "input_hashes": {
+    "artifacts/unified_alinea_actuator_20261013_v1/engineering/runs/UA_FIXED750_S17_01/STOP_INPUT_DETAIL_V1.json": "5583230219cd667fe0bf4888ca48449b50fd76cb065174744763db409044541a",
+    "data/raw/unified_alinea_actuator_20261013_v1/UA_FIXED750_S17_01/outputs/fcd.xml.gz": "4e1e1fc08e634ddf8c725c52e2f40b216b0f0d0342fbddb0c362e65c80cc97ad"
+  }
+}

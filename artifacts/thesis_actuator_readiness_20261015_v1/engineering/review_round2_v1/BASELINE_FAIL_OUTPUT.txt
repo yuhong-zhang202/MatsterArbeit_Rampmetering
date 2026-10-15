@@ -1,0 +1,46 @@
+test_setter_partial_application_is_durable_and_stops_before_more_motion (test_natural.NaturalTests.test_setter_partial_application_is_durable_and_stops_before_more_motion) ... 
+  test_setter_partial_application_is_durable_and_stops_before_more_motion (test_natural.NaturalTests.test_setter_partial_application_is_durable_and_stops_before_more_motion) (target=0, kind='setter') ... FAIL
+  test_setter_partial_application_is_durable_and_stops_before_more_motion (test_natural.NaturalTests.test_setter_partial_application_is_durable_and_stops_before_more_motion) (target=600, kind='setter') ... FAIL
+  test_setter_partial_application_is_durable_and_stops_before_more_motion (test_natural.NaturalTests.test_setter_partial_application_is_durable_and_stops_before_more_motion) (target=600, kind='readback') ... FAIL
+  test_setter_partial_application_is_durable_and_stops_before_more_motion (test_natural.NaturalTests.test_setter_partial_application_is_durable_and_stops_before_more_motion) (target=603, kind='yellow') ... FAIL
+
+======================================================================
+FAIL: test_setter_partial_application_is_durable_and_stops_before_more_motion (test_natural.NaturalTests.test_setter_partial_application_is_durable_and_stops_before_more_motion) (target=0, kind='setter')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_natural_service_20261015/test_natural.py", line 219, in test_setter_partial_application_is_durable_and_stops_before_more_motion
+    self.assertTrue(path.is_file(),'Setter outcome must survive failure before pre_steps is written')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Setter outcome must survive failure before pre_steps is written
+
+======================================================================
+FAIL: test_setter_partial_application_is_durable_and_stops_before_more_motion (test_natural.NaturalTests.test_setter_partial_application_is_durable_and_stops_before_more_motion) (target=600, kind='setter')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_natural_service_20261015/test_natural.py", line 219, in test_setter_partial_application_is_durable_and_stops_before_more_motion
+    self.assertTrue(path.is_file(),'Setter outcome must survive failure before pre_steps is written')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Setter outcome must survive failure before pre_steps is written
+
+======================================================================
+FAIL: test_setter_partial_application_is_durable_and_stops_before_more_motion (test_natural.NaturalTests.test_setter_partial_application_is_durable_and_stops_before_more_motion) (target=600, kind='readback')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_natural_service_20261015/test_natural.py", line 219, in test_setter_partial_application_is_durable_and_stops_before_more_motion
+    self.assertTrue(path.is_file(),'Setter outcome must survive failure before pre_steps is written')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Setter outcome must survive failure before pre_steps is written
+
+======================================================================
+FAIL: test_setter_partial_application_is_durable_and_stops_before_more_motion (test_natural.NaturalTests.test_setter_partial_application_is_durable_and_stops_before_more_motion) (target=603, kind='yellow')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_natural_service_20261015/test_natural.py", line 219, in test_setter_partial_application_is_durable_and_stops_before_more_motion
+    self.assertTrue(path.is_file(),'Setter outcome must survive failure before pre_steps is written')
+    ~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: False is not true : Setter outcome must survive failure before pre_steps is written
+
+----------------------------------------------------------------------
+Ran 1 test in 1.840s
+
+FAILED (failures=4)

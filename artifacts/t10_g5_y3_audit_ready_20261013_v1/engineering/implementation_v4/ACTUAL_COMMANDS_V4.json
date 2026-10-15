@@ -1,0 +1,31 @@
+{
+  "commands": [
+    {
+      "command": ".venv/bin/python -m unittest tests.t10_g5_y3_audit_20261013.test_audit.AuditTests.test_nonactive_pool_independent_binding_and_terminal_scope -v",
+      "version": "historical V3 evidence.py",
+      "result": "FAIL_OLD_OMISSION_NOT_REJECTED",
+      "exit_code": 1,
+      "seconds": 0.0,
+      "log": "NONACTIVE_OMISSION_OLD_SOURCE_FAIL_V1.log"
+    },
+    {
+      "command": ".venv/bin/python -m unittest tests.t10_g5_y3_audit_20261013.test_audit.AuditTests.test_nonactive_pool_independent_binding_and_terminal_scope tests.t10_g5_y3_audit_20261013.test_audit.AuditTests.test_extra_PRE_identity_prefix_valid_and_unknown_cases tests.t10_g5_y3_audit_20261013.test_audit.AuditTests.test_public_fixture_real_card_gates_and_unchanged_motion_bridge -v",
+      "result": "PASS",
+      "exit_code": 0,
+      "methods": 3,
+      "seconds": 0.239,
+      "log": "AFFECTED_POOLS_V4.log"
+    },
+    {
+      "command": "current prepare and check-card using existing .venv CLI",
+      "result": "PASS",
+      "exit_code": 0,
+      "logs": [
+        "PREPARE_CARD_V4.log",
+        "CARD_CHECK_V4.log"
+      ]
+    }
+  ],
+  "native_starts": 0,
+  "full_suite_rerun": false
+}

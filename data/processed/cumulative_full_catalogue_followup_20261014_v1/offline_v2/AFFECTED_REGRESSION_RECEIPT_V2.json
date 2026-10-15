@@ -1,0 +1,23 @@
+{
+  "old_command": "FOLLOWUP_OLD_ACTUAL_RESOURCE_SOURCE=data/processed/cumulative_full_catalogue_followup_20261014_v1/offline_v2/source_preimage/actual.py .venv/bin/python -B -m unittest discover -s tests/cumulative_full_catalogue_followup_audit_20261014 -k single_vs_aggregate -v",
+  "old_exit": 1,
+  "old_methods": 1,
+  "old_elapsed_s": 0.005,
+  "old_failure": "180 charged +180 current incorrectly alarmed by old exact AST rule (300 aggregate)",
+  "new_command": ".venv/bin/python -B -m unittest discover -s tests/cumulative_full_catalogue_followup_audit_20261014 -k single_vs_aggregate -v",
+  "new_exit": 0,
+  "new_methods": 1,
+  "new_elapsed_s": 0.004,
+  "coverage": [
+    "180 charged+180 current =>PASS",
+    "301 current+0 charged =>alarm",
+    "180 current+421 charged =>aggregate alarm",
+    "actual.py calls tested helper"
+  ],
+  "reader_sources_sha256": {
+    "scripts/cumulative_full_catalogue_followup_audit_20261014_v1/scope.py": "7474fc058373c89cf4dc92cb68948f452452f2a10c8c32183ff614cd09d3f468",
+    "scripts/cumulative_full_catalogue_followup_audit_20261014_v1/actual.py": "079ed69575bff44454ed361862f38d4b40cb6df48f3f897d4e107711ec9ba5c4"
+  },
+  "test_sha256": "56c177be00c8083162773eb941ce7ff4ceccb6246621eecdec56a1fd76335be2",
+  "scope": "ONE_AFFECTED_OFFLINE_METHOD_NO_NATIVE_NO_UNAFFECTED_SUITE_RERUN"
+}

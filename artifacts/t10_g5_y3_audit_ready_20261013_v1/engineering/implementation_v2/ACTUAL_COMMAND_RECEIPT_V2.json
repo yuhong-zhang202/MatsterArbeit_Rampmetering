@@ -1,0 +1,43 @@
+{
+  "classification": "OFFLINE_ONLY_SYNTHETIC_NO_SUMO",
+  "commands": [
+    {
+      "command": ".venv/bin/python -m unittest tests.t10_g5_y3_audit_20261013.test_audit -v",
+      "source_version": "pre_telemetry_v1",
+      "result": "PASS",
+      "methods": 5,
+      "seconds": 0.166,
+      "log": "../implementation_v1/OFFLINE_TESTS_V2.log"
+    },
+    {
+      "command": ".venv/bin/python -m unittest tests.t10_g5_y3_audit_20261013.test_audit -v",
+      "source_version": "telemetry_v2",
+      "result": "PASS",
+      "methods": 6,
+      "seconds": 0.184,
+      "log": "OFFLINE_TESTS_V3.log"
+    },
+    {
+      "command": ".venv/bin/python scripts/candidate_a_t10_g5_y3_audit_ready_20261013_v1/cli.py --prepare",
+      "result": "PASS",
+      "exit_code": 0,
+      "log": "PREPARE_CARD_V2.log"
+    },
+    {
+      "command": ".venv/bin/python scripts/candidate_a_t10_g5_y3_audit_ready_20261013_v1/cli.py --check-card artifacts/t10_g5_y3_audit_ready_20261013_v1/engineering/packages_v2/UA_T10_G5Y3_FIXED750_S17_02/card.json",
+      "result": "PASS",
+      "exit_code": 0,
+      "log": "CARD_CHECK_V2.log"
+    },
+    {
+      "command": ".venv/bin/python scripts/t10_g5_y3_audit_20261013_v1/actual.py --manifest data/processed/t10_g5_y3_audit_ready_20261013_v1/engineering_offline_v1/NO_NATIVE_MANIFEST_PROBE_V1.json --card artifacts/t10_g5_y3_audit_ready_20261013_v1/engineering/packages_v2/UA_T10_G5Y3_FIXED750_S17_02/card.json --output data/processed/t10_g5_y3_audit_ready_20261013_v1/engineering_offline_v1/no_native_probe_result_v2",
+      "result": "EXPECTED_REJECTION_NO_ACTUAL_RAW_RUN",
+      "exit_code": 1,
+      "log": "NO_NATIVE_AUDIT_PROBE_V2.log"
+    }
+  ],
+  "runtime_card_frozen_after_last_helper_source_change": true,
+  "last_change_note": "After six tests, actual reader extra-last-PRE identity join added; CLI probe imported final actual source and correctly rejected absent native raw. Existing focused predicates unchanged; no additional broad suite.",
+  "future_actual_observations": "ALL_NULL",
+  "new_native_starts": 0
+}

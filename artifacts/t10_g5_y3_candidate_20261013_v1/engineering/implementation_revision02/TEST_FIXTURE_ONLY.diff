@@ -1,0 +1,56 @@
+--- 0394949/test_candidate.py
++++ revision02/test_candidate.py
+@@ -2,7 +2,7 @@
+ from pathlib import Path
+ from types import SimpleNamespace
+ from unittest.mock import patch
+-import importlib.util,json,tempfile,time,unittest
++import importlib.util,json,tempfile,time,unittest,shutil
+ from src.candidate_a_t10_g5_y3_20261013 import profile,bridge
+ from src.candidate_a_t10_g5_y3_20261013.policy import Ledger,Command,parameters
+ from src.candidate_a_t10_g5_y3_20261013.adapter import StepAdapter,inventory
+@@ -113,12 +113,35 @@
+    q=current_following(w,'R_flow.2',1206);self.assertEqual(q['status'],'STOP_CURRENT_GAP_BOUND_DENIED');self.assertEqual(q['margin_m'],1.1);self.assertEqual(q['getSecureGap_args']['leaderMaxDecel'],9.)
+ 
+  def test_offline_card_no_authorization_rejects_before_allocation_import_and_900_preserved(self):
+-  p=profile.prepare();c=profile.validate(p,require_environment=True)
+-  self.assertFalse(c['SUMO_execution_authorized']);self.assertFalse(c['numerical_exception_authority']['enabled'])
+-  with patch.object(bridge,'protected_worker',side_effect=AssertionError('must not import worker')) as worker:
+-   with self.assertRaisesRegex(ValueError,'FUTURE_EXACT_NATIVE_AUTHORIZATION_MISSING'):bridge.execute(p,profile.ROOT/profile.TASK/'releases'/profile.RUN/'EXECUTION_RELEASE.json')
+-   worker.assert_not_called()
+-  self.assertFalse((profile.ROOT/profile.output(profile.RUN)).parent.exists())
+-  from src.candidate_a_unified_alinea_20261013.policy import parameters as original
+-  self.assertEqual(original(8)['phases'],(('G',4,1),('y',2,2),('r',2,0)))
+-  self.assertEqual(c['sources_sha256']['src/candidate_a_unified_alinea_20261013/policy.py'],profile.sha(profile.ROOT/'src/candidate_a_unified_alinea_20261013/policy.py'))
++  # Public cards are intentionally host-bound. Build a separate offline fixture
++  # rather than relaxing source/input/path gates or rewriting the real card.
++  original_root=profile.ROOT
++  public_package=original_root/profile.TASK/'packages'/profile.RUN
++  public=json.loads((public_package/'card.json').read_text())
++  donor=json.loads((original_root/profile.DONOR/'card.json').read_text())
++  paths=set(public['sources_sha256'])|set(donor['prepared_input_sha256'])|{str(profile.NETWORK),str(profile.DONOR/'card.json')}
++  def copy_public_dependencies(target):
++   for rel in paths:
++    dest=target/rel;dest.parent.mkdir(parents=True,exist_ok=True)
++    shutil.copyfile(original_root/rel,dest)
++  with tempfile.TemporaryDirectory() as tmp:
++   foreign=Path(tmp)/'foreign';copy_public_dependencies(foreign)
++   pkg=foreign/profile.TASK/'packages'/profile.RUN;pkg.mkdir(parents=True)
++   for name in ('card.json','demand.rou.xml','scenario.sumocfg','scenario.add.xml'):
++    shutil.copyfile(public_package/name,pkg/name)
++   with self.assertRaisesRegex(ValueError,'FOREIGN_RUNTIME_INPUT'):
++    profile.validate(pkg/'card.json',root=foreign,require_environment=True)
++   fixture=(Path(tmp)/'fixture').resolve();copy_public_dependencies(fixture)
++   p=profile.prepare(root=fixture);c=profile.validate(p,root=fixture,require_environment=True)
++   self.assertFalse(c['SUMO_execution_authorized']);self.assertFalse(c['numerical_exception_authority']['enabled'])
++   release=fixture/profile.TASK/'releases'/profile.RUN/'EXECUTION_RELEASE.json'
++   with patch.object(bridge,'ROOT',fixture),patch.object(bridge,'protected_worker',side_effect=AssertionError('must not import worker')) as worker:
++    with self.assertRaisesRegex(ValueError,'FUTURE_EXACT_NATIVE_AUTHORIZATION_MISSING'):
++     bridge.execute(p,release,root=fixture)
++    worker.assert_not_called()
++   self.assertFalse((fixture/profile.output(profile.RUN)).parent.exists())
++   self.assertFalse((fixture/profile.TASK/'authorizations').exists())
++   self.assertFalse((fixture/profile.TASK/'releases').exists())
++   from src.candidate_a_unified_alinea_20261013.policy import parameters as original
++   self.assertEqual(original(8)['phases'],(('G',4,1),('y',2,2),('r',2,0)))
++   self.assertEqual(c['sources_sha256']['src/candidate_a_unified_alinea_20261013/policy.py'],profile.sha(fixture/'src/candidate_a_unified_alinea_20261013/policy.py'))

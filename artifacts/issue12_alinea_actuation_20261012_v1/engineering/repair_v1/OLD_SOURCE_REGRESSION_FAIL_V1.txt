@@ -1,0 +1,25 @@
+test_real_worker_duration_dispatch_and_actual_red_clock (tests.candidate_a_issue12_signal_policy_20261012.test_policy.PolicyTests.test_real_worker_duration_dispatch_and_actual_red_clock)
+Compose the actual protected allowlist, never an arbitrary-method fake. ... ERROR
+
+======================================================================
+ERROR: test_real_worker_duration_dispatch_and_actual_red_clock (tests.candidate_a_issue12_signal_policy_20261012.test_policy.PolicyTests.test_real_worker_duration_dispatch_and_actual_red_clock)
+Compose the actual protected allowlist, never an arbitrary-method fake.
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_issue12_signal_policy_20261012/test_policy.py", line 126, in test_real_worker_duration_dispatch_and_actual_red_clock
+    _diagnostic_loop(w,real,cap,out,{'wall_limit_s':300,'minimum_free_bytes':0,'run_limit_bytes':300000000},fixture.old.fixture.fixture.FakeProcess(),time.monotonic(),a)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_issue12_signal_policy_20261012/bridge.py", line 189, in _diagnostic_loop
+    policy_after_ack(conn,adapter,worker,output)
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_issue12_signal_policy_20261012/bridge.py", line 131, in policy_after_ack
+    worker.request_phase(conn.trafficlight,requests,t,'setPhaseDuration',remaining)
+    ~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/candidate_a_qualification_20261008_v1/worker.py", line 101, in request_phase
+    raise ValueError('unsupported phase request')
+ValueError: unsupported phase request
+
+----------------------------------------------------------------------
+Ran 1 test in 2.316s
+
+FAILED (errors=1)

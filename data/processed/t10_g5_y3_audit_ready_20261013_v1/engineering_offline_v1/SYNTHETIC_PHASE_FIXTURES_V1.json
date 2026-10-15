@@ -1,0 +1,2433 @@
+{
+  "classification": "SYNTHETIC_OFFLINE_NOT_ACTUAL_SUMO",
+  "cases": [
+    {
+      "fixture": {
+        "classification": "SYNTHETIC_NOT_OBSERVED",
+        "posts": [
+          {
+            "time_begin_s": 1200,
+            "time_end_s": 1201,
+            "accounting_complete": true,
+            "motion": "G",
+            "rate_chain": {
+              "pending_request_id": "fixed",
+              "input_origin": "FIXED",
+              "r_final_veh_h": 750,
+              "r_policy_pending_veh_h": 720.0,
+              "applied_request_id": "fixed",
+              "period_s": 10,
+              "requested_quota": 2,
+              "r_policy_applied_veh_h": 720.0,
+              "cycle_application_delay_s": null
+            },
+            "actual_crossings": [
+              {
+                "vehicle_id": "R_flow.0"
+              }
+            ],
+            "accounting": {
+              "C": 0.20833333333333334,
+              "C_mapped_pending": 0.2,
+              "C_applied": 0.2,
+              "E": 0,
+              "N": 1,
+              "policy_quantization": 0.008333333333333333,
+              "application_latency": 0.0,
+              "C_applied_minus_E": 0.2,
+              "E_minus_N": -1
+            },
+            "phase_observation": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "phase_after": 0,
+              "state_after": "G",
+              "next_switch_after_s": 1205
+            }
+          },
+          {
+            "time_begin_s": 1201,
+            "time_end_s": 1202,
+            "accounting_complete": true,
+            "motion": "G",
+            "rate_chain": {
+              "pending_request_id": "fixed",
+              "input_origin": "FIXED",
+              "r_final_veh_h": 750,
+              "r_policy_pending_veh_h": 720.0,
+              "applied_request_id": "fixed",
+              "period_s": 10,
+              "requested_quota": 2,
+              "r_policy_applied_veh_h": 720.0,
+              "cycle_application_delay_s": 0
+            },
+            "actual_crossings": [],
+            "accounting": {
+              "C": 0.4166666666666667,
+              "C_mapped_pending": 0.4,
+              "C_applied": 0.4,
+              "E": 0,
+              "N": 1,
+              "policy_quantization": 0.016666666666666666,
+              "application_latency": 0.0,
+              "C_applied_minus_E": 0.4,
+              "E_minus_N": -1
+            },
+            "phase_observation": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "phase_after": 0,
+              "state_after": "G",
+              "next_switch_after_s": 1205
+            }
+          },
+          {
+            "time_begin_s": 1202,
+            "time_end_s": 1203,
+            "accounting_complete": true,
+            "motion": "G",
+            "rate_chain": {
+              "pending_request_id": "fixed",
+              "input_origin": "FIXED",
+              "r_final_veh_h": 750,
+              "r_policy_pending_veh_h": 720.0,
+              "applied_request_id": "fixed",
+              "period_s": 10,
+              "requested_quota": 2,
+              "r_policy_applied_veh_h": 720.0,
+              "cycle_application_delay_s": 0
+            },
+            "actual_crossings": [],
+            "accounting": {
+              "C": 0.625,
+              "C_mapped_pending": 0.6,
+              "C_applied": 0.6,
+              "E": 0,
+              "N": 1,
+              "policy_quantization": 0.025,
+              "application_latency": 0.0,
+              "C_applied_minus_E": 0.6,
+              "E_minus_N": -1
+            },
+            "phase_observation": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "phase_after": 0,
+              "state_after": "G",
+              "next_switch_after_s": 1205
+            }
+          },
+          {
+            "time_begin_s": 1203,
+            "time_end_s": 1204,
+            "accounting_complete": true,
+            "motion": "G",
+            "rate_chain": {
+              "pending_request_id": "fixed",
+              "input_origin": "FIXED",
+              "r_final_veh_h": 750,
+              "r_policy_pending_veh_h": 720.0,
+              "applied_request_id": "fixed",
+              "period_s": 10,
+              "requested_quota": 2,
+              "r_policy_applied_veh_h": 720.0,
+              "cycle_application_delay_s": 0
+            },
+            "actual_crossings": [
+              {
+                "vehicle_id": "R_flow.1"
+              }
+            ],
+            "accounting": {
+              "C": 0.8333333333333334,
+              "C_mapped_pending": 0.8,
+              "C_applied": 0.8,
+              "E": 0,
+              "N": 2,
+              "policy_quantization": 0.03333333333333333,
+              "application_latency": 0.0,
+              "C_applied_minus_E": 0.8,
+              "E_minus_N": -2
+            },
+            "phase_observation": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "phase_after": 0,
+              "state_after": "G",
+              "next_switch_after_s": 1205
+            }
+          },
+          {
+            "time_begin_s": 1204,
+            "time_end_s": 1205,
+            "accounting_complete": true,
+            "motion": "y",
+            "rate_chain": {
+              "pending_request_id": "fixed",
+              "input_origin": "FIXED",
+              "r_final_veh_h": 750,
+              "r_policy_pending_veh_h": 720.0,
+              "applied_request_id": "fixed",
+              "period_s": 10,
+              "requested_quota": 2,
+              "r_policy_applied_veh_h": 720.0,
+              "cycle_application_delay_s": 0
+            },
+            "actual_crossings": [],
+            "accounting": {
+              "C": 1.0416666666666667,
+              "C_mapped_pending": 1.0,
+              "C_applied": 1.0,
+              "E": 0,
+              "N": 2,
+              "policy_quantization": 0.041666666666666664,
+              "application_latency": 0.0,
+              "C_applied_minus_E": 1.0,
+              "E_minus_N": -2
+            },
+            "phase_observation": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1204,
+              "phase_after": 1,
+              "state_after": "y",
+              "next_switch_after_s": 1207
+            }
+          },
+          {
+            "time_begin_s": 1205,
+            "time_end_s": 1206,
+            "accounting_complete": true,
+            "motion": "y",
+            "rate_chain": {
+              "pending_request_id": "fixed",
+              "input_origin": "FIXED",
+              "r_final_veh_h": 750,
+              "r_policy_pending_veh_h": 720.0,
+              "applied_request_id": "fixed",
+              "period_s": 10,
+              "requested_quota": 2,
+              "r_policy_applied_veh_h": 720.0,
+              "cycle_application_delay_s": 0
+            },
+            "actual_crossings": [],
+            "accounting": {
+              "C": 1.25,
+              "C_mapped_pending": 1.2,
+              "C_applied": 1.2,
+              "E": 0,
+              "N": 2,
+              "policy_quantization": 0.05,
+              "application_latency": 0.0,
+              "C_applied_minus_E": 1.2,
+              "E_minus_N": -2
+            },
+            "phase_observation": {
+              "phase_before": 1,
+              "state_before": "y",
+              "next_switch_before_s": 1207,
+              "phase_after": 1,
+              "state_after": "y",
+              "next_switch_after_s": 1207
+            }
+          },
+          {
+            "time_begin_s": 1206,
+            "time_end_s": 1207,
+            "accounting_complete": true,
+            "motion": "y",
+            "rate_chain": {
+              "pending_request_id": "fixed",
+              "input_origin": "FIXED",
+              "r_final_veh_h": 750,
+              "r_policy_pending_veh_h": 720.0,
+              "applied_request_id": "fixed",
+              "period_s": 10,
+              "requested_quota": 2,
+              "r_policy_applied_veh_h": 720.0,
+              "cycle_application_delay_s": 0
+            },
+            "actual_crossings": [],
+            "accounting": {
+              "C": 1.4583333333333333,
+              "C_mapped_pending": 1.4,
+              "C_applied": 1.4,
+              "E": 0,
+              "N": 2,
+              "policy_quantization": 0.058333333333333334,
+              "application_latency": 0.0,
+              "C_applied_minus_E": 1.4,
+              "E_minus_N": -2
+            },
+            "phase_observation": {
+              "phase_before": 1,
+              "state_before": "y",
+              "next_switch_before_s": 1207,
+              "phase_after": 1,
+              "state_after": "y",
+              "next_switch_after_s": 1207
+            }
+          },
+          {
+            "time_begin_s": 1207,
+            "time_end_s": 1208,
+            "accounting_complete": true,
+            "motion": "r",
+            "rate_chain": {
+              "pending_request_id": "fixed",
+              "input_origin": "FIXED",
+              "r_final_veh_h": 750,
+              "r_policy_pending_veh_h": 720.0,
+              "applied_request_id": "fixed",
+              "period_s": 10,
+              "requested_quota": 2,
+              "r_policy_applied_veh_h": 720.0,
+              "cycle_application_delay_s": 0
+            },
+            "actual_crossings": [],
+            "accounting": {
+              "C": 1.6666666666666667,
+              "C_mapped_pending": 1.6,
+              "C_applied": 1.6,
+              "E": 0,
+              "N": 2,
+              "policy_quantization": 0.06666666666666667,
+              "application_latency": 0.0,
+              "C_applied_minus_E": 1.6,
+              "E_minus_N": -2
+            },
+            "phase_observation": {
+              "phase_before": 1,
+              "state_before": "y",
+              "next_switch_before_s": 1207,
+              "phase_after": 2,
+              "state_after": "r",
+              "next_switch_after_s": 1209
+            }
+          },
+          {
+            "time_begin_s": 1208,
+            "time_end_s": 1209,
+            "accounting_complete": true,
+            "motion": "r",
+            "rate_chain": {
+              "pending_request_id": "fixed",
+              "input_origin": "FIXED",
+              "r_final_veh_h": 750,
+              "r_policy_pending_veh_h": 720.0,
+              "applied_request_id": "fixed",
+              "period_s": 10,
+              "requested_quota": 2,
+              "r_policy_applied_veh_h": 720.0,
+              "cycle_application_delay_s": 0
+            },
+            "actual_crossings": [],
+            "accounting": {
+              "C": 1.875,
+              "C_mapped_pending": 1.8,
+              "C_applied": 1.8,
+              "E": 0,
+              "N": 2,
+              "policy_quantization": 0.075,
+              "application_latency": 0.0,
+              "C_applied_minus_E": 1.8,
+              "E_minus_N": -2
+            },
+            "phase_observation": {
+              "phase_before": 2,
+              "state_before": "r",
+              "next_switch_before_s": 1210,
+              "phase_after": 2,
+              "state_after": "r",
+              "next_switch_after_s": 1210
+            }
+          },
+          {
+            "time_begin_s": 1209,
+            "time_end_s": 1210,
+            "accounting_complete": true,
+            "motion": "r",
+            "rate_chain": {
+              "pending_request_id": "fixed",
+              "input_origin": "FIXED",
+              "r_final_veh_h": 750,
+              "r_policy_pending_veh_h": 720.0,
+              "applied_request_id": "fixed",
+              "period_s": 10,
+              "requested_quota": 2,
+              "r_policy_applied_veh_h": 720.0,
+              "cycle_application_delay_s": 0
+            },
+            "actual_crossings": [],
+            "accounting": {
+              "C": 2.0833333333333335,
+              "C_mapped_pending": 2.0,
+              "C_applied": 2.0,
+              "E": 2,
+              "N": 2,
+              "policy_quantization": 0.08333333333333333,
+              "application_latency": 0.0,
+              "C_applied_minus_E": 0.0,
+              "E_minus_N": 0
+            },
+            "phase_observation": {
+              "phase_before": 2,
+              "state_before": "r",
+              "next_switch_before_s": 1210,
+              "phase_after": 2,
+              "state_after": "r",
+              "next_switch_after_s": 1210
+            }
+          }
+        ],
+        "events": [
+          {
+            "event": "REQUESTED",
+            "request_id": "fixed",
+            "global_request_s": 1200,
+            "rate_veh_h": 750,
+            "origin": "FIXED",
+            "r_ALINEA": null,
+            "mapped_period_s": 10,
+            "mapped_rate_veh_h": 720.0
+          },
+          {
+            "event": "ACK_OBSERVED",
+            "request_id": "fixed",
+            "application_global_s": 1200,
+            "first_green_ACK_s": 1201,
+            "application_delay_s": 0
+          }
+        ],
+        "entries": [
+          {
+            "vehicle_id": "R_flow.0",
+            "time_begin_s": 1200,
+            "time_end_s": 1201,
+            "motion": "G"
+          },
+          {
+            "vehicle_id": "R_flow.1",
+            "time_begin_s": 1203,
+            "time_end_s": 1204,
+            "motion": "G"
+          }
+        ],
+        "tls": [
+          {
+            "time": "1200",
+            "id": "ramp_mid",
+            "programID": "T10_G5Y3_NATIVE",
+            "phase": "0",
+            "state": "G"
+          },
+          {
+            "time": "1201",
+            "id": "ramp_mid",
+            "programID": "T10_G5Y3_NATIVE",
+            "phase": "0",
+            "state": "G"
+          },
+          {
+            "time": "1202",
+            "id": "ramp_mid",
+            "programID": "T10_G5Y3_NATIVE",
+            "phase": "0",
+            "state": "G"
+          },
+          {
+            "time": "1203",
+            "id": "ramp_mid",
+            "programID": "T10_G5Y3_NATIVE",
+            "phase": "0",
+            "state": "G"
+          },
+          {
+            "time": "1204",
+            "id": "ramp_mid",
+            "programID": "T10_G5Y3_NATIVE",
+            "phase": "1",
+            "state": "y"
+          },
+          {
+            "time": "1205",
+            "id": "ramp_mid",
+            "programID": "T10_G5Y3_NATIVE",
+            "phase": "1",
+            "state": "y"
+          },
+          {
+            "time": "1206",
+            "id": "ramp_mid",
+            "programID": "T10_G5Y3_NATIVE",
+            "phase": "1",
+            "state": "y"
+          },
+          {
+            "time": "1207",
+            "id": "ramp_mid",
+            "programID": "T10_G5Y3_NATIVE",
+            "phase": "2",
+            "state": "r"
+          },
+          {
+            "time": "1208",
+            "id": "ramp_mid",
+            "programID": "T10_G5Y3_NATIVE",
+            "phase": "2",
+            "state": "r"
+          },
+          {
+            "time": "1209",
+            "id": "ramp_mid",
+            "programID": "T10_G5Y3_NATIVE",
+            "phase": "2",
+            "state": "r"
+          }
+        ],
+        "acks": [
+          {
+            "requested_target_s": 1201,
+            "ACK_received": true,
+            "actual_time_verified": false,
+            "actual_readback_s": null
+          },
+          {
+            "requested_target_s": 1201,
+            "ACK_received": true,
+            "actual_time_verified": true,
+            "actual_readback_s": 1201
+          },
+          {
+            "requested_target_s": 1202,
+            "ACK_received": true,
+            "actual_time_verified": false,
+            "actual_readback_s": null
+          },
+          {
+            "requested_target_s": 1202,
+            "ACK_received": true,
+            "actual_time_verified": true,
+            "actual_readback_s": 1202
+          },
+          {
+            "requested_target_s": 1203,
+            "ACK_received": true,
+            "actual_time_verified": false,
+            "actual_readback_s": null
+          },
+          {
+            "requested_target_s": 1203,
+            "ACK_received": true,
+            "actual_time_verified": true,
+            "actual_readback_s": 1203
+          },
+          {
+            "requested_target_s": 1204,
+            "ACK_received": true,
+            "actual_time_verified": false,
+            "actual_readback_s": null
+          },
+          {
+            "requested_target_s": 1204,
+            "ACK_received": true,
+            "actual_time_verified": true,
+            "actual_readback_s": 1204
+          },
+          {
+            "requested_target_s": 1205,
+            "ACK_received": true,
+            "actual_time_verified": false,
+            "actual_readback_s": null
+          },
+          {
+            "requested_target_s": 1205,
+            "ACK_received": true,
+            "actual_time_verified": true,
+            "actual_readback_s": 1205
+          },
+          {
+            "requested_target_s": 1206,
+            "ACK_received": true,
+            "actual_time_verified": false,
+            "actual_readback_s": null
+          },
+          {
+            "requested_target_s": 1206,
+            "ACK_received": true,
+            "actual_time_verified": true,
+            "actual_readback_s": 1206
+          },
+          {
+            "requested_target_s": 1207,
+            "ACK_received": true,
+            "actual_time_verified": false,
+            "actual_readback_s": null
+          },
+          {
+            "requested_target_s": 1207,
+            "ACK_received": true,
+            "actual_time_verified": true,
+            "actual_readback_s": 1207
+          },
+          {
+            "requested_target_s": 1208,
+            "ACK_received": true,
+            "actual_time_verified": false,
+            "actual_readback_s": null
+          },
+          {
+            "requested_target_s": 1208,
+            "ACK_received": true,
+            "actual_time_verified": true,
+            "actual_readback_s": 1208
+          },
+          {
+            "requested_target_s": 1209,
+            "ACK_received": true,
+            "actual_time_verified": false,
+            "actual_readback_s": null
+          },
+          {
+            "requested_target_s": 1209,
+            "ACK_received": true,
+            "actual_time_verified": true,
+            "actual_readback_s": 1209
+          },
+          {
+            "requested_target_s": 1210,
+            "ACK_received": true,
+            "actual_time_verified": false,
+            "actual_readback_s": null
+          },
+          {
+            "requested_target_s": 1210,
+            "ACK_received": true,
+            "actual_time_verified": true,
+            "actual_readback_s": 1210
+          }
+        ],
+        "pre": [
+          {
+            "bound_snapshot": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "program": "T10_G5Y3_NATIVE"
+            }
+          },
+          {
+            "bound_snapshot": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "program": "T10_G5Y3_NATIVE"
+            }
+          },
+          {
+            "bound_snapshot": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "program": "T10_G5Y3_NATIVE"
+            }
+          },
+          {
+            "bound_snapshot": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "program": "T10_G5Y3_NATIVE"
+            }
+          },
+          {
+            "bound_snapshot": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1204,
+              "program": "T10_G5Y3_NATIVE"
+            }
+          },
+          {
+            "bound_snapshot": {
+              "phase_before": 1,
+              "state_before": "y",
+              "next_switch_before_s": 1207,
+              "program": "T10_G5Y3_NATIVE"
+            }
+          },
+          {
+            "bound_snapshot": {
+              "phase_before": 1,
+              "state_before": "y",
+              "next_switch_before_s": 1207,
+              "program": "T10_G5Y3_NATIVE"
+            }
+          },
+          {
+            "bound_snapshot": {
+              "phase_before": 1,
+              "state_before": "y",
+              "next_switch_before_s": 1207,
+              "program": "T10_G5Y3_NATIVE"
+            }
+          },
+          {
+            "bound_snapshot": {
+              "phase_before": 2,
+              "state_before": "r",
+              "next_switch_before_s": 1210,
+              "program": "T10_G5Y3_NATIVE"
+            }
+          },
+          {
+            "bound_snapshot": {
+              "phase_before": 2,
+              "state_before": "r",
+              "next_switch_before_s": 1210,
+              "program": "T10_G5Y3_NATIVE"
+            }
+          }
+        ],
+        "calls": [
+          {
+            "requests": [
+              {
+                "method": "setPhase",
+                "value": 1,
+                "time_s": 1204,
+                "call_completed": true
+              }
+            ],
+            "actual_readback": {
+              "time_s": 1204,
+              "phase": 1,
+              "state": "y",
+              "nextSwitch_s": 1207
+            }
+          },
+          {
+            "requests": [
+              {
+                "method": "setPhaseDuration",
+                "value": 2,
+                "time_s": 1208,
+                "call_completed": true,
+                "actual_readback": {
+                  "time_s": 1208,
+                  "program": "T10_G5Y3_NATIVE",
+                  "phase": 2,
+                  "state": "r",
+                  "nextSwitch_s": 1210
+                }
+              }
+            ],
+            "actual_readback": {
+              "state": "r",
+              "nextSwitch_s": 1210
+            }
+          }
+        ],
+        "durations": [
+          {
+            "time_s": 1208,
+            "method": "setPhaseDuration",
+            "value": 2,
+            "call_completed": false,
+            "status": "ATTEMPTED",
+            "cycle_end_s": 1210
+          },
+          {
+            "method": "setPhaseDuration",
+            "value": 2,
+            "time_s": 1208,
+            "call_completed": true,
+            "actual_readback": {
+              "time_s": 1208,
+              "program": "T10_G5Y3_NATIVE",
+              "phase": 2,
+              "state": "r",
+              "nextSwitch_s": 1210
+            },
+            "status": "READBACK_VERIFIED",
+            "cycle_end_s": 1210
+          }
+        ]
+      },
+      "independent_accounting": {
+        "status": "PASS_ACCOUNTING",
+        "accounting": {
+          "C": 2.0833333333333335,
+          "C_mapped_pending": 2.0,
+          "C_applied": 2.0,
+          "E": 2,
+          "N": 2,
+          "policy_quantization": 0.08333333333333333,
+          "application_latency": 0.0,
+          "C_applied_minus_E": 0.0,
+          "E_minus_N": 0
+        },
+        "cycles": [
+          {
+            "begin_s": 1200,
+            "end_s": 1210,
+            "period_s": 10,
+            "yellow_s": 3,
+            "applied_request_id": "fixed",
+            "N": 2,
+            "N_G": 2,
+            "N_y": 0,
+            "N_r": 0,
+            "E": 2,
+            "completed": true,
+            "phase_exposure_s": {
+              "G": 4,
+              "y": 3,
+              "r": 3
+            }
+          }
+        ],
+        "applications": [
+          {
+            "request_id": "fixed",
+            "application_global_s": 1200,
+            "application_delay_s": 0
+          }
+        ],
+        "observed_end_s": 1210,
+        "planned_end_observed": false,
+        "requests_without_observed_application": [],
+        "rate_qualified": false
+      },
+      "independent_phases": {
+        "status": "PASS_CONTINUOUS_PHASES",
+        "cycles": [
+          {
+            "begin_s": 1200,
+            "end_s": 1210,
+            "period_s": 10,
+            "observed_motion_sequence": "GGGGyyyrrr",
+            "green_end_s": 1204,
+            "yellow_s": 3,
+            "completed": true
+          }
+        ],
+        "observed_intercycle_r_to_G": 0,
+        "rate_qualified": false,
+        "native_safety_proven": false
+      }
+    },
+    {
+      "fixture": {
+        "classification": "SYNTHETIC_NOT_OBSERVED",
+        "posts": [
+          {
+            "time_begin_s": 1200,
+            "time_end_s": 1201,
+            "accounting_complete": true,
+            "motion": "G",
+            "rate_chain": {
+              "pending_request_id": "fixed",
+              "input_origin": "FIXED",
+              "r_final_veh_h": 750,
+              "r_policy_pending_veh_h": 720.0,
+              "applied_request_id": "fixed",
+              "period_s": 10,
+              "requested_quota": 2,
+              "r_policy_applied_veh_h": 720.0,
+              "cycle_application_delay_s": null
+            },
+            "actual_crossings": [
+              {
+                "vehicle_id": "R_flow.0"
+              }
+            ],
+            "accounting": {
+              "C": 0.20833333333333334,
+              "C_mapped_pending": 0.2,
+              "C_applied": 0.2,
+              "E": 0,
+              "N": 1,
+              "policy_quantization": 0.008333333333333333,
+              "application_latency": 0.0,
+              "C_applied_minus_E": 0.2,
+              "E_minus_N": -1
+            },
+            "phase_observation": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "phase_after": 0,
+              "state_after": "G",
+              "next_switch_after_s": 1205
+            }
+          },
+          {
+            "time_begin_s": 1201,
+            "time_end_s": 1202,
+            "accounting_complete": true,
+            "motion": "G",
+            "rate_chain": {
+              "pending_request_id": "fixed",
+              "input_origin": "FIXED",
+              "r_final_veh_h": 750,
+              "r_policy_pending_veh_h": 720.0,
+              "applied_request_id": "fixed",
+              "period_s": 10,
+              "requested_quota": 2,
+              "r_policy_applied_veh_h": 720.0,
+              "cycle_application_delay_s": 0
+            },
+            "actual_crossings": [],
+            "accounting": {
+              "C": 0.4166666666666667,
+              "C_mapped_pending": 0.4,
+              "C_applied": 0.4,
+              "E": 0,
+              "N": 1,
+              "policy_quantization": 0.016666666666666666,
+              "application_latency": 0.0,
+              "C_applied_minus_E": 0.4,
+              "E_minus_N": -1
+            },
+            "phase_observation": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "phase_after": 0,
+              "state_after": "G",
+              "next_switch_after_s": 1205
+            }
+          },
+          {
+            "time_begin_s": 1202,
+            "time_end_s": 1203,
+            "accounting_complete": true,
+            "motion": "G",
+            "rate_chain": {
+              "pending_request_id": "fixed",
+              "input_origin": "FIXED",
+              "r_final_veh_h": 750,
+              "r_policy_pending_veh_h": 720.0,
+              "applied_request_id": "fixed",
+              "period_s": 10,
+              "requested_quota": 2,
+              "r_policy_applied_veh_h": 720.0,
+              "cycle_application_delay_s": 0
+            },
+            "actual_crossings": [],
+            "accounting": {
+              "C": 0.625,
+              "C_mapped_pending": 0.6,
+              "C_applied": 0.6,
+              "E": 0,
+              "N": 1,
+              "policy_quantization": 0.025,
+              "application_latency": 0.0,
+              "C_applied_minus_E": 0.6,
+              "E_minus_N": -1
+            },
+            "phase_observation": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "phase_after": 0,
+              "state_after": "G",
+              "next_switch_after_s": 1205
+            }
+          },
+          {
+            "time_begin_s": 1203,
+            "time_end_s": 1204,
+            "accounting_complete": true,
+            "motion": "G",
+            "rate_chain": {
+              "pending_request_id": "fixed",
+              "input_origin": "FIXED",
+              "r_final_veh_h": 750,
+              "r_policy_pending_veh_h": 720.0,
+              "applied_request_id": "fixed",
+              "period_s": 10,
+              "requested_quota": 2,
+              "r_policy_applied_veh_h": 720.0,
+              "cycle_application_delay_s": 0
+            },
+            "actual_crossings": [],
+            "accounting": {
+              "C": 0.8333333333333334,
+              "C_mapped_pending": 0.8,
+              "C_applied": 0.8,
+              "E": 0,
+              "N": 1,
+              "policy_quantization": 0.03333333333333333,
+              "application_latency": 0.0,
+              "C_applied_minus_E": 0.8,
+              "E_minus_N": -1
+            },
+            "phase_observation": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "phase_after": 0,
+              "state_after": "G",
+              "next_switch_after_s": 1205
+            }
+          },
+          {
+            "time_begin_s": 1204,
+            "time_end_s": 1205,
+            "accounting_complete": true,
+            "motion": "G",
+            "rate_chain": {
+              "pending_request_id": "fixed",
+              "input_origin": "FIXED",
+              "r_final_veh_h": 750,
+              "r_policy_pending_veh_h": 720.0,
+              "applied_request_id": "fixed",
+              "period_s": 10,
+              "requested_quota": 2,
+              "r_policy_applied_veh_h": 720.0,
+              "cycle_application_delay_s": 0
+            },
+            "actual_crossings": [],
+            "accounting": {
+              "C": 1.0416666666666667,
+              "C_mapped_pending": 1.0,
+              "C_applied": 1.0,
+              "E": 0,
+              "N": 1,
+              "policy_quantization": 0.041666666666666664,
+              "application_latency": 0.0,
+              "C_applied_minus_E": 1.0,
+              "E_minus_N": -1
+            },
+            "phase_observation": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "phase_after": 0,
+              "state_after": "G",
+              "next_switch_after_s": 1205
+            }
+          },
+          {
+            "time_begin_s": 1205,
+            "time_end_s": 1206,
+            "accounting_complete": true,
+            "motion": "y",
+            "rate_chain": {
+              "pending_request_id": "fixed",
+              "input_origin": "FIXED",
+              "r_final_veh_h": 750,
+              "r_policy_pending_veh_h": 720.0,
+              "applied_request_id": "fixed",
+              "period_s": 10,
+              "requested_quota": 2,
+              "r_policy_applied_veh_h": 720.0,
+              "cycle_application_delay_s": 0
+            },
+            "actual_crossings": [],
+            "accounting": {
+              "C": 1.25,
+              "C_mapped_pending": 1.2,
+              "C_applied": 1.2,
+              "E": 0,
+              "N": 1,
+              "policy_quantization": 0.05,
+              "application_latency": 0.0,
+              "C_applied_minus_E": 1.2,
+              "E_minus_N": -1
+            },
+            "phase_observation": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "phase_after": 1,
+              "state_after": "y",
+              "next_switch_after_s": 1208
+            }
+          },
+          {
+            "time_begin_s": 1206,
+            "time_end_s": 1207,
+            "accounting_complete": true,
+            "motion": "y",
+            "rate_chain": {
+              "pending_request_id": "fixed",
+              "input_origin": "FIXED",
+              "r_final_veh_h": 750,
+              "r_policy_pending_veh_h": 720.0,
+              "applied_request_id": "fixed",
+              "period_s": 10,
+              "requested_quota": 2,
+              "r_policy_applied_veh_h": 720.0,
+              "cycle_application_delay_s": 0
+            },
+            "actual_crossings": [],
+            "accounting": {
+              "C": 1.4583333333333333,
+              "C_mapped_pending": 1.4,
+              "C_applied": 1.4,
+              "E": 0,
+              "N": 1,
+              "policy_quantization": 0.058333333333333334,
+              "application_latency": 0.0,
+              "C_applied_minus_E": 1.4,
+              "E_minus_N": -1
+            },
+            "phase_observation": {
+              "phase_before": 1,
+              "state_before": "y",
+              "next_switch_before_s": 1208,
+              "phase_after": 1,
+              "state_after": "y",
+              "next_switch_after_s": 1208
+            }
+          },
+          {
+            "time_begin_s": 1207,
+            "time_end_s": 1208,
+            "accounting_complete": true,
+            "motion": "y",
+            "rate_chain": {
+              "pending_request_id": "fixed",
+              "input_origin": "FIXED",
+              "r_final_veh_h": 750,
+              "r_policy_pending_veh_h": 720.0,
+              "applied_request_id": "fixed",
+              "period_s": 10,
+              "requested_quota": 2,
+              "r_policy_applied_veh_h": 720.0,
+              "cycle_application_delay_s": 0
+            },
+            "actual_crossings": [],
+            "accounting": {
+              "C": 1.6666666666666667,
+              "C_mapped_pending": 1.6,
+              "C_applied": 1.6,
+              "E": 0,
+              "N": 1,
+              "policy_quantization": 0.06666666666666667,
+              "application_latency": 0.0,
+              "C_applied_minus_E": 1.6,
+              "E_minus_N": -1
+            },
+            "phase_observation": {
+              "phase_before": 1,
+              "state_before": "y",
+              "next_switch_before_s": 1208,
+              "phase_after": 1,
+              "state_after": "y",
+              "next_switch_after_s": 1208
+            }
+          },
+          {
+            "time_begin_s": 1208,
+            "time_end_s": 1209,
+            "accounting_complete": true,
+            "motion": "r",
+            "rate_chain": {
+              "pending_request_id": "fixed",
+              "input_origin": "FIXED",
+              "r_final_veh_h": 750,
+              "r_policy_pending_veh_h": 720.0,
+              "applied_request_id": "fixed",
+              "period_s": 10,
+              "requested_quota": 2,
+              "r_policy_applied_veh_h": 720.0,
+              "cycle_application_delay_s": 0
+            },
+            "actual_crossings": [],
+            "accounting": {
+              "C": 1.875,
+              "C_mapped_pending": 1.8,
+              "C_applied": 1.8,
+              "E": 0,
+              "N": 1,
+              "policy_quantization": 0.075,
+              "application_latency": 0.0,
+              "C_applied_minus_E": 1.8,
+              "E_minus_N": -1
+            },
+            "phase_observation": {
+              "phase_before": 1,
+              "state_before": "y",
+              "next_switch_before_s": 1208,
+              "phase_after": 2,
+              "state_after": "r",
+              "next_switch_after_s": 1210
+            }
+          },
+          {
+            "time_begin_s": 1209,
+            "time_end_s": 1210,
+            "accounting_complete": true,
+            "motion": "r",
+            "rate_chain": {
+              "pending_request_id": "fixed",
+              "input_origin": "FIXED",
+              "r_final_veh_h": 750,
+              "r_policy_pending_veh_h": 720.0,
+              "applied_request_id": "fixed",
+              "period_s": 10,
+              "requested_quota": 2,
+              "r_policy_applied_veh_h": 720.0,
+              "cycle_application_delay_s": 0
+            },
+            "actual_crossings": [],
+            "accounting": {
+              "C": 2.0833333333333335,
+              "C_mapped_pending": 2.0,
+              "C_applied": 2.0,
+              "E": 2,
+              "N": 1,
+              "policy_quantization": 0.08333333333333333,
+              "application_latency": 0.0,
+              "C_applied_minus_E": 0.0,
+              "E_minus_N": 1
+            },
+            "phase_observation": {
+              "phase_before": 2,
+              "state_before": "r",
+              "next_switch_before_s": 1210,
+              "phase_after": 2,
+              "state_after": "r",
+              "next_switch_after_s": 1210
+            }
+          }
+        ],
+        "events": [
+          {
+            "event": "REQUESTED",
+            "request_id": "fixed",
+            "global_request_s": 1200,
+            "rate_veh_h": 750,
+            "origin": "FIXED",
+            "r_ALINEA": null,
+            "mapped_period_s": 10,
+            "mapped_rate_veh_h": 720.0
+          },
+          {
+            "event": "ACK_OBSERVED",
+            "request_id": "fixed",
+            "application_global_s": 1200,
+            "first_green_ACK_s": 1201,
+            "application_delay_s": 0
+          }
+        ],
+        "entries": [
+          {
+            "vehicle_id": "R_flow.0",
+            "time_begin_s": 1200,
+            "time_end_s": 1201,
+            "motion": "G"
+          }
+        ],
+        "tls": [
+          {
+            "time": "1200",
+            "id": "ramp_mid",
+            "programID": "T10_G5Y3_NATIVE",
+            "phase": "0",
+            "state": "G"
+          },
+          {
+            "time": "1201",
+            "id": "ramp_mid",
+            "programID": "T10_G5Y3_NATIVE",
+            "phase": "0",
+            "state": "G"
+          },
+          {
+            "time": "1202",
+            "id": "ramp_mid",
+            "programID": "T10_G5Y3_NATIVE",
+            "phase": "0",
+            "state": "G"
+          },
+          {
+            "time": "1203",
+            "id": "ramp_mid",
+            "programID": "T10_G5Y3_NATIVE",
+            "phase": "0",
+            "state": "G"
+          },
+          {
+            "time": "1204",
+            "id": "ramp_mid",
+            "programID": "T10_G5Y3_NATIVE",
+            "phase": "0",
+            "state": "G"
+          },
+          {
+            "time": "1205",
+            "id": "ramp_mid",
+            "programID": "T10_G5Y3_NATIVE",
+            "phase": "1",
+            "state": "y"
+          },
+          {
+            "time": "1206",
+            "id": "ramp_mid",
+            "programID": "T10_G5Y3_NATIVE",
+            "phase": "1",
+            "state": "y"
+          },
+          {
+            "time": "1207",
+            "id": "ramp_mid",
+            "programID": "T10_G5Y3_NATIVE",
+            "phase": "1",
+            "state": "y"
+          },
+          {
+            "time": "1208",
+            "id": "ramp_mid",
+            "programID": "T10_G5Y3_NATIVE",
+            "phase": "2",
+            "state": "r"
+          },
+          {
+            "time": "1209",
+            "id": "ramp_mid",
+            "programID": "T10_G5Y3_NATIVE",
+            "phase": "2",
+            "state": "r"
+          }
+        ],
+        "acks": [
+          {
+            "requested_target_s": 1201,
+            "ACK_received": true,
+            "actual_time_verified": false,
+            "actual_readback_s": null
+          },
+          {
+            "requested_target_s": 1201,
+            "ACK_received": true,
+            "actual_time_verified": true,
+            "actual_readback_s": 1201
+          },
+          {
+            "requested_target_s": 1202,
+            "ACK_received": true,
+            "actual_time_verified": false,
+            "actual_readback_s": null
+          },
+          {
+            "requested_target_s": 1202,
+            "ACK_received": true,
+            "actual_time_verified": true,
+            "actual_readback_s": 1202
+          },
+          {
+            "requested_target_s": 1203,
+            "ACK_received": true,
+            "actual_time_verified": false,
+            "actual_readback_s": null
+          },
+          {
+            "requested_target_s": 1203,
+            "ACK_received": true,
+            "actual_time_verified": true,
+            "actual_readback_s": 1203
+          },
+          {
+            "requested_target_s": 1204,
+            "ACK_received": true,
+            "actual_time_verified": false,
+            "actual_readback_s": null
+          },
+          {
+            "requested_target_s": 1204,
+            "ACK_received": true,
+            "actual_time_verified": true,
+            "actual_readback_s": 1204
+          },
+          {
+            "requested_target_s": 1205,
+            "ACK_received": true,
+            "actual_time_verified": false,
+            "actual_readback_s": null
+          },
+          {
+            "requested_target_s": 1205,
+            "ACK_received": true,
+            "actual_time_verified": true,
+            "actual_readback_s": 1205
+          },
+          {
+            "requested_target_s": 1206,
+            "ACK_received": true,
+            "actual_time_verified": false,
+            "actual_readback_s": null
+          },
+          {
+            "requested_target_s": 1206,
+            "ACK_received": true,
+            "actual_time_verified": true,
+            "actual_readback_s": 1206
+          },
+          {
+            "requested_target_s": 1207,
+            "ACK_received": true,
+            "actual_time_verified": false,
+            "actual_readback_s": null
+          },
+          {
+            "requested_target_s": 1207,
+            "ACK_received": true,
+            "actual_time_verified": true,
+            "actual_readback_s": 1207
+          },
+          {
+            "requested_target_s": 1208,
+            "ACK_received": true,
+            "actual_time_verified": false,
+            "actual_readback_s": null
+          },
+          {
+            "requested_target_s": 1208,
+            "ACK_received": true,
+            "actual_time_verified": true,
+            "actual_readback_s": 1208
+          },
+          {
+            "requested_target_s": 1209,
+            "ACK_received": true,
+            "actual_time_verified": false,
+            "actual_readback_s": null
+          },
+          {
+            "requested_target_s": 1209,
+            "ACK_received": true,
+            "actual_time_verified": true,
+            "actual_readback_s": 1209
+          },
+          {
+            "requested_target_s": 1210,
+            "ACK_received": true,
+            "actual_time_verified": false,
+            "actual_readback_s": null
+          },
+          {
+            "requested_target_s": 1210,
+            "ACK_received": true,
+            "actual_time_verified": true,
+            "actual_readback_s": 1210
+          }
+        ],
+        "pre": [
+          {
+            "bound_snapshot": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "program": "T10_G5Y3_NATIVE"
+            }
+          },
+          {
+            "bound_snapshot": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "program": "T10_G5Y3_NATIVE"
+            }
+          },
+          {
+            "bound_snapshot": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "program": "T10_G5Y3_NATIVE"
+            }
+          },
+          {
+            "bound_snapshot": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "program": "T10_G5Y3_NATIVE"
+            }
+          },
+          {
+            "bound_snapshot": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "program": "T10_G5Y3_NATIVE"
+            }
+          },
+          {
+            "bound_snapshot": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "program": "T10_G5Y3_NATIVE"
+            }
+          },
+          {
+            "bound_snapshot": {
+              "phase_before": 1,
+              "state_before": "y",
+              "next_switch_before_s": 1208,
+              "program": "T10_G5Y3_NATIVE"
+            }
+          },
+          {
+            "bound_snapshot": {
+              "phase_before": 1,
+              "state_before": "y",
+              "next_switch_before_s": 1208,
+              "program": "T10_G5Y3_NATIVE"
+            }
+          },
+          {
+            "bound_snapshot": {
+              "phase_before": 1,
+              "state_before": "y",
+              "next_switch_before_s": 1208,
+              "program": "T10_G5Y3_NATIVE"
+            }
+          },
+          {
+            "bound_snapshot": {
+              "phase_before": 2,
+              "state_before": "r",
+              "next_switch_before_s": 1210,
+              "program": "T10_G5Y3_NATIVE"
+            }
+          }
+        ],
+        "calls": [
+          {
+            "requests": [
+              {
+                "method": "setPhaseDuration",
+                "value": 1,
+                "time_s": 1209,
+                "call_completed": true,
+                "actual_readback": {
+                  "time_s": 1209,
+                  "program": "T10_G5Y3_NATIVE",
+                  "phase": 2,
+                  "state": "r",
+                  "nextSwitch_s": 1210
+                }
+              }
+            ],
+            "actual_readback": {
+              "state": "r",
+              "nextSwitch_s": 1210
+            }
+          }
+        ],
+        "durations": [
+          {
+            "time_s": 1209,
+            "method": "setPhaseDuration",
+            "value": 1,
+            "call_completed": false,
+            "status": "ATTEMPTED",
+            "cycle_end_s": 1210
+          },
+          {
+            "method": "setPhaseDuration",
+            "value": 1,
+            "time_s": 1209,
+            "call_completed": true,
+            "actual_readback": {
+              "time_s": 1209,
+              "program": "T10_G5Y3_NATIVE",
+              "phase": 2,
+              "state": "r",
+              "nextSwitch_s": 1210
+            },
+            "status": "READBACK_VERIFIED",
+            "cycle_end_s": 1210
+          }
+        ]
+      },
+      "independent_accounting": {
+        "status": "PASS_ACCOUNTING",
+        "accounting": {
+          "C": 2.0833333333333335,
+          "C_mapped_pending": 2.0,
+          "C_applied": 2.0,
+          "E": 2,
+          "N": 1,
+          "policy_quantization": 0.08333333333333333,
+          "application_latency": 0.0,
+          "C_applied_minus_E": 0.0,
+          "E_minus_N": 1
+        },
+        "cycles": [
+          {
+            "begin_s": 1200,
+            "end_s": 1210,
+            "period_s": 10,
+            "yellow_s": 3,
+            "applied_request_id": "fixed",
+            "N": 1,
+            "N_G": 1,
+            "N_y": 0,
+            "N_r": 0,
+            "E": 2,
+            "completed": true,
+            "phase_exposure_s": {
+              "G": 5,
+              "y": 3,
+              "r": 2
+            }
+          }
+        ],
+        "applications": [
+          {
+            "request_id": "fixed",
+            "application_global_s": 1200,
+            "application_delay_s": 0
+          }
+        ],
+        "observed_end_s": 1210,
+        "planned_end_observed": false,
+        "requests_without_observed_application": [],
+        "rate_qualified": false
+      },
+      "independent_phases": {
+        "status": "PASS_CONTINUOUS_PHASES",
+        "cycles": [
+          {
+            "begin_s": 1200,
+            "end_s": 1210,
+            "period_s": 10,
+            "observed_motion_sequence": "GGGGGyyyrr",
+            "green_end_s": 1205,
+            "yellow_s": 3,
+            "completed": true
+          }
+        ],
+        "observed_intercycle_r_to_G": 0,
+        "rate_qualified": false,
+        "native_safety_proven": false
+      }
+    },
+    {
+      "fixture": {
+        "classification": "SYNTHETIC_NOT_OBSERVED",
+        "posts": [
+          {
+            "time_begin_s": 1200,
+            "time_end_s": 1201,
+            "accounting_complete": true,
+            "motion": "G",
+            "rate_chain": {
+              "pending_request_id": "fixed",
+              "input_origin": "FIXED",
+              "r_final_veh_h": 750,
+              "r_policy_pending_veh_h": 720.0,
+              "applied_request_id": "fixed",
+              "period_s": 10,
+              "requested_quota": 2,
+              "r_policy_applied_veh_h": 720.0,
+              "cycle_application_delay_s": null
+            },
+            "actual_crossings": [
+              {
+                "vehicle_id": "R_flow.0"
+              }
+            ],
+            "accounting": {
+              "C": 0.20833333333333334,
+              "C_mapped_pending": 0.2,
+              "C_applied": 0.2,
+              "E": 0,
+              "N": 1,
+              "policy_quantization": 0.008333333333333333,
+              "application_latency": 0.0,
+              "C_applied_minus_E": 0.2,
+              "E_minus_N": -1
+            },
+            "phase_observation": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "phase_after": 0,
+              "state_after": "G",
+              "next_switch_after_s": 1205
+            }
+          },
+          {
+            "time_begin_s": 1201,
+            "time_end_s": 1202,
+            "accounting_complete": true,
+            "motion": "G",
+            "rate_chain": {
+              "pending_request_id": "fixed",
+              "input_origin": "FIXED",
+              "r_final_veh_h": 750,
+              "r_policy_pending_veh_h": 720.0,
+              "applied_request_id": "fixed",
+              "period_s": 10,
+              "requested_quota": 2,
+              "r_policy_applied_veh_h": 720.0,
+              "cycle_application_delay_s": 0
+            },
+            "actual_crossings": [],
+            "accounting": {
+              "C": 0.4166666666666667,
+              "C_mapped_pending": 0.4,
+              "C_applied": 0.4,
+              "E": 0,
+              "N": 1,
+              "policy_quantization": 0.016666666666666666,
+              "application_latency": 0.0,
+              "C_applied_minus_E": 0.4,
+              "E_minus_N": -1
+            },
+            "phase_observation": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "phase_after": 0,
+              "state_after": "G",
+              "next_switch_after_s": 1205
+            }
+          },
+          {
+            "time_begin_s": 1202,
+            "time_end_s": 1203,
+            "accounting_complete": true,
+            "motion": "G",
+            "rate_chain": {
+              "pending_request_id": "fixed",
+              "input_origin": "FIXED",
+              "r_final_veh_h": 750,
+              "r_policy_pending_veh_h": 720.0,
+              "applied_request_id": "fixed",
+              "period_s": 10,
+              "requested_quota": 2,
+              "r_policy_applied_veh_h": 720.0,
+              "cycle_application_delay_s": 0
+            },
+            "actual_crossings": [],
+            "accounting": {
+              "C": 0.625,
+              "C_mapped_pending": 0.6,
+              "C_applied": 0.6,
+              "E": 0,
+              "N": 1,
+              "policy_quantization": 0.025,
+              "application_latency": 0.0,
+              "C_applied_minus_E": 0.6,
+              "E_minus_N": -1
+            },
+            "phase_observation": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "phase_after": 0,
+              "state_after": "G",
+              "next_switch_after_s": 1205
+            }
+          },
+          {
+            "time_begin_s": 1203,
+            "time_end_s": 1204,
+            "accounting_complete": true,
+            "motion": "G",
+            "rate_chain": {
+              "pending_request_id": "fixed",
+              "input_origin": "FIXED",
+              "r_final_veh_h": 750,
+              "r_policy_pending_veh_h": 720.0,
+              "applied_request_id": "fixed",
+              "period_s": 10,
+              "requested_quota": 2,
+              "r_policy_applied_veh_h": 720.0,
+              "cycle_application_delay_s": 0
+            },
+            "actual_crossings": [],
+            "accounting": {
+              "C": 0.8333333333333334,
+              "C_mapped_pending": 0.8,
+              "C_applied": 0.8,
+              "E": 0,
+              "N": 1,
+              "policy_quantization": 0.03333333333333333,
+              "application_latency": 0.0,
+              "C_applied_minus_E": 0.8,
+              "E_minus_N": -1
+            },
+            "phase_observation": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "phase_after": 0,
+              "state_after": "G",
+              "next_switch_after_s": 1205
+            }
+          },
+          {
+            "time_begin_s": 1204,
+            "time_end_s": 1205,
+            "accounting_complete": true,
+            "motion": "G",
+            "rate_chain": {
+              "pending_request_id": "fixed",
+              "input_origin": "FIXED",
+              "r_final_veh_h": 750,
+              "r_policy_pending_veh_h": 720.0,
+              "applied_request_id": "fixed",
+              "period_s": 10,
+              "requested_quota": 2,
+              "r_policy_applied_veh_h": 720.0,
+              "cycle_application_delay_s": 0
+            },
+            "actual_crossings": [],
+            "accounting": {
+              "C": 1.0416666666666667,
+              "C_mapped_pending": 1.0,
+              "C_applied": 1.0,
+              "E": 0,
+              "N": 1,
+              "policy_quantization": 0.041666666666666664,
+              "application_latency": 0.0,
+              "C_applied_minus_E": 1.0,
+              "E_minus_N": -1
+            },
+            "phase_observation": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "phase_after": 0,
+              "state_after": "G",
+              "next_switch_after_s": 1205
+            }
+          },
+          {
+            "time_begin_s": 1205,
+            "time_end_s": 1206,
+            "accounting_complete": true,
+            "motion": "y",
+            "rate_chain": {
+              "pending_request_id": "fixed",
+              "input_origin": "FIXED",
+              "r_final_veh_h": 750,
+              "r_policy_pending_veh_h": 720.0,
+              "applied_request_id": "fixed",
+              "period_s": 10,
+              "requested_quota": 2,
+              "r_policy_applied_veh_h": 720.0,
+              "cycle_application_delay_s": 0
+            },
+            "actual_crossings": [
+              {
+                "vehicle_id": "R_flow.1"
+              }
+            ],
+            "accounting": {
+              "C": 1.25,
+              "C_mapped_pending": 1.2,
+              "C_applied": 1.2,
+              "E": 0,
+              "N": 2,
+              "policy_quantization": 0.05,
+              "application_latency": 0.0,
+              "C_applied_minus_E": 1.2,
+              "E_minus_N": -2
+            },
+            "phase_observation": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "phase_after": 1,
+              "state_after": "y",
+              "next_switch_after_s": 1208
+            }
+          },
+          {
+            "time_begin_s": 1206,
+            "time_end_s": 1207,
+            "accounting_complete": true,
+            "motion": "y",
+            "rate_chain": {
+              "pending_request_id": "fixed",
+              "input_origin": "FIXED",
+              "r_final_veh_h": 750,
+              "r_policy_pending_veh_h": 720.0,
+              "applied_request_id": "fixed",
+              "period_s": 10,
+              "requested_quota": 2,
+              "r_policy_applied_veh_h": 720.0,
+              "cycle_application_delay_s": 0
+            },
+            "actual_crossings": [
+              {
+                "vehicle_id": "R_flow.2"
+              }
+            ],
+            "accounting": {
+              "C": 1.4583333333333333,
+              "C_mapped_pending": 1.4,
+              "C_applied": 1.4,
+              "E": 0,
+              "N": 3,
+              "policy_quantization": 0.058333333333333334,
+              "application_latency": 0.0,
+              "C_applied_minus_E": 1.4,
+              "E_minus_N": -3
+            },
+            "phase_observation": {
+              "phase_before": 1,
+              "state_before": "y",
+              "next_switch_before_s": 1208,
+              "phase_after": 1,
+              "state_after": "y",
+              "next_switch_after_s": 1208
+            }
+          },
+          {
+            "time_begin_s": 1207,
+            "time_end_s": 1208,
+            "accounting_complete": true,
+            "motion": "y",
+            "rate_chain": {
+              "pending_request_id": "fixed",
+              "input_origin": "FIXED",
+              "r_final_veh_h": 750,
+              "r_policy_pending_veh_h": 720.0,
+              "applied_request_id": "fixed",
+              "period_s": 10,
+              "requested_quota": 2,
+              "r_policy_applied_veh_h": 720.0,
+              "cycle_application_delay_s": 0
+            },
+            "actual_crossings": [],
+            "accounting": {
+              "C": 1.6666666666666667,
+              "C_mapped_pending": 1.6,
+              "C_applied": 1.6,
+              "E": 0,
+              "N": 3,
+              "policy_quantization": 0.06666666666666667,
+              "application_latency": 0.0,
+              "C_applied_minus_E": 1.6,
+              "E_minus_N": -3
+            },
+            "phase_observation": {
+              "phase_before": 1,
+              "state_before": "y",
+              "next_switch_before_s": 1208,
+              "phase_after": 1,
+              "state_after": "y",
+              "next_switch_after_s": 1208
+            }
+          },
+          {
+            "time_begin_s": 1208,
+            "time_end_s": 1209,
+            "accounting_complete": true,
+            "motion": "r",
+            "rate_chain": {
+              "pending_request_id": "fixed",
+              "input_origin": "FIXED",
+              "r_final_veh_h": 750,
+              "r_policy_pending_veh_h": 720.0,
+              "applied_request_id": "fixed",
+              "period_s": 10,
+              "requested_quota": 2,
+              "r_policy_applied_veh_h": 720.0,
+              "cycle_application_delay_s": 0
+            },
+            "actual_crossings": [],
+            "accounting": {
+              "C": 1.875,
+              "C_mapped_pending": 1.8,
+              "C_applied": 1.8,
+              "E": 0,
+              "N": 3,
+              "policy_quantization": 0.075,
+              "application_latency": 0.0,
+              "C_applied_minus_E": 1.8,
+              "E_minus_N": -3
+            },
+            "phase_observation": {
+              "phase_before": 1,
+              "state_before": "y",
+              "next_switch_before_s": 1208,
+              "phase_after": 2,
+              "state_after": "r",
+              "next_switch_after_s": 1210
+            }
+          },
+          {
+            "time_begin_s": 1209,
+            "time_end_s": 1210,
+            "accounting_complete": true,
+            "motion": "r",
+            "rate_chain": {
+              "pending_request_id": "fixed",
+              "input_origin": "FIXED",
+              "r_final_veh_h": 750,
+              "r_policy_pending_veh_h": 720.0,
+              "applied_request_id": "fixed",
+              "period_s": 10,
+              "requested_quota": 2,
+              "r_policy_applied_veh_h": 720.0,
+              "cycle_application_delay_s": 0
+            },
+            "actual_crossings": [],
+            "accounting": {
+              "C": 2.0833333333333335,
+              "C_mapped_pending": 2.0,
+              "C_applied": 2.0,
+              "E": 2,
+              "N": 3,
+              "policy_quantization": 0.08333333333333333,
+              "application_latency": 0.0,
+              "C_applied_minus_E": 0.0,
+              "E_minus_N": -1
+            },
+            "phase_observation": {
+              "phase_before": 2,
+              "state_before": "r",
+              "next_switch_before_s": 1210,
+              "phase_after": 2,
+              "state_after": "r",
+              "next_switch_after_s": 1210
+            }
+          }
+        ],
+        "events": [
+          {
+            "event": "REQUESTED",
+            "request_id": "fixed",
+            "global_request_s": 1200,
+            "rate_veh_h": 750,
+            "origin": "FIXED",
+            "r_ALINEA": null,
+            "mapped_period_s": 10,
+            "mapped_rate_veh_h": 720.0
+          },
+          {
+            "event": "ACK_OBSERVED",
+            "request_id": "fixed",
+            "application_global_s": 1200,
+            "first_green_ACK_s": 1201,
+            "application_delay_s": 0
+          }
+        ],
+        "entries": [
+          {
+            "vehicle_id": "R_flow.0",
+            "time_begin_s": 1200,
+            "time_end_s": 1201,
+            "motion": "G"
+          },
+          {
+            "vehicle_id": "R_flow.1",
+            "time_begin_s": 1205,
+            "time_end_s": 1206,
+            "motion": "y"
+          },
+          {
+            "vehicle_id": "R_flow.2",
+            "time_begin_s": 1206,
+            "time_end_s": 1207,
+            "motion": "y"
+          }
+        ],
+        "tls": [
+          {
+            "time": "1200",
+            "id": "ramp_mid",
+            "programID": "T10_G5Y3_NATIVE",
+            "phase": "0",
+            "state": "G"
+          },
+          {
+            "time": "1201",
+            "id": "ramp_mid",
+            "programID": "T10_G5Y3_NATIVE",
+            "phase": "0",
+            "state": "G"
+          },
+          {
+            "time": "1202",
+            "id": "ramp_mid",
+            "programID": "T10_G5Y3_NATIVE",
+            "phase": "0",
+            "state": "G"
+          },
+          {
+            "time": "1203",
+            "id": "ramp_mid",
+            "programID": "T10_G5Y3_NATIVE",
+            "phase": "0",
+            "state": "G"
+          },
+          {
+            "time": "1204",
+            "id": "ramp_mid",
+            "programID": "T10_G5Y3_NATIVE",
+            "phase": "0",
+            "state": "G"
+          },
+          {
+            "time": "1205",
+            "id": "ramp_mid",
+            "programID": "T10_G5Y3_NATIVE",
+            "phase": "1",
+            "state": "y"
+          },
+          {
+            "time": "1206",
+            "id": "ramp_mid",
+            "programID": "T10_G5Y3_NATIVE",
+            "phase": "1",
+            "state": "y"
+          },
+          {
+            "time": "1207",
+            "id": "ramp_mid",
+            "programID": "T10_G5Y3_NATIVE",
+            "phase": "1",
+            "state": "y"
+          },
+          {
+            "time": "1208",
+            "id": "ramp_mid",
+            "programID": "T10_G5Y3_NATIVE",
+            "phase": "2",
+            "state": "r"
+          },
+          {
+            "time": "1209",
+            "id": "ramp_mid",
+            "programID": "T10_G5Y3_NATIVE",
+            "phase": "2",
+            "state": "r"
+          }
+        ],
+        "acks": [
+          {
+            "requested_target_s": 1201,
+            "ACK_received": true,
+            "actual_time_verified": false,
+            "actual_readback_s": null
+          },
+          {
+            "requested_target_s": 1201,
+            "ACK_received": true,
+            "actual_time_verified": true,
+            "actual_readback_s": 1201
+          },
+          {
+            "requested_target_s": 1202,
+            "ACK_received": true,
+            "actual_time_verified": false,
+            "actual_readback_s": null
+          },
+          {
+            "requested_target_s": 1202,
+            "ACK_received": true,
+            "actual_time_verified": true,
+            "actual_readback_s": 1202
+          },
+          {
+            "requested_target_s": 1203,
+            "ACK_received": true,
+            "actual_time_verified": false,
+            "actual_readback_s": null
+          },
+          {
+            "requested_target_s": 1203,
+            "ACK_received": true,
+            "actual_time_verified": true,
+            "actual_readback_s": 1203
+          },
+          {
+            "requested_target_s": 1204,
+            "ACK_received": true,
+            "actual_time_verified": false,
+            "actual_readback_s": null
+          },
+          {
+            "requested_target_s": 1204,
+            "ACK_received": true,
+            "actual_time_verified": true,
+            "actual_readback_s": 1204
+          },
+          {
+            "requested_target_s": 1205,
+            "ACK_received": true,
+            "actual_time_verified": false,
+            "actual_readback_s": null
+          },
+          {
+            "requested_target_s": 1205,
+            "ACK_received": true,
+            "actual_time_verified": true,
+            "actual_readback_s": 1205
+          },
+          {
+            "requested_target_s": 1206,
+            "ACK_received": true,
+            "actual_time_verified": false,
+            "actual_readback_s": null
+          },
+          {
+            "requested_target_s": 1206,
+            "ACK_received": true,
+            "actual_time_verified": true,
+            "actual_readback_s": 1206
+          },
+          {
+            "requested_target_s": 1207,
+            "ACK_received": true,
+            "actual_time_verified": false,
+            "actual_readback_s": null
+          },
+          {
+            "requested_target_s": 1207,
+            "ACK_received": true,
+            "actual_time_verified": true,
+            "actual_readback_s": 1207
+          },
+          {
+            "requested_target_s": 1208,
+            "ACK_received": true,
+            "actual_time_verified": false,
+            "actual_readback_s": null
+          },
+          {
+            "requested_target_s": 1208,
+            "ACK_received": true,
+            "actual_time_verified": true,
+            "actual_readback_s": 1208
+          },
+          {
+            "requested_target_s": 1209,
+            "ACK_received": true,
+            "actual_time_verified": false,
+            "actual_readback_s": null
+          },
+          {
+            "requested_target_s": 1209,
+            "ACK_received": true,
+            "actual_time_verified": true,
+            "actual_readback_s": 1209
+          },
+          {
+            "requested_target_s": 1210,
+            "ACK_received": true,
+            "actual_time_verified": false,
+            "actual_readback_s": null
+          },
+          {
+            "requested_target_s": 1210,
+            "ACK_received": true,
+            "actual_time_verified": true,
+            "actual_readback_s": 1210
+          }
+        ],
+        "pre": [
+          {
+            "bound_snapshot": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "program": "T10_G5Y3_NATIVE"
+            }
+          },
+          {
+            "bound_snapshot": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "program": "T10_G5Y3_NATIVE"
+            }
+          },
+          {
+            "bound_snapshot": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "program": "T10_G5Y3_NATIVE"
+            }
+          },
+          {
+            "bound_snapshot": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "program": "T10_G5Y3_NATIVE"
+            }
+          },
+          {
+            "bound_snapshot": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "program": "T10_G5Y3_NATIVE"
+            }
+          },
+          {
+            "bound_snapshot": {
+              "phase_before": 0,
+              "state_before": "G",
+              "next_switch_before_s": 1205,
+              "program": "T10_G5Y3_NATIVE"
+            }
+          },
+          {
+            "bound_snapshot": {
+              "phase_before": 1,
+              "state_before": "y",
+              "next_switch_before_s": 1208,
+              "program": "T10_G5Y3_NATIVE"
+            }
+          },
+          {
+            "bound_snapshot": {
+              "phase_before": 1,
+              "state_before": "y",
+              "next_switch_before_s": 1208,
+              "program": "T10_G5Y3_NATIVE"
+            }
+          },
+          {
+            "bound_snapshot": {
+              "phase_before": 1,
+              "state_before": "y",
+              "next_switch_before_s": 1208,
+              "program": "T10_G5Y3_NATIVE"
+            }
+          },
+          {
+            "bound_snapshot": {
+              "phase_before": 2,
+              "state_before": "r",
+              "next_switch_before_s": 1210,
+              "program": "T10_G5Y3_NATIVE"
+            }
+          }
+        ],
+        "calls": [
+          {
+            "requests": [
+              {
+                "method": "setPhaseDuration",
+                "value": 1,
+                "time_s": 1209,
+                "call_completed": true,
+                "actual_readback": {
+                  "time_s": 1209,
+                  "program": "T10_G5Y3_NATIVE",
+                  "phase": 2,
+                  "state": "r",
+                  "nextSwitch_s": 1210
+                }
+              }
+            ],
+            "actual_readback": {
+              "state": "r",
+              "nextSwitch_s": 1210
+            }
+          }
+        ],
+        "durations": [
+          {
+            "time_s": 1209,
+            "method": "setPhaseDuration",
+            "value": 1,
+            "call_completed": false,
+            "status": "ATTEMPTED",
+            "cycle_end_s": 1210
+          },
+          {
+            "method": "setPhaseDuration",
+            "value": 1,
+            "time_s": 1209,
+            "call_completed": true,
+            "actual_readback": {
+              "time_s": 1209,
+              "program": "T10_G5Y3_NATIVE",
+              "phase": 2,
+              "state": "r",
+              "nextSwitch_s": 1210
+            },
+            "status": "READBACK_VERIFIED",
+            "cycle_end_s": 1210
+          }
+        ]
+      },
+      "independent_accounting": {
+        "status": "PASS_ACCOUNTING",
+        "accounting": {
+          "C": 2.0833333333333335,
+          "C_mapped_pending": 2.0,
+          "C_applied": 2.0,
+          "E": 2,
+          "N": 3,
+          "policy_quantization": 0.08333333333333333,
+          "application_latency": 0.0,
+          "C_applied_minus_E": 0.0,
+          "E_minus_N": -1
+        },
+        "cycles": [
+          {
+            "begin_s": 1200,
+            "end_s": 1210,
+            "period_s": 10,
+            "yellow_s": 3,
+            "applied_request_id": "fixed",
+            "N": 3,
+            "N_G": 1,
+            "N_y": 2,
+            "N_r": 0,
+            "E": 2,
+            "completed": true,
+            "phase_exposure_s": {
+              "G": 5,
+              "y": 3,
+              "r": 2
+            }
+          }
+        ],
+        "applications": [
+          {
+            "request_id": "fixed",
+            "application_global_s": 1200,
+            "application_delay_s": 0
+          }
+        ],
+        "observed_end_s": 1210,
+        "planned_end_observed": false,
+        "requests_without_observed_application": [],
+        "rate_qualified": false
+      },
+      "independent_phases": {
+        "status": "PASS_CONTINUOUS_PHASES",
+        "cycles": [
+          {
+            "begin_s": 1200,
+            "end_s": 1210,
+            "period_s": 10,
+            "observed_motion_sequence": "GGGGGyyyrr",
+            "green_end_s": 1205,
+            "yellow_s": 3,
+            "completed": true
+          }
+        ],
+        "observed_intercycle_r_to_G": 0,
+        "rate_qualified": false,
+        "native_safety_proven": false
+      }
+    }
+  ]
+}

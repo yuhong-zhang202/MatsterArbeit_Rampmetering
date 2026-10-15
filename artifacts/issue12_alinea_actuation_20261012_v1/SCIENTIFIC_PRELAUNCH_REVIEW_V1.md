@@ -1,0 +1,13 @@
+# Issue12 scientific prelaunch review V1
+
+2026-10-12. Read-only scientific_reviewer /root/budget_cycle_design_science; faithful primary-agent record. Verdict: GO_FOR_FIRST_R300_BOUNDED_TECHNICAL_DIAGNOSTIC, not native safety or service qualification. No Blocker/Major. Context preflight completed; Stage6 closure, A1 UNRESOLVED, Candidate A NOT_QUALIFIED and empty/unfrozen formal protocol preserved.
+
+Exact first card SHA256: 4ddbe480758fb8b0212912a36c07359eae34675b961cf1e1e49c434a031762a5. Current engineering105 binder 077b8313ea0c380422b3650288f66fe2271f03e1dc3153b6c0550cbd1de1755a and independent data9 binder 819eb2f40cbaa0341efff9119e5a63da825460995261b9e794f142121662fdff matched. Source is an uncommitted exact snapshot on baseline20e5, not code tested by that historical commit.
+
+Reviewed actual quota with uncapped G/y entries; requested/mapped/applied integrals; Y5 bound actual local stop/body-clear feasibility (not native future safety); actualred ACK clock adjustment and readback to24s endpoint with totalred>=2; dynamic firstred checkpoint and1272 endpoint; terminal before-only identities and BEGIN/dt1 postrun speed join. Original collision, teleport, red-entry, braking, WAIT and entry checks remain. Unknown/danger STOP remains mandatory.
+
+One Minor in audit_data_V2: checking leftover independent entries only by vehicle ID can miss an additional out-of-window record bearing a previously counted ID. It does not affect runtime/card or block obtaining first raw. Before a complete independent accounting claim, every independent entry record must belong to an observed ACK and be consumed exactly once, otherwise UNKNOWN. Primary assigned one versioned V3 reader repair/fixture, retaining V2, with no engineering-suite/native rerun.
+
+Measurement checks: target PASS (meter R entries/second/cycle/72s and laststep brake, not whole-route benefit); coverage PASS at code/binding level but native NOT_VERIFIED; omission/duplication partial pending Minor; independent fixture PASS but actual FCD/TLS/ACK/EOF/arrival audit pending; seven engineering methods have separate actual PASS receipts and two data methods are small fixtures, not native physics evidence.
+
+Next: primary binds genuine Issue12 authorization and canonical exact one-use release only for first300 after fresh resources/inputs/env checks. At most3 new starts. Actual engineering->data->science postrun gates required before any900 run; terminal UNKNOWN blocks progression. All other rates NOT_TESTED. No tests, writes, native start or new literature fetch were performed by scientific reviewer. Suggestions do not authorize formal experiments.

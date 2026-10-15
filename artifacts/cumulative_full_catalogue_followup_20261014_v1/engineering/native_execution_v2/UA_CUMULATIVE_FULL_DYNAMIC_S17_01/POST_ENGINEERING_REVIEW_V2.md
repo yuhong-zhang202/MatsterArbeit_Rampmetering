@@ -1,0 +1,25 @@
+# Dynamic actual STOP-prefix engineering review
+
+2026-10-14. GO_FOR_FROZEN_STOP_EVIDENCE_HANDOFF_ONLY; no next run/retry or qualification. Independent actual data/science pending.
+
+Exactly one native start: CLI61749/SUMO61776/port52850/session84587, executionHEAD ee5984024987e6cf7c6b2e571c083e06a9773a8b. packages_v2card68e9b2c/shared136source5d069519 andcanonical8082adc8 remained exact. StartupCONNECTED3.844228875s after37polls ofthe samechild; monitoredstartup+loop+ownedcleanup147.815189833s below300. CLIexit1, nativeEOF0 andfourstreamfinalBOUND_NO_OBSERVED_NATIVE_MESSAGE; bothownedprocessesconfirmedgone. ActualstopACK/accounted1233<1296: DiagnosticStop:POST_CURRENT_GAP_BOUND_DENIED. This is not normalapprovedterminalpartial or resourcefailure. Nativeclosednormallyafterthe requestedSTOP; that exit0doesnot erase the controlfailure.
+
+Entire rawparent186files/401074259B frozen once outside raw, manifestfae54a894ca43db10999857a1c11db8371ac8c57b992f5cb0007b8f0f268eb75; original outputs/reservations/source snapshots/card/release/failure/counters/clientwarning kept. Statstablewhilehashed, no rawchangesafterfreeze. All136current/125previoussourcehashesmatch. No source/guard/model/phase/NUM/seed change orautomaticretry; ALINEA notauthorizedorstarted. RawbytecapNone/live5GB/300wall/.2watchdog unchanged.
+
+## Exact hard-predicate refusal
+
+Motion1232→1233 was firstG ofthirdpacketT8/I12_PACKET8, nativephase2/r/due1232 before, phase0/G/nextSwitch1236 after. R_flow.4 actually crossed; its before/after actualfollowing checksbothpassed. It is not the refused nextfrontR_flow.5, and no redentry is invented.
+
+AtfreshACK1233 the nextfrontR_flow.5 isbound tostorage lane, position195.615477548m, speed1.022884125m/s, length5/minGap2.5/modes31/1621. NativegetLeader returnsR_flow.4 internal:ramp_mid_0_0 atposition0.720629764m/speed1.765150742m/s; tailstill−4.279370236m frommeter. CurrentquerygetSecureGap arguments are followerR5, actualspeed1.022884125, actualleaderSpeed1.765150742, leaderMaxDecel9.0, leaderIDR4. Returnedsecuregap1.022884125m; measuredgapexcludingminGap2.095152216m. Requiredprojectboundsecuregap+retained1.1m=2.122884125m; shortfall0.027731909m. Physicalbumpergap4.595152216m is a separate quantity; addingminGapagain to the netgapcriterion wouldmisstateitsunits.
+
+PRE1232 worldbindsR4storage/v0.129104763 andR5storage/v4.306578289; postR4internal/v1.765150742,R5storage/v1.022884125. ThusR5delta-v−3.283694164m/s over1s stays belowthe normal4.5m/s² magnitude; rawlegacybrakingreasonsareempty, nativeeventcounterszero. Freshroute/modes/time/lane/leader andgetSecureGap inputsarepresent. Selectedbefore/afterbindingsandexactsourcehashareinBEFORE_AFTER_STOP_BINDING_V2.json; query/entry/countersinSTOP_INPUT_DETAIL_V2.json. No evidenceofmissingfields, wrongID/time/unit orsetter/readbackbug isidentifiedbythisboundedengineeringinspection; privateSUMObranch/RNGandfuturemovementarenotobserved.
+
+The arithmeticgap exceeds the returnednative securegap butmissesthe project'sadditional1.1margin. Thatdistinguishes the observedprojectcontractdenial from a verifiednativecollision or proof ofuniversalunsafeSUMO/CandidateA/900infeasibility. The unchangedguardcorrectlyenforceditsdeclaredrule; thereisnoauthorizationto subtractmargin, chooseanotherdeceleration, suppressSTOP orreusea brakingnumericexception. Earlierfixed24/900 andphase-onlyshortpacket workusedthe samemargin responsibility. Theoldlong-greenavoidance fixdoesnotautomaticallyrepairthisfirst-G refusalinrepeatedT8; samepredicate isnotproof ofsameunderlyingtrafficcause. Anyfollow-upcontract/mechanismdecisionneedsindependent actualreview andexplicitroot/scientific scope, notanunchangedseedreroll.
+
+## Observed application/accounting scope
+
+Initial engineering accounting: two completepackets1200–1224T24 G4/Y5/R15 and1224–1232T8 G4/Y2/R2, eachN2; third1232–planned1240T8 hasonly1G/N1. C169/24≈7.041667; appliedC4.25; completeE4/allobservedN5. Itsunobservedy/r mustbe null inindependentresults ratherthananobservedzero; E/Nsupportsareunequalatpartialend. R4tailiscensoredatSTOPandcannotbecalledcleared. Request300 actuallyapplied1200,750request1201applied1224(delay23),900request1226applied1232(delay6). Future1237→300 requestneveroccurred, sothefullfourswitchtaskisnotcompleteanditscounts/applicationremainunobserved. NoendpointC=N/qualificationclaim.
+
+Theactualcostarithmeticallyleaves600−147.815189833=452.184810167s, butit is not yetsettled: productionguardianholdsunknown300andrefusesanothernewrununtildata/sciencepostreview/settlement. NoALINEAreleaseorautomaticprogressbasedonsurplusresources. ClientfloatstepAPIUserWarningkeptdistinctfromfourSUMOnativestreams. EOFcoverageisbound; normalterminallast-step/independentFCD/population/phase/accountingreviewisdata-owned, notcompletedbyengineering.
+
+Next: independentnewreaderoneactualprefixaudit andreadonlyscience retainSTOP, partial/null/censor andmissingfinalrequest. Thenrootdecidesan evidence-supportedmechanisminvestigation; do notraiseglobaltolerance orrunFeedbacktoavoidthisfinding. Documentation/state/Git remainroot-owned; thisengineerchangedonlynewexecutionevidence, neveroldraw/source.

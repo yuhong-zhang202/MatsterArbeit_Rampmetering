@@ -1,0 +1,674 @@
+{
+  "status": "PASS_LOCAL_REPLAY_NOT_NEW_NATIVE900",
+  "source_compatibility": {
+    "identity_inventory_AST_identical": true,
+    "post_physical_guard_block_byte_identical": true,
+    "body_and_current_gap_imports": "UNCHANGED_OLD_MODULES",
+    "900_cache_non_E1_domains": "INHERITED_SUPER_DISPATCH_UNCHANGED",
+    "expected_metadata_differences": [
+      "new run ID",
+      "new code namespace",
+      "command IDs and journals",
+      "prepared versus actual ACK application statuses",
+      "generic phase-clock diagnostic fields"
+    ],
+    "programID900": "I12_PACKET8 unchanged",
+    "new_native_source_900_tested": false
+  },
+  "matched_motion_clock_entry_rows": [
+    {
+      "time_begin_s": 1200,
+      "motion": "G",
+      "actual_entry_ids": [
+        "R_flow.0"
+      ],
+      "expected_post_nextSwitch_s": 1204,
+      "actual_post_nextSwitch_s": 1204.0
+    },
+    {
+      "time_begin_s": 1201,
+      "motion": "G",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1204,
+      "actual_post_nextSwitch_s": 1204.0
+    },
+    {
+      "time_begin_s": 1202,
+      "motion": "G",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1204,
+      "actual_post_nextSwitch_s": 1204.0
+    },
+    {
+      "time_begin_s": 1203,
+      "motion": "G",
+      "actual_entry_ids": [
+        "R_flow.1"
+      ],
+      "expected_post_nextSwitch_s": 1204,
+      "actual_post_nextSwitch_s": 1204.0
+    },
+    {
+      "time_begin_s": 1204,
+      "motion": "y",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1206,
+      "actual_post_nextSwitch_s": 1206.0
+    },
+    {
+      "time_begin_s": 1205,
+      "motion": "y",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1206,
+      "actual_post_nextSwitch_s": 1206.0
+    },
+    {
+      "time_begin_s": 1206,
+      "motion": "r",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1208,
+      "actual_post_nextSwitch_s": 1208.0
+    },
+    {
+      "time_begin_s": 1207,
+      "motion": "r",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1208,
+      "actual_post_nextSwitch_s": 1208.0
+    },
+    {
+      "time_begin_s": 1208,
+      "motion": "G",
+      "actual_entry_ids": [
+        "R_flow.2"
+      ],
+      "expected_post_nextSwitch_s": 1212,
+      "actual_post_nextSwitch_s": 1212.0
+    },
+    {
+      "time_begin_s": 1209,
+      "motion": "G",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1212,
+      "actual_post_nextSwitch_s": 1212.0
+    },
+    {
+      "time_begin_s": 1210,
+      "motion": "G",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1212,
+      "actual_post_nextSwitch_s": 1212.0
+    },
+    {
+      "time_begin_s": 1211,
+      "motion": "G",
+      "actual_entry_ids": [
+        "R_flow.3"
+      ],
+      "expected_post_nextSwitch_s": 1212,
+      "actual_post_nextSwitch_s": 1212.0
+    },
+    {
+      "time_begin_s": 1212,
+      "motion": "y",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1214,
+      "actual_post_nextSwitch_s": 1214.0
+    },
+    {
+      "time_begin_s": 1213,
+      "motion": "y",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1214,
+      "actual_post_nextSwitch_s": 1214.0
+    },
+    {
+      "time_begin_s": 1214,
+      "motion": "r",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1216,
+      "actual_post_nextSwitch_s": 1216.0
+    },
+    {
+      "time_begin_s": 1215,
+      "motion": "r",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1216,
+      "actual_post_nextSwitch_s": 1216.0
+    },
+    {
+      "time_begin_s": 1216,
+      "motion": "G",
+      "actual_entry_ids": [
+        "R_flow.4"
+      ],
+      "expected_post_nextSwitch_s": 1220,
+      "actual_post_nextSwitch_s": 1220.0
+    },
+    {
+      "time_begin_s": 1217,
+      "motion": "G",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1220,
+      "actual_post_nextSwitch_s": 1220.0
+    },
+    {
+      "time_begin_s": 1218,
+      "motion": "G",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1220,
+      "actual_post_nextSwitch_s": 1220.0
+    },
+    {
+      "time_begin_s": 1219,
+      "motion": "G",
+      "actual_entry_ids": [
+        "R_flow.5"
+      ],
+      "expected_post_nextSwitch_s": 1220,
+      "actual_post_nextSwitch_s": 1220.0
+    },
+    {
+      "time_begin_s": 1220,
+      "motion": "y",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1222,
+      "actual_post_nextSwitch_s": 1222.0
+    },
+    {
+      "time_begin_s": 1221,
+      "motion": "y",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1222,
+      "actual_post_nextSwitch_s": 1222.0
+    },
+    {
+      "time_begin_s": 1222,
+      "motion": "r",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1224,
+      "actual_post_nextSwitch_s": 1224.0
+    },
+    {
+      "time_begin_s": 1223,
+      "motion": "r",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1224,
+      "actual_post_nextSwitch_s": 1224.0
+    },
+    {
+      "time_begin_s": 1224,
+      "motion": "G",
+      "actual_entry_ids": [
+        "R_flow.6"
+      ],
+      "expected_post_nextSwitch_s": 1228,
+      "actual_post_nextSwitch_s": 1228.0
+    },
+    {
+      "time_begin_s": 1225,
+      "motion": "G",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1228,
+      "actual_post_nextSwitch_s": 1228.0
+    },
+    {
+      "time_begin_s": 1226,
+      "motion": "G",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1228,
+      "actual_post_nextSwitch_s": 1228.0
+    },
+    {
+      "time_begin_s": 1227,
+      "motion": "G",
+      "actual_entry_ids": [
+        "R_flow.7"
+      ],
+      "expected_post_nextSwitch_s": 1228,
+      "actual_post_nextSwitch_s": 1228.0
+    },
+    {
+      "time_begin_s": 1228,
+      "motion": "y",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1230,
+      "actual_post_nextSwitch_s": 1230.0
+    },
+    {
+      "time_begin_s": 1229,
+      "motion": "y",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1230,
+      "actual_post_nextSwitch_s": 1230.0
+    },
+    {
+      "time_begin_s": 1230,
+      "motion": "r",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1232,
+      "actual_post_nextSwitch_s": 1232.0
+    },
+    {
+      "time_begin_s": 1231,
+      "motion": "r",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1232,
+      "actual_post_nextSwitch_s": 1232.0
+    },
+    {
+      "time_begin_s": 1232,
+      "motion": "G",
+      "actual_entry_ids": [
+        "R_flow.8"
+      ],
+      "expected_post_nextSwitch_s": 1236,
+      "actual_post_nextSwitch_s": 1236.0
+    },
+    {
+      "time_begin_s": 1233,
+      "motion": "G",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1236,
+      "actual_post_nextSwitch_s": 1236.0
+    },
+    {
+      "time_begin_s": 1234,
+      "motion": "G",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1236,
+      "actual_post_nextSwitch_s": 1236.0
+    },
+    {
+      "time_begin_s": 1235,
+      "motion": "G",
+      "actual_entry_ids": [
+        "R_flow.9"
+      ],
+      "expected_post_nextSwitch_s": 1236,
+      "actual_post_nextSwitch_s": 1236.0
+    },
+    {
+      "time_begin_s": 1236,
+      "motion": "y",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1238,
+      "actual_post_nextSwitch_s": 1238.0
+    },
+    {
+      "time_begin_s": 1237,
+      "motion": "y",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1238,
+      "actual_post_nextSwitch_s": 1238.0
+    },
+    {
+      "time_begin_s": 1238,
+      "motion": "r",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1240,
+      "actual_post_nextSwitch_s": 1240.0
+    },
+    {
+      "time_begin_s": 1239,
+      "motion": "r",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1240,
+      "actual_post_nextSwitch_s": 1240.0
+    },
+    {
+      "time_begin_s": 1240,
+      "motion": "G",
+      "actual_entry_ids": [
+        "R_flow.10"
+      ],
+      "expected_post_nextSwitch_s": 1244,
+      "actual_post_nextSwitch_s": 1244.0
+    },
+    {
+      "time_begin_s": 1241,
+      "motion": "G",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1244,
+      "actual_post_nextSwitch_s": 1244.0
+    },
+    {
+      "time_begin_s": 1242,
+      "motion": "G",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1244,
+      "actual_post_nextSwitch_s": 1244.0
+    },
+    {
+      "time_begin_s": 1243,
+      "motion": "G",
+      "actual_entry_ids": [
+        "R_flow.11"
+      ],
+      "expected_post_nextSwitch_s": 1244,
+      "actual_post_nextSwitch_s": 1244.0
+    },
+    {
+      "time_begin_s": 1244,
+      "motion": "y",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1246,
+      "actual_post_nextSwitch_s": 1246.0
+    },
+    {
+      "time_begin_s": 1245,
+      "motion": "y",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1246,
+      "actual_post_nextSwitch_s": 1246.0
+    },
+    {
+      "time_begin_s": 1246,
+      "motion": "r",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1248,
+      "actual_post_nextSwitch_s": 1248.0
+    },
+    {
+      "time_begin_s": 1247,
+      "motion": "r",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1248,
+      "actual_post_nextSwitch_s": 1248.0
+    },
+    {
+      "time_begin_s": 1248,
+      "motion": "G",
+      "actual_entry_ids": [
+        "R_flow.12"
+      ],
+      "expected_post_nextSwitch_s": 1252,
+      "actual_post_nextSwitch_s": 1252.0
+    },
+    {
+      "time_begin_s": 1249,
+      "motion": "G",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1252,
+      "actual_post_nextSwitch_s": 1252.0
+    },
+    {
+      "time_begin_s": 1250,
+      "motion": "G",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1252,
+      "actual_post_nextSwitch_s": 1252.0
+    },
+    {
+      "time_begin_s": 1251,
+      "motion": "G",
+      "actual_entry_ids": [
+        "R_flow.13"
+      ],
+      "expected_post_nextSwitch_s": 1252,
+      "actual_post_nextSwitch_s": 1252.0
+    },
+    {
+      "time_begin_s": 1252,
+      "motion": "y",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1254,
+      "actual_post_nextSwitch_s": 1254.0
+    },
+    {
+      "time_begin_s": 1253,
+      "motion": "y",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1254,
+      "actual_post_nextSwitch_s": 1254.0
+    },
+    {
+      "time_begin_s": 1254,
+      "motion": "r",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1256,
+      "actual_post_nextSwitch_s": 1256.0
+    },
+    {
+      "time_begin_s": 1255,
+      "motion": "r",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1256,
+      "actual_post_nextSwitch_s": 1256.0
+    },
+    {
+      "time_begin_s": 1256,
+      "motion": "G",
+      "actual_entry_ids": [
+        "R_flow.14"
+      ],
+      "expected_post_nextSwitch_s": 1260,
+      "actual_post_nextSwitch_s": 1260.0
+    },
+    {
+      "time_begin_s": 1257,
+      "motion": "G",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1260,
+      "actual_post_nextSwitch_s": 1260.0
+    },
+    {
+      "time_begin_s": 1258,
+      "motion": "G",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1260,
+      "actual_post_nextSwitch_s": 1260.0
+    },
+    {
+      "time_begin_s": 1259,
+      "motion": "G",
+      "actual_entry_ids": [
+        "R_flow.15"
+      ],
+      "expected_post_nextSwitch_s": 1260,
+      "actual_post_nextSwitch_s": 1260.0
+    },
+    {
+      "time_begin_s": 1260,
+      "motion": "y",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1262,
+      "actual_post_nextSwitch_s": 1262.0
+    },
+    {
+      "time_begin_s": 1261,
+      "motion": "y",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1262,
+      "actual_post_nextSwitch_s": 1262.0
+    },
+    {
+      "time_begin_s": 1262,
+      "motion": "r",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1264,
+      "actual_post_nextSwitch_s": 1264.0
+    },
+    {
+      "time_begin_s": 1263,
+      "motion": "r",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1264,
+      "actual_post_nextSwitch_s": 1264.0
+    },
+    {
+      "time_begin_s": 1264,
+      "motion": "G",
+      "actual_entry_ids": [
+        "R_flow.16"
+      ],
+      "expected_post_nextSwitch_s": 1268,
+      "actual_post_nextSwitch_s": 1268.0
+    },
+    {
+      "time_begin_s": 1265,
+      "motion": "G",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1268,
+      "actual_post_nextSwitch_s": 1268.0
+    },
+    {
+      "time_begin_s": 1266,
+      "motion": "G",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1268,
+      "actual_post_nextSwitch_s": 1268.0
+    },
+    {
+      "time_begin_s": 1267,
+      "motion": "G",
+      "actual_entry_ids": [
+        "R_flow.17"
+      ],
+      "expected_post_nextSwitch_s": 1268,
+      "actual_post_nextSwitch_s": 1268.0
+    },
+    {
+      "time_begin_s": 1268,
+      "motion": "y",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1270,
+      "actual_post_nextSwitch_s": 1270.0
+    },
+    {
+      "time_begin_s": 1269,
+      "motion": "y",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1270,
+      "actual_post_nextSwitch_s": 1270.0
+    },
+    {
+      "time_begin_s": 1270,
+      "motion": "r",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1272,
+      "actual_post_nextSwitch_s": 1272.0
+    },
+    {
+      "time_begin_s": 1271,
+      "motion": "r",
+      "actual_entry_ids": [],
+      "expected_post_nextSwitch_s": 1272,
+      "actual_post_nextSwitch_s": 1272.0
+    }
+  ],
+  "setter_calls": [
+    [
+      1200,
+      "setProgram",
+      "I12_PACKET8"
+    ],
+    [
+      1200,
+      "setPhase",
+      0
+    ],
+    [
+      1204,
+      "setPhase",
+      1
+    ],
+    [
+      1207,
+      "setPhaseDuration",
+      1
+    ],
+    [
+      1212,
+      "setPhase",
+      1
+    ],
+    [
+      1215,
+      "setPhaseDuration",
+      1
+    ],
+    [
+      1220,
+      "setPhase",
+      1
+    ],
+    [
+      1223,
+      "setPhaseDuration",
+      1
+    ],
+    [
+      1228,
+      "setPhase",
+      1
+    ],
+    [
+      1231,
+      "setPhaseDuration",
+      1
+    ],
+    [
+      1236,
+      "setPhase",
+      1
+    ],
+    [
+      1239,
+      "setPhaseDuration",
+      1
+    ],
+    [
+      1244,
+      "setPhase",
+      1
+    ],
+    [
+      1247,
+      "setPhaseDuration",
+      1
+    ],
+    [
+      1252,
+      "setPhase",
+      1
+    ],
+    [
+      1255,
+      "setPhaseDuration",
+      1
+    ],
+    [
+      1260,
+      "setPhase",
+      1
+    ],
+    [
+      1263,
+      "setPhaseDuration",
+      1
+    ],
+    [
+      1268,
+      "setPhase",
+      1
+    ],
+    [
+      1271,
+      "setPhaseDuration",
+      1
+    ]
+  ],
+  "accounting": {
+    "C": 18.0,
+    "C_mapped_pending": 18.0,
+    "C_applied": 18.0,
+    "E": 18,
+    "N": 18,
+    "policy_quantization": 0.0,
+    "application_latency": 0.0,
+    "C_applied_minus_E": 0.0,
+    "E_minus_N": 0
+  },
+  "scope": "Recorded actual900 input/count/phase trace replay plus unchanged physical guard code; not reexecution of vehicle physics or future guarantee"
+}

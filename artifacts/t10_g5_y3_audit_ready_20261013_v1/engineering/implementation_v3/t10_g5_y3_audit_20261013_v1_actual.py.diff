@@ -1,0 +1,69 @@
+--- protected_V2/scripts/t10_g5_y3_audit_20261013_v1/actual.py
++++ repair_V3/scripts/t10_g5_y3_audit_20261013_v1/actual.py
+@@ -10,12 +10,13 @@
+ from scripts.unified_alinea_audit_20261013_v1.signal_binding_v2 import validate as signal_validate
+ spec=importlib.util.spec_from_file_location('protected_terminal_audit',ROOT/'data/processed/issue12_alinea_actuation_20261012_v1/audit_data_V3.py')
+ terminal=importlib.util.module_from_spec(spec);spec.loader.exec_module(terminal)
+-from scripts.t10_g5_y3_audit_20261013_v1.evidence import body_frame,log_eof,serialized_population,strict_numeric,checkpoint,yellow_record,identity_journal
++from scripts.t10_g5_y3_audit_20261013_v1.evidence import body_frame,log_eof,serialized_population,strict_numeric,checkpoint,yellow_record,identity_journal,identity_prefix,yellow_coverage
+ STORAGE='ramp_storage_0';INGRESS=':urban_diverge_1_0';INTERNAL=':ramp_mid_0_0'
+ STREAMS={'sumo_stdout.log','sumo_stderr.log','sumo_error.log','sumo.log'}
+ def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+ def read(p):return json.loads(Path(p).read_text())
+-def lines(p):return [json.loads(x) for x in Path(p).open() if x.strip()]
++def lines(p):
++    with Path(p).open() as f:return [json.loads(x) for x in f if x.strip()]
+ def flatten(rows):
+     out=[]
+     for row in rows:
+@@ -66,7 +67,7 @@
+     last=receipt.get('last_completed_s');need(type(last) in (int,float) and last==int(last) and 0<=last<=approved_end,'LAST_ACK');last=int(last)
+     pre=lines(raw/'pre_steps.jsonl');post=flatten(lines(raw/'post_steps.jsonl'));acks=lines(raw/'step_ack.jsonl');logs=lines(raw/'log_intervals.jsonl')
+     need(len(post)==last and last<=len(pre)<=last+1 and len(acks)==2*last,'PREFIX_COVERAGE')
+-    identities=lines(raw/'identity_journal.jsonl');need(2*last<=len(identities)<=2*last+1,'IDENTITY_JOURNAL_ACK_COVERAGE')
++    identities=lines(raw/'identity_journal.jsonl');identity_summary=identity_prefix(identities,pre,post,last)
+     tls=[v.attrib.copy() for v in ET.parse(raw/'tls_states.xml').getroot() if v.get('id')=='ramp_mid']
+     need(len(tls)==last and all(number(float(q['time'])) and float(q['time'])==i for i,q in enumerate(tls)),'ORDERED_TLS_PREFIX')
+     cfg=ET.parse(ROOT/card['package']/'scenario.sumocfg').getroot();net=Path(cfg.find('./input/net-file').get('value'));net=net if net.is_absolute() else ROOT/card['package']/net
+@@ -81,7 +82,6 @@
+         strict_numeric(r)
+         serialized_population(b['bound_snapshot'],i)
+         w=b['bound_snapshot']['world'];z=r.get('post_world');need(isinstance(z,dict),'MISSING_ADVANCED_WORLD')
+-        identity_journal(identities[2*i],i,'BEFORE_MOTION',w);identity_journal(identities[2*i+1],i+1,'AFTER_ACK',z)
+         ic=r.get('identity_change');need(isinstance(ic,dict),'MISSING_IDENTITY_CHANGE')
+         need(set(w)-set(z)==set(ic['arrived_ids'])==set(ic['before_only_ids']) and set(z)-set(w)==set(ic['after_only_ids']) and set(ic['after_only_ids'])<=set(ic['departed_ids']),'WORLD_IDENTITIES')
+         pending=r.get('terminal_arrival_pending');need(isinstance(pending,list) and len(pending)==len(ic['arrived_ids']) and {q['vehicle_id'] for q in pending}==set(ic['arrived_ids']),'ALL_ARRIVAL_METADATA')
+@@ -113,9 +113,6 @@
+             entry_following_ids[i]=expected_ids
+             if r.get('status') not in ('RECONCILED_DIAGNOSTIC_ONLY','MANDATORY_FIRST_RED_CHECKPOINT_PENDING','APPROVED_TECHNICAL_END_MANDATORY_STOP_NOT_QUALIFIED'):alarms.append({'kind':'RUNTIME_STOP','interval_begin_s':i,'status':r.get('status'),'reasons':r.get('reasons')})
+         else:missing.append({'kind':'UNRECONCILED_ADVANCED_INTERVAL','interval_begin_s':i,'retained_fields':sorted(r),'binding':r.get('post_signal_application_binding')})
+-    if len(identities)>2*last:
+-        need(len(pre)==last+1,'UNBOUND_EXTRA_IDENTITY_PRE_JOURNAL')
+-        identity_journal(identities[-1],last,'BEFORE_MOTION',pre[last]['bound_snapshot']['world'])
+     need({q['vehicle_id'] for q in arrivals}=={v['id'] for v in trips if float(v['arrival'])>=0} and len(arrivals)==len({q['vehicle_id'] for q in arrivals}),'ALL_COMPLETED_ARRIVALS')
+     entries=[];active=set();binding={};cleared={};body_rows=0;frame_count=0;shared=[]
+     with gzip.open(raw/'fcd.xml.gz','rb') as stream:
+@@ -145,10 +142,10 @@
+     for q in green_admissions:
+         t=q['time_s'];need(q['native_red_boundary'] is True and q['receiver']['available'] is True and t<len(pre),'FRESH_RECEIVING_SPACE_DENIED_OR_UNBOUND')
+         local={v for v,w in pre[t]['bound_snapshot']['world'].items() if w['lane_id'] in (STORAGE,INGRESS)};need(len(q['vehicle_states'])==len(local) and {v['vehicle_id'] for v in q['vehicle_states']}==local,'ADMISSION_LOCAL_COVERAGE')
+-    yellow=lines(raw/'yellow_scope.jsonl')
+-    for yy in yellow:
+-        t=yy['time_s'];meta=pre[t]['bound_snapshot']['terminal_before'] if t<len(pre) else None
+-        yellow_record(yy,account['cycles'],post[t-1]['post_world'],meta,last)
++    yellow=lines(raw/'yellow_scope.jsonl') if (raw/'yellow_scope.jsonl').exists() else []
++    prefix_stop=receipt['status'] not in ('PACKET_CYCLES_OBSERVED_NO_MONITORED_ANOMALY_NOT_QUALIFIED','APPROVED_END_PARTIAL_OR_BODY_CENSORED_NOT_QUALIFIED')
++    yellow_summary=yellow_coverage(yellow,phase,account['cycles'],post,pre,last,prefix_stop)
++    yellow_attempts=lines(raw/'yellow_scope_attempts.jsonl') if (raw/'yellow_scope_attempts.jsonl').exists() else []
+     log_eof(logs,raw,receipt)
+     if receipt['final_logs']['status']!='BOUND_NO_OBSERVED_NATIVE_MESSAGE':alarms.append({'kind':'NATIVE_FINAL_LOG_MESSAGE','reasons':receipt['final_logs'].get('reasons')})
+     elapsed=receipt['monitored_elapsed_through_cleanup_s'];need(number(elapsed) and elapsed>=0,'MONITORED_COST_MISSING')
+@@ -181,7 +178,7 @@
+     queue=ET.parse(raw/'queues.xml').getroot();last_queue=list(queue)[-1] if len(queue) else None
+     queue_summary=None if last_queue is None else {'export_BEGIN':last_queue.get('timestep'),'lanes':{q.get('id'):q.attrib for q in last_queue.findall('./lanes/lane') if q.get('id') in (STORAGE,'shared_approach_0')}}
+     runtime_stop=receipt['status'] not in ('PACKET_CYCLES_OBSERVED_NO_MONITORED_ANOMALY_NOT_QUALIFIED','APPROVED_END_PARTIAL_OR_BODY_CENSORED_NOT_QUALIFIED')
+-    return {'status':'UNKNOWN_INCOMPLETE_COVERAGE' if missing else 'STOP_OBSERVED_ALARM' if alarms or runtime_stop else 'PASS_OBSERVED_DATA_INTEGRITY_ONLY','classification':'BOUNDED_DIAGNOSTIC_NOT_FORMAL','run_id':run,'card_sha256':sha(card_path),'manifest_sha256':sha(manifest_path),'raw_files':len(m['files']),'raw_bytes':m['bytes'],'last_ACK':last,'last_accounted':len(complete),'accounting':account,'phase_audit':phase,'feedback_audit':feedback,'independent_actual_entries':entries,'entries_without_complete_accounting':[x for x in entries if x['time_begin_s']>=len(complete)],'body_censored_ids':sorted(active),'body_first_clear_ACK':cleared,'body_rows_checked':body_rows,'terminal_results':arrivals,'missing_or_unknown':missing,'observed_alarms':alarms,'runtime_stop':runtime_stop,'runtime_status':receipt['status'],'runtime_error':receipt['error'],'first_red_checkpoint':cp,'WAIT_records':wait,'min_speed_difference':min(brakes) if brakes else None,'min_native_acceleration':min(accelerations) if accelerations else None,'counter_max':max(counter_values) if counter_values else None,'log_EOF_verified':True,'demand_groups':groups,'shared_approach_diagnostic_frames':shared,'queue_export_final':queue_summary,'source_snapshot':'CARD_BOUND_EXACT_BYTES_NOT_BASELINE_NATIVE','identity_dynamics_scope':'Independent before/after actual getter journal joins active/loaded/pending population; model identity additionally bound vType input, not private native branch'  ,'native_safety_proven':False,'rate_qualified':False,'formal_effect_proven':False,'monitored_elapsed_s':elapsed,'current_source_and_environment_hashes_checked':True,'final_client_stderr_scope':'SEPARATE_FROM_FOUR_NATIVE_STREAMS_NOT_UNIVERSAL_LOG_COVERAGE'}
++    return {'status':'UNKNOWN_INCOMPLETE_COVERAGE' if missing else 'STOP_OBSERVED_ALARM' if alarms or runtime_stop else 'PASS_OBSERVED_DATA_INTEGRITY_ONLY','classification':'BOUNDED_DIAGNOSTIC_NOT_FORMAL','run_id':run,'card_sha256':sha(card_path),'manifest_sha256':sha(manifest_path),'raw_files':len(m['files']),'raw_bytes':m['bytes'],'last_ACK':last,'last_accounted':len(complete),'accounting':account,'phase_audit':phase,'feedback_audit':feedback,'independent_actual_entries':entries,'entries_without_complete_accounting':[x for x in entries if x['time_begin_s']>=len(complete)],'body_censored_ids':sorted(active),'body_first_clear_ACK':cleared,'body_rows_checked':body_rows,'terminal_results':arrivals,'missing_or_unknown':missing,'observed_alarms':alarms,'runtime_stop':runtime_stop,'runtime_status':receipt['status'],'runtime_error':receipt['error'],'first_red_checkpoint':cp,'yellow_screen_coverage':yellow_summary,'yellow_pre_motion_attempts_retained':yellow_attempts,'identity_prefix_coverage':identity_summary,'WAIT_records':wait,'min_speed_difference':min(brakes) if brakes else None,'min_native_acceleration':min(accelerations) if accelerations else None,'counter_max':max(counter_values) if counter_values else None,'log_EOF_verified':True,'demand_groups':groups,'shared_approach_diagnostic_frames':shared,'queue_export_final':queue_summary,'source_snapshot':'CARD_BOUND_EXACT_BYTES_NOT_BASELINE_NATIVE','identity_dynamics_scope':'Independent before/after actual getter journal joins active/loaded/pending population; model identity additionally bound vType input, not private native branch'  ,'native_safety_proven':False,'rate_qualified':False,'formal_effect_proven':False,'monitored_elapsed_s':elapsed,'current_source_and_environment_hashes_checked':True,'final_client_stderr_scope':'SEPARATE_FROM_FOUR_NATIVE_STREAMS_NOT_UNIVERSAL_LOG_COVERAGE'}
+ 
+ def main():
+     p=argparse.ArgumentParser();p.add_argument('--manifest',required=True);p.add_argument('--card',required=True);p.add_argument('--output',required=True);args=p.parse_args();out=Path(args.output).resolve();need(out.is_relative_to(ROOT/'data/processed/t10_g5_y3_audit_ready_20261013_v1'),'ONLY_NEW_PROCESSED_OUTPUT')

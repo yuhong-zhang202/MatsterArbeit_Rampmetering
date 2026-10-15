@@ -1,0 +1,12 @@
+{
+  "classification": "PR13_P2_OFFLINE_ORDERED_PHASE_REPAIR_BASELINE",
+  "requested_PR_head_reference": "4552241",
+  "prior_actual_auditor_path": "data/processed/issue12_alinea_actuation_20261012_v1/CA_I12_PACKET_R900_S17_DIAG01/revision01/audit_packet_actual_V1.py",
+  "prior_actual_auditor_sha256": "a80348c662c0487d23445bf2853d4e5ea20218c9592dfcb95e2923cb010b73aa",
+  "prior_data_binding_sha256": "8a660303b570b275cf108e27a98dd93d52cd2fe4373733ebef1e4a430db0c856",
+  "prior9_bound_files_unchanged": true,
+  "known_prior_limitation": "V1 checks per-cycle phase totals and agrees TLS with self-reported motion but does not independently require exact chronological GGGGyyrr order. TLS time dictionary may mask duplicate timestamps.",
+  "allowed_changes": "new revision02 auditor/evidence only, plus parent-owned pure phase helper/tests",
+  "SUMO_starts": 0,
+  "runtime_guard_card_raw_changes": 0
+}

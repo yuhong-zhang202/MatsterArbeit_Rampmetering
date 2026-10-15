@@ -1,0 +1,7 @@
+# Subsequent autonomous authority and exact-reader handoff
+
+After the preceding offline data review was frozen, the direct user gave autonomous technical-continuation/basic SUMO authorization, recorded in USER_AUTONOMOUS_CONTINUATION_AUTHORITY_V1.json. This supersedes the earlier need to wait for another individual reply; it does not retroactively turn PREPARED_NOT_RELEASED card observations into measured outcomes or eliminate exact scientific/canonical gates. The data evidence is sufficient to enter the bounded single750 run review under that recorded authority, pending scientific and canonical checks. Parent determines release; data agent grants no execution authority.
+
+Exact immediate identity/card/source/horizon/resources are as recorded: UA_CUMULATIVE_FULL750_S17_01 / da64599b / c4787966 /1296/300s/start60/no bytecap/free5GB. Preserve one start per identity and no blind retry. Former offline report statements about proposed resources/no execution describe that earlier snapshot; current user authority is the later governing instruction. Original safety/UNKNOWN/strictNUM/no-catchup and original scientific scope/qualification boundaries remain.
+
+FUTURE_RELEASE_DATA_BINDING_V1.json gives the required data review path/SHA and CUMULATIVE_FULL_C_N_V1 exact actual reader path/SHA for the profile’s enforced release gate. It binds the unchanged final independent data review; this supplemental authority record does not rerun tests, change sources/card or claim actual evidence. Scientific review and parent’s canonical release are still pending.

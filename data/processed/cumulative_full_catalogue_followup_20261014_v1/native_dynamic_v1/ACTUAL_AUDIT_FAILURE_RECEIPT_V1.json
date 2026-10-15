@@ -1,0 +1,16 @@
+{
+  "command": ".venv/bin/python -B scripts/cumulative_full_catalogue_followup_audit_20261014_v1/actual.py --manifest artifacts/cumulative_full_catalogue_followup_20261014_v1/engineering/native_execution_v2/UA_CUMULATIVE_FULL_DYNAMIC_S17_01/RAW_FINAL_SHA256_V2.json --card artifacts/cumulative_full_catalogue_followup_20261014_v1/engineering/packages_v2/UA_CUMULATIVE_FULL_DYNAMIC_S17_01/card.json --output data/processed/cumulative_full_catalogue_followup_20261014_v1/native_dynamic_v1",
+  "session_id": 12458,
+  "actual_exit_code": 1,
+  "status": "UNKNOWN_AUDIT_EXCEPTION",
+  "error": "UnboundLocalError: terminal local variable shadows imported terminal audit module",
+  "failed_line": 91,
+  "local_assignment_line": 189,
+  "reader_sha256": "079ed69575bff44454ed361862f38d4b40cb6df48f3f897d4e107711ec9ba5c4",
+  "result_sha256": "6b2ff0b69f749aff8a4e22b71ceb345eae37bf4f901e7cf4b564223e91cae271",
+  "actual_traffic_audit_completed": false,
+  "auditor_retries": 0,
+  "native_retries": 0,
+  "C_N_E_independent_results": null,
+  "runtime_failure_distinct": "Native STOP must be evaluated separately; this exception is data-reader failure, not native unsafe event"
+}

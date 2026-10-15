@@ -1,0 +1,15 @@
+{
+  "command": ".venv/bin/python -B -m unittest discover -s tests/cumulative_full_catalogue_audit_20261014 -v",
+  "exit_code": 0,
+  "methods": 4,
+  "log": "data/processed/cumulative_full_catalogue_implementation_20261014_v1/offline_v1/TEST_LOG_V1.txt",
+  "reader_sources_sha256": {
+    "scripts/cumulative_full_catalogue_audit_20261014_v1/_phase.py": "1b6669c79ea66ae54d03a4849cc837441ecdc16d8b780a8516f2132c81ae7471",
+    "scripts/cumulative_full_catalogue_audit_20261014_v1/actual.py": "ba09f70e6fc096fb5efee745d604a2da56e9cd589a5b8a46f60fa3fb4fb49f38",
+    "scripts/cumulative_full_catalogue_audit_20261014_v1/core.py": "5e47c42e1bb740b6f1dec07f9aa9eba6ba76191a3fb6d934d867375203a0b1cd",
+    "scripts/cumulative_full_catalogue_audit_20261014_v1/evidence.py": "f4de2afe20130f1b736314340210aa22c4f482d4126bbfda115f4c30bd641c15"
+  },
+  "test_sha256": "c0247383c4d57ef88fe92d5a7f2689542f9d8489131fbf26f9051698f47d2b23",
+  "scope": "INDEPENDENT_SYNTHETIC_ACCOUNTING_PHASE_YELLOW_FEEDBACK_INTERFACES_NOT_NATIVE_FCD_EOF_FULL_PIPELINE",
+  "native_runs": 0
+}

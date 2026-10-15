@@ -1,0 +1,42 @@
+--- scripts/dynamic_minimum_qualification_audit_20261015_v1/actual.py
++++ scripts/dynamic_native_yellow_minqual_audit_20261015_v1/actual.py
+@@ -6,13 +6,13 @@
+ from pathlib import Path
+ import argparse,collections,gzip,hashlib,importlib.util,json,math,sys,traceback,xml.etree.ElementTree as ET
+ ROOT=Path(__file__).resolve().parents[2];sys.path.insert(0,str(ROOT))
+-from scripts.dynamic_minimum_qualification_audit_20261015_v1.scope import check_card_scope,terminal_scope,resource_alarms
++from scripts.dynamic_native_yellow_minqual_audit_20261015_v1.scope import check_card_scope,terminal_scope,resource_alarms
+ from scripts.cumulative_full_catalogue_audit_20261014_v1.core import audit_accounting,audit_phases,audit_feedback,need,near,number
+ from scripts.unified_alinea_audit_20261013_v1.signal_binding_v2 import validate as signal_validate
+ spec=importlib.util.spec_from_file_location('protected_terminal_audit',ROOT/'data/processed/issue12_alinea_actuation_20261012_v1/audit_data_V3.py')
+ terminal=importlib.util.module_from_spec(spec);spec.loader.exec_module(terminal)
+ from scripts.cumulative_full_catalogue_audit_20261014_v1.evidence import body_frame,log_eof,serialized_population,strict_numeric,checkpoint,identity_journal,identity_prefix
+-from scripts.cumulative_full_catalogue_followup_audit_20261014_v1.yellow import yellow_record,yellow_coverage
++from scripts.dynamic_native_yellow_minqual_audit_20261015_v1.yellow import yellow_record,yellow_coverage
+ STORAGE='ramp_storage_0';INGRESS=':urban_diverge_1_0';INTERNAL=':ramp_mid_0_0'
+ STREAMS={'sumo_stdout.log','sumo_stderr.log','sumo_error.log','sumo.log'}
+ def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+@@ -131,12 +131,12 @@
+         local={v for v,w in pre[t]['bound_snapshot']['world'].items() if w['lane_id'] in (STORAGE,INGRESS)};need(len(q['vehicle_states'])==len(local) and {v['vehicle_id'] for v in q['vehicle_states']}==local,'ADMISSION_LOCAL_COVERAGE')
+     yellow=lines(raw/'yellow_scope.jsonl') if (raw/'yellow_scope.jsonl').exists() else []
+     prefix_stop=receipt['status'] not in ('PACKET_CYCLES_OBSERVED_NO_MONITORED_ANOMALY_NOT_QUALIFIED','APPROVED_END_PARTIAL_OR_BODY_CENSORED_NOT_QUALIFIED')
+-    yellow_summary=yellow_coverage(yellow,phase,account['cycles'],post,pre,last,prefix_stop)
++    yellow_summary=yellow_coverage(yellow,phase,account['cycles'],post,pre,last,prefix_stop,card['spec']['yellow_responsibility_contract'])
+     yellow_attempts=lines(raw/'yellow_scope_attempts.jsonl') if (raw/'yellow_scope_attempts.jsonl').exists() else []
+     log_eof(logs,raw,receipt)
+     if receipt['final_logs']['status']!='BOUND_NO_OBSERVED_NATIVE_MESSAGE':alarms.append({'kind':'NATIVE_FINAL_LOG_MESSAGE','reasons':receipt['final_logs'].get('reasons')})
+     elapsed=receipt['monitored_elapsed_through_cleanup_s'];need(number(elapsed) and elapsed>=0,'MONITORED_COST_MISSING')
+-    before=receipt['total_budget_before_run'];need(number(before['charged_monitored_s']) and type(before['charged_raw_bytes']) is int,'NEW_BUDGET_BASELINE')
++    before=receipt['total_budget_before_run'];need(number(before['charged_monitored_s']) and before['charged_monitored_s']>=163.07205774995964 and type(before['charged_raw_bytes']) is int and before['charged_raw_bytes']>=403265825,'SAME_STAGE_BUDGET_BASELINE_NO_RESET')
+     alarms.extend(resource_alarms(card,elapsed,before['charged_monitored_s'],m['bytes']))
+     feedback_events=lines(raw/'feedback_events.jsonl') if (raw/'feedback_events.jsonl').exists() else []
+     if card['spec']['mode']=='real_alinea':
+@@ -178,7 +178,7 @@
+     return {'status':'UNKNOWN_INCOMPLETE_COVERAGE' if missing else 'STOP_OBSERVED_ALARM' if alarms or runtime_stop else 'PASS_OBSERVED_DATA_INTEGRITY_ONLY','classification':'BOUNDED_DIAGNOSTIC_NOT_FORMAL','run_id':run,'card_sha256':sha(card_path),'manifest_sha256':sha(manifest_path),'raw_files':len(m['files']),'raw_bytes':m['bytes'],'last_ACK':last,'last_accounted':len(complete),'accounting':account,'phase_audit':phase,'feedback_audit':feedback,'independent_actual_entries':entries,'entries_without_complete_accounting':[x for x in entries if x['time_begin_s']>=len(complete)],'body_censored_ids':sorted(active),'body_first_clear_ACK':cleared,'body_rows_checked':body_rows,'terminal_results':arrivals,'missing_or_unknown':missing,'observed_alarms':alarms,'legacy_margin_advisories':advisories,'tracking_review':tracking,'terminal_support':terminal_support,'runtime_stop':runtime_stop,'runtime_status':receipt['status'],'runtime_error':receipt['error'],'first_red_checkpoint':cp,'yellow_screen_coverage':yellow_summary,'yellow_pre_motion_attempts_retained':yellow_attempts,'identity_prefix_coverage':identity_summary,'WAIT_records':wait,'min_speed_difference':min(brakes) if brakes else None,'min_native_acceleration':min(accelerations) if accelerations else None,'counter_max':max(counter_values) if counter_values else None,'log_EOF_verified':True,'demand_groups':groups,'shared_approach_diagnostic_frames':shared,'queue_export_final':queue_summary,'source_snapshot':'CARD_BOUND_EXACT_BYTES_NOT_BASELINE_NATIVE','identity_dynamics_scope':'BEFORE and extraPRE pools independently joined to original PRE; AFTER pools cross-checked against next same-time PRE where available; terminal AFTER without next PRE is SINGLE_JOURNAL_NOT_INDEPENDENT_POOL_CHECK; model input bound, private branch unobserved'  ,'native_safety_proven':False,'rate_qualified':False,'formal_effect_proven':False,'monitored_elapsed_s':elapsed,'current_source_and_environment_hashes_checked':True,'final_client_stderr_scope':'SEPARATE_FROM_FOUR_NATIVE_STREAMS_NOT_UNIVERSAL_LOG_COVERAGE'}
+ 
+ def main():
+-    p=argparse.ArgumentParser();p.add_argument('--manifest',required=True);p.add_argument('--card',required=True);p.add_argument('--output',required=True);args=p.parse_args();out=Path(args.output).resolve();need(out.is_relative_to(ROOT/'data/processed/dynamic_minimum_qualification_20261015_v1'),'ONLY_NEW_PROCESSED_OUTPUT')
++    p=argparse.ArgumentParser();p.add_argument('--manifest',required=True);p.add_argument('--card',required=True);p.add_argument('--output',required=True);args=p.parse_args();out=Path(args.output).resolve();need(out.is_relative_to(ROOT/'data/processed/dynamic_native_yellow_minqual_20261015_v1'),'ONLY_NEW_PROCESSED_OUTPUT')
+     need(not out.exists(),'VERSIONED_OUTPUT_EXISTS');out.mkdir(parents=True)
+     try:result=audit(args.manifest,args.card)
+     except Exception as exc:result={'status':'UNKNOWN_AUDIT_EXCEPTION','exception_type':type(exc).__name__,'reason':str(exc),'traceback':traceback.format_exc(),'native_safety_proven':False,'rate_qualified':False}

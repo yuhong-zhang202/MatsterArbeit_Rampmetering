@@ -1,0 +1,46 @@
+test_same_clock_wrong_post_signal_program_or_link_never_applies_command (tests.candidate_a_unified_alinea_20261013.test_unified.UnifiedTests.test_same_clock_wrong_post_signal_program_or_link_never_applies_command) ... 
+  test_same_clock_wrong_post_signal_program_or_link_never_applies_command (tests.candidate_a_unified_alinea_20261013.test_unified.UnifiedTests.test_same_clock_wrong_post_signal_program_or_link_never_applies_command) (mutation='state') ... FAIL
+  test_same_clock_wrong_post_signal_program_or_link_never_applies_command (tests.candidate_a_unified_alinea_20261013.test_unified.UnifiedTests.test_same_clock_wrong_post_signal_program_or_link_never_applies_command) (mutation='phase') ... FAIL
+  test_same_clock_wrong_post_signal_program_or_link_never_applies_command (tests.candidate_a_unified_alinea_20261013.test_unified.UnifiedTests.test_same_clock_wrong_post_signal_program_or_link_never_applies_command) (mutation='program') ... FAIL
+  test_same_clock_wrong_post_signal_program_or_link_never_applies_command (tests.candidate_a_unified_alinea_20261013.test_unified.UnifiedTests.test_same_clock_wrong_post_signal_program_or_link_never_applies_command) (mutation='link') ... FAIL
+
+======================================================================
+FAIL: test_same_clock_wrong_post_signal_program_or_link_never_applies_command (tests.candidate_a_unified_alinea_20261013.test_unified.UnifiedTests.test_same_clock_wrong_post_signal_program_or_link_never_applies_command) (mutation='state')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_unified_alinea_20261013/test_unified.py", line 54, in test_same_clock_wrong_post_signal_program_or_link_never_applies_command
+    self.assertIsNone(a.ledger.requests['bound-test']['first_application_s'])
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1200 is not None
+
+======================================================================
+FAIL: test_same_clock_wrong_post_signal_program_or_link_never_applies_command (tests.candidate_a_unified_alinea_20261013.test_unified.UnifiedTests.test_same_clock_wrong_post_signal_program_or_link_never_applies_command) (mutation='phase')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_unified_alinea_20261013/test_unified.py", line 54, in test_same_clock_wrong_post_signal_program_or_link_never_applies_command
+    self.assertIsNone(a.ledger.requests['bound-test']['first_application_s'])
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1200 is not None
+
+======================================================================
+FAIL: test_same_clock_wrong_post_signal_program_or_link_never_applies_command (tests.candidate_a_unified_alinea_20261013.test_unified.UnifiedTests.test_same_clock_wrong_post_signal_program_or_link_never_applies_command) (mutation='program')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_unified_alinea_20261013/test_unified.py", line 54, in test_same_clock_wrong_post_signal_program_or_link_never_applies_command
+    self.assertIsNone(a.ledger.requests['bound-test']['first_application_s'])
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1200 is not None
+
+======================================================================
+FAIL: test_same_clock_wrong_post_signal_program_or_link_never_applies_command (tests.candidate_a_unified_alinea_20261013.test_unified.UnifiedTests.test_same_clock_wrong_post_signal_program_or_link_never_applies_command) (mutation='link')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_unified_alinea_20261013/test_unified.py", line 54, in test_same_clock_wrong_post_signal_program_or_link_never_applies_command
+    self.assertIsNone(a.ledger.requests['bound-test']['first_application_s'])
+    ~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: 1200 is not None
+
+----------------------------------------------------------------------
+Ran 1 test in 0.023s
+
+FAILED (failures=4)

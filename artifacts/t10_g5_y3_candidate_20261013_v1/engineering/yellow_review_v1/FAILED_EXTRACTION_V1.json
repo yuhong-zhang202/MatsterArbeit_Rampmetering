@@ -1,0 +1,8 @@
+{
+  "command": ".venv/bin/python artifacts/t10_g5_y3_candidate_20261013_v1/engineering/yellow_review_v1/RECOMPUTE_EXISTING_YELLOW_V1.py",
+  "exit_code": 1,
+  "error": "ModuleNotFoundError: No module named src",
+  "source_sha256": "e9ab720af36bde514476d23249694b704c4552947496552ee68248f573af44bf",
+  "before_derived_outputs_or_runtime_mutation": true,
+  "remedy": "V2 adds correct project root to standalone script import path; runtime untouched"
+}

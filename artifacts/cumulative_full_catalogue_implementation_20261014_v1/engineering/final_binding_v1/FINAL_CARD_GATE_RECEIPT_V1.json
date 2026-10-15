@@ -1,0 +1,29 @@
+{
+  "status": "PASS_STATIC_17_XML_SOURCE_ENV_AND_REAL_NO_PERMISSION_GATE",
+  "source_commit": "3e95c545fd63765d1c15489c943bd80a78f6fdd5",
+  "command": ".venv/bin/python real profile.validate(require_environment=True), bridge.execute missing canonical exact authorization before protected_worker/native import/allocation",
+  "card_path": "artifacts/cumulative_full_catalogue_implementation_20261014_v1/engineering/packages_v1/UA_CUMULATIVE_FULL750_S17_01/card.json",
+  "card_sha256": "da64599b03875f92bb99a6d45691f5d918b9cc77420c0a0b755d3ef0acc5db8c",
+  "source_count": 125,
+  "source_digest": "c47879667efe4e92ae867353233b96ade1fb48d0cf879fdeed6b6921e86bab21",
+  "reader_sha256": {
+    "actual.py": "ba09f70e6fc096fb5efee745d604a2da56e9cd589a5b8a46f60fa3fb4fb49f38",
+    "core.py": "5e47c42e1bb740b6f1dec07f9aa9eba6ba76191a3fb6d934d867375203a0b1cd",
+    "evidence.py": "f4de2afe20130f1b736314340210aa22c4f482d4126bbfda115f4c30bd641c15",
+    "_phase.py": "1b6669c79ea66ae54d03a4849cc837441ecdc16d8b780a8516f2132c81ae7471"
+  },
+  "17_XML_rows_checked_by_real_validate": true,
+  "refusal_reason": "FUTURE_EXACT_NATIVE_AUTHORIZATION_MISSING",
+  "no_auth_release_raw": true,
+  "native_starts": 0,
+  "no_native_version_process": true,
+  "elapsed_s": 0.17691149999154732,
+  "audit_contract": {
+    "schema": "CUMULATIVE_FULL_C_N_V1",
+    "reader": "scripts/cumulative_full_catalogue_audit_20261014_v1/actual.py",
+    "status": "FROZEN_NEW_READER_REVIEW_REQUIRED_BEFORE_RELEASE",
+    "NUM": "STRICT_NO_CONTINUE_CLASSIFICATION",
+    "EOF_and_terminal_arrival_audit": "MANDATORY_NO_SKIP"
+  },
+  "scope": "No new native physics/service/safety observed; proposed resources and horizon need separate permission"
+}

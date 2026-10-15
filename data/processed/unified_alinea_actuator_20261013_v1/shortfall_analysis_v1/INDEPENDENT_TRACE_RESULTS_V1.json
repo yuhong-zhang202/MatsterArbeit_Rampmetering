@@ -1,0 +1,263 @@
+{
+  "status": "PASS_BOUNDED_SELECTED_TRACE_NOT_NEW_RUN",
+  "seven_cycles": [
+    {
+      "begin_s": 1200,
+      "second_id": "R_flow.1",
+      "start_position_m": 195.9879543879801,
+      "start_speed_m_s": 0.0,
+      "distance_to_line_m": 8.502045612019913,
+      "four_G_advance_m": 8.581191891884774,
+      "green_end_signed_distance_beyond_line_m": 0.07914628000000334,
+      "N_G": 2,
+      "queue_supply": 28,
+      "head_receiver_available": true,
+      "second_entry_BEGIN": 1203,
+      "G_close_reason": "ACTUAL_QUOTA_ACK"
+    },
+    {
+      "begin_s": 1210,
+      "second_id": "R_flow.3",
+      "start_position_m": 195.92988339013868,
+      "start_speed_m_s": 0.2244833997680257,
+      "distance_to_line_m": 8.560116609861325,
+      "four_G_advance_m": 12.144824695041148,
+      "green_end_signed_distance_beyond_line_m": 3.5847080899999924,
+      "N_G": 2,
+      "queue_supply": 26,
+      "head_receiver_available": true,
+      "second_entry_BEGIN": 1213,
+      "G_close_reason": "ACTUAL_QUOTA_ACK"
+    },
+    {
+      "begin_s": 1220,
+      "second_id": "R_flow.5",
+      "start_position_m": 195.9862837789823,
+      "start_speed_m_s": 0.0460397796998547,
+      "distance_to_line_m": 8.503716221017697,
+      "four_G_advance_m": 9.171127800159997,
+      "green_end_signed_distance_beyond_line_m": 0.6674115799999925,
+      "N_G": 2,
+      "queue_supply": 24,
+      "head_receiver_available": true,
+      "second_entry_BEGIN": 1223,
+      "G_close_reason": "ACTUAL_QUOTA_ACK"
+    },
+    {
+      "begin_s": 1230,
+      "second_id": "R_flow.7",
+      "start_position_m": 195.83552083521462,
+      "start_speed_m_s": 0.2966299385321398,
+      "distance_to_line_m": 8.654479164785386,
+      "four_G_advance_m": 11.215095356327978,
+      "green_end_signed_distance_beyond_line_m": 2.5606161899999904,
+      "N_G": 2,
+      "queue_supply": 22,
+      "head_receiver_available": true,
+      "second_entry_BEGIN": 1233,
+      "G_close_reason": "ACTUAL_QUOTA_ACK"
+    },
+    {
+      "begin_s": 1240,
+      "second_id": "R_flow.9",
+      "start_position_m": 195.7872105982055,
+      "start_speed_m_s": 0.1791481671531244,
+      "distance_to_line_m": 8.702789401794519,
+      "four_G_advance_m": 10.921016047187347,
+      "green_end_signed_distance_beyond_line_m": 2.218226649999991,
+      "N_G": 2,
+      "queue_supply": 21,
+      "head_receiver_available": true,
+      "second_entry_BEGIN": 1243,
+      "G_close_reason": "ACTUAL_QUOTA_ACK"
+    },
+    {
+      "begin_s": 1250,
+      "second_id": "R_flow.11",
+      "start_position_m": 195.924867539798,
+      "start_speed_m_s": 0.1287144197648152,
+      "distance_to_line_m": 8.565132460202022,
+      "four_G_advance_m": 8.938424216180701,
+      "green_end_signed_distance_beyond_line_m": 0.37329176000000075,
+      "N_G": 2,
+      "queue_supply": 21,
+      "head_receiver_available": true,
+      "second_entry_BEGIN": 1253,
+      "G_close_reason": "ACTUAL_QUOTA_ACK"
+    },
+    {
+      "begin_s": 1260,
+      "second_id": "R_flow.13",
+      "start_position_m": 195.92872133566854,
+      "start_speed_m_s": 0.06203493453036034,
+      "distance_to_line_m": 8.561278664331468,
+      "four_G_advance_m": 8.042648804400445,
+      "green_end_signed_distance_beyond_line_m": -0.5186298600000043,
+      "N_G": 1,
+      "queue_supply": 21,
+      "head_receiver_available": true,
+      "second_entry_BEGIN": null,
+      "G_close_reason": "MAX_GREEN_DEADLINE"
+    }
+  ],
+  "selected_ACKs": 41,
+  "last_cycle_ACK_trace": [
+    {
+      "ACK_s": 1260,
+      "FCD_BEGIN_s": 1259,
+      "lane": "ramp_storage_0",
+      "position_m": 195.92872134,
+      "speed_m_s": 0.06203493453036034,
+      "motion": "r",
+      "actual_delta_v_m_s2": -0.8770315519889557,
+      "actual_alpha_m_s2": -0.8770315519889557
+    },
+    {
+      "ACK_s": 1261,
+      "FCD_BEGIN_s": 1260,
+      "lane": "ramp_storage_0",
+      "position_m": 195.96008414,
+      "speed_m_s": 0.03136280044629204,
+      "motion": "G",
+      "actual_delta_v_m_s2": -0.030672134084068298,
+      "actual_alpha_m_s2": -0.030672134084068298
+    },
+    {
+      "ACK_s": 1262,
+      "FCD_BEGIN_s": 1261,
+      "lane": "ramp_storage_0",
+      "position_m": 196.95297854,
+      "speed_m_s": 0.9928944050419262,
+      "motion": "G",
+      "actual_delta_v_m_s2": 0.9615316045956341,
+      "actual_alpha_m_s2": 0.9615316045956341
+    },
+    {
+      "ACK_s": 1263,
+      "FCD_BEGIN_s": 1262,
+      "lane": "ramp_storage_0",
+      "position_m": 199.27914242,
+      "speed_m_s": 2.326163874257957,
+      "motion": "G",
+      "actual_delta_v_m_s2": 1.3332694692160307,
+      "actual_alpha_m_s2": 1.3332694692160307
+    },
+    {
+      "ACK_s": 1264,
+      "FCD_BEGIN_s": 1263,
+      "lane": "ramp_storage_0",
+      "position_m": 203.97137014,
+      "speed_m_s": 4.69222772465427,
+      "motion": "G",
+      "actual_delta_v_m_s2": 2.366063850396313,
+      "actual_alpha_m_s2": 2.366063850396313
+    },
+    {
+      "ACK_s": 1265,
+      "FCD_BEGIN_s": 1264,
+      "lane": "ramp_storage_0",
+      "position_m": 204.16259786,
+      "speed_m_s": 0.19122772465426985,
+      "motion": "y",
+      "actual_delta_v_m_s2": -4.501,
+      "actual_alpha_m_s2": -4.501
+    },
+    {
+      "ACK_s": 1266,
+      "FCD_BEGIN_s": 1265,
+      "lane": "ramp_storage_0",
+      "position_m": 204.16259786,
+      "speed_m_s": 0.0,
+      "motion": "y",
+      "actual_delta_v_m_s2": -0.19122772465426985,
+      "actual_alpha_m_s2": -0.19122772465426985
+    },
+    {
+      "ACK_s": 1267,
+      "FCD_BEGIN_s": 1266,
+      "lane": "ramp_storage_0",
+      "position_m": 204.16259786,
+      "speed_m_s": 0.0,
+      "motion": "y",
+      "actual_delta_v_m_s2": 0.0,
+      "actual_alpha_m_s2": 0.0
+    },
+    {
+      "ACK_s": 1268,
+      "FCD_BEGIN_s": 1267,
+      "lane": "ramp_storage_0",
+      "position_m": 204.16259786,
+      "speed_m_s": 0.0,
+      "motion": "y",
+      "actual_delta_v_m_s2": 0.0,
+      "actual_alpha_m_s2": 0.0
+    },
+    {
+      "ACK_s": 1269,
+      "FCD_BEGIN_s": 1268,
+      "lane": "ramp_storage_0",
+      "position_m": 204.16259786,
+      "speed_m_s": 0.0,
+      "motion": "r",
+      "actual_delta_v_m_s2": 0.0,
+      "actual_alpha_m_s2": 0.0
+    },
+    {
+      "ACK_s": 1270,
+      "FCD_BEGIN_s": 1269,
+      "lane": "ramp_storage_0",
+      "position_m": 204.16259786,
+      "speed_m_s": 0.0,
+      "motion": "r",
+      "actual_delta_v_m_s2": 0.0,
+      "actual_alpha_m_s2": 0.0
+    }
+  ],
+  "observed_R13_first_yellow_getter_state": {
+    "vehicle_id": "R_flow.13",
+    "time_s": 1264,
+    "lane_id": "ramp_storage_0",
+    "type_id": "technical_passenger",
+    "route": [
+      "urban_in",
+      "shared_approach",
+      "ramp_storage",
+      "ramp_accel",
+      "merge_section",
+      "main_down"
+    ],
+    "speed_mode": 31,
+    "lane_change_mode": 1621,
+    "speed_m_s": 4.69222772465427,
+    "position_m": 203.97137014006898,
+    "length_m": 5.0,
+    "dynamics": {
+      "accel": 2.6,
+      "decel": 4.5,
+      "emergency_decel": 9.0,
+      "tau": 1.0,
+      "action_step": 1.0,
+      "sigma": 0.5,
+      "max_speed": 55.55555555555556,
+      "min_gap": 2.5
+    }
+  },
+  "parameter_provenance": "initial VehicleState actual getters; sigma/emergency/maxspeed explicitly serialized numeric_stop_beforeR13@1264. Krauss model/default and actual RNG branch not observed.",
+  "direct_shortfall_before_numeric_yellow": true,
+  "software_fault_demonstrated": false,
+  "possible_following_or_RNG_contributions_uniquely_identified": false,
+  "head_receiver_PASS_not_exclusion_of_second_vehicle_following": true,
+  "raw_hashes_checked": {
+    "data/raw/unified_alinea_actuator_20261013_v1/UA_FIXED750_S17_02/outputs/pre_steps.jsonl": "13326adf3dca3cee29f9190d8a25427b4c931d75710b9b30fbcef414a8f4639d",
+    "data/raw/unified_alinea_actuator_20261013_v1/UA_FIXED750_S17_02/outputs/post_steps.jsonl": "d4b0d30cc23ca218c421ac79e8fda174a7bf497b468a789e6bf9f3a43f236b06",
+    "data/raw/unified_alinea_actuator_20261013_v1/UA_FIXED750_S17_02/outputs/step_ack.jsonl": "c17017a707f4d106fec80079ffb6c9b9fff6d6056c5aad8f94188970b5e3a4bb",
+    "data/raw/unified_alinea_actuator_20261013_v1/UA_FIXED750_S17_02/outputs/tls_states.xml": "b8708d36697c2aca9c69f01f212a47cf918106365fb74cc42a3d6e93992751f6",
+    "data/raw/unified_alinea_actuator_20261013_v1/UA_FIXED750_S17_02/outputs/fcd.xml.gz": "bc189a9e5decd0e85e50050229c3d946e9edf461c30b66ab1872065d6328529a",
+    "data/raw/unified_alinea_actuator_20261013_v1/UA_FIXED750_S17_02/outputs/bridge_receipt.json": "29216edc37668734d68f6d7d27d20a3300e3fc3e70be472a73cf8c3c0c0d665a",
+    "data/raw/unified_alinea_actuator_20261013_v1/UA_FIXED750_S17_02/outputs/policy_phase_requests.jsonl": "f5b2b5cc8a77193edff8acba125705bddc27138cf85b5861564470e622abaa8a"
+  },
+  "not_rerun_full_arrivals_or_all_manifest": true,
+  "existing_actual_E": 14,
+  "existing_actual_N": 13,
+  "native_runs": 0
+}

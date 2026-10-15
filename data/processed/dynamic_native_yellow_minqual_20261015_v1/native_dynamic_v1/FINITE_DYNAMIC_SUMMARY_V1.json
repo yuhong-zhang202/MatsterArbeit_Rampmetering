@@ -1,0 +1,108 @@
+{
+  "status": "GO_FINITE_DYNAMIC_TECHNICAL_GATE_PENDING_SCIENTIFIC_POSTREVIEW",
+  "C_original_fraction": "311/24",
+  "C_applied_fraction": "155/12",
+  "E_completed": 12,
+  "N_all_actual": 14,
+  "C_minus_N_fraction": "-25/24",
+  "observed_end_s": 1296,
+  "applications": [
+    {
+      "request_id": "dynamic_commands:1200",
+      "application_global_s": 1200,
+      "application_delay_s": 0
+    },
+    {
+      "request_id": "scheduled:1201",
+      "application_global_s": 1224,
+      "application_delay_s": 23
+    },
+    {
+      "request_id": "scheduled:1226",
+      "application_global_s": 1232,
+      "application_delay_s": 6
+    },
+    {
+      "request_id": "scheduled:1237",
+      "application_global_s": 1240,
+      "application_delay_s": 3
+    }
+  ],
+  "final300_recovery": {
+    "application_begin_s": 1240,
+    "error_at_application_fraction": "55/24",
+    "maximum_positive_complete_boundary_error_fraction": "55/24",
+    "later_complete_boundary_errors": [
+      {
+        "time_s": 1248,
+        "error_fraction": "23/24"
+      },
+      {
+        "time_s": 1261,
+        "error_fraction": "1/24"
+      },
+      {
+        "time_s": 1285,
+        "error_fraction": "1/24"
+      }
+    ],
+    "status": "RECOVERY_OBSERVED"
+  },
+  "completed_packet_counts": [
+    2,
+    2,
+    2,
+    2,
+    2,
+    2
+  ],
+  "terminal_partial": {
+    "begin_s": 1285,
+    "observed_end_s": 1296,
+    "planned_end_s": 1309,
+    "completed": false,
+    "C_packet_fraction": "11/12",
+    "C_total_fraction": "311/24",
+    "N_packet": 2,
+    "N_total": 14,
+    "E_packet": 0,
+    "E_support": "COMPLETE_PACKETS_ONLY",
+    "error_before_fraction": "1/24",
+    "error_after_fraction": "-25/24",
+    "selector_forecast_residual_fraction": null,
+    "midpacket_request_change_fraction": null,
+    "packet_shortfall": null,
+    "phase_counts_on_observed_exposure": {
+      "G": 2,
+      "y": 0,
+      "r": 0
+    },
+    "phase_exposure_s": {
+      "G": 4,
+      "y": 5,
+      "r": 2
+    },
+    "partial_is_completed_quota": false
+  },
+  "yellow_entry_ids": [
+    {
+      "vehicle_id": "R_flow.5",
+      "time_begin_s": 1236,
+      "time_end_s": 1237,
+      "motion": "y"
+    }
+  ],
+  "legacy_yellow_failed_times": [
+    1236
+  ],
+  "legacy_yellow_result_not_rewritten": true,
+  "body_censored": [],
+  "normal_arrivals_checked": 1372,
+  "prior_cost_s": 163.07205774995964,
+  "this_monitored_s": 155.48080320795998,
+  "combined_cost_if_settled_s": 318.5528609579196,
+  "remaining_if_settled_s": 281.4471390420804,
+  "budget_actually_settled_here": false,
+  "ALINEA_released": false,
+  "longterm_fullrange_safety_qualified": false
+}

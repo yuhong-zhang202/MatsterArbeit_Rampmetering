@@ -1,0 +1,24 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/issue12_phase_sequence_audit_20261013",
+    "-p",
+    "test_phase_sequence.py",
+    "-v"
+  ],
+  "baseline_commit": "4552241ec989278b14f816cac9439716ae5bb24c",
+  "new_analysis_code_uncommitted_snapshot": true,
+  "returncode": 1,
+  "elapsed_s": 0.12144062499282882,
+  "log_sha256": "ec1e1d3a8be98b63c9438f0b8125b5cc06f86b5e3dd1e02a9039073cf85313ad",
+  "tests_count_methods": 4,
+  "negative_mutation_cases": 19,
+  "fixture_path": "data/processed/issue12_phase_sequence_fix_20261013_v1/PUBLIC_PHASE_FIXTURE_V1.json",
+  "fixture_is_public_observation_subset_not_full_raw": true,
+  "SUMO_started": false
+}

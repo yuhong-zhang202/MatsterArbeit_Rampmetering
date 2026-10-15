@@ -1,0 +1,22 @@
+{
+  "classification": "OFFLINE_SYNTHETIC_AND_STATIC_ONLY",
+  "command": "python3 -m unittest discover -s tests/dynamic_minimum_qualification_audit_20261015 -v",
+  "final_log": "data/processed/dynamic_minimum_qualification_20261015_v1/implementation_v1/TEST_LOG_V2.txt",
+  "exit_code": 0,
+  "methods": 3,
+  "unittest_seconds": 0.075,
+  "sources_sha256": {
+    "scripts/dynamic_minimum_qualification_audit_20261015_v1/actual.py": "d5d3b7257905dbf02bb1340c330bc06753fe1ac624d2b11c39f6e77bdde7d81f",
+    "scripts/dynamic_minimum_qualification_audit_20261015_v1/current_gap.py": "6d4fe7be2094def0a9a689188d43b79d683bcb0ff76d574f7d203efdb221e093",
+    "scripts/dynamic_minimum_qualification_audit_20261015_v1/scope.py": "d51397ab368dbd08d74cd4249931f0a87e9280853a72553c45095dba28b464b8",
+    "scripts/dynamic_minimum_qualification_audit_20261015_v1/tracking.py": "e589e99dafc37ca609a5de689e7c4ea4133db561c1771174ffa9ff0ef5f72c23",
+    "tests/dynamic_minimum_qualification_audit_20261015/test_audit.py": "c484ea8cb557807cc7967fd6873eee96fe52d0c1baf64a3078028b86c0bab748"
+  },
+  "earlier_log_retained": "data/processed/dynamic_minimum_qualification_20261015_v1/implementation_v1/TEST_LOG_V1.txt",
+  "earlier_tests_passed": true,
+  "second_run_reason": "Before-freeze chronological debt-recovery refinement; final three focused methods executed on final source bytes. No expanded matrix.",
+  "synthetic_reused_fixture_scope": "Old engineering helper dynamic_commands and real_alinea fixture; independent core/phase/Feedback math, not new current-gap bridge integration or native execution.",
+  "native_runs": 0,
+  "new_raw_read": false,
+  "actual_pipeline_executed": false
+}

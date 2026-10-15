@@ -1,0 +1,8 @@
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/unified_alinea_audit_20261013_v1/prelaunch_v2.py", line 27, in <module>
+    if __name__=='__main__':print(json.dumps(check(),indent=2))
+                                             ~~~~~^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/unified_alinea_audit_20261013_v1/prelaunch_v2.py", line 23, in check
+    require(s['new_native_starts']==0 and s['canonical_auth_release_created'] is False and s['zero_new_raw_allocated'] is True,'PRELAUNCH_RECORDED_STATE')
+            ~^^^^^^^^^^^^^^^^^^^^^
+KeyError: 'new_native_starts'

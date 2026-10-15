@@ -1,0 +1,74 @@
+{
+  "classification": "EXISTING_STATE_ONLY_NO_NEW_NATIVE",
+  "inputs": {
+    "data/raw/cumulative_tracking_implementation_20261014_v1/UA_CUMULATIVE750_S17_01/outputs/yellow_scope_attempts.jsonl": {
+      "sha256": "5a14fff32f796a47005809a867257bb9650b5b53b514cdb98b6ec4d99fd9ba09",
+      "bytes": 140590
+    },
+    "data/raw/cumulative_tracking_implementation_20261014_v1/UA_CUMULATIVE750_S17_01/outputs/policy_phase_requests.jsonl": {
+      "sha256": "45e21b529bfa72301cbc49ccf58a56e4d1b9780fae97caf27475260edb92c5e0",
+      "bytes": 4763
+    },
+    "data/processed/cumulative_tracking_implementation_20261014_v1/native_actual_v1/ACTUAL_RESULTS_V1.json": {
+      "sha256": "d35fb044bb79a3110bc41bd1daf9e2fe6b301f3d2ef3630977c2f4b13b06d368",
+      "bytes": 997356
+    },
+    "data/processed/cumulative_tracking_implementation_20261014_v1/native_actual_v1/OBSERVED_CYCLES_V1.csv": {
+      "sha256": "78ff01215a7c4b6c6abaf8fb3f29d83fd354f724fbe75c3ce3d7844fea227760",
+      "bytes": 372
+    },
+    "data/processed/cumulative_tracking_implementation_20261014_v1/native_actual_v1/DATA_POSTREVIEW_V1.md": {
+      "sha256": "62924531c4f8fcd273805e1617412d93cd3964392f37716cd0d4b8b37b15b561",
+      "bytes": 5309
+    },
+    "artifacts/cumulative_tracking_implementation_20261014_v1/engineering/native_execution_v1/STOP_INPUT_DETAIL_V1.json": {
+      "sha256": "ededa6eeadbe8b8da04e872a64b95e128a2390f65124695dd09204d60bfb9559",
+      "bytes": 3484
+    },
+    "docs/development/T10_G5_Y3_NATIVE_CONTINUATION_REPORT_20261013.md": {
+      "sha256": "3f9be272e856c5d7efed6ccb7822078b14466e46c9bf4bcfe1546ed647094a5b",
+      "bytes": 12326
+    },
+    "artifacts/cumulative_tracking_implementation_20261014_v1/engineering/native_execution_v1/RAW_FINAL_SHA256_V1.json": {
+      "sha256": "cf38cadb8d17991c43ebcc40db784afc5227a9ff0f07e02bf33b3a9d6fbc15fe",
+      "bytes": 43517
+    }
+  },
+  "outputs": {
+    "data/processed/cumulative_tracking_followup_design_20261014_v1/ALL_BOUND_VEHICLE_SCREENS_V1.csv": {
+      "sha256": "e5d408dd4d8ae12495a5c88d64c8689f4e042836aed52976181a6bdb99595f41",
+      "bytes": 34155
+    },
+    "data/processed/cumulative_tracking_followup_design_20261014_v1/ALL_ATTEMPTS_V1.json": {
+      "sha256": "e57ab3b261dff8fa6c35a9ac404ab369790904190fb61aeece52b17dd648537c",
+      "bytes": 5963
+    },
+    "data/processed/cumulative_tracking_followup_design_20261014_v1/extract_yellow_snapshots_V1.py": {
+      "sha256": "125298c4b1b36d42ed88659589a74aa4296cfd18b3a831716915e8a263adc600",
+      "bytes": 4511
+    },
+    "data/processed/cumulative_tracking_followup_design_20261014_v1/DATA_FOLLOWUP_DESIGN_REVIEW_V1.md": {
+      "sha256": "6729848b971fae8b08c99cf665843070abaf88d070a3e038ea8bff989faa847f",
+      "bytes": 5353
+    },
+    "data/processed/cumulative_tracking_followup_design_20261014_v1/NOMINAL_CATALOGUE_ARITHMETIC_V1.json": {
+      "sha256": "12fb27770fc78fd68aa5251ef030b7f09474783f591931bd7b6ffe7854b653b6",
+      "bytes": 791
+    }
+  },
+  "raw_manifest_entries": {
+    "data/raw/cumulative_tracking_implementation_20261014_v1/UA_CUMULATIVE750_S17_01/outputs/yellow_scope_attempts.jsonl": {
+      "sha256": "5a14fff32f796a47005809a867257bb9650b5b53b514cdb98b6ec4d99fd9ba09",
+      "bytes": 140590
+    },
+    "data/raw/cumulative_tracking_implementation_20261014_v1/UA_CUMULATIVE750_S17_01/outputs/policy_phase_requests.jsonl": {
+      "sha256": "45e21b529bfa72301cbc49ccf58a56e4d1b9780fae97caf27475260edb92c5e0",
+      "bytes": 4763
+    }
+  },
+  "self_excluded": true,
+  "extract_command": "python data/processed/cumulative_tracking_followup_design_20261014_v1/extract_yellow_snapshots_V1.py",
+  "extract_exit_code": 0,
+  "native_runs": 0,
+  "scope": "NO_COUNTERFACTUAL_SIMULATION_NO_EXECUTION_AUTHORIZATION"
+}

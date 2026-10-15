@@ -1,0 +1,57 @@
+{
+  "command": ".venv/bin/python -B scripts/cumulative_full_catalogue_audit_20261014_v1/actual.py --manifest artifacts/cumulative_full_catalogue_implementation_20261014_v1/engineering/native_execution_v1/RAW_FINAL_SHA256_V1.json --card artifacts/cumulative_full_catalogue_implementation_20261014_v1/engineering/packages_v1/UA_CUMULATIVE_FULL750_S17_01/card.json --output data/processed/cumulative_full_catalogue_implementation_20261014_v1/native_actual_v1",
+  "exec_session_id": 85264,
+  "actual_exit_code": 0,
+  "attempts": 1,
+  "audit_elapsed_s": null,
+  "status": "PASS_OBSERVED_DATA_INTEGRITY_ONLY",
+  "actual_reader_sha256": "ba09f70e6fc096fb5efee745d604a2da56e9cd589a5b8a46f60fa3fb4fb49f38",
+  "result_sha256": "2c86c4dfc3d288a0463d46f5384906e955313abb6a35b49a96d9f26ff6c65c92",
+  "engineering_binder_checks": {
+    "artifacts/cumulative_full_catalogue_implementation_20261014_v1/engineering/native_execution_v1/EXECUTION_INTENT_V1.json": {
+      "sha256": "af02294c078954a9c500253308263c6a6ae860b44ba2fb5590f8a3f01259135b",
+      "match": true
+    },
+    "artifacts/cumulative_full_catalogue_implementation_20261014_v1/engineering/native_execution_v1/ACTUAL_START_RECEIPT_V1.json": {
+      "sha256": "962091f4f20af92ab5e10bb870fac8f9c1ef18c2011e7cf64e62ae7dcc3f34f6",
+      "match": true
+    },
+    "artifacts/cumulative_full_catalogue_implementation_20261014_v1/engineering/native_execution_v1/POST_ENGINEERING_REVIEW_V1.md": {
+      "sha256": "a268ee71d560aff2a73d209d195058d53c50d066e19a5dc56d6fd8b3557eb3be",
+      "match": true
+    },
+    "artifacts/cumulative_full_catalogue_implementation_20261014_v1/engineering/native_execution_v1/EXECUTION_RECEIPT_V1.json": {
+      "sha256": "e1cd7fcacdbbcc5bf0eedbcfb13448f5ac3662a1d30dd98e89bc35162be05255",
+      "match": true
+    },
+    "artifacts/cumulative_full_catalogue_implementation_20261014_v1/engineering/native_execution_v1/RAW_FINAL_SHA256_V1.json": {
+      "sha256": "ba93f78efcc74d95506f61fc4114c67e806f01e6433545370842c5b019f8f769",
+      "match": true
+    },
+    "artifacts/cumulative_full_catalogue_implementation_20261014_v1/engineering/authorizations/UA_CUMULATIVE_FULL750_S17_01/AUTHORIZATION_NATIVE_EXECUTION.json": {
+      "sha256": "60387931fb872dded4649604c90a8ad7646426fdf9bb2b9a8b2652857558952b",
+      "match": true
+    },
+    "artifacts/cumulative_full_catalogue_implementation_20261014_v1/engineering/authorizations/UA_CUMULATIVE_FULL750_S17_01/HUMAN_CONTINUING_AUTHORITY_EXACT_CARD_BINDING_V1.json": {
+      "sha256": "f92b3fe353732851928641f6c5d3623af314c1453db263541024dd0d135c2a2c",
+      "match": true
+    },
+    "artifacts/cumulative_full_catalogue_implementation_20261014_v1/engineering/releases/UA_CUMULATIVE_FULL750_S17_01/EXECUTION_RELEASE.json": {
+      "sha256": "eade38c9bb0d78d82eaef396a4aadd6a478843dd44b1251f42ea27ad7abcae0b",
+      "match": true
+    },
+    "artifacts/cumulative_full_catalogue_implementation_20261014_v1/engineering/packages_v1/UA_CUMULATIVE_FULL750_S17_01/card.json": {
+      "sha256": "da64599b03875f92bb99a6d45691f5d918b9cc77420c0a0b755d3ef0acc5db8c",
+      "match": true
+    },
+    "artifacts/cumulative_full_catalogue_implementation_20261014_v1/USER_AUTONOMOUS_CONTINUATION_AUTHORITY_V1.json": {
+      "sha256": "66935056c0490e04c88b5f546a9d5248c7b318d568d78f707c3ad427b7bfd95a",
+      "match": true
+    }
+  },
+  "native_CLI_returncode": 0,
+  "native_EOF_returncode": 0,
+  "source_test_basis": "card-bound exact125 snapshot; no extra offline test suite in postreview",
+  "native_starts_by_data_agent": 0,
+  "raw_verification": "single actual reader verified174 files; extraction did not repeat raw scan"
+}

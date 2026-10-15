@@ -1,0 +1,19 @@
+{
+  "source": "direct user message in current Codex task",
+  "exact_user_text": "本轮不再用固定启动次数作为技术修复的停止条件。请在明确的任务范围和总资源预算内自主排查、修复、审查及诊断运行。每次运行说明必要性，保留全部记录；避免重复无效运行。证据足够或已明确无法在现有边界内解决时停止。安全检查、科研设计和异常停止规则保持不变。",
+  "issue_url": "https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/issues/12",
+  "fixed_start_count_is_current_stop_condition": false,
+  "safety_checks_research_design_and_anomaly_stop_unchanged": true,
+  "selected_engineering_resource_budget": {
+    "cumulative_monitored_s": 900,
+    "cumulative_raw_output_bytes": 900000000,
+    "per_run_wall_s_max": 300,
+    "per_run_raw_bytes_max": 300000000,
+    "startup_s_max": 60,
+    "free_bytes_min": 5000000000
+  },
+  "budget_provenance": "Engineering selected conservative totals equal to original three maximum300s/300MB allocations. User delegated total-resource operation but did not literally state these numeric totals. These totals were communicated in commentary; no broader paid-call authorization.",
+  "stage": "bounded technical implementation/diagnosis, not formal experiments",
+  "canonical_exact_card_three_role_release_still_required": true,
+  "historical_failure_and_limits_retained": true
+}

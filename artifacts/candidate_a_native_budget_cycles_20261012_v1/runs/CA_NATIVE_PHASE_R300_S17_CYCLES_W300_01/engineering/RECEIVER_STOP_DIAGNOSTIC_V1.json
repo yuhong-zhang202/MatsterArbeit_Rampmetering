@@ -1,0 +1,205 @@
+{
+  "classification": "BOUNDED_POST_GREEN_RECEIVER_INPUT_DIAGNOSIS_NOT_SAFETY_PROOF",
+  "decision_interval_s": [
+    1200,
+    1201
+  ],
+  "firstcontrolledphase": "G",
+  "error": "DiagnosticStop:POST_GREEN_RECEIVER_DENIED",
+  "pre_receiver": {
+    "available": true,
+    "reason": "AVAILABLE",
+    "front_id": "R_flow.0",
+    "nearest_internal": null,
+    "leader": null,
+    "nearest_internal_rear_clearance_m": null,
+    "required_front_clearance_m": 7.5
+  },
+  "post_receiver": {
+    "available": false,
+    "reason": "LEADER_SECURE_GAP",
+    "front_id": "R_flow.1",
+    "nearest_internal": "R_flow.0",
+    "leader": {
+      "vehicle_id": "R_flow.0",
+      "lane_id": ":ramp_mid_0_0",
+      "gap_excluding_minGap_m": 1.3163151997241584,
+      "secure_gap_m": 2.6
+    },
+    "nearest_internal_rear_clearance_m": -4.685730412295754,
+    "required_front_clearance_m": 7.5
+  },
+  "pre_front_and_next_vehicle_states": {
+    "R_flow.1": {
+      "vehicle_id": "R_flow.1",
+      "population": "storage",
+      "position_m": 195.9879543879801,
+      "speed_m_s": 0.0,
+      "length_m": 5.0,
+      "min_gap_m": 2.5,
+      "accel_m_s2": 2.6,
+      "normal_decel_m_s2": 4.5,
+      "tau_s": 1.0,
+      "action_step_s": 1.0,
+      "type_id": "technical_passenger"
+    },
+    "R_flow.0": {
+      "vehicle_id": "R_flow.0",
+      "population": "storage",
+      "position_m": 203.48895846490217,
+      "speed_m_s": 0.0,
+      "length_m": 5.0,
+      "min_gap_m": 2.5,
+      "accel_m_s2": 2.6,
+      "normal_decel_m_s2": 4.5,
+      "tau_s": 1.0,
+      "action_step_s": 1.0,
+      "type_id": "technical_passenger"
+    }
+  },
+  "pre_world_selected": {
+    "R_flow.0": {
+      "role": "R",
+      "speed_m_s": 0.0,
+      "lane_id": "ramp_storage_0"
+    },
+    "R_flow.1": {
+      "role": "R",
+      "speed_m_s": 0.0,
+      "lane_id": "ramp_storage_0"
+    }
+  },
+  "post_world_selected": {
+    "R_flow.0": {
+      "role": "R",
+      "speed_m_s": 1.3153111228020862,
+      "lane_id": ":ramp_mid_0_0"
+    },
+    "R_flow.1": {
+      "role": "R",
+      "speed_m_s": 0.0,
+      "lane_id": "ramp_storage_0"
+    }
+  },
+  "post_actual_acceleration_selected_m_s2": {
+    "R_flow.0": 1.3153111228020862,
+    "R_flow.1": 0.0
+  },
+  "post_speed_difference_selected_m_s2": {
+    "R_flow.0": 1.3153111228020862,
+    "R_flow.1": 0.0
+  },
+  "native_collision_teleport_counters": {
+    "colliding_vehicles": 0,
+    "starting_teleports": 0,
+    "ending_teleports": 0
+  },
+  "recorded_crossings": [
+    {
+      "vehicle_id": "R_flow.0",
+      "crossing_time_lower_s": 1200,
+      "crossing_time_upper_s": 1201,
+      "time_interval": "(lower,upper]",
+      "cycle_id": 0,
+      "motion_signal_state": "G"
+    }
+  ],
+  "phase_fields": {
+    "phase_before": 0,
+    "state_before": "G",
+    "next_switch_before_s": 1203.0,
+    "phase_after": 0,
+    "state_after": "G",
+    "next_switch_after_s": 1203.0
+  },
+  "independent_native_FCD_selected_rounded_precision2": {
+    "1199.0": {
+      "R_flow.0": {
+        "id": "R_flow.0",
+        "x": "1219.91",
+        "y": "863.12",
+        "angle": "60.64",
+        "type": "technical_passenger",
+        "speed": "0.00",
+        "pos": "203.49",
+        "lane": "ramp_storage_0",
+        "slope": "0.00"
+      },
+      "R_flow.1": {
+        "id": "R_flow.1",
+        "x": "1213.37",
+        "y": "859.44",
+        "angle": "60.64",
+        "type": "technical_passenger",
+        "speed": "0.00",
+        "pos": "195.99",
+        "lane": "ramp_storage_0",
+        "slope": "0.00"
+      }
+    },
+    "1200.0": {
+      "R_flow.0": {
+        "id": "R_flow.0",
+        "x": "1221.08",
+        "y": "863.70",
+        "angle": "61.45",
+        "type": "technical_passenger",
+        "speed": "1.32",
+        "pos": "0.31",
+        "lane": ":ramp_mid_0_0",
+        "slope": "0.00"
+      },
+      "R_flow.1": {
+        "id": "R_flow.1",
+        "x": "1213.37",
+        "y": "859.44",
+        "angle": "60.64",
+        "type": "technical_passenger",
+        "speed": "0.00",
+        "pos": "195.99",
+        "lane": "ramp_storage_0",
+        "slope": "0.00"
+      }
+    }
+  },
+  "formula_inputs": {
+    "post_front_id": "R_flow.1",
+    "post_leader_id": "R_flow.0",
+    "internal_leader_position_m": 0.3142695877042456,
+    "leader_length_m": 5.0,
+    "rear_clearance_m": -4.685730412295754,
+    "required_front_clearance_m": 7.5,
+    "leader_gap_excluding_minGap_m": 1.3163151997241584,
+    "queried_secure_gap_m": 2.6,
+    "unchanged_extra_margin_m": 1.1,
+    "gate_required_secure_plus_margin_m": 3.7
+  },
+  "interpretation": {
+    "observation_coverage_unknown_in_this_gate": false,
+    "reason": "observe returned bound fields and available=False, not schema missing/getterunknown; STOP_OBSERVED_AFTER_STEP includesone explicitreason",
+    "geometry_shortfall_for_next_vehicle": true,
+    "physical_collision_or_emergency_observed_in_prefix": false,
+    "native_red_safety_observed": false,
+    "budget_exhausted": false,
+    "physical_safety_violation_proven": false,
+    "sampling_implementation_bug_proven": false,
+    "different_front_before_and_after": "beforeR0 departed intointernal; afterfrontR1, withR0rear still overstopline",
+    "unresolved": "Does receiver_available=false for the next vehicle after a legal entry justify stopping an already-active native green? Existing guard treats it as STOP; its responsibility/interpretation requires reviewed contract discussion. It is not evidence that SUMO native following is unsafe or timebudget inadequate."
+  },
+  "sources": [
+    {
+      "path": "scripts/candidate_a_qualification_20261008_v1/worker.py",
+      "sha256": "5d776dfcef39163389564c0a6921a8873478fae76b13651795443d077d9ed243",
+      "begin_line": 57,
+      "end_line": 77,
+      "text": "    receiver=dict(available=True,reason='NO_FRONT',front_id='',nearest_internal=None,leader=None)\n    if front:\n        receiver['front_id']=front.vehicle_id\n        route=tuple(conn.vehicle.getRoute(front.vehicle_id));idx=conn.vehicle.getRouteIndex(front.vehicle_id)\n        if route[idx:idx+3]!=('ramp_storage','ramp_accel','merge_section'):raise ValueError('checked receiver route changed')\n        nearest=min(internal,key=lambda k:internal[k]['position_m']-internal[k]['length_m']) if internal else None\n        clearance=internal[nearest]['position_m']-internal[nearest]['length_m'] if nearest else None\n        receiver.update(nearest_internal=nearest,nearest_internal_rear_clearance_m=clearance,required_front_clearance_m=front.length_m+front.min_gap_m)\n        if nearest and clearance<front.length_m+front.min_gap_m:receiver.update(available=False,reason='INTERNAL_RECEIVER_CLEARANCE')\n        raw=conn.vehicle.getLeader(front.vehicle_id,478.67)\n        if raw:\n            leader_id,gap=raw;typ=conn.vehicle.getTypeID(leader_id);lane=conn.vehicle.getLaneID(leader_id)\n            if lane not in (INTERNAL,'ramp_accel_0',':freeway_merge_2_0','merge_section_0','merge_section_1','merge_section_2'):raise ValueError('leader off checked receiving path')\n            lead=LeaderState(leader_id,lane,gap,conn.vehicle.getSpeed(leader_id),conn.vehicletype.getEmergencyDecel(typ))\n            state=VehicleState(front.position_m,front.speed_m_s,front.length_m,front.min_gap_m,front.accel_m_s2,front.normal_decel_m_s2)\n            secure=conn.vehicle.getSecureGap(**secure_gap_query(front.vehicle_id,state,lead))\n            if not math.isfinite(secure) or secure<0:raise ValueError('unknown secure receiving gap')\n            receiver['leader']=dict(vehicle_id=leader_id,lane_id=lane,gap_excluding_minGap_m=gap,secure_gap_m=secure)\n            if gap+1e-9<secure+1.1:receiver.update(available=False,reason='LEADER_SECURE_GAP')\n        if receiver['available']:receiver['reason']='AVAILABLE'\n    return vehicles,ids,internal,receiver"
+    },
+    {
+      "path": "src/candidate_a_native_budget_cycles_20261012/adapter.py",
+      "sha256": "40b36f5536d79b975e3882773c40ba6677a2e72b3740a0474379cdab0bff820d",
+      "begin_line": 211,
+      "end_line": 255,
+      "text": "        if conn.trafficlight.getProgram(TLS) != p['program']: errors.append('PROGRAM_MISMATCH')\n        if conn.trafficlight.getControlledLinks(TLS) != ((('ramp_storage_0','ramp_accel_0',INTERNAL),),): errors.append('POST_LINK_MISMATCH')\n        try:\n            _, _, post_internal, post_receiver = self.observe(conn)\n            if type(post_receiver.get('available')) is not bool: errors.append('UNKNOWN_POST_RECEIVER')\n            if post_receiver.get('available') is False and p['motion'] == 'G': errors.append('POST_GREEN_RECEIVER_DENIED')\n            if set(post_internal) != set(conn.lane.getLastStepVehicleIDs(INTERNAL)): errors.append('POST_INTERNAL_COVERAGE_MISMATCH')\n            row['post_receiver'] = post_receiver\n        except Exception as exc:\n            errors.append('POST_OBSERVATION_UNKNOWN:'+type(exc).__name__)\n        counters = {'colliding_vehicles': conn.simulation.getCollidingVehiclesNumber(),\n            'starting_teleports': conn.simulation.getStartingTeleportNumber(), 'ending_teleports': conn.simulation.getEndingTeleportNumber()}\n        row['native_event_counters'] = counters\n        if any(counters.values()): errors.append('COLLISION_OR_TELEPORT')\n        if p['motion'] == 'r' and recs: errors.append('RED_CROSSING')\n        braking = {'speed_difference_ids': sorted(before & after), 'after_acceleration_ids': sorted(after),\n            'excluded_before_only_ids': sorted(before-after), 'arrived_ids': sorted(arrived),\n            'speed_difference_m_s2': {}, 'actual_acceleration_m_s2': {},\n            'coverage': 'BEFORE_INTERSECTION_AFTER_DIFFERENCE_AND_AFTER_POPULATION_GETTER_NOT_GLOBAL'}\n        row['braking_observation'] = braking\n        for vid in sorted(before & after):\n            difference = world[vid]['speed_m_s']-p['world'][vid]['speed_m_s']\n            braking['speed_difference_m_s2'][vid] = difference\n            if difference < -4.5-1e-6: errors.append('ORDINARY_BRAKING_EXCEEDED:'+vid)\n        for vid in sorted(after):\n            a = conn.vehicle.getAcceleration(vid)\n            braking['actual_acceleration_m_s2'][vid] = a if math.isfinite(a) else None\n            if not math.isfinite(a) or a < -4.5-1e-6: errors.append('UNKNOWN_OR_EXCESSIVE_ACCELERATION:'+vid)\n        if any(s in native_warning_text.lower() for s in ('emergency braking','emergency stop','collision','teleport')): errors.append('NATIVE_WARNING')\n        if errors:\n            self.paused = True\n            row.update(status='STOP_OBSERVED_AFTER_STEP', reasons=errors)\n            raise DiagnosticStop(';'.join(errors))\n        if p['time_s'] == 1206:\n            self.checkpoint_pending = True\n            row['status'] = 'MANDATORY_FIRST_RED_CHECKPOINT_PENDING'\n        if self.last_end >= 1272:\n            require(self.checkpoint_verified, 'FIRST_RED_CHECKPOINT_MISSING')\n            require(len(self.ledger.rows) == 3 and all(c['completed'] for c in self.ledger.rows), 'THREE_CYCLES_INCOMPLETE')\n            self.paused = True\n            row['status'] = 'THREE_CYCLES_COMPLETED_MANDATORY_STOP_NOT_QUALIFIED'\n        return row"
+    }
+  ]
+}

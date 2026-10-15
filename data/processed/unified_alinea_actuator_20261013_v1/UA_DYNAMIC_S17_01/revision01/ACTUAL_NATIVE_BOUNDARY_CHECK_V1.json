@@ -1,0 +1,59 @@
+{
+  "status": "PASS_ACTUAL_CONTROL_SETTER_BOUNDARIES_ONLY",
+  "observed_native_setProgram_setPhase0_calls": [
+    {
+      "time_s": 1200,
+      "method": "setProgram",
+      "value": "I12_PACKET24",
+      "call_completed": true
+    },
+    {
+      "time_s": 1200,
+      "method": "setPhase",
+      "value": 0,
+      "call_completed": true
+    },
+    {
+      "time_s": 1224,
+      "method": "setProgram",
+      "value": "I12_PACKET10",
+      "call_completed": true
+    },
+    {
+      "time_s": 1224,
+      "method": "setPhase",
+      "value": 0,
+      "call_completed": true
+    },
+    {
+      "time_s": 1234,
+      "method": "setProgram",
+      "value": "I12_PACKET8",
+      "call_completed": true
+    },
+    {
+      "time_s": 1234,
+      "method": "setPhase",
+      "value": 0,
+      "call_completed": true
+    },
+    {
+      "time_s": 1242,
+      "method": "setProgram",
+      "value": "I12_PACKET24",
+      "call_completed": true
+    },
+    {
+      "time_s": 1242,
+      "method": "setPhase",
+      "value": 0,
+      "call_completed": true
+    }
+  ],
+  "no_midcycle_control_restart": true,
+  "fresh_begin_provenance": "original pre_steps row time equals setter time; FCD_TLS_ACK phase audit independently matched throughout",
+  "source_sha256": "2f8f6212610dfd1ba595aa5c9db55006b1737c72df4ac8bfd067f5af649cdd99",
+  "WAIT_pre": 11,
+  "WAIT_post": 15,
+  "WAIT_total": 26
+}

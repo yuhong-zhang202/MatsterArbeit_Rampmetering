@@ -1,0 +1,48 @@
+{
+  "status": "PASS_BOUNDED_SELECTED_JOIN",
+  "command": ".venv/bin/python artifacts/unified_alinea_actuator_20261013_v1/engineering/shortfall_investigation_v1/EXTRACT_EXISTING_TRACE_V1.py",
+  "selected_ACK_frames": 41,
+  "cycles": 7,
+  "last_cycle_steps": 11,
+  "four_G_motion_Euler_position_TLS_ACK_entry_checks": "PASS",
+  "original_state_source_checks": {
+    "src/candidate_a_unified_alinea_20261013/policy.py": {
+      "observed_sha256": "c2d0a9fc89bc4a1600de72978b7c5e4e28c1ef24d4a81ec3d9da0922a0c9bd36",
+      "card_sha256": "c2d0a9fc89bc4a1600de72978b7c5e4e28c1ef24d4a81ec3d9da0922a0c9bd36",
+      "matches": true
+    },
+    "src/candidate_a_unified_alinea_20261013/bridge.py": {
+      "observed_sha256": "8850d1e75848c17d3a105ac8cd911b4a257cad8353a7959ca14df05e8f9bac06",
+      "card_sha256": "8850d1e75848c17d3a105ac8cd911b4a257cad8353a7959ca14df05e8f9bac06",
+      "matches": true
+    },
+    "src/candidate_a_unified_alinea_20261013/adapter.py": {
+      "observed_sha256": "056371a8e43149081a3b099b543fec0536f1a9469b0cf45f839242e87002372a",
+      "card_sha256": "056371a8e43149081a3b099b543fec0536f1a9469b0cf45f839242e87002372a",
+      "matches": true
+    },
+    "src/candidate_a_native_receiver_wait_20261012/receiver_wait.py": {
+      "observed_sha256": "eff05b5a27f1489fab64fecd41b5e1b1a1c9dd93d3c9003a0e9add54eb99d547",
+      "card_sha256": "eff05b5a27f1489fab64fecd41b5e1b1a1c9dd93d3c9003a0e9add54eb99d547",
+      "matches": true
+    }
+  },
+  "official_Krauss_source": {
+    "path": "src/microsim/cfmodels/MSCFModel_Krauss.cpp",
+    "commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+    "tag": "v1_26_0",
+    "raw_url": "https://raw.githubusercontent.com/eclipse-sumo/sumo/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/cfmodels/MSCFModel_Krauss.cpp",
+    "sha256": "0722e1a44c56e430e40c2b661d1ccfb74df1095cd9f6ffeb4e4ceb4da983af36",
+    "bytes": 7409
+  },
+  "official_cached_hash_matches": true,
+  "derived_outputs": {
+    "data/processed/unified_alinea_actuator_20261013_v1/shortfall_engineering_v1/SEVEN_CYCLE_TRAJECTORY_V1.json": "d2ecb0ac3ae46e8a9644c62ce613383c0ccbc0e39dd2b1191281961d7d8aa463",
+    "data/processed/unified_alinea_actuator_20261013_v1/shortfall_engineering_v1/LAST_CYCLE_AND_VERSION_TIMELINE_V1.json": "7a4f9a711938baec560c984616c9d598c1810df40baa5cc2d858ebe6b8380e43"
+  },
+  "native_runs": 0,
+  "tests_added_or_run": false,
+  "raw_mutations": false,
+  "runtime_mutations": false,
+  "elapsed_s": 1.273985082982108
+}

@@ -1,0 +1,58 @@
+{
+  "official_pin": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+  "fresh_fetch": false,
+  "native_invocations": 0,
+  "compiler_binary_equivalence": "NOT_VERIFIED",
+  "sources": [
+    {
+      "path": "src/libsumo/Vehicle.cpp",
+      "sha256": "9ef12f97fe72aa3daed0740d37de1bbb702012e4a250b82abdc66e8138c37fc8",
+      "bytes": 121128,
+      "prior_receipt_path": "artifacts/candidate_a_a1_proof_gap_20261011_v1/engineering/SOURCE_FETCH_RECEIPT.json",
+      "prior_receipt_sha256": "14446ca421bd8257346f503e9584be0371163e5fc904ebc1a022ecfffc29544d",
+      "cached_full_hash_verified": true,
+      "excerpts": [
+        {
+          "begin_line": 906,
+          "end_line": 918,
+          "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/libsumo/Vehicle.cpp#L906-L918",
+          "text": "double\nVehicle::getSecureGap(const std::string& vehID, double speed, double leaderSpeed, double leaderMaxDecel, const std::string& leaderID) {\n    MSBaseVehicle* vehicle = Helper::getVehicle(vehID);\n    MSVehicle* veh = dynamic_cast<MSVehicle*>(vehicle);\n    if (veh == nullptr) {\n        WRITE_ERROR(\"getSecureGap not applicable for meso\");\n        return INVALID_DOUBLE_VALUE;\n    }\n    MSVehicle* leader = dynamic_cast<MSVehicle*>(MSNet::getInstance()->getVehicleControl().getVehicle(leaderID));\n    return veh->getCarFollowModel().getSecureGap(veh, leader, speed, leaderSpeed, leaderMaxDecel);\n}\n\n"
+        }
+      ]
+    },
+    {
+      "path": "src/microsim/MSVehicle.cpp",
+      "sha256": "8499ebe445906b19395d5c70945b012f320a439327e9cb3c20f0abd26d15a6a4",
+      "bytes": 381688,
+      "prior_receipt_path": "artifacts/candidate_a_a1_contract_20261011_v1/engineering/SOURCE_RECEIPT.json",
+      "prior_receipt_sha256": "03da4b06a49c6a3f3a6e4e98bb0b126f149f65f1afee9e95106a336d5ef799dd",
+      "cached_full_hash_verified": true,
+      "excerpts": [
+        {
+          "begin_line": 3280,
+          "end_line": 3305,
+          "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSVehicle.cpp#L3280-L3305",
+          "text": "                if (lastLink->myLink->getInternalLaneBefore() != nullptr) {\n                    // do not drive onto the junction conflict area\n                    stopDist -= lastLink->myLink->getInternalLaneBefore()->getLength();\n                }\n                vsafeLeader = cfModel.stopSpeed(this, getSpeed(), stopDist);\n            }\n        }\n        if (backOnRoute) {\n            vsafeLeader = cfModel.followSpeed(this, getSpeed(), leaderInfo.second, leaderInfo.first->getSpeed(), leaderInfo.first->getCurrentApparentDecel(), leaderInfo.first);\n        }\n        if (lastLink != nullptr) {\n            const double futureVSafe = cfModel.followSpeed(this, lastLink->accelV, leaderInfo.second, leaderInfo.first->getSpeed(), leaderInfo.first->getCurrentApparentDecel(), leaderInfo.first, MSCFModel::CalcReason::FUTURE);\n            lastLink->adaptLeaveSpeed(futureVSafe);\n#ifdef DEBUG_PLAN_MOVE\n            if (DEBUG_COND) {\n                std::cout << \"   vlinkpass=\" << lastLink->myVLinkPass << \" futureVSafe=\" << futureVSafe << \"\\n\";\n            }\n#endif\n        }\n        v = MIN2(v, vsafeLeader);\n        vLinkPass = MIN2(vLinkPass, vsafeLeader);\n#ifdef DEBUG_PLAN_MOVE\n        if (DEBUG_COND) std::cout\n                    << SIMTIME\n                    //std::cout << std::setprecision(10);\n                    << \" veh=\" << getID()"
+        },
+        {
+          "begin_line": 3710,
+          "end_line": 3739,
+          "url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSVehicle.cpp#L3710-L3739",
+          "text": "\n            const LinkState ls = link->getState();\n            // vehicles should brake when running onto a yellow light if the distance allows to halt in front\n            const bool yellow = link->haveYellow();\n            const bool canBrake = (dpi.myDistance > getCarFollowModel().brakeGap(myState.mySpeed, getCarFollowModel().getMaxDecel(), 0.)\n                                   || (MSGlobals::gSemiImplicitEulerUpdate && myState.mySpeed < ACCEL2SPEED(getCarFollowModel().getMaxDecel())));\n            assert(link->getLaneBefore() != nullptr);\n            const bool beyondStopLine = dpi.myDistance < link->getLaneBefore()->getVehicleStopOffset(this);\n            const bool ignoreRedLink = ignoreRed(link, canBrake) || beyondStopLine;\n            if (yellow && canBrake && !ignoreRedLink) {\n                vSafe = dpi.myVLinkWait;\n                myHaveToWaitOnNextLink = true;\n#ifdef DEBUG_CHECKREWINDLINKLANES\n                if (DEBUG_COND) {\n                    std::cout << SIMTIME << \" veh=\" << getID() << \" haveToWait (yellow)\\n\";\n                }\n#endif\n                break;\n            }\n            const bool influencerPrio = (myInfluencer != nullptr && !myInfluencer->getRespectJunctionPriority());\n            MSLink::BlockingFoes collectFoes;\n            bool opened = (yellow || influencerPrio\n                           || link->opened(dpi.myArrivalTime, dpi.myArrivalSpeed, dpi.getLeaveSpeed(),\n                                           getVehicleType().getLength(),\n                                           canBrake ? getImpatience() : 1,\n                                           getCarFollowModel().getMaxDecel(),\n                                           getWaitingTimeFor(link), getLateralPositionOnLane(),\n                                           ls == LINKSTATE_ZIPPER ? &collectFoes : nullptr,\n                                           ignoreRedLink, this, dpi.myDistance));\n            if (opened && myLaneChangeModel->getShadowLane() != nullptr) {"
+        }
+      ]
+    }
+  ],
+  "local_prospective_query_source": {
+    "path": "src/stage6_safe_actuator_v10.py",
+    "sha256": "c48b743972e44cdac8d53b6276efeed75c8bcd45a36c13940735e9d3f317f2d7",
+    "begin_line": 78,
+    "end_line": 100,
+    "text": "def secure_gap_query(front_id: str, front: VehicleState,\n                     leader: LeaderState) -> dict:\n    \"\"\"Arguments for TraCI vehicle.getSecureGap, in its bumper-gap convention.\n\n    getLeader.gap already excludes ego minGap. The returned getSecureGap value\n    is compared to that gap directly; do not subtract minGap a second time.\n    Leader emergencyDecel covers the stronger leader-braking case, while the\n    follower's own red-stop guard continues to use normalDecel.\n    \"\"\"\n    if not front_id or not leader.vehicle_id or leader.vehicle_id == front_id:\n        raise ValueError(\"invalid front/leader identity\")\n    _validate_vehicle(front)\n    if (not all(math.isfinite(value) for value in\n                (leader.gap_excluding_ego_min_gap_m, leader.speed_m_s,\n                 leader.emergency_decel_m_s2)) or\n            leader.gap_excluding_ego_min_gap_m < 0 or leader.speed_m_s < 0 or\n            leader.emergency_decel_m_s2 <= 0):\n        raise ValueError(\"invalid leader state\")\n    return {\"vehID\": front_id,\n            \"speed\": front.speed_m_s + front.accel_m_s2 * STEP_S,\n            \"leaderSpeed\": leader.speed_m_s,\n            \"leaderMaxDecel\": leader.emergency_decel_m_s2,\n            \"leaderID\": leader.vehicle_id}"
+  },
+  "readonly_original_failure": {
+    "absolute_root": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/candidate_a_native_budget_cycles_20261012_v1/runs/CA_NATIVE_PHASE_R300_S17_CYCLES_W300_01/engineering",
+    "diagnostic_sha256": "13e03ae848610a95b6426b3e781ffeeec41f964b2e6254ffe15183ee4630d0b1",
+    "raw_manifest_sha256": "9d87bca24c48b8536a2e5307fa8c957b4581eaa149a2eb876d2b07ccb05298df"
+  }
+}

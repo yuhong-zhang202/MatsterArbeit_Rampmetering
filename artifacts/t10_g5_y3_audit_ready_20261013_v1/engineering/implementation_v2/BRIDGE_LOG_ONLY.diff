@@ -1,0 +1,35 @@
+--- protected01motion/bridge.py
++++ 02logonly/bridge.py
+@@ -13,13 +13,14 @@
+ import time
+ 
+ from src.candidate_a_t10_g5_y3_20261013.adapter import StepAdapter, inventory, TLS, STORAGE, INGRESS, INTERNAL
+-from src.candidate_a_t10_g5_y3_20261013.profile import ROOT,TASK,NETWORK,SUMO,sha,write_new,validate_release,require
++from src.candidate_a_t10_g5_y3_audit_ready_20261013.profile import ROOT,TASK,NETWORK,SUMO,sha,write_new,validate_release,require
+ from src.candidate_a_native_smoke_20261011.bridge_logs import LogCapture
+ from src.candidate_a_native_smoke_20261011.bridge_resources import ResourceWatchdog
+ from src.candidate_a_unified_alinea_20261013.frame_cache import FrameCache
+ from src.candidate_a_t10_g5_y3_20261013.policy import MAX_GREEN, yellow_scope
+ from src.candidate_a_t10_g5_y3_20261013.producer import Producer
+-from src.candidate_a_t10_g5_y3_20261013 import budget
++from src.candidate_a_t10_g5_y3_audit_ready_20261013 import budget
++from src.candidate_a_t10_g5_y3_audit_ready_20261013.telemetry import snapshot as identity_snapshot
+ 
+ 
+ def protected_worker():
+@@ -216,6 +217,7 @@
+                 else:
+                     adapter.selected_new_program_at=None
+         before=adapter.prepare_step(conn,t)
++        append_new(output/'identity_journal.jsonl',identity_snapshot(conn,t,'BEFORE_MOTION'))
+         append_new(output/'pre_steps.jsonl',{'time_s':t,'bound_snapshot':adapter.pending,'preparation':before,'phase_requests':phase_requests})
+         # All log cursors began at byte0 including startup/control queries. Check
+         # existing stderr before motion, then consume the afterACK interval.
+@@ -231,6 +233,7 @@
+         adapter.bridge_last_ack['actual_time_verified']=True
+         adapter.last_completed=actual
+         append_new(output/'step_ack.jsonl',adapter.bridge_last_ack)
++        append_new(output/'identity_journal.jsonl',identity_snapshot(conn,t+1,'AFTER_ACK'))
+         after=capture.snapshot(t,t+1,'AFTER_SIMULATION_STEP_ACK')
+         append_new(output/'log_intervals.jsonl',after)
+         try:row=adapter.reconcile_step(conn,capture.adapter_warning(after))

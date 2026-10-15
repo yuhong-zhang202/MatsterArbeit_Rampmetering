@@ -1,0 +1,104 @@
+{
+  "classification": "INDEPENDENT_ACTUAL_PREFIX_AUDIT_NOT_QUALIFICATION",
+  "run_id": "CA_I12_QUOTA_R300_S17_FIX01",
+  "raw_manifest_sha256": "c63436ebcaf75efc969c8778c3cde11de6181b41c7ce9a13a2536d9e4e268ea6",
+  "raw_files_checked": 82,
+  "last_actual_ACK": 1272,
+  "observed_control_seconds": 72,
+  "independent_entries": [
+    {
+      "vehicle_id": "R_flow.0",
+      "time_begin_s": 1200,
+      "time_end_s": 1201,
+      "motion": "G"
+    },
+    {
+      "vehicle_id": "R_flow.1",
+      "time_begin_s": 1203,
+      "time_end_s": 1204,
+      "motion": "G"
+    },
+    {
+      "vehicle_id": "R_flow.2",
+      "time_begin_s": 1224,
+      "time_end_s": 1225,
+      "motion": "G"
+    },
+    {
+      "vehicle_id": "R_flow.3",
+      "time_begin_s": 1227,
+      "time_end_s": 1228,
+      "motion": "G"
+    },
+    {
+      "vehicle_id": "R_flow.4",
+      "time_begin_s": 1248,
+      "time_end_s": 1249,
+      "motion": "G"
+    },
+    {
+      "vehicle_id": "R_flow.5",
+      "time_begin_s": 1251,
+      "time_end_s": 1252,
+      "motion": "G"
+    }
+  ],
+  "terminal_arrivals": 1335,
+  "terminal_status_counts": {
+    "PASS": 1335
+  },
+  "braking_min_speed_difference_m_s2": -4.5,
+  "native_min_acceleration_m_s2": -4.5,
+  "native_event_counter_max": 0,
+  "conditional_WAIT_records": 21,
+  "supplied_control_steps": 72,
+  "FCD_TLS_ACK_frames": 1272,
+  "native_log_final_EOF": "BOUND",
+  "log_records": 2547,
+  "yellow_screen_events": [
+    1204,
+    1228,
+    1252
+  ],
+  "demand_group_counts": {
+    "M": {
+      "due_before1272": 1272,
+      "future_at_or_after1272": 1728,
+      "inserted": 1272,
+      "due_not_inserted": 0,
+      "unfinished_in_network": 77
+    },
+    "R": {
+      "due_before1272": 168,
+      "future_at_or_after1272": 432,
+      "inserted": 100,
+      "due_not_inserted": 68,
+      "unfinished_in_network": 97
+    },
+    "U": {
+      "due_before1272": 128,
+      "future_at_or_after1272": 172,
+      "inserted": 100,
+      "due_not_inserted": 28,
+      "unfinished_in_network": 23
+    },
+    "X": {
+      "due_before1272": 64,
+      "future_at_or_after1272": 86,
+      "inserted": 64,
+      "due_not_inserted": 0,
+      "unfinished_in_network": 4
+    }
+  },
+  "queue_export_final_BEGIN": "1271.000",
+  "service_command": 300,
+  "qRamp": 900,
+  "r_ALINEA": null,
+  "complete_cycles": 3,
+  "first_red_checkpoint_completed": true,
+  "remaining_cycles": [],
+  "native_safety_proven": false,
+  "rate_qualified": false,
+  "technical_cause": null
+}
+accounting {'C': 6.0, 'C_mapped_pending': 6.0, 'C_applied': 6.0, 'E': 6, 'N': 6, 'policy_quantization': 0.0, 'application_latency': 0.0, 'C_applied_minus_E': 0.0, 'E_minus_N': 0}

@@ -1,0 +1,34 @@
+{
+  "run_id": "UA_CUMULATIVE_FULL750_S17_01",
+  "SUMO_execution_authorized": true,
+  "card_sha256": "da64599b03875f92bb99a6d45691f5d918b9cc77420c0a0b755d3ef0acc5db8c",
+  "authorization_sha256": "60387931fb872dded4649604c90a8ad7646426fdf9bb2b9a8b2652857558952b",
+  "reviews": {
+    "engineering": {
+      "path": "artifacts/cumulative_full_catalogue_implementation_20261014_v1/engineering/native_prelaunch_v1/ENGINEERING_PRELAUNCH_REVIEW_V1.md",
+      "sha256": "a46e2bcfe32e233876f9b12369e77b2f9fe4b80dbefd6992f366c33222e94d5c",
+      "card_sha256": "da64599b03875f92bb99a6d45691f5d918b9cc77420c0a0b755d3ef0acc5db8c"
+    },
+    "data": {
+      "path": "data/processed/cumulative_full_catalogue_implementation_20261014_v1/offline_v1/FINAL_EXACT_CARD_DATA_REVIEW_V1.md",
+      "sha256": "ff9ec941d9b5c6738ee8104c350339848199873f9b0ff6d8e07f26823a020d2f",
+      "card_sha256": "da64599b03875f92bb99a6d45691f5d918b9cc77420c0a0b755d3ef0acc5db8c",
+      "audit_contract": "CUMULATIVE_FULL_C_N_V1",
+      "actual_reader_path": "scripts/cumulative_full_catalogue_audit_20261014_v1/actual.py",
+      "actual_reader_sha256": "ba09f70e6fc096fb5efee745d604a2da56e9cd589a5b8a46f60fa3fb4fb49f38",
+      "scope": "EXACT_DATA_REVIEW_SUFFICIENT_PENDING_SCIENCE_CANONICAL_NOT_NATIVE_QUALIFIED",
+      "later_authority": {
+        "path": "artifacts/cumulative_full_catalogue_implementation_20261014_v1/USER_AUTONOMOUS_CONTINUATION_AUTHORITY_V1.json",
+        "sha256": "66935056c0490e04c88b5f546a9d5248c7b318d568d78f707c3ad427b7bfd95a"
+      }
+    },
+    "science": {
+      "path": "artifacts/cumulative_full_catalogue_implementation_20261014_v1/SCIENCE_FINAL_OFFLINE_REVIEW_V1.md",
+      "sha256": "42f2927d40685cbd0190b37127413095a15059c446f18fc3499b1ecf88d3317a",
+      "card_sha256": "da64599b03875f92bb99a6d45691f5d918b9cc77420c0a0b755d3ef0acc5db8c"
+    }
+  },
+  "one_start_per_identity": true,
+  "automatic_retry": false,
+  "authority_provenance": "Direct human autonomous continuation; root exact-card selection; three-role review is a gate not authority"
+}

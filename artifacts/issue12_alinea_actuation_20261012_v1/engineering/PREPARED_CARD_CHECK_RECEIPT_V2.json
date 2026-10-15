@@ -1,0 +1,197 @@
+{
+  "status": "PASS_PREPARED_NOT_RELEASED",
+  "cards": {
+    "CA_I12_QUOTA_R300_S17_DIAG01": {
+      "card_sha256": "8e02e1c7174a1d31af76a0ffa3158de8c368abf0ab012142c60c1ea3696cdc71",
+      "spec": {
+        "run_id": "CA_I12_QUOTA_R300_S17_DIAG01",
+        "seed": 17,
+        "qMain": 3600,
+        "qRamp": 900,
+        "qUrban": 360,
+        "qCross": 180,
+        "service_command_veh_h": 300,
+        "step_s": 1,
+        "activation_s": 1200,
+        "end_s": 1272,
+        "phase_durations_s": [
+          17,
+          5,
+          2
+        ],
+        "initial_hold_s": [
+          600,
+          1200
+        ],
+        "first_red_mandatory_pause": false,
+        "automatic_continuation": false,
+        "first_red_mandatory_checkpoint_s": null,
+        "first_red_checkpoint_kind": "FIRST_CONTROLLED_RED_ACK",
+        "fixed_command_veh_h": 300,
+        "period_s": 24,
+        "input_origin": "FIXED_POLICY_DIAGNOSTIC",
+        "r_ALINEA": null,
+        "discrete_rates_veh_h": [
+          300,
+          450,
+          600,
+          750,
+          900
+        ],
+        "quotas": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yellow_scope": "BOUND_ACTUAL_LOCAL_STOP_OR_BODY_CLEAR_SCREEN_NOT_A1",
+        "terminal_arrival_audit": "MANDATORY_POST_RUN_PRECISION8_NO_NEXT_RUN_IF_UNKNOWN",
+        "within_run_checkpoint_continuation": true,
+        "complete_cycles_target": 3,
+        "automatic_retry": false,
+        "sequential_postreview_gate": true,
+        "receiver_diagnostic_policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1"
+      },
+      "resources": {
+        "wall_limit_s": 300,
+        "startup_limit_s": 60,
+        "run_limit_bytes": 300000000,
+        "minimum_free_bytes": 5000000000
+      },
+      "environment_complete": true,
+      "raw_parent_exists": false,
+      "canonical_authorization_exists": false,
+      "canonical_release_exists": false
+    },
+    "CA_I12_QUOTA_R900_S17_DIAG02": {
+      "card_sha256": "c5f432d7537b1fccf2bd43fec07cc8db97320a987d25b9951bd1004a839fa2bc",
+      "spec": {
+        "run_id": "CA_I12_QUOTA_R900_S17_DIAG02",
+        "seed": 17,
+        "qMain": 3600,
+        "qRamp": 900,
+        "qUrban": 360,
+        "qCross": 180,
+        "service_command_veh_h": 900,
+        "step_s": 1,
+        "activation_s": 1200,
+        "end_s": 1272,
+        "phase_durations_s": [
+          17,
+          5,
+          2
+        ],
+        "initial_hold_s": [
+          600,
+          1200
+        ],
+        "first_red_mandatory_pause": false,
+        "automatic_continuation": false,
+        "first_red_mandatory_checkpoint_s": null,
+        "first_red_checkpoint_kind": "FIRST_CONTROLLED_RED_ACK",
+        "fixed_command_veh_h": 900,
+        "period_s": 24,
+        "input_origin": "FIXED_POLICY_DIAGNOSTIC",
+        "r_ALINEA": null,
+        "discrete_rates_veh_h": [
+          300,
+          450,
+          600,
+          750,
+          900
+        ],
+        "quotas": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yellow_scope": "BOUND_ACTUAL_LOCAL_STOP_OR_BODY_CLEAR_SCREEN_NOT_A1",
+        "terminal_arrival_audit": "MANDATORY_POST_RUN_PRECISION8_NO_NEXT_RUN_IF_UNKNOWN",
+        "within_run_checkpoint_continuation": true,
+        "complete_cycles_target": 3,
+        "automatic_retry": false,
+        "sequential_postreview_gate": true,
+        "receiver_diagnostic_policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1"
+      },
+      "resources": {
+        "wall_limit_s": 300,
+        "startup_limit_s": 60,
+        "run_limit_bytes": 300000000,
+        "minimum_free_bytes": 5000000000
+      },
+      "environment_complete": true,
+      "raw_parent_exists": false,
+      "canonical_authorization_exists": false,
+      "canonical_release_exists": false
+    },
+    "CA_I12_QUOTA_R600_S17_DIAG03": {
+      "card_sha256": "1e0166909840b5f4fab2689a880384147a5164b4beeaefc24dfacd2bc2ed1cce",
+      "spec": {
+        "run_id": "CA_I12_QUOTA_R600_S17_DIAG03",
+        "seed": 17,
+        "qMain": 3600,
+        "qRamp": 900,
+        "qUrban": 360,
+        "qCross": 180,
+        "service_command_veh_h": 600,
+        "step_s": 1,
+        "activation_s": 1200,
+        "end_s": 1272,
+        "phase_durations_s": [
+          17,
+          5,
+          2
+        ],
+        "initial_hold_s": [
+          600,
+          1200
+        ],
+        "first_red_mandatory_pause": false,
+        "automatic_continuation": false,
+        "first_red_mandatory_checkpoint_s": null,
+        "first_red_checkpoint_kind": "FIRST_CONTROLLED_RED_ACK",
+        "fixed_command_veh_h": 600,
+        "period_s": 24,
+        "input_origin": "FIXED_POLICY_DIAGNOSTIC",
+        "r_ALINEA": null,
+        "discrete_rates_veh_h": [
+          300,
+          450,
+          600,
+          750,
+          900
+        ],
+        "quotas": [
+          2,
+          3,
+          4,
+          5,
+          6
+        ],
+        "yellow_scope": "BOUND_ACTUAL_LOCAL_STOP_OR_BODY_CLEAR_SCREEN_NOT_A1",
+        "terminal_arrival_audit": "MANDATORY_POST_RUN_PRECISION8_NO_NEXT_RUN_IF_UNKNOWN",
+        "within_run_checkpoint_continuation": true,
+        "complete_cycles_target": 3,
+        "automatic_retry": false,
+        "sequential_postreview_gate": true,
+        "receiver_diagnostic_policy": "ACTUAL_SPEED_FOLLOWING_OBSERVATION_WITH_RETAINED_1_1_M_MARGIN_V1"
+      },
+      "resources": {
+        "wall_limit_s": 300,
+        "startup_limit_s": 60,
+        "run_limit_bytes": 300000000,
+        "minimum_free_bytes": 5000000000
+      },
+      "environment_complete": true,
+      "raw_parent_exists": false,
+      "canonical_authorization_exists": false,
+      "canonical_release_exists": false
+    }
+  },
+  "native_or_version_calls": 0,
+  "Issue12_new_actual_starts": 0,
+  "scope": "offline prepare/check3; precise output and exact source/input/env/path/protected536 gates passed; initial duplicateprecision FAIL fully retained"
+}

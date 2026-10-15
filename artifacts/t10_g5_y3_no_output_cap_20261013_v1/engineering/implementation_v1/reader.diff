@@ -1,0 +1,38 @@
+--- scripts/t10_g5_y3_audit_20261013_v1/actual.py
++++ scripts/t10_g5_y3_no_output_cap_audit_20261013_v1/actual.py
+@@ -50,7 +50,7 @@
+ 
+ def audit(manifest_path,card_path):
+     manifest_path=Path(manifest_path);card_path=Path(card_path);m=read(manifest_path);card=read(card_path);raw=ROOT/card['output'];approved_end=card['spec']['end_s'];run=card['spec']['run_id']
+-    need(card['classification']=='OFFLINE_REVIEW_T10_G5Y3_NOT_NATIVE_AUTHORIZED' and card['spec']['run_id']=='UA_T10_G5Y3_FIXED750_S17_02' and card['spec']['mode']=='fixed750' and card['spec']['end_s']==1270 and card['spec']['phase_durations_s']==[5,3,2] and card['numerical_exception_authority']['enabled'] is False and card['spec']['step_s']==1 and card['spec']['activation_s']==1200,'APPROVED_DIAGNOSTIC_SCOPE')
++    need(card['classification']=='OFFLINE_REVIEW_T10_G5Y3_NOT_NATIVE_AUTHORIZED' and card['spec']['run_id']=='UA_T10_G5Y3_FIXED750_S17_03' and card['spec']['mode']=='fixed750' and card['spec']['end_s']==1270 and card['spec']['phase_durations_s']==[5,3,2] and card['numerical_exception_authority']['enabled'] is False and card['spec']['step_s']==1 and card['spec']['activation_s']==1200,'APPROVED_DIAGNOSTIC_SCOPE')
+     need(raw.is_dir(),'NO_ACTUAL_RAW_RUN')
+     need(card['observations']==dict.fromkeys(('N','E','actual_phase_exposure','native_safety','body_clearance','future_G5_population')),'PREPARED_CARD_OBSERVATIONS_NOT_NULL')
+     for name,value in m['files'].items():need(sha(ROOT/name)==(value['sha256'] if isinstance(value,dict) else value),'RAW_SHA_DRIFT:'+name)
+@@ -61,7 +61,7 @@
+     for name,h in card['environment']['files_sha256'].items():need(sha(Path(name))==h,'ENVIRONMENT_BOUND_BYTES_DRIFT:'+name)
+     for key in ('sources_sha256','prepared_input_sha256','inherited_inputs_sha256'):
+         for name,h in card[key].items():need(sha(ROOT/name)==h,'CARD_BOUND_SOURCE_INPUT_DRIFT:'+name)
+-    need(card['resources']=={'wall_limit_s':300,'startup_limit_s':60,'run_limit_bytes':300000000,'minimum_free_bytes':5000000000} and card['spec']['total_resource_envelope']=={'monitored_s':300,'raw_bytes':300000000},'RESOURCE_BOUNDARY')
++    need(card['resources']=={'wall_limit_s':300,'startup_limit_s':60,'run_limit_bytes':None,'minimum_free_bytes':5000000000} and card['spec']['total_resource_envelope']=={'monitored_s':300,'raw_bytes':None},'RESOURCE_BOUNDARY')
+     receipt=read(raw/'bridge_receipt.json');need(receipt['run_id']==run and receipt['card_sha256']==sha(card_path),'EXECUTED_CARD_RECEIPT')
+     need(receipt.get('native_started') is True,'NO_NATIVE_STARTED_EVIDENCE')
+     last=receipt.get('last_completed_s');need(type(last) in (int,float) and last==int(last) and 0<=last<=approved_end,'LAST_ACK');last=int(last)
+@@ -150,7 +150,7 @@
+     if receipt['final_logs']['status']!='BOUND_NO_OBSERVED_NATIVE_MESSAGE':alarms.append({'kind':'NATIVE_FINAL_LOG_MESSAGE','reasons':receipt['final_logs'].get('reasons')})
+     elapsed=receipt['monitored_elapsed_through_cleanup_s'];need(number(elapsed) and elapsed>=0,'MONITORED_COST_MISSING')
+     before=receipt['total_budget_before_run'];need(number(before['charged_monitored_s']) and type(before['charged_raw_bytes']) is int,'NEW_BUDGET_BASELINE')
+-    if elapsed>300 or m['bytes']>300000000 or before['charged_monitored_s']+elapsed>300 or before['charged_raw_bytes']+m['bytes']>300000000:alarms.append({'kind':'RESOURCE_CAP_OBSERVED_EXCEEDED','monitored_s':elapsed,'raw_bytes':m['bytes']})
++    if elapsed>300 or before['charged_monitored_s']+elapsed>300:alarms.append({'kind':'RESOURCE_CAP_OBSERVED_EXCEEDED','monitored_s':elapsed,'raw_bytes':m['bytes']})
+     feedback_events=lines(raw/'feedback_events.jsonl') if (raw/'feedback_events.jsonl').exists() else []
+     if card['spec']['mode']=='real_alinea':
+         for event in feedback_events:
+@@ -181,7 +181,7 @@
+     return {'status':'UNKNOWN_INCOMPLETE_COVERAGE' if missing else 'STOP_OBSERVED_ALARM' if alarms or runtime_stop else 'PASS_OBSERVED_DATA_INTEGRITY_ONLY','classification':'BOUNDED_DIAGNOSTIC_NOT_FORMAL','run_id':run,'card_sha256':sha(card_path),'manifest_sha256':sha(manifest_path),'raw_files':len(m['files']),'raw_bytes':m['bytes'],'last_ACK':last,'last_accounted':len(complete),'accounting':account,'phase_audit':phase,'feedback_audit':feedback,'independent_actual_entries':entries,'entries_without_complete_accounting':[x for x in entries if x['time_begin_s']>=len(complete)],'body_censored_ids':sorted(active),'body_first_clear_ACK':cleared,'body_rows_checked':body_rows,'terminal_results':arrivals,'missing_or_unknown':missing,'observed_alarms':alarms,'runtime_stop':runtime_stop,'runtime_status':receipt['status'],'runtime_error':receipt['error'],'first_red_checkpoint':cp,'yellow_screen_coverage':yellow_summary,'yellow_pre_motion_attempts_retained':yellow_attempts,'identity_prefix_coverage':identity_summary,'WAIT_records':wait,'min_speed_difference':min(brakes) if brakes else None,'min_native_acceleration':min(accelerations) if accelerations else None,'counter_max':max(counter_values) if counter_values else None,'log_EOF_verified':True,'demand_groups':groups,'shared_approach_diagnostic_frames':shared,'queue_export_final':queue_summary,'source_snapshot':'CARD_BOUND_EXACT_BYTES_NOT_BASELINE_NATIVE','identity_dynamics_scope':'BEFORE and extraPRE pools independently joined to original PRE; AFTER pools cross-checked against next same-time PRE where available; terminal AFTER without next PRE is SINGLE_JOURNAL_NOT_INDEPENDENT_POOL_CHECK; model input bound, private branch unobserved'  ,'native_safety_proven':False,'rate_qualified':False,'formal_effect_proven':False,'monitored_elapsed_s':elapsed,'current_source_and_environment_hashes_checked':True,'final_client_stderr_scope':'SEPARATE_FROM_FOUR_NATIVE_STREAMS_NOT_UNIVERSAL_LOG_COVERAGE'}
+ 
+ def main():
+-    p=argparse.ArgumentParser();p.add_argument('--manifest',required=True);p.add_argument('--card',required=True);p.add_argument('--output',required=True);args=p.parse_args();out=Path(args.output).resolve();need(out.is_relative_to(ROOT/'data/processed/t10_g5_y3_audit_ready_20261013_v1'),'ONLY_NEW_PROCESSED_OUTPUT')
++    p=argparse.ArgumentParser();p.add_argument('--manifest',required=True);p.add_argument('--card',required=True);p.add_argument('--output',required=True);args=p.parse_args();out=Path(args.output).resolve();need(out.is_relative_to(ROOT/'data/processed/t10_g5_y3_no_output_cap_20261013_v1'),'ONLY_NEW_PROCESSED_OUTPUT')
+     need(not out.exists(),'VERSIONED_OUTPUT_EXISTS');out.mkdir(parents=True)
+     try:result=audit(args.manifest,args.card)
+     except Exception as exc:result={'status':'UNKNOWN_AUDIT_EXCEPTION','exception_type':type(exc).__name__,'reason':str(exc),'traceback':traceback.format_exc(),'native_safety_proven':False,'rate_qualified':False}

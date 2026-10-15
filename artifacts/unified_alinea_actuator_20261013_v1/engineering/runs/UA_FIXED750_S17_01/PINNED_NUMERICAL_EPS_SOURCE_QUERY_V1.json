@@ -1,0 +1,50 @@
+{
+  "classification": "ONE_BOUNDED_LOCAL_CACHE_QUERY_NO_FETCH_BUILD_RUN_OR_THRESHOLD_CHANGE",
+  "tag": "v1_26_0",
+  "official_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+  "prior_source_receipt": "artifacts/candidate_a_a1_contract_20261011_v1/engineering/SOURCE_RECEIPT.json",
+  "sources": {
+    "src/config.h.cmake": {
+      "cache_path": "/private/tmp/issue8_sumo_sources/src/config.h.cmake",
+      "sha256": "e849e676b62539154d42497ffd117a471e30d03c5899532f9e2230048652ab95",
+      "matches_prior_official_source_receipt": true,
+      "official_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+      "official_url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/config.h.cmake"
+    },
+    "src/microsim/cfmodels/MSCFModel.cpp": {
+      "cache_path": "/private/tmp/issue8_sumo_sources/src/microsim/cfmodels/MSCFModel.cpp",
+      "sha256": "b4a2b50b679c7772dc81ec5585410cedfdea2110961cc445731627ef3cb1d769",
+      "matches_prior_official_source_receipt": true,
+      "official_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+      "official_url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/cfmodels/MSCFModel.cpp"
+    },
+    "src/microsim/cfmodels/MSCFModel_Krauss.cpp": {
+      "cache_path": "/private/tmp/issue8_sumo_sources/src/microsim/cfmodels/MSCFModel_Krauss.cpp",
+      "sha256": "0722e1a44c56e430e40c2b661d1ccfb74df1095cd9f6ffeb4e4ceb4da983af36",
+      "matches_prior_official_source_receipt": true,
+      "official_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+      "official_url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/cfmodels/MSCFModel_Krauss.cpp"
+    },
+    "src/microsim/MSVehicle.cpp": {
+      "cache_path": "/private/tmp/issue8_sumo_sources/src/microsim/MSVehicle.cpp",
+      "sha256": "8499ebe445906b19395d5c70945b012f320a439327e9cb3c20f0abd26d15a6a4",
+      "matches_prior_official_source_receipt": true,
+      "official_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+      "official_url": "https://github.com/eclipse-sumo/sumo/blob/fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3/src/microsim/MSVehicle.cpp"
+    }
+  },
+  "findings": {
+    "config.h.cmake:229-230": "NUMERICAL_EPS=0.001",
+    "MSCFModel_Krauss.cpp:101-107": "stopSpeed delegates to maximumSafeStopSpeed with relaxEmergency on non-FUTURE use",
+    "MSCFModel.cpp:796-815": "normal/emergency stop relaxation compares origSafeDecel > myDecel + NUMERICAL_EPS",
+    "MSCFModel.cpp:189-197": "finalizeSpeed permits safe-speed bound to require stronger braking up to emergency envelope",
+    "MSVehicle.cpp:3712-3727": "yellow stopping condition uses internal distance and model brakeGap",
+    "MSVehicle.cpp:4908-4928": "native acceleration derived from moved velocity, warning computation subtracts maxDecel and NUMERICAL_EPS"
+  },
+  "actual_observed_deceleration_m_s2": 4.501,
+  "actual_guard_limit_m_s2": 4.5,
+  "project_guard_tolerance": 1e-06,
+  "native_binary_source_compiler_equivalence_verified": false,
+  "actual_native_branch_inputs_or_branch_tracing_available": false,
+  "interpretation": "Source-level candidate for native numerical handling and absent warning; not proven causal branch or safety PASS. Existing project guard correctly STOPs under its stricter contract."
+}

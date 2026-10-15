@@ -1,0 +1,26 @@
+{
+  "timestamp_utc": "2026-10-13T21:21:17.609485+00:00",
+  "run_id": "UA_T10_G5Y3_FIXED750_S17_02",
+  "card_sha256": "18774ee7aba5319b9947cf6c817c29db00339e7b5f52bb2abef509cf4313755e",
+  "release_sha256": "6bbed02a802ac4156a7c57cc78e575dae625e9dce23b3b2e2a0c4d168b35008b",
+  "actual_spawn": false,
+  "CLI_start_requested": 1,
+  "automatic_retry": false,
+  "source_digest": "4deb99f4a6c0b053d810d3b61123a5fff8a15df09cd9cd659e2b4f39bff9fd40",
+  "fresh_free_bytes": 34580361216,
+  "budget": {
+    "charged_monitored_s": 0,
+    "charged_raw_bytes": 0,
+    "unknown_reserved": [],
+    "remaining_s": 300,
+    "remaining_bytes": 300000000,
+    "selected_total_limits": {
+      "wall_s": 300,
+      "bytes": 300000000
+    },
+    "scope": "NEW_SINGLE_CARD_ENVELOPE_REQUIRES_FUTURE_EXPLICIT_RESOURCE_APPROVAL_NO_OLD_REMAINDER"
+  },
+  "command": ".venv/bin/python scripts/candidate_a_t10_g5_y3_audit_ready_20261013_v1/cli.py --execute artifacts/t10_g5_y3_audit_ready_20261013_v1/engineering/packages_v4/UA_T10_G5Y3_FIXED750_S17_02/card.json --release artifacts/t10_g5_y3_audit_ready_20261013_v1/engineering/releases/UA_T10_G5Y3_FIXED750_S17_02/EXECUTION_RELEASE.json",
+  "owned_native_child_expected": 1,
+  "strict_NUM": true
+}

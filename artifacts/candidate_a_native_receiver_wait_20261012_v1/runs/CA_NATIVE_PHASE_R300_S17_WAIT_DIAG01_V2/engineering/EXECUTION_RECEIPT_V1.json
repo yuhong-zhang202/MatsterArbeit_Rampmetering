@@ -1,0 +1,84 @@
+{
+  "status": "TECHNICAL_THREE_CYCLES_OBSERVED_WITH_RECONCILED_MONITORING_PENDING_DATA_SCIENCE",
+  "run_id": "CA_NATIVE_PHASE_R300_S17_WAIT_DIAG01_V2",
+  "card_sha256": "c6f8574a57396939b1b4be4c119041e78ce1f652050d5a621c6d121d8def10ac",
+  "source_engineering77binding_sha256": "dd917c8b15fffe39d779cb02ae155f99f8855eb4195e0f76c2f9f59a73f44435",
+  "source_snapshot_is_uncommitted": true,
+  "baseline_HEAD": "20e5e83ac059768320cdaa4c815d164e1022de45",
+  "native_starts": 1,
+  "owned_native_pid": 96903,
+  "owned_cli_pid": 96902,
+  "owned_launcher_pid": 96885,
+  "port": 53202,
+  "startup_attempts_same_child": 233,
+  "successful_startup_elapsed_s": 24.16514208400622,
+  "cli_exit": 0,
+  "native_exit": 0,
+  "actual_ACK_end_s": 1272,
+  "last_accounted_s": 1272,
+  "ACK_rows": 2544,
+  "pre_rows": 1272,
+  "post_rows": 1272,
+  "native_log_capture_rows": 2547,
+  "global_motion_counts": {
+    "G": 609,
+    "y": 12,
+    "r": 651
+  },
+  "controlled_motion_counts": {
+    "G": 9,
+    "y": 9,
+    "r": 54
+  },
+  "full_cycle_count": 3,
+  "nominal_and_actual_accounting": {
+    "C": 6.0,
+    "C_applied": 6.0,
+    "E": 6,
+    "N": 3,
+    "mapping_command_latency": 0.0,
+    "mapping_quantization": 0.0,
+    "physical_shortfall": 3,
+    "C_minus_E": 0.0,
+    "E_minus_N": 3
+  },
+  "C_E_N_is_not_rate_qualification": true,
+  "actual_controlled_entry_ids": [
+    "R_flow.0",
+    "R_flow.1",
+    "R_flow.2"
+  ],
+  "actual_controlled_crossings_by_motion": {
+    "G": 3,
+    "y": 0,
+    "r": 0
+  },
+  "post_WAIT_count": 9,
+  "checkpoint_actual_s": 1207,
+  "checkpoint_monitored_elapsed_s": 132.51649420897593,
+  "loop_terminal_elapsed_s": 144.7964810419944,
+  "monitored_elapsed_through_cleanup_s": 144.84869999997318,
+  "whole_CLI_elapsed_s": 145.40914408300887,
+  "native_final_log_status": "BOUND_NO_OBSERVED_NATIVE_MESSAGE",
+  "native_event_counter_max": {
+    "colliding_vehicles": 0,
+    "starting_teleports": 0,
+    "ending_teleports": 0
+  },
+  "actual_acceleration_min_covered_m_s2": -4.5,
+  "actual_speed_difference_min_before_intersection_after_m_s2": -4.5,
+  "braking_coverage_limit": "observedafterpopulation andbefore intersectionafter; arrived/excludedIDsserialized, notglobalfutureproof",
+  "resource_watchdog": {
+    "reason": null,
+    "error": null,
+    "poll_s": 0.2
+  },
+  "free_bytes_after": 15089872896,
+  "raw_file_count": 72,
+  "raw_bytes": 69002098,
+  "raw_manifest_sha256": "990386cf6d40d70b5f59d6754cde56555e7e7021f0910a8918373b19afb94199",
+  "native_safety_proven": false,
+  "rate_qualified": false,
+  "automatic_retry_or_more_budget_start": false,
+  "error": ""
+}

@@ -1,0 +1,235 @@
+{
+  "seed_real_detector_events": {
+    "event": "E1_ACTIVATION_SEED",
+    "global_s": 1200,
+    "logical_s": 600,
+    "raw_events": {
+      "p1_main_down_20_l0": [],
+      "p1_main_down_20_l1": []
+    },
+    "ongoing_events": {
+      "p1_main_down_20_l0": [],
+      "p1_main_down_20_l1": []
+    },
+    "discarded_completed_before_window": {
+      "p1_main_down_20_l0": [],
+      "p1_main_down_20_l1": []
+    },
+    "detector_ids": [
+      "p1_main_down_20_l0",
+      "p1_main_down_20_l1"
+    ],
+    "window_begin_global_s": 1200
+  },
+  "actual_feedback_decisions": [
+    {
+      "event": "PROJECT_FEEDBACK_DECISION",
+      "global_s": 1230,
+      "logical_s": 630,
+      "global_window_begin_s": 1200,
+      "global_window_end_s": 1230,
+      "detector_ids": [
+        "p1_main_down_20_l0",
+        "p1_main_down_20_l1"
+      ],
+      "contributors": [
+        12,
+        17
+      ],
+      "request_id": "feedback:1230",
+      "update_time_s": 630,
+      "interval_begin_s": 600,
+      "interval_end_s": 630,
+      "occ_l0_pct": 7.296530162747482,
+      "occ_l1_pct": 9.659084500640347,
+      "occ_mean_pct": 8.477807331693914,
+      "rate_previous_veh_h": 900,
+      "rate_raw_veh_h": 1076.553486781426,
+      "rate_clipped_veh_h": 900
+    },
+    {
+      "event": "PROJECT_FEEDBACK_DECISION",
+      "global_s": 1260,
+      "logical_s": 660,
+      "global_window_begin_s": 1230,
+      "global_window_end_s": 1260,
+      "detector_ids": [
+        "p1_main_down_20_l0",
+        "p1_main_down_20_l1"
+      ],
+      "contributors": [
+        17,
+        20
+      ],
+      "request_id": "feedback:1260",
+      "update_time_s": 660,
+      "interval_begin_s": 630,
+      "interval_end_s": 660,
+      "occ_l0_pct": 11.292688537954138,
+      "occ_l1_pct": 11.21895811676647,
+      "occ_mean_pct": 11.255823327360304,
+      "rate_previous_veh_h": 900,
+      "rate_raw_veh_h": 882.0923670847787,
+      "rate_clipped_veh_h": 882.0923670847787
+    }
+  ],
+  "actual_post_E1_ACK_times": [
+    1201,
+    1202,
+    1203,
+    1204,
+    1205,
+    1206,
+    1207,
+    1208,
+    1209,
+    1210,
+    1211,
+    1212,
+    1213,
+    1214,
+    1215,
+    1216,
+    1217,
+    1218,
+    1219,
+    1220,
+    1221,
+    1222,
+    1223,
+    1224,
+    1225,
+    1226,
+    1227,
+    1228,
+    1229,
+    1230,
+    1231,
+    1232,
+    1233,
+    1234,
+    1235,
+    1236,
+    1237,
+    1238,
+    1239,
+    1240,
+    1241,
+    1242,
+    1243,
+    1244,
+    1245,
+    1246,
+    1247,
+    1248,
+    1249,
+    1250,
+    1251,
+    1252,
+    1253,
+    1254,
+    1255,
+    1256,
+    1257,
+    1258,
+    1259,
+    1260,
+    1261,
+    1262,
+    1263,
+    1264,
+    1265,
+    1266,
+    1267,
+    1268,
+    1269,
+    1270,
+    1271,
+    1272
+  ],
+  "actual_requests_including_unused_initial": [
+    {
+      "event": "REQUESTED",
+      "request_id": "initial",
+      "global_request_s": 1200,
+      "rate_veh_h": 900,
+      "origin": "FIXED",
+      "r_ALINEA": null,
+      "mapped_period_s": 8,
+      "mapped_rate_veh_h": 900.0
+    },
+    {
+      "event": "REQUESTED",
+      "request_id": "real_alinea:1200",
+      "global_request_s": 1200,
+      "rate_veh_h": 900,
+      "origin": "PROJECT_FEEDBACK",
+      "r_ALINEA": 900,
+      "mapped_period_s": 8,
+      "mapped_rate_veh_h": 900.0
+    },
+    {
+      "event": "REQUESTED",
+      "request_id": "feedback:1230",
+      "global_request_s": 1230,
+      "rate_veh_h": 900,
+      "origin": "PROJECT_FEEDBACK",
+      "r_ALINEA": 900,
+      "mapped_period_s": 8,
+      "mapped_rate_veh_h": 900.0
+    },
+    {
+      "event": "REQUESTED",
+      "request_id": "feedback:1260",
+      "global_request_s": 1260,
+      "rate_veh_h": 882.0923670847787,
+      "origin": "PROJECT_FEEDBACK",
+      "r_ALINEA": 882.0923670847787,
+      "mapped_period_s": 8,
+      "mapped_rate_veh_h": 900.0
+    }
+  ],
+  "actual_applied_ACK_events": [
+    {
+      "event": "ACK_OBSERVED",
+      "request_id": "real_alinea:1200",
+      "application_global_s": 1200,
+      "first_green_ACK_s": 1201,
+      "application_delay_s": 0
+    },
+    {
+      "event": "ACK_OBSERVED",
+      "request_id": "feedback:1230",
+      "application_global_s": 1232,
+      "first_green_ACK_s": 1233,
+      "application_delay_s": 2
+    },
+    {
+      "event": "ACK_OBSERVED",
+      "request_id": "feedback:1260",
+      "application_global_s": 1264,
+      "first_green_ACK_s": 1265,
+      "application_delay_s": 4
+    }
+  ],
+  "actual_control_native_program_phase_requests": [
+    {
+      "time_s": 1200,
+      "method": "setProgram",
+      "value": "I12_PACKET8",
+      "call_completed": true
+    },
+    {
+      "time_s": 1200,
+      "method": "setPhase",
+      "value": 0,
+      "call_completed": true
+    }
+  ],
+  "pending_or_unapplied_commands": {},
+  "numeric_classifications": [],
+  "remaining_stop_reasons": [],
+  "raw_feedback_journal_sha256": "cf9c7877035c0268d87029d4da95302f80f5872e4b2e781e09d42fa79f13e83a",
+  "raw_command_journal_sha256": "8bbcb04526e72ae41152d6776b74c4de34663fbac0e4e4f4383baffbc8c4b7ec",
+  "scope": "Actual source-bound journal; independent event occupancy/window/own-state/formula/ACK audit remains required"
+}

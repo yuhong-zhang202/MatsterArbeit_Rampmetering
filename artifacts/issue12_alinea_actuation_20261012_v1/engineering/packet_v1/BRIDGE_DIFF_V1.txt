@@ -1,0 +1,109 @@
+--- old/bridge.py
++++ packet/bridge.py
+@@ -12,12 +12,13 @@
+ import sys
+ import time
+ 
+-from src.candidate_a_issue12_signal_policy_20261012.adapter import StepAdapter, inventory, TLS, STORAGE, INGRESS, INTERNAL
+-from src.candidate_a_issue12_signal_policy_20261012.profile import ROOT,TASK,NETWORK,SUMO,sha,write_new,validate_release,require
++from src.candidate_a_issue12_packet_policy_20261012.adapter import StepAdapter, inventory, TLS, STORAGE, INGRESS, INTERNAL
++from src.candidate_a_issue12_packet_policy_20261012.profile import ROOT,TASK,NETWORK,SUMO,sha,write_new,validate_release,require
+ from src.candidate_a_native_smoke_20261011.bridge_logs import LogCapture
+ from src.candidate_a_native_smoke_20261011.bridge_resources import ResourceWatchdog
+ from src.candidate_a_native_smoke_runtime_fix_20261012.frame_cache import FrameCache
+-from src.candidate_a_issue12_signal_policy_20261012.policy import PROGRAM, MAX_GREEN, YELLOW, yellow_scope
++from src.candidate_a_issue12_packet_policy_20261012.policy import PROGRAM, PERIOD, MAX_GREEN, YELLOW, yellow_scope
++from src.candidate_a_issue12_packet_policy_20261012 import budget
+ 
+ 
+ def protected_worker():
+@@ -47,7 +48,7 @@
+     for lane,length in [(STORAGE,204.49),(INGRESS,113.08),(INTERNAL,81.98)]:
+         require(abs(conn.lane.getLength(lane)-length)<=1e-8,'admission geometry drift')
+     require(type(receiver.get('available')) is bool and receiver['available'],'receiver denies green')
+-    require(time_s in (1200,1224,1248), 'admission outside declared cycle boundaries')
++    require(time_s in range(1200,1272,PERIOD), 'admission outside declared cycle boundaries')
+     program = 'CA_C8' if time_s == 1200 else PROGRAM
+     require(conn.trafficlight.getProgram(TLS)==program and conn.trafficlight.getRedYellowGreenState(TLS)=='r' and conn.trafficlight.getPhase(TLS)==2,'not native cycle-red boundary')
+     switch=conn.trafficlight.getNextSwitch(TLS)
+@@ -175,18 +176,26 @@
+         require(time.monotonic()-start_time<=resources['wall_limit_s'],'wall resource STOP')
+         require(shutil.disk_usage(output).free>=resources['minimum_free_bytes'],'disk reserve STOP')
+         require(sum(p.stat().st_size for p in output.rglob('*') if p.is_file())<=resources['run_limit_bytes'],'output bytes STOP')
++        if 'total_budget_baseline' in resources:
++            bound=resources['total_budget_baseline']
++            require(bound['charged_monitored_s']+time.monotonic()-start_time<=budget.TOTAL_WALL,'total monitored resource STOP')
++            require(bound['charged_raw_bytes']+sum(p.stat().st_size for p in output.parent.rglob('*') if p.is_file())<=budget.TOTAL_BYTES,'total raw resource STOP')
+         require(process.poll() is None,'native child exited before observed step')
+         if t==600:
+             worker.request_phase(conn.trafficlight,phase_requests,t,'setProgram','CA_C8')
+             worker.request_phase(conn.trafficlight,phase_requests,t,'setPhase',1)
+         if t==1200:
+             bound=admission(conn,t,worker.observe);append_new(output/'admission.jsonl',bound)
++            body=adapter.body.observe(conn,t,inventory(conn)[0],[], 'r')
++            append_new(output/'body_admission.jsonl',body)
+             worker.request_phase(conn.trafficlight,phase_requests,t,'setProgram',PROGRAM)
+             # setProgram retains a phase index; select G only after the bound red
+             # observation. No direct red and no transient setPhase(2) is needed.
+             worker.request_phase(conn.trafficlight,phase_requests,t,'setPhase',0)
+-        if t in (1224,1248):
++        if t in range(1200+PERIOD,1272,PERIOD):
+             bound=admission(conn,t,worker.observe);append_new(output/'admission.jsonl',bound)
++            body=adapter.body.observe(conn,t,inventory(conn)[0],[], 'r')
++            append_new(output/'body_admission.jsonl',body)
+         before=adapter.prepare_step(conn,t)
+         append_new(output/'pre_steps.jsonl',{'time_s':t,'bound_snapshot':adapter.pending,'preparation':before,'phase_requests':phase_requests})
+         # All log cursors began at byte0 including startup/control queries. Check
+@@ -226,12 +235,15 @@
+     root=Path(root).resolve()
+     require(root==ROOT,'execute root injection prohibited')
+     card=validate_release(card_path,release_path,root)
++    total_budget=budget.accounting(root)
++    effective=budget.effective_limits(card['resources'],total_budget)
+     run=card['spec']['run_id']
+     output=root/card['output'];parent=output.parent
+     require(not parent.exists(),'run identity/output already consumed')
+     require(shutil.disk_usage(root).free>=card['resources']['minimum_free_bytes'],'insufficient fresh disk reserve')
+     parent.mkdir(parents=True,exist_ok=False);output.mkdir()
+     write_new(parent/'ONE_USE_RESERVATION.json',{'run_id':run,'card_sha256':sha(card_path),'release_sha256':sha(release_path),'status':'CONSUMED_NO_RETRY'})
++    write_new(parent/'TOTAL_BUDGET_RESERVATION.json',{'run_id':run,'history_bound':total_budget,'single_ceiling_resources':card['resources'],'effective_total_remaining_limits':effective,'unknown_or_incomplete_reservation_never_released_implicitly':True})
+     # Review source/input snapshots before any child can alter output.
+     snaps=output/'snapshots';snaps.mkdir()
+     for p,h in {**card['sources_sha256'],**card['prepared_input_sha256'],**card['inherited_inputs_sha256'],str(NETWORK):card['network_sha256']}.items():
+@@ -248,13 +260,13 @@
+         command=[str(SUMO),'-c',str(root/card['package']/'scenario.sumocfg'),'--remote-port',str(port)]
+         write_new(output/'startup_context.json',{'command':command,'SUMO_HOME':env['SUMO_HOME'],'native_warning_suppression':False,'aggregate_warnings':-1,'source_compiler_equivalence':'NOT_VERIFIED'})
+         process=worker.launch_sumo_process(command,capture.handles['sumo_stdout.log'],capture.handles['sumo_stderr.log'],env)
+-        watchdog=ResourceWatchdog(process,output,card['resources'],started);watchdog.start()
++        watchdog=ResourceWatchdog(process,parent,effective,started);watchdog.start()
+         conn=worker.connect_traci(traci,port,process,worker.startup_trace_callback(output/'startup_trace.jsonl'),deadline_s=card['resources']['startup_limit_s'])
+         startup=capture.snapshot(0,0,'STARTUP_CONNECT_ACK');append_new(output/'log_intervals.jsonl',startup)
+         require(not startup['streams']['sumo_stderr.log']['text'],'startup stderr nonempty')
+         adapter=StepAdapter(worker.observe,card['spec']['fixed_command_veh_h'])
+-        _diagnostic_loop(conn,worker,capture,output,card['resources'],process,started,adapter)
+-        status='THREE_CYCLES_PENDING_LOG_FINALIZATION'
++        _diagnostic_loop(conn,worker,capture,output,{**effective,'total_budget_baseline':total_budget},process,started,adapter)
++        status='PACKET_CYCLES_PENDING_LOG_FINALIZATION'
+     except Exception as exc:
+         error=type(exc).__name__+':'+str(exc)
+         write_new(output/'failure_snapshot.json',json.loads(json.dumps({'error':error,'last_completed_s':adapter.last_completed if adapter else None,
+@@ -292,7 +304,7 @@
+             except Exception as exc:
+                 status='STOP_UNKNOWN_LOG_FINALIZATION';error+=';logfinal:'+type(exc).__name__+':'+str(exc)
+             capture.close_handles()
+-        if status=='THREE_CYCLES_PENDING_LOG_FINALIZATION':status='THREE_CYCLES_OBSERVED_NO_MONITORED_ANOMALY_NOT_QUALIFIED'
++        if status=='PACKET_CYCLES_PENDING_LOG_FINALIZATION':status='PACKET_CYCLES_OBSERVED_NO_MONITORED_ANOMALY_NOT_QUALIFIED'
+         write_new(output/'bridge_receipt.json',{'run_id':run,'card_sha256':sha(card_path),'status':status,'error':error,
+             'native_started':process is not None,'last_completed_s':adapter.last_completed if adapter else None,
+             'last_step_ack':getattr(adapter,'bridge_last_ack',None),
+@@ -304,7 +316,9 @@
+             'first_red_checkpoint_verified':getattr(adapter,'checkpoint_verified',False),
+             'cycles':adapter.ledger.rows if adapter else None,
+             'control_accounting':adapter.ledger.accounting() if adapter and adapter.last_end is not None and adapter.last_end>1200 else None,
++            'total_budget_before_run':total_budget,'effective_resource_limits':effective,
++            'budget_timer_scope':'monitored startup plus loop and owned-child cleanup; whole CLI separate',
+             'loop_terminal_elapsed_s':getattr(adapter,'loop_terminal_elapsed_s',None),
+             'monitored_elapsed_through_cleanup_s':time.monotonic()-started,
+             'files_sha256':{str(p.relative_to(output)):sha(p) for p in output.rglob('*') if p.is_file()}})
+-    return 0 if status=='THREE_CYCLES_OBSERVED_NO_MONITORED_ANOMALY_NOT_QUALIFIED' else 1
++    return 0 if status=='PACKET_CYCLES_OBSERVED_NO_MONITORED_ANOMALY_NOT_QUALIFIED' else 1

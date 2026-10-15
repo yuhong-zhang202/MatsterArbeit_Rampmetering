@@ -1,0 +1,33 @@
+{
+  "classification": "OFFLINE_REAL_HELPER_XML_FAKE_CONNECTION_NOT_NATIVE",
+  "commands": [
+    {
+      "command": ".venv/bin/python -m unittest tests.candidate_a_t10_g5_y3_20261013.test_candidate -v",
+      "exit_code": 0,
+      "methods": 4,
+      "duration_s": 18.885,
+      "log": "OFFLINE_TESTS_V2.log",
+      "test_snapshot": "TEST_SOURCE_V2.py"
+    },
+    {
+      "command": ".venv/bin/python -m unittest tests.candidate_a_t10_g5_y3_20261013.test_candidate.CandidateTests.test_real_helper_both_clock_paths_dynamic_red_and_uncapped_accounting -v",
+      "exit_code": 0,
+      "methods": 1,
+      "duration_s": 9.354,
+      "log": "OFFLINE_STARTUP_SELECTION_V1.log",
+      "test_snapshot": "tests/candidate_a_t10_g5_y3_20261013/test_candidate.py"
+    },
+    {
+      "command": ".venv/bin/python scripts/candidate_a_t10_g5_y3_20261013_v1/cli.py --check-card artifacts/t10_g5_y3_candidate_20261013_v1/engineering/packages/UA_T10_G5Y3_FIXED750_S17_01/card.json",
+      "exit_code": 0,
+      "log": "CARD_CHECK_V1.log"
+    }
+  ],
+  "new_native_starts": 0,
+  "new_raw_allocations": 0,
+  "canonical_auth_generated": false,
+  "canonical_release_generated": false,
+  "no_implementation_test_failure_observed": true,
+  "failed_historical_yellow_extractor_V1_preserved": true,
+  "test_paths": "Existing focused methods reused; only startup clock method rechecked after fixture initialization change."
+}

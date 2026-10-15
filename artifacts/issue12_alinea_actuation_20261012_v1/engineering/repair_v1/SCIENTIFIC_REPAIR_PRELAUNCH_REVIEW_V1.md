@@ -1,0 +1,9 @@
+# Minimal duration repair: scientific prelaunch
+
+2026-10-12. Read-only scientific_reviewer /root/budget_cycle_design_science, faithful primary record. GO_FOR_SECOND_FIX300_ONLY. Exact card SHA9f914d8b307df524d47b56999280b8a58fc76da13d4d57f4f743cdf2fe0478ee. No new Blocker/Major/Minor. Not permission for900, future safety, rate qualification or formal experimentation.
+
+Context refreshed. Engineering44 binding6520b77d6e7915eaa72434b58b211a06f150aa86bd45572217e18b4f5f3d50aa and data3 bindingfa3015c90342ca97d4f057fbb730f67111614c979104a56f6b12f85f3b975bc5 matched. Source is an exact uncommitted snapshot; firstDIAG01 failure evidence unchanged.
+
+Original Major closed only at offline interface level: newhelper calls official setPhaseDuration only on bound actualred ACK, records ATTEMPTED durably beforeAPI, then time/program/phase/red/nextSwitch readback; API failure and inconsistent readback retain FAILED_STOP and throw. Oldworker/adapter/policy/guard/model unchanged. Real-oldhelper composition reproduces originalFAIL; same method passes repaired threefakecycles and two negative cases. This is not native physics evidence. Unrerun old suites/identity-test housekeeping branch are disclosed and do not affect this narrow repair gate.
+
+Measurement checks: target/IDconsumption/interface records PASS in code/binding scope; actual FIX72s coverage/accounting NOT_VERIFIED; regression protects actualdispatch/APIfailure/readback; previous1271arrivalPASS cannot substitute fresh FIXarrival audit.1/3 native starts consumed. Canonical exactrelease/fresh resources remain required before one secondFIX300; danger/UNKNOWN STOP, no automatic retry. Third900 only after actual engineering->data->science gates,600 skipped. Y5 remains localfeasibility, quota requested, uncappedN observed. Nominal75quantization and375->30020% mean no claim all continuous rates pass original10%screen. No scientific-review tests/writes/native performed.

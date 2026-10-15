@@ -1,0 +1,29 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/issue12_phase_sequence_audit_20261013",
+    "-p",
+    "test_phase_sequence.py",
+    "-v"
+  ],
+  "baseline_commit": "4552241ec989278b14f816cac9439716ae5bb24c",
+  "new_analysis_code_uncommitted_snapshot": true,
+  "returncode": 0,
+  "elapsed_s": 0.10164783400250599,
+  "log_sha256": "4c277fd4750bd5b62737e9ad0508bcb672a9e23485d3757a737cf06d9bd4d68c",
+  "tests_count_methods": 4,
+  "negative_mutation_cases": 19,
+  "sources_sha256": {
+    "scripts/issue12_phase_sequence_audit_20261013_v1/phase_sequence.py": "77602efdc6b64766dc2fa1b093639506f3c8bfa259532de983c0b27f6dc2f12e",
+    "tests/issue12_phase_sequence_audit_20261013/test_phase_sequence.py": "cb1f7bda6385972d543d77d6e08a396fcd714d3c2ba674d88ea9655b312c1b09",
+    "data/processed/issue12_phase_sequence_fix_20261013_v1/PUBLIC_PHASE_FIXTURE_V1.json": "55ab870c26fcfcb63b1d2fe95c860ac6c36ff14e5c701eaeae88f77731ceff4d",
+    "data/processed/issue12_phase_sequence_fix_20261013_v1/FIXTURE_PROVENANCE_V1.json": "eec5d10e099f03183c82c9ee1a72937e51b6d72dc53b59ff2fb42ead0041819b"
+  },
+  "SUMO_started": false,
+  "original_failure_retained": true
+}

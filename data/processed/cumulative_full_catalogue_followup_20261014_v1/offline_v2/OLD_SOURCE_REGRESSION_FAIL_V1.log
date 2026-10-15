@@ -1,0 +1,22 @@
+test_single_vs_aggregate_monitored_budget_nonzero_history (test_followup.Tests.test_single_vs_aggregate_monitored_budget_nonzero_history) ... FAIL
+
+======================================================================
+FAIL: test_single_vs_aggregate_monitored_budget_nonzero_history (test_followup.Tests.test_single_vs_aggregate_monitored_budget_nonzero_history)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/cumulative_full_catalogue_followup_audit_20261014/test_followup.py", line 22, in test_single_vs_aggregate_monitored_budget_nonzero_history
+    self.assertEqual(check(c,180,180,1),[])
+    ~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: Lists differ: [{'kind': 'RESOURCE_CAP_OBSERVED_EXCEEDED', 'monitored_s': 180, 'raw_bytes': 1}] != []
+
+First list contains 1 additional elements.
+First extra element 0:
+{'kind': 'RESOURCE_CAP_OBSERVED_EXCEEDED', 'monitored_s': 180, 'raw_bytes': 1}
+
+- [{'kind': 'RESOURCE_CAP_OBSERVED_EXCEEDED', 'monitored_s': 180, 'raw_bytes': 1}]
++ []
+
+----------------------------------------------------------------------
+Ran 1 test in 0.005s
+
+FAILED (failures=1)

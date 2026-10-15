@@ -1,0 +1,9 @@
+{
+  "classification": "POST_AUDIT_METADATA_SCHEMA_ERROR_NOT_ACTUAL_READER_FAILURE",
+  "actual_exit_code": 1,
+  "exception": "KeyError: files_sha256",
+  "reason": "Engineering actual binder uses files; metadata helper assumed files_sha256",
+  "actual_reader_exit_code": 0,
+  "reader_not_modified_or_rerun": true,
+  "minimal_resolution": "Inspect exact files mapping and verify it directly in a separate metadata readback"
+}

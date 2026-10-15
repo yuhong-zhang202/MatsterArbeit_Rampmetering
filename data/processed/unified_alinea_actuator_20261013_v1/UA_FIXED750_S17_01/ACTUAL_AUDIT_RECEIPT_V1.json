@@ -1,0 +1,17 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-B",
+    "scripts/unified_alinea_audit_20261013_v1/actual.py",
+    "--manifest",
+    "artifacts/unified_alinea_actuator_20261013_v1/engineering/runs/UA_FIXED750_S17_01/RAW_FINAL_SHA256_V1.json",
+    "--card",
+    "artifacts/unified_alinea_actuator_20261013_v1/engineering/packages/UA_FIXED750_S17_01/card.json",
+    "--output",
+    "data/processed/unified_alinea_actuator_20261013_v1/UA_FIXED750_S17_01/revision01"
+  ],
+  "exit_code": 0,
+  "elapsed_s": 1.843392083013896,
+  "source_sha256": "6f4dd156f38f890b614721a3ce0e0c3cba70d75cc0462c3abc39419ff7dc87d3",
+  "native_starts": 0
+}

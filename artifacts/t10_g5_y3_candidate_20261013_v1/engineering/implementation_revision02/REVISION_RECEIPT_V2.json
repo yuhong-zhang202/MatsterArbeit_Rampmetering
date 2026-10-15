@@ -1,0 +1,39 @@
+{
+  "scope": "TEST_FIXTURE_ONLY_NO_RUNTIME_CARD_GUARD_CHANGE",
+  "historical_checkpoint": "03949494d02c94802e5bc2461ca9daf2a82b341a",
+  "historical_test_git_blob_sha256": "824f6a68993f8a45f5e76765fa87de8cc669dcee2e9a6bd2968f0e6bb093e3cf",
+  "historical_32_binder_sha256": "f623f11444cf3dd8c9017d5f35125d65f19385aca4a92554b21b14d51a39e35a",
+  "historical_32_binder_live_mismatches_only_superseded_test": [
+    "tests/candidate_a_t10_g5_y3_20261013/test_candidate.py"
+  ],
+  "historical_32_other31_file_hashes_unchanged": true,
+  "card_sha256": "6dc909466ddf8387db7a132c2609cb09564fb05c5d917ba9d67de7ba633b7476",
+  "unchanged_73source_digest": "013a7da7518bdf822e049ab833fd06854a2b1f294f8f2120e4796f878a0e71f2",
+  "new_test_sha256": "5a17a8fdfb6ee8d02b3d03abcf3b9a093689ac941fa5aebf2ca6356efe8c5c40",
+  "commands": [
+    {
+      "command": ".venv/bin/python -m unittest tests.candidate_a_t10_g5_y3_20261013.test_candidate.CandidateTests.test_offline_card_no_authorization_rejects_before_allocation_import_and_900_preserved -v",
+      "log": "OFFLINE_PORTABLE_FIXTURE_V2.log",
+      "result": "FAIL",
+      "exit_code": 1,
+      "methods": 1,
+      "seconds": 0.125,
+      "reason": "macOS temporary /var to /private/var alias; patched ROOT was not canonical resolved path; root guard correctly rejected fixture"
+    },
+    {
+      "command": ".venv/bin/python -m unittest tests.candidate_a_t10_g5_y3_20261013.test_candidate.CandidateTests.test_offline_card_no_authorization_rejects_before_allocation_import_and_900_preserved -v",
+      "log": "OFFLINE_PORTABLE_FIXTURE_V3.log",
+      "result": "PASS",
+      "exit_code": 0,
+      "methods": 1,
+      "seconds": 0.133,
+      "minimal_fix": "Resolve temporary fixture root before test-only bridge ROOT patch"
+    }
+  ],
+  "public_dependency_fixture_only": true,
+  "raw_copied": false,
+  "native_runs": 0,
+  "native_authorization_created": false,
+  "production_card_modified": false,
+  "full_clean_suite_rerun": "NOT_RUN_BY_ENGINEER_PARENT_NEXT_CHECKPOINT_PENDING"
+}

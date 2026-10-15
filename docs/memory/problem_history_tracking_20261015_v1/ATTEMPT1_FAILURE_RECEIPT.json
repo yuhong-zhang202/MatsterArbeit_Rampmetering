@@ -1,0 +1,16 @@
+{
+  "status": "failed",
+  "date": "2026-10-15",
+  "network": "none",
+  "model_calls": 0,
+  "paid_requests": 0,
+  "ledger_sha256_before": "9e335f040971c7222081ea0196dfe84bc4a913d37e8a294f64e3d27b105fdf70",
+  "ledger_sha256_after": "9e335f040971c7222081ea0196dfe84bc4a913d37e8a294f64e3d27b105fdf70",
+  "immediate": {
+    "status": "failed",
+    "error": "scenario/write failed: 404 {\"code\":404,\"message\":\"Scenario file not found: ActuatorTracking_20261015.md\",\"request_id\":\"req-99ebaae02a0d41be\"}",
+    "gateway_stderr_tail": "[observability][factory] Internal observability backend requested but private module not available. Falling back to console backend. Install the private submodule for full observability.\n2026-10-15T00:51:51.671+00:00 WARN  [tdai-gateway] [gateway] integrations/ not available (Cannot find module '/app/src/integrations/factory.js' imported from /app/src/gateway/server.ts); falling back to inline LocalConfigSource + NoopQuotaReporter (standalone only).\n(node:17) ExperimentalWarning: SQLite is an experimental feature and might change at any time\n(Use `node --trace-warnings ...` to show where the warning was created)\n"
+  },
+  "fresh_readback": false,
+  "error": "Model-free write incomplete:{\"status\":\"failed\",\"error\":\"scenario/write failed: 404 {\\\"code\\\":404,\\\"message\\\":\\\"Scenario file not found: ActuatorTracking_20261015.md\\\",\\\"request_id\\\":\\\"req-99ebaae02a0d41be\\\"}\",\"gateway_stderr_tail\":\"[observability][factory] Internal observability backend requested but private module not available. Falling back to console backend. Install the private submodule for full observability.\\n2026-10-15T00:51:51.671+00:00 WARN  [tdai-gateway] [gateway] integrations/ not available (Cannot find module '/app/src/integrations/factory.js' imported from /app/src/gateway/server.ts); falling back to inline LocalConfigSource + NoopQuotaReporter (standalone only).\\n(node:17) ExperimentalWarning: SQLite is an experimental feature and might change at any time\\n(Use `node --trace-warnings ...` to show where the warning was created)\\n\"}"
+}

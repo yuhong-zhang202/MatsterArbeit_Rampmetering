@@ -1,0 +1,17 @@
+# Final pending-field repair after bounded review limit
+
+Result: PASS_OFFLINE_PENDING_FIELD_BINDING_ONLY. The final two-field reader repair is complete; stop further testing/review expansion. Native service/safety, full4050 lifecycle, urban exposure and native EOF remain NOT_TESTED. This does not authorize qualification execution or an automatic third full review.
+
+Context preflight revisited AGENTS/current project-state/decisions/empty protocol/recent worklog under the existing task stream. Stage6 exploratory closeout and overall NOT_QUALIFIED remain. Current STATE precedes the completed newest review evidence supplied by root; factual integration belongs to root. Latest noSUMO/no-merge instruction remains. No formal threshold, metric or protocol was introduced.
+
+Root identified review5527262368 at actual commit5b08d28fe96fb160f51ae21a566a74ba50093db0 and comment4278340629. READER_5B08_PREIMAGE.py is the exact `git show` reader blob and matched current source bytes before this repair. Before edits, both reported counterexamples were actually accepted by that reader: blocked_none_641 post interval630 had pending_request_id='NONEXISTENT', or r_policy_pending_veh_h=900. OLD_FALSE_ACCEPTANCES_V1.json preserves the reproduction and original source hash.
+
+The only implementation change is in scripts/natural_service_audit_20261015_v1/actual.py: on every controlled post row, pending_request_id must equal the latest chronological REQUESTED request at that interval's start; r_policy_pending_veh_h must remain null, because the pending command has not been translated into a pending packet rate. This pending identity is separate from the selected/actually applied packet request. In particular, at630 the latest request is feedback:630 while the existing packet may still refer to real_alinea:600 until632; the reader now binds the correct quantities without moving the application time.
+
+Command: `.venv/bin/python -m unittest discover -s tests/natural_service_audit_20261015_v1 -p test_final_pending.py -v`
+
+Actual result: exit0,1method0.314s. Reused exactly the five existing engineering saved bundles (empty/supply/late/blocked641 plus blocked640), and rejected exactly the two reported field corruptions. No fake-loop, natural runtime or SUMO was run. C/E_scheduled/E_executed/Cselected/Capplied/N, held-red recovery, request history and complete/partial classifications remain their prior independently reconstructed values; RESULT_V1.json records those outputs. No new observation or pending-unapplied native case was fabricated.
+
+Writes were limited to this reader, one small new test and final_pending_fix_v1 evidence. Runtime/src, previous processed evidence/binders, governance and Git were untouched. Previous source bindings still describe their original reader bytes; only this new binding identifies the repaired current source. The two old acceptances are preserved as failed protections, not reclassified as historical passes.
+
+Impact is traceability of pending command logs: a wrong/missing request linkage or a fabricated pending packet rate can no longer pass the supported saved-bundle audit. No new actual control defect or physical result was found. The reader remains an explicitly synthetic-bundle audit and does not certify future native files. Safest next step: root/scientific reviewer perform the final read-only scope check and record this last field repair within the capped review outcome; no automatic third full review or qualification progression.

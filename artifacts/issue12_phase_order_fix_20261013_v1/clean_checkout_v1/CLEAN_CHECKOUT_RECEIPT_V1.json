@@ -1,0 +1,31 @@
+{
+  "tested_commit": "2f24afa154fa74808f40f6087c54bf06cdde4d0b",
+  "clone": "/private/tmp/pr13-p2-clean-2f24afa",
+  "local_shared_Git_objects": true,
+  "working_files_are_clean_committed_tree": true,
+  "command": [
+    "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+    "-B",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/issue12_phase_sequence_audit_20261013",
+    "-p",
+    "test_phase_sequence.py",
+    "-v"
+  ],
+  "returncode": 0,
+  "elapsed_process_s": 0.06771212496096268,
+  "tests_methods": 4,
+  "negative_mutation_cases": 19,
+  "log_sha256": "f8412e00a896a3cf80028d717a316c2f756de8ee901570b43bfc8f435d0bf0b0",
+  "working_status": "",
+  "actual_raw_files": [
+    "data/raw/.gitkeep"
+  ],
+  "phase_helper_test_fixture_match_main": true,
+  "SUMO_started": false,
+  "full_local_raw_audit_rerun": false,
+  "scope": "public phase subset regressions only; existing Python environment reused; unrelated historical LFS smudge skipped"
+}

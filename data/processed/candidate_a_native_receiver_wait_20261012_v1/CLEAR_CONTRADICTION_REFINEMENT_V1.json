@@ -1,0 +1,7 @@
+{
+  "cause": "Independent serialized CLEAR checker previously did not reject extra contradictory leader fields. Native source never emits such fields in CLEAR branch, so no execution source/card defect or native behavior change.",
+  "old_schema_sha256": "339eecbc6eb9e9a9da5b877b1bf31f285e080e38abceba14d4a68ef7d0fbf89c",
+  "new_schema_sha256": "7dbeca3df41713fa6885c2075f1438d23de10e7ce8cbdfa41fba44fd3ed7d3fc",
+  "prior_PASS_and_sources_preserved": true,
+  "new_check": "Only CLEAR branch additionally rejects conflicting leader/query/gap fields; one affected tiny fixture method rerun."
+}

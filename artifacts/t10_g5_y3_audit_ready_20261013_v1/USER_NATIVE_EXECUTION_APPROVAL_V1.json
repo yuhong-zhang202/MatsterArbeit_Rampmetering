@@ -1,0 +1,27 @@
+{
+  "source": "direct human explicit execution approval",
+  "date": "2026-10-13",
+  "request": "认可当前交付，授权按提交 c82333d 及 V4 绑定卡运行一次 UA_T10_G5Y3_FIXED750_S17_02，仿真终点1270秒，监控预算300秒、输出上限300MB。保持严格安全检查，异常或UNKNOWN立即停止，保留全部证据，不自动重试。完成工程、数据、科学审查后报告实际放行量与控制指令是否匹配，不把技术通过解释为安全或服务资格通过。",
+  "approved_commit": "c82333d77de1367f0d6fce4b8ceb2742bfd8ed80",
+  "run_id": "UA_T10_G5Y3_FIXED750_S17_02",
+  "card_sha256": "18774ee7aba5319b9947cf6c817c29db00339e7b5f52bb2abef509cf4313755e",
+  "common_runtime_source_sha256": "4deb99f4a6c0b053d810d3b61123a5fff8a15df09cd9cd659e2b4f39bff9fd40",
+  "SUMO_execution_authorized": true,
+  "native_start_limit": 1,
+  "end_s": 1270,
+  "numerical_exception_enabled": false,
+  "resources": {
+    "wall_limit_s": 300,
+    "startup_limit_s": 60,
+    "run_limit_bytes": 300000000,
+    "minimum_free_bytes": 5000000000
+  },
+  "resource_envelope": {
+    "monitored_s": 300,
+    "raw_bytes": 300000000
+  },
+  "automatic_retry": false,
+  "STOP_on_anomaly_or_UNKNOWN": true,
+  "safety_checks_unchanged": true,
+  "formal_design_change_authorized": false
+}

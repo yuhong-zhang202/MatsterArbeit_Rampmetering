@@ -1,0 +1,75 @@
+{
+  "classification": "FAKE_API_FAILURE_NO_NATIVE",
+  "error": "ValueError:CONTROL_SETTER_READBACK_UNKNOWN",
+  "actual_clock": 600,
+  "last_completed_s": 600,
+  "last_accounted_s": 600,
+  "last_control_setter": {
+    "setter_id": "600:setPhase:1",
+    "time_s": 600,
+    "method": "setPhase",
+    "value": 0,
+    "expected_readback": {
+      "time_s": 600,
+      "program": "I12_PACKET8",
+      "phase": 0,
+      "state": "G",
+      "next_switch_s": 604
+    },
+    "status": "READBACK_UNKNOWN_STOP",
+    "call_completed": true,
+    "actual_signal": {
+      "fields": {
+        "time_s": {
+          "status": "OBSERVED",
+          "value": 600,
+          "error": null
+        },
+        "program": {
+          "status": "OBSERVED",
+          "value": "I12_PACKET8",
+          "error": null
+        },
+        "phase": {
+          "status": "UNKNOWN",
+          "value": null,
+          "error": "RuntimeError:INJECTED_PHASE_GETTER_UNAVAILABLE"
+        },
+        "state": {
+          "status": "OBSERVED",
+          "value": "G",
+          "error": null
+        },
+        "next_switch_s": {
+          "status": "OBSERVED",
+          "value": 604,
+          "error": null
+        }
+      },
+      "complete": false,
+      "scope": "CURRENT_GETTERS_AFTER_CONTROL_NOT_MOVEMENT_ACK"
+    }
+  },
+  "memory_requests": [
+    [
+      0,
+      "setProgram",
+      "A_OPEN"
+    ],
+    [
+      0,
+      "setPhase",
+      0
+    ],
+    [
+      600,
+      "setProgram",
+      "I12_PACKET8"
+    ],
+    [
+      600,
+      "setPhase",
+      0
+    ]
+  ]
+}

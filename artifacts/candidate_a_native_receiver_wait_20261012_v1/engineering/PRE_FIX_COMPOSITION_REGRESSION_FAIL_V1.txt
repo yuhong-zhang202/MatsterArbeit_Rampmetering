@@ -1,0 +1,16 @@
+Exact preserved V1 adapter SHA256=c08f890ad29409ee18059fc9dc60903ab4e692b47eaf296bb5c01d0ac8c2ca06
+test_before_denied_after_pass_entry_still_stops_with_both_observations (current_combination_test.WaitTests.test_before_denied_after_pass_entry_still_stops_with_both_observations) ... FAIL
+
+======================================================================
+FAIL: test_before_denied_after_pass_entry_still_stops_with_both_observations (current_combination_test.WaitTests.test_before_denied_after_pass_entry_still_stops_with_both_observations)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/.codex/worktrees/native-receiver-wait/Masterarbeit-Ramp-Metering/tests/candidate_a_native_receiver_wait_20261012/test_wait.py", line 99, in test_before_denied_after_pass_entry_still_stops_with_both_observations
+    with self.assertRaisesRegex(ValueError,'ACTUAL_ENTRY_BEFORE_CURRENT_GAP_BOUND_DENIED:R_flow.0'):self.loop(w,out)
+         ~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: ValueError not raised
+
+----------------------------------------------------------------------
+Ran 1 test in 1.442s
+
+FAILED (failures=1)

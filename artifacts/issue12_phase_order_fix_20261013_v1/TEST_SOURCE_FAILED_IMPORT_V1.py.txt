@@ -1,0 +1,86 @@
+"""Real public subset plus adversarial mutations; no SUMO and no full raw."""
+from pathlib import Path
+from collections import Counter
+from copy import deepcopy
+import json
+import unittest
+
+from scripts.issue12_phase_sequence_audit_20261013_v1.phase_sequence import audit_phase_sequence
+
+ROOT = Path(__file__).resolve().parents[2]
+FIXTURE = ROOT / "data/processed/issue12_phase_sequence_fix_20261013_v1/PUBLIC_PHASE_FIXTURE_V1.json"
+
+
+class PhaseSequenceTests(unittest.TestCase):
+    def setUp(self):
+        self.data = json.loads(FIXTURE.read_text())
+
+    def audit(self, data=None):
+        return audit_phase_sequence(**(self.data if data is None else data))
+
+    def test_real_nine_cycles_and_pending_native_boundaries(self):
+        result = self.audit()
+        self.assertEqual(result["status"], "PASS_ORDERED_TLS_ACK_SWITCH_AUDIT")
+        self.assertEqual(len(result["cycles"]), 9)
+        self.assertEqual(result["observed_intercycle_r_to_G"], 8)
+        for cycle, begin in zip(result["cycles"], range(1200, 1272, 8)):
+            self.assertEqual(cycle["motion_sequence"], "GGGGyyrr")
+            self.assertEqual((cycle["green_begin_s"], cycle["yellow_begin_s"], cycle["red_begin_s"], cycle["end_s"]), (begin, begin + 4, begin + 6, begin + 8))
+        # Existing native getters remain at the preceding phase before a due
+        # transition. Rejecting these valid frames would create a false failure.
+        self.assertEqual(self.data["post_rows"][6]["phase_observation"]["state_before"], "y")
+        self.assertEqual(self.data["post_rows"][8]["phase_observation"]["state_before"], "r")
+        self.assertTrue(result["no_tenth_green_observation"])
+        self.assertFalse(result["native_safety_proven"])
+        self.assertFalse(result["rate_qualified"])
+
+    def test_same_totals_reordered_or_interrupted_phases_rejected(self):
+        for sequence in ("GGyGGyrr", "rrGGGGyy", "GGGGrryy")
+            with self.subTest(sequence=sequence):
+                data = deepcopy(self.data)
+                self.assertEqual(Counter(sequence), Counter("GGGGyyrr"))
+                for i, state in enumerate(sequence):
+                    phase = {"G": 0, "y": 1, "r": 2}[state]
+                    data["tls_rows"][i].update(state=state, phase=str(phase))
+                    data["post_rows"][i]["motion"] = state
+                    data["post_rows"][i]["phase_observation"].update(phase_after=phase, state_after=state)
+                with self.assertRaisesRegex(ValueError, "CONTINUOUS_G_Y_R_ORDER"):
+                    self.audit(data)
+
+    def test_missing_duplicate_unknown_or_misaligned_observations_rejected(self):
+        mutations = (
+            lambda d: d["tls_rows"].pop(),
+            lambda d: d["tls_rows"].__setitem__(1, deepcopy(d["tls_rows"][0])),
+            lambda d: d["tls_rows"][4].update(time="1204.5"),
+            lambda d: d["tls_rows"][4].update(state="u"),
+            lambda d: d["tls_rows"][4].update(programID="other_program"),
+            lambda d: d["ack_rows"].pop(),
+            lambda d: d["ack_rows"].__setitem__(3, deepcopy(d["ack_rows"][1])),
+            lambda d: d["ack_rows"][1].update(actual_time_verified=False),
+            lambda d: d["post_rows"][6]["phase_observation"].update(phase_after=True),
+        )
+        for index, mutate in enumerate(mutations):
+            with self.subTest(case=index):
+                data = deepcopy(self.data); mutate(data)
+                with self.assertRaises(ValueError):
+                    self.audit(data)
+
+    def test_transition_clock_or_request_trace_corruption_rejected(self):
+        mutations = (
+            lambda d: d["post_rows"][6]["phase_observation"].update(next_switch_before_s=1207),
+            lambda d: d["post_rows"][8]["phase_observation"].update(next_switch_after_s=1213),
+            lambda d: d["phase_requests"][0].update(time_s=1205),
+            lambda d: d["phase_requests"][0]["requests"][0].update(method="setPhaseDuration"),
+            lambda d: d["phase_requests"].pop(),
+            lambda d: d["duration_requests"][1]["actual_readback"].update(nextSwitch_s=1209),
+            lambda d: d["duration_requests"][1].update(status="FAILED_STOP"),
+        )
+        for index, mutate in enumerate(mutations):
+            with self.subTest(case=index):
+                data = deepcopy(self.data); mutate(data)
+                with self.assertRaises(ValueError):
+                    self.audit(data)
+
+
+if __name__ == "__main__":
+    unittest.main()

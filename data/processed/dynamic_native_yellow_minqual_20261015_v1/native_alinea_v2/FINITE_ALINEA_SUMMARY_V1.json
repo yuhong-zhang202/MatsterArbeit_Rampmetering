@@ -1,0 +1,158 @@
+{
+  "classification": "FINITE_CLOSED_LOOP_MEASUREMENT_SUPPORT_PENDING_ENGINEERING_AND_SCIENTIFIC_REVIEW",
+  "original_C": 23.703439077103457,
+  "actual_N": 24,
+  "E_complete": 22,
+  "selected_period_nominal_rate_integral_C_applied": 23.75,
+  "C_minus_actual_N": -0.29656092289654434,
+  "feedback": {
+    "status": "PASS_REAL_FEEDBACK_RECOMPUTATION",
+    "decisions": [
+      {
+        "global_s": 1230,
+        "request_id": "feedback:1230",
+        "occ_l0_pct": 7.296530162747482,
+        "occ_l1_pct": 9.659084500640347,
+        "occ_mean_pct": 8.477807331693914,
+        "rate_previous_veh_h": 900.0,
+        "rate_raw_veh_h": 1076.553486781426,
+        "rate_clipped_veh_h": 900
+      },
+      {
+        "global_s": 1260,
+        "request_id": "feedback:1260",
+        "occ_l0_pct": 11.292688537954138,
+        "occ_l1_pct": 11.21895811676647,
+        "occ_mean_pct": 11.255823327360304,
+        "rate_previous_veh_h": 900,
+        "rate_raw_veh_h": 882.0923670847787,
+        "rate_clipped_veh_h": 882.0923670847787
+      },
+      {
+        "global_s": 1290,
+        "request_id": "feedback:1290",
+        "occ_l0_pct": 13.838275026798783,
+        "occ_l1_pct": 10.175746580246898,
+        "occ_mean_pct": 12.00701080352284,
+        "rate_previous_veh_h": 882.0923670847787,
+        "rate_raw_veh_h": 811.6016108381799,
+        "rate_clipped_veh_h": 811.6016108381799
+      }
+    ],
+    "feedback_command_applied": true,
+    "applied_feedback_request_ids": [
+      "feedback:1230",
+      "feedback:1260"
+    ],
+    "partial_next_window_s": [
+      1290,
+      1296
+    ],
+    "native_or_formal_effect_proven": false,
+    "different_period_observed": true,
+    "period_source": "ACTUAL_FIRST_G_ACK_CYCLE_APPLICATIONS_NOT_NEAREST_REFERENCE"
+  },
+  "applications": [
+    {
+      "request_id": "real_alinea:1200",
+      "application_global_s": 1200,
+      "application_delay_s": 0
+    },
+    {
+      "request_id": "feedback:1230",
+      "application_global_s": 1232,
+      "application_delay_s": 2
+    },
+    {
+      "request_id": "feedback:1260",
+      "application_global_s": 1264,
+      "application_delay_s": 4
+    }
+  ],
+  "terminal_partial": {
+    "begin_s": 1289,
+    "observed_end_s": 1296,
+    "planned_end_s": 1297,
+    "completed": false,
+    "C_packet_fraction": "57517020321138581/36000000000000000",
+    "C_total_fraction": "71110317231310367/3000000000000000",
+    "N_packet": 2,
+    "N_total": 24,
+    "E_packet": 0,
+    "E_support": "COMPLETE_PACKETS_ONLY",
+    "error_before_fraction": "3806786454585823/36000000000000000",
+    "error_after_fraction": "-889682768689633/3000000000000000",
+    "selector_forecast_residual_fraction": null,
+    "midpacket_request_change_fraction": null,
+    "packet_shortfall": null,
+    "phase_counts_on_observed_exposure": {
+      "G": 2,
+      "y": 0,
+      "r": 0
+    },
+    "phase_exposure_s": {
+      "G": 4,
+      "y": 2,
+      "r": 1
+    },
+    "partial_is_completed_quota": false
+  },
+  "complete_boundary_error_trajectory": [
+    {
+      "time_s": 1208,
+      "error": 0.0
+    },
+    {
+      "time_s": 1216,
+      "error": 0.0
+    },
+    {
+      "time_s": 1224,
+      "error": 0.0
+    },
+    {
+      "time_s": 1232,
+      "error": 0.0
+    },
+    {
+      "time_s": 1240,
+      "error": 0.0
+    },
+    {
+      "time_s": 1248,
+      "error": 0.0
+    },
+    {
+      "time_s": 1256,
+      "error": 0.0
+    },
+    {
+      "time_s": 1264,
+      "error": -0.019897369905801446
+    },
+    {
+      "time_s": 1272,
+      "error": -0.05969210971740433
+    },
+    {
+      "time_s": 1280,
+      "error": -0.09948684952900723
+    },
+    {
+      "time_s": 1289,
+      "error": 0.10574406818293952
+    }
+  ],
+  "pending_real_feedback": "feedback:1290",
+  "superseded_initial_is_not_pending_live_request": true,
+  "current_gap_advisory_records": 0,
+  "legacy_yellow_failed_times": [],
+  "arrivals_checked": 1376,
+  "bodycensored": [],
+  "before_charged_s": 318.5528609579196,
+  "this_monitored_s": 157.09260666702176,
+  "total_if_settled_s": 475.6454676249414,
+  "remaining_if_settled_s": 124.35453237505862,
+  "settlement_performed": false,
+  "overall_qualified": false
+}

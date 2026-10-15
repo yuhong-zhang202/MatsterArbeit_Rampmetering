@@ -1,0 +1,8 @@
+{
+  "pr_url": "https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/pull/13",
+  "baseline_commit": "4552241ec989278b14f816cac9439716ae5bb24c",
+  "comment_id": 4253092187,
+  "severity": "P2",
+  "comment": "**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  Verify phase order before reporting 4/2/2 durations**\n\nThis assertion validates only the per-cycle totals of four `G`, two `y`, and two `r` samples, not that the TLS followed the continuous sequence `GGGGyyrr`; for example, a reordered or interrupted sequence with the same counts would still pass. Although line 78 binds each sample to `tls_states.xml`, the audit never checks consecutive transition times or the complete phase-request trace, so its result cannot independently substantiate the reported actual 4 s green, 2 s yellow, and 2 s red durations used for later safety and actuator-qualification reasoning. Add an ordered per-cycle TLS/switch assertion before emitting this conclusion.\n\nAGENTS.md reference: [AGENTS.md:L34-L38](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/blob/4552241ec989278b14f816cac9439716ae5bb24c/AGENTS.md#L34-L38)\n\nUseful? React with \ud83d\udc4d\u00a0/ \ud83d\udc4e.",
+  "scope": "ordered phase audit only, existing TLS/ACK, no SUMO/timing/guard/upstream change"
+}
