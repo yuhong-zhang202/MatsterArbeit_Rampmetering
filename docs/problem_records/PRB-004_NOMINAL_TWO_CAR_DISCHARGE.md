@@ -144,3 +144,13 @@ Feedback使用自己的前一clipped请求，不回灌映射率或实际N；1290
 | [最终科学后审](../../artifacts/dynamic_native_yellow_minqual_20261015_v1/SCIENCE_FINAL_POSTREVIEW_V1.md) | `c785f9868a3c5d6e0378dd1b61e8d90883ffbf6eeded7e58cf3a422b86f8ecd2` |
 
 Documentation Impact Check：本代理只扩充本问题记录；PROJECT_STATE／WORKLOG及问题索引的必要同步由主代理负责。DECISIONS、EXPERIMENT_PROTOCOL、导师反馈、README、AGENTS、论文结构及其余问题文件未由本任务改写。
+
+### 10. 后续P1与自然需求资格目标（2026-10-15）
+
+PR13实际审查`9a9c96ed…`指出：上一完整周期N<2并不证明执行器故障，空供给、未就绪或接收受限均可能造成该结果。`6dc1680d…`新有限诊断入口已修正误归因并限定用途；其复审已完成，两项失败证据审计P2已修复并通过限定回归；该入口仍会中性停止，不能作为普通服务持续控制已解决的依据。[有限修复报告](../development/PR13_FINITE_SERVICE_SCOPE_FIX_20261015.md)。
+
+用户随后明确要求继续实现可信论文所需的自然运行能力，而非停在有限诊断。当前工程方案将原始C、名义调度机会E_scheduled、真实应用及N分开，拟以C−E_scheduled校正量化，不让物理短放E_scheduled−N驱动追债；受限条件保留观测，真实安全／UNKNOWN仍停止。方案已获科学允许离线实施，新namespace实现及3组合＋1终点方法已通过必要离线验证；独立reader五保存案例／十反例通过，科学终审允许准确head的限定离线复审。真实自然交通尚未测试。[新授权](../../artifacts/thesis_actuator_readiness_20261015_v1/USER_AUTHORITY.md)、[文献及官方依据](../../artifacts/thesis_actuator_readiness_20261015_v1/LITERATURE_AND_METHOD_BASIS.md)、[精确工程提案](../../artifacts/thesis_actuator_readiness_20261015_v1/engineering/PROPOSED_IMPLEMENTATION_V1.md)。
+
+自然候选复用既有4050车、4200秒、600秒起控输入；旧154人为600–1200蓄队不能冒充自然需求。真实资格仍NOT_TESTED／总体NOT_QUALIFIED。900秒墙钟预算仅提案，旧600秒实耗475.645秒及124.355余额保持；不得重置旧账或把最多两次身份直接当精确预算/运行放行。后续实际结果须新版本追加，不覆盖前述历史FAIL、STOP及有界改善。
+
+本轮最新限制为不运行SUMO、不合并PR。普通服务新实现、P2处理、失败保留及精确版本边界见[PR13修复交付](../development/PR13_ORDINARY_SERVICE_REVIEW_FIX_20261015.md)；旧finite与154实测不混作新实现资格。

@@ -1,0 +1,80 @@
+{
+  "status": "PASS_SYNTHETIC_READER_INTEGRITY_ONLY",
+  "cases": {
+    "overquota": {
+      "observation_accounting": "PASS_OFFLINE_SYNTHETIC_ONLY",
+      "diagnostic_outcome": "HARD_OR_UNKNOWN_GATE_STOP",
+      "C_exact_fraction": "25/12",
+      "E": 2,
+      "N": 3,
+      "requested_minus_actual_exact_fraction": "-11/12",
+      "accounted_end_s": 1210,
+      "partial": false,
+      "general_service_qualified": false
+    },
+    "later_hard": {
+      "observation_accounting": "PASS_OFFLINE_SYNTHETIC_ONLY",
+      "diagnostic_outcome": "HARD_OR_UNKNOWN_GATE_STOP",
+      "C_exact_fraction": "5/2",
+      "E": 2,
+      "N": 4,
+      "requested_minus_actual_exact_fraction": "-3/2",
+      "accounted_end_s": 1212,
+      "partial": true,
+      "general_service_qualified": false
+    },
+    "empty": {
+      "observation_accounting": "PASS_OFFLINE_SYNTHETIC_ONLY",
+      "diagnostic_outcome": "DIAGNOSTIC_TARGET_NOT_MET_CAUSE_UNESTABLISHED",
+      "C_exact_fraction": "25/12",
+      "E": 2,
+      "N": 0,
+      "requested_minus_actual_exact_fraction": "25/12",
+      "accounted_end_s": 1210,
+      "partial": false,
+      "general_service_qualified": false
+    },
+    "one_exact": {
+      "observation_accounting": "PASS_OFFLINE_SYNTHETIC_ONLY",
+      "diagnostic_outcome": "DIAGNOSTIC_TARGET_NOT_MET_CAUSE_UNESTABLISHED",
+      "C_exact_fraction": "25/12",
+      "E": 2,
+      "N": 1,
+      "requested_minus_actual_exact_fraction": "13/12",
+      "accounted_end_s": 1210,
+      "partial": false,
+      "general_service_qualified": false
+    },
+    "partial": {
+      "observation_accounting": "PASS_OFFLINE_SYNTHETIC_ONLY",
+      "diagnostic_outcome": "FINITE_LOOP_COMPLETED_NOT_GENERAL_QUALIFICATION",
+      "C_exact_fraction": "5/2",
+      "E": 2,
+      "N": 4,
+      "requested_minus_actual_exact_fraction": "-3/2",
+      "accounted_end_s": 1212,
+      "partial": true,
+      "general_service_qualified": false
+    },
+    "safety_priority": {
+      "observation_accounting": "PASS_OFFLINE_SYNTHETIC_ONLY",
+      "diagnostic_outcome": "HARD_OR_UNKNOWN_GATE_STOP",
+      "C_exact_fraction": "25/12",
+      "E": 2,
+      "N": 1,
+      "requested_minus_actual_exact_fraction": "13/12",
+      "accounted_end_s": 1210,
+      "partial": false,
+      "general_service_qualified": false
+    }
+  },
+  "rejections": {
+    "false_quota_pass": "REJECTED",
+    "quota_without_hard": "REJECTED",
+    "misbound_quota": "REJECTED",
+    "malformed_quota": "REJECTED",
+    "current_neutral_masks_safety": "REJECTED"
+  },
+  "old_reader_regression_failures": 2,
+  "native_started": false
+}

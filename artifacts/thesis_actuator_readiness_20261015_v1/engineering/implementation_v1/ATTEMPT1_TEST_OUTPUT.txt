@@ -1,0 +1,224 @@
+test_hard_gates_initial_precondition_and_authority_before_native (test_natural.NaturalTests.test_hard_gates_initial_precondition_and_authority_before_native) ... 
+  test_hard_gates_initial_precondition_and_authority_before_native (test_natural.NaturalTests.test_hard_gates_initial_precondition_and_authority_before_native) (fault='braking') ... ERROR
+  test_hard_gates_initial_precondition_and_authority_before_native (test_natural.NaturalTests.test_hard_gates_initial_precondition_and_authority_before_native) (fault='badACK') ... ERROR
+  test_hard_gates_initial_precondition_and_authority_before_native (test_natural.NaturalTests.test_hard_gates_initial_precondition_and_authority_before_native) (fault='unknown') ... ERROR
+test_nominal_sequence_independent_of_service_no_physical_catchup_and_partial (test_natural.NaturalTests.test_nominal_sequence_independent_of_service_no_physical_catchup_and_partial) ... ERROR
+test_real_loop_empty_one_late_and_receiver_red_wait_then_recovery (test_natural.NaturalTests.test_real_loop_empty_one_late_and_receiver_red_wait_then_recovery) ... 
+  test_real_loop_empty_one_late_and_receiver_red_wait_then_recovery (test_natural.NaturalTests.test_real_loop_empty_one_late_and_receiver_red_wait_then_recovery) (case='empty') ... ERROR
+  test_real_loop_empty_one_late_and_receiver_red_wait_then_recovery (test_natural.NaturalTests.test_real_loop_empty_one_late_and_receiver_red_wait_then_recovery) (case='supply') ... ERROR
+  test_real_loop_empty_one_late_and_receiver_red_wait_then_recovery (test_natural.NaturalTests.test_real_loop_empty_one_late_and_receiver_red_wait_then_recovery) (case='late') ... ERROR
+  test_real_loop_empty_one_late_and_receiver_red_wait_then_recovery (test_natural.NaturalTests.test_real_loop_empty_one_late_and_receiver_red_wait_then_recovery) (case='blocked') ... ERROR
+
+======================================================================
+ERROR: test_hard_gates_initial_precondition_and_authority_before_native (test_natural.NaturalTests.test_hard_gates_initial_precondition_and_authority_before_native) (fault='braking')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_natural_service_20261015/test_natural.py", line 134, in test_hard_gates_initial_precondition_and_authority_before_native
+    _,a,_,error,_=self.run_loop(fault=fault)
+                  ~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_natural_service_20261015/test_natural.py", line 93, in run_loop
+    w=NaturalWorld(pkg/'scenario.add.xml',case,fault);a=StepAdapter(w.observe,900,end,yellow_diagnostic_mode=True)
+                                                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_natural_service_20261015/adapter.py", line 83, in __init__
+    self.ledger = Ledger(command, end_s)
+                  ~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_natural_service_20261015/policy.py", line 52, in __init__
+    self.pending_command = Command('initial', activation_s, command, 'FIXED').validate()
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_unified_alinea_20261013/policy.py", line 29, in validate
+    require(isinstance(self.request_id, str) and self.request_id and
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            type(self.global_request_s) is int and self.global_request_s >= 1200 and
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            self.origin in ('FIXED', 'SCHEDULED', 'PROJECT_FEEDBACK'), 'INVALID_COMMAND_BINDING')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_issue12_packet_policy_20261012/policy.py", line 15, in require
+    raise ValueError(reason)
+ValueError: INVALID_COMMAND_BINDING
+
+======================================================================
+ERROR: test_hard_gates_initial_precondition_and_authority_before_native (test_natural.NaturalTests.test_hard_gates_initial_precondition_and_authority_before_native) (fault='badACK')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_natural_service_20261015/test_natural.py", line 134, in test_hard_gates_initial_precondition_and_authority_before_native
+    _,a,_,error,_=self.run_loop(fault=fault)
+                  ~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_natural_service_20261015/test_natural.py", line 93, in run_loop
+    w=NaturalWorld(pkg/'scenario.add.xml',case,fault);a=StepAdapter(w.observe,900,end,yellow_diagnostic_mode=True)
+                                                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_natural_service_20261015/adapter.py", line 83, in __init__
+    self.ledger = Ledger(command, end_s)
+                  ~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_natural_service_20261015/policy.py", line 52, in __init__
+    self.pending_command = Command('initial', activation_s, command, 'FIXED').validate()
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_unified_alinea_20261013/policy.py", line 29, in validate
+    require(isinstance(self.request_id, str) and self.request_id and
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            type(self.global_request_s) is int and self.global_request_s >= 1200 and
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            self.origin in ('FIXED', 'SCHEDULED', 'PROJECT_FEEDBACK'), 'INVALID_COMMAND_BINDING')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_issue12_packet_policy_20261012/policy.py", line 15, in require
+    raise ValueError(reason)
+ValueError: INVALID_COMMAND_BINDING
+
+======================================================================
+ERROR: test_hard_gates_initial_precondition_and_authority_before_native (test_natural.NaturalTests.test_hard_gates_initial_precondition_and_authority_before_native) (fault='unknown')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_natural_service_20261015/test_natural.py", line 134, in test_hard_gates_initial_precondition_and_authority_before_native
+    _,a,_,error,_=self.run_loop(fault=fault)
+                  ~~~~~~~~~~~~~^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_natural_service_20261015/test_natural.py", line 93, in run_loop
+    w=NaturalWorld(pkg/'scenario.add.xml',case,fault);a=StepAdapter(w.observe,900,end,yellow_diagnostic_mode=True)
+                                                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_natural_service_20261015/adapter.py", line 83, in __init__
+    self.ledger = Ledger(command, end_s)
+                  ~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_natural_service_20261015/policy.py", line 52, in __init__
+    self.pending_command = Command('initial', activation_s, command, 'FIXED').validate()
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_unified_alinea_20261013/policy.py", line 29, in validate
+    require(isinstance(self.request_id, str) and self.request_id and
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            type(self.global_request_s) is int and self.global_request_s >= 1200 and
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            self.origin in ('FIXED', 'SCHEDULED', 'PROJECT_FEEDBACK'), 'INVALID_COMMAND_BINDING')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_issue12_packet_policy_20261012/policy.py", line 15, in require
+    raise ValueError(reason)
+ValueError: INVALID_COMMAND_BINDING
+
+======================================================================
+ERROR: test_nominal_sequence_independent_of_service_no_physical_catchup_and_partial (test_natural.NaturalTests.test_nominal_sequence_independent_of_service_no_physical_catchup_and_partial)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_natural_service_20261015/test_natural.py", line 67, in test_nominal_sequence_independent_of_service_no_physical_catchup_and_partial
+    allserved=policy.Ledger(750,720);limited=policy.Ledger(750,720)
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_natural_service_20261015/policy.py", line 52, in __init__
+    self.pending_command = Command('initial', activation_s, command, 'FIXED').validate()
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_unified_alinea_20261013/policy.py", line 29, in validate
+    require(isinstance(self.request_id, str) and self.request_id and
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            type(self.global_request_s) is int and self.global_request_s >= 1200 and
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            self.origin in ('FIXED', 'SCHEDULED', 'PROJECT_FEEDBACK'), 'INVALID_COMMAND_BINDING')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_issue12_packet_policy_20261012/policy.py", line 15, in require
+    raise ValueError(reason)
+ValueError: INVALID_COMMAND_BINDING
+
+======================================================================
+ERROR: test_real_loop_empty_one_late_and_receiver_red_wait_then_recovery (test_natural.NaturalTests.test_real_loop_empty_one_late_and_receiver_red_wait_then_recovery) (case='empty')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_natural_service_20261015/test_natural.py", line 109, in test_real_loop_empty_one_late_and_receiver_red_wait_then_recovery
+    w,a,p,error,logs=self.run_loop(case)
+                     ~~~~~~~~~~~~~^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_natural_service_20261015/test_natural.py", line 93, in run_loop
+    w=NaturalWorld(pkg/'scenario.add.xml',case,fault);a=StepAdapter(w.observe,900,end,yellow_diagnostic_mode=True)
+                                                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_natural_service_20261015/adapter.py", line 83, in __init__
+    self.ledger = Ledger(command, end_s)
+                  ~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_natural_service_20261015/policy.py", line 52, in __init__
+    self.pending_command = Command('initial', activation_s, command, 'FIXED').validate()
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_unified_alinea_20261013/policy.py", line 29, in validate
+    require(isinstance(self.request_id, str) and self.request_id and
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            type(self.global_request_s) is int and self.global_request_s >= 1200 and
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            self.origin in ('FIXED', 'SCHEDULED', 'PROJECT_FEEDBACK'), 'INVALID_COMMAND_BINDING')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_issue12_packet_policy_20261012/policy.py", line 15, in require
+    raise ValueError(reason)
+ValueError: INVALID_COMMAND_BINDING
+
+======================================================================
+ERROR: test_real_loop_empty_one_late_and_receiver_red_wait_then_recovery (test_natural.NaturalTests.test_real_loop_empty_one_late_and_receiver_red_wait_then_recovery) (case='supply')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_natural_service_20261015/test_natural.py", line 109, in test_real_loop_empty_one_late_and_receiver_red_wait_then_recovery
+    w,a,p,error,logs=self.run_loop(case)
+                     ~~~~~~~~~~~~~^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_natural_service_20261015/test_natural.py", line 93, in run_loop
+    w=NaturalWorld(pkg/'scenario.add.xml',case,fault);a=StepAdapter(w.observe,900,end,yellow_diagnostic_mode=True)
+                                                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_natural_service_20261015/adapter.py", line 83, in __init__
+    self.ledger = Ledger(command, end_s)
+                  ~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_natural_service_20261015/policy.py", line 52, in __init__
+    self.pending_command = Command('initial', activation_s, command, 'FIXED').validate()
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_unified_alinea_20261013/policy.py", line 29, in validate
+    require(isinstance(self.request_id, str) and self.request_id and
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            type(self.global_request_s) is int and self.global_request_s >= 1200 and
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            self.origin in ('FIXED', 'SCHEDULED', 'PROJECT_FEEDBACK'), 'INVALID_COMMAND_BINDING')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_issue12_packet_policy_20261012/policy.py", line 15, in require
+    raise ValueError(reason)
+ValueError: INVALID_COMMAND_BINDING
+
+======================================================================
+ERROR: test_real_loop_empty_one_late_and_receiver_red_wait_then_recovery (test_natural.NaturalTests.test_real_loop_empty_one_late_and_receiver_red_wait_then_recovery) (case='late')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_natural_service_20261015/test_natural.py", line 109, in test_real_loop_empty_one_late_and_receiver_red_wait_then_recovery
+    w,a,p,error,logs=self.run_loop(case)
+                     ~~~~~~~~~~~~~^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_natural_service_20261015/test_natural.py", line 93, in run_loop
+    w=NaturalWorld(pkg/'scenario.add.xml',case,fault);a=StepAdapter(w.observe,900,end,yellow_diagnostic_mode=True)
+                                                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_natural_service_20261015/adapter.py", line 83, in __init__
+    self.ledger = Ledger(command, end_s)
+                  ~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_natural_service_20261015/policy.py", line 52, in __init__
+    self.pending_command = Command('initial', activation_s, command, 'FIXED').validate()
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_unified_alinea_20261013/policy.py", line 29, in validate
+    require(isinstance(self.request_id, str) and self.request_id and
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            type(self.global_request_s) is int and self.global_request_s >= 1200 and
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            self.origin in ('FIXED', 'SCHEDULED', 'PROJECT_FEEDBACK'), 'INVALID_COMMAND_BINDING')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_issue12_packet_policy_20261012/policy.py", line 15, in require
+    raise ValueError(reason)
+ValueError: INVALID_COMMAND_BINDING
+
+======================================================================
+ERROR: test_real_loop_empty_one_late_and_receiver_red_wait_then_recovery (test_natural.NaturalTests.test_real_loop_empty_one_late_and_receiver_red_wait_then_recovery) (case='blocked')
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_natural_service_20261015/test_natural.py", line 109, in test_real_loop_empty_one_late_and_receiver_red_wait_then_recovery
+    w,a,p,error,logs=self.run_loop(case)
+                     ~~~~~~~~~~~~~^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_natural_service_20261015/test_natural.py", line 93, in run_loop
+    w=NaturalWorld(pkg/'scenario.add.xml',case,fault);a=StepAdapter(w.observe,900,end,yellow_diagnostic_mode=True)
+                                                        ~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_natural_service_20261015/adapter.py", line 83, in __init__
+    self.ledger = Ledger(command, end_s)
+                  ~~~~~~^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_natural_service_20261015/policy.py", line 52, in __init__
+    self.pending_command = Command('initial', activation_s, command, 'FIXED').validate()
+                           ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_unified_alinea_20261013/policy.py", line 29, in validate
+    require(isinstance(self.request_id, str) and self.request_id and
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            type(self.global_request_s) is int and self.global_request_s >= 1200 and
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+            self.origin in ('FIXED', 'SCHEDULED', 'PROJECT_FEEDBACK'), 'INVALID_COMMAND_BINDING')
+            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_issue12_packet_policy_20261012/policy.py", line 15, in require
+    raise ValueError(reason)
+ValueError: INVALID_COMMAND_BINDING
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.075s
+
+FAILED (errors=8)

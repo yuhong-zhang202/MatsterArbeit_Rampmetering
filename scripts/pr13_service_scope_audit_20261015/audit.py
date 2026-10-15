@@ -75,7 +75,13 @@ def audit(d):
         need(ev['cause'] == 'UNESTABLISHED' and ev['actuator_fault_established'] is False and ev['general_service_qualified'] is False, 'false cause or qualification')
         at = acks[boundary-1201]['accounting']
         need(Fraction(ev['C_exact_fraction']) == Fraction(at['C_exact_fraction']) and ev['E'] == at['E'] and Fraction(ev['requested_minus_actual_exact_fraction']) == Fraction(at['C_exact_fraction'])-ev['N'], 'corrupt assessment accounting')
-        need(ev['status'] == (UNDER if n < 2 else 'FINITE_DIAGNOSTIC_TARGET_OBSERVED_NOT_GENERAL_QUALIFICATION'), 'false target PASS')
+        expected = (UNDER if n < 2 else
+                    'FINITE_DIAGNOSTIC_TARGET_OBSERVED_NOT_GENERAL_QUALIFICATION' if n == 2 else
+                    'SERVICE_PACKET_QUOTA_EXCEEDED')
+        need(ev['status'] == expected, 'false target PASS')
+        if n > 2:
+            need(hard and end == boundary and len(packets) == ev['cycle_id']+1 and
+                 'SERVICE_PACKET_QUOTA_EXCEEDED' in r['error'], 'overquota hard stop missing')
         if n < 2:
             need(r['status'] == UNDER and end == boundary and len(packets) == ev['cycle_id']+1, 'continued after target failure')
             need(not any(s[0] >= boundary for s in d['setters']), 'setter after stop')
@@ -85,7 +91,17 @@ def audit(d):
     complete = packets[-1]['application_global_s']+packets[-1]['period_s'] <= end
     need(r['partial_cycle'] is (not complete), 'terminal partial flag')
     if hard:
-        need(r['error'] and not assessed and r['service_diagnostic'] is None, 'hard failure downgraded')
+        current = [ev for ev in assessed if ev['cycle_id'] == packets[-1]['cycle_id']]
+        historical = [ev for ev in assessed if ev['cycle_id'] < packets[-1]['cycle_id']]
+        need(r['error'] and UNDER not in r['error'] and
+             acks[-1]['status'].startswith('STOP_'), 'hard failure downgraded')
+        need(all(ev['status'] == 'FINITE_DIAGNOSTIC_TARGET_OBSERVED_NOT_GENERAL_QUALIFICATION'
+                 for ev in historical), 'invalid prior assessment before hard stop')
+        need(not current or (len(current) == 1 and
+             current[0]['status'] == 'SERVICE_PACKET_QUOTA_EXCEEDED'),
+             'hard failure masked by current assessment')
+        need({ev['cycle_id'] for ev in historical} == set(range(packets[-1]['cycle_id'])),
+             'missing prior complete assessment')
     else:
         need(len(assessed) == E//2, 'missing complete assessment')
         need(r['status'] in (UNDER, 'FINITE_LOOP_COMPLETED_NOT_GENERAL_QUALIFICATION'), 'false result status')

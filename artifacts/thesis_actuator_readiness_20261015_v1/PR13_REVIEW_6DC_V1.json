@@ -1,0 +1,24 @@
+{
+  "actual_review_commit": "6dc1680de32bad325aa7151f107cd61f8bb51b4d",
+  "review_id": 5526924792,
+  "submitted_at": "2026-10-15T01:28:28Z",
+  "url": "https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/pull/13#pullrequestreview-5526924792",
+  "findings": [
+    {
+      "id": 4278071195,
+      "url": "https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/pull/13#discussion_r4278071195",
+      "path": "scripts/pr13_service_scope_audit_20261015/audit.py",
+      "line": 78,
+      "body": "**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  让审计接受超额包的硬停止评估**\n\n在实际审查的 `6dc1680de32bad325aa7151f107cd61f8bb51b4d` 中，当完整 packet 出现 3 个以上唯一 crossing 时，`policy.py` 会有意记录 `SERVICE_PACKET_QUOTA_EXCEEDED` 后硬停止，但这里将所有 `n >= 2` 都要求为普通的 `FINITE_DIAGNOSTIC_TARGET_OBSERVED_NOT_GENERAL_QUALIFICATION`，因此真实的超额证据会先以 `false target PASS` 被拒绝。现有四个 bundle 未覆盖该情况，所以独立 reader 目前不能支持报告所称的 N>2 异常路径验证；这不影响运行时硬停止，也不同于明确未解决的普通受约束服务持续控制。应为超额包接受 quota-exceeded assessment 与 hard receipt 的组合。\n\nAGENTS.md reference: [AGENTS.md:L69-L71](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/blob/6dc1680de32bad325aa7151f107cd61f8bb51b4d/AGENTS.md#L69-L71)\n\nUseful? React with 👍 / 👎."
+    },
+    {
+      "id": 4278071201,
+      "url": "https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/pull/13#discussion_r4278071201",
+      "path": "scripts/pr13_service_scope_audit_20261015/audit.py",
+      "line": 88,
+      "body": "**<sub><sub>![P2 Badge](https://img.shields.io/badge/P2-yellow?style=flat)</sub></sub>  仅对发生故障的当前包禁止中性评估**\n\n当 braking、UNKNOWN 或 receiver 故障发生在第二个或更晚 packet 时，wrapper 的 `finally` 会按设计保留此前完整 packet 的 assessment，而终端 receipt 仍正确保持 `HARD_OR_UNKNOWN_GATE_STOP`；这里却因整个 `assessed` 列表非空而拒绝该合法记录。当前 safety fixture 在首包即失败，因而没有暴露此问题；结果是后续 packet 的真实硬故障无法被独立审计，尽管并未被降级成中性停止。应只确认发生故障的当前 packet 没有中性 assessment，而不是要求全部历史 assessment 为空。\n\nAGENTS.md reference: [AGENTS.md:L69-L71](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/blob/6dc1680de32bad325aa7151f107cd61f8bb51b4d/AGENTS.md#L69-L71)\n\nUseful? React with 👍 / 👎."
+    }
+  ],
+  "new_goal_extra_substantive_review_rounds_requested": 0,
+  "handling": "Combine both reader corrections with ordinary-service implementation before first new-goal substantive re-review."
+}

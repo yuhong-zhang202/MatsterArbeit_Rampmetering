@@ -372,19 +372,38 @@
     {
       "id": "issue12-signal-policy-review",
       "chapterId": "",
-      "title": "Issue #12 技术诊断完成，Draft PR #13 待审查",
+      "title": "PR #13：普通服务P1修复与有界复审",
       "status": "doing",
       "priority": "high",
       "type": "engineering",
       "due": "",
       "subtasks": [
-        "新packet900：seed17、72秒九周期，各2辆，C=appliedC=E=N18；工程/独立数据/科学GO技术交付",
-        "保留原9+1.1检查；停止追加机制诊断，不把余预算作为补矩阵理由",
-        "新runner仅fixed900/T8；旧FIX300不同版本、450/600/750及长期/连续ALINEA未资格",
+        "154源动态与真实ALINEA各96秒有限技术节点完成；并非自然需求资格",
+        "6dc1680实际复审完成；超额包与后周期硬故障两项reader P2已修、针对性离线回归通过",
+        "普通服务候选已实现：C−E_scheduled、N0/1继续、接收限制实际红灯等待；不追回物理短放",
+        "工程3组合＋1终点方法、独立5保存案例/10反例通过；科学GO仅离线送审，下一步准确head复审",
         "Candidate A NOT_QUALIFIED、A1 UNRESOLVED、Stage6既有结项和正式协议未冻结保持",
-        "证据与问题索引：docs/development/ISSUE12_EXECUTION_POLICY_DELIVERY_20261012.md；docs/problem_records/README.md",
-        "待用户/Chat审查，建议不构成执行授权；Issue https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/issues/12",
-        "Draft PR #13：https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/pull/13；仅技术交付，未验收/合并"
+        "当前授权及依据：artifacts/thesis_actuator_readiness_20261015_v1/；问题索引docs/problem_records/README.md",
+        "Issue https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/issues/12；实质修复仍在原PR交付",
+        "Draft PR #13：https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/pull/13；仅技术交付，未验收/合并",
+        "用户最新限制：不运行SUMO、不合并PR；新版本自然实际行为NOT_TESTED"
+      ]
+    },
+    {
+      "id": "natural-actuator-readiness",
+      "chapterId": "",
+      "title": "自然需求最小资格：输入与证据准备，尚未运行",
+      "status": "doing",
+      "priority": "high",
+      "type": "engineering",
+      "due": "",
+      "subtasks": [
+        "复用既有M3600/R900/U360/X180、seed17、4050车、4200秒自然输入及600秒起控",
+        "不能把154短诊断600–1200秒人工蓄队沿用为自然供车",
+        "资格需覆盖C/N持续跟踪、真实应用延迟、空/受阻、全车辆安全、队列与城市暴露、完整窗口和可复现绑定",
+        "最多两次有目的技术身份，第二次须由首轮实质问题支持；不做正式矩阵",
+        "旧600秒预算已耗475.645秒；新900秒提案尚未获新增预算/精确卡放行，不重置旧账",
+        "七项资格标准及输入预检已准备；本轮只修复和离线复审，不执行自然运行，保持NOT_TESTED"
       ]
     }
   ],
@@ -663,6 +682,17 @@
         "stage-one-observation-instrumentation",
         "exploratory-uncontrolled-grid",
         "stage6-standard-metering-validation"
+      ]
+    },
+    {
+      "id": "natural-technical-qualification",
+      "code": "TECH-QUAL",
+      "rq": "正式实验前技术准备",
+      "title": "动态ALINEA自然需求最小资格验证",
+      "status": "todo",
+      "next": "先关闭普通服务P1及有界Review，再完成准确输入/版本/资源/权限门；当前自然运行NOT_TESTED。",
+      "taskIds": [
+        "natural-actuator-readiness"
       ]
     },
     {
