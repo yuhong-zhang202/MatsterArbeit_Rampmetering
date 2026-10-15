@@ -45,3 +45,5 @@
 文献／官方机制调查、自然输入独立核对、七项测量映射及实施前科学审查已完成。PR13普通服务实现及五份保存合成案例的独立核账已完成，最终61612bf的三行pending校验正等待经用户批准的定点复审；旧review不冒充此head已审，见[修复交付](PR13_ORDINARY_SERVICE_REVIEW_FIX_20261015.md)。原154短测、有限诊断及合成核账各保留其版本和TECHNICAL_PASS范围。
 
 [资格准备说明](NATURAL_ACTUATOR_QUALIFICATION_PREPARATION_20261015.md)记录新分支的原生审计／独立预算／guardian实施进度。旧synthetic reader保持原用途；新native reader将实际EOF、FCD／TLS／ACK、E1、4050生命周期、系统成本和城市暴露接入同一证据包，不能以重标合成数据代替原生链路。设计已获只读科学允许非运行实施；实际实现验证与科学终审已完成，唯一首卡b73c6781已生成／validate exit0并获三方只读字段GO；具体源与回执见准备说明和RUN_REQUEST。新卡仅PREPARED_NOT_RELEASED，当前自然安全、持续服务及实际资源性能全部NOT_TESTED，总体NOT_QUALIFIED。
+
+**准备后状态更新：** 用户已直接批准新增独立900秒及仅b73首卡有条件一次运行，见[授权回执](../../artifacts/natural_actuator_qualification_20261015_v1/HUMAN_APPROVAL_RECEIPT_V1.md)。旧预算不pool，原准备卡／RUN_REQUEST不改字节；PR13准确616定点review仍Running，canonical／PID观察／实时资源门仍待满足，尚无任何新native启动或实际资格结果。上文“未批准”描述准备快照，当前以本段和PROJECT_STATE为准。

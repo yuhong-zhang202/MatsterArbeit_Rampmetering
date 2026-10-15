@@ -49,3 +49,7 @@ PR13最后三行pending校验已经推送61612bf；用户明确批准追加一�
 可执行checkpoint `b6c60b927fc71a8750f5674f2cf168824b78cf05`。实际卡SHA `b73c678130604d1cef41dd5ecb70a79cc868084e91ae5033cc179393c25f6982`，173源摘要 `c2f00d7f66ea66e331e436248bf34d510fc8ba11a99b16792cd80e18f61055b2`。唯一prepare0.130秒／只读validate0.107秒均exit0，不代表native测试。实际XML、4050人口、600／4200／六窗、E1两lane30秒、precision8、141环境hash和所有源／输入经工程→独立data→只读science回读，无阻碍未释放交付的实质问题。[实际卡](../../artifacts/natural_actuator_qualification_20261015_v1/engineering/packages_v1/QUAL_NATURAL_ALINEA_R900_S17_01/card.json)、[三方14文件绑定](../../artifacts/natural_actuator_qualification_20261015_v1/card_preparation_v1/THREE_ROLE_CARD_BINDING_V1.json)，绑定SHA `fd4d1bdb1a0d7c8350ccd11053ca987931196f27590b5746b66d9fb0bd29083b`。
 
 全部独立实现／离线验证／精确卡准备已完成；[RUN_REQUEST_V1](../../artifacts/natural_actuator_qualification_20261015_v1/RUN_REQUEST_V1.md)明确真实预算及仅本卡解除noSUMO的范围，**它不是批准**。PR13准确616定点review仍Running、未给结论；只有该审查无未处理实质阻碍且真实数字预算／精确人工运行批准／canonical／PID观察权限与实时资源门均有效后，才可仅本卡一次技术运行。卡执行false、观测null；native安全、持续C/N、供给／接收分支、城市结果和性能仍NOT_TESTED，总体NOT_QUALIFIED。不自动预备第二卡或开展正式矩阵。
+
+## 后续直接批准：仍等待review条件
+
+用户已明确回复“批准独立900秒并有条件释放上述首卡”，仅对b73c6781卡一次非正式技术运行解除noSUMO；[直接授权非执行回执](../../artifacts/natural_actuator_qualification_20261015_v1/HUMAN_APPROVAL_RECEIPT_V1.md)。新增独立总900已获真实批准，本地账已耗0／余900／start0、旧账不pool，无unknown预留。原卡和14文件准备绑定保持不变；卡内资源提案状态是生成时快照，实际数字批准由独立账记录绑定。review准确616仍Running，所以不创建canonical/raw/guardian身份、不启动SUMO。review完成无实质阻碍及其余实时门有效后，只能本卡一次运行；第二身份仍无放行。以上批准不是native通过或资格提升。
