@@ -1,0 +1,55 @@
+# First natural native observation audit V1
+
+**STOP_RETAINED / NOT_QUALIFIED.** The frozen reader returned UNKNOWN; independent bounded post-run derivation reconciles the observed0..650 prefix and retains the actual safety-rule denial. This is a technical diagnosis, not a formal experiment or successful4200 qualification. No simulation, source/card/rule change, retry, second identity, Git operation, review trigger or budget settlement was performed by this analyst.
+
+## Context and inputs
+
+AGENTS, current PROJECT_STATE, DECISIONS, zero-byte/unfrozen EXPERIMENT_PROTOCOL and relevant WORKLOG reviewed. Stage6's existing closeout is unchanged, A1 remains unresolved. State currently records this unique authorized execution as started and defers its result to receipts; the actual engineering terminal report supplies650. PR13 remains REVIEW_PENDING / NO_VERDICT; user removed its completion prerequisite only. Root owns documentation maintenance, scientific disposition and any explicit resource settlement.
+
+Exact run QUAL_NATURAL_ALINEA_R900_S17_01; execution checkpoint b6c60b927fc71a8750f5674f2cf168824b78cf05. Card SHA b73c678130604d1cef41dd5ecb70a79cc868084e91ae5033cc179393c25f6982;173-source digest c2f00d7f66ea66e331e436248bf34d510fc8ba11a99b16792cd80e18f61055b2. Manifest RAW_MANIFEST_V1.json SHA bb85c8f96c394bd81771203c0c91d10caa7ff027ccbbcf0f71b3b177629d875e,227files/157210133bytes. Frozen provenance independently hashes all manifest entries and passes. Raw is immutable; only this new processed directory was written.
+
+## Exact frozen audit and its limitations
+
+Command (repository root):
+
+```
+.venv/bin/python -m scripts.natural_actuator_qualification_20261015_v1.actual --manifest artifacts/natural_actuator_qualification_20261015_v1/engineering/first_native_execution_v1/RAW_MANIFEST_V1.json --card artifacts/natural_actuator_qualification_20261015_v1/engineering/packages_v1/QUAL_NATURAL_ALINEA_R900_S17_01/card.json --out data/processed/natural_actuator_qualification_20261015_v1/first_native_execution_v1
+```
+
+Exactly one invocation; exit1, measured1.662354375s, stdout UNKNOWN_INCOMPLETE_EVIDENCE, stderr empty. AUDIT_COMMAND_RECEIPT_V1.json and NATIVE_AUDIT_RESULT.json preserve this. Native stream join rejects the terminal receiver decision STOP_CURRENT_GAP_BOUND_DENIED because its enumeration accepts only READY/WAIT; EOF helper rejects guardian.worker_returncode1 even though native process EOF0 and owned cleanup are recorded. Neither rejection establishes corrupt raw or unsafe motion; neither has been hidden or turned into PASS.
+
+For the permitted minimum observed-prefix derivation, observational_scan.py is a verbatim frozen streaming helper copy except ONE explicit terminal enum condition: it accepts the observed STOP decision only at lastACK with the exact matching receipt.error, then runs the existing independent following predicate, which retains the denial alarm. This is a disclosed processed observation transform, not a replacement native-reader version or qualification. All other FCD/TLS/ACK/world/identity/body/arrival/braking checks remain in that copied observation function. Its measured scan time1.299996250s. Original reader/source bytes stay unchanged.
+
+Commands executed once each after fixture-path correction: `.venv/bin/python data/processed/natural_actuator_qualification_20261015_v1/first_native_execution_v1/derive_observed_prefix.py`, `derive_final_evidence.py`, `derive_feedback_window.py` (same prefix). DERIVED_OBSERVED_PREFIX_V1.json, SUPPLEMENTAL_EVIDENCE_V1.json and FEEDBACK_WINDOW_V1.json retain outputs. No new rates/seeds/fake or native loops/tests.
+
+Two derivation mistakes were preserved: initial network path guessed a package-local net, causing StopIteration before stream parsing; corrected by reading the actual scenario.sumocfg net-file. First bounded E1 union excluded endpoint630 and failed its assertion; corrected inclusive630, matching event order. Preimages and failure text remain. The synthetic feedback_check also returns missing E1 ACK window because terminal650 feedback processing did not occur after safety stop; it is retained UNKNOWN, not repaired. The complete600..630 window is separately reconstructed from actual E1 events plus XML.
+
+## Independent observed accounting and applications
+
+Continuous requested/verified two-stageACK1..650, FCD0..649 and native TLS0..649 join; no post650 motion is inferred. Actual activation600, no forced prequeue. Independent chronological C =1477382113011881/120000000000000 =12.311517608432341 vehicles over[600,650). Selected/applied command integrals both49/4=12.25; six completed scheduled/executed packets give E_scheduled=E_executed=12. Unique physical FCD/ACK entry N=1, R_flow.0 during649..650 on G. C−N=1357382113011881/120000000000000≈11.3115176084, decomposed(C−E_scheduled)≈0.3115176084 +(E_scheduled−E_executed)0 +(E_executed−N)11. This preserves physical service deficit; it does not attribute it wholly to actuator failure or create physical debt recovery.
+
+Packet periods8/8/8/8/8/9/8; first six complete actualN0 each continued without unconditionalN2 stop. Last649..657 packet only one G second observed, partial, no nominal completion credit. Initial FIXED request superseded without application; real_alinea:600 applies600; feedback:630 prepared/applied632, delay2. No outstanding never-applied request or held packet in this prefix; those cases are NOT_TESTED by this native run. Historical first-application times remain distinct from current packet application.
+
+Only complete Feedback window600..630:16/20 E1 contributors, occupied3.420407987887/3.470393416246seconds, lane occupancy11.401359959624/11.567978054153%; mean11.484669006888%; own prior900 +70*(11−mean)=866.0731695178215veh/h, unclipped inside300..900, matching request and both native XML occupancies to8decimal representation. Applied632. No terminal650 update or unobserved660 decision is invented.
+
+## Actual stop, safety coverage and constraints
+
+650 ACK is accounted before the error. R_flow.0 crosses on G from ramp_storage_0 to :ramp_mid_0_0 at speed3.934029315m/s; R_flow.1 remains ramp_storage at189.119744925m, speed8.794946163m/s. Fresh native getLeader returns R0 with gap excluding minGap9.610493939m; minGap2.5m yields physical bumper gap12.110493939m. Actual getSecureGap using these same speeds, leaderMaxDecel9 and leaderID R0 returns13.089892327m. The query-coordinate deficit is3.479398388m; it fails the unchanged hard floor, independently reconstructed as CURRENT_NATIVE_QUERY_FLOOR_DENIED. The old additional1.1m margin also fails, but is not the hard reason. Terminal reasons match POST_CURRENT_GAP_BOUND_DENIED exactly.
+
+This verifies the rule trigger and query binding, not a collision, inevitable danger, or proof of harmlessness. No additional native query was issued. Native counters colliding/startingteleport/endingteleport are0 across650 observed intervals. Minimum actual acceleration and speed difference are both−4.5m/s², with no observed value below the existing−4.5 bound. After-world53198 vehicle-step accelerations and52437 common-ID speed differences were covered; before-world53103 vehicle steps.666 normal arrivals have independent last-movement PASS. Controlled phase exposure G25/y13/r12 seconds; no new front enters under red. Six observed yellow records retain their diagnostic scope and the failed local witness for R0, not general yellow safety.
+
+Only one entry/body row was observed; R_flow.0 remains body-censored at650, with no tail-clear observation. No future clearance or red-tail qualification is claimed. 37/50 pre-motion control frames have empty storage; receiver pre-motion unavailable0; no held packet/recovery observed. The observation scanner's `WAIT_observations:1` increments for any nonREADY current-following record and here denotes the terminal denial, NOT an ordinary WAIT/recovery branch. Terminal receiver geometry has internal rear clearance−3.259761136m and prospective receiver false. Supplylimited early availability is observed descriptively; capacity-limited continuation/recovery is NOT_TESTED and causal allocation of C−N is unestablished.
+
+## Population, urban scope and windows
+
+4050 requested cohort reconciles demand/trips/FCD/summary/time integrals:761 inserted=666arrived+95unfinished;3289 future requests, zero future exposure; no missing due trip and no due-uninserted vehicle. Classes inserted M650/R13/U65/X33; unfinished M73/R13/U6/X3. Source wait0s; observed restricted in-network/system cost53198vehicle-seconds (M46966/R338/U3755/X2139). These are650-cutoff exposures, not completed-journey/controller-effect metrics. Native log loaded980 is parser-loaded demand, not scheduled4050 or inserted761; tripinfo763 includes uninserted future records and does not contradict761 insertion.
+
+Named-lane queue rear observations/queues.xml cover the observed prefix with their separate definitions. No slowR rear at endpoint650 under the descriptive1.389m/s cutoff; this does not establish no upstream effect or physical spillback. Urban evaluation1200..3000 was never reached and remains NOT_TESTED. All six300s windows1200..3000 have0observed intervals and null C/N, explicitly NOT_TESTED_WINDOW_NOT_REACHED. Full4200 service/safety/coverage remains untested; no formal result or general qualification follows.
+
+## Native EOF and resource evidence
+
+Native final logs show TraCI-requested termination650, native returncode0, four bound streams and no observed recognized/unrecognized native message. Full stream hash EOF primitive executes before frozen guardian-worker0 refusal; native EOF itself is observed despite controller/worker exit1. Guardian matches card/release/run/worker identities and records ownership_verified=true, native_identity_verified=true, WORKER_EXITED, no_live_owned_members=true, overshoot0, monitored83.63743604102638s through cleanup against900 total(870+30). Engineering independently saved empty post-exit group inventory. These supply a bounded resource cost/cleanup basis for reviewed settlement; outer CLI86.371036084s and bridge80.576065959s have different timer scopes and are not substituted for guardian time. Analyst does not modify ledger or release the full900 reservation; sole start consumed, no automatic second identity. Data evidence sufficient for scientific review of settlement scope, not technical/service acceptance.
+
+## Disposition and documentation impact
+
+Observed-prefix arithmetic/lifecycle and the existing hard-rule trigger are independently supported; original reader remains UNKNOWN due its two failed-tail restrictions, plus partial terminal-feedback helper limitation. General safe continuation, native held recovery, full horizon, six evaluation windows and urban evaluation remain unqualified/not tested. Stop after this bounded audit; read-only scientific review is next. Root should append WORKLOG and update PROJECT_STATE/Issue14/PR15 with this failed650 observation and audit limitations; data analyst has no governance write scope.

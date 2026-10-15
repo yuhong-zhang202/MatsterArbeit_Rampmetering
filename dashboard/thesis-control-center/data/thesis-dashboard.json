@@ -3,7 +3,7 @@
     "title": "高速公路匝道调节的 Sweet Spot 研究",
     "degree": "TU Berlin · Planung und Betrieb im Verkehrswesen (M.Sc.)",
     "currentPhase": "探索验证已结项；进入正式实验方案设计",
-    "updatedAt": "2026年10月12日",
+    "updatedAt": "2026年10月15日",
     "nextMilestone": "设计并审查正式实验协议；批准冻结后再运行",
     "researchQuestion": "暂定研究 ramp-metering sweet spot：在不同需求条件下平衡高速保护与城市回溢风险；正式定义与范围仍待 Robert 确认。",
     "supervisors": [
@@ -372,7 +372,7 @@
     {
       "id": "issue12-signal-policy-review",
       "chapterId": "",
-      "title": "PR #13：最后字段已修，超限定点复审待指示",
+      "title": "PR #13：REVIEW_PENDING / NO_VERDICT",
       "status": "doing",
       "priority": "high",
       "type": "engineering",
@@ -386,25 +386,27 @@
         "当前授权及依据：artifacts/thesis_actuator_readiness_20261015_v1/；问题索引docs/problem_records/README.md",
         "Issue https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/issues/12；实质修复仍在原PR交付",
         "Draft PR #13：https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/pull/13；仅技术交付，未验收/合并",
-        "用户最新限制：不运行SUMO、不合并PR；新版本自然实际行为NOT_TESTED",
-        "已到2轮复审上限；最后小修未获GitHub复审，不自动第三轮或资格推进，不SUMO／不合并"
+        "请求6191040336绑定616：REVIEW_PENDING / NO_VERDICT；不称PASS/CANCELLED，不再新发review",
+        "用户撤销末轮review完成作为唯一自然诊断额外门；该运行结果在PR15，不再发review、不合并"
       ]
     },
     {
       "id": "natural-actuator-readiness",
       "chapterId": "",
-      "title": "自然需求最小资格：输入与证据准备，尚未运行",
+      "title": "PR #15：唯一自然诊断650秒STOP；NOT_QUALIFIED",
       "status": "doing",
       "priority": "high",
       "type": "engineering",
       "due": "",
       "subtasks": [
-        "复用既有M3600/R900/U360/X180、seed17、4050车、4200秒自然输入及600秒起控",
-        "不能把154短诊断600–1200秒人工蓄队沿用为自然供车",
-        "资格需覆盖C/N持续跟踪、真实应用延迟、空/受阻、全车辆安全、队列与城市暴露、完整窗口和可复现绑定",
-        "最多两次有目的技术身份，第二次须由首轮实质问题支持；不做正式矩阵",
-        "旧600秒预算已耗475.645秒；新900秒提案尚未获新增预算/精确卡放行，不重置旧账",
-        "七项资格标准及输入预检已准备；本轮只修复和离线复审，不执行自然运行，保持NOT_TESTED"
+        "精确卡b73／执行源b6／173源c2f00d7f；其余必要门及真实canonical通过后一次运行",
+        "六完整周期N0继续；C≈12.311518、E12、真实N1；partial不补额",
+        "650秒POST_CURRENT_GAP_BOUND_DENIED；规则触发获核实，真实危险或误判未建立",
+        "227raw文件哈希核验；原reader exit1/UNKNOWN及车尾截断保留",
+        "六评价窗、下游受限等待恢复、完整4200秒及长期放行率NOT_TESTED",
+        "工程→data→science后审完成；资源结算见RESOURCE_ACCOUNT_FINAL_V1.json，唯一启动权消耗",
+        "PR13 REVIEW_PENDING / NO_VERDICT，不重复复审；不自动第二次、正式实验或合并",
+        "详见docs/development/NATURAL_ACTUATOR_FIRST_NATIVE_CLOSEOUT_20261015.md"
       ]
     }
   ],
@@ -690,8 +692,8 @@
       "code": "TECH-QUAL",
       "rq": "正式实验前技术准备",
       "title": "动态ALINEA自然需求最小资格验证",
-      "status": "todo",
-      "next": "先关闭普通服务P1及有界Review，再完成准确输入/版本/资源/权限门；当前自然运行NOT_TESTED。",
+      "status": "doing",
+      "next": "唯一获批自然诊断650秒STOP，NOT_QUALIFIED；保存失败与未测范围。后续停止合同或新运行须另行审定，不自动重试。",
       "taskIds": [
         "natural-actuator-readiness"
       ]

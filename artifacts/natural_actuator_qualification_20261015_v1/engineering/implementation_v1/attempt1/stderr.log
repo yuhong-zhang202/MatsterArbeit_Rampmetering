@@ -1,0 +1,29 @@
+test_budget_is_independent_and_unknown_remains_reserved (test_preparation.Preparation.test_budget_is_independent_and_unknown_remains_reserved) ... ok
+test_exact_preparation_and_missing_release_before_allocation (test_preparation.Preparation.test_exact_preparation_and_missing_release_before_allocation) ... ERROR
+test_real_python_group_normal_timeout_and_early_exit (test_preparation.Preparation.test_real_python_group_normal_timeout_and_early_exit) ... FAIL
+test_spawn_hook_persists_unknown_and_wrong_group_before_stop (test_preparation.Preparation.test_spawn_hook_persists_unknown_and_wrong_group_before_stop) ... ok
+
+======================================================================
+ERROR: test_exact_preparation_and_missing_release_before_allocation (test_preparation.Preparation.test_exact_preparation_and_missing_release_before_allocation)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/natural_qualification_preparation_20261015/test_preparation.py", line 52, in test_exact_preparation_and_missing_release_before_allocation
+    c['prepared_input_sha256'][str(cfg.relative_to(root))]=p.sha(cfg);put(card,c)
+                                   ~~~~~~~~~~~~~~~^^^^^^
+  File "/Library/Frameworks/Python.framework/Versions/3.13/lib/python3.13/pathlib/_local.py", line 385, in relative_to
+    raise ValueError(f"{str(self)!r} is not in the subpath of {str(other)!r}")
+ValueError: '/private/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/tmpci6zaidf/artifacts/natural_actuator_qualification_20261015_v1/engineering/packages_v1/QUAL_NATURAL_ALINEA_R900_S17_01/scenario.sumocfg' is not in the subpath of '/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/tmpci6zaidf'
+
+======================================================================
+FAIL: test_real_python_group_normal_timeout_and_early_exit (test_preparation.Preparation.test_real_python_group_normal_timeout_and_early_exit)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/natural_qualification_preparation_20261015/test_preparation.py", line 97, in test_real_python_group_normal_timeout_and_early_exit
+    self.assertIs(receipt['group_cleanup']['no_live_owned_members'],True,receipt)
+    ~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+AssertionError: None is not True : {'schema': 'NATURAL_QUALIFICATION_GUARDIAN_V1', 'run_id': 'test', 'card_sha256': 'card', 'release_sha256': 'release', 'worker': {'pid': 10386, 'pgid': 10386, 'sid': 10386, 'status': 'OBSERVED'}, 'worker_returncode': 0, 'stop_reason': "GUARDIAN_UNKNOWN:PermissionError:[Errno 1] Operation not permitted: 'ps'", 'native_identity_path': '/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/natural_actuator_qualification_20261015_v1/engineering/implementation_v1/attempt1/python_process_fixtures/normal/identity.json', 'native_identity_verified': True, 'inner_wall_limit_s': 0.6, 'cleanup_reserve_s': 0.6, 'outer_wall_limit_s': 1.2, 'monitored_elapsed_through_cleanup_s': 0.23299841600237414, 'overshoot_s': 0, 'group_cleanup': {'ownership_verified': True, 'no_live_owned_members': None, 'status': 'UNKNOWN_OR_LIVE_OWNED_MEMBERS', 'error': "PermissionError:[Errno 1] Operation not permitted: 'ps'"}}
+
+----------------------------------------------------------------------
+Ran 4 tests in 0.274s
+
+FAILED (failures=1, errors=1)

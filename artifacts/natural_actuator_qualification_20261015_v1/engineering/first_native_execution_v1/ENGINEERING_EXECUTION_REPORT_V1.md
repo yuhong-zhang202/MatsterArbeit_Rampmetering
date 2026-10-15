@@ -1,0 +1,30 @@
+# First exact-card native engineering execution V1
+
+**STOP_RETAINED / NOT_QUALIFIED; independent data/scientific interpretation pending.** This was the one explicitly authorized natural-demand technical diagnosis, not a formal experiment or a successful4200s qualification. No retry, second card, algorithm/source/input/safety-rule change or git operation occurred.
+
+## Context and genuine release
+AGENTS/current PROJECT_STATE/relevant DECISIONS/empty EXPERIMENT_PROTOCOL/relevant WORKLOG and simulation_engineer instructions reviewed. The protocol remains unfrozen, so this is nonformal. Current user explicitly removed only the external PR13 completion dependency; the review remains REVIEW_PENDING / NO_VERDICT. Original direct exact-card approval and independent900 numeric approval remain byte-identical. The new USER_REVIEW_DEPENDENCY_SUPPLEMENT_V1.json preserves the user's exact text and prior approval hash, only removes that one dependency and retains all other gates. Canonical was genuinely formed from those permissions and exact three-role card receipts; canonical nonrunning validation passed before allocation/start. Historical request/science/card snapshots were not rewritten or promoted.
+
+Exact card SHA b73c678130604d1cef41dd5ecb70a79cc868084e91ae5033cc179393c25f6982;173-source digest c2f00d7f66ea66e331e436248bf34d510fc8ba11a99b16792cd80e18f61055b2; execution source checkpoint b6c60b927fc71a8750f5674f2cf168824b78cf05. Runtime source, card, routes, network, phase values and formal protocol unchanged. Fourteen prepared-card binding items and141environment hashes rechecked. Python3.13.0. Live PID/PGID/SID inspection allowed; preflight free38,326,751,232bytes. Independent900 budget before run: charged0/start0/remaining900, no unknown reservation, old remainder not pooled.
+
+Canonical: engineering/releases/QUAL_NATURAL_ALINEA_R900_S17_01_CANONICAL_V1.json, SHA1977ffa2624e3a917b82a7a45554a61f30fc3193471a8aec00ee06ff7b9abb91. Supplement SHA c964edc26ee2ccf8880484cf8c84d96d54f72bde2ee91f2ddfd585e25d01e668. Local executable permissions remain outside public publication scope.
+
+## Actual command and terminal result
+The exact absolute command is in EXECUTE_COMMAND_V1.json:
+
+`.venv/bin/python -m scripts.candidate_a_natural_service_20261015_v1.cli execute --card artifacts/natural_actuator_qualification_20261015_v1/engineering/packages_v1/QUAL_NATURAL_ALINEA_R900_S17_01/card.json --release artifacts/natural_actuator_qualification_20261015_v1/engineering/releases/QUAL_NATURAL_ALINEA_R900_S17_01_CANONICAL_V1.json`
+
+Existing outer guardian was used. The tool allowed this exact explicit native scope; no sandbox bypass or control monkeypatch. Worker/native identities immediately journalled before connection/control: guardian24586, worker24611/PGID24611/SID24611, SUMO24639/PGID24611/SID24611, ownership_verified=true. Startup connection initially failed repeatedly but succeeded on attempt239 at25.004909s, inside60s limit; every failed attempt remains in startup_trace.jsonl. There was one native Popen, not239 native launches.
+
+CLI exit1, outer CLI elapsed86.37103608401958s. Guardian measured83.63743604102638s through owned cleanup, inner870/cleanup30/outer900, overshoot0; bridge measured80.57606595900143s from its own later timer. Separate timer scopes are retained, not equated. Actual simulation and accounted ACK end650, below4200. Error DiagnosticStop:POST_CURRENT_GAP_BOUND_DENIED; bridge ABORTED_UNKNOWN. Failure snapshot, retained observation, native following evidence, prior failed yellow witness, setter history, partial cycle and censored body preserved. The640-range yellow witness was not transformed into safety approval. No rule was weakened after this stop.
+
+Native SUMO log reports1.26.0, TraCI requested termination at650, process returncode0. Native EOF/logs: FINAL_FILES_AT_OWNED_PROCESS_EOF, four streams bound, BOUND_NO_OBSERVED_NATIVE_MESSAGE. Guardian worker_returncode1/WORKER_EXITED, native identity verified, no live owned members=true. An independent post-exit PID-group inventory was empty. Native EOF success does not reverse the controller's safety/UNKNOWN stop or establish full-horizon data correctness.
+
+Controller-reported final values, pending independent reconstruction: Craw12.311517608432341, Cselected=Capplied12.25, E_scheduled12, E_executed12, N1; partial cycle and body-censored R_flow.0; one Feedback decision, feedback:630 first-applied. These are receipt fields, not independent scientific conclusions or service acceptance. Evaluation[1200,3000) and full4200 continuation were not reached. Ordinary supply/receiver branches and root cause of current-gap denial require the data/science review, not assumption from these totals.
+
+## Immutable raw, handoff and resource status
+Raw root data/raw/natural_actuator_qualification_20261015_v1/QUAL_NATURAL_ALINEA_R900_S17_01, now read-only. Manifest RAW_MANIFEST_V1.json outside raw:227files/157,210,133bytes, SHA bb85c8f96c394bd81771203c0c91d10caa7ff027ccbbcf0f71b3b177629d875e. Each size/mtime stable across streaming hashes after process EOF. Native source/card/release snapshots and guardian receipt are included. No raw file was appended/edited after finalization by engineering.
+
+Budget.accounting correctly refuses with NATURAL_TOTAL_BUDGET_EXHAUSTED_OR_RESERVED before three-role settlement; full900 remains conservatively reserved. Observed cost is recorded, but no residual was made automatically available and no SETTLEMENT was fabricated. Data and scientific receipts must precede the explicit reviewed settlement. Old600 ledger unchanged. The sole authorized start is consumed irrespective of future cost settlement; remaining budget cannot authorize a second native run.
+
+Next: data_analyst audits the exact manifest/card prefix and failure evidence, then scientific_reviewer judges actual safety/current-gap failure and qualification boundary. Root owns STATE/WORKLOG/Issue/PR updates. This engineering report changes no research conclusions. No additional native diagnosis, old fullraw re-audit or automatic review request is proposed.

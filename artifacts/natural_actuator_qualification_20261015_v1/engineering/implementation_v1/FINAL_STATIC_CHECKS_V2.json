@@ -1,0 +1,55 @@
+{
+  "python": "3.13.0 (v3.13.0:60403a5409f, Oct  7 2024, 00:37:40) [Clang 15.0.0 (clang-1500.3.9.4)]",
+  "three_control_modules_byte_identical_to_616": {
+    "policy": true,
+    "adapter": true,
+    "producer": true
+  },
+  "syntax": {
+    "src/candidate_a_natural_service_20261015/profile.py": "PASS",
+    "src/candidate_a_natural_service_20261015/budget.py": "PASS",
+    "src/candidate_a_natural_service_20261015/bridge.py": "PASS",
+    "src/candidate_a_natural_service_20261015/guardian.py": "PASS",
+    "scripts/candidate_a_natural_service_20261015_v1/cli.py": "PASS",
+    "tests/natural_qualification_preparation_20261015/test_preparation.py": "PASS"
+  },
+  "numeric_budget": {
+    "scope_id": "NATURAL_QUALIFICATION_20261015_V1",
+    "status": "PROPOSED_NOT_APPROVED",
+    "proposed_total_monitored_s": 900,
+    "available_monitored_s": null,
+    "prior_stage": {
+      "known_settled": {
+        "UA_NATIVEYELLOW_DYNAMIC_S17_01": {
+          "monitored_s": 155.48080320795998,
+          "raw_bytes": 442183368
+        },
+        "UA_NATIVEGAP_DYNAMIC_S17_01": {
+          "monitored_s": 163.07205774995964,
+          "raw_bytes": 403265825
+        },
+        "UA_NATIVEYELLOW_ALINEA_S17_01": {
+          "monitored_s": 157.09260666702176,
+          "raw_bytes": 442380604
+        }
+      },
+      "unknown_reserved": [],
+      "charged_monitored_s": 475.6454676249414,
+      "charged_raw_bytes": 1287829797,
+      "remaining_s": 124.35453237505862,
+      "remaining_bytes": null,
+      "selected_total_limits": {
+        "wall_s": 600,
+        "bytes": null
+      },
+      "fixed_start_count_limit": null,
+      "scope": "SAME600_STAGE_INCLUDING_SETTLED_NATIVEGAP_AND_NEW_YELLOW_IDENTITIES_NO_RESET"
+    },
+    "old_remainder_pooled": false
+  },
+  "current_source_closure": {
+    "status": "NOT_READY_NO_CARD_PREPARED",
+    "error": "ValueError:NATIVE_READER_DEPENDENCIES_NOT_READY"
+  },
+  "note": "V2 syntax checked after independent pre-raw reservation and UNKNOWN-inventory cleanup fixes; ordinary process PASS evidence is attempt2, unaffected normal cleanup path."
+}
