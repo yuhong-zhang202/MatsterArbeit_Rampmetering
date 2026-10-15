@@ -406,6 +406,9 @@ def execute(card_path, release_path, root=ROOT):
         command=[str(SUMO),'-c',str(root/card['package']/'scenario.sumocfg'),'--remote-port',str(port)]
         write_new(output/'startup_context.json',{'command':command,'SUMO_HOME':env['SUMO_HOME'],'native_warning_suppression':False,'aggregate_warnings':-1,'source_compiler_equivalence':'NOT_VERIFIED'})
         process=worker.launch_sumo_process(command,capture.handles['sumo_stdout.log'],capture.handles['sumo_stderr.log'],env)
+        # Spawn-only evidence/gate: no connection or controller action precedes it.
+        from src.candidate_a_natural_service_20261015.guardian import record_native_identity
+        record_native_identity(process,output,run,card_path,release_path,root)
         watchdog=ResourceWatchdog(process,parent,effective,started);watchdog.start()
         conn=worker.connect_traci(traci,port,process,worker.startup_trace_callback(output/'startup_trace.jsonl'),deadline_s=card['resources']['startup_limit_s'])
         startup=capture.snapshot(0,0,'STARTUP_CONNECT_ACK');append_new(output/'log_intervals.jsonl',startup)

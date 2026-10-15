@@ -257,3 +257,15 @@ The user selected tracking the original ALINEA request over time. The [reviewed 
 
 The isolated [full-catalogue continuation](docs/development/CUMULATIVE_FULL_CATALOGUE_PLAN_20261014.md) restores the existing T8…T24 catalogue with the T10 G5/Y3 exception in `src/candidate_a_cumulative_full_catalogue_20261014/`; it keeps the original C−actual-N objective. Use only an exact reviewed card and its canonical release through `scripts/candidate_a_cumulative_full_catalogue_20261014_v1/cli.py`. The [final offline scientific review](artifacts/cumulative_full_catalogue_implementation_20261014_v1/SCIENCE_FINAL_OFFLINE_REVIEW_V1.md) and separate user continuing authority permit the bounded new750 diagnostic after live prelaunch checks. The [new fixed750 native report](docs/development/CUMULATIVE_FULL_CATALOGUE_NATIVE_REPORT_20261014.md) records two48-second blocks with actualC=E=N10 each. Actual results and next actions are in [PROJECT_STATE](docs/PROJECT_STATE.md); full-range physical service and sustained closed-loop tracking remain unverified. Old consumed identities are evidence, not runnable examples.
 
+
+### Natural-demand actuator qualification preparation
+
+[Issue #14](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/issues/14) is a bounded follow-up based on PR #13. The [preparation record](docs/development/NATURAL_ACTUATOR_QUALIFICATION_PREPARATION_20261015.md) and [seven-domain minimum plan](docs/development/THESIS_ACTUATOR_MINIMUM_QUALIFICATION_PLAN_20261015.md) distinguish offline checks from actual native qualification. The new native reader is `scripts/natural_actuator_qualification_20261015_v1/actual.py`; the prior synthetic reader retains its original scope.
+
+```sh
+python3 -m scripts.candidate_a_natural_service_20261015_v1.cli prepare
+python3 -m scripts.candidate_a_natural_service_20261015_v1.cli validate-prepared --card artifacts/natural_actuator_qualification_20261015_v1/engineering/packages_v1/QUAL_NATURAL_ALINEA_R900_S17_01/card.json
+python3 scripts/natural_actuator_qualification_20261015_v1/actual.py --help
+```
+
+Preparation is single-use and refuses an existing package or consumed output identity; use the saved card for validation. These commands do not start SUMO, create raw outputs or grant permission. The proposed independent 900 s scope includes a 30 s cleanup reserve; its available amount remains null without direct numeric approval, and the historical remainder is not pooled. Execution additionally requires exact-card human authorization, current engineering/data/scientific reviews, a valid canonical release and the outer guardian. A prepared card, passing offline checks or a GitHub review does not establish `QUALIFIED` or authorize formal experiments. Current actual natural-demand behavior is `NOT_TESTED`.

@@ -372,7 +372,7 @@
     {
       "id": "issue12-signal-policy-review",
       "chapterId": "",
-      "title": "PR #13：最后字段已修，超限定点复审待指示",
+      "title": "PR #13：61612bf最后pending三行定点复审待返回",
       "status": "doing",
       "priority": "high",
       "type": "engineering",
@@ -387,13 +387,13 @@
         "Issue https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/issues/12；实质修复仍在原PR交付",
         "Draft PR #13：https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/pull/13；仅技术交付，未验收/合并",
         "用户最新限制：不运行SUMO、不合并PR；新版本自然实际行为NOT_TESTED",
-        "已到2轮复审上限；最后小修未获GitHub复审，不自动第三轮或资格推进，不SUMO／不合并"
+        "用户明确批准追加一次仅pending三行定点复审；请求6191040336指定61612bf，未返回不当通过；不扩大完整矩阵"
       ]
     },
     {
       "id": "natural-actuator-readiness",
       "chapterId": "",
-      "title": "自然需求最小资格：输入与证据准备，尚未运行",
+      "title": "Issue #14：原生资格审计与精确卡准备，尚未运行",
       "status": "doing",
       "priority": "high",
       "type": "engineering",
@@ -404,7 +404,10 @@
         "资格需覆盖C/N持续跟踪、真实应用延迟、空/受阻、全车辆安全、队列与城市暴露、完整窗口和可复现绑定",
         "最多两次有目的技术身份，第二次须由首轮实质问题支持；不做正式矩阵",
         "旧600秒预算已耗475.645秒；新900秒提案尚未获新增预算/精确卡放行，不重置旧账",
-        "七项资格标准及输入预检已准备；本轮只修复和离线复审，不执行自然运行，保持NOT_TESTED"
+        "原生reader、独立预算和guardian非运行实施中；设计科学GO不等于实际资格；精确卡待唯一准备",
+        "唯一Issue #14：https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/issues/14；新分支依赖PR13",
+        "拟新scope共900秒，内限870＋清理预留30；未批时可用量null，旧124.355秒不pool",
+        "首次自然运行仍需准确卡、直接人工放行、新数字预算及canonical；不运行SUMO、不合并PR"
       ]
     }
   ],
@@ -691,7 +694,7 @@
       "rq": "正式实验前技术准备",
       "title": "动态ALINEA自然需求最小资格验证",
       "status": "todo",
-      "next": "先关闭普通服务P1及有界Review，再完成准确输入/版本/资源/权限门；当前自然运行NOT_TESTED。",
+      "next": "完成原生reader／guardian必要离线验证、科学审查和准确PREPARED_NOT_RELEASED卡；新预算与人工运行门缺失，实际NOT_TESTED。",
       "taskIds": [
         "natural-actuator-readiness"
       ]

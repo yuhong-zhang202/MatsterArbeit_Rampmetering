@@ -160,3 +160,9 @@ PR13实际审查`9a9c96ed…`指出：上一完整周期N<2并不证明执行器
 第二轮review5527262368精确审查5b08d28f，剩一项逐row pending ID／rate语义校验P2。仅补这两字段及原保存材料反例，不更改控制政策；到两轮上限停止自动扩审与资格推进，最终小修与最后实际review源分开。[末轮回执](../../artifacts/thesis_actuator_readiness_20261015_v1/PR13_REVIEW_5B08_V1.json)。
 
 最后pending两字段已修；5保存材料／2指定反例0.314秒通过，科学仅GO小修交付。修后reader只由新58项e08cc79a绑定说明，不以5b08远端review冒充修后已审。达到两轮上限，停止自动扩审／资格推进；需要第三次仅此字段定点review时交用户明确指示。自然资格仍NOT_TESTED。[最后修复记录](../../data/processed/thesis_actuator_readiness_20261015_v1/final_pending_fix_v1/DATA_REPORT_V1.md)。
+
+### 11. 用户批准定点复审，资格准备独立依赖（2026-10-15）
+
+用户已明确批准追加一次仅pending三行的定点复审。[请求6191040336](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/pull/13#issuecomment-6191040336)指定PR13 head `61612bf6e240d41d2ca4be95a02429f48c9ddd54`；在未收到实际回执前仍标待审，不将eyes当完成，不扩大成第三轮完整矩阵。上文“待用户指示／停止资格推进”属于该批准前的快照。
+
+完整目标继续落实为唯一[Issue #14](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/issues/14)，新分支以PR13为上游，准备原生审计、精确卡和资源／进程保护。原普通服务政策不变，bridge仅允许必要启动进程身份记录；旧154源及其成功／失败不改判。设计科学GO仅允许非运行实施，不认证实际安全或持续服务。当前仍MITIGATED、自然资格NOT_TESTED／总体NOT_QUALIFIED；新增独立900秒仍提案，旧124.355秒不pool，不运行SUMO、不合并。实际交付及必要离线验证见[资格准备说明](../development/NATURAL_ACTUATOR_QUALIFICATION_PREPARATION_20261015.md)。

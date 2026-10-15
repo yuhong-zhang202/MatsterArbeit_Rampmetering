@@ -1,0 +1,47 @@
+{
+  "classification": "OFFLINE_UNIT_AND_SAVED_FIXTURE_ONLY_NOT_NATIVE_TESTED",
+  "commands": [
+    {
+      "command": ".venv/bin/python -m unittest discover -s tests/natural_actuator_qualification_20261015_v1 -p test_native_audit.py -v",
+      "methods": 5,
+      "seconds": 0.214,
+      "exit_code": 0,
+      "version": "initial five groups"
+    },
+    {
+      "command": "same suite -k stream_two -v",
+      "methods": 1,
+      "seconds": 0.03,
+      "exit_code": 0
+    },
+    {
+      "command": "same full suite -v",
+      "methods": 8,
+      "seconds": 0.244,
+      "exit_code": 0
+    },
+    {
+      "command": "same suite -k named_lane_queue -v",
+      "methods": 1,
+      "seconds": 0.002,
+      "exit_code": 0
+    },
+    {
+      "command": "same full suite -v",
+      "methods": 9,
+      "seconds": 0.242,
+      "exit_code": 0
+    },
+    {
+      "command": "same suite -k nonempty_E1 -v",
+      "methods": 1,
+      "seconds": 0.002,
+      "exit_code": 0
+    }
+  ],
+  "static_ast_modules": 6,
+  "unexpected_test_failures": 0,
+  "native_executed": false,
+  "natural_fake_loop_executed": false,
+  "historical_full_raw_audit_executed": false
+}
