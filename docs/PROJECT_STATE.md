@@ -5,6 +5,8 @@
 
 ## Current Phase
 
+**10/15新增明确批准：黄灯诊断合同、隔离实现及有界执行。** 用户回复“批准合同、实施及有界运行”：只在完整finite/联合绑定而原黄灯工程见证不成立时，新模式允许原生观察，原UNKNOWN/row及单步风险保持；其它异常/覆盖未知、strict新G/current-query/NUM等不改。先最小实施/必要离线验证/工程→data→science，再一次新动态；仅实际C/N四应用及最后300欠额恢复通过并完成后审/结算，才同执行器短ALINEA。沿原600总账已用163.072、余436.928，单次min300/实时余量、start60/end1296/free5GB/no bytecap，不重置或自动重试。旧141源/1236STOP与正式设计不变，当前尚无本新合同native。[直接批准](../artifacts/dynamic_yellow_contract_proposal_20261015_v1/USER_APPROVAL_V1.json)、[已审交接](../artifacts/dynamic_yellow_contract_proposal_20261015_v1/REVIEWED_HANDOFF_V1.md)。以下“待决定”为批准前历史快照。
+
 **10/15最新：本次有界技术节点已完成三方后审；动态资格未建立，ALINEA未启动。** 唯一UA_NATIVEGAP_DYNAMIC_S17_01在1236秒首次黄灯执行前返回UNKNOWN_LOCAL_YELLOW_SCOPE，未到1296。工程→独立数据→科学确认：观测前缀完整核账，原始C187/24≈7.792辆、实际N5、完整E4、差67/24；三应用延迟0/23/6秒，最终1237的300请求尚未发生，欠额恢复未观察。获批current-following新query底线/旧1.1告警在同一1233帧生效，旧缺ACK不在本前缀重现。新阻碍是未改的局部黄灯充分筛查，完整输入R5距线0.146m/v4.973m/s对应项目表达式2.558s>Y2；实际首Y未执行，不能据此声称SUMO危险、T8普遍不行或CandidateA不可行。保留原STOP，不盲目改公式/黄灯或重试。原始191文件403265825B，163.072s仅资源结算已核；余预算不放行新Dynamic/条件ALINEA。下一步仅待另行审定黄灯责任与停止合同，现批准只覆盖间距分类；不追加A1证明/矩阵。Stage6/A1UNRESOLVED/总体NOT_QUALIFIED/空正式协议不变。[完整本轮报告](development/DYNAMIC_MINIMUM_QUALIFICATION_NATIVE_REPORT_20261015.md)、[科学后审](../artifacts/dynamic_minimum_qualification_20261015_v1/SCIENCE_NATIVE_POSTREVIEW_V1.md)。以下为历史快照。
 
 **10/15技术准备补项已完成：** followup审计器局部变量遮蔽与合法周期黄灯兼容两项必要修复已通过数据实现/验证→工程独立复核→科学终审。三项针对性方法一次PASS0.009s；旧125源、guard、运行配置、卡片与raw保持，旧动态STOP/缺ACK UNKNOWN不改判。完整新reader流水线未重跑，未来卡须重新绑定。合同变更与新仿真仍待明确批准；不追加无效检查或运行。[数据修复报告](../data/processed/dynamic_minimum_qualification_20261015_v1/reader_fix_v1/DATA_READER_FIX_REVIEW_V1.md)、[科学终审](../artifacts/dynamic_minimum_qualification_20261015_v1/SCIENCE_READER_FIX_REVIEW_V1.md)。

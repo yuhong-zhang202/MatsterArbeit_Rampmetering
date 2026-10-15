@@ -1,0 +1,36 @@
+test_bound_legacy_failure_strict_default_typed_mode_and_missing_fields (tests.candidate_a_native_yellow_minqual_20261015.test_yellow_contract.YellowTests.test_bound_legacy_failure_strict_default_typed_mode_and_missing_fields) ... ok
+test_other_stop_keeps_original_exception_and_durable_events (tests.candidate_a_native_yellow_minqual_20261015.test_yellow_contract.YellowTests.test_other_stop_keeps_original_exception_and_durable_events) ... ok
+test_real_quota_and_deadline_prepare_definitive_journals_and_strict_stop (tests.candidate_a_native_yellow_minqual_20261015.test_yellow_contract.YellowTests.test_real_quota_and_deadline_prepare_definitive_journals_and_strict_stop) ... 
+  test_real_quota_and_deadline_prepare_definitive_journals_and_strict_stop (tests.candidate_a_native_yellow_minqual_20261015.test_yellow_contract.YellowTests.test_real_quota_and_deadline_prepare_definitive_journals_and_strict_stop) (strict_quota=False) ... ERROR
+
+======================================================================
+ERROR: test_real_quota_and_deadline_prepare_definitive_journals_and_strict_stop (tests.candidate_a_native_yellow_minqual_20261015.test_yellow_contract.YellowTests.test_real_quota_and_deadline_prepare_definitive_journals_and_strict_stop) (strict_quota=False)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_native_yellow_minqual_20261015/adapter.py", line 105, in _terminal_call
+    return method(*args)
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_native_yellow_minqual_20261015/adapter.py", line 173, in _prepare_step
+    require(self.last_yellow_scope['diagnostic_yellow_contract']['allow_prepared_step'] is True, 'UNKNOWN_LOCAL_YELLOW_SCOPE')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_native_yellow_minqual_20261015/adapter.py", line 42, in require
+    raise DiagnosticStop(reason)
+src.candidate_a_native_yellow_minqual_20261015.adapter.DiagnosticStop: UNKNOWN_LOCAL_YELLOW_SCOPE
+
+During handling of the above exception, another exception occurred:
+
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/candidate_a_native_yellow_minqual_20261015/test_yellow_contract.py", line 80, in test_real_quota_and_deadline_prepare_definitive_journals_and_strict_stop
+    else:a.prepare_step(w,t)
+         ~~~~~~~~~~~~~~^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_native_yellow_minqual_20261015/adapter.py", line 116, in prepare_step
+    return self._terminal_call(self._prepare_step, conn, time_s)
+           ~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_native_yellow_minqual_20261015/adapter.py", line 111, in _terminal_call
+    if self.receipts[-1]['status'] != 'STOP_OBSERVED_AFTER_STEP':
+       ~~~~~~~~~~~~~~~~~^^^^^^^^^^
+KeyError: 'status'
+
+----------------------------------------------------------------------
+Ran 3 tests in 0.029s
+
+FAILED (errors=1)

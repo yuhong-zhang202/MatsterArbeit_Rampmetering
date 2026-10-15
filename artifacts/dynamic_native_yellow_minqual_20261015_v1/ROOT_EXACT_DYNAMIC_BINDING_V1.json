@@ -1,0 +1,52 @@
+{
+  "source": "root exact-card binding under direct human approved scope",
+  "approval_source_reference": "artifacts/dynamic_yellow_contract_proposal_20261015_v1/USER_APPROVAL_V1.json",
+  "approval_source_sha256": "861c2d6f3ec5553b1f5d6fcd0831379473ce3b9280fee3b5f67758fe92320c87",
+  "SUMO_execution_authorized": true,
+  "run_id": "UA_NATIVEYELLOW_DYNAMIC_S17_01",
+  "card_sha256": "53ffc4911d119ac8d4d147f1c64c11508bc3a159f5c93b1cc7c1a803a8c6d98f",
+  "common_runtime_source_sha256": "089a2fefb9fb4d68aced499b532636c3a551b672f9130a1fd2e6acb468ff4ae2",
+  "end_s": 1296,
+  "catalogue_periods_s": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "mode": "dynamic_commands",
+  "numerical_exception_enabled": false,
+  "yellow_responsibility_contract": {
+    "policy": "NATIVE_YELLOW_RESPONSIBILITY_COMPLETE_INPUT_DIAGNOSTIC_V1",
+    "enabled": true
+  },
+  "resources": {
+    "wall_limit_s": 300,
+    "startup_limit_s": 60,
+    "run_limit_bytes": null,
+    "minimum_free_bytes": 5000000000
+  },
+  "resource_envelope": {
+    "monitored_s": 300,
+    "raw_bytes": null
+  },
+  "combined_resource_envelope": {
+    "monitored_s": 600,
+    "raw_bytes": null
+  },
+  "same600_budget_not_reset": true,
+  "ALINEA_released": false,
+  "no_automatic_retry": true
+}

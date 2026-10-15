@@ -1,0 +1,219 @@
+# PROPOSAL ONLY — NOT APPLIED, NOT TESTED, NOT EXECUTION AUTHORITY.
+# Targets are NEW isolated copies; current 141-source runtime/reader stays untouched.
+# Exact future identity/card/authority/source bindings are a later approved implementation step.
+--- /dev/null
++++ PROPOSED-NEW-ISOLATED/runtime/yellow_contract.py
+@@ -0,0 +1,31 @@
++"""PROPOSED ONLY: explicit diagnostic responsibility, not a safety certificate."""
++from src.candidate_a_cumulative_full_catalogue_20261014.policy import yellow_scope
++POLICY = 'NATIVE_YELLOW_RESPONSIBILITY_COMPLETE_INPUT_DIAGNOSTIC_V1'
++
++def require(ok, reason):
++    if not ok:
++        raise ValueError(reason)
++
++def annotate_yellow_scope(scope, vehicles, time_s, yellow_s, enabled=False):
++    require(type(enabled) is bool, 'UNKNOWN_YELLOW_CONTRACT_ENABLE')
++    # Callers retain their original fresh world/ID/mode/geometry/phase joins.
++    # This pure replay checks the exact legacy witness; not independent physics.
++    expected = yellow_scope(vehicles, time_s, yellow_s)
++    require(isinstance(scope, dict) and all(k in scope and scope[k] == v
++            for k, v in expected.items()), 'UNKNOWN_YELLOW_RESULT_OR_BINDING')
++    require(expected['status'] in ('PASS', 'UNKNOWN'), 'UNKNOWN_YELLOW_SCHEMA')
++    failed = [r['vehicle_id'] for r in expected['rows']
++              if r['stop_possible'] is False and r['clear_possible'] is False]
++    witness = expected['status'] == 'PASS'
++    require(witness == (len(failed) == 0), 'UNKNOWN_YELLOW_WITNESS_AGGREGATE')
++    # Never catch a getter, identity, dynamics, coverage or validation error.
++    decision = dict(policy=POLICY, enabled=enabled,
++        original_witness_status=expected['status'], witness_established=witness,
++        failed_witness_ids=failed,
++        interpretation=('LEGACY_WITNESS_ESTABLISHED' if witness else
++            'DIAGNOSTIC_WITNESS_NOT_ESTABLISHED' if enabled else 'STRICT_STOP_NO_WITNESS'),
++        input_scope='ORIGINAL_HARD_FRESH_FRAME_AND_POPULATION_JOINS_REQUIRED',
++        allow_prepared_step=(witness or enabled),
++        future_native_safety_proven=False, safety_certified=None)
++    # Preserve original status and every original row literally.
++    return dict(scope, diagnostic_yellow_contract=decision)
+--- protected-reference/runtime/adapter.py
++++ PROPOSED-NEW-ISOLATED/runtime/adapter.py
+@@ -21,6 +21,7 @@
+ PROFILE = 'NATIVE_PHASE_CURRENT_FOLLOWING_WAIT_DIAGNOSTIC_NOT_QUALIFIED'
+ from src.candidate_a_dynamic_minqual_20261015.receiver_wait import classify_receiver, current_following
+ from src.candidate_a_cumulative_full_catalogue_20261014.policy import Ledger, parameters, yellow_scope
++from NEW_ISOLATED_NAMESPACE.yellow_contract import annotate_yellow_scope
+ from src.candidate_a_issue12_packet_policy_20261012.body import BodyTracker
+ from src.candidate_a_unified_alinea_20261013 import numeric_stop
+ 
+@@ -74,8 +75,10 @@
+ 
+ class StepAdapter:
+     """Preparation seam only: callers observe/advance externally; we never do."""
+-    def __init__(self, observe, command=750, end_s=1296, numerical_authority=None):
+-        self.observe = observe  # Future bridge binds exact protected worker.observe.
++    def __init__(self, observe, command=750, end_s=1296, numerical_authority=None, yellow_diagnostic_mode=False):
++        self.observe = observe  # Original binding unchanged.
++        require(type(yellow_diagnostic_mode) is bool, 'UNKNOWN_YELLOW_MODE')
++        self.yellow_diagnostic_mode = yellow_diagnostic_mode  # Default strict.
+         self.envelope = PhaseEnvelope()  # Pre-control holding program only.
+         self.ledger = Ledger(command, end_s)
+         self.end_s = end_s
+@@ -166,7 +169,8 @@
+             require(motion == self.ledger.motion_at(time_s), 'PHASE_SCHEDULE_MISMATCH')
+             if motion == 'y' and self.previous_motion != 'y':
+                 self.last_yellow_scope = yellow_scope(vehicles, time_s, cycle['yellow_s'])
+-                require(self.last_yellow_scope['status']=='PASS', 'UNKNOWN_LOCAL_YELLOW_SCOPE')
++                self.last_yellow_scope = annotate_yellow_scope(self.last_yellow_scope, vehicles, time_s, cycle['yellow_s'], self.yellow_diagnostic_mode)
++                require(self.last_yellow_scope['diagnostic_yellow_contract']['allow_prepared_step'] is True, 'UNKNOWN_LOCAL_YELLOW_SCOPE')
+         elif time_s >= 600:
+             require(program == 'CA_C8', 'HOLD_PROGRAM_IDENTITY')
+             idx, motion = motion_phase(phase, state, nxt, time_s, self.envelope.phases(8))
+--- protected-reference/runtime/bridge.py
++++ PROPOSED-NEW-ISOLATED/runtime/bridge.py
+@@ -18,6 +18,7 @@
+ from src.candidate_a_t10_g5_y3_no_output_cap_20261013.resources import ResourceWatchdog
+ from src.candidate_a_unified_alinea_20261013.frame_cache import FrameCache
+ from src.candidate_a_cumulative_full_catalogue_20261014.policy import yellow_scope
++from NEW_ISOLATED_NAMESPACE.yellow_contract import annotate_yellow_scope, POLICY as YELLOW_POLICY
+ from src.candidate_a_cumulative_full_catalogue_20261014.producer import Producer
+ from src.candidate_a_dynamic_minqual_20261015 import budget
+ from src.candidate_a_t10_g5_y3_audit_ready_20261013.telemetry import snapshot as identity_snapshot
+@@ -144,9 +145,11 @@
+                 abs(v.position_m-pos)<=1e-8 and abs(v.length_m-conn.vehicle.getLength(v.vehicle_id))<=1e-8 and
+                 abs(v.normal_decel_m_s2-conn.vehicle.getDecel(v.vehicle_id))<=1e-8,'yellow position/speed/body unbound')
+         require(conn.simulation.getTime()==t,'yellow final source time drift')
+-        scope=yellow_scope(vehicles,t,cycle['yellow_s']);scope['source_post_frame_time_s']=t;adapter.last_yellow_scope=scope
++        scope=yellow_scope(vehicles,t,cycle['yellow_s']);adapter.last_yellow_scope=scope
++        scope=annotate_yellow_scope(scope,vehicles,t,cycle['yellow_s'],adapter.yellow_diagnostic_mode)
++        scope['source_post_frame_time_s']=t;adapter.last_yellow_scope=scope
+         append_new(output/'yellow_scope_attempts.jsonl',dict(scope,attempt_stage='QUOTA_CLOSE_SCREEN_BEFORE_SETTER',observed_first_Y=False))
+-        require(scope['status']=='PASS','UNKNOWN_LOCAL_YELLOW_SCOPE')
++        require(scope['diagnostic_yellow_contract']['allow_prepared_step'] is True,'UNKNOWN_LOCAL_YELLOW_SCOPE')
+         require(phase==0 and t<=cycle['begin_s']+cycle['max_green_s'],'green close wrong phase/budget')
+         worker.request_phase(conn.trafficlight,requests,t,'setPhase',1)
+         require(conn.trafficlight.getPhase(TLS)==1 and conn.trafficlight.getRedYellowGreenState(TLS)=='y' and conn.trafficlight.getNextSwitch(TLS)==t+cycle['yellow_s'],'yellow command readback mismatch')
+@@ -170,7 +173,8 @@
+     p=adapter.pending
+     if t>=1200 and p['motion']=='y' and adapter.previous_motion!='y':
+         q=adapter.last_yellow_scope
+-        require(isinstance(q,dict) and q['time_s']==t and q['status']=='PASS','FIRST_Y_SCREEN_NOT_FRESH')
++        require(isinstance(q,dict) and q['time_s']==t and
++            q['diagnostic_yellow_contract']['allow_prepared_step'] is True,'FIRST_Y_SCREEN_NOT_FRESH')
+         record=dict(q,source_post_frame_time_s=t,screen_stage='PREPARED_BEFORE_FIRST_Y_MOTION',source_program=p['program'],source_motion='y',observed_first_Y=False)
+         append_new(output/'yellow_scope.jsonl',record)
+ 
+@@ -343,7 +347,9 @@
+         require(not startup['streams']['sumo_stderr.log']['text'],'startup stderr nonempty')
+         require(card['numerical_exception_authority']['enabled'] is False,'NEW_SCOPE_NUMERICAL_EXCEPTION_NOT_ENABLED')
+         authority=None
+-        adapter=StepAdapter(worker.observe,card['spec']['fixed_command_veh_h'],card['spec']['end_s'],authority)
++        # validate_release must already bind the exact newly approved contract.
++        adapter=StepAdapter(worker.observe,card['spec']['fixed_command_veh_h'],card['spec']['end_s'],authority,
++            yellow_diagnostic_mode=card['spec']['yellow_responsibility_contract']['enabled'])
+         producer=Producer(card['spec']['mode'],card['spec']['fixed_command_veh_h'])
+         _diagnostic_loop(conn,worker,capture,output,{**effective,'total_budget_baseline':total_budget},process,started,adapter,producer)
+         status='PACKET_CYCLES_PENDING_LOG_FINALIZATION'
+--- protected-reference/independent-reader/yellow.py
++++ PROPOSED-NEW-ISOLATED/independent-reader/yellow.py
+@@ -4,7 +4,9 @@
+ """
+ from scripts.cumulative_full_catalogue_audit_20261014_v1.core import need,near,number,catalogue
+ 
+-def yellow_record(yy,cycles,world,meta,last):
++POLICY = 'NATIVE_YELLOW_RESPONSIBILITY_COMPLETE_INPUT_DIAGNOSTIC_V1'
++
++def yellow_record(yy,cycles,world,meta,last,diagnostic_contract=None):
+     t=yy['time_s'];need(type(t) is int and t==yy['source_post_frame_time_s'] and 1200<t<=last,'YELLOW_SOURCE_CLOCK')
+     selected=[c for c in cycles if c['begin_s']<t<=c['begin_s']+c['max_green_s']];need(len(selected)==1,'YELLOW_CYCLE_BINDING')
+     c=selected[0];P=catalogue(c['period_s']);Y=P['yellow_s']
+@@ -12,7 +14,10 @@
+     need(type(yy['yellow_s']) is int and yy['yellow_s']==Y,'YELLOW_PERIOD')
+     need(meta is not None,'MISSING_YELLOW_METADATA')
+     need(len({q['vehicle_id'] for q in yy['rows']})==len(yy['rows']) and {q['vehicle_id'] for q in yy['rows']}==set(yy['covered_ids'])=={v for v,w in world.items() if w['lane_id'] in ('ramp_storage_0',':urban_diverge_1_0')},'YELLOW_LOCAL_COMPLETE')
+-    need(yy['status']=='PASS','UNKNOWN_LOCAL_YELLOW_SCOPE')
++    enabled = diagnostic_contract == {'policy':POLICY,'enabled':True}
++    need(diagnostic_contract is None or enabled, 'UNKNOWN_YELLOW_CONTRACT')
++    need(yy['status'] in ('PASS','UNKNOWN'), 'UNKNOWN_YELLOW_SCHEMA')
++    failed=[]
+     for q in yy['rows']:
+         vid=q['vehicle_id'];v=meta[vid];offset=113.08 if q['population']=='ingress' else 0
+         need(q['time_s']==t and near(q['speed_m_s'],world[vid]['speed_m_s']) and q['native_future_safety_proven'] is False,'YELLOW_REAL_SPEED_ID')
+@@ -21,10 +26,28 @@
+         need(number(speed) and 0<=speed<=55.55555555555556 and number(d) and near(b,4.5) and near(length,5) and near(dt,1),'YELLOW_EFFECTIVE_MODEL_BOUND')
+         one=d>0 and speed<=b*dt;stop=d>0 and (one or d>=speed*dt+speed*speed/(2*b));timing=None if speed==0 else dt+speed/(2*b)+length/speed;clear=speed>0 and timing<=Y and d+length<=speed*(Y-dt)
+         need(q['one_step_Euler_stop_possible']==one and near(q['distance_to_meter_m'],d) and q['stop_possible']==stop and q['clear_possible']==clear,'YELLOW_INDEPENDENT_SCREEN')
+-        need(stop or clear,'UNKNOWN_LOCAL_YELLOW_SCOPE')
++        need(all(type(q[k]) is bool for k in ('one_step_Euler_stop_possible','stop_possible','clear_possible')), 'UNKNOWN_YELLOW_BOOL_SCHEMA')
++        need(number(q['stop_distance_screen_m']) and near(q['stop_distance_screen_m'],speed*dt+speed*speed/(2*b)), 'YELLOW_STOP_DISTANCE_RECORD')
++        recorded_time=q['body_clear_time_screen_s']  # Missing is not explicit null.
++        need(recorded_time is None if timing is None else number(recorded_time) and near(recorded_time,timing), 'YELLOW_CLEAR_TIME_RECORD')
++        expected_row_status='WITHIN_LOCAL_yellow_s_SCREEN' if stop or clear else 'UNKNOWN_LOCAL_yellow_s_SCOPE'
++        need(q['status']==expected_row_status, 'YELLOW_ROW_STATUS_RECORD')
++        if not (stop or clear):failed.append(vid)
++    expected_status='PASS' if not failed else 'UNKNOWN'
++    need(yy['status']==expected_status,'YELLOW_OVERALL_STATUS_RECORD')
++    if not enabled:need(not failed,'UNKNOWN_LOCAL_YELLOW_SCOPE')
++    else:
++        decision=yy['diagnostic_yellow_contract']
++        need(decision['policy']==POLICY and decision['enabled'] is True and
++             decision['original_witness_status']==expected_status and
++             type(decision['witness_established']) is bool and decision['witness_established']==(not failed) and
++             decision['failed_witness_ids']==failed and decision['allow_prepared_step'] is True and
++             decision['future_native_safety_proven'] is False and decision['safety_certified'] is None and
++             decision['interpretation']==('LEGACY_WITNESS_ESTABLISHED' if not failed else 'DIAGNOSTIC_WITNESS_NOT_ESTABLISHED'),
++             'UNKNOWN_YELLOW_DIAGNOSTIC_RECORD')
+     return True
+ 
+-def yellow_coverage(records,phase,cycles,post,pre,last,runtime_stop):
++def yellow_coverage(records,phase,cycles,post,pre,last,runtime_stop,diagnostic_contract=None):
+     need(phase.get('status')=='PASS_CONTINUOUS_PHASES','UNKNOWN_PHASE_FOR_YELLOW_COVERAGE')
+     expected={}
+     for c in phase['cycles']:
+@@ -40,5 +63,5 @@
+         need(t<len(pre) and pre[t]['bound_snapshot']['time_s']==t and pre[t]['bound_snapshot']['motion']=='y' and pre[t]['bound_snapshot']['program']==program,'YELLOW_PREPARATION_PHASE_JOIN')
+         if t in extras:
+             need(runtime_stop is True and t==last and len(pre)==last+1,'EXTRA_YELLOW_NOT_BOUND_TO_ABORTED_PREPARED_PREFIX')
+-        yellow_record(q,cycles,post[t-1]['post_world'],pre[t]['bound_snapshot']['terminal_before'],last)
+-    return {'observed_first_Y_count':len(expected),'validated_records':len(records),'prepared_not_observed_times':sorted(extras),'future_native_safety_proven':False}
++        yellow_record(q,cycles,post[t-1]['post_world'],pre[t]['bound_snapshot']['terminal_before'],last,diagnostic_contract)
++    return {'observed_first_Y_count':len(expected),'validated_records':len(records),'prepared_not_observed_times':sorted(extras),'legacy_failed_witness_times':[q['time_s'] for q in records if q['status']=='UNKNOWN'], 'diagnostic_binding_integrity':'PASS_IF_ALL_JOINS_ABOVE_PASS', 'future_native_safety_proven':False}
+--- protected-reference/independent-reader/actual.py
++++ PROPOSED-NEW-ISOLATED/independent-reader/actual.py
+@@ -12,7 +12,7 @@
+ spec=importlib.util.spec_from_file_location('protected_terminal_audit',ROOT/'data/processed/issue12_alinea_actuation_20261012_v1/audit_data_V3.py')
+ terminal=importlib.util.module_from_spec(spec);spec.loader.exec_module(terminal)
+ from scripts.cumulative_full_catalogue_audit_20261014_v1.evidence import body_frame,log_eof,serialized_population,strict_numeric,checkpoint,identity_journal,identity_prefix
+-from scripts.cumulative_full_catalogue_followup_audit_20261014_v1.yellow import yellow_record,yellow_coverage
++from NEW_ISOLATED_AUDIT_NAMESPACE.yellow import yellow_record,yellow_coverage
+ STORAGE='ramp_storage_0';INGRESS=':urban_diverge_1_0';INTERNAL=':ramp_mid_0_0'
+ STREAMS={'sumo_stdout.log','sumo_stderr.log','sumo_error.log','sumo.log'}
+ def sha(p):return hashlib.sha256(p.read_bytes()).hexdigest()
+@@ -131,7 +131,8 @@
+         local={v for v,w in pre[t]['bound_snapshot']['world'].items() if w['lane_id'] in (STORAGE,INGRESS)};need(len(q['vehicle_states'])==len(local) and {v['vehicle_id'] for v in q['vehicle_states']}==local,'ADMISSION_LOCAL_COVERAGE')
+     yellow=lines(raw/'yellow_scope.jsonl') if (raw/'yellow_scope.jsonl').exists() else []
+     prefix_stop=receipt['status'] not in ('PACKET_CYCLES_OBSERVED_NO_MONITORED_ANOMALY_NOT_QUALIFIED','APPROVED_END_PARTIAL_OR_BODY_CENSORED_NOT_QUALIFIED')
+-    yellow_summary=yellow_coverage(yellow,phase,account['cycles'],post,pre,last,prefix_stop)
++    # Exact new scope gate must reject absent/disabled/foreign policy IDs.
++    yellow_summary=yellow_coverage(yellow,phase,account['cycles'],post,pre,last,prefix_stop,card['spec']['yellow_responsibility_contract'])
+     yellow_attempts=lines(raw/'yellow_scope_attempts.jsonl') if (raw/'yellow_scope_attempts.jsonl').exists() else []
+     log_eof(logs,raw,receipt)
+     if receipt['final_logs']['status']!='BOUND_NO_OBSERVED_NATIVE_MESSAGE':alarms.append({'kind':'NATIVE_FINAL_LOG_MESSAGE','reasons':receipt['final_logs'].get('reasons')})
+
+# REQUIRED EXACT SCOPE/PERMISSION SEAMS (not a generated card or permission):
+# New profile spec: yellow_responsibility_contract={policy:POLICY, enabled:true}.
+# New USER path must refer to a future DIRECT approval of this yellow contract;
+# current margin-only USER_APPROVAL_V1 is insufficient and must not be inherited.
+# validate + validate_release: require explicit policy/enabled fields, exact
+# new approval SHA/card/source and same field in derived human/canonical binding;
+# absent/disabled/unbound scope denies BEFORE allocation/import/spawn.
+# Independent scope.py: accept only that exact new identity/contract/schema;
+# no broad UNKNOWN exemption and no legacy-card acceptance.
+# Per-card source inventory must include every actual new helper/reader import.
+# Default StepAdapter yellow_diagnostic_mode remains False (old strict STOP).
+# Motion-policy/producer/phase/model/strictNUM/queryfloor/newG are unchanged.
+# Resources: retain SAME prior600s stage and settled163.07205774995964s;
+# no reset. The minimal accounting ID seam must retain that consumed historical
+# identity and its verified settlement plus newly approved exact identities.
+# Effective single limit=min(300, actual remaining stage seconds); an unreviewed
+# reservation keeps its full ceiling. No ALINEA launch unless Dynamic actual
+# succeeds, three roles close, and enough remaining budget is explicitly available.

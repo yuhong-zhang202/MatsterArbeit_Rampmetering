@@ -1,0 +1,16 @@
+{
+  "status": "PASS_OFFLINE_FOCUSED_ONLY",
+  "command": "python3 -m unittest discover -s tests/dynamic_native_yellow_minqual_audit_20261015 -v",
+  "exit_code": 0,
+  "methods": 3,
+  "seconds": 0.017,
+  "sources_sha256": {
+    "scripts/dynamic_native_yellow_minqual_audit_20261015_v1/yellow.py": "b5b3017c98cc752cf116ab2d788925829c7ad7c22e0cd568cd9c3748350fc5db",
+    "scripts/dynamic_native_yellow_minqual_audit_20261015_v1/scope.py": "4b09f38c72a84e24ebd564b9fb7e17864920a4d093c3c710fb5a77c473d2c6ed",
+    "scripts/dynamic_native_yellow_minqual_audit_20261015_v1/actual.py": "3fdb0ee9e9a2c5ab989d36da8118797057d0c185e192e6a90662aa230fff310a",
+    "tests/dynamic_native_yellow_minqual_audit_20261015/test_yellow.py": "f1bd426b2c44c6a1de8faa06828660c2b6150ca9dbd76a1c3e195987c77d6f26"
+  },
+  "native_runs": 0,
+  "full_actual_pipeline_executed": false,
+  "fixture_scope": "Historical38rows replay; world/metadata reconstructed from already-bound rows, synthetic quota/deadline routing. Not a new trajectory or fresh independent historical audit."
+}
