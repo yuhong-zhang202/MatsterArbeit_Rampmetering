@@ -1,0 +1,26 @@
+{
+  "SUMO_execution_authorized": true,
+  "run_id": "UA_NATIVEYELLOW_ALINEA_S17_01",
+  "card_sha256": "36d30fff68d1e52e0b699bcf87186b9388f39302181367929532b9d409b0e560",
+  "numerical_exception_enabled": false,
+  "yellow_responsibility_contract": {
+    "policy": "NATIVE_YELLOW_RESPONSIBILITY_COMPLETE_INPUT_DIAGNOSTIC_V1",
+    "enabled": true
+  },
+  "resources": {
+    "wall_limit_s": 300,
+    "startup_limit_s": 60,
+    "run_limit_bytes": null,
+    "minimum_free_bytes": 5000000000
+  },
+  "resource_envelope": {
+    "monitored_s": 300,
+    "raw_bytes": null
+  },
+  "combined_resource_envelope": {
+    "monitored_s": 600,
+    "raw_bytes": null
+  },
+  "human_authorization_reference": "artifacts/dynamic_native_yellow_minqual_20261015_v1/ROOT_EXACT_ALINEA_BINDING_V1.json",
+  "human_authorization_sha256": "9f77247b87b451c2985de5a76b24e2f97bbecc03bfe1b538232586356daa7418"
+}

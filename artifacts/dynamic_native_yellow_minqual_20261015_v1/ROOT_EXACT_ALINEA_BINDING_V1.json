@@ -1,0 +1,60 @@
+{
+  "source": "root exact-card binding under direct human approved scope",
+  "approval_source_reference": "artifacts/dynamic_yellow_contract_proposal_20261015_v1/USER_APPROVAL_V1.json",
+  "approval_source_sha256": "861c2d6f3ec5553b1f5d6fcd0831379473ce3b9280fee3b5f67758fe92320c87",
+  "SUMO_execution_authorized": true,
+  "run_id": "UA_NATIVEYELLOW_ALINEA_S17_01",
+  "card_sha256": "36d30fff68d1e52e0b699bcf87186b9388f39302181367929532b9d409b0e560",
+  "common_runtime_source_sha256": "089a2fefb9fb4d68aced499b532636c3a551b672f9130a1fd2e6acb468ff4ae2",
+  "end_s": 1296,
+  "catalogue_periods_s": [
+    8,
+    9,
+    10,
+    11,
+    12,
+    13,
+    14,
+    15,
+    16,
+    17,
+    18,
+    19,
+    20,
+    21,
+    22,
+    23,
+    24
+  ],
+  "mode": "real_alinea",
+  "numerical_exception_enabled": false,
+  "yellow_responsibility_contract": {
+    "policy": "NATIVE_YELLOW_RESPONSIBILITY_COMPLETE_INPUT_DIAGNOSTIC_V1",
+    "enabled": true
+  },
+  "resources": {
+    "wall_limit_s": 300,
+    "startup_limit_s": 60,
+    "run_limit_bytes": null,
+    "minimum_free_bytes": 5000000000
+  },
+  "resource_envelope": {
+    "monitored_s": 300,
+    "raw_bytes": null
+  },
+  "combined_resource_envelope": {
+    "monitored_s": 600,
+    "raw_bytes": null
+  },
+  "dynamic_technical_gate": {
+    "path": "artifacts/dynamic_native_yellow_minqual_20261015_v1/SCIENCE_DYNAMIC_POSTREVIEW_V1.md",
+    "sha256": "52df62a87645ec23c595bcb904dadda38e02d3dad5fd7f756691fb269ef6f38e"
+  },
+  "dynamic_settlement": {
+    "path": "artifacts/dynamic_minimum_qualification_20261015_v1/engineering/settlements/UA_NATIVEYELLOW_DYNAMIC_S17_01/SETTLEMENT.json",
+    "sha256": "aaa823371e8dd0047f859705522e587f21f54e2d948e0eb54a11747f9e7d07ea"
+  },
+  "actual_same600_remaining_s": 281.4471390420804,
+  "effective_wall_limit_s": 281.4471390420804,
+  "no_automatic_retry": true
+}

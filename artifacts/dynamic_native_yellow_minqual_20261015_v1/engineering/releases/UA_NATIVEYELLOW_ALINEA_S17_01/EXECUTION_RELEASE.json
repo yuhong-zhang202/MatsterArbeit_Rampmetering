@@ -1,0 +1,40 @@
+{
+  "run_id": "UA_NATIVEYELLOW_ALINEA_S17_01",
+  "card_sha256": "36d30fff68d1e52e0b699bcf87186b9388f39302181367929532b9d409b0e560",
+  "SUMO_execution_authorized": true,
+  "yellow_responsibility_contract": {
+    "policy": "NATIVE_YELLOW_RESPONSIBILITY_COMPLETE_INPUT_DIAGNOSTIC_V1",
+    "enabled": true
+  },
+  "authorization_sha256": "10007481f0fcc15e43faddc8b0d41aafcaff77e637042e366ebf553862414c0f",
+  "reviews": {
+    "engineering": {
+      "path": "artifacts/dynamic_native_yellow_minqual_20261015_v1/engineering/implementation_v1/ENGINEERING_REVIEW_V1.md",
+      "sha256": "2c76e6f7471e22c24092b4c250c5925d76d963e9576a928cbfb50c6ada534cc2",
+      "card_sha256": "36d30fff68d1e52e0b699bcf87186b9388f39302181367929532b9d409b0e560"
+    },
+    "data": {
+      "path": "data/processed/dynamic_native_yellow_minqual_20261015_v1/final_cards_v1/FINAL_CARD_REVIEW_V1.md",
+      "sha256": "5bc8cfbc4efe73fec8b095acc48b45850676413f7abd7aa6ee9671cad95cad66",
+      "card_sha256": "36d30fff68d1e52e0b699bcf87186b9388f39302181367929532b9d409b0e560",
+      "audit_contract": "CUMULATIVE_FULL_C_N_V1",
+      "actual_reader_path": "scripts/dynamic_native_yellow_minqual_audit_20261015_v1/actual.py",
+      "actual_reader_sha256": "3fdb0ee9e9a2c5ab989d36da8118797057d0c185e192e6a90662aa230fff310a"
+    },
+    "science": {
+      "path": "artifacts/dynamic_native_yellow_minqual_20261015_v1/SCIENCE_DYNAMIC_POSTREVIEW_V1.md",
+      "sha256": "52df62a87645ec23c595bcb904dadda38e02d3dad5fd7f756691fb269ef6f38e",
+      "card_sha256": "36d30fff68d1e52e0b699bcf87186b9388f39302181367929532b9d409b0e560"
+    }
+  },
+  "dynamic_technical_gate": {
+    "path": "artifacts/dynamic_native_yellow_minqual_20261015_v1/SCIENCE_DYNAMIC_POSTREVIEW_V1.md",
+    "sha256": "52df62a87645ec23c595bcb904dadda38e02d3dad5fd7f756691fb269ef6f38e"
+  },
+  "dynamic_settlement": {
+    "path": "artifacts/dynamic_minimum_qualification_20261015_v1/engineering/settlements/UA_NATIVEYELLOW_DYNAMIC_S17_01/SETTLEMENT.json",
+    "sha256": "aaa823371e8dd0047f859705522e587f21f54e2d948e0eb54a11747f9e7d07ea"
+  },
+  "same_source_as_actual_dynamic": true,
+  "actual_effective_limit_s": 281.4471390420804
+}

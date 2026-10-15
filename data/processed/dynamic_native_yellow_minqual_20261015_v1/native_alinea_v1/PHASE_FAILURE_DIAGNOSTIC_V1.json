@@ -1,0 +1,16 @@
+{
+  "classification": "PHASE_EXCEPTION_DIAGNOSTIC_NOT_INDEPENDENT_FCD_RECOUNT",
+  "C_from_raw_reported_entries_for_diagnostic_only": {
+    "C": 23.703439077103457,
+    "C_nearest_reference": 23.833333333333332,
+    "C_applied": 23.75,
+    "E": 22,
+    "N": 24,
+    "requested_minus_nominal": 1.7034390771034558,
+    "nominal_minus_actual": -2,
+    "requested_minus_actual": -0.29656092289654434
+  },
+  "status": "PHASE_CHECK_FAILED",
+  "reason": "RED_DURATION_TRACE_COVERAGE",
+  "traceback": "Traceback (most recent call last):\n  File \"<stdin>\", line 9, in <module>\n  File \"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/cumulative_full_catalogue_audit_20261014_v1/core.py\", line 78, in audit_phases\n    return check(*args,**kwargs)\n  File \"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/cumulative_full_catalogue_audit_20261014_v1/_phase.py\", line 57, in audit_phases\n    at=ge+Y+1;records=[q for q in durations if q.get('time_s')==at];need(len(records)==2,'RED_DURATION_TRACE_COVERAGE')\n                                                                    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/t10_g5_y3_audit_20261013_v1/core.py\", line 13, in need\n    if not ok:raise ValueError(why)\n              ^^^^^^^^^^^^^^^^^^^^^\nValueError: RED_DURATION_TRACE_COVERAGE\n"
+}

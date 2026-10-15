@@ -1,0 +1,28 @@
+--- data/processed/dynamic_native_yellow_minqual_20261015_v1/native_alinea_v2/PHASE_PREIMAGE_V1.py
++++ data/processed/dynamic_native_yellow_minqual_20261015_v1/native_alinea_v2/phase_boundary_V2.py
+@@ -1,7 +1,7 @@
+ """Protected continuous-phase checker adapted only to cycle catalogue metadata."""
+ from fractions import Fraction
+ from decimal import Decimal
+-from .core import need,near,moment,catalogue
++from scripts.cumulative_full_catalogue_audit_20261014_v1.core import need,near,moment,catalogue
+ def audit_phases(tls,posts,acks,cycles,phase_requests,durations,pre_rows=None):
+     """Contiguous actual prefix G then y then r, variable T/early-G and timers.
+ 
+@@ -54,7 +54,15 @@
+                 else:need(not pre_rows[i].get('phase_requests',[]),'MIDCYCLE_PROGRAM_RESTART')
+                 pr=pre_rows[i]['bound_snapshot'];need(pr['phase_before']==bp and pr['state_before']==before and pr['next_switch_before_s']==bs and pr['program']==program,'PRE_SNAPSHOT_PHASE_BINDING')
+         if ge is not None and ge+Y+1<=posts[-1]['time_end_s']:
+-            at=ge+Y+1;records=[q for q in durations if q.get('time_s')==at];need(len(records)==2,'RED_DURATION_TRACE_COVERAGE')
++            at=ge+Y+1;records=[q for q in durations if q.get('time_s')==at]
++            phase_duration_calls=[c for e,c in phase_calls if c.get('method')=='setPhaseDuration' and c.get('time_s')==at]
++            if at==posts[-1]['time_end_s'] and not records and not phase_duration_calls:
++                # Approved cutoff after the first red ACK, before another prepare.
++                # Retain observed native clock; never invent the unexecuted setter.
++                tail=rows[-1]
++                need(not cycle['completed'] and tail['time_end_s']==at and tail['motion']=='r' and tail['phase_observation']['phase_after']==2 and tail['phase_observation']['state_after']=='r' and moment(tail['phase_observation']['next_switch_after_s'],end) and (pre_rows is None or len(pre_rows)==len(posts)), 'TERMINAL_NO_SETTER_NOT_BOUND_TO_UNPREPARED_PARTIAL_RED_ACK')
++                continue
++            need(len(records)==2,'RED_DURATION_TRACE_COVERAGE')
+             attempted,verified=records;need(attempted.get('status')=='ATTEMPTED' and attempted.get('call_completed') is False and verified.get('status')=='READBACK_VERIFIED' and verified.get('call_completed') is True,'RED_DURATION_PAIR')
+             for q in records:used_duration.add(id(q));need(q.get('method')=='setPhaseDuration' and type(q.get('value')) is int and q['value']==end-at and moment(q.get('cycle_end_s'),end),'RED_DURATION_VALUE_BINDING')
+             rb=verified.get('actual_readback',{});need(moment(rb.get('time_s'),at) and rb.get('program')==program and type(rb.get('phase')) is int and rb['phase']==2 and rb.get('state')=='r' and moment(rb.get('nextSwitch_s'),end),'RED_DURATION_READBACK')

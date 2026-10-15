@@ -1,0 +1,8 @@
+{
+  "status": "UNKNOWN_AUDIT_EXCEPTION",
+  "exception_type": "ValueError",
+  "reason": "UNKNOWN_PHASE_FOR_YELLOW_COVERAGE",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/dynamic_native_yellow_minqual_audit_20261015_v1/actual.py\", line 183, in main\n    try:result=audit(args.manifest,args.card)\n               ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/dynamic_native_yellow_minqual_audit_20261015_v1/actual.py\", line 134, in audit\n    yellow_summary=yellow_coverage(yellow,phase,account['cycles'],post,pre,last,prefix_stop,card['spec']['yellow_responsibility_contract'])\n  File \"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/dynamic_native_yellow_minqual_audit_20261015_v1/yellow.py\", line 51, in yellow_coverage\n    need(phase.get('status')=='PASS_CONTINUOUS_PHASES','UNKNOWN_PHASE_FOR_YELLOW_COVERAGE')\n    ~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/t10_g5_y3_audit_20261013_v1/core.py\", line 13, in need\n    if not ok:raise ValueError(why)\n              ^^^^^^^^^^^^^^^^^^^^^\nValueError: UNKNOWN_PHASE_FOR_YELLOW_COVERAGE\n",
+  "native_safety_proven": false,
+  "rate_qualified": false
+}

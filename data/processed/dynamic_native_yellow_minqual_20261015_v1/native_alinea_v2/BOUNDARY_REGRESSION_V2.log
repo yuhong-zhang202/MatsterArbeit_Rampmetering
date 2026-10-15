@@ -1,0 +1,11 @@
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/dynamic_native_yellow_minqual_20261015_v1/native_alinea_v2/test_phase_boundary_V2.py", line 7, in <module>
+    old=module(ROOT/'scripts/cumulative_full_catalogue_audit_20261014_v1/_phase.py','scripts.cumulative_full_catalogue_audit_20261014_v1.old_boundary')
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/processed/dynamic_native_yellow_minqual_20261015_v1/native_alinea_v2/test_phase_boundary_V2.py", line 6, in module
+    s=importlib.util.spec_from_file_location(name,p);m=importlib.util.module_from_spec(s);s.loader.exec_module(m);return m
+                                                                                          ~~~~~~~~~~~~~~~~~~~~^^^
+  File "<frozen importlib._bootstrap_external>", line 1022, in exec_module
+  File "<frozen importlib._bootstrap>", line 488, in _call_with_frames_removed
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/cumulative_full_catalogue_audit_20261014_v1/_phase.py", line 4, in <module>
+    from .core import need,near,moment,catalogue
+ModuleNotFoundError: No module named 'scripts'
