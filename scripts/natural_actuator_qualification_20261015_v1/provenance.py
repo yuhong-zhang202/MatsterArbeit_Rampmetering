@@ -22,10 +22,11 @@ CURRENT_GAP_CONTRACT='ORDINARY_NATIVE_REFERENCE_OBSERVATION_V1'
 
 def resource_card(card,root,budget=None):
     run=card['spec']['run_id']
-    bounds={'QUAL_NATURAL_ALINEA_R900_S17_01':(900,870),'QUAL_NATURAL_ALINEA_R900_S17_02':(816,786)}
+    bounds={'QUAL_NATURAL_ALINEA_R900_S17_01':(900,870),'QUAL_NATURAL_ALINEA_R900_S17_02':(816,786),'QUAL_NATURAL_ALINEA_R900_S17_03':(641,611)}
     need(run in bounds,'UNKNOWN_NATURAL_RESOURCE_IDENTITY');outer,inner=bounds[run]
     need(card['resources']==dict(wall_limit_s=outer,startup_limit_s=60,run_limit_bytes=None,minimum_free_bytes=5000000000),'EXACT_RESOURCE_CARD_LIMITS')
-    expected=dict(schema='NATURAL_QUALIFICATION_GUARDIAN_V1',inner_wall_limit_s=inner,cleanup_reserve_s=30,outer_wall_limit_s=outer,receipt=f'data/raw/natural_actuator_qualification_20261015_v1/{run}/guardian_receipt.json',fallback_receipt=f'artifacts/natural_actuator_qualification_20261015_v1/engineering/runs/{run}/guardian_receipt.json')
+    task='actuator_acceptance_20261015_v1' if run.endswith('_03') else 'natural_actuator_qualification_20261015_v1'
+    expected=dict(schema='NATURAL_QUALIFICATION_GUARDIAN_V1',inner_wall_limit_s=inner,cleanup_reserve_s=30,outer_wall_limit_s=outer,receipt=f'data/raw/natural_actuator_qualification_20261015_v1/{run}/guardian_receipt.json',fallback_receipt=f'artifacts/{task}/engineering/runs/{run}/guardian_receipt.json')
     need(card['guardian']==expected,'GUARDIAN_CARD_SCHEMA')
     if run.endswith('_02'):
         spent=83.63743604102638
@@ -34,6 +35,17 @@ def resource_card(card,root,budget=None):
         need(card['resources_scope']==dict(scope_id='NATURAL_QUALIFICATION_20261015_V1',approved_total_monitored_s=900,charged_before_preparation_s=spent,remaining_before_preparation_s=900-spent,start_count_before_preparation=1,unknown_reserved_before_preparation=[],budget_approval_sha256=sha(resolve(root,'artifacts/natural_actuator_qualification_20261015_v1/NATIVE_BUDGET_APPROVAL.json')),old_scope_available_not_pooled=True,current_identity_ordinal=2,max_new_identities=2,further_identity_prepared=False),'RUN02_EXISTING_RESOURCE_SCOPE')
         need(card['qualification_proposal']==dict(status='PROPOSED_PENDING_EXACT_CARD_USER_CONFIRMATION',purpose='LIMITED_OPERATIONAL_AND_MEASUREMENT_QUALIFICATION_NOT_FORMAL',required_horizon_s=4200,required_evaluation_windows_s=[[t,t+300] for t in range(1200,3000,300)],technical_pass='EXACT_ACCOUNTING_VERSION_POPULATION_EOF_ONLY',not_qualified='HARD_ANOMALY_REQUIRED_UNKNOWN_OR_UNEXPLAINED_PERSISTENT_LOSS_WITH_OPPORTUNITY',not_tested='BRANCH_NOT_OBSERVED_OR_INSUFFICIENT_OPPORTUNITY',alinea_numeric_tracking_accuracy='NOT_ASSESSED',native_safety_proven=False,formal_experiment_authorized=False),'RUN02_QUALIFICATION_PROPOSAL')
         if budget is not None:need(budget['known_settled']=={'QUAL_NATURAL_ALINEA_R900_S17_01':spent} and budget['charged_monitored_s']==spent and budget['remaining_s']==900-spent and budget['start_count']==1,'RUN02_NATIVE_RESOURCE_BASELINE')
+    if run.endswith('_03'):
+        spent=258.87379404105013
+        need(card['spec'].get('safety_acceptance_contract',{}).get('policy')=='FIRST_YELLOW_SOURCE_SCALE_OBSERVATION_V1' and
+             card['resources_status']=='PROPOSED_PENDING_EXACT_CARD_EXECUTION_APPROVAL','RUN03_CONTRACT_AND_STATUS')
+        need(card['resources_scope']==dict(scope_id='NATURAL_QUALIFICATION_20261015_V1',approved_total_monitored_s=900,
+            charged_before_preparation_s=spent,remaining_before_preparation_s=900-spent,start_count_before_preparation=2,
+            unknown_reserved_before_preparation=[],budget_approval_sha256=sha(resolve(root,'artifacts/natural_actuator_qualification_20261015_v1/NATIVE_BUDGET_APPROVAL.json')),
+            old_scope_available_not_pooled=True,current_identity_ordinal=3,additional_exact_single_start_status='PROPOSED_NOT_APPROVED',
+            max_prepared_new_identities=1,further_identity_prepared=False),'RUN03_RESOURCE_SCOPE')
+        if budget is not None:need(budget['known_settled']=={'QUAL_NATURAL_ALINEA_R900_S17_01':83.63743604102638,'QUAL_NATURAL_ALINEA_R900_S17_02':175.23635800002376} and
+            budget['charged_monitored_s']==spent and budget['remaining_s']==900-spent and budget['start_count']==2,'RUN03_NATIVE_RESOURCE_BASELINE')
     return dict(run_id=run,outer_wall_limit_s=outer,inner_wall_limit_s=inner,cleanup_reserve_s=30)
 
 
@@ -51,6 +63,28 @@ def current_gap_contract(spec,root):
     approval=read(resolve(root,path))
     need(approval['schema']=='ISSUE16_CONTRACT_APPROVAL_RECEIPT_V1' and approval['answer']=='批准该合同及最小离线实现' and approval['approved_document']=='docs/development/ISSUE16_CURRENT_GAP_SCOPE_DECISION_20261015.md' and approval['SUMO_execution_authorized'] is False and approval['new_exact_card_approval_required'] is True,'CURRENT_GAP_EXPLICIT_APPROVAL')
     return dict(enabled=True,**item)
+
+
+def safety_acceptance_proof(card,approval,card_sha,approval_sha,root):
+    from scripts.natural_actuator_qualification_20261015_v1.episode import CONTRACT,RUN,SOURCE
+    item=card['spec'].get('safety_acceptance_contract')
+    if card['spec']['run_id']!=RUN:
+        need(item is None,'OLD_RUN_NEW_SAFETY_CONTRACT');return None
+    need(item and item['policy']==CONTRACT and item['status']=='PROPOSED_DEFAULT_INACTIVE' and item['source_commit']==SOURCE and
+         item['configured_model']=='Krauss' and item['configured_Euler_dt_s']==1 and item['no_model_or_JM_override'] is True and
+         item['classification']=='NUMERICAL_SCALE_COMPATIBLE_NOT_CONFIRMED_NUMERIC' and item['followup']=='ONE_UNCHANGED_STEP_REQUIRED_NO_RENEWAL_WHILE_PENDING','RUN03_SAFETY_CARD_SCOPE')
+    need(card['spec'].get('accuracy_acceptance_contract')==dict(policy='PREDECLARED_LOCAL20_BACKLOG_EXTERNAL_BOUNDARY_V1',
+         status='PROPOSED_PENDING_EXACT_CARD_APPROVAL',evaluator='scripts/actuator_acceptance_20261015_v1/accuracy.py',
+         normalizer='scripts/actuator_acceptance_20261015_v1/normalize.py',absolute_bound_vehicles=2,relative_bound=.05,formal_experiment_authorized=False),'RUN03_ACCURACY_CONTRACT')
+    need(card['spec'].get('acceptance_observation_contract')==dict(policy='FIXED_RECEIVER_DOMAIN_AND_LOCAL20_V1',local_storage_domain_m=[184.49,204.49],
+         minimum_actual_R_fronts=2,receiver_lanes=[':ramp_mid_0_0','ramp_accel_0',':freeway_merge_2_0','merge_section_0','merge_section_1','merge_section_2'],
+         cause='UNESTABLISHED_UNLESS_SEPARATELY_BOUND'),'RUN03_OBSERVATION_CONTRACT')
+    need(item['standard']=='docs/development/ACTUATOR_ACCEPTANCE_CRITERIA.md' and sha(resolve(root,item['standard']))==item['standard_sha256'],'RUN03_STANDARD_HASH')
+    need(approval['status']=='DIRECT_USER_APPROVED_EXACT_NATURAL_EXECUTION' and approval['run_id']==RUN and approval['card_sha256']==card_sha and
+         approval['lifts_current_no_SUMO_restriction'] is True and approval['acceptance_contract_approved']==CONTRACT and approval['accuracy_criteria_approved']=='PREDECLARED_LOCAL20_BACKLOG_EXTERNAL_BOUNDARY_V1' and
+         approval['acceptance_standard_sha256']==item['standard_sha256'] and approval['additional_exact_single_start_approved'] is True,'RUN03_DIRECT_EXTRA_AUTHORITY')
+    return dict(enabled=True,contract=CONTRACT,source_commit=SOURCE,status='EXACT_ACCEPTANCE_CONTRACT_AUTHORITY_VERIFIED',
+        configured_model='Krauss',configured_Euler_dt_s=1,no_model_or_JM_override=True,run_id=RUN,approval_sha256=approval_sha,execution_card_sha256=card_sha)
 
 
 def execution_sources(root,raw,sources,postanalysis_reader_v1=False):
@@ -85,7 +119,8 @@ def verify(manifest_path,card_path,root,postanalysis_reader_v1=False):
     need(s['counts']==dict(M=3000,R=600,U=300,X=150),'NATIVE_COHORT_SCOPE')
     need(s['Feedback']==dict(target_percent=11,gain_veh_h_per_percentage_point=70,bounds_veh_h=[300,900],initial_veh_h=900,sample_s=30),'NATIVE_FEEDBACK_SCOPE')
     raw=resolve(root,card['output']);package=resolve(root,card['package'])
-    need(raw==root/'data/raw/natural_actuator_qualification_20261015_v1'/s['run_id']/'outputs' and package==root/'artifacts/natural_actuator_qualification_20261015_v1/engineering/packages_v1'/s['run_id'],'NATIVE_OUTPUT_PACKAGE_NAMESPACE')
+    task='actuator_acceptance_20261015_v1' if s['run_id']=='QUAL_NATURAL_ALINEA_R900_S17_03' else 'natural_actuator_qualification_20261015_v1'
+    need(raw==root/'data/raw/natural_actuator_qualification_20261015_v1'/s['run_id']/'outputs' and package==root/'artifacts'/task/'engineering/packages_v1'/s['run_id'],'NATIVE_OUTPUT_PACKAGE_NAMESPACE')
     need(raw.is_dir(),'NATIVE_NOT_RUN_NO_RAW')
     for path,value in manifest['files'].items():
         p=resolve(root,path);expected=value['sha256'] if isinstance(value,dict) else value
@@ -115,9 +150,10 @@ def verify(manifest_path,card_path,root,postanalysis_reader_v1=False):
     b=read(budget_path);need(b['status']=='DIRECT_USER_APPROVED_INDEPENDENT_NUMERIC_BUDGET' and b['scope_id']==budget['scope_id'] and b['total_monitored_s']==900,'BUDGET_APPROVAL_NOT_GRANTED')
     need(sha(resolve(root,b['direct_user_authority']['path']))==b['direct_user_authority']['sha256'],'BUDGET_USER_AUTHORITY_HASH')
     resource_proof=resource_card(card,root,budget)
+    safety_proof=safety_acceptance_proof(card,a,sha(card_path),authority['sha256'],root)
     inherited=[h for p,h in card['inherited_inputs_sha256'].items() if p.endswith('/demand.rou.xml')]
     need(len(inherited)==1 and sha(package/'demand.rou.xml')==inherited[0],'NATURAL_REQUESTS_CHANGED')
-    return card,receipt,raw,package,net,dict(status='PASS_NATIVE_HASH_PROVENANCE',card_sha256=sha(card_path),manifest_sha256=sha(manifest_path),files=len(actual),bytes=manifest['bytes'],source_versions=source_proof,current_gap_contract=current_gap_contract(s,root),resource_contract=resource_proof)
+    return card,receipt,raw,package,net,dict(status='PASS_NATIVE_HASH_PROVENANCE',card_sha256=sha(card_path),manifest_sha256=sha(manifest_path),files=len(actual),bytes=manifest['bytes'],source_versions=source_proof,current_gap_contract=current_gap_contract(s,root),resource_contract=resource_proof,safety_acceptance=safety_proof)
 
 
 def eof(raw,receipt,logs,guardian,identity,card_sha,release_sha,terminal_row=None,card_guardian=None):

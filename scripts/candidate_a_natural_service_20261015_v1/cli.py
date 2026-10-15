@@ -6,12 +6,12 @@ from src.candidate_a_natural_service_20261015 import profile
 
 def main():
     parser=argparse.ArgumentParser()
-    parser.add_argument('action',choices=('prepare','validate-prepared','validate','execute','worker'))
+    parser.add_argument('action',choices=('prepare','prepare-acceptance','validate-prepared','validate','execute','worker'))
     parser.add_argument('--card')
     parser.add_argument('--release')
     args=parser.parse_args()
-    if args.action=='prepare':
-        card=profile.prepare()
+    if args.action in ('prepare','prepare-acceptance'):
+        card=profile.prepare(acceptance=args.action=='prepare-acceptance')
         print(json.dumps(dict(status='PREPARED_NOT_RELEASED',card=str(card),sha256=profile.sha(card))))
         return 0
     if not args.card:parser.error('card is required')

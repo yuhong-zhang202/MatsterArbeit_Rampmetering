@@ -7,7 +7,7 @@
 
 **Issue16有界收口：run02在1262秒STOP，仍NOT_QUALIFIED。** 获批四条合同最小修复及三方离线/准确卡审查完成后，用户明确批准dc9c1ce4卡一次限定诊断；执行checkpoint daa149bd/176源4eb466ec。全部门及新canonical真实通过，唯一native在1262触发R109制动−4.501m/s²，超原4.5+1e−6门。原告警与失败保留，没有重试/新guard/源码修改。独立C133.174013/E132/N109，662秒描述平均592.749辆/小时，残差24.174013；首评价窗62/300秒、五窗未到、完整受限红保持恢复NOT_TESTED，数值跟踪精度NOT_ASSESSED。231raw封存，工程19/data27/全部raw获科学复核；原reader两项失败尾UNKNOWN保持，nativeEOF0/清组空事实另列。科学仅GO资源结算175.236358秒，随后真实结算回核通过：累计258.873794041秒、余额641.126205959秒、start2、unknown预留空，不pool/reset。[本轮结论](development/ISSUE16_CURRENT_GAP_SCOPE_DECISION_20261015.md)、[Draft PR17](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/pull/17)。
 
-**唯一下一步：用户/Robert裁定逐步绝对4.5制动门是否适合作为论文资格标准。** 微小超额不能自动认定误报或危险，零碰撞不撤销规则触发。在该方法决定前停止自动改guard/重跑，不新增预测系统或矩阵。两次实际启动已消耗，余额不授第三次；正式实验仍未启动、协议0B未冻结。PR13仍REVIEW_PENDING / NO_VERDICT，未重发审查；原154证据、旧650失败及无关memory/WORKLOG插入保持。
+**当前已授权后续：依据文献制定最小安全与真实放行精度标准，完成隔离离线准备。** 用户新任务明确允许S1–S6原文核查、方案、问题记录、隔离补丁和内部审查；新的安全硬停止合同、数值验收尺度、准确新卡与SUMO启动仍须明确批准。主推荐见[执行器验收标准（Proposed）](development/ACTUATOR_ACCEPTANCE_CRITERIA.md)：源/步长绑定的窄停车数值尺度相容事件及一次后续观察；300秒窗真实C/N容差max(2辆,5%C)，原始全时域与条件机会分开。当前进行实际日志接口和离线实现审查，不改旧STOP、未启动第三次。原两次许可已消费；余额641.126205959秒不是新启动权。正式协议仍0B未冻结，PR13保留REVIEW_PENDING / NO_VERDICT，不重复复审。
 
 以下为不同版本的历史批准、准备和执行快照，当前状态以上段为准。
 

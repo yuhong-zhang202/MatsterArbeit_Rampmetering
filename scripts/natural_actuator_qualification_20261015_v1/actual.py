@@ -106,7 +106,7 @@ def audit(manifest_path,card_path,root=ROOT,postanalysis_reader_v1=False):
     result['native_terminal_evidence']['last_selected_cycle']=receipt.get('cycles',[])[-1:]
     if (raw/'failure_snapshot.json').exists():result['native_terminal_evidence']['failure_snapshot']=provenance.read(raw/'failure_snapshot.json')
     trips=run('trip_schema',lambda:records(raw/'tripinfo.xml','tripinfo'))
-    scan=run('native_stream_joins',lambda:streaming.scan(raw,receipt,network,trips,proof['current_gap_contract'])) if trips is not None else None
+    scan=run('native_stream_joins',lambda:streaming.scan(raw,receipt,network,trips,proof['current_gap_contract'],proof.get('safety_acceptance'))) if trips is not None else None
     if trips is not None:result['domains']['trip_schema']=dict(status='PASS_XML_SCHEMA',records=len(trips))
     if scan is not None:
         files={name:lines(raw/name,True) for name in ('command_events.jsonl','feedback_events.jsonl','admission.jsonl','policy_phase_requests.jsonl','policy_duration_requests.jsonl')}
@@ -133,6 +133,10 @@ def audit(manifest_path,card_path,root=ROOT,postanalysis_reader_v1=False):
         result['domains']['urban']=dict(status='PASS_OBSERVED_DESCRIPTIVE_EXPOSURE' if last>=3000 else 'UNKNOWN_EVALUATION_NOT_COMPLETE',counts=scan['urban_counts'],U_context=scan['urban_contexts'],scope='Legacy1.389m/s descriptive exposure; not contiguous queue or causal delay')
         result['observed_alarms'].extend(scan['alarms']);result['missing_or_unknown'].extend(scan['missing'])
         result['ordinary_reference_observations']=scan['reference_observations']
+        result['source_scale_episode_observations']=scan['episode_observations']
+        positions=scan['pre_position_rows']
+        result['domains']['pre_position_observations']=dict(status='PASS_PRE_POSITION_FCD_BINDING' if all(q['status']=='PASS_PRE_POSITION_FCD_BINDING' for q in positions) else 'UNKNOWN_PRE_POSITION_BINDING',rows=positions)
+        if any(q['unknown'] for q in positions):result['missing_or_unknown'].append(dict(domain='pre_position_observations',status='UNKNOWN_PRE_POSITION_BINDING'))
         result['domains']['native_stream_joins']=dict(status='PASS_JOIN_INTEGRITY',independent_physical_N=len(scan['entries']),entries=scan['entries'],body_rows_checked=scan['body_rows'],populations_checked=scan['populations'],arrivals_checked=len(scan['arrivals']),identity_scope=scan['identity_scope'],body_censored_ids=receipt['body_censored_ids'],partial_final_cycle=receipt.get('partial_final_cycle'),censor_scope='No clearance after last ACK is imputed',legacy_advisories=scan['advisories'])
         if scan['post'] and last>600:
             from fractions import Fraction

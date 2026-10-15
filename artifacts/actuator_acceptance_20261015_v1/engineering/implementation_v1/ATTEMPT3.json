@@ -1,0 +1,17 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "unittest",
+    "test_actuator_acceptance_safety.SafetyTests.test_exact_authority_resource_and_guardian_identity_fail_closed",
+    "-v"
+  ],
+  "env_override": {
+    "PYTHONPATH": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests"
+  },
+  "exit_code": 1,
+  "elapsed_s": 0.34417237498564646,
+  "python": "3.13.0 (v3.13.0:60403a5409f, Oct  7 2024, 00:37:40) [Clang 15.0.0 (clang-1500.3.9.4)]",
+  "change": "FIXTURE_EXISTING_PARENT_MKDIR_ONLY",
+  "test_sha256": "e2ddbd6d630d78dd5ff5e2ee83fff0214ad302dcde5acfb0e9ba3634ef31e9af"
+}

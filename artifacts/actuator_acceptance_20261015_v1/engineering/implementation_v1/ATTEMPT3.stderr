@@ -1,0 +1,21 @@
+test_exact_authority_resource_and_guardian_identity_fail_closed (test_actuator_acceptance_safety.SafetyTests.test_exact_authority_resource_and_guardian_identity_fail_closed) ... ERROR
+
+======================================================================
+ERROR: test_exact_authority_resource_and_guardian_identity_fail_closed (test_actuator_acceptance_safety.SafetyTests.test_exact_authority_resource_and_guardian_identity_fail_closed)
+----------------------------------------------------------------------
+Traceback (most recent call last):
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests/test_actuator_acceptance_safety.py", line 233, in test_exact_authority_resource_and_guardian_identity_fail_closed
+    self.assertEqual(guardian.require_worker_context(card_path,release_path,root)['run_id'],profile.ACCEPTANCE_RUN)
+                     ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_natural_service_20261015/guardian.py", line 34, in require_worker_context
+    require(Path(card).resolve()==Path(root)/task/'packages_v1'/run/'card.json','FOREIGN_GUARDIAN_CARD')
+    ~~~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/src/candidate_a_native_smoke_20261011/bridge_card.py", line 32, in require
+    if not condition:raise ValueError(why)
+                     ^^^^^^^^^^^^^^^^^^^^^
+ValueError: FOREIGN_GUARDIAN_CARD
+
+----------------------------------------------------------------------
+Ran 1 test in 0.013s
+
+FAILED (errors=1)

@@ -87,11 +87,35 @@ def receiver_observation(d,receiver,t,role,contract,new_green=False):
     if new_green:need(receiver['available'] is True and d['decision']=='READY','STRICT_NEW_GREEN_RECEIVER_DENIED')
 
 
-def scan(raw,receipt,network,trips,current_gap_contract=None):
+def pre_position_binding(p,previous_fcd,t):
+    """XML FCD t-1 is POST ACKt, the actual PREt position witness."""
+    targets={v['vehicle_id']:v for v in p['vehicle_states'] if v['population']=='storage'}
+    targets.update(p.get('receiver_domain_observation',{}).get('vehicles',{}))
+    verified={};unknown={}
+    for vid,v in targets.items():
+        try:
+            m=p['terminal_before'][vid];w=p['world'][vid]
+            need(previous_fcd is not None and vid in previous_fcd,'NO_SAME_ACK_FCD_POSITION')
+            f=previous_fcd[vid]
+            need(f['lane']==m['lane_id']==w['lane_id'],'PRE_FCD_LANE_BOUNDARY_UNKNOWN')
+            need(all(type(x) in (int,float) and math.isfinite(x) for x in (v['position_m'],v['length_m'],m['position_m'],m['length_m'])) and
+                 v['length_m']>0 and near(v['length_m'],m['length_m']) and near(v['position_m'],m['position_m']),'PRE_TERMINAL_POSITION_BODY_MISMATCH')
+            need(abs(v['position_m']-float(f['pos']))<=.51e-8 and abs(v['speed_m_s']-float(f['speed']))<=.51e-8,'PRE_SAME_ACK_FCD_POSITION_SPEED')
+            verified[vid]=dict(position_m=v['position_m'],length_m=v['length_m'],lane_id=f['lane'],speed_m_s=v['speed_m_s'],fcd_position_m=f['pos'],terminal_position_m=m['position_m'])
+        except (KeyError,TypeError,ValueError) as exc:unknown[vid]=str(exc)
+    return dict(PRE_time_s=t,FCD_XML_time_s=t-1,actual_ACK_s=t,verified=verified,unknown=unknown,
+                status='PASS_PRE_POSITION_FCD_BINDING' if not unknown else 'UNKNOWN_PRE_POSITION_BINDING',
+                length_scope='MATCHED_FRESH_PRE_AND_TERMINAL_GETTERS; FCD_HAS_NO_LENGTH_FIELD')
+
+
+def scan(raw,receipt,network,trips,current_gap_contract=None,safety_authority=None):
     contract=current_gap_contract or dict(enabled=False);reference_observations=[]
     last=receipt['last_completed_s'];need(type(last) is int and 0<=last<=4200,'LAST_ACK')
     pi=iter(jsonl(raw/'pre_steps.jsonl'));po=iter(posts(raw/'post_steps.jsonl'));ai=iter(jsonl(raw/'step_ack.jsonl'));ji=iter(jsonl(raw/'identity_journal.jsonl'));fi=iter(fcd_frames(raw/'fcd.xml.gz'))
+    from scripts.natural_actuator_qualification_20261015_v1.episode import EpisodeAudit
+    episode_audit=EpisodeAudit(safety_authority)
     tls=tls_rows(raw/'tls_states.xml',last)
+    pre_position_rows=[];previous_fcd=None
     pre=next(pi,None);small_pre=[];small_post=[];acks=[];entries=[];active=set();binding={};cleared={};observed={};endpoint={};alarms=[];missing=[];advisories=[];arrivals=[];constraints=Counter();populations=Counter();urban=Counter();contexts=[];body_checked=0;queue_rows=[]
     edges={e.get('id'):[x.get('id') for x in e.findall('lane')] for e in ET.parse(network).getroot().findall('edge')}
     lane_lengths={x.get('id'):float(x.get('length')) for e in ET.parse(network).getroot().findall('edge') for x in e.findall('lane') if x.get('length') is not None}
@@ -107,6 +131,7 @@ def scan(raw,receipt,network,trips,current_gap_contract=None):
         p=pre['bound_snapshot'];w=p['world'];z=r['post_world']
         populations.update(before_vehicle_steps=len(w),after_vehicle_steps=len(z),speed_difference_checks=len(set(w)&set(z)),acceleration_checks=len(z))
         serialized_population(p,t);strict_numeric(r)
+        if t>=600:pre_position_rows.append(pre_position_binding(p,previous_fcd,t))
         need(set(frame)==set(z),'FCD_WORLD_POPULATION')
         for vid,v in frame.items():need(v['lane']==z[vid]['lane_id'] and abs(float(v['speed'])-z[vid]['speed_m_s'])<=.51e-8,'FCD_WORLD_LANE_SPEED')
         before=next(ji,None);after=next(ji,None)
@@ -139,6 +164,10 @@ def scan(raw,receipt,network,trips,current_gap_contract=None):
             if v:alarms.append(dict(kind=name,time_s=t,value=v))
         warning=r['warning_observation'];need(warning['time_begin_s']==t and warning['time_end_s']==t+1,'WARNING_INTERVAL')
         if warning['text']:alarms.append(dict(kind='NATIVE_INTERVAL_MESSAGE',time_s=t,text=warning['text']))
+        episode_cycle=next((c for c in receipt['cycles'] if c['cycle_id']==p['cycle_id']),None)
+        compatible=episode_audit.step(p,r,episode_cycle,w,z,frame)
+        if compatible:
+            alarms[:]=[a for a in alarms if not (a.get('time_s')==t and a.get('id') in compatible and a.get('kind') in ('EXCESSIVE_SPEED_DIFFERENCE','EXCESSIVE_ACCELERATION'))]
         if t>=600:
             need(type(p['receiver']['available']) is bool and type(r['post_receiver']['available']) is bool,'RECEIVER_UNKNOWN')
             cycle=next(c for c in receipt['cycles'] if c['cycle_id']==p['cycle_id'])
@@ -172,6 +201,7 @@ def scan(raw,receipt,network,trips,current_gap_contract=None):
         small={k:r[k] for k in keys if k in r}
         if t>=600:small['constraint_observation']=dict(empty_storage=not p['storage'],receiver_available=p['receiver']['available'],WAIT_before=(p.get('native_receiver_decision') or {}).get('decision')=='WAIT_NATIVE_FOLLOWING')
         small['post_world']={q['vehicle_id']:{} for q in r['actual_crossings']};small_post.append(small)
+        previous_fcd=frame
         pre=nxt
     need(next(po,None) is None and next(ai,None) is None and next(fi,None) is None,'EXTRA_POST_ACK_FCD')
     extra_pre=[]
@@ -181,4 +211,6 @@ def scan(raw,receipt,network,trips,current_gap_contract=None):
     need(next(ji,None) is None,'EXTRA_IDENTITY_JOURNAL')
     need(set(x['vehicle_id'] for x in arrivals if x.get('vehicle_id'))=={q['id'] for q in trips if float(q['arrival'])>=0} and len(arrivals)==len({q['id'] for q in trips if float(q['arrival'])>=0}),'NORMAL_ARRIVAL_COVERAGE')
     need(sorted(active)==receipt['body_censored_ids'],'BODY_CENSOR_RECEIPT')
-    return dict(pre=small_pre,post=small_post,acks=acks,tls=tls,observed=observed,endpoint=endpoint,entries=entries,body_rows=body_checked,alarms=alarms,missing=missing,advisories=advisories,reference_observations=reference_observations,arrivals=arrivals,constraints=dict(constraints),populations=dict(populations),urban_counts=[dict(lane=k[0],vehicle_class=k[1],metric=k[2],value=v) for k,v in urban.items()],urban_contexts=contexts,queue_rows=queue_rows,extra_pre_count=len(extra_pre),identity_scope='STREAMING_CURRENT_AND_NEXT_PRE; FINAL_AFTER_WITHOUT_NEXT_PRE_SINGLE_JOURNAL')
+    if safety_authority is not None:need(isinstance(receipt.get('safety_acceptance_episodes'),list),'MISSING_EPISODE_RECEIPT_REGISTRY')
+    episode_observations=episode_audit.finish(receipt.get('safety_acceptance_episodes') if safety_authority else None,receipt.get('safety_acceptance_followup'))
+    return dict(pre_position_rows=pre_position_rows,episode_observations=episode_observations,pre=small_pre,post=small_post,acks=acks,tls=tls,observed=observed,endpoint=endpoint,entries=entries,body_rows=body_checked,alarms=alarms,missing=missing,advisories=advisories,reference_observations=reference_observations,arrivals=arrivals,constraints=dict(constraints),populations=dict(populations),urban_counts=[dict(lane=k[0],vehicle_class=k[1],metric=k[2],value=v) for k,v in urban.items()],urban_contexts=contexts,queue_rows=queue_rows,extra_pre_count=len(extra_pre),identity_scope='STREAMING_CURRENT_AND_NEXT_PRE; FINAL_AFTER_WITHOUT_NEXT_PRE_SINGLE_JOURNAL')

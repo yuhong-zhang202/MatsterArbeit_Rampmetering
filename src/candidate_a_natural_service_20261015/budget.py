@@ -4,7 +4,7 @@ import math
 import os
 from pathlib import Path
 from src.candidate_a_native_yellow_minqual_20261015 import budget as previous
-from src.candidate_a_natural_service_20261015.profile import RAW, TASK, RUN, HISTORICAL_RUN, sha, require
+from src.candidate_a_natural_service_20261015.profile import RAW, TASK, RUN, HISTORICAL_RUN, ACCEPTANCE_RUN, ACCEPTANCE_TASK, paths_for_run, sha, require
 
 APPROVAL=Path('artifacts/natural_actuator_qualification_20261015_v1/NATIVE_BUDGET_APPROVAL.json')
 SCOPE='NATURAL_QUALIFICATION_20261015_V1'
@@ -27,9 +27,9 @@ def accounting(root):
     old=previous.accounting(root)
     wall=0.;unknown=[];known={}
     names=set()
-    for base in (root/RAW,root/TASK/'runs'):
+    for base in (root/RAW,root/TASK/'runs',root/ACCEPTANCE_TASK/'runs'):
         for parent in base.iterdir() if base.exists() else ():
-            require(parent.is_dir() and parent.name in (HISTORICAL_RUN,RUN),'UNPREPARED_NATURAL_IDENTITY')
+            require(parent.is_dir() and parent.name in (HISTORICAL_RUN,RUN,ACCEPTANCE_RUN),'UNPREPARED_NATURAL_IDENTITY')
             names.add(parent.name)
     # The live, exact outer-owned worker uses its already-reserved envelope.
     # Every other process sees even a pre-raw early failure as fully reserved.
@@ -38,11 +38,12 @@ def accounting(root):
     if os.environ.get(guardian.CONTEXT_ENV):
         context=json.loads(Path(os.environ[guardian.CONTEXT_ENV]).read_text())
         guardian.require_worker_context(context['card_path'],context['release_path'],root)
-        active=RUN;names.discard(RUN)
-    require(len(names)<=2,'NATURAL_START_CAP_EXCEEDED')
+        active=context['run_id'];names.discard(active)
+    require(len(names)<=3,'NATURAL_IDENTITY_INVENTORY_EXCEEDED')
     for name in sorted(names):
         parent=root/RAW/name
-        settlement=root/TASK/'settlements'/parent.name/'SETTLEMENT.json'
+        task,_=paths_for_run(name)
+        settlement=root/task/'settlements'/parent.name/'SETTLEMENT.json'
         if not settlement.is_file():
             wall+=TOTAL;unknown.append(parent.name);continue
         s=json.loads(settlement.read_text())
@@ -66,8 +67,16 @@ def accounting(root):
         unknown_reserved=unknown,known_settled=known,budget_approval_sha256=sha(root/APPROVAL),start_count=len(names),active_outer_reservation=active)
 
 
-def effective_limits(resources,bound):
-    require(bound['start_count']<2 and not bound['unknown_reserved'],'NATURAL_START_CAP_OR_UNKNOWN_RESERVATION')
+def effective_limits(resources,bound,additional_start_authority=None):
+    if additional_start_authority is None:
+        require(bound['start_count']<2 and not bound['unknown_reserved'],'NATURAL_START_CAP_OR_UNKNOWN_RESERVATION')
+    else:
+        from src.candidate_a_natural_service_20261015.acceptance_safety import validate_authority
+        authority=validate_authority(additional_start_authority)
+        require(authority['run_id']==ACCEPTANCE_RUN and bound['start_count']==2 and
+            not bound['unknown_reserved'] and resources==dict(wall_limit_s=641,startup_limit_s=60,
+            run_limit_bytes=None,minimum_free_bytes=5000000000),
+            'THIRD_EXACT_START_OR_RESOURCE_NOT_APPROVED')
     outer=min(resources['wall_limit_s'],bound['remaining_s'])
     require(outer>30,'INSUFFICIENT_CLEANUP_RESERVE')
     return {**resources,'wall_limit_s':outer-30,'outer_wall_limit_s':outer,'cleanup_reserve_s':30}

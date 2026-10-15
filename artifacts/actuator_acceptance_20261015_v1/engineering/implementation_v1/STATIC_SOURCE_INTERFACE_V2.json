@@ -1,0 +1,50 @@
+{
+  "status": "PROVISIONAL_STATIC_INTERFACE_MATCH_NO_PREPARE",
+  "source_count": 187,
+  "legacy_source_count": 154,
+  "legacy_sources_unchanged": true,
+  "required_sources": {
+    "scripts/natural_actuator_qualification_20261015_v1/episode.py": "27b5635c56d165879a8c1521571350417c3aed8d93336c0039720de00330f1de",
+    "tests/test_actuator_acceptance_episode_reader.py": "8f5c1ef3aef599d8abe50318a67634f114e5c0bd7663bf0587fb842ce85ab795",
+    "scripts/actuator_acceptance_20261015_v1/normalize.py": "92da39f36f7bccde43b0208ce7a9b08aa7b7cc44ae7c3c131eb3faccafe5a28c",
+    "tests/test_actuator_acceptance_normalize.py": "66e8442233a46fad00f8889d0c39e4a61028e7807db311bf1f89831619f883d8"
+  },
+  "registration": {
+    "run_id": "QUAL_NATURAL_ALINEA_R900_S17_03",
+    "opportunity_geometry": {
+      "source": {
+        "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+        "sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca"
+      },
+      "lane_domains": [
+        {
+          "lane_id": "ramp_storage_0",
+          "start_pos_m": 184.49,
+          "end_pos_m": 204.49
+        }
+      ],
+      "network_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+      "receiver_domain_source": {
+        "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+        "sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca"
+      },
+      "receiver_lane_ids": [
+        ":ramp_mid_0_0",
+        "ramp_accel_0",
+        ":freeway_merge_2_0",
+        "merge_section_0",
+        "merge_section_1",
+        "merge_section_2"
+      ],
+      "receiver_geometry_m": {
+        ":ramp_mid_0_0": 81.98,
+        "ramp_accel_0": 99.07,
+        ":freeway_merge_2_0": 3.11,
+        "merge_section_0": 294.51,
+        "merge_section_1": 294.51,
+        "merge_section_2": 294.51
+      }
+    }
+  },
+  "freeze_pending": "DATA_FINAL_BINDING_AND_PARENT_METHOD_CHECKPOINT"
+}
