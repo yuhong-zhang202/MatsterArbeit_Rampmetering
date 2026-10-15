@@ -1,0 +1,152 @@
+{
+  "status": "STOP_RETAINED_NOT_QUALIFIED",
+  "run_id": "QUAL_NATURAL_ALINEA_R900_S17_01",
+  "error": "DiagnosticStop:POST_CURRENT_GAP_BOUND_DENIED",
+  "last_completed_s": 650,
+  "last_accounted_s": 650,
+  "bridge_status": "ABORTED_UNKNOWN",
+  "execution_result": {
+    "command": [
+      "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+      "-m",
+      "scripts.candidate_a_natural_service_20261015_v1.cli",
+      "execute",
+      "--card",
+      "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/natural_actuator_qualification_20261015_v1/engineering/packages_v1/QUAL_NATURAL_ALINEA_R900_S17_01/card.json",
+      "--release",
+      "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/artifacts/natural_actuator_qualification_20261015_v1/engineering/releases/QUAL_NATURAL_ALINEA_R900_S17_01_CANONICAL_V1.json"
+    ],
+    "exit_code": 1,
+    "finished_at_utc": "2026-10-15T13:50:23.585174+00:00",
+    "outer_CLI_elapsed_s": 86.37051808397518,
+    "interpreter": "3.13.0 (v3.13.0:60403a5409f, Oct  7 2024, 00:37:40) [Clang 15.0.0 (clang-1500.3.9.4)]",
+    "automatic_retry": false
+  },
+  "guardian_monitored_elapsed_s": 83.63743604102638,
+  "bridge_monitored_elapsed_s": 80.57606595900143,
+  "ownership": {
+    "schema": "NATURAL_OWNED_PROCESS_IDENTITY_V1",
+    "run_id": "QUAL_NATURAL_ALINEA_R900_S17_01",
+    "card_sha256": "b73c678130604d1cef41dd5ecb70a79cc868084e91ae5033cc179393c25f6982",
+    "release_sha256": "1977ffa2624e3a917b82a7a45554a61f30fc3193471a8aec00ee06ff7b9abb91",
+    "guardian_pid": 24586,
+    "worker": {
+      "pid": 24611,
+      "pgid": 24611,
+      "sid": 24611,
+      "status": "OBSERVED"
+    },
+    "native": {
+      "pid": 24639,
+      "pgid": 24611,
+      "sid": 24611,
+      "status": "OBSERVED"
+    },
+    "child_returncode_before": null,
+    "child_returncode_after": null,
+    "observed_monotonic_s": 339111.043333958,
+    "ownership_verified": true
+  },
+  "independent_post_exit_owned_group_inventory": [],
+  "guardian": {
+    "schema": "NATURAL_QUALIFICATION_GUARDIAN_V1",
+    "run_id": "QUAL_NATURAL_ALINEA_R900_S17_01",
+    "card_sha256": "b73c678130604d1cef41dd5ecb70a79cc868084e91ae5033cc179393c25f6982",
+    "release_sha256": "1977ffa2624e3a917b82a7a45554a61f30fc3193471a8aec00ee06ff7b9abb91",
+    "worker": {
+      "pid": 24611,
+      "pgid": 24611,
+      "sid": 24611,
+      "status": "OBSERVED"
+    },
+    "worker_returncode": 1,
+    "stop_reason": "WORKER_EXITED",
+    "native_identity_path": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/natural_actuator_qualification_20261015_v1/QUAL_NATURAL_ALINEA_R900_S17_01/outputs/owned_process_identity.json",
+    "native_identity_verified": true,
+    "inner_wall_limit_s": 870,
+    "cleanup_reserve_s": 30,
+    "outer_wall_limit_s": 900,
+    "monitored_elapsed_through_cleanup_s": 83.63743604102638,
+    "overshoot_s": 0,
+    "group_cleanup": {
+      "ownership_verified": true,
+      "no_live_owned_members": true,
+      "status": "OBSERVED_NO_LIVE_OWNED_MEMBERS",
+      "error": null
+    },
+    "total_budget_before_worker": {
+      "scope_id": "NATURAL_QUALIFICATION_20261015_V1",
+      "charged_monitored_s": 0.0,
+      "remaining_s": 900.0,
+      "approved_total_monitored_s": 900,
+      "prior_stage": {
+        "known_settled": {
+          "UA_NATIVEYELLOW_DYNAMIC_S17_01": {
+            "monitored_s": 155.48080320795998,
+            "raw_bytes": 442183368
+          },
+          "UA_NATIVEGAP_DYNAMIC_S17_01": {
+            "monitored_s": 163.07205774995964,
+            "raw_bytes": 403265825
+          },
+          "UA_NATIVEYELLOW_ALINEA_S17_01": {
+            "monitored_s": 157.09260666702176,
+            "raw_bytes": 442380604
+          }
+        },
+        "unknown_reserved": [],
+        "charged_monitored_s": 475.6454676249414,
+        "charged_raw_bytes": 1287829797,
+        "remaining_s": 124.35453237505862,
+        "remaining_bytes": null,
+        "selected_total_limits": {
+          "wall_s": 600,
+          "bytes": null
+        },
+        "fixed_start_count_limit": null,
+        "scope": "SAME600_STAGE_INCLUDING_SETTLED_NATIVEGAP_AND_NEW_YELLOW_IDENTITIES_NO_RESET"
+      },
+      "old_remainder_pooled": false,
+      "unknown_reserved": [],
+      "known_settled": {},
+      "budget_approval_sha256": "8f91d3453d933f71c898d07cb56255311cacf149bb57286f373454ab01107894",
+      "start_count": 0,
+      "active_outer_reservation": null
+    }
+  },
+  "final_native_log_coverage": "FINAL_FILES_AT_OWNED_PROCESS_EOF",
+  "native_returncode": 0,
+  "native_messages": "BOUND_NO_OBSERVED_NATIVE_MESSAGE",
+  "startup_connected": [
+    {
+      "attempt": 239,
+      "at_utc": "2026-10-15T13:49:28.053146+00:00",
+      "elapsed_since_start_s": 25.00490900001023,
+      "startup_deadline_monotonic_s": 339171.04373525,
+      "duration_s": 0.0011851659510284662,
+      "poll_before": null,
+      "poll_after": null,
+      "outcome": "CONNECTED"
+    }
+  ],
+  "raw_manifest": {
+    "path": "artifacts/natural_actuator_qualification_20261015_v1/engineering/first_native_execution_v1/RAW_MANIFEST_V1.json",
+    "sha256": "bb85c8f96c394bd81771203c0c91d10caa7ff027ccbbcf0f71b3b177629d875e",
+    "files": 227,
+    "bytes": 157210133
+  },
+  "budget": {
+    "status": "FULL900_RESERVED_UNSETTLED",
+    "accounting_gate_error": "ValueError:NATURAL_TOTAL_BUDGET_EXHAUSTED_OR_RESERVED",
+    "observed_guardian_elapsed_s": 83.63743604102638,
+    "automatic_remaining_available": false,
+    "three_role_settlement_pending": true
+  },
+  "raw_preserved_immutable": true,
+  "no_retry_or_second_start": true,
+  "source_card_algorithm_unchanged": true,
+  "free_bytes_after": 38153773056,
+  "actual_full_horizon": "NOT_TESTED",
+  "overall_qualification": "NOT_QUALIFIED_PENDING_INDEPENDENT_DATA_SCIENCE_REVIEW",
+  "external_PR13_review": "REVIEW_PENDING / NO_VERDICT"
+}

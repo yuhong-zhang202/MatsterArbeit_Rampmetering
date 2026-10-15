@@ -5,6 +5,12 @@
 
 ## Current Phase
 
+**首次自然交通诊断已完成后审：STOP_RETAINED / NOT_QUALIFIED。** 精确卡b73／执行源b6／173源c2f00d7f唯一运行于650秒触发POST_CURRENT_GAP_BOUND_DENIED，未到4200秒及六评价窗。六完整周期N0均继续；独立C≈12.311518、E_scheduled=E_executed12、真实N1，物理短放保留。间距9.610494m低于同帧native查询13.089892m，证实规则触发，未证明碰撞、必然危险或保守误判。下游受限等待恢复、完整时域及长期放行率NOT_TESTED；原reader exit1/UNKNOWN、partial和车尾截断不改判。227raw文件封存，工程→data→science后审完成，科学仅允许资源结算。独立900预算已结算83.637436041秒，账面余816.362563959秒、start1、unknown预留空，旧余额不pool；唯一启动权已消耗，不重跑、不正式实验、不合并。GitHub末轮仍REVIEW_PENDING / NO_VERDICT，用户仅撤销其完成作为本次额外门，不再复审。[本次完整收口](development/NATURAL_ACTUATOR_FIRST_NATIVE_CLOSEOUT_20261015.md)。
+
+以下授权及准备段落是本次运行前的历史快照，以本段及收口报告为当前状态。
+
+**最新直接授权：仅首卡一次自然技术诊断，启动前核查已通过。** 用户明确撤销PR13最后一轮GitHub审查完成这一额外前置条件，保留 `REVIEW_PENDING / NO_VERDICT`、禁止重复复审。沿已批准独立总900秒和既有精确卡b73c6781，仅一次非正式自然SUMO诊断；其余源码／输入／三方／安全／canonical／PID观察／实时资源和运行权限门全部保留。仿真工程代理已核对173源／141环境／14卡审查材料及PID观察／预算／磁盘门，并以真实新增权限补充形成canonical且验证通过；唯一execute命令已于13:48:57 UTC发起，具体native进展与结果以运行回执为准，尚不宣称通过。[授权变更非执行回执](../artifacts/natural_actuator_qualification_20261015_v1/REVIEW_DEPENDENCY_AMENDMENT_RECEIPT_V1.json)。原卡、旧授权与绑定文件保留不改；后续独立数据审计及只读科学结论完成前不提升资格，不自动第二次或正式实验。下方review执行条件属于此明确撤销前的历史快照。
+
 **当前状态：PR13为 `REVIEW_PENDING / NO_VERDICT`；非运行资格准备已完成。** 用户明确要求不再发起新的自动review，也不因其等待阻塞已授权非运行工作。现有修复、针对性测试及科学准备回执继续作为各自范围内的依据；没有把GitHub状态改判为PASS或CANCELLED。首卡14项绑定本次机械回读无漂移，src/scripts/tests相对执行checkpoint无变化；已有审查无阻碍未释放准备的实质finding。七域审计、精确卡、三方准备回执和资源保护均已交付，未发现剩余的独立非运行实施项。[准备交接状态](../artifacts/natural_actuator_qualification_20261015_v1/NONRUNNING_PREPARATION_STATUS_V1.json)。实际自然验证仍NOT_TESTED、总体NOT_QUALIFIED；本次只调整非运行工作的依赖，不改原精确卡有条件执行授权，不生成canonical或启动SUMO。
 
 **PR13审查诊断（10/15 13:14 UTC）：** 精确616的请求已获bot eyes，但summary自11:32 UTC持续Running且无新完成回执；Codex checks接口没有暴露job或日志，无法证明后台仍活跃或已终止。官方状态页未公布相关Review故障。当前仅判为疑似停滞／状态未回写，建议服务方核查既有请求并恢复结果回写；不重复触发、不改连接或审查设置、不放行SUMO。[诊断回执](../artifacts/natural_actuator_qualification_20261015_v1/PR13_REVIEW_DIAGNOSTIC_V1.json)、[未发送的支持请求草稿](../artifacts/natural_actuator_qualification_20261015_v1/PR13_REVIEW_SUPPORT_DRAFT_V1.txt)。

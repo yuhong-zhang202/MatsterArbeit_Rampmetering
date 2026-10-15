@@ -1,0 +1,61 @@
+{
+  "status": "PASS_NONRUNNING_LIVE_PREFLIGHT_PENDING_AUTHORITY_SUPPLEMENT_AND_CANONICAL",
+  "at_utc": "2026-10-15T13:47:50.375904+00:00",
+  "python": "3.13.0 (v3.13.0:60403a5409f, Oct  7 2024, 00:37:40) [Clang 15.0.0 (clang-1500.3.9.4)]",
+  "python_executable": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/.venv/bin/python",
+  "card_sha256": "b73c678130604d1cef41dd5ecb70a79cc868084e91ae5033cc179393c25f6982",
+  "source_count": 173,
+  "source_digest": "c2f00d7f66ea66e331e436248bf34d510fc8ba11a99b16792cd80e18f61055b2",
+  "three_role_binding_sha256": "fd4d1bdb1a0d7c8350ccd11053ca987931196f27590b5746b66d9fb0bd29083b",
+  "three_role_items": 14,
+  "environment_files_verified": 141,
+  "PID_observation_permission": "PASS_PS_PID_PGID_AND_OS_SID",
+  "observer": {
+    "pid": 24439,
+    "pgid": 24439,
+    "sid": 24439
+  },
+  "free_bytes": 38326751232,
+  "budget": {
+    "scope_id": "NATURAL_QUALIFICATION_20261015_V1",
+    "charged_monitored_s": 0.0,
+    "remaining_s": 900.0,
+    "approved_total_monitored_s": 900,
+    "prior_stage": {
+      "known_settled": {
+        "UA_NATIVEYELLOW_DYNAMIC_S17_01": {
+          "monitored_s": 155.48080320795998,
+          "raw_bytes": 442183368
+        },
+        "UA_NATIVEGAP_DYNAMIC_S17_01": {
+          "monitored_s": 163.07205774995964,
+          "raw_bytes": 403265825
+        },
+        "UA_NATIVEYELLOW_ALINEA_S17_01": {
+          "monitored_s": 157.09260666702176,
+          "raw_bytes": 442380604
+        }
+      },
+      "unknown_reserved": [],
+      "charged_monitored_s": 475.6454676249414,
+      "charged_raw_bytes": 1287829797,
+      "remaining_s": 124.35453237505862,
+      "remaining_bytes": null,
+      "selected_total_limits": {
+        "wall_s": 600,
+        "bytes": null
+      },
+      "fixed_start_count_limit": null,
+      "scope": "SAME600_STAGE_INCLUDING_SETTLED_NATIVEGAP_AND_NEW_YELLOW_IDENTITIES_NO_RESET"
+    },
+    "old_remainder_pooled": false,
+    "unknown_reserved": [],
+    "known_settled": {},
+    "budget_approval_sha256": "8f91d3453d933f71c898d07cb56255311cacf149bb57286f373454ab01107894",
+    "start_count": 0,
+    "active_outer_reservation": null
+  },
+  "native_started": false,
+  "raw_allocated": false,
+  "current_PR13_review": "REVIEW_PENDING_NO_VERDICT"
+}

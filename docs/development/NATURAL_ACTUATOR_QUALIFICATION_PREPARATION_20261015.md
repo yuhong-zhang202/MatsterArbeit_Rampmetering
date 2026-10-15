@@ -1,5 +1,10 @@
 # 自然需求执行器：最小资格准备
 
+**首次自然交通诊断已完成后审：STOP_RETAINED / NOT_QUALIFIED。** 精确卡b73／执行源b6／173源c2f00d7f唯一运行于650秒触发POST_CURRENT_GAP_BOUND_DENIED，未到4200秒及六评价窗。六完整周期N0均继续；独立C≈12.311518、E_scheduled=E_executed12、真实N1，物理短放保留。间距9.610494m低于同帧native查询13.089892m，证实规则触发，未证明碰撞、必然危险或保守误判。下游受限等待恢复、完整时域及长期放行率NOT_TESTED；原reader exit1/UNKNOWN、partial和车尾截断不改判。227raw文件封存，工程→data→science后审完成，科学仅允许资源结算。独立900预算实际账见资源回执；唯一启动权已消耗，不重跑、不正式实验、不合并。GitHub末轮仍REVIEW_PENDING / NO_VERDICT，用户仅撤销其完成作为本次额外门，不再复审。[实际收口](NATURAL_ACTUATOR_FIRST_NATIVE_CLOSEOUT_20261015.md)。
+
+## 以下为准备阶段历史快照
+
+
 **当前状态：PR13为 `REVIEW_PENDING / NO_VERDICT`；非运行资格准备已完成。** 用户明确要求不再发起新的自动review，也不因其等待阻塞已授权非运行工作。现有修复、针对性测试及科学准备回执继续作为各自范围内的依据；没有把GitHub状态改判为PASS或CANCELLED。首卡14项绑定本次机械回读无漂移，src/scripts/tests相对执行checkpoint无变化；已有审查无阻碍未释放准备的实质finding。七域审计、精确卡、三方准备回执和资源保护均已交付，未发现剩余的独立非运行实施项。[准备交接状态](../../artifacts/natural_actuator_qualification_20261015_v1/NONRUNNING_PREPARATION_STATUS_V1.json)。实际自然验证仍NOT_TESTED、总体NOT_QUALIFIED；本次只调整非运行工作的依赖，不改原精确卡有条件执行授权，不生成canonical或启动SUMO。
 
 2026-10-15。当前为**非运行实施与审查准备**；自然运行NOT_TESTED，总体NOT_QUALIFIED。唯一工作项为[Issue #14](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/issues/14)，分支`codex/natural-actuator-qualification`从PR13准确head `61612bf6e240d41d2ca4be95a02429f48c9ddd54`建立，[Draft PR #15](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/pull/15)以PR13分支为base。不得通过本记录放行SUMO或合并。

@@ -1,0 +1,81 @@
+{
+  "status": "RESOURCE_SETTLED_AFTER_ACTUAL_THREE_ROLE_REVIEW",
+  "recorded_at_utc": "2026-10-15T14:08:11.416948+00:00",
+  "run_id": "QUAL_NATURAL_ALINEA_R900_S17_01",
+  "settlement": {
+    "path": "artifacts/natural_actuator_qualification_20261015_v1/engineering/settlements/QUAL_NATURAL_ALINEA_R900_S17_01/SETTLEMENT.json",
+    "sha256": "90341bf36de022540dc3679306ca8d51967229836569d0be9343149b62b9af1c"
+  },
+  "reviews": {
+    "engineering": {
+      "path": "artifacts/natural_actuator_qualification_20261015_v1/engineering/first_native_execution_v1/ENGINEERING_EXECUTION_REPORT_V1.md",
+      "sha256": "a3b8cae110576b3959a364a0d384fa818c2287b90663ed33ccd38d973340b88b"
+    },
+    "data": {
+      "path": "data/processed/natural_actuator_qualification_20261015_v1/first_native_execution_v1/DATA_NATIVE_REPORT_V1.md",
+      "sha256": "b531928460cea3ecefa92208732e8e8fdc1816007c249292b5a2ad0b71b851da"
+    },
+    "science": {
+      "path": "artifacts/natural_actuator_qualification_20261015_v1/SCIENCE_FIRST_NATIVE_POSTREVIEW_V1.md",
+      "sha256": "755eba4ee10164e740d4a3f19feee43f8227607f3549637ec9fc9b816ebbc914"
+    }
+  },
+  "accounting_readback": {
+    "scope_id": "NATURAL_QUALIFICATION_20261015_V1",
+    "charged_monitored_s": 83.63743604102638,
+    "remaining_s": 816.3625639589736,
+    "approved_total_monitored_s": 900,
+    "prior_stage": {
+      "known_settled": {
+        "UA_NATIVEYELLOW_DYNAMIC_S17_01": {
+          "monitored_s": 155.48080320795998,
+          "raw_bytes": 442183368
+        },
+        "UA_NATIVEGAP_DYNAMIC_S17_01": {
+          "monitored_s": 163.07205774995964,
+          "raw_bytes": 403265825
+        },
+        "UA_NATIVEYELLOW_ALINEA_S17_01": {
+          "monitored_s": 157.09260666702176,
+          "raw_bytes": 442380604
+        }
+      },
+      "unknown_reserved": [],
+      "charged_monitored_s": 475.6454676249414,
+      "charged_raw_bytes": 1287829797,
+      "remaining_s": 124.35453237505862,
+      "remaining_bytes": null,
+      "selected_total_limits": {
+        "wall_s": 600,
+        "bytes": null
+      },
+      "fixed_start_count_limit": null,
+      "scope": "SAME600_STAGE_INCLUDING_SETTLED_NATIVEGAP_AND_NEW_YELLOW_IDENTITIES_NO_RESET"
+    },
+    "old_remainder_pooled": false,
+    "unknown_reserved": [],
+    "known_settled": {
+      "QUAL_NATURAL_ALINEA_R900_S17_01": 83.63743604102638
+    },
+    "budget_approval_sha256": "8f91d3453d933f71c898d07cb56255311cacf149bb57286f373454ab01107894",
+    "start_count": 1,
+    "active_outer_reservation": null
+  },
+  "accounting_source": {
+    "path": "src/candidate_a_natural_service_20261015/budget.py",
+    "sha256": "f5c203cba1584892035c0a8bdb1a7bcffd3d64fce90ed996ad170fdbfe43c0e1"
+  },
+  "guardian_cost_s": 83.63743604102638,
+  "CLI_elapsed_s_different_scope": 86.37103608401958,
+  "native_returncode": 0,
+  "controller_worker_returncode": 1,
+  "raw_file_count": 227,
+  "raw_bytes": 157210133,
+  "raw_manifest_sha256": "bb85c8f96c394bd81771203c0c91d10caa7ff027ccbbcf0f71b3b177629d875e",
+  "no_raw_source_card_rule_change": true,
+  "run_status": "STOP_RETAINED_NOT_QUALIFIED",
+  "single_authorized_start_consumed": true,
+  "further_execution_authorized": false,
+  "remaining_numeric_balance_is_not_run_permission": true,
+  "external_PR13_review": "REVIEW_PENDING / NO_VERDICT"
+}

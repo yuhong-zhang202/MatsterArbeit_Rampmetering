@@ -1,0 +1,33 @@
+{
+  "status": "SETTLED_AFTER_THREE_ROLE_REVIEW",
+  "run_id": "QUAL_NATURAL_ALINEA_R900_S17_01",
+  "recorded_at_utc": "2026-10-15T14:08:09.849507+00:00",
+  "reviews": {
+    "engineering": {
+      "path": "artifacts/natural_actuator_qualification_20261015_v1/engineering/first_native_execution_v1/ENGINEERING_EXECUTION_REPORT_V1.md",
+      "sha256": "a3b8cae110576b3959a364a0d384fa818c2287b90663ed33ccd38d973340b88b"
+    },
+    "data": {
+      "path": "data/processed/natural_actuator_qualification_20261015_v1/first_native_execution_v1/DATA_NATIVE_REPORT_V1.md",
+      "sha256": "b531928460cea3ecefa92208732e8e8fdc1816007c249292b5a2ad0b71b851da"
+    },
+    "science": {
+      "path": "artifacts/natural_actuator_qualification_20261015_v1/SCIENCE_FIRST_NATIVE_POSTREVIEW_V1.md",
+      "sha256": "755eba4ee10164e740d4a3f19feee43f8227607f3549637ec9fc9b816ebbc914"
+    }
+  },
+  "guardian_receipt": {
+    "path": "data/raw/natural_actuator_qualification_20261015_v1/QUAL_NATURAL_ALINEA_R900_S17_01/guardian_receipt.json",
+    "sha256": "e1d8c2a2c83333fec0595d4c4115a520f6ccea8b029c36694e4c6344c2a32040"
+  },
+  "raw_manifest": {
+    "path": "artifacts/natural_actuator_qualification_20261015_v1/engineering/first_native_execution_v1/RAW_MANIFEST_V1.json",
+    "sha256": "bb85c8f96c394bd81771203c0c91d10caa7ff027ccbbcf0f71b3b177629d875e"
+  },
+  "settled_monitored_s": 83.63743604102638,
+  "cost_basis": "GUARDIAN_MONITORED_STARTUP_WORKER_AND_OWNED_CLEANUP",
+  "CLI_elapsed_s_separate_scope": 86.37103608401958,
+  "disposition": "RESOURCE_ACCOUNTING_ONLY_STOP_RETAINED_NOT_QUALIFIED",
+  "authorized_single_start_consumed": true,
+  "further_execution_authorized": false
+}

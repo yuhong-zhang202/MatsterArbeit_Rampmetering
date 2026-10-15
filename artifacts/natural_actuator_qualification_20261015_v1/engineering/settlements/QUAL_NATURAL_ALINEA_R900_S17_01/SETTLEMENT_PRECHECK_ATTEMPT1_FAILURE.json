@@ -1,0 +1,8 @@
+{
+  "status": "FAILED_BEFORE_SETTLEMENT_WRITE",
+  "error": "KeyError: 'files_sha256'",
+  "cause": "Data native binder uses files[path]={sha256,bytes}; precheck mistakenly requested earlier implementation binder schema",
+  "settlement_created": false,
+  "resource_account_changed": false,
+  "fix": "Read actual files mapping; only precheck script corrected, no source/test/raw changes"
+}

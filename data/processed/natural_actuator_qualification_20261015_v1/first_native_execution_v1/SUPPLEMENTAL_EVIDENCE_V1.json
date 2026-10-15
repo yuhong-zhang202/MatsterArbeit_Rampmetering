@@ -1,0 +1,39 @@
+{
+  "qualified": false,
+  "scope": "Observed prefix only",
+  "independent_feedback": {
+    "status": "UNKNOWN",
+    "reason": "missing E1 ACK window"
+  },
+  "min_braking": {
+    "actual_acceleration_m_s2": {
+      "value": -4.5,
+      "id": "M_flow.4",
+      "time_begin_s": 6
+    },
+    "speed_difference_m_s2": {
+      "value": -4.5,
+      "id": "M_flow.4",
+      "time_begin_s": 6
+    }
+  },
+  "native_counter_totals": {
+    "colliding_vehicles": 0,
+    "starting_teleports": 0,
+    "ending_teleports": 0
+  },
+  "controlled_phase_seconds": {
+    "G": 25,
+    "y": 13,
+    "r": 12
+  },
+  "runtime_reasons": [
+    {
+      "time_s": 649,
+      "reasons": [
+        "POST_CURRENT_GAP_BOUND_DENIED"
+      ],
+      "terminal_reason": "DiagnosticStop:POST_CURRENT_GAP_BOUND_DENIED"
+    }
+  ]
+}

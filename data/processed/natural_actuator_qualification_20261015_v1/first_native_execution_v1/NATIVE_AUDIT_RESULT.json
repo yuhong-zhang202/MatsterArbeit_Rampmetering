@@ -1,0 +1,1965 @@
+{
+  "classification": "NATIVE_TECHNICAL_DIAGNOSTIC_NOT_FORMAL",
+  "qualified": false,
+  "service_qualification": "NOT_ASSESSED_REQUIRES_SCIENTIFIC_REVIEW",
+  "domains": {
+    "provenance": {
+      "status": "PASS_NATIVE_HASH_PROVENANCE",
+      "card_sha256": "b73c678130604d1cef41dd5ecb70a79cc868084e91ae5033cc179393c25f6982",
+      "manifest_sha256": "bb85c8f96c394bd81771203c0c91d10caa7ff027ccbbcf0f71b3b177629d875e",
+      "files": 227,
+      "bytes": 157210133
+    },
+    "trip_schema": {
+      "status": "PASS_XML_SCHEMA",
+      "records": 763
+    },
+    "native_stream_joins": {
+      "status": "UNKNOWN_INCOMPLETE_EVIDENCE",
+      "reason": "ValueError:UNEXPECTED_RECEIVER_DECISION"
+    },
+    "EOF_ownership": {
+      "status": "UNKNOWN_INCOMPLETE_EVIDENCE",
+      "reason": "ValueError:GUARDIAN_STOP_OR_EXIT"
+    }
+  },
+  "missing_or_unknown": [
+    {
+      "domain": "native_stream_joins",
+      "status": "UNKNOWN_INCOMPLETE_EVIDENCE",
+      "reason": "ValueError:UNEXPECTED_RECEIVER_DECISION"
+    },
+    {
+      "domain": "EOF_ownership",
+      "status": "UNKNOWN_INCOMPLETE_EVIDENCE",
+      "reason": "ValueError:GUARDIAN_STOP_OR_EXIT"
+    },
+    {
+      "domain": "full_horizon",
+      "status": "NOT_TESTED_OR_TRUNCATED",
+      "last_ACK": 650,
+      "target": 4200
+    }
+  ],
+  "observed_alarms": [
+    {
+      "kind": "RUNTIME_STOP_RETAINED",
+      "status": "ABORTED_UNKNOWN",
+      "error": "DiagnosticStop:POST_CURRENT_GAP_BOUND_DENIED",
+      "last_completed": 650,
+      "last_accounted": 650,
+      "unobserved_preparation_tail": null
+    }
+  ],
+  "run_id": "QUAL_NATURAL_ALINEA_R900_S17_01",
+  "native_terminal_evidence": {
+    "status": "ABORTED_UNKNOWN",
+    "error": "DiagnosticStop:POST_CURRENT_GAP_BOUND_DENIED",
+    "last_completed_s": 650,
+    "last_accounted_s": 650,
+    "last_step_ack": {
+      "requested_target_s": 650,
+      "ACK_received": true,
+      "actual_readback_s": 650.0,
+      "actual_time_verified": true
+    },
+    "last_control_setter": {
+      "setter_id": "649:setPhase:1",
+      "time_s": 649,
+      "method": "setPhase",
+      "value": 0,
+      "expected_readback": {
+        "time_s": 649,
+        "program": "I12_PACKET8",
+        "phase": 0,
+        "state": "G",
+        "next_switch_s": 653
+      },
+      "status": "READBACK_OBSERVED",
+      "call_completed": true,
+      "actual_signal": {
+        "fields": {
+          "time_s": {
+            "status": "OBSERVED",
+            "value": 649.0,
+            "error": null
+          },
+          "program": {
+            "status": "OBSERVED",
+            "value": "I12_PACKET8",
+            "error": null
+          },
+          "phase": {
+            "status": "OBSERVED",
+            "value": 0,
+            "error": null
+          },
+          "state": {
+            "status": "OBSERVED",
+            "value": "G",
+            "error": null
+          },
+          "next_switch_s": {
+            "status": "OBSERVED",
+            "value": 653.0,
+            "error": null
+          }
+        },
+        "complete": true,
+        "scope": "CURRENT_GETTERS_AFTER_CONTROL_NOT_MOVEMENT_ACK"
+      }
+    },
+    "command_records": {
+      "initial": {
+        "command": {
+          "request_id": "initial",
+          "global_request_s": 600,
+          "rate_veh_h": 900,
+          "origin": "FIXED",
+          "r_ALINEA": null
+        },
+        "first_application_s": null,
+        "first_preparation_s": null,
+        "status": "SUPERSEDED_WITHOUT_APPLICATION"
+      },
+      "real_alinea:600": {
+        "command": {
+          "request_id": "real_alinea:600",
+          "global_request_s": 600,
+          "rate_veh_h": 900,
+          "origin": "PROJECT_FEEDBACK",
+          "r_ALINEA": 900
+        },
+        "first_application_s": 600,
+        "first_preparation_s": 600,
+        "status": "ACK_OBSERVED"
+      },
+      "feedback:630": {
+        "command": {
+          "request_id": "feedback:630",
+          "global_request_s": 630,
+          "rate_veh_h": 866.0731695178215,
+          "origin": "PROJECT_FEEDBACK",
+          "r_ALINEA": 866.0731695178215
+        },
+        "first_application_s": 632,
+        "first_preparation_s": 632,
+        "status": "ACK_OBSERVED"
+      }
+    },
+    "partial_final_cycle": true,
+    "body_censored_ids": [
+      "R_flow.0"
+    ],
+    "last_selected_cycle": [
+      {
+        "cycle_id": 6,
+        "begin_s": 649,
+        "end_s": 657,
+        "period_s": 8,
+        "max_green_s": 4,
+        "yellow_s": 2,
+        "minimum_red_s": 2,
+        "program": "I12_PACKET8",
+        "requested_quota": 2,
+        "quota_status": "REQUESTED_NOT_EMPIRICALLY_QUALIFIED",
+        "selected_command_veh_h": 900.0,
+        "applied_command_veh_h": 900.0,
+        "packet_selection": {
+          "actual_C_fraction": "28970260147225739/2400000000000000",
+          "scheduled_nominal_E": 12,
+          "scheduled_error_fraction": "170260147225739/2400000000000000",
+          "forecast_request_veh_h": 866.0731695178215,
+          "forecast_assumption": "CURRENT_REQUEST_HELD_NOT_OBSERVED_FUTURE",
+          "candidate_errors_fraction": {
+            "8": "-3560982893071/800000000000000",
+            "9": "141674791083167/600000000000000",
+            "10": "1144081277344549/2400000000000000",
+            "11": "57382113011881/80000000000000",
+            "12": "2298845503368311/2400000000000000",
+            "13": "89882113011881/75000000000000",
+            "14": "1151203243130691/800000000000000",
+            "15": "2015495921201977/1200000000000000",
+            "16": "921674791083167/480000000000000",
+            "17": "432146339035643/200000000000000",
+            "18": "5763138181439597/2400000000000000",
+            "19": "3170260147225739/1200000000000000",
+            "20": "2305967469154453/800000000000000",
+            "21": "187382113011881/60000000000000",
+            "22": "8072666633487121/2400000000000000",
+            "23": "1441674791083167/400000000000000",
+            "24": "9227430859510883/2400000000000000"
+          },
+          "chosen_period_s": 8,
+          "catalogue_status": "FULL_300_900_CONFIGURED_ACTUAL_SERVICE_UNQUALIFIED"
+        },
+        "selected_request_id": "feedback:630",
+        "applied_request_id": "feedback:630",
+        "command_requested_s": 630,
+        "command_applied_s": 632,
+        "planned_application_s": 649,
+        "application_status": "ACK_OBSERVED",
+        "application_delay_s": 2,
+        "command_age_at_cycle_start_s": 19,
+        "green_end_s": null,
+        "green_end_reason": null,
+        "executed": true,
+        "completed": false,
+        "signal_program": "I12_PACKET8",
+        "service_context": [
+          {
+            "time_s": 649,
+            "storage_ids": [
+              "R_flow.0",
+              "R_flow.1",
+              "R_flow.2",
+              "R_flow.3",
+              "R_flow.4"
+            ],
+            "vehicle_states": [
+              {
+                "vehicle_id": "R_flow.4",
+                "population": "storage",
+                "position_m": 9.762390108590992,
+                "speed_m_s": 18.631633132312214,
+                "length_m": 5.0,
+                "min_gap_m": 2.5,
+                "accel_m_s2": 2.6,
+                "normal_decel_m_s2": 4.5,
+                "tau_s": 1.0,
+                "action_step_s": 1.0,
+                "type_id": "technical_passenger"
+              },
+              {
+                "vehicle_id": "R_flow.3",
+                "population": "storage",
+                "position_m": 41.70915528468929,
+                "speed_m_s": 20.747269477054303,
+                "length_m": 5.0,
+                "min_gap_m": 2.5,
+                "accel_m_s2": 2.6,
+                "normal_decel_m_s2": 4.5,
+                "tau_s": 1.0,
+                "action_step_s": 1.0,
+                "type_id": "technical_passenger"
+              },
+              {
+                "vehicle_id": "R_flow.2",
+                "population": "storage",
+                "position_m": 152.9896075234375,
+                "speed_m_s": 17.61641815691909,
+                "length_m": 5.0,
+                "min_gap_m": 2.5,
+                "accel_m_s2": 2.6,
+                "normal_decel_m_s2": 4.5,
+                "tau_s": 1.0,
+                "action_step_s": 1.0,
+                "type_id": "technical_passenger"
+              },
+              {
+                "vehicle_id": "R_flow.1",
+                "population": "storage",
+                "position_m": 180.3247987621773,
+                "speed_m_s": 12.771598010037966,
+                "length_m": 5.0,
+                "min_gap_m": 2.5,
+                "accel_m_s2": 2.6,
+                "normal_decel_m_s2": 4.5,
+                "tau_s": 1.0,
+                "action_step_s": 1.0,
+                "type_id": "technical_passenger"
+              },
+              {
+                "vehicle_id": "R_flow.0",
+                "population": "storage",
+                "position_m": 202.29620954928546,
+                "speed_m_s": 1.5898748913376206,
+                "length_m": 5.0,
+                "min_gap_m": 2.5,
+                "accel_m_s2": 2.6,
+                "normal_decel_m_s2": 4.5,
+                "tau_s": 1.0,
+                "action_step_s": 1.0,
+                "type_id": "technical_passenger"
+              },
+              {
+                "vehicle_id": "R_flow.5",
+                "population": "ingress",
+                "position_m": -19.943734043781348,
+                "speed_m_s": 17.506694499943475,
+                "length_m": 5.0,
+                "min_gap_m": 2.5,
+                "accel_m_s2": 2.6,
+                "normal_decel_m_s2": 4.5,
+                "tau_s": 1.0,
+                "action_step_s": 1.0,
+                "type_id": "technical_passenger"
+              }
+            ],
+            "receiver": {
+              "available": true,
+              "reason": "AVAILABLE",
+              "front_id": "R_flow.0",
+              "nearest_internal": null,
+              "leader": null,
+              "nearest_internal_rear_clearance_m": null,
+              "required_front_clearance_m": 7.5
+            },
+            "native_receiver_decision": {
+              "decision": "READY",
+              "prospective_available": true,
+              "time_s": 649,
+              "policy": "ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1",
+              "future_safety_proven": false
+            },
+            "cause": "UNESTABLISHED"
+          }
+        ],
+        "N_G": 1,
+        "N_y": 0,
+        "N_r": 0,
+        "crossing_ids": [
+          "R_flow.0"
+        ],
+        "phase_exposure_s": {
+          "G": 1,
+          "y": 0,
+          "r": 0
+        },
+        "denial_reason": ""
+      }
+    ],
+    "failure_snapshot": {
+      "error": "DiagnosticStop:POST_CURRENT_GAP_BOUND_DENIED",
+      "last_completed_s": 650,
+      "last_step_ack": {
+        "requested_target_s": 650,
+        "ACK_received": true,
+        "actual_readback_s": 650.0,
+        "actual_time_verified": true
+      },
+      "last_control_setter": {
+        "setter_id": "649:setPhase:1",
+        "time_s": 649,
+        "method": "setPhase",
+        "value": 0,
+        "expected_readback": {
+          "time_s": 649,
+          "program": "I12_PACKET8",
+          "phase": 0,
+          "state": "G",
+          "next_switch_s": 653
+        },
+        "status": "READBACK_OBSERVED",
+        "call_completed": true,
+        "actual_signal": {
+          "fields": {
+            "time_s": {
+              "status": "OBSERVED",
+              "value": 649.0,
+              "error": null
+            },
+            "program": {
+              "status": "OBSERVED",
+              "value": "I12_PACKET8",
+              "error": null
+            },
+            "phase": {
+              "status": "OBSERVED",
+              "value": 0,
+              "error": null
+            },
+            "state": {
+              "status": "OBSERVED",
+              "value": "G",
+              "error": null
+            },
+            "next_switch_s": {
+              "status": "OBSERVED",
+              "value": 653.0,
+              "error": null
+            }
+          },
+          "complete": true,
+          "scope": "CURRENT_GETTERS_AFTER_CONTROL_NOT_MOVEMENT_ACK"
+        }
+      },
+      "phase_api_requests": [
+        {
+          "time_s": 649,
+          "method": "setProgram",
+          "value": "I12_PACKET8",
+          "call_completed": true
+        },
+        {
+          "time_s": 649,
+          "method": "setPhase",
+          "value": 0,
+          "call_completed": true
+        }
+      ],
+      "control_setter_journal": "control_setters.jsonl",
+      "same_state_query_cache": {
+        "hits": 10293613,
+        "misses": 1802325,
+        "underlying_calls": 1840636,
+        "invalidations": 672,
+        "verified_time_reads": 6782
+      },
+      "last_accounted_s": 650,
+      "pending": null,
+      "accounting": {
+        "C": 12.311517608432341,
+        "C_nearest_reference": 12.5,
+        "C_applied": 12.25,
+        "C_selected": 12.25,
+        "E": 12,
+        "E_scheduled_nominal": 12,
+        "E_executed_nominal": 12,
+        "N": 1,
+        "C_selected_exact_fraction": "49/4",
+        "C_applied_exact_fraction": "49/4",
+        "scheduled_minus_executed": 0,
+        "executed_minus_actual": 11,
+        "requested_minus_nominal": 0.31151760843234166,
+        "nominal_minus_actual": 11,
+        "requested_minus_actual": 11.311517608432341,
+        "C_exact_fraction": "1477382113011881/120000000000000",
+        "E_support": "COMPLETE_PACKETS_ONLY",
+        "N_support": "ALL_OBSERVED_ENTRY_BEGIN_INTERVALS",
+        "partial_cycle": true,
+        "nearest_reference_is_not_cumulative_scheduler_output": true
+      },
+      "retained_last_observation": [
+        {
+          "time_begin_s": 649,
+          "observed_time_s": 650.0,
+          "status": "STOP_OBSERVED_AFTER_STEP",
+          "accounting_complete": true,
+          "shadow_envelope": null,
+          "time_end_s": 650,
+          "warning_observation": {
+            "time_begin_s": 649,
+            "time_end_s": 650,
+            "coverage": "CALLER_DECLARED_INTERVAL",
+            "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/natural_actuator_qualification_20261015_v1/QUAL_NATURAL_ALINEA_R900_S17_01/outputs/sumo_stderr.log",
+            "byte_start": 0,
+            "byte_end": 0,
+            "text": "",
+            "bridge_capture": {
+              "source": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/natural_actuator_qualification_20261015_v1/QUAL_NATURAL_ALINEA_R900_S17_01/outputs/sumo_stderr.log",
+              "byte_start": 0,
+              "byte_end": 0,
+              "device": 16777233,
+              "inode": 90423384,
+              "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "fragment_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+              "text": "",
+              "raw_fragment_hex": "",
+              "whole_prefix_decoded": true,
+              "coverage": "CONDITIONAL_SYNC_CERR_BEFORE_ACK"
+            },
+            "bridge_record_stage": "AFTER_SIMULATION_STEP_ACK",
+            "condition": "reviewed synchronous CERR path + stepACK; not universal/native safety proof"
+          },
+          "post_world": {
+            "M_flow.577": {
+              "role": "M",
+              "speed_m_s": 25.098592742755326,
+              "lane_id": "main_down_0"
+            },
+            "M_flow.578": {
+              "role": "M",
+              "speed_m_s": 30.063845302869996,
+              "lane_id": "main_down_1"
+            },
+            "M_flow.579": {
+              "role": "M",
+              "speed_m_s": 32.260544974303244,
+              "lane_id": "main_down_1"
+            },
+            "M_flow.580": {
+              "role": "M",
+              "speed_m_s": 26.764177862336776,
+              "lane_id": "main_down_0"
+            },
+            "M_flow.581": {
+              "role": "M",
+              "speed_m_s": 30.478822237604863,
+              "lane_id": "main_down_0"
+            },
+            "M_flow.582": {
+              "role": "M",
+              "speed_m_s": 30.191698050331965,
+              "lane_id": "main_down_1"
+            },
+            "M_flow.583": {
+              "role": "M",
+              "speed_m_s": 32.31437296692789,
+              "lane_id": "main_down_1"
+            },
+            "M_flow.584": {
+              "role": "M",
+              "speed_m_s": 26.35200761410579,
+              "lane_id": "main_down_0"
+            },
+            "M_flow.585": {
+              "role": "M",
+              "speed_m_s": 29.208599535997365,
+              "lane_id": "main_down_1"
+            },
+            "M_flow.586": {
+              "role": "M",
+              "speed_m_s": 27.79751231608745,
+              "lane_id": "main_down_0"
+            },
+            "M_flow.587": {
+              "role": "M",
+              "speed_m_s": 28.36543332985122,
+              "lane_id": "main_down_1"
+            },
+            "M_flow.588": {
+              "role": "M",
+              "speed_m_s": 27.20462105948611,
+              "lane_id": "main_down_0"
+            },
+            "M_flow.589": {
+              "role": "M",
+              "speed_m_s": 29.69480439749057,
+              "lane_id": "main_down_1"
+            },
+            "M_flow.590": {
+              "role": "M",
+              "speed_m_s": 27.062553858753525,
+              "lane_id": "main_down_0"
+            },
+            "M_flow.591": {
+              "role": "M",
+              "speed_m_s": 28.025553523683172,
+              "lane_id": "main_down_1"
+            },
+            "M_flow.592": {
+              "role": "M",
+              "speed_m_s": 25.913550438692877,
+              "lane_id": "merge_section_1"
+            },
+            "M_flow.593": {
+              "role": "M",
+              "speed_m_s": 29.643931221415997,
+              "lane_id": "main_down_1"
+            },
+            "M_flow.594": {
+              "role": "M",
+              "speed_m_s": 25.433148953231356,
+              "lane_id": "merge_section_1"
+            },
+            "M_flow.595": {
+              "role": "M",
+              "speed_m_s": 29.011368556043674,
+              "lane_id": "main_down_1"
+            },
+            "M_flow.596": {
+              "role": "M",
+              "speed_m_s": 26.907920504717286,
+              "lane_id": "merge_section_1"
+            },
+            "M_flow.597": {
+              "role": "M",
+              "speed_m_s": 27.317411646576364,
+              "lane_id": "merge_section_2"
+            },
+            "M_flow.598": {
+              "role": "M",
+              "speed_m_s": 26.68077360437625,
+              "lane_id": "merge_section_1"
+            },
+            "M_flow.599": {
+              "role": "M",
+              "speed_m_s": 28.858957855321805,
+              "lane_id": "merge_section_2"
+            },
+            "M_flow.600": {
+              "role": "M",
+              "speed_m_s": 25.938357974585504,
+              "lane_id": "merge_section_1"
+            },
+            "M_flow.601": {
+              "role": "M",
+              "speed_m_s": 28.824315075688734,
+              "lane_id": "merge_section_2"
+            },
+            "M_flow.602": {
+              "role": "M",
+              "speed_m_s": 25.48026708234743,
+              "lane_id": "merge_section_1"
+            },
+            "M_flow.603": {
+              "role": "M",
+              "speed_m_s": 28.687603337715466,
+              "lane_id": "merge_section_2"
+            },
+            "M_flow.604": {
+              "role": "M",
+              "speed_m_s": 30.75773058848339,
+              "lane_id": "merge_section_2"
+            },
+            "M_flow.605": {
+              "role": "M",
+              "speed_m_s": 28.424598940152872,
+              "lane_id": "main_up_1"
+            },
+            "M_flow.606": {
+              "role": "M",
+              "speed_m_s": 28.13526699907911,
+              "lane_id": "main_up_0"
+            },
+            "M_flow.607": {
+              "role": "M",
+              "speed_m_s": 28.240189831663724,
+              "lane_id": "main_up_1"
+            },
+            "M_flow.608": {
+              "role": "M",
+              "speed_m_s": 27.606723872332356,
+              "lane_id": "main_up_0"
+            },
+            "M_flow.609": {
+              "role": "M",
+              "speed_m_s": 28.078304468244124,
+              "lane_id": "main_up_1"
+            },
+            "M_flow.610": {
+              "role": "M",
+              "speed_m_s": 29.147876807481246,
+              "lane_id": "main_up_0"
+            },
+            "M_flow.611": {
+              "role": "M",
+              "speed_m_s": 29.463605026681634,
+              "lane_id": "main_up_1"
+            },
+            "M_flow.612": {
+              "role": "M",
+              "speed_m_s": 26.873751253556996,
+              "lane_id": "main_up_0"
+            },
+            "M_flow.613": {
+              "role": "M",
+              "speed_m_s": 28.295794120501284,
+              "lane_id": "main_up_1"
+            },
+            "M_flow.614": {
+              "role": "M",
+              "speed_m_s": 26.26490542563007,
+              "lane_id": "main_up_0"
+            },
+            "M_flow.615": {
+              "role": "M",
+              "speed_m_s": 27.527827078688187,
+              "lane_id": "main_up_1"
+            },
+            "M_flow.616": {
+              "role": "M",
+              "speed_m_s": 26.295054480765124,
+              "lane_id": "main_up_0"
+            },
+            "M_flow.617": {
+              "role": "M",
+              "speed_m_s": 29.18644361179579,
+              "lane_id": "main_up_1"
+            },
+            "M_flow.618": {
+              "role": "M",
+              "speed_m_s": 28.478992071422574,
+              "lane_id": "main_up_1"
+            },
+            "M_flow.619": {
+              "role": "M",
+              "speed_m_s": 29.650756317942523,
+              "lane_id": "main_up_1"
+            },
+            "M_flow.620": {
+              "role": "M",
+              "speed_m_s": 24.290995582878356,
+              "lane_id": "main_up_0"
+            },
+            "M_flow.621": {
+              "role": "M",
+              "speed_m_s": 29.424995041726493,
+              "lane_id": "main_up_1"
+            },
+            "M_flow.622": {
+              "role": "M",
+              "speed_m_s": 28.129097089694287,
+              "lane_id": "main_up_0"
+            },
+            "M_flow.623": {
+              "role": "M",
+              "speed_m_s": 30.54306152003217,
+              "lane_id": "main_up_1"
+            },
+            "M_flow.624": {
+              "role": "M",
+              "speed_m_s": 29.14351988480658,
+              "lane_id": "main_up_0"
+            },
+            "M_flow.625": {
+              "role": "M",
+              "speed_m_s": 29.9913232409682,
+              "lane_id": "main_up_1"
+            },
+            "M_flow.626": {
+              "role": "M",
+              "speed_m_s": 29.846680329176092,
+              "lane_id": "main_up_0"
+            },
+            "M_flow.627": {
+              "role": "M",
+              "speed_m_s": 29.60502332465307,
+              "lane_id": "main_up_1"
+            },
+            "M_flow.628": {
+              "role": "M",
+              "speed_m_s": 27.393374154624958,
+              "lane_id": "main_up_0"
+            },
+            "M_flow.629": {
+              "role": "M",
+              "speed_m_s": 28.654728491419238,
+              "lane_id": "main_up_1"
+            },
+            "M_flow.630": {
+              "role": "M",
+              "speed_m_s": 27.866129358679366,
+              "lane_id": "main_up_0"
+            },
+            "M_flow.631": {
+              "role": "M",
+              "speed_m_s": 28.778856693161902,
+              "lane_id": "main_up_1"
+            },
+            "M_flow.632": {
+              "role": "M",
+              "speed_m_s": 28.09314753243259,
+              "lane_id": "main_up_0"
+            },
+            "M_flow.633": {
+              "role": "M",
+              "speed_m_s": 27.550981066816817,
+              "lane_id": "main_up_1"
+            },
+            "M_flow.634": {
+              "role": "M",
+              "speed_m_s": 28.377403350909894,
+              "lane_id": "main_up_0"
+            },
+            "M_flow.635": {
+              "role": "M",
+              "speed_m_s": 29.089013359208565,
+              "lane_id": "main_up_1"
+            },
+            "M_flow.636": {
+              "role": "M",
+              "speed_m_s": 29.5789007948497,
+              "lane_id": "main_up_0"
+            },
+            "M_flow.637": {
+              "role": "M",
+              "speed_m_s": 29.806224895464776,
+              "lane_id": "main_up_1"
+            },
+            "M_flow.638": {
+              "role": "M",
+              "speed_m_s": 30.269204229219405,
+              "lane_id": "main_up_0"
+            },
+            "M_flow.639": {
+              "role": "M",
+              "speed_m_s": 25.222711414163967,
+              "lane_id": "main_up_1"
+            },
+            "M_flow.640": {
+              "role": "M",
+              "speed_m_s": 25.507246410422994,
+              "lane_id": "main_up_0"
+            },
+            "M_flow.641": {
+              "role": "M",
+              "speed_m_s": 26.51303721837733,
+              "lane_id": "main_up_1"
+            },
+            "M_flow.642": {
+              "role": "M",
+              "speed_m_s": 26.515964792920617,
+              "lane_id": "main_up_0"
+            },
+            "M_flow.643": {
+              "role": "M",
+              "speed_m_s": 27.614182856056125,
+              "lane_id": "main_up_1"
+            },
+            "M_flow.644": {
+              "role": "M",
+              "speed_m_s": 28.341280514139015,
+              "lane_id": "main_up_0"
+            },
+            "M_flow.645": {
+              "role": "M",
+              "speed_m_s": 30.01666078736934,
+              "lane_id": "main_up_1"
+            },
+            "M_flow.646": {
+              "role": "M",
+              "speed_m_s": 28.708081605575256,
+              "lane_id": "main_up_0"
+            },
+            "M_flow.647": {
+              "role": "M",
+              "speed_m_s": 32.78428197911386,
+              "lane_id": "main_up_1"
+            },
+            "M_flow.648": {
+              "role": "M",
+              "speed_m_s": 31.03180358470019,
+              "lane_id": "main_up_0"
+            },
+            "M_flow.649": {
+              "role": "M",
+              "speed_m_s": 31.79525299005,
+              "lane_id": "main_up_1"
+            },
+            "R_flow.0": {
+              "role": "R",
+              "speed_m_s": 3.9340293150224332,
+              "lane_id": ":ramp_mid_0_0"
+            },
+            "R_flow.1": {
+              "role": "R",
+              "speed_m_s": 8.794946163265283,
+              "lane_id": "ramp_storage_0"
+            },
+            "R_flow.10": {
+              "role": "R",
+              "speed_m_s": 12.390804309809567,
+              "lane_id": "shared_approach_0"
+            },
+            "R_flow.11": {
+              "role": "R",
+              "speed_m_s": 12.574965947744143,
+              "lane_id": "shared_approach_0"
+            },
+            "R_flow.12": {
+              "role": "R",
+              "speed_m_s": 12.635712125433667,
+              "lane_id": "urban_in_0"
+            },
+            "R_flow.2": {
+              "role": "R",
+              "speed_m_s": 13.944610336431104,
+              "lane_id": "ramp_storage_0"
+            },
+            "R_flow.3": {
+              "role": "R",
+              "speed_m_s": 21.53970339506568,
+              "lane_id": "ramp_storage_0"
+            },
+            "R_flow.4": {
+              "role": "R",
+              "speed_m_s": 20.486243108974538,
+              "lane_id": "ramp_storage_0"
+            },
+            "R_flow.5": {
+              "role": "R",
+              "speed_m_s": 18.084775511150387,
+              "lane_id": ":urban_diverge_1_0"
+            },
+            "R_flow.6": {
+              "role": "R",
+              "speed_m_s": 10.999843829037955,
+              "lane_id": ":urban_diverge_1_0"
+            },
+            "R_flow.7": {
+              "role": "R",
+              "speed_m_s": 10.573815783658617,
+              "lane_id": "shared_approach_0"
+            },
+            "R_flow.8": {
+              "role": "R",
+              "speed_m_s": 10.735895384320937,
+              "lane_id": "shared_approach_0"
+            },
+            "R_flow.9": {
+              "role": "R",
+              "speed_m_s": 11.284631285472507,
+              "lane_id": "shared_approach_0"
+            },
+            "U_flow.59": {
+              "role": "U",
+              "speed_m_s": 11.744733330964271,
+              "lane_id": "urban_out_0"
+            },
+            "U_flow.60": {
+              "role": "U",
+              "speed_m_s": 12.388605821146918,
+              "lane_id": "urban_out_0"
+            },
+            "U_flow.61": {
+              "role": "U",
+              "speed_m_s": 14.528981773505441,
+              "lane_id": "urban_out_0"
+            },
+            "U_flow.62": {
+              "role": "U",
+              "speed_m_s": 11.318424398493743,
+              "lane_id": "urban_out_0"
+            },
+            "U_flow.63": {
+              "role": "U",
+              "speed_m_s": 11.226034025930588,
+              "lane_id": "shared_approach_0"
+            },
+            "U_flow.64": {
+              "role": "U",
+              "speed_m_s": 12.004718765686233,
+              "lane_id": "shared_approach_0"
+            },
+            "X_flow.30": {
+              "role": "X",
+              "speed_m_s": 3.612395450333133,
+              "lane_id": ":urban_tls_1_0"
+            },
+            "X_flow.31": {
+              "role": "X",
+              "speed_m_s": 1.0596494217267751,
+              "lane_id": "cross_in_0"
+            },
+            "X_flow.32": {
+              "role": "X",
+              "speed_m_s": 0.000654208628123558,
+              "lane_id": "cross_in_0"
+            }
+          },
+          "phase_observation": {
+            "phase_before": 0,
+            "state_before": "G",
+            "next_switch_before_s": 653.0,
+            "phase_after": 0,
+            "state_after": "G",
+            "next_switch_after_s": 653.0
+          },
+          "phase_clock_binding": {
+            "cycle_id": 6,
+            "program": "I12_PACKET8",
+            "motion": "G",
+            "expected_post_nextSwitch_s": 653,
+            "actual_post_nextSwitch_s": 653.0,
+            "status": "ACK_OBSERVED_NOT_FUTURE_SAFETY"
+          },
+          "identity_change": {
+            "arrived_ids": [],
+            "departed_ids": [
+              "M_flow.649"
+            ],
+            "before_only_ids": [],
+            "after_only_ids": [
+              "M_flow.649"
+            ]
+          },
+          "terminal_arrival_pending": [],
+          "yellow_scope": {
+            "status": "UNKNOWN",
+            "time_s": 644,
+            "yellow_s": 3,
+            "covered_ids": [
+              "R_flow.0",
+              "R_flow.1",
+              "R_flow.2",
+              "R_flow.3",
+              "R_flow.4",
+              "R_flow.5"
+            ],
+            "rows": [
+              {
+                "vehicle_id": "R_flow.2",
+                "population": "storage",
+                "time_s": 644,
+                "position_m": 49.18108549758088,
+                "speed_m_s": 20.916154644432254,
+                "length_m": 5.0,
+                "normal_decel_m_s2": 4.5,
+                "action_step_s": 1.0,
+                "distance_to_meter_m": 155.30891450241913,
+                "one_step_Euler_stop_possible": false,
+                "stop_distance_screen_m": 69.52565743441059,
+                "stop_possible": true,
+                "body_clear_time_screen_s": 3.563066859148932,
+                "clear_possible": false,
+                "status": "WITHIN_LOCAL_yellow_s_SCREEN",
+                "native_future_safety_proven": false
+              },
+              {
+                "vehicle_id": "R_flow.1",
+                "population": "storage",
+                "time_s": 644,
+                "position_m": 87.19526774708712,
+                "speed_m_s": 21.728697447178366,
+                "length_m": 5.0,
+                "normal_decel_m_s2": 4.5,
+                "action_step_s": 1.0,
+                "distance_to_meter_m": 117.2947322529129,
+                "one_step_Euler_stop_possible": false,
+                "stop_distance_screen_m": 74.18828553062454,
+                "stop_possible": true,
+                "body_clear_time_screen_s": 3.64441015036121,
+                "clear_possible": false,
+                "status": "WITHIN_LOCAL_yellow_s_SCREEN",
+                "native_future_safety_proven": false
+              },
+              {
+                "vehicle_id": "R_flow.0",
+                "population": "storage",
+                "time_s": 644,
+                "position_m": 150.1776672291517,
+                "speed_m_s": 19.577119049205432,
+                "length_m": 5.0,
+                "normal_decel_m_s2": 4.5,
+                "action_step_s": 1.0,
+                "distance_to_meter_m": 54.312332770848315,
+                "one_step_Euler_stop_possible": false,
+                "stop_distance_screen_m": 62.16196241217901,
+                "stop_possible": false,
+                "body_clear_time_screen_s": 3.4306356437519283,
+                "clear_possible": false,
+                "status": "UNKNOWN_LOCAL_yellow_s_SCOPE",
+                "native_future_safety_proven": false
+              },
+              {
+                "vehicle_id": "R_flow.5",
+                "population": "ingress",
+                "time_s": 644,
+                "position_m": -97.78617650730496,
+                "speed_m_s": 11.397713848105118,
+                "length_m": 5.0,
+                "normal_decel_m_s2": 4.5,
+                "action_step_s": 1.0,
+                "distance_to_meter_m": 302.27617650730497,
+                "one_step_Euler_stop_possible": false,
+                "stop_distance_screen_m": 25.831922844025915,
+                "stop_possible": true,
+                "body_clear_time_screen_s": 2.70509711464214,
+                "clear_possible": false,
+                "status": "WITHIN_LOCAL_yellow_s_SCREEN",
+                "native_future_safety_proven": false
+              },
+              {
+                "vehicle_id": "R_flow.4",
+                "population": "ingress",
+                "time_s": 644,
+                "position_m": -74.96637200270159,
+                "speed_m_s": 13.607446018831496,
+                "length_m": 5.0,
+                "normal_decel_m_s2": 4.5,
+                "action_step_s": 1.0,
+                "distance_to_meter_m": 279.4563720027016,
+                "one_step_Euler_stop_possible": false,
+                "stop_distance_screen_m": 34.18106681387739,
+                "stop_possible": true,
+                "body_clear_time_screen_s": 2.879384328231344,
+                "clear_possible": false,
+                "status": "WITHIN_LOCAL_yellow_s_SCREEN",
+                "native_future_safety_proven": false
+              },
+              {
+                "vehicle_id": "R_flow.3",
+                "population": "ingress",
+                "time_s": 644,
+                "position_m": -49.26350291833374,
+                "speed_m_s": 15.686188731606435,
+                "length_m": 5.0,
+                "normal_decel_m_s2": 4.5,
+                "action_step_s": 1.0,
+                "distance_to_meter_m": 253.75350291833377,
+                "one_step_Euler_stop_possible": false,
+                "stop_distance_screen_m": 43.02580172311496,
+                "stop_possible": true,
+                "body_clear_time_screen_s": 3.061661602116692,
+                "clear_possible": false,
+                "status": "WITHIN_LOCAL_yellow_s_SCREEN",
+                "native_future_safety_proven": false
+              }
+            ],
+            "classification": "BOUND_LOCAL_FEASIBILITY_NOT_GLOBAL_SAFETY",
+            "diagnostic_yellow_contract": {
+              "policy": "NATIVE_YELLOW_RESPONSIBILITY_COMPLETE_INPUT_DIAGNOSTIC_V1",
+              "enabled": true,
+              "original_witness_status": "UNKNOWN",
+              "witness_established": false,
+              "failed_witness_ids": [
+                "R_flow.0"
+              ],
+              "interpretation": "DIAGNOSTIC_WITNESS_NOT_ESTABLISHED",
+              "input_scope": "ORIGINAL_HARD_FRESH_FRAME_AND_POPULATION_JOINS_REQUIRED",
+              "allow_prepared_step": true,
+              "future_native_safety_proven": false,
+              "safety_certified": null
+            }
+          },
+          "rate_chain": {
+            "input_origin": "PROJECT_FEEDBACK",
+            "r_ALINEA": 866.0731695178215,
+            "r_final_veh_h": 866.0731695178215,
+            "pending_request_id": "feedback:630",
+            "r_policy_pending_veh_h": null,
+            "nearest_reference_veh_h": 900.0,
+            "pending_packet_status": "SELECTED_ONLY_AT_COMPLETE_BOUNDARY",
+            "applied_request_id": null,
+            "selected_request_id": "feedback:630",
+            "r_policy_selected_veh_h": 900.0,
+            "r_policy_applied_veh_h": null,
+            "requested_quota": 2,
+            "period_s": 8,
+            "cycle_application_delay_s": 2,
+            "command_requested_s": 630
+          },
+          "actual_crossings": [
+            {
+              "vehicle_id": "R_flow.0",
+              "crossing_time_lower_s": 649,
+              "crossing_time_upper_s": 650,
+              "time_interval": "(lower,upper]",
+              "cycle_id": 6,
+              "motion_signal_state": "G"
+            }
+          ],
+          "post_signal_application_binding": {
+            "ACK_s": 650,
+            "actual_phase": 0,
+            "actual_state": "G",
+            "actual_program": "I12_PACKET8",
+            "actual_controlled_links": [
+              [
+                [
+                  "ramp_storage_0",
+                  "ramp_accel_0",
+                  ":ramp_mid_0_0"
+                ]
+              ]
+            ],
+            "expected_phase": 0,
+            "expected_state": "G",
+            "expected_program": "I12_PACKET8",
+            "status": "BOUND_BEFORE_LEDGER"
+          },
+          "motion": "G",
+          "accounting": {
+            "C": 12.311517608432341,
+            "C_nearest_reference": 12.5,
+            "C_applied": 12.25,
+            "C_selected": 12.25,
+            "E": 12,
+            "E_scheduled_nominal": 12,
+            "E_executed_nominal": 12,
+            "N": 1,
+            "C_selected_exact_fraction": "49/4",
+            "C_applied_exact_fraction": "49/4",
+            "scheduled_minus_executed": 0,
+            "executed_minus_actual": 11,
+            "requested_minus_nominal": 0.31151760843234166,
+            "nominal_minus_actual": 11,
+            "requested_minus_actual": 11.311517608432341,
+            "C_exact_fraction": "1477382113011881/120000000000000",
+            "E_support": "COMPLETE_PACKETS_ONLY",
+            "N_support": "ALL_OBSERVED_ENTRY_BEGIN_INTERVALS",
+            "partial_cycle": true,
+            "nearest_reference_is_not_cumulative_scheduler_output": true
+          },
+          "post_native_receiver_decision": {
+            "decision": "STOP_CURRENT_GAP_BOUND_DENIED",
+            "prospective_available": false,
+            "original_prospective_receiver": {
+              "available": false,
+              "reason": "LEADER_SECURE_GAP",
+              "front_id": "R_flow.1",
+              "nearest_internal": "R_flow.0",
+              "leader": {
+                "vehicle_id": "R_flow.0",
+                "lane_id": ":ramp_mid_0_0",
+                "gap_excluding_minGap_m": 9.610493938865318,
+                "secure_gap_m": 20.68483848979585
+              },
+              "nearest_internal_rear_clearance_m": -3.2597611356921163,
+              "required_front_clearance_m": 7.5
+            },
+            "current_following": {
+              "vehicle_id": "R_flow.1",
+              "lane_id": "ramp_storage_0",
+              "time_s": 650,
+              "route": [
+                "urban_in",
+                "shared_approach",
+                "ramp_storage",
+                "ramp_accel",
+                "merge_section",
+                "main_down"
+              ],
+              "lookahead_m": 478.67,
+              "receiver_path_lanes": [
+                ":ramp_mid_0_0",
+                "ramp_accel_0",
+                ":freeway_merge_2_0",
+                "merge_section_0",
+                "merge_section_1",
+                "merge_section_2"
+              ],
+              "path_geometry_m": {
+                "ramp_storage_0": 204.49,
+                ":ramp_mid_0_0": 81.98,
+                "ramp_accel_0": 99.07,
+                ":freeway_merge_2_0": 3.11,
+                "merge_section_0": 294.51,
+                "merge_section_1": 294.51,
+                "merge_section_2": 294.51
+              },
+              "actual_speed_m_s": 8.794946163265283,
+              "lane_position_m": 189.11974492544257,
+              "vehicle_length_m": 5.0,
+              "min_gap_m": 2.5,
+              "speed_mode": 31,
+              "lane_change_mode": 1621,
+              "policy": "ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1",
+              "margin_m": 1.1,
+              "hard_margin_m": 0.0,
+              "margin_role": "ADVISORY_ONLY",
+              "future_safety_proven": false,
+              "fresh_getLeader_result": [
+                "R_flow.0",
+                9.610493938865318
+              ],
+              "leader_id": "R_flow.0",
+              "leader_lane_id": ":ramp_mid_0_0",
+              "leader_speed_m_s": 3.9340293150224332,
+              "leader_speed_mode": 31,
+              "leader_lane_change_mode": 1621,
+              "getSecureGap_args": {
+                "vehID": "R_flow.1",
+                "speed": 8.794946163265283,
+                "leaderSpeed": 3.9340293150224332,
+                "leaderMaxDecel": 9.0,
+                "leaderID": "R_flow.0"
+              },
+              "actual_secure_gap_m": 13.089892326530567,
+              "gap_excluding_minGap_m": 9.610493938865318,
+              "physical_bumper_gap_m": 12.110493938865318,
+              "required_with_margin_m": 14.189892326530567,
+              "required_hard_floor_m": 13.089892326530567,
+              "hard_screen_pass": false,
+              "legacy_margin_pass": false,
+              "legacy_contract_status": "STOP_CURRENT_GAP_BOUND_DENIED",
+              "margin_classification": "BELOW_NATIVE_QUERY_FLOOR",
+              "status": "STOP_CURRENT_GAP_BOUND_DENIED"
+            },
+            "time_s": 650,
+            "policy": "ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1",
+            "future_safety_proven": false
+          },
+          "post_receiver": {
+            "available": false,
+            "reason": "LEADER_SECURE_GAP",
+            "front_id": "R_flow.1",
+            "nearest_internal": "R_flow.0",
+            "leader": {
+              "vehicle_id": "R_flow.0",
+              "lane_id": ":ramp_mid_0_0",
+              "gap_excluding_minGap_m": 9.610493938865318,
+              "secure_gap_m": 20.68483848979585
+            },
+            "nearest_internal_rear_clearance_m": -3.2597611356921163,
+            "required_front_clearance_m": 7.5
+          },
+          "actual_entry_following": [
+            {
+              "vehicle_id": "R_flow.0",
+              "time_begin_s": 649,
+              "time_end_s": 650,
+              "before": {
+                "vehicle_id": "R_flow.0",
+                "lane_id": "ramp_storage_0",
+                "time_s": 649,
+                "route": [
+                  "urban_in",
+                  "shared_approach",
+                  "ramp_storage",
+                  "ramp_accel",
+                  "merge_section",
+                  "main_down"
+                ],
+                "lookahead_m": 478.67,
+                "receiver_path_lanes": [
+                  ":ramp_mid_0_0",
+                  "ramp_accel_0",
+                  ":freeway_merge_2_0",
+                  "merge_section_0",
+                  "merge_section_1",
+                  "merge_section_2"
+                ],
+                "path_geometry_m": {
+                  "ramp_storage_0": 204.49,
+                  ":ramp_mid_0_0": 81.98,
+                  "ramp_accel_0": 99.07,
+                  ":freeway_merge_2_0": 3.11,
+                  "merge_section_0": 294.51,
+                  "merge_section_1": 294.51,
+                  "merge_section_2": 294.51
+                },
+                "actual_speed_m_s": 1.5898748913376206,
+                "lane_position_m": 202.29620954928546,
+                "vehicle_length_m": 5.0,
+                "min_gap_m": 2.5,
+                "speed_mode": 31,
+                "lane_change_mode": 1621,
+                "policy": "ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1",
+                "margin_m": 1.1,
+                "hard_margin_m": 0.0,
+                "margin_role": "ADVISORY_ONLY",
+                "future_safety_proven": false,
+                "fresh_getLeader_result": null,
+                "status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                "actual_secure_gap_m": null,
+                "gap_excluding_minGap_m": null,
+                "required_with_margin_m": null,
+                "required_hard_floor_m": null,
+                "hard_screen_pass": null,
+                "legacy_margin_pass": null,
+                "legacy_contract_status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                "margin_classification": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                "claim_scope": "fresh valid native empty result within fixed lookahead and bound route/path, not globally clear"
+              },
+              "after": {
+                "vehicle_id": "R_flow.0",
+                "lane_id": ":ramp_mid_0_0",
+                "time_s": 650,
+                "route": [
+                  "urban_in",
+                  "shared_approach",
+                  "ramp_storage",
+                  "ramp_accel",
+                  "merge_section",
+                  "main_down"
+                ],
+                "lookahead_m": 478.67,
+                "receiver_path_lanes": [
+                  ":ramp_mid_0_0",
+                  "ramp_accel_0",
+                  ":freeway_merge_2_0",
+                  "merge_section_0",
+                  "merge_section_1",
+                  "merge_section_2"
+                ],
+                "path_geometry_m": {
+                  "ramp_storage_0": 204.49,
+                  ":ramp_mid_0_0": 81.98,
+                  "ramp_accel_0": 99.07,
+                  ":freeway_merge_2_0": 3.11,
+                  "merge_section_0": 294.51,
+                  "merge_section_1": 294.51,
+                  "merge_section_2": 294.51
+                },
+                "actual_speed_m_s": 3.9340293150224332,
+                "lane_position_m": 1.7402388643078837,
+                "vehicle_length_m": 5.0,
+                "min_gap_m": 2.5,
+                "speed_mode": 31,
+                "lane_change_mode": 1621,
+                "policy": "ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1",
+                "margin_m": 1.1,
+                "hard_margin_m": 0.0,
+                "margin_role": "ADVISORY_ONLY",
+                "future_safety_proven": false,
+                "fresh_getLeader_result": null,
+                "status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                "actual_secure_gap_m": null,
+                "gap_excluding_minGap_m": null,
+                "required_with_margin_m": null,
+                "required_hard_floor_m": null,
+                "hard_screen_pass": null,
+                "legacy_margin_pass": null,
+                "legacy_contract_status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                "margin_classification": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                "claim_scope": "fresh valid native empty result within fixed lookahead and bound route/path, not globally clear"
+              },
+              "motion": "G"
+            }
+          ],
+          "native_event_counters": {
+            "colliding_vehicles": 0,
+            "starting_teleports": 0,
+            "ending_teleports": 0
+          },
+          "braking_observation": {
+            "speed_difference_ids": [
+              "M_flow.577",
+              "M_flow.578",
+              "M_flow.579",
+              "M_flow.580",
+              "M_flow.581",
+              "M_flow.582",
+              "M_flow.583",
+              "M_flow.584",
+              "M_flow.585",
+              "M_flow.586",
+              "M_flow.587",
+              "M_flow.588",
+              "M_flow.589",
+              "M_flow.590",
+              "M_flow.591",
+              "M_flow.592",
+              "M_flow.593",
+              "M_flow.594",
+              "M_flow.595",
+              "M_flow.596",
+              "M_flow.597",
+              "M_flow.598",
+              "M_flow.599",
+              "M_flow.600",
+              "M_flow.601",
+              "M_flow.602",
+              "M_flow.603",
+              "M_flow.604",
+              "M_flow.605",
+              "M_flow.606",
+              "M_flow.607",
+              "M_flow.608",
+              "M_flow.609",
+              "M_flow.610",
+              "M_flow.611",
+              "M_flow.612",
+              "M_flow.613",
+              "M_flow.614",
+              "M_flow.615",
+              "M_flow.616",
+              "M_flow.617",
+              "M_flow.618",
+              "M_flow.619",
+              "M_flow.620",
+              "M_flow.621",
+              "M_flow.622",
+              "M_flow.623",
+              "M_flow.624",
+              "M_flow.625",
+              "M_flow.626",
+              "M_flow.627",
+              "M_flow.628",
+              "M_flow.629",
+              "M_flow.630",
+              "M_flow.631",
+              "M_flow.632",
+              "M_flow.633",
+              "M_flow.634",
+              "M_flow.635",
+              "M_flow.636",
+              "M_flow.637",
+              "M_flow.638",
+              "M_flow.639",
+              "M_flow.640",
+              "M_flow.641",
+              "M_flow.642",
+              "M_flow.643",
+              "M_flow.644",
+              "M_flow.645",
+              "M_flow.646",
+              "M_flow.647",
+              "M_flow.648",
+              "R_flow.0",
+              "R_flow.1",
+              "R_flow.10",
+              "R_flow.11",
+              "R_flow.12",
+              "R_flow.2",
+              "R_flow.3",
+              "R_flow.4",
+              "R_flow.5",
+              "R_flow.6",
+              "R_flow.7",
+              "R_flow.8",
+              "R_flow.9",
+              "U_flow.59",
+              "U_flow.60",
+              "U_flow.61",
+              "U_flow.62",
+              "U_flow.63",
+              "U_flow.64",
+              "X_flow.30",
+              "X_flow.31",
+              "X_flow.32"
+            ],
+            "after_acceleration_ids": [
+              "M_flow.577",
+              "M_flow.578",
+              "M_flow.579",
+              "M_flow.580",
+              "M_flow.581",
+              "M_flow.582",
+              "M_flow.583",
+              "M_flow.584",
+              "M_flow.585",
+              "M_flow.586",
+              "M_flow.587",
+              "M_flow.588",
+              "M_flow.589",
+              "M_flow.590",
+              "M_flow.591",
+              "M_flow.592",
+              "M_flow.593",
+              "M_flow.594",
+              "M_flow.595",
+              "M_flow.596",
+              "M_flow.597",
+              "M_flow.598",
+              "M_flow.599",
+              "M_flow.600",
+              "M_flow.601",
+              "M_flow.602",
+              "M_flow.603",
+              "M_flow.604",
+              "M_flow.605",
+              "M_flow.606",
+              "M_flow.607",
+              "M_flow.608",
+              "M_flow.609",
+              "M_flow.610",
+              "M_flow.611",
+              "M_flow.612",
+              "M_flow.613",
+              "M_flow.614",
+              "M_flow.615",
+              "M_flow.616",
+              "M_flow.617",
+              "M_flow.618",
+              "M_flow.619",
+              "M_flow.620",
+              "M_flow.621",
+              "M_flow.622",
+              "M_flow.623",
+              "M_flow.624",
+              "M_flow.625",
+              "M_flow.626",
+              "M_flow.627",
+              "M_flow.628",
+              "M_flow.629",
+              "M_flow.630",
+              "M_flow.631",
+              "M_flow.632",
+              "M_flow.633",
+              "M_flow.634",
+              "M_flow.635",
+              "M_flow.636",
+              "M_flow.637",
+              "M_flow.638",
+              "M_flow.639",
+              "M_flow.640",
+              "M_flow.641",
+              "M_flow.642",
+              "M_flow.643",
+              "M_flow.644",
+              "M_flow.645",
+              "M_flow.646",
+              "M_flow.647",
+              "M_flow.648",
+              "M_flow.649",
+              "R_flow.0",
+              "R_flow.1",
+              "R_flow.10",
+              "R_flow.11",
+              "R_flow.12",
+              "R_flow.2",
+              "R_flow.3",
+              "R_flow.4",
+              "R_flow.5",
+              "R_flow.6",
+              "R_flow.7",
+              "R_flow.8",
+              "R_flow.9",
+              "U_flow.59",
+              "U_flow.60",
+              "U_flow.61",
+              "U_flow.62",
+              "U_flow.63",
+              "U_flow.64",
+              "X_flow.30",
+              "X_flow.31",
+              "X_flow.32"
+            ],
+            "excluded_before_only_ids": [],
+            "arrived_ids": [],
+            "speed_difference_m_s2": {
+              "M_flow.577": -0.9754857978085063,
+              "M_flow.578": 0.3096879028502926,
+              "M_flow.579": 0.9136275252983168,
+              "M_flow.580": 0.8297481880211208,
+              "M_flow.581": -0.32760815552901335,
+              "M_flow.582": 0.8186686529079452,
+              "M_flow.583": 1.2194986223153137,
+              "M_flow.584": -1.2001746214783502,
+              "M_flow.585": 0.7756551133934408,
+              "M_flow.586": 0.15293927319837053,
+              "M_flow.587": -1.1057152726924144,
+              "M_flow.588": 0.022820191951751667,
+              "M_flow.589": 1.1711738074093816,
+              "M_flow.590": 1.329135823882094,
+              "M_flow.591": -1.1983854417009034,
+              "M_flow.592": -0.0016841522771890993,
+              "M_flow.593": 0.3097132475703006,
+              "M_flow.594": -1.9340075484764974,
+              "M_flow.595": 1.2278961387175364,
+              "M_flow.596": -0.2742443620009354,
+              "M_flow.597": -1.1221591655299044,
+              "M_flow.598": 0.9585433956899507,
+              "M_flow.599": 0.09246480306299176,
+              "M_flow.600": 0.39009527276797584,
+              "M_flow.601": -0.15870727241267346,
+              "M_flow.602": -0.279247606164855,
+              "M_flow.603": -1.9543713043852584,
+              "M_flow.604": 1.622719597034724,
+              "M_flow.605": 0.2893319410737618,
+              "M_flow.606": 0.22965073583181805,
+              "M_flow.607": 0.6334659593313674,
+              "M_flow.608": -1.3315178270741583,
+              "M_flow.609": -0.8620485905311952,
+              "M_flow.610": 0.2254067145522498,
+              "M_flow.611": 1.0132069096207807,
+              "M_flow.612": 0.2428657353855641,
+              "M_flow.613": 0.5017949478767108,
+              "M_flow.614": 0.3063507232041083,
+              "M_flow.615": -1.3484433463827656,
+              "M_flow.616": -0.5615318289239895,
+              "M_flow.617": 0.7927741343062813,
+              "M_flow.618": -0.15311375838277996,
+              "M_flow.619": 0.26499337941427115,
+              "M_flow.620": -3.0555832749441585,
+              "M_flow.621": -0.43753343712715065,
+              "M_flow.622": 0.6938294204255371,
+              "M_flow.623": 0.10687680304981839,
+              "M_flow.624": 0.3405552498297766,
+              "M_flow.625": -0.016819447255691955,
+              "M_flow.626": -0.04067136986057207,
+              "M_flow.627": -0.5727973726453577,
+              "M_flow.628": 0.25377534278668534,
+              "M_flow.629": 0.23244283685926348,
+              "M_flow.630": -0.5562305904702676,
+              "M_flow.631": 0.6857091607293135,
+              "M_flow.632": 0.28103560328017707,
+              "M_flow.633": -0.826422284093077,
+              "M_flow.634": 0.2094940818164126,
+              "M_flow.635": -0.4898874356411369,
+              "M_flow.636": 0.09580100777093037,
+              "M_flow.637": -0.4629793337546282,
+              "M_flow.638": 0.6353666006587417,
+              "M_flow.639": -0.28453499625902623,
+              "M_flow.640": -0.18479354043956775,
+              "M_flow.641": -0.002927574543285516,
+              "M_flow.642": -0.0021704765037142693,
+              "M_flow.643": -0.6260739998715188,
+              "M_flow.644": 0.16706138648980584,
+              "M_flow.645": -0.1803225789366536,
+              "M_flow.646": 0.14180719458963864,
+              "M_flow.647": -0.177850790711382,
+              "M_flow.648": -0.5915975074982285,
+              "R_flow.0": 2.3441544236848126,
+              "R_flow.1": -3.9766518467726826,
+              "R_flow.10": -1.2383735968558387,
+              "R_flow.11": -1.468372944814357,
+              "R_flow.12": -0.7326600224090107,
+              "R_flow.2": -3.6718078204879845,
+              "R_flow.3": 0.7924339180113762,
+              "R_flow.4": 1.8546099766623243,
+              "R_flow.5": 0.5780810112069119,
+              "R_flow.6": 0.5104267224436629,
+              "R_flow.7": 0.11913941044860721,
+              "R_flow.8": -0.16801756254863065,
+              "R_flow.9": 0.28099795475136524,
+              "U_flow.59": -0.003288974193855765,
+              "U_flow.60": 1.3369981188177444,
+              "U_flow.61": -0.663466088520364,
+              "U_flow.62": 1.4468445013975728,
+              "U_flow.63": 1.2813806742395162,
+              "U_flow.64": 0.5466128278989348,
+              "X_flow.30": 1.6241738922893996,
+              "X_flow.31": 1.0596494217267751,
+              "X_flow.32": -0.0008384918707560827
+            },
+            "actual_acceleration_m_s2": {
+              "M_flow.577": -0.9754857978085063,
+              "M_flow.578": 0.3096879028502926,
+              "M_flow.579": 0.9136275252983168,
+              "M_flow.580": 0.8297481880211208,
+              "M_flow.581": -0.32760815552901335,
+              "M_flow.582": 0.8186686529079452,
+              "M_flow.583": 1.2194986223153137,
+              "M_flow.584": -1.2001746214783502,
+              "M_flow.585": 0.7756551133934408,
+              "M_flow.586": 0.15293927319837053,
+              "M_flow.587": -1.1057152726924144,
+              "M_flow.588": 0.022820191951751667,
+              "M_flow.589": 1.1711738074093816,
+              "M_flow.590": 1.329135823882094,
+              "M_flow.591": -1.1983854417009034,
+              "M_flow.592": -0.0016841522771890993,
+              "M_flow.593": 0.3097132475703006,
+              "M_flow.594": -1.9340075484764974,
+              "M_flow.595": 1.2278961387175364,
+              "M_flow.596": -0.2742443620009354,
+              "M_flow.597": -1.1221591655299044,
+              "M_flow.598": 0.9585433956899507,
+              "M_flow.599": 0.09246480306299176,
+              "M_flow.600": 0.39009527276797584,
+              "M_flow.601": -0.15870727241267346,
+              "M_flow.602": -0.279247606164855,
+              "M_flow.603": -1.9543713043852584,
+              "M_flow.604": 1.622719597034724,
+              "M_flow.605": 0.2893319410737618,
+              "M_flow.606": 0.22965073583181805,
+              "M_flow.607": 0.6334659593313674,
+              "M_flow.608": -1.3315178270741583,
+              "M_flow.609": -0.8620485905311952,
+              "M_flow.610": 0.2254067145522498,
+              "M_flow.611": 1.0132069096207807,
+              "M_flow.612": 0.2428657353855641,
+              "M_flow.613": 0.5017949478767108,
+              "M_flow.614": 0.3063507232041083,
+              "M_flow.615": -1.3484433463827656,
+              "M_flow.616": -0.5615318289239895,
+              "M_flow.617": 0.7927741343062813,
+              "M_flow.618": -0.15311375838277996,
+              "M_flow.619": 0.26499337941427115,
+              "M_flow.620": -3.0555832749441585,
+              "M_flow.621": -0.43753343712715065,
+              "M_flow.622": 0.6938294204255371,
+              "M_flow.623": 0.10687680304981839,
+              "M_flow.624": 0.3405552498297766,
+              "M_flow.625": -0.016819447255691955,
+              "M_flow.626": -0.04067136986057207,
+              "M_flow.627": -0.5727973726453577,
+              "M_flow.628": 0.25377534278668534,
+              "M_flow.629": 0.23244283685926348,
+              "M_flow.630": -0.5562305904702676,
+              "M_flow.631": 0.6857091607293135,
+              "M_flow.632": 0.28103560328017707,
+              "M_flow.633": -0.826422284093077,
+              "M_flow.634": 0.2094940818164126,
+              "M_flow.635": -0.4898874356411369,
+              "M_flow.636": 0.09580100777093037,
+              "M_flow.637": -0.4629793337546282,
+              "M_flow.638": 0.6353666006587417,
+              "M_flow.639": -0.28453499625902623,
+              "M_flow.640": -0.18479354043956775,
+              "M_flow.641": -0.002927574543285516,
+              "M_flow.642": -0.0021704765037142693,
+              "M_flow.643": -0.6260739998715188,
+              "M_flow.644": 0.16706138648980584,
+              "M_flow.645": -0.1803225789366536,
+              "M_flow.646": 0.14180719458963864,
+              "M_flow.647": -0.177850790711382,
+              "M_flow.648": -0.5915975074982285,
+              "M_flow.649": 0.0,
+              "R_flow.0": 2.3441544236848126,
+              "R_flow.1": -3.9766518467726826,
+              "R_flow.10": -1.2383735968558387,
+              "R_flow.11": -1.468372944814357,
+              "R_flow.12": -0.7326600224090107,
+              "R_flow.2": -3.6718078204879845,
+              "R_flow.3": 0.7924339180113762,
+              "R_flow.4": 1.8546099766623243,
+              "R_flow.5": 0.5780810112069119,
+              "R_flow.6": 0.5104267224436629,
+              "R_flow.7": 0.11913941044860721,
+              "R_flow.8": -0.16801756254863065,
+              "R_flow.9": 0.28099795475136524,
+              "U_flow.59": -0.003288974193855765,
+              "U_flow.60": 1.3369981188177444,
+              "U_flow.61": -0.663466088520364,
+              "U_flow.62": 1.4468445013975728,
+              "U_flow.63": 1.2813806742395162,
+              "U_flow.64": 0.5466128278989348,
+              "X_flow.30": 1.6241738922893996,
+              "X_flow.31": 1.0596494217267751,
+              "X_flow.32": -0.0008384918707560827
+            },
+            "coverage": "BEFORE_INTERSECTION_AFTER_DIFFERENCE_AND_AFTER_POPULATION_GETTER_NOT_GLOBAL"
+          },
+          "body_observation": {
+            "ACK_s": 650,
+            "signal": "G",
+            "spanning_ids": [
+              "R_flow.0"
+            ],
+            "rows": [
+              {
+                "vehicle_id": "R_flow.0",
+                "entry_time_begin_s": 649,
+                "entry_time_end_s": 650,
+                "entry_signal": "G",
+                "observed_ACK_s": 650,
+                "observed_signal": "G",
+                "head_position_m": 1.7402388643078837,
+                "length_m": 5.0,
+                "speed_m_s": 3.9340293150224332,
+                "rear_position_m": -3.2597611356921163,
+                "status": "REAR_SPANS_LINE",
+                "red_rear_is_not_new_front_entry": true
+              }
+            ],
+            "claim": "actual per-ACK rear observation; no yellow-end clearance deadline or future guarantee"
+          },
+          "legacy_braking_reasons": [],
+          "numeric_stop_classifications": [],
+          "reasons": [
+            "POST_CURRENT_GAP_BOUND_DENIED"
+          ],
+          "terminal_reason": "DiagnosticStop:POST_CURRENT_GAP_BOUND_DENIED"
+        }
+      ],
+      "last_yellow_scope": {
+        "status": "UNKNOWN",
+        "time_s": 644,
+        "yellow_s": 3,
+        "covered_ids": [
+          "R_flow.0",
+          "R_flow.1",
+          "R_flow.2",
+          "R_flow.3",
+          "R_flow.4",
+          "R_flow.5"
+        ],
+        "rows": [
+          {
+            "vehicle_id": "R_flow.2",
+            "population": "storage",
+            "time_s": 644,
+            "position_m": 49.18108549758088,
+            "speed_m_s": 20.916154644432254,
+            "length_m": 5.0,
+            "normal_decel_m_s2": 4.5,
+            "action_step_s": 1.0,
+            "distance_to_meter_m": 155.30891450241913,
+            "one_step_Euler_stop_possible": false,
+            "stop_distance_screen_m": 69.52565743441059,
+            "stop_possible": true,
+            "body_clear_time_screen_s": 3.563066859148932,
+            "clear_possible": false,
+            "status": "WITHIN_LOCAL_yellow_s_SCREEN",
+            "native_future_safety_proven": false
+          },
+          {
+            "vehicle_id": "R_flow.1",
+            "population": "storage",
+            "time_s": 644,
+            "position_m": 87.19526774708712,
+            "speed_m_s": 21.728697447178366,
+            "length_m": 5.0,
+            "normal_decel_m_s2": 4.5,
+            "action_step_s": 1.0,
+            "distance_to_meter_m": 117.2947322529129,
+            "one_step_Euler_stop_possible": false,
+            "stop_distance_screen_m": 74.18828553062454,
+            "stop_possible": true,
+            "body_clear_time_screen_s": 3.64441015036121,
+            "clear_possible": false,
+            "status": "WITHIN_LOCAL_yellow_s_SCREEN",
+            "native_future_safety_proven": false
+          },
+          {
+            "vehicle_id": "R_flow.0",
+            "population": "storage",
+            "time_s": 644,
+            "position_m": 150.1776672291517,
+            "speed_m_s": 19.577119049205432,
+            "length_m": 5.0,
+            "normal_decel_m_s2": 4.5,
+            "action_step_s": 1.0,
+            "distance_to_meter_m": 54.312332770848315,
+            "one_step_Euler_stop_possible": false,
+            "stop_distance_screen_m": 62.16196241217901,
+            "stop_possible": false,
+            "body_clear_time_screen_s": 3.4306356437519283,
+            "clear_possible": false,
+            "status": "UNKNOWN_LOCAL_yellow_s_SCOPE",
+            "native_future_safety_proven": false
+          },
+          {
+            "vehicle_id": "R_flow.5",
+            "population": "ingress",
+            "time_s": 644,
+            "position_m": -97.78617650730496,
+            "speed_m_s": 11.397713848105118,
+            "length_m": 5.0,
+            "normal_decel_m_s2": 4.5,
+            "action_step_s": 1.0,
+            "distance_to_meter_m": 302.27617650730497,
+            "one_step_Euler_stop_possible": false,
+            "stop_distance_screen_m": 25.831922844025915,
+            "stop_possible": true,
+            "body_clear_time_screen_s": 2.70509711464214,
+            "clear_possible": false,
+            "status": "WITHIN_LOCAL_yellow_s_SCREEN",
+            "native_future_safety_proven": false
+          },
+          {
+            "vehicle_id": "R_flow.4",
+            "population": "ingress",
+            "time_s": 644,
+            "position_m": -74.96637200270159,
+            "speed_m_s": 13.607446018831496,
+            "length_m": 5.0,
+            "normal_decel_m_s2": 4.5,
+            "action_step_s": 1.0,
+            "distance_to_meter_m": 279.4563720027016,
+            "one_step_Euler_stop_possible": false,
+            "stop_distance_screen_m": 34.18106681387739,
+            "stop_possible": true,
+            "body_clear_time_screen_s": 2.879384328231344,
+            "clear_possible": false,
+            "status": "WITHIN_LOCAL_yellow_s_SCREEN",
+            "native_future_safety_proven": false
+          },
+          {
+            "vehicle_id": "R_flow.3",
+            "population": "ingress",
+            "time_s": 644,
+            "position_m": -49.26350291833374,
+            "speed_m_s": 15.686188731606435,
+            "length_m": 5.0,
+            "normal_decel_m_s2": 4.5,
+            "action_step_s": 1.0,
+            "distance_to_meter_m": 253.75350291833377,
+            "one_step_Euler_stop_possible": false,
+            "stop_distance_screen_m": 43.02580172311496,
+            "stop_possible": true,
+            "body_clear_time_screen_s": 3.061661602116692,
+            "clear_possible": false,
+            "status": "WITHIN_LOCAL_yellow_s_SCREEN",
+            "native_future_safety_proven": false
+          }
+        ],
+        "classification": "BOUND_LOCAL_FEASIBILITY_NOT_GLOBAL_SAFETY",
+        "diagnostic_yellow_contract": {
+          "policy": "NATIVE_YELLOW_RESPONSIBILITY_COMPLETE_INPUT_DIAGNOSTIC_V1",
+          "enabled": true,
+          "original_witness_status": "UNKNOWN",
+          "witness_established": false,
+          "failed_witness_ids": [
+            "R_flow.0"
+          ],
+          "interpretation": "DIAGNOSTIC_WITNESS_NOT_ESTABLISHED",
+          "input_scope": "ORIGINAL_HARD_FRESH_FRAME_AND_POPULATION_JOINS_REQUIRED",
+          "allow_prepared_step": true,
+          "future_native_safety_proven": false,
+          "safety_certified": null
+        }
+      },
+      "original_logs_preserved": true
+    }
+  },
+  "status": "UNKNOWN_INCOMPLETE_EVIDENCE",
+  "native_safety_proven": false,
+  "formal_effect_proven": false
+}
