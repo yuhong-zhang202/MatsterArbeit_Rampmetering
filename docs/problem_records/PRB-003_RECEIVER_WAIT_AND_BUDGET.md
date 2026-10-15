@@ -10,3 +10,7 @@
 - **下一链接：**[PRB-004](PRB-004_NOMINAL_TWO_CAR_DISCHARGE.md)追踪服务缺额；[Issue #12](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/issues/12)。此归档不修改生产guard、协议或运行权限。
 
 **主要来源快照 SHA-256：** `d2326198719eb413672832d9852e997d252dce7995dfaa53859b6f8fc78549ab`（CANDIDATE_A_NATIVE_WAIT_DIAGNOSTIC_20261012.md；归档时校验，不替代该报告引用的原始证据）。
+
+---
+
+2026-10-15补记：后续G5/Y3、累计纠偏与新154动态／真实闭环见[PRB-004](PRB-004_NOMINAL_TWO_CAR_DISCHARGE.md)。不以它们重写旧E6/N3。后续单独获批取消固定输出字节门及同600秒监控账均按各卡，不把旧300MB／300秒参考视作所有后续运行的统一上限。

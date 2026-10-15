@@ -10,3 +10,7 @@
 - **下一链接：**后续独立原生WAIT诊断见[PRB-003](PRB-003_RECEIVER_WAIT_AND_BUDGET.md)；它没有追溯解除A1证明缺口。[Issue #12](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/issues/12)转向工程资格准备。
 
 **主要来源快照 SHA-256：** `39ecbf80524c4f8cea446b2b93d715dfdb42fee1de8110e884436fdd0714a4fd`（CANDIDATE_A_SAFETY_CONTRACT_REASSESSMENT.md；归档时校验，不替代该报告引用的原始证据）。
+
+---
+
+2026-10-15补记：后续已获明确批准的原生黄灯诊断责任合同与新154源有限观察见[PRB-004](PRB-004_NOMINAL_TWO_CAR_DISCHARGE.md)。它不证明原A1合同或原生未来状态，旧STOP3／UNKNOWN／未测四档均保留为当时系列事实。
