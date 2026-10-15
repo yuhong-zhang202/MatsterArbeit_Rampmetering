@@ -178,3 +178,10 @@ PR13实际审查`9a9c96ed…`指出：上一完整周期N<2并不证明执行器
 ## 2026-10-15 首次自然交通173源实际诊断
 
 **首次自然交通诊断已完成后审：STOP_RETAINED / NOT_QUALIFIED。** 精确卡b73／执行源b6／173源c2f00d7f唯一运行于650秒触发POST_CURRENT_GAP_BOUND_DENIED，未到4200秒及六评价窗。六完整周期N0均继续；独立C≈12.311518、E_scheduled=E_executed12、真实N1，物理短放保留。间距9.610494m低于同帧native查询13.089892m，证实规则触发，未证明碰撞、必然危险或保守误判。下游受限等待恢复、完整时域及长期放行率NOT_TESTED；原reader exit1/UNKNOWN、partial和车尾截断不改判。227raw文件封存，工程→data→science后审完成，科学仅允许资源结算。独立900预算实际账见资源回执；唯一启动权已消耗，不重跑、不正式实验、不合并。GitHub末轮仍REVIEW_PENDING / NO_VERDICT，用户仅撤销其完成作为本次额外门，不再复审。[完整证据及版本边界](../development/NATURAL_ACTUATOR_FIRST_NATIVE_CLOSEOUT_20261015.md)。原154源预排队短诊断不与此运行拼接，不因六个N0周期继续而认定全部普通交通已获资格。
+
+
+## 2026-10-15 Issue16：被动间距查询作用域调查与合同批准
+
+固定SUMO1.26源码、既有649/650帧及独立科学审查支持一个有界的MINIMAL_SCOPE_CHANGE_PROPOSED：当前速度的getSecureGap参考不等于原生下一步跟驰动作的普遍POST不变量。R1在PRE649已低于参考，650角色变为首车后触发旧硬停；不是新证明安全、误报或危险。9改4.5对这两帧查询无影响，不作为修复。
+
+用户现已明确批准四条最小合同及离线实现：新G准入保持严格；仅限定普通被动查询的参考不足转为完整观测；真实异常/必要UNKNOWN仍停。当前实现中，新实际运行未授权；旧650STOP、原readerUNKNOWN和六窗未测保持。独立失败前缀reader已通过工程与科学限定交付审查，最终V3仍exit1/UNKNOWN（full_horizon未到）且qualified=false。详见[唯一判定与批准](../development/ISSUE16_CURRENT_GAP_SCOPE_DECISION_20261015.md)。原启动已消费，预算余额不授权新卡；总体NOT_QUALIFIED。

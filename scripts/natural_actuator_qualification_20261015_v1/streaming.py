@@ -7,6 +7,7 @@ from scripts.unified_alinea_audit_20261013_v1.signal_binding_v2 import validate 
 from scripts.dynamic_minimum_qualification_audit_20261015_v1.current_gap import following
 from scripts.natural_actuator_qualification_20261015_v1.measurements import urban_frame,queue_extent
 from data.processed.issue12_alinea_actuation_20261012_v1.audit_data_V3 import audit_terminal
+from scripts.natural_actuator_qualification_20261015_v1.provenance import gap_stop
 
 
 def jsonl(path,optional=False):
@@ -99,9 +100,11 @@ def scan(raw,receipt,network,trips):
             constraints['empty_storage_seconds']+=not p['storage'];constraints['receiver_unavailable_seconds']+=not p['receiver']['available']
             for d,when,world,meta in [(p.get('native_receiver_decision'),t,w,p['terminal_before']),(r.get('post_native_receiver_decision'),t+1,z,{})]:
                 if d and d['decision']!='READY':
-                    need(d['decision']=='WAIT_NATIVE_FOLLOWING','UNEXPECTED_RECEIVER_DECISION')
+                    if d['decision']=='STOP_CURRENT_GAP_BOUND_DENIED':
+                        need(when==last and when==t+1,'NONTERMINAL_GAP_STOP');gap_stop(receipt,r)
+                    else:need(d['decision']=='WAIT_NATIVE_FOLLOWING','UNEXPECTED_RECEIVER_DECISION')
                     following(d['current_following'],d['current_following']['vehicle_id'],when,world,meta,alarms,advisories)
-                    constraints['WAIT_observations']+=1
+                    constraints['WAIT_observations' if d['decision']=='WAIT_NATIVE_FOLLOWING' else 'terminal_gap_denials']+=1
             fs=r['actual_entry_following'];need(len(fs)==len(xs) and {q['vehicle_id'] for q in fs}=={x['vehicle_id'] for x in xs},'ENTRY_FOLLOWING_POPULATION')
             for q in fs:
                 following(q['before'],q['vehicle_id'],t,w,p['terminal_before'],alarms,advisories);following(q['after'],q['vehicle_id'],t+1,z,{},alarms,advisories)
@@ -111,7 +114,7 @@ def scan(raw,receipt,network,trips):
         if 1200<=t<3000:
             counts,ctx=urban_frame(frame,tls[t,'urban_tls']['state'],t);urban.update(counts);contexts.extend(ctx)
         small_pre.append(dict(time_s=t,phase_requests=pre['phase_requests'],bound_snapshot={k:p[k] for k in ('time_s','cycle_id','program','motion','motion_phase')}))
-        keys=('time_begin_s','observed_time_s','time_end_s','status','accounting_complete','accounting','actual_crossings','post_signal_application_binding','motion','rate_chain','phase_observation','reasons','terminal_reason','native_event_counters')
+        keys=('time_begin_s','observed_time_s','time_end_s','status','accounting_complete','accounting','actual_crossings','post_signal_application_binding','motion','rate_chain','phase_observation','reasons','terminal_reason','native_event_counters','post_native_receiver_decision','post_receiver')
         small={k:r[k] for k in keys if k in r}
         if t>=600:small['constraint_observation']=dict(empty_storage=not p['storage'],receiver_available=p['receiver']['available'],WAIT_before=(p.get('native_receiver_decision') or {}).get('decision')=='WAIT_NATIVE_FOLLOWING')
         small['post_world']={q['vehicle_id']:{} for q in r['actual_crossings']};small_post.append(small)

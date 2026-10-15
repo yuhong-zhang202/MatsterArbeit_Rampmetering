@@ -1,0 +1,44 @@
+# Issue16：650秒间距硬停止的适用性判定
+
+**T1结论：MINIMAL_SCOPE_CHANGE_PROPOSED；用户现已批准四条合同及最小离线实现。** 直接答复为“批准该合同及最小离线实现”，见[非执行批准回执](../../artifacts/issue16_natural_gap_scope_20261015_v1/HUMAN_CONTRACT_APPROVAL_RECEIPT_V1.json)。工程正在落实及离线检查，尚不宣称实现通过；新SUMO运行未授权，仍须准确新卡单独放行。旧650 STOP保持。
+
+## 任务与版本
+
+[Issue16](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/issues/16)要求一次有界根因调查、至多一次必要局部修复及一次获授权的自然复验。开始时GitHub PR15与本地均为 `af988faddaa271ac2a8f80fe3fd3558ff2898618`；新分支 `codex/issue-16-natural-gap-scope` 从该精确提交建立，后续Draft PR以 `codex/natural-actuator-qualification` 为base。PR13仍为61612bf，末轮REVIEW_PENDING / NO_VERDICT，不重复触发。未改上游分支或重用旧运行身份。
+
+主代理完整读取Issue16/14/12和PR15/13正文及可见评论/审查、AGENTS、DECISIONS、七项资格方案、问题索引和相关三方回执。PROJECT_STATE470行与WORKLOG3054行由三代理分段完整阅读并回报历史冲突，相关长输出截断处补读。旧Stage6状态及旧恢复授权不能覆盖D018、当前Issue16和已消费的单次启动许可；无关memory ledger与WORKLOG插入保留。正式协议仍0B/未冻结。
+
+首次自然run01的650 STOP、原reader exit1/UNKNOWN、车尾截断、六窗未测和NOT_QUALIFIED均不改判。173执行源及卡b73保留。独立900预算已耗83.637436041、余816.362563959秒，但唯一启动权已消费；余额不批准新启动。[首次收口](NATURAL_ACTUATOR_FIRST_NATIVE_CLOSEOUT_20261015.md)。
+
+## 科研定位与完成边界
+
+执行器服务于可信的交通效果实验，不重开A1完备预测证明，不改ALINEA核心、模型、路网、输入或黄红配时。直接实测、固定官方源码、工程推断和未验证项分别记录。只有经过科学审查且用户明确批准的安全合同才能实施；新精确卡/预算/三方/canonical仍是后续独立门。
+
+论文整体阶段判断：场景探索已依D018结项，当前卡在正式实验前执行器资格；正式设计尚未冻结，正式结果与论文章节完成率缺少可核证据，因此不编百分比或毕业日期。后续资格即使通过，也只支持固定自然条件的预实验用途。
+
+## 根因及唯一合同提案
+
+实测确认：R1在PRE649已经低于相同的参考间距；R0跨入内部连接后，R1成为储存段首车，POST650检查才硬停。固定SUMO1.26源码中，getSecureGap按当前速度计算参考，而普通Krauss跟驰按当时条件计算下一步速度；未找到必须在运动后满足该参考不等式的原生要求。**旧合同确实被触发；尚未证明实际危险，也未证明误报。** 两帧把前车制动参数9改为4.5均不会改变查询，不能这样造PASS。[工程源码与实测判定](../../artifacts/issue16_natural_gap_scope_20261015_v1/engineering/T1_MECHANISM_AND_SCOPE_REPORT_V1.md)、[科学终审](../../artifacts/issue16_natural_gap_scope_20261015_v1/SCIENCE_T1_REVIEW_V1.md)。
+
+下列四项合同已经用户明确批准，仅允许最小实现和离线验证：
+
+1. **每次新G严格准入保持。** fresh完整观测、原prospective接收/空间检查不变；已知不足保持实际红灯，必要观测未知停止。不改配时、模型或接收布尔值。
+2. **普通被动跟驰查询统一改为观测责任。** 在有效既有信号计划、无车辆速度/安全模式/车型setter、前后车与路径/距离完整绑定、query有限且实际gap非负时，ongoing PRE、POSTreceiver及实际entry前后快照中的参考不足单独保留为BELOW_NATIVE_REFERENCE_OBSERVED，不再仅凭该值停止。查询参数、数值和旧失败字段仍保留；这不是接收容量或安全通过证明。
+3. **真实异常和必要观测UNKNOWN仍停止。** 碰撞/teleport、既有超过4.5m/s²制动、红灯新入口、负gap/重叠、相位/ACK/身份/车尾/路径/日志异常保持硬停。黄灯责任沿既有已批诊断合同，不扩大证明。
+4. **只限科研技术诊断责任。** 旧STOP/FAIL/UNKNOWN/raw不改；未来仍需新合同实现/reader精确绑定、单独新卡批准、真实剩余预算及canonical。未记录的native私有分支和未来动作是限制，不另建A1完整预测器。
+
+科学审查未发现阻碍提交此提案的新Blocker/Major；这不等于新执行器安全或资格通过。用户现已接受上述责任边界；若后续仍有无法消除的实质安全或科研阻塞，应停止本路线追加调试，交Robert讨论更简单的原生信号操作路线。
+
+## 运行前资格口径（建议，未冻结）
+
+账目、唯一N、指令应用和partial/pending采用精确复算；表示误差沿既有输出精度，跨界不确定保留UNKNOWN。六窗全部保留，不能删除空/受限窗。C−E_scheduled的调度误差与实际E_executed−N分开；不能宣称动态误差始终≤1/8辆。现有文献不支持通用5%/10%实际服务阈值，不强求供给不足时C=N，也不免除未解释持续短放。若需要数值物理服务门，必须在新运行前以用途/可评条件论证并审定；不能跑后挑阈值。整个4200秒、六窗、完整人口/安全/实际服务审查仍是后续资格门，不能由本次提案代替。
+
+## 证据入口
+
+- [有限原始证据与角色/时点核查](../../data/processed/issue16_natural_gap_scope_20261015_v1/DATA_T0_T1_REPORT_V1.md)
+- [reader最小修复计划](../../data/processed/issue16_natural_gap_scope_20261015_v1/READER_MINIMAL_PLAN_V1.md)
+- 固定官方SUMO v1_26_0 commit `fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3`；源码索引与本地缓存位于 `artifacts/issue16_natural_gap_scope_20261015_v1/engineering/`，完整第三方源码不重复公开导入PR。
+
+## 模型建议
+
+建议复杂根因与科学边界判定使用GPT-6 Astra；常规局部实现可用GPT-6.1 Sol。官方将Astra定位于复杂推理/编码、Sol定位于能力与成本平衡；这是任务选择建议，不是正确性保证，也未改变本聊天或代理设置。[OpenAI模型说明](https://developers.openai.com/api/docs/models)（2026-10-15实际检索并打开）。
