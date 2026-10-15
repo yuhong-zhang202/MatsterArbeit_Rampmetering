@@ -184,4 +184,6 @@ PR13实际审查`9a9c96ed…`指出：上一完整周期N<2并不证明执行器
 
 固定SUMO1.26源码、既有649/650帧及独立科学审查支持一个有界的MINIMAL_SCOPE_CHANGE_PROPOSED：当前速度的getSecureGap参考不等于原生下一步跟驰动作的普遍POST不变量。R1在PRE649已低于参考，650角色变为首车后触发旧硬停；不是新证明安全、误报或危险。9改4.5对这两帧查询无影响，不作为修复。
 
-用户现已明确批准四条最小合同及离线实现：新G准入保持严格；仅限定普通被动查询的参考不足转为完整观测；真实异常/必要UNKNOWN仍停。当前实现中，新实际运行未授权；旧650STOP、原readerUNKNOWN和六窗未测保持。独立失败前缀reader已通过工程与科学限定交付审查，最终V3仍exit1/UNKNOWN（full_horizon未到）且qualified=false。详见[唯一判定与批准](../development/ISSUE16_CURRENT_GAP_SCOPE_DECISION_20261015.md)。原启动已消费，预算余额不授权新卡；总体NOT_QUALIFIED。
+用户现已明确批准四条最小合同及离线实现：新G准入保持严格；仅限定普通被动查询的参考不足转为完整观测；真实异常/必要UNKNOWN仍停。最小实现及工程→data→science离线复核已完成，GO仅支持交付/非执行新卡准备；新实际运行未授权；旧650STOP、原readerUNKNOWN和六窗未测保持。独立失败前缀reader已通过工程与科学限定交付审查，最终V3仍exit1/UNKNOWN（full_horizon未到）且qualified=false。详见[唯一判定与批准](../development/ISSUE16_CURRENT_GAP_SCOPE_DECISION_20261015.md)。原启动已消费，预算余额不授权新卡；总体NOT_QUALIFIED。
+
+新独立run02卡dc9c1ce4（176源4eb466ec）已一次prepare/validate及工程→data→science准确卡复核，GO仅交人审。总816秒=786+30，预算账与start1不重置；execution=false，无新raw/canonical。有限运行/测量用途与数值跟踪NOT_ASSESSED为待确认边界，仍非自然服务资格通过。

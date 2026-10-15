@@ -106,7 +106,7 @@ def audit(manifest_path,card_path,root=ROOT,postanalysis_reader_v1=False):
     result['native_terminal_evidence']['last_selected_cycle']=receipt.get('cycles',[])[-1:]
     if (raw/'failure_snapshot.json').exists():result['native_terminal_evidence']['failure_snapshot']=provenance.read(raw/'failure_snapshot.json')
     trips=run('trip_schema',lambda:records(raw/'tripinfo.xml','tripinfo'))
-    scan=run('native_stream_joins',lambda:streaming.scan(raw,receipt,network,trips)) if trips is not None else None
+    scan=run('native_stream_joins',lambda:streaming.scan(raw,receipt,network,trips,proof['current_gap_contract'])) if trips is not None else None
     if trips is not None:result['domains']['trip_schema']=dict(status='PASS_XML_SCHEMA',records=len(trips))
     if scan is not None:
         files={name:lines(raw/name,True) for name in ('command_events.jsonl','feedback_events.jsonl','admission.jsonl','policy_phase_requests.jsonl','policy_duration_requests.jsonl')}
@@ -132,6 +132,7 @@ def audit(manifest_path,card_path,root=ROOT,postanalysis_reader_v1=False):
         result['domains']['constraints']=dict(status='OBSERVED_ONLY_NO_CAUSAL_ALLOCATION',WAIT_branch_status='OBSERVED' if scan['constraints'].get('WAIT_observations',0) else 'NOT_TESTED_NO_OBSERVED_WAIT',**scan['constraints'])
         result['domains']['urban']=dict(status='PASS_OBSERVED_DESCRIPTIVE_EXPOSURE' if last>=3000 else 'UNKNOWN_EVALUATION_NOT_COMPLETE',counts=scan['urban_counts'],U_context=scan['urban_contexts'],scope='Legacy1.389m/s descriptive exposure; not contiguous queue or causal delay')
         result['observed_alarms'].extend(scan['alarms']);result['missing_or_unknown'].extend(scan['missing'])
+        result['ordinary_reference_observations']=scan['reference_observations']
         result['domains']['native_stream_joins']=dict(status='PASS_JOIN_INTEGRITY',independent_physical_N=len(scan['entries']),entries=scan['entries'],body_rows_checked=scan['body_rows'],populations_checked=scan['populations'],arrivals_checked=len(scan['arrivals']),identity_scope=scan['identity_scope'],body_censored_ids=receipt['body_censored_ids'],partial_final_cycle=receipt.get('partial_final_cycle'),censor_scope='No clearance after last ACK is imputed',legacy_advisories=scan['advisories'])
         if scan['post'] and last>600:
             from fractions import Fraction
@@ -143,7 +144,7 @@ def audit(manifest_path,card_path,root=ROOT,postanalysis_reader_v1=False):
         reds=[r for r in scan['post'] if r['time_begin_s']>=600 and r['motion']=='r']
         if reds:run('first_red_checkpoint',lambda:(checkpoint(provenance.read(raw/'first_red_checkpoint.json'),reds) or dict(status='PASS_FIRST_RED_CHECKPOINT')))
         else:result['domains']['first_red_checkpoint']=dict(status='NOT_TESTED_NO_CONTROLLED_RED')
-    run('EOF_ownership',lambda:provenance.eof(raw,receipt,lines(raw/'log_intervals.jsonl'),provenance.read(provenance.resolve(root,card['guardian']['receipt'])),provenance.read(raw/'owned_process_identity.json'),proof['card_sha256'],provenance.sha(raw/'release.json'),scan['post'][-1] if scan is not None else None))
+    run('EOF_ownership',lambda:provenance.eof(raw,receipt,lines(raw/'log_intervals.jsonl'),provenance.read(provenance.resolve(root,card['guardian']['receipt'])),provenance.read(raw/'owned_process_identity.json'),proof['card_sha256'],provenance.sha(raw/'release.json'),scan['post'][-1] if scan is not None else None,card['guardian']))
     if receipt['final_logs'].get('status')!='BOUND_NO_OBSERVED_NATIVE_MESSAGE':result['observed_alarms'].append(dict(kind='NATIVE_FINAL_LOG_MESSAGE_OR_UNKNOWN',detail=receipt['final_logs']))
     if receipt.get('error'):result['observed_alarms'].append(dict(kind='RUNTIME_STOP_RETAINED',status=receipt['status'],error=receipt['error'],last_completed=last,last_accounted=receipt['last_accounted_s'],unobserved_preparation_tail=receipt.get('pending')))
     if last!=4200:result['missing_or_unknown'].append(dict(domain='full_horizon',status='NOT_TESTED_OR_TRUNCATED',last_ACK=last,target=4200))

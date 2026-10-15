@@ -5,7 +5,7 @@
 
 ## Current Phase
 
-**Issue16有界后续：四条最小合同已获用户批准，仅实施与离线验证。** 新分支 `codex/issue-16-natural-gap-scope` 基于PR15准确 `af988faddaa271ac2a8f80fe3fd3558ff2898618`；固定官方源码及既有649/650帧支持 `MINIMAL_SCOPE_CHANGE_PROPOSED`，用户明确答复“批准该合同及最小离线实现”。保留新绿灯严格准入和真实异常/必要UNKNOWN硬停，将限定普通被动跟驰参考不足记为观测；实现和独立审查正在进行。既有failed-prefix reader已修复并离线核对，原650 STOP、六窗未测、整体UNKNOWN/NOT_QUALIFIED不改判。此次没有新SUMO权限，新精确卡/启动/预算/canonical须另行放行；独立900余额不授权重跑。[本次判定与批准](development/ISSUE16_CURRENT_GAP_SCOPE_DECISION_20261015.md)。
+**Issue16有界后续：四条最小合同已获用户批准，仅实施与离线验证。** 新分支 `codex/issue-16-natural-gap-scope` 基于PR15准确 `af988faddaa271ac2a8f80fe3fd3558ff2898618`；固定官方源码及既有649/650帧支持 `MINIMAL_SCOPE_CHANGE_PROPOSED`，用户明确答复“批准该合同及最小离线实现”。保留新绿灯严格准入和真实异常/必要UNKNOWN硬停，将限定普通被动跟驰参考不足记为观测；最小实现及工程→data→science离线审查完成，未发现未处理Blocker/Major；目前GO仅限离线交付与非执行新卡准备。既有failed-prefix reader已修复并离线核对，原650 STOP、六窗未测、整体UNKNOWN/NOT_QUALIFIED不改判。此次没有新SUMO权限，独立run02准确卡dc9c1ce4已准备/校验且三方精确复核完成，176源4eb466ec；拟总816秒=worker786+清理30，execution=false/观测null，无新raw/canonical；新精确卡/一次启动/限定用途仍须用户单独批准，随后核canonical及实时门；独立900余额不授权重跑。[本次判定与批准](development/ISSUE16_CURRENT_GAP_SCOPE_DECISION_20261015.md)。
 
 **首次自然交通诊断已完成后审：STOP_RETAINED / NOT_QUALIFIED。** 精确卡b73／执行源b6／173源c2f00d7f唯一运行于650秒触发POST_CURRENT_GAP_BOUND_DENIED，未到4200秒及六评价窗。六完整周期N0均继续；独立C≈12.311518、E_scheduled=E_executed12、真实N1，物理短放保留。间距9.610494m低于同帧native查询13.089892m，证实规则触发，未证明碰撞、必然危险或保守误判。下游受限等待恢复、完整时域及长期放行率NOT_TESTED；原reader exit1/UNKNOWN、partial和车尾截断不改判。227raw文件封存，工程→data→science后审完成，科学仅允许资源结算。独立900预算已结算83.637436041秒，账面余816.362563959秒、start1、unknown预留空，旧余额不pool；唯一启动权已消耗，不重跑、不正式实验、不合并。GitHub末轮仍REVIEW_PENDING / NO_VERDICT，用户仅撤销其完成作为本次额外门，不再复审。[本次完整收口](development/NATURAL_ACTUATOR_FIRST_NATIVE_CLOSEOUT_20261015.md)。
 

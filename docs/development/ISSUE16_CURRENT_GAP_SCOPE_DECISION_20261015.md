@@ -1,6 +1,6 @@
 # Issue16：650秒间距硬停止的适用性判定
 
-**T1结论：MINIMAL_SCOPE_CHANGE_PROPOSED；用户现已批准四条合同及最小离线实现。** 直接答复为“批准该合同及最小离线实现”，见[非执行批准回执](../../artifacts/issue16_natural_gap_scope_20261015_v1/HUMAN_CONTRACT_APPROVAL_RECEIPT_V1.json)。工程正在落实及离线检查，尚不宣称实现通过；新SUMO运行未授权，仍须准确新卡单独放行。旧650 STOP保持。
+**T1结论：MINIMAL_SCOPE_CHANGE_PROPOSED；用户现已批准四条合同及最小离线实现。** 直接答复为“批准该合同及最小离线实现”，见[非执行批准回执](../../artifacts/issue16_natural_gap_scope_20261015_v1/HUMAN_CONTRACT_APPROVAL_RECEIPT_V1.json)。最小实现及工程→数据→科学离线审查已完成，GO仅支持离线交付与非执行新卡准备；新SUMO运行未授权，仍须准确新卡单独放行。旧650 STOP保持。
 
 ## 任务与版本
 
@@ -32,6 +32,18 @@
 ## 运行前资格口径（建议，未冻结）
 
 账目、唯一N、指令应用和partial/pending采用精确复算；表示误差沿既有输出精度，跨界不确定保留UNKNOWN。六窗全部保留，不能删除空/受限窗。C−E_scheduled的调度误差与实际E_executed−N分开；不能宣称动态误差始终≤1/8辆。现有文献不支持通用5%/10%实际服务阈值，不强求供给不足时C=N，也不免除未解释持续短放。若需要数值物理服务门，必须在新运行前以用途/可评条件论证并审定；不能跑后挑阈值。整个4200秒、六窗、完整人口/安全/实际服务审查仍是后续资格门，不能由本次提案代替。
+
+## 获批合同的离线实现
+
+自然版本新增被动参考分类模块，接入PRE/POST/实际entry前后；新G仍严格准入，原query/legacy失败保持，真实硬异常独立停止。policy、producer、bridge和旧receiver字节未变。工程3方法首轮PASS2.976秒；独立data加强字段核对后3方法PASS0.068秒，再仅受影响pending/held方法PASS0.067秒。26项工程、35项data、8项静态绑定获科学只读核对，无未处理Blocker/Major；这不是最终全套重跑或原生验证。[科学终审](../../artifacts/issue16_natural_gap_scope_20261015_v1/SCIENCE_IMPLEMENTATION_REVIEW_V1.md)。保存fixture缺REQUESTED/feedback/command_records，完整生命周期仍未测。
+
+独立run02已唯一prepare/validate成功（exit0，各1.675902417/1.410167541秒）。准确卡SHA `dc9c1ce418ab61eb4e36b26e1436c94b31ba78cde9a630df596a0e5a4ce4c509`，176源摘要 `4eb466ec0a28f783089230941f1a6139ce9f0ed45a0e0dced82a7dc1e278d66f`；工程199/data20最终绑定获科学复核，GO仅交人审。卡拟使用原900账剩余中的总816秒（worker786+清理30），不重置已耗83.637436041及start1。卡execution=false/观测null，无新raw/guardian/canonical/启动权。准确卡及有限用途仍须用户确认。[唯一运行请求](../../artifacts/issue16_natural_gap_scope_20261015_v1/RUN02_REQUEST_V1.md)、[精确卡科学复核](../../artifacts/issue16_natural_gap_scope_20261015_v1/SCIENCE_EXACT_CARD_REVIEW_V1.md)。公开推送72a2e61时被自动审批拒绝，要求具体发布范围的人类批准；当前仅本地交付，待最终文件范围固定后统一提交批准请求。
+
+## 已完成的失败前缀读取修复
+
+独立reader修复、工程静态复核和科学终审均仅支持失败前缀交付。4方法/17拒绝变体通过（0.567秒）；最终V3对同一旧raw只读审计exit1，完整时域未到仍UNKNOWN，qualified=false。精确终止原因、ACK及query绑定下分别解释worker1与nativeEOF0；原间距告警、650 STOP、partial、六窗null和车尾截断全部保留。新到达的endpoint重复ID异常已窄修，第一次失败和源重建限制保留。显式后分析模式区分173执行快照与15项当前reader闭包，不向旧卡写入新源码。[reader报告](../../data/processed/issue16_natural_gap_scope_20261015_v1/reader_fix_v1/READER_FIX_REPORT_V1.md)、[科学复核](../../artifacts/issue16_natural_gap_scope_20261015_v1/SCIENCE_READER_REVIEW_V1.md)。
+
+新合同后的运行/测量资格与数值跟踪精度应分开：前者仍需完整4200秒和七域实际证据；后者没有获批数值容差，建议NOT_ASSESSED。该用途限定仍是待用户随准确新卡确认的方法建议，不能偷换成完整ALINEA服务准确资格。[预声明口径建议](../../artifacts/issue16_natural_gap_scope_20261015_v1/SCIENCE_PREDECLARED_CRITERIA_PROPOSAL_V1.md)。
 
 ## 证据入口
 

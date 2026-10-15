@@ -4,7 +4,7 @@ import math
 import os
 from pathlib import Path
 from src.candidate_a_native_yellow_minqual_20261015 import budget as previous
-from src.candidate_a_natural_service_20261015.profile import RAW, TASK, RUN, sha, require
+from src.candidate_a_natural_service_20261015.profile import RAW, TASK, RUN, HISTORICAL_RUN, sha, require
 
 APPROVAL=Path('artifacts/natural_actuator_qualification_20261015_v1/NATIVE_BUDGET_APPROVAL.json')
 SCOPE='NATURAL_QUALIFICATION_20261015_V1'
@@ -29,7 +29,7 @@ def accounting(root):
     names=set()
     for base in (root/RAW,root/TASK/'runs'):
         for parent in base.iterdir() if base.exists() else ():
-            require(parent.is_dir() and parent.name==RUN,'UNPREPARED_NATURAL_IDENTITY')
+            require(parent.is_dir() and parent.name in (HISTORICAL_RUN,RUN),'UNPREPARED_NATURAL_IDENTITY')
             names.add(parent.name)
     # The live, exact outer-owned worker uses its already-reserved envelope.
     # Every other process sees even a pre-raw early failure as fully reserved.

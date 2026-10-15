@@ -18,8 +18,9 @@ ROUTES = {
     'U': ('urban_in', 'shared_approach', 'urban_out'),
     'X': ('cross_in', 'cross_out'),
 }
-PROFILE = 'NATIVE_PHASE_CURRENT_FOLLOWING_WAIT_DIAGNOSTIC_NOT_QUALIFIED'
-from src.candidate_a_dynamic_minqual_20261015.receiver_wait import classify_receiver, current_following
+PROFILE = 'NATIVE_PHASE_PASSIVE_REFERENCE_OBSERVATION_DIAGNOSTIC_NOT_QUALIFIED'
+from src.candidate_a_natural_service_20261015.current_gap_scope import (
+    classify_receiver, current_following, classification, ACCEPTED, BELOW)
 from src.candidate_a_natural_service_20261015.policy import Ledger, parameters, yellow_scope
 from src.candidate_a_native_yellow_minqual_20261015.yellow_contract import annotate_yellow_scope
 from src.candidate_a_issue12_packet_policy_20261012.body import BodyTracker
@@ -175,9 +176,9 @@ class StepAdapter:
         else:
             require(program == 'A_OPEN' and type(phase) is int and phase == 0 and state == 'G', 'OPEN_PHASE_MISMATCH')
             motion = 'G'
-        native_decision = classify_receiver(conn, receiver, time_s) if motion == 'G' else None
-        require(receiver['available'] or motion != 'G' or native_decision['decision'] == 'WAIT_NATIVE_FOLLOWING', 'CURRENT_GAP_BOUND_DENIED')
-        entry_before = {vid: current_following(conn, vid, time_s, allow_clear=True) for vid in sorted(ids[STORAGE])} if motion in ('G','y') else {}
+        native_decision = classify_receiver(conn, receiver, time_s, role='ONGOING_PRE_RECEIVER') if motion == 'G' else None
+        require(receiver['available'] or motion != 'G' or native_decision['decision'] in ('WAIT_NATIVE_FOLLOWING', BELOW), 'CURRENT_GAP_BOUND_DENIED')
+        entry_before = {vid: current_following(conn, vid, time_s, allow_clear=True, role='ENTRY_BEFORE') for vid in sorted(ids[STORAGE])} if motion in ('G','y') else {}
         entering_red = motion == 'r' and (self.previous_motion != 'r' or state == 'y')
         shadow = red_transition_witness(vehicles) if entering_red else None
         numeric_before = ({vid:numeric_stop.read_vehicle_state(conn,vid,time_s) for vid in sorted(ids[STORAGE])}
@@ -297,8 +298,8 @@ class StepAdapter:
             _, _, post_internal, post_receiver = self.observe(conn)
             if type(post_receiver.get('available')) is not bool: errors.append('UNKNOWN_POST_RECEIVER')
             if p['motion'] == 'G':
-                row['post_native_receiver_decision'] = classify_receiver(conn, post_receiver, self.last_completed)
-                if row['post_native_receiver_decision']['decision'] not in ('READY','WAIT_NATIVE_FOLLOWING'):
+                row['post_native_receiver_decision'] = classify_receiver(conn, post_receiver, self.last_completed, role='POST_RECEIVER')
+                if row['post_native_receiver_decision']['decision'] not in ('READY','WAIT_NATIVE_FOLLOWING', BELOW):
                     errors.append('POST_CURRENT_GAP_BOUND_DENIED')
             if set(post_internal) != set(conn.lane.getLastStepVehicleIDs(INTERNAL)): errors.append('POST_INTERNAL_COVERAGE_MISMATCH')
             row['post_receiver'] = post_receiver
@@ -313,13 +314,13 @@ class StepAdapter:
             row['actual_entry_following'].append(bound)
             try:
                 require(bound['before'] is not None and bound['before']['vehicle_id']==vid, 'UNKNOWN_ENTRY_BEFORE_BINDING')
-                allowed = {'CURRENT_GAP_OBSERVED_WITHIN_BOUND','CLEAR_WITHIN_OBSERVED_LOOKAHEAD'}
-                before_status = bound['before'].get('status')
+                allowed = ACCEPTED
+                before_status = classification(bound['before'])
                 if before_status not in allowed:
                     reason = 'ACTUAL_ENTRY_BEFORE_CURRENT_GAP_BOUND_DENIED' if before_status == 'STOP_CURRENT_GAP_BOUND_DENIED' else 'ACTUAL_ENTRY_BEFORE_FOLLOWING_UNKNOWN'
                     errors.append(reason+':'+vid)
-                bound['after'] = current_following(conn, vid, self.last_completed, allow_clear=True)
-                after_status = bound['after'].get('status')
+                bound['after'] = current_following(conn, vid, self.last_completed, allow_clear=True, role='ENTRY_AFTER')
+                after_status = classification(bound['after'])
                 if after_status not in allowed:
                     reason = 'ACTUAL_ENTRY_AFTER_CURRENT_GAP_BOUND_DENIED' if after_status == 'STOP_CURRENT_GAP_BOUND_DENIED' else 'ACTUAL_ENTRY_AFTER_FOLLOWING_UNKNOWN'
                     errors.append(reason+':'+vid)
@@ -361,7 +362,7 @@ class StepAdapter:
                 try:
                     before_state=p.get('numeric_stop_before',{}).get(vid)
                     after_state=numeric_stop.read_vehicle_state(conn,vid,self.last_completed)
-                    following=current_following(conn,vid,self.last_completed,allow_clear=True)
+                    following=current_following(conn,vid,self.last_completed,allow_clear=True,role='ENTRY_AFTER')
                     binding=row['post_signal_application_binding']
                     evidence=dict(run_id=self.numerical_authority['run_id'],mode=self.numerical_authority['mode'],
                         execution_card_sha256=self.numerical_authority['execution_card_sha256'],

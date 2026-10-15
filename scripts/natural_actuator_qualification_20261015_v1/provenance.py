@@ -17,6 +17,40 @@ def resolve(root,path):
 
 
 POSTANALYSIS_PATHS=frozenset('scripts/natural_actuator_qualification_20261015_v1/'+n for n in ('actual.py','streaming.py','provenance.py'))
+CURRENT_GAP_CONTRACT='ORDINARY_NATIVE_REFERENCE_OBSERVATION_V1'
+
+
+def resource_card(card,root,budget=None):
+    run=card['spec']['run_id']
+    bounds={'QUAL_NATURAL_ALINEA_R900_S17_01':(900,870),'QUAL_NATURAL_ALINEA_R900_S17_02':(816,786)}
+    need(run in bounds,'UNKNOWN_NATURAL_RESOURCE_IDENTITY');outer,inner=bounds[run]
+    need(card['resources']==dict(wall_limit_s=outer,startup_limit_s=60,run_limit_bytes=None,minimum_free_bytes=5000000000),'EXACT_RESOURCE_CARD_LIMITS')
+    expected=dict(schema='NATURAL_QUALIFICATION_GUARDIAN_V1',inner_wall_limit_s=inner,cleanup_reserve_s=30,outer_wall_limit_s=outer,receipt=f'data/raw/natural_actuator_qualification_20261015_v1/{run}/guardian_receipt.json',fallback_receipt=f'artifacts/natural_actuator_qualification_20261015_v1/engineering/runs/{run}/guardian_receipt.json')
+    need(card['guardian']==expected,'GUARDIAN_CARD_SCHEMA')
+    if run.endswith('_02'):
+        spent=83.63743604102638
+        need(card['spec'].get('current_gap_responsibility_contract',{}).get('policy')==CURRENT_GAP_CONTRACT,'RUN02_CURRENT_GAP_CONTRACT_REQUIRED')
+        need(card['resources_status']=='PROPOSED_PENDING_EXACT_CARD_EXECUTION_APPROVAL','RUN02_RESOURCE_STATUS')
+        need(card['resources_scope']==dict(scope_id='NATURAL_QUALIFICATION_20261015_V1',approved_total_monitored_s=900,charged_before_preparation_s=spent,remaining_before_preparation_s=900-spent,start_count_before_preparation=1,unknown_reserved_before_preparation=[],budget_approval_sha256=sha(resolve(root,'artifacts/natural_actuator_qualification_20261015_v1/NATIVE_BUDGET_APPROVAL.json')),old_scope_available_not_pooled=True,current_identity_ordinal=2,max_new_identities=2,further_identity_prepared=False),'RUN02_EXISTING_RESOURCE_SCOPE')
+        need(card['qualification_proposal']==dict(status='PROPOSED_PENDING_EXACT_CARD_USER_CONFIRMATION',purpose='LIMITED_OPERATIONAL_AND_MEASUREMENT_QUALIFICATION_NOT_FORMAL',required_horizon_s=4200,required_evaluation_windows_s=[[t,t+300] for t in range(1200,3000,300)],technical_pass='EXACT_ACCOUNTING_VERSION_POPULATION_EOF_ONLY',not_qualified='HARD_ANOMALY_REQUIRED_UNKNOWN_OR_UNEXPLAINED_PERSISTENT_LOSS_WITH_OPPORTUNITY',not_tested='BRANCH_NOT_OBSERVED_OR_INSUFFICIENT_OPPORTUNITY',alinea_numeric_tracking_accuracy='NOT_ASSESSED',native_safety_proven=False,formal_experiment_authorized=False),'RUN02_QUALIFICATION_PROPOSAL')
+        if budget is not None:need(budget['known_settled']=={'QUAL_NATURAL_ALINEA_R900_S17_01':spent} and budget['charged_monitored_s']==spent and budget['remaining_s']==900-spent and budget['start_count']==1,'RUN02_NATIVE_RESOURCE_BASELINE')
+    return dict(run_id=run,outer_wall_limit_s=outer,inner_wall_limit_s=inner,cleanup_reserve_s=30)
+
+
+def guardian_receipt_limits(guardian,card_guardian):
+    need(all(type(guardian.get(k)) is int and guardian[k]==card_guardian[k] for k in ('inner_wall_limit_s','cleanup_reserve_s','outer_wall_limit_s')),'GUARDIAN_RECEIPT_CARD_LIMITS')
+
+
+def current_gap_contract(spec,root):
+    item=spec.get('current_gap_responsibility_contract')
+    if item is None:return dict(enabled=False)
+    path='artifacts/issue16_natural_gap_scope_20261015_v1/HUMAN_CONTRACT_APPROVAL_RECEIPT_V1.json'
+    need(item==dict(policy=CURRENT_GAP_CONTRACT,prospective_new_green='UNCHANGED_STRICT',ordinary_current_queries='OBSERVATIONAL_ONLY',approval_receipt=path,approval_sha256=item.get('approval_sha256'),native_safety_proven=False),'UNKNOWN_CURRENT_GAP_CARD_CONTRACT')
+    need(item['native_safety_proven'] is False,'CURRENT_GAP_NOT_SAFETY_CERTIFICATE')
+    need(sha(resolve(root,path))==item['approval_sha256'],'CURRENT_GAP_APPROVAL_HASH')
+    approval=read(resolve(root,path))
+    need(approval['schema']=='ISSUE16_CONTRACT_APPROVAL_RECEIPT_V1' and approval['answer']=='批准该合同及最小离线实现' and approval['approved_document']=='docs/development/ISSUE16_CURRENT_GAP_SCOPE_DECISION_20261015.md' and approval['SUMO_execution_authorized'] is False and approval['new_exact_card_approval_required'] is True,'CURRENT_GAP_EXPLICIT_APPROVAL')
+    return dict(enabled=True,**item)
 
 
 def execution_sources(root,raw,sources,postanalysis_reader_v1=False):
@@ -80,16 +114,17 @@ def verify(manifest_path,card_path,root,postanalysis_reader_v1=False):
     need(sha(budget_path)==release['budget_approval_sha256'],'BUDGET_APPROVAL_HASH')
     b=read(budget_path);need(b['status']=='DIRECT_USER_APPROVED_INDEPENDENT_NUMERIC_BUDGET' and b['scope_id']==budget['scope_id'] and b['total_monitored_s']==900,'BUDGET_APPROVAL_NOT_GRANTED')
     need(sha(resolve(root,b['direct_user_authority']['path']))==b['direct_user_authority']['sha256'],'BUDGET_USER_AUTHORITY_HASH')
-    need(card['guardian']==dict(schema='NATURAL_QUALIFICATION_GUARDIAN_V1',inner_wall_limit_s=870,cleanup_reserve_s=30,outer_wall_limit_s=900,receipt=card['guardian']['receipt'],fallback_receipt=card['guardian']['fallback_receipt']),'GUARDIAN_CARD_SCHEMA')
+    resource_proof=resource_card(card,root,budget)
     inherited=[h for p,h in card['inherited_inputs_sha256'].items() if p.endswith('/demand.rou.xml')]
     need(len(inherited)==1 and sha(package/'demand.rou.xml')==inherited[0],'NATURAL_REQUESTS_CHANGED')
-    return card,receipt,raw,package,net,dict(status='PASS_NATIVE_HASH_PROVENANCE',card_sha256=sha(card_path),manifest_sha256=sha(manifest_path),files=len(actual),bytes=manifest['bytes'],source_versions=source_proof)
+    return card,receipt,raw,package,net,dict(status='PASS_NATIVE_HASH_PROVENANCE',card_sha256=sha(card_path),manifest_sha256=sha(manifest_path),files=len(actual),bytes=manifest['bytes'],source_versions=source_proof,current_gap_contract=current_gap_contract(s,root),resource_contract=resource_proof)
 
 
-def eof(raw,receipt,logs,guardian,identity,card_sha,release_sha,terminal_row=None):
+def eof(raw,receipt,logs,guardian,identity,card_sha,release_sha,terminal_row=None,card_guardian=None):
     log_eof(logs,raw,receipt)
     need(receipt['final_logs']['process_returncode']==0 and receipt['final_logs']['all_streams_bound'] is True,'NATIVE_FINAL_PROCESS_EOF')
     need(guardian['card_sha256']==card_sha and guardian['release_sha256']==release_sha and guardian['run_id']==receipt['run_id'],'GUARDIAN_IDENTITY')
+    if card_guardian is not None:guardian_receipt_limits(guardian,card_guardian)
     clean=guardian['group_cleanup'];need(clean['ownership_verified'] is True and clean['no_live_owned_members'] is True,'OWNED_CLEANUP_UNKNOWN')
     failed_prefix=guardian['worker_returncode']==1
     if failed_prefix:gap_stop(receipt,terminal_row)
