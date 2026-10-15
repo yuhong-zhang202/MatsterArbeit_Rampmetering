@@ -41,3 +41,8 @@ PROJECT_STATE、WORKLOG、PRB-004与Dashboard仅更新当前事实和待办；DE
 发布内容已备好：113文件，约27.4MB，包含新代码、限定测试、治理／方法文档和明确标注的合成观察／审计材料。最大单文件约2.13MB；高置信凭据模式0；真实data/raw、私人supervision、无关memory及其账本／WORKLOG插入均排除。Git remote与GitHub PR13 API的head repo、clone URL、分支完全一致。全量whitespace检查只命中按原字节保留的授权／PR旧正文末空行和首次失败测试日志尾空格；src/scripts/tests/docs/dashboard范围检查通过，不修改原证据消除格式提示。
 
 远端仍为6dc1680，已完成的review只对应该版本。本地修复没有被新一轮GitHub reviewer审查；批准公开推送后，才可核对准确远端head并申请新的review。当前状态为本地离线修复完成／发布待明确批准，非远端复审完成。后续状态说明提交仅更正文档／Dashboard，不改变已审绑定的实现或测试证据。
+
+
+### 发布批准及实际推送更新
+
+用户对上述113文件、约27.4MB、明确公开目的地和原PR13分支直接回复“批准公开推送并复审”。审批后同一正常推送成功，远端由6dc1680快进至37ab8056bc1e72ccc658242f153daa20c56baa8e；没有force、合并或新增SUMO。前节阻塞描述属于批准前历史。随后只同步当前文档／Dashboard事实，并对最终远端准确head申请针对性review；实际审查结果仍待返回，不能把内部GO或旧6dc review当作新版本已审。

@@ -5,7 +5,7 @@
 
 ## Current Phase
 
-**当前发布阻塞：** 普通服务及两项P2修复已在本地commit `f7a9badaecef1c0aa5775ae4143687ee2959828a` 完成，原PR13远端仍为已审`6dc1680de32bad325aa7151f107cd61f8bb51b4d`。两次推送均被自动审批拒绝，第二次明确不接受历史goal/tool输出作为公开授权，要求用户明确批准本次113文件（约27.4MB，代码、文档、合成测试／审计材料）发布到原公开GitHub仓库／分支。已核远端与PR13 head repo一致，排除真实raw、私人导师邮件、无关记忆和凭据模式；不绕过拒绝，不改用其他上传方式。当前只待明确发布批准，尚未对本地新修复申请远端review；不运行SUMO／不合并。
+**当前发布状态：用户已明确批准，修复已推送，准备准确head复审。** 用户针对113文件／约27.4MB／原公开仓库及PR13分支明确回复“批准公开推送并复审”。正常快进推送已成功：远端从6dc1680到37ab8056bc1e72ccc658242f153daa20c56baa8e（实现提交f7a9bada，随后仅记录先前自动审批阻塞）。此前两次审批拒绝保留为历史，不再是当前阻碍。原base／Draft状态保持；本次事实状态同步后核对最终远端head再申请review。尚未得到新版本远端审查结论；不运行SUMO、不合并PR。
 
 **10/15当前：PR13普通服务修复离线交付与有界复审。** [用户完整任务](../artifacts/thesis_actuator_readiness_20261015_v1/USER_AUTHORITY.md)要求解决普通供给不足／启动跟驰／接收受限时的持续运行，不能以有限诊断中性停止代替。用户最新指令明确本轮**不运行SUMO、不合并PR**。GitHub review5526924792实际审查`6dc1680de32bad325aa7151f107cd61f8bb51b4d`，两项reader P2已修并完成针对性回归；[实际review回执](../artifacts/thesis_actuator_readiness_20261015_v1/PR13_REVIEW_6DC_V1.json)。新隔离natural版本真实600起控，以C−E_scheduled调度、N0/1继续、接收受限保持实际红灯，C/E_executed/C_selected/C_applied/N分别记录，不追物理短放；原安全与UNKNOWN硬门保持。工程3组合方法4.906秒＋另1精确终点方法0.743秒PASS，首次Command起点接线失败保留；独立新reader五保存案例／十反例最终PASS0.970秒；科学终审GO仅支持这组离线修复送审，无实质送审阻碍，随后向原Draft PR13准确新head申请复审。[本轮报告](development/PR13_ORDINARY_SERVICE_REVIEW_FIX_20261015.md)。自然实际安全／持续服务仍NOT_TESTED，总体NOT_QUALIFIED，900秒新增预算仅提案、旧账不重置；[最小资格方案](development/THESIS_ACTUATOR_MINIMUM_QUALIFICATION_PLAN_20261015.md)不构成运行放行或正式协议。下文有限诊断及旧154实测属于各自历史版本。
 
