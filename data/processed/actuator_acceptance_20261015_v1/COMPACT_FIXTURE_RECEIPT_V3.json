@@ -1,0 +1,52 @@
+{
+  "schema": "ACTUATOR_COMPACT_EPISODE_FIXTURE_RECEIPT_V3",
+  "classification": "SYNTHETIC_REPRODUCIBILITY_DEPENDENCY_ONLY",
+  "changes": [
+    "Extracted original PRE/POST array rows604/605 and episodes unchanged into committed test fixture",
+    "Test now resolves fixture relative to test file; large engineering artifact is provenance only, not needed at test runtime"
+  ],
+  "fixture_path": "tests/fixtures/actuator_acceptance_episode_v1.json",
+  "fixture_sha256": "c8ff7ba242c0f8512aecec8a8f1520d1a97f4ca503846ea9be7a08e06057447e",
+  "fixture_bytes": 87953,
+  "original_source_provenance": {
+    "source_path": "artifacts/actuator_acceptance_20261015_v1/engineering/implementation_v1/attempt1_fixtures/loop_True.json",
+    "source_sha256": "c53cc0f97c02293ff472e55c61a3fe421c5d06fbf47514db21f04c6b993e4972",
+    "source_bytes": 5657034,
+    "source_classification": "FAKE_LOOP_NO_NATIVE_PHYSICS_OR_SAFETY_EVIDENCE",
+    "selection": "Unmodified values from saved arrays; no new loop or generated traffic",
+    "json_pointers": [
+      "/logs/pre_steps.jsonl/604",
+      "/logs/post_steps.jsonl/604",
+      "/logs/pre_steps.jsonl/605",
+      "/logs/post_steps.jsonl/605",
+      "/episodes"
+    ],
+    "actual_interval_support_s": [
+      [
+        604,
+        605
+      ],
+      [
+        605,
+        606
+      ]
+    ],
+    "excluded": "All other PRE/POST/ACK/setter rows; not needed by these tests"
+  },
+  "test": {
+    "command": ".venv/bin/python -m unittest discover -s tests -p test_actuator_acceptance_episode_reader.py -v",
+    "methods": 4,
+    "exit": 0,
+    "unittest_elapsed_s": 0.013
+  },
+  "new_simulations": 0,
+  "fake_loop_reexecution": false,
+  "old_raw_reanalysis": false,
+  "reader_runtime_changes": false,
+  "source_closure_action": "Engineering adds this compact JSON literal to acceptance_sources; expected188 entries, final readback pending",
+  "limitations": [
+    "Synthetic artifact, not native safety or service evidence",
+    "No qualification or approval change"
+  ],
+  "documentation_impact": "Parent records publication dependency; no governance edit by data analyst"
+}

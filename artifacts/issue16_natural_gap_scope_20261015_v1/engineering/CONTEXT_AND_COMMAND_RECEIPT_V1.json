@@ -1,0 +1,77 @@
+{
+  "status": "BOUNDED_READ_ONLY_ENGINEERING_INVESTIGATION_NO_RUNTIME_CHANGE",
+  "recorded_at_utc": "2026-10-15T14:39:08.090643+00:00",
+  "baseline": "af988faddaa271ac2a8f80fe3fd3558ff2898618",
+  "branch": "codex/issue-16-natural-gap-scope",
+  "context": [
+    {
+      "path": "AGENTS.md",
+      "assigned_read_lines": "ALL",
+      "assigned_range_sha256": "4df6eb482d63f9d1e6d30dfea6d78c3645577cc08a9d944b818db53601ac281b",
+      "full_file_sha_at_record": "4df6eb482d63f9d1e6d30dfea6d78c3645577cc08a9d944b818db53601ac281b",
+      "bytes": 14070
+    },
+    {
+      "path": "docs/PROJECT_STATE.md",
+      "assigned_read_lines": [
+        1,
+        160
+      ],
+      "assigned_range_sha256": "dfbe4af4b534905cbff369d887d2b4795e4102b36224b27ef3f112d3e719539b",
+      "full_file_sha_at_record": "9daf356d82f819493a4e1d225fe4b1d29119e0e3bca81f5bdfebfca519625ada",
+      "bytes": 80058
+    },
+    {
+      "path": "docs/DECISIONS.md",
+      "assigned_read_lines": "ALL",
+      "assigned_range_sha256": "c4d1e315ac05c22600b6e005aa51b1ef1e984f31dbec9d58f8860fb296613b4f",
+      "full_file_sha_at_record": "c4d1e315ac05c22600b6e005aa51b1ef1e984f31dbec9d58f8860fb296613b4f",
+      "bytes": 24991
+    },
+    {
+      "path": "docs/EXPERIMENT_PROTOCOL.md",
+      "assigned_read_lines": "ALL",
+      "assigned_range_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "full_file_sha_at_record": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+      "bytes": 0
+    },
+    {
+      "path": "docs/WORKLOG.md",
+      "assigned_read_lines": [
+        1,
+        1000
+      ],
+      "assigned_range_sha256": "19a304d3bf7b0974a321b99e34e628c06e0f864b669cb5fc7e73b1dea981d251",
+      "full_file_sha_at_record": "13cb426818f95e9b878dafb34e96825d7753586d95b37878d812af8f89b136f7",
+      "bytes": 237801
+    },
+    {
+      "path": "docs/problem_records/README.md",
+      "assigned_read_lines": "ALL",
+      "assigned_range_sha256": "ea160f851220144166c8baccf47a00d7808be60e0fe23c76226fce5bce8a39f2",
+      "full_file_sha_at_record": "ea160f851220144166c8baccf47a00d7808be60e0fe23c76226fce5bce8a39f2",
+      "bytes": 5550
+    },
+    {
+      "path": "artifacts/issue16_natural_gap_scope_20261015_v1/ISSUE16_SOURCE.md",
+      "assigned_read_lines": "ALL",
+      "assigned_range_sha256": "47e7b496af9b5be1d6e42bf8fe813781040a26d4bc72d0fe1965d319fcb9c638",
+      "full_file_sha_at_record": "47e7b496af9b5be1d6e42bf8fe813781040a26d4bc72d0fe1965d319fcb9c638",
+      "bytes": 15333
+    }
+  ],
+  "protocol_bytes": 0,
+  "source_download": "13 owning source files at official tag commit fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3 and five explicit official living pages; no package installation",
+  "arithmetic_command": [
+    ".venv/bin/python",
+    "artifacts/issue16_natural_gap_scope_20261015_v1/engineering/query_formula_check_v1.py"
+  ],
+  "arithmetic_exit_code": 0,
+  "python": "3.13.0 (v3.13.0:60403a5409f, Oct  7 2024, 00:37:40) [Clang 15.0.0 (clang-1500.3.9.4)]",
+  "native_starts": 0,
+  "real_TraCI_queries": 0,
+  "code_card_input_guard_changes": 0,
+  "git_mutations": 0,
+  "source_cache_publication": false,
+  "doc_cache_publication": false
+}

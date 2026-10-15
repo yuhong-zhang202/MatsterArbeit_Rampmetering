@@ -7,7 +7,7 @@ import signal
 import subprocess
 import sys
 import time
-from src.candidate_a_natural_service_20261015.profile import ROOT,TASK,RAW,RUN,sha,require
+from src.candidate_a_natural_service_20261015.profile import ROOT,TASK,RAW,RUN,paths_for_run,sha,require
 
 CONTEXT_ENV='NATURAL_QUALIFICATION_GUARDIAN_CONTEXT'
 TOKEN_ENV='NATURAL_QUALIFICATION_GUARDIAN_TOKEN'
@@ -30,9 +30,11 @@ def require_worker_context(card,release,root=ROOT):
     path=os.environ.get(CONTEXT_ENV);token=os.environ.get(TOKEN_ENV)
     require(path and token,'OUTER_GUARDIAN_CONTEXT_REQUIRED')
     c=json.loads(Path(path).read_text())
-    require(Path(path).resolve()==Path(root)/TASK/'runs'/RUN/'guardian_context.json','FOREIGN_GUARDIAN_CONTEXT')
+    run=json.loads(Path(card).read_text())['spec']['run_id'];task,_=paths_for_run(run)
+    require(Path(card).resolve()==Path(root)/task/'packages_v1'/run/'card.json','FOREIGN_GUARDIAN_CARD')
+    require(Path(path).resolve()==Path(root)/task/'runs'/run/'guardian_context.json','FOREIGN_GUARDIAN_CONTEXT')
     require(c['token_sha256']==__import__('hashlib').sha256(token.encode()).hexdigest(),'GUARDIAN_TOKEN_MISMATCH')
-    require(c['run_id']==RUN and c['card_sha256']==sha(card) and c['release_sha256']==sha(release),'GUARDIAN_BINDING_MISMATCH')
+    require(c['run_id']==run and c['card_sha256']==sha(card) and c['release_sha256']==sha(release),'GUARDIAN_BINDING_MISMATCH')
     require(c['guardian_pid']==os.getppid(),'GUARDIAN_PARENT_MISMATCH')
     me=identity(os.getpid())
     require(me['status']=='OBSERVED' and me['pid']==me['pgid']==me['sid'],'DEDICATED_WORKER_SESSION_REQUIRED')
@@ -135,18 +137,21 @@ def execute_guarded(card,release,root=ROOT):
     from src.candidate_a_natural_service_20261015 import profile,budget
     root=Path(root).resolve();require(root==ROOT,'GUARDIAN_ROOT_INJECTION_PROHIBITED')
     c=profile.validate_release(card,release,root,guardian_preflight=True)
-    bound=budget.accounting(root);limits=budget.effective_limits(c['resources'],bound)
+    from src.candidate_a_natural_service_20261015.acceptance_safety import runtime_authority
+    authority=runtime_authority(c,card,json.loads(Path(release).read_text()),root)
+    bound=budget.accounting(root);limits=budget.effective_limits(c['resources'],bound,authority)
     require(__import__('shutil').disk_usage(root).free>=c['resources']['minimum_free_bytes'],'INSUFFICIENT_FREE_DISK')
-    folder=root/TASK/'runs'/RUN;folder.mkdir(parents=True,exist_ok=False)
+    run=c['spec']['run_id'];task,_=paths_for_run(run)
+    folder=root/task/'runs'/run;folder.mkdir(parents=True,exist_ok=False)
     token=secrets.token_hex(32);context=folder/'guardian_context.json'
-    write_new(context,dict(run_id=RUN,guardian_pid=os.getpid(),card_sha256=sha(card),release_sha256=sha(release),
+    write_new(context,dict(run_id=run,guardian_pid=os.getpid(),card_sha256=sha(card),release_sha256=sha(release),
         card_path=str(Path(card).resolve()),release_path=str(Path(release).resolve()),
         token_sha256=__import__('hashlib').sha256(token.encode()).hexdigest()))
     env={**os.environ,CONTEXT_ENV:str(context),TOKEN_ENV:token}
     with (folder/'worker_stdout.log').open('xb') as out,(folder/'worker_stderr.log').open('xb') as err:
         receipt=supervise([sys.executable,'-m','scripts.candidate_a_natural_service_20261015_v1.cli','worker','--card',str(Path(card).resolve()),'--release',str(Path(release).resolve())],env,root,
-            inner_s=limits['wall_limit_s'],cleanup_s=limits['cleanup_reserve_s'],identity_path=root/c['output']/'owned_process_identity.json',run=RUN,card_sha=sha(card),release_sha=sha(release),stdout=out,stderr=err)
+            inner_s=limits['wall_limit_s'],cleanup_s=limits['cleanup_reserve_s'],identity_path=root/c['output']/'owned_process_identity.json',run=run,card_sha=sha(card),release_sha=sha(release),stdout=out,stderr=err)
     receipt['total_budget_before_worker']=bound
-    destination=root/RAW/RUN/'guardian_receipt.json' if (root/RAW/RUN).is_dir() else folder/'guardian_receipt.json'
+    destination=root/RAW/run/'guardian_receipt.json' if (root/RAW/run).is_dir() else folder/'guardian_receipt.json'
     write_new(destination,receipt)
     return 0 if receipt['worker_returncode']==0 and receipt['stop_reason']=='WORKER_EXITED' and receipt['native_identity_verified'] and receipt['group_cleanup']['no_live_owned_members'] is True else 1

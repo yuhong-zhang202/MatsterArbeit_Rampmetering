@@ -178,3 +178,30 @@ PR13实际审查`9a9c96ed…`指出：上一完整周期N<2并不证明执行器
 ## 2026-10-15 首次自然交通173源实际诊断
 
 **首次自然交通诊断已完成后审：STOP_RETAINED / NOT_QUALIFIED。** 精确卡b73／执行源b6／173源c2f00d7f唯一运行于650秒触发POST_CURRENT_GAP_BOUND_DENIED，未到4200秒及六评价窗。六完整周期N0均继续；独立C≈12.311518、E_scheduled=E_executed12、真实N1，物理短放保留。间距9.610494m低于同帧native查询13.089892m，证实规则触发，未证明碰撞、必然危险或保守误判。下游受限等待恢复、完整时域及长期放行率NOT_TESTED；原reader exit1/UNKNOWN、partial和车尾截断不改判。227raw文件封存，工程→data→science后审完成，科学仅允许资源结算。独立900预算实际账见资源回执；唯一启动权已消耗，不重跑、不正式实验、不合并。GitHub末轮仍REVIEW_PENDING / NO_VERDICT，用户仅撤销其完成作为本次额外门，不再复审。[完整证据及版本边界](../development/NATURAL_ACTUATOR_FIRST_NATIVE_CLOSEOUT_20261015.md)。原154源预排队短诊断不与此运行拼接，不因六个N0周期继续而认定全部普通交通已获资格。
+
+
+## 2026-10-15 Issue16：被动间距查询作用域调查与合同批准
+
+固定SUMO1.26源码、既有649/650帧及独立科学审查支持一个有界的MINIMAL_SCOPE_CHANGE_PROPOSED：当前速度的getSecureGap参考不等于原生下一步跟驰动作的普遍POST不变量。R1在PRE649已低于参考，650角色变为首车后触发旧硬停；不是新证明安全、误报或危险。9改4.5对这两帧查询无影响，不作为修复。
+
+用户现已明确批准四条最小合同及离线实现：新G准入保持严格；仅限定普通被动查询的参考不足转为完整观测；真实异常/必要UNKNOWN仍停。最小实现及工程→data→science离线复核已完成，GO仅支持交付/非执行新卡准备；新实际运行未授权；旧650STOP、原readerUNKNOWN和六窗未测保持。独立失败前缀reader已通过工程与科学限定交付审查，最终V3仍exit1/UNKNOWN（full_horizon未到）且qualified=false。详见[唯一判定与批准](../development/ISSUE16_CURRENT_GAP_SCOPE_DECISION_20261015.md)。原启动已消费，预算余额不授权新卡；总体NOT_QUALIFIED。
+
+新独立run02卡dc9c1ce4（176源4eb466ec）已一次prepare/validate及工程→data→science准确卡复核，GO仅交人审。总816秒=786+30，预算账与start1不重置；execution=false，无新raw/canonical。有限运行/测量用途与数值跟踪NOT_ASSESSED为待确认边界，仍非自然服务资格通过。
+
+
+### Issue16唯一自然复验结果：1262 STOP，资格未建立
+
+用户准确批准后run02一次执行，卡dc9c1ce4/176源4eb466ec/checkpoint daa149bd，1262黄灯步R109实测−4.501m/s²超过原4.5+1e−6，保留两条硬告警，不重试不改门。原650失败与新版越过650不混为同版本PASS。独立662秒C133.174013/E132/N109、描述592.749veh/h，物理残差24.174013未追债；首窗62/300、其余未测，完整边界受限恢复未测。读取器两项失败尾UNKNOWN原样保留，补充EOF/反馈事实不替代；231raw封存/三方后审STOP_RETAINED/NOT_QUALIFIED。有限资格未取得，数值精度NOT_ASSESSED。问题保持未收敛，不拿原154短成功拼接自然资格；唯一建议用户/Robert决定逐步4.5制动门科研适用性，停止自动guard工程和运行。见[本轮完整判定](../development/ISSUE16_CURRENT_GAP_SCOPE_DECISION_20261015.md)。
+
+
+### 2026-10-15 文献驱动的验收标准与隔离准备（新任务，Proposed）
+
+**同一实质问题继续，不另建问题或Issue：** 逐步绝对4.5门在首黄停车形态触发，以及原始ALINEA真实放行尚无完整事先验收尺度，均影响该工具能否可靠比较高速、匝道与城市交通效果。run02执行daa149bd/176源4eb466ec、卡dc9c1ce4与报告ad205d4分开；R1091261→1262速度4.5623291644→0.0613291644m/s、−4.501峰值、旧STOP及662s的C133.174013/E132/N109全部保留。第一窗62/300、后五未到，仍NOT_QUALIFIED/原数值精度NOT_ASSESSED。
+
+此前已尝试普通被动gap合同范围修复，获批run02越过旧650触发点，但并未取得自然资格。旧numeric_stop仅有部分条件相容，完整专用观测未建立且本卡禁用；它不能把此次STOP改成误报。供给、接收、等待证据重叠，不能把24.174013辆C−N全部解释掉。
+
+用户现在授权非运行文献/工程准备；[方法文件](../development/ACTUATOR_ACCEPTANCE_CRITERIA.md)集中登记S1–S6实际原文范围、来源支持与项目推断，本记录不重复维护来源表。官方正常decel、紧急能力、告警条件分开；固定距离epsilon经具体Euler公式/dt换算，不是任意放大制动门。推荐首黄局部相容事件仅受控继续一步并逐项后审，仍非安全证明；真实放行采用固定六窗与全时域原始C−N、独立服务机会和明确待批偏差尺度，不以E替代N或追回物理欠额。
+
+[科学设计审查](../../artifacts/actuator_acceptance_20261015_v1/SCIENCE_DESIGN_REVIEW.md)有条件允许隔离离线实现，已采纳取消无依据的同车终身重复否决、固定近线20m机会域和未知不豁免等修正。**新合同和验收尺度仍Proposed，未获新运行批准；实现/测试/最终卡审查以方法文件的实际回执为准。** 旧失败不追溯改判，新自然验证NOT_TESTED。唯一接续为完成最小离线接口/审查后提交新合同、标准、精确卡与预算的集中审批包，不自动第三次启动或正式实验。
+
+非执行交付已完成：源624573ab、188源摘要402d4ab2、准确03卡51202927；一次prepare/validate均exit0，独立数据及科学仅GO审批包交付。PRE位置/FCD同ACK绑定缺口已修，小型合成测试可独立复现。未运行SUMO，数值标准/新合同仍Proposed，新自然观测NOT_TESTED，旧NOT_QUALIFIED保留；[审批包](../../artifacts/actuator_acceptance_20261015_v1/APPROVAL_PACKAGE_V1.md)集中请求准确卡及新一次启动，余额不授许可。

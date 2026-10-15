@@ -1,0 +1,157 @@
+{
+  "schema": "ACTUATOR_ACCEPTANCE_PREPARED_CARD_DATA_REVIEW_V1",
+  "verdict": "GO_FOR_EXACT_NONEXECUTING_PREPARED_CARD_DELIVERY_ONLY",
+  "blockers": [],
+  "checkpoint": "624573abafac043a777901ce251a2358e3758384",
+  "card": {
+    "path": "artifacts/actuator_acceptance_20261015_v1/engineering/packages_v1/QUAL_NATURAL_ALINEA_R900_S17_03/card.json",
+    "sha256": "5120292702f93458cdfaae7211467948f4e559671e62af8ff74d82c9ee6ba3a2",
+    "source_count": 188,
+    "source_digest": "402d4ab207381afbddef2a95ed8120e94fa2367f1eb0dd859fde34ab66f5eb87",
+    "status": "PREPARED_NOT_RELEASED"
+  },
+  "checks": {
+    "188_current_source_hashes": true,
+    "source_count_188": true,
+    "source_digest": true,
+    "four_prepared_input_hashes": true,
+    "inherited_input_hashes": true,
+    "same_network_and_demand_as_run02": true,
+    "environment_manifest_unchanged_from_run02": true,
+    "registration_non_circular": true,
+    "execution_authorized_false": true,
+    "eight_observations_null": true,
+    "numerical_authority_disabled": true,
+    "no_new_raw_or_guardian": true,
+    "no_canonical": true
+  },
+  "population": {
+    "total": 4050,
+    "counts": {
+      "M": 3000,
+      "U": 300,
+      "X": 150,
+      "R": 600
+    },
+    "natural_first_R_depart_s": 600
+  },
+  "clock": {
+    "begin_s": 0,
+    "activation_s": 600,
+    "end_s": 4200,
+    "step_s": 1,
+    "seed": 17
+  },
+  "evaluation_windows": [
+    [
+      1200,
+      1500
+    ],
+    [
+      1500,
+      1800
+    ],
+    [
+      1800,
+      2100
+    ],
+    [
+      2100,
+      2400
+    ],
+    [
+      2400,
+      2700
+    ],
+    [
+      2700,
+      3000
+    ]
+  ],
+  "registration": {
+    "path": "artifacts/actuator_acceptance_20261015_v1/engineering/packages_v1/QUAL_NATURAL_ALINEA_R900_S17_03/accuracy_registration.json",
+    "sha256": "80190e06f3dc7b438acc403a33553d88dcf8b31bca75203974e077b9fb1a7d0c",
+    "geometry": {
+      "source": {
+        "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+        "sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca"
+      },
+      "lane_domains": [
+        {
+          "lane_id": "ramp_storage_0",
+          "start_pos_m": 184.49,
+          "end_pos_m": 204.49
+        }
+      ],
+      "network_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+      "receiver_domain_source": {
+        "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+        "sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca"
+      },
+      "receiver_lane_ids": [
+        ":ramp_mid_0_0",
+        "ramp_accel_0",
+        ":freeway_merge_2_0",
+        "merge_section_0",
+        "merge_section_1",
+        "merge_section_2"
+      ],
+      "receiver_geometry_m": {
+        ":ramp_mid_0_0": 81.98,
+        "ramp_accel_0": 99.07,
+        ":freeway_merge_2_0": 3.11,
+        "merge_section_0": 294.51,
+        "merge_section_1": 294.51,
+        "merge_section_2": 294.51
+      }
+    },
+    "prepared_input_bound": true,
+    "identity_or_future_manifest_not_embedded": true
+  },
+  "prepared_inputs": {
+    "artifacts/actuator_acceptance_20261015_v1/engineering/packages_v1/QUAL_NATURAL_ALINEA_R900_S17_03/demand.rou.xml": "99151ed51419c8d490c0f0b1a91bea23f6be70c5486890a04e1e06b3de5d808e",
+    "artifacts/actuator_acceptance_20261015_v1/engineering/packages_v1/QUAL_NATURAL_ALINEA_R900_S17_03/scenario.sumocfg": "b7546a951091b8e971f10b0aa0c28459e91a820161a5c80653c22a9fed6c952a",
+    "artifacts/actuator_acceptance_20261015_v1/engineering/packages_v1/QUAL_NATURAL_ALINEA_R900_S17_03/accuracy_registration.json": "80190e06f3dc7b438acc403a33553d88dcf8b31bca75203974e077b9fb1a7d0c",
+    "artifacts/actuator_acceptance_20261015_v1/engineering/packages_v1/QUAL_NATURAL_ALINEA_R900_S17_03/scenario.add.xml": "cc5a0255840469931ea3ad9f59c7fb1ee056c8631be8b28f291c38b4879746c2"
+  },
+  "key_reader_source_binding": {
+    "scripts/actuator_acceptance_20261015_v1/accuracy.py": "4ee2b1bd4adbe90fd2427daebb2ddeece95748570426a4d173093d144a7de042",
+    "scripts/actuator_acceptance_20261015_v1/normalize.py": "83b58f9f364c20eb2e3d3906b6e0eae9ec28652457bdbeb49631ea657db64b89",
+    "scripts/natural_actuator_qualification_20261015_v1/actual.py": "7a58a96f0f6cc183a3d93c4f165569759a5b3b7034883b1f089717694317ccb8",
+    "scripts/natural_actuator_qualification_20261015_v1/dependencies.json": "d9fd5d99e8efc75331c02a865e65a436afdba60e37555d564c46908148abacdc",
+    "scripts/natural_actuator_qualification_20261015_v1/episode.py": "595578aed115c279caa3ea8a3f74ce3c6368f8a8392ae378f2df954cdd0b792f",
+    "scripts/natural_actuator_qualification_20261015_v1/measurements.py": "ff1358e6fc3458743fc8c6088e1f4d6940d1dcf90ae65e088129cfcdf2749fe8",
+    "scripts/natural_actuator_qualification_20261015_v1/phases.py": "661bbbb5c263b10409ad68250a3be196399379c05dfc9a999bbd241a525c6c28",
+    "scripts/natural_actuator_qualification_20261015_v1/provenance.py": "d3710d9df63dd2f2d345370b2906f3818cac9f8de7494f7838e84e641557476b",
+    "scripts/natural_actuator_qualification_20261015_v1/streaming.py": "6ff2fbd63a11e5260feb6d2a342d50a3a6d50d11fc94af1d1ac6fff2bacd5abf",
+    "scripts/natural_actuator_qualification_20261015_v1/yellow.py": "3abc83a3ddc602c56f88191174442932fec42dd0b005aa84cb725fefdd80b2ef",
+    "tests/fixtures/actuator_acceptance_episode_v1.json": "c8ff7ba242c0f8512aecec8a8f1520d1a97f4ca503846ea9be7a08e06057447e"
+  },
+  "schema_consumption": {
+    "native_reader": "Static exact03 resource/package/safety contract branch matches prepared card; actual run inputs NOT_TESTED",
+    "normalizer": "Registration run_id/geometry match; its SHA is in card.prepared_input_sha256; card and future manifest derive runtime identity without circularity",
+    "FCD_PRE": "Required future per-second PREt/FCDt-1 certificate domain is source-bound; no future certificate is asserted present"
+  },
+  "xml_comparison": {
+    "additional": "Same as02 after output identity replacement; detector/phase content unchanged",
+    "config": "Same tag tree and values except route/additional package paths and output/log identity paths; new namespace is not a model/timing delta"
+  },
+  "resources": {
+    "total_s": 641,
+    "worker_s": 611,
+    "cleanup_s": 30,
+    "declared_prior_spent_s": 258.87379404105013,
+    "declared_remainder_s": 641.1262059589499,
+    "start_count_before": 2,
+    "additional_start_status": "PROPOSED_NOT_APPROVED",
+    "ledger_writes": 0
+  },
+  "limits": [
+    "No tests, reader, normalizer, SUMO, version command or prepare executed",
+    "188 source and prepared/inherited inputs read-hashed; environment manifest compared, no new binary execution or environment requalification",
+    "Resource values checked as prepared contract; no live ledger recomputation or execution release",
+    "Safety/precision/geometry/additional single start still require explicit exact-card authority; no qualification verdict",
+    "Optional delay-applied-request integral and historical per-window pending remain NOT_IMPLEMENTED"
+  ],
+  "documentation_impact": "Parent records factual prepared-card result; no governance file edited"
+}

@@ -1,0 +1,56 @@
+{
+  "classification": "READ_ONLY_PREPARATION_PREFLIGHT_NO_NATIVE_AUTHORITY",
+  "budget": {
+    "approved_total_monitored_s": 900,
+    "charged_monitored_s": 83.63743604102638,
+    "remaining_s": 816.3625639589736,
+    "known_settled": {
+      "QUAL_NATURAL_ALINEA_R900_S17_01": 83.63743604102638
+    },
+    "start_count": 1,
+    "unknown_reserved": [],
+    "old_remainder_pooled": false,
+    "budget_approval_sha256": "8f91d3453d933f71c898d07cb56255311cacf149bb57286f373454ab01107894"
+  },
+  "proposed_resources": {
+    "wall_limit_s": 816,
+    "startup_limit_s": 60,
+    "run_limit_bytes": null,
+    "minimum_free_bytes": 5000000000
+  },
+  "proposed_guardian": {
+    "schema": "NATURAL_QUALIFICATION_GUARDIAN_V1",
+    "inner_wall_limit_s": 786,
+    "cleanup_reserve_s": 30,
+    "outer_wall_limit_s": 816,
+    "receipt": "data/raw/natural_actuator_qualification_20261015_v1/QUAL_NATURAL_ALINEA_R900_S17_02/guardian_receipt.json",
+    "fallback_receipt": "artifacts/natural_actuator_qualification_20261015_v1/engineering/runs/QUAL_NATURAL_ALINEA_R900_S17_02/guardian_receipt.json"
+  },
+  "effective_limits": {
+    "wall_limit_s": 786,
+    "startup_limit_s": 60,
+    "run_limit_bytes": null,
+    "minimum_free_bytes": 5000000000,
+    "outer_wall_limit_s": 816,
+    "cleanup_reserve_s": 30
+  },
+  "environment": {
+    "bound_file_count": 141,
+    "mismatched_paths": [],
+    "python_observed": "3.13.0",
+    "python_expected": "3.13.0",
+    "native_runtime_environment_NOT_STARTED": true
+  },
+  "protected_source_unchanged": {
+    "src/candidate_a_natural_service_20261015/adapter.py": true,
+    "src/candidate_a_natural_service_20261015/bridge.py": true,
+    "src/candidate_a_natural_service_20261015/policy.py": true,
+    "src/candidate_a_natural_service_20261015/producer.py": true,
+    "src/candidate_a_natural_service_20261015/current_gap_scope.py": true
+  },
+  "free_disk_bytes": 37984202752,
+  "proposed_raw_identity_exists": false,
+  "proposed_guardian_context_exists": false,
+  "canonical_created": false,
+  "new_execution_authority_created": false
+}

@@ -15,7 +15,7 @@
 | [PRB-001 FIX02服务跟踪](PRB-001_FIX02_SERVICE_TRACKING.md) | 10-07开发 | 高 | OPEN（原系列） | 72服务窗71FAIL；拒绝秒数不是唯一缺额因果分解；新短诊断不反改旧结果 | 是，不能用FIX02宣称完整服务合格 |
 | [PRB-002 STOP3／A1证明缺口](PRB-002_STOP3_A1_PROOF_GAP.md) | 10-08～11离线/技术 | 高 | NO-GO（当前接口完备证明路线建议） | 原guard拒绝可重现；原生未来联合状态不足，A1仍UNRESOLVED | 是，不能把原生相位观察写成A1证明 |
 | [PRB-003 receiver WAIT／预算](PRB-003_RECEIVER_WAIT_AND_BUDGET.md) | 10-12诊断 | 中 | MITIGATED；预算子问题CLOSED | 分清假设推进和实际等待；300/360完成，420/480跳过，不能称绝对最优 | 原局部问题缓解，不保证未来供给／服务 |
-| [PRB-004 放行不足与原始ALINEA累计跟踪](PRB-004_NOMINAL_TWO_CAR_DISCHARGE.md) | 10-12～15开发 | 高 | MITIGATED；最小技术节点完成待审 | G3每周期1辆、750的13/14、720映射偏差分别调查；累计纠偏与最终154源动态/真实闭环有限证据 | 是，长期／全域／一般安全未资格 |
+| [PRB-004 放行不足与原始ALINEA累计跟踪](PRB-004_NOMINAL_TWO_CAR_DISCHARGE.md) | 10-12～15开发 | 高 | 旧短技术节点MITIGATED；自然条件NOT_QUALIFIED | run02首黄−4.501旧STOP保留；S1–S6验收标准与隔离实现准备中，新合同/尺度/运行待批 | 是，真实C/N精度与安全资格未建立；方法见PRB-004末节 |
 | [PRB-005 早期目标现象与实际入口域](PRB-005_EARLY_SCENARIO_READINESS_AND_OBSERVATION_DOMAIN.md) | 09月Stage2–6 | 高 | 观测域技术子问题CLOSED；旧科学阴性保留 | 车辆实际近合流入网，H2覆盖修复不自动通过State1；重建网络独立归档 | 精确容量/真实校准未建立 |
 | [PRB-006 分析假通过与T54证据资格](PRB-006_ANALYSIS_VALIDITY_AND_T54_HANDOFF.md) | 09-13复审 | 高 | 限定处理缺陷CLOSED | 四类坏输入、证据映射和5缺配对键修复；不追认T54用户接受 | 未来输入仍须资格检查 |
 | [PRB-007 原RI3350不可配对](PRB-007_RI3350_INPUT_PAIRABILITY.md) | 09-26原系列 | 高 | 历史比较排除处置CLOSED | 动态请求与复制输出不是同输入；NOT_PAIRABLE/A_NOT_EVALUABLE保留 | 原系列不能用于A因果效果 |

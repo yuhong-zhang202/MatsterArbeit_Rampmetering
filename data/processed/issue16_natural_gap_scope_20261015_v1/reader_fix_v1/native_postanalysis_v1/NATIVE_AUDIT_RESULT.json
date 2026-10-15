@@ -1,0 +1,6 @@
+{
+  "status": "UNKNOWN_AUDIT_EXCEPTION",
+  "reason": "TypeError:dict() got multiple values for keyword argument 'id'",
+  "traceback": "Traceback (most recent call last):\n  File \"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/natural_actuator_qualification_20261015_v1/actual.py\", line 153, in main\n    try:r=audit(a.manifest,a.card,postanalysis_reader_v1=a.postanalysis_reader_v1)\n          ~~~~~^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/scripts/natural_actuator_qualification_20261015_v1/actual.py\", line 122, in audit\n    result['endpoint_vehicles']=[dict(id=vid,**v) for vid,v in scan['endpoint'].items()]\n                                 ~~~~^^^^^^^^^^^^\nTypeError: dict() got multiple values for keyword argument 'id'\n",
+  "qualified": false
+}

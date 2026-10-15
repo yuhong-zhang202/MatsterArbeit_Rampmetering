@@ -1,0 +1,43 @@
+{
+  "status": "GO_FOR_SOURCE_FREEZE_AND_NONEXECUTING_EXACT_PREPARATION",
+  "review": "READ_ONLY_FINAL_SCHEMA_AND_HASH_REVIEW",
+  "tests_run": 0,
+  "native_starts": 0,
+  "prepared_cards": 0,
+  "source_count": 187,
+  "source_digest": "49e17517a90093e7ae78853cf18f5d2f5ecdb09819776b17b77da56998fb6aaa",
+  "legacy154_unchanged": true,
+  "data_files_verified": 28,
+  "data_mismatches": [],
+  "static_checks": {
+    "PRE_t_FCD_t_minus_1": "MATCHED_ACK_AND_POSITION_BODY_SCOPE",
+    "normalizer_requires_independent_position_rows": true,
+    "registration_fourth_prepared_input": "MATCHED_NONCIRCULAR_NETWORK_DOMAIN",
+    "receiver_6lanes_and_red_omission": "MATCHED",
+    "exact03_safety_accuracy_extra_start_authority": "MATCHED",
+    "episode_registry_and_one_next_ACK": "MATCHED",
+    "native_qualification": "NOT_TESTED",
+    "contract_enabled": false
+  },
+  "references": {
+    "data/processed/actuator_acceptance_20261015_v1/DATA_FINAL_BINDING_V2.json": "b2cc134516d45a4412fb9453cdfe825cf6e22731b46ecd3626b9a6fb284afc9c",
+    "data/processed/actuator_acceptance_20261015_v1/DATA_FINAL_OFFLINE_DELIVERY_V2.md": "46c8bd084d9bb08d421d5fc6140612736106805aaa53ba502dd3c2b99b81c7d5",
+    "artifacts/actuator_acceptance_20261015_v1/engineering/implementation_v1/ENGINEERING_BINDING_V2.json": "331e6ed58feaffce5090373ebe75a53d9b662f330cdc82c7524e5a834c133b5c"
+  },
+  "required_source_hashes": {
+    "src/candidate_a_natural_service_20261015/profile.py": "8d83349c440e210d676f05b416d50914b1bfffb2215d1f8177ae499025c8ff6c",
+    "scripts/natural_actuator_qualification_20261015_v1/episode.py": "595578aed115c279caa3ea8a3f74ce3c6368f8a8392ae378f2df954cdd0b792f",
+    "scripts/natural_actuator_qualification_20261015_v1/streaming.py": "6ff2fbd63a11e5260feb6d2a342d50a3a6d50d11fc94af1d1ac6fff2bacd5abf",
+    "scripts/actuator_acceptance_20261015_v1/normalize.py": "83b58f9f364c20eb2e3d3906b6e0eae9ec28652457bdbeb49631ea657db64b89",
+    "tests/test_actuator_acceptance_episode_reader.py": "d57cea6113208c542aa3f9bd28801a7e96d58f653d1b2326e13642f66c229d1b",
+    "docs/development/ACTUATOR_ACCEPTANCE_CRITERIA.md": "c417d079aa21c2fb490e51a7f2f95ba757bd79a05d626cadba8eabb1ead09f6e"
+  },
+  "limitations": [
+    "NO_NATIVE_PIPELINE_VALIDATION",
+    "LENGTH_MATCHED_GETTERS_NOT_INDEPENDENT_FCD_LENGTH",
+    "MISSING_POSITION_OR_FOLLOWUP_REMAINS_UNKNOWN",
+    "NO_SOURCE_CAUSAL_OR_CAPACITY_PROOF",
+    "NO_CONTRACT_ACCURACY_OR_START_APPROVAL",
+    "FULL_SYNTHETIC_FIXTURES_LOCAL_ONLY"
+  ]
+}

@@ -1,0 +1,59 @@
+{
+  "scope": "SOURCE_FORMULA_REPRODUCTION_NOT_NATIVE_MOTION_REPLAY",
+  "dt_s": 1,
+  "normal_decel_m_s2": 4.5,
+  "tau_s": 1,
+  "private_native_movement_call_not_recorded": true,
+  "rows": [
+    {
+      "time_s": 649,
+      "saved_actual_query": {
+        "vehID": "R_flow.1",
+        "speed": 12.771598010037966,
+        "leaderSpeed": 1.5898748913376206,
+        "leaderMaxDecel": 9.0,
+        "leaderID": "R_flow.0"
+      },
+      "saved_native_query_result_m": 24.814794030113898,
+      "conditional_Euler_formula": [
+        {
+          "leaderMaxDecel_diagnostic": 9.0,
+          "leader_brake_gap_m": 0.0,
+          "secure_gap_m": 24.814794030113898,
+          "reference_minus_actual_gap_m": 10.343383243005729
+        },
+        {
+          "leaderMaxDecel_diagnostic": 4.5,
+          "leader_brake_gap_m": 0.0,
+          "secure_gap_m": 24.814794030113898,
+          "reference_minus_actual_gap_m": 10.343383243005729
+        }
+      ]
+    },
+    {
+      "time_s": 650,
+      "saved_actual_query": {
+        "vehID": "R_flow.1",
+        "speed": 8.794946163265283,
+        "leaderSpeed": 3.9340293150224332,
+        "leaderMaxDecel": 9.0,
+        "leaderID": "R_flow.0"
+      },
+      "saved_native_query_result_m": 13.089892326530567,
+      "conditional_Euler_formula": [
+        {
+          "leaderMaxDecel_diagnostic": 9.0,
+          "leader_brake_gap_m": 0.0,
+          "secure_gap_m": 13.089892326530567,
+          "reference_minus_actual_gap_m": 3.479398387665249
+        },
+        {
+          "leaderMaxDecel_diagnostic": 4.5,
+          "leader_brake_gap_m": 0.0,
+          "secure_gap_m": 13.089892326530567,
+          "reference_minus_actual_gap_m": 3.479398387665249
+        }
+      ]
+    }
+  ]
+}

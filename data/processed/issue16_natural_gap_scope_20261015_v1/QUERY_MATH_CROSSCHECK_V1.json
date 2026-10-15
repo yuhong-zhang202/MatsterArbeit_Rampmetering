@@ -1,0 +1,49 @@
+{
+  "scope": "PINNED_SOURCE_FORMULA_CONDITIONAL_EULER_NOT_NATIVE_REPLAY",
+  "native_motion_private_branch_recorded": false,
+  "finding": "Changing leaderMaxDecel9 to4.5 cannot remove these recorded deficits under this source formula; neither proposal nor parameter modification",
+  "rows": [
+    {
+      "time_s": 649,
+      "actual_query_result_m": 24.814794030113898,
+      "source_formula": "MSCFModel.cpp92..98 Euler dt1; base getSecureGap168..184",
+      "arithmetic": [
+        {
+          "diagnostic_leaderMaxDecel": 9.0,
+          "leader_brake_gap_m": 0.0,
+          "follower_brake_gap_m": 24.814794030113898,
+          "computed_secure_gap_m": 24.814794030113898,
+          "still_below_query": true
+        },
+        {
+          "diagnostic_leaderMaxDecel": 4.5,
+          "leader_brake_gap_m": 0.0,
+          "follower_brake_gap_m": 24.814794030113898,
+          "computed_secure_gap_m": 24.814794030113898,
+          "still_below_query": true
+        }
+      ]
+    },
+    {
+      "time_s": 650,
+      "actual_query_result_m": 13.089892326530567,
+      "source_formula": "MSCFModel.cpp92..98 Euler dt1; base getSecureGap168..184",
+      "arithmetic": [
+        {
+          "diagnostic_leaderMaxDecel": 9.0,
+          "leader_brake_gap_m": 0.0,
+          "follower_brake_gap_m": 13.089892326530567,
+          "computed_secure_gap_m": 13.089892326530567,
+          "still_below_query": true
+        },
+        {
+          "diagnostic_leaderMaxDecel": 4.5,
+          "leader_brake_gap_m": 0.0,
+          "follower_brake_gap_m": 13.089892326530567,
+          "computed_secure_gap_m": 13.089892326530567,
+          "still_below_query": true
+        }
+      ]
+    }
+  ]
+}

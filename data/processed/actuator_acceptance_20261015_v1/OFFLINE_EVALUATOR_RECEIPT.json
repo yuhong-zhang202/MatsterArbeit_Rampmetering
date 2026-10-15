@@ -1,0 +1,56 @@
+{
+  "schema": "ACTUATOR_ACCURACY_OFFLINE_DELIVERY_V1",
+  "criterion_status": "PROPOSED_NOT_APPROVED",
+  "command": ".venv/bin/python -m unittest discover -s tests -p test_actuator_acceptance_accuracy.py -v",
+  "attempts": [
+    {
+      "exit": 0,
+      "tests": 6,
+      "unittest_elapsed_s": 0.005,
+      "scope": "initial small synthetic certificates"
+    },
+    {
+      "exit": 0,
+      "tests": 6,
+      "unittest_elapsed_s": 0.005,
+      "scope": "necessary unknown-support and H/subwindow consistency tightening"
+    },
+    {
+      "exit": 0,
+      "tests": 6,
+      "unittest_elapsed_s": 0.006,
+      "scope": "final science-fixed local20m domain, all-six union, independent raw persistent-loss flag"
+    },
+    {
+      "exit": 0,
+      "tests": 6,
+      "unittest_elapsed_s": 0.007,
+      "scope": "required final receiver-geometry binding and proof beyond policy-independent boolean"
+    }
+  ],
+  "failed_test_attempts": [],
+  "native_runs": 0,
+  "old_raw_audits": 0,
+  "old_results_reclassified": false,
+  "files": {
+    "scripts/actuator_acceptance_20261015_v1/accuracy.py": {
+      "sha256": "4ee2b1bd4adbe90fd2427daebb2ddeece95748570426a4d173093d144a7de042",
+      "bytes": 15324
+    },
+    "tests/test_actuator_acceptance_accuracy.py": {
+      "sha256": "5c7d5b690ceaa7f1cfe00e6ccc83460dab7b60e6dab161d8ea36ee72e178c407",
+      "bytes": 6559
+    },
+    "data/processed/actuator_acceptance_20261015_v1/DATA_METHOD_PROPOSAL.md": {
+      "sha256": "9fa2c05558dbaaa16140be9bdc1e4f8b4a7e622c0606907b31c81828ce8e4745",
+      "bytes": 20838
+    }
+  },
+  "limits": [
+    "Pure normalized-certificate schema/arithmetic; no raw evidence projection implemented here",
+    "All hashes/references identify upstream evidence; this function does not read or independently validate referenced file bytes",
+    "Proposed 5%/2-vehicle target and20m spatial domain require approval",
+    "Application delay/pending preserved; lifecycle proof remains upstream",
+    "NO_QUALIFICATION_VERDICT; conditional opportunity subset does not erase unexplained raw losses"
+  ]
+}

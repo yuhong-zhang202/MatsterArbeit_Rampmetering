@@ -1,0 +1,146 @@
+{
+  "status": "GO_FOR_EXACT_PREPARED_CARD_DATA_DELIVERY_ONLY",
+  "card_path": "artifacts/natural_actuator_qualification_20261015_v1/engineering/packages_v1/QUAL_NATURAL_ALINEA_R900_S17_02/card.json",
+  "card_sha256": "dc9c1ce418ab61eb4e36b26e1436c94b31ba78cde9a630df596a0e5a4ce4c509",
+  "source_count": 176,
+  "source_digest": "4eb466ec0a28f783089230941f1a6139ce9f0ed45a0e0dced82a7dc1e278d66f",
+  "all_current_sources_match": true,
+  "all_prepared_and_inherited_inputs_match": true,
+  "planned_count": 4050,
+  "counts": {
+    "M": 3000,
+    "U": 300,
+    "X": 150,
+    "R": 600
+  },
+  "natural_R_begin_s": 600,
+  "simulation_clock": [
+    0,
+    4200,
+    1
+  ],
+  "evaluation_windows_s": [
+    [
+      1200,
+      1500
+    ],
+    [
+      1500,
+      1800
+    ],
+    [
+      1800,
+      2100
+    ],
+    [
+      2100,
+      2400
+    ],
+    [
+      2400,
+      2700
+    ],
+    [
+      2700,
+      3000
+    ]
+  ],
+  "precision": 8,
+  "E1": [
+    {
+      "id": "p1_main_down_20_l0",
+      "lane": "main_down_0",
+      "pos": "20",
+      "period": "30",
+      "length": "0",
+      "friendlyPos": "false",
+      "file": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/natural_actuator_qualification_20261015_v1/QUAL_NATURAL_ALINEA_R900_S17_02/outputs/p1_main_down_20_l0.xml"
+    },
+    {
+      "id": "p1_main_down_20_l1",
+      "lane": "main_down_1",
+      "pos": "20",
+      "period": "30",
+      "length": "0",
+      "friendlyPos": "false",
+      "file": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/natural_actuator_qualification_20261015_v1/QUAL_NATURAL_ALINEA_R900_S17_02/outputs/p1_main_down_20_l1.xml"
+    }
+  ],
+  "reader_dependency_count": 8,
+  "environment_count": 141,
+  "environment_closure_same_as_run01": true,
+  "environment_binary_rehash": "NOT_REPEATED_ENGINEERING_OWNED",
+  "resource_contract": {
+    "run_id": "QUAL_NATURAL_ALINEA_R900_S17_02",
+    "outer_wall_limit_s": 816,
+    "inner_wall_limit_s": 786,
+    "cleanup_reserve_s": 30
+  },
+  "resources_scope": {
+    "scope_id": "NATURAL_QUALIFICATION_20261015_V1",
+    "approved_total_monitored_s": 900,
+    "charged_before_preparation_s": 83.63743604102638,
+    "remaining_before_preparation_s": 816.3625639589736,
+    "start_count_before_preparation": 1,
+    "unknown_reserved_before_preparation": [],
+    "budget_approval_sha256": "8f91d3453d933f71c898d07cb56255311cacf149bb57286f373454ab01107894",
+    "old_scope_available_not_pooled": true,
+    "current_identity_ordinal": 2,
+    "max_new_identities": 2,
+    "further_identity_prepared": false
+  },
+  "card_status": "PREPARED_NOT_RELEASED",
+  "SUMO_execution_authorized": false,
+  "observations": {
+    "native_safety": null,
+    "C_raw": null,
+    "E_scheduled_nominal": null,
+    "E_executed_nominal": null,
+    "N_actual": null,
+    "cohort": null,
+    "urban": null,
+    "EOF": null
+  },
+  "qualification": "NOT_TESTED_NOT_QUALIFIED",
+  "new_raw_present": false,
+  "new_guardian_present": false,
+  "new_canonical_present": false,
+  "native_started": false,
+  "qualification_proposal": {
+    "status": "PROPOSED_PENDING_EXACT_CARD_USER_CONFIRMATION",
+    "purpose": "LIMITED_OPERATIONAL_AND_MEASUREMENT_QUALIFICATION_NOT_FORMAL",
+    "required_horizon_s": 4200,
+    "required_evaluation_windows_s": [
+      [
+        1200,
+        1500
+      ],
+      [
+        1500,
+        1800
+      ],
+      [
+        1800,
+        2100
+      ],
+      [
+        2100,
+        2400
+      ],
+      [
+        2400,
+        2700
+      ],
+      [
+        2700,
+        3000
+      ]
+    ],
+    "technical_pass": "EXACT_ACCOUNTING_VERSION_POPULATION_EOF_ONLY",
+    "not_qualified": "HARD_ANOMALY_REQUIRED_UNKNOWN_OR_UNEXPLAINED_PERSISTENT_LOSS_WITH_OPPORTUNITY",
+    "not_tested": "BRANCH_NOT_OBSERVED_OR_INSUFFICIENT_OPPORTUNITY",
+    "alinea_numeric_tracking_accuracy": "NOT_ASSESSED",
+    "native_safety_proven": false,
+    "formal_experiment_authorized": false
+  }
+}

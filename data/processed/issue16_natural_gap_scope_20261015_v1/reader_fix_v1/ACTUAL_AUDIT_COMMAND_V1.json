@@ -1,0 +1,18 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "scripts.natural_actuator_qualification_20261015_v1.actual",
+    "--manifest",
+    "artifacts/natural_actuator_qualification_20261015_v1/engineering/first_native_execution_v1/RAW_MANIFEST_V1.json",
+    "--card",
+    "artifacts/natural_actuator_qualification_20261015_v1/engineering/packages_v1/QUAL_NATURAL_ALINEA_R900_S17_01/card.json",
+    "--out",
+    "data/processed/issue16_natural_gap_scope_20261015_v1/reader_fix_v1/native_postanalysis_v1",
+    "--postanalysis-reader-v1"
+  ],
+  "exit": 1,
+  "elapsed_s": 1.734658750006929,
+  "stdout": "UNKNOWN_AUDIT_EXCEPTION\n",
+  "stderr": ""
+}

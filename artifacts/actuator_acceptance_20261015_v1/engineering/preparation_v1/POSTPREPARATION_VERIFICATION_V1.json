@@ -1,0 +1,203 @@
+{
+  "status": "PASS_EXACT_PREPARED_CARD_ENGINEERING_ONLY",
+  "timestamp_utc": "2026-10-15T19:09:03.615239+00:00",
+  "card": {
+    "path": "artifacts/actuator_acceptance_20261015_v1/engineering/packages_v1/QUAL_NATURAL_ALINEA_R900_S17_03/card.json",
+    "sha256": "5120292702f93458cdfaae7211467948f4e559671e62af8ff74d82c9ee6ba3a2",
+    "bytes": 61494
+  },
+  "source_checkpoint": "624573abafac043a777901ce251a2358e3758384",
+  "source_count": 188,
+  "source_digest": "402d4ab207381afbddef2a95ed8120e94fa2367f1eb0dd859fde34ab66f5eb87",
+  "source_all_current_and_commit_match": true,
+  "environment_file_count": 141,
+  "environment_all_actual_hash_match": true,
+  "python": "3.13.0",
+  "input_counts": {
+    "M": 3000,
+    "U": 300,
+    "X": 150,
+    "R": 600
+  },
+  "total_vehicles": 4050,
+  "route_sha256": "99151ed51419c8d490c0f0b1a91bea23f6be70c5486890a04e1e06b3de5d808e",
+  "network_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+  "settings": {
+    "begin": "0",
+    "end": "4200",
+    "dt": "1",
+    "seed": "17",
+    "precision": "8",
+    "collision_action": "warn",
+    "collision_check_junctions": "true"
+  },
+  "fixed_scope": {
+    "activation_s": 600,
+    "end_s": 4200,
+    "evaluation_windows": [
+      [
+        1200,
+        1500
+      ],
+      [
+        1500,
+        1800
+      ],
+      [
+        1800,
+        2100
+      ],
+      [
+        2100,
+        2400
+      ],
+      [
+        2400,
+        2700
+      ],
+      [
+        2700,
+        3000
+      ]
+    ]
+  },
+  "prepared_input_sha256": {
+    "artifacts/actuator_acceptance_20261015_v1/engineering/packages_v1/QUAL_NATURAL_ALINEA_R900_S17_03/demand.rou.xml": "99151ed51419c8d490c0f0b1a91bea23f6be70c5486890a04e1e06b3de5d808e",
+    "artifacts/actuator_acceptance_20261015_v1/engineering/packages_v1/QUAL_NATURAL_ALINEA_R900_S17_03/scenario.sumocfg": "b7546a951091b8e971f10b0aa0c28459e91a820161a5c80653c22a9fed6c952a",
+    "artifacts/actuator_acceptance_20261015_v1/engineering/packages_v1/QUAL_NATURAL_ALINEA_R900_S17_03/accuracy_registration.json": "80190e06f3dc7b438acc403a33553d88dcf8b31bca75203974e077b9fb1a7d0c",
+    "artifacts/actuator_acceptance_20261015_v1/engineering/packages_v1/QUAL_NATURAL_ALINEA_R900_S17_03/scenario.add.xml": "cc5a0255840469931ea3ad9f59c7fb1ee056c8631be8b28f291c38b4879746c2"
+  },
+  "inherited_input_sha256": {
+    "artifacts/formal_development_20261007_v1/inputs/DEV_M3600_R900_S17_T1_A03/card.json": "d88dc20ec1fd388cd70b8478d7dd62acc97d3baa847c7abc4c5dad81f8a5f157",
+    "artifacts/formal_development_20261007_v1/inputs/DEV_M3600_R900_S17_T1_A03/demand.rou.xml": "99151ed51419c8d490c0f0b1a91bea23f6be70c5486890a04e1e06b3de5d808e",
+    "artifacts/formal_development_20261007_v1/inputs/DEV_M3600_R900_S17_T1_A03/scenario.add.xml": "826f315e1591fce4936906d816536cd401a40972759b7b7ad40c9e1b01e3ab55",
+    "artifacts/formal_development_20261007_v1/inputs/DEV_M3600_R900_S17_T1_A03/scenario.sumocfg": "9d881625b6bb774b99b3c8f83c32cb669c56b131567bc4d85aa2c393be45fcfd"
+  },
+  "registration": {
+    "run_id": "QUAL_NATURAL_ALINEA_R900_S17_03",
+    "opportunity_geometry": {
+      "source": {
+        "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+        "sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca"
+      },
+      "lane_domains": [
+        {
+          "lane_id": "ramp_storage_0",
+          "start_pos_m": 184.49,
+          "end_pos_m": 204.49
+        }
+      ],
+      "network_sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca",
+      "receiver_domain_source": {
+        "path": "artifacts/stage6_baseline_localization_20260921_v1/LOC_M3350_S17/engineering/build_attempts/TV_BUILD01/network.net.xml",
+        "sha256": "887c232483f0c68dc024334ff5997250d7d36299ab2744bdcf49d5a314c700ca"
+      },
+      "receiver_lane_ids": [
+        ":ramp_mid_0_0",
+        "ramp_accel_0",
+        ":freeway_merge_2_0",
+        "merge_section_0",
+        "merge_section_1",
+        "merge_section_2"
+      ],
+      "receiver_geometry_m": {
+        ":ramp_mid_0_0": 81.98,
+        "ramp_accel_0": 99.07,
+        ":freeway_merge_2_0": 3.11,
+        "merge_section_0": 294.51,
+        "merge_section_1": 294.51,
+        "merge_section_2": 294.51
+      }
+    }
+  },
+  "resources": {
+    "wall_limit_s": 641,
+    "startup_limit_s": 60,
+    "run_limit_bytes": null,
+    "minimum_free_bytes": 5000000000
+  },
+  "guardian": {
+    "schema": "NATURAL_QUALIFICATION_GUARDIAN_V1",
+    "inner_wall_limit_s": 611,
+    "cleanup_reserve_s": 30,
+    "outer_wall_limit_s": 641,
+    "receipt": "data/raw/natural_actuator_qualification_20261015_v1/QUAL_NATURAL_ALINEA_R900_S17_03/guardian_receipt.json",
+    "fallback_receipt": "artifacts/actuator_acceptance_20261015_v1/engineering/runs/QUAL_NATURAL_ALINEA_R900_S17_03/guardian_receipt.json"
+  },
+  "resources_scope": {
+    "scope_id": "NATURAL_QUALIFICATION_20261015_V1",
+    "approved_total_monitored_s": 900,
+    "charged_before_preparation_s": 258.87379404105013,
+    "remaining_before_preparation_s": 641.1262059589499,
+    "start_count_before_preparation": 2,
+    "unknown_reserved_before_preparation": [],
+    "budget_approval_sha256": "8f91d3453d933f71c898d07cb56255311cacf149bb57286f373454ab01107894",
+    "old_scope_available_not_pooled": true,
+    "current_identity_ordinal": 3,
+    "additional_exact_single_start_status": "PROPOSED_NOT_APPROVED",
+    "max_prepared_new_identities": 1,
+    "further_identity_prepared": false
+  },
+  "ledger_after": {
+    "artifacts/natural_actuator_qualification_20261015_v1/NATIVE_BUDGET_APPROVAL.json": "8f91d3453d933f71c898d07cb56255311cacf149bb57286f373454ab01107894",
+    "artifacts/natural_actuator_qualification_20261015_v1/engineering/settlements/QUAL_NATURAL_ALINEA_R900_S17_01/SETTLEMENT.json": "90341bf36de022540dc3679306ca8d51967229836569d0be9343149b62b9af1c",
+    "artifacts/natural_actuator_qualification_20261015_v1/engineering/settlements/QUAL_NATURAL_ALINEA_R900_S17_02/SETTLEMENT.json": "38a7159d4aebcaef612889938f8ca53e38f16f52834b7d2d3281f5a0be329061"
+  },
+  "ledger_hashes_unchanged": true,
+  "budget_after": {
+    "scope_id": "NATURAL_QUALIFICATION_20261015_V1",
+    "charged_monitored_s": 258.87379404105013,
+    "remaining_s": 641.1262059589499,
+    "approved_total_monitored_s": 900,
+    "prior_stage": {
+      "known_settled": {
+        "UA_NATIVEYELLOW_DYNAMIC_S17_01": {
+          "monitored_s": 155.48080320795998,
+          "raw_bytes": 442183368
+        },
+        "UA_NATIVEGAP_DYNAMIC_S17_01": {
+          "monitored_s": 163.07205774995964,
+          "raw_bytes": 403265825
+        },
+        "UA_NATIVEYELLOW_ALINEA_S17_01": {
+          "monitored_s": 157.09260666702176,
+          "raw_bytes": 442380604
+        }
+      },
+      "unknown_reserved": [],
+      "charged_monitored_s": 475.6454676249414,
+      "charged_raw_bytes": 1287829797,
+      "remaining_s": 124.35453237505862,
+      "remaining_bytes": null,
+      "selected_total_limits": {
+        "wall_s": 600,
+        "bytes": null
+      },
+      "fixed_start_count_limit": null,
+      "scope": "SAME600_STAGE_INCLUDING_SETTLED_NATIVEGAP_AND_NEW_YELLOW_IDENTITIES_NO_RESET"
+    },
+    "old_remainder_pooled": false,
+    "unknown_reserved": [],
+    "known_settled": {
+      "QUAL_NATURAL_ALINEA_R900_S17_01": 83.63743604102638,
+      "QUAL_NATURAL_ALINEA_R900_S17_02": 175.23635800002376
+    },
+    "budget_approval_sha256": "8f91d3453d933f71c898d07cb56255311cacf149bb57286f373454ab01107894",
+    "start_count": 2,
+    "active_outer_reservation": null
+  },
+  "budget_accounting_unchanged": true,
+  "absent_paths": {
+    "raw": true,
+    "guardian_run": true,
+    "guardian_raw_receipt": true,
+    "guardian_fallback_receipt": true,
+    "canonical_releases": true,
+    "private_authorization": true
+  },
+  "SUMO_execution_authorized": false,
+  "observations_all_null": true,
+  "native_started": false,
+  "no_contract_or_accuracy_or_start_approval_created": true,
+  "no_qualification": true
+}

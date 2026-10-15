@@ -22,6 +22,7 @@ from src.candidate_a_cumulative_full_catalogue_20261014.policy import yellow_sco
 from src.candidate_a_native_yellow_minqual_20261015.yellow_contract import annotate_yellow_scope
 from src.candidate_a_natural_service_20261015.producer import Producer
 from src.candidate_a_natural_service_20261015 import budget
+from src.candidate_a_natural_service_20261015 import acceptance_safety
 from src.candidate_a_t10_g5_y3_audit_ready_20261013.telemetry import snapshot as identity_snapshot
 
 
@@ -381,8 +382,10 @@ def execute(card_path, release_path, root=ROOT):
     root=Path(root).resolve()
     require(root==ROOT,'execute root injection prohibited')
     card=validate_release(card_path,release_path,root)
+    acceptance_authority=acceptance_safety.runtime_authority(card,card_path,
+        json.loads(Path(release_path).read_text()),root)
     total_budget=budget.accounting(root)
-    effective=budget.effective_limits(card['resources'],total_budget)
+    effective=budget.effective_limits(card['resources'],total_budget,acceptance_authority)
     run=card['spec']['run_id']
     output=root/card['output'];parent=output.parent
     require(not parent.exists(),'run identity/output already consumed')
@@ -416,7 +419,9 @@ def execute(card_path, release_path, root=ROOT):
         require(card['numerical_exception_authority']['enabled'] is False,'NEW_SCOPE_NUMERICAL_EXCEPTION_NOT_ENABLED')
         authority=None
         adapter=StepAdapter(worker.observe,card['spec']['fixed_command_veh_h'],card['spec']['end_s'],authority,
-            yellow_diagnostic_mode=card['spec']['yellow_responsibility_contract']['enabled'])
+            yellow_diagnostic_mode=card['spec']['yellow_responsibility_contract']['enabled'],
+            acceptance_authority=acceptance_authority,
+            acceptance_observation_mode=bool(card['spec'].get('acceptance_observation_contract')))
         producer=Producer(card['spec']['mode'],card['spec']['fixed_command_veh_h'])
         _diagnostic_loop(conn,worker,capture,output,{**effective,'total_budget_baseline':total_budget},process,started,adapter,producer)
         status='PACKET_CYCLES_PENDING_LOG_FINALIZATION'
@@ -432,6 +437,7 @@ def execute(card_path, release_path, root=ROOT):
             'accounting':adapter.ledger.accounting() if adapter else None,
             'retained_last_observation':adapter.receipts[-1:] if adapter else [],
             'last_yellow_scope':getattr(adapter,'last_yellow_scope',None),
+            'safety_acceptance_followup':getattr(adapter,'acceptance_followup',None),
             'original_logs_preserved':True},default=encoded)))
     finally:
         if conn is not None:
@@ -476,6 +482,8 @@ def execute(card_path, release_path, root=ROOT):
             'actual_native_safety_proven':False,'rate_qualified':False,'automatic_continuation':False,
             'terminal_arrival_audit':'PENDING_INDEPENDENT_FINAL_TRIPINFO_AUDIT_NOT_ONLINE_FULL_COVERAGE',
             'first_red_checkpoint_verified':getattr(adapter,'checkpoint_verified',False),
+            'safety_acceptance_episodes':getattr(adapter,'acceptance_episodes',None),
+            'safety_acceptance_followup':getattr(adapter,'acceptance_followup',None),
             'cycles':adapter.ledger.rows if adapter else None,
             'command_records':adapter.ledger.requests if adapter else None,
             'approved_mode':card['spec']['mode'],'approved_end_s':card['spec']['end_s'],

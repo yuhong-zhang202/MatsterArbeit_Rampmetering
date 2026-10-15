@@ -1,0 +1,2309 @@
+{
+  "schema": "ACTUATOR_EPISODE_MINIMAL_SYNTHETIC_FIXTURE_V1",
+  "classification": "SYNTHETIC_NO_NATIVE_TRAFFIC_OR_SAFETY_EVIDENCE",
+  "provenance": {
+    "source_path": "artifacts/actuator_acceptance_20261015_v1/engineering/implementation_v1/attempt1_fixtures/loop_True.json",
+    "source_sha256": "c53cc0f97c02293ff472e55c61a3fe421c5d06fbf47514db21f04c6b993e4972",
+    "source_bytes": 5657034,
+    "source_classification": "FAKE_LOOP_NO_NATIVE_PHYSICS_OR_SAFETY_EVIDENCE",
+    "selection": "Unmodified values from saved arrays; no new loop or generated traffic",
+    "json_pointers": [
+      "/logs/pre_steps.jsonl/604",
+      "/logs/post_steps.jsonl/604",
+      "/logs/pre_steps.jsonl/605",
+      "/logs/post_steps.jsonl/605",
+      "/episodes"
+    ],
+    "actual_interval_support_s": [
+      [
+        604,
+        605
+      ],
+      [
+        605,
+        606
+      ]
+    ],
+    "excluded": "All other PRE/POST/ACK/setter rows; not needed by these tests"
+  },
+  "steps": [
+    {
+      "time_begin_s": 604,
+      "pre": {
+        "time_s": 604,
+        "bound_snapshot": {
+          "time_s": 604,
+          "world": {
+            "M_flow.0": {
+              "role": "M",
+              "speed_m_s": 5.0,
+              "lane_id": "main_up_0"
+            },
+            "R_flow.0": {
+              "role": "R",
+              "speed_m_s": 4.56232916440366,
+              "lane_id": "ramp_storage_0"
+            }
+          },
+          "loaded": [
+            "M_flow.0",
+            "R_flow.0"
+          ],
+          "pending_ids": [],
+          "storage": [
+            "R_flow.0"
+          ],
+          "internal": [],
+          "cycle_id": 0,
+          "program": "I12_PACKET8",
+          "phase_before": 0,
+          "state_before": "G",
+          "next_switch_before_s": 604,
+          "motion_phase": 1,
+          "motion": "y",
+          "entering_red": false,
+          "shadow_envelope": null,
+          "vehicle_states": [
+            {
+              "vehicle_id": "R_flow.0",
+              "population": "storage",
+              "position_m": 203.96811645360515,
+              "speed_m_s": 4.56232916440366,
+              "length_m": 5.0,
+              "min_gap_m": 2.5,
+              "accel_m_s2": 2.6,
+              "normal_decel_m_s2": 4.5,
+              "tau_s": 1.0,
+              "action_step_s": 1.0,
+              "type_id": "technical_passenger"
+            }
+          ],
+          "receiver": {
+            "available": true,
+            "front_id": "R_flow.0",
+            "nearest_internal": null,
+            "leader": null,
+            "reason": "AVAILABLE"
+          },
+          "yellow_scope": {
+            "status": "UNKNOWN",
+            "time_s": 604,
+            "yellow_s": 2,
+            "covered_ids": [
+              "R_flow.0"
+            ],
+            "rows": [
+              {
+                "vehicle_id": "R_flow.0",
+                "population": "storage",
+                "time_s": 604,
+                "position_m": 203.96811645360515,
+                "speed_m_s": 4.56232916440366,
+                "length_m": 5.0,
+                "normal_decel_m_s2": 4.5,
+                "action_step_s": 1.0,
+                "distance_to_meter_m": 0.5218835463948608,
+                "one_step_Euler_stop_possible": false,
+                "stop_distance_screen_m": 6.875089987111236,
+                "stop_possible": false,
+                "body_clear_time_screen_s": 2.60285690909008,
+                "clear_possible": false,
+                "status": "UNKNOWN_LOCAL_yellow_s_SCOPE",
+                "native_future_safety_proven": false
+              }
+            ],
+            "classification": "BOUND_LOCAL_FEASIBILITY_NOT_GLOBAL_SAFETY",
+            "diagnostic_yellow_contract": {
+              "policy": "NATIVE_YELLOW_RESPONSIBILITY_COMPLETE_INPUT_DIAGNOSTIC_V1",
+              "enabled": true,
+              "original_witness_status": "UNKNOWN",
+              "witness_established": false,
+              "failed_witness_ids": [
+                "R_flow.0"
+              ],
+              "interpretation": "DIAGNOSTIC_WITNESS_NOT_ESTABLISHED",
+              "input_scope": "ORIGINAL_HARD_FRESH_FRAME_AND_POPULATION_JOINS_REQUIRED",
+              "allow_prepared_step": true,
+              "future_native_safety_proven": false,
+              "safety_certified": null
+            }
+          },
+          "rate_chain": {
+            "input_origin": "PROJECT_FEEDBACK",
+            "r_ALINEA": 900,
+            "r_final_veh_h": 900,
+            "pending_request_id": "real_alinea:600",
+            "r_policy_pending_veh_h": null,
+            "nearest_reference_veh_h": 900.0,
+            "pending_packet_status": "SELECTED_ONLY_AT_COMPLETE_BOUNDARY",
+            "applied_request_id": "real_alinea:600",
+            "selected_request_id": "real_alinea:600",
+            "r_policy_selected_veh_h": 900.0,
+            "r_policy_applied_veh_h": 900.0,
+            "requested_quota": 2,
+            "period_s": 8,
+            "cycle_application_delay_s": 0,
+            "command_requested_s": 600
+          },
+          "terminal_before": {
+            "M_flow.0": {
+              "vehicle_id": "M_flow.0",
+              "time_s": 604,
+              "speed_m_s": 5.0,
+              "lane_id": "main_up_0",
+              "position_m": 50.0,
+              "length_m": 5.0,
+              "type_id": "technical_passenger",
+              "route": [
+                "main_up",
+                "merge_section",
+                "main_down"
+              ],
+              "terminal_edge": "main_down",
+              "normal_decel_m_s2": 4.5,
+              "terminal_lane_binding_scope": "any actual network lane on bound terminal route edge; legal final lane changes allowed",
+              "acceleration_m_s2": 0.0,
+              "acceleration_scope": "same-before-time last-post reading or initial getter"
+            },
+            "R_flow.0": {
+              "vehicle_id": "R_flow.0",
+              "time_s": 604,
+              "speed_m_s": 4.56232916440366,
+              "lane_id": "ramp_storage_0",
+              "position_m": 203.96811645360515,
+              "length_m": 5.0,
+              "type_id": "technical_passenger",
+              "route": [
+                "urban_in",
+                "shared_approach",
+                "ramp_storage",
+                "ramp_accel",
+                "merge_section",
+                "main_down"
+              ],
+              "terminal_edge": "main_down",
+              "normal_decel_m_s2": 4.5,
+              "terminal_lane_binding_scope": "any actual network lane on bound terminal route edge; legal final lane changes allowed",
+              "acceleration_m_s2": 0.0,
+              "acceleration_scope": "same-before-time last-post reading or initial getter"
+            }
+          },
+          "native_receiver_decision": null,
+          "entry_following_before": {
+            "R_flow.0": {
+              "vehicle_id": "R_flow.0",
+              "lane_id": "ramp_storage_0",
+              "time_s": 604,
+              "route": [
+                "urban_in",
+                "shared_approach",
+                "ramp_storage",
+                "ramp_accel",
+                "merge_section",
+                "main_down"
+              ],
+              "lookahead_m": 478.67,
+              "receiver_path_lanes": [
+                ":ramp_mid_0_0",
+                "ramp_accel_0",
+                ":freeway_merge_2_0",
+                "merge_section_0",
+                "merge_section_1",
+                "merge_section_2"
+              ],
+              "path_geometry_m": {
+                "ramp_storage_0": 204.49,
+                ":ramp_mid_0_0": 81.98,
+                "ramp_accel_0": 294.51,
+                ":freeway_merge_2_0": 12.0,
+                "merge_section_0": 365.0,
+                "merge_section_1": 365.0,
+                "merge_section_2": 365.0
+              },
+              "actual_speed_m_s": 4.56232916440366,
+              "lane_position_m": 203.96811645360515,
+              "vehicle_length_m": 5.0,
+              "min_gap_m": 2.5,
+              "speed_mode": 31,
+              "lane_change_mode": 1621,
+              "policy": "ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1",
+              "margin_m": 1.1,
+              "hard_margin_m": 0.0,
+              "margin_role": "ADVISORY_ONLY",
+              "future_safety_proven": false,
+              "fresh_getLeader_result": null,
+              "status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+              "actual_secure_gap_m": null,
+              "gap_excluding_minGap_m": null,
+              "required_with_margin_m": null,
+              "required_hard_floor_m": null,
+              "hard_screen_pass": null,
+              "legacy_margin_pass": null,
+              "legacy_contract_status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+              "margin_classification": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+              "claim_scope": "fresh valid native empty result within fixed lookahead and bound route/path, not globally clear",
+              "ordinary_current_gap_observation": {
+                "contract": "ORDINARY_NATIVE_REFERENCE_OBSERVATION_V1",
+                "role": "ENTRY_BEFORE",
+                "time_s": 604,
+                "classification": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                "observational_only": true,
+                "native_safety_proven": false
+              }
+            }
+          },
+          "numeric_stop_before": {},
+          "receiver_domain_observation": {
+            "time_s": 604,
+            "scope": "FRESH_COMPLETE_FIXED_RECEIVER_LANES",
+            "geometry_m": {
+              ":ramp_mid_0_0": 81.98,
+              "ramp_accel_0": 294.51,
+              ":freeway_merge_2_0": 12.0,
+              "merge_section_0": 365.0,
+              "merge_section_1": 365.0,
+              "merge_section_2": 365.0
+            },
+            "ids_by_lane": {
+              ":ramp_mid_0_0": [],
+              "ramp_accel_0": [],
+              ":freeway_merge_2_0": [],
+              "merge_section_0": [],
+              "merge_section_1": [],
+              "merge_section_2": []
+            },
+            "vehicles": {},
+            "prospective_receiver": {
+              "available": true,
+              "front_id": "R_flow.0",
+              "nearest_internal": null,
+              "leader": null,
+              "reason": "AVAILABLE"
+            },
+            "cause": "UNESTABLISHED",
+            "policy_independence": "NOT_ESTABLISHED",
+            "clear_beyond_finite_domain": false,
+            "native_safety_proven": false
+          },
+          "acceptance_safety_before": {
+            "time_s": 604,
+            "world_ids": [
+              "M_flow.0",
+              "R_flow.0"
+            ],
+            "lane_ids": {
+              "ramp_storage_0": [
+                "R_flow.0"
+              ],
+              ":urban_diverge_1_0": []
+            },
+            "states": {
+              "R_flow.0": {
+                "vehicle_id": "R_flow.0",
+                "time_s": 604,
+                "lane_id": "ramp_storage_0",
+                "type_id": "technical_passenger",
+                "route": [
+                  "urban_in",
+                  "shared_approach",
+                  "ramp_storage",
+                  "ramp_accel",
+                  "merge_section",
+                  "main_down"
+                ],
+                "speed_mode": 31,
+                "lane_change_mode": 1621,
+                "speed_m_s": 4.56232916440366,
+                "position_m": 203.96811645360515,
+                "length_m": 5.0,
+                "dynamics": {
+                  "accel": 2.6,
+                  "decel": 4.5,
+                  "emergency_decel": 9.0,
+                  "tau": 1.0,
+                  "action_step": 1.0,
+                  "sigma": 0.5,
+                  "max_speed": 55.55555555555556,
+                  "min_gap": 2.5
+                }
+              }
+            },
+            "following": {
+              "R_flow.0": {
+                "vehicle_id": "R_flow.0",
+                "lane_id": "ramp_storage_0",
+                "time_s": 604,
+                "route": [
+                  "urban_in",
+                  "shared_approach",
+                  "ramp_storage",
+                  "ramp_accel",
+                  "merge_section",
+                  "main_down"
+                ],
+                "lookahead_m": 478.67,
+                "receiver_path_lanes": [
+                  ":ramp_mid_0_0",
+                  "ramp_accel_0",
+                  ":freeway_merge_2_0",
+                  "merge_section_0",
+                  "merge_section_1",
+                  "merge_section_2"
+                ],
+                "path_geometry_m": {
+                  "ramp_storage_0": 204.49,
+                  ":ramp_mid_0_0": 81.98,
+                  "ramp_accel_0": 294.51,
+                  ":freeway_merge_2_0": 12.0,
+                  "merge_section_0": 365.0,
+                  "merge_section_1": 365.0,
+                  "merge_section_2": 365.0
+                },
+                "actual_speed_m_s": 4.56232916440366,
+                "lane_position_m": 203.96811645360515,
+                "vehicle_length_m": 5.0,
+                "min_gap_m": 2.5,
+                "speed_mode": 31,
+                "lane_change_mode": 1621,
+                "policy": "ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1",
+                "margin_m": 1.1,
+                "hard_margin_m": 0.0,
+                "margin_role": "ADVISORY_ONLY",
+                "future_safety_proven": false,
+                "fresh_getLeader_result": null,
+                "status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                "actual_secure_gap_m": null,
+                "gap_excluding_minGap_m": null,
+                "required_with_margin_m": null,
+                "required_hard_floor_m": null,
+                "hard_screen_pass": null,
+                "legacy_margin_pass": null,
+                "legacy_contract_status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                "margin_classification": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                "claim_scope": "fresh valid native empty result within fixed lookahead and bound route/path, not globally clear",
+                "ordinary_current_gap_observation": {
+                  "contract": "ORDINARY_NATIVE_REFERENCE_OBSERVATION_V1",
+                  "role": "ENTRY_BEFORE",
+                  "time_s": 604,
+                  "classification": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                  "observational_only": true,
+                  "native_safety_proven": false
+                }
+              }
+            },
+            "leaders": {},
+            "storage_length_m": 204.49,
+            "ingress_length_m": 113.08,
+            "coverage": "FRESH_COMPLETE_STORAGE_INGRESS_AND_NATIVE_LEADER"
+          },
+          "acceptance_first_yellow": true
+        },
+        "preparation": {
+          "status": "OBSERVATIONS_BOUND_NOT_PROSPECTIVE_SAFETY",
+          "profile": "NATIVE_PHASE_PASSIVE_REFERENCE_OBSERVATION_DIAGNOSTIC_NOT_QUALIFIED",
+          "motion": "y",
+          "shadow_envelope": null,
+          "step_advance_performed": false
+        },
+        "phase_requests": []
+      },
+      "post": {
+        "time_begin_s": 604,
+        "observed_time_s": 605,
+        "status": "RECONCILED_DIAGNOSTIC_ONLY",
+        "accounting_complete": true,
+        "shadow_envelope": null,
+        "time_end_s": 605,
+        "warning_observation": {
+          "time_begin_s": 604,
+          "time_end_s": 605,
+          "coverage": "CALLER_DECLARED_INTERVAL",
+          "source": "/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/tmpk_9ld7d3/out/sumo_stderr.log",
+          "byte_start": 0,
+          "byte_end": 0,
+          "text": "",
+          "bridge_capture": {
+            "source": "/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/tmpk_9ld7d3/out/sumo_stderr.log",
+            "byte_start": 0,
+            "byte_end": 0,
+            "device": 16777233,
+            "inode": 90510499,
+            "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "fragment_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "text": "",
+            "raw_fragment_hex": "",
+            "whole_prefix_decoded": true,
+            "coverage": "CONDITIONAL_SYNC_CERR_BEFORE_ACK"
+          },
+          "bridge_record_stage": "AFTER_SIMULATION_STEP_ACK",
+          "condition": "reviewed synchronous CERR path + stepACK; not universal/native safety proof"
+        },
+        "post_world": {
+          "M_flow.0": {
+            "role": "M",
+            "speed_m_s": 5.0,
+            "lane_id": "main_up_0"
+          },
+          "R_flow.0": {
+            "role": "R",
+            "speed_m_s": 0.06132916440366,
+            "lane_id": "ramp_storage_0"
+          }
+        },
+        "phase_observation": {
+          "phase_before": 0,
+          "state_before": "G",
+          "next_switch_before_s": 604,
+          "phase_after": 1,
+          "state_after": "y",
+          "next_switch_after_s": 606
+        },
+        "phase_clock_binding": {
+          "cycle_id": 0,
+          "program": "I12_PACKET8",
+          "motion": "y",
+          "expected_post_nextSwitch_s": 606,
+          "actual_post_nextSwitch_s": 606,
+          "status": "ACK_OBSERVED_NOT_FUTURE_SAFETY"
+        },
+        "identity_change": {
+          "arrived_ids": [],
+          "departed_ids": [],
+          "before_only_ids": [],
+          "after_only_ids": []
+        },
+        "terminal_arrival_pending": [],
+        "yellow_scope": {
+          "status": "UNKNOWN",
+          "time_s": 604,
+          "yellow_s": 2,
+          "covered_ids": [
+            "R_flow.0"
+          ],
+          "rows": [
+            {
+              "vehicle_id": "R_flow.0",
+              "population": "storage",
+              "time_s": 604,
+              "position_m": 203.96811645360515,
+              "speed_m_s": 4.56232916440366,
+              "length_m": 5.0,
+              "normal_decel_m_s2": 4.5,
+              "action_step_s": 1.0,
+              "distance_to_meter_m": 0.5218835463948608,
+              "one_step_Euler_stop_possible": false,
+              "stop_distance_screen_m": 6.875089987111236,
+              "stop_possible": false,
+              "body_clear_time_screen_s": 2.60285690909008,
+              "clear_possible": false,
+              "status": "UNKNOWN_LOCAL_yellow_s_SCOPE",
+              "native_future_safety_proven": false
+            }
+          ],
+          "classification": "BOUND_LOCAL_FEASIBILITY_NOT_GLOBAL_SAFETY",
+          "diagnostic_yellow_contract": {
+            "policy": "NATIVE_YELLOW_RESPONSIBILITY_COMPLETE_INPUT_DIAGNOSTIC_V1",
+            "enabled": true,
+            "original_witness_status": "UNKNOWN",
+            "witness_established": false,
+            "failed_witness_ids": [
+              "R_flow.0"
+            ],
+            "interpretation": "DIAGNOSTIC_WITNESS_NOT_ESTABLISHED",
+            "input_scope": "ORIGINAL_HARD_FRESH_FRAME_AND_POPULATION_JOINS_REQUIRED",
+            "allow_prepared_step": true,
+            "future_native_safety_proven": false,
+            "safety_certified": null
+          }
+        },
+        "rate_chain": {
+          "input_origin": "PROJECT_FEEDBACK",
+          "r_ALINEA": 900,
+          "r_final_veh_h": 900,
+          "pending_request_id": "real_alinea:600",
+          "r_policy_pending_veh_h": null,
+          "nearest_reference_veh_h": 900.0,
+          "pending_packet_status": "SELECTED_ONLY_AT_COMPLETE_BOUNDARY",
+          "applied_request_id": "real_alinea:600",
+          "selected_request_id": "real_alinea:600",
+          "r_policy_selected_veh_h": 900.0,
+          "r_policy_applied_veh_h": 900.0,
+          "requested_quota": 2,
+          "period_s": 8,
+          "cycle_application_delay_s": 0,
+          "command_requested_s": 600
+        },
+        "actual_crossings": [],
+        "post_signal_application_binding": {
+          "ACK_s": 605,
+          "actual_phase": 1,
+          "actual_state": "y",
+          "actual_program": "I12_PACKET8",
+          "actual_controlled_links": [
+            [
+              [
+                "ramp_storage_0",
+                "ramp_accel_0",
+                ":ramp_mid_0_0"
+              ]
+            ]
+          ],
+          "expected_phase": 1,
+          "expected_state": "y",
+          "expected_program": "I12_PACKET8",
+          "status": "BOUND_BEFORE_LEDGER"
+        },
+        "motion": "y",
+        "accounting": {
+          "C": 1.25,
+          "C_nearest_reference": 1.25,
+          "C_applied": 1.25,
+          "C_selected": 1.25,
+          "E": 0,
+          "E_scheduled_nominal": 0,
+          "E_executed_nominal": 0,
+          "N": 0,
+          "C_selected_exact_fraction": "5/4",
+          "C_applied_exact_fraction": "5/4",
+          "scheduled_minus_executed": 0,
+          "executed_minus_actual": 0,
+          "requested_minus_nominal": 1.25,
+          "nominal_minus_actual": 0,
+          "requested_minus_actual": 1.25,
+          "C_exact_fraction": "5/4",
+          "E_support": "COMPLETE_PACKETS_ONLY",
+          "N_support": "ALL_OBSERVED_ENTRY_BEGIN_INTERVALS",
+          "partial_cycle": true,
+          "nearest_reference_is_not_cumulative_scheduler_output": true
+        },
+        "post_receiver": {
+          "available": true,
+          "front_id": "R_flow.0",
+          "nearest_internal": null,
+          "leader": null,
+          "reason": "AVAILABLE"
+        },
+        "actual_entry_following": [],
+        "native_event_counters": {
+          "colliding_vehicles": 0,
+          "starting_teleports": 0,
+          "ending_teleports": 0
+        },
+        "braking_observation": {
+          "speed_difference_ids": [
+            "M_flow.0",
+            "R_flow.0"
+          ],
+          "after_acceleration_ids": [
+            "M_flow.0",
+            "R_flow.0"
+          ],
+          "excluded_before_only_ids": [],
+          "arrived_ids": [],
+          "speed_difference_m_s2": {
+            "M_flow.0": 0.0,
+            "R_flow.0": -4.5009999999999994
+          },
+          "actual_acceleration_m_s2": {
+            "M_flow.0": 0.0,
+            "R_flow.0": -4.501
+          },
+          "coverage": "BEFORE_INTERSECTION_AFTER_DIFFERENCE_AND_AFTER_POPULATION_GETTER_NOT_GLOBAL"
+        },
+        "body_observation": {
+          "ACK_s": 605,
+          "signal": "y",
+          "spanning_ids": [],
+          "rows": [],
+          "claim": "actual per-ACK rear observation; no yellow-end clearance deadline or future guarantee"
+        },
+        "legacy_braking_reasons": [
+          "ORDINARY_BRAKING_EXCEEDED:R_flow.0",
+          "UNKNOWN_OR_EXCESSIVE_ACCELERATION:R_flow.0"
+        ],
+        "numeric_stop_classifications": [],
+        "safety_acceptance": {
+          "contract": "FIRST_YELLOW_SOURCE_SCALE_OBSERVATION_V1",
+          "enabled": true,
+          "classifications": [
+            {
+              "contract": "FIRST_YELLOW_SOURCE_SCALE_OBSERVATION_V1",
+              "classification": "NUMERICAL_SCALE_COMPATIBLE",
+              "decision": "ONE_UNCHANGED_STEP_FOLLOWUP_REQUIRED",
+              "actual_branch_identified": false,
+              "native_safety_proven": false,
+              "legacy_strict_FAIL_retained": true,
+              "evidence": {
+                "vehicle_id": "R_flow.0",
+                "dt_s": 1,
+                "before": {
+                  "time_s": 604,
+                  "world_ids": [
+                    "M_flow.0",
+                    "R_flow.0"
+                  ],
+                  "lane_ids": {
+                    "ramp_storage_0": [
+                      "R_flow.0"
+                    ],
+                    ":urban_diverge_1_0": []
+                  },
+                  "states": {
+                    "R_flow.0": {
+                      "vehicle_id": "R_flow.0",
+                      "time_s": 604,
+                      "lane_id": "ramp_storage_0",
+                      "type_id": "technical_passenger",
+                      "route": [
+                        "urban_in",
+                        "shared_approach",
+                        "ramp_storage",
+                        "ramp_accel",
+                        "merge_section",
+                        "main_down"
+                      ],
+                      "speed_mode": 31,
+                      "lane_change_mode": 1621,
+                      "speed_m_s": 4.56232916440366,
+                      "position_m": 203.96811645360515,
+                      "length_m": 5.0,
+                      "dynamics": {
+                        "accel": 2.6,
+                        "decel": 4.5,
+                        "emergency_decel": 9.0,
+                        "tau": 1.0,
+                        "action_step": 1.0,
+                        "sigma": 0.5,
+                        "max_speed": 55.55555555555556,
+                        "min_gap": 2.5
+                      }
+                    }
+                  },
+                  "following": {
+                    "R_flow.0": {
+                      "vehicle_id": "R_flow.0",
+                      "lane_id": "ramp_storage_0",
+                      "time_s": 604,
+                      "route": [
+                        "urban_in",
+                        "shared_approach",
+                        "ramp_storage",
+                        "ramp_accel",
+                        "merge_section",
+                        "main_down"
+                      ],
+                      "lookahead_m": 478.67,
+                      "receiver_path_lanes": [
+                        ":ramp_mid_0_0",
+                        "ramp_accel_0",
+                        ":freeway_merge_2_0",
+                        "merge_section_0",
+                        "merge_section_1",
+                        "merge_section_2"
+                      ],
+                      "path_geometry_m": {
+                        "ramp_storage_0": 204.49,
+                        ":ramp_mid_0_0": 81.98,
+                        "ramp_accel_0": 294.51,
+                        ":freeway_merge_2_0": 12.0,
+                        "merge_section_0": 365.0,
+                        "merge_section_1": 365.0,
+                        "merge_section_2": 365.0
+                      },
+                      "actual_speed_m_s": 4.56232916440366,
+                      "lane_position_m": 203.96811645360515,
+                      "vehicle_length_m": 5.0,
+                      "min_gap_m": 2.5,
+                      "speed_mode": 31,
+                      "lane_change_mode": 1621,
+                      "policy": "ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1",
+                      "margin_m": 1.1,
+                      "hard_margin_m": 0.0,
+                      "margin_role": "ADVISORY_ONLY",
+                      "future_safety_proven": false,
+                      "fresh_getLeader_result": null,
+                      "status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                      "actual_secure_gap_m": null,
+                      "gap_excluding_minGap_m": null,
+                      "required_with_margin_m": null,
+                      "required_hard_floor_m": null,
+                      "hard_screen_pass": null,
+                      "legacy_margin_pass": null,
+                      "legacy_contract_status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                      "margin_classification": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                      "claim_scope": "fresh valid native empty result within fixed lookahead and bound route/path, not globally clear",
+                      "ordinary_current_gap_observation": {
+                        "contract": "ORDINARY_NATIVE_REFERENCE_OBSERVATION_V1",
+                        "role": "ENTRY_BEFORE",
+                        "time_s": 604,
+                        "classification": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                        "observational_only": true,
+                        "native_safety_proven": false
+                      }
+                    }
+                  },
+                  "leaders": {},
+                  "storage_length_m": 204.49,
+                  "ingress_length_m": 113.08,
+                  "coverage": "FRESH_COMPLETE_STORAGE_INGRESS_AND_NATIVE_LEADER"
+                },
+                "after": {
+                  "time_s": 605,
+                  "world_ids": [
+                    "M_flow.0",
+                    "R_flow.0"
+                  ],
+                  "lane_ids": {
+                    "ramp_storage_0": [
+                      "R_flow.0"
+                    ],
+                    ":urban_diverge_1_0": []
+                  },
+                  "states": {
+                    "R_flow.0": {
+                      "vehicle_id": "R_flow.0",
+                      "time_s": 605,
+                      "lane_id": "ramp_storage_0",
+                      "type_id": "technical_passenger",
+                      "route": [
+                        "urban_in",
+                        "shared_approach",
+                        "ramp_storage",
+                        "ramp_accel",
+                        "merge_section",
+                        "main_down"
+                      ],
+                      "speed_mode": 31,
+                      "lane_change_mode": 1621,
+                      "speed_m_s": 0.06132916440366,
+                      "position_m": 204.0294456180088,
+                      "length_m": 5.0,
+                      "dynamics": {
+                        "accel": 2.6,
+                        "decel": 4.5,
+                        "emergency_decel": 9.0,
+                        "tau": 1.0,
+                        "action_step": 1.0,
+                        "sigma": 0.5,
+                        "max_speed": 55.55555555555556,
+                        "min_gap": 2.5
+                      }
+                    }
+                  },
+                  "following": {
+                    "R_flow.0": {
+                      "vehicle_id": "R_flow.0",
+                      "lane_id": "ramp_storage_0",
+                      "time_s": 605,
+                      "route": [
+                        "urban_in",
+                        "shared_approach",
+                        "ramp_storage",
+                        "ramp_accel",
+                        "merge_section",
+                        "main_down"
+                      ],
+                      "lookahead_m": 478.67,
+                      "receiver_path_lanes": [
+                        ":ramp_mid_0_0",
+                        "ramp_accel_0",
+                        ":freeway_merge_2_0",
+                        "merge_section_0",
+                        "merge_section_1",
+                        "merge_section_2"
+                      ],
+                      "path_geometry_m": {
+                        "ramp_storage_0": 204.49,
+                        ":ramp_mid_0_0": 81.98,
+                        "ramp_accel_0": 294.51,
+                        ":freeway_merge_2_0": 12.0,
+                        "merge_section_0": 365.0,
+                        "merge_section_1": 365.0,
+                        "merge_section_2": 365.0
+                      },
+                      "actual_speed_m_s": 0.06132916440366,
+                      "lane_position_m": 204.0294456180088,
+                      "vehicle_length_m": 5.0,
+                      "min_gap_m": 2.5,
+                      "speed_mode": 31,
+                      "lane_change_mode": 1621,
+                      "policy": "ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1",
+                      "margin_m": 1.1,
+                      "hard_margin_m": 0.0,
+                      "margin_role": "ADVISORY_ONLY",
+                      "future_safety_proven": false,
+                      "fresh_getLeader_result": null,
+                      "status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                      "actual_secure_gap_m": null,
+                      "gap_excluding_minGap_m": null,
+                      "required_with_margin_m": null,
+                      "required_hard_floor_m": null,
+                      "hard_screen_pass": null,
+                      "legacy_margin_pass": null,
+                      "legacy_contract_status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                      "margin_classification": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                      "claim_scope": "fresh valid native empty result within fixed lookahead and bound route/path, not globally clear",
+                      "ordinary_current_gap_observation": {
+                        "contract": "ORDINARY_NATIVE_REFERENCE_OBSERVATION_V1",
+                        "role": "ENTRY_AFTER",
+                        "time_s": 605,
+                        "classification": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                        "observational_only": true,
+                        "native_safety_proven": false
+                      }
+                    }
+                  },
+                  "leaders": {},
+                  "storage_length_m": 204.49,
+                  "ingress_length_m": 113.08,
+                  "coverage": "FRESH_COMPLETE_STORAGE_INGRESS_AND_NATIVE_LEADER"
+                },
+                "first_yellow": true,
+                "motion": "y",
+                "signal_binding": "BOUND_BEFORE_LEDGER",
+                "entered_link": false,
+                "body_coverage_complete": true,
+                "hard_reasons": [],
+                "native_warning_text": "",
+                "native_event_counters": {
+                  "colliding_vehicles": 0,
+                  "starting_teleports": 0,
+                  "ending_teleports": 0
+                },
+                "acceleration_m_s2": -4.501,
+                "delta_m_s2": -4.5009999999999994
+              },
+              "neighbors": {
+                "before": {
+                  "follower_id": null,
+                  "follower_bumper_gap_m": null,
+                  "follower_gap_excluding_minGap_m": null,
+                  "leader_id": null,
+                  "leader_bumper_gap_m": null,
+                  "leader_gap_excluding_minGap_m": null,
+                  "physical_overlap": false,
+                  "minGap_infringement": false,
+                  "absence_scope": "COMPLETE_STORAGE_AND_INGRESS_TO_KNOWN_BOUNDARY"
+                },
+                "after": {
+                  "follower_id": null,
+                  "follower_bumper_gap_m": null,
+                  "follower_gap_excluding_minGap_m": null,
+                  "leader_id": null,
+                  "leader_bumper_gap_m": null,
+                  "leader_gap_excluding_minGap_m": null,
+                  "physical_overlap": false,
+                  "minGap_infringement": false,
+                  "absence_scope": "COMPLETE_STORAGE_AND_INGRESS_TO_KNOWN_BOUNDARY"
+                }
+              },
+              "arithmetic": {
+                "eps_distance_m": 0.001,
+                "dt_s": 1,
+                "excess_m_s2": 0.001000000000000334,
+                "inferred_stop_offset_m": 0.45955438199120113,
+                "predicted_speed_m_s": 0.06132916440365965,
+                "private_stopDist_observed": false
+              },
+              "reason": "SOURCE_SCALE_AND_EXTERNAL_CONTEXT_ONLY"
+            }
+          ],
+          "remaining_reasons": [],
+          "followup_pending": {
+            "time_begin_s": 604,
+            "time_end_s": 605,
+            "vehicle_ids": [
+              "R_flow.0"
+            ]
+          },
+          "native_safety_proven": false,
+          "authority_binding": {
+            "enabled": true,
+            "contract": "FIRST_YELLOW_SOURCE_SCALE_OBSERVATION_V1",
+            "source_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+            "status": "EXACT_ACCEPTANCE_CONTRACT_AUTHORITY_VERIFIED",
+            "configured_model": "Krauss",
+            "configured_Euler_dt_s": 1,
+            "no_model_or_JM_override": true,
+            "run_id": "SYNTHETIC_ONLY",
+            "approval_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "execution_card_sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+          },
+          "after_frame": {
+            "time_s": 605,
+            "world_ids": [
+              "M_flow.0",
+              "R_flow.0"
+            ],
+            "lane_ids": {
+              "ramp_storage_0": [
+                "R_flow.0"
+              ],
+              ":urban_diverge_1_0": []
+            },
+            "states": {
+              "R_flow.0": {
+                "vehicle_id": "R_flow.0",
+                "time_s": 605,
+                "lane_id": "ramp_storage_0",
+                "type_id": "technical_passenger",
+                "route": [
+                  "urban_in",
+                  "shared_approach",
+                  "ramp_storage",
+                  "ramp_accel",
+                  "merge_section",
+                  "main_down"
+                ],
+                "speed_mode": 31,
+                "lane_change_mode": 1621,
+                "speed_m_s": 0.06132916440366,
+                "position_m": 204.0294456180088,
+                "length_m": 5.0,
+                "dynamics": {
+                  "accel": 2.6,
+                  "decel": 4.5,
+                  "emergency_decel": 9.0,
+                  "tau": 1.0,
+                  "action_step": 1.0,
+                  "sigma": 0.5,
+                  "max_speed": 55.55555555555556,
+                  "min_gap": 2.5
+                }
+              }
+            },
+            "following": {
+              "R_flow.0": {
+                "vehicle_id": "R_flow.0",
+                "lane_id": "ramp_storage_0",
+                "time_s": 605,
+                "route": [
+                  "urban_in",
+                  "shared_approach",
+                  "ramp_storage",
+                  "ramp_accel",
+                  "merge_section",
+                  "main_down"
+                ],
+                "lookahead_m": 478.67,
+                "receiver_path_lanes": [
+                  ":ramp_mid_0_0",
+                  "ramp_accel_0",
+                  ":freeway_merge_2_0",
+                  "merge_section_0",
+                  "merge_section_1",
+                  "merge_section_2"
+                ],
+                "path_geometry_m": {
+                  "ramp_storage_0": 204.49,
+                  ":ramp_mid_0_0": 81.98,
+                  "ramp_accel_0": 294.51,
+                  ":freeway_merge_2_0": 12.0,
+                  "merge_section_0": 365.0,
+                  "merge_section_1": 365.0,
+                  "merge_section_2": 365.0
+                },
+                "actual_speed_m_s": 0.06132916440366,
+                "lane_position_m": 204.0294456180088,
+                "vehicle_length_m": 5.0,
+                "min_gap_m": 2.5,
+                "speed_mode": 31,
+                "lane_change_mode": 1621,
+                "policy": "ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1",
+                "margin_m": 1.1,
+                "hard_margin_m": 0.0,
+                "margin_role": "ADVISORY_ONLY",
+                "future_safety_proven": false,
+                "fresh_getLeader_result": null,
+                "status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                "actual_secure_gap_m": null,
+                "gap_excluding_minGap_m": null,
+                "required_with_margin_m": null,
+                "required_hard_floor_m": null,
+                "hard_screen_pass": null,
+                "legacy_margin_pass": null,
+                "legacy_contract_status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                "margin_classification": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                "claim_scope": "fresh valid native empty result within fixed lookahead and bound route/path, not globally clear",
+                "ordinary_current_gap_observation": {
+                  "contract": "ORDINARY_NATIVE_REFERENCE_OBSERVATION_V1",
+                  "role": "ENTRY_AFTER",
+                  "time_s": 605,
+                  "classification": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                  "observational_only": true,
+                  "native_safety_proven": false
+                }
+              }
+            },
+            "leaders": {},
+            "storage_length_m": 204.49,
+            "ingress_length_m": 113.08,
+            "coverage": "FRESH_COMPLETE_STORAGE_INGRESS_AND_NATIVE_LEADER"
+          },
+          "status": "OBSERVATION_ONLY_NOT_SAFETY_PROOF"
+        }
+      }
+    },
+    {
+      "time_begin_s": 605,
+      "pre": {
+        "time_s": 605,
+        "bound_snapshot": {
+          "time_s": 605,
+          "world": {
+            "M_flow.0": {
+              "role": "M",
+              "speed_m_s": 5.0,
+              "lane_id": "main_up_0"
+            },
+            "R_flow.0": {
+              "role": "R",
+              "speed_m_s": 0.06132916440366,
+              "lane_id": "ramp_storage_0"
+            }
+          },
+          "loaded": [
+            "M_flow.0",
+            "R_flow.0"
+          ],
+          "pending_ids": [],
+          "storage": [
+            "R_flow.0"
+          ],
+          "internal": [],
+          "cycle_id": 0,
+          "program": "I12_PACKET8",
+          "phase_before": 1,
+          "state_before": "y",
+          "next_switch_before_s": 606,
+          "motion_phase": 1,
+          "motion": "y",
+          "entering_red": false,
+          "shadow_envelope": null,
+          "vehicle_states": [
+            {
+              "vehicle_id": "R_flow.0",
+              "population": "storage",
+              "position_m": 204.0294456180088,
+              "speed_m_s": 0.06132916440366,
+              "length_m": 5.0,
+              "min_gap_m": 2.5,
+              "accel_m_s2": 2.6,
+              "normal_decel_m_s2": 4.5,
+              "tau_s": 1.0,
+              "action_step_s": 1.0,
+              "type_id": "technical_passenger"
+            }
+          ],
+          "receiver": {
+            "available": true,
+            "front_id": "R_flow.0",
+            "nearest_internal": null,
+            "leader": null,
+            "reason": "AVAILABLE"
+          },
+          "yellow_scope": {
+            "status": "UNKNOWN",
+            "time_s": 604,
+            "yellow_s": 2,
+            "covered_ids": [
+              "R_flow.0"
+            ],
+            "rows": [
+              {
+                "vehicle_id": "R_flow.0",
+                "population": "storage",
+                "time_s": 604,
+                "position_m": 203.96811645360515,
+                "speed_m_s": 4.56232916440366,
+                "length_m": 5.0,
+                "normal_decel_m_s2": 4.5,
+                "action_step_s": 1.0,
+                "distance_to_meter_m": 0.5218835463948608,
+                "one_step_Euler_stop_possible": false,
+                "stop_distance_screen_m": 6.875089987111236,
+                "stop_possible": false,
+                "body_clear_time_screen_s": 2.60285690909008,
+                "clear_possible": false,
+                "status": "UNKNOWN_LOCAL_yellow_s_SCOPE",
+                "native_future_safety_proven": false
+              }
+            ],
+            "classification": "BOUND_LOCAL_FEASIBILITY_NOT_GLOBAL_SAFETY",
+            "diagnostic_yellow_contract": {
+              "policy": "NATIVE_YELLOW_RESPONSIBILITY_COMPLETE_INPUT_DIAGNOSTIC_V1",
+              "enabled": true,
+              "original_witness_status": "UNKNOWN",
+              "witness_established": false,
+              "failed_witness_ids": [
+                "R_flow.0"
+              ],
+              "interpretation": "DIAGNOSTIC_WITNESS_NOT_ESTABLISHED",
+              "input_scope": "ORIGINAL_HARD_FRESH_FRAME_AND_POPULATION_JOINS_REQUIRED",
+              "allow_prepared_step": true,
+              "future_native_safety_proven": false,
+              "safety_certified": null
+            }
+          },
+          "rate_chain": {
+            "input_origin": "PROJECT_FEEDBACK",
+            "r_ALINEA": 900,
+            "r_final_veh_h": 900,
+            "pending_request_id": "real_alinea:600",
+            "r_policy_pending_veh_h": null,
+            "nearest_reference_veh_h": 900.0,
+            "pending_packet_status": "SELECTED_ONLY_AT_COMPLETE_BOUNDARY",
+            "applied_request_id": "real_alinea:600",
+            "selected_request_id": "real_alinea:600",
+            "r_policy_selected_veh_h": 900.0,
+            "r_policy_applied_veh_h": 900.0,
+            "requested_quota": 2,
+            "period_s": 8,
+            "cycle_application_delay_s": 0,
+            "command_requested_s": 600
+          },
+          "terminal_before": {
+            "M_flow.0": {
+              "vehicle_id": "M_flow.0",
+              "time_s": 605,
+              "speed_m_s": 5.0,
+              "lane_id": "main_up_0",
+              "position_m": 50.0,
+              "length_m": 5.0,
+              "type_id": "technical_passenger",
+              "route": [
+                "main_up",
+                "merge_section",
+                "main_down"
+              ],
+              "terminal_edge": "main_down",
+              "normal_decel_m_s2": 4.5,
+              "terminal_lane_binding_scope": "any actual network lane on bound terminal route edge; legal final lane changes allowed",
+              "acceleration_m_s2": 0.0,
+              "acceleration_scope": "same-before-time last-post reading or initial getter"
+            },
+            "R_flow.0": {
+              "vehicle_id": "R_flow.0",
+              "time_s": 605,
+              "speed_m_s": 0.06132916440366,
+              "lane_id": "ramp_storage_0",
+              "position_m": 204.0294456180088,
+              "length_m": 5.0,
+              "type_id": "technical_passenger",
+              "route": [
+                "urban_in",
+                "shared_approach",
+                "ramp_storage",
+                "ramp_accel",
+                "merge_section",
+                "main_down"
+              ],
+              "terminal_edge": "main_down",
+              "normal_decel_m_s2": 4.5,
+              "terminal_lane_binding_scope": "any actual network lane on bound terminal route edge; legal final lane changes allowed",
+              "acceleration_m_s2": -4.501,
+              "acceleration_scope": "same-before-time last-post reading or initial getter"
+            }
+          },
+          "native_receiver_decision": null,
+          "entry_following_before": {
+            "R_flow.0": {
+              "vehicle_id": "R_flow.0",
+              "lane_id": "ramp_storage_0",
+              "time_s": 605,
+              "route": [
+                "urban_in",
+                "shared_approach",
+                "ramp_storage",
+                "ramp_accel",
+                "merge_section",
+                "main_down"
+              ],
+              "lookahead_m": 478.67,
+              "receiver_path_lanes": [
+                ":ramp_mid_0_0",
+                "ramp_accel_0",
+                ":freeway_merge_2_0",
+                "merge_section_0",
+                "merge_section_1",
+                "merge_section_2"
+              ],
+              "path_geometry_m": {
+                "ramp_storage_0": 204.49,
+                ":ramp_mid_0_0": 81.98,
+                "ramp_accel_0": 294.51,
+                ":freeway_merge_2_0": 12.0,
+                "merge_section_0": 365.0,
+                "merge_section_1": 365.0,
+                "merge_section_2": 365.0
+              },
+              "actual_speed_m_s": 0.06132916440366,
+              "lane_position_m": 204.0294456180088,
+              "vehicle_length_m": 5.0,
+              "min_gap_m": 2.5,
+              "speed_mode": 31,
+              "lane_change_mode": 1621,
+              "policy": "ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1",
+              "margin_m": 1.1,
+              "hard_margin_m": 0.0,
+              "margin_role": "ADVISORY_ONLY",
+              "future_safety_proven": false,
+              "fresh_getLeader_result": null,
+              "status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+              "actual_secure_gap_m": null,
+              "gap_excluding_minGap_m": null,
+              "required_with_margin_m": null,
+              "required_hard_floor_m": null,
+              "hard_screen_pass": null,
+              "legacy_margin_pass": null,
+              "legacy_contract_status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+              "margin_classification": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+              "claim_scope": "fresh valid native empty result within fixed lookahead and bound route/path, not globally clear",
+              "ordinary_current_gap_observation": {
+                "contract": "ORDINARY_NATIVE_REFERENCE_OBSERVATION_V1",
+                "role": "ENTRY_BEFORE",
+                "time_s": 605,
+                "classification": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                "observational_only": true,
+                "native_safety_proven": false
+              }
+            }
+          },
+          "numeric_stop_before": {},
+          "receiver_domain_observation": {
+            "time_s": 605,
+            "scope": "FRESH_COMPLETE_FIXED_RECEIVER_LANES",
+            "geometry_m": {
+              ":ramp_mid_0_0": 81.98,
+              "ramp_accel_0": 294.51,
+              ":freeway_merge_2_0": 12.0,
+              "merge_section_0": 365.0,
+              "merge_section_1": 365.0,
+              "merge_section_2": 365.0
+            },
+            "ids_by_lane": {
+              ":ramp_mid_0_0": [],
+              "ramp_accel_0": [],
+              ":freeway_merge_2_0": [],
+              "merge_section_0": [],
+              "merge_section_1": [],
+              "merge_section_2": []
+            },
+            "vehicles": {},
+            "prospective_receiver": {
+              "available": true,
+              "front_id": "R_flow.0",
+              "nearest_internal": null,
+              "leader": null,
+              "reason": "AVAILABLE"
+            },
+            "cause": "UNESTABLISHED",
+            "policy_independence": "NOT_ESTABLISHED",
+            "clear_beyond_finite_domain": false,
+            "native_safety_proven": false
+          },
+          "acceptance_safety_before": {
+            "time_s": 605,
+            "world_ids": [
+              "M_flow.0",
+              "R_flow.0"
+            ],
+            "lane_ids": {
+              "ramp_storage_0": [
+                "R_flow.0"
+              ],
+              ":urban_diverge_1_0": []
+            },
+            "states": {
+              "R_flow.0": {
+                "vehicle_id": "R_flow.0",
+                "time_s": 605,
+                "lane_id": "ramp_storage_0",
+                "type_id": "technical_passenger",
+                "route": [
+                  "urban_in",
+                  "shared_approach",
+                  "ramp_storage",
+                  "ramp_accel",
+                  "merge_section",
+                  "main_down"
+                ],
+                "speed_mode": 31,
+                "lane_change_mode": 1621,
+                "speed_m_s": 0.06132916440366,
+                "position_m": 204.0294456180088,
+                "length_m": 5.0,
+                "dynamics": {
+                  "accel": 2.6,
+                  "decel": 4.5,
+                  "emergency_decel": 9.0,
+                  "tau": 1.0,
+                  "action_step": 1.0,
+                  "sigma": 0.5,
+                  "max_speed": 55.55555555555556,
+                  "min_gap": 2.5
+                }
+              }
+            },
+            "following": {
+              "R_flow.0": {
+                "vehicle_id": "R_flow.0",
+                "lane_id": "ramp_storage_0",
+                "time_s": 605,
+                "route": [
+                  "urban_in",
+                  "shared_approach",
+                  "ramp_storage",
+                  "ramp_accel",
+                  "merge_section",
+                  "main_down"
+                ],
+                "lookahead_m": 478.67,
+                "receiver_path_lanes": [
+                  ":ramp_mid_0_0",
+                  "ramp_accel_0",
+                  ":freeway_merge_2_0",
+                  "merge_section_0",
+                  "merge_section_1",
+                  "merge_section_2"
+                ],
+                "path_geometry_m": {
+                  "ramp_storage_0": 204.49,
+                  ":ramp_mid_0_0": 81.98,
+                  "ramp_accel_0": 294.51,
+                  ":freeway_merge_2_0": 12.0,
+                  "merge_section_0": 365.0,
+                  "merge_section_1": 365.0,
+                  "merge_section_2": 365.0
+                },
+                "actual_speed_m_s": 0.06132916440366,
+                "lane_position_m": 204.0294456180088,
+                "vehicle_length_m": 5.0,
+                "min_gap_m": 2.5,
+                "speed_mode": 31,
+                "lane_change_mode": 1621,
+                "policy": "ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1",
+                "margin_m": 1.1,
+                "hard_margin_m": 0.0,
+                "margin_role": "ADVISORY_ONLY",
+                "future_safety_proven": false,
+                "fresh_getLeader_result": null,
+                "status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                "actual_secure_gap_m": null,
+                "gap_excluding_minGap_m": null,
+                "required_with_margin_m": null,
+                "required_hard_floor_m": null,
+                "hard_screen_pass": null,
+                "legacy_margin_pass": null,
+                "legacy_contract_status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                "margin_classification": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                "claim_scope": "fresh valid native empty result within fixed lookahead and bound route/path, not globally clear",
+                "ordinary_current_gap_observation": {
+                  "contract": "ORDINARY_NATIVE_REFERENCE_OBSERVATION_V1",
+                  "role": "ENTRY_BEFORE",
+                  "time_s": 605,
+                  "classification": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                  "observational_only": true,
+                  "native_safety_proven": false
+                }
+              }
+            },
+            "leaders": {},
+            "storage_length_m": 204.49,
+            "ingress_length_m": 113.08,
+            "coverage": "FRESH_COMPLETE_STORAGE_INGRESS_AND_NATIVE_LEADER"
+          },
+          "acceptance_first_yellow": false
+        },
+        "preparation": {
+          "status": "OBSERVATIONS_BOUND_NOT_PROSPECTIVE_SAFETY",
+          "profile": "NATIVE_PHASE_PASSIVE_REFERENCE_OBSERVATION_DIAGNOSTIC_NOT_QUALIFIED",
+          "motion": "y",
+          "shadow_envelope": null,
+          "step_advance_performed": false
+        },
+        "phase_requests": []
+      },
+      "post": {
+        "time_begin_s": 605,
+        "observed_time_s": 606,
+        "status": "RECONCILED_DIAGNOSTIC_ONLY",
+        "accounting_complete": true,
+        "shadow_envelope": null,
+        "time_end_s": 606,
+        "warning_observation": {
+          "time_begin_s": 605,
+          "time_end_s": 606,
+          "coverage": "CALLER_DECLARED_INTERVAL",
+          "source": "/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/tmpk_9ld7d3/out/sumo_stderr.log",
+          "byte_start": 0,
+          "byte_end": 0,
+          "text": "",
+          "bridge_capture": {
+            "source": "/var/folders/2j/w80s77d56dbbtr9tsfbym0dr0000gn/T/tmpk_9ld7d3/out/sumo_stderr.log",
+            "byte_start": 0,
+            "byte_end": 0,
+            "device": 16777233,
+            "inode": 90510499,
+            "prefix_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "fragment_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+            "text": "",
+            "raw_fragment_hex": "",
+            "whole_prefix_decoded": true,
+            "coverage": "CONDITIONAL_SYNC_CERR_BEFORE_ACK"
+          },
+          "bridge_record_stage": "AFTER_SIMULATION_STEP_ACK",
+          "condition": "reviewed synchronous CERR path + stepACK; not universal/native safety proof"
+        },
+        "post_world": {
+          "M_flow.0": {
+            "role": "M",
+            "speed_m_s": 5.0,
+            "lane_id": "main_up_0"
+          },
+          "R_flow.0": {
+            "role": "R",
+            "speed_m_s": 0.06132916440366,
+            "lane_id": "ramp_storage_0"
+          }
+        },
+        "phase_observation": {
+          "phase_before": 1,
+          "state_before": "y",
+          "next_switch_before_s": 606,
+          "phase_after": 1,
+          "state_after": "y",
+          "next_switch_after_s": 606
+        },
+        "phase_clock_binding": {
+          "cycle_id": 0,
+          "program": "I12_PACKET8",
+          "motion": "y",
+          "expected_post_nextSwitch_s": 606,
+          "actual_post_nextSwitch_s": 606,
+          "status": "ACK_OBSERVED_NOT_FUTURE_SAFETY"
+        },
+        "identity_change": {
+          "arrived_ids": [],
+          "departed_ids": [],
+          "before_only_ids": [],
+          "after_only_ids": []
+        },
+        "terminal_arrival_pending": [],
+        "yellow_scope": {
+          "status": "UNKNOWN",
+          "time_s": 604,
+          "yellow_s": 2,
+          "covered_ids": [
+            "R_flow.0"
+          ],
+          "rows": [
+            {
+              "vehicle_id": "R_flow.0",
+              "population": "storage",
+              "time_s": 604,
+              "position_m": 203.96811645360515,
+              "speed_m_s": 4.56232916440366,
+              "length_m": 5.0,
+              "normal_decel_m_s2": 4.5,
+              "action_step_s": 1.0,
+              "distance_to_meter_m": 0.5218835463948608,
+              "one_step_Euler_stop_possible": false,
+              "stop_distance_screen_m": 6.875089987111236,
+              "stop_possible": false,
+              "body_clear_time_screen_s": 2.60285690909008,
+              "clear_possible": false,
+              "status": "UNKNOWN_LOCAL_yellow_s_SCOPE",
+              "native_future_safety_proven": false
+            }
+          ],
+          "classification": "BOUND_LOCAL_FEASIBILITY_NOT_GLOBAL_SAFETY",
+          "diagnostic_yellow_contract": {
+            "policy": "NATIVE_YELLOW_RESPONSIBILITY_COMPLETE_INPUT_DIAGNOSTIC_V1",
+            "enabled": true,
+            "original_witness_status": "UNKNOWN",
+            "witness_established": false,
+            "failed_witness_ids": [
+              "R_flow.0"
+            ],
+            "interpretation": "DIAGNOSTIC_WITNESS_NOT_ESTABLISHED",
+            "input_scope": "ORIGINAL_HARD_FRESH_FRAME_AND_POPULATION_JOINS_REQUIRED",
+            "allow_prepared_step": true,
+            "future_native_safety_proven": false,
+            "safety_certified": null
+          }
+        },
+        "rate_chain": {
+          "input_origin": "PROJECT_FEEDBACK",
+          "r_ALINEA": 900,
+          "r_final_veh_h": 900,
+          "pending_request_id": "real_alinea:600",
+          "r_policy_pending_veh_h": null,
+          "nearest_reference_veh_h": 900.0,
+          "pending_packet_status": "SELECTED_ONLY_AT_COMPLETE_BOUNDARY",
+          "applied_request_id": "real_alinea:600",
+          "selected_request_id": "real_alinea:600",
+          "r_policy_selected_veh_h": 900.0,
+          "r_policy_applied_veh_h": 900.0,
+          "requested_quota": 2,
+          "period_s": 8,
+          "cycle_application_delay_s": 0,
+          "command_requested_s": 600
+        },
+        "actual_crossings": [],
+        "post_signal_application_binding": {
+          "ACK_s": 606,
+          "actual_phase": 1,
+          "actual_state": "y",
+          "actual_program": "I12_PACKET8",
+          "actual_controlled_links": [
+            [
+              [
+                "ramp_storage_0",
+                "ramp_accel_0",
+                ":ramp_mid_0_0"
+              ]
+            ]
+          ],
+          "expected_phase": 1,
+          "expected_state": "y",
+          "expected_program": "I12_PACKET8",
+          "status": "BOUND_BEFORE_LEDGER"
+        },
+        "motion": "y",
+        "accounting": {
+          "C": 1.5,
+          "C_nearest_reference": 1.5,
+          "C_applied": 1.5,
+          "C_selected": 1.5,
+          "E": 0,
+          "E_scheduled_nominal": 0,
+          "E_executed_nominal": 0,
+          "N": 0,
+          "C_selected_exact_fraction": "3/2",
+          "C_applied_exact_fraction": "3/2",
+          "scheduled_minus_executed": 0,
+          "executed_minus_actual": 0,
+          "requested_minus_nominal": 1.5,
+          "nominal_minus_actual": 0,
+          "requested_minus_actual": 1.5,
+          "C_exact_fraction": "3/2",
+          "E_support": "COMPLETE_PACKETS_ONLY",
+          "N_support": "ALL_OBSERVED_ENTRY_BEGIN_INTERVALS",
+          "partial_cycle": true,
+          "nearest_reference_is_not_cumulative_scheduler_output": true
+        },
+        "post_receiver": {
+          "available": true,
+          "front_id": "R_flow.0",
+          "nearest_internal": null,
+          "leader": null,
+          "reason": "AVAILABLE"
+        },
+        "actual_entry_following": [],
+        "native_event_counters": {
+          "colliding_vehicles": 0,
+          "starting_teleports": 0,
+          "ending_teleports": 0
+        },
+        "braking_observation": {
+          "speed_difference_ids": [
+            "M_flow.0",
+            "R_flow.0"
+          ],
+          "after_acceleration_ids": [
+            "M_flow.0",
+            "R_flow.0"
+          ],
+          "excluded_before_only_ids": [],
+          "arrived_ids": [],
+          "speed_difference_m_s2": {
+            "M_flow.0": 0.0,
+            "R_flow.0": 0.0
+          },
+          "actual_acceleration_m_s2": {
+            "M_flow.0": 0.0,
+            "R_flow.0": 0.0
+          },
+          "coverage": "BEFORE_INTERSECTION_AFTER_DIFFERENCE_AND_AFTER_POPULATION_GETTER_NOT_GLOBAL"
+        },
+        "body_observation": {
+          "ACK_s": 606,
+          "signal": "y",
+          "spanning_ids": [],
+          "rows": [],
+          "claim": "actual per-ACK rear observation; no yellow-end clearance deadline or future guarantee"
+        },
+        "legacy_braking_reasons": [],
+        "numeric_stop_classifications": [],
+        "safety_acceptance": {
+          "contract": "FIRST_YELLOW_SOURCE_SCALE_OBSERVATION_V1",
+          "enabled": true,
+          "classifications": [
+            {
+              "contract": "FIRST_YELLOW_SOURCE_SCALE_OBSERVATION_V1",
+              "classification": "FOLLOWUP_CLOSED_OBSERVED",
+              "decision": "CLOSED",
+              "vehicle_ids": [
+                "R_flow.0"
+              ],
+              "frame": {
+                "time_s": 606,
+                "world_ids": [
+                  "M_flow.0",
+                  "R_flow.0"
+                ],
+                "lane_ids": {
+                  "ramp_storage_0": [
+                    "R_flow.0"
+                  ],
+                  ":urban_diverge_1_0": []
+                },
+                "states": {
+                  "R_flow.0": {
+                    "vehicle_id": "R_flow.0",
+                    "time_s": 606,
+                    "lane_id": "ramp_storage_0",
+                    "type_id": "technical_passenger",
+                    "route": [
+                      "urban_in",
+                      "shared_approach",
+                      "ramp_storage",
+                      "ramp_accel",
+                      "merge_section",
+                      "main_down"
+                    ],
+                    "speed_mode": 31,
+                    "lane_change_mode": 1621,
+                    "speed_m_s": 0.06132916440366,
+                    "position_m": 204.0294456180088,
+                    "length_m": 5.0,
+                    "dynamics": {
+                      "accel": 2.6,
+                      "decel": 4.5,
+                      "emergency_decel": 9.0,
+                      "tau": 1.0,
+                      "action_step": 1.0,
+                      "sigma": 0.5,
+                      "max_speed": 55.55555555555556,
+                      "min_gap": 2.5
+                    }
+                  }
+                },
+                "following": {
+                  "R_flow.0": {
+                    "vehicle_id": "R_flow.0",
+                    "lane_id": "ramp_storage_0",
+                    "time_s": 606,
+                    "route": [
+                      "urban_in",
+                      "shared_approach",
+                      "ramp_storage",
+                      "ramp_accel",
+                      "merge_section",
+                      "main_down"
+                    ],
+                    "lookahead_m": 478.67,
+                    "receiver_path_lanes": [
+                      ":ramp_mid_0_0",
+                      "ramp_accel_0",
+                      ":freeway_merge_2_0",
+                      "merge_section_0",
+                      "merge_section_1",
+                      "merge_section_2"
+                    ],
+                    "path_geometry_m": {
+                      "ramp_storage_0": 204.49,
+                      ":ramp_mid_0_0": 81.98,
+                      "ramp_accel_0": 294.51,
+                      ":freeway_merge_2_0": 12.0,
+                      "merge_section_0": 365.0,
+                      "merge_section_1": 365.0,
+                      "merge_section_2": 365.0
+                    },
+                    "actual_speed_m_s": 0.06132916440366,
+                    "lane_position_m": 204.0294456180088,
+                    "vehicle_length_m": 5.0,
+                    "min_gap_m": 2.5,
+                    "speed_mode": 31,
+                    "lane_change_mode": 1621,
+                    "policy": "ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1",
+                    "margin_m": 1.1,
+                    "hard_margin_m": 0.0,
+                    "margin_role": "ADVISORY_ONLY",
+                    "future_safety_proven": false,
+                    "fresh_getLeader_result": null,
+                    "status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                    "actual_secure_gap_m": null,
+                    "gap_excluding_minGap_m": null,
+                    "required_with_margin_m": null,
+                    "required_hard_floor_m": null,
+                    "hard_screen_pass": null,
+                    "legacy_margin_pass": null,
+                    "legacy_contract_status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                    "margin_classification": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                    "claim_scope": "fresh valid native empty result within fixed lookahead and bound route/path, not globally clear",
+                    "ordinary_current_gap_observation": {
+                      "contract": "ORDINARY_NATIVE_REFERENCE_OBSERVATION_V1",
+                      "role": "ENTRY_AFTER",
+                      "time_s": 606,
+                      "classification": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                      "observational_only": true,
+                      "native_safety_proven": false
+                    }
+                  }
+                },
+                "leaders": {},
+                "storage_length_m": 204.49,
+                "ingress_length_m": 113.08,
+                "coverage": "FRESH_COMPLETE_STORAGE_INGRESS_AND_NATIVE_LEADER"
+              },
+              "native_safety_proven": false
+            }
+          ],
+          "remaining_reasons": [],
+          "followup_pending": null,
+          "native_safety_proven": false,
+          "authority_binding": {
+            "enabled": true,
+            "contract": "FIRST_YELLOW_SOURCE_SCALE_OBSERVATION_V1",
+            "source_commit": "fa7df22d7f1c4ae245192ecc32410a49f1ffb2a3",
+            "status": "EXACT_ACCEPTANCE_CONTRACT_AUTHORITY_VERIFIED",
+            "configured_model": "Krauss",
+            "configured_Euler_dt_s": 1,
+            "no_model_or_JM_override": true,
+            "run_id": "SYNTHETIC_ONLY",
+            "approval_sha256": "0000000000000000000000000000000000000000000000000000000000000000",
+            "execution_card_sha256": "1111111111111111111111111111111111111111111111111111111111111111"
+          },
+          "after_frame": {
+            "time_s": 606,
+            "world_ids": [
+              "M_flow.0",
+              "R_flow.0"
+            ],
+            "lane_ids": {
+              "ramp_storage_0": [
+                "R_flow.0"
+              ],
+              ":urban_diverge_1_0": []
+            },
+            "states": {
+              "R_flow.0": {
+                "vehicle_id": "R_flow.0",
+                "time_s": 606,
+                "lane_id": "ramp_storage_0",
+                "type_id": "technical_passenger",
+                "route": [
+                  "urban_in",
+                  "shared_approach",
+                  "ramp_storage",
+                  "ramp_accel",
+                  "merge_section",
+                  "main_down"
+                ],
+                "speed_mode": 31,
+                "lane_change_mode": 1621,
+                "speed_m_s": 0.06132916440366,
+                "position_m": 204.0294456180088,
+                "length_m": 5.0,
+                "dynamics": {
+                  "accel": 2.6,
+                  "decel": 4.5,
+                  "emergency_decel": 9.0,
+                  "tau": 1.0,
+                  "action_step": 1.0,
+                  "sigma": 0.5,
+                  "max_speed": 55.55555555555556,
+                  "min_gap": 2.5
+                }
+              }
+            },
+            "following": {
+              "R_flow.0": {
+                "vehicle_id": "R_flow.0",
+                "lane_id": "ramp_storage_0",
+                "time_s": 606,
+                "route": [
+                  "urban_in",
+                  "shared_approach",
+                  "ramp_storage",
+                  "ramp_accel",
+                  "merge_section",
+                  "main_down"
+                ],
+                "lookahead_m": 478.67,
+                "receiver_path_lanes": [
+                  ":ramp_mid_0_0",
+                  "ramp_accel_0",
+                  ":freeway_merge_2_0",
+                  "merge_section_0",
+                  "merge_section_1",
+                  "merge_section_2"
+                ],
+                "path_geometry_m": {
+                  "ramp_storage_0": 204.49,
+                  ":ramp_mid_0_0": 81.98,
+                  "ramp_accel_0": 294.51,
+                  ":freeway_merge_2_0": 12.0,
+                  "merge_section_0": 365.0,
+                  "merge_section_1": 365.0,
+                  "merge_section_2": 365.0
+                },
+                "actual_speed_m_s": 0.06132916440366,
+                "lane_position_m": 204.0294456180088,
+                "vehicle_length_m": 5.0,
+                "min_gap_m": 2.5,
+                "speed_mode": 31,
+                "lane_change_mode": 1621,
+                "policy": "ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1",
+                "margin_m": 1.1,
+                "hard_margin_m": 0.0,
+                "margin_role": "ADVISORY_ONLY",
+                "future_safety_proven": false,
+                "fresh_getLeader_result": null,
+                "status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                "actual_secure_gap_m": null,
+                "gap_excluding_minGap_m": null,
+                "required_with_margin_m": null,
+                "required_hard_floor_m": null,
+                "hard_screen_pass": null,
+                "legacy_margin_pass": null,
+                "legacy_contract_status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                "margin_classification": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                "claim_scope": "fresh valid native empty result within fixed lookahead and bound route/path, not globally clear",
+                "ordinary_current_gap_observation": {
+                  "contract": "ORDINARY_NATIVE_REFERENCE_OBSERVATION_V1",
+                  "role": "ENTRY_AFTER",
+                  "time_s": 606,
+                  "classification": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                  "observational_only": true,
+                  "native_safety_proven": false
+                }
+              }
+            },
+            "leaders": {},
+            "storage_length_m": 204.49,
+            "ingress_length_m": 113.08,
+            "coverage": "FRESH_COMPLETE_STORAGE_INGRESS_AND_NATIVE_LEADER"
+          },
+          "status": "OBSERVATION_ONLY_NOT_SAFETY_PROOF"
+        }
+      }
+    }
+  ],
+  "episodes": [
+    {
+      "event": {
+        "time_begin_s": 604,
+        "time_end_s": 605,
+        "vehicle_ids": [
+          "R_flow.0"
+        ]
+      },
+      "classifications": [
+        {
+          "contract": "FIRST_YELLOW_SOURCE_SCALE_OBSERVATION_V1",
+          "classification": "NUMERICAL_SCALE_COMPATIBLE",
+          "decision": "ONE_UNCHANGED_STEP_FOLLOWUP_REQUIRED",
+          "actual_branch_identified": false,
+          "native_safety_proven": false,
+          "legacy_strict_FAIL_retained": true,
+          "evidence": {
+            "vehicle_id": "R_flow.0",
+            "dt_s": 1,
+            "before": {
+              "time_s": 604,
+              "world_ids": [
+                "M_flow.0",
+                "R_flow.0"
+              ],
+              "lane_ids": {
+                "ramp_storage_0": [
+                  "R_flow.0"
+                ],
+                ":urban_diverge_1_0": []
+              },
+              "states": {
+                "R_flow.0": {
+                  "vehicle_id": "R_flow.0",
+                  "time_s": 604,
+                  "lane_id": "ramp_storage_0",
+                  "type_id": "technical_passenger",
+                  "route": [
+                    "urban_in",
+                    "shared_approach",
+                    "ramp_storage",
+                    "ramp_accel",
+                    "merge_section",
+                    "main_down"
+                  ],
+                  "speed_mode": 31,
+                  "lane_change_mode": 1621,
+                  "speed_m_s": 4.56232916440366,
+                  "position_m": 203.96811645360515,
+                  "length_m": 5.0,
+                  "dynamics": {
+                    "accel": 2.6,
+                    "decel": 4.5,
+                    "emergency_decel": 9.0,
+                    "tau": 1.0,
+                    "action_step": 1.0,
+                    "sigma": 0.5,
+                    "max_speed": 55.55555555555556,
+                    "min_gap": 2.5
+                  }
+                }
+              },
+              "following": {
+                "R_flow.0": {
+                  "vehicle_id": "R_flow.0",
+                  "lane_id": "ramp_storage_0",
+                  "time_s": 604,
+                  "route": [
+                    "urban_in",
+                    "shared_approach",
+                    "ramp_storage",
+                    "ramp_accel",
+                    "merge_section",
+                    "main_down"
+                  ],
+                  "lookahead_m": 478.67,
+                  "receiver_path_lanes": [
+                    ":ramp_mid_0_0",
+                    "ramp_accel_0",
+                    ":freeway_merge_2_0",
+                    "merge_section_0",
+                    "merge_section_1",
+                    "merge_section_2"
+                  ],
+                  "path_geometry_m": {
+                    "ramp_storage_0": 204.49,
+                    ":ramp_mid_0_0": 81.98,
+                    "ramp_accel_0": 294.51,
+                    ":freeway_merge_2_0": 12.0,
+                    "merge_section_0": 365.0,
+                    "merge_section_1": 365.0,
+                    "merge_section_2": 365.0
+                  },
+                  "actual_speed_m_s": 4.56232916440366,
+                  "lane_position_m": 203.96811645360515,
+                  "vehicle_length_m": 5.0,
+                  "min_gap_m": 2.5,
+                  "speed_mode": 31,
+                  "lane_change_mode": 1621,
+                  "policy": "ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1",
+                  "margin_m": 1.1,
+                  "hard_margin_m": 0.0,
+                  "margin_role": "ADVISORY_ONLY",
+                  "future_safety_proven": false,
+                  "fresh_getLeader_result": null,
+                  "status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                  "actual_secure_gap_m": null,
+                  "gap_excluding_minGap_m": null,
+                  "required_with_margin_m": null,
+                  "required_hard_floor_m": null,
+                  "hard_screen_pass": null,
+                  "legacy_margin_pass": null,
+                  "legacy_contract_status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                  "margin_classification": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                  "claim_scope": "fresh valid native empty result within fixed lookahead and bound route/path, not globally clear",
+                  "ordinary_current_gap_observation": {
+                    "contract": "ORDINARY_NATIVE_REFERENCE_OBSERVATION_V1",
+                    "role": "ENTRY_BEFORE",
+                    "time_s": 604,
+                    "classification": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                    "observational_only": true,
+                    "native_safety_proven": false
+                  }
+                }
+              },
+              "leaders": {},
+              "storage_length_m": 204.49,
+              "ingress_length_m": 113.08,
+              "coverage": "FRESH_COMPLETE_STORAGE_INGRESS_AND_NATIVE_LEADER"
+            },
+            "after": {
+              "time_s": 605,
+              "world_ids": [
+                "M_flow.0",
+                "R_flow.0"
+              ],
+              "lane_ids": {
+                "ramp_storage_0": [
+                  "R_flow.0"
+                ],
+                ":urban_diverge_1_0": []
+              },
+              "states": {
+                "R_flow.0": {
+                  "vehicle_id": "R_flow.0",
+                  "time_s": 605,
+                  "lane_id": "ramp_storage_0",
+                  "type_id": "technical_passenger",
+                  "route": [
+                    "urban_in",
+                    "shared_approach",
+                    "ramp_storage",
+                    "ramp_accel",
+                    "merge_section",
+                    "main_down"
+                  ],
+                  "speed_mode": 31,
+                  "lane_change_mode": 1621,
+                  "speed_m_s": 0.06132916440366,
+                  "position_m": 204.0294456180088,
+                  "length_m": 5.0,
+                  "dynamics": {
+                    "accel": 2.6,
+                    "decel": 4.5,
+                    "emergency_decel": 9.0,
+                    "tau": 1.0,
+                    "action_step": 1.0,
+                    "sigma": 0.5,
+                    "max_speed": 55.55555555555556,
+                    "min_gap": 2.5
+                  }
+                }
+              },
+              "following": {
+                "R_flow.0": {
+                  "vehicle_id": "R_flow.0",
+                  "lane_id": "ramp_storage_0",
+                  "time_s": 605,
+                  "route": [
+                    "urban_in",
+                    "shared_approach",
+                    "ramp_storage",
+                    "ramp_accel",
+                    "merge_section",
+                    "main_down"
+                  ],
+                  "lookahead_m": 478.67,
+                  "receiver_path_lanes": [
+                    ":ramp_mid_0_0",
+                    "ramp_accel_0",
+                    ":freeway_merge_2_0",
+                    "merge_section_0",
+                    "merge_section_1",
+                    "merge_section_2"
+                  ],
+                  "path_geometry_m": {
+                    "ramp_storage_0": 204.49,
+                    ":ramp_mid_0_0": 81.98,
+                    "ramp_accel_0": 294.51,
+                    ":freeway_merge_2_0": 12.0,
+                    "merge_section_0": 365.0,
+                    "merge_section_1": 365.0,
+                    "merge_section_2": 365.0
+                  },
+                  "actual_speed_m_s": 0.06132916440366,
+                  "lane_position_m": 204.0294456180088,
+                  "vehicle_length_m": 5.0,
+                  "min_gap_m": 2.5,
+                  "speed_mode": 31,
+                  "lane_change_mode": 1621,
+                  "policy": "ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1",
+                  "margin_m": 1.1,
+                  "hard_margin_m": 0.0,
+                  "margin_role": "ADVISORY_ONLY",
+                  "future_safety_proven": false,
+                  "fresh_getLeader_result": null,
+                  "status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                  "actual_secure_gap_m": null,
+                  "gap_excluding_minGap_m": null,
+                  "required_with_margin_m": null,
+                  "required_hard_floor_m": null,
+                  "hard_screen_pass": null,
+                  "legacy_margin_pass": null,
+                  "legacy_contract_status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                  "margin_classification": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                  "claim_scope": "fresh valid native empty result within fixed lookahead and bound route/path, not globally clear",
+                  "ordinary_current_gap_observation": {
+                    "contract": "ORDINARY_NATIVE_REFERENCE_OBSERVATION_V1",
+                    "role": "ENTRY_AFTER",
+                    "time_s": 605,
+                    "classification": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                    "observational_only": true,
+                    "native_safety_proven": false
+                  }
+                }
+              },
+              "leaders": {},
+              "storage_length_m": 204.49,
+              "ingress_length_m": 113.08,
+              "coverage": "FRESH_COMPLETE_STORAGE_INGRESS_AND_NATIVE_LEADER"
+            },
+            "first_yellow": true,
+            "motion": "y",
+            "signal_binding": "BOUND_BEFORE_LEDGER",
+            "entered_link": false,
+            "body_coverage_complete": true,
+            "hard_reasons": [],
+            "native_warning_text": "",
+            "native_event_counters": {
+              "colliding_vehicles": 0,
+              "starting_teleports": 0,
+              "ending_teleports": 0
+            },
+            "acceleration_m_s2": -4.501,
+            "delta_m_s2": -4.5009999999999994
+          },
+          "neighbors": {
+            "before": {
+              "follower_id": null,
+              "follower_bumper_gap_m": null,
+              "follower_gap_excluding_minGap_m": null,
+              "leader_id": null,
+              "leader_bumper_gap_m": null,
+              "leader_gap_excluding_minGap_m": null,
+              "physical_overlap": false,
+              "minGap_infringement": false,
+              "absence_scope": "COMPLETE_STORAGE_AND_INGRESS_TO_KNOWN_BOUNDARY"
+            },
+            "after": {
+              "follower_id": null,
+              "follower_bumper_gap_m": null,
+              "follower_gap_excluding_minGap_m": null,
+              "leader_id": null,
+              "leader_bumper_gap_m": null,
+              "leader_gap_excluding_minGap_m": null,
+              "physical_overlap": false,
+              "minGap_infringement": false,
+              "absence_scope": "COMPLETE_STORAGE_AND_INGRESS_TO_KNOWN_BOUNDARY"
+            }
+          },
+          "arithmetic": {
+            "eps_distance_m": 0.001,
+            "dt_s": 1,
+            "excess_m_s2": 0.001000000000000334,
+            "inferred_stop_offset_m": 0.45955438199120113,
+            "predicted_speed_m_s": 0.06132916440365965,
+            "private_stopDist_observed": false
+          },
+          "reason": "SOURCE_SCALE_AND_EXTERNAL_CONTEXT_ONLY"
+        }
+      ],
+      "followup": {
+        "contract": "FIRST_YELLOW_SOURCE_SCALE_OBSERVATION_V1",
+        "classification": "FOLLOWUP_CLOSED_OBSERVED",
+        "decision": "CLOSED",
+        "vehicle_ids": [
+          "R_flow.0"
+        ],
+        "frame": {
+          "time_s": 606,
+          "world_ids": [
+            "M_flow.0",
+            "R_flow.0"
+          ],
+          "lane_ids": {
+            "ramp_storage_0": [
+              "R_flow.0"
+            ],
+            ":urban_diverge_1_0": []
+          },
+          "states": {
+            "R_flow.0": {
+              "vehicle_id": "R_flow.0",
+              "time_s": 606,
+              "lane_id": "ramp_storage_0",
+              "type_id": "technical_passenger",
+              "route": [
+                "urban_in",
+                "shared_approach",
+                "ramp_storage",
+                "ramp_accel",
+                "merge_section",
+                "main_down"
+              ],
+              "speed_mode": 31,
+              "lane_change_mode": 1621,
+              "speed_m_s": 0.06132916440366,
+              "position_m": 204.0294456180088,
+              "length_m": 5.0,
+              "dynamics": {
+                "accel": 2.6,
+                "decel": 4.5,
+                "emergency_decel": 9.0,
+                "tau": 1.0,
+                "action_step": 1.0,
+                "sigma": 0.5,
+                "max_speed": 55.55555555555556,
+                "min_gap": 2.5
+              }
+            }
+          },
+          "following": {
+            "R_flow.0": {
+              "vehicle_id": "R_flow.0",
+              "lane_id": "ramp_storage_0",
+              "time_s": 606,
+              "route": [
+                "urban_in",
+                "shared_approach",
+                "ramp_storage",
+                "ramp_accel",
+                "merge_section",
+                "main_down"
+              ],
+              "lookahead_m": 478.67,
+              "receiver_path_lanes": [
+                ":ramp_mid_0_0",
+                "ramp_accel_0",
+                ":freeway_merge_2_0",
+                "merge_section_0",
+                "merge_section_1",
+                "merge_section_2"
+              ],
+              "path_geometry_m": {
+                "ramp_storage_0": 204.49,
+                ":ramp_mid_0_0": 81.98,
+                "ramp_accel_0": 294.51,
+                ":freeway_merge_2_0": 12.0,
+                "merge_section_0": 365.0,
+                "merge_section_1": 365.0,
+                "merge_section_2": 365.0
+              },
+              "actual_speed_m_s": 0.06132916440366,
+              "lane_position_m": 204.0294456180088,
+              "vehicle_length_m": 5.0,
+              "min_gap_m": 2.5,
+              "speed_mode": 31,
+              "lane_change_mode": 1621,
+              "policy": "ACTUAL_CURRENT_NATIVE_GAP_FLOOR_LEGACY_MARGIN_ADVISORY_V1",
+              "margin_m": 1.1,
+              "hard_margin_m": 0.0,
+              "margin_role": "ADVISORY_ONLY",
+              "future_safety_proven": false,
+              "fresh_getLeader_result": null,
+              "status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+              "actual_secure_gap_m": null,
+              "gap_excluding_minGap_m": null,
+              "required_with_margin_m": null,
+              "required_hard_floor_m": null,
+              "hard_screen_pass": null,
+              "legacy_margin_pass": null,
+              "legacy_contract_status": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+              "margin_classification": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+              "claim_scope": "fresh valid native empty result within fixed lookahead and bound route/path, not globally clear",
+              "ordinary_current_gap_observation": {
+                "contract": "ORDINARY_NATIVE_REFERENCE_OBSERVATION_V1",
+                "role": "ENTRY_AFTER",
+                "time_s": 606,
+                "classification": "CLEAR_WITHIN_OBSERVED_LOOKAHEAD",
+                "observational_only": true,
+                "native_safety_proven": false
+              }
+            }
+          },
+          "leaders": {},
+          "storage_length_m": 204.49,
+          "ingress_length_m": 113.08,
+          "coverage": "FRESH_COMPLETE_STORAGE_INGRESS_AND_NATIVE_LEADER"
+        },
+        "native_safety_proven": false
+      }
+    }
+  ]
+}

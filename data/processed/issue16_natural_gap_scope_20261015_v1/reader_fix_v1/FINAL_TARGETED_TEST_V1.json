@@ -1,0 +1,17 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "unittest",
+    "discover",
+    "-s",
+    "tests/issue16_natural_gap_scope_20261015_v1",
+    "-p",
+    "test_reader_failure_tail.py",
+    "-v"
+  ],
+  "exit": 0,
+  "elapsed_s": 0.6462963329977356,
+  "stdout": "",
+  "stderr": "test_exact_terminal_cause_and_complete_feedback (test_reader_failure_tail.FailureTailTests.test_exact_terminal_cause_and_complete_feedback) ... ok\ntest_explicit_reader_version_and_immutable_snapshot (test_reader_failure_tail.FailureTailTests.test_explicit_reader_version_and_immutable_snapshot) ... ok\ntest_native_EOF_separate_from_worker_failure (test_reader_failure_tail.FailureTailTests.test_native_EOF_separate_from_worker_failure) ... ok\ntest_native_endpoint_existing_id_preserved (test_reader_failure_tail.FailureTailTests.test_native_endpoint_existing_id_preserved) ... ok\n\n----------------------------------------------------------------------\nRan 4 tests in 0.567s\n\nOK\n"
+}

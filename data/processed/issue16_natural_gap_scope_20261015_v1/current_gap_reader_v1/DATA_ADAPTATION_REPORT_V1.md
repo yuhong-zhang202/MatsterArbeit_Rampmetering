@@ -1,0 +1,48 @@
+# Approved current-gap contract: independent reader adaptation V1
+
+**Offline contract compatibility delivered; no native qualification or new simulation.** Only the explicitly approved passive-reference meaning is recognized. Original query/legacy failure fields remain, actual hazards and required missing/inconsistent observations remain alarms/UNKNOWN. Old650 STOP/NOT_QUALIFIED, original readerUNKNOWN and all previous binders/results stay unchanged.
+
+## Context, ownership and inputs
+
+Repeated Context Preflight read current STATE top, DECISIONS, relevant WORKLOG, unchanged AGENTS and0B/unfrozen protocol; prior complete assigned historical reading remains in DATA_T0_T1_REPORT. Direct receipt HUMAN_CONTRACT_APPROVAL_RECEIPT_V1.json records “批准该合同及最小离线实现”, SUMO=false, newexactcard approval required. This task does not authorize native, cardprepare, new identity, budget use, GitHubreview or merge. Stage6 existing closeout/overallNOT_QUALIFIED unchanged.
+
+Engineering owns new current_gap_scope.py plus adapter.py/profile.py; no engineering-owned file was changed here. Data changed only native reader actual.py/provenance.py/streaming.py and added test_current_gap_reader.py under the assigned tests namespace. Current three preimages saved before edits; their hashes exactly match the previously reviewed failed-prefix reader binding (actualfe70f842…, streamingb2bee704…, provenance7e40c18c…). Original173 execution source/card/raw and earlier reports are immutable.
+
+Inputs: five engineering saved fixtures under engineering/implementation_v1/attempt1_fixtures/{recorded_queries,loop_None,loop_collision,loop_braking,loop_badACK}.json and engineering final26-item binding babeb55a5842b8af28368734032316a8e27db9034765ff45eb83cb2b27a56cfa. Recordedqueries are oldnative-query replays with new annotations, not new native movement. Four loop bundles explicitly SYNTHETIC_MOVEMENT_NO_NATIVE_SAFETY_EVIDENCE. Prior bounded TERMINAL_FRAMES_V1.json supplies independently saved old649/650 fields. No raw native file/full227 audit was read or rerun in this adaptation.
+
+## Reader changes
+
+1. Provenance reads an optional explicit card.spec.current_gap_responsibility_contract. Absence retains old semantics. Present metadata must match policy ORDINARY_NATIVE_REFERENCE_OBSERVATION_V1, prospective_new_green UNCHANGED_STRICT, ordinary_current_queries OBSERVATIONAL_ONLY, native_safety_proven=false, exact approvedreceipt path/hash and direct receipt schema/answer/nonexecution boundary. Malformed or unapproved metadata does not silently enable observations. Executable authority remains the separate existing release gate.
+2. Independent following_observation first uses the unchanged old `following` primitive to bind rawquery vehicle/leader/time/speed/route/modes/gap/nativequery/legacy classification. Original query object is not mutated. Only a matching approved role/contract/time and complete BELOW annotation allow the legacy CURRENT_NATIVE_QUERY_FLOOR_DENIED record to be saved as ordinary_reference_observations. Its old reason/status/legacy status and raw query source/role/time remain. Fulloriginalquery stays in immutable input; processed summaries avoid accumulating copied full query/world objects.
+3. BELOW additionally reconstructs the route-path gap using leader lane/position/length and known lane geometry, parallel merge-lane station treatment, followerposition/minGap, existing body-length coverage and actual FCD position where applicable. Missing length, negative/nonfinite gap, wronggeometry/ID/time/role/query or missing required field remains rejected. An unavailable preceding body-length observation remains UNKNOWN, not invented from a private model branch.
+4. All storage ENTRY_BEFORE snapshots for G/y are independently checked, not merely those that eventually cross; actual-entry-before is bound bytewise to its prepared record and ENTRY_AFTER validated separately. PRE/POST receiver classifications retain originalreceiver.available=false and legacydecision. At any executed new-cycleG, independent receiver check still requires available=true and READY. The new passive observation never changes capacity availability or grants new-G admission.
+5. Collision/teleport, braking, redfront, identity/setter/mode, body/signal/ACK/log and unknown checks stay separate. Existing fullstream identity helper checks zero vehicle-setter calls. Only the passive query's own legacy-floor record is moved into the separately named observation list; existing hazard alarms are not cleared. actual.py passes the provenance-enabled contract to streaming and exposes those observations; global qualified/native_safety_proven/formal_effect_proven remain false. No new numeric tolerance was selected; path/FCD precision checks reuse existing source/8decimal representation tolerances.
+
+## Necessary verification and precise results
+
+Commands:
+
+```
+.venv/bin/python -m unittest discover -s tests/issue16_natural_gap_scope_20261015_v1 -p test_current_gap_reader.py -v
+.venv/bin/python -m unittest discover -s tests/issue16_natural_gap_scope_20261015_v1 -p test_current_gap_reader.py -k test_saved_normal_hold_recovery_accounting_and_hazards -v
+```
+
+Initial3groups PASS0.072s. After adding direct original-query preservation assertions,3groups PASS0.068s, subprocess0.151960375s, exit0. Then only the affected saved-loop method was strengthened for held-current application and pending/selected timing; that1method PASS0.067s, subprocess0.152234375s, exit0. This is not a claim of a final-source fullsuite rerun. All three owning modules AST parse. No tests of new traffic/seeds/rates, no fake-loop execution, no oldraw/fullnative audit. No test/analysis failure occurred in this adaptation. A read-only attempted filename for the engineering test used a nonexistent basename; actual runtime/schema and savedfiles were read instead, no conclusions from that missing path.
+
+Three groups cover14 narrowly malformed variants: card policy/newG contract/hash; missingannotation/queryargs/leadergeometry; negativegap/wrongrole/wrongposition/nonfinitequery; newannotations without approvedcontract; belowreceiver as newG; changedlegacydecision or receiveravailability. The two saved queryrecords match all original fields exactly after excluding only the two additive keys, passive_leader_geometry and ordinary_current_gap_observation. Each role is checked against both recorded frames using the existing known coordinates, not replayed native motion. A preexisting collision alarm stays intact while a belowreference observation is added.
+
+Five saved bundles are inspected without rerunning loops. The ordinary saved loop preserves held608..616 red with appliedIDnull/rate0, resumes executedG616, and keeps selected/applied accounting separate. Rate-chain integration over600..641 gives C41/4, Cselected41/4, Capplied33/4, completeEscheduled10/Eexecuted8, unique syntheticentryN4, C−N25/4; finalpartial gets no completedE.630pendingrequestfeedback:630 remains separate from oldselectedreal_alinea:600;632firstG selects feedback:630 but pre-ledger rate snapshot still has appliedIDnull,633showsactualappliedIDfeedback:630. This timing is preserved, not mistaken for a failed application.
+
+Savedcollision and braking stop603 with their original terminalreasons; savedbadACK stops602 with lastaccounted601 and STOP_UNBOUND_BEFORE_LEDGER, not fabricated accounting. These are synthetic fault-preservation observations, not native safety outcomes. No source field was altered to make them pass.
+
+## Interpretation limits and version boundaries
+
+The loop fixtures omit REQUESTED/feedback/command_records event streams. Therefore the above C is explicitly independent integration of saved rate_chain plus cycle rates, not a complete independent chronological REQUESTED provenance audit. Full lifecycle/request-origin/E1 verification for the new version remains NOT_TESTED in these fixtures; the old pure arithmetic/Feedback source was neither modified nor claimed rerun. Existing native runtime logging retains those streams for a future separately authorized exactcard.
+
+This task does not reclassify old650raw under the approved contract or run the new fullnative scanner over it. Old explicit postanalysis allowance still permits only the previous three reader paths to differ, while all other current runtime/dependencies must match the oldcard. Because engineering has now changed runtime adapter/profile and added the contract, no allowlist is broadened to pretend currentruntime equals old173. Prior exact versioned oldraw results remain their own evidence. Future realcard must bind newcontract/runtime/reader and permission separately; none created here.
+
+Full4200/sixwindows, actual normalreceiver recovery, current-contract native ordinary movement, future bodyclearance and serviceeffect remain NOT_TESTED/NOT_QUALIFIED. Existing900/870 guardian-card equality remains a known prospective next-card preparation item if the future permission selects another actual budget; it was not silently changed in this contract adaptation. No new physicalservice error threshold, capacity attribution or C=N claim is made.
+
+## Handoff and documentation
+
+Engineering has preliminarily read the stable three-source diff and reported no substantive compatibility blocker; final exacthash readback is next, followed by one read-only scientificreview. Data binding includes all owning reader/dependency hashes, test/receipts, approved contract, existing-query sources, engineering source/binding and saved5fixtures. No governance file changed by data; root owns minimal STATE/WORKLOG/Issue/DraftPR maintenance and the precise next human gate. Stop optional testing now.

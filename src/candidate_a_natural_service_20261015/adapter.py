@@ -18,12 +18,14 @@ ROUTES = {
     'U': ('urban_in', 'shared_approach', 'urban_out'),
     'X': ('cross_in', 'cross_out'),
 }
-PROFILE = 'NATIVE_PHASE_CURRENT_FOLLOWING_WAIT_DIAGNOSTIC_NOT_QUALIFIED'
-from src.candidate_a_dynamic_minqual_20261015.receiver_wait import classify_receiver, current_following
+PROFILE = 'NATIVE_PHASE_PASSIVE_REFERENCE_OBSERVATION_DIAGNOSTIC_NOT_QUALIFIED'
+from src.candidate_a_natural_service_20261015.current_gap_scope import (
+    classify_receiver, current_following, classification, ACCEPTED, BELOW)
 from src.candidate_a_natural_service_20261015.policy import Ledger, parameters, yellow_scope
 from src.candidate_a_native_yellow_minqual_20261015.yellow_contract import annotate_yellow_scope
 from src.candidate_a_issue12_packet_policy_20261012.body import BodyTracker
 from src.candidate_a_unified_alinea_20261013 import numeric_stop
+from src.candidate_a_natural_service_20261015 import acceptance_safety
 
 
 class PhaseEnvelope(ProtectedPhaseEnvelope):
@@ -75,7 +77,8 @@ def inventory(conn):
 
 class StepAdapter:
     """Preparation seam only: callers observe/advance externally; we never do."""
-    def __init__(self, observe, command=900, end_s=4200, numerical_authority=None, yellow_diagnostic_mode=False):
+    def __init__(self, observe, command=900, end_s=4200, numerical_authority=None, yellow_diagnostic_mode=False,
+                 acceptance_authority=None, acceptance_observation_mode=False):
         self.observe = observe  # Original binding unchanged.
         require(type(yellow_diagnostic_mode) is bool, 'UNKNOWN_YELLOW_MODE')
         self.yellow_diagnostic_mode = yellow_diagnostic_mode  # Default strict.
@@ -85,6 +88,12 @@ class StepAdapter:
         self.selected_new_program_at = None
         require(numerical_authority is None,'NEW_SCOPE_NUMERICAL_EXCEPTION_NOT_ENABLED')
         self.numerical_authority = numerical_authority  # Default strict, never implicit approval.
+        self.acceptance_authority = (acceptance_safety.validate_authority(acceptance_authority)
+                                     if acceptance_authority is not None else None)
+        self.acceptance_followup = None
+        self.acceptance_episodes = []
+        require(type(acceptance_observation_mode) is bool, 'UNKNOWN_ACCEPTANCE_OBSERVATION_MODE')
+        self.acceptance_observation_mode = acceptance_observation_mode
         self.command = command
         self.first_controlled_red_begin = None
         self.last_yellow_scope = None
@@ -175,9 +184,9 @@ class StepAdapter:
         else:
             require(program == 'A_OPEN' and type(phase) is int and phase == 0 and state == 'G', 'OPEN_PHASE_MISMATCH')
             motion = 'G'
-        native_decision = classify_receiver(conn, receiver, time_s) if motion == 'G' else None
-        require(receiver['available'] or motion != 'G' or native_decision['decision'] == 'WAIT_NATIVE_FOLLOWING', 'CURRENT_GAP_BOUND_DENIED')
-        entry_before = {vid: current_following(conn, vid, time_s, allow_clear=True) for vid in sorted(ids[STORAGE])} if motion in ('G','y') else {}
+        native_decision = classify_receiver(conn, receiver, time_s, role='ONGOING_PRE_RECEIVER') if motion == 'G' else None
+        require(receiver['available'] or motion != 'G' or native_decision['decision'] in ('WAIT_NATIVE_FOLLOWING', BELOW), 'CURRENT_GAP_BOUND_DENIED')
+        entry_before = {vid: current_following(conn, vid, time_s, allow_clear=True, role='ENTRY_BEFORE') for vid in sorted(ids[STORAGE])} if motion in ('G','y') else {}
         entering_red = motion == 'r' and (self.previous_motion != 'r' or state == 'y')
         shadow = red_transition_witness(vehicles) if entering_red else None
         numeric_before = ({vid:numeric_stop.read_vehicle_state(conn,vid,time_s) for vid in sorted(ids[STORAGE])}
@@ -204,6 +213,17 @@ class StepAdapter:
                             for vid,w in world.items()},
                         'native_receiver_decision': native_decision, 'entry_following_before': entry_before,
                         'numeric_stop_before': numeric_before}
+        if self.acceptance_observation_mode:
+            self.pending['receiver_domain_observation'] = acceptance_safety.receiver_domain(
+                conn,time_s,self.pending['terminal_before'],receiver)
+        if self.acceptance_authority is not None and (self.acceptance_followup is not None or
+                (cycle is not None and motion == 'y' and cycle['green_end_s'] == time_s)):
+            # Observe only the scoped first-yellow/follow-up frames. This seam
+            # has no effect and makes no additional calls in the old default.
+            self.pending['acceptance_safety_before'] = acceptance_safety.observe_frame(
+                conn, time_s, entry_before)
+            self.pending['acceptance_first_yellow'] = bool(cycle is not None and motion == 'y' and
+                                                        cycle['green_end_s'] == time_s)
         if cycle is not None:
             cycle['service_context'].append({'time_s':time_s,'storage_ids':sorted(ids[STORAGE]),'vehicle_states':self.pending['vehicle_states'],'receiver':receiver,'native_receiver_decision':native_decision,'cause':'UNESTABLISHED'})
         return {'status': 'OBSERVATIONS_BOUND_NOT_PROSPECTIVE_SAFETY', 'profile': PROFILE,
@@ -297,8 +317,8 @@ class StepAdapter:
             _, _, post_internal, post_receiver = self.observe(conn)
             if type(post_receiver.get('available')) is not bool: errors.append('UNKNOWN_POST_RECEIVER')
             if p['motion'] == 'G':
-                row['post_native_receiver_decision'] = classify_receiver(conn, post_receiver, self.last_completed)
-                if row['post_native_receiver_decision']['decision'] not in ('READY','WAIT_NATIVE_FOLLOWING'):
+                row['post_native_receiver_decision'] = classify_receiver(conn, post_receiver, self.last_completed, role='POST_RECEIVER')
+                if row['post_native_receiver_decision']['decision'] not in ('READY','WAIT_NATIVE_FOLLOWING', BELOW):
                     errors.append('POST_CURRENT_GAP_BOUND_DENIED')
             if set(post_internal) != set(conn.lane.getLastStepVehicleIDs(INTERNAL)): errors.append('POST_INTERNAL_COVERAGE_MISMATCH')
             row['post_receiver'] = post_receiver
@@ -313,13 +333,13 @@ class StepAdapter:
             row['actual_entry_following'].append(bound)
             try:
                 require(bound['before'] is not None and bound['before']['vehicle_id']==vid, 'UNKNOWN_ENTRY_BEFORE_BINDING')
-                allowed = {'CURRENT_GAP_OBSERVED_WITHIN_BOUND','CLEAR_WITHIN_OBSERVED_LOOKAHEAD'}
-                before_status = bound['before'].get('status')
+                allowed = ACCEPTED
+                before_status = classification(bound['before'])
                 if before_status not in allowed:
                     reason = 'ACTUAL_ENTRY_BEFORE_CURRENT_GAP_BOUND_DENIED' if before_status == 'STOP_CURRENT_GAP_BOUND_DENIED' else 'ACTUAL_ENTRY_BEFORE_FOLLOWING_UNKNOWN'
                     errors.append(reason+':'+vid)
-                bound['after'] = current_following(conn, vid, self.last_completed, allow_clear=True)
-                after_status = bound['after'].get('status')
+                bound['after'] = current_following(conn, vid, self.last_completed, allow_clear=True, role='ENTRY_AFTER')
+                after_status = classification(bound['after'])
                 if after_status not in allowed:
                     reason = 'ACTUAL_ENTRY_AFTER_CURRENT_GAP_BOUND_DENIED' if after_status == 'STOP_CURRENT_GAP_BOUND_DENIED' else 'ACTUAL_ENTRY_AFTER_FOLLOWING_UNKNOWN'
                     errors.append(reason+':'+vid)
@@ -361,7 +381,7 @@ class StepAdapter:
                 try:
                     before_state=p.get('numeric_stop_before',{}).get(vid)
                     after_state=numeric_stop.read_vehicle_state(conn,vid,self.last_completed)
-                    following=current_following(conn,vid,self.last_completed,allow_clear=True)
+                    following=current_following(conn,vid,self.last_completed,allow_clear=True,role='ENTRY_AFTER')
                     binding=row['post_signal_application_binding']
                     evidence=dict(run_id=self.numerical_authority['run_id'],mode=self.numerical_authority['mode'],
                         execution_card_sha256=self.numerical_authority['execution_card_sha256'],
@@ -388,6 +408,8 @@ class StepAdapter:
                 if decision['decision']=='CONTINUE_RESTRICTED_NUMERICAL_EVENT':
                     errors=[x for x in errors if x not in allowed_reasons]
         # END_APPROVED_NUMERICAL_EVENT_SEAM
+        row['safety_acceptance'] = self._acceptance_observation(conn, p, row, errors, native_warning_text)
+        errors = row['safety_acceptance']['remaining_reasons']
         if errors:
             self.paused = True
             row.update(status='STOP_OBSERVED_AFTER_STEP', reasons=errors)
@@ -404,3 +426,61 @@ class StepAdapter:
             self.paused = True
             row['status'] = 'APPROVED_TECHNICAL_END_MANDATORY_STOP_NOT_QUALIFIED'
         return row
+
+    def _acceptance_observation(self, conn, p, row, errors, native_warning_text):
+        """Default strict; an authorized candidate retains every legacy reason."""
+        result = dict(contract=acceptance_safety.CONTRACT,
+                      enabled=self.acceptance_authority is not None,
+                      classifications=[], remaining_reasons=list(errors),
+                      followup_pending=self.acceptance_followup, native_safety_proven=False)
+        if self.acceptance_authority is None:
+            result['status'] = 'DISABLED_ORIGINAL_BRAKING_GATE'
+            return result
+        result['authority_binding'] = self.acceptance_authority
+        try:
+            frame = (acceptance_safety.observe_frame(conn, self.last_completed)
+                     if 'acceptance_safety_before' in p else None)
+            result['after_frame'] = frame
+            if self.acceptance_followup is not None:
+                decision = acceptance_safety.followup(frame, self.acceptance_followup['vehicle_ids'],
+                    row['braking_observation'], errors, native_warning_text)
+                result['classifications'].append(decision)
+                if decision['decision'] != 'CLOSED':
+                    result['remaining_reasons'].append('ACCEPTANCE_FOLLOWUP_NOT_CLOSED')
+                else:
+                    self.acceptance_episodes[-1]['followup'] = decision
+                    self.acceptance_followup = None
+            elif errors:
+                prefix = ('ORDINARY_BRAKING_EXCEEDED:', 'UNKNOWN_OR_EXCESSIVE_ACCELERATION:')
+                candidates = sorted({x.split(':',1)[1] for x in errors if x.startswith(prefix)})
+                hard = [x for x in errors if not x.startswith(prefix)]
+                decisions = []
+                for vid in candidates:
+                    evidence = dict(vehicle_id=vid, dt_s=1, before=p.get('acceptance_safety_before'),
+                        after=frame, first_yellow=p.get('acceptance_first_yellow',False), motion=p['motion'],
+                        signal_binding=row.get('post_signal_application_binding',{}).get('status'),
+                        entered_link=vid in {x['vehicle_id'] for x in row['actual_crossings']},
+                        body_coverage_complete='body_observation' in row and 'body_observation_error' not in row,
+                        hard_reasons=hard, native_warning_text=native_warning_text,
+                        native_event_counters=row['native_event_counters'],
+                        acceleration_m_s2=row['braking_observation']['actual_acceleration_m_s2'].get(vid),
+                        delta_m_s2=row['braking_observation']['speed_difference_m_s2'].get(vid))
+                    decisions.append(acceptance_safety.classify(evidence))
+                result['classifications'] = decisions
+                # A compatible vehicle cannot hide another vehicle's hard or
+                # unclassified braking event in the same native motion step.
+                if decisions and not hard and all(x['decision']=='ONE_UNCHANGED_STEP_FOLLOWUP_REQUIRED' for x in decisions):
+                    self.acceptance_followup = dict(time_begin_s=p['time_s'], time_end_s=self.last_completed,
+                                                   vehicle_ids=candidates)
+                    self.acceptance_episodes.append(dict(event=self.acceptance_followup.copy(),
+                                                         classifications=decisions, followup=None))
+                    result['remaining_reasons'] = []
+            result['followup_pending'] = self.acceptance_followup
+            result['status'] = 'OBSERVATION_ONLY_NOT_SAFETY_PROOF'
+            if self.last_completed == self.end_s and self.acceptance_followup is not None:
+                result['remaining_reasons'].append('ACCEPTANCE_EOF_FOLLOWUP_NOT_OBSERVED')
+        except Exception as exc:
+            result['status'] = 'UNKNOWN_STOP'
+            result['error'] = type(exc).__name__+':'+str(exc)
+            result['remaining_reasons'].append('ACCEPTANCE_REQUIRED_OBSERVATION_UNKNOWN')
+        return result

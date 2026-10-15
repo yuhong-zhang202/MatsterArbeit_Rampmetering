@@ -1,0 +1,27 @@
+{
+  "command": [
+    ".venv/bin/python",
+    "-m",
+    "unittest",
+    "test_actuator_acceptance_safety.SafetyTests.test_exact_authority_resource_and_guardian_identity_fail_closed",
+    "-v"
+  ],
+  "env_override": {
+    "PYTHONPATH": "/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/tests"
+  },
+  "exit_code": 1,
+  "elapsed_s": 0.13694733299780637,
+  "python": "3.13.0 (v3.13.0:60403a5409f, Oct  7 2024, 00:37:40) [Clang 15.0.0 (clang-1500.3.9.4)]",
+  "classification": "OFFLINE_EXACT_PERMISSION_SCHEMA_NO_PRODUCTION_AUTHORITY",
+  "AST_parse": "PASS",
+  "source_sha256": {
+    "src/candidate_a_natural_service_20261015/acceptance_safety.py": "645260546b7b87e2b73b37e7d7a2ed2d44d4c06273d224164281c025b01a625b",
+    "src/candidate_a_natural_service_20261015/adapter.py": "e6ccb2520289b859b28e20e50524a9a96f9af7e74849fc2bf58c11deaee8f418",
+    "src/candidate_a_natural_service_20261015/bridge.py": "dc0f23ab5334cea35ade922eab53f14e8c8f54052b60722fcdb4bb5059f5e436",
+    "src/candidate_a_natural_service_20261015/profile.py": "554a640d0689c2f6c12c98bab0c646043b98d7e10a33f5c6224a34907656270a",
+    "src/candidate_a_natural_service_20261015/budget.py": "227531246093a2c5aa7b964bdd0b7ecba01b96e4e148276311b366088f9dc0f9",
+    "src/candidate_a_natural_service_20261015/guardian.py": "812bdffa08757856df1881609027d56933f42f1e6e0d990cd3c742ddcdcc9a3d",
+    "scripts/candidate_a_natural_service_20261015_v1/cli.py": "764b2e2ffb9d8c1d3ff47675d516c409e050562a5daac03d89905a0957d869c7",
+    "tests/test_actuator_acceptance_safety.py": "0ea7a82874fc89921cf2be4cd14a58bbea20f6f6a9d6386df15dbe4030ba3139"
+  }
+}
