@@ -1,5 +1,7 @@
 # 自然需求执行器：最小资格准备
 
+**当前状态：PR13为 `REVIEW_PENDING / NO_VERDICT`；非运行资格准备已完成。** 用户明确要求不再发起新的自动review，也不因其等待阻塞已授权非运行工作。现有修复、针对性测试及科学准备回执继续作为各自范围内的依据；没有把GitHub状态改判为PASS或CANCELLED。首卡14项绑定本次机械回读无漂移，src/scripts/tests相对执行checkpoint无变化；已有审查无阻碍未释放准备的实质finding。七域审计、精确卡、三方准备回执和资源保护均已交付，未发现剩余的独立非运行实施项。[准备交接状态](../../artifacts/natural_actuator_qualification_20261015_v1/NONRUNNING_PREPARATION_STATUS_V1.json)。实际自然验证仍NOT_TESTED、总体NOT_QUALIFIED；本次只调整非运行工作的依赖，不改原精确卡有条件执行授权，不生成canonical或启动SUMO。
+
 2026-10-15。当前为**非运行实施与审查准备**；自然运行NOT_TESTED，总体NOT_QUALIFIED。唯一工作项为[Issue #14](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/issues/14)，分支`codex/natural-actuator-qualification`从PR13准确head `61612bf6e240d41d2ca4be95a02429f48c9ddd54`建立，[Draft PR #15](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/pull/15)以PR13分支为base。不得通过本记录放行SUMO或合并。
 
 ## 为什么需要这项工作
@@ -28,7 +30,7 @@ PR13最后三行pending校验已经推送61612bf；用户明确批准追加一�
 
 审计程序可以给出指定字段的TECHNICAL_PASS；不能仅凭退出0或名义账相等自动给QUALIFIED。供给充足、接收可用时持续服务偏差仍须按实际结果解释，不任意创造百分比阈值，也不因“正常物理原因”删除差额。
 
-## 第一张卡与真实权限门
+## 第一张卡与真实权限门（批准前准备快照）
 
 拟首身份`QUAL_NATURAL_ALINEA_R900_S17_01`，复用既有自然输入，seed17、dt1、0–4200秒、600秒起控，4050计划ID，既有六窗[1200,3000)。新包仅将输出precision从2提高到8以支持物理复算；网络、需求、车型、speedFactor、控制参数不变。原始候选输入只读，旧低精度raw不改判为高精度通过。
 

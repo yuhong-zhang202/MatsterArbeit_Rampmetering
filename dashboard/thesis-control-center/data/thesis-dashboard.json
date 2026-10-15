@@ -372,7 +372,7 @@
     {
       "id": "issue12-signal-policy-review",
       "chapterId": "",
-      "title": "PR #13：61612bf最后pending三行定点复审待返回",
+      "title": "PR #13：REVIEW_PENDING / NO_VERDICT（不阻塞非运行准备）",
       "status": "doing",
       "priority": "high",
       "type": "engineering",
@@ -387,13 +387,13 @@
         "Issue https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/issues/12；实质修复仍在原PR交付",
         "Draft PR #13：https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/pull/13；仅技术交付，未验收/合并",
         "用户最新限制：不运行SUMO、不合并PR；新版本自然实际行为NOT_TESTED",
-        "用户明确批准追加一次仅pending三行定点复审；请求6191040336指定61612bf，未返回不当通过；不扩大完整矩阵"
+        "请求6191040336绑定616：REVIEW_PENDING / NO_VERDICT；不称PASS/CANCELLED，不再新发review"
       ]
     },
     {
       "id": "natural-actuator-readiness",
       "chapterId": "",
-      "title": "PR #15：自然资格离线实现与首卡准备，待真实权限",
+      "title": "PR #15：非运行资格准备已交付；实际验证NOT_TESTED",
       "status": "doing",
       "priority": "high",
       "type": "engineering",
@@ -406,7 +406,7 @@
         "实际首卡b73c6781…已唯一prepare/validate-prepared；执行false/观测全null/raw不存在，实际字段三方GO仅未释放交付",
         "用户直接批准独立900和仅b73首卡有条件一次运行；已耗0/余900/start0，inner870＋cleanup30，旧124.355不pool",
         "准确卡预算/有条件noSUMO解除已获直接批准；仍待review完成/三方canonical/PID观察等门，第二身份未释放",
-        "PR13定点review准确616仍Running；实际自然安全/持续服务/城市结果NOT_TESTED，总体NOT_QUALIFIED"
+        "非运行准备独立完成，14项绑定无漂移；外部review仅REVIEW_PENDING / NO_VERDICT，实际资格NOT_TESTED/NOT_QUALIFIED"
       ]
     }
   ],
@@ -693,7 +693,7 @@
       "rq": "正式实验前技术准备",
       "title": "动态ALINEA自然需求最小资格验证",
       "status": "todo",
-      "next": "独立900及仅首卡有条件放行已获直接批准；先等PR13准确616定点review完成且无实质阻碍，再满足canonical/PID观察/实时资源门，才可一次技术运行。尚无native。",
+      "next": "非运行实现、精确首卡和三方准备证据已交付；不因REVIEW_PENDING / NO_VERDICT增加代码或测试。实际启动仍按原准确有条件授权及canonical/PID/资源门，不自动第二次。",
       "taskIds": [
         "natural-actuator-readiness"
       ]
