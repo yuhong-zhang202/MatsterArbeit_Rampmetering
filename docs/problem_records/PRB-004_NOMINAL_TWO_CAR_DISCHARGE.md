@@ -187,3 +187,8 @@ PR13实际审查`9a9c96ed…`指出：上一完整周期N<2并不证明执行器
 用户现已明确批准四条最小合同及离线实现：新G准入保持严格；仅限定普通被动查询的参考不足转为完整观测；真实异常/必要UNKNOWN仍停。最小实现及工程→data→science离线复核已完成，GO仅支持交付/非执行新卡准备；新实际运行未授权；旧650STOP、原readerUNKNOWN和六窗未测保持。独立失败前缀reader已通过工程与科学限定交付审查，最终V3仍exit1/UNKNOWN（full_horizon未到）且qualified=false。详见[唯一判定与批准](../development/ISSUE16_CURRENT_GAP_SCOPE_DECISION_20261015.md)。原启动已消费，预算余额不授权新卡；总体NOT_QUALIFIED。
 
 新独立run02卡dc9c1ce4（176源4eb466ec）已一次prepare/validate及工程→data→science准确卡复核，GO仅交人审。总816秒=786+30，预算账与start1不重置；execution=false，无新raw/canonical。有限运行/测量用途与数值跟踪NOT_ASSESSED为待确认边界，仍非自然服务资格通过。
+
+
+### Issue16唯一自然复验结果：1262 STOP，资格未建立
+
+用户准确批准后run02一次执行，卡dc9c1ce4/176源4eb466ec/checkpoint daa149bd，1262黄灯步R109实测−4.501m/s²超过原4.5+1e−6，保留两条硬告警，不重试不改门。原650失败与新版越过650不混为同版本PASS。独立662秒C133.174013/E132/N109、描述592.749veh/h，物理残差24.174013未追债；首窗62/300、其余未测，完整边界受限恢复未测。读取器两项失败尾UNKNOWN原样保留，补充EOF/反馈事实不替代；231raw封存/三方后审STOP_RETAINED/NOT_QUALIFIED。有限资格未取得，数值精度NOT_ASSESSED。问题保持未收敛，不拿原154短成功拼接自然资格；唯一建议用户/Robert决定逐步4.5制动门科研适用性，停止自动guard工程和运行。见[本轮完整判定](../development/ISSUE16_CURRENT_GAP_SCOPE_DECISION_20261015.md)。

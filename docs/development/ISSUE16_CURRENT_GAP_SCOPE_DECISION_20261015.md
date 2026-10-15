@@ -1,5 +1,7 @@
 # Issue16：650秒间距硬停止的适用性判定
 
+**本轮有界收口：STOP_RETAINED / NOT_QUALIFIED。** 获批最小合同已实现并完成离线审查；唯一新自然运行run02在1262秒触发保留的制动硬门。未取得有限运行资格，不改门、不自动重跑。下面T1、准备和批准内容保留其版本；实际结果见末节。
+
 **T1结论：MINIMAL_SCOPE_CHANGE_PROPOSED；用户现已批准四条合同及最小离线实现。** 直接答复为“批准该合同及最小离线实现”，见[非执行批准回执](../../artifacts/issue16_natural_gap_scope_20261015_v1/HUMAN_CONTRACT_APPROVAL_RECEIPT_V1.json)。最小实现及工程→数据→科学离线审查已完成，GO仅支持离线交付与非执行新卡准备；新SUMO运行未授权，仍须准确新卡单独放行。旧650 STOP保持。
 
 ## 任务与版本
@@ -54,3 +56,19 @@
 ## 模型建议
 
 建议复杂根因与科学边界判定使用GPT-6 Astra；常规局部实现可用GPT-6.1 Sol。官方将Astra定位于复杂推理/编码、Sol定位于能力与成本平衡；这是任务选择建议，不是正确性保证，也未改变本聊天或代理设置。[OpenAI模型说明](https://developers.openai.com/api/docs/models)（2026-10-15实际检索并打开）。
+
+## 唯一自然复验与科学收口
+
+用户明确批准公开101文件及准确run02一次启动/限定用途后，已发布[Draft PR17](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/pull/17)，执行checkpoint `daa149bd296e1ab24da82b47b03f33d7d3e6904a`。新真实canonical及全部来源/输入/环境/三方/PID/磁盘/预算门通过；一次native连接25.135秒后开始运动。没有第二次启动或源码修改。
+
+**1262秒STOP。** R_flow.109在1261→1262黄灯步的速度差和加速度getter均为−4.501m/s²，超过原4.5+1e−6门；原两条制动告警保持。碰撞/teleport观测0，不能据此判数值误报或未来安全，也不能仅凭微小超额证明实际危险。原650 gapSTOP不改判，新版越过650是本次过程证据。[实际工程报告](../../artifacts/issue16_natural_gap_scope_20261015_v1/engineering/run02_execution_v1/ENGINEERING_EXECUTION_REPORT_V1.md)。
+
+独立[600,1262)662秒：C≈133.174013、E_scheduled=E_executed132、N109，描述平均592.749辆/小时；C−N≈24.174013全部保留，不能把物理缺额追到调度账。66完整周期和末partial、1260请求pending、22完整反馈窗口获核对。第一评价窗仅62/300秒，其余五窗null；下游完整边界红保持恢复未测，供给/receiver/WAIT重叠不能唯一解释23辆名义与实际差额。全4050人口=1462到达+157未完+2431future，截断不当零。[独立数据报告](../../data/processed/issue16_natural_gap_scope_20261015_v1/run02_native_v1/DATA_RUN02_REPORT_V1.md)。
+
+原reader唯一exit1/UNKNOWN：反馈尾部及EOF两个UNBOUND_GAP_STOP_RECEIPT保留，未扩豁免造PASS。补充独立完整反馈前缀、nativeEOF0/四流绑定/清组为空是另列的事实，不替代原UNKNOWN域。231raw文件/402,556,357字节封存，manifest207f7183；工程19/data27/全部raw经只读科学核对一致。[最终科学审查](../../artifacts/issue16_natural_gap_scope_20261015_v1/SCIENCE_RUN02_POSTREVIEW_V1.md)。
+
+状态边界：离线TECHNICAL_PASS仅对应已述测试；此次实际NOT_QUALIFIED，LIMITED_QUALIFIED未取得；完整4200/完整六窗/真实边界受限恢复NOT_TESTED，数值跟踪精度NOT_ASSESSED。正式实验未启动，论文仍卡在正式实验前执行器资格，不能给无依据完成百分比。
+
+唯一建议：把本次−4.501事件及既有数值事件历史交用户/Robert，一次性裁定“逐步绝对4.5制动门”是否适合论文资格标准。此前保持停止与未资格，不继续自动修改guard/新增预测系统/测试矩阵或重跑；未向Robert发消息。
+
+真实资源结算已回读通过：本次guardian含清理175.236358000秒（CLI179.816117125秒为不同范围），累计258.873794041秒，余641.126205959秒，start2/unknown预留空；旧账/预算不pool或reset。余额不授予第三次启动。[最终资源摘要](../../artifacts/issue16_natural_gap_scope_20261015_v1/RUN02_RESOURCE_ACCOUNT_FINAL_V1.json)。

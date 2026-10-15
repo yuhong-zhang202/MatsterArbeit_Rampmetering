@@ -1,0 +1,43 @@
+# Run02 independent actual-data closeout V1
+
+Run QUAL_NATURAL_ALINEA_R900_S17_02 is NOT_QUALIFIED: the existing braking gate stopped at ACK1262, before4200 and before any complete evaluation window. Numerical ALINEA tracking accuracy remains NOT_ASSESSED under the approved limited measurement purpose. No rule, reader, source, card or raw data was changed for this analysis; no native process or retry was started.
+
+## Context and reproducibility
+
+Context Preflight reviewed AGENTS, current PROJECT_STATE, DECISIONS, empty/unfrozen EXPERIMENT_PROTOCOL and relevant WORKLOG. This is bounded exploratory qualification evidence, not a formal experiment or thesis effect conclusion. Parent owns documentation and resource decisions. Historical Stage6 closeout and old failures remain unchanged.
+
+Exact card SHA dc9c1ce418ab61eb4e36b26e1436c94b31ba78cde9a630df596a0e5a4ce4c509, executed176-source digest4eb466ec0a28f783089230941f1a6139ce9f0ed45a0e0dced82a7dc1e278d66f at daa149bd296e1ab24da82b47b03f33d7d3e6904a. Manifest SHA207f7183a93465526ac4da7061a0990503a0323b85430ca6583a65f49677e9d8 seals231 files/402556357 bytes. Fixed audit provenance independently passed exact current-card sources, raw hashes, prepared inputs and environment, without postanalysis source exceptions. Its15-reader closure is retained in NATIVE_AUDIT_RESULT.json.
+
+The exact command/exit/elapsed/stdout/stderr are in AUDIT_COMMAND_V1.json. The sole actual-reader invocation exited1 after4.790758249990176s, overall UNKNOWN_INCOMPLETE_EVIDENCE. Both feedback_event_accounting and EOF_ownership reject this braking failure tail with ValueError:UNBOUND_GAP_STOP_RECEIPT; their narrowly supported historical gap-stop branch is not applicable. These original rejections are preserved. No rerun or repair to obtain PASS occurred. Full-horizon/urban/window incompleteness is independently retained.
+
+A single supplementary read-only extraction command was then run:
+`.venv/bin/python data/processed/issue16_natural_gap_scope_20261015_v1/run02_native_v1/extract_stop_evidence_v1.py`
+It exited0 (tool wall approximately0.8s; no separate elapsed receipt). STOP_PREFIX_FACTS_V1.json retains inputs, finite terminal frames, arithmetic, recorded-event checks and original resource identities. This does not overwrite or upgrade the fixed audit's unknown domains. One subsequent interactive inspection had an AttributeError from treating the saved post list as a dict; it changed no output or inference.
+
+## Independent observed accounting
+
+Observed control interval [600,1262) is662s. Independent FCD/TLS/ACK crossing joins reconstruct109 unique physical entries; descriptive average is109*3600/662=592.749244713 veh/h, only for that truncated interval. Scheduled and executed nominal entitlement are each132; chronological raw C=199761020172459847/1500000000000000=133.17401344830656 vehicles, selected/applied request integrals each1198/9=133.11111111111111. C−N=24.17401344830656, C−E_sched=1.17401344830656, E_sched−E_exec=0, E_exec−N=23 vehicles. Nominal execution does not prove physical supply or acceptable tracking, and residuals are not recoverable physical debt.
+
+There are66 complete packets and one partial packet1257–1266 cut at1262, with one observed G entry and no observed Y/red entry in that partial packet. Complete packet N=0/1 and a legal N=3 are retained without forcing N=2. Body observations237, final body-censored IDs empty; no unobserved future clearance is imputed. Feedback630 was actually first applied632; latest feedback1260 at807.2354353021569 veh/h remains PENDING with no preparation/application. The initial fixed request was SUPERSEDED_WITHOUT_APPLICATION. Request history and current application are separately retained.
+
+The XML/recorded Feedback input windows600–630 through1230–1260 (22 complete windows/44 lane windows) are reconstructable. Supplementary unchanged pure feedback_check verifies chronological recorded events601..1261 and these22 request calculations. No1262 Feedback event was created after STOP. This supports only the complete recorded prefix; the fixed feedback failure-tail domain remains UNKNOWN.
+
+First evaluation window[1200,1500) has62/300 observed seconds: C12.202008328366443, N10, C−N2.202008328366443; E_sched=E_exec12, selected/applied1208/99. It is UNKNOWN_INCOMPLETE_WINDOW. All five later windows are NOT_TESTED_WINDOW_NOT_REACHED with C/N null. No complete-window or full4200 PASS is claimed.
+
+## Stop and observation boundaries
+
+At1261→1262 R_flow.109 remained the storage front; R_flow.108 was its internal-lane leader. Motion was yellow (native before phaseG/nextswitch1261, after phasey/nextswitch1264). R109 speed4.56232916440366→0.06132916440365965 m/s gives−4.501 m/s², matching actual acceleration getter. Existing4.5+1e−6 threshold is exceeded by0.0009990000000001942 m/s². Both ORDINARY_BRAKING_EXCEEDED and UNKNOWN_OR_EXCESSIVE_ACCELERATION reasons remain. The small excess alone establishes neither numeric false positive nor unavoidable danger. No threshold or numerical exception was changed.
+
+Terminal BEFORE native reference gap9.31012174321824m/secure query4.624658328807319m is within bound; the original prospective receiver was false. POST receiver is available, frontR109/leaderR108, gap18.709782017458515m/query2.200339725759709m. No actual R109 crossing occurred in this step. POST reference is not the private prior motion followSpeed input or a causal explanation of braking.
+
+Observed prefix collision/starting-teleport/ending-teleport counters are0, with128971 speed-difference and130590 acceleration observations. The hard braking alarm remains despite zero collision. Red-entry/phase/arrival/body checks passed observed joins;1462 arrivals were checked. Controlled motions cover269 G,233 yellow,160 red seconds. This establishes recorded observation coverage, not general safety or absence of unobserved future hazards.
+
+Empty storage37 seconds, PRE receiver unavailable298 seconds,25 PRE/POST below-reference records and389 WAIT records are observed. WAIT counts combine recorded checks, not seconds or vehicle deficit. Passive reference observations2491 include repeated per-vehicle/role queries; legacy queries remain unchanged and do not prove native safety. No held packet was selected, so actual complete-boundary held-red recovery is NOT_TESTED. These overlapping constraints cannot uniquely allocate the23-vehicle nominal execution/physical count difference or demonstrate sustained unrestricted tracking. First actual entry is650; later entries demonstrate service after initial empty storage, not causal recovery from each restriction.
+
+## Population, endpoint and resources
+
+Full planned cohort4050 is classified at1262:1462 arrived,157 unfinished,2431 future scheduled; due vehicles counted as inserted1619. Future p>=1262 has zero restricted exposure, not negative cost; source wait0 for the observed due cohort. Trip XML schema contains1620 records: the extra M_flow.1262 record has depart=-1/arrival=-1 at the scheduled-time boundary1262 (TRIP_BOUNDARY_CHECK_V1.json). Endpoint population categories use the half-open scheduled-time cohort, so this future record has zero observed exposure. Restricted system/in-network exposure130590 vehicle-seconds is not full-journey cost. Urban evaluation is partial only. Named-lane slow-R rear extents at endpoint287.45319601m ramp/internal and471.25198907m shared permit gaps; they are not contiguous queue length or demonstrated causal spillback.
+
+Original guardian is WORKER_EXITED/worker1; native return0, allfourlogs bound, no observed native message, exactrun/card/release ownership verified and owned group empty. Finite independent identity/limits cross-check supports these resource facts, without changing EOF_ownership UNKNOWN. Guardian elapsed through cleanup175.23635800002376s/overshoot0 is the candidate resource charge, within816=786+30. CLI wall179.81611712498125s includes other overhead and is a different scope. Parent/engineering additionally retain independent empty-PGID observation. These receipts are sufficient to present the actual candidate charge to scientific review; no ledger or reservation was released here.
+
+The safest next step is scientific review of this preserved failed prefix and one genuine resource settlement under parent control. Qualification remains absent, numerical accuracy NOT_ASSESSED, and no third start/card/retry follows from a remaining balance. No broader diagnosis, alternative guard or matrix was developed. Documentation impact: parent must append the data findings to current STATE/WORKLOG; this analyst has no governance write authority.

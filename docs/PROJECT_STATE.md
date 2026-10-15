@@ -5,7 +5,11 @@
 
 ## Current Phase
 
-**Issue16有界后续：四条最小合同已获用户批准，仅实施与离线验证。** 新分支 `codex/issue-16-natural-gap-scope` 基于PR15准确 `af988faddaa271ac2a8f80fe3fd3558ff2898618`；固定官方源码及既有649/650帧支持 `MINIMAL_SCOPE_CHANGE_PROPOSED`，用户明确答复“批准该合同及最小离线实现”。保留新绿灯严格准入和真实异常/必要UNKNOWN硬停，将限定普通被动跟驰参考不足记为观测；最小实现及工程→data→science离线审查完成，未发现未处理Blocker/Major；目前GO仅限离线交付与非执行新卡准备。既有failed-prefix reader已修复并离线核对，原650 STOP、六窗未测、整体UNKNOWN/NOT_QUALIFIED不改判。此次没有新SUMO权限，独立run02准确卡dc9c1ce4已准备/校验且三方精确复核完成，176源4eb466ec；拟总816秒=worker786+清理30，execution=false/观测null，无新raw/canonical；新精确卡/一次启动/限定用途仍须用户单独批准，随后核canonical及实时门；独立900余额不授权重跑。[本次判定与批准](development/ISSUE16_CURRENT_GAP_SCOPE_DECISION_20261015.md)。
+**Issue16有界收口：run02在1262秒STOP，仍NOT_QUALIFIED。** 获批四条合同最小修复及三方离线/准确卡审查完成后，用户明确批准dc9c1ce4卡一次限定诊断；执行checkpoint daa149bd/176源4eb466ec。全部门及新canonical真实通过，唯一native在1262触发R109制动−4.501m/s²，超原4.5+1e−6门。原告警与失败保留，没有重试/新guard/源码修改。独立C133.174013/E132/N109，662秒描述平均592.749辆/小时，残差24.174013；首评价窗62/300秒、五窗未到、完整受限红保持恢复NOT_TESTED，数值跟踪精度NOT_ASSESSED。231raw封存，工程19/data27/全部raw获科学复核；原reader两项失败尾UNKNOWN保持，nativeEOF0/清组空事实另列。科学仅GO资源结算175.236358秒，随后真实结算回核通过：累计258.873794041秒、余额641.126205959秒、start2、unknown预留空，不pool/reset。[本轮结论](development/ISSUE16_CURRENT_GAP_SCOPE_DECISION_20261015.md)、[Draft PR17](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/pull/17)。
+
+**唯一下一步：用户/Robert裁定逐步绝对4.5制动门是否适合作为论文资格标准。** 微小超额不能自动认定误报或危险，零碰撞不撤销规则触发。在该方法决定前停止自动改guard/重跑，不新增预测系统或矩阵。两次实际启动已消耗，余额不授第三次；正式实验仍未启动、协议0B未冻结。PR13仍REVIEW_PENDING / NO_VERDICT，未重发审查；原154证据、旧650失败及无关memory/WORKLOG插入保持。
+
+以下为不同版本的历史批准、准备和执行快照，当前状态以上段为准。
 
 **首次自然交通诊断已完成后审：STOP_RETAINED / NOT_QUALIFIED。** 精确卡b73／执行源b6／173源c2f00d7f唯一运行于650秒触发POST_CURRENT_GAP_BOUND_DENIED，未到4200秒及六评价窗。六完整周期N0均继续；独立C≈12.311518、E_scheduled=E_executed12、真实N1，物理短放保留。间距9.610494m低于同帧native查询13.089892m，证实规则触发，未证明碰撞、必然危险或保守误判。下游受限等待恢复、完整时域及长期放行率NOT_TESTED；原reader exit1/UNKNOWN、partial和车尾截断不改判。227raw文件封存，工程→data→science后审完成，科学仅允许资源结算。独立900预算已结算83.637436041秒，账面余816.362563959秒、start1、unknown预留空，旧余额不pool；唯一启动权已消耗，不重跑、不正式实验、不合并。GitHub末轮仍REVIEW_PENDING / NO_VERDICT，用户仅撤销其完成作为本次额外门，不再复审。[本次完整收口](development/NATURAL_ACTUATOR_FIRST_NATIVE_CLOSEOUT_20261015.md)。
 

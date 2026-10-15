@@ -2,9 +2,9 @@
   "meta": {
     "title": "高速公路匝道调节的 Sweet Spot 研究",
     "degree": "TU Berlin · Planung und Betrieb im Verkehrswesen (M.Sc.)",
-    "currentPhase": "探索验证已结项；进入正式实验方案设计",
+    "currentPhase": "探索已结项；正式实验前执行器资格受阻",
     "updatedAt": "2026年10月15日",
-    "nextMilestone": "设计并审查正式实验协议；批准冻结后再运行",
+    "nextMilestone": "由用户/Robert确认制动资格标准；暂不追加运行或正式实验",
     "researchQuestion": "暂定研究 ramp-metering sweet spot：在不同需求条件下平衡高速保护与城市回溢风险；正式定义与范围仍待 Robert 确认。",
     "supervisors": [
       {
@@ -393,7 +393,7 @@
     {
       "id": "natural-actuator-readiness",
       "chapterId": "",
-      "title": "Issue #16：精确run02卡已审，等待新卡放行",
+      "title": "Issue #16：run02在1262秒STOP；未取得资格",
       "status": "doing",
       "priority": "high",
       "type": "engineering",
@@ -407,7 +407,7 @@
         "工程→data→science后审完成；资源结算见RESOURCE_ACCOUNT_FINAL_V1.json，唯一启动权消耗",
         "PR13 REVIEW_PENDING / NO_VERDICT，不重复复审；不自动第二次、正式实验或合并",
         "详见docs/development/NATURAL_ACTUATOR_FIRST_NATIVE_CLOSEOUT_20261015.md",
-        "Issue16：四条合同离线修复及三方复核完成；run02卡dc9c1ce4/176源4eb466ec已审，816秒提案，execution=false，准确新卡/一次启动/限定用途待用户批准"
+        "run02准确卡dc9c1ce4/176源4eb466ec唯一获批运行1262STOP：R109 -4.501超原门；C133.174/E132/N109；首窗62/300，其余未测；三方后审NOT_QUALIFIED，停止自动重跑/guard修改"
       ]
     }
   ],
