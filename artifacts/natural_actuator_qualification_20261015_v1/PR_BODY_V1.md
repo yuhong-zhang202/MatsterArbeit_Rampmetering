@@ -19,7 +19,9 @@ Refs #14。基于 Draft PR #13 的准确 `61612bf6e240d41d2ca4be95a02429f48c9ddd
 
 - 工程报告：`artifacts/natural_actuator_qualification_20261015_v1/engineering/implementation_v1/ENGINEERING_REPORT_V1.md`
 - 58文件绑定：`b5954b752ef9c06d8f5d18ece87ab150ebe2441bcaa7961fe6a4396105f7fee6`，主代理现场逐项匹配。
-- 独立数据和科学终审、准确卡与源码绑定：完成后在本段以实际回执更新；目前不预报PASS。
+- 数据七域实现及22项绑定完成，`fbacd0b9f5066447b4cc5d60a94db71e6e879dbc71d4c1db5d24a9b8bccd75dd`；9组PASS0.242秒后非空E1受影响方法PASS0.002秒，未宣称整套重跑。
+- 工程独立native-schema兼容通过，173项闭包覆盖8项传递依赖；科学GO允许首张未释放卡准备，见`SCIENCE_FINAL_IMPLEMENTATION_REVIEW_V1.md`。
+- 实际首卡已唯一生成并只读validate-prepared exit0：SHA `b73c678130604d1cef41dd5ecb70a79cc868084e91ae5033cc179393c25f6982`，源摘要 `c2f00d7f66ea66e331e436248bf34d510fc8ba11a99b16792cd80e18f61055b2`；代码checkpoint `b6c60b927fc71a8750f5674f2cf168824b78cf05`。实际卡已获工程→独立data→只读science字段GO，仅支持未释放交付；观测全null、execution false、新raw不存在，未生成批准或canonical。
 
 所有历史FAIL、STOP3、原154版本、raw及旧审计回执保留。未启动native --version、netconvert、真实TraCI或SUMO；未创建实际运行批准／canonical，未分配新raw。
 
@@ -28,3 +30,5 @@ Refs #14。基于 Draft PR #13 的准确 `61612bf6e240d41d2ca4be95a02429f48c9ddd
 STATE／WORKLOG／PRB-004／最小资格方案／准备说明／README及Dashboard同步具体事实。依据与访问层次见 `artifacts/thesis_actuator_readiness_20261015_v1/LITERATURE_AND_METHOD_BASIS.md`；C−E_scheduled为有说明的工程选择，不伪称文献要求。
 
 首卡仅 `PREPARED_NOT_RELEASED`。完成全部独立准备和审查后，停在准确新数字预算与本卡直接人工运行授权门；旧批准、最多两次身份、Reviewer回复和本PR均不授权运行。第二身份不预备，必须由首项实际实质结果支持且同一新scope余量及全部权限有效。
+
+实际卡与三方回执已同步本Draft；14文件卡绑定 `fd4d1bdb1a0d7c8350ccd11053ca987931196f27590b5746b66d9fb0bd29083b`。唯一具体运行范围见 `RUN_REQUEST_V1.md`，仍待真实人类预算及本卡运行放行等门。PR13准确616定点review仍Running；不虚称GitHub审查完成。

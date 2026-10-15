@@ -393,21 +393,20 @@
     {
       "id": "natural-actuator-readiness",
       "chapterId": "",
-      "title": "Issue #14：原生资格审计与精确卡准备，尚未运行",
+      "title": "PR #15：自然资格离线实现与首卡准备，待真实权限",
       "status": "doing",
       "priority": "high",
       "type": "engineering",
       "due": "",
       "subtasks": [
-        "复用既有M3600/R900/U360/X180、seed17、4050车、4200秒自然输入及600秒起控",
-        "不能把154短诊断600–1200秒人工蓄队沿用为自然供车",
-        "资格需覆盖C/N持续跟踪、真实应用延迟、空/受阻、全车辆安全、队列与城市暴露、完整窗口和可复现绑定",
-        "最多两次有目的技术身份，第二次须由首轮实质问题支持；不做正式矩阵",
-        "旧600秒预算已耗475.645秒；新900秒提案尚未获新增预算/精确卡放行，不重置旧账",
-        "原生reader、独立预算和guardian非运行实施中；设计科学GO不等于实际资格；精确卡待唯一准备",
-        "唯一Issue #14：https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/issues/14；新分支依赖PR13",
-        "拟新scope共900秒，内限870＋清理预留30；未批时可用量null，旧124.355秒不pool",
-        "首次自然运行仍需准确卡、直接人工放行、新数字预算及canonical；不运行SUMO、不合并PR"
+        "Issue #14、Draft PR #15唯一创建；base为PR13原分支，未合并",
+        "自然4050车、seed17、4200秒、600起控；precision8仅测量，原需求/模型/算法不改",
+        "原生七域流式reader完成；9组PASS后非空E1受影响方法PASS，未运行native或新natural假循环",
+        "工程58/data22绑定均匹配；173项源闭包无缺；科学GO仅准备首卡",
+        "实际首卡b73c6781…已唯一prepare/validate-prepared；执行false/观测全null/raw不存在，实际字段三方GO仅未释放交付",
+        "独立900仅提案，inner870＋cleanup30计入900；可用量null，旧124.355秒不pool",
+        "RUN_REQUEST_V1明确本卡数字预算/解除noSUMO/三方canonical/PID观察门，第二身份未预备或释放",
+        "PR13定点review准确616仍Running；实际自然安全/持续服务/城市结果NOT_TESTED，总体NOT_QUALIFIED"
       ]
     }
   ],
@@ -694,7 +693,7 @@
       "rq": "正式实验前技术准备",
       "title": "动态ALINEA自然需求最小资格验证",
       "status": "todo",
-      "next": "完成原生reader／guardian必要离线验证、科学审查和准确PREPARED_NOT_RELEASED卡；新预算与人工运行门缺失，实际NOT_TESTED。",
+      "next": "离线实现和首卡三方回读完成；等待PR13准确616定点review及新增独立900预算/仅本卡解除noSUMO/canonical/PID观察门。实际仍NOT_TESTED。",
       "taskIds": [
         "natural-actuator-readiness"
       ]

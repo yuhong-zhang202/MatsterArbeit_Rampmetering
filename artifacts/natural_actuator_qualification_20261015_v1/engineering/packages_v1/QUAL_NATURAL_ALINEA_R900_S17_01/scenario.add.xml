@@ -1,0 +1,102 @@
+<?xml version='1.0' encoding='utf-8'?>
+<additional xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="http://sumo.dlr.de/xsd/additional_file.xsd">
+  <laneAreaDetector id="shared_boundary_e2" lane="shared_approach_0" pos="0" endPos="238.8" period="30" timeThreshold="1" speedThreshold="1.3888888888888888" jamThreshold="10" friendlyPos="false" file="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/natural_actuator_qualification_20261015_v1/QUAL_NATURAL_ALINEA_R900_S17_01/outputs/shared_boundary_e2.xml" />
+  <laneAreaDetector id="ramp_storage_e2" lane="ramp_storage_0" pos="0" endPos="204.49" period="30" timeThreshold="1" speedThreshold="1.3888888888888888" jamThreshold="10" friendlyPos="false" file="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/natural_actuator_qualification_20261015_v1/QUAL_NATURAL_ALINEA_R900_S17_01/outputs/ramp_storage_e2.xml" />
+  <inductionLoop id="p1_main_up_1300_l0" lane="main_up_0" pos="1300" period="30" length="0" friendlyPos="false" file="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/natural_actuator_qualification_20261015_v1/QUAL_NATURAL_ALINEA_R900_S17_01/outputs/p1_main_up_1300_l0.xml" />
+  <inductionLoop id="p1_main_up_1300_l1" lane="main_up_1" pos="1300" period="30" length="0" friendlyPos="false" file="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/natural_actuator_qualification_20261015_v1/QUAL_NATURAL_ALINEA_R900_S17_01/outputs/p1_main_up_1300_l1.xml" />
+  <inductionLoop id="p1_merge_section_20_l0" lane="merge_section_0" pos="20" period="30" length="0" friendlyPos="false" file="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/natural_actuator_qualification_20261015_v1/QUAL_NATURAL_ALINEA_R900_S17_01/outputs/p1_merge_section_20_l0.xml" />
+  <inductionLoop id="p1_merge_section_20_l1" lane="merge_section_1" pos="20" period="30" length="0" friendlyPos="false" file="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/natural_actuator_qualification_20261015_v1/QUAL_NATURAL_ALINEA_R900_S17_01/outputs/p1_merge_section_20_l1.xml" />
+  <inductionLoop id="p1_merge_section_20_l2" lane="merge_section_2" pos="20" period="30" length="0" friendlyPos="false" file="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/natural_actuator_qualification_20261015_v1/QUAL_NATURAL_ALINEA_R900_S17_01/outputs/p1_merge_section_20_l2.xml" />
+  <inductionLoop id="p1_main_down_20_l0" lane="main_down_0" pos="20" period="30" length="0" friendlyPos="false" file="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/natural_actuator_qualification_20261015_v1/QUAL_NATURAL_ALINEA_R900_S17_01/outputs/p1_main_down_20_l0.xml" />
+  <inductionLoop id="p1_main_down_20_l1" lane="main_down_1" pos="20" period="30" length="0" friendlyPos="false" file="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/natural_actuator_qualification_20261015_v1/QUAL_NATURAL_ALINEA_R900_S17_01/outputs/p1_main_down_20_l1.xml" />
+  <inductionLoop id="p1_main_down_200_l0" lane="main_down_0" pos="200" period="30" length="0" friendlyPos="false" file="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/natural_actuator_qualification_20261015_v1/QUAL_NATURAL_ALINEA_R900_S17_01/outputs/p1_main_down_200_l0.xml" />
+  <inductionLoop id="p1_main_down_200_l1" lane="main_down_1" pos="200" period="30" length="0" friendlyPos="false" file="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/natural_actuator_qualification_20261015_v1/QUAL_NATURAL_ALINEA_R900_S17_01/outputs/p1_main_down_200_l1.xml" />
+  <timedEvent type="SaveTLSStates" dest="/Users/yuhongzhang/Desktop/Masterarbeit-Ramp-Metering/data/raw/natural_actuator_qualification_20261015_v1/QUAL_NATURAL_ALINEA_R900_S17_01/outputs/tls_states.xml" />
+  <WAUT id="targeted_program_selector" refTime="0" startProg="A_OPEN" />
+  <wautJunction wautID="targeted_program_selector" junctionID="ramp_mid" />
+  <tlLogic id="ramp_mid" type="static" programID="I12_PACKET8" offset="0">
+    <phase state="G" duration="4" next="1" />
+    <phase state="y" duration="2" next="2" />
+    <phase state="r" duration="2" next="0" />
+  </tlLogic>
+  <tlLogic id="ramp_mid" type="static" programID="I12_PACKET9" offset="0">
+    <phase state="G" duration="4" next="1" />
+    <phase state="y" duration="3" next="2" />
+    <phase state="r" duration="2" next="0" />
+  </tlLogic>
+  <tlLogic id="ramp_mid" type="static" programID="T10_G5Y3_NATIVE" offset="0">
+    <phase state="G" duration="5" next="1" />
+    <phase state="y" duration="3" next="2" />
+    <phase state="r" duration="2" next="0" />
+  </tlLogic>
+  <tlLogic id="ramp_mid" type="static" programID="I12_PACKET11" offset="0">
+    <phase state="G" duration="4" next="1" />
+    <phase state="y" duration="5" next="2" />
+    <phase state="r" duration="2" next="0" />
+  </tlLogic>
+  <tlLogic id="ramp_mid" type="static" programID="I12_PACKET12" offset="0">
+    <phase state="G" duration="4" next="1" />
+    <phase state="y" duration="5" next="2" />
+    <phase state="r" duration="3" next="0" />
+  </tlLogic>
+  <tlLogic id="ramp_mid" type="static" programID="I12_PACKET13" offset="0">
+    <phase state="G" duration="4" next="1" />
+    <phase state="y" duration="5" next="2" />
+    <phase state="r" duration="4" next="0" />
+  </tlLogic>
+  <tlLogic id="ramp_mid" type="static" programID="I12_PACKET14" offset="0">
+    <phase state="G" duration="4" next="1" />
+    <phase state="y" duration="5" next="2" />
+    <phase state="r" duration="5" next="0" />
+  </tlLogic>
+  <tlLogic id="ramp_mid" type="static" programID="I12_PACKET15" offset="0">
+    <phase state="G" duration="4" next="1" />
+    <phase state="y" duration="5" next="2" />
+    <phase state="r" duration="6" next="0" />
+  </tlLogic>
+  <tlLogic id="ramp_mid" type="static" programID="I12_PACKET16" offset="0">
+    <phase state="G" duration="4" next="1" />
+    <phase state="y" duration="5" next="2" />
+    <phase state="r" duration="7" next="0" />
+  </tlLogic>
+  <tlLogic id="ramp_mid" type="static" programID="I12_PACKET17" offset="0">
+    <phase state="G" duration="4" next="1" />
+    <phase state="y" duration="5" next="2" />
+    <phase state="r" duration="8" next="0" />
+  </tlLogic>
+  <tlLogic id="ramp_mid" type="static" programID="I12_PACKET18" offset="0">
+    <phase state="G" duration="4" next="1" />
+    <phase state="y" duration="5" next="2" />
+    <phase state="r" duration="9" next="0" />
+  </tlLogic>
+  <tlLogic id="ramp_mid" type="static" programID="I12_PACKET19" offset="0">
+    <phase state="G" duration="4" next="1" />
+    <phase state="y" duration="5" next="2" />
+    <phase state="r" duration="10" next="0" />
+  </tlLogic>
+  <tlLogic id="ramp_mid" type="static" programID="I12_PACKET20" offset="0">
+    <phase state="G" duration="4" next="1" />
+    <phase state="y" duration="5" next="2" />
+    <phase state="r" duration="11" next="0" />
+  </tlLogic>
+  <tlLogic id="ramp_mid" type="static" programID="I12_PACKET21" offset="0">
+    <phase state="G" duration="4" next="1" />
+    <phase state="y" duration="5" next="2" />
+    <phase state="r" duration="12" next="0" />
+  </tlLogic>
+  <tlLogic id="ramp_mid" type="static" programID="I12_PACKET22" offset="0">
+    <phase state="G" duration="4" next="1" />
+    <phase state="y" duration="5" next="2" />
+    <phase state="r" duration="13" next="0" />
+  </tlLogic>
+  <tlLogic id="ramp_mid" type="static" programID="I12_PACKET23" offset="0">
+    <phase state="G" duration="4" next="1" />
+    <phase state="y" duration="5" next="2" />
+    <phase state="r" duration="14" next="0" />
+  </tlLogic>
+  <tlLogic id="ramp_mid" type="static" programID="I12_PACKET24" offset="0">
+    <phase state="G" duration="4" next="1" />
+    <phase state="y" duration="5" next="2" />
+    <phase state="r" duration="15" next="0" />
+  </tlLogic>
+</additional>

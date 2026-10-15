@@ -1,6 +1,6 @@
 # 自然需求执行器：最小资格准备
 
-2026-10-15。当前为**非运行实施与审查准备**；自然运行NOT_TESTED，总体NOT_QUALIFIED。唯一工作项为[Issue #14](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/issues/14)，分支`codex/natural-actuator-qualification`从PR13准确head `61612bf6e240d41d2ca4be95a02429f48c9ddd54`建立，后续Draft PR必须以PR13分支为base。不得通过本记录放行SUMO或合并。
+2026-10-15。当前为**非运行实施与审查准备**；自然运行NOT_TESTED，总体NOT_QUALIFIED。唯一工作项为[Issue #14](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/issues/14)，分支`codex/natural-actuator-qualification`从PR13准确head `61612bf6e240d41d2ca4be95a02429f48c9ddd54`建立，[Draft PR #15](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/pull/15)以PR13分支为base。不得通过本记录放行SUMO或合并。
 
 ## 为什么需要这项工作
 
@@ -42,6 +42,10 @@ PR13最后三行pending校验已经推送61612bf；用户明确批准追加一�
 
 独立data实现已完成：[报告V1](../../data/processed/natural_actuator_qualification_20261015_v1/implementation_v1/DATA_IMPLEMENTATION_REPORT_V1.md)、[22项绑定](../../data/processed/natural_actuator_qualification_20261015_v1/implementation_v1/DATA_BINDING_V1.json)，SHA `fbacd0b9f5066447b4cc5d60a94db71e6e879dbc71d4c1db5d24a9b8bccd75dd`，主代理逐项复核无漂移。9组整体PASS0.242秒后，仅补强非空E1方法PASS0.002秒，未重跑全组。E1已测试两车道3／6秒占用→10／20%→原Feedback900降至620的计算，不是新交通请求矩阵；流式两帧join是已保存假材料的schema投影与构造XML，不是原生运行。队列后沿、queue XML、终点身份与截尾名单已经接入；保留一个binder旧schema KeyError并纠正，只读绑定失败不改动数据。
 
-执行前失败尾可能使旧纯数学完整周期校验为UNKNOWN，新native封装另存已观察C/N前缀、六窗、请求／意图／last setter／故障，不能把UNKNOWN伪报通过。全规模内存、用时、native物理与EOF均未实测。[工程独立schema兼容](../../artifacts/natural_actuator_qualification_20261015_v1/ENGINEERING_NATIVE_SCHEMA_COMPATIBILITY_V1.md)确认173项实际源闭包完整且无动态状态文档递归；[只读科学终审](../../artifacts/natural_actuator_qualification_20261015_v1/SCIENCE_FINAL_IMPLEMENTATION_REVIEW_V1.md)为GO_FOR_FIRST_EXACT_PREPARED_NOT_RELEASED_CARD_PREPARATION，无阻碍首卡准备的实质finding。尚未创建首卡／运行输出，未运行SUMO、TraCI或native --version。正式协议仍空且未冻结，未修改DECISIONS、导师意见或研究设计。
+执行前失败尾可能使旧纯数学完整周期校验为UNKNOWN，新native封装另存已观察C/N前缀、六窗、请求／意图／last setter／故障，不能把UNKNOWN伪报通过。全规模内存、用时、native物理与EOF均未实测。[工程独立schema兼容](../../artifacts/natural_actuator_qualification_20261015_v1/ENGINEERING_NATIVE_SCHEMA_COMPATIBILITY_V1.md)确认173项实际源闭包完整且无动态状态文档递归；[只读科学终审](../../artifacts/natural_actuator_qualification_20261015_v1/SCIENCE_FINAL_IMPLEMENTATION_REVIEW_V1.md)为GO_FOR_FIRST_EXACT_PREPARED_NOT_RELEASED_CARD_PREPARATION，无阻碍首卡准备的实质finding。首卡已唯一生成且只读validate-prepared exit0，见下节；尚无运行输出，未运行SUMO、TraCI或native --version。正式协议仍空且未冻结，未修改DECISIONS、导师意见或研究设计。
 
-下一步完成必要实现验证与只读科学审查，再由主代理唯一准备首卡、核对准确绑定、更新依赖Draft PR和具体RUN_REQUEST，停在真实人类预算／运行门。
+## 实际首卡与唯一下一步
+
+可执行checkpoint `b6c60b927fc71a8750f5674f2cf168824b78cf05`。实际卡SHA `b73c678130604d1cef41dd5ecb70a79cc868084e91ae5033cc179393c25f6982`，173源摘要 `c2f00d7f66ea66e331e436248bf34d510fc8ba11a99b16792cd80e18f61055b2`。唯一prepare0.130秒／只读validate0.107秒均exit0，不代表native测试。实际XML、4050人口、600／4200／六窗、E1两lane30秒、precision8、141环境hash和所有源／输入经工程→独立data→只读science回读，无阻碍未释放交付的实质问题。[实际卡](../../artifacts/natural_actuator_qualification_20261015_v1/engineering/packages_v1/QUAL_NATURAL_ALINEA_R900_S17_01/card.json)、[三方14文件绑定](../../artifacts/natural_actuator_qualification_20261015_v1/card_preparation_v1/THREE_ROLE_CARD_BINDING_V1.json)，绑定SHA `fd4d1bdb1a0d7c8350ccd11053ca987931196f27590b5746b66d9fb0bd29083b`。
+
+全部独立实现／离线验证／精确卡准备已完成；[RUN_REQUEST_V1](../../artifacts/natural_actuator_qualification_20261015_v1/RUN_REQUEST_V1.md)明确真实预算及仅本卡解除noSUMO的范围，**它不是批准**。PR13准确616定点review仍Running、未给结论；只有该审查无未处理实质阻碍且真实数字预算／精确人工运行批准／canonical／PID观察权限与实时资源门均有效后，才可仅本卡一次技术运行。卡执行false、观测null；native安全、持续C/N、供给／接收分支、城市结果和性能仍NOT_TESTED，总体NOT_QUALIFIED。不自动预备第二卡或开展正式矩阵。
