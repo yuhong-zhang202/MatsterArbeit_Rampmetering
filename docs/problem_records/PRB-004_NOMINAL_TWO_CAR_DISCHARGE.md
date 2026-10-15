@@ -156,3 +156,7 @@ PR13实际审查`9a9c96ed…`指出：上一完整周期N<2并不证明执行器
 本轮最新限制为不运行SUMO、不合并PR。普通服务新实现、P2处理、失败保留及精确版本边界见[PR13修复交付](../development/PR13_ORDINARY_SERVICE_REVIEW_FIX_20261015.md)；旧finite与154实测不混作新实现资格。
 
 24ec690d精确复审5527104163已完成：新增三项失败／时序证据P2（setter部分应用持久化、command生命周期完整绑定、later-hard原因绑定），并未报告新的N0/1误停或物理追债缺陷。第二轮三项限定修复及必要离线工程／data／science复核已完成，待准确新head复审；review未指出某问题不等于安全或自然资格认证。实际finding见[本轮回执](../../artifacts/thesis_actuator_readiness_20261015_v1/PR13_REVIEW_24EC_V1.json)。
+
+第二轮review5527262368精确审查5b08d28f，剩一项逐row pending ID／rate语义校验P2。仅补这两字段及原保存材料反例，不更改控制政策；到两轮上限停止自动扩审与资格推进，最终小修与最后实际review源分开。[末轮回执](../../artifacts/thesis_actuator_readiness_20261015_v1/PR13_REVIEW_5B08_V1.json)。
+
+最后pending两字段已修；5保存材料／2指定反例0.314秒通过，科学仅GO小修交付。修后reader只由新58项e08cc79a绑定说明，不以5b08远端review冒充修后已审。达到两轮上限，停止自动扩审／资格推进；需要第三次仅此字段定点review时交用户明确指示。自然资格仍NOT_TESTED。[最后修复记录](../../data/processed/thesis_actuator_readiness_20261015_v1/final_pending_fix_v1/DATA_REPORT_V1.md)。

@@ -164,6 +164,9 @@ def audit(bundle):
              b['actual_program']==p['program']==current['program'] and b['actual_state']==p['motion']==motion and
              b['actual_phase']==p['motion_phase'],'unbound actual phase/program')
         chain=r['rate_chain']
+        need(chain['pending_request_id']==pending['request_id'] and
+             chain['r_policy_pending_veh_h'] is None,
+             'pending request not latest REQUESTED or false pending packet rate')
         # rate_chain is captured before ledger.end_step; the first-G row
         # therefore still has null applied fields. Actual application is
         # independently established by that row's G binding and emitted ACK.

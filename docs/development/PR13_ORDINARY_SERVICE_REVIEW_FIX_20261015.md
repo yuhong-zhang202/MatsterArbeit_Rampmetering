@@ -71,3 +71,17 @@ Natural reader独立重建完整nested command、first preparation、首次实�
 三种旧reader错误接受已实际重现。新最终针对性组PASS0.939秒／14种损坏拒绝，旧finite保存回归0.007秒；初次8.751秒只新增一次相同finite later-hard假故障V2，此后只读保存材料。四份新setter故障边界独立核对通过。旧later_hard／safety_priority投影缺reasons，修后明确NOT_CERTIFIED，不从error追填原因；不删除旧通过记录或把新证据当成旧证据。[data round2](../../data/processed/thesis_actuator_readiness_20261015_v1/review_round2_v1/DATA_REPORT_V1.md)，新绑定`3eeafcc712a215d063619485fa7d74ae617f290f0a7570e358c3f6e8471c4125`。
 
 原154、其余五个natural模块和既有raw／旧bundle／旧binder保持。当前改动的bridge、两个reader和测试只由新round2绑定说明；旧47415／121aa／19ac绑定仍对应其旧源快照，不是当前源码证书。只读科学终审GO_FOR_SECOND_BOUNDED_REPAIR_PUBLICATION_AND_EXACT_HEAD_REREVIEW，新工程45／data88项及原154源哈希现场核对通过；[round2科学回执](../../artifacts/thesis_actuator_readiness_20261015_v1/SCIENCE_ROUND2_OFFLINE_REVIEW_V1.md)。待准确新head复审；自然交通、native安全／EOF／4050生命周期／城市暴露仍NOT_TESTED，本轮未启动SUMO或修改合同／算法／正式输入。
+
+
+### 第二轮结果：5b08精确审查及最后pending字段P2
+
+Review5527262368实际commit_id为5b08d28fe96fb160f51ae21a566a74ba50093db0，精确等于请求／远端。唯一新[P2 4278340629](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/pull/13#discussion_r4278340629)指出：每post row的rate_chain.pending_request_id及r_policy_pending_veh_h null语义尚未核对，改为虚构ID或900仍可能PASS。[原始回执](../../artifacts/thesis_actuator_readiness_20261015_v1/PR13_REVIEW_5B08_V1.json)。这不是实际native pending观测；保存材料仍只是合成观察。
+
+Data只修这两个字段、复用五份保存材料与两个反例，随后只读科学复核；不更改runtime、算法、输入或旧证据。已到原任务两轮额外实质复审上限，不自动开展第三次完整review或资格运行。最终小修复和最后实际review版本必须明确分开，不能把5b08 review当作之后未审源通过。
+
+
+### 最后小修已离线完成，超限定点复审待明确指示
+
+Reader逐控制row要求pending_request_id精确等于该时刻最新REQUESTED ID，且pending packet rate字段必须存在并为null；选择与实际应用时刻不变。精确5b08前像对两个指定篡改的旧错误接受已真实复现；修后五保存材料＋两反例1组PASS0.314秒，无fake／native重跑。[数据最后修复](../../data/processed/thesis_actuator_readiness_20261015_v1/final_pending_fix_v1/DATA_REPORT_V1.md)，新58项绑定`e08cc79a65f8dd5d74272c244735e99845b4746e2fbb1c0909f54dd1756d805e`现场核对一致。
+
+[只读科学终核](../../artifacts/thesis_actuator_readiness_20261015_v1/SCIENCE_FINAL_PENDING_FIX_V1.md)允许小修交付，未要求更多测试；不包含GitHub修后审查或native资格。原先两轮复审均已完成并核对精确commit，最后修后源尚未GitHub review。按上限停止自动扩审和资格推进；如用户决定追加，仅对这个准备好提交的pending两字段修复做一次定点review，不扩为第三次完整控制器审查。
