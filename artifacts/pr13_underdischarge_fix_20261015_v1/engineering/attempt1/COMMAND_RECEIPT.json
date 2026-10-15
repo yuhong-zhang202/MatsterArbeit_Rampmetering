@@ -1,0 +1,40 @@
+{
+  "command": ".venv/bin/python -m unittest discover -s tests/candidate_a_service_scope_20261015 -p 'test_scope.py' -v",
+  "python_version": "3.13.0",
+  "exit_code": 1,
+  "methods": 5,
+  "elapsed_s": 15.917,
+  "failure_count": 5,
+  "stdout_stderr_capture": "Original tool transcript for exec session 84130; not redirected to a file in first attempt. The result below is a faithful concise transcription, not a full original byte log.",
+  "failures": [
+    {
+      "method": "test_real_adapter_loop_records_supply_readiness_wait_and_stops_before_new_motion",
+      "subcase": "empty",
+      "actual": "(1208, 1208, 2, 0)",
+      "expected": "(1210, 1210, 2, 0)"
+    },
+    {
+      "method": "test_real_adapter_loop_records_supply_readiness_wait_and_stops_before_new_motion",
+      "subcase": "one",
+      "actual": "(1208, 1208, 2, 1)",
+      "expected": "(1210, 1210, 2, 1)"
+    },
+    {
+      "method": "test_real_adapter_loop_records_supply_readiness_wait_and_stops_before_new_motion",
+      "subcase": "late",
+      "actual": "(1208, 1208, 2, 1)",
+      "expected": "(1210, 1210, 2, 1)"
+    },
+    {
+      "method": "test_real_adapter_loop_records_supply_readiness_wait_and_stops_before_new_motion",
+      "subcase": "receiver_wait",
+      "actual": "(1208, 1208, 2, 1)",
+      "expected": "(1210, 1210, 2, 1)"
+    },
+    {
+      "method": "test_terminal_complete_partial_safety_priority_and_entry_gate",
+      "error": "AssertionError: DiagnosticStop('FIRST_RED_CHECKPOINT_MISSING') is not None"
+    }
+  ],
+  "native_started": false
+}
