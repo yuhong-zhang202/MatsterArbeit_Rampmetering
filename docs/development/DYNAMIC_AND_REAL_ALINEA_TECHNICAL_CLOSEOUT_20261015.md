@@ -77,7 +77,7 @@ SUMO官方说明原生黄灯下车辆根据制动可行性选择停车或通过�
 
 同600秒账包含旧UA_NATIVEGAP_DYNAMIC的163.072057750秒及本次两运行；已三方后审结算合计**475.645467625秒**、剩124.354532375秒、无unknownreserve。余额不构成追加运行理由或权限。[最终账](../../artifacts/dynamic_native_yellow_minqual_20261015_v1/RESOURCE_ACCOUNT_FINAL_V1.json)。两次新raw共884563972B，全部留在本地immutable路径`data/raw/dynamic_minimum_qualification_20261015_v1/`各run，manifest记录文件级哈希。不是公开在线原始产物。
 
-本次只整理选定本地提交，不自动推送、合并或修改上游PR。最终交付提交见Git历史；执行测试仍对应3d82ed57和单独记录的后分析副本，不声称测试过未来文档提交。未提交私人邮件、无关MemoryCore改动或全部raw。
+2026-10-15发布补记：按用户明确要求，技术交付`6ae5a6dd1eac715929868bbcf4638417799881fc`已快进上传[原Draft PR #13](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/pull/13)，相关发布文档继续在同一分支同步，最终head见PR；不改base、不合并或修改上游PR。执行测试仍对应3d82ed57和单独记录的后分析副本，不声称测试过后续文档提交。未提交私人邮件、无关MemoryCore改动或全部raw。[发布核对](../../artifacts/github_publication_20261015_v1/PUBLISH_TECHNICAL_HEAD_READBACK_V1.json)。
 
 ## 7. 最终判定与下一步
 
