@@ -172,5 +172,64 @@ class NaturalTests(unittest.TestCase):
         self.assertEqual(a.ledger.E,10)
         self.assertLess(a.ledger.E_executed,a.ledger.E)
 
+    def test_setter_partial_application_is_durable_and_stops_before_more_motion(self):
+        # API failures at initial OPEN, boundary new-G, and quota yellow share
+        # one production setter seam. All movement below is XMLFakeConnection.
+        for target,kind in ((0,'setter'),(600,'setter'),(600,'readback'),(603,'yellow')):
+            with self.subTest(target=target,kind=kind),tempfile.TemporaryDirectory() as tmp:
+                pkg=Path(tmp)/'pkg';out=Path(tmp)/'out'
+                profile.stage_package(profile.ROOT,pkg,out,641);out.mkdir()
+                w=NaturalWorld(pkg/'scenario.add.xml');a=StepAdapter(w.observe,900,641,yellow_diagnostic_mode=True)
+                original_set=w.trafficlight.setPhase;original_step=w.simulationStep
+                if kind=='yellow':
+                    def step(end):
+                        original_step(end)
+                        if end==603:w.enter['R_flow.1']=end
+                    w.simulationStep=step
+                def phase(tls,value):
+                    if w.time==target and value==(1 if kind=='yellow' else 0):
+                        if kind=='readback':
+                            original_set(tls,value)
+                            def missing(_):raise RuntimeError('INJECTED_PHASE_GETTER_UNAVAILABLE')
+                            w.trafficlight.getPhase=missing
+                            return
+                        raise RuntimeError('INJECTED_SET_PHASE_FAILURE')
+                    return original_set(tls,value)
+                w.trafficlight.setPhase=phase
+                cap=LogCapture(out);worker=bridge.protected_worker();error=None
+                try:
+                    bridge._diagnostic_loop(w,NS(observe=w.observe,request_phase=worker.request_phase),cap,out,
+                        dict(wall_limit_s=300,run_limit_bytes=None,minimum_free_bytes=0),
+                        old.f.fixture.old.fixture.old.fixture.fixture.FakeProcess(),time.monotonic(),a,Producer())
+                except Exception as exc:error=exc
+                finally:cap.close_handles()
+                self.assertIsNotNone(error)
+                self.assertEqual(w.time,target)
+                path=out/'control_setters.jsonl'
+                export=os.environ.get('CA_SETTER_FAILURE_EXPORT')
+                if export:
+                    dest=Path(export)/f'{target}_{kind}';dest.mkdir(parents=True,exist_ok=False)
+                    for name in ('control_setters.jsonl','pre_steps.jsonl','post_steps.jsonl','step_ack.jsonl','command_events.jsonl','policy_phase_requests.jsonl'):
+                        p=out/name
+                        if p.exists():(dest/name).write_bytes(p.read_bytes())
+                    (dest/'SYNTHETIC_STOP.json').write_text(json.dumps(dict(
+                        classification='FAKE_API_FAILURE_NO_NATIVE',error=type(error).__name__+':'+str(error),
+                        actual_clock=w.time,last_completed_s=a.last_completed,last_accounted_s=a.last_end,
+                        last_control_setter=getattr(a,'last_control_setter',None),memory_requests=w.requests),indent=2))
+                self.assertTrue(path.is_file(),'Setter outcome must survive failure before pre_steps is written')
+                rows=[json.loads(line) for line in path.read_text().splitlines()]
+                final=rows[-1]
+                self.assertEqual(final['time_s'],target)
+                self.assertEqual(final['method'],'setPhase')
+                self.assertEqual(final['status'],'READBACK_UNKNOWN_STOP' if kind=='readback' else 'CALL_FAILED_STOP')
+                self.assertEqual(final['actual_signal']['fields']['program']['status'],'OBSERVED')
+                if kind=='readback':
+                    self.assertEqual(final['actual_signal']['fields']['phase']['status'],'UNKNOWN')
+                    self.assertIsNone(final['actual_signal']['fields']['phase']['value'])
+                    self.assertTrue(final['call_completed'])
+                else:self.assertFalse(final['call_completed'])
+                if kind!='yellow':
+                    self.assertTrue(any(row['time_s']==target and row['method']=='setProgram' and row['status']=='READBACK_OBSERVED' for row in rows))
+
 
 if __name__=='__main__':unittest.main(verbosity=2)

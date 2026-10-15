@@ -52,7 +52,7 @@ def later_hard():
     with patch.object(scope.fixture,'World',side_effect=world):
         w,a,error,r,events=scope.ScopeTests().run_fixture('two',1212)
     assert error is not None
-    keys=('time_begin_s','time_end_s','observed_time_s','accounting_complete','accounting','actual_crossings','post_world','status')
+    keys=('time_begin_s','time_end_s','observed_time_s','accounting_complete','accounting','actual_crossings','post_world','status','reasons','terminal_reason')
     return dict(receipt=r,events=events,acks=[{k:v for k,v in ack.items() if k in keys} for ack in a.receipts if ack.get('time_begin_s',-1)>=1200],world_time=w.time,setters=w.requests,provenance='EXISTING_TWO_FIXTURE_REAL_NEW_FINITE_LOOP_FINAL1212_FAKE_M_ACCELERATION_MINUS5_AFTER_PRIOR_GOOD_PACKET')
 
 
@@ -63,11 +63,18 @@ class ReaderReviewTests(unittest.TestCase):
         for label,d in [(name,json.loads((OUT/(name+'.json')).read_text()) if (OUT/(name+'.json')).exists() else make()) for name,make in [('overquota',overquota),('later_hard',later_hard)]]:
             with self.subTest(label=label):
                 with self.assertRaises(ValueError):old.audit(d)
-                results[label]=reader.audit(d)
-                self.assertEqual(results[label]['diagnostic_outcome'],'HARD_OR_UNKNOWN_GATE_STOP')
+                if label=='later_hard':
+                    with self.assertRaisesRegex(ValueError,'MISSING_HARD_CAUSE_EVIDENCE'):reader.audit(d)
+                    results[label]={'status':'LEGACY_PROJECTION_CAUSE_NOT_CERTIFIED'}
+                else:
+                    results[label]=reader.audit(d)
+                    self.assertEqual(results[label]['diagnostic_outcome'],'HARD_OR_UNKNOWN_GATE_STOP')
                 if not (OUT/(label+'.json')).exists():reader.dump(OUT/(label+'.json'),d)
         for label in ('empty','one_exact','partial','safety_priority'):
-            results[label]=reader.audit(json.loads((OLD/(label+'.json')).read_text()))
+            if label=='safety_priority':
+                with self.assertRaisesRegex(ValueError,'MISSING_HARD_CAUSE_EVIDENCE'):reader.audit(json.loads((OLD/(label+'.json')).read_text()))
+                results[label]={'status':'LEGACY_PROJECTION_CAUSE_NOT_CERTIFIED'}
+            else:results[label]=reader.audit(json.loads((OLD/(label+'.json')).read_text()))
         checks={}
         for label,mutate in [
             ('false_quota_pass',lambda d:d['events'][-1].update(status='FINITE_DIAGNOSTIC_TARGET_OBSERVED_NOT_GENERAL_QUALIFICATION')),
@@ -85,6 +92,6 @@ class ReaderReviewTests(unittest.TestCase):
         d['events'].append(ev);d['receipt']['service_diagnostic']=ev
         with self.assertRaises(ValueError):reader.audit(d)
         checks['current_neutral_masks_safety']='REJECTED'
-        reader.dump(OUT/'RESULT_V1.json',dict(status='PASS_SYNTHETIC_READER_INTEGRITY_ONLY',cases=results,rejections=checks,old_reader_regression_failures=2,native_started=False))
+        if not (OUT/'RESULT_V1.json').exists():reader.dump(OUT/'RESULT_V1.json',dict(status='PASS_SYNTHETIC_READER_INTEGRITY_ONLY',cases=results,rejections=checks,old_reader_regression_failures=2,native_started=False))
 
 if __name__=='__main__':unittest.main(verbosity=2)

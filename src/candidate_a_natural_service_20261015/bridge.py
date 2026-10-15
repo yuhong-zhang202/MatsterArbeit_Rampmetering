@@ -6,6 +6,7 @@ human authorization/release before output allocation or native import/spawn.
 from pathlib import Path
 from dataclasses import asdict
 import json
+import math
 import os
 import shutil
 import socket
@@ -40,6 +41,55 @@ def encoded(value):
 def append_new(path, value):
     with path.open('a') as f:
         f.write(json.dumps(value,default=encoded,allow_nan=False)+'\n');f.flush();os.fsync(f.fileno())
+
+
+def _actual_signal_after_control(conn):
+    """Independent best-effort fields; missing observations remain unknown."""
+    fields={}
+    for name,getter,valid in (
+        ('time_s',conn.simulation.getTime,lambda v:type(v) in (int,float) and math.isfinite(v)),
+        ('program',lambda:conn.trafficlight.getProgram(TLS),lambda v:isinstance(v,str) and bool(v)),
+        ('phase',lambda:conn.trafficlight.getPhase(TLS),lambda v:type(v) is int and v>=0),
+        ('state',lambda:conn.trafficlight.getRedYellowGreenState(TLS),lambda v:isinstance(v,str) and bool(v)),
+        ('next_switch_s',lambda:conn.trafficlight.getNextSwitch(TLS),lambda v:type(v) in (int,float) and math.isfinite(v))):
+        try:
+            value=getter()
+            if not valid(value):raise ValueError('INVALID_SIGNAL_FIELD_SCHEMA')
+            fields[name]=dict(status='OBSERVED',value=value,error=None)
+        except Exception as exc:
+            fields[name]=dict(status='UNKNOWN',value=None,error=type(exc).__name__+':'+str(exc))
+    return dict(fields=fields,complete=all(item['status']=='OBSERVED' for item in fields.values()),
+                scope='CURRENT_GETTERS_AFTER_CONTROL_NOT_MOVEMENT_ACK')
+
+
+def request_phase_durable(conn,worker,requests,time_s,method,value,output,adapter,expected):
+    """Journal each native control outcome before any subsequent API or step."""
+    operation=dict(setter_id=f'{time_s}:{method}:{len(requests)}',time_s=time_s,
+                   method=method,value=value,expected_readback=expected)
+    adapter.last_phase_requests=requests
+    def persist(status,**details):
+        row=dict(operation,status=status,**details)
+        adapter.last_control_setter=row
+        append_new(output/'control_setters.jsonl',row)
+    persist('ATTEMPTED',call_completed=False)
+    try:
+        worker.request_phase(conn.trafficlight,requests,time_s,method,value)
+    except Exception as exc:
+        persist('CALL_FAILED_STOP',call_completed=False,
+            error=type(exc).__name__+':'+str(exc),effect_of_failed_call='UNKNOWN_POSSIBLE_PARTIAL_APPLICATION',
+            actual_signal=_actual_signal_after_control(conn))
+        raise
+    persist('CALL_RETURNED',call_completed=True)
+    actual=_actual_signal_after_control(conn)
+    if not actual['complete']:
+        persist('READBACK_UNKNOWN_STOP',call_completed=True,actual_signal=actual)
+        raise ValueError('CONTROL_SETTER_READBACK_UNKNOWN')
+    mismatches={key:dict(expected=want,observed=actual['fields'][key]['value'])
+                for key,want in expected.items() if actual['fields'][key]['value']!=want}
+    if mismatches:
+        persist('READBACK_MISMATCH_STOP',call_completed=True,actual_signal=actual,mismatches=mismatches)
+        raise ValueError('CONTROL_SETTER_READBACK_MISMATCH')
+    persist('READBACK_OBSERVED',call_completed=True,actual_signal=actual)
 
 
 def admission(conn, time_s, observe, previous_program):
@@ -159,8 +209,8 @@ def policy_after_ack(conn, adapter, worker, output):
         append_new(output/'yellow_scope_attempts.jsonl',dict(scope,attempt_stage='QUOTA_CLOSE_SCREEN_BEFORE_SETTER',observed_first_Y=False))
         require(scope['diagnostic_yellow_contract']['allow_prepared_step'] is True,'UNKNOWN_LOCAL_YELLOW_SCOPE')
         require(phase==0 and t<=cycle['begin_s']+cycle['max_green_s'],'green close wrong phase/budget')
-        worker.request_phase(conn.trafficlight,requests,t,'setPhase',1)
-        require(conn.trafficlight.getPhase(TLS)==1 and conn.trafficlight.getRedYellowGreenState(TLS)=='y' and conn.trafficlight.getNextSwitch(TLS)==t+cycle['yellow_s'],'yellow command readback mismatch')
+        request_phase_durable(conn,worker,requests,t,'setPhase',1,output,adapter,
+            dict(time_s=t,program=cycle['program'],phase=1,state='y',next_switch_s=t+cycle['yellow_s']))
         adapter.ledger.close_green(t,'ACTUAL_QUOTA_ACK')
     if adapter.previous_motion=='r' and phase==2 and state=='r' and not cycle.get('red_clock_bound'):
         remaining=cycle['end_s']-t
@@ -231,8 +281,10 @@ def _diagnostic_loop(conn, worker, capture, output, resources, process, start_ti
     conn=FrameCache(conn)
     adapter.query_cache_stats=conn.stats
     phase_requests=[]
-    worker.request_phase(conn.trafficlight,phase_requests,0,'setProgram','A_OPEN')
-    worker.request_phase(conn.trafficlight,phase_requests,0,'setPhase',0)
+    request_phase_durable(conn,worker,phase_requests,0,'setProgram','A_OPEN',output,adapter,
+        dict(time_s=0,program='A_OPEN'))
+    request_phase_durable(conn,worker,phase_requests,0,'setPhase',0,output,adapter,
+        dict(time_s=0,program='A_OPEN',phase=0,state='G'))
     for t in range(adapter.end_s):
         require(time.monotonic()-start_time<=resources['wall_limit_s'],'wall resource STOP')
         require(shutil.disk_usage(output).free>=resources['minimum_free_bytes'],'disk reserve STOP')
@@ -256,11 +308,10 @@ def _diagnostic_loop(conn, worker, capture, output, resources, process, start_ti
                 body=adapter.body.observe(conn,t,inventory(conn)[0],[], 'G' if t==600 else 'r')
                 append_new(output/'body_admission.jsonl',body)
                 if bound['receiver']['available']:
-                    worker.request_phase(conn.trafficlight,phase_requests,t,'setProgram',cycle['program'])
-                    worker.request_phase(conn.trafficlight,phase_requests,t,'setPhase',0)
-                    require(conn.trafficlight.getProgram(TLS)==cycle['program'] and
-                        conn.trafficlight.getPhase(TLS)==0 and conn.trafficlight.getRedYellowGreenState(TLS)=='G' and
-                        conn.trafficlight.getNextSwitch(TLS)==t+cycle['max_green_s'],'new program green readback unknown')
+                    request_phase_durable(conn,worker,phase_requests,t,'setProgram',cycle['program'],output,adapter,
+                        dict(time_s=t,program=cycle['program']))
+                    request_phase_durable(conn,worker,phase_requests,t,'setPhase',0,output,adapter,
+                        dict(time_s=t,program=cycle['program'],phase=0,state='G',next_switch_s=t+cycle['max_green_s']))
                     adapter.ledger.mark_cycle_start(True, signal_program=cycle['program'])
                     adapter.selected_new_program_at=t
                 else:
@@ -370,6 +421,9 @@ def execute(card_path, release_path, root=ROOT):
         error=type(exc).__name__+':'+str(exc)
         write_new(output/'failure_snapshot.json',json.loads(json.dumps({'error':error,'last_completed_s':adapter.last_completed if adapter else None,
             'last_step_ack':getattr(adapter,'bridge_last_ack',None),
+            'last_control_setter':getattr(adapter,'last_control_setter',None),
+            'phase_api_requests':getattr(adapter,'last_phase_requests',None),
+            'control_setter_journal':'control_setters.jsonl',
             'same_state_query_cache':getattr(adapter,'query_cache_stats',None),
             'last_accounted_s':adapter.last_end if adapter else None,'pending':adapter.pending if adapter else None,
             'accounting':adapter.ledger.accounting() if adapter else None,
@@ -410,6 +464,9 @@ def execute(card_path, release_path, root=ROOT):
         write_new(output/'bridge_receipt.json',{'run_id':run,'card_sha256':sha(card_path),'status':status,'error':error,
             'native_started':process is not None,'last_completed_s':adapter.last_completed if adapter else None,
             'last_step_ack':getattr(adapter,'bridge_last_ack',None),
+            'last_control_setter':getattr(adapter,'last_control_setter',None),
+            'phase_api_requests':getattr(adapter,'last_phase_requests',None),
+            'control_setter_journal':'control_setters.jsonl',
             'same_state_query_cache':getattr(adapter,'query_cache_stats',None),
             'last_accounted_s':adapter.last_end if adapter else None,'final_logs':final_logs,
             'resource_watchdog':{'reason':watchdog.reason,'error':watchdog.error,'poll_s':.2} if watchdog else None,

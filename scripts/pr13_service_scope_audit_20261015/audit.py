@@ -100,6 +100,20 @@ def audit(d):
         need(not current or (len(current) == 1 and
              current[0]['status'] == 'SERVICE_PACKET_QUOTA_EXCEEDED'),
              'hard failure masked by current assessment')
+        if current:
+            # Policy quota exception is independently bound by the completed
+            # overquota assessment; it does not invent adapter safety reasons.
+            need(r['error']=='ValueError:SERVICE_PACKET_QUOTA_EXCEEDED',
+                 'quota error does not match policy assessment')
+        else:
+            reasons=acks[-1].get('reasons')
+            need(isinstance(reasons,list) and reasons and
+                 all(isinstance(x,str) and x for x in reasons),
+                 'MISSING_HARD_CAUSE_EVIDENCE_OLD_PROJECTION_NOT_CERTIFIED')
+            need(r['error']=='DiagnosticStop:'+';'.join(reasons),
+                 'hard error does not match observed reasons')
+            if 'terminal_reason' in acks[-1]:
+                need(acks[-1]['terminal_reason']==r['error'],'terminal reason mismatch')
         need({ev['cycle_id'] for ev in historical} == set(range(packets[-1]['cycle_id'])),
              'missing prior complete assessment')
     else:
@@ -126,7 +140,7 @@ def main(out):
     for label, kind, end, fault in [('empty','empty',1218,None), ('one_exact','one',1210,None),
                                      ('partial','two',1212,None), ('safety_priority','one',1218,'final_braking')]:
         w,a,error,receipt,events = m.ScopeTests().run_fixture(kind,end,fault)
-        keys = ('time_begin_s','time_end_s','observed_time_s','accounting_complete','accounting','actual_crossings','post_world','status')
+        keys = ('time_begin_s','time_end_s','observed_time_s','accounting_complete','accounting','actual_crossings','post_world','status','reasons','terminal_reason')
         bundle = dict(case=label,fixture=dict(kind=kind,end=end,fault=fault),world_time=w.time,setters=w.requests,
                       receipt=receipt,events=events,acks=[{k:v for k,v in x.items() if k in keys} for x in a.receipts if x.get('time_begin_s',-1)>=1200])
         dump(out/(label+'.json'),bundle)

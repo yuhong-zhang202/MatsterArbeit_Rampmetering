@@ -1,6 +1,6 @@
 # PR13：普通服务P1与审计器两项P2修复
 
-2026-10-15。当前交付仅包含实现、必要离线验证和复审；用户最新指令禁止SUMO及合并PR。自然交通资格仍为NOT_TESTED，总体NOT_QUALIFIED。本文件不改变正式实验协议、ALINEA核心或科研设计。
+2026-10-15。当前最新为本文末的第二轮限定P2修复及新绑定；前文第一轮绑定／结果保留为历史。当前交付仅包含实现、必要离线验证和复审；用户最新指令禁止SUMO及合并PR。自然交通资格仍为NOT_TESTED，总体NOT_QUALIFIED。本文件不改变正式实验协议、ALINEA核心或科研设计。
 
 ## 实际审查版本和问题
 
@@ -46,3 +46,28 @@ PROJECT_STATE、WORKLOG、PRB-004与Dashboard仅更新当前事实和待办；DE
 ### 发布批准及实际推送更新
 
 用户对上述113文件、约27.4MB、明确公开目的地和原PR13分支直接回复“批准公开推送并复审”。审批后同一正常推送成功，远端由6dc1680快进至37ab8056bc1e72ccc658242f153daa20c56baa8e；没有force、合并或新增SUMO。前节阻塞描述属于批准前历史。随后只同步当前文档／Dashboard事实，并对最终远端准确head申请针对性review；实际审查结果仍待返回，不能把内部GO或旧6dc review当作新版本已审。
+
+
+### 本轮准确head复审请求
+
+最终远端head已通过GitHub原始PR API核对为`24ec690de67818355076247f9192ed48a75ad390`，base20e5e83、Draft及未合并状态保持。相对实现提交f7a9bada仅四个治理／发布状态文件变化，实现、测试和绑定证据字节不变。113文件发布范围核对一致。
+
+已回复原P1及两项P2线程（4278189787／4278189214／4278189546），保留线程供reviewer确认；[本轮@codex review请求6182550931](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/pull/13#issuecomment-6182550931)明确限定准确head、普通服务误停／物理追债／真实红灯保持、C/E/N、partial/pending和失败版本边界，并禁止SUMO、改代码／合同或扩大矩阵。机器人eyes只表示接收，不代表完成或通过。当前等待正式review结果及实际commit_id；历史空白人工review条目不能算本轮bot审查完成。
+
+
+### 24ec复审完成：第二轮限定修复
+
+review5527104163实际commit_id为24ec690de67818355076247f9192ed48a75ad390，与请求及远端一致；[原始回执](../../artifacts/thesis_actuator_readiness_20261015_v1/PR13_REVIEW_24EC_V1.json)。三项实质P2为[setter部分失败证据](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/pull/13#discussion_r4278226978)、[最终command生命周期绑定](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/pull/13#discussion_r4278226984)、[硬停止原因与reasons绑定](https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering/pull/13#discussion_r4278226992)。这不是新自然交通或安全运行结果。
+
+进入最多两轮额外实质修复中的第二轮：工程仅修natural bridge逐setter证据及小故障注入，data仅修两reader与相应最少反例核账，然后科学终审及准确新head复审。旧源、报告、绑定和保存案例不覆盖；缺失reasons的旧证据不得追填或借新reader改判为更强证据。仍禁止SUMO、合并、改合同／科研输入或扩矩阵。
+
+
+### 第二轮离线修复及新证据版本
+
+三项P2已完成最小修复。Natural bridge在初始OPEN、新包程序／绿灯、quota黄灯每次setter前后逐次fsync记录ATTEMPTED、正常返回、读回或失败；每个读回字段分别OBSERVED或UNKNOWN。失败可能已部分改变信号，不能标成无效果；未读到的phase保持null／错误，后续不advance、不虚构G ACK。失败快照／receipt新增最后setter及journal指针。旧24ec同一故障方法四子案真实FAIL1.840秒保留，修复后同1方法PASS1.742秒，不是整套／native重跑。[工程round2](../../artifacts/thesis_actuator_readiness_20261015_v1/engineering/review_round2_v1/ENGINEERING_REPORT_V1.md)，新45文件绑定`9cace32950a7cff0404d167772e46ba8282962f149b473953c3ca49fc1feba29`。
+
+Natural reader独立重建完整nested command、first preparation、首次实际G应用、superseded／最终status与事件顺序，并核对cycle请求／应用／延迟。Held周期可保留该请求历史首次应用时间，但当前applied ID／rate仍null。Finite reader普通after-step硬停要求真实terminal reasons与DiagnosticStop精确对应；quota异常则由完整超额assessment和精确ValueError链单独支持。
+
+三种旧reader错误接受已实际重现。新最终针对性组PASS0.939秒／14种损坏拒绝，旧finite保存回归0.007秒；初次8.751秒只新增一次相同finite later-hard假故障V2，此后只读保存材料。四份新setter故障边界独立核对通过。旧later_hard／safety_priority投影缺reasons，修后明确NOT_CERTIFIED，不从error追填原因；不删除旧通过记录或把新证据当成旧证据。[data round2](../../data/processed/thesis_actuator_readiness_20261015_v1/review_round2_v1/DATA_REPORT_V1.md)，新绑定`3eeafcc712a215d063619485fa7d74ae617f290f0a7570e358c3f6e8471c4125`。
+
+原154、其余五个natural模块和既有raw／旧bundle／旧binder保持。当前改动的bridge、两个reader和测试只由新round2绑定说明；旧47415／121aa／19ac绑定仍对应其旧源快照，不是当前源码证书。只读科学终审GO_FOR_SECOND_BOUNDED_REPAIR_PUBLICATION_AND_EXACT_HEAD_REREVIEW，新工程45／data88项及原154源哈希现场核对通过；[round2科学回执](../../artifacts/thesis_actuator_readiness_20261015_v1/SCIENCE_ROUND2_OFFLINE_REVIEW_V1.md)。待准确新head复审；自然交通、native安全／EOF／4050生命周期／城市暴露仍NOT_TESTED，本轮未启动SUMO或修改合同／算法／正式输入。

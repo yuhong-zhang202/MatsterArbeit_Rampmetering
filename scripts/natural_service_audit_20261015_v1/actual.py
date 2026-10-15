@@ -138,7 +138,8 @@ def audit(bundle):
             green,yellow,program=(5,3,'T10_G5Y3_NATIVE') if period==10 else (4,min(5,period-6),f'I12_PACKET{period}')
             executing=ad['receiver']['available'];need(type(executing) is bool,'unknown admission receiver')
             ca=selected_acks.get(len(cycles));need(ca is not None,'missing execution decision ACK')
-            need(ca['event']==('PACKET_ACK_OBSERVED' if executing else 'WITHHELD_RED_ACK_OBSERVED'),'false executed packet')
+            need(ca['event']==('PACKET_ACK_OBSERVED' if executing else 'WITHHELD_RED_ACK_OBSERVED') and
+                 ca['request_id']==pending['request_id'],'false executed packet or ACK request binding')
             binding=r['post_signal_application_binding'];actual_program=binding['actual_program']
             current=dict(id=len(cycles),begin=t,end=t+period,period=period,executed=executing,program=actual_program,selected_request=pending['request_id'],N=0,phases={'G':0,'y':0,'r':0})
             need(ad['cycle_id']==current['id'] and ad['selected_request_id']==pending['request_id'],'selected request mismatch')
@@ -150,6 +151,7 @@ def audit(bundle):
                      any(v['method']=='setPhase' and v['value']==0 for v in calls),'missing actual program/green setter')
                 first_application.setdefault(pending['request_id'],t)
             else:
+                need(ca['observed_ACK_s']==t+1 and ca['signal_program']==actual_program,'held ACK clock/program mismatch')
                 need(t>600 and binding['actual_state']=='r' and binding['actual_phase']==2 and
                      actual_program==post[t-1]['post_signal_application_binding']['actual_program'],'held phase/program not actual previous red')
                 need(not any(v['method'] in ('setProgram','setPhase') for v in calls),'held selection falsely executed')
@@ -201,11 +203,53 @@ def audit(bundle):
     need(set(receipt['command_records'])==set(request_ids),'missing command record')
     actual_ack_ids=[e['request_id'] for e in events if e['event']=='ACK_OBSERVED']
     need(len(actual_ack_ids)==len(set(actual_ack_ids)) and set(actual_ack_ids)==set(first_application),'missing or duplicate first-application ACK')
-    for rid,record in receipt['command_records'].items():
-        need(rid in request_ids and record['first_application_s']==first_application.get(rid),'false application or pending record')
-    for e in events:
-        if e['event']=='ACK_OBSERVED':
-            rid=e['request_id'];need(e['application_global_s']==first_application[rid] and e['application_delay_s']==first_application[rid]-request_ids[rid]['global_request_s'],'application delay mismatch')
+    # Rebuild request lifecycle from chronological requests, independently
+    # reconstructed selection/actual-G boundaries, and replacement order.
+    lifecycle={}
+    for i,q in enumerate(requests):
+        rid=q['request_id']
+        command={k:q[k] for k in ('request_id','global_request_s','rate_veh_h','origin','r_ALINEA')}
+        prepared=min((c['begin'] for c in cycles if c['selected_request']==rid),default=None)
+        applied=first_application.get(rid)
+        replaced = requests[i+1] if i+1<len(requests) else None
+        superseded=bool(replaced is not None and (applied is None or applied>replaced['global_request_s']))
+        status=('SUPERSEDED_WITHOUT_APPLICATION' if superseded else 'ACK_OBSERVED' if applied is not None else
+                'PREPARED_NOT_OBSERVED' if prepared is not None else 'PENDING')
+        expected=dict(command=command,first_application_s=applied,first_preparation_s=prepared,status=status)
+        need(receipt['command_records'][rid]==expected,'request lifecycle summary mismatch')
+        supers=[e for e in events if e['event']=='SUPERSEDED' and e.get('command',{}).get('request_id')==rid]
+        preps=[e for e in events if e['event']=='PREPARED_NOT_OBSERVED' and e['request_id']==rid]
+        apps=[e for e in events if e['event']=='ACK_OBSERVED' and e['request_id']==rid]
+        need(len(supers)==int(superseded) and len(preps)==int(prepared is not None) and
+             len(apps)==int(applied is not None),'missing or duplicate lifecycle event')
+        if superseded:
+            ev=supers[0]
+            need(ev['command']==command and ev['first_application_s'] is None and
+                 ev['first_preparation_s']==prepared and ev['status']=='SUPERSEDED_WITHOUT_APPLICATION' and
+                 events.index(q)<events.index(ev)<events.index(replaced),'superseded event binding')
+        for ev,t in [(e,prepared) for e in preps]+[(e,applied) for e in apps]:
+            need(ev['application_global_s']==t and ev['application_delay_s']==t-q['global_request_s'] and
+                 events.index(q)<events.index(ev),'request preparation/application event binding')
+            if ev['event']=='PREPARED_NOT_OBSERVED':need(ev['global_request_s']==q['global_request_s'],'preparation request time')
+            else:need(ev['first_green_ACK_s']==t+1,'first application ACK time')
+        if preps and apps:need(events.index(preps[0])<events.index(apps[0]),'application event before preparation')
+        lifecycle[rid]=expected
+    need(all(e.get('request_id') in request_ids for e in events if e['event'] in ('ACK_OBSERVED','PREPARED_NOT_OBSERVED')) and
+         all(e.get('command',{}).get('request_id') in request_ids for e in events if e['event']=='SUPERSEDED'),
+         'unknown lifecycle event request')
+    for c,actual in zip(cycles,receipt['cycles']):
+        rid=c['selected_request'];q=request_ids[rid];first=first_application.get(rid)
+        applied=first if first is not None and first<=c['begin'] else None
+        # Cycle command_applied_s carries this request's first actual
+        # application, including an earlier packet; it is not this packet age.
+        need(actual['selected_request_id']==rid and actual['command_requested_s']==q['global_request_s'] and
+             actual['planned_application_s']==actual['begin_s']==c['begin'] and
+             actual['end_s']==c['end'] and actual['cycle_id']==c['id'] and
+             actual['command_applied_s']==applied and
+             actual['application_delay_s']==(None if applied is None else applied-q['global_request_s']) and
+             actual['command_age_at_cycle_start_s']==c['begin']-q['global_request_s'] and
+             actual['application_status']==('ACK_OBSERVED' if c['executed'] else 'PREPARED_NOT_OBSERVED'),
+             'cycle request/application time or delay mismatch')
     duration=files.get('policy_duration_requests.jsonl',[])
     for d in duration:
         t=d['time_s'];need(600<=t<end and d['cycle_end_s']-t==d['value']>=1,'terminal or malformed duration setter')
