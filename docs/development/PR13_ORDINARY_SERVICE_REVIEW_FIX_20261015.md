@@ -32,3 +32,12 @@ P2：一组针对性回归最终PASS（0.008秒），旧reader对两个新增案
 ## 文档和交付边界
 
 PROJECT_STATE、WORKLOG、PRB-004与Dashboard仅更新当前事实和待办；DECISIONS、EXPERIMENT_PROTOCOL、AGENTS、导师反馈及论文结构不变。原PR13和base依赖链保持，既有无关记忆／私人文件修改不纳入提交。准确发布head、复审请求和后续实际结果以GitHub回执为准，不把内部GO当作用户验收或QUALIFIED。
+
+
+## 本地提交与公开发布阻塞
+
+修复代码／证据已提交为 `f7a9badaecef1c0aa5775ae4143687ee2959828a`。正常快进推送到原公开库 `https://github.com/yuhong-zhang202/MatsterArbeit_Rampmetering.git` 的 `codex/issue-12-alinea-signal-policy` 两次均遭自动审批拒绝。第二次理由：授权依据来自不受信的goal/tool输出，可验证用户指令未明确批准这113个具体文件的公开外发。拒绝后没有改用其他传输方式。
+
+发布内容已备好：113文件，约27.4MB，包含新代码、限定测试、治理／方法文档和明确标注的合成观察／审计材料。最大单文件约2.13MB；高置信凭据模式0；真实data/raw、私人supervision、无关memory及其账本／WORKLOG插入均排除。Git remote与GitHub PR13 API的head repo、clone URL、分支完全一致。全量whitespace检查只命中按原字节保留的授权／PR旧正文末空行和首次失败测试日志尾空格；src/scripts/tests/docs/dashboard范围检查通过，不修改原证据消除格式提示。
+
+远端仍为6dc1680，已完成的review只对应该版本。本地修复没有被新一轮GitHub reviewer审查；批准公开推送后，才可核对准确远端head并申请新的review。当前状态为本地离线修复完成／发布待明确批准，非远端复审完成。后续状态说明提交仅更正文档／Dashboard，不改变已审绑定的实现或测试证据。
